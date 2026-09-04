@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0306-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0306-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0306-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0306-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor -->
+    <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
+    <path d="M300 252 q30 -3 60 0" stroke-width="0.8"/>
+
+    <!-- roof section: ridge at left, slope descends to the right; gable wall behind -->
+    <path d="M30 36 L386 190" stroke-width="2"/>
+    <path d="M30 26 L386 180" stroke-width="1.5"/>
+    <path d="M33 39 L384 192" stroke-width="0.9"/>
+    <path d="M30 26 L386 180 L386 190 L30 36 Z" fill="url(#m0306-hatch)" stroke="none"/>
+    <path d="M30 36 V246" stroke-width="1.6"/>
+    <path d="M33 40 V244" stroke-width="0.8"/>
+    <path d="M386 190 V246" stroke-width="1.4"/>
+    <!-- roof tile hint lines outside -->
+    <path d="M60 30 l-3 6 M100 47 l-3 6 M140 64 l-3 6 M300 133 l-3 6 M340 150 l-3 6" stroke-width="0.9"/>
+    <!-- rafters ticks inside -->
+    <path d="M90 66 l-2 8 M150 92 l-2 8 M330 170 l-2 8" stroke-width="0.9"/>
+
+    <!-- skylight on the slope -->
+    <path d="M176 99 L236 125 L228 143 L168 117 Z" stroke-width="1.7"/>
+    <path d="M179 102 L233 126" stroke-width="0.9"/>
+    <path d="M180 103 L232 127 L226 140 L172 116 Z" fill="url(#m0306-hatch2)" stroke="none"/>
+    <path d="M206 112 L200 126" stroke-width="1"/>
+
+    <!-- weather mast on the roof, right of the skylight -->
+    <path d="M276 133 V44" stroke-width="2"/>
+    <path d="M279 135 V46" stroke-width="0.9"/>
+    <!-- hinge base bracket -->
+    <path d="M264 128 L288 138 M268 126 l4 2 v6" stroke-width="1.3"/>
+    <circle cx="276" cy="131" r="2.2" stroke-width="1"/>
+    <!-- anemometer cups on top -->
+    <path d="M276 44 V36" stroke-width="1.4"/>
+    <path d="M276 36 L256 30 M276 36 L296 30 M276 36 L278 22" stroke-width="1.1"/>
+    <path d="M256 30 m-6 0 a6 4 0 1 0 12 0 a6 4 0 1 0 -12 0" stroke-width="1.3"/>
+    <path d="M296 30 m-6 0 a6 4 0 1 0 12 0 a6 4 0 1 0 -12 0" stroke-width="1.3"/>
+    <path d="M278 22 m-6 0 a6 4 0 1 0 12 0 a6 4 0 1 0 -12 0" stroke-width="1.3"/>
+    <!-- motion arcs -->
+    <path d="M244 22 q-4 8 0 16 M308 22 q4 8 0 16" stroke-width="0.7"/>
+    <!-- wind vane -->
+    <path d="M276 62 H316" stroke-width="1.4"/>
+    <path d="M316 62 l-8 -5 v10 Z" stroke-width="1.2"/>
+    <path d="M276 62 l-16 -2 l4 2 l-4 2 Z" stroke-width="1"/>
+    <path d="M276 68 v-12" stroke-width="0.8"/>
+    <circle cx="276" cy="62" r="2.4" stroke-width="1"/>
+    <!-- rain gauge cylinder -->
+    <path d="M254 80 v22 h14 v-22" stroke-width="1.4"/>
+    <path d="M252 80 h18 M254 78 q7 -4 14 0" stroke-width="1"/>
+    <path d="M268 90 h8" stroke-width="1"/>
+    <path d="M256 92 h10 v9 h-10 Z" fill="url(#m0306-hatch)" stroke="none"/>
+    <!-- radiation shield (stacked plates) for temp/humidity -->
+    <path d="M280 104 h20 M282 109 h16 M284 114 h12 M286 119 h8" stroke-width="1.3"/>
+    <path d="M280 104 q10 -6 20 0" stroke-width="1"/>
+    <path d="M279 100 h-3" stroke-width="1"/>
+    <!-- cable running down the mast into the attic -->
+    <path d="M282 122 q6 10 -2 16" stroke-width="0.8"/>
+
+    <!-- weather outside: cloud + rain + bird -->
+    <path d="M320 40 q4 -14 18 -10 q8 -12 22 -4 q14 -2 14 10 q6 10 -6 12 h-46 q-8 -2 -2 -8 Z" stroke-width="1.4"/>
+    <path d="M328 42 q6 -2 12 0" stroke-width="0.8"/>
+    <path d="M332 56 l-3 9 M346 56 l-3 9 M360 56 l-3 9 M340 70 l-3 9 M354 70 l-3 9 M368 66 l-3 9 M348 86 l-3 9 M362 90 l-3 9" stroke-width="0.9"/>
+    <path d="M200 30 q4 -4 8 0 q4 -4 8 0" stroke-width="1"/>
+    <path d="M180 60 q3 -3 6 0 q3 -3 6 0" stroke-width="0.9"/>
+
+    <!-- e-ink weather screen on the gable wall (inside) -->
+    <path d="M62 118 H140 V170 H62 Z" stroke-width="1.8"/>
+    <path d="M65 121 H137 V167" stroke-width="0.9"/>
+    <path d="M68 126 h20 M68 132 h14" stroke-width="1.2"/>
+    <path d="M108 126 h26 M108 132 h18" stroke-width="1.2"/>
+    <path d="M68 164 H134 M68 142 V164" stroke-width="0.8"/>
+    <path d="M70 158 q10 -8 18 -4 q8 4 14 -8 q8 -14 14 -2 q6 8 16 -6" stroke-width="1.3"/>
+    <path d="M70 160 q10 -8 18 -4 q8 4 14 -8 q8 -14 14 -2 q6 8 16 -6" stroke-width="0.6"/>
+    <path d="M76 164 v2 M92 164 v2 M108 164 v2 M124 164 v2" stroke-width="0.8"/>
+    <!-- screen shadow -->
+    <path d="M140 122 L145 118 V170 L140 174 Z" fill="url(#m0306-hatch)" stroke="none"/>
+    <path d="M140 118 L145 114 V170" stroke-width="1"/>
+
+    <!-- person standing looking up at the skylight, holding a mug -->
+    <circle cx="176" cy="164" r="8" stroke-width="1.5"/>
+    <path d="M176 172 V212 M176 182 L162 196 M176 182 L192 192 M176 212 L166 246 M176 212 L188 246" stroke-width="1.5"/>
+    <path d="M177 174 V210" stroke-width="0.8"/>
+    <path d="M190 188 h8 v8 h-8 Z M198 190 q4 0 3 4" stroke-width="1.1"/>
+    <path d="M180 160 l4 -2" stroke-width="1"/>
+
+    <!-- small table with sensor box & esp board inside -->
+    <path d="M300 246 V206 H372 V246 M304 208 V244 M368 208 V244" stroke-width="1.4"/>
+    <path d="M318 206 v-14 h30 v14 M322 198 h6 M332 198 h10" stroke-width="1.1"/>
+    <path d="M338 200 q-4 -10 -10 -14" stroke-width="0.7"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0306</text>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0201-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0201-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0201-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0201-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room: back wall, low ceiling, floor (one-point perspective) -->
+    <path d="M90 62 H310 V206 H90 Z" stroke-width="1.8"/>
+    <path d="M92 64 H308 V204" stroke-width="0.9"/>
+    <path d="M90 62 L22 16 M310 62 L378 16" stroke-width="1.5"/>
+    <path d="M90 206 L22 260 M310 206 L378 260" stroke-width="1.5"/>
+    <path d="M22 260 Q200 256 378 260" stroke-width="1.2"/>
+    <!-- concrete wall texture: a few block joints on left wall -->
+    <path d="M40 100 L90 118 M40 160 L90 162 M56 40 V240" stroke-width="0.7"/>
+    <path d="M22 16 L90 62 L90 206 L22 260 Z" fill="url(#m0201-hatch)" stroke="none"/>
+
+    <!-- ceiling rail: long track running across the ceiling -->
+    <path d="M44 34 H356" stroke-width="2"/>
+    <path d="M44 40 H356" stroke-width="1.2"/>
+    <path d="M60 34 v-6 M140 34 v-6 M220 34 v-6 M300 34 v-6 M340 34 v-6" stroke-width="1"/>
+    <path d="M46 37 H354" stroke-width="0.6"/>
+    <!-- trolley + arm -->
+    <path d="M110 40 H140 V48 H110 Z" stroke-width="1.4"/>
+    <circle cx="116" cy="37" r="2.5" stroke-width="1"/>
+    <circle cx="134" cy="37" r="2.5" stroke-width="1"/>
+    <path d="M125 48 V66" stroke-width="1.6"/>
+    <!-- film light head: box + fresnel lens, tilted toward bed -->
+    <path d="M100 66 L146 60 L158 92 L112 100 Z" stroke-width="1.9"/>
+    <path d="M102 68 L146 62 L157 91" stroke-width="0.9"/>
+    <path d="M102 68 L112 98 L146 90 Z" fill="url(#m0201-hatch)" stroke="none"/>
+    <path d="M104 76 h8 M104 82 h8 M104 88 h8" stroke-width="0.8"/>
+    <path d="M148 90 q14 -6 20 6 q-2 10 -14 12 q-10 -4 -6 -18 Z" stroke-width="1.6"/>
+    <path d="M152 94 q8 -2 12 6 M150 100 q8 -2 12 4" stroke-width="0.8"/>
+    <!-- light cone from lens down to the bed -->
+    <path d="M160 104 L226 206 M160 104 L318 178" stroke-width="0.9" stroke-dasharray="6 5"/>
+    <path d="M170 118 L296 168 M180 134 L282 178" stroke-width="0.6"/>
+
+    <!-- fake window shadow on back wall (light patch with frame shadow) -->
+    <path d="M212 96 L290 84 V160 L212 168 Z" stroke-width="1.2"/>
+    <path d="M251 90 V164 M212 132 L290 122" stroke-width="2.2"/>
+    <path d="M253 92 V162" stroke-width="0.8"/>
+    <!-- darker wall around the patch: hatch on the right of back wall -->
+    <path d="M292 66 H308 V202 H292 Z" fill="url(#m0201-hatch)" stroke="none"/>
+    <path d="M94 66 H128 V140 H94 Z" fill="url(#m0201-hatch)" stroke="none"/>
+
+    <!-- bed: headboard against back wall, mattress toward viewer -->
+    <path d="M228 152 H304 V186" stroke-width="1.6"/>
+    <path d="M230 154 H302" stroke-width="0.8"/>
+    <path d="M228 186 H304 L348 236 H208 Z" fill="#fff" stroke="none"/>
+    <path d="M228 186 H304 L348 236 H208 Z" stroke-width="1.9"/>
+    <path d="M208 236 V250 H348 V236" stroke-width="1.6"/>
+    <path d="M210 238 V248 H346" stroke-width="0.8"/>
+    <path d="M212 254 v-4 M344 254 v-4" stroke-width="1.6"/>
+    <!-- pillow -->
+    <path d="M236 178 q16 -6 34 -2 q2 8 -4 10 q-16 2 -30 0 Z" stroke-width="1.2"/>
+    <!-- person under blanket: head on pillow, blanket bulging toward the foot -->
+    <circle cx="252" cy="176" r="6" stroke-width="1.4"/>
+    <path d="M258 180 q6 -2 8 2" stroke-width="0.8"/>
+    <path d="M226 200 q30 -14 62 -6 q30 6 46 22 L340 234 H214 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M240 210 q20 -8 40 -4 M262 222 q24 -4 48 4" stroke-width="0.8"/>
+    <path d="M226 200 q6 14 -2 30" stroke-width="0.8"/>
+    <!-- sun spot on blanket -->
+    <path d="M250 214 q20 -10 44 -2 q6 8 -8 12 q-24 4 -40 -2 Z" stroke-width="0.7" stroke-dasharray="3 3"/>
+    <!-- shadow under bed -->
+    <path d="M214 252 H342 L350 258 H206 Z" fill="url(#m0201-hatch)" stroke="none"/>
+
+    <!-- nightstand with plant, long shadow on wall -->
+    <path d="M128 176 H176 V206 H128 Z" stroke-width="1.5"/>
+    <path d="M128 206 L120 214 H170 L176 206" stroke-width="1.2"/>
+    <path d="M132 190 h40" stroke-width="0.9"/>
+    <path d="M144 176 v-8 h16 v8" stroke-width="1.2"/>
+    <path d="M152 168 q-2 -12 -12 -18 M152 168 q0 -14 10 -22 M152 168 q6 -10 16 -12" stroke-width="1.2"/>
+    <path d="M140 150 q-6 -4 -4 -10 q6 2 4 10 Z M162 146 q0 -8 6 -10 q2 8 -6 10 Z M168 156 q6 -6 10 -2 q-4 6 -10 2 Z" stroke-width="1"/>
+    <!-- plant shadow stretched on back wall -->
+    <path d="M160 176 q10 -30 40 -50 q-6 30 -30 52 Z" fill="url(#m0201-hatch)" stroke="none"/>
+
+    <!-- rug on floor -->
+    <path d="M60 246 q60 -4 120 0 q-10 8 -110 6 Z" stroke-width="1"/>
+    <path d="M70 250 h40 M120 250 h30" stroke-width="0.7"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0201</text>
+</svg>

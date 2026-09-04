@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0203-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0203-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0203-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0203-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room corner: back wall + left wall + low ceiling -->
+    <path d="M120 60 H340 V210 H120 Z" stroke-width="1.8"/>
+    <path d="M122 62 H338 V208" stroke-width="0.9"/>
+    <path d="M120 60 L30 14 M340 60 L386 34" stroke-width="1.5"/>
+    <path d="M120 210 L30 262 M340 210 L386 238" stroke-width="1.5"/>
+    <path d="M30 262 Q200 258 386 262" stroke-width="1.2"/>
+    <!-- block joints on left wall -->
+    <path d="M30 70 L120 96 M30 130 L120 140 M30 190 L120 184 M70 36 V240 M96 50 V226" stroke-width="0.6"/>
+    <path d="M32 18 L118 62 V208 L32 258 Z" fill="url(#m0203-hatch)" stroke="none"/>
+    <!-- cork floor boards -->
+    <path d="M60 240 H360 M100 226 H360 M140 216 H340" stroke-width="0.6"/>
+
+    <!-- ceiling duct: round pipe running along the ceiling to a vent -->
+    <path d="M160 40 H330" stroke-width="2"/>
+    <path d="M160 24 H330" stroke-width="2"/>
+    <path d="M162 26 H328" stroke-width="0.8"/>
+    <path d="M160 24 q-8 8 0 16 M330 24 q8 8 0 16" stroke-width="1.3"/>
+    <path d="M200 24 q-4 8 0 16 M240 24 q-4 8 0 16 M280 24 q-4 8 0 16 M310 24 q-4 8 0 16" stroke-width="0.9"/>
+    <path d="M162 34 H328 V39 H162 Z" fill="url(#m0203-hatch)" stroke="none"/>
+    <!-- riser from cabinet top up to the duct -->
+    <path d="M160 24 V84 M148 40 V84" stroke-width="1.8"/>
+    <path d="M150 42 V82" stroke-width="0.8"/>
+    <path d="M148 40 q6 -10 12 -16" stroke-width="1.6"/>
+    <!-- diffuser vent under the duct -->
+    <path d="M262 40 H296 L304 50 H254 Z" stroke-width="1.6"/>
+    <path d="M258 46 H300" stroke-width="0.8"/>
+    <!-- airflow arrows from vent -->
+    <path d="M266 58 q-4 12 -12 20 M280 58 q0 14 0 26 M294 58 q4 12 12 20" stroke-width="0.9"/>
+    <path d="M254 74 l0 6 l6 -2 M280 84 l-4 -4 M282 84 l4 -4 M306 74 l0 6 l-6 -2" stroke-width="0.9"/>
+
+    <!-- cabinet under the duct with open door showing the dehumidifier -->
+    <path d="M110 84 H198 V212 H110 Z" stroke-width="1.7"/>
+    <path d="M112 86 H196 V210" stroke-width="0.8"/>
+    <path d="M110 86 L112 84" stroke-width="0.8"/>
+    <!-- open door swung to the left -->
+    <path d="M110 84 L66 104 V226 L110 212" stroke-width="1.6"/>
+    <path d="M68 108 L108 90 V208 L68 224 Z" fill="url(#m0203-hatch)" stroke="none"/>
+    <path d="M70 110 L106 94" stroke-width="0.7"/>
+    <circle cx="102" cy="160" r="2" stroke-width="1"/>
+    <!-- dehumidifier unit inside -->
+    <path d="M124 110 H184 V204 H124 Z" fill="#fff" stroke-width="1.8"/>
+    <path d="M126 112 H182 V202" stroke-width="0.8"/>
+    <path d="M124 110 q30 -6 60 0" stroke-width="1.1"/>
+    <path d="M130 120 H178 M130 126 H178 M130 132 H178 M130 138 H178 M130 144 H178" stroke-width="0.8"/>
+    <path d="M132 156 H176 V166 H132 Z" stroke-width="1"/>
+    <circle cx="140" cy="176" r="2" stroke-width="0.9"/>
+    <circle cx="150" cy="176" r="2" stroke-width="0.9"/>
+    <path d="M132 186 H176 V196 H132 Z" fill="url(#m0203-hatch2)" stroke="none"/>
+    <path d="M132 186 H176 V196 H132 Z" stroke-width="0.9"/>
+    <!-- condensate hose going out of the cabinet to the floor drain -->
+    <path d="M184 196 q16 2 18 12 q2 10 12 12" stroke-width="1.2"/>
+    <path d="M208 220 h10 v4 h-10 Z" stroke-width="1"/>
+    <path d="M194 202 q6 6 8 12" stroke-width="0.6"/>
+    <path d="M126 114 H136 V200 H126 Z" fill="url(#m0203-hatch)" stroke="none"/>
+
+    <!-- round temperature / humidity dial on the back wall -->
+    <circle cx="272" cy="120" r="30" stroke-width="1.9"/>
+    <circle cx="272" cy="120" r="27" stroke-width="0.8"/>
+    <circle cx="272" cy="120" r="22" stroke-width="1"/>
+    <path d="M272 100 v4 M292 120 h-4 M272 140 v-4 M252 120 h4 M286 106 l-3 3 M286 134 l-3 -3 M258 106 l3 3 M258 134 l3 -3" stroke-width="1"/>
+    <path d="M272 120 L286 108" stroke-width="1.8"/>
+    <path d="M272 120 L262 132" stroke-width="1.2"/>
+    <circle cx="272" cy="120" r="2" stroke-width="1"/>
+    <path d="M266 110 q6 -4 12 0" stroke-width="0.7"/>
+    <path d="M260 156 v-6 h24 v6" stroke-width="0.9"/>
+    <path d="M264 152 h4 M270 152 h4 M276 152 h4" stroke-width="0.8"/>
+    <!-- sensor probe on the wall with a wire -->
+    <path d="M316 150 h10 v14 h-10 Z" stroke-width="1.1"/>
+    <path d="M321 164 q0 20 -6 40" stroke-width="0.8"/>
+    <path d="M318 154 h6 M318 158 h6" stroke-width="0.7"/>
+
+    <!-- fern in a pot on the floor at right -->
+    <path d="M300 258 l6 -32 h44 l6 32 Z" stroke-width="1.6"/>
+    <path d="M304 256 l5 -28 h38" stroke-width="0.8"/>
+    <path d="M304 234 H352" stroke-width="1"/>
+    <path d="M306 240 L312 256 H346 L352 240 Z" fill="url(#m0203-hatch)" stroke="none"/>
+    <!-- fronds -->
+    <path d="M328 226 q-30 -20 -46 -60 M328 226 q-14 -30 -10 -66 M328 226 q10 -30 30 -58 M328 226 q26 -18 46 -44 M328 226 q-40 -6 -56 -30 M328 226 q40 -4 58 -24" stroke-width="1.3"/>
+    <path d="M306 190 l-6 2 M312 200 l-6 4 M298 176 l-6 0 M320 186 l-4 -6 M324 200 l-5 -4 M338 190 l4 -6 M342 202 l5 -2 M352 196 l4 -6 M348 208 l6 0 M296 210 l-4 -6 M310 214 l-2 -6 M362 210 l2 -6" stroke-width="0.8"/>
+    <!-- drops / moss ball beside the pot -->
+    <circle cx="282" cy="250" r="8" stroke-width="1.2"/>
+    <path d="M276 248 q6 -4 12 0 M278 254 q4 -2 8 0" stroke-width="0.7"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0203</text>
+</svg>

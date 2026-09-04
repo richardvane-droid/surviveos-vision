@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0505-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0505-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0505-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0505-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 250 Q110 246 200 249 T390 247" stroke-width="1.2"/>
+    <path d="M30 256 q22 -3 44 0" stroke-width="0.9"/>
+    <path d="M168 250 L176 232 H372 L364 250 Z" stroke-width="1.5"/>
+    <path d="M172 241 H368 M230 232 L226 250 M300 232 L296 250" stroke-width="0.8"/>
+    <path d="M178 253 q4 -3 8 0 M192 254 q4 -3 8 0 M206 253 q4 -3 8 0 M330 253 q4 -3 8 0 M344 254 q4 -3 8 0 M358 253 q4 -3 8 0" stroke-width="0.8"/>
+    <path d="M104 246 V112 H120 V246" stroke-width="1.9"/>
+    <path d="M107 244 V115 M117 244 V115" stroke-width="0.8"/>
+    <path d="M108 126 q2 20 -1 40 M114 170 q2 26 -1 50" stroke-width="0.6"/>
+    <path d="M84 116 L112 92 L140 116 Z" stroke-width="1.8" fill="#fff"/>
+    <path d="M84 116 L140 116 M88 114 L112 96 L136 114" stroke-width="1.0"/>
+    <path d="M112 92 L128 84 L156 108 L140 116" stroke-width="1.4"/>
+    <path d="M118 99 L142 113 M125 92 L149 110" stroke-width="0.7"/>
+    <path d="M112 116 v6 M106 128 q6 -8 12 0 z" stroke-width="1.2" fill="#fff"/>
+    <path d="M104 132 l-3 3 M120 132 l3 3 M112 134 v4" stroke-width="0.8"/>
+    <path d="M100 150 h24 v20 h-24 z" stroke-width="1.5" fill="#fff"/>
+    <path d="M100 150 h24 M108 156 h8 M112 158 v6" stroke-width="0.9"/>
+    <circle cx="107" cy="165" r="1.3" stroke-width="0.9"/>
+    <circle cx="117" cy="165" r="1.3" stroke-width="0.9"/>
+    <circle cx="112" cy="144" r="2.6" stroke-width="1.2" fill="#fff"/>
+    <path d="M112 137 v-3 M106 140 l-2 -2 M118 140 l2 -2" stroke-width="0.7"/>
+    <circle cx="112" cy="190" r="11" stroke-width="1.5" fill="#fff"/>
+    <circle cx="112" cy="190" r="7" stroke-width="1.0"/>
+    <circle cx="112" cy="190" r="3" stroke-width="0.9"/>
+    <path d="M100 184 q-2 6 0 12" stroke-width="0.8"/>
+    <path d="M122 194 q30 40 60 30 q20 -8 34 4 q10 8 16 -4" stroke-width="1.5"/>
+    <path d="M124 197 q30 40 58 30" stroke-width="0.8"/>
+    <path d="M226 226 h8 v6 h-8 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M84 150 q-2 -14 12 -18 q12 4 10 18 z" stroke-width="1.5" fill="#fff"/>
+    <path d="M84 150 h22 M88 140 q8 -3 16 0 M100 132 l4 -6 l-4 -2" stroke-width="1.0"/>
+    <path d="M86 146 q10 -4 18 0 v4 h-18 z" stroke-width="1.2" fill="url(#m0505-hatch)" stroke="none"/>
+    <path d="M78 172 q0 24 4 40 h10 q4 -18 2 -40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M78 172 h16 M84 166 v6 M84 178 q4 20 2 30" stroke-width="0.9"/>
+    <circle cx="222" cy="224" r="21" stroke-width="1.9" fill="#fff"/>
+    <circle cx="222" cy="224" r="14" stroke-width="1.0"/>
+    <circle cx="222" cy="224" r="4" stroke-width="1.1"/>
+    <path d="M208 224 h28 M222 210 v28 M212 214 l20 20 M212 234 l20 -20" stroke-width="0.7"/>
+    <circle cx="322" cy="224" r="21" stroke-width="1.9" fill="#fff"/>
+    <circle cx="322" cy="224" r="14" stroke-width="1.0"/>
+    <circle cx="322" cy="224" r="4" stroke-width="1.1"/>
+    <path d="M308 224 h28 M322 210 v28 M312 214 l20 20 M312 234 l20 -20" stroke-width="0.7"/>
+    <path d="M200 214 q4 -20 30 -22 L262 192 L262 208 L206 218 Z" stroke-width="1.5" fill="#fff"/>
+    <path d="M240 214 L292 214 L296 224 L244 224 Z" stroke-width="1.5" fill="#fff"/>
+    <path d="M226 186 q30 -10 56 -4 q6 4 -4 8 q-30 2 -50 6 q-6 -4 -2 -10 z" stroke-width="1.7" fill="#fff"/>
+    <path d="M230 190 q26 -8 48 -4" stroke-width="0.7"/>
+    <path d="M244 196 L248 214 M276 190 L280 212" stroke-width="1.1"/>
+    <path d="M292 214 L296 176 q6 -20 20 -30 L326 150" stroke-width="1.7"/>
+    <path d="M290 214 L294 178 q6 -18 18 -28" stroke-width="0.8"/>
+    <path d="M296 176 L300 214" stroke-width="0.9"/>
+    <path d="M312 156 L322 204 M318 154 L326 204" stroke-width="1.3"/>
+    <path d="M312 150 q-10 -2 -18 -8 M330 150 q10 -2 18 -8" stroke-width="1.6"/>
+    <path d="M316 150 h14" stroke-width="1.4"/>
+    <circle cx="292" cy="138" r="3.5" stroke-width="1.1" fill="#fff"/>
+    <circle cx="350" cy="138" r="3.5" stroke-width="1.1" fill="#fff"/>
+    <path d="M294 141 l2 4 M348 141 l-2 4" stroke-width="0.9"/>
+    <path d="M328 160 q10 -2 12 8 q-4 6 -12 2 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M344 166 l6 -2 M344 170 h6" stroke-width="0.7"/>
+    <path d="M198 206 h-4 v6 h4 M202 192 h-10 v6" stroke-width="1.1"/>
+    <path d="M204 244 q60 -4 150 -2 q-6 6 -40 6 q-80 2 -110 -4 z" stroke-width="1.2" fill="url(#m0505-hatch)" stroke="none"/>
+    <path d="M14 246 V172 H36 V246" stroke-width="1.5"/>
+    <path d="M10 172 H40 M17 244 V176" stroke-width="1.0"/>
+    <path d="M18 190 h14 v14 h-14 z" stroke-width="0.8" fill="#fff"/>
+    <path d="M374 246 Q371.4 242.7 375.2 240.8 Q374.3 236.6 378.5 236.6 Q379.5 232.5 383.3 234.3 Q386.0 231.0 388.7 234.3 Q392.5 232.5 393.5 236.6 Q397.7 236.6 396.8 240.8 Q400.6 242.7 398.0 246.0 Z" stroke-width="1.2" fill="#fff"/>
+    <path d="M50 252 l2 -7 l2 7 M57 253 l2 -6 M150 252 l2 -7 l2 7 M157 253 l2 -6 M376 253 l2 -7 l2 7 M383 254 l2 -6 " stroke-width="0.9"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0505</text>
+</svg>

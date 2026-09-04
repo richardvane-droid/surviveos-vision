@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs>
+    <filter id="marea04-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="marea04-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="marea04-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#marea04-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- front A-frame section (cut plane): rafters, knee walls, floor -->
+    <path d="M30 180 L300 20 L570 180" stroke-width="2.2"/>
+    <path d="M33 183 L301 24 L567 183" stroke-width="0.9"/>
+    <path d="M30 180 V262 M570 180 V262" stroke-width="1.8"/>
+    <path d="M14 262 Q150 258 300 262 T586 260" stroke-width="1.6"/>
+    <path d="M40 270 q20 -3 40 0 M520 270 q25 -4 50 -1" stroke-width="0.8"/>
+    <!-- depth lines: ridge, eave purlins, mid purlins -->
+    <path d="M300 20 L300 92" stroke-width="1.6"/>
+    <path d="M304 26 V92" stroke-width="0.8"/>
+    <path d="M30 180 L179 164 M570 180 L421 164" stroke-width="1.4"/>
+    <path d="M165 100 L239 127.5 M435 100 L361 127.5" stroke-width="1"/>
+    <!-- intermediate rafters -->
+    <path d="M70 175.5 L300 39.5 M111 171 L300 59 M151 166.5 L300 78.5" stroke-width="0.9"/>
+    <path d="M530 175.5 L300 39.5 M489 171 L300 59 M449 166.5 L300 78.5" stroke-width="0.9"/>
+    <!-- skylight on the right slope -->
+    <path d="M433.7 112.2 L385 83.4 L370.9 94.5 L411.4 118.5 Z" stroke-width="1.5"/>
+    <path d="M430 112 L386 86 L374 95 L410 116 Z" fill="url(#marea04-hatch2)" stroke="none"/>
+
+    <!-- far gable wall -->
+    <path d="M179 164 L300 92 L421 164 V200 H179 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M181 166 L300 95 L419 166" stroke-width="0.8"/>
+    <path d="M179 200 H421" stroke-width="1.3"/>
+    <!-- round gable window -->
+    <circle cx="300" cy="124" r="10" stroke-width="1.3"/>
+    <path d="M290 124 h20 M300 114 v20" stroke-width="0.8"/>
+    <path d="M292 118 a8 8 0 0 1 16 0 Z" fill="url(#marea04-hatch2)" stroke="none"/>
+    <!-- left door: spray booth (glass upper half + warning lamp) -->
+    <path d="M214 200 V162 H246 V200" stroke-width="1.5"/>
+    <path d="M216 200 V164 H244" stroke-width="0.8"/>
+    <path d="M218 166 H242 V180 H218 Z" stroke-width="1"/>
+    <path d="M219 167 H241 V179 H219 Z" fill="url(#marea04-hatch2)" stroke="none"/>
+    <circle cx="242" cy="188" r="1.3" stroke-width="0.9"/>
+    <path d="M226 158 a4 4 0 0 1 8 0 Z" stroke-width="1"/>
+    <path d="M218 150 H242 V156 H218 Z" stroke-width="0.9"/>
+    <!-- right door: woodshop (plank door + sign) -->
+    <path d="M354 200 V162 H386 V200" stroke-width="1.5"/>
+    <path d="M356 200 V164 H384" stroke-width="0.8"/>
+    <path d="M356 166 L384 194 M384 166 L356 194" stroke-width="0.8"/>
+    <circle cx="358" cy="184" r="1.3" stroke-width="0.9"/>
+    <path d="M358 150 H382 V156 H358 Z" stroke-width="0.9"/>
+    <path d="M362 153 h16" stroke-width="0.7"/>
+
+    <!-- corridor floor edges + transverse boards -->
+    <path d="M150 262 L232 200 M450 262 L368 200" stroke-width="1.6"/>
+    <path d="M154 262 L235 201 M446 262 L365 201" stroke-width="0.8"/>
+    <path d="M172 245 H428 M192 228 H408 M212 212 H388" stroke-width="0.7"/>
+
+    <!-- LEFT: pegboard tool wall on the knee wall -->
+    <path d="M36 188 L165 168 V204 L36 256 Z" stroke-width="1.9"/>
+    <path d="M38 190 L165 170 M38 254 L165 202" stroke-width="1"/>
+    <path d="M36 205 L165 177.5 M36 222 L165 186 M36 239 L165 194.5" stroke-width="0.7"/>
+    <path d="M60 183.8 V244.2 M90 179.6 V232.4 M120 175.3 V220.7 M145 171.8 V210.9" stroke-width="0.7"/>
+    <!-- hammer -->
+    <path d="M42 194 H60 V203 H42 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M49 203 H53 V236 H49 Z" fill="#fff" stroke-width="1.1"/>
+    <!-- hand saw -->
+    <path d="M66 190 h12 v10 h-12 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M68 200 H78 L76 240 L68 233 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M77 208 l2 2 M77 218 l2 2 M76 228 l2 2" stroke-width="0.7"/>
+    <!-- wrench + pliers -->
+    <path d="M88 186 l4 -4 h6 l4 4 l-4 5 h-6 Z" fill="#fff" stroke-width="1.1"/>
+    <path d="M93 191 h4 v28 h-4 Z" fill="#fff" stroke-width="1.1"/>
+    <path d="M108 188 l5 24 M114 188 l-5 24" stroke-width="1.2"/>
+    <path d="M108 188 q-2 -5 2 -6 M114 188 q2 -5 -2 -6" stroke-width="0.9"/>
+    <!-- level along the top -->
+    <path d="M40 193 L160 174 L160 178 L40 199 Z" fill="#fff" stroke-width="1.2"/>
+    <circle cx="100" cy="185" r="2" stroke-width="0.8"/>
+    <!-- coiled cord + tape measure further back -->
+    <circle cx="132" cy="196" r="6" fill="#fff" stroke-width="1.1"/>
+    <circle cx="132" cy="196" r="2.5" stroke-width="0.7"/>
+    <circle cx="150" cy="188" r="4.5" fill="#fff" stroke-width="1.1"/>
+    <!-- shadow along the foot of the pegboard -->
+    <path d="M36 256 L165 204 L165 206 L36 260 Z" fill="url(#marea04-hatch)" stroke="none"/>
+
+    <!-- RIGHT: heavy-duty shelving along the knee wall -->
+    <path d="M450 195 V262 M566 195 V262" stroke-width="1.8"/>
+    <path d="M452 197 V262 M564 197 V262" stroke-width="0.8"/>
+    <path d="M405 181.5 V228.4 M486 181.5 V228.4 M427 188.3 V245.2" stroke-width="1.2"/>
+    <path d="M450 195 L405 181.5 M450 228 L405 204.6 M450 262 L405 228.4" stroke-width="1.5"/>
+    <path d="M566 195 L486 181.5 M566 228 L486 204.6" stroke-width="1.1"/>
+    <path d="M450 195 H566 M450 228 H566 M405 181.5 H486 M405 204.6 H486" stroke-width="1.4"/>
+    <path d="M450 199 H566 M450 232 H566 M405 184.5 H486 M405 207.5 H486" stroke-width="0.7"/>
+    <!-- boxes on the front bay -->
+    <path d="M458 168 H498 V195 H458 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M458 168 L466 162 H506 L498 168 M506 162 V189 L498 195" stroke-width="1"/>
+    <path d="M466 176 h18 v6 h-18 Z" stroke-width="0.8"/>
+    <path d="M510 174 H548 V195 H510 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M510 174 L518 169 H556 L548 174 M556 169 V190 L548 195" stroke-width="1"/>
+    <path d="M458 206 H500 V228 H458 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M458 206 L466 201 H508 L500 206 M508 201 V223 L500 228" stroke-width="1"/>
+    <path d="M466 214 h18 v6 h-18 Z" stroke-width="0.8"/>
+    <path d="M512 210 H550 V228 H512 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M512 210 L520 205 H558 L550 210 M558 205 V223 L550 228" stroke-width="1"/>
+    <!-- plywood stack on the bottom shelf -->
+    <path d="M456 250 H560 V256 H456 Z M458 244 H560 V250 H458 Z" fill="#fff" stroke-width="1"/>
+    <!-- boxes in the back bay -->
+    <path d="M414 190 H436 V204.6 H414 Z" fill="#fff" stroke-width="1.1"/>
+    <path d="M414 190 L419 187 H441 L436 190 M441 187 V201 L436 204.6" stroke-width="0.9"/>
+    <path d="M414 169 H434 V181.5 H414 Z" fill="#fff" stroke-width="1.1"/>
+    <path d="M414 169 L419 166 H439 L434 169 M439 166 V178 L434 181.5" stroke-width="0.9"/>
+    <!-- shadow under the rack -->
+    <path d="M452 262 H566 V268 H452 Z" fill="url(#marea04-hatch)" stroke="none"/>
+
+    <!-- LED strip under the ridge -->
+    <path d="M296 30 V90" stroke-width="0.8"/>
+    <path d="M292 40 h4 M292 60 h4 M292 80 h4" stroke-width="0.7"/>
+
+    <!-- person walking down the corridor carrying a box -->
+    <circle cx="286" cy="158" r="4.5" fill="#fff" stroke-width="1.4"/>
+    <path d="M286 162.5 V196 M286 196 L280 234 M286 196 L292 234" stroke-width="1.4"/>
+    <path d="M286 170 L276 180 M286 170 L296 180" stroke-width="1.2"/>
+    <path d="M274 176 H298 V190 H274 Z" fill="#fff" stroke-width="1.2"/>
+
+    <!-- floor tufts of sawdust -->
+    <path d="M330 250 q8 -4 16 0 M120 258 h5 M480 266 h4" stroke-width="0.8"/>
+  </g>
+  <text x="586" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">04</text>
+</svg>

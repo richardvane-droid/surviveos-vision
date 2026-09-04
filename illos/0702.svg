@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0702-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0702-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0702-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="m0702-dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="1.1" fill="none" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0702-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- deck ground line + planks -->
+    <path d="M12 278 H388" stroke-width="1.3"/>
+    <path d="M20 286 h60 M110 288 h80 M230 286 h60 M320 288 h50" stroke-width="0.8"/>
+    <path d="M30 262 h30 M330 262 h40" stroke-width="0.8"/>
+
+    <!-- posts -->
+    <path d="M84 44 V278 M316 44 V278" stroke-width="2"/>
+    <path d="M86 46 V276 M318 46 V276" stroke-width="0.9"/>
+    <path d="M78 278 h12 M310 278 h12" stroke-width="1.2"/>
+
+    <!-- eave board on top -->
+    <path d="M70 54 L330 54 L322 40 L78 40 Z" fill="#fff" stroke-width="1.7"/>
+    <path d="M72 56 L332 56" stroke-width="0.9"/>
+    <path d="M71 55 L329 55 L322 41 L79 41 Z" fill="url(#m0702-hatch)" stroke="none"/>
+    <path d="M70 54 v6 H330 v-6" stroke-width="1.2"/>
+
+    <!-- pegboard -->
+    <path d="M92 60 H308 V222 H92 Z" fill="#fff" stroke-width="1.9"/>
+    <path d="M94 62 H310 V224" stroke-width="0.9"/>
+    <path d="M96 64 H304 V218 H96 Z" fill="url(#m0702-dots)" stroke="none"/>
+
+    <!-- rod rails (two horizontal supports) -->
+    <path d="M100 100 H250 M100 104 H250" stroke-width="1.1"/>
+    <path d="M100 190 H250 M100 194 H250" stroke-width="1.1"/>
+    <path d="M110 100 v4 M124 100 v4 M138 100 v4 M152 100 v4 M166 100 v4 M180 100 v4" stroke-width="0.8"/>
+
+    <!-- six rods fanned diagonally -->
+    <path d="M104 210 L192 70" stroke-width="1.5"/>
+    <path d="M118 210 L206 70" stroke-width="1.5"/>
+    <path d="M132 210 L220 70" stroke-width="1.5"/>
+    <path d="M146 210 L234 70" stroke-width="1.5"/>
+    <path d="M160 210 L248 70" stroke-width="1.5"/>
+    <path d="M174 212 L250 92" stroke-width="1.5"/>
+    <path d="M106 212 L194 72 M134 212 L222 72 M162 212 L250 72" stroke-width="0.6"/>
+    <!-- reel seats near butt -->
+    <path d="M108 204 l4 2 M122 204 l4 2 M136 204 l4 2 M150 204 l4 2 M164 204 l4 2 M178 206 l4 2" stroke-width="2"/>
+    <circle cx="114" cy="198" r="3" stroke-width="1"/>
+    <circle cx="128" cy="198" r="3" stroke-width="1"/>
+    <circle cx="142" cy="198" r="3" stroke-width="1"/>
+    <circle cx="156" cy="198" r="3" stroke-width="1"/>
+    <circle cx="170" cy="198" r="3" stroke-width="1"/>
+    <!-- guides (tiny loops along rods) -->
+    <path d="M150 137 q3 -2 3 1 M164 137 q3 -2 3 1 M178 137 q3 -2 3 1 M192 137 q3 -2 3 1 M206 137 q3 -2 3 1" stroke-width="0.7"/>
+    <path d="M172 102 q3 -2 3 1 M186 102 q3 -2 3 1 M200 102 q3 -2 3 1 M214 102 q3 -2 3 1 M228 102 q3 -2 3 1" stroke-width="0.7"/>
+    <!-- old bamboo rod on top, horizontal -->
+    <path d="M100 78 L250 74" stroke-width="1.6"/>
+    <path d="M100 80 L250 76" stroke-width="0.7"/>
+    <path d="M120 77 v4 M145 77 v4 M170 76 v4 M195 76 v4 M220 75 v4" stroke-width="0.9"/>
+    <path d="M104 74 v10 M246 70 v10" stroke-width="1.1"/>
+
+    <!-- lures column on the right -->
+    <path d="M270 76 q10 -8 20 0 q-10 8 -20 0 Z" fill="#fff" stroke-width="1.2"/>
+    <circle cx="274" cy="76" r="0.9" stroke-width="0.8"/>
+    <path d="M290 76 l6 -4 l0 8 Z M282 80 q0 6 -4 6 q-3 0 -3 -3" stroke-width="0.9"/>
+    <path d="M270 104 q10 -8 20 0 q-10 8 -20 0 Z" fill="url(#m0702-hatch)" stroke-width="1.2"/>
+    <circle cx="274" cy="104" r="0.9" fill="#fff" stroke-width="0.8"/>
+    <path d="M290 104 l6 -4 l0 8 Z M282 108 q0 6 -4 6 q-3 0 -3 -3" stroke-width="0.9"/>
+    <path d="M270 132 q10 -8 20 0 q-10 8 -20 0 Z" fill="#fff" stroke-width="1.2"/>
+    <circle cx="274" cy="132" r="0.9" stroke-width="0.8"/>
+    <path d="M290 132 l6 -4 l0 8 Z M282 136 q0 6 -4 6 q-3 0 -3 -3" stroke-width="0.9"/>
+    <path d="M272 154 l6 -12 l6 12 M278 142 v18" stroke-width="1.1"/>
+    <path d="M276 158 q0 6 -4 6 q-3 0 -3 -3" stroke-width="0.9"/>
+    <path d="M266 72 v4 M266 100 v4 M266 128 v4 M278 138 v4" stroke-width="1.1"/>
+
+    <!-- small chalkboard, lower right of board -->
+    <path d="M262 176 H302 V212 H262 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M264 178 H304 V214" stroke-width="0.8"/>
+    <path d="M263 177 H301 V211 H263 Z" fill="url(#m0702-hatch2)" stroke="none"/>
+    <path d="M268 186 h20 M268 194 h26 M268 202 h16" stroke="#fff" stroke-width="2"/>
+    <path d="M268 186 h20 M268 194 h26 M268 202 h16" stroke-width="0.8"/>
+
+    <!-- bricks under box -->
+    <path d="M116 270 h16 v8 h-16 Z M214 270 h16 v8 h-16 Z" stroke-width="1"/>
+
+    <!-- old wooden box, lid half open -->
+    <path d="M142 226 L262 226 L268 188 L148 188 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M144 228 L264 228" stroke-width="0.8"/>
+    <path d="M143 225 L261 225 L267 189 L149 189 Z" fill="url(#m0702-hatch)" stroke="none"/>
+    <path d="M110 240 L230 240 L262 226 L142 226 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M111 239 L229 239 L261 227 L143 227 Z" fill="url(#m0702-hatch2)" stroke="none"/>
+    <path d="M150 236 L172 226 M186 236 L206 226 M150 236 L150 226" stroke="#fff" stroke-width="2"/>
+    <path d="M150 236 L172 226 M186 236 L206 226" stroke-width="0.9"/>
+    <path d="M110 240 H230 V270 H110 Z" fill="#fff" stroke-width="1.7"/>
+    <path d="M112 242 H232 V272" stroke-width="0.9"/>
+    <path d="M230 240 L262 226 V256 L230 270 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M231 241 L261 227 V255 L231 269 Z" fill="url(#m0702-hatch)" stroke="none"/>
+    <path d="M116 248 H224 M116 256 H224 M116 264 H224" stroke-width="0.8"/>
+    <path d="M126 252 q10 -2 18 0 M186 260 q10 -2 20 0 M140 267 q8 -2 16 0" stroke-width="0.7"/>
+    <path d="M110 244 H230 M110 262 H230" stroke-width="1.1"/>
+    <circle cx="170" cy="250" r="3" stroke-width="1"/>
+    <path d="M170 253 v6" stroke-width="1"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0702</text>
+</svg>

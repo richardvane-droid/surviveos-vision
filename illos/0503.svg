@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0503-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0503-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0503-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0503-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 250 Q110 246 200 249 T390 247" stroke-width="1.2"/>
+    <path d="M40 256 q25 -3 50 0 M300 255 q22 -3 48 0" stroke-width="0.9"/>
+    <path d="M90 246 V236 H116 V200 H142 V164 H168 V246" stroke-width="1.7" fill="#fff"/>
+    <path d="M93 246 V236 H116 V200 H142 V164 H168 V246" stroke-width="0.8"/>
+    <path d="M302 246 V236 H276 V200 H250 V164 H224 V246" stroke-width="1.7" fill="#fff"/>
+    <path d="M299 246 V236 H276 V200 H250 V164 H224 V246" stroke-width="0.8"/>
+    <path d="M90 236 H302 V242 H90 Z" stroke-width="1.6" fill="#fff"/>
+    <path d="M100 239 h70 M206 239 h60" stroke-width="0.7"/>
+    <path d="M114 200 H278 V206 H114 Z" stroke-width="1.6" fill="#fff"/>
+    <path d="M124 203 h53 M204 203 h46" stroke-width="0.7"/>
+    <path d="M138 164 H254 V170 H138 Z" stroke-width="1.6" fill="#fff"/>
+    <path d="M148 167 h36 M201 167 h31" stroke-width="0.7"/>
+    <path d="M118 206 H274 v6 H118 Z M144 170 H248 v6 H144 Z" stroke-width="1.2" fill="url(#m0503-hatch)" stroke="none"/>
+    <path d="M105.2 236 L101.0 212 H131.0 L126.8 236 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M99.5 212 H132.5 M99.5 216 H132.5" stroke-width="1.0"/>
+    <path d="M144.6 236 L141.0 212 H167.0 L163.4 236 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M139.5 212 H168.5 M139.5 216 H168.5" stroke-width="1.0"/>
+    <path d="M185.2 236 L181.0 212 H211.0 L206.8 236 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M179.5 212 H212.5 M179.5 216 H212.5" stroke-width="1.0"/>
+    <path d="M228.6 236 L225.0 212 H251.0 L247.4 236 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M223.5 212 H252.5 M223.5 216 H252.5" stroke-width="1.0"/>
+    <path d="M265.2 236 L261.0 212 H291.0 L286.8 236 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M259.5 212 H292.5 M259.5 216 H292.5" stroke-width="1.0"/>
+    <path d="M100 212 Q96.5 207.5 101.6 205.1 Q100.4 199.5 106.0 199.5 Q107.3 194.0 112.4 196.4 Q116.0 192.0 119.6 196.4 Q124.7 194.0 126.0 199.5 Q131.6 199.5 130.4 205.1 Q135.5 207.5 132.0 212.0 Z" stroke-width="1.3" fill="#fff"/>
+    <path d="M108 204 q4 -6 8 0 M118 200 q4 -6 8 0" stroke-width="0.8"/>
+    <path d="M154 212 q-8.4 -13.0 -14.0 -19.0 M154 212 q-5.6 -13.0 -9.4 -21.3 M154 212 q-2.8 -13.0 -4.7 -23.7 M154 212 q0.0 -13.0 0.0 -26.0 M154 212 q2.8 -13.0 4.7 -23.7 M154 212 q5.6 -13.0 9.4 -21.3 " stroke-width="1.1"/>
+    <path d="M178 212 Q174.1 207.0 179.8 204.2 Q178.4 198.0 184.8 197.9 Q186.2 191.7 192.0 194.5 Q196.0 189.5 200.0 194.5 Q205.8 191.7 207.2 197.9 Q213.6 198.0 212.2 204.2 Q217.9 207.0 214.0 212.0 Z" stroke-width="1.3" fill="#fff"/>
+    <path d="M188 200 q4 -8 8 -2 M198 196 q4 -6 8 0 M190 210 q6 -4 12 0" stroke-width="0.8"/>
+    <path d="M238 212 q-4.8 -11.0 -7.9 -18.0 M238 212 q-2.4 -11.0 -4.0 -20.0 M238 212 q0.0 -11.0 0.0 -22.0 M238 212 q2.4 -11.0 4.0 -20.0 M238 212 q4.8 -11.0 7.9 -18.0 " stroke-width="1.1"/>
+    <path d="M262 212 Q258.9 208.1 263.4 205.9 Q262.3 201.1 267.3 201.1 Q268.4 196.2 272.9 198.4 Q276.0 194.5 279.1 198.4 Q283.6 196.2 284.7 201.1 Q289.7 201.1 288.6 205.9 Q293.1 208.1 290.0 212.0 Z" stroke-width="1.3" fill="#fff"/>
+    <path d="M138.5 200 L134.0 176 H166.0 L161.5 200 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M132.5 176 H167.5 M132.5 180 H167.5" stroke-width="1.0"/>
+    <path d="M181.9 200 L178.0 176 H206.0 L202.1 200 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M176.5 176 H207.5 M176.5 180 H207.5" stroke-width="1.0"/>
+    <path d="M220.5 200 L216.0 176 H248.0 L243.5 200 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M214.5 176 H249.5 M214.5 180 H249.5" stroke-width="1.0"/>
+    <path d="M258.6 200 L255.0 176 H281.0 L277.4 200 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M253.5 176 H282.5 M253.5 180 H282.5" stroke-width="1.0"/>
+    <path d="M132 176 Q128.1 171.0 133.8 168.2 Q132.4 162.0 138.8 161.9 Q140.2 155.7 146.0 158.5 Q150.0 153.5 154.0 158.5 Q159.8 155.7 161.2 161.9 Q167.6 162.0 166.2 168.2 Q171.9 171.0 168.0 176.0 Z" stroke-width="1.3" fill="#fff"/>
+    <circle cx="144" cy="166" r="4" stroke-width="0.9"/>
+    <circle cx="154" cy="162" r="4" stroke-width="0.9"/>
+    <circle cx="150" cy="170" r="3" stroke-width="0.9"/>
+    <path d="M150 176 v-10" stroke-width="1.0"/>
+    <path d="M192 176 V140" stroke-width="1.6"/>
+    <path d="M192 150 q-14 -6 -20 4 q8 4 20 0 M192 160 q14 -8 22 2 q-10 6 -22 2 M192 146 q-8 -14 0 -18 q8 6 0 18" stroke-width="1.2"/>
+    <path d="M178 152 q6 -2 12 0 M196 160 q8 -3 14 0" stroke-width="0.7"/>
+    <path d="M216 176 Q212.5 171.5 217.6 169.1 Q216.4 163.5 222.0 163.5 Q223.3 158.0 228.4 160.4 Q232.0 156.0 235.6 160.4 Q240.7 158.0 242.0 163.5 Q247.6 163.5 246.4 169.1 Q251.5 171.5 248.0 176.0 Z" stroke-width="1.3" fill="#fff"/>
+    <path d="M224 166 l4 -8 M236 164 l3 -8 M230 170 q4 -4 8 0" stroke-width="0.8"/>
+    <path d="M268 176 q-9.7 -15.0 -16.2 -21.9 M268 176 q-6.5 -15.0 -10.8 -24.6 M268 176 q-3.2 -15.0 -5.4 -27.3 M268 176 q0.0 -15.0 0.0 -30.0 M268 176 q3.2 -15.0 5.4 -27.3 M268 176 q6.5 -15.0 10.8 -24.6 M268 176 q9.7 -15.0 16.2 -21.9 " stroke-width="1.1"/>
+    <path d="M155.2 164 L151.0 140 H181.0 L176.8 164 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M149.5 140 H182.5 M149.5 144 H182.5" stroke-width="1.0"/>
+    <path d="M195.8 164 L191.0 140 H225.0 L220.2 164 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M189.5 140 H226.5 M189.5 144 H226.5" stroke-width="1.0"/>
+    <path d="M237.9 164 L234.0 140 H262.0 L258.1 164 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M232.5 140 H263.5 M232.5 144 H263.5" stroke-width="1.0"/>
+    <path d="M166 140 V116" stroke-width="1.4"/>
+    <path d="M146 132 Q141.6 126.4 148.0 123.3 Q146.5 116.4 153.5 116.4 Q155.2 109.5 161.5 112.5 Q166.0 107.0 170.5 112.5 Q176.8 109.5 178.5 116.4 Q185.5 116.4 184.0 123.3 Q190.4 126.4 186.0 132.0 Z" stroke-width="1.3" fill="#fff"/>
+    <circle cx="158" cy="118" r="2.6" stroke-width="0.9"/>
+    <circle cx="172" cy="114" r="2.6" stroke-width="0.9"/>
+    <circle cx="166" cy="124" r="2.6" stroke-width="0.9"/>
+    <circle cx="176" cy="124" r="2.6" stroke-width="0.9"/>
+    <path d="M208 140 V128" stroke-width="1.3"/>
+    <circle cx="208" cy="116" r="15" stroke-width="1.4" fill="#fff"/>
+    <path d="M198 110 q6 -4 12 2 M202 120 q6 -4 12 2 M204 126 q6 2 10 -2" stroke-width="0.7"/>
+    <path d="M236 140 Q233.4 136.7 237.2 134.8 Q236.3 130.6 240.5 130.6 Q241.5 126.5 245.3 128.3 Q248.0 125.0 250.7 128.3 Q254.5 126.5 255.5 130.6 Q259.7 130.6 258.8 134.8 Q262.6 136.7 260.0 140.0 Z" stroke-width="1.3" fill="#fff"/>
+    <path d="M256 140 q10 20 6 40 q-4 8 2 16 M240 140 q-8 16 -4 32" stroke-width="1.1"/>
+    <path d="M260 156 q4 -4 6 0 M262 170 q-5 -4 -6 0 M240 156 q-4 -4 -6 0" stroke-width="0.9"/>
+    <path d="M328 246 q-10 -30 -6 -66 q30 -8 60 0 q4 36 -6 66 Z" stroke-width="1.8" fill="#fff"/>
+    <path d="M322 180 q30 -8 60 0 M322 186 q30 -6 60 0" stroke-width="1.3"/>
+    <path d="M327 182 q30 6 58 0" stroke-width="0.9"/>
+    <path d="M330 236 q28 6 52 0 M328 214 q28 4 56 0" stroke-width="0.7"/>
+    <path d="M328 200 q10 -6 24 -3 q-4 30 -16 44 q-16 -8 -8 -41 z" stroke-width="1.2" fill="url(#m0503-hatch)" stroke="none"/>
+    <path d="M350 183 q-19.9 -23.0 -33.1 -29.4 M350 183 q-14.9 -23.0 -24.8 -33.6 M350 183 q-9.9 -23.0 -16.6 -37.7 M350 183 q-5.0 -23.0 -8.3 -41.9 M350 183 q0.0 -23.0 0.0 -46.0 M350 183 q5.0 -23.0 8.3 -41.9 M350 183 q9.9 -23.0 16.6 -37.7 M350 183 q14.9 -23.0 24.8 -33.6 " stroke-width="1.2"/>
+    <path d="M340 190 q10 -3 20 0" stroke-width="0.8"/>
+    <circle cx="52" cy="194" r="5.4" stroke-width="1.4"/>
+    <path d="M52 199 q-2 14 -8 20 L36 246 M44 219 L58 246 M52 206 L70 214 M52 210 L66 224" stroke-width="1.4"/>
+    <path d="M66 216 h14 v12 h-14 z M80 220 l10 -8 M88 213 q4 -1 6 3" stroke-width="1.2" fill="#fff"/>
+    <path d="M92 216 l6 6 l-2 8 M96 222 l4 -2" stroke-width="0.8"/>
+    <path d="M24 252 l2 -7 l2 7 M31 253 l2 -6 M300 251 l2 -7 l2 7 M307 252 l2 -6 M392 250 l2 -7 l2 7 M399 251 l2 -6 M112 252 l2 -7 l2 7 M119 253 l2 -6 " stroke-width="0.9"/>
+    <path d="M14 244 h22 M20 240 h10" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0503</text>
+</svg>

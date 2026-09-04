@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0401-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0401-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0401-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0401-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- corridor edges (one-point perspective, VP 200,150) -->
+    <path d="M160 110 L52 2 M240 110 L348 2" stroke-width="1.4"/>
+    <path d="M160 190 L70 280 M240 190 L330 280" stroke-width="1.8"/>
+    <path d="M162 192 L74 280 M238 192 L326 280" stroke-width="0.9"/>
+    <!-- far wall -->
+    <path d="M160 110 H240 V190 H160 Z" stroke-width="1.7"/>
+    <path d="M162 112 H238 V188" stroke-width="0.9"/>
+    <!-- floor transverse lines -->
+    <path d="M130 220 H270 M100 250 H300" stroke-width="0.8"/>
+    <!-- ceiling LED strip with sensor sections -->
+    <path d="M197 110 V4 M203 110 V4" stroke-width="1"/>
+    <path d="M194 92 H206 M193 56 H207 M192 22 H208" stroke-width="0.8"/>
+
+    <!-- door at the end -->
+    <path d="M182 190 V128 H218 V190" stroke-width="1.6"/>
+    <path d="M184 190 V130 H216" stroke-width="0.9"/>
+    <path d="M188 134 H212 V152 H188 Z" stroke-width="1"/>
+    <path d="M189 135 H211 V151 H189 Z" fill="url(#m0401-hatch2)" stroke="none"/>
+    <circle cx="213" cy="165" r="1.6" stroke-width="1"/>
+    <!-- warning lamp over the door -->
+    <path d="M195 124 a5 5 0 0 1 10 0 Z" stroke-width="1.2"/>
+    <path d="M200 116 v-4 M193 118 l-3 -3 M207 118 l3 -3" stroke-width="0.9"/>
+
+    <!-- LEFT pegboard wall -->
+    <path d="M30 48 L150 120 V175 L30 235 Z" stroke-width="1.9"/>
+    <path d="M32 50 L150 122 M32 233 L150 173" stroke-width="1"/>
+    <path d="M30 85 L150 131 M30 123 L150 142 M30 160 L150 153 M30 198 L150 164" stroke-width="0.7"/>
+    <path d="M45 57 V227 M62 67 V219 M80 78 V210 M98 89 V201 M115 99 V192 M132 109 V184" stroke-width="0.7"/>
+    <!-- level along the top -->
+    <path d="M36 54 L145 121 L145 126 L36 63 Z" fill="#fff" stroke-width="1.3"/>
+    <circle cx="90" cy="88" r="2.6" stroke-width="0.9"/>
+    <!-- hammer + its shadow outline -->
+    <path d="M40 70 H62 V80 H40 Z" fill="#fff" stroke-width="1.4"/>
+    <path d="M49 80 H53 V120 H49 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M38 68 H64 V82 H55 V122 H47 V82 H38 Z" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <!-- hand saw hanging -->
+    <path d="M68 96 h14 v12 h-14 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M72 100 h6" stroke-width="0.8"/>
+    <path d="M70 108 H82 L80 158 L70 150 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M81 116 l2 2 M81 126 l2 2 M80 136 l2 2 M80 146 l2 2" stroke-width="0.8"/>
+    <!-- wrench -->
+    <path d="M90 92 L94 88 H100 L104 92 L100 97 H94 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M95 97 H99 V135 H95 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M88 90 L94 86 H100 L106 90 L102 99 V137 H92 V99 Z" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <!-- pliers -->
+    <path d="M110 100 l6 30 M118 100 l-6 30" stroke-width="1.4"/>
+    <path d="M110 100 q-3 -6 2 -8 M118 100 q3 -6 -2 -8 M116 130 q2 5 -2 6 M112 130 q-2 5 2 6" stroke-width="1"/>
+    <!-- screwdrivers -->
+    <path d="M128 132 v18 M134 130 v18 M140 128 v18" stroke-width="1.2"/>
+    <path d="M126 128 h4 v5 h-4 Z M132 126 h4 v5 h-4 Z M138 124 h4 v5 h-4 Z" fill="#fff" stroke-width="1"/>
+    <!-- hooks along the mid rail -->
+    <path d="M60 165 q0 -3 3 -3 M78 160 q0 -3 3 -3 M96 156 q0 -3 3 -3 M114 153 q0 -3 3 -3" stroke-width="0.9"/>
+
+    <!-- RIGHT pegboard (upper) -->
+    <path d="M370 48 L250 120 V150 H370 Z" stroke-width="1.9"/>
+    <path d="M368 50 L252 122" stroke-width="1"/>
+    <path d="M370 80 L250 130 M370 112 L250 140" stroke-width="0.7"/>
+    <path d="M355 57 V150 M338 67 V150 M320 78 V150 M302 89 V150 M285 99 V150 M268 109 V150" stroke-width="0.7"/>
+    <!-- tape measure -->
+    <circle cx="338" cy="92" r="10" fill="#fff" stroke-width="1.5"/>
+    <circle cx="338" cy="92" r="3" stroke-width="0.9"/>
+    <path d="M348 96 h6 v4 h-6" stroke-width="1"/>
+    <!-- F-clamps -->
+    <path d="M300 84 V132 M296 88 H310 M296 124 H310 M310 86 v4 M310 122 v4" fill="#fff" stroke-width="1.3"/>
+    <path d="M314 82 V128 M310 86 H322 M310 120 H322" stroke-width="1.1"/>
+    <!-- extension cord coil -->
+    <circle cx="272" cy="130" r="8" fill="#fff" stroke-width="1.3"/>
+    <circle cx="272" cy="130" r="4" stroke-width="0.8"/>
+    <path d="M280 134 q4 4 2 8" stroke-width="0.8"/>
+    <!-- RIGHT drawer cabinet (lower) -->
+    <path d="M370 158 L250 152 V175 L370 235 Z" fill="#fff" stroke-width="1.8"/>
+    <path d="M368 160 L252 154" stroke-width="0.9"/>
+    <path d="M370 184 L250 160 M370 209 L250 167" stroke-width="1"/>
+    <path d="M262 153 V181 M276 154 V188 M292 154 V196 M310 155 V205 M330 156 V215 M352 157 V226" stroke-width="0.9"/>
+    <!-- drawer labels -->
+    <path d="M338 170 h8 M338 194 h8 M338 218 h8 M318 165 h7 M318 187 h7 M318 208 h7 M298 162 h6 M298 181 h6 M298 199 h6 M280 160 h5 M280 175 h5 M280 190 h5" stroke-width="1.1"/>
+    <!-- shadow under the cabinet -->
+    <path d="M252 176 L370 237 L370 244 L252 180 Z" fill="url(#m0401-hatch)" stroke="none"/>
+
+    <!-- little person walking out with a plank -->
+    <circle cx="200" cy="157" r="4.5" fill="#fff" stroke-width="1.4"/>
+    <path d="M200 161.5 V178 M200 178 L195 193 M200 178 L205 193" stroke-width="1.4"/>
+    <path d="M200 166 L191 170 M200 166 L209 170" stroke-width="1.3"/>
+    <path d="M184 168 H216 V171 H184 Z" fill="#fff" stroke-width="1.2"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0401</text>
+</svg>

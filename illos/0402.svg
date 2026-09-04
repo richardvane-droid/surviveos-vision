@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0402-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0402-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0402-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0402-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room corner: walls + floor -->
+    <path d="M200 20 V232" stroke-width="1.6"/>
+    <path d="M200 232 L12 276 M200 232 L388 276" stroke-width="1.8"/>
+    <path d="M202 234 L16 278 M202 234 L384 277" stroke-width="0.9"/>
+    <path d="M200 20 L12 64 M200 20 L385 -23" stroke-width="0.9"/>
+    <path d="M40 282 q20 -4 40 0 M320 284 q25 -4 50 -1" stroke-width="0.8"/>
+
+    <!-- small window on the left wall, slanted light -->
+    <path d="M55 62 L105 50 V82 L55 94 Z" stroke-width="1.5"/>
+    <path d="M57 63 L103 52 V81 L57 92 Z" fill="url(#m0402-hatch2)" stroke="none"/>
+    <path d="M80 56 V88 M55 78 L105 66" stroke-width="1"/>
+    <path d="M100 86 L192 214 M88 92 L178 222" stroke-width="0.7"/>
+
+    <!-- lumber rack: plinth -->
+    <path d="M25 261 L170 227 L198 233.5 L198 245.5 L53 279.5 L25 273 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M25 261 L53 267.5 L198 233.5 M53 267.5 V279.5" stroke-width="1.1"/>
+    <path d="M27 275 L55 281 L200 247 L200 251 L55 285 L27 279 Z" fill="url(#m0402-hatch)" stroke="none"/>
+    <!-- rack top rail + uprights -->
+    <path d="M30 72 L172 39" stroke-width="1.4"/>
+    <path d="M30 72 V260 M80 60.5 V248 M125 50 V237 M172 39 V226" stroke-width="1.2"/>
+    <!-- standing boards, left to right (each with grain + label) -->
+    <path d="M38 258 L50 255 V108 L38 111 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M42 130 q2 30 -1 60 M46 150 q-2 30 1 55" stroke-width="0.7"/>
+    <path d="M54 254 L64 252 V99 L54 101 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M58 120 q2 40 -1 80" stroke-width="0.7"/>
+    <path d="M68 251 L82 248 V108 L68 111 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M72 130 q2 30 -1 55 M77 140 q-2 40 1 70" stroke-width="0.7"/>
+    <path d="M86 247 L95 245 V95 L86 97 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M90 120 q2 40 -1 80" stroke-width="0.7"/>
+    <path d="M99 244 L111 241 V86 L99 89 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M103 110 q2 40 -1 80 M107 130 q-2 30 1 60" stroke-width="0.7"/>
+    <path d="M115 240 L126 237.5 V102 L115 105 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M120 125 q2 40 -1 75" stroke-width="0.7"/>
+    <path d="M130 236 L143 233 V73 L130 76 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M134 100 q2 40 -1 80 M139 120 q-2 40 1 70" stroke-width="0.7"/>
+    <path d="M147 232 L156 230 V85 L147 87 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M151 110 q2 40 -1 80" stroke-width="0.7"/>
+    <path d="M160 229 L171 226.5 V77 L160 79.5 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M165 100 q2 40 -1 80" stroke-width="0.7"/>
+    <!-- labels on boards -->
+    <path d="M40 236 h8 v6 h-8 Z M56 232 h6 v6 h-6 Z M70 228 h10 v6 h-10 Z M88 224 h5 v6 h-5 Z M101 221 h8 v6 h-8 Z M117 217 h7 v6 h-7 Z M132 213 h9 v6 h-9 Z M149 210 h5 v6 h-5 Z M162 207 h7 v6 h-7 Z" stroke-width="0.9"/>
+
+    <!-- hygrometer dial near the corner -->
+    <circle cx="214" cy="122" r="7" stroke-width="1.2"/>
+    <path d="M214 122 l3 -4" stroke-width="0.9"/>
+
+    <!-- heavy-duty shelving on the right wall -->
+    <path d="M250 80 V244 M380 110 V274" stroke-width="1"/>
+    <path d="M222 85 V250 M352 115 V281" stroke-width="1.8"/>
+    <path d="M224 87 V250 M354 117 V281" stroke-width="0.9"/>
+    <!-- shelves (h = 10, 60, 110, 160 above floor) -->
+    <path d="M222 240 L352 270.5 L380 264 L250 233.5 Z M222 240 V244 L352 274.5 V270.5" stroke-width="1.4"/>
+    <path d="M222 190 L352 220.5 L380 214 L250 183.5 Z M222 190 V194 L352 224.5 V220.5" stroke-width="1.4"/>
+    <path d="M222 140 L352 170.5 L380 164 L250 133.5 Z M222 140 V144 L352 174.5 V170.5" stroke-width="1.4"/>
+    <path d="M222 90 L352 120.5 L380 114 L250 83.5 Z M222 90 V94 L352 124.5 V120.5" stroke-width="1.4"/>
+    <!-- bottom shelf: stacked plywood sheets -->
+    <path d="M228 236 L346 263.5 L346 258 L228 230.5 Z M230 229 L346 256 L346 251 L230 224 Z" fill="#fff" stroke-width="1"/>
+    <!-- shelf 2 bins -->
+    <path d="M226 191 L260 199 V169 L226 161 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M226 161 L248 156 L282 164 L260 169" stroke-width="1"/>
+    <path d="M234 175 h16 v7 h-16 Z" stroke-width="0.8"/>
+    <path d="M264 200 L298 208 V178 L264 170 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M264 170 L286 165 L320 173 L298 178" stroke-width="1"/>
+    <path d="M272 184 h16 v7 h-16 Z" stroke-width="0.8"/>
+    <path d="M302 209 L336 217 V187 L302 179 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M302 179 L324 174 L358 182 L336 187" stroke-width="1"/>
+    <path d="M310 193 h16 v7 h-16 Z" stroke-width="0.8"/>
+    <!-- shelf 3 bins -->
+    <path d="M226 141 L260 149 V119 L226 111 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M226 111 L248 106 L282 114 L260 119" stroke-width="1"/>
+    <path d="M234 125 h16 v7 h-16 Z" stroke-width="0.8"/>
+    <path d="M264 150 L298 158 V128 L264 120 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M264 120 L286 115 L320 123 L298 128" stroke-width="1"/>
+    <path d="M272 134 h16 v7 h-16 Z" stroke-width="0.8"/>
+    <path d="M302 159 L336 167 V137 L302 129 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M302 129 L324 124 L358 132 L336 137" stroke-width="1"/>
+    <path d="M310 143 h16 v7 h-16 Z" stroke-width="0.8"/>
+    <!-- top shelf: two boxes with lids -->
+    <path d="M226 91 L266 100.5 V76 L226 66.5 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M226 66.5 L248 61.5 L288 71 L266 76" stroke-width="1"/>
+    <path d="M236 80 h18 v6 h-18 Z" stroke-width="0.8"/>
+    <path d="M272 102 L312 111.5 V87 L272 77.5 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M272 77.5 L294 72.5 L334 82 L312 87" stroke-width="1"/>
+    <path d="M282 91 h18 v6 h-18 Z" stroke-width="0.8"/>
+    <!-- shadow under lowest shelf -->
+    <path d="M224 246 L352 276 L352 282 L224 252 Z" fill="url(#m0402-hatch)" stroke="none"/>
+
+    <!-- person pulling a board -->
+    <circle cx="184" cy="222" r="5" fill="#fff" stroke-width="1.4"/>
+    <path d="M184 227 V250 M184 250 L178 270 M184 250 L190 270" stroke-width="1.4"/>
+    <path d="M184 234 L170 226 M184 236 L194 246" stroke-width="1.3"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0402</text>
+</svg>

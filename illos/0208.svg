@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0208-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0208-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0208-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0208-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room shell -->
+    <path d="M70 50 H330 V208 H70 Z" stroke-width="1.8"/>
+    <path d="M72 52 H328 V206" stroke-width="0.9"/>
+    <path d="M70 50 L18 14 M330 50 L382 14" stroke-width="1.5"/>
+    <path d="M70 208 L18 262 M330 208 L382 262" stroke-width="1.5"/>
+    <path d="M18 262 Q200 258 382 262" stroke-width="1.2"/>
+    <path d="M332 52 L380 16 V260 L332 206 Z" fill="url(#m0208-hatch)" stroke="none"/>
+    <!-- wooden diffuser slats on the back wall -->
+    <path d="M84 56 V200 M96 56 V200 M108 56 V200 M292 56 V200 M304 56 V200 M316 56 V200" stroke-width="0.6"/>
+
+    <!-- record shelf (cube grid) on the left wall -->
+    <path d="M28 40 L62 60 V196 L28 210 Z" stroke-width="1.5"/>
+    <path d="M30 42 L60 62" stroke-width="0.8"/>
+    <path d="M28 82 L62 94 M28 124 L62 128 M28 166 L62 162" stroke-width="1.2"/>
+    <path d="M32 50 l0 30 M40 54 l0 28 M48 58 l0 26 M56 62 l0 26 M32 92 v28 M38 92 v30 M46 94 v30 M54 96 v28 M32 132 v28 M42 132 v28 M52 130 v30 M32 172 v30 M44 170 v26 M56 166 v26" stroke-width="0.6"/>
+
+    <!-- left big floor speaker -->
+    <path d="M92 76 H142 V236 H92 Z" fill="#fff" stroke="none"/>
+    <path d="M92 76 H142 V236 H92 Z" stroke-width="2"/>
+    <path d="M94 78 H140 V234" stroke-width="0.9"/>
+    <path d="M142 76 L156 70 V228 L142 236" stroke-width="1.6"/>
+    <path d="M144 78 L154 72 V226 L144 234 Z" fill="url(#m0208-hatch)" stroke="none"/>
+    <circle cx="117" cy="98" r="9" stroke-width="1.4"/>
+    <circle cx="117" cy="98" r="3" stroke-width="0.8"/>
+    <circle cx="117" cy="136" r="16" stroke-width="1.5"/>
+    <circle cx="117" cy="136" r="10" stroke-width="0.8"/>
+    <circle cx="117" cy="136" r="4" stroke-width="0.8"/>
+    <circle cx="117" cy="190" r="20" stroke-width="1.6"/>
+    <circle cx="117" cy="190" r="13" stroke-width="0.8"/>
+    <circle cx="117" cy="190" r="5" stroke-width="0.9"/>
+    <path d="M96 222 H138" stroke-width="0.7"/>
+    <path d="M94 236 v6 M140 236 v6" stroke-width="1.6"/>
+    <!-- right big floor speaker -->
+    <path d="M258 76 H308 V236 H258 Z" fill="#fff" stroke="none"/>
+    <path d="M258 76 H308 V236 H258 Z" stroke-width="2"/>
+    <path d="M260 78 H306 V234" stroke-width="0.9"/>
+    <path d="M258 76 L244 70 V228 L258 236" stroke-width="1.6"/>
+    <path d="M246 72 L256 78 V234 L246 226 Z" fill="url(#m0208-hatch)" stroke="none"/>
+    <circle cx="283" cy="98" r="9" stroke-width="1.4"/>
+    <circle cx="283" cy="98" r="3" stroke-width="0.8"/>
+    <circle cx="283" cy="136" r="16" stroke-width="1.5"/>
+    <circle cx="283" cy="136" r="10" stroke-width="0.8"/>
+    <circle cx="283" cy="136" r="4" stroke-width="0.8"/>
+    <circle cx="283" cy="190" r="20" stroke-width="1.6"/>
+    <circle cx="283" cy="190" r="13" stroke-width="0.8"/>
+    <circle cx="283" cy="190" r="5" stroke-width="0.9"/>
+    <path d="M262 222 H304" stroke-width="0.7"/>
+    <path d="M260 236 v6 M306 236 v6" stroke-width="1.6"/>
+    <!-- sound waves -->
+    <path d="M150 128 q8 8 0 16 M158 122 q12 12 0 28 M250 128 q-8 8 0 16 M242 122 q-12 12 0 28" stroke-width="0.7"/>
+
+    <!-- low cabinet between speakers with turntable and tube amp -->
+    <path d="M164 170 H236 V208 H164 Z" stroke-width="1.6"/>
+    <path d="M166 172 H234 V206" stroke-width="0.8"/>
+    <path d="M166 190 H234 M200 172 V206" stroke-width="0.8"/>
+    <path d="M170 176 h26 v10 h-26 Z M204 176 h26 v10 h-26 Z" fill="url(#m0208-hatch2)" stroke="none"/>
+    <!-- turntable on top -->
+    <path d="M166 162 H234 V170 H166 Z" stroke-width="1.4"/>
+    <path d="M176 166 m-12 0 a12 3 0 1 0 24 0 a12 3 0 1 0 -24 0" stroke-width="1"/>
+    <path d="M176 160 v6" stroke-width="0.8"/>
+    <path d="M226 158 V166 M226 158 L206 163" stroke-width="1"/>
+    <circle cx="226" cy="158" r="2" stroke-width="0.8"/>
+    <!-- tube amp glowing on the shelf right -->
+    <path d="M206 154 h8 v8 h-8 Z M216 154 h6 v8 h-6 Z" stroke-width="0.8"/>
+    <path d="M210 152 q-2 -4 0 -6 M219 152 q-2 -4 0 -6" stroke-width="0.6"/>
+
+    <!-- single leather armchair, front view, with a person seated eyes closed -->
+    <path d="M150 262 V214 q0 -8 8 -8 H242 q8 0 8 8 V262" fill="#fff" stroke="none"/>
+    <path d="M150 262 V214 q0 -8 8 -8 H242 q8 0 8 8 V262" stroke-width="2"/>
+    <path d="M154 260 V216 q0 -6 6 -6 H240" stroke-width="0.9"/>
+    <path d="M150 232 q-10 0 -10 12 V262 M250 232 q10 0 10 12 V262" stroke-width="1.8"/>
+    <path d="M140 262 H260" stroke-width="1.4"/>
+    <path d="M154 250 H246" stroke-width="0.9"/>
+    <path d="M156 216 H244 V232 H156 Z" fill="url(#m0208-hatch)" stroke="none"/>
+    <!-- person -->
+    <circle cx="200" cy="200" r="12" stroke-width="1.6"/>
+    <path d="M194 199 q3 2 6 0 M200 199 q3 2 6 0" stroke-width="1"/>
+    <path d="M196 207 q4 2 8 0" stroke-width="0.8"/>
+    <path d="M190 190 q10 -8 20 0" stroke-width="1"/>
+    <path d="M178 254 V226 q0 -10 22 -10 q22 0 22 10 V254" fill="#fff" stroke="none"/>
+    <path d="M178 254 V226 q0 -10 22 -10 q22 0 22 10 V254" stroke-width="1.6"/>
+    <path d="M180 252 V228 q0 -8 20 -8" stroke-width="0.8"/>
+    <path d="M178 232 q-12 6 -14 18 M222 232 q12 6 14 18" stroke-width="1.5"/>
+    <path d="M162 250 h10 M228 250 h10" stroke-width="1.2"/>
+    <path d="M184 254 v14 M216 254 v14 M180 270 h10 M212 270 h10" stroke-width="1.5"/>
+    <!-- small side table with a glass -->
+    <path d="M278 262 v-30 h18 v30 M276 232 h22" stroke-width="1.3"/>
+    <path d="M284 232 v-10 h8 v10 Z M286 226 h4" stroke-width="1"/>
+    <!-- wool rug under the chair -->
+    <path d="M110 270 q90 -5 180 0" stroke-width="0.8"/>
+    <path d="M120 274 l2 -3 M150 274 l2 -3 M250 274 l2 -3 M280 274 l2 -3" stroke-width="0.6"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0208</text>
+</svg>

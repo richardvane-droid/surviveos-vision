@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs>
+    <filter id="marea01-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="marea01-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="marea01-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#marea01-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground line -->
+    <path d="M12 262 Q150 256 300 260 T588 258" stroke-width="1.2"/>
+    <path d="M30 268 q20 -3 40 0 M520 268 q25 -4 50 -1" stroke-width="0.9"/>
+
+    <!-- cabin section: floor, walls, roof (front wall removed) -->
+    <path d="M90 250 H510" stroke-width="2"/>
+    <path d="M92 252 H508" stroke-width="0.9"/>
+    <path d="M78 250 V256 H522 V250" stroke-width="1.4"/>
+    <!-- left wall (thick log wall in section) -->
+    <path d="M90 250 V124 H102 V250" stroke-width="1.8"/>
+    <path d="M92 130 h8 M92 146 h8 M92 162 h8 M92 178 h8 M92 194 h8 M92 210 h8 M92 226 h8 M92 242 h8" stroke-width="0.8"/>
+    <path d="M91 125 H101 V249 H91 Z" fill="url(#marea01-hatch)" stroke="none"/>
+    <!-- right wall -->
+    <path d="M498 250 V124 H510 V250" stroke-width="1.8"/>
+    <path d="M500 130 h8 M500 146 h8 M500 162 h8 M500 178 h8 M500 194 h8 M500 210 h8 M500 226 h8 M500 242 h8" stroke-width="0.8"/>
+    <path d="M499 125 H509 V249 H499 Z" fill="url(#marea01-hatch)" stroke="none"/>
+    <!-- roof: gable with overhang -->
+    <path d="M62 132 L300 34 L538 132" stroke-width="2.2"/>
+    <path d="M64 136 L300 40 L536 136" stroke-width="1"/>
+    <path d="M68 138 L300 44 L532 138 L526 144 L300 52 L74 144 Z" fill="url(#marea01-hatch)" stroke="none"/>
+    <!-- rafters visible inside -->
+    <path d="M102 124 L300 52 L498 124" stroke-width="1.4"/>
+    <path d="M150 106 L150 124 M200 88 L200 124 M250 70 L250 124 M350 70 L350 124 M400 88 L400 124 M450 106 L450 124" stroke-width="0.8"/>
+    <path d="M102 124 H498" stroke-width="1.2"/>
+    <!-- back wall log lines (interior) -->
+    <path d="M102 140 H498 M102 156 H498 M102 172 H498 M102 188 H498 M102 204 H498 M102 220 H498 M102 236 H498" stroke-width="0.6"/>
+
+    <!-- chimney through the roof + smoke -->
+    <path d="M124 90 H140 V250 H124 Z" fill="#fff" stroke="none"/>
+    <path d="M124 92 V190 M140 92 V190" stroke-width="1.6"/>
+    <path d="M126 94 V188" stroke-width="0.7"/>
+    <path d="M120 92 H144 V84 H120 Z" stroke-width="1.4"/>
+    <path d="M132 78 q-8 -8 0 -16 q8 -8 0 -16 q-6 -6 2 -12" stroke-width="1"/>
+    <path d="M142 74 q-6 -7 0 -13 q6 -7 0 -13" stroke-width="0.8"/>
+
+    <!-- 0106 wood stove (left) -->
+    <path d="M108 190 H156 V240 H108 Z" fill="#fff" stroke="none"/>
+    <path d="M108 190 H156 V240 H108 Z" stroke-width="1.8"/>
+    <path d="M110 192 H154 V238" stroke-width="0.9"/>
+    <path d="M114 198 H150 V230 H114 Z" stroke-width="1.2"/>
+    <path d="M115 199 H149 V229 H115 Z" fill="url(#marea01-hatch2)" stroke="none"/>
+    <path d="M122 228 q2 -12 8 -16 q2 -8 6 -4 q4 -6 6 4 q4 8 -2 16 Z" fill="#fff" stroke-width="1"/>
+    <path d="M112 240 V248 M152 240 V248" stroke-width="1.6"/>
+    <path d="M104 248 H160" stroke-width="1.2"/>
+    <path d="M110 186 q0 -10 10 -10 q10 0 10 10" stroke-width="1.2"/>
+    <path d="M114 176 q6 -8 12 0" stroke-width="0.9"/>
+    <!-- log rack beside stove -->
+    <path d="M164 248 V216 H196 V248" stroke-width="1.3"/>
+    <circle cx="172" cy="240" r="4" stroke-width="0.9"/>
+    <circle cx="182" cy="240" r="4" stroke-width="0.9"/>
+    <circle cx="191" cy="240" r="4" stroke-width="0.9"/>
+    <circle cx="177" cy="232" r="4" stroke-width="0.9"/>
+    <circle cx="187" cy="232" r="4" stroke-width="0.9"/>
+
+    <!-- 0104 photo ropes on the back wall above the stove -->
+    <path d="M108 148 Q160 158 210 146" stroke-width="1"/>
+    <path d="M118 150 v8 h8 v-8 M140 154 v8 h8 v-8 M162 156 v8 h8 v-8 M184 152 v8 h8 v-8" stroke-width="0.9"/>
+    <path d="M119 151 h6 v6 h-6 Z M163 157 h6 v6 h-6 Z" fill="url(#marea01-hatch)" stroke="none"/>
+
+    <!-- 0101 display pedestal with open PSK box (center-left) -->
+    <path d="M214 250 V206 H254 V250" fill="#fff" stroke-width="1.7"/>
+    <path d="M216 250 V208 H252" stroke-width="0.8"/>
+    <path d="M210 206 H258" stroke-width="1.5"/>
+    <path d="M222 206 V196 H246 V206" stroke-width="1.4"/>
+    <path d="M224 198 H244" stroke-width="0.6"/>
+    <path d="M222 196 L226 172 H250 L246 196" stroke-width="1.3"/>
+    <path d="M225 193 L228 175 H247 L244 193 Z" fill="url(#marea01-hatch)" stroke="none"/>
+    <!-- spotlight above pedestal -->
+    <path d="M234 124 V138" stroke-width="1"/>
+    <path d="M228 138 H240 V148 H228 Z" stroke-width="1.3"/>
+    <path d="M229 150 L214 196 M239 150 L256 196" stroke-width="0.7" stroke-dasharray="3 3"/>
+
+    <!-- 0103 iPad frame wall (center-right back wall) -->
+    <path d="M280 138 H360 V198 H280 Z" fill="#fff" stroke="none"/>
+    <path d="M280 138 H360 V198 H280 Z" stroke-width="1.8"/>
+    <path d="M282 140 H358 V196" stroke-width="0.8"/>
+    <path d="M286 144 H354 V192 H286 Z" stroke-width="1.1"/>
+    <path d="M308 144 V192 M332 144 V192 M286 160 H354 M286 176 H354" stroke-width="0.9"/>
+    <path d="M288 158 l6 -8 l5 6 l6 -9 M312 190 l6 -8 l5 6 l6 -9 M336 172 l5 -7 l4 4 l6 -6" stroke-width="0.7"/>
+    <circle cx="298" cy="168" r="3" stroke-width="0.7"/>
+    <circle cx="344" cy="150" r="3" stroke-width="0.7"/>
+    <path d="M314 148 h10 v10 h-10 Z" stroke-width="0.7"/>
+    <path d="M338 182 l4 -6 l4 6 Z" stroke-width="0.7"/>
+
+    <!-- 0102 work display wall shelves (right-center back wall) -->
+    <path d="M374 150 H440 M374 172 H440 M374 194 H440" stroke-width="1.4"/>
+    <path d="M378 150 V140 H392 V150 M398 150 V142 H412 V150 M418 150 V140 H432 V150" stroke-width="1"/>
+    <path d="M378 172 V162 H392 V172 M398 172 V164 H412 V172 M418 172 V162 H432 V172" stroke-width="1"/>
+    <path d="M378 194 V184 H392 V194 M398 194 V186 H412 V194 M418 194 V184 H432 V194" stroke-width="1"/>
+    <path d="M380 142 H390 V148 H380 Z M400 166 H410 V170 H400 Z M420 186 H430 V192 H420 Z" fill="url(#marea01-hatch)" stroke="none"/>
+
+    <!-- 0105 worktable (right-center floor) -->
+    <path d="M362 214 H446 V222 H362 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M364 216 H444" stroke-width="0.7"/>
+    <path d="M368 222 V250 M440 222 V250" stroke-width="1.5"/>
+    <path d="M372 222 V236 H436 V222" stroke-width="0.9"/>
+    <path d="M392 214 V206 H420 V214" stroke-width="1.1"/>
+    <path d="M394 208 H418" stroke-width="0.6"/>
+    <path d="M426 212 l12 -6" stroke-width="1"/>
+
+    <!-- 0107 bar (right) with stools -->
+    <path d="M456 250 V204 H496 V250" fill="#fff" stroke-width="1.6"/>
+    <path d="M452 204 H498 Q490 210 480 206 Q468 202 452 208 Z" fill="#fff" stroke-width="1.8"/>
+    <path d="M458 214 V248 M472 214 V248 M486 214 V248" stroke-width="0.6"/>
+    <!-- lamps above bar -->
+    <path d="M466 124 V150 M486 124 V150" stroke-width="0.8"/>
+    <path d="M460 150 H472 L476 158 H456 Z M480 150 H492 L496 158 H476 Z" stroke-width="1.2"/>
+    <!-- mugs on shelf above bar -->
+    <path d="M458 176 H496" stroke-width="1.2"/>
+    <path d="M462 176 V168 H470 V176 M476 176 V166 H484 V176 M488 176 V168 H496 V176" stroke-width="0.9"/>
+    <!-- stool -->
+    <path d="M436 232 q8 -4 16 0 q-8 4 -16 0 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M438 234 L436 250 M450 234 L452 250" stroke-width="1.2"/>
+    <path d="M438 244 H450" stroke-width="0.8"/>
+    <!-- cup on bar -->
+    <path d="M470 204 V198 H478 V204" stroke-width="0.9"/>
+
+    <!-- person inside looking at the frame wall -->
+    <circle cx="270" cy="188" r="5" stroke-width="1.4"/>
+    <path d="M270 193 V216 M270 200 L262 210 M270 200 L278 206 L286 200 M270 216 L264 250 M270 216 L276 250" stroke-width="1.4"/>
+
+    <!-- outside: tree on the left -->
+    <path d="M36 262 q4 -40 2 -90" stroke-width="1.8"/>
+    <path d="M40 262 q4 -40 2 -88" stroke-width="0.8"/>
+    <path d="M38 176 q-30 20 -32 -12 q-14 -22 8 -34 q0 -28 30 -22 q22 -12 28 14 q18 8 4 30 q4 26 -38 24 Z" stroke-width="1.7"/>
+    <path d="M18 156 q10 4 18 0 M28 136 q12 6 22 -2 M40 166 q10 6 20 0" stroke-width="0.9"/>
+    <path d="M8 162 q10 8 28 8 q6 12 -8 14" fill="url(#marea01-hatch)" stroke="none"/>
+
+    <!-- outside: woodpile on the right -->
+    <path d="M540 256 H590 V232 H540 Z" stroke-width="1.5"/>
+    <circle cx="548" cy="244" r="5" stroke-width="1.1"/>
+    <circle cx="560" cy="244" r="5" stroke-width="1.1"/>
+    <circle cx="572" cy="244" r="5" stroke-width="1.1"/>
+    <circle cx="584" cy="244" r="5" stroke-width="1.1"/>
+    <path d="M554 236 l3 4 M566 238 v4 M578 236 l-3 4" stroke-width="0.7"/>
+    <path d="M542 230 q24 -6 48 0" stroke-width="1"/>
+
+    <!-- grass tufts -->
+    <path d="M56 266 l2 -7 l2 7 M64 267 l2 -6 M520 264 l2 -8 l2 8 M530 266 l1 -6 M300 268 l3 -7 l2 7" stroke-width="0.9"/>
+  </g>
+  <text x="586" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">area-01</text>
+</svg>

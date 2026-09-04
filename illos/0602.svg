@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0602-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0602-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0602-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0602-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground surface -->
+    <path d="M14 204 Q100 200 200 203 T390 201" stroke-width="1.3"/>
+    <!-- soil section (cut-away block) -->
+    <path d="M40 206 V270 H360 V204" stroke-width="1.6"/>
+    <path d="M42 208 V268 H358" stroke-width="0.8"/>
+    <path d="M60 232 l3 1 M92 250 l3 1 M120 226 l3 1 M170 256 l3 1 M230 228 l3 1 M262 258 l3 1 M300 236 l3 1 M330 254 l3 1 M86 262 l3 1 M250 248 l3 1 M340 226 l3 1 M140 246 l3 1" stroke-width="0.9"/>
+    <path d="M70 244 q4 -2 8 0 M200 262 q4 -2 8 0 M300 258 q4 -2 8 0 M110 260 q4 -2 8 0 M320 244 q4 -2 8 0" stroke-width="0.8"/>
+    <!-- roots hanging from the surface -->
+    <path d="M100 206 q-2 8 -6 14 q-2 6 2 12 M108 206 q3 10 0 18 M150 205 q-3 8 -1 16 q2 6 -2 10 M158 205 q2 8 5 14 M250 205 q-2 10 -5 16 M258 204 q2 8 4 14 q1 6 -2 10 M300 204 q-1 8 -4 14 M120 206 q1 6 -1 12" stroke-width="0.8"/>
+    <!-- buried post foot -->
+    <path d="M186 206 V236 H214 V206" stroke-width="1.3"/>
+    <path d="M188 208 V234 H212 V208 Z" fill="url(#m0602-hatch)" stroke="none"/>
+    <!-- soil moisture probe (fork) inserted among roots, cable from post -->
+    <path d="M186 216 q-20 0 -34 4 q-18 4 -22 -2 q-4 -4 -2 -10" stroke-width="1"/>
+    <path d="M118 194 H138 V208 H118 Z" stroke-width="1.5"/>
+    <path d="M120 196 H136" stroke-width="0.8"/>
+    <path d="M123 208 V246 M133 208 V246" stroke-width="1.6"/>
+    <path d="M124 210 V244 M134 210 V244" stroke-width="0.8"/>
+    <path d="M121 246 l2 4 l2 -4 M131 246 l2 4 l2 -4" stroke-width="1.2"/>
+    <!-- buried drip pipe cross-section with emitter -->
+    <circle cx="290" cy="238" r="7" stroke-width="1.5"/>
+    <circle cx="290" cy="238" r="4" stroke-width="0.8"/>
+    <path d="M290 245 v6 M286 254 q4 4 8 0 M283 260 q7 6 14 0" stroke-width="0.9"/>
+    <!-- post: front face + side face -->
+    <path d="M186 206 V74 H214 V206" stroke-width="1.9"/>
+    <path d="M188 204 V76 H212" stroke-width="0.9"/>
+    <path d="M214 74 L226 68 V200 L214 206" stroke-width="1.6"/>
+    <path d="M216 76 L224 71 V198 L216 203 Z" fill="url(#m0602-hatch)" stroke="none"/>
+    <path d="M190 100 q4 -2 8 0 M192 180 q6 -3 12 0 M194 128 q5 -2 10 0" stroke-width="0.7"/>
+    <!-- little pitched roof cap -->
+    <path d="M172 76 L200 50 L228 76" stroke-width="2"/>
+    <path d="M174 79 L200 54 L226 79" stroke-width="1"/>
+    <path d="M228 76 L240 70 L212 44 L200 50" stroke-width="1.6"/>
+    <path d="M226 72 L236 67 L212 47 Z" fill="url(#m0602-hatch)" stroke="none"/>
+    <path d="M182 68 L200 52 M192 60 L212 46" stroke-width="0.7"/>
+    <!-- bracket + tipping-bucket rain gauge on the right -->
+    <path d="M226 92 H262 M226 92 l14 -12 M262 92 v-4" stroke-width="1.3"/>
+    <path d="M244 60 v28 h28 v-28" stroke-width="1.6"/>
+    <path d="M246 62 v24 h24" stroke-width="0.8"/>
+    <ellipse cx="258" cy="60" rx="14" ry="3.5" stroke-width="1.5"/>
+    <path d="M247 63 L258 78 L269 63" stroke-width="1.1"/>
+    <path d="M258 78 v4 M252 84 l6 -2 l6 2" stroke-width="1"/>
+    <path d="M262 64 q4 8 6 20 q-2 -2 -6 0 Z" fill="url(#m0602-hatch)" stroke="none"/>
+    <!-- rain drops into the funnel -->
+    <path d="M250 36 v6 M258 30 v6 M266 40 v6 M254 46 v4 M262 50 v4" stroke-width="0.9"/>
+    <!-- indicator LED with glow ticks -->
+    <circle cx="200" cy="112" r="3.2" stroke-width="1.3"/>
+    <path d="M200 104 v-3 M207 106 l2 -2 M193 106 l-2 -2 M208 112 h3 M192 112 h-3" stroke-width="0.8"/>
+    <!-- big button -->
+    <circle cx="200" cy="146" r="10" stroke-width="1.8"/>
+    <circle cx="200" cy="146" r="6.5" stroke-width="1"/>
+    <path d="M194 150 q6 4 12 0" stroke-width="0.7"/>
+    <path d="M192 150 q6 8 16 3 q-8 3 -16 -3 Z" fill="url(#m0602-hatch)" stroke="none"/>
+    <!-- label plate -->
+    <path d="M190 164 H210 V172 H190 Z" stroke-width="1.1"/>
+    <path d="M193 168 h14" stroke-width="0.7"/>
+    <!-- cable from post to the probe (above ground bit hidden inside the post) -->
+    <!-- grass on the surface -->
+    <path d="M96 202 q1.5 -8 4.2 -14 M99 202 q1.5 -8 5.0 -14 M101 202 q1.5 -8 5.8 -14 M140 203 q1.5 -9 4.2 -16 M142 203 q1.5 -9 5.0 -16 M115 206 q1.5 -6 4.2 -11 M118 206 q1.5 -6 5.0 -11 M120 206 q1.5 -6 5.8 -11 M125 201 q1.5 -7 4.2 -13 M127 201 q1.5 -7 5.0 -13 M110 201 q1.5 -7 4.2 -12 M113 201 q1.5 -7 5.0 -12 M115 201 q1.5 -7 5.8 -12 M75 201 q1.5 -8 4.2 -14 M78 201 q1.5 -8 5.0 -14 M46 201 q1.5 -7 4.2 -12 M48 201 q1.5 -7 5.0 -12 M51 201 q1.5 -7 5.8 -12 M54 205 q1.5 -5 4.2 -8 M57 205 q1.5 -5 5.0 -8 M93 200 q1.5 -7 4.2 -12 M95 200 q1.5 -7 5.0 -12 M98 200 q1.5 -7 5.8 -12 M72 202 q1.5 -6 4.2 -11 M75 202 q1.5 -6 5.0 -11 M54 204 q1.5 -8 4.2 -15 M57 204 q1.5 -8 5.0 -15 M43 203 q1.5 -7 4.2 -13 M45 203 q1.5 -7 5.0 -13 M58 202 q1.5 -7 4.2 -12 M61 202 q1.5 -7 5.0 -12 M86 203 q1.5 -9 4.2 -16 M89 203 q1.5 -9 5.0 -16" stroke-width="0.9"/>
+    <path d="M332 203 q1.5 -6 4.2 -11 M335 203 q1.5 -6 5.0 -11 M326 204 q1.5 -7 4.2 -13 M329 204 q1.5 -7 5.0 -13 M331 204 q1.5 -7 5.8 -13 M332 203 q1.5 -7 4.2 -12 M335 203 q1.5 -7 5.0 -12 M337 203 q1.5 -7 5.8 -12 M273 201 q1.5 -8 4.2 -15 M276 201 q1.5 -8 5.0 -15 M278 201 q1.5 -8 5.8 -15 M330 201 q1.5 -5 4.2 -8 M333 201 q1.5 -5 5.0 -8 M254 204 q1.5 -8 4.2 -15 M257 204 q1.5 -8 5.0 -15 M324 201 q1.5 -7 4.2 -12 M326 201 q1.5 -7 5.0 -12 M249 200 q1.5 -7 4.2 -12 M252 200 q1.5 -7 5.0 -12 M254 200 q1.5 -7 5.8 -12 M300 200 q1.5 -5 4.2 -9 M303 200 q1.5 -5 5.0 -9 M305 200 q1.5 -5 5.8 -9 M329 204 q1.5 -5 4.2 -9 M332 204 q1.5 -5 5.0 -9 M293 199 q1.5 -9 4.2 -16 M295 199 q1.5 -9 5.0 -16 M298 199 q1.5 -9 5.8 -16 M308 202 q1.5 -9 4.2 -15 M310 202 q1.5 -9 5.0 -15 M313 202 q1.5 -9 5.8 -15" stroke-width="0.9"/>
+    <!-- a couple of far-off tufts beyond the block -->
+    <path d="M370 200 l2 -8 l2 8 M378 201 l2 -6 M18 204 l2 -8 l2 8 M26 205 l2 -6" stroke-width="0.9"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0602</text>
+</svg>

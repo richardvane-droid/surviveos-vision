@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0103-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0103-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0103-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0103-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- log wall behind: horizontal lines -->
+    <path d="M20 40 H380 M20 70 H380 M20 100 H380 M20 130 H380 M20 160 H380 M20 190 H380 M20 220 H380 M20 250 H380" stroke-width="0.8"/>
+    <path d="M40 52 q10 -3 18 0 M340 112 q10 -3 20 0 M50 232 q12 -3 22 0 M330 172 q8 -2 16 0" stroke-width="0.7"/>
+    <!-- floor line -->
+    <path d="M14 264 Q120 260 200 262 T388 260" stroke-width="1.2"/>
+
+    <!-- big walnut frame: outer (white fill hides logs) -->
+    <path d="M78 42 H322 V214 H78 Z" fill="#fff" stroke="none"/>
+    <path d="M78 42 H322 V214 H78 Z" stroke-width="2"/>
+    <path d="M80 44 H320 V212" stroke-width="1"/>
+    <path d="M92 54 H308 V202 H92 Z" stroke-width="1.6"/>
+    <!-- frame wood grain -->
+    <path d="M84 60 q3 60 -1 130 M316 60 q-3 60 1 130 M100 48 q60 2 120 0 q40 -1 100 1 M100 208 q80 -2 200 0" stroke-width="0.6"/>
+    <path d="M78 42 L92 54 M322 42 L308 54 M78 214 L92 202 M322 214 L308 202" stroke-width="0.9"/>
+
+    <!-- 3x3 screens: columns x 96-162, 167-233, 238-304 ; rows y 58-104, 108-152, 156-198 -->
+    <path d="M96 58 H162 V104 H96 Z M167 58 H233 V104 H167 Z M238 58 H304 V104 H238 Z" stroke-width="1.2"/>
+    <path d="M96 108 H162 V152 H96 Z M167 108 H233 V152 H167 Z M238 108 H304 V152 H238 Z" stroke-width="1.2"/>
+    <path d="M96 156 H162 V198 H96 Z M167 156 H233 V198 H167 Z M238 156 H304 V198 H238 Z" stroke-width="1.2"/>
+
+    <!-- 1: mountains + moon -->
+    <path d="M98 100 L118 72 L132 90 L146 66 L160 100" stroke-width="1"/>
+    <circle cx="112" cy="68" r="5" stroke-width="0.9"/>
+    <path d="M100 100 L118 76 L130 92 L146 70 L158 100 Z" fill="url(#m0103-hatch)" stroke="none"/>
+    <!-- 2: small cabin -->
+    <path d="M186 100 V82 L200 70 L214 82 V100 Z" stroke-width="1"/>
+    <path d="M196 100 V88 H204 V100 M206 76 V68 H210 V79" stroke-width="0.8"/>
+    <path d="M170 100 H230" stroke-width="0.7"/>
+    <path d="M176 96 l2 -6 l2 6 M220 97 l2 -5 l2 5" stroke-width="0.7"/>
+    <!-- 3: fox in snow -->
+    <path d="M250 96 q8 -14 20 -12 q10 2 14 12 M270 84 l6 -8 l2 8 M262 86 l-6 -8 l2 10 M284 96 q14 -8 12 -18" stroke-width="1"/>
+    <circle cx="268" cy="90" r="1" stroke-width="0.8"/>
+    <path d="M242 98 H300" stroke-width="0.7"/>
+    <!-- 4: old map -->
+    <path d="M100 116 q20 6 30 -2 q16 -8 30 4 M104 138 q22 -10 40 2 q10 6 14 -4" stroke-width="0.9" stroke-dasharray="3 2"/>
+    <circle cx="128" cy="130" r="4" stroke-width="0.8"/>
+    <path d="M128 122 v16 M120 130 h16" stroke-width="0.6"/>
+    <path d="M144 114 l3 4 l-4 3" stroke-width="0.7"/>
+    <!-- 5: survival manual illustration: knife + firesteel -->
+    <path d="M176 140 L214 116 L220 118 L184 144 Z" stroke-width="1"/>
+    <path d="M178 140 L186 134" stroke-width="0.7"/>
+    <path d="M188 144 L212 124" stroke-width="0.6"/>
+    <path d="M198 148 q14 -4 26 -2" stroke-width="0.9"/>
+    <path d="M222 138 l4 -3 l1 4 l4 -2" stroke-width="0.7"/>
+    <!-- 6: pine trees -->
+    <path d="M256 148 L268 118 L280 148 Z M254 140 L268 110 L282 140 M286 148 L294 128 L302 148" stroke-width="1"/>
+    <path d="M268 148 v-4 M294 148 v-3" stroke-width="0.8"/>
+    <path d="M258 146 L268 122 L278 146 Z" fill="url(#m0103-hatch)" stroke="none"/>
+    <!-- 7: bird on branch -->
+    <path d="M100 186 q20 -6 40 -10 q10 -2 20 2" stroke-width="1"/>
+    <path d="M124 178 q6 -14 16 -10 q4 4 0 10 q-6 4 -14 2 Z" stroke-width="0.9"/>
+    <circle cx="140" cy="172" r="3" stroke-width="0.9"/>
+    <path d="M143 172 l4 1" stroke-width="0.8"/>
+    <path d="M124 178 q-6 4 -10 10" stroke-width="0.8"/>
+    <!-- 8: lake + boat -->
+    <path d="M170 186 q10 -3 20 0 t20 0 t20 0" stroke-width="0.8"/>
+    <path d="M186 178 h24 l-4 6 h-16 Z M198 178 V166" stroke-width="1"/>
+    <path d="M198 166 l10 8 h-10" stroke-width="0.8"/>
+    <path d="M172 192 q14 -3 26 0 M206 192 q12 -3 24 0" stroke-width="0.6"/>
+    <!-- 9: campfire -->
+    <path d="M256 190 h36 M262 190 l14 -22 l14 22" stroke-width="1"/>
+    <path d="M270 186 q6 -14 8 -8 q4 -6 6 8" stroke-width="0.9"/>
+    <path d="M258 190 l8 -6 M292 190 l-8 -6" stroke-width="0.8"/>
+    <path d="M266 176 q-4 -10 2 -16 M282 176 q4 -8 -2 -14" stroke-width="0.6"/>
+
+    <!-- ledge below frame -->
+    <path d="M88 226 H312" stroke-width="1.8"/>
+    <path d="M88 226 V232 H312 V226" stroke-width="1.2"/>
+    <path d="M89 227 H311" stroke-width="0.8"/>
+    <path d="M100 232 l-6 8 M300 232 l6 8" stroke-width="0.9"/>
+    <!-- dry pine branch on ledge -->
+    <path d="M130 226 q30 -8 70 -4 q20 2 36 -6" stroke-width="1.3"/>
+    <path d="M150 221 l-4 -8 M162 220 l2 -9 M176 220 l-3 -9 M190 220 l3 -8 M208 222 l-2 -9 M222 218 l3 -8 M154 222 l3 -6" stroke-width="0.8"/>
+    <path d="M144 222 l-3 -4 M200 221 l-3 -6 M230 217 l1 -6" stroke-width="0.7"/>
+
+    <!-- coffee mug on ledge at right -->
+    <path d="M280 226 V214 H296 V226" stroke-width="1.2"/>
+    <path d="M296 217 q6 0 6 4 q0 4 -6 4" stroke-width="1"/>
+    <path d="M284 210 q-2 -4 2 -6 M290 210 q2 -4 -2 -6" stroke-width="0.7"/>
+
+    <!-- cables going down behind ledge -->
+    <path d="M200 214 v10" stroke-width="0.7" stroke-dasharray="2 2"/>
+
+    <!-- floor detail -->
+    <path d="M40 268 q20 -3 40 0 M320 268 q20 -3 40 0" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0103</text>
+</svg>

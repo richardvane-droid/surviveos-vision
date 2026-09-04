@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0207-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0207-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0207-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0207-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room shell: dark walls (hatched sides), low ceiling -->
+    <path d="M80 54 H320 V206 H80 Z" stroke-width="1.8"/>
+    <path d="M82 56 H318 V204" stroke-width="0.9"/>
+    <path d="M80 54 L18 14 M320 54 L382 14" stroke-width="1.5"/>
+    <path d="M80 206 L18 262 M320 206 L382 262" stroke-width="1.5"/>
+    <path d="M18 262 Q200 258 382 262" stroke-width="1.2"/>
+    <path d="M20 16 L78 56 V204 L20 260 Z" fill="url(#m0207-hatch)" stroke="none"/>
+    <path d="M322 56 L380 16 V260 L322 204 Z" fill="url(#m0207-hatch)" stroke="none"/>
+    <!-- acoustic panel joints on side walls -->
+    <path d="M40 30 V246 M60 42 V232" stroke-width="0.6"/>
+    <path d="M360 30 V246 M340 42 V232" stroke-width="0.6"/>
+
+    <!-- 120-inch screen dropping from the ceiling on the back wall -->
+    <path d="M96 60 H304 V66 H96 Z" stroke-width="1.4"/>
+    <path d="M104 66 H296 V170 H104 Z" fill="#fff" stroke="none"/>
+    <path d="M104 66 H296 V170 H104 Z" stroke-width="2"/>
+    <path d="M106 68 H294 V168" stroke-width="0.9"/>
+    <path d="M100 170 H300 V174 H100 Z" stroke-width="1.2"/>
+    <!-- picture on screen: a road toward mountains, sky -->
+    <path d="M110 138 L170 96 L200 116 L236 88 L290 138" stroke-width="1"/>
+    <path d="M150 110 q4 -10 10 -12 M226 100 q6 -8 10 -6" stroke-width="0.6"/>
+    <path d="M110 138 H290" stroke-width="0.8"/>
+    <path d="M186 168 L196 138 H204 L214 168" stroke-width="0.9"/>
+    <path d="M196 146 h8 M194 156 h12" stroke-width="0.6"/>
+    <circle cx="258" cy="84" r="7" stroke-width="0.9"/>
+    <path d="M114 80 q10 -6 22 0 q8 -6 18 0" stroke-width="0.6"/>
+    <!-- dark wall band under the screen with hatch -->
+    <path d="M84 176 H316 V204 H84 Z" fill="url(#m0207-hatch)" stroke="none"/>
+
+    <!-- projector hung from the ceiling, light cone to the screen -->
+    <path d="M200 14 V30" stroke-width="1.6"/>
+    <path d="M182 30 H218 V46 H182 Z" fill="#fff" stroke="none"/>
+    <path d="M182 30 H218 V46 H182 Z" stroke-width="1.8"/>
+    <path d="M184 32 H216 V44" stroke-width="0.8"/>
+    <circle cx="200" cy="40" r="4" stroke-width="1.2"/>
+    <circle cx="200" cy="40" r="1.5" stroke-width="0.8"/>
+    <path d="M186 34 h6 M186 37 h4" stroke-width="0.6"/>
+    <path d="M196 44 L106 68 M204 44 L294 68" stroke-width="0.8" stroke-dasharray="5 4"/>
+    <path d="M198 46 L140 62 M202 46 L260 62" stroke-width="0.5" stroke-dasharray="3 4"/>
+    <!-- dust motes in the beam -->
+    <circle cx="176" cy="52" r="0.8" stroke-width="0.6"/>
+    <circle cx="222" cy="54" r="0.8" stroke-width="0.6"/>
+    <circle cx="200" cy="58" r="0.8" stroke-width="0.6"/>
+
+    <!-- back row: raised platform with bean bags, two heads -->
+    <path d="M60 244 H340 L352 258 H48 Z" fill="#fff" stroke="none"/>
+    <path d="M60 244 H340 L352 258 H48 Z" stroke-width="1.6"/>
+    <path d="M48 258 V266 H352 V258" stroke-width="1.3"/>
+    <path d="M50 260 H350" stroke-width="0.7"/>
+    <!-- bean bags -->
+    <path d="M96 246 q-8 -22 24 -26 q30 -2 30 24 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M100 244 q-2 -14 16 -18" stroke-width="0.7"/>
+    <path d="M250 246 q-8 -22 24 -26 q30 -2 30 24 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M254 244 q-2 -14 16 -18" stroke-width="0.7"/>
+    <circle cx="124" cy="212" r="8" stroke-width="1.5"/>
+    <path d="M118 220 q6 4 12 0" stroke-width="1"/>
+    <circle cx="278" cy="212" r="8" stroke-width="1.5"/>
+    <path d="M272 220 q6 4 12 0" stroke-width="1"/>
+    <!-- mug on platform edge -->
+    <path d="M196 244 v-9 h9 v9 Z M205 237 q5 0 3 5" stroke-width="1"/>
+
+    <!-- front row: three-seat sofa seen from behind -->
+    <path d="M110 222 q0 -12 12 -12 H278 q12 0 12 12 V244 H110 Z" fill="#fff" stroke="none"/>
+    <path d="M110 244 V222 q0 -12 12 -12 H278 q12 0 12 12 V244" stroke-width="1.9"/>
+    <path d="M114 244 V224 q0 -10 10 -10 H276 q10 0 10 10 V244" stroke-width="0.9"/>
+    <path d="M160 212 V242 M240 212 V242" stroke-width="1"/>
+    <path d="M110 244 H290" stroke-width="1.2"/>
+    <path d="M118 236 q18 -2 36 0 M166 236 q18 -2 36 0 M244 236 q18 -2 36 0" stroke-width="0.6"/>
+    <path d="M116 226 H288 V242 H116 Z" fill="url(#m0207-hatch)" stroke="none"/>
+    <!-- two people on the sofa, seen from behind -->
+    <circle cx="176" cy="194" r="9" stroke-width="1.6"/>
+    <path d="M166 212 q0 -8 10 -8 q10 0 10 8" stroke-width="1.5"/>
+    <circle cx="226" cy="196" r="9" stroke-width="1.6"/>
+    <path d="M216 212 q0 -8 10 -8 q10 0 10 8" stroke-width="1.5"/>
+    <path d="M222 190 q4 -4 8 0" stroke-width="0.8"/>
+    <!-- fluffy rug in front of the sofa -->
+    <path d="M100 250 q100 -6 200 0" stroke-width="0.7"/>
+    <path d="M60 268 q140 -4 280 0" stroke-width="0.8"/>
+    <path d="M70 272 l2 -3 M90 273 l2 -3 M120 272 l2 -3 M300 272 l2 -3 M330 273 l2 -3" stroke-width="0.6"/>
+
+    <!-- surround speakers on the side walls -->
+    <path d="M44 110 L60 118 V150 L44 148 Z" stroke-width="1.2"/>
+    <circle cx="52" cy="132" r="4" stroke-width="0.9"/>
+    <path d="M356 110 L340 118 V150 L356 148 Z" stroke-width="1.2"/>
+    <circle cx="348" cy="132" r="4" stroke-width="0.9"/>
+    <!-- little chalkboard by the door on the left wall -->
+    <path d="M28 176 L52 184 V214 L28 216 Z" stroke-width="1.2"/>
+    <path d="M32 190 l14 3 M32 198 l10 2 M32 206 l14 1" stroke-width="0.7"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0207</text>
+</svg>

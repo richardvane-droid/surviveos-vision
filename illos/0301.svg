@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0301-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0301-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0301-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0301-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor line -->
+    <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
+    <path d="M40 252 q30 -3 60 0 M280 251 q30 -3 60 0" stroke-width="0.8"/>
+
+    <!-- knee wall top edge + sloped ceiling above (rafters receding upward) -->
+    <path d="M14 102 H388" stroke-width="1.8"/>
+    <path d="M16 105 H386" stroke-width="0.9"/>
+    <path d="M40 102 L64 14 M100 102 L118 14 M160 102 L172 14 M220 102 L226 14 M280 102 L280 14 M340 102 L334 14" stroke-width="1.1"/>
+    <path d="M30 60 H372 M22 88 H380" stroke-width="0.8"/>
+    <!-- rafter shadow hatch upper left -->
+    <path d="M14 14 L58 14 L38 100 L14 100 Z" fill="url(#m0301-hatch)" stroke="none"/>
+
+    <!-- pegboard on knee wall -->
+    <path d="M104 112 H296 V166 H104 Z" stroke-width="1.6"/>
+    <path d="M106 114 H294 V164" stroke-width="0.9"/>
+    <path d="M112 120 h0.1 M124 120 h0.1 M136 120 h0.1 M148 120 h0.1 M160 120 h0.1 M172 120 h0.1 M184 120 h0.1 M196 120 h0.1 M208 120 h0.1 M220 120 h0.1 M232 120 h0.1 M244 120 h0.1 M256 120 h0.1 M268 120 h0.1 M280 120 h0.1
+             M112 132 h0.1 M124 132 h0.1 M136 132 h0.1 M148 132 h0.1 M160 132 h0.1 M172 132 h0.1 M184 132 h0.1 M196 132 h0.1 M208 132 h0.1 M220 132 h0.1 M232 132 h0.1 M244 132 h0.1 M256 132 h0.1 M268 132 h0.1 M280 132 h0.1
+             M112 144 h0.1 M124 144 h0.1 M136 144 h0.1 M148 144 h0.1 M160 144 h0.1 M172 144 h0.1 M184 144 h0.1 M196 144 h0.1 M208 144 h0.1 M220 144 h0.1 M232 144 h0.1 M244 144 h0.1 M256 144 h0.1 M268 144 h0.1 M280 144 h0.1
+             M112 156 h0.1 M124 156 h0.1 M136 156 h0.1 M148 156 h0.1 M160 156 h0.1 M172 156 h0.1 M184 156 h0.1 M196 156 h0.1 M208 156 h0.1 M220 156 h0.1 M232 156 h0.1 M244 156 h0.1 M256 156 h0.1 M268 156 h0.1 M280 156 h0.1" stroke-width="1.6"/>
+    <!-- hanging tools: screwdrivers -->
+    <path d="M120 118 v10 l-2 4 v14 M126 118 v10 l2 4 v14 M118 118 h10" stroke-width="1.1"/>
+    <path d="M138 118 v10 l-2 4 v14 M144 118 v10 l2 4 v14 M136 118 h10" stroke-width="1.1"/>
+    <path d="M156 118 v10 l-2 4 v14 M162 118 v10 l2 4 v14 M154 118 h10" stroke-width="1.1"/>
+    <!-- pliers -->
+    <path d="M182 118 l-4 16 l-3 20 M186 118 l4 16 l3 20 M178 134 h12" stroke-width="1.1"/>
+    <!-- hammer -->
+    <path d="M206 118 v36 M198 118 h18 v8 h-18 Z" stroke-width="1.1"/>
+    <!-- tape roll + wrench -->
+    <circle cx="238" cy="132" r="9" stroke-width="1.2"/>
+    <circle cx="238" cy="132" r="4" stroke-width="0.9"/>
+    <path d="M262 118 q-6 6 0 12 v22 q6 -6 0 -12 M258 126 h8" stroke-width="1.1"/>
+    <!-- saw -->
+    <path d="M276 120 h14 l-2 26 h-10 Z M278 124 l10 0" stroke-width="1"/>
+
+    <!-- work table top -->
+    <path d="M92 170 H308 V180 H92 Z" stroke-width="1.9"/>
+    <path d="M94 172 H306" stroke-width="0.9"/>
+    <path d="M100 176 q30 -1 60 0 M200 177 q40 -2 80 0" stroke-width="0.7"/>
+    <!-- drawers -->
+    <path d="M104 182 H292 V200 H104 Z M104 202 H292 V220 H104 Z" stroke-width="1.2"/>
+    <path d="M190 191 h16 M190 211 h16" stroke-width="1.3"/>
+    <!-- legs -->
+    <path d="M100 180 V246 M108 180 V246 M292 180 V246 M300 180 V246" stroke-width="1.6"/>
+    <path d="M101 182 V244" stroke-width="0.8"/>
+    <path d="M100 236 H108 M292 236 H300" stroke-width="1"/>
+    <!-- shadow under table -->
+    <path d="M110 222 H290 V244 H110 Z" fill="url(#m0301-hatch)" stroke="none"/>
+
+    <!-- desktop CNC at left corner of table -->
+    <path d="M116 170 V150 H172 V170" stroke-width="1.6"/>
+    <path d="M118 152 H170" stroke-width="0.9"/>
+    <path d="M122 150 V138 H166 V150" stroke-width="1.4"/>
+    <path d="M122 142 H166" stroke-width="0.9"/>
+    <path d="M140 142 V158 M146 142 V158 M138 158 H148 M143 158 V164" stroke-width="1.1"/>
+    <path d="M124 166 H164 M130 164 h10 l2 -3 h6" stroke-width="0.8"/>
+    <path d="M118 154 H121 V168 H118 Z" fill="url(#m0301-hatch)" stroke="none"/>
+
+    <!-- vise at right corner -->
+    <path d="M250 170 V160 H262 V170 M266 170 V160 H278 V170 M262 165 H266 M278 165 h10" stroke-width="1.3"/>
+    <circle cx="290" cy="165" r="2.5" stroke-width="1"/>
+
+    <!-- arm lamp -->
+    <path d="M300 170 L306 132 L282 100" stroke-width="1.5"/>
+    <path d="M301 172 L307 134" stroke-width="0.8"/>
+    <path d="M282 100 l-14 -6 l-6 12 Z" stroke-width="1.4"/>
+    <path d="M270 106 l-6 10 M264 104 l-8 12 M258 102 l-8 10" stroke-width="0.7"/>
+    <circle cx="306" cy="132" r="2.5" stroke-width="1"/>
+
+    <!-- soldering iron on table -->
+    <path d="M198 168 l30 -4 l8 0" stroke-width="1.3"/>
+    <path d="M200 166 q4 -8 8 -2" stroke-width="0.8"/>
+
+    <!-- person sitting on stool, right side, facing the bench -->
+    <path d="M330 218 H362 M336 218 V246 M356 218 V246 M340 232 H354" stroke-width="1.4"/>
+    <circle cx="348" cy="150" r="8" stroke-width="1.5"/>
+    <path d="M348 158 V196 L336 218 M348 172 L322 182 M348 176 L324 188" stroke-width="1.5"/>
+    <path d="M348 196 L358 218" stroke-width="1.5"/>
+    <path d="M338 224 L330 246 M358 224 L352 246" stroke-width="1.5"/>
+    <path d="M349 160 V194" stroke-width="0.8"/>
+
+    <!-- shavings bucket lower left -->
+    <path d="M40 246 l-2 -28 h30 l-2 28 Z" stroke-width="1.4"/>
+    <path d="M38 218 q15 -4 30 0" stroke-width="1"/>
+    <path d="M44 226 l4 6 M54 224 l-3 7 M60 228 l4 5" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0301</text>
+</svg>

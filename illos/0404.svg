@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0404-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0404-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0404-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0404-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room corner: vertical corner, floor edges, sloped ceiling edges -->
+    <path d="M250 18 V200" stroke-width="1.6"/>
+    <path d="M250 200 L12 246 M250 200 L388 236" stroke-width="1.8"/>
+    <path d="M252 202 L16 248 M252 202 L384 237" stroke-width="0.9"/>
+    <path d="M250 18 L12 60 M250 18 L388 2" stroke-width="0.9"/>
+    <path d="M40 280 q20 -4 40 0 M330 276 q25 -4 50 -1" stroke-width="0.8"/>
+
+    <!-- overhead dust pipe along the ceiling, drop to the corner cyclone -->
+    <path d="M12 52 H340 Q352 52 352 64 V146" stroke-width="1.5"/>
+    <path d="M12 62 H332 Q342 62 342 72 V146" stroke-width="1.5"/>
+    <path d="M14 54 H338" stroke-width="0.8"/>
+    <path d="M80 52 V62 M150 52 V62 M290 52 V62 M347 100 h5" stroke-width="0.8"/>
+    <!-- hangers from ceiling -->
+    <path d="M110 40 V52 M230 30 V52" stroke-width="0.9"/>
+    <!-- wye + flexible hose down to the saw hood -->
+    <path d="M210 62 Q206 78 214 90 Q222 102 214 114 Q206 126 214 138 Q222 150 216 160 Q212 166 212 170" stroke-width="1.3"/>
+    <path d="M222 62 Q216 78 224 90 Q232 102 224 114 Q216 126 224 138 Q232 150 226 160 Q222 166 222 170" stroke-width="1.3"/>
+    <path d="M212 84 h10 M212 108 h10 M212 132 h10 M212 156 h10" stroke-width="0.7"/>
+
+    <!-- cyclone separator in the corner -->
+    <path d="M330 146 H364 V166 L352 198 H342 L330 166 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M330 146 a17 4 0 0 1 34 0" stroke-width="1"/>
+    <path d="M333 166 h28" stroke-width="0.8"/>
+    <path d="M336 170 L344 190 M358 170 L350 190" stroke-width="0.6"/>
+    <path d="M320 198 H376 V254 H320 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M320 198 a28 5 0 0 1 56 0" stroke-width="1.1"/>
+    <path d="M320 254 a28 5 0 0 0 56 0" stroke-width="1.1"/>
+    <path d="M322 200 V252" stroke-width="0.8"/>
+    <path d="M320 212 H376 M320 240 H376" stroke-width="0.7"/>
+    <path d="M334 214 V238 M362 214 V238" stroke-width="0.7"/>
+    <path d="M364 152 h12 v18 h-12" stroke-width="1"/>
+    <path d="M318 256 H378 V262 H318 Z" fill="url(#m0404-hatch)" stroke="none"/>
+
+    <!-- left wall hanging rail with tools -->
+    <path d="M18 92 L244 114" stroke-width="1.7"/>
+    <path d="M18 98 L244 120" stroke-width="1.7"/>
+    <path d="M20 94 L242 116" stroke-width="0.8"/>
+    <!-- chisels x3 -->
+    <path d="M32 98 h6 v10 h-6 Z M44 99 h6 v10 h-6 Z M56 100 h6 v10 h-6 Z" fill="#fff" stroke-width="1.1"/>
+    <path d="M35 108 V132 M47 109 V134 M59 110 V136" stroke-width="1.2"/>
+    <path d="M33 128 l2 6 l2 -6 M45 130 l2 6 l2 -6 M57 132 l2 6 l2 -6" stroke-width="0.8"/>
+    <!-- mallet -->
+    <path d="M76 100 H98 V114 H76 Z" fill="#fff" stroke-width="1.4"/>
+    <path d="M85 114 h4 v30 h-4 Z" fill="#fff" stroke-width="1.1"/>
+    <path d="M78 102 h18" stroke-width="0.7"/>
+    <!-- hand plane, side view -->
+    <path d="M110 112 H164 L160 124 H114 Z" fill="#fff" stroke-width="1.4"/>
+    <circle cx="121" cy="106" r="4" fill="#fff" stroke-width="1.1"/>
+    <path d="M121 110 v2" stroke-width="0.9"/>
+    <path d="M148 112 q-2 -12 8 -14 q6 0 4 8 l-2 6" fill="#fff" stroke-width="1.1"/>
+    <path d="M134 104 l8 -8 M134 104 l6 8" stroke-width="1"/>
+    <path d="M114 122 h44" stroke-width="0.7"/>
+    <!-- try square -->
+    <path d="M176 112 h34 v6 h-28 v28 h-6 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M186 118 v4 M196 118 v4 M206 118 v4" stroke-width="0.7"/>
+    <!-- F-clamps -->
+    <path d="M222 116 V172 M218 120 H232 M218 164 H232 M232 118 v4 M232 162 v4" stroke-width="1.3"/>
+    <path d="M236 118 V166 M232 122 H244 M232 158 H244" stroke-width="1.1"/>
+
+    <!-- workbench: top, apron, legs -->
+    <path d="M90 212 L150 184 L320 196 L260 226 Z" fill="#fff" stroke-width="1.9"/>
+    <path d="M92 214 L152 186 L318 198" stroke-width="0.9"/>
+    <path d="M90 212 V224 L260 238 V226 M320 196 V208 L260 238" stroke-width="1.4"/>
+    <path d="M92 224 L260 238 L320 208 L320 214 L260 244 L92 230 Z" fill="url(#m0404-hatch)" stroke="none"/>
+    <path d="M94 224 V262 M100 224 V260 M256 238 V276 M262 238 V275 M316 208 V244 M150 196 V216" stroke-width="1.4"/>
+    <path d="M97 250 L259 264 M259 264 L317 234" stroke-width="1"/>
+
+    <!-- table saw on the bench -->
+    <path d="M136 204 L183 182 L278 190 L232 214 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M138 205 L184 184 L276 191" stroke-width="0.8"/>
+    <path d="M136 204 V218 L232 228 V214 M278 190 V204 L232 228" stroke-width="1.3"/>
+    <path d="M138 218 L232 228 L278 204 L278 208 L232 232 L138 222 Z" fill="url(#m0404-hatch2)" stroke="none"/>
+    <path d="M150 203 L192 184 M164 205 L206 186" stroke-width="0.7"/>
+    <!-- rip fence -->
+    <path d="M236 206 L280 184 L286 186 L242 208 Z" fill="#fff" stroke-width="1.2"/>
+    <!-- board being fed into the blade -->
+    <path d="M148 206 L190 190 L200 192 L158 208 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M154 205 l30 -12" stroke-width="0.6"/>
+
+    <!-- blade (foreshortened) + guard + dust hood -->
+    <g transform="translate(208 199) rotate(-18)">
+      <path d="M-17 0 A17 19 0 0 1 17 0 Z" fill="#fff" stroke-width="1.6"/>
+      <path d="M-15 -9 l-4 -2 M-10 -15 l-3 -3 M-4 -18 l-1 -4 M4 -18 l1 -4 M10 -15 l3 -3 M15 -9 l4 -2" stroke-width="1"/>
+      <path d="M-9 -3 A9 9 0 0 1 9 -3" stroke-width="0.7"/>
+    </g>
+    <path d="M198 168 H230 V176 Q214 182 198 176 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M200 170 H228" stroke-width="0.7"/>
+    <!-- person behind bench pushing the board -->
+    <circle cx="128" cy="150" r="5.5" fill="#fff" stroke-width="1.4"/>
+    <path d="M128 155.5 V186" stroke-width="1.5"/>
+    <path d="M128 164 L148 194 M128 166 L150 190" stroke-width="1.3"/>
+    <path d="M122 154 h12" stroke-width="0.9"/>
+
+    <!-- sawdust + offcuts on the floor -->
+    <path d="M150 262 q10 -6 24 0 q12 -5 26 2" stroke-width="0.9"/>
+    <path d="M160 268 h4 M176 266 h5 M192 270 h3" stroke-width="0.8"/>
+    <path d="M28 262 L60 256 L62 260 L30 266 Z" fill="#fff" stroke-width="1.1"/>
+    <path d="M36 256 L66 250 L68 254 L38 260 Z" fill="#fff" stroke-width="1.1"/>
+    <path d="M290 258 q12 -8 26 0 M296 264 h4 M306 262 h4" stroke-width="0.9"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0404</text>
+</svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0209-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0209-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0209-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0209-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor + back wall corner lines -->
+    <path d="M14 250 Q200 246 386 250" stroke-width="1.2"/>
+    <path d="M30 256 q30 -3 60 0 M300 257 q30 -3 60 0" stroke-width="0.8"/>
+    <path d="M14 40 H386" stroke-width="0.8"/>
+
+    <!-- loft bed: platform with mattress, seen from the front, ceiling cuts it -->
+    <path d="M40 66 H360 V80 H40 Z" stroke-width="2"/>
+    <path d="M42 68 H358 V78" stroke-width="0.9"/>
+    <path d="M60 68 v10 M120 68 v10 M200 68 v10 M280 68 v10 M340 68 v10" stroke-width="0.7"/>
+    <!-- mattress + blanket + pillow on top -->
+    <path d="M50 66 V52 H350 V66" stroke-width="1.6"/>
+    <path d="M52 64 V54 H348" stroke-width="0.8"/>
+    <path d="M60 52 q20 -10 60 -6 q30 2 60 -2 q60 -4 120 6 q10 2 4 6 H60 Z" stroke-width="1.2"/>
+    <path d="M56 50 q10 -10 34 -6 q4 6 -2 8 H58 Z" stroke-width="1.1"/>
+    <path d="M110 52 h60 M200 52 h40" stroke-width="0.6"/>
+    <path d="M52 56 H348 V64 H52 Z" fill="url(#m0209-hatch)" stroke="none"/>
+    <!-- posts to the floor -->
+    <path d="M40 80 V250 M52 80 V250 M348 80 V250 M360 80 V250" stroke-width="1.8"/>
+    <path d="M42 82 V248 M362 82 V248" stroke-width="0.7"/>
+    <path d="M42 82 H50 V248 H42 Z M350 82 H358 V248 H350 Z" fill="url(#m0209-hatch)" stroke="none"/>
+    <!-- ladder on the right post -->
+    <path d="M366 80 L384 250 M378 80 L396 250" stroke-width="1.3"/>
+    <path d="M369 110 h12 M372 140 h12 M375 170 h12 M378 200 h12 M381 230 h12" stroke-width="1.1"/>
+    <!-- small wooden sign hanging on the left post -->
+    <path d="M46 96 v10" stroke-width="0.8"/>
+    <path d="M36 106 h20 v14 h-20 Z" stroke-width="1.1"/>
+    <path d="M39 111 h14 M39 116 h10" stroke-width="0.6"/>
+
+    <!-- tent: triangular front, apex just below the bed -->
+    <path d="M200 86 L70 250 H330 Z" fill="#fff" stroke="none"/>
+    <path d="M200 86 L70 250 H330 Z" stroke-width="2.2"/>
+    <path d="M202 90 L74 248 M198 90 L326 248" stroke-width="1"/>
+    <path d="M200 86 V76" stroke-width="1.4"/>
+    <!-- door opening: inner triangle -->
+    <path d="M200 106 L118 250 H282 Z" stroke-width="1.6"/>
+    <!-- fabric flaps pulled to the sides and tied -->
+    <path d="M200 106 Q150 150 118 250" stroke-width="0.8"/>
+    <path d="M110 182 q-16 -4 -22 8 q10 8 22 2 Z" stroke-width="1.2"/>
+    <path d="M290 182 q16 -4 22 8 q-10 8 -22 2 Z" stroke-width="1.2"/>
+    <path d="M114 184 q-8 0 -12 4 M286 184 q8 0 12 4" stroke-width="0.7"/>
+    <path d="M136 170 L108 186 M264 170 L292 186" stroke-width="0.9"/>
+    <!-- outside fabric shading -->
+    <path d="M76 246 L196 96 L192 112 L124 246 Z" fill="url(#m0209-hatch)" stroke="none"/>
+    <path d="M86 226 q6 -4 12 -2 M96 208 q6 -4 12 -2 M300 226 q-6 -4 -12 -2 M290 208 q-6 -4 -12 -2" stroke-width="0.6"/>
+
+    <!-- inside: back wall of the tent covered in posters -->
+    <path d="M200 112 L128 246 H272 Z" stroke-width="0.7"/>
+    <!-- poster rows -->
+    <path d="M186 130 h28 v20 h-28 Z" stroke-width="1"/>
+    <path d="M190 138 h20 M190 144 h14" stroke-width="0.6"/>
+    <path d="M166 156 h30 v24 h-30 Z M202 154 h30 v26 h-30 Z" stroke-width="1"/>
+    <path d="M170 168 q8 -8 12 0 q6 -6 10 2 M206 162 q12 0 20 12 M208 172 h20" stroke-width="0.6"/>
+    <path d="M148 186 h28 v26 h-28 Z M182 186 h36 v26 h-36 Z M224 186 h28 v26 h-28 Z" stroke-width="1"/>
+    <path d="M152 192 h20 M152 198 h14 M152 204 h18" stroke-width="0.6"/>
+    <circle cx="200" cy="196" r="6" stroke-width="0.7"/>
+    <path d="M188 208 h24" stroke-width="0.6"/>
+    <path d="M228 194 l6 -4 l6 6 M228 204 h20" stroke-width="0.6"/>
+    <!-- string lights hanging along the inside -->
+    <path d="M150 178 q25 12 50 4 q25 -8 50 4" stroke-width="0.9"/>
+    <circle cx="160" cy="182" r="2.2" stroke-width="0.9"/>
+    <circle cx="176" cy="186" r="2.2" stroke-width="0.9"/>
+    <circle cx="194" cy="185" r="2.2" stroke-width="0.9"/>
+    <circle cx="212" cy="182" r="2.2" stroke-width="0.9"/>
+    <circle cx="228" cy="182" r="2.2" stroke-width="0.9"/>
+    <circle cx="244" cy="186" r="2.2" stroke-width="0.9"/>
+    <path d="M200 106 V124" stroke-width="0.8"/>
+    <path d="M194 124 h12 v8 h-12 Z" stroke-width="1"/>
+    <path d="M194 128 l-4 0 M206 128 l4 0" stroke-width="0.6"/>
+
+    <!-- inside floor: wool rug, cushions, person lying on the side -->
+    <path d="M130 246 q70 -6 140 0" stroke-width="0.8"/>
+    <path d="M232 236 q10 -10 26 -6 q4 8 -4 12 q-16 2 -22 -6 Z" stroke-width="1.2"/>
+    <path d="M236 224 q8 -8 22 -4 q2 6 -4 8 q-14 2 -18 -4 Z" stroke-width="1.1"/>
+    <!-- person lying on the side: head on the cushion at right, body stretched to the left -->
+    <circle cx="238" cy="226" r="8" stroke-width="1.5"/>
+    <path d="M233 225 q2 2 4 0 M240 225 q2 2 4 0" stroke-width="0.8"/>
+    <path d="M230 230 Q200 224 176 232 Q160 236 148 246" stroke-width="1.8"/>
+    <path d="M230 236 Q200 234 178 240" stroke-width="1"/>
+    <path d="M226 234 q-4 4 -2 10 M148 246 l-8 2 M150 242 l8 4" stroke-width="1.2"/>
+    <path d="M186 234 q-10 2 -14 12" stroke-width="1.3"/>
+    <!-- treasure tin box in the corner + a book -->
+    <path d="M136 246 v-16 h22 v16 Z M136 230 q11 -6 22 0" stroke-width="1.2"/>
+    <path d="M140 236 h14 M146 240 h4" stroke-width="0.7"/>
+    <path d="M254 246 l2 -6 h14 l2 6 Z" stroke-width="0.9"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0209</text>
+</svg>

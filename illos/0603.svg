@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0603-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0603-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0603-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0603-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground line -->
+    <path d="M14 236 Q120 231 220 235 T392 232" stroke-width="1.2"/>
+    <!-- eave with gutter, top-left -->
+    <path d="M10 34 L156 56" stroke-width="2"/>
+    <path d="M10 38 L154 60" stroke-width="1"/>
+    <path d="M10 50 L152 72 q6 2 4 6 L10 56" stroke-width="1.5"/>
+    <path d="M12 52 L150 74" stroke-width="0.8"/>
+    <path d="M20 36 l-2 10 M50 40 l-2 10 M80 45 l-2 10 M110 49 l-2 10 M140 54 l-2 10" stroke-width="0.8"/>
+    <path d="M12 26 q40 6 70 12 M60 20 q40 6 80 14" stroke-width="0.8"/>
+    <!-- rain -->
+    <path d="M30 14 v6 M52 10 v6 M76 18 v6 M100 12 v6 M120 22 v6 M160 30 v6 M180 20 v6 M210 40 v6 M240 24 v6 M270 46 v6 M300 30 v6 M330 44 v6 M360 26 v6 M380 50 v6 M170 60 v6 M320 70 v6 M370 90 v6 M40 80 v6 M60 110 v6 M90 100 v6 M20 150 v6 M50 170 v6 M100 140 v6 M230 70 v6 M350 120 v6" stroke-width="0.8"/>
+    <!-- downspout -->
+    <path d="M144 78 V104 M156 76 V104" stroke-width="1.6"/>
+    <path d="M146 80 V102" stroke-width="0.8"/>
+    <!-- T splitter: branch to tank filter, continue down to first-flush bucket -->
+    <path d="M144 104 H138 V116 H144 M156 104 H162 V116 H156" stroke-width="1.4"/>
+    <path d="M162 106 H236 M162 114 H236" stroke-width="1.4"/>
+    <path d="M144 116 V152 M156 116 V152" stroke-width="1.6"/>
+    <!-- first-flush bucket (small barrel) -->
+    <ellipse cx="150" cy="154" rx="16" ry="4" stroke-width="1.5"/>
+    <path d="M134 154 V190 q16 6 32 0 V154" stroke-width="1.6"/>
+    <path d="M136 156 V188" stroke-width="0.8"/>
+    <path d="M134 170 q16 5 32 0 M134 181 q16 5 32 0" stroke-width="0.9"/>
+    <path d="M158 158 q5 16 5 30 q-5 3 -7 -2 q0 -16 2 -28 Z" fill="url(#m0603-hatch)" stroke="none"/>
+    <path d="M150 194 v4 M150 202 v3 M147 210 q3 3 6 0" stroke-width="0.9"/>
+    <path d="M122 172 h12" stroke-width="1"/>
+    <path d="M114 174 q-4 -6 4 -8 q6 0 6 6 Z" stroke-width="1"/>
+    <!-- horizontal 1500L tank on brick base -->
+    <ellipse cx="204" cy="158" rx="18" ry="52" stroke-width="1.8"/>
+    <path d="M204 106 H340 q24 0 24 52 q0 52 -24 52 H204" stroke-width="1.9"/>
+    <path d="M206 108 H338 q22 2 22 50" stroke-width="0.9"/>
+    <path d="M222 116 H336 M222 200 H336" stroke-width="0.8"/>
+    <path d="M208 146 H230 M208 170 H230" stroke-width="0.7"/>
+    <path d="M300 110 q32 4 46 24 q6 24 0 48 q-14 20 -46 22 q20 -16 22 -46 q-2 -32 -22 -48 Z" fill="url(#m0603-hatch)" stroke="none"/>
+    <!-- filter basket on top of the tank -->
+    <path d="M236 92 H262 V108 H236 Z" stroke-width="1.5"/>
+    <ellipse cx="249" cy="90" rx="15" ry="3.5" stroke-width="1.4"/>
+    <path d="M238 97 h22 M238 102 h22 M242 93 v13 M249 93 v13 M256 93 v13" stroke-width="0.6"/>
+    <!-- level tube with float and marks -->
+    <path d="M188 114 H180 V202 H188" stroke-width="1"/>
+    <path d="M182 116 V200 M186 116 V200" stroke-width="1.3"/>
+    <path d="M176 124 h4 M176 140 h4 M176 156 h4 M176 172 h4 M176 188 h4" stroke-width="0.9"/>
+    <circle cx="184" cy="150" r="2.6" stroke-width="1.2"/>
+    <path d="M182 153 V200" stroke-width="0.6"/>
+    <!-- brick base -->
+    <path d="M206 210 H346 V230 H206 Z" stroke-width="1.6"/>
+    <path d="M206 220 H346" stroke-width="0.9"/>
+    <path d="M218 210 v10 M242 210 v10 M230 220 v10 M254 220 v10" stroke-width="0.8"/>
+    <!-- wooden lattice screen in front of the right half -->
+    <path d="M262 80 H378 V232 H262 Z" fill="#fff" stroke="none"/>
+    <path d="M262 80 H378 V232 H262 Z" stroke-width="1.9"/>
+    <path d="M264 82 H376 V230" stroke-width="0.9"/>
+    <path d="M274 82 V230 M286 82 V230 M298 82 V186 M310 82 V186 M322 82 V230 M334 82 V230 M346 82 V230 M358 82 V230 M370 82 V230" stroke-width="1"/>
+    <path d="M262 96 H378 M262 156 H378" stroke-width="1.3"/>
+    <path d="M264 98 q30 -2 56 0" stroke-width="0.7"/>
+    <path d="M276 90 q2 30 0 60 M348 110 q2 40 0 80" stroke-width="0.6"/>
+    <!-- access door at the bottom of the screen -->
+    <path d="M294 186 H318 V230 H294 Z" stroke-width="1.6"/>
+    <path d="M296 188 H316 V228" stroke-width="0.9"/>
+    <path d="M298 190 L314 226 M314 190 L298 226" stroke-width="0.8"/>
+    <circle cx="312" cy="210" r="1.6" stroke-width="1"/>
+    <path d="M294 192 h3 M294 222 h3" stroke-width="1.2"/>
+    <!-- clematis on top of the screen -->
+    <path d="M300 80 q-6 -10 6 -12 q8 -6 14 2 q10 -8 14 4 q10 -2 6 8" stroke-width="1.1"/>
+    <path d="M304 74 q3 -5 8 -3 M320 70 q3 -5 8 -2 M340 78 l-4 -8 l6 2" stroke-width="0.9"/>
+    <path d="M316 80 q-2 -12 4 -20 M330 80 q4 -10 2 -16" stroke-width="0.8"/>
+    <!-- gravel drain channel at the foot, to the left -->
+    <path d="M24 236 q6 -3 10 0 q6 -3 10 0 M50 238 q5 -3 9 0 M70 236 q6 -3 10 0 q5 -3 9 0 M100 238 q5 -3 9 0" stroke-width="0.9"/>
+    <path d="M14 244 q60 -4 110 -2" stroke-width="0.9"/>
+    <path d="M379 233 q1.5 -6 4.2 -11 M382 233 q1.5 -6 5.0 -11 M386 233 q1.5 -6 4.2 -11 M389 233 q1.5 -6 5.0 -11 M391 233 q1.5 -6 5.8 -11 M385 231 q1.5 -5 4.2 -9 M388 231 q1.5 -5 5.0 -9 M390 231 q1.5 -5 5.8 -9" stroke-width="0.9"/>
+    <path d="M190 235 q1.2 -6 3.2 -11 M192 235 q1.2 -6 4.0 -11 M195 235 q1.2 -6 4.8 -11 M126 237 q1.2 -6 3.2 -12 M128 237 q1.2 -6 4.0 -12 M123 239 q1.2 -4 3.2 -7 M125 239 q1.2 -4 4.0 -7 M128 239 q1.2 -4 4.8 -7 M178 236 q1.2 -7 3.2 -12 M180 236 q1.2 -7 4.0 -12 M145 235 q1.2 -4 3.2 -8 M147 235 q1.2 -4 4.0 -8 M155 235 q1.2 -6 3.2 -11 M158 235 q1.2 -6 4.0 -11" stroke-width="0.9"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0603</text>
+</svg>

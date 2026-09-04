@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0604-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0604-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0604-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0604-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- horizon -->
+    <path d="M12 232 Q100 227 200 231 T392 228" stroke-width="1.2"/>
+    <path d="M330 232 Q334 174 344 136" stroke-width="1.8"/>
+    <path d="M338 232 Q343 174 348 136" stroke-width="1.8"/>
+    <path d="M336 229 Q341 174 347 140" stroke-width="0.8"/>
+    <path d="M324 232 q4 -4 8 -2 M344 232 q-4 -4 -8 -2" stroke-width="1.3"/>
+    <path d="M346 136 l-20 -14 M346 136 l23 -16 M346 136 l1 -20 M326 122 l-15 -6" stroke-width="1.1"/>
+    <path d="M283 134 Q284 119 299 108 Q301 99 315 99 Q319 91 331 95 Q338 88 347 94 Q357 88 363 95 Q375 91 379 99 Q393 99 395 108 Q410 119 411 134 Q395 138 379 134 Q363 138 347 134 Q331 138 315 134 Q299 138 283 134" stroke-width="1.8"/>
+    <path d="M285 133 Q296 106 315 98" stroke-width="0.8"/>
+    <path d="M300 128 q3 -4 6 -1 q3 -3 6 0 M376 112 q3 -4 6 -1 q3 -3 6 0 M367 117 q3 -4 6 -1 q3 -3 6 0 M373 128 q3 -4 6 -1 q3 -3 6 0 M325 115 q3 -4 6 -1 q3 -3 6 0 M314 107 q3 -4 6 -1 q3 -3 6 0 M333 127 q3 -4 6 -1 q3 -3 6 0 M326 110 q3 -4 6 -1 q3 -3 6 0 M398 127 q3 -4 6 -1 q3 -3 6 0 M336 100 q3 -4 6 -1 q3 -3 6 0 M344 105 q3 -4 6 -1 q3 -3 6 0 M369 125 q3 -4 6 -1 q3 -3 6 0 M343 113 q3 -4 6 -1 q3 -3 6 0 M297 114 q3 -4 6 -1 q3 -3 6 0" stroke-width="0.9"/>
+    <path d="M288 121 Q328 129 363 133 L291 133 Z" fill="url(#m0604-hatch)" stroke="none"/>
+    <!-- feeder hanging from a branch -->
+    <path d="M316 130 V150" stroke-width="1"/>
+    <path d="M302 158 L316 148 L330 158 V178 H302 Z" stroke-width="1.5"/>
+    <path d="M304 160 L316 151 L328 160" stroke-width="0.8"/>
+    <path d="M300 172 H332 M306 166 h20" stroke-width="0.9"/>
+    <path d="M306 176 h20 v-4" stroke-width="0.7"/>
+    <path d="M318 162 q12 2 10 14 q-8 0 -10 -2 Z" fill="url(#m0604-hatch)" stroke="none"/>
+    <!-- camera pole -->
+    <path d="M116 240 V44 M126 240 V44" stroke-width="2"/>
+    <path d="M118 238 V46" stroke-width="0.9"/>
+    <path d="M118 44 H124" stroke-width="1.5"/>
+    <path d="M106 240 H136 V248 H106 Z" stroke-width="1.6"/>
+    <path d="M108 242 H134" stroke-width="0.8"/>
+    <path d="M116 60 q4 6 8 0 M116 100 q4 6 8 0 M116 180 q4 6 8 0" stroke-width="0.7"/>
+    <!-- top: wide-angle camera looking out over the grass -->
+    <path d="M126 50 H138 V40" stroke-width="1.3"/>
+    <path d="M132 30 H170 V56 H132 Z" stroke-width="1.7"/>
+    <path d="M134 32 H168 V54" stroke-width="0.9"/>
+    <path d="M130 28 H176 L180 34 H132" stroke-width="1.3"/>
+    <circle cx="170" cy="43" r="7" stroke-width="1.6"/>
+    <circle cx="170" cy="43" r="3.5" stroke-width="1"/>
+    <path d="M136 36 q10 4 22 0 q-6 14 -20 16 Z" fill="url(#m0604-hatch)" stroke="none"/>
+    <!-- middle: telephoto camera on a bracket, tilted down toward the basin -->
+    <path d="M126 112 H146 M126 118 H146 M146 108 V124" stroke-width="1.6"/>
+    <path d="M140 108 L188 132 L182 146 L134 122 Z" stroke-width="1.7"/>
+    <path d="M142 110 L186 133" stroke-width="0.9"/>
+    <path d="M158 116 l-2 6 M170 122 l-2 6" stroke-width="0.8"/>
+    <path d="M188 132 L200 138 L196 150 L182 146 Z" stroke-width="1.6"/>
+    <ellipse cx="198" cy="144" rx="3.2" ry="6.5" transform="rotate(26 198 144)" stroke-width="1.5"/>
+    <path d="M136 122 L180 145 q-2 -6 2 -10 L140 114 Z" fill="url(#m0604-hatch)" stroke="none"/>
+    <path d="M204 150 L240 202" stroke-width="0.8" stroke-dasharray="3 4"/>
+    <!-- infrared light near the base -->
+    <path d="M126 200 H146 V214 H126" stroke-width="1.4"/>
+    <circle cx="140" cy="207" r="3.5" stroke-width="1.2"/>
+    <path d="M148 204 h4 M148 210 h4" stroke-width="0.7"/>
+    <!-- shallow water basin -->
+    <ellipse cx="282" cy="224" rx="52" ry="10" stroke-width="1.8"/>
+    <path d="M230 224 q6 18 52 18 q46 0 52 -18" stroke-width="1.8"/>
+    <path d="M232 226 q8 16 50 16" stroke-width="0.9"/>
+    <ellipse cx="282" cy="224" rx="42" ry="6" stroke-width="0.8"/>
+    <path d="M264 222 q8 -2 14 0 M270 226 q10 -2 20 0 M290 220 q6 -2 12 0" stroke-width="0.7"/>
+    <path d="M286 232 q40 0 46 -8 q-4 12 -46 14 Z" fill="url(#m0604-hatch)" stroke="none"/>
+    <!-- slanted stone leaning on the basin -->
+    <path d="M330 238 L340 214 L360 222 L356 240 Z" stroke-width="1.5"/>
+    <path d="M340 214 L346 234 M348 220 l6 4" stroke-width="0.8"/>
+    <path d="M346 224 L360 224 L356 238 L348 236 Z" fill="url(#m0604-hatch)" stroke="none"/>
+    <!-- bird on the rim, head down to drink -->
+    <ellipse cx="250" cy="212" rx="13" ry="6.5" transform="rotate(-12 250 212)" stroke-width="1.5"/>
+    <path d="M244 210 q6 -3 12 0 q-4 4 -10 3" stroke-width="0.9"/>
+    <path d="M238 214 l-10 -5 M238 214 l-9 -1" stroke-width="1.3"/>
+    <circle cx="265" cy="214" r="4.5" stroke-width="1.4"/>
+    <path d="M268 217 l6 6 M268 217 l4 7" stroke-width="1.2"/>
+    <circle cx="266" cy="212.5" r="0.7" stroke-width="1"/>
+    <path d="M250 218 v5 M256 218 v5" stroke-width="1"/>
+    <path d="M240 216 q10 4 20 -1 q-6 5 -20 1 Z" fill="url(#m0604-hatch)" stroke="none"/>
+    <!-- grass -->
+    <path d="M40 239 q1.8 -6 5.2 -11 M42 239 q1.8 -6 6.0 -11 M89 239 q1.8 -10 5.2 -18 M91 239 q1.8 -10 6.0 -18 M94 239 q1.8 -10 6.8 -18 M45 230 q1.8 -6 5.2 -12 M47 230 q1.8 -6 6.0 -12 M50 230 q1.8 -6 6.8 -12 M92 233 q1.8 -8 5.2 -15 M94 233 q1.8 -8 6.0 -15 M97 233 q1.8 -8 6.8 -15 M76 228 q1.8 -8 5.2 -15 M78 228 q1.8 -8 6.0 -15 M37 234 q1.8 -6 5.2 -10 M40 234 q1.8 -6 6.0 -10 M87 234 q1.8 -7 5.2 -12 M90 234 q1.8 -7 6.0 -12 M23 233 q1.8 -10 5.2 -18 M26 233 q1.8 -10 6.0 -18 M33 233 q1.8 -9 5.2 -17 M35 233 q1.8 -9 6.0 -17 M38 233 q1.8 -9 6.8 -17 M60 232 q1.8 -10 5.2 -18 M62 232 q1.8 -10 6.0 -18 M65 232 q1.8 -10 6.8 -18 M87 230 q1.8 -7 5.2 -13 M90 230 q1.8 -7 6.0 -13 M92 230 q1.8 -7 6.8 -13 M49 237 q1.8 -7 5.2 -12 M52 237 q1.8 -7 6.0 -12 M54 237 q1.8 -7 6.8 -12" stroke-width="0.9"/>
+    <path d="M48 227 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M97 221 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M53 218 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M96 222 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M32 215 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M41 216 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M96 217 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3" stroke-width="0.8"/>
+    <path d="M148 229 q1.8 -8 5.2 -14 M150 229 q1.8 -8 6.0 -14 M170 230 q1.8 -6 5.2 -11 M173 230 q1.8 -6 6.0 -11 M195 233 q1.8 -8 5.2 -14 M197 233 q1.8 -8 6.0 -14 M175 241 q1.8 -6 5.2 -12 M178 241 q1.8 -6 6.0 -12 M180 241 q1.8 -6 6.8 -12 M215 233 q1.8 -8 5.2 -15 M218 233 q1.8 -8 6.0 -15 M220 233 q1.8 -8 6.8 -15 M159 230 q1.8 -8 5.2 -14 M161 230 q1.8 -8 6.0 -14 M164 230 q1.8 -8 6.8 -14 M169 234 q1.8 -6 5.2 -11 M172 234 q1.8 -6 6.0 -11 M148 231 q1.8 -6 5.2 -12 M151 231 q1.8 -6 6.0 -12 M153 231 q1.8 -6 6.8 -12" stroke-width="0.9"/>
+    <path d="M156 215 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M203 219 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M184 229 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M224 218 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M167 216 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3" stroke-width="0.8"/>
+    <path d="M366 236 q1.8 -7 5.2 -14 M368 236 q1.8 -7 6.0 -14 M371 236 q1.8 -7 6.8 -14 M378 229 q1.8 -6 5.2 -10 M381 229 q1.8 -6 6.0 -10 M373 231 q1.8 -6 5.2 -11 M376 231 q1.8 -6 6.0 -11 M378 231 q1.8 -6 6.8 -11 M369 235 q1.8 -9 5.2 -16 M372 235 q1.8 -9 6.0 -16 M374 235 q1.8 -9 6.8 -16" stroke-width="0.9"/>
+    <path d="M14 252 q60 -4 110 -1 q60 3 100 -1 M300 250 q40 -3 90 0" stroke-width="1"/>
+    <path d="M62 253 q1.8 -6 5.2 -10 M65 253 q1.8 -6 6.0 -10 M20 255 q1.8 -6 5.2 -11 M22 255 q1.8 -6 6.0 -11 M25 255 q1.8 -6 6.8 -11 M96 252 q1.8 -6 5.2 -10 M98 252 q1.8 -6 6.0 -10 M59 253 q1.8 -8 5.2 -15 M61 253 q1.8 -8 6.0 -15 M43 252 q1.8 -8 5.2 -15 M45 252 q1.8 -8 6.0 -15 M60 256 q1.8 -7 5.2 -13 M62 256 q1.8 -7 6.0 -13" stroke-width="1"/>
+    <path d="M197 257 q1.8 -6 5.2 -12 M200 257 q1.8 -6 6.0 -12 M209 254 q1.8 -7 5.2 -13 M212 254 q1.8 -7 6.0 -13 M165 250 q1.8 -6 5.2 -10 M167 250 q1.8 -6 6.0 -10 M170 250 q1.8 -6 6.8 -10 M193 254 q1.8 -7 5.2 -13 M195 254 q1.8 -7 6.0 -13 M160 257 q1.8 -6 5.2 -11 M162 257 q1.8 -6 6.0 -11" stroke-width="1"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0604</text>
+</svg>

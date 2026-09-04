@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0703-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0703-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0703-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0703-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- night sky: moon + stars -->
+    <path d="M352 30 a16 16 0 1 0 14 24 a12 12 0 1 1 -14 -24 Z" fill="url(#m0703-hatch)" stroke-width="1.4"/>
+    <path d="M320 18 l0 6 M317 21 l6 0 M384 70 l0 6 M381 73 l6 0 M300 56 l0 5 M297.5 58.5 l5 0 M20 30 l0 6 M17 33 l6 0 M40 70 l0 4 M38 72 l4 0 M370 100 l0 5 M367.5 102.5 l5 0" stroke-width="0.9"/>
+
+    <!-- far bank line -->
+    <path d="M0 132 Q100 126 200 130 T400 128" stroke-width="1.1"/>
+    <path d="M330 130 l3 -18 M340 129 l1 -22 M350 130 l4 -16 M360 128 l0 -20 M372 128 l3 -16 M384 128 l1 -18" stroke-width="0.9"/>
+
+    <!-- water ripples -->
+    <path d="M10 150 h24 M60 156 h20 M300 148 h26 M340 156 h22 M372 146 h20" stroke-width="0.9"/>
+    <path d="M6 172 h20 M320 176 h28 M362 168 h26 M330 194 h22 M366 190 h26" stroke-width="0.9"/>
+    <path d="M326 214 h30 M366 210 h24 M338 232 h22 M372 228 h20" stroke-width="0.9"/>
+    <path d="M20 246 h24 M60 252 h20 M110 246 h30 M160 254 h20 M330 250 h26 M372 246 h20" stroke-width="0.9"/>
+    <path d="M14 266 h22 M66 272 h28 M120 268 h18 M170 274 h30 M230 268 h20 M340 270 h22 M380 266 h14" stroke-width="0.9"/>
+    <path d="M30 284 h22 M90 288 h28 M150 284 h18 M210 288 h30 M270 284 h20 M330 288 h26 M372 284 h20" stroke-width="0.9"/>
+
+    <!-- deck -->
+    <path d="M30 226 L262 226 L312 180 L80 180 Z" fill="#fff" stroke-width="1.9"/>
+    <path d="M32 228 L264 228 L314 182" stroke-width="1"/>
+    <path d="M30 226 V235 H262 V226 M262 235 L312 189 V180" stroke-width="1.6"/>
+    <path d="M31 227 H261 V234 H31 Z" fill="url(#m0703-hatch)" stroke="none"/>
+    <path d="M263 228 L311 184 V188 L263 234 Z" fill="url(#m0703-hatch2)" stroke="none"/>
+    <path d="M60 226 L110 180 M100 226 L150 180 M140 226 L190 180 M180 226 L230 180 M220 226 L270 180" stroke-width="0.8"/>
+    <path d="M40 235 V262 M150 235 V266 M256 235 V262 M306 189 V210" stroke-width="2.4"/>
+    <path d="M34 263 h12 M144 267 h12 M250 263 h12 M300 211 h12" stroke-width="0.9"/>
+
+    <!-- posts -->
+    <path d="M60 226 V104 M236 226 V104 M106 180 V72 M284 180 V72" stroke-width="2"/>
+    <path d="M62 226 V106 M238 226 V106" stroke-width="0.9"/>
+
+    <!-- roof plane with solar panel -->
+    <path d="M40 100 L250 100 L300 54 L90 54 Z" fill="#fff" stroke-width="2"/>
+    <path d="M38 102 L252 102 M92 56 L302 56" stroke-width="1"/>
+    <path d="M40 100 V106 H250 V100" stroke-width="1.4"/>
+    <path d="M41 101 H249 V105 H41 Z" fill="url(#m0703-hatch)" stroke="none"/>
+    <path d="M58 100 L108 54 M76 100 L126 54 M94 100 L144 54 M112 100 L162 54 M130 100 L180 54 M148 100 L198 54 M166 100 L216 54 M184 100 L234 54 M202 100 L252 54 M220 100 L270 54 M238 100 L288 54" stroke-width="0.7"/>
+    <!-- solar panel raised on frame -->
+    <path d="M120 92 L204 92 L238 62 L154 62 Z" fill="#fff" stroke-width="1.8"/>
+    <path d="M122 94 L206 94 L240 64" stroke-width="0.9"/>
+    <path d="M141 92 L175 62 M162 92 L196 62 M183 92 L217 62 M131 82 L215 82 M142 72 L226 72" stroke-width="0.9"/>
+    <path d="M121 91 L203 91 L237 63 L155 63 Z" fill="url(#m0703-hatch)" stroke="none"/>
+    <path d="M122 92 v5 M204 92 v5 M124 97 H206" stroke-width="1"/>
+    <path d="M208 108 q8 -14 20 -18" stroke-width="0.7"/>
+
+    <!-- lantern on bracket, front-left post -->
+    <path d="M60 122 L88 118" stroke-width="1.4"/>
+    <path d="M86 118 q2 4 0 8 M88 126 v4" stroke-width="1"/>
+    <path d="M80 130 h16 v4 h-16 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M82 134 V154 M94 134 V154 M82 134 q6 -6 12 0" stroke-width="1.1"/>
+    <path d="M79 154 h18 v5 h-18 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M84 138 q4 8 0 14" stroke-width="0.8"/>
+    <!-- light rays -->
+    <path d="M70 128 l-6 -5 M64 144 l-8 0 M70 160 l-6 5 M106 128 l6 -5 M112 144 l8 0 M106 160 l6 5 M88 168 l0 8 M76 168 l-3 7 M100 168 l3 7" stroke-width="0.9"/>
+    <path d="M62 178 l-4 6 M114 178 l4 6" stroke-width="0.8"/>
+
+    <!-- cable, switch, socket on post -->
+    <path d="M62 128 q4 30 0 60" stroke-width="0.7"/>
+    <path d="M52 150 h8 v8 h-8 Z" stroke-width="1"/>
+    <circle cx="56" cy="154" r="1.5" stroke-width="0.8"/>
+    <path d="M50 166 h10 v14 h-10 Z" stroke-width="1.1"/>
+    <path d="M52 170 h6 M52 176 h6" stroke-width="0.8"/>
+    <circle cx="55" cy="173" r="0.8" stroke-width="0.8"/>
+
+    <!-- battery box at post foot with antenna -->
+    <path d="M36 200 H72 V226 H36 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M38 202 H74 V228" stroke-width="0.8"/>
+    <path d="M40 206 H68 M40 212 H56" stroke-width="0.8"/>
+    <path d="M62 212 h6 v4 h-6 Z" stroke-width="0.8"/>
+    <path d="M70 200 V190 M67 190 l3 -3 l3 3" stroke-width="1"/>
+    <path d="M37 216 H71 V225 H37 Z" fill="url(#m0703-hatch)" stroke="none"/>
+
+    <!-- clamp lamp at deck edge, aimed at water -->
+    <path d="M196 226 v-8 l10 -6" stroke-width="1.4"/>
+    <path d="M204 206 l8 8 l-8 4 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M212 214 L296 256 M212 214 L318 250" stroke-width="0.7"/>
+    <path d="M214 214 q40 12 84 38" stroke-width="0.6"/>
+
+    <!-- rod on holder, line to float -->
+    <path d="M176 226 V212 M176 212 l-3 -5 M176 212 l3 -5" stroke-width="1.3"/>
+    <path d="M160 224 Q250 200 348 192" stroke-width="1.5"/>
+    <path d="M162 226 Q250 202 348 194" stroke-width="0.7"/>
+    <path d="M348 192 Q332 226 310 254" stroke-width="0.7"/>
+    <ellipse cx="308" cy="258" rx="1.8" ry="5" stroke-width="1.1"/>
+    <path d="M296 264 h24 M300 270 h16" stroke-width="0.8"/>
+    <path d="M300 250 l-6 -6 M318 250 l6 -6 M306 248 l-2 -8 M312 248 l2 -8" stroke-width="0.7"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0703</text>
+</svg>

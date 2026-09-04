@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0212-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0212-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0212-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0212-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room shell -->
+    <path d="M80 46 H320 V210 H80 Z" stroke-width="1.8"/>
+    <path d="M82 48 H318 V208" stroke-width="0.9"/>
+    <path d="M80 46 L18 12 M320 46 L382 12" stroke-width="1.5"/>
+    <path d="M80 210 L18 262 M320 210 L382 262" stroke-width="1.5"/>
+    <path d="M18 262 Q200 258 382 262" stroke-width="1.2"/>
+    <path d="M20 14 L78 48 V208 L20 260 Z" fill="url(#m0212-hatch)" stroke="none"/>
+
+    <!-- big mirror on the back wall with a light strip above -->
+    <path d="M100 66 H300 V206 H100 Z" fill="#fff" stroke="none"/>
+    <path d="M100 66 H300 V206 H100 Z" stroke-width="2"/>
+    <path d="M102 68 H298 V204" stroke-width="0.9"/>
+    <path d="M96 58 H304 V62 H96 Z" stroke-width="1.3"/>
+    <path d="M110 66 l-2 6 M150 66 l-1 6 M250 66 l1 6 M290 66 l2 6" stroke-width="0.6"/>
+    <!-- reflections in the mirror: room corner lines + reflected person facing us -->
+    <path d="M104 72 L128 84 V190 L104 202" stroke-width="0.6"/>
+    <path d="M296 72 L272 84 V190 L296 202" stroke-width="0.6"/>
+    <path d="M128 190 H272" stroke-width="0.6"/>
+    <path d="M110 80 l14 -8 M114 100 l16 -14" stroke-width="0.5"/>
+    <!-- reflected person (front view, smaller, arms up with dumbbells) -->
+    <circle cx="200" cy="110" r="9" stroke-width="1.3"/>
+    <path d="M196 109 h1 M203 109 h1 M196 114 q4 3 8 0" stroke-width="0.8"/>
+    <path d="M186 148 V128 q0 -8 14 -8 q14 0 14 8 V148" stroke-width="1.2"/>
+    <path d="M186 128 L172 108 L170 96 M214 128 L228 108 L230 96" stroke-width="1.2"/>
+    <path d="M164 94 h12 M166 90 v8 M174 90 v8 M224 94 h12 M226 90 v8 M234 90 v8" stroke-width="1.3"/>
+    <path d="M190 148 V186 M210 148 V186" stroke-width="1.2"/>
+    <path d="M186 186 h8 M206 186 h8" stroke-width="1.1"/>
+    <!-- heart-rate hint on a small wall display reflected -->
+    <path d="M250 96 h28 v16 h-28 Z M254 104 l4 -4 l4 8 l4 -8 l4 4 h6" stroke-width="0.8"/>
+
+    <!-- pull-up bar on the right wall -->
+    <path d="M326 60 L376 34" stroke-width="2.2"/>
+    <path d="M327 63 L375 37" stroke-width="0.9"/>
+    <path d="M334 58 V72 M366 40 V54" stroke-width="1.4"/>
+    <path d="M330 72 h8 M362 54 h8" stroke-width="1.2"/>
+    <path d="M338 56 l2 -6 M354 48 l2 -6" stroke-width="0.6"/>
+    <!-- folding bench folded flat against the right wall -->
+    <path d="M334 110 L370 92 V180 L334 188 Z" stroke-width="1.2"/>
+    <path d="M336 112 L368 96 V178" stroke-width="0.7"/>
+    <path d="M338 116 L366 102 V172 L338 182 Z" fill="url(#m0212-hatch)" stroke="none"/>
+
+    <!-- rubber floor mat with tile grid -->
+    <path d="M70 250 H330 L300 214 H100 Z" stroke-width="1.5"/>
+    <path d="M72 248 L102 216" stroke-width="0.7"/>
+    <path d="M84 238 H316 M94 226 H306" stroke-width="0.6"/>
+    <path d="M140 214 L128 250 M180 214 L176 250 M220 214 L224 250 M260 214 L272 250" stroke-width="0.6"/>
+
+    <!-- dumbbell rack on the left with spare dumbbells -->
+    <path d="M40 232 L92 216 V196 L40 210 Z" stroke-width="1.4"/>
+    <path d="M42 230 L90 214" stroke-width="0.7"/>
+    <path d="M44 232 V254 M88 218 V240" stroke-width="1.5"/>
+    <path d="M46 206 l30 -8 M50 208 v-8 M56 206 v-8 M68 202 v-8 M74 200 v-8" stroke-width="1.2"/>
+    <path d="M52 196 h4 v10 h-4 Z M70 192 h4 v10 h-4 Z" fill="url(#m0212-hatch)" stroke="none"/>
+    <path d="M48 226 l22 -6 M50 228 v-7 M54 227 v-7 M64 224 v-7 M68 223 v-7" stroke-width="1.2"/>
+    <!-- kettlebell -->
+    <path d="M110 250 q-2 -14 12 -14 q14 0 12 14 Z" stroke-width="1.4"/>
+    <path d="M116 236 q6 -12 12 0" stroke-width="1.2"/>
+    <path d="M112 246 q12 -4 22 0" stroke-width="0.6"/>
+
+    <!-- main person seen from behind, lifting dumbbells overhead -->
+    <circle cx="200" cy="152" r="13" stroke-width="1.7"/>
+    <path d="M200 165 V172" stroke-width="1.6"/>
+    <path d="M176 244 V194 q0 -22 24 -22 q24 0 24 22 V244" fill="#fff" stroke="none"/>
+    <path d="M176 244 V194 q0 -22 24 -22 q24 0 24 22 V244" stroke-width="1.8"/>
+    <path d="M178 242 V196 q0 -20 22 -20" stroke-width="0.8"/>
+    <path d="M178 186 L160 156 L156 136 M222 186 L240 156 L244 136" stroke-width="1.8"/>
+    <path d="M148 132 h16 M150 126 v12 M154 126 v12 M158 126 v12 M162 126 v12" stroke-width="1.5"/>
+    <path d="M236 132 h16 M238 126 v12 M242 126 v12 M246 126 v12 M250 126 v12" stroke-width="1.5"/>
+    <path d="M184 244 V256 M216 244 V256" stroke-width="1.7"/>
+    <path d="M178 258 h12 M210 258 h12" stroke-width="1.5"/>
+    <path d="M180 212 H220" stroke-width="0.6"/>
+    <path d="M180 224 H220 V242 H180 Z" fill="url(#m0212-hatch)" stroke="none"/>
+    <!-- sweat drops + effort lines -->
+    <path d="M186 146 l-3 -4 M214 146 l3 -4" stroke-width="0.7"/>
+    <!-- wooden stool + water bottle at right -->
+    <path d="M300 262 v-24 h26 v24 M298 238 h30 M304 250 h18" stroke-width="1.3"/>
+    <path d="M310 238 v-14 h8 v14 Z M312 224 v-4 h4 v4" stroke-width="1"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0212</text>
+</svg>

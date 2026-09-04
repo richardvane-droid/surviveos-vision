@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0205-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0205-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0205-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0205-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room shell -->
+    <path d="M70 52 H330 V208 H70 Z" stroke-width="1.8"/>
+    <path d="M72 54 H328 V206" stroke-width="0.9"/>
+    <path d="M70 52 L18 16 M330 52 L382 16" stroke-width="1.5"/>
+    <path d="M70 208 L18 262 M330 208 L382 262" stroke-width="1.5"/>
+    <path d="M18 262 Q200 258 382 262" stroke-width="1.2"/>
+    <path d="M20 18 L68 54 V206 L20 260 Z" fill="url(#m0205-hatch)" stroke="none"/>
+    <path d="M332 54 L380 18 V260 L332 206 Z" fill="url(#m0205-hatch)" stroke="none"/>
+
+    <!-- old wooden window frame set into the wall -->
+    <path d="M100 82 H300 V172 H100 Z" stroke-width="2.2"/>
+    <path d="M102 84 H298 V170" stroke-width="1"/>
+    <path d="M108 90 H292 V164 H108 Z" stroke-width="1.6"/>
+    <path d="M100 82 L108 90 M300 82 L292 90 M100 172 L108 164 M300 172 L292 164" stroke-width="1"/>
+    <path d="M102 86 h4 M104 100 q2 4 0 8 M296 120 q-2 6 0 12 M120 84 h30 M240 168 h34" stroke-width="0.6"/>
+    <path d="M96 172 H304 V178 H96 Z" stroke-width="1.4"/>
+    <!-- water line + light bar on top -->
+    <path d="M110 96 q30 -3 60 0 t60 0 t60 0" stroke-width="0.9"/>
+    <path d="M120 80 H280 V76 H120 Z" stroke-width="1.1"/>
+    <path d="M130 90 l-2 -6 M200 90 v-6 M270 90 l2 -6" stroke-width="0.6"/>
+    <!-- substrate + hatch dark bottom -->
+    <path d="M110 154 q40 -6 90 -2 q50 4 90 2 V162 H110 Z" fill="url(#m0205-hatch)" stroke="none"/>
+    <path d="M110 154 q40 -6 90 -2 q50 4 90 2" stroke-width="1"/>
+    <!-- driftwood on the left, rising diagonally -->
+    <path d="M124 154 q10 -30 40 -46 q6 -2 10 4 q-26 14 -34 46 Z" stroke-width="1.6"/>
+    <path d="M136 132 q10 -12 22 -18" stroke-width="0.7"/>
+    <path d="M128 152 q8 -24 30 -40 q-14 18 -20 40 Z" fill="url(#m0205-hatch)" stroke="none"/>
+    <path d="M160 112 q6 -8 12 -6 q-2 8 -12 6 Z M148 122 q-8 -2 -10 -8 q8 0 10 8 Z" stroke-width="0.9"/>
+    <!-- moss stones -->
+    <path d="M232 154 q4 -12 16 -12 q14 0 16 12 Z M258 154 q2 -8 12 -8 q10 0 10 8 Z" stroke-width="1.2"/>
+    <path d="M238 146 q4 -3 8 0 M248 148 q4 -3 8 0" stroke-width="0.6"/>
+    <!-- plants: tall stems and grass -->
+    <path d="M176 154 q-2 -20 4 -40 M184 154 q0 -22 8 -38 M192 154 q4 -18 0 -34" stroke-width="1"/>
+    <path d="M178 130 q-6 -2 -8 -8 M186 122 q6 -2 8 -8 M180 116 q-6 0 -8 -6 M190 138 q6 -2 8 -6" stroke-width="0.9"/>
+    <path d="M110 154 q4 -12 6 -22 M116 154 q2 -10 6 -18 M122 154 q0 -8 4 -14" stroke-width="0.8"/>
+    <path d="M210 154 q2 -14 -2 -30 q8 8 6 30 Z M222 154 q-2 -12 4 -22 q4 12 0 22 Z" stroke-width="1"/>
+    <path d="M280 154 q-2 -10 2 -20 M286 154 q2 -10 -2 -18 M276 150 q-4 -6 -2 -12 M290 148 q4 -6 2 -12" stroke-width="0.8"/>
+    <!-- fish: small tetras -->
+    <path d="M150 104 q6 -4 12 0 q-6 4 -12 0 Z M162 104 l4 -3 v6 Z" stroke-width="1"/>
+    <path d="M200 112 q6 -4 12 0 q-6 4 -12 0 Z M212 112 l4 -3 v6 Z" stroke-width="1"/>
+    <path d="M226 122 q6 -4 12 0 q-6 4 -12 0 Z M238 122 l4 -3 v6 Z" stroke-width="1"/>
+    <path d="M254 106 q-6 -4 -12 0 q6 4 12 0 Z M242 106 l-4 -3 v6 Z" stroke-width="1"/>
+    <path d="M166 136 q-6 -4 -12 0 q6 4 12 0 Z M154 136 l-4 -3 v6 Z" stroke-width="1"/>
+    <path d="M270 132 q6 -4 12 0 q-6 4 -12 0 Z M282 132 l4 -3 v6 Z" stroke-width="1"/>
+    <circle cx="156" cy="104" r="0.7" stroke-width="0.6"/>
+    <circle cx="206" cy="112" r="0.7" stroke-width="0.6"/>
+    <circle cx="248" cy="106" r="0.7" stroke-width="0.6"/>
+    <!-- bubbles from the filter on the right -->
+    <circle cx="276" cy="140" r="1.5" stroke-width="0.7"/>
+    <circle cx="279" cy="130" r="1.8" stroke-width="0.7"/>
+    <circle cx="275" cy="118" r="1.4" stroke-width="0.7"/>
+    <circle cx="280" cy="108" r="2" stroke-width="0.7"/>
+    <circle cx="277" cy="100" r="1.3" stroke-width="0.7"/>
+    <!-- glass reflections -->
+    <path d="M114 100 l6 -8 M118 112 l10 -14" stroke-width="0.6"/>
+
+    <!-- small stool in front of the tank -->
+    <path d="M186 198 q14 -3 28 0 q2 4 -2 6 q-12 2 -24 0 q-4 -2 -2 -6 Z" stroke-width="1.4"/>
+    <path d="M190 204 L184 238 M212 204 L220 238 M200 205 V236" stroke-width="1.3"/>
+    <path d="M188 222 h24" stroke-width="0.8"/>
+    <path d="M190 200 q10 -2 20 0" stroke-width="0.7"/>
+    <!-- floor lamp beside the stool -->
+    <path d="M88 240 h16 M96 240 V150" stroke-width="1.3"/>
+    <path d="M84 150 h24 l-4 -16 h-16 Z" stroke-width="1.3"/>
+    <path d="M86 146 L104 138 V148 L86 150 Z" fill="url(#m0205-hatch)" stroke="none"/>
+    <!-- side table + mug at right -->
+    <path d="M296 208 h26 v6 h-26 Z M300 214 v20 M318 214 v20" stroke-width="1.2"/>
+    <path d="M304 208 v-9 h9 v9 Z M313 201 q5 0 3 5" stroke-width="1"/>
+
+    <!-- sofa back in the foreground (viewer's seat) -->
+    <path d="M40 262 q0 -18 16 -18 H344 q16 0 16 18" fill="#fff" stroke="none"/>
+    <path d="M40 262 q0 -18 16 -18 H344 q16 0 16 18" stroke-width="2"/>
+    <path d="M44 262 q0 -14 14 -14 H342 q14 0 14 14" stroke-width="0.9"/>
+    <path d="M140 246 v14 M260 246 v14" stroke-width="1"/>
+    <path d="M60 254 q20 -2 40 0 M300 254 q20 -2 40 0 M180 256 q20 -2 40 0" stroke-width="0.7"/>
+    <path d="M46 262 H354" stroke-width="1"/>
+    <!-- rug -->
+    <path d="M110 268 q90 -4 180 0" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0205</text>
+</svg>

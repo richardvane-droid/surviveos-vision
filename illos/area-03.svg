@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs>
+    <filter id="ma03-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="ma03-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="ma03-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#ma03-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor / joists -->
+    <path d="M14 262 Q150 258 300 262 T586 260" stroke-width="1.6"/>
+    <path d="M30 270 H570" stroke-width="1"/>
+    <path d="M60 262 V270 M140 262 V270 M220 262 V270 M300 262 V270 M380 262 V270 M460 262 V270 M540 262 V270" stroke-width="0.8"/>
+
+    <!-- A-frame roof section -->
+    <path d="M30 184 L300 34 L570 184" stroke-width="2.2"/>
+    <path d="M18 178 L300 22 L582 178" stroke-width="1.6"/>
+    <path d="M33 187 L301 38 L568 187" stroke-width="0.9"/>
+    <path d="M18 178 L300 22 L582 178 L570 184 L300 34 L30 184 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <!-- knee walls -->
+    <path d="M30 184 V262 M570 184 V262" stroke-width="1.6"/>
+    <path d="M33 187 V260 M567 187 V260" stroke-width="0.8"/>
+    <!-- collar tie + rafter ticks -->
+    <path d="M170 106 H430" stroke-width="1.4"/>
+    <path d="M172 109 H428" stroke-width="0.7"/>
+    <path d="M90 151 l3 6 M130 129 l3 6 M210 84 l3 6 M250 62 l3 6 M350 62 l-3 6 M390 84 l-3 6 M470 129 l-3 6 M510 151 l-3 6" stroke-width="0.9"/>
+
+    <!-- skylight on the left slope -->
+    <path d="M110 134 L164 104 L184 118 L130 148 Z" stroke-width="1.7"/>
+    <path d="M113 136 L164 108 L180 119" stroke-width="0.9"/>
+    <path d="M116 136 L164 110 L178 120 L130 146 Z" fill="url(#ma03-hatch2)" stroke="none"/>
+    <path d="M147 118 l-4 14" stroke-width="1"/>
+    <!-- light rays through skylight -->
+    <path d="M140 150 L120 200 M156 146 L146 200 M172 140 L172 200" stroke-width="0.6"/>
+
+    <!-- PV panels on the right slope (outside) -->
+    <path d="M360 62 L500 140 L516 122 L376 44 Z" stroke-width="1.9"/>
+    <path d="M363 62 L378 47 L513 122" stroke-width="0.9"/>
+    <path d="M368 53 L508 131" stroke-width="0.8"/>
+    <path d="M395 81 L411 63 M430 101 L446 83 M465 120 L481 102" stroke-width="0.8"/>
+    <path d="M380 66 V74 M440 100 V108 M500 134 V140" stroke-width="1.3"/>
+    <!-- sun -->
+    <circle cx="540" cy="46" r="14" stroke-width="1.5"/>
+    <path d="M540 24 v-6 M562 46 h6 M556 30 l4 -4 M556 62 l4 4 M524 30 l-4 -4" stroke-width="1"/>
+    <!-- cable from PV down into the attic -->
+    <path d="M498 146 L510 152 V168 L552 190 V214" stroke-width="1"/>
+
+    <!-- weather mast at the right eave -->
+    <path d="M552 168 V96" stroke-width="1.8"/>
+    <path d="M555 170 V98" stroke-width="0.8"/>
+    <path d="M552 96 L540 90 M552 96 L564 90 M552 96 L554 84" stroke-width="1"/>
+    <path d="M540 90 m-4 0 a4 3 0 1 0 8 0 a4 3 0 1 0 -8 0 M564 90 m-4 0 a4 3 0 1 0 8 0 a4 3 0 1 0 -8 0 M554 84 m-4 0 a4 3 0 1 0 8 0 a4 3 0 1 0 -8 0" stroke-width="1.1"/>
+    <path d="M552 112 h22 l-6 -4 v8 Z" stroke-width="1.1"/>
+    <path d="M540 130 v14 h10 v-14 M538 130 h14" stroke-width="1.1"/>
+    <path d="M546 166 l12 5" stroke-width="1.2"/>
+
+    <!-- tent in the middle -->
+    <path d="M214 258 Q216 168 300 150 Q384 168 386 258 Z" stroke-width="2"/>
+    <path d="M218 258 Q220 172 300 154" stroke-width="1"/>
+    <path d="M300 150 Q262 190 254 258 M300 150 Q338 190 346 258" stroke-width="1.1"/>
+    <path d="M272 258 Q276 200 300 176 Q324 200 328 258" stroke-width="1.5"/>
+    <path d="M286 258 Q289 210 300 180 Q323 202 326 258 Z" fill="#fff" stroke="none"/>
+    <path d="M286 258 Q289 210 300 180 Q323 202 326 258" stroke-width="1.4"/>
+    <path d="M292 200 q8 6 16 4 q6 -2 12 4" stroke-width="0.8"/>
+    <circle cx="296" cy="204" r="1.8" stroke-width="0.9"/>
+    <circle cx="306" cy="205" r="1.8" stroke-width="0.9"/>
+    <circle cx="316" cy="206" r="1.8" stroke-width="0.9"/>
+    <path d="M302 210 h10 v10 h-10 Z M307 204 v6" stroke-width="1"/>
+    <path d="M292 254 h30 M294 246 q10 -5 20 0" stroke-width="1"/>
+    <path d="M290 256 Q292 222 300 196 Q306 212 300 256 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M220 254 Q222 184 274 162 Q250 190 240 254 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M222 206 L190 254 M378 206 L410 254" stroke-width="0.9"/>
+    <path d="M188 250 l4 8 M408 250 l4 8" stroke-width="1.2"/>
+
+    <!-- left: gear wall - backpack hanging on the slope + cubby -->
+    <path d="M52 150 l14 -8 l14 8 l4 42 q-18 6 -36 0 Z" stroke-width="1.7"/>
+    <path d="M52 166 q18 5 32 0" stroke-width="1"/>
+    <path d="M58 172 h20 v12 h-20 Z" stroke-width="0.9"/>
+    <path d="M66 142 v-6" stroke-width="1.2"/>
+    <path d="M54 154 q6 10 8 38 q-6 0 -8 -2 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M88 132 V190 M96 132 V190 M84 134 h8 M92 134 h8" stroke-width="1.2"/>
+    <path d="M44 200 H132 V258 H44 Z M44 230 H132 M88 200 V258" stroke-width="1.5"/>
+    <path d="M46 202 H130 V256" stroke-width="0.8"/>
+    <circle cx="66" cy="215" r="10" stroke-width="1.3"/>
+    <circle cx="66" cy="215" r="4" stroke-width="0.8"/>
+    <circle cx="110" cy="215" r="10" stroke-width="1.3"/>
+    <circle cx="110" cy="215" r="4" stroke-width="0.8"/>
+    <path d="M52 238 h28 v14 h-28 Z M96 244 h24 M100 244 v-8 h16 v8" stroke-width="1.1"/>
+    <!-- boots -->
+    <path d="M150 258 v-22 q2 -6 8 -4 l3 8 q8 3 14 6 v12 Z" stroke-width="1.4"/>
+    <path d="M154 246 l5 3 M154 240 l4 2" stroke-width="0.8"/>
+
+    <!-- right: workbench with pegboard + 3D printer on it -->
+    <path d="M430 178 H520 V194 H430 Z" stroke-width="1.5"/>
+    <path d="M436 182 v8 M446 182 v8 M456 182 v8 M466 182 v8 M478 182 v8 M488 182 v8 M500 182 v8 M510 182 v8" stroke-width="0.9"/>
+    <path d="M424 200 H526 V208 H424 Z" stroke-width="1.8"/>
+    <path d="M426 202 H524" stroke-width="0.9"/>
+    <path d="M430 208 V262 M436 208 V262 M514 208 V262 M520 208 V262" stroke-width="1.5"/>
+    <path d="M440 214 H510 V232 H440 Z M470 223 h10" stroke-width="1.1"/>
+    <path d="M440 236 H510 V258 H440 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M440 200 V160 H484 V200" stroke-width="1.6"/>
+    <path d="M440 160 L448 154 H492 L484 160 M484 160 L492 154 V194 L484 200" stroke-width="1.3"/>
+    <path d="M446 168 H478 V194 H446 Z M452 176 h20 M458 188 h8 v-8 h-8 Z" stroke-width="1"/>
+    <path d="M486 162 L490 158 V192 L486 196 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <!-- lamp -->
+    <path d="M516 200 L520 176 L504 162 M504 162 l-8 -2 l-2 8 Z" stroke-width="1.3"/>
+
+    <!-- far right: power station beneath the knee wall -->
+    <path d="M534 262 V214 H566 V262" stroke-width="1.6"/>
+    <path d="M540 212 V206 Q550 200 560 206 V212" stroke-width="1.3"/>
+    <path d="M538 220 H550 V232 H538 Z" stroke-width="1"/>
+    <path d="M540 224 h6 M540 228 h4" stroke-width="0.8"/>
+    <circle cx="558" cy="222" r="1.8" stroke-width="0.9"/>
+    <circle cx="558" cy="230" r="1.8" stroke-width="0.9"/>
+    <path d="M538 240 H562 M538 246 H562 M538 252 H562" stroke-width="0.8"/>
+
+    <!-- little person walking to the tent -->
+    <circle cx="196" cy="206" r="6" stroke-width="1.4"/>
+    <path d="M196 212 V236 M196 220 L186 230 M196 220 L206 226 M196 236 L188 258 M196 236 L204 258" stroke-width="1.4"/>
+    <!-- mug on floor + small rug -->
+    <path d="M262 258 q38 -3 76 0 q-4 5 -76 4 Z" stroke-width="0.9"/>
+
+    <!-- raindrops on the left outside -->
+    <path d="M60 120 l-3 8 M84 100 l-3 8 M40 150 l-3 8 M110 78 l-3 8 M140 56 l-3 8 M74 62 l-3 8 M180 36 l-3 8" stroke-width="0.8"/>
+    <path d="M40 90 q4 -12 18 -8 q10 -8 20 2 q10 4 4 12 h-40 q-6 -2 -2 -6 Z" stroke-width="1.3"/>
+  </g>
+  <text x="586" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">area-03</text>
+</svg>

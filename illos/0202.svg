@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0202-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0202-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0202-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0202-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room shell -->
+    <path d="M96 74 H304 V206 H96 Z" stroke-width="1.8"/>
+    <path d="M98 76 H302 V204" stroke-width="0.9"/>
+    <path d="M96 74 L20 20 M304 74 L380 20" stroke-width="1.5"/>
+    <path d="M96 206 L20 260 M304 206 L380 260" stroke-width="1.5"/>
+    <path d="M20 260 Q200 256 380 260" stroke-width="1.2"/>
+    <!-- tiles on floor -->
+    <path d="M60 232 H340 M96 206 L200 260 M304 206 L200 260 M200 206 V260" stroke-width="0.6"/>
+    <!-- ceiling light box: big glowing panel -->
+    <path d="M132 64 H268 L292 30 H108 Z" stroke-width="2"/>
+    <path d="M134 66 H266 L290 32" stroke-width="0.9"/>
+    <path d="M138 60 H262 L282 36 H118 Z" stroke-width="0.8"/>
+    <path d="M100 18 L104 26 M296 18 L292 26 M126 70 l-4 6 M274 70 l4 6 M200 66 v10 M200 28 v-8 M160 30 l-2 -8 M240 30 l2 -8" stroke-width="0.9"/>
+    <!-- light spill lines from box downwards -->
+    <path d="M150 70 L120 150 M250 70 L280 150" stroke-width="0.6" stroke-dasharray="4 5"/>
+
+    <!-- three-fold mirror over the sink on back wall -->
+    <path d="M142 96 H176 L176 160 H142 Z" stroke-width="1.6"/>
+    <path d="M176 92 H224 V164 H176 Z" stroke-width="1.8"/>
+    <path d="M224 96 H258 V160 H224 Z" stroke-width="1.6"/>
+    <path d="M178 94 H222 V162" stroke-width="0.8"/>
+    <path d="M144 98 L150 100 V158 M226 98 L232 100 V158" stroke-width="0.7"/>
+    <path d="M144 98 H150 V158 H144 Z M250 98 H256 V158 H250 Z" fill="url(#m0202-hatch)" stroke="none"/>
+    <!-- reflected face in the centre mirror -->
+    <circle cx="200" cy="124" r="10" stroke-width="1.3"/>
+    <path d="M196 122 h1 M204 122 h1 M196 129 q4 3 8 0" stroke-width="1"/>
+    <path d="M190 116 q10 -8 20 0" stroke-width="1"/>
+    <path d="M186 164 V142 q14 -6 28 0 V164" stroke-width="0.8"/>
+    <!-- side-mirror reflections hint -->
+    <path d="M158 126 q6 -6 10 0 M234 126 q6 -6 10 0" stroke-width="0.7"/>
+    <!-- warm light strips beside mirrors -->
+    <path d="M136 98 V158 M264 98 V158" stroke-width="1.6"/>
+    <path d="M130 104 l-3 0 M130 128 l-3 0 M130 152 l-3 0 M270 104 l3 0 M270 128 l3 0 M270 152 l3 0" stroke-width="0.7"/>
+
+    <!-- floating vanity + basin -->
+    <path d="M140 180 H260 V190 H140 Z" stroke-width="1.6"/>
+    <path d="M142 182 H258" stroke-width="0.8"/>
+    <path d="M140 190 L130 206 H270 L260 190" stroke-width="1"/>
+    <path d="M176 180 q0 -8 24 -8 q24 0 24 8" stroke-width="1.3"/>
+    <path d="M200 172 v-8 q0 -4 6 -4" stroke-width="1.2"/>
+    <path d="M150 196 h12 v-4 h-12 Z M154 192 v-10 M158 192 v-8" stroke-width="0.9"/>
+    <path d="M142 192 H258 V204 H142 Z" fill="url(#m0202-hatch)" stroke="none"/>
+
+    <!-- person at the sink, seen from behind, brushing teeth -->
+    <path d="M180 260 V212 q0 -12 20 -12 q20 0 20 12 V260" fill="#fff" stroke="none"/>
+    <circle cx="200" cy="186" r="11" stroke-width="1.6"/>
+    <path d="M200 197 V236" stroke-width="1.6"/>
+    <path d="M182 258 V214 q0 -14 18 -14 q18 0 18 14 V258" stroke-width="1.6"/>
+    <path d="M184 256 V216 q0 -12 16 -12" stroke-width="0.8"/>
+    <path d="M182 214 L170 236 M218 214 L226 200 L214 190" stroke-width="1.6"/>
+    <path d="M210 188 l2 -8" stroke-width="1.2"/>
+    <path d="M194 258 V236 M206 258 V236" stroke-width="1.4"/>
+    <path d="M186 228 H214" stroke-width="0.7"/>
+
+    <!-- shower cubicle on the right with steam -->
+    <path d="M300 110 L370 96 V260 M300 110 V206" stroke-width="1.4"/>
+    <path d="M302 114 L368 100" stroke-width="0.8"/>
+    <path d="M308 118 L360 108 V254 L308 240 Z" fill="url(#m0202-hatch2)" stroke="none"/>
+    <path d="M330 106 v-6 l12 -3 M338 100 q6 4 4 10" stroke-width="1.2"/>
+    <path d="M332 116 l-2 8 M340 118 l-2 8 M348 116 l-2 8" stroke-width="0.7"/>
+    <!-- steam curls rising above the cubicle -->
+    <path d="M320 92 q-6 -8 2 -14 q8 -6 0 -14 M340 86 q-6 -8 2 -14 q8 -6 0 -12 M356 90 q-5 -7 1 -12 q6 -6 0 -12" stroke-width="1"/>
+    <path d="M312 78 q10 -6 18 2 q8 -8 16 0" stroke-width="0.8"/>
+    <!-- small square light box over the shower -->
+    <path d="M320 40 H356 L366 26 H332 Z" stroke-width="1.4"/>
+    <path d="M336 42 l-2 6 M356 42 l2 6" stroke-width="0.8"/>
+
+    <!-- toilet on the left + access cabinet door -->
+    <path d="M60 206 q-2 -20 16 -22 h20 q10 4 8 22 Z" stroke-width="1.4"/>
+    <path d="M70 184 V162 H100 V184" stroke-width="1.3"/>
+    <path d="M72 164 H98" stroke-width="0.7"/>
+    <path d="M62 206 L52 214 H104 L100 206" stroke-width="1"/>
+    <path d="M100 100 H122 V150 H100 Z" stroke-width="1.1"/>
+    <path d="M102 102 L120 106 V148" stroke-width="0.7"/>
+    <circle cx="116" cy="126" r="1.6" stroke-width="0.9"/>
+    <!-- extractor grille on left wall -->
+    <path d="M50 56 L76 66 M50 62 L76 72 M50 68 L76 78 M50 56 V72 M76 66 V82 M50 72 L76 82" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0202</text>
+</svg>

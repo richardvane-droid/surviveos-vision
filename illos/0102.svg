@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0102-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0102-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0102-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0102-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor line -->
+    <path d="M14 256 Q120 252 200 254 T388 252" stroke-width="1.2"/>
+    <!-- pine plank wall: vertical boards -->
+    <path d="M30 34 H370 V254" stroke-width="1.6"/>
+    <path d="M30 34 V254" stroke-width="1.6"/>
+    <path d="M72 36 V252 M114 36 V252 M156 36 V252 M198 36 V252 M240 36 V252 M282 36 V252 M324 36 V252" stroke-width="0.9"/>
+    <path d="M50 60 q3 30 -2 60 M92 140 q-3 40 2 70 M176 50 q4 30 0 60 M260 180 q-3 30 2 50 M346 70 q3 40 -2 90" stroke-width="0.6"/>
+    <path d="M60 220 l3 -3 l3 3 M300 70 l3 -3 l3 3" stroke-width="0.6"/>
+
+    <!-- light strips above each shelf -->
+    <path d="M60 70 H292 M60 130 H292 M60 190 H292" stroke-width="0.7" stroke-dasharray="3 3"/>
+
+    <!-- shelf 1 -->
+    <path d="M56 100 H296" stroke-width="1.9"/>
+    <path d="M56 100 V106 H296 V100" stroke-width="1.2"/>
+    <path d="M57 101 H295" stroke-width="0.8"/>
+    <path d="M70 106 l-6 10 M280 106 l6 10" stroke-width="0.9"/>
+    <!-- boxes shelf 1 (oldest: tin box, then boxes) -->
+    <path d="M66 100 V84 H98 V100" stroke-width="1.5"/>
+    <path d="M66 84 q16 -6 32 0" stroke-width="1.1"/>
+    <path d="M68 86 H96 V98 H68 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M112 100 V82 H144 V100" stroke-width="1.5"/>
+    <path d="M114 84 H142 M114 91 H142" stroke-width="0.8"/>
+    <path d="M158 100 V80 H192 V100" stroke-width="1.5"/>
+    <path d="M160 82 H190 V98 H160 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M158 88 H192" stroke-width="1"/>
+    <!-- two empty slots with tags only -->
+    <path d="M214 92 h20 M258 92 h20" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <!-- tags shelf 1 -->
+    <path d="M78 108 V114 H88 V122 H72 V114 Z M124 108 V114 H134 V122 H118 V114 Z M170 108 V114 H180 V122 H164 V114 Z M220 108 V114 H230 V122 H214 V114 Z M264 108 V114 H274 V122 H258 V114 Z" stroke-width="0.9"/>
+    <path d="M75 118 h10 M121 118 h10 M167 118 h10 M217 118 h10 M261 118 h10" stroke-width="0.6"/>
+
+    <!-- shelf 2 -->
+    <path d="M56 160 H296" stroke-width="1.9"/>
+    <path d="M56 160 V166 H296 V160" stroke-width="1.2"/>
+    <path d="M57 161 H295" stroke-width="0.8"/>
+    <path d="M70 166 l-6 10 M280 166 l6 10" stroke-width="0.9"/>
+    <path d="M66 160 V142 H100 V160" stroke-width="1.5"/>
+    <path d="M68 144 H98 V158 H68 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M66 150 H100" stroke-width="1"/>
+    <path d="M114 160 V140 H146 V160" stroke-width="1.5"/>
+    <path d="M116 142 H144 M116 149 H144 M130 142 V160" stroke-width="0.8"/>
+    <path d="M160 160 V141 H196 V160" stroke-width="1.5"/>
+    <path d="M162 143 H194 V158 H162 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M160 150 H196" stroke-width="1"/>
+    <path d="M210 160 V139 H244 V160" stroke-width="1.5"/>
+    <path d="M212 141 H242 M212 148 H242 M228 141 V160" stroke-width="0.8"/>
+    <path d="M256 160 V142 H290 V160" stroke-width="1.5"/>
+    <path d="M258 144 H288 V158 H258 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M78 168 V174 H88 V182 H72 V174 Z M126 168 V174 H136 V182 H120 V174 Z M174 168 V174 H184 V182 H168 V174 Z M222 168 V174 H232 V182 H216 V174 Z M270 168 V174 H280 V182 H264 V174 Z" stroke-width="0.9"/>
+    <path d="M75 178 h10 M123 178 h10 M171 178 h10 M219 178 h10 M267 178 h10" stroke-width="0.6"/>
+
+    <!-- shelf 3 -->
+    <path d="M56 220 H296" stroke-width="1.9"/>
+    <path d="M56 220 V226 H296 V220" stroke-width="1.2"/>
+    <path d="M57 221 H295" stroke-width="0.8"/>
+    <path d="M70 226 l-6 10 M280 226 l6 10" stroke-width="0.9"/>
+    <path d="M66 220 V200 H102 V220" stroke-width="1.5"/>
+    <path d="M68 202 H100 M68 209 H100" stroke-width="0.8"/>
+    <path d="M116 220 V202 H150 V220" stroke-width="1.5"/>
+    <path d="M118 204 H148 V218 H118 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M116 210 H150" stroke-width="1"/>
+    <path d="M164 220 V200 H200 V220" stroke-width="1.5"/>
+    <path d="M166 202 H198 M166 209 H198 M182 202 V220" stroke-width="0.8"/>
+    <path d="M214 220 V202 H248 V220" stroke-width="1.5"/>
+    <path d="M216 204 H246 V218 H216 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M214 211 H248" stroke-width="1"/>
+    <path d="M260 220 V198 H294 V220" stroke-width="1.5"/>
+    <path d="M262 200 H292 M262 207 H292 M262 214 H292" stroke-width="0.8"/>
+    <circle cx="285" cy="209" r="2" stroke-width="0.9"/>
+    <path d="M78 228 V234 H88 V242 H72 V234 Z M128 228 V234 H138 V242 H122 V234 Z M178 228 V234 H188 V242 H172 V234 Z M226 228 V234 H236 V242 H220 V234 Z M272 228 V234 H282 V242 H266 V234 Z" stroke-width="0.9"/>
+    <path d="M75 238 h10 M125 238 h10 M175 238 h10 M223 238 h10 M269 238 h10" stroke-width="0.6"/>
+
+    <!-- old wooden ladder leaning in the corner (drawn over wall) -->
+    <path d="M312 254 L334 46" stroke-width="2"/>
+    <path d="M314 254 L336 48" stroke-width="0.9"/>
+    <path d="M350 254 L372 46" stroke-width="2"/>
+    <path d="M352 254 L374 48" stroke-width="0.9"/>
+    <path d="M317 220 H355 M321 186 H359 M325 152 H363 M329 118 H367 M332 84 H370" stroke-width="1.5"/>
+    <path d="M318 222 H354 M322 188 H358" stroke-width="0.7"/>
+    <!-- box on top rung + on 2nd rung -->
+    <path d="M338 84 V68 H364 V84" stroke-width="1.4"/>
+    <path d="M340 70 H362 V82 H340 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M334 118 V104 H360 V118" stroke-width="1.4"/>
+    <path d="M334 111 H360" stroke-width="0.9"/>
+
+    <!-- floor shadow under ladder feet -->
+    <path d="M304 258 q28 -4 56 0" stroke-width="0.9"/>
+    <path d="M36 260 q20 -3 40 0" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0102</text>
+</svg>

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0106-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0106-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0106-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0106-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor line -->
+    <path d="M14 262 Q120 258 200 260 T388 258" stroke-width="1.2"/>
+
+    <!-- red brick fire wall behind the stove -->
+    <path d="M110 60 H290 V250" stroke-width="1.5"/>
+    <path d="M110 60 V250" stroke-width="1.5"/>
+    <path d="M110 80 H290 M110 100 H290 M110 120 H290 M110 140 H290 M110 160 H290 M110 180 H290 M110 200 H290 M110 220 H290 M110 240 H290" stroke-width="0.7"/>
+    <path d="M140 60 V80 M180 60 V80 M220 60 V80 M260 60 V80 M120 80 V100 M160 80 V100 M200 80 V100 M240 80 V100 M280 80 V100 M140 100 V120 M180 100 V120 M220 100 V120 M260 100 V120 M120 120 V140 M160 120 V140 M240 120 V140 M280 120 V140 M140 140 V160 M260 140 V160 M120 160 V180 M280 160 V180 M140 180 V200 M260 180 V200 M120 200 V220 M280 200 V220 M140 220 V240 M260 220 V240" stroke-width="0.7"/>
+    <path d="M122 88 h10 M244 108 h8 M126 208 h8 M266 168 h8" stroke-width="0.6"/>
+
+    <!-- small thermometer on wall -->
+    <path d="M60 110 V150" stroke-width="1.4"/>
+    <circle cx="60" cy="155" r="5" stroke-width="1.3"/>
+    <path d="M58 118 h-3 M58 126 h-3 M58 134 h-3 M58 142 h-3" stroke-width="0.8"/>
+    <path d="M60 134 V150" stroke-width="2.4"/>
+
+    <!-- chimney: double wall pipe straight up -->
+    <path d="M188 8 H212 V128 H188 Z" fill="#fff" stroke="none"/>
+    <path d="M188 128 V8 M212 128 V8" stroke-width="1.8"/>
+    <path d="M190 126 V10" stroke-width="0.8"/>
+    <path d="M186 40 H214 M186 44 H214" stroke-width="1"/>
+    <path d="M186 90 H214 M186 94 H214" stroke-width="1"/>
+    <path d="M204 12 H211 V126 H204 Z" fill="url(#m0106-hatch)" stroke="none"/>
+
+    <!-- stove body (white fill hides bricks) -->
+    <path d="M150 130 H250 V232 H150 Z" fill="#fff" stroke="none"/>
+    <path d="M150 130 H250 V232 H150 Z" stroke-width="2"/>
+    <path d="M152 132 H248 V230" stroke-width="1"/>
+    <!-- stove top plate -->
+    <path d="M144 130 H256 V124 H144 Z" stroke-width="1.6"/>
+    <path d="M146 126 H254" stroke-width="0.7"/>
+    <!-- glass door frame -->
+    <path d="M162 146 H238 V212 H162 Z" stroke-width="1.6"/>
+    <path d="M168 152 H232 V206 H168 Z" stroke-width="1.1"/>
+    <path d="M169 153 H231 V205 H169 Z" fill="url(#m0106-hatch2)" stroke="none"/>
+    <!-- fire inside: white flames over hatch -->
+    <path d="M176 204 q2 -18 12 -24 q0 -14 10 -18 q-2 10 6 14 q4 -10 10 -6 q-2 12 6 22 q4 10 -4 12 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M186 202 q4 -14 12 -18 q2 10 8 14 q2 -8 6 -4 q0 8 -2 8" stroke-width="0.9"/>
+    <path d="M194 200 q2 -8 6 -8 q2 4 2 8" stroke-width="0.8"/>
+    <!-- logs at the bottom of firebox -->
+    <path d="M172 204 H228" stroke-width="1.2"/>
+    <circle cx="180" cy="200" r="3.5" stroke-width="0.9"/>
+    <circle cx="220" cy="200" r="3.5" stroke-width="0.9"/>
+    <!-- door handle + air vent -->
+    <path d="M242 172 v14" stroke-width="2"/>
+    <path d="M166 220 h20 M166 224 h20" stroke-width="0.9"/>
+    <path d="M226 218 h14 M226 222 h14 M226 226 h14" stroke-width="0.8"/>
+    <!-- legs -->
+    <path d="M158 232 V246 M164 232 V246 M236 232 V246 M242 232 V246" stroke-width="1.8"/>
+    <path d="M156 246 H166 M234 246 H244" stroke-width="1.2"/>
+    <!-- stone slab -->
+    <path d="M118 246 H282 L292 256 H108 Z" stroke-width="1.6"/>
+    <path d="M120 248 H280" stroke-width="0.8"/>
+    <path d="M130 251 h20 M170 252 h30 M230 252 h24" stroke-width="0.6"/>
+
+    <!-- cast iron kettle on top -->
+    <path d="M148 124 q0 -22 22 -22 q22 0 22 22 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M150 122 q2 -18 20 -18 q18 0 20 18" stroke-width="0.8"/>
+    <path d="M154 106 q16 -20 32 0" stroke-width="1.3"/>
+    <path d="M188 112 l10 -8 l2 4 l-8 6" stroke-width="1.2"/>
+    <path d="M166 100 V96 H174 V100" stroke-width="1"/>
+    <path d="M172 90 q-4 -6 0 -12 q4 -6 0 -10" stroke-width="0.8"/>
+    <!-- small pan with sweet potatoes -->
+    <path d="M220 124 h32 q0 -8 -8 -8 h-16 q-8 0 -8 8 Z" stroke-width="1.3"/>
+    <path d="M252 120 h10" stroke-width="1.3"/>
+    <path d="M226 116 q6 -6 12 0 M240 116 q6 -6 12 0" stroke-width="0.9"/>
+
+    <!-- L-shaped wood rack at right -->
+    <path d="M300 248 V150 H370" stroke-width="1.8"/>
+    <path d="M302 246 V152 H368" stroke-width="0.8"/>
+    <path d="M300 248 H372 V150" stroke-width="1.8"/>
+    <path d="M300 182 H372 M300 216 H372" stroke-width="1.4"/>
+    <!-- top: pine cones -->
+    <path d="M312 176 q4 -12 8 0 M326 176 q4 -12 8 0 M340 176 q4 -12 8 0 M354 176 q4 -12 8 0" stroke-width="1"/>
+    <path d="M314 170 h4 M328 170 h4 M342 170 h4 M356 170 h4 M316 166 h2 M330 166 h2" stroke-width="0.7"/>
+    <!-- middle: thin sticks -->
+    <circle cx="310" cy="208" r="5" stroke-width="1"/>
+    <circle cx="322" cy="208" r="5" stroke-width="1"/>
+    <circle cx="334" cy="208" r="5" stroke-width="1"/>
+    <circle cx="346" cy="208" r="5" stroke-width="1"/>
+    <circle cx="358" cy="208" r="5" stroke-width="1"/>
+    <circle cx="316" cy="199" r="5" stroke-width="1"/>
+    <circle cx="328" cy="199" r="5" stroke-width="1"/>
+    <circle cx="340" cy="199" r="5" stroke-width="1"/>
+    <circle cx="352" cy="199" r="5" stroke-width="1"/>
+    <path d="M310 206 v4 M334 206 l3 3 M358 206 v4 M328 197 v4 M352 197 l-3 3" stroke-width="0.7"/>
+    <!-- bottom: split logs (wedge shapes) -->
+    <path d="M304 246 L314 224 L326 246 Z M326 246 L338 226 L350 246 Z M350 246 L360 226 L370 246 Z" stroke-width="1.2"/>
+    <path d="M306 244 L314 228 L324 244 Z" fill="url(#m0106-hatch)" stroke="none"/>
+    <path d="M352 244 L360 228 L368 244 Z" fill="url(#m0106-hatch)" stroke="none"/>
+    <path d="M318 236 l-4 2 M342 238 l-3 -4 M362 236 l-2 4" stroke-width="0.7"/>
+
+    <!-- shoe-drying rack, folding, at left of stove -->
+    <path d="M78 246 L96 190 M112 246 L96 190" stroke-width="1.4"/>
+    <path d="M86 226 H106 M90 210 H102" stroke-width="1.1"/>
+    <path d="M74 222 q4 -10 14 -8 q10 0 8 8 Z" stroke-width="1.1"/>
+    <path d="M100 206 q4 -8 12 -6 q6 2 4 6 Z" stroke-width="1"/>
+    <path d="M82 208 q-3 -6 0 -12 M112 194 q-3 -6 0 -12" stroke-width="0.7"/>
+
+    <!-- heat shimmer above stove -->
+    <path d="M232 100 q-4 6 0 12 q4 6 0 12 M244 96 q-4 6 0 12 q4 6 0 12" stroke-width="0.7"/>
+
+    <!-- floor detail -->
+    <path d="M24 266 q20 -3 40 0 M330 266 q20 -3 40 0" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0106</text>
+</svg>

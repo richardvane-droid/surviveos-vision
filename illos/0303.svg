@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0303-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0303-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0303-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0303-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor -->
+    <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
+    <path d="M30 252 q30 -3 60 0 M310 252 q30 -3 60 0" stroke-width="0.8"/>
+
+    <!-- A-frame roof section: two slopes meeting at ridge -->
+    <path d="M14 196 L200 22 L386 196" stroke-width="2"/>
+    <path d="M17 199 L201 26 L385 199" stroke-width="1"/>
+    <path d="M14 196 V246 M386 196 V246" stroke-width="1.4"/>
+    <!-- rafters hint -->
+    <path d="M60 153 l6 6 M110 106 l6 6 M290 106 l-6 6 M340 153 l-6 6" stroke-width="0.9"/>
+    <path d="M40 172 q6 -4 12 -10 M348 172 q-6 -4 -12 -10" stroke-width="0.8"/>
+    <!-- collar tie -->
+    <path d="M120 96 H280" stroke-width="1.3"/>
+
+    <!-- skylight on left slope -->
+    <path d="M78 136 L124 92 L152 108 L106 152 Z" stroke-width="1.7"/>
+    <path d="M82 138 L124 96 L148 110 L106 150" stroke-width="0.9"/>
+    <path d="M92 130 L136 88" stroke-width="1"/>
+    <path d="M86 132 L126 94 L146 108 L108 146 Z" fill="url(#m0303-hatch2)" stroke="none"/>
+    <!-- rain outside above the roof -->
+    <path d="M40 60 l-4 12 M58 46 l-4 12 M76 30 l-4 12 M30 96 l-4 12 M52 82 l-4 12 M92 44 l-4 12 M110 22 l-4 12 M70 70 l-4 12 M130 40 l-4 12 M150 22 l-4 12 M26 130 l-4 12 M46 118 l-4 12" stroke-width="0.9"/>
+    <path d="M260 40 l-4 12 M290 60 l-4 12 M320 90 l-4 12 M350 122 l-4 12 M300 30 l-4 12 M336 66 l-4 12 M366 100 l-4 12 M372 150 l-4 12" stroke-width="0.9"/>
+    <!-- drops running down the skylight glass -->
+    <path d="M118 100 l-6 8 M132 104 l-8 10 M100 126 l-6 8" stroke-width="0.7"/>
+
+    <!-- tent: dome, front view -->
+    <path d="M110 240 Q112 150 200 128 Q288 150 290 240 Z" stroke-width="2"/>
+    <path d="M114 240 Q116 154 200 132" stroke-width="1"/>
+    <path d="M292 240 Q288 156 202 132" stroke-width="1"/>
+    <!-- pole seams -->
+    <path d="M200 128 Q160 170 150 240 M200 128 Q240 170 250 240" stroke-width="1.1"/>
+    <path d="M200 128 V240" stroke-width="0.8"/>
+    <!-- door: right flap rolled back, left flap tied -->
+    <path d="M170 240 Q172 175 200 152 Q228 175 232 240" stroke-width="1.5"/>
+    <path d="M200 152 Q186 190 182 240" stroke-width="1"/>
+    <!-- open door interior: white fill to cover seams -->
+    <path d="M184 240 Q187 190 201 156 Q226 178 230 240 Z" fill="#fff" stroke="none"/>
+    <path d="M184 240 Q187 190 201 156 Q226 178 230 240" stroke-width="1.4"/>
+    <!-- rolled flap on right -->
+    <path d="M222 168 q10 -6 12 6 q-4 8 -12 2 Z" stroke-width="1.1"/>
+    <path d="M226 170 q4 0 6 4" stroke-width="0.7"/>
+    <!-- interior: sleeping pad + pillow + book -->
+    <path d="M190 236 h36" stroke-width="1.1"/>
+    <path d="M192 226 q10 -6 22 0 q-6 6 -22 0" stroke-width="1.1"/>
+    <path d="M206 232 l8 -4 l6 2 l-8 4 Z" stroke-width="0.9"/>
+    <!-- interior shadow -->
+    <path d="M188 238 Q190 200 200 172 Q208 178 212 190 Q204 210 200 238 Z" fill="url(#m0303-hatch)" stroke="none"/>
+    <!-- string lights inside along the ceiling -->
+    <path d="M192 168 q8 6 16 4 q8 -2 18 4" stroke-width="0.8"/>
+    <circle cx="196" cy="172" r="2" stroke-width="0.9"/>
+    <circle cx="206" cy="173" r="2" stroke-width="0.9"/>
+    <circle cx="216" cy="172" r="2" stroke-width="0.9"/>
+    <circle cx="224" cy="176" r="2" stroke-width="0.9"/>
+    <!-- lantern hanging from the tent peak inside -->
+    <path d="M212 158 v14" stroke-width="0.9"/>
+    <path d="M206 172 h12 v12 h-12 Z M208 184 h8 v3 h-8" stroke-width="1.1"/>
+    <path d="M204 178 l-4 0 M220 178 l4 0 M206 170 l-2 -3 M218 170 l2 -3" stroke-width="0.7"/>
+    <!-- tent fabric shading left side -->
+    <path d="M116 236 Q118 162 178 140 Q150 170 140 236 Z" fill="url(#m0303-hatch)" stroke="none"/>
+    <!-- guy lines + pegs -->
+    <path d="M118 196 L60 240 M282 196 L340 240" stroke-width="0.9"/>
+    <path d="M58 236 l4 8 M338 236 l4 8" stroke-width="1.2"/>
+    <!-- small rug in front of door + slippers -->
+    <path d="M176 246 q26 -3 50 0 q-4 5 -50 4 Z" stroke-width="1"/>
+    <path d="M182 250 h6 M190 250 h6" stroke-width="1.1"/>
+
+    <!-- mug on floor at right, book at left -->
+    <path d="M304 246 v-12 h12 v12 Z M316 238 q6 0 4 5" stroke-width="1.2"/>
+    <path d="M82 246 l2 -6 h18 l2 6 Z M86 243 h14" stroke-width="1"/>
+    <!-- white noise machine / small plant in corner -->
+    <path d="M40 246 v-16 h18 v16 M44 236 h10" stroke-width="1.1"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0303</text>
+</svg>

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0210-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0210-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0210-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0210-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room shell -->
+    <path d="M80 44 H330 V212 H80 Z" stroke-width="1.8"/>
+    <path d="M82 46 H328 V210" stroke-width="0.9"/>
+    <path d="M80 44 L20 12 M330 44 L384 18" stroke-width="1.5"/>
+    <path d="M80 212 L20 262 M330 212 L384 256" stroke-width="1.5"/>
+    <path d="M20 262 Q200 258 384 262" stroke-width="1.2"/>
+    <path d="M22 14 L78 46 V210 L22 260 Z" fill="url(#m0210-hatch)" stroke="none"/>
+    <path d="M332 46 L382 20 V254 L332 210 Z" fill="url(#m0210-hatch)" stroke="none"/>
+
+    <!-- tall galvanised steel rack: uprights + five shelves -->
+    <path d="M100 30 V232 M282 30 V232" stroke-width="2"/>
+    <path d="M103 32 V230 M285 32 V230" stroke-width="0.8"/>
+    <path d="M94 62 H288 M94 104 H288 M94 146 H288 M94 188 H288 M94 232 H288" stroke-width="1.7"/>
+    <path d="M94 66 H288 M94 108 H288 M94 150 H288 M94 192 H288 M94 236 H288" stroke-width="0.8"/>
+    <path d="M100 30 L96 34 M282 30 L286 34" stroke-width="1"/>
+    <path d="M96 62 H286 V66 H96 Z M96 104 H286 V108 H96 Z M96 146 H286 V150 H96 Z M96 188 H286 V192 H96 Z M96 232 H286 V236 H96 Z" fill="url(#m0210-hatch)" stroke="none"/>
+    <path d="M100 236 v10 M282 236 v10" stroke-width="1.6"/>
+
+    <!-- shelf 1 (top): vacuum rice bricks and noodle packs -->
+    <path d="M108 62 V38 H140 V62 M148 62 V38 H180 V62 M188 62 V40 H216 V62 M224 62 V36 H254 V62 M260 62 V44 H278 V62" stroke-width="1.3"/>
+    <path d="M110 40 H138 M150 40 H178 M226 38 H252" stroke-width="0.7"/>
+    <path d="M114 48 h18 M114 54 h12 M154 48 h18 M194 50 h14 M230 46 h18 M230 52 h12" stroke-width="0.7"/>
+    <path d="M262 46 H276 V60 H262 Z" fill="url(#m0210-hatch)" stroke="none"/>
+
+    <!-- shelf 2: cans on the sloped rail, labels facing out -->
+    <path d="M108 104 v-22 M124 104 v-22 M108 82 q8 -3 16 0 M108 100 q8 3 16 0" stroke-width="1.2"/>
+    <path d="M130 104 v-22 M146 104 v-22 M130 82 q8 -3 16 0 M130 100 q8 3 16 0" stroke-width="1.2"/>
+    <path d="M152 104 v-22 M168 104 v-22 M152 82 q8 -3 16 0 M152 100 q8 3 16 0" stroke-width="1.2"/>
+    <path d="M174 104 v-22 M190 104 v-22 M174 82 q8 -3 16 0 M174 100 q8 3 16 0" stroke-width="1.2"/>
+    <path d="M196 104 v-22 M212 104 v-22 M196 82 q8 -3 16 0 M196 100 q8 3 16 0" stroke-width="1.2"/>
+    <path d="M218 104 v-22 M234 104 v-22 M218 82 q8 -3 16 0 M218 100 q8 3 16 0" stroke-width="1.2"/>
+    <path d="M240 104 v-22 M256 104 v-22 M240 82 q8 -3 16 0 M240 100 q8 3 16 0" stroke-width="1.2"/>
+    <path d="M262 104 v-22 M278 104 v-22 M262 82 q8 -3 16 0 M262 100 q8 3 16 0" stroke-width="1.2"/>
+    <path d="M110 88 h12 v8 h-12 Z M132 88 h12 v8 h-12 Z M154 88 h12 v8 h-12 Z M176 88 h12 v8 h-12 Z M198 88 h12 v8 h-12 Z M220 88 h12 v8 h-12 Z M242 88 h12 v8 h-12 Z M264 88 h12 v8 h-12 Z" stroke-width="0.6"/>
+    <path d="M112 93 h8 M134 93 h8 M156 93 h8 M178 93 h8 M200 93 h8 M222 93 h8 M244 93 h8 M266 93 h8" stroke-width="0.9"/>
+    <!-- shelf 3: bigger cans + jars -->
+    <path d="M108 146 v-28 M132 146 v-28 M108 118 q12 -4 24 0 M108 142 q12 4 24 0" stroke-width="1.3"/>
+    <path d="M140 146 v-28 M164 146 v-28 M140 118 q12 -4 24 0 M140 142 q12 4 24 0" stroke-width="1.3"/>
+    <path d="M172 146 v-28 M196 146 v-28 M172 118 q12 -4 24 0 M172 142 q12 4 24 0" stroke-width="1.3"/>
+    <path d="M204 146 v-28 M228 146 v-28 M204 118 q12 -4 24 0 M204 142 q12 4 24 0" stroke-width="1.3"/>
+    <path d="M112 126 h16 v10 h-16 Z M144 126 h16 v10 h-16 Z M176 126 h16 v10 h-16 Z M208 126 h16 v10 h-16 Z" stroke-width="0.6"/>
+    <path d="M114 132 h12 M146 132 h12 M178 132 h12 M210 132 h12" stroke-width="1"/>
+    <path d="M238 146 v-24 q0 -4 4 -4 h12 q4 0 4 4 v24 M240 118 h16" stroke-width="1.2"/>
+    <path d="M242 128 h12 v8 h-12 Z" stroke-width="0.6"/>
+    <path d="M262 146 v-22 h16 v22 M264 124 h12" stroke-width="1.2"/>
+    <!-- shelf 4: sealed buckets (rice / flour) -->
+    <path d="M108 188 v-30 h30 v30 M106 158 h34 M112 166 h22 v6 h-22 Z" stroke-width="1.3"/>
+    <path d="M148 188 v-30 h30 v30 M146 158 h34 M152 166 h22 v6 h-22 Z" stroke-width="1.3"/>
+    <path d="M188 188 v-30 h30 v30 M186 158 h34 M192 166 h22 v6 h-22 Z" stroke-width="1.3"/>
+    <path d="M228 188 v-30 h30 v30 M226 158 h34 M232 166 h22 v6 h-22 Z" stroke-width="1.3"/>
+    <path d="M116 176 h14 M156 176 h14 M196 176 h14 M236 176 h14" stroke-width="0.8"/>
+    <path d="M266 188 v-22 h12 v22 M266 174 h12" stroke-width="1.1"/>
+    <!-- shelf 5 (bottom): water jugs with handles -->
+    <path d="M106 232 v-30 q0 -4 4 -4 h24 q4 0 4 4 v30 M112 198 h16 v-5 h-16 Z M116 206 h12 q4 6 0 10 h-12 q-4 -6 0 -10 Z" stroke-width="1.4"/>
+    <path d="M146 232 v-30 q0 -4 4 -4 h24 q4 0 4 4 v30 M152 198 h16 v-5 h-16 Z M156 206 h12 q4 6 0 10 h-12 q-4 -6 0 -10 Z" stroke-width="1.4"/>
+    <path d="M186 232 v-30 q0 -4 4 -4 h24 q4 0 4 4 v30 M192 198 h16 v-5 h-16 Z M196 206 h12 q4 6 0 10 h-12 q-4 -6 0 -10 Z" stroke-width="1.4"/>
+    <path d="M226 232 v-30 q0 -4 4 -4 h24 q4 0 4 4 v30 M232 198 h16 v-5 h-16 Z M236 206 h12 q4 6 0 10 h-12 q-4 -6 0 -10 Z" stroke-width="1.4"/>
+    <path d="M110 222 h22 M150 222 h22 M190 222 h22 M230 222 h22" stroke-width="0.7"/>
+    <path d="M264 232 v-26 h14 v26 M266 212 h10" stroke-width="1.1"/>
+
+    <!-- small whiteboard hanging on the right side of the rack -->
+    <path d="M292 100 h40 v34 h-40 Z" fill="#fff" stroke="none"/>
+    <path d="M292 100 h40 v34 h-40 Z" stroke-width="1.5"/>
+    <path d="M294 102 h36 v30" stroke-width="0.7"/>
+    <path d="M298 110 h20 M298 118 h28 M298 126 h16" stroke-width="0.8"/>
+    <path d="M312 100 v-6 M300 94 h24" stroke-width="0.9"/>
+    <path d="M324 126 l3 -3 l3 3" stroke-width="0.8"/>
+
+    <!-- little person on tiptoe placing a can on the top shelf -->
+    <circle cx="66" cy="78" r="8" stroke-width="1.5"/>
+    <path d="M66 86 V150 M66 100 L90 66 M66 104 L80 120 M66 150 L58 214 M66 150 L74 214" stroke-width="1.6"/>
+    <path d="M56 218 l2 -6 M72 218 l2 -6" stroke-width="1.4"/>
+    <path d="M58 212 v6 M74 212 v6" stroke-width="1.2"/>
+    <!-- can in hand -->
+    <path d="M90 58 v10 M100 58 v10 M90 58 q5 -2 10 0 M90 68 q5 2 10 0" stroke-width="1.1"/>
+    <!-- backpack on the floor -->
+    <path d="M30 262 q-4 -22 10 -30 h20 q12 8 8 30 Z" stroke-width="1.4"/>
+    <path d="M36 246 h26 M42 252 h14" stroke-width="0.8"/>
+    <path d="M44 232 q6 -6 12 0" stroke-width="1"/>
+    <!-- shadow under rack -->
+    <path d="M96 240 H288 V248 H96 Z" fill="url(#m0210-hatch)" stroke="none"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0210</text>
+</svg>

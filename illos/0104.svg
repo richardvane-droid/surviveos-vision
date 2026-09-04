@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0104-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0104-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0104-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0104-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor line -->
+    <path d="M14 262 Q120 258 200 260 T388 258" stroke-width="1.2"/>
+    <!-- wall hooks left / right -->
+    <path d="M24 40 v8 M24 108 v8 M24 176 v8" stroke-width="1.6"/>
+    <path d="M296 36 v8 M296 104 v8 M296 172 v8" stroke-width="1.6"/>
+
+    <!-- rope 1 (sagging) -->
+    <path d="M24 44 Q160 70 296 40" stroke-width="1.6"/>
+    <path d="M25 46 Q160 72 296 42" stroke-width="0.8"/>
+    <!-- photos on rope 1: (x,y top) approx along the curve -->
+    <g stroke-width="1.3">
+      <path d="M44 50 l-1 2 M44 52 h4" stroke-width="1"/>
+      <path d="M38 52 l1 30 l24 -1 l-1 -30 Z" fill="#fff"/>
+      <path d="M42 57 l17 -1 l1 19 l-17 1 Z" fill="url(#m0104-hatch)" stroke="none"/>
+      <path d="M46 68 l4 -6 l4 4 l3 -3 l4 6" stroke-width="0.8"/>
+
+      <path d="M86 61 l-1 30 h24 l0 -30 Z" fill="#fff"/>
+      <path d="M90 65 h16 v18 h-16 Z" fill="url(#m0104-hatch2)" stroke="none"/>
+      <circle cx="98" cy="74" r="4" stroke-width="0.8"/>
+
+      <path d="M134 66 v30 h24 v-30 Z" fill="#fff"/>
+      <path d="M138 70 h16 v18 h-16 Z" fill="url(#m0104-hatch)" stroke="none"/>
+      <path d="M140 84 l5 -8 l4 5 l5 -6" stroke-width="0.8"/>
+
+      <path d="M184 67 v30 h24 v-30 Z" fill="#fff"/>
+      <path d="M188 71 h16 v18 h-16 Z" fill="url(#m0104-hatch2)" stroke="none"/>
+      <path d="M192 86 h10 v-10 h-10 Z" stroke-width="0.8"/>
+
+      <path d="M232 64 l1 30 l24 -1 l-1 -30 Z" fill="#fff"/>
+      <path d="M237 68 h16 v18 h-16 Z" fill="url(#m0104-hatch)" stroke="none"/>
+      <circle cx="245" cy="76" r="3" stroke-width="0.8"/>
+      <path d="M240 84 l10 -1" stroke-width="0.8"/>
+
+      <path d="M270 56 l2 30 l24 -2 l-2 -30 Z" fill="#fff"/>
+      <path d="M275 60 h16 v18 h-16 Z" fill="url(#m0104-hatch2)" stroke="none"/>
+      <path d="M278 74 l4 -8 l5 6 l4 -4" stroke-width="0.8"/>
+    </g>
+    <!-- clothespins rope 1 -->
+    <path d="M48 46 v9 M52 46 v9 M96 56 v9 M100 56 v9 M144 60 v9 M148 60 v9 M194 61 v9 M198 61 v9 M242 58 v9 M246 58 v9 M280 50 v9 M284 50 v9" stroke-width="1.4"/>
+
+    <!-- rope 2 -->
+    <path d="M24 112 Q160 138 296 108" stroke-width="1.6"/>
+    <path d="M25 114 Q160 140 296 110" stroke-width="0.8"/>
+    <g stroke-width="1.3">
+      <path d="M40 120 v30 h24 v-30 Z" fill="#fff"/>
+      <path d="M44 124 h16 v18 h-16 Z" fill="url(#m0104-hatch)" stroke="none"/>
+      <path d="M46 140 l6 -10 l6 10" stroke-width="0.8"/>
+
+      <path d="M90 129 l-2 30 l24 1 l2 -30 Z" fill="#fff"/>
+      <path d="M94 133 h16 v18 h-16 Z" fill="url(#m0104-hatch2)" stroke="none"/>
+      <circle cx="102" cy="141" r="4" stroke-width="0.8"/>
+      <path d="M97 150 h12" stroke-width="0.7"/>
+
+      <path d="M140 134 v30 h24 v-30 Z" fill="#fff"/>
+      <path d="M144 138 h16 v18 h-16 Z" fill="url(#m0104-hatch)" stroke="none"/>
+      <path d="M147 152 l4 -8 l5 5 l4 -5" stroke-width="0.8"/>
+
+      <path d="M190 134 l2 30 l24 -1 l-2 -30 Z" fill="#fff"/>
+      <path d="M195 138 h16 v18 h-16 Z" fill="url(#m0104-hatch2)" stroke="none"/>
+      <path d="M198 148 q6 -8 12 0" stroke-width="0.8"/>
+
+      <path d="M238 130 v30 h24 v-30 Z" fill="#fff"/>
+      <path d="M242 134 h16 v18 h-16 Z" fill="url(#m0104-hatch)" stroke="none"/>
+      <path d="M244 148 l5 -7 l4 4 l5 -6" stroke-width="0.8"/>
+
+      <path d="M276 124 l-1 30 h24 l1 -30 Z" fill="#fff"/>
+      <path d="M280 128 h16 v18 h-16 Z" fill="url(#m0104-hatch2)" stroke="none"/>
+      <circle cx="288" cy="136" r="3" stroke-width="0.8"/>
+    </g>
+    <path d="M50 114 v9 M54 114 v9 M100 124 v9 M104 124 v9 M150 128 v9 M154 128 v9 M200 129 v9 M204 129 v9 M248 125 v9 M252 125 v9 M286 118 v9 M290 118 v9" stroke-width="1.4"/>
+
+    <!-- rope 3 -->
+    <path d="M24 180 Q160 206 296 176" stroke-width="1.6"/>
+    <path d="M25 182 Q160 208 296 178" stroke-width="0.8"/>
+    <g stroke-width="1.3">
+      <path d="M44 188 l-1 30 h24 l1 -30 Z" fill="#fff"/>
+      <path d="M48 192 h16 v18 h-16 Z" fill="url(#m0104-hatch2)" stroke="none"/>
+      <circle cx="53" cy="200" r="2.5" stroke-width="0.8"/>
+      <circle cx="60" cy="200" r="2.5" stroke-width="0.8"/>
+
+      <path d="M96 197 v30 h24 v-30 Z" fill="#fff"/>
+      <path d="M100 201 h16 v18 h-16 Z" fill="url(#m0104-hatch)" stroke="none"/>
+      <path d="M103 215 l5 -9 l5 9" stroke-width="0.8"/>
+
+      <path d="M148 202 l2 30 l24 -2 l-2 -30 Z" fill="#fff"/>
+      <path d="M153 206 h16 v18 h-16 Z" fill="url(#m0104-hatch2)" stroke="none"/>
+      <circle cx="158" cy="214" r="2.5" stroke-width="0.8"/>
+      <circle cx="165" cy="213" r="2.5" stroke-width="0.8"/>
+
+      <path d="M200 202 v30 h24 v-30 Z" fill="#fff"/>
+      <path d="M204 206 h16 v18 h-16 Z" fill="url(#m0104-hatch)" stroke="none"/>
+      <path d="M206 220 l6 -10 l6 10" stroke-width="0.8"/>
+
+      <!-- empty clothespins waiting -->
+      <path d="M244 194 v9 M248 194 v9 M270 190 v9 M274 190 v9" stroke-width="1.4"/>
+    </g>
+    <path d="M54 182 v9 M58 182 v9 M106 191 v9 M110 191 v9 M158 196 v9 M162 196 v9 M210 197 v9 M214 197 v9" stroke-width="1.4"/>
+
+    <!-- small shelf with instant camera -->
+    <path d="M110 250 H210" stroke-width="1.8"/>
+    <path d="M110 250 V255 H210 V250" stroke-width="1.1"/>
+    <path d="M120 255 l-5 7 M200 255 l5 7" stroke-width="0.9"/>
+    <path d="M140 250 V232 H182 V250" stroke-width="1.6"/>
+    <path d="M142 234 H180" stroke-width="0.8"/>
+    <circle cx="161" cy="241" r="6" stroke-width="1.3"/>
+    <circle cx="161" cy="241" r="3" stroke-width="0.9"/>
+    <path d="M146 236 h6 M172 236 h5 M150 250 h22" stroke-width="0.9"/>
+    <path d="M148 232 V228 H160 V232" stroke-width="1"/>
+    <!-- box of film next to camera -->
+    <path d="M188 250 V240 H206 V250" stroke-width="1.1"/>
+    <path d="M190 242 H204 V248 H190 Z" fill="url(#m0104-hatch)" stroke="none"/>
+
+    <!-- wood stove peeking in at right edge -->
+    <path d="M330 260 V170 H396" stroke-width="1.9"/>
+    <path d="M332 258 V172 H394" stroke-width="0.9"/>
+    <path d="M356 170 V150 H372 V170" stroke-width="1.6"/>
+    <path d="M356 150 V100 M372 150 V100" stroke-width="1.6"/>
+    <path d="M358 150 V102" stroke-width="0.8"/>
+    <path d="M356 100 H372" stroke-width="1.2"/>
+    <path d="M364 94 q-6 -8 0 -16 q6 -8 0 -14" stroke-width="0.9"/>
+    <!-- glass door with flames -->
+    <path d="M342 184 H392 V236 H342 Z" stroke-width="1.5"/>
+    <path d="M344 186 H390 V234 H344 Z" fill="url(#m0104-hatch)" stroke="none"/>
+    <path d="M352 230 q4 -20 10 -18 q2 -12 8 -4 q6 -10 8 6 q4 6 -2 16 Z" fill="#fff" stroke-width="1.1"/>
+    <path d="M360 226 q2 -10 6 -8 q4 4 2 10" stroke-width="0.8"/>
+    <path d="M336 244 h56" stroke-width="1"/>
+    <path d="M338 260 v-10 M388 260 v-10" stroke-width="1.5"/>
+    <!-- stone slab under stove -->
+    <path d="M322 262 H400" stroke-width="1.4"/>
+    <path d="M324 260 h6 M392 260 h6" stroke-width="0.8"/>
+    <!-- heat shimmer -->
+    <path d="M318 130 q-4 6 0 12 q4 6 0 12" stroke-width="0.7"/>
+
+    <!-- floor detail -->
+    <path d="M40 266 q20 -3 40 0 M240 266 q20 -3 40 0" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0104</text>
+</svg>
