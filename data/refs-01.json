@@ -1,0 +1,129 @@
+[
+  {
+    "id": "0101",
+    "github": [
+      {"name": "EverythingSmartHome/everything-presence-lite", "url": "https://github.com/EverythingSmartHome/everything-presence-lite", "stars": "293",
+       "desc": "基于 ESPHome 的毫米波人体存在传感器，带光照传感，直接接入 HomeAssistant",
+       "why": "展台射灯人靠近自动亮就靠它，毫米波比红外灵敏，站着不动也不会灭灯"},
+      {"name": "adafruit/pi_video_looper", "url": "https://github.com/adafruit/pi_video_looper", "stars": "532",
+       "desc": "树莓派开机自动循环播放视频和图片的方案，专为艺术装置和展示屏设计",
+       "why": "展台侧面那块 7 寸小屏滚动播野外实测视频，插电即放，不用人管"}
+    ],
+    "xhs": [
+      {"keyword": "博物馆风 展示台 射灯", "note": "看单件展品加一束顶光的布光角度和铜牌位置"},
+      {"keyword": "胡桃木 展示台 手作", "note": "看原木展台的比例、倾斜台面和留刨痕的做法"},
+      {"keyword": "痛屋 展柜 打光", "note": "看收藏党怎么给核心藏品单独做 C 位和氛围灯"}
+    ]
+  },
+  {
+    "id": "0102",
+    "github": [
+      {"name": "Aircoookie/WLED", "url": "https://github.com/Aircoookie/WLED", "stars": "18.6k",
+       "desc": "ESP32 控制灯带的开源固件，手机网页调色调亮度，可接 HomeAssistant",
+       "why": "三排托架上方的 2700K 灯带用它统一控制，傍晚自动开、深夜自动关"},
+      {"name": "benjaminjonard/koillection", "url": "https://github.com/benjaminjonard/koillection", "stars": "1.3k",
+       "desc": "自托管的个人收藏管理系统，任意物件都能建档、配图、写字段",
+       "why": "给 20 只历代生存盒建电子档案，型号年份去过哪座山，标签内容从这里出"}
+    ],
+    "xhs": [
+      {"keyword": "收藏墙 木托架 展示", "note": "看卡带墙香水墙怎么排托架、灯带藏在哪里"},
+      {"keyword": "老松木 墙板 复古", "note": "看不刷漆的松木拼板墙和钉眼虫洞的质感"},
+      {"keyword": "手写 牛皮纸 标签 展品", "note": "看小标签的字体尺寸和铜钉固定方式"}
+    ]
+  },
+  {
+    "id": "0103",
+    "github": [
+      {"name": "damongolding/immich-kiosk", "url": "https://github.com/damongolding/immich-kiosk", "stars": "1.5k",
+       "desc": "把 Immich 相册变成浏览器轮播画框的方案，老平板打开网页就能用",
+       "why": "9 台老 iPad 各开一个网页，每台配不同相册和淡入节奏，就是九幅画"},
+      {"name": "mikf/gallery-dl", "url": "https://github.com/mikf/gallery-dl", "stars": "19.2k",
+       "desc": "命令行批量下载图站图集的工具，支持 Pinterest 画板、板块和搜索结果",
+       "why": "凌晨四点定时跑一遍，把 Pinterest 画板里的新图拉下来喂给画框"},
+      {"name": "MagicMirrorOrg/MagicMirror", "url": "https://github.com/MagicMirrorOrg/MagicMirror", "stars": "23.8k",
+       "desc": "模块化智能镜子平台，用网页模块拼接屏幕内容，社区壁纸轮播模块很多",
+       "why": "想在某一格画里叠时间天气或今日主题名，用它的模块比自己写网页省事"}
+    ],
+    "xhs": [
+      {"keyword": "电子画框 墙 拼接", "note": "看多屏拼画框的间距、外框收边和走线方式"},
+      {"keyword": "旧 iPad 改造 相框", "note": "看老平板嵌木框和拆机常供电的做法"},
+      {"keyword": "Frame 画框电视 氛围", "note": "看画面亮度怎么调得像真画而不是屏幕"}
+    ]
+  },
+  {
+    "id": "0104",
+    "github": [
+      {"name": "pibooth/pibooth", "url": "https://github.com/pibooth/pibooth", "stars": "823",
+       "desc": "树莓派开箱即用的拍照亭软件，按键拍照、加边框、接打印机直接出片",
+       "why": "拍立得相纸贵，用它接一台小照片打印机，客人按一下就出一张挂上去"},
+      {"name": "PhotoboothProject/photobooth", "url": "https://github.com/PhotoboothProject/photobooth", "stars": "649",
+       "desc": "自托管拍照亭网页应用，带实时预览、拼图、宝丽来滤镜和自动打印",
+       "why": "宝丽来滤镜加自动打印，客人合影那一排照片的风格能和拍立得统一"},
+      {"name": "immich-app/immich", "url": "https://github.com/immich-app/immich", "stars": "110k",
+       "desc": "高性能自托管照片视频管理系统，手机自动备份、人脸识别、共享相册",
+       "why": "80 张照片的原片和背面那句话都存进去，换下来的照片也不会丢"}
+    ],
+    "xhs": [
+      {"keyword": "麻绳 木夹子 照片墙", "note": "看绳子下垂弧度、夹子间距和灯带位置"},
+      {"keyword": "拍立得 照片墙 复古", "note": "看不塑封的照片怎么排才有松弛感"},
+      {"keyword": "壁炉旁 照片墙 暖光", "note": "看柴火炉旁边的墙面怎么布置不显乱"}
+    ]
+  },
+  {
+    "id": "0105",
+    "github": [
+      {"name": "kennetek/gridfinity-rebuilt-openscad", "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad", "stars": "2.2k",
+       "desc": "Gridfinity 模块化收纳盒的 OpenSCAD 参数化重制版，尺寸分格随便改",
+       "why": "27 格零件柜不想全木工的话，直接用它生成每种物件的专属小格子打印"},
+      {"name": "andymai/gridfinity-layout-tool", "url": "https://github.com/andymai/gridfinity-layout-tool", "stars": "266",
+       "desc": "网页版 Gridfinity 抽屉布局规划工具，拖拽排格子、3D 预览、导出 STL",
+       "why": "台面下两层抽屉先在网页里把空盒身和成品的格子排好，再打印"},
+      {"name": "timmmmmmmmm/halagen", "url": "https://github.com/timmmmmmmmm/halagen", "stars": "60",
+       "desc": "浏览器里生成五金零件标签的工具，带图标库、YAML 批量出图、PNG 导出",
+       "why": "27 个格口的物件名和数量标签用它批量生成，风格统一再拿去激光刻"}
+    ],
+    "xhs": [
+      {"keyword": "手工桌 收纳 零件柜", "note": "看小格子零件柜和磁吸工具板的组合方式"},
+      {"keyword": "白蜡木 工作台 实木", "note": "看厚实木台面配方钢腿的比例和高度"},
+      {"keyword": "头顶机位 手工 拍摄", "note": "看俯拍摄像头怎么吊、长条灯装在哪不挡手"}
+    ]
+  },
+  {
+    "id": "0106",
+    "github": [
+      {"name": "patrickcollins12/esphome-fan-controller", "url": "https://github.com/patrickcollins12/esphome-fan-controller", "stars": "704",
+       "desc": "ESP32 加温度传感器的 PID 温控风扇方案，纯 YAML 配置，接 HomeAssistant",
+       "why": "间接参考：炉子对面那个温度传感器就照它接，再顺手带一个循环风扇"},
+      {"name": "mbuhidar/WoodStoveRegulator", "url": "https://github.com/mbuhidar/WoodStoveRegulator", "stars": "4",
+       "desc": "Arduino 柴火炉自动风门调节器，K 型热电偶测烟管温度，舵机拉线控风门",
+       "why": "烟管温度超标自动关风门的思路和硬件清单直接抄，缺柴还会蜂鸣提醒"},
+      {"name": "lenne0815/hafireplaceautomation", "url": "https://github.com/lenne0815/hafireplaceautomation", "stars": "1",
+       "desc": "ESP8266 加 MAX6675 热电偶加舵机风门的壁炉自动化整套方案，含 HA 面板",
+       "why": "整套 HomeAssistant 仪表盘和 Node-RED 流程现成，超 26 度提醒改几行就行"}
+    ],
+    "xhs": [
+      {"keyword": "铸铁 柴火炉 木屋", "note": "看玻璃门炉子配青石板和红砖背墙的搭配"},
+      {"keyword": "柴火架 铁艺 收纳", "note": "看 L 形柴火架怎么分粗柴细柴和引火料"},
+      {"keyword": "烟囱 室内 保温管", "note": "看双层不锈钢烟囱室内段露出来的处理方式"}
+    ]
+  },
+  {
+    "id": "0107",
+    "github": [
+      {"name": "karlomikus/bar-assistant", "url": "https://github.com/karlomikus/bar-assistant", "stars": "1.0k",
+       "desc": "自托管家庭吧台管理系统，管酒水库存、500 多个鸡尾酒配方和购物清单",
+       "why": "台面下那几瓶黄酒和玻璃罐里的料都登记进去，客人来了直接翻能做什么"},
+      {"name": "alex9849/CocktailPi", "url": "https://github.com/alex9849/CocktailPi", "stars": "194",
+       "desc": "树莓派 DIY 自动调酒机的网页界面和控制软件，多泵配料、自动出杯",
+       "why": "想把热红酒之外再加一台自动调酒机，泵和网页点单都是现成的"},
+      {"name": "AndreWohnsland/CocktailBerry", "url": "https://github.com/AndreWohnsland/CocktailBerry", "stars": "89",
+       "desc": "树莓派调酒机开源软件，带触屏界面、配方管理和 WS281x 灯光联动",
+       "why": "另一套调酒机方案，官方还有硬件仓库，灯光能跟出酒一起亮"}
+    ],
+    "xhs": [
+      {"keyword": "家庭吧台 榆木 自然边", "note": "看自然边木台面配高脚凳和黄铜吊灯的组合"},
+      {"keyword": "小吧台 木架 玻璃罐", "note": "看后墙木架上杯子和手写标签罐子的摆法"},
+      {"keyword": "热红酒 铸铁锅 冬天", "note": "看炉边煨热红酒的器具和待客氛围"}
+    ]
+  }
+]

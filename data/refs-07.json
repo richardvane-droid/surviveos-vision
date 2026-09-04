@@ -1,0 +1,72 @@
+[
+  {
+    "id": "0701",
+    "github": [
+      {"name": "wikihouseproject/Skylark", "url": "https://github.com/wikihouseproject/Skylark", "stars": "243",
+       "desc": "WikiHouse 开源木结构建造系统，标准化木块 CNC 切割后手工拼装，可建 1～3 层",
+       "why": "间接参考：学它把木结构拆成标准件的思路，顶棚的柱、梁、檩可以按同样方法画图下料"},
+      {"name": "xuminic/woodshed", "url": "https://github.com/xuminic/woodshed", "stars": "10",
+       "desc": "一个人从零建木结构花园小屋的全记录，带 CAD 图纸、结构方案、材料清单和分阶段施工",
+       "why": "间接参考：钓台顶棚就是缩小版的柱梁屋架，它的地基、立柱、屋面分阶段做法可以照搬"}
+    ],
+    "xhs": [
+      {"keyword": "池塘 木平台 钓台", "note": "看伸入水面的木栈道和平台的桩基、栏杆和板缝处理"},
+      {"keyword": "竹瓦 顶棚 凉亭", "note": "看竹瓦单坡顶的檐口、雨链和杉木柱的搭配效果"},
+      {"keyword": "防腐木 栈道 自建", "note": "看乡下自己打桩铺栈道的过程和一年后的木色变化"}
+    ]
+  },
+  {
+    "id": "0702",
+    "github": [
+      {"name": "cohenadair/anglers-log", "url": "https://github.com/cohenadair/anglers-log", "stars": "34",
+       "desc": "Flutter 写的钓鱼日志 App，记录渔获、饵、天气和地点，能出统计，iOS 和安卓都有",
+       "why": "小黑板上的渔获记录写满拍照后，用它做数字版，哪种饵在哪个月最好用一查就知道"},
+      {"name": "m1ndgames/OpenFishing", "url": "https://github.com/m1ndgames/OpenFishing", "stars": "2",
+       "desc": "自托管钓具管理网页：假饵库带二维码标签、钓点地图、渔获记录和统计，一个 Docker 跑起来",
+       "why": "刚起步但正好对上“钓具数字孪生”：每根竿每盒饵贴二维码，扫一下知道上次钓了什么"}
+    ],
+    "xhs": [
+      {"keyword": "鱼竿 收纳墙 洞洞板", "note": "看鱼竿斜挂扇形排列和假饵按颜色摆放的展示效果"},
+      {"keyword": "路亚 假饵 收纳 展示", "note": "看亚克力小盒和磁吸板存放假饵的做法"},
+      {"keyword": "老樟木箱 改造", "note": "看旧木箱内部分格和不打磨保留包浆的样子"}
+    ]
+  },
+  {
+    "id": "0703",
+    "github": [
+      {"name": "KinDR007/VictronMPPT-ESPHOME", "url": "https://github.com/KinDR007/VictronMPPT-ESPHOME", "stars": "409",
+       "desc": "ESPHome 组件，通过 VE.Direct 串口读 Victron MPPT、SmartShunt 的电压、电流、发电量",
+       "why": "电池箱里的 ESPHome 节点直接用它，光伏发电量和电池电量推到 HomeAssistant 做卡片"},
+      {"name": "Bettapro/Solar-Tracer-Blynk-V3", "url": "https://github.com/Bettapro/Solar-Tracer-Blynk-V3", "stars": "61",
+       "desc": "ESP32 通过 RS485 Modbus 读 EPEver Tracer 系列 MPPT 控制器，支持 MQTT 和 HomeAssistant",
+       "why": "国内买的 MPPT 多是 EPEver 这类，不想上 Victron 就用它接，电量低于 20% 报警照样能做"},
+      {"name": "syssi/esphome-jk-bms", "url": "https://github.com/syssi/esphome-jk-bms", "stars": "963",
+       "desc": "ESPHome 组件，用串口或蓝牙读 JK BMS 的每节电芯电压、温度和剩余容量",
+       "why": "磷酸铁锂电池组若配 JK 保护板，用它把单体电压和温度也读出来，冬天低温充电有数"}
+    ],
+    "xhs": [
+      {"keyword": "夜钓 灯光 氛围", "note": "看马灯暖光和蓝光夜钓灯的搭配，以及灯不照水面的布法"},
+      {"keyword": "太阳能 离网 小系统", "note": "看光伏板、控制器、电池箱的接线和防水安装方式"},
+      {"keyword": "庭院 太阳能 地脚灯", "note": "看栈道两侧地脚灯的间距和夜晚亮起来的效果"}
+    ]
+  },
+  {
+    "id": "0704",
+    "github": [
+      {"name": "WLANThermo-nano/WLANThermo_ESP32_Software", "url": "https://github.com/WLANThermo-nano/WLANThermo_ESP32_Software", "stars": "40",
+       "desc": "德国开源 ESP32 烧烤温度计固件，多路探针、手机推送、能控风扇调火，有网页和 App",
+       "why": "烤鱼和茶壶各插一根探针，温度到了手机提醒，不用一直盯着火塘，也能控风扇补火"},
+      {"name": "Bjk8kds/esphome-winsen-co-sensor", "url": "https://github.com/Bjk8kds/esphome-winsen-co-sensor", "stars": "4",
+       "desc": "ESPHome 外部组件，接炜盛 ZE07/ZE15 电化学一氧化碳传感器，输出 ppm 并检测故障",
+       "why": "顶棚透气口不够时 CO 会积，用这颗国产电化学传感器做报警比 MQ-7 准，直接接 HomeAssistant"},
+      {"name": "MarcFinns/AtmoScan", "url": "https://github.com/MarcFinns/AtmoScan", "stars": "47",
+       "desc": "ESP8266 手持多合一空气传感器，CO、CO2、VOC、PM2.5 一起测，带彩屏和 MQTT",
+       "why": "想做一个能拿在手里的火塘旁空气检测仪，它的传感器组合和外壳方案可以照抄"}
+    ],
+    "xhs": [
+      {"keyword": "围炉煮茶 户外 水边", "note": "看火盆、吊架、矮桌和蒲团的围坐布局与器物搭配"},
+      {"keyword": "木平台 火塘 隔热", "note": "看木地板上生火时铁盆、火山岩板和防火垫的做法"},
+      {"keyword": "户外 烤鱼 炭火 吊架", "note": "看三脚吊架挂壶架网的高度调节和烤鱼串的架法"}
+    ]
+  }
+]

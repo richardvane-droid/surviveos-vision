@@ -1,0 +1,100 @@
+[
+  {
+    "id": "0501",
+    "github": [
+      {"name": "pvvx/ATC_MiThermometer", "url": "https://github.com/pvvx/ATC_MiThermometer", "stars": "4.1k",
+       "desc": "小米/青萍蓝牙温湿度计的开源替换固件，省电且直连 HomeAssistant",
+       "why": "间接参考：十几块钱的小米温湿度计刷这个固件塞进柴堆缝里，就是最省事的回潮监测探头"},
+      {"name": "blaineventurine/simple_inventory", "url": "https://github.com/blaineventurine/simple_inventory", "stars": "42",
+       "desc": "HomeAssistant 家庭库存管理集成，支持分区、到期日和低库存提醒",
+       "why": "间接参考：把每格柴火当库存条目，记入库月份和到期日，晒满 8 个月自动提醒可以烧了"}
+    ],
+    "xhs": [
+      {"keyword": "柴火墙 庭院", "note": "看切面朝外码成波点纹理的柴火墙，以及打卡机位怎么选"},
+      {"keyword": "柴棚 木架 diy", "note": "看杉木立柱加波浪瓦顶的柴架结构，底部怎么架空防潮"},
+      {"keyword": "劈柴 柴火炉 生活", "note": "看动手主义博主劈柴码柴的日常，柴火分类和引火区怎么摆"}
+    ]
+  },
+  {
+    "id": "0502",
+    "github": [
+      {"name": "pageauc/pi-timolo", "url": "https://github.com/pageauc/pi-timolo", "stars": "580",
+       "desc": "树莓派延时摄影加移动侦测加低光拍摄一体的 Python 工具，支持自动同步到网盘",
+       "why": "固定机位每天定时拍一张爬山虎墙，自带日出日落自动调曝光，一年剪成四季延时"},
+      {"name": "kernelkaribou/chronosnap", "url": "https://github.com/kernelkaribou/chronosnap", "stars": "3",
+       "desc": "自托管延时摄影管理器，支持 RTSP/HTTP/USB 摄像头定时抓拍并自动合成视频",
+       "why": "如果墙前已经有网络摄像头，直接用它按计划抓图并合成 30 秒延时，不用再装树莓派"},
+      {"name": "Lumics/Plantwatery", "url": "https://github.com/Lumics/Plantwatery", "stars": "101",
+       "desc": "ESP32 加太阳能板加电容土壤传感器加水泵的全自动浇水装置，含 3D 打印外壳",
+       "why": "墙脚种植带前两年需要稳定补水，照它做一套太阳能小泵，不用从屋里拉电和水管"}
+    ],
+    "xhs": [
+      {"keyword": "爬山虎墙 庭院", "note": "看整面绿墙加一把帆布椅的打卡位，以及秋天变红的效果"},
+      {"keyword": "绿墙 地灯 夜景", "note": "看暖光地灯从叶子背面打上去的透光效果和灯位怎么埋"},
+      {"keyword": "植物 四季 延时", "note": "看固定机位一年拍下来的四季对比帖，学机位和构图"}
+    ]
+  },
+  {
+    "id": "0503",
+    "github": [
+      {"name": "rbaron/b-parasite", "url": "https://github.com/rbaron/b-parasite", "stars": "2.4k",
+       "desc": "开源 DIY 电容式土壤湿度传感器，纽扣电池供电，带温湿度和光照，蓝牙直连 HomeAssistant",
+       "why": "每个陶盆插一根，手机上看谁该浇水了，纽扣电池能撑一年，梅雨季判断盆土会不会烂根"},
+      {"name": "Olen/homeassistant-plant", "url": "https://github.com/Olen/homeassistant-plant", "stars": "848",
+       "desc": "HomeAssistant 增强版植物组件，每盆植物一个设备，自动拉取物种养护阈值并报警",
+       "why": "把二十盆花每盆建成一个实体，湿度光照低于阈值就推通知，等于给每盆发了身份证"},
+      {"name": "MDeLuise/plant-it", "url": "https://github.com/MDeLuise/plant-it", "stars": "1.3k",
+       "desc": "开源自托管的植物养护记录 App，记浇水施肥、拍照打卡、提醒到期",
+       "why": "给每盆起名字、记入院日期和第 38 天的照片，就用它，不用自己写小程序"}
+    ],
+    "xhs": [
+      {"keyword": "阶梯花架 庭院 陶盆", "note": "看三层木花架摆粗陶盆的高低错落搭配和摆位"},
+      {"keyword": "给植物起名字", "note": "看博主给每盆植物起名挂牌的玩法，竹签木牌怎么做"},
+      {"keyword": "陶缸 菖蒲 小水景", "note": "看旧陶缸养菖蒲和小鱼的庭院水景，怎么防蚊防藻"}
+    ]
+  },
+  {
+    "id": "0504",
+    "github": [
+      {"name": "kizniche/Mycodo", "url": "https://github.com/kizniche/Mycodo", "stars": "3.3k",
+       "desc": "树莓派上的环境监控与调节系统，接传感器控水泵灯光风扇，带 PID 和网页仪表盘",
+       "why": "种植架的湿度判断、滴灌泵、遮阳网电机全接它一台树莓派，网页上看每层数据曲线"},
+      {"name": "makstech/esphome-irrigation-system", "url": "https://github.com/makstech/esphome-irrigation-system", "stars": "19",
+       "desc": "基于 ESPHome 加 ES32A08 扩展板的 8 路灌溉控制器，本地排程不依赖 HomeAssistant 在线",
+       "why": "四层架子每层一路电磁阀正好用这块 8 路板，YAML 直接抄，断网也照常浇"},
+      {"name": "calvinmclean/automated-garden", "url": "https://github.com/calvinmclean/automated-garden", "stars": "35",
+       "desc": "ESP32 固件加 Go 后端的智能灌溉系统，按天气和土壤湿度决定浇不浇，支持多套种植区",
+       "why": "它的按湿度阈值浇水而不是按时间表的逻辑，正是种植架想要的，多区管理也现成"},
+      {"name": "DeltaLima/CanGrow", "url": "https://github.com/DeltaLima/CanGrow", "stars": "10",
+       "desc": "ESP8266/ESP32 的植物种植箱控制固件，自带网页面板配传感器和灯泵输出",
+       "why": "不想装 HomeAssistant 的话，一块 ESP32 刷它就能独立管灯和泵，架子侧面小屏也能接"}
+    ],
+    "xhs": [
+      {"keyword": "庭院 种植架 自动浇水", "note": "看多层种植架加滴灌管的布线走法，滴头怎么固定"},
+      {"keyword": "镀锌管 种植架 diy", "note": "看用镀锌管和卡扣拼四层架子的结构和承重做法"},
+      {"keyword": "墨水屏 智能家居 面板", "note": "看墨水屏小面板显示温湿度的样子，外壳怎么做"}
+    ]
+  },
+  {
+    "id": "0505",
+    "github": [
+      {"name": "evcc-io/evcc", "url": "https://github.com/evcc-io/evcc", "stars": "6.8k",
+       "desc": "开源光伏优先充电与家庭能源管理系统，支持大量充电桩、电表和智能插座，本地运行",
+       "why": "它支持把智能插座当电动两轮的充电器，白天光伏有余电才充，手机上看太阳能占比"},
+      {"name": "jmcollin78/solar_optimizer", "url": "https://github.com/jmcollin78/solar_optimizer", "stars": "227",
+       "desc": "HomeAssistant 集成，按光伏净发电量自动启停用电设备，支持优先级",
+       "why": "只用 HomeAssistant 的话装这个，把电摩插座设成储能高于 30% 才通电的优先级设备"},
+      {"name": "KaufHA/PLF10", "url": "https://github.com/KaufHA/PLF10", "stars": "29",
+       "desc": "带功率计量的 ESPHome 智能插座的开源配置包，可自定义功率阈值和按钮行为",
+       "why": "照它的 YAML 做计量插座，功率降到几瓦就判定充满自动断电，避免电池鼓包"},
+      {"name": "OpenEVSE/openevse_esp32_firmware", "url": "https://github.com/OpenEVSE/openevse_esp32_firmware", "stars": "228",
+       "desc": "OpenEVSE 开源充电桩的 ESP32 联网固件，带网页界面、光伏分流、MQTT 接入",
+       "why": "以后换成电动汽车再看它，木柱里塞一套 OpenEVSE 就是一根真正的充电桩"}
+    ],
+    "xhs": [
+      {"keyword": "院子 电动车 充电桩 diy", "note": "看自建木柱或立柱式充电桩的样子，插座和线怎么藏"},
+      {"keyword": "庭院 停车位 青石板", "note": "看青石板加鹅卵石边线的小停车位铺法"},
+      {"keyword": "智能插座 充电 自动断电", "note": "看用计量插座给电瓶车充满自动断电的设置和界面"}
+    ]
+  }
+]

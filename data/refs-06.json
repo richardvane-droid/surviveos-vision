@@ -1,0 +1,84 @@
+[
+  {
+    "id": "0601",
+    "github": [
+      {"name": "cofade/open-garden-planner", "url": "https://github.com/cofade/open-garden-planner", "stars": "8",
+       "desc": "开源桌面版庭院规划工具，按米制精确画布局，给每棵植物挂元数据并导出标准格式",
+       "why": "间接参考：把 50 平米三分区和滴灌走线按实际尺寸画进去，树间距 4 米一眼看出够不够"},
+      {"name": "Ecohackerfarm/powerplant", "url": "https://github.com/Ecohackerfarm/powerplant", "stars": "94",
+       "desc": "基于朴门永续原则的种植规划应用，给出植物搭配建议和种植时间表",
+       "why": "间接参考：草原带混播和野花点缀带选种时，用它查哪些植物搭在一起互相不打架"},
+      {"name": "openfarmcc/OpenFarm", "url": "https://github.com/openfarmcc/OpenFarm", "stars": "1.7k",
+       "desc": "曾经的开放种植知识库，收录大量植物的间距、需水、土壤和伴生信息，2025 年已归档",
+       "why": "间接参考：网站已关但代码和数据还在，能扒出芒草、松果菊这类植物的间距和需水资料"}
+    ],
+    "xhs": [
+      {"keyword": "疏林草原 庭院", "note": "看芒草狼尾草配几棵歪脖子树的草原感布局和拍照角度"},
+      {"keyword": "观赏草 花园 设计", "note": "看观赏草混播的品种搭配、密度和秋天穗子的效果"},
+      {"keyword": "碎石 干河道 庭院", "note": "看用碎石干河道分隔草地和庭院的做法，雨天排水效果"}
+    ]
+  },
+  {
+    "id": "0602",
+    "github": [
+      {"name": "OpenSprinkler/OpenSprinkler-Firmware", "url": "https://github.com/OpenSprinkler/OpenSprinkler-Firmware", "stars": "543",
+       "desc": "OpenSprinkler 开源灌溉控制器统一固件，支持树莓派和 ESP 硬件，带网页、MQTT 和天气调节",
+       "why": "三路电磁阀最成熟的现成方案，接雨量和土壤传感器就能按湿度和天气决定浇不浇"},
+      {"name": "altmenorg/HAsmartirrigation", "url": "https://github.com/altmenorg/HAsmartirrigation", "stars": "548",
+       "desc": "HomeAssistant 智能灌溉组件，按蒸散量和降雨计算每个分区该浇多久",
+       "why": "草原区、疏林区各建一个分区，它算出该浇几分钟，再交给 ESP32 开阀"},
+      {"name": "petergridge/Irrigation-V5", "url": "https://github.com/petergridge/Irrigation-V5", "stars": "115",
+       "desc": "HomeAssistant 灌溉排程集成，多区、按天气调节、自带 Lovelace 卡片",
+       "why": "凌晨四到六点的时段锁定、三区不同阈值和草地体检卡片，用它配起来最快"},
+      {"name": "lrswss/esp32-irrigation-automation", "url": "https://github.com/lrswss/esp32-irrigation-automation", "stars": "36",
+       "desc": "ESP32 自动灌溉的固件和硬件设计，四路电磁阀加水泵，带土壤湿度和水位监测，MQTT 接 HomeAssistant",
+       "why": "桧木杆里那块控制板可以直接照它的电路做，电磁阀、水位、湿度探针一块板全包了"}
+    ],
+    "xhs": [
+      {"keyword": "庭院 自动浇水 esphome", "note": "看博主晒的 ESP32 灌溉控制盒和 YAML 配置，传感器怎么接"},
+      {"keyword": "土壤湿度传感器 花园", "note": "看电容式探针埋在草地里的安装深度和防水做法"},
+      {"keyword": "庭院 电磁阀 滴灌 安装", "note": "看多路电磁阀分区接管和滴灌主管走线的实拍"}
+    ]
+  },
+  {
+    "id": "0603",
+    "github": [
+      {"name": "kane5432/ESP32-Water-Level-Sensor", "url": "https://github.com/kane5432/ESP32-Water-Level-Sensor", "stars": "55",
+       "desc": "ESP32-C3 加超声波测水罐水位并上报 HomeAssistant，支持深度睡眠省电和 OTA 升级",
+       "why": "雨水罐顶开口装一颗超声波探头，直接照它做，水位低于 20% 就触发自来水补水阀"},
+      {"name": "tomsbasement/esp32-water-tank-sensor", "url": "https://github.com/tomsbasement/esp32-water-tank-sensor", "stars": "19",
+       "desc": "用现成模块做的 ESPHome 水罐水位传感器，带太阳能充电，接 HomeAssistant",
+       "why": "罐子在屋后没电源的话看这个，太阳能小板供电，ESPHome 配置可以直接抄"},
+      {"name": "hugokernel/esphome-weather-station", "url": "https://github.com/hugokernel/esphome-weather-station", "stars": "338",
+       "desc": "ESPHome 版 Elektor 气象站，含翻斗雨量计脉冲计数、风速风向和温湿度",
+       "why": "它的翻斗雨量计 YAML 拿来算每场雨接了多少升，配合水位就能统计雨水占比"}
+    ],
+    "xhs": [
+      {"keyword": "雨水收集 庭院 水罐", "note": "看落水管接雨水罐的整体布置，罐子怎么用格栅遮丑"},
+      {"keyword": "初期雨水 弃流 diy", "note": "看首雨弃流桶的自制做法和底部慢排小孔"},
+      {"keyword": "雨水花园 溢流 碎石", "note": "看溢流口接碎石干河道的景观处理和暴雨实拍"}
+    ]
+  },
+  {
+    "id": "0604",
+    "github": [
+      {"name": "blakeblackshear/frigate", "url": "https://github.com/blakeblackshear/frigate", "stars": "35.1k",
+       "desc": "本地 AI 目标检测的开源 NVR，配 HomeAssistant 用，支持 Coral 和 GPU 加速",
+       "why": "长焦机的移动侦测和鸟、猫、人识别全靠它，本地跑不上云，通知直接推到手机"},
+      {"name": "Nachtzuster/BirdNET-Pi", "url": "https://github.com/Nachtzuster/BirdNET-Pi", "stars": "1.1k",
+       "desc": "树莓派上的实时鸟类声纹识别系统，BirdNET-Pi 的活跃维护分支",
+       "why": "杆子上挂一个麦克风，靠叫声认鸟，和摄像头图像识别互相印证，戴胜叫一声就知道"},
+      {"name": "mmcc-xx/WhosAtMyFeeder", "url": "https://github.com/mmcc-xx/WhosAtMyFeeder", "stars": "456",
+       "desc": "Frigate 的伴侣程序，用 TensorFlow 鸟类分类模型识别 Frigate 抓到的鸟是什么种",
+       "why": "Frigate 抓到鸟之后交给它分种，自动生成来访者名单，新物种推通知就靠这一步"},
+      {"name": "Jellman86/YetAnother-WhosAtMyFeeder", "url": "https://github.com/Jellman86/YetAnother-WhosAtMyFeeder", "stars": "43",
+       "desc": "WhosAtMyFeeder 的重写版，更新活跃，带实时仪表盘、硬件加速和 HomeAssistant 集成",
+       "why": "原版更新慢，想要更好看的仪表盘和多传感器交叉验证就用这个新版"}
+    ],
+    "xhs": [
+      {"keyword": "院子 观鸟 摄像头", "note": "看博主在院子里架摄像头拍鸟的机位、镜头和水盆喂鸟器布置"},
+      {"keyword": "喂鸟器 diy 木", "note": "看木制喂鸟器的结构和挂法，怎么防松鼠和野猫"},
+      {"keyword": "草地 延时摄影 一年", "note": "看固定机位拍一年草地和植物变化的延时帖，学机位固定方法"}
+    ]
+  }
+]

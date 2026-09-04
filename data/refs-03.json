@@ -1,0 +1,113 @@
+[
+  {
+    "id": "0301",
+    "github": [
+      {"name": "kennetek/gridfinity-rebuilt-openscad", "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad", "stars": "2.2k",
+       "desc": "用 OpenSCAD 重写的 Gridfinity 收纳盒与底板参数化生成器，尺寸随便改",
+       "why": "台面下两层浅抽屉的螺丝钉分格盒直接用它生成，交给 0305 的打印机打，格子想多大就多大"},
+      {"name": "Ralim/IronOS", "url": "https://github.com/Ralim/IronOS", "stars": "8.3k",
+       "desc": "Pinecil、TS100 等便携电烙铁的开源固件，带自动休眠和动作唤醒",
+       "why": "买 Pinecil 那类烙铁刷它，放下几十秒自动降温休眠，正好解决“阁楼木头多怕忘关”的心病"},
+      {"name": "Denvi/Candle", "url": "https://github.com/Denvi/Candle", "stars": "1.7k",
+       "desc": "GRBL 桌面 CNC 的开源上位机，带 G 代码可视化和高度图补偿",
+       "why": "桌面小 CNC 大多是 GRBL 控制板，用它发刻小扣件和木牌的 G 代码，比机器自带软件顺手"}
+    ],
+    "xhs": [
+      {"keyword": "阁楼 斜顶 工作台", "note": "看斜顶下矮桌怎么摆、椅子高度和头顶间隙怎么留"},
+      {"keyword": "洞洞板 工具墙 收纳", "note": "看工具轮廓描边和分类挂法，一眼看出少了什么"},
+      {"keyword": "桌面 CNC 雕刻 木牌", "note": "看小雕刻机能做出什么级别的木牌和亚克力件"}
+    ]
+  },
+  {
+    "id": "0302",
+    "github": [
+      {"name": "galenmaly/lighterpack", "url": "https://github.com/galenmaly/lighterpack", "stars": "800",
+       "desc": "户外圈最常用的装备清单网站 LighterPack 的源码，可自部署，按重量分类统计",
+       "why": "把墙上那张手写出发清单搬进去，日徒步、两日露营、钓鱼三条线各存一份，背包重量自动算"},
+      {"name": "sysadminsmedia/homebox", "url": "https://github.com/sysadminsmedia/homebox", "stars": "7.1k",
+       "desc": "面向家庭用户的自托管物品库存系统，支持位置、标签、二维码标签打印",
+       "why": "每个木格子和收纳箱都是一个位置，贴上它打印的二维码，扫一下就知道气罐还剩几罐"}
+    ],
+    "xhs": [
+      {"keyword": "户外装备 上墙 展示", "note": "看登山包、登山杖怎么挂成一面店铺式陈列墙"},
+      {"keyword": "露营装备 收纳 格子柜", "note": "看睡袋防潮垫卷筒立放和分格贴标签的做法"},
+      {"keyword": "阁楼 户外 痛屋", "note": "看把爱好装备当收藏品布置整间屋的氛围"}
+    ]
+  },
+  {
+    "id": "0303",
+    "github": [
+      {"name": "remvze/moodist", "url": "https://github.com/remvze/moodist", "stars": "3.7k",
+       "desc": "开源的环境音播放器，雨声、雷声、篝火等几十种声音可叠加混音，能自部署",
+       "why": "不下雨的晚上也想听雨，在旧手机或小平板上开它，混一段雨打帐篷加篝火当白噪音机"},
+      {"name": "Aircoookie/WLED", "url": "https://github.com/Aircoookie/WLED", "stars": "18.6k",
+       "desc": "ESP32 控制 WS2812 等可寻址灯带的开源固件，手机调色、百种灯效、直连 HA",
+       "why": "帐篷顶那串 5V 串灯换成灯带刷它，暖黄呼吸、星空闪烁随时切，还能让 HA 睡前自动调暗"},
+      {"name": "RoadkillUK/Motor-on-a-Roller-Blind-for-ESPHOME", "url": "https://github.com/RoadkillUK/Motor-on-a-Roller-Blind-for-ESPHOME", "stars": "153",
+       "desc": "用 28BYJ 步进电机和 3D 打印件改造卷帘的 ESPHome 配置，自带 3D 模型",
+       "why": "天窗遮光帘不用买智能款，一个步进电机加打印件改成 HA 里的 cover，早上 7 点自动卷起"}
+    ],
+    "xhs": [
+      {"keyword": "室内 帐篷 氛围感", "note": "看串灯、露营灯、毛毯三件套怎么搭出室内露营感"},
+      {"keyword": "阁楼 天窗 帐篷", "note": "看帐篷门对着天窗的取景和躺着看天的角度"},
+      {"keyword": "逃避间 角落 布置", "note": "看小空间怎么做成不带手机的精神领地"}
+    ]
+  },
+  {
+    "id": "0304",
+    "github": [
+      {"name": "syssi/esphome-jk-bms", "url": "https://github.com/syssi/esphome-jk-bms", "stars": "963",
+       "desc": "用 ESP32 通过串口或蓝牙读取 JK 电池保护板的 ESPHome 组件，能看每节电压和温度",
+       "why": "木架子上那两块备用磷酸铁锂配 JK 保护板，一块 ESP32 就把电压温度送进 HA，过热立刻推送"},
+      {"name": "tolwi/hassio-ecoflow-cloud", "url": "https://github.com/tolwi/hassio-ecoflow-cloud", "stars": "882",
+       "desc": "正浩 EcoFlow 户外储能电源的 Home Assistant 集成，读电量、输入输出功率并控制输出口",
+       "why": "买正浩这类储能电源的话直接装它，每天发电量和剩余电量进 HA，再推到 0211 中枢大屏"},
+      {"name": "fl4p/batmon-ha", "url": "https://github.com/fl4p/batmon-ha", "stars": "489",
+       "desc": "HA 加载项，通过蓝牙同时连接 JK、JBD、Daly 等多种 BMS，还能算电量和累计能量",
+       "why": "备用电池保护板不是 JK 也没关系，它一个加载项通吃 Daly、JBD，不用额外焊 ESP32"}
+    ],
+    "xhs": [
+      {"keyword": "阳台 光伏 储能 自制", "note": "看家用小型光伏加储能电源的接线和摆放方式"},
+      {"keyword": "户外电源 太阳能板 屋顶", "note": "看光伏板贴斜顶装的支架做法和走线防水"},
+      {"keyword": "工业风 电池 展示 角落", "note": "看储能、电流表、铝架子露出来的硬核角落"}
+    ]
+  },
+  {
+    "id": "0305",
+    "github": [
+      {"name": "greghesp/ha-bambulab", "url": "https://github.com/greghesp/ha-bambulab", "stars": "2.3k",
+       "desc": "拓竹打印机的 Home Assistant 集成，读进度、层数、温度、AMS 耗材，还能看摄像头",
+       "why": "P1S 接上它，开始、结束、失败自动推手机，躺帐篷里在 HA 上看第 47 层的摄像头画面"},
+      {"name": "OrcaSlicer/OrcaSlicer", "url": "https://github.com/OrcaSlicer/OrcaSlicer", "stars": "15.6k",
+       "desc": "基于拓竹 Bambu Studio 二次开发的开源切片软件，自带校准流程，支持局域网直发",
+       "why": "地堡 0204 工作台装它切片，局域网直接推到阁楼的 P1S，不用来回跑，挂钩标牌批量打"},
+      {"name": "Donkie/Spoolman", "url": "https://github.com/Donkie/Spoolman", "stars": "2.5k",
+       "desc": "自托管的 3D 打印耗材库存管理，记录每卷剩余克数、颜色、材质，带打印机集成",
+       "why": "8 格耗材架每卷登记进去，标签上的剩余克数不用手写，快用完自动提醒，防止囤太多"}
+    ],
+    "xhs": [
+      {"keyword": "拓竹 P1S 打印机 桌面", "note": "看封闭式打印机放矮柜的摆法和周边收纳"},
+      {"keyword": "3D打印 耗材架 收纳", "note": "看 PLA 按颜色排开做成装饰墙的效果"},
+      {"keyword": "3D打印机 排风 管道", "note": "看打印机顶部接排风管到窗边的走管做法"}
+    ]
+  },
+  {
+    "id": "0306",
+    "github": [
+      {"name": "hugokernel/esphome-weather-station", "url": "https://github.com/hugokernel/esphome-weather-station", "stars": "338",
+       "desc": "Elektor 气象站的 ESPHome 版本，风速、风向、翻斗雨量、温湿压、光照全套配置",
+       "why": "风杯、风向标、雨量筒三件套的引脚和换算公式都写好了，抄它的 YAML 改改就能进 HA"},
+      {"name": "Madelena/esphome-weatherman-dashboard", "url": "https://github.com/Madelena/esphome-weatherman-dashboard", "stars": "1.3k",
+       "desc": "用 ESP32 驱动 7.5 寸墨水屏显示天气和预报的 ESPHome 配置，字体图标全打包",
+       "why": "阁楼墙上那块 7.5 寸墨水屏照它做，把气象站的温湿压和 24 小时曲线画上去，极简出片"},
+      {"name": "3KUdelta/Solar_WiFi_Weather_Station", "url": "https://github.com/3KUdelta/Solar_WiFi_Weather_Station", "stars": "117",
+       "desc": "太阳能供电的 ESP 气象站，用气压变化趋势跑 Zambretti 算法本地预报天气",
+       "why": "“比天气预报早半小时知道下雨”靠的就是气压趋势，把它的 Zambretti 算法搬到 HA 自动化里"}
+    ],
+    "xhs": [
+      {"keyword": "自制 气象站 ESP32", "note": "看风杯风向标雨量筒怎么装在杆子上和百叶盒怎么做"},
+      {"keyword": "墨水屏 天气 显示屏", "note": "看极简墨水屏天气面板挂墙的效果和排版"},
+      {"keyword": "屋顶 气象杆 安装", "note": "看杆子固定、放倒机构和避开屋脊挡风的位置"}
+    ]
+  }
+]

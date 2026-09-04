@@ -1,0 +1,84 @@
+[
+  {
+    "id": "0401",
+    "github": [
+      {"name": "kennetek/gridfinity-rebuilt-openscad", "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad", "stars": "2.2k",
+       "desc": "OpenSCAD 重写的 Gridfinity 参数化收纳格生成器，尺寸、分格、磁吸孔随便调",
+       "why": "抽屉柜里的螺丝分格、洞洞板下方的小零件托盘直接用它生成后 3D 打印，全站统一模数"},
+      {"name": "tkubic/GridfinityShadowMaker", "url": "https://github.com/tkubic/GridfinityShadowMaker", "stars": "116",
+       "desc": "把工具拍照转成 DXF 轮廓，再生成可 3D 打印的工具影子板，兼容 Gridfinity",
+       "why": "工具“影子”不用手描，拍一张照片就能出轮廓，打印出来贴在洞洞板或抽屉里"},
+      {"name": "chicago-tool-library/circulate", "url": "https://github.com/chicago-tool-library/circulate", "stars": "110",
+       "desc": "芝加哥工具图书馆开源的借还管理系统，Rails 写的，带库存、借出、催还",
+       "why": "比小白板更进一步的工具借用登记，想让朋友也能借工具时可以自建一套，功能偏重"},
+      {"name": "stockholmux/pegmixer", "url": "https://github.com/stockholmux/pegmixer", "stars": "34",
+       "desc": "OpenSCAD 洞洞板配件库，输入物件尺寸自动算出挂钩、托盒和插销位置",
+       "why": "标准挂钩挂不了的异形工具，用它按尺寸生成专属挂座打印，孔距按自家钢板改"}
+    ],
+    "xhs": [
+      {"keyword": "工具墙 洞洞板 收纳", "note": "看整面洞洞板的工具排布、挂钩混搭和黑白配色怎么出片"},
+      {"keyword": "工具 影子板", "note": "看描轮廓的手法、颜色选择以及缺件一眼识别的效果"},
+      {"keyword": "车库 工具间 改造", "note": "看长条形空间两侧墙面和顶部长物件的利用方式"}
+    ]
+  },
+  {
+    "id": "0402",
+    "github": [
+      {"name": "sysadminsmedia/homebox", "url": "https://github.com/sysadminsmedia/homebox", "stars": "7.1k",
+       "desc": "面向家庭用户的自托管物品库存系统，按位置、标签分类，带图片和维护记录",
+       "why": "每个周转箱在里面建一个位置，打印二维码贴箱口，扫码就跳到箱内清单，和 0206 数字孪生打通"},
+      {"name": "inventree/InvenTree", "url": "https://github.com/inventree/InvenTree", "stars": "7.3k",
+       "desc": "开源零件库存管理系统，Django 后端，支持条码、库位、BOM 和手机 App",
+       "why": "黄铜配件、螺丝五金这种按数量管的小零件用它更合适，出入库有条码扫描"},
+      {"name": "pklaus/brother_ql", "url": "https://github.com/pklaus/brother_ql", "stars": "701",
+       "desc": "直接驱动 Brother QL 系列标签机的 Python 库，不用官方驱动，支持 USB 和网络",
+       "why": "写个脚本批量把箱名和二维码打成统一字体的标签，字体永远一致不会强迫症发作"},
+      {"name": "bozokopic/opcut", "url": "https://github.com/bozokopic/opcut", "stars": "183",
+       "desc": "开源板材切割优化器，多张板、直线切割，带网页界面和命令行，输出 SVG 或 PDF",
+       "why": "买板材前先用它算一遍下料图，少买一张多层板，切完剩下的边角料也好记录"}
+    ],
+    "xhs": [
+      {"keyword": "木料 收纳架 竖放", "note": "看木料竖立架的分格结构、踢脚板防潮和按木种排列的效果"},
+      {"keyword": "透明收纳箱 标签 仓库", "note": "看统一周转箱加白底黑字标签的整面货架长什么样"},
+      {"keyword": "板材 收纳 A字架", "note": "看带脚轮的板材架怎么做，推出推回不占过道"}
+    ]
+  },
+  {
+    "id": "0403",
+    "github": [
+      {"name": "MallocArray/airgradient_esphome", "url": "https://github.com/MallocArray/airgradient_esphome", "stars": "332",
+       "desc": "AirGradient 空气质量监测器的 ESPHome 配置，PM2.5、CO2、TVOC 一起上报 HomeAssistant",
+       "why": "喷漆间的 VOC 传感器直接抄它的 SGP41 配置，超标推送提醒的传感器部分就搞定了"},
+      {"name": "airgradienthq/arduino", "url": "https://github.com/airgradienthq/arduino", "stars": "357",
+       "desc": "AirGradient 开源硬件空气监测器的官方固件，ESP32-C3，带 PM、CO2、TVOC 传感器",
+       "why": "想自己焊一块带外壳的监测板，用它的 PCB 和固件方案，比面包板接线可靠"},
+      {"name": "patrickcollins12/esphome-fan-controller", "url": "https://github.com/patrickcollins12/esphome-fan-controller", "stars": "704",
+       "desc": "ESP32 加 ESPHome 做的 PID 温控风扇控制器，接 HomeAssistant 手动或自动调速",
+       "why": "排风机联动的 ESPHome 逻辑照它改：门开启动、延时 30 分钟停，再加个 VOC 阈值触发"}
+    ],
+    "xhs": [
+      {"keyword": "喷漆房 自制 排风", "note": "看小型喷漆房的过滤棉墙、风机位置和管道怎么走"},
+      {"keyword": "模型 喷漆 晾干架", "note": "看晾杆和 S 钩挂满成品的画廊式陈列效果"},
+      {"keyword": "阳光板 铝型材 小房间", "note": "看透明小隔间的框架结构和门的做法"}
+    ]
+  },
+  {
+    "id": "0404",
+    "github": [
+      {"name": "FoxDotBuild/DustCollection", "url": "https://github.com/FoxDotBuild/DustCollection", "stars": "5",
+       "desc": "木工房自动集尘方案：ESP32 控制集尘器继电器，电流传感器检测机器开机并联动舵机阀门",
+       "why": "哪台机器开机就开哪路阀门的思路和它一样，电流检测加舵机球阀的代码可以直接参考"},
+      {"name": "MaslowCNC/Maslow_4", "url": "https://github.com/MaslowCNC/Maslow_4", "stars": "94",
+       "desc": "Maslow 4 开源大幅面 CNC 雕刻机固件，ESP32 跑 FluidNC，皮带牵引切整张板",
+       "why": "以后想在木工间加一台能切整张多层板的 CNC，这是最省空间也最便宜的开源方案"},
+      {"name": "lairdubois/lairdubois-opencutlist-sketchup-extension", "url": "https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension", "stars": "583",
+       "desc": "SketchUp 木工插件，从 3D 模型自动生成零件清单、下料图、标签和成本估算",
+       "why": "画完木盒模型直接出切割清单和板材排料图，切之前就知道要多少料和怎么切"}
+    ],
+    "xhs": [
+      {"keyword": "木工房 集尘 系统", "note": "看集尘管道的走向、旋风桶位置和各机器的接口做法"},
+      {"keyword": "法式挂条 工具墙", "note": "看 French cleat 墙上各种工具挂架的自制样式"},
+      {"keyword": "家庭 木工房 布置", "note": "看小空间里台锯、工作台和挂墙的 U 形动线安排"}
+    ]
+  }
+]
