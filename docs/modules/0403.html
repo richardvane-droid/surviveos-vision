@@ -16,6 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" class="on"><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
 </header>
@@ -156,6 +157,34 @@
   </div>
 
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥2,000～4,000（管道风机 + 阳光板 + 转盘）；过滤棉年耗 ¥200 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+
+  <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
+    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
+    <div class="gh-list">
+      <a class="gh" href="https://github.com/MallocArray/airgradient_esphome" target="_blank" rel="noopener">
+        <div class="gh-head"><b>MallocArray/airgradient_esphome</b><span class="stars">★ 332</span></div>
+        <p class="gh-desc">AirGradient 空气质量监测器的 ESPHome 配置，PM2.5、CO2、TVOC 一起上报 HomeAssistant</p>
+        <p class="gh-why">→ 喷漆间的 VOC 传感器直接抄它的 SGP41 配置，超标推送提醒的传感器部分就搞定了</p>
+      </a>
+      <a class="gh" href="https://github.com/airgradienthq/arduino" target="_blank" rel="noopener">
+        <div class="gh-head"><b>airgradienthq/arduino</b><span class="stars">★ 357</span></div>
+        <p class="gh-desc">AirGradient 开源硬件空气监测器的官方固件，ESP32-C3，带 PM、CO2、TVOC 传感器</p>
+        <p class="gh-why">→ 想自己焊一块带外壳的监测板，用它的 PCB 和固件方案，比面包板接线可靠</p>
+      </a>
+      <a class="gh" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">
+        <div class="gh-head"><b>patrickcollins12/esphome-fan-controller</b><span class="stars">★ 704</span></div>
+        <p class="gh-desc">ESP32 加 ESPHome 做的 PID 温控风扇控制器，接 HomeAssistant 手动或自动调速</p>
+        <p class="gh-why">→ 排风机联动的 ESPHome 逻辑照它改：门开启动、延时 30 分钟停，再加个 VOC 阈值触发</p>
+      </a>
+    </div></section>
+
+  <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
+    <p class="tiny">点关键词直接跳到小红书站内搜索（需登录小红书），看热门帖里的实拍效果。</p>
+    <div class="xhs-list">
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%96%B7%E6%BC%86%E6%88%BF%20%E8%87%AA%E5%88%B6%20%E6%8E%92%E9%A3%8E&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 喷漆房 自制 排风</span><span class="xnote">看小型喷漆房的过滤棉墙、风机位置和管道怎么走</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E6%A8%A1%E5%9E%8B%20%E5%96%B7%E6%BC%86%20%E6%99%BE%E5%B9%B2%E6%9E%B6&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 模型 喷漆 晾干架</span><span class="xnote">看晾杆和 S 钩挂满成品的画廊式陈列效果</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E9%98%B3%E5%85%89%E6%9D%BF%20%E9%93%9D%E5%9E%8B%E6%9D%90%20%E5%B0%8F%E6%88%BF%E9%97%B4&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 阳光板 铝型材 小房间</span><span class="xnote">看透明小隔间的框架结构和门的做法</span></a>
+    </div></section>
 
   <section class="blk"><h2><em>🔗</em> 联动模块</h2>
     <div class="link-grid">

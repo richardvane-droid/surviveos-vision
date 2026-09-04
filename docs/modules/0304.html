@@ -16,6 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" class="on"><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
 </header>
@@ -156,6 +157,34 @@
   </div>
 
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥8,000～15,000（4 块光伏板 + 2kWh 储能 + 支架线材）；之后每年省电费 ¥500～800</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+
+  <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
+    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
+    <div class="gh-list">
+      <a class="gh" href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">
+        <div class="gh-head"><b>syssi/esphome-jk-bms</b><span class="stars">★ 963</span></div>
+        <p class="gh-desc">用 ESP32 通过串口或蓝牙读取 JK 电池保护板的 ESPHome 组件，能看每节电压和温度</p>
+        <p class="gh-why">→ 木架子上那两块备用磷酸铁锂配 JK 保护板，一块 ESP32 就把电压温度送进 HA，过热立刻推送</p>
+      </a>
+      <a class="gh" href="https://github.com/tolwi/hassio-ecoflow-cloud" target="_blank" rel="noopener">
+        <div class="gh-head"><b>tolwi/hassio-ecoflow-cloud</b><span class="stars">★ 882</span></div>
+        <p class="gh-desc">正浩 EcoFlow 户外储能电源的 Home Assistant 集成，读电量、输入输出功率并控制输出口</p>
+        <p class="gh-why">→ 买正浩这类储能电源的话直接装它，每天发电量和剩余电量进 HA，再推到 0211 中枢大屏</p>
+      </a>
+      <a class="gh" href="https://github.com/fl4p/batmon-ha" target="_blank" rel="noopener">
+        <div class="gh-head"><b>fl4p/batmon-ha</b><span class="stars">★ 489</span></div>
+        <p class="gh-desc">HA 加载项，通过蓝牙同时连接 JK、JBD、Daly 等多种 BMS，还能算电量和累计能量</p>
+        <p class="gh-why">→ 备用电池保护板不是 JK 也没关系，它一个加载项通吃 Daly、JBD，不用额外焊 ESP32</p>
+      </a>
+    </div></section>
+
+  <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
+    <p class="tiny">点关键词直接跳到小红书站内搜索（需登录小红书），看热门帖里的实拍效果。</p>
+    <div class="xhs-list">
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E9%98%B3%E5%8F%B0%20%E5%85%89%E4%BC%8F%20%E5%82%A8%E8%83%BD%20%E8%87%AA%E5%88%B6&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 阳台 光伏 储能 自制</span><span class="xnote">看家用小型光伏加储能电源的接线和摆放方式</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E6%88%B7%E5%A4%96%E7%94%B5%E6%BA%90%20%E5%A4%AA%E9%98%B3%E8%83%BD%E6%9D%BF%20%E5%B1%8B%E9%A1%B6&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 户外电源 太阳能板 屋顶</span><span class="xnote">看光伏板贴斜顶装的支架做法和走线防水</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%B7%A5%E4%B8%9A%E9%A3%8E%20%E7%94%B5%E6%B1%A0%20%E5%B1%95%E7%A4%BA%20%E8%A7%92%E8%90%BD&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 工业风 电池 展示 角落</span><span class="xnote">看储能、电流表、铝架子露出来的硬核角落</span></a>
+    </div></section>
 
   <section class="blk"><h2><em>🔗</em> 联动模块</h2>
     <div class="link-grid">

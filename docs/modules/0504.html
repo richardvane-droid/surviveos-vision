@@ -16,6 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" class="on"><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
 </header>
@@ -187,6 +188,39 @@
   </div>
 
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,500～3,000（镀锌管、种植箱、滴灌件、传感器、墨水屏）；年度电费 ¥30 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+
+  <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
+    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
+    <div class="gh-list">
+      <a class="gh" href="https://github.com/kizniche/Mycodo" target="_blank" rel="noopener">
+        <div class="gh-head"><b>kizniche/Mycodo</b><span class="stars">★ 3.3k</span></div>
+        <p class="gh-desc">树莓派上的环境监控与调节系统，接传感器控水泵灯光风扇，带 PID 和网页仪表盘</p>
+        <p class="gh-why">→ 种植架的湿度判断、滴灌泵、遮阳网电机全接它一台树莓派，网页上看每层数据曲线</p>
+      </a>
+      <a class="gh" href="https://github.com/makstech/esphome-irrigation-system" target="_blank" rel="noopener">
+        <div class="gh-head"><b>makstech/esphome-irrigation-system</b><span class="stars">★ 19</span></div>
+        <p class="gh-desc">基于 ESPHome 加 ES32A08 扩展板的 8 路灌溉控制器，本地排程不依赖 HomeAssistant 在线</p>
+        <p class="gh-why">→ 四层架子每层一路电磁阀正好用这块 8 路板，YAML 直接抄，断网也照常浇</p>
+      </a>
+      <a class="gh" href="https://github.com/calvinmclean/automated-garden" target="_blank" rel="noopener">
+        <div class="gh-head"><b>calvinmclean/automated-garden</b><span class="stars">★ 35</span></div>
+        <p class="gh-desc">ESP32 固件加 Go 后端的智能灌溉系统，按天气和土壤湿度决定浇不浇，支持多套种植区</p>
+        <p class="gh-why">→ 它的按湿度阈值浇水而不是按时间表的逻辑，正是种植架想要的，多区管理也现成</p>
+      </a>
+      <a class="gh" href="https://github.com/DeltaLima/CanGrow" target="_blank" rel="noopener">
+        <div class="gh-head"><b>DeltaLima/CanGrow</b><span class="stars">★ 10</span></div>
+        <p class="gh-desc">ESP8266/ESP32 的植物种植箱控制固件，自带网页面板配传感器和灯泵输出</p>
+        <p class="gh-why">→ 不想装 HomeAssistant 的话，一块 ESP32 刷它就能独立管灯和泵，架子侧面小屏也能接</p>
+      </a>
+    </div></section>
+
+  <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
+    <p class="tiny">点关键词直接跳到小红书站内搜索（需登录小红书），看热门帖里的实拍效果。</p>
+    <div class="xhs-list">
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%BA%AD%E9%99%A2%20%E7%A7%8D%E6%A4%8D%E6%9E%B6%20%E8%87%AA%E5%8A%A8%E6%B5%87%E6%B0%B4&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 庭院 种植架 自动浇水</span><span class="xnote">看多层种植架加滴灌管的布线走法，滴头怎么固定</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E9%95%80%E9%94%8C%E7%AE%A1%20%E7%A7%8D%E6%A4%8D%E6%9E%B6%20diy&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 镀锌管 种植架 diy</span><span class="xnote">看用镀锌管和卡扣拼四层架子的结构和承重做法</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%A2%A8%E6%B0%B4%E5%B1%8F%20%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%20%E9%9D%A2%E6%9D%BF&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 墨水屏 智能家居 面板</span><span class="xnote">看墨水屏小面板显示温湿度的样子，外壳怎么做</span></a>
+    </div></section>
 
   <section class="blk"><h2><em>🔗</em> 联动模块</h2>
     <div class="link-grid">

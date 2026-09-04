@@ -16,6 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" class="on"><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
 </header>
@@ -152,6 +153,34 @@
   </div>
 
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥800～2,000（传感器三件套 + ESP32 + 墨水屏 + 杆子）；几乎不耗电</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+
+  <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
+    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
+    <div class="gh-list">
+      <a class="gh" href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">
+        <div class="gh-head"><b>hugokernel/esphome-weather-station</b><span class="stars">★ 338</span></div>
+        <p class="gh-desc">Elektor 气象站的 ESPHome 版本，风速、风向、翻斗雨量、温湿压、光照全套配置</p>
+        <p class="gh-why">→ 风杯、风向标、雨量筒三件套的引脚和换算公式都写好了，抄它的 YAML 改改就能进 HA</p>
+      </a>
+      <a class="gh" href="https://github.com/Madelena/esphome-weatherman-dashboard" target="_blank" rel="noopener">
+        <div class="gh-head"><b>Madelena/esphome-weatherman-dashboard</b><span class="stars">★ 1.3k</span></div>
+        <p class="gh-desc">用 ESP32 驱动 7.5 寸墨水屏显示天气和预报的 ESPHome 配置，字体图标全打包</p>
+        <p class="gh-why">→ 阁楼墙上那块 7.5 寸墨水屏照它做，把气象站的温湿压和 24 小时曲线画上去，极简出片</p>
+      </a>
+      <a class="gh" href="https://github.com/3KUdelta/Solar_WiFi_Weather_Station" target="_blank" rel="noopener">
+        <div class="gh-head"><b>3KUdelta/Solar_WiFi_Weather_Station</b><span class="stars">★ 117</span></div>
+        <p class="gh-desc">太阳能供电的 ESP 气象站，用气压变化趋势跑 Zambretti 算法本地预报天气</p>
+        <p class="gh-why">→ “比天气预报早半小时知道下雨”靠的就是气压趋势，把它的 Zambretti 算法搬到 HA 自动化里</p>
+      </a>
+    </div></section>
+
+  <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
+    <p class="tiny">点关键词直接跳到小红书站内搜索（需登录小红书），看热门帖里的实拍效果。</p>
+    <div class="xhs-list">
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E8%87%AA%E5%88%B6%20%E6%B0%94%E8%B1%A1%E7%AB%99%20ESP32&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 自制 气象站 ESP32</span><span class="xnote">看风杯风向标雨量筒怎么装在杆子上和百叶盒怎么做</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%A2%A8%E6%B0%B4%E5%B1%8F%20%E5%A4%A9%E6%B0%94%20%E6%98%BE%E7%A4%BA%E5%B1%8F&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 墨水屏 天气 显示屏</span><span class="xnote">看极简墨水屏天气面板挂墙的效果和排版</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%B1%8B%E9%A1%B6%20%E6%B0%94%E8%B1%A1%E6%9D%86%20%E5%AE%89%E8%A3%85&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 屋顶 气象杆 安装</span><span class="xnote">看杆子固定、放倒机构和避开屋脊挡风的位置</span></a>
+    </div></section>
 
   <section class="blk"><h2><em>🔗</em> 联动模块</h2>
     <div class="link-grid">

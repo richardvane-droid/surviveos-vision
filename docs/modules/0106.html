@@ -16,6 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../areas/01.html" class="on"><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
 </header>
@@ -170,6 +171,34 @@
   </div>
 
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥6,000～12,000（铸铁炉和双层烟囱占大头）；每年柴火 ¥800 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+
+  <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
+    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
+    <div class="gh-list">
+      <a class="gh" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">
+        <div class="gh-head"><b>patrickcollins12/esphome-fan-controller</b><span class="stars">★ 704</span></div>
+        <p class="gh-desc">ESP32 加温度传感器的 PID 温控风扇方案，纯 YAML 配置，接 HomeAssistant</p>
+        <p class="gh-why">→ 间接参考：炉子对面那个温度传感器就照它接，再顺手带一个循环风扇</p>
+      </a>
+      <a class="gh" href="https://github.com/mbuhidar/WoodStoveRegulator" target="_blank" rel="noopener">
+        <div class="gh-head"><b>mbuhidar/WoodStoveRegulator</b><span class="stars">★ 4</span></div>
+        <p class="gh-desc">Arduino 柴火炉自动风门调节器，K 型热电偶测烟管温度，舵机拉线控风门</p>
+        <p class="gh-why">→ 烟管温度超标自动关风门的思路和硬件清单直接抄，缺柴还会蜂鸣提醒</p>
+      </a>
+      <a class="gh" href="https://github.com/lenne0815/hafireplaceautomation" target="_blank" rel="noopener">
+        <div class="gh-head"><b>lenne0815/hafireplaceautomation</b><span class="stars">★ 1</span></div>
+        <p class="gh-desc">ESP8266 加 MAX6675 热电偶加舵机风门的壁炉自动化整套方案，含 HA 面板</p>
+        <p class="gh-why">→ 整套 HomeAssistant 仪表盘和 Node-RED 流程现成，超 26 度提醒改几行就行</p>
+      </a>
+    </div></section>
+
+  <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
+    <p class="tiny">点关键词直接跳到小红书站内搜索（需登录小红书），看热门帖里的实拍效果。</p>
+    <div class="xhs-list">
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E9%93%B8%E9%93%81%20%E6%9F%B4%E7%81%AB%E7%82%89%20%E6%9C%A8%E5%B1%8B&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 铸铁 柴火炉 木屋</span><span class="xnote">看玻璃门炉子配青石板和红砖背墙的搭配</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E6%9F%B4%E7%81%AB%E6%9E%B6%20%E9%93%81%E8%89%BA%20%E6%94%B6%E7%BA%B3&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 柴火架 铁艺 收纳</span><span class="xnote">看 L 形柴火架怎么分粗柴细柴和引火料</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E7%83%9F%E5%9B%B1%20%E5%AE%A4%E5%86%85%20%E4%BF%9D%E6%B8%A9%E7%AE%A1&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 烟囱 室内 保温管</span><span class="xnote">看双层不锈钢烟囱室内段露出来的处理方式</span></a>
+    </div></section>
 
   <section class="blk"><h2><em>🔗</em> 联动模块</h2>
     <div class="link-grid">

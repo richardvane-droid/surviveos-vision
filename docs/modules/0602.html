@@ -16,6 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" class="on"><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
 </header>
@@ -128,6 +129,39 @@
   </div>
 
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥800～1,500（传感器 + ESP32 + 三路电磁阀 + 桧木杆）；年度电费忽略不计</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+
+  <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
+    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
+    <div class="gh-list">
+      <a class="gh" href="https://github.com/OpenSprinkler/OpenSprinkler-Firmware" target="_blank" rel="noopener">
+        <div class="gh-head"><b>OpenSprinkler/OpenSprinkler-Firmware</b><span class="stars">★ 543</span></div>
+        <p class="gh-desc">OpenSprinkler 开源灌溉控制器统一固件，支持树莓派和 ESP 硬件，带网页、MQTT 和天气调节</p>
+        <p class="gh-why">→ 三路电磁阀最成熟的现成方案，接雨量和土壤传感器就能按湿度和天气决定浇不浇</p>
+      </a>
+      <a class="gh" href="https://github.com/altmenorg/HAsmartirrigation" target="_blank" rel="noopener">
+        <div class="gh-head"><b>altmenorg/HAsmartirrigation</b><span class="stars">★ 548</span></div>
+        <p class="gh-desc">HomeAssistant 智能灌溉组件，按蒸散量和降雨计算每个分区该浇多久</p>
+        <p class="gh-why">→ 草原区、疏林区各建一个分区，它算出该浇几分钟，再交给 ESP32 开阀</p>
+      </a>
+      <a class="gh" href="https://github.com/petergridge/Irrigation-V5" target="_blank" rel="noopener">
+        <div class="gh-head"><b>petergridge/Irrigation-V5</b><span class="stars">★ 115</span></div>
+        <p class="gh-desc">HomeAssistant 灌溉排程集成，多区、按天气调节、自带 Lovelace 卡片</p>
+        <p class="gh-why">→ 凌晨四到六点的时段锁定、三区不同阈值和草地体检卡片，用它配起来最快</p>
+      </a>
+      <a class="gh" href="https://github.com/lrswss/esp32-irrigation-automation" target="_blank" rel="noopener">
+        <div class="gh-head"><b>lrswss/esp32-irrigation-automation</b><span class="stars">★ 36</span></div>
+        <p class="gh-desc">ESP32 自动灌溉的固件和硬件设计，四路电磁阀加水泵，带土壤湿度和水位监测，MQTT 接 HomeAssistant</p>
+        <p class="gh-why">→ 桧木杆里那块控制板可以直接照它的电路做，电磁阀、水位、湿度探针一块板全包了</p>
+      </a>
+    </div></section>
+
+  <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
+    <p class="tiny">点关键词直接跳到小红书站内搜索（需登录小红书），看热门帖里的实拍效果。</p>
+    <div class="xhs-list">
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%BA%AD%E9%99%A2%20%E8%87%AA%E5%8A%A8%E6%B5%87%E6%B0%B4%20esphome&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 庭院 自动浇水 esphome</span><span class="xnote">看博主晒的 ESP32 灌溉控制盒和 YAML 配置，传感器怎么接</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%9C%9F%E5%A3%A4%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%20%E8%8A%B1%E5%9B%AD&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 土壤湿度传感器 花园</span><span class="xnote">看电容式探针埋在草地里的安装深度和防水做法</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%BA%AD%E9%99%A2%20%E7%94%B5%E7%A3%81%E9%98%80%20%E6%BB%B4%E7%81%8C%20%E5%AE%89%E8%A3%85&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 庭院 电磁阀 滴灌 安装</span><span class="xnote">看多路电磁阀分区接管和滴灌主管走线的实拍</span></a>
+    </div></section>
 
   <section class="blk"><h2><em>🔗</em> 联动模块</h2>
     <div class="link-grid">
