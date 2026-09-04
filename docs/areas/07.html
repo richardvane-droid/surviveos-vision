@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>07 钓台 · SurviveOs 设想版</title>
+<meta name="description" content="钓台：伸进池塘的木平台：顶棚、钓具墙、光伏夜灯、小火塘。4 个模块专题。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" class="on"><i>07</i>钓台</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <span>07 钓台</span></nav>
+<section class="area-hero">
+  <figure class="area-art"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <filter id="ma07-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="ma07-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="ma07-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#ma07-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- far bank, hills, tree, reeds -->
+    <path d="M120 118 Q250 110 380 116 T600 112" stroke-width="1.1"/>
+    <path d="M300 116 Q380 84 460 100 Q520 80 600 96" stroke-width="0.9"/>
+    <path d="M540 112 q3 -50 0 -60" stroke-width="1.6"/>
+    <path d="M540 60 q-26 12 -24 -14 q-14 -14 8 -26 q6 -20 30 -12 q22 -6 22 16 q18 10 2 26 q2 20 -26 14 Z" stroke-width="1.5"/>
+    <path d="M520 48 q10 6 20 0 M534 30 q10 6 18 -2" stroke-width="0.8"/>
+    <path d="M516 40 q8 10 26 8 q4 10 -8 12" fill="url(#ma07-hatch)" stroke="none"/>
+    <path d="M470 114 l3 -22 M480 113 l1 -26 M490 114 l5 -20 M500 112 l0 -24 M510 113 l4 -18 M560 112 l-1 -22 M572 112 l3 -20 M584 111 l1 -18 M594 112 l2 -16" stroke-width="0.9"/>
+    <path d="M476 88 q4 -6 8 -2 M496 88 q4 -5 7 -1 M566 90 q3 -5 7 -2" stroke-width="0.8"/>
+    <path d="M400 118 l2 -12 M408 117 l1 -14 M416 118 l3 -10" stroke-width="0.8"/>
+    <!-- egret on far bank -->
+    <path d="M440 116 v-14 q0 -6 5 -6 q6 0 6 6 l6 -3 M446 96 v-8 q2 -4 6 -3" stroke-width="0.9"/>
+
+    <!-- water ripples -->
+    <path d="M130 132 h26 M180 138 h18 M230 130 h30 M280 136 h22 M330 128 h28 M380 134 h20 M430 126 h24 M480 132 h22 M530 128 h26 M570 134 h20" stroke-width="0.9"/>
+    <path d="M140 152 h20 M200 158 h26 M250 150 h18 M300 156 h30 M350 150 h22 M400 156 h18 M450 148 h24 M500 154 h22 M550 150 h26 M585 158 h10" stroke-width="0.9"/>
+    <path d="M480 176 h30 M520 172 h26 M560 178 h30 M486 196 h26 M530 200 h22 M572 194 h22" stroke-width="0.9"/>
+    <path d="M478 218 h34 M528 224 h30 M574 218 h20 M490 242 h26 M540 246 h30 M580 240 h14" stroke-width="0.9"/>
+    <path d="M60 256 h26 M110 262 h20 M160 256 h30 M210 264 h22 M260 258 h28 M310 264 h20 M360 256 h26 M410 262 h22 M460 258 h30 M510 264 h20 M560 258 h26" stroke-width="0.9"/>
+    <path d="M20 276 h22 M80 282 h28 M140 278 h18 M190 284 h30 M250 280 h20 M300 286 h26 M350 280 h22 M400 286 h20 M450 280 h28 M500 286 h22 M550 280 h30" stroke-width="0.9"/>
+    <path d="M100 270 h14 M285 272 h16 M395 270 h14 M470 272 h12" stroke-width="0.8"/>
+
+    <!-- left bank -->
+    <path d="M0 110 Q60 116 100 150 Q124 184 96 216 Q70 244 30 262 Q14 270 0 274 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M2 114 Q60 120 98 152" stroke-width="0.9"/>
+    <path d="M80 140 Q104 160 104 186 Q98 208 84 222" fill="url(#ma07-hatch)" stroke="none"/>
+    <path d="M30 140 l2 -9 l2 9 M50 160 l2 -8 l3 8 M70 180 l2 -9 l2 9 M20 190 l1 -8 M60 210 l3 -8 l2 8 M40 236 l2 -8 l2 8 M16 250 l2 -7 M78 250 l2 -8" stroke-width="0.9"/>
+    <path d="M22 126 l3 -20 M28 128 l1 -24 M34 124 l4 -18 M40 128 l2 -22" stroke-width="0.9"/>
+    <!-- small hut hint on bank -->
+    <path d="M14 172 L14 148 L36 134 L58 148 L58 172 Z" fill="#fff" stroke-width="1.4"/>
+    <path d="M8 150 L36 130 L64 150" stroke-width="1.5"/>
+    <path d="M30 172 V158 H42 V172" stroke-width="1"/>
+
+    <!-- boardwalk -->
+    <path d="M56 222 L176 212 L192 192 L64 204 Z" fill="#fff" stroke-width="1.7"/>
+    <path d="M58 224 L176 214" stroke-width="0.9"/>
+    <path d="M72 221 l6 -17 M88 220 l6 -17 M104 219 l6 -16 M120 218 l6 -16 M136 216 l6 -15 M152 215 l6 -15 M168 214 l6 -15" stroke-width="0.8"/>
+    <path d="M66 221 v-18 M104 218 v-18 M142 215 v-18 M64 203 Q104 199 144 197" stroke-width="1.2"/>
+    <path d="M74 203 v-16 M112 201 v-16 M150 199 v-16 M72 187 Q112 184 152 183" stroke-width="1"/>
+
+    <!-- deck -->
+    <path d="M150 230 L420 230 L470 176 L200 176 Z" fill="#fff" stroke-width="1.9"/>
+    <path d="M152 232 L422 232 L472 178" stroke-width="1"/>
+    <path d="M150 230 V239 H420 V230 M420 239 L470 185 V176" stroke-width="1.7"/>
+    <path d="M151 231 H419 V238 H151 Z" fill="url(#ma07-hatch)" stroke="none"/>
+    <path d="M421 232 L469 179 V184 L421 238 Z" fill="url(#ma07-hatch2)" stroke="none"/>
+    <path d="M180 230 L230 176 M210 230 L260 176 M240 230 L290 176 M270 230 L320 176 M300 230 L350 176 M330 230 L380 176 M360 230 L410 176 M390 230 L440 176" stroke-width="0.7"/>
+    <path d="M160 239 V268 M285 239 V272 M410 239 V268 M464 185 V210" stroke-width="2.4"/>
+    <path d="M154 269 h12 M279 273 h12 M404 269 h12 M458 211 h12" stroke-width="0.9"/>
+
+    <!-- roof posts -->
+    <path d="M172 230 V124 M398 230 V124 M218 176 V94 M448 176 V94" stroke-width="2"/>
+    <path d="M174 230 V126 M400 230 V126" stroke-width="0.9"/>
+    <path d="M172 138 l-10 -10 M172 138 l10 -10 M398 138 l10 -10 M398 138 l-10 -10" stroke-width="1.1"/>
+    <!-- roof -->
+    <path d="M148 122 L424 122 L474 88 L198 88 Z" fill="#fff" stroke-width="2"/>
+    <path d="M146 124 L426 124 M200 90 L476 90" stroke-width="1"/>
+    <path d="M148 122 V128 H424 V122" stroke-width="1.5"/>
+    <path d="M149 123 H423 V127 H149 Z" fill="url(#ma07-hatch)" stroke="none"/>
+    <path d="M166 122 L216 88 M184 122 L234 88 M202 122 L252 88 M220 122 L270 88 M238 122 L288 88 M256 122 L306 88 M274 122 L324 88 M292 122 L342 88 M310 122 L360 88 M328 122 L378 88 M346 122 L396 88 M364 122 L414 88 M382 122 L432 88 M400 122 L450 88" stroke-width="0.7"/>
+    <path d="M173 105 L450 105" stroke-width="0.9"/>
+    <!-- rain chain -->
+    <circle cx="428" cy="134" r="1.8" stroke-width="0.9"/>
+    <circle cx="428" cy="144" r="1.8" stroke-width="0.9"/>
+    <circle cx="428" cy="154" r="1.8" stroke-width="0.9"/>
+    <circle cx="428" cy="164" r="1.8" stroke-width="0.9"/>
+    <circle cx="428" cy="174" r="1.8" stroke-width="0.9"/>
+    <circle cx="428" cy="184" r="1.8" stroke-width="0.9"/>
+    <circle cx="428" cy="194" r="1.8" stroke-width="0.9"/>
+    <circle cx="428" cy="204" r="1.8" stroke-width="0.9"/>
+    <circle cx="428" cy="214" r="1.8" stroke-width="0.9"/>
+    <circle cx="428" cy="224" r="1.8" stroke-width="0.9"/>
+    <!-- lantern under roof -->
+    <path d="M300 128 v8 M294 136 h12 v14 h-12 Z" fill="#fff" stroke-width="1.1"/>
+    <path d="M297 140 q3 6 0 8" stroke-width="0.7"/>
+
+    <!-- bench at back -->
+    <path d="M232 196 L318 196 L330 184 L244 184 Z" fill="#fff" stroke-width="1.4"/>
+    <path d="M238 196 V210 M312 196 V210 M324 184 V198" stroke-width="1.2"/>
+    <!-- pegboard with rods at back-left -->
+    <path d="M206 176 V132 H244 V176" stroke-width="1.4"/>
+    <path d="M210 170 L238 138 M218 172 L242 146 M226 174 L244 156" stroke-width="1.1"/>
+
+    <!-- person on chair fishing -->
+    <path d="M338 228 V206 H356 V228 M356 206 L360 190 M340 228 V236 M354 228 V236" stroke-width="1.3"/>
+    <circle cx="362" cy="176" r="7" stroke-width="1.5"/>
+    <path d="M362 183 V208 M362 208 L346 216 L344 232 M362 208 L376 220 L372 232 M362 192 L378 198 M362 192 L376 200" stroke-width="1.5"/>
+    <path d="M376 198 Q460 168 560 150" stroke-width="1.5"/>
+    <path d="M378 200 Q460 170 560 152" stroke-width="0.7"/>
+    <path d="M560 150 Q552 190 542 232" stroke-width="0.8"/>
+    <ellipse cx="541" cy="236" rx="1.8" ry="5" stroke-width="1.1"/>
+    <path d="M530 244 h22 M534 250 h14" stroke-width="0.8"/>
+    <!-- bucket + fish keep net -->
+    <path d="M384 218 v12 q7 3 14 0 v-12" stroke-width="1.2"/>
+    <ellipse cx="391" cy="218" rx="7" ry="2.5" stroke-width="1"/>
+    <path d="M300 230 q0 20 6 34" stroke-width="0.9"/>
+    <ellipse cx="308" cy="268" rx="9" ry="5" fill="url(#ma07-hatch2)" stroke-width="1"/>
+
+    <!-- grass on deck edge / boardwalk edge -->
+    <path d="M150 246 l2 -6 l2 6 M112 236 l2 -6 l2 6" stroke-width="0.8"/>
+  </g>
+  <text x="586" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">07 钓台</text>
+</svg>
+</figure>
+  <div class="area-head">
+    <p class="kicker">区域 07 · Pier</p>
+    <h1>钓台</h1>
+    <p class="lede">伸进池塘的木平台：顶棚、钓具墙、光伏夜灯、小火塘</p>
+    <p class="intro">真实项目里钓台还没做范围拆解，设想版干脆先替它想好四个模块：平台本体和顶棚、钓具储物墙、离网照明与电源、水边茶席和小火塘。做完之后，这里应该是整套系统里最“什么都不干”的地方。</p>
+  </div>
+</section>
+<section class="sec">
+  <h2 class="sec-title"><span>4 个模块专题</span><small>按编号排列，编号不代表优先级</small></h2>
+  <div class="mod-list">
+  
+    <a class="mod-row" href="../modules/0701.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0701-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0701-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0701-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0701-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- far bank -->
+    <path d="M100 112 Q200 106 300 110 T400 106" stroke-width="1.1"/>
+    <path d="M330 110 l3 -22 M338 109 l1 -26 M346 110 l5 -20 M354 108 l0 -24 M362 109 l4 -18 M370 108 l-1 -22 M380 108 l3 -20 M390 107 l1 -18" stroke-width="0.9"/>
+    <path d="M336 84 q4 -6 8 -2 M352 86 q4 -5 7 -1 M378 88 q3 -5 7 -2" stroke-width="0.8"/>
+    <path d="M250 112 l2 -12 M258 111 l1 -14 M266 112 l3 -10" stroke-width="0.8"/>
+
+    <!-- water ripples (behind everything) -->
+    <path d="M110 128 h26 M150 134 h18 M200 126 h30 M250 132 h22 M290 124 h28 M330 130 h20 M365 122 h24 M380 136 h14" stroke-width="0.9"/>
+    <path d="M120 146 h20 M170 152 h26 M220 144 h18 M260 150 h30 M310 146 h22 M350 154 h18 M375 146 h20" stroke-width="0.9"/>
+    <path d="M110 166 h24 M160 172 h20 M210 164 h28 M270 170 h20 M320 166 h24 M362 172 h22 M385 160 h10" stroke-width="0.9"/>
+    <path d="M350 190 h30 M362 206 h26 M356 222 h34 M370 238 h22" stroke-width="0.9"/>
+    <path d="M40 256 h26 M90 262 h20 M140 256 h30 M190 264 h22 M240 258 h28 M290 264 h20 M340 256 h26 M380 262 h12" stroke-width="0.9"/>
+    <path d="M20 276 h22 M70 282 h28 M120 278 h18 M170 284 h30 M230 280 h20 M280 286 h26 M330 280 h22 M370 286 h20" stroke-width="0.9"/>
+    <path d="M100 268 h14 M255 272 h16 M312 270 h14" stroke-width="0.8"/>
+
+    <!-- left bank -->
+    <path d="M0 132 Q50 128 86 148 Q102 176 80 206 Q60 232 22 246 Q10 250 0 254 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M2 136 Q50 132 84 152" stroke-width="0.9"/>
+    <path d="M30 160 l2 -9 l2 9 M40 176 l2 -8 l3 8 M56 190 l2 -9 l2 9 M18 200 l1 -8 M60 165 l3 -8 l2 8 M36 224 l2 -8 l2 8 M14 232 l2 -7" stroke-width="0.9"/>
+    <path d="M60 148 Q80 160 84 184 Q80 200 70 214" fill="url(#m0701-hatch)" stroke="none"/>
+    <path d="M20 148 l3 -20 M26 150 l1 -24 M32 146 l4 -18" stroke-width="0.9"/>
+
+    <!-- boardwalk from bank to deck -->
+    <path d="M30 222 L138 212 L151 194 L36 204 Z" fill="#fff" stroke-width="1.7"/>
+    <path d="M32 224 L138 214" stroke-width="0.9"/>
+    <path d="M44 220 l6 -17 M58 219 l6 -16 M72 218 l6 -16 M86 216 l6 -15 M100 215 l6 -15 M114 214 l6 -15 M128 213 l6 -14" stroke-width="0.8"/>
+    <!-- railings -->
+    <path d="M42 221 v-18 M76 218 v-18 M110 215 v-18 M40 203 Q76 199 112 197" stroke-width="1.2"/>
+    <path d="M48 203 v-16 M82 201 v-16 M116 199 v-16 M46 187 Q82 184 118 183" stroke-width="1"/>
+
+    <!-- deck body -->
+    <path d="M120 232 L300 232 L345 178 L165 178 Z" fill="#fff" stroke-width="1.9"/>
+    <path d="M122 234 L302 234 L346 180" stroke-width="1"/>
+    <path d="M120 232 L120 241 L300 241 L300 232 M300 241 L345 187 L345 178" stroke-width="1.7"/>
+    <path d="M121 234 L121 240 L299 240 L299 234 Z" fill="url(#m0701-hatch)" stroke="none"/>
+    <path d="M301 234 L344 181 L344 186 L301 240 Z" fill="url(#m0701-hatch2)" stroke="none"/>
+    <!-- plank lines -->
+    <path d="M142 232 L187 178 M164 232 L209 178 M186 232 L231 178 M208 232 L253 178 M230 232 L275 178 M252 232 L297 178 M274 232 L319 178" stroke-width="0.8"/>
+    <path d="M150 210 l6 -4 M220 214 l8 -3 M262 196 l6 -2" stroke-width="0.7"/>
+    <!-- piles -->
+    <path d="M128 241 V270 M210 241 V272 M292 241 V270 M340 187 V212" stroke-width="2.4"/>
+    <path d="M122 271 h12 M204 274 h12 M286 272 h12 M334 213 h12" stroke-width="0.9"/>
+
+    <!-- roof posts -->
+    <path d="M140 232 V126 M285 232 V126 M180 178 V96 M325 178 V96" stroke-width="2"/>
+    <path d="M142 232 V128 M287 232 V128" stroke-width="0.9"/>
+    <path d="M140 140 l-10 -10 M285 140 l10 -10 M140 140 l10 -10 M285 140 l-10 -10" stroke-width="1.1"/>
+    <!-- roof plane (single slope, low toward water) -->
+    <path d="M118 124 L305 124 L352 90 L168 90 Z" fill="#fff" stroke-width="2"/>
+    <path d="M116 126 L307 126 M170 92 L354 92" stroke-width="1"/>
+    <path d="M118 124 L118 130 L305 130 L305 124" stroke-width="1.5"/>
+    <path d="M119 125 L304 125 L304 129 L119 129 Z" fill="url(#m0701-hatch)" stroke="none"/>
+    <!-- bamboo tiles -->
+    <path d="M135 124 L185 90 M152 124 L202 90 M169 124 L219 90 M186 124 L236 90 M203 124 L253 90 M220 124 L270 90 M237 124 L287 90 M254 124 L304 90 M271 124 L321 90 M288 124 L338 90" stroke-width="0.7"/>
+    <path d="M143 107 L330 107" stroke-width="0.9"/>
+    <path d="M160 100 l5 -3 M232 112 l5 -3 M290 98 l5 -3" stroke-width="0.7"/>
+    <!-- rain chain at right eave -->
+    <circle cx="308" cy="136" r="1.8" stroke-width="0.9"/>
+    <circle cx="308" cy="146" r="1.8" stroke-width="0.9"/>
+    <circle cx="308" cy="156" r="1.8" stroke-width="0.9"/>
+    <circle cx="308" cy="166" r="1.8" stroke-width="0.9"/>
+    <circle cx="308" cy="176" r="1.8" stroke-width="0.9"/>
+    <circle cx="308" cy="186" r="1.8" stroke-width="0.9"/>
+    <circle cx="308" cy="196" r="1.8" stroke-width="0.9"/>
+    <circle cx="308" cy="206" r="1.8" stroke-width="0.9"/>
+    <circle cx="308" cy="216" r="1.8" stroke-width="0.9"/>
+    <circle cx="308" cy="226" r="1.8" stroke-width="0.9"/>
+
+    <!-- bench along back edge -->
+    <path d="M204 198 L290 198 L302 186 L216 186 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M206 200 L292 200" stroke-width="0.8"/>
+    <path d="M210 198 V212 M284 198 V212 M296 186 V200 M222 186 V196" stroke-width="1.3"/>
+    <path d="M218 191 h50" stroke-width="0.7"/>
+
+    <!-- bucket -->
+    <path d="M168 214 v14 q7 3 14 0 v-14" stroke-width="1.2"/>
+    <ellipse cx="175" cy="214" rx="7" ry="2.5" stroke-width="1"/>
+    <path d="M168 214 q7 -9 14 0" stroke-width="0.9"/>
+
+    <!-- rod holder + rod -->
+    <path d="M250 232 V216 M250 216 l-4 -6 M250 216 l4 -6" stroke-width="1.4"/>
+    <path d="M226 230 Q300 190 378 150" stroke-width="1.5"/>
+    <path d="M228 232 Q300 192 378 152" stroke-width="0.7"/>
+    <path d="M232 226 l3 3 M238 223 l2 3" stroke-width="0.9"/>
+    <path d="M378 150 Q372 180 368 202" stroke-width="0.8"/>
+    <ellipse cx="368" cy="206" rx="1.6" ry="4" stroke-width="1"/>
+    <path d="M358 214 h20 M362 220 h14" stroke-width="0.8"/>
+
+    <!-- little person on bench -->
+    <circle cx="250" cy="176" r="5" stroke-width="1.4"/>
+    <path d="M250 181 V196 M250 186 L242 192 M250 186 L258 191 M250 196 L244 208 M250 196 L256 208" stroke-width="1.4"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0701</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0701</i><b>钓台本体与顶棚</b><span class="st st-设想" title="真实项目尚未拆解此区域">设想 真实项目尚未拆解此区域</span></div>
+        <h3>谁懂啊！在自家池塘上搭了个 3×4 米的木钓台，一整个爱住</h3>
+        <p>一块伸进水里的木头地板，头顶一片竹瓦顶棚，下雨天也能坐着钓一下午。</p>
+        <p class="tags"><span>#露营风</span><span>#精神领地</span><span>#动手主义</span><span>#原木风</span><span>#水边生活</span></p>
+      </div>
+    </a>
+  
+    <a class="mod-row" href="../modules/0702.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0702-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0702-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0702-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="m0702-dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="1.1" fill="none" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0702-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- deck ground line + planks -->
+    <path d="M12 278 H388" stroke-width="1.3"/>
+    <path d="M20 286 h60 M110 288 h80 M230 286 h60 M320 288 h50" stroke-width="0.8"/>
+    <path d="M30 262 h30 M330 262 h40" stroke-width="0.8"/>
+
+    <!-- posts -->
+    <path d="M84 44 V278 M316 44 V278" stroke-width="2"/>
+    <path d="M86 46 V276 M318 46 V276" stroke-width="0.9"/>
+    <path d="M78 278 h12 M310 278 h12" stroke-width="1.2"/>
+
+    <!-- eave board on top -->
+    <path d="M70 54 L330 54 L322 40 L78 40 Z" fill="#fff" stroke-width="1.7"/>
+    <path d="M72 56 L332 56" stroke-width="0.9"/>
+    <path d="M71 55 L329 55 L322 41 L79 41 Z" fill="url(#m0702-hatch)" stroke="none"/>
+    <path d="M70 54 v6 H330 v-6" stroke-width="1.2"/>
+
+    <!-- pegboard -->
+    <path d="M92 60 H308 V222 H92 Z" fill="#fff" stroke-width="1.9"/>
+    <path d="M94 62 H310 V224" stroke-width="0.9"/>
+    <path d="M96 64 H304 V218 H96 Z" fill="url(#m0702-dots)" stroke="none"/>
+
+    <!-- rod rails (two horizontal supports) -->
+    <path d="M100 100 H250 M100 104 H250" stroke-width="1.1"/>
+    <path d="M100 190 H250 M100 194 H250" stroke-width="1.1"/>
+    <path d="M110 100 v4 M124 100 v4 M138 100 v4 M152 100 v4 M166 100 v4 M180 100 v4" stroke-width="0.8"/>
+
+    <!-- six rods fanned diagonally -->
+    <path d="M104 210 L192 70" stroke-width="1.5"/>
+    <path d="M118 210 L206 70" stroke-width="1.5"/>
+    <path d="M132 210 L220 70" stroke-width="1.5"/>
+    <path d="M146 210 L234 70" stroke-width="1.5"/>
+    <path d="M160 210 L248 70" stroke-width="1.5"/>
+    <path d="M174 212 L250 92" stroke-width="1.5"/>
+    <path d="M106 212 L194 72 M134 212 L222 72 M162 212 L250 72" stroke-width="0.6"/>
+    <!-- reel seats near butt -->
+    <path d="M108 204 l4 2 M122 204 l4 2 M136 204 l4 2 M150 204 l4 2 M164 204 l4 2 M178 206 l4 2" stroke-width="2"/>
+    <circle cx="114" cy="198" r="3" stroke-width="1"/>
+    <circle cx="128" cy="198" r="3" stroke-width="1"/>
+    <circle cx="142" cy="198" r="3" stroke-width="1"/>
+    <circle cx="156" cy="198" r="3" stroke-width="1"/>
+    <circle cx="170" cy="198" r="3" stroke-width="1"/>
+    <!-- guides (tiny loops along rods) -->
+    <path d="M150 137 q3 -2 3 1 M164 137 q3 -2 3 1 M178 137 q3 -2 3 1 M192 137 q3 -2 3 1 M206 137 q3 -2 3 1" stroke-width="0.7"/>
+    <path d="M172 102 q3 -2 3 1 M186 102 q3 -2 3 1 M200 102 q3 -2 3 1 M214 102 q3 -2 3 1 M228 102 q3 -2 3 1" stroke-width="0.7"/>
+    <!-- old bamboo rod on top, horizontal -->
+    <path d="M100 78 L250 74" stroke-width="1.6"/>
+    <path d="M100 80 L250 76" stroke-width="0.7"/>
+    <path d="M120 77 v4 M145 77 v4 M170 76 v4 M195 76 v4 M220 75 v4" stroke-width="0.9"/>
+    <path d="M104 74 v10 M246 70 v10" stroke-width="1.1"/>
+
+    <!-- lures column on the right -->
+    <path d="M270 76 q10 -8 20 0 q-10 8 -20 0 Z" fill="#fff" stroke-width="1.2"/>
+    <circle cx="274" cy="76" r="0.9" stroke-width="0.8"/>
+    <path d="M290 76 l6 -4 l0 8 Z M282 80 q0 6 -4 6 q-3 0 -3 -3" stroke-width="0.9"/>
+    <path d="M270 104 q10 -8 20 0 q-10 8 -20 0 Z" fill="url(#m0702-hatch)" stroke-width="1.2"/>
+    <circle cx="274" cy="104" r="0.9" fill="#fff" stroke-width="0.8"/>
+    <path d="M290 104 l6 -4 l0 8 Z M282 108 q0 6 -4 6 q-3 0 -3 -3" stroke-width="0.9"/>
+    <path d="M270 132 q10 -8 20 0 q-10 8 -20 0 Z" fill="#fff" stroke-width="1.2"/>
+    <circle cx="274" cy="132" r="0.9" stroke-width="0.8"/>
+    <path d="M290 132 l6 -4 l0 8 Z M282 136 q0 6 -4 6 q-3 0 -3 -3" stroke-width="0.9"/>
+    <path d="M272 154 l6 -12 l6 12 M278 142 v18" stroke-width="1.1"/>
+    <path d="M276 158 q0 6 -4 6 q-3 0 -3 -3" stroke-width="0.9"/>
+    <path d="M266 72 v4 M266 100 v4 M266 128 v4 M278 138 v4" stroke-width="1.1"/>
+
+    <!-- small chalkboard, lower right of board -->
+    <path d="M262 176 H302 V212 H262 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M264 178 H304 V214" stroke-width="0.8"/>
+    <path d="M263 177 H301 V211 H263 Z" fill="url(#m0702-hatch2)" stroke="none"/>
+    <path d="M268 186 h20 M268 194 h26 M268 202 h16" stroke="#fff" stroke-width="2"/>
+    <path d="M268 186 h20 M268 194 h26 M268 202 h16" stroke-width="0.8"/>
+
+    <!-- bricks under box -->
+    <path d="M116 270 h16 v8 h-16 Z M214 270 h16 v8 h-16 Z" stroke-width="1"/>
+
+    <!-- old wooden box, lid half open -->
+    <path d="M142 226 L262 226 L268 188 L148 188 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M144 228 L264 228" stroke-width="0.8"/>
+    <path d="M143 225 L261 225 L267 189 L149 189 Z" fill="url(#m0702-hatch)" stroke="none"/>
+    <path d="M110 240 L230 240 L262 226 L142 226 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M111 239 L229 239 L261 227 L143 227 Z" fill="url(#m0702-hatch2)" stroke="none"/>
+    <path d="M150 236 L172 226 M186 236 L206 226 M150 236 L150 226" stroke="#fff" stroke-width="2"/>
+    <path d="M150 236 L172 226 M186 236 L206 226" stroke-width="0.9"/>
+    <path d="M110 240 H230 V270 H110 Z" fill="#fff" stroke-width="1.7"/>
+    <path d="M112 242 H232 V272" stroke-width="0.9"/>
+    <path d="M230 240 L262 226 V256 L230 270 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M231 241 L261 227 V255 L231 269 Z" fill="url(#m0702-hatch)" stroke="none"/>
+    <path d="M116 248 H224 M116 256 H224 M116 264 H224" stroke-width="0.8"/>
+    <path d="M126 252 q10 -2 18 0 M186 260 q10 -2 20 0 M140 267 q8 -2 16 0" stroke-width="0.7"/>
+    <path d="M110 244 H230 M110 262 H230" stroke-width="1.1"/>
+    <circle cx="170" cy="250" r="3" stroke-width="1"/>
+    <path d="M170 253 v6" stroke-width="1"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0702</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0702</i><b>钓具储物与展示</b><span class="st st-设想" title="真实项目尚未拆解此区域">设想 真实项目尚未拆解此区域</span></div>
+        <h3>码住！钓台边一面洞洞板，把鱼竿、假饵、抄网全挂成了一幅画</h3>
+        <p>一面防水洞洞板 + 一个老木箱，钓具不再乱塞，每一件都像展品。</p>
+        <p class="tags"><span>#痛屋</span><span>#收纳</span><span>#工业风</span><span>#钓鱼</span><span>#数字孪生</span></p>
+      </div>
+    </a>
+  
+    <a class="mod-row" href="../modules/0703.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0703-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0703-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0703-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0703-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- night sky: moon + stars -->
+    <path d="M352 30 a16 16 0 1 0 14 24 a12 12 0 1 1 -14 -24 Z" fill="url(#m0703-hatch)" stroke-width="1.4"/>
+    <path d="M320 18 l0 6 M317 21 l6 0 M384 70 l0 6 M381 73 l6 0 M300 56 l0 5 M297.5 58.5 l5 0 M20 30 l0 6 M17 33 l6 0 M40 70 l0 4 M38 72 l4 0 M370 100 l0 5 M367.5 102.5 l5 0" stroke-width="0.9"/>
+
+    <!-- far bank line -->
+    <path d="M0 132 Q100 126 200 130 T400 128" stroke-width="1.1"/>
+    <path d="M330 130 l3 -18 M340 129 l1 -22 M350 130 l4 -16 M360 128 l0 -20 M372 128 l3 -16 M384 128 l1 -18" stroke-width="0.9"/>
+
+    <!-- water ripples -->
+    <path d="M10 150 h24 M60 156 h20 M300 148 h26 M340 156 h22 M372 146 h20" stroke-width="0.9"/>
+    <path d="M6 172 h20 M320 176 h28 M362 168 h26 M330 194 h22 M366 190 h26" stroke-width="0.9"/>
+    <path d="M326 214 h30 M366 210 h24 M338 232 h22 M372 228 h20" stroke-width="0.9"/>
+    <path d="M20 246 h24 M60 252 h20 M110 246 h30 M160 254 h20 M330 250 h26 M372 246 h20" stroke-width="0.9"/>
+    <path d="M14 266 h22 M66 272 h28 M120 268 h18 M170 274 h30 M230 268 h20 M340 270 h22 M380 266 h14" stroke-width="0.9"/>
+    <path d="M30 284 h22 M90 288 h28 M150 284 h18 M210 288 h30 M270 284 h20 M330 288 h26 M372 284 h20" stroke-width="0.9"/>
+
+    <!-- deck -->
+    <path d="M30 226 L262 226 L312 180 L80 180 Z" fill="#fff" stroke-width="1.9"/>
+    <path d="M32 228 L264 228 L314 182" stroke-width="1"/>
+    <path d="M30 226 V235 H262 V226 M262 235 L312 189 V180" stroke-width="1.6"/>
+    <path d="M31 227 H261 V234 H31 Z" fill="url(#m0703-hatch)" stroke="none"/>
+    <path d="M263 228 L311 184 V188 L263 234 Z" fill="url(#m0703-hatch2)" stroke="none"/>
+    <path d="M60 226 L110 180 M100 226 L150 180 M140 226 L190 180 M180 226 L230 180 M220 226 L270 180" stroke-width="0.8"/>
+    <path d="M40 235 V262 M150 235 V266 M256 235 V262 M306 189 V210" stroke-width="2.4"/>
+    <path d="M34 263 h12 M144 267 h12 M250 263 h12 M300 211 h12" stroke-width="0.9"/>
+
+    <!-- posts -->
+    <path d="M60 226 V104 M236 226 V104 M106 180 V72 M284 180 V72" stroke-width="2"/>
+    <path d="M62 226 V106 M238 226 V106" stroke-width="0.9"/>
+
+    <!-- roof plane with solar panel -->
+    <path d="M40 100 L250 100 L300 54 L90 54 Z" fill="#fff" stroke-width="2"/>
+    <path d="M38 102 L252 102 M92 56 L302 56" stroke-width="1"/>
+    <path d="M40 100 V106 H250 V100" stroke-width="1.4"/>
+    <path d="M41 101 H249 V105 H41 Z" fill="url(#m0703-hatch)" stroke="none"/>
+    <path d="M58 100 L108 54 M76 100 L126 54 M94 100 L144 54 M112 100 L162 54 M130 100 L180 54 M148 100 L198 54 M166 100 L216 54 M184 100 L234 54 M202 100 L252 54 M220 100 L270 54 M238 100 L288 54" stroke-width="0.7"/>
+    <!-- solar panel raised on frame -->
+    <path d="M120 92 L204 92 L238 62 L154 62 Z" fill="#fff" stroke-width="1.8"/>
+    <path d="M122 94 L206 94 L240 64" stroke-width="0.9"/>
+    <path d="M141 92 L175 62 M162 92 L196 62 M183 92 L217 62 M131 82 L215 82 M142 72 L226 72" stroke-width="0.9"/>
+    <path d="M121 91 L203 91 L237 63 L155 63 Z" fill="url(#m0703-hatch)" stroke="none"/>
+    <path d="M122 92 v5 M204 92 v5 M124 97 H206" stroke-width="1"/>
+    <path d="M208 108 q8 -14 20 -18" stroke-width="0.7"/>
+
+    <!-- lantern on bracket, front-left post -->
+    <path d="M60 122 L88 118" stroke-width="1.4"/>
+    <path d="M86 118 q2 4 0 8 M88 126 v4" stroke-width="1"/>
+    <path d="M80 130 h16 v4 h-16 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M82 134 V154 M94 134 V154 M82 134 q6 -6 12 0" stroke-width="1.1"/>
+    <path d="M79 154 h18 v5 h-18 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M84 138 q4 8 0 14" stroke-width="0.8"/>
+    <!-- light rays -->
+    <path d="M70 128 l-6 -5 M64 144 l-8 0 M70 160 l-6 5 M106 128 l6 -5 M112 144 l8 0 M106 160 l6 5 M88 168 l0 8 M76 168 l-3 7 M100 168 l3 7" stroke-width="0.9"/>
+    <path d="M62 178 l-4 6 M114 178 l4 6" stroke-width="0.8"/>
+
+    <!-- cable, switch, socket on post -->
+    <path d="M62 128 q4 30 0 60" stroke-width="0.7"/>
+    <path d="M52 150 h8 v8 h-8 Z" stroke-width="1"/>
+    <circle cx="56" cy="154" r="1.5" stroke-width="0.8"/>
+    <path d="M50 166 h10 v14 h-10 Z" stroke-width="1.1"/>
+    <path d="M52 170 h6 M52 176 h6" stroke-width="0.8"/>
+    <circle cx="55" cy="173" r="0.8" stroke-width="0.8"/>
+
+    <!-- battery box at post foot with antenna -->
+    <path d="M36 200 H72 V226 H36 Z" fill="#fff" stroke-width="1.5"/>
+    <path d="M38 202 H74 V228" stroke-width="0.8"/>
+    <path d="M40 206 H68 M40 212 H56" stroke-width="0.8"/>
+    <path d="M62 212 h6 v4 h-6 Z" stroke-width="0.8"/>
+    <path d="M70 200 V190 M67 190 l3 -3 l3 3" stroke-width="1"/>
+    <path d="M37 216 H71 V225 H37 Z" fill="url(#m0703-hatch)" stroke="none"/>
+
+    <!-- clamp lamp at deck edge, aimed at water -->
+    <path d="M196 226 v-8 l10 -6" stroke-width="1.4"/>
+    <path d="M204 206 l8 8 l-8 4 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M212 214 L296 256 M212 214 L318 250" stroke-width="0.7"/>
+    <path d="M214 214 q40 12 84 38" stroke-width="0.6"/>
+
+    <!-- rod on holder, line to float -->
+    <path d="M176 226 V212 M176 212 l-3 -5 M176 212 l3 -5" stroke-width="1.3"/>
+    <path d="M160 224 Q250 200 348 192" stroke-width="1.5"/>
+    <path d="M162 226 Q250 202 348 194" stroke-width="0.7"/>
+    <path d="M348 192 Q332 226 310 254" stroke-width="0.7"/>
+    <ellipse cx="308" cy="258" rx="1.8" ry="5" stroke-width="1.1"/>
+    <path d="M296 264 h24 M300 270 h16" stroke-width="0.8"/>
+    <path d="M300 250 l-6 -6 M318 250 l6 -6 M306 248 l-2 -8 M312 248 l2 -8" stroke-width="0.7"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0703</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0703</i><b>钓台照明与电源</b><span class="st st-设想" title="真实项目尚未拆解此区域">设想 真实项目尚未拆解此区域</span></div>
+        <h3>夜钓氛围感拉满！一块光伏板让钓台亮到天亮，不用拉一根电线</h3>
+        <p>顶棚上一块太阳能板，柱子上一盏暖光灯，插座随时给手机和夜钓灯补电。</p>
+        <p class="tags"><span>#露营风</span><span>#夜钓</span><span>#光伏</span><span>#智能家居</span><span>#氛围感</span></p>
+      </div>
+    </a>
+  
+    <a class="mod-row" href="../modules/0704.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0704-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0704-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0704-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0704-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- far bank + reeds + moon -->
+    <path d="M0 74 Q100 68 200 72 T400 70" stroke-width="1.1"/>
+    <path d="M300 72 l3 -20 M310 71 l1 -24 M320 72 l4 -18 M332 70 l0 -22 M344 71 l3 -18 M356 70 l1 -20 M368 70 l4 -16 M380 70 l1 -18" stroke-width="0.9"/>
+    <path d="M20 74 l3 -16 M30 73 l1 -20 M40 74 l4 -14 M52 72 l0 -18" stroke-width="0.9"/>
+    <circle cx="350" cy="30" r="9" stroke-width="1.2"/>
+
+    <!-- water ripples all around -->
+    <path d="M20 90 h26 M70 96 h20 M120 88 h30 M170 94 h22 M220 88 h28 M270 94 h20 M320 90 h26 M360 96 h24" stroke-width="0.9"/>
+    <path d="M10 110 h20 M50 116 h26 M100 108 h18 M150 114 h30 M210 110 h22 M250 116 h18 M300 108 h24 M340 114 h22 M380 110 h14" stroke-width="0.9"/>
+    <path d="M30 132 h24 M80 138 h20 M130 130 h28 M190 136 h20 M240 132 h24 M290 138 h22 M330 130 h26 M372 136 h18" stroke-width="0.9"/>
+    <path d="M14 152 h20 M60 156 h22 M300 152 h20 M350 156 h26 M386 150 h10" stroke-width="0.9"/>
+    <path d="M10 176 h22 M50 182 h18 M340 178 h24 M376 184 h16" stroke-width="0.9"/>
+    <path d="M8 204 h20 M40 210 h14 M352 206 h22 M382 212 h12" stroke-width="0.9"/>
+    <path d="M6 236 h18 M366 236 h24" stroke-width="0.9"/>
+    <path d="M14 280 h30 M70 286 h26 M130 282 h30 M200 288 h26 M260 282 h30 M320 288 h24 M370 282 h20" stroke-width="0.9"/>
+    <!-- firelight wobble on water -->
+    <path d="M186 120 l3 -3 l3 3 l3 -3 l3 3 M180 142 l3 -3 l3 3 l3 -3 l3 3 l3 -3 l3 3" stroke-width="0.8"/>
+
+    <!-- deck -->
+    <path d="M30 268 L330 268 L390 160 L90 160 Z" fill="#fff" stroke-width="1.9"/>
+    <path d="M32 270 L332 270 L392 162" stroke-width="1"/>
+    <path d="M30 268 V276 H330 V268 M330 276 L390 168 V160" stroke-width="1.6"/>
+    <path d="M31 269 H329 V275 H31 Z" fill="url(#m0704-hatch)" stroke="none"/>
+    <path d="M60 268 L120 160 M90 268 L150 160 M120 268 L180 160 M150 268 L210 160 M180 268 L240 160 M210 268 L270 160 M240 268 L300 160 M270 268 L330 160 M300 268 L360 160" stroke-width="0.7"/>
+    <!-- roof posts (partial, going up out of frame) -->
+    <path d="M112 160 V96 M366 160 V96" stroke-width="2"/>
+    <path d="M114 160 V98 M368 160 V98" stroke-width="0.8"/>
+    <path d="M100 96 h24 M354 96 h24" stroke-width="1.2"/>
+
+    <!-- fire pit opening in deck -->
+    <path d="M160 238 L244 238 L262 206 L178 206 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M161 237 L243 237 L261 207 L179 207 Z" fill="url(#m0704-hatch2)" stroke="none"/>
+    <!-- iron bowl -->
+    <ellipse cx="211" cy="221" rx="34" ry="12" fill="#fff" stroke-width="1.8"/>
+    <ellipse cx="211" cy="223" rx="34" ry="12" stroke-width="0.8"/>
+    <path d="M177 221 q34 26 68 0" stroke-width="1.2"/>
+    <ellipse cx="211" cy="222" rx="28" ry="8" fill="url(#m0704-hatch)" stroke="none"/>
+    <!-- coals + flames -->
+    <path d="M192 226 h8 M214 228 h10 M204 218 h8" stroke="#fff" stroke-width="3"/>
+    <path d="M192 226 h8 M214 228 h10 M204 218 h8" stroke-width="1.2"/>
+    <path d="M200 216 q-6 -10 2 -18 q2 8 6 4 q-2 10 4 14 M218 214 q-4 -8 2 -14 q1 6 4 3 q0 8 -2 12" fill="#fff" stroke-width="1.2"/>
+    <path d="M198 204 q2 -8 6 -12 M224 206 q-2 -6 2 -10" stroke-width="0.8"/>
+
+    <!-- tripod + chain + grill with fish -->
+    <path d="M170 236 L211 128 M254 232 L211 128 M222 204 L211 128" stroke-width="1.6"/>
+    <path d="M172 238 L212 130" stroke-width="0.7"/>
+    <path d="M206 124 h10 v6 h-10 Z" fill="#fff" stroke-width="1.2"/>
+    <path d="M211 130 v8 M211 142 v8 M211 154 v8 M211 166 v8" stroke-width="1.2"/>
+    <circle cx="211" cy="140" r="1.6" stroke-width="0.8"/>
+    <circle cx="211" cy="152" r="1.6" stroke-width="0.8"/>
+    <circle cx="211" cy="164" r="1.6" stroke-width="0.8"/>
+    <ellipse cx="211" cy="182" rx="26" ry="7" fill="#fff" stroke-width="1.4"/>
+    <path d="M190 178 h42 M188 182 h46 M190 186 h42" stroke-width="0.7"/>
+    <path d="M199 174 v14 M211 175 v14 M223 174 v14" stroke-width="0.7"/>
+    <path d="M196 182 q14 -9 28 0 q-14 9 -28 0 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M224 182 l6 -4 v8 Z" stroke-width="1.1"/>
+    <circle cx="201" cy="181" r="0.9" stroke-width="0.8"/>
+    <path d="M204 178 q4 4 8 0 M208 186 q3 -3 6 0" stroke-width="0.7"/>
+
+    <!-- low table with teapot and cups -->
+    <path d="M56 250 L130 250 L152 220 L78 220 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M58 252 L132 252 L154 222" stroke-width="0.9"/>
+    <path d="M62 250 V262 M126 250 V262 M148 220 V232 M84 220 V228" stroke-width="1.3"/>
+    <path d="M90 244 l40 -18" stroke-width="0.7"/>
+    <!-- teapot -->
+    <path d="M100 232 a11 8 0 1 0 22 0 a11 8 0 1 0 -22 0 Z" fill="#fff" stroke-width="1.3"/>
+    <path d="M100 232 q-10 -8 -4 -16 M122 230 q8 -2 8 6" stroke-width="1.1"/>
+    <path d="M104 224 h14 M111 224 v-5" stroke-width="1"/>
+    <path d="M101 234 a11 7 0 0 0 20 0" fill="url(#m0704-hatch)" stroke="none"/>
+    <!-- cups -->
+    <path d="M72 238 h10 v7 q-5 2 -10 0 Z M134 226 h10 v7 q-5 2 -10 0 Z" fill="#fff" stroke-width="1"/>
+    <path d="M76 238 h4" stroke-width="0.7"/>
+
+    <!-- person A (right, facing fire) -->
+    <ellipse cx="300" cy="248" rx="26" ry="8" fill="#fff" stroke-width="1.3"/>
+    <path d="M280 246 q20 -6 40 0" stroke-width="0.7"/>
+    <circle cx="296" cy="196" r="8" stroke-width="1.5"/>
+    <path d="M296 204 V232 M296 214 L280 226 M296 214 L312 224 M296 232 L280 244 L302 246 M296 232 L314 240 L300 246" stroke-width="1.5"/>
+    <path d="M288 226 h-8 v-4" stroke-width="1"/>
+
+    <!-- person B (back-left, facing viewer) -->
+    <ellipse cx="146" cy="196" rx="22" ry="6" fill="#fff" stroke-width="1.3"/>
+    <circle cx="146" cy="152" r="7" stroke-width="1.5"/>
+    <path d="M146 159 V184 M146 166 L134 178 M146 166 L160 176 M146 184 L132 194 L150 196 M146 184 L162 192 L150 196" stroke-width="1.5"/>
+    <path d="M160 176 h6 v-4" stroke-width="1"/>
+
+    <!-- wood bucket with logs -->
+    <path d="M334 232 v22 q10 4 20 0 v-22" stroke-width="1.3"/>
+    <ellipse cx="344" cy="232" rx="10" ry="3.5" stroke-width="1.1"/>
+    <path d="M338 232 l-4 -14 M344 231 l2 -16 M350 232 l4 -12" stroke-width="1.2"/>
+    <path d="M336 244 q8 -2 16 0" stroke-width="0.7"/>
+
+    <!-- water bucket at front-left -->
+    <path d="M40 240 v16 q7 3 14 0 v-16" stroke-width="1.2"/>
+    <ellipse cx="47" cy="240" rx="7" ry="2.5" stroke-width="1"/>
+    <path d="M40 240 q7 -9 14 0" stroke-width="0.9"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0704</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0704</i><b>水边茶席·小火塘</b><span class="st st-设想" title="真实项目尚未拆解此区域">设想 真实项目尚未拆解此区域</span></div>
+        <h3>松弛感天花板：钓台上挖了个小火塘，煮茶烤鱼看月亮</h3>
+        <p>一方矮桌一壶茶，一个铁盆小火塘，钓上来的鱼当场烤，朋友来了不想走。</p>
+        <p class="tags"><span>#围炉煮茶</span><span>#松弛感</span><span>#人类丰容</span><span>#烤鱼</span><span>#观鸟</span></p>
+      </div>
+    </a>
+  
+  </div>
+</section>
+<nav class="pager">
+  <a href="../areas/06.html">← 06 草地</a>
+  
+</nav>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

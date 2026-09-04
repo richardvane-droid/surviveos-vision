@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>03 阁楼间 · SurviveOs 设想版</title>
+<meta name="description" content="阁楼间：斜顶之下：工具台、帐篷、光伏，和一根会预报天气的杆子。6 个模块专题。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" class="on"><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <span>03 阁楼间</span></nav>
+<section class="area-hero">
+  <figure class="area-art"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <filter id="ma03-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="ma03-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="ma03-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#ma03-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor / joists -->
+    <path d="M14 262 Q150 258 300 262 T586 260" stroke-width="1.6"/>
+    <path d="M30 270 H570" stroke-width="1"/>
+    <path d="M60 262 V270 M140 262 V270 M220 262 V270 M300 262 V270 M380 262 V270 M460 262 V270 M540 262 V270" stroke-width="0.8"/>
+
+    <!-- A-frame roof section -->
+    <path d="M30 184 L300 34 L570 184" stroke-width="2.2"/>
+    <path d="M18 178 L300 22 L582 178" stroke-width="1.6"/>
+    <path d="M33 187 L301 38 L568 187" stroke-width="0.9"/>
+    <path d="M18 178 L300 22 L582 178 L570 184 L300 34 L30 184 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <!-- knee walls -->
+    <path d="M30 184 V262 M570 184 V262" stroke-width="1.6"/>
+    <path d="M33 187 V260 M567 187 V260" stroke-width="0.8"/>
+    <!-- collar tie + rafter ticks -->
+    <path d="M170 106 H430" stroke-width="1.4"/>
+    <path d="M172 109 H428" stroke-width="0.7"/>
+    <path d="M90 151 l3 6 M130 129 l3 6 M210 84 l3 6 M250 62 l3 6 M350 62 l-3 6 M390 84 l-3 6 M470 129 l-3 6 M510 151 l-3 6" stroke-width="0.9"/>
+
+    <!-- skylight on the left slope -->
+    <path d="M110 134 L164 104 L184 118 L130 148 Z" stroke-width="1.7"/>
+    <path d="M113 136 L164 108 L180 119" stroke-width="0.9"/>
+    <path d="M116 136 L164 110 L178 120 L130 146 Z" fill="url(#ma03-hatch2)" stroke="none"/>
+    <path d="M147 118 l-4 14" stroke-width="1"/>
+    <!-- light rays through skylight -->
+    <path d="M140 150 L120 200 M156 146 L146 200 M172 140 L172 200" stroke-width="0.6"/>
+
+    <!-- PV panels on the right slope (outside) -->
+    <path d="M360 62 L500 140 L516 122 L376 44 Z" stroke-width="1.9"/>
+    <path d="M363 62 L378 47 L513 122" stroke-width="0.9"/>
+    <path d="M368 53 L508 131" stroke-width="0.8"/>
+    <path d="M395 81 L411 63 M430 101 L446 83 M465 120 L481 102" stroke-width="0.8"/>
+    <path d="M380 66 V74 M440 100 V108 M500 134 V140" stroke-width="1.3"/>
+    <!-- sun -->
+    <circle cx="540" cy="46" r="14" stroke-width="1.5"/>
+    <path d="M540 24 v-6 M562 46 h6 M556 30 l4 -4 M556 62 l4 4 M524 30 l-4 -4" stroke-width="1"/>
+    <!-- cable from PV down into the attic -->
+    <path d="M498 146 L510 152 V168 L552 190 V214" stroke-width="1"/>
+
+    <!-- weather mast at the right eave -->
+    <path d="M552 168 V96" stroke-width="1.8"/>
+    <path d="M555 170 V98" stroke-width="0.8"/>
+    <path d="M552 96 L540 90 M552 96 L564 90 M552 96 L554 84" stroke-width="1"/>
+    <path d="M540 90 m-4 0 a4 3 0 1 0 8 0 a4 3 0 1 0 -8 0 M564 90 m-4 0 a4 3 0 1 0 8 0 a4 3 0 1 0 -8 0 M554 84 m-4 0 a4 3 0 1 0 8 0 a4 3 0 1 0 -8 0" stroke-width="1.1"/>
+    <path d="M552 112 h22 l-6 -4 v8 Z" stroke-width="1.1"/>
+    <path d="M540 130 v14 h10 v-14 M538 130 h14" stroke-width="1.1"/>
+    <path d="M546 166 l12 5" stroke-width="1.2"/>
+
+    <!-- tent in the middle -->
+    <path d="M214 258 Q216 168 300 150 Q384 168 386 258 Z" stroke-width="2"/>
+    <path d="M218 258 Q220 172 300 154" stroke-width="1"/>
+    <path d="M300 150 Q262 190 254 258 M300 150 Q338 190 346 258" stroke-width="1.1"/>
+    <path d="M272 258 Q276 200 300 176 Q324 200 328 258" stroke-width="1.5"/>
+    <path d="M286 258 Q289 210 300 180 Q323 202 326 258 Z" fill="#fff" stroke="none"/>
+    <path d="M286 258 Q289 210 300 180 Q323 202 326 258" stroke-width="1.4"/>
+    <path d="M292 200 q8 6 16 4 q6 -2 12 4" stroke-width="0.8"/>
+    <circle cx="296" cy="204" r="1.8" stroke-width="0.9"/>
+    <circle cx="306" cy="205" r="1.8" stroke-width="0.9"/>
+    <circle cx="316" cy="206" r="1.8" stroke-width="0.9"/>
+    <path d="M302 210 h10 v10 h-10 Z M307 204 v6" stroke-width="1"/>
+    <path d="M292 254 h30 M294 246 q10 -5 20 0" stroke-width="1"/>
+    <path d="M290 256 Q292 222 300 196 Q306 212 300 256 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M220 254 Q222 184 274 162 Q250 190 240 254 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M222 206 L190 254 M378 206 L410 254" stroke-width="0.9"/>
+    <path d="M188 250 l4 8 M408 250 l4 8" stroke-width="1.2"/>
+
+    <!-- left: gear wall - backpack hanging on the slope + cubby -->
+    <path d="M52 150 l14 -8 l14 8 l4 42 q-18 6 -36 0 Z" stroke-width="1.7"/>
+    <path d="M52 166 q18 5 32 0" stroke-width="1"/>
+    <path d="M58 172 h20 v12 h-20 Z" stroke-width="0.9"/>
+    <path d="M66 142 v-6" stroke-width="1.2"/>
+    <path d="M54 154 q6 10 8 38 q-6 0 -8 -2 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M88 132 V190 M96 132 V190 M84 134 h8 M92 134 h8" stroke-width="1.2"/>
+    <path d="M44 200 H132 V258 H44 Z M44 230 H132 M88 200 V258" stroke-width="1.5"/>
+    <path d="M46 202 H130 V256" stroke-width="0.8"/>
+    <circle cx="66" cy="215" r="10" stroke-width="1.3"/>
+    <circle cx="66" cy="215" r="4" stroke-width="0.8"/>
+    <circle cx="110" cy="215" r="10" stroke-width="1.3"/>
+    <circle cx="110" cy="215" r="4" stroke-width="0.8"/>
+    <path d="M52 238 h28 v14 h-28 Z M96 244 h24 M100 244 v-8 h16 v8" stroke-width="1.1"/>
+    <!-- boots -->
+    <path d="M150 258 v-22 q2 -6 8 -4 l3 8 q8 3 14 6 v12 Z" stroke-width="1.4"/>
+    <path d="M154 246 l5 3 M154 240 l4 2" stroke-width="0.8"/>
+
+    <!-- right: workbench with pegboard + 3D printer on it -->
+    <path d="M430 178 H520 V194 H430 Z" stroke-width="1.5"/>
+    <path d="M436 182 v8 M446 182 v8 M456 182 v8 M466 182 v8 M478 182 v8 M488 182 v8 M500 182 v8 M510 182 v8" stroke-width="0.9"/>
+    <path d="M424 200 H526 V208 H424 Z" stroke-width="1.8"/>
+    <path d="M426 202 H524" stroke-width="0.9"/>
+    <path d="M430 208 V262 M436 208 V262 M514 208 V262 M520 208 V262" stroke-width="1.5"/>
+    <path d="M440 214 H510 V232 H440 Z M470 223 h10" stroke-width="1.1"/>
+    <path d="M440 236 H510 V258 H440 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M440 200 V160 H484 V200" stroke-width="1.6"/>
+    <path d="M440 160 L448 154 H492 L484 160 M484 160 L492 154 V194 L484 200" stroke-width="1.3"/>
+    <path d="M446 168 H478 V194 H446 Z M452 176 h20 M458 188 h8 v-8 h-8 Z" stroke-width="1"/>
+    <path d="M486 162 L490 158 V192 L486 196 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <!-- lamp -->
+    <path d="M516 200 L520 176 L504 162 M504 162 l-8 -2 l-2 8 Z" stroke-width="1.3"/>
+
+    <!-- far right: power station beneath the knee wall -->
+    <path d="M534 262 V214 H566 V262" stroke-width="1.6"/>
+    <path d="M540 212 V206 Q550 200 560 206 V212" stroke-width="1.3"/>
+    <path d="M538 220 H550 V232 H538 Z" stroke-width="1"/>
+    <path d="M540 224 h6 M540 228 h4" stroke-width="0.8"/>
+    <circle cx="558" cy="222" r="1.8" stroke-width="0.9"/>
+    <circle cx="558" cy="230" r="1.8" stroke-width="0.9"/>
+    <path d="M538 240 H562 M538 246 H562 M538 252 H562" stroke-width="0.8"/>
+
+    <!-- little person walking to the tent -->
+    <circle cx="196" cy="206" r="6" stroke-width="1.4"/>
+    <path d="M196 212 V236 M196 220 L186 230 M196 220 L206 226 M196 236 L188 258 M196 236 L204 258" stroke-width="1.4"/>
+    <!-- mug on floor + small rug -->
+    <path d="M262 258 q38 -3 76 0 q-4 5 -76 4 Z" stroke-width="0.9"/>
+
+    <!-- raindrops on the left outside -->
+    <path d="M60 120 l-3 8 M84 100 l-3 8 M40 150 l-3 8 M110 78 l-3 8 M140 56 l-3 8 M74 62 l-3 8 M180 36 l-3 8" stroke-width="0.8"/>
+    <path d="M40 90 q4 -12 18 -8 q10 -8 20 2 q10 4 4 12 h-40 q-6 -2 -2 -6 Z" stroke-width="1.3"/>
+  </g>
+  <text x="586" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">area-03</text>
+</svg>
+</figure>
+  <div class="area-head">
+    <p class="kicker">区域 03 · Loft</p>
+    <h1>阁楼间</h1>
+    <p class="lede">斜顶之下：工具台、帐篷、光伏，和一根会预报天气的杆子</p>
+    <p class="intro">斜顶阁楼是最容易被浪费的空间，也是最适合“一个人待着”的空间。这里放小制作、户外装备、一顶常驻帐篷，屋顶上是光伏板和微型气象站——整栋房子的能源与天气，从这层开始。</p>
+  </div>
+</section>
+<section class="sec">
+  <h2 class="sec-title"><span>6 个模块专题</span><small>按编号排列，编号不代表优先级</small></h2>
+  <div class="mod-list">
+  
+    <a class="mod-row" href="../modules/0301.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0301-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0301-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0301-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0301-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor line -->
+    <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
+    <path d="M40 252 q30 -3 60 0 M280 251 q30 -3 60 0" stroke-width="0.8"/>
+
+    <!-- knee wall top edge + sloped ceiling above (rafters receding upward) -->
+    <path d="M14 102 H388" stroke-width="1.8"/>
+    <path d="M16 105 H386" stroke-width="0.9"/>
+    <path d="M40 102 L64 14 M100 102 L118 14 M160 102 L172 14 M220 102 L226 14 M280 102 L280 14 M340 102 L334 14" stroke-width="1.1"/>
+    <path d="M30 60 H372 M22 88 H380" stroke-width="0.8"/>
+    <!-- rafter shadow hatch upper left -->
+    <path d="M14 14 L58 14 L38 100 L14 100 Z" fill="url(#m0301-hatch)" stroke="none"/>
+
+    <!-- pegboard on knee wall -->
+    <path d="M104 112 H296 V166 H104 Z" stroke-width="1.6"/>
+    <path d="M106 114 H294 V164" stroke-width="0.9"/>
+    <path d="M112 120 h0.1 M124 120 h0.1 M136 120 h0.1 M148 120 h0.1 M160 120 h0.1 M172 120 h0.1 M184 120 h0.1 M196 120 h0.1 M208 120 h0.1 M220 120 h0.1 M232 120 h0.1 M244 120 h0.1 M256 120 h0.1 M268 120 h0.1 M280 120 h0.1
+             M112 132 h0.1 M124 132 h0.1 M136 132 h0.1 M148 132 h0.1 M160 132 h0.1 M172 132 h0.1 M184 132 h0.1 M196 132 h0.1 M208 132 h0.1 M220 132 h0.1 M232 132 h0.1 M244 132 h0.1 M256 132 h0.1 M268 132 h0.1 M280 132 h0.1
+             M112 144 h0.1 M124 144 h0.1 M136 144 h0.1 M148 144 h0.1 M160 144 h0.1 M172 144 h0.1 M184 144 h0.1 M196 144 h0.1 M208 144 h0.1 M220 144 h0.1 M232 144 h0.1 M244 144 h0.1 M256 144 h0.1 M268 144 h0.1 M280 144 h0.1
+             M112 156 h0.1 M124 156 h0.1 M136 156 h0.1 M148 156 h0.1 M160 156 h0.1 M172 156 h0.1 M184 156 h0.1 M196 156 h0.1 M208 156 h0.1 M220 156 h0.1 M232 156 h0.1 M244 156 h0.1 M256 156 h0.1 M268 156 h0.1 M280 156 h0.1" stroke-width="1.6"/>
+    <!-- hanging tools: screwdrivers -->
+    <path d="M120 118 v10 l-2 4 v14 M126 118 v10 l2 4 v14 M118 118 h10" stroke-width="1.1"/>
+    <path d="M138 118 v10 l-2 4 v14 M144 118 v10 l2 4 v14 M136 118 h10" stroke-width="1.1"/>
+    <path d="M156 118 v10 l-2 4 v14 M162 118 v10 l2 4 v14 M154 118 h10" stroke-width="1.1"/>
+    <!-- pliers -->
+    <path d="M182 118 l-4 16 l-3 20 M186 118 l4 16 l3 20 M178 134 h12" stroke-width="1.1"/>
+    <!-- hammer -->
+    <path d="M206 118 v36 M198 118 h18 v8 h-18 Z" stroke-width="1.1"/>
+    <!-- tape roll + wrench -->
+    <circle cx="238" cy="132" r="9" stroke-width="1.2"/>
+    <circle cx="238" cy="132" r="4" stroke-width="0.9"/>
+    <path d="M262 118 q-6 6 0 12 v22 q6 -6 0 -12 M258 126 h8" stroke-width="1.1"/>
+    <!-- saw -->
+    <path d="M276 120 h14 l-2 26 h-10 Z M278 124 l10 0" stroke-width="1"/>
+
+    <!-- work table top -->
+    <path d="M92 170 H308 V180 H92 Z" stroke-width="1.9"/>
+    <path d="M94 172 H306" stroke-width="0.9"/>
+    <path d="M100 176 q30 -1 60 0 M200 177 q40 -2 80 0" stroke-width="0.7"/>
+    <!-- drawers -->
+    <path d="M104 182 H292 V200 H104 Z M104 202 H292 V220 H104 Z" stroke-width="1.2"/>
+    <path d="M190 191 h16 M190 211 h16" stroke-width="1.3"/>
+    <!-- legs -->
+    <path d="M100 180 V246 M108 180 V246 M292 180 V246 M300 180 V246" stroke-width="1.6"/>
+    <path d="M101 182 V244" stroke-width="0.8"/>
+    <path d="M100 236 H108 M292 236 H300" stroke-width="1"/>
+    <!-- shadow under table -->
+    <path d="M110 222 H290 V244 H110 Z" fill="url(#m0301-hatch)" stroke="none"/>
+
+    <!-- desktop CNC at left corner of table -->
+    <path d="M116 170 V150 H172 V170" stroke-width="1.6"/>
+    <path d="M118 152 H170" stroke-width="0.9"/>
+    <path d="M122 150 V138 H166 V150" stroke-width="1.4"/>
+    <path d="M122 142 H166" stroke-width="0.9"/>
+    <path d="M140 142 V158 M146 142 V158 M138 158 H148 M143 158 V164" stroke-width="1.1"/>
+    <path d="M124 166 H164 M130 164 h10 l2 -3 h6" stroke-width="0.8"/>
+    <path d="M118 154 H121 V168 H118 Z" fill="url(#m0301-hatch)" stroke="none"/>
+
+    <!-- vise at right corner -->
+    <path d="M250 170 V160 H262 V170 M266 170 V160 H278 V170 M262 165 H266 M278 165 h10" stroke-width="1.3"/>
+    <circle cx="290" cy="165" r="2.5" stroke-width="1"/>
+
+    <!-- arm lamp -->
+    <path d="M300 170 L306 132 L282 100" stroke-width="1.5"/>
+    <path d="M301 172 L307 134" stroke-width="0.8"/>
+    <path d="M282 100 l-14 -6 l-6 12 Z" stroke-width="1.4"/>
+    <path d="M270 106 l-6 10 M264 104 l-8 12 M258 102 l-8 10" stroke-width="0.7"/>
+    <circle cx="306" cy="132" r="2.5" stroke-width="1"/>
+
+    <!-- soldering iron on table -->
+    <path d="M198 168 l30 -4 l8 0" stroke-width="1.3"/>
+    <path d="M200 166 q4 -8 8 -2" stroke-width="0.8"/>
+
+    <!-- person sitting on stool, right side, facing the bench -->
+    <path d="M330 218 H362 M336 218 V246 M356 218 V246 M340 232 H354" stroke-width="1.4"/>
+    <circle cx="348" cy="150" r="8" stroke-width="1.5"/>
+    <path d="M348 158 V196 L336 218 M348 172 L322 182 M348 176 L324 188" stroke-width="1.5"/>
+    <path d="M348 196 L358 218" stroke-width="1.5"/>
+    <path d="M338 224 L330 246 M358 224 L352 246" stroke-width="1.5"/>
+    <path d="M349 160 V194" stroke-width="0.8"/>
+
+    <!-- shavings bucket lower left -->
+    <path d="M40 246 l-2 -28 h30 l-2 28 Z" stroke-width="1.4"/>
+    <path d="M38 218 q15 -4 30 0" stroke-width="1"/>
+    <path d="M44 226 l4 6 M54 224 l-3 7 M60 228 l4 5" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0301</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0301</i><b>小制作工具台</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
+        <h3>谁懂啊！斜顶下 1.2 米的小工具台，坐着刚好不撞头</h3>
+        <p>阁楼最矮的那一侧，塞进一张只做小东西的工作台，每天拧两颗螺丝就很治愈。</p>
+        <p class="tags"><span>#动手主义</span><span>#精神角落</span><span>#洞洞板</span><span>#斜顶阁楼</span><span>#DIY</span></p>
+      </div>
+    </a>
+  
+    <a class="mod-row" href="../modules/0302.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0302-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0302-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0302-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0302-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor -->
+    <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
+    <path d="M300 252 q30 -3 60 0" stroke-width="0.8"/>
+
+    <!-- gable roof edge at left: sloped ceiling rises to the right -->
+    <path d="M14 124 L104 14" stroke-width="2"/>
+    <path d="M17 127 L106 18" stroke-width="1"/>
+    <path d="M14 124 V246" stroke-width="1.4"/>
+    <path d="M100 14 L386 14" stroke-width="0.9"/>
+    <!-- sloped surface: wooden slats (horizontal) -->
+    <path d="M14 148 H386 M14 128 H386 M24 108 H386 M40 88 H386 M56 68 H386 M72 48 H386 M89 28 H386" stroke-width="1"/>
+    <path d="M30 143 q40 -1 80 0 M240 103 q30 -1 60 0 M300 63 q30 -1 60 0 M130 33 q30 -1 60 0" stroke-width="0.7"/>
+    <!-- roof thickness hatch (the triangle left of the slope) -->
+    <path d="M14 120 L14 16 L98 16 Z" fill="url(#m0302-hatch)" stroke="none"/>
+
+    <!-- backpack 1 (small 20L) -->
+    <path d="M96 60 v-6 h8 v6" stroke-width="1.1"/>
+    <path d="M84 62 q16 -6 32 0 l4 40 q-20 6 -40 0 Z" stroke-width="1.7"/>
+    <path d="M86 64 q15 -5 30 0" stroke-width="0.9"/>
+    <path d="M86 78 q14 4 28 0" stroke-width="1"/>
+    <path d="M90 84 h20 v12 h-20 Z" stroke-width="0.9"/>
+    <path d="M82 74 q-6 14 0 24 M118 74 q6 14 0 24" stroke-width="1"/>
+    <path d="M86 66 q10 8 12 34 q-8 0 -14 -2 Z" fill="url(#m0302-hatch)" stroke="none"/>
+
+    <!-- backpack 2 (mid 38L) -->
+    <path d="M170 46 v-7 h10 v7" stroke-width="1.1"/>
+    <path d="M152 48 q22 -8 44 0 l6 62 q-28 8 -56 0 Z" stroke-width="1.8"/>
+    <path d="M154 50 q21 -7 42 0" stroke-width="0.9"/>
+    <path d="M152 68 q26 6 48 0" stroke-width="1.1"/>
+    <path d="M160 78 h28 v18 h-28 Z M164 88 h20" stroke-width="0.9"/>
+    <path d="M150 62 q-8 20 0 34 M202 62 q8 20 0 34" stroke-width="1.1"/>
+    <path d="M154 54 q10 12 12 54 q-10 0 -14 -3 Z" fill="url(#m0302-hatch)" stroke="none"/>
+
+    <!-- backpack 3 (large 65L) -->
+    <path d="M256 32 v-8 h12 v8" stroke-width="1.1"/>
+    <path d="M232 34 q28 -10 56 0 l8 84 q-36 10 -72 0 Z" stroke-width="1.9"/>
+    <path d="M234 36 q27 -9 54 0" stroke-width="0.9"/>
+    <path d="M232 58 q34 8 60 0" stroke-width="1.2"/>
+    <path d="M242 70 h36 v24 h-36 Z M248 82 h24" stroke-width="0.9"/>
+    <path d="M244 104 h32" stroke-width="0.9"/>
+    <path d="M228 52 q-10 24 0 42 M296 52 q10 24 0 42" stroke-width="1.2"/>
+    <path d="M234 40 q12 16 14 76 q-12 0 -18 -4 Z" fill="url(#m0302-hatch)" stroke="none"/>
+
+    <!-- trekking poles hanging at right -->
+    <path d="M336 36 V150 M346 36 V150" stroke-width="1.4"/>
+    <path d="M330 38 h10 M340 38 h10" stroke-width="1.2"/>
+    <path d="M336 44 q-6 6 0 10 M346 44 q6 6 0 10" stroke-width="0.9"/>
+    <path d="M331 138 h10 M341 138 h10" stroke-width="1"/>
+    <!-- rope coil -->
+    <path d="M372 44 q-10 6 0 12 q10 6 0 12 q-10 6 0 12" stroke-width="1.2"/>
+    <path d="M368 40 h8" stroke-width="1"/>
+
+    <!-- cubby shelf below -->
+    <path d="M60 156 H320 V246 H60 Z" stroke-width="1.8"/>
+    <path d="M62 158 H318 V244" stroke-width="0.9"/>
+    <path d="M60 200 H320 M146 156 V246 M232 156 V246" stroke-width="1.4"/>
+    <!-- rolled sleeping bags (cylinders end-on) -->
+    <circle cx="86" cy="178" r="15" stroke-width="1.5"/>
+    <circle cx="86" cy="178" r="9" stroke-width="0.9"/>
+    <circle cx="86" cy="178" r="3" stroke-width="0.8"/>
+    <circle cx="120" cy="178" r="15" stroke-width="1.5"/>
+    <circle cx="120" cy="178" r="9" stroke-width="0.9"/>
+    <circle cx="120" cy="178" r="3" stroke-width="0.8"/>
+    <circle cx="172" cy="178" r="15" stroke-width="1.5"/>
+    <circle cx="172" cy="178" r="9" stroke-width="0.9"/>
+    <circle cx="172" cy="178" r="3" stroke-width="0.8"/>
+    <circle cx="206" cy="178" r="15" stroke-width="1.5"/>
+    <circle cx="206" cy="178" r="9" stroke-width="0.9"/>
+    <circle cx="206" cy="178" r="3" stroke-width="0.8"/>
+    <path d="M74 190 a15 15 0 0 0 24 0 Z M108 190 a15 15 0 0 0 24 0 Z M160 190 a15 15 0 0 0 24 0 Z M194 190 a15 15 0 0 0 24 0 Z" fill="url(#m0302-hatch)" stroke="none"/>
+    <!-- lower cubbies: storage box + mats -->
+    <path d="M70 210 H136 V240 H70 Z M70 216 H136" stroke-width="1.3"/>
+    <path d="M96 222 h14" stroke-width="1"/>
+    <circle cx="176" cy="222" r="14" stroke-width="1.4"/>
+    <path d="M176 222 m-10 0 a10 10 0 1 1 0 0.1" stroke-width="0.8"/>
+    <circle cx="208" cy="222" r="14" stroke-width="1.4"/>
+    <path d="M208 222 m-10 0 a10 10 0 1 1 0 0.1" stroke-width="0.8"/>
+    <!-- right cubbies: gas can + stove + headlamp -->
+    <path d="M250 170 h20 v22 h-20 Z M254 170 v-6 h12 v6" stroke-width="1.2"/>
+    <path d="M282 190 h22 M287 190 v-12 h12 v12 M288 178 l-4 -6 M304 178 l4 -6" stroke-width="1.1"/>
+    <circle cx="262" cy="224" r="8" stroke-width="1.2"/>
+    <path d="M254 224 q-8 -12 8 -14 M270 224 q8 -12 -8 -14" stroke-width="0.9"/>
+    <path d="M288 212 h22 v24 h-22 Z M292 218 h14" stroke-width="1.1"/>
+    <!-- shelf side shadow -->
+    <path d="M322 160 L328 156 V242 L322 246 Z" fill="url(#m0302-hatch)" stroke="none"/>
+    <path d="M320 156 L328 152 V242" stroke-width="1.2"/>
+
+    <!-- boots on floor at right -->
+    <path d="M340 246 v-30 q2 -8 10 -6 l4 12 q10 4 20 8 v16 Z" stroke-width="1.6"/>
+    <path d="M342 244 v-28" stroke-width="0.8"/>
+    <path d="M346 222 l6 4 M346 230 l8 4 M350 216 l4 3" stroke-width="0.9"/>
+    <path d="M342 238 h30" stroke-width="0.9"/>
+    <path d="M356 224 v-32 q2 -8 10 -6 l4 12 q6 3 12 6" stroke-width="1.4"/>
+    <path d="M360 200 l6 4 M360 208 l8 4" stroke-width="0.9"/>
+
+    <!-- checklist note on wall left -->
+    <path d="M28 196 h22 v26 h-22 Z" stroke-width="1.1"/>
+    <path d="M32 202 h6 M32 208 h12 M32 214 h10" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0302</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0302</i><b>户外装备区</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
+        <h3>被问爆了！我把阁楼斜墙做成了一面“户外装备展示墙”</h3>
+        <p>登山包、睡袋、炉头全部挂上墙，像户外店一样一眼看全，出发只要 5 分钟。</p>
+        <p class="tags"><span>#痛屋</span><span>#户外风</span><span>#露营风</span><span>#装备墙</span><span>#去家务化</span></p>
+      </div>
+    </a>
+  
+    <a class="mod-row" href="../modules/0303.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0303-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0303-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0303-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0303-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor -->
+    <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
+    <path d="M30 252 q30 -3 60 0 M310 252 q30 -3 60 0" stroke-width="0.8"/>
+
+    <!-- A-frame roof section: two slopes meeting at ridge -->
+    <path d="M14 196 L200 22 L386 196" stroke-width="2"/>
+    <path d="M17 199 L201 26 L385 199" stroke-width="1"/>
+    <path d="M14 196 V246 M386 196 V246" stroke-width="1.4"/>
+    <!-- rafters hint -->
+    <path d="M60 153 l6 6 M110 106 l6 6 M290 106 l-6 6 M340 153 l-6 6" stroke-width="0.9"/>
+    <path d="M40 172 q6 -4 12 -10 M348 172 q-6 -4 -12 -10" stroke-width="0.8"/>
+    <!-- collar tie -->
+    <path d="M120 96 H280" stroke-width="1.3"/>
+
+    <!-- skylight on left slope -->
+    <path d="M78 136 L124 92 L152 108 L106 152 Z" stroke-width="1.7"/>
+    <path d="M82 138 L124 96 L148 110 L106 150" stroke-width="0.9"/>
+    <path d="M92 130 L136 88" stroke-width="1"/>
+    <path d="M86 132 L126 94 L146 108 L108 146 Z" fill="url(#m0303-hatch2)" stroke="none"/>
+    <!-- rain outside above the roof -->
+    <path d="M40 60 l-4 12 M58 46 l-4 12 M76 30 l-4 12 M30 96 l-4 12 M52 82 l-4 12 M92 44 l-4 12 M110 22 l-4 12 M70 70 l-4 12 M130 40 l-4 12 M150 22 l-4 12 M26 130 l-4 12 M46 118 l-4 12" stroke-width="0.9"/>
+    <path d="M260 40 l-4 12 M290 60 l-4 12 M320 90 l-4 12 M350 122 l-4 12 M300 30 l-4 12 M336 66 l-4 12 M366 100 l-4 12 M372 150 l-4 12" stroke-width="0.9"/>
+    <!-- drops running down the skylight glass -->
+    <path d="M118 100 l-6 8 M132 104 l-8 10 M100 126 l-6 8" stroke-width="0.7"/>
+
+    <!-- tent: dome, front view -->
+    <path d="M110 240 Q112 150 200 128 Q288 150 290 240 Z" stroke-width="2"/>
+    <path d="M114 240 Q116 154 200 132" stroke-width="1"/>
+    <path d="M292 240 Q288 156 202 132" stroke-width="1"/>
+    <!-- pole seams -->
+    <path d="M200 128 Q160 170 150 240 M200 128 Q240 170 250 240" stroke-width="1.1"/>
+    <path d="M200 128 V240" stroke-width="0.8"/>
+    <!-- door: right flap rolled back, left flap tied -->
+    <path d="M170 240 Q172 175 200 152 Q228 175 232 240" stroke-width="1.5"/>
+    <path d="M200 152 Q186 190 182 240" stroke-width="1"/>
+    <!-- open door interior: white fill to cover seams -->
+    <path d="M184 240 Q187 190 201 156 Q226 178 230 240 Z" fill="#fff" stroke="none"/>
+    <path d="M184 240 Q187 190 201 156 Q226 178 230 240" stroke-width="1.4"/>
+    <!-- rolled flap on right -->
+    <path d="M222 168 q10 -6 12 6 q-4 8 -12 2 Z" stroke-width="1.1"/>
+    <path d="M226 170 q4 0 6 4" stroke-width="0.7"/>
+    <!-- interior: sleeping pad + pillow + book -->
+    <path d="M190 236 h36" stroke-width="1.1"/>
+    <path d="M192 226 q10 -6 22 0 q-6 6 -22 0" stroke-width="1.1"/>
+    <path d="M206 232 l8 -4 l6 2 l-8 4 Z" stroke-width="0.9"/>
+    <!-- interior shadow -->
+    <path d="M188 238 Q190 200 200 172 Q208 178 212 190 Q204 210 200 238 Z" fill="url(#m0303-hatch)" stroke="none"/>
+    <!-- string lights inside along the ceiling -->
+    <path d="M192 168 q8 6 16 4 q8 -2 18 4" stroke-width="0.8"/>
+    <circle cx="196" cy="172" r="2" stroke-width="0.9"/>
+    <circle cx="206" cy="173" r="2" stroke-width="0.9"/>
+    <circle cx="216" cy="172" r="2" stroke-width="0.9"/>
+    <circle cx="224" cy="176" r="2" stroke-width="0.9"/>
+    <!-- lantern hanging from the tent peak inside -->
+    <path d="M212 158 v14" stroke-width="0.9"/>
+    <path d="M206 172 h12 v12 h-12 Z M208 184 h8 v3 h-8" stroke-width="1.1"/>
+    <path d="M204 178 l-4 0 M220 178 l4 0 M206 170 l-2 -3 M218 170 l2 -3" stroke-width="0.7"/>
+    <!-- tent fabric shading left side -->
+    <path d="M116 236 Q118 162 178 140 Q150 170 140 236 Z" fill="url(#m0303-hatch)" stroke="none"/>
+    <!-- guy lines + pegs -->
+    <path d="M118 196 L60 240 M282 196 L340 240" stroke-width="0.9"/>
+    <path d="M58 236 l4 8 M338 236 l4 8" stroke-width="1.2"/>
+    <!-- small rug in front of door + slippers -->
+    <path d="M176 246 q26 -3 50 0 q-4 5 -50 4 Z" stroke-width="1"/>
+    <path d="M182 250 h6 M190 250 h6" stroke-width="1.1"/>
+
+    <!-- mug on floor at right, book at left -->
+    <path d="M304 246 v-12 h12 v12 Z M316 238 q6 0 4 5" stroke-width="1.2"/>
+    <path d="M82 246 l2 -6 h18 l2 6 Z M86 243 h14" stroke-width="1"/>
+    <!-- white noise machine / small plant in corner -->
+    <path d="M40 246 v-16 h18 v16 M44 236 h10" stroke-width="1.1"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0303</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0303</i><b>帐篷区</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
+        <h3>沉浸式！在阁楼常驻一顶帐篷，下雨天躺进去听雨声</h3>
+        <p>屋里搭一顶永远不用收的帐篷，天窗正对着帐篷门，雨夜是我的逃避间。</p>
+        <p class="tags"><span>#逃避间</span><span>#室内露营</span><span>#精神领地</span><span>#听雨</span><span>#氛围感</span></p>
+      </div>
+    </a>
+  
+    <a class="mod-row" href="../modules/0304.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0304-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0304-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0304-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0304-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor -->
+    <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
+    <path d="M30 252 q30 -3 60 0" stroke-width="0.8"/>
+
+    <!-- roof section: slope descends to the right, knee wall at right -->
+    <path d="M14 30 L340 150" stroke-width="2"/>
+    <path d="M14 20 L346 142" stroke-width="1.6"/>
+    <path d="M16 33 L338 152" stroke-width="0.9"/>
+    <path d="M340 150 V246" stroke-width="1.6"/>
+    <path d="M343 152 V244" stroke-width="0.8"/>
+    <!-- roof thickness hatch -->
+    <path d="M14 21 L344 143 L340 150 L14 31 Z" fill="url(#m0304-hatch)" stroke="none"/>
+    <!-- rafters under the slope -->
+    <path d="M60 47 l-3 10 M130 73 l-3 10 M200 99 l-3 10 M270 124 l-3 10" stroke-width="1"/>
+    <path d="M36 44 L322 150" stroke-width="0.7"/>
+
+    <!-- PV panel outside on the roof (upper right, cut by canvas) -->
+    <path d="M180 75 L340 134 L357 87 L197 28 Z" stroke-width="1.9"/>
+    <path d="M183 74 L199 31 L355 89" stroke-width="0.9"/>
+    <!-- panel cell grid -->
+    <path d="M186 59 L346 118 M191 44 L351 103" stroke-width="0.8"/>
+    <path d="M212 87 L229 40 M244 98 L261 51 M276 110 L293 63 M308 122 L325 75" stroke-width="0.8"/>
+    <!-- mounting brackets -->
+    <path d="M200 82 V89 M270 108 V115 M330 130 V137" stroke-width="1.3"/>
+    <!-- sun rays -->
+    <path d="M300 14 l6 14 M330 20 l4 12 M360 30 l4 12 M370 60 l8 4 M372 100 l10 0" stroke-width="0.8"/>
+    <!-- cable from panel through the roof, along the slope, down the knee wall -->
+    <path d="M196 84 V104 L330 156 V176 H314" stroke-width="1.1"/>
+    <path d="M296 192 V230 H290" stroke-width="1.1"/>
+
+    <!-- ammeter on knee wall -->
+    <circle cx="296" cy="176" r="16" stroke-width="1.6"/>
+    <circle cx="296" cy="176" r="13" stroke-width="0.8"/>
+    <path d="M286 170 q10 -8 20 0" stroke-width="0.9"/>
+    <path d="M296 182 L303 168" stroke-width="1.3"/>
+    <circle cx="296" cy="182" r="1.6" stroke-width="1"/>
+    <path d="M288 188 h16" stroke-width="0.8"/>
+
+    <!-- power station (main subject) on floor -->
+    <path d="M148 246 V162 H288 V246 Z" stroke-width="2"/>
+    <path d="M151 244 V165 H285" stroke-width="1"/>
+    <path d="M148 162 q70 -8 140 0" stroke-width="1.4"/>
+    <!-- handle -->
+    <path d="M186 158 V146 Q218 132 250 146 V158" stroke-width="1.7"/>
+    <path d="M190 156 V149 Q218 137 246 149 V156" stroke-width="0.9"/>
+    <!-- screen -->
+    <path d="M162 176 H222 V204 H162 Z" stroke-width="1.4"/>
+    <path d="M166 180 H218 V200 H166 Z" fill="url(#m0304-hatch2)" stroke="none"/>
+    <path d="M170 186 h10 v10 h-10 Z M172 188 v6 h6 v-6 Z" stroke-width="0.9" fill="#fff"/>
+    <path d="M186 192 h4 M192 188 h6 M192 194 h4" stroke-width="1.3"/>
+    <!-- LEDs -->
+    <circle cx="238" cy="182" r="2.2" stroke-width="1"/>
+    <circle cx="248" cy="182" r="2.2" stroke-width="1"/>
+    <circle cx="258" cy="182" r="2.2" stroke-width="1"/>
+    <circle cx="268" cy="182" r="2.2" stroke-width="1"/>
+    <!-- sockets -->
+    <path d="M234 194 h40 v18 h-40 Z" stroke-width="1.2"/>
+    <circle cx="244" cy="203" r="4" stroke-width="0.9"/>
+    <circle cx="264" cy="203" r="4" stroke-width="0.9"/>
+    <path d="M242 202 v2 M246 202 v2 M262 202 v2 M266 202 v2" stroke-width="0.8"/>
+    <!-- USB row + vents -->
+    <path d="M162 214 h10 v6 h-10 Z M178 214 h10 v6 h-10 Z M194 214 h10 v6 h-10 Z" stroke-width="1"/>
+    <path d="M222 224 h52 M222 230 h52 M222 236 h52" stroke-width="0.8"/>
+    <!-- side shading -->
+    <path d="M152 226 H214 V242 H152 Z" fill="url(#m0304-hatch)" stroke="none"/>
+
+    <!-- wooden rack with two spare batteries, left -->
+    <path d="M40 246 V150 M48 246 V150 M120 246 V150 M128 246 V150" stroke-width="1.5"/>
+    <path d="M42 152 V244" stroke-width="0.7"/>
+    <path d="M36 150 H132 M36 200 H132 M36 244 H132" stroke-width="1.6"/>
+    <path d="M38 154 H130 M38 204 H130" stroke-width="0.8"/>
+    <!-- battery blocks -->
+    <path d="M54 196 V166 H114 V196" stroke-width="1.6"/>
+    <path d="M56 168 H112" stroke-width="0.8"/>
+    <path d="M62 166 v-6 h8 v6 M98 166 v-6 h8 v6" stroke-width="1.2"/>
+    <path d="M60 178 h18 M60 184 h10" stroke-width="0.9"/>
+    <path d="M90 172 L114 172 V196 L90 196 Z" fill="url(#m0304-hatch)" stroke="none"/>
+    <path d="M54 240 V210 H114 V240" stroke-width="1.6"/>
+    <path d="M56 212 H112" stroke-width="0.8"/>
+    <path d="M62 210 v-6 h8 v6 M98 210 v-6 h8 v6" stroke-width="1.2"/>
+    <path d="M60 222 h18 M60 228 h10" stroke-width="0.9"/>
+    <path d="M90 216 L114 216 V240 L90 240 Z" fill="url(#m0304-hatch)" stroke="none"/>
+    <!-- velcro straps -->
+    <path d="M84 166 V196 M84 210 V240" stroke-width="1.4"/>
+
+    <!-- fire extinguisher by the wall -->
+    <path d="M312 246 v-28 q0 -8 8 -8 q8 0 8 8 v28 Z" stroke-width="1.4"/>
+    <path d="M318 210 v-6 h4 v6 M320 204 l-6 -2" stroke-width="1"/>
+    <path d="M314 226 h12" stroke-width="0.8"/>
+    <path d="M320 216 v28" stroke-width="0.6"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0304</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0304</i><b>光伏储能</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
+        <h3>码住！屋顶 4 块光伏板，阁楼一整年不用交电费</h3>
+        <p>阁楼是离屋顶最近的房间，把光伏和储能都放在这里，太阳直接喂电。</p>
+        <p class="tags"><span>#能源自由</span><span>#工业风</span><span>#光伏</span><span>#储能</span><span>#低成本高质感</span></p>
+      </div>
+    </a>
+  
+    <a class="mod-row" href="../modules/0305.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0305-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0305-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0305-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0305-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor -->
+    <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
+    <path d="M40 252 q30 -3 60 0" stroke-width="0.8"/>
+
+    <!-- sloped ceiling: low at left, rising to the right -->
+    <path d="M14 92 L386 16" stroke-width="2"/>
+    <path d="M14 82 L386 6" stroke-width="1.4"/>
+    <path d="M17 95 L384 20" stroke-width="0.9"/>
+    <path d="M14 82 L386 6 L386 16 L14 92 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <path d="M14 92 V246" stroke-width="1.4"/>
+    <!-- rafter ticks -->
+    <path d="M70 81 l2 9 M130 68 l2 9 M190 56 l2 9 M250 44 l2 9" stroke-width="1"/>
+    <!-- skylight on the slope, upper right -->
+    <path d="M282 40 L354 25 L362 36 L290 51 Z" stroke-width="1.7"/>
+    <path d="M285 42 L352 29" stroke-width="0.9"/>
+    <path d="M286 42 L352 29 L358 36 L292 48 Z" fill="url(#m0305-hatch2)" stroke="none"/>
+    <path d="M318 33 L322 43" stroke-width="1"/>
+    <!-- exhaust vent fan box beside skylight -->
+    <path d="M254 54 L272 48 L276 58 L258 64 Z" stroke-width="1.3"/>
+    <path d="M262 58 l4 -3 M264 54 l2 6" stroke-width="0.8"/>
+
+    <!-- exhaust duct: from printer top, up, then along the slope to the vent -->
+    <path d="M160 100 V80 Q160 70 172 68 L254 52" stroke-width="1.7"/>
+    <path d="M172 100 V86 Q172 78 180 78 L256 62" stroke-width="1.7"/>
+    <path d="M160 92 h12 M162 84 h12 M200 62 l1 12 M220 59 l1 11 M240 55 l1 11" stroke-width="0.8"/>
+    <path d="M186 71 L254 58 L256 62 L186 77 Z" fill="url(#m0305-hatch)" stroke="none"/>
+
+    <!-- low cabinet -->
+    <path d="M96 246 V184 H236 V246" stroke-width="1.8"/>
+    <path d="M99 244 V187 H233" stroke-width="0.9"/>
+    <path d="M96 184 q70 -5 140 0" stroke-width="1.2"/>
+    <path d="M110 194 H222 V236 H110 Z" stroke-width="1.1"/>
+    <path d="M166 194 V236 M158 214 h4 M174 214 h4" stroke-width="1"/>
+    <path d="M100 238 H232 V244 H100 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <!-- anti-vibration pad -->
+    <path d="M104 180 H228 V184 H104 Z" stroke-width="1"/>
+
+    <!-- enclosed 3D printer: cube on the cabinet -->
+    <path d="M110 180 V100 H222 V180 Z" stroke-width="2"/>
+    <path d="M113 178 V103 H219" stroke-width="1"/>
+    <!-- top: slightly 3/4 to show a lid -->
+    <path d="M110 100 L124 90 H236 L222 100" stroke-width="1.5"/>
+    <path d="M222 100 L236 90 V170 L222 180" stroke-width="1.5"/>
+    <path d="M224 102 L234 94 V168 L224 176 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <!-- glass door frame with X brace of the corners -->
+    <path d="M120 112 H200 V172 H120 Z" stroke-width="1.4"/>
+    <path d="M122 114 H198 V170" stroke-width="0.8"/>
+    <path d="M124 116 l10 10 M196 116 l-10 10 M124 168 l10 -10" stroke-width="0.7"/>
+    <!-- inside: gantry, nozzle, build plate with object -->
+    <path d="M124 128 H196" stroke-width="1.2"/>
+    <path d="M150 124 h14 v10 h-14 Z M156 134 v4 l2 3 M160 134 v4 l-2 3" stroke-width="1.1"/>
+    <path d="M132 160 H188 V164 H132 Z" stroke-width="1.2"/>
+    <path d="M150 160 v-12 h12 v12 M152 156 h8 M152 152 h8" stroke-width="1"/>
+    <path d="M126 150 l4 0 M190 150 l4 0" stroke-width="0.8"/>
+    <!-- side panel with small screen & filament tube -->
+    <path d="M206 116 H216 V132 H206 Z" stroke-width="1.1"/>
+    <path d="M208 120 h6 M208 124 h4" stroke-width="0.8"/>
+    <path d="M206 140 h10 M206 146 h10 M206 152 h10 M206 158 h10" stroke-width="0.8"/>
+    <path d="M222 108 q16 -4 20 10" stroke-width="1"/>
+    <!-- light glow lines inside -->
+    <path d="M128 120 l4 4 M192 120 l-4 4" stroke-width="0.7"/>
+    <!-- extra top cover shading -->
+    <path d="M126 92 H232 V96 H126 Z" fill="url(#m0305-hatch)" stroke="none"/>
+
+    <!-- filament spool rack at right: two shelves, 4 spools each -->
+    <path d="M262 246 V120 M270 246 V120 M370 246 V120 M378 246 V120" stroke-width="1.5"/>
+    <path d="M264 122 V244" stroke-width="0.7"/>
+    <path d="M258 120 H382 M258 182 H382 M258 244 H382" stroke-width="1.6"/>
+    <path d="M260 124 H380 M260 186 H380" stroke-width="0.8"/>
+    <!-- spools row 1 -->
+    <circle cx="285" cy="152" r="13" stroke-width="1.5"/>
+    <circle cx="285" cy="152" r="4" stroke-width="1"/>
+    <circle cx="308" cy="152" r="13" stroke-width="1.5"/>
+    <circle cx="308" cy="152" r="4" stroke-width="1"/>
+    <circle cx="331" cy="152" r="13" stroke-width="1.5"/>
+    <circle cx="331" cy="152" r="4" stroke-width="1"/>
+    <circle cx="354" cy="152" r="13" stroke-width="1.5"/>
+    <circle cx="354" cy="152" r="4" stroke-width="1"/>
+    <path d="M285 152 m-13 0 a13 13 0 0 0 26 0 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <path d="M331 152 m-13 0 a13 13 0 0 0 26 0 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <circle cx="308" cy="152" r="8" stroke-width="0.7"/>
+    <circle cx="354" cy="152" r="8" stroke-width="0.7"/>
+    <!-- spools row 2 -->
+    <circle cx="285" cy="214" r="13" stroke-width="1.5"/>
+    <circle cx="285" cy="214" r="4" stroke-width="1"/>
+    <circle cx="308" cy="214" r="13" stroke-width="1.5"/>
+    <circle cx="308" cy="214" r="4" stroke-width="1"/>
+    <circle cx="331" cy="214" r="13" stroke-width="1.5"/>
+    <circle cx="331" cy="214" r="4" stroke-width="1"/>
+    <circle cx="354" cy="214" r="13" stroke-width="1.5"/>
+    <circle cx="354" cy="214" r="4" stroke-width="1"/>
+    <path d="M308 214 m-13 0 a13 13 0 0 0 26 0 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <path d="M354 214 m-13 0 a13 13 0 0 0 26 0 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <circle cx="285" cy="214" r="8" stroke-width="0.7"/>
+    <circle cx="331" cy="214" r="8" stroke-width="0.7"/>
+    <!-- labels on shelf edge -->
+    <path d="M276 181 h6 M300 181 h6 M324 181 h6 M348 181 h6" stroke-width="1.6"/>
+
+    <!-- printed hooks on the floor, left -->
+    <path d="M40 246 v-16 q0 -6 6 -6 h6 v6 M60 246 v-12 q0 -6 6 -6 h6" stroke-width="1.2"/>
+    <path d="M28 236 h6 M30 240 h8" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0305</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0305</i><b>3D 打印</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
+        <h3>一整个爱住！拓竹 P1S 放阁楼，夜里 3 点打印声像下雨</h3>
+        <p>和地堡共用一台拓竹 P1S，白天设计楼下画图，晚上上楼打印，通宵也不吵人。</p>
+        <p class="tags"><span>#家的丰容计划</span><span>#3D打印</span><span>#拓竹</span><span>#动手主义</span><span>#延时视频</span></p>
+      </div>
+    </a>
+  
+    <a class="mod-row" href="../modules/0306.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0306-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0306-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0306-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0306-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor -->
+    <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
+    <path d="M300 252 q30 -3 60 0" stroke-width="0.8"/>
+
+    <!-- roof section: ridge at left, slope descends to the right; gable wall behind -->
+    <path d="M30 36 L386 190" stroke-width="2"/>
+    <path d="M30 26 L386 180" stroke-width="1.5"/>
+    <path d="M33 39 L384 192" stroke-width="0.9"/>
+    <path d="M30 26 L386 180 L386 190 L30 36 Z" fill="url(#m0306-hatch)" stroke="none"/>
+    <path d="M30 36 V246" stroke-width="1.6"/>
+    <path d="M33 40 V244" stroke-width="0.8"/>
+    <path d="M386 190 V246" stroke-width="1.4"/>
+    <!-- roof tile hint lines outside -->
+    <path d="M60 30 l-3 6 M100 47 l-3 6 M140 64 l-3 6 M300 133 l-3 6 M340 150 l-3 6" stroke-width="0.9"/>
+    <!-- rafters ticks inside -->
+    <path d="M90 66 l-2 8 M150 92 l-2 8 M330 170 l-2 8" stroke-width="0.9"/>
+
+    <!-- skylight on the slope -->
+    <path d="M176 99 L236 125 L228 143 L168 117 Z" stroke-width="1.7"/>
+    <path d="M179 102 L233 126" stroke-width="0.9"/>
+    <path d="M180 103 L232 127 L226 140 L172 116 Z" fill="url(#m0306-hatch2)" stroke="none"/>
+    <path d="M206 112 L200 126" stroke-width="1"/>
+
+    <!-- weather mast on the roof, right of the skylight -->
+    <path d="M276 133 V44" stroke-width="2"/>
+    <path d="M279 135 V46" stroke-width="0.9"/>
+    <!-- hinge base bracket -->
+    <path d="M264 128 L288 138 M268 126 l4 2 v6" stroke-width="1.3"/>
+    <circle cx="276" cy="131" r="2.2" stroke-width="1"/>
+    <!-- anemometer cups on top -->
+    <path d="M276 44 V36" stroke-width="1.4"/>
+    <path d="M276 36 L256 30 M276 36 L296 30 M276 36 L278 22" stroke-width="1.1"/>
+    <path d="M256 30 m-6 0 a6 4 0 1 0 12 0 a6 4 0 1 0 -12 0" stroke-width="1.3"/>
+    <path d="M296 30 m-6 0 a6 4 0 1 0 12 0 a6 4 0 1 0 -12 0" stroke-width="1.3"/>
+    <path d="M278 22 m-6 0 a6 4 0 1 0 12 0 a6 4 0 1 0 -12 0" stroke-width="1.3"/>
+    <!-- motion arcs -->
+    <path d="M244 22 q-4 8 0 16 M308 22 q4 8 0 16" stroke-width="0.7"/>
+    <!-- wind vane -->
+    <path d="M276 62 H316" stroke-width="1.4"/>
+    <path d="M316 62 l-8 -5 v10 Z" stroke-width="1.2"/>
+    <path d="M276 62 l-16 -2 l4 2 l-4 2 Z" stroke-width="1"/>
+    <path d="M276 68 v-12" stroke-width="0.8"/>
+    <circle cx="276" cy="62" r="2.4" stroke-width="1"/>
+    <!-- rain gauge cylinder -->
+    <path d="M254 80 v22 h14 v-22" stroke-width="1.4"/>
+    <path d="M252 80 h18 M254 78 q7 -4 14 0" stroke-width="1"/>
+    <path d="M268 90 h8" stroke-width="1"/>
+    <path d="M256 92 h10 v9 h-10 Z" fill="url(#m0306-hatch)" stroke="none"/>
+    <!-- radiation shield (stacked plates) for temp/humidity -->
+    <path d="M280 104 h20 M282 109 h16 M284 114 h12 M286 119 h8" stroke-width="1.3"/>
+    <path d="M280 104 q10 -6 20 0" stroke-width="1"/>
+    <path d="M279 100 h-3" stroke-width="1"/>
+    <!-- cable running down the mast into the attic -->
+    <path d="M282 122 q6 10 -2 16" stroke-width="0.8"/>
+
+    <!-- weather outside: cloud + rain + bird -->
+    <path d="M320 40 q4 -14 18 -10 q8 -12 22 -4 q14 -2 14 10 q6 10 -6 12 h-46 q-8 -2 -2 -8 Z" stroke-width="1.4"/>
+    <path d="M328 42 q6 -2 12 0" stroke-width="0.8"/>
+    <path d="M332 56 l-3 9 M346 56 l-3 9 M360 56 l-3 9 M340 70 l-3 9 M354 70 l-3 9 M368 66 l-3 9 M348 86 l-3 9 M362 90 l-3 9" stroke-width="0.9"/>
+    <path d="M200 30 q4 -4 8 0 q4 -4 8 0" stroke-width="1"/>
+    <path d="M180 60 q3 -3 6 0 q3 -3 6 0" stroke-width="0.9"/>
+
+    <!-- e-ink weather screen on the gable wall (inside) -->
+    <path d="M62 118 H140 V170 H62 Z" stroke-width="1.8"/>
+    <path d="M65 121 H137 V167" stroke-width="0.9"/>
+    <path d="M68 126 h20 M68 132 h14" stroke-width="1.2"/>
+    <path d="M108 126 h26 M108 132 h18" stroke-width="1.2"/>
+    <path d="M68 164 H134 M68 142 V164" stroke-width="0.8"/>
+    <path d="M70 158 q10 -8 18 -4 q8 4 14 -8 q8 -14 14 -2 q6 8 16 -6" stroke-width="1.3"/>
+    <path d="M70 160 q10 -8 18 -4 q8 4 14 -8 q8 -14 14 -2 q6 8 16 -6" stroke-width="0.6"/>
+    <path d="M76 164 v2 M92 164 v2 M108 164 v2 M124 164 v2" stroke-width="0.8"/>
+    <!-- screen shadow -->
+    <path d="M140 122 L145 118 V170 L140 174 Z" fill="url(#m0306-hatch)" stroke="none"/>
+    <path d="M140 118 L145 114 V170" stroke-width="1"/>
+
+    <!-- person standing looking up at the skylight, holding a mug -->
+    <circle cx="176" cy="164" r="8" stroke-width="1.5"/>
+    <path d="M176 172 V212 M176 182 L162 196 M176 182 L192 192 M176 212 L166 246 M176 212 L188 246" stroke-width="1.5"/>
+    <path d="M177 174 V210" stroke-width="0.8"/>
+    <path d="M190 188 h8 v8 h-8 Z M198 190 q4 0 3 4" stroke-width="1.1"/>
+    <path d="M180 160 l4 -2" stroke-width="1"/>
+
+    <!-- small table with sensor box & esp board inside -->
+    <path d="M300 246 V206 H372 V246 M304 208 V244 M368 208 V244" stroke-width="1.4"/>
+    <path d="M318 206 v-14 h30 v14 M322 198 h6 M332 198 h10" stroke-width="1.1"/>
+    <path d="M338 200 q-4 -10 -10 -14" stroke-width="0.7"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0306</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0306</i><b>微型气象站</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
+        <h3>被问爆了！屋顶一根杆子，让我比天气预报早半小时知道下雨</h3>
+        <p>阁楼天窗外伸一根气象杆，风向风速雨量温湿度全都自己测，草地浇不浇水它说了算。</p>
+        <p class="tags"><span>#自然生活</span><span>#气象站</span><span>#ESPHome</span><span>#墨水屏</span><span>#观鸟</span></p>
+      </div>
+    </a>
+  
+  </div>
+</section>
+<nav class="pager">
+  <a href="../areas/02.html">← 02 地堡</a>
+  <a href="../areas/04.html">04 阁楼仓库 →</a>
+</nav>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>
