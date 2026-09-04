@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0504 自动种植架 · SurviveOs 设想版</title>
+<meta name="description" content="保姆级！一个 2 米种植架，让我半年没买过一片叶子菜——一座四层的自动滴灌种植架，土壤湿度自己判断，我只负责摘和吃。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" class="on"><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/05.html">05 庭院</a> › <span>0504 自动种植架</span></nav>
+<article class="mod">
+  <header class="mod-head">
+    <p class="kicker">庭院 · 模块 0504 · 自动种植架</p>
+    <h1>保姆级！一个 2 米种植架，让我半年没买过一片叶子菜</h1>
+    <p class="lede">一座四层的自动滴灌种植架，土壤湿度自己判断，我只负责摘和吃。</p>
+    <p class="meta">
+      <span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">#阳台种菜</span><span class="tag">#去家务化</span><span class="tag">#自动浇灌</span><span class="tag">#ESPHome</span><span class="tag">#动手主义</span>
+    </p>
+  </header>
+  <figure class="mod-art">
+    <svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0504-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0504-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0504-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0504-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 250 Q110 246 200 249 T390 247" stroke-width="1.2"/>
+    <path d="M40 256 q25 -3 50 0 M300 255 q22 -3 48 0" stroke-width="0.9"/>
+    <path d="M322 232 V70 M326 232 V70" stroke-width="1.5"/>
+    <path d="M322 232 L310 246 M326 232 L314 246" stroke-width="1.2"/>
+    <path d="M122 70 V96 M126 70 V96" stroke-width="1.1"/>
+    <path d="M96 78 H296 M98 82 H294 M296 78 L324 70 M96 78 L124 70 M124 70 H324" stroke-width="1.4"/>
+    <path d="M93.5 246 V78 M98.5 246 V78" stroke-width="1.8"/>
+    <path d="M96 244 V80" stroke-width="0.7"/>
+    <path d="M293.5 246 V78 M298.5 246 V78" stroke-width="1.8"/>
+    <path d="M296 244 V80" stroke-width="0.7"/>
+    <path d="M88 246 h16 M288 246 h16" stroke-width="1.5"/>
+    <path d="M96 236 H296 M96 239 H296" stroke-width="1.5"/>
+    <path d="M296 236 L324 228" stroke-width="1.1"/>
+    <path d="M100 240 H292 v5 H100 Z" stroke-width="1.2" fill="url(#m0504-hatch)" stroke="none"/>
+    <path d="M96 190 H296 M96 193 H296" stroke-width="1.5"/>
+    <path d="M296 190 L324 182" stroke-width="1.1"/>
+    <path d="M100 194 H292 v5 H100 Z" stroke-width="1.2" fill="url(#m0504-hatch)" stroke="none"/>
+    <path d="M96 144 H296 M96 147 H296" stroke-width="1.5"/>
+    <path d="M296 144 L324 136" stroke-width="1.1"/>
+    <path d="M100 148 H292 v5 H100 Z" stroke-width="1.2" fill="url(#m0504-hatch)" stroke="none"/>
+    <path d="M96 98 H296 M96 101 H296" stroke-width="1.5"/>
+    <path d="M296 98 L324 90" stroke-width="1.1"/>
+    <path d="M100 102 H292 v5 H100 Z" stroke-width="1.2" fill="url(#m0504-hatch)" stroke="none"/>
+    <path d="M104 98 h40 v-12 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M102 86 h44" stroke-width="1.0"/>
+    <path d="M112 86 q0 -6 2 -8 M124 86 q-1 -7 2 -9 M135 86 q1 -6 -1 -8 M114 80 q2 -3 4 0 M125 79 q-3 -3 -6 0" stroke-width="0.9"/>
+    <path d="M151 98 h40 v-12 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M149 86 h44" stroke-width="1.0"/>
+    <path d="M159 86 q0 -6 2 -8 M171 86 q-1 -7 2 -9 M182 86 q1 -6 -1 -8 M161 80 q2 -3 4 0 M172 79 q-3 -3 -6 0" stroke-width="0.9"/>
+    <path d="M198 98 h40 v-12 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M196 86 h44" stroke-width="1.0"/>
+    <path d="M206 86 q0 -6 2 -8 M218 86 q-1 -7 2 -9 M229 86 q1 -6 -1 -8 M208 80 q2 -3 4 0 M219 79 q-3 -3 -6 0" stroke-width="0.9"/>
+    <path d="M245 98 h40 v-12 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M243 86 h44" stroke-width="1.0"/>
+    <path d="M253 86 q0 -6 2 -8 M265 86 q-1 -7 2 -9 M276 86 q1 -6 -1 -8 M255 80 q2 -3 4 0 M266 79 q-3 -3 -6 0" stroke-width="0.9"/>
+    <path d="M104 144 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M102 130 h44" stroke-width="1.0"/>
+    <path d="M110 130 q2 -17 3 -29 M110 105 q4 -6 0 -10 q-4 4 0 10 M117 130 q3 -18 -1 -30 M115 104 q4 -6 0 -10 q-4 4 0 10 M124 130 q1 -18 -2 -30 M121 104 q4 -6 0 -10 q-4 4 0 10 M131 130 q-2 -17 -2 -29 M128 105 q4 -6 0 -10 q-4 4 0 10 M138 130 q6 -18 -4 -30 M139 104 q4 -6 0 -10 q-4 4 0 10 " stroke-width="1.0"/>
+    <path d="M151 144 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M149 130 h44" stroke-width="1.0"/>
+    <path d="M157 130 q1 -17 -2 -28 M158 106 q4 -6 0 -10 q-4 4 0 10 M164 130 q2 -13 -3 -22 M161 112 q4 -6 0 -10 q-4 4 0 10 M171 130 q-3 -13 -1 -22 M172 112 q4 -6 0 -10 q-4 4 0 10 M178 130 q6 -13 3 -22 M177 112 q4 -6 0 -10 q-4 4 0 10 M185 130 q3 -17 -1 -29 M186 105 q4 -6 0 -10 q-4 4 0 10 " stroke-width="1.0"/>
+    <path d="M198 144 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M196 130 h44" stroke-width="1.0"/>
+    <path d="M204 130 q4 -15 0 -25 M204 109 q4 -6 0 -10 q-4 4 0 10 M211 130 q4 -13 -3 -22 M211 112 q4 -6 0 -10 q-4 4 0 10 M218 130 q0 -16 4 -26 M221 108 q4 -6 0 -10 q-4 4 0 10 M225 130 q5 -14 0 -23 M224 111 q4 -6 0 -10 q-4 4 0 10 M232 130 q2 -15 0 -25 M229 109 q4 -6 0 -10 q-4 4 0 10 " stroke-width="1.0"/>
+    <path d="M245 144 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M243 130 h44" stroke-width="1.0"/>
+    <path d="M251 130 q3 -14 -3 -23 M251 111 q4 -6 0 -10 q-4 4 0 10 M258 130 q-2 -14 2 -23 M255 111 q4 -6 0 -10 q-4 4 0 10 M265 130 q4 -13 -4 -22 M263 112 q4 -6 0 -10 q-4 4 0 10 M272 130 q-6 -15 3 -25 M272 109 q4 -6 0 -10 q-4 4 0 10 M279 130 q0 -17 -3 -28 M280 106 q4 -6 0 -10 q-4 4 0 10 " stroke-width="1.0"/>
+    <path d="M104 190 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M102 176 h44" stroke-width="1.0"/>
+    <path d="M124 176 V150" stroke-width="1.0"/>
+    <path d="M124 172 q-8 -4 -12 -10 M124 164 q8 -4 12 -10 M124 158 q-8 -2 -10 -8" stroke-width="1.0"/>
+    <circle cx="114" cy="168" r="3" stroke-width="0.9"/>
+    <circle cx="118" cy="172" r="3" stroke-width="0.9"/>
+    <circle cx="134" cy="162" r="3" stroke-width="0.9"/>
+    <path d="M112 160 l-3 -3 M134 158 l3 -3" stroke-width="0.7"/>
+    <path d="M151 190 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M149 176 h44" stroke-width="1.0"/>
+    <path d="M171 176 V150" stroke-width="1.0"/>
+    <path d="M171 172 q-8 -4 -12 -10 M171 164 q8 -4 12 -10 M171 158 q-8 -2 -10 -8" stroke-width="1.0"/>
+    <circle cx="161" cy="168" r="3" stroke-width="0.9"/>
+    <circle cx="165" cy="172" r="3" stroke-width="0.9"/>
+    <circle cx="181" cy="162" r="3" stroke-width="0.9"/>
+    <path d="M159 160 l-3 -3 M181 158 l3 -3" stroke-width="0.7"/>
+    <path d="M198 190 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M196 176 h44" stroke-width="1.0"/>
+    <path d="M218 176 V150" stroke-width="1.0"/>
+    <path d="M218 172 q-8 -4 -12 -10 M218 164 q8 -4 12 -10 M218 158 q-8 -2 -10 -8" stroke-width="1.0"/>
+    <circle cx="208" cy="168" r="3" stroke-width="0.9"/>
+    <circle cx="212" cy="172" r="3" stroke-width="0.9"/>
+    <circle cx="228" cy="162" r="3" stroke-width="0.9"/>
+    <path d="M206 160 l-3 -3 M228 158 l3 -3" stroke-width="0.7"/>
+    <path d="M245 190 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M243 176 h44" stroke-width="1.0"/>
+    <path d="M265 176 V150" stroke-width="1.0"/>
+    <path d="M265 172 q-8 -4 -12 -10 M265 164 q8 -4 12 -10 M265 158 q-8 -2 -10 -8" stroke-width="1.0"/>
+    <circle cx="255" cy="168" r="3" stroke-width="0.9"/>
+    <circle cx="259" cy="172" r="3" stroke-width="0.9"/>
+    <circle cx="275" cy="162" r="3" stroke-width="0.9"/>
+    <path d="M253 160 l-3 -3 M275 158 l3 -3" stroke-width="0.7"/>
+    <path d="M104 236 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M102 222 h44" stroke-width="1.0"/>
+    <path d="M110 222 Q106.9 218.1 111.4 215.9 Q110.3 211.1 115.3 211.1 Q116.4 206.2 120.9 208.4 Q124.0 204.5 127.1 208.4 Q131.6 206.2 132.7 211.1 Q137.7 211.1 136.6 215.9 Q141.1 218.1 138.0 222.0 Z" stroke-width="1.3" fill="#fff"/>
+    <path d="M116 214 q4 -6 8 0 M126 210 q4 -5 8 1" stroke-width="0.8"/>
+    <path d="M151 236 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M149 222 h44" stroke-width="1.0"/>
+    <path d="M159 222 Q156.4 218.7 160.2 216.8 Q159.3 212.6 163.5 212.6 Q164.5 208.5 168.3 210.3 Q171.0 207.0 173.7 210.3 Q177.5 208.5 178.5 212.6 Q182.7 212.6 181.8 216.8 Q185.6 218.7 183.0 222.0 Z" stroke-width="1.3" fill="#fff"/>
+    <path d="M163 214 q4 -6 8 0 M173 210 q4 -5 8 1" stroke-width="0.8"/>
+    <path d="M198 236 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M196 222 h44" stroke-width="1.0"/>
+    <path d="M204 222 Q200.9 218.1 205.4 215.9 Q204.3 211.1 209.3 211.1 Q210.4 206.2 214.9 208.4 Q218.0 204.5 221.1 208.4 Q225.6 206.2 226.7 211.1 Q231.7 211.1 230.6 215.9 Q235.1 218.1 232.0 222.0 Z" stroke-width="1.3" fill="#fff"/>
+    <path d="M210 214 q4 -6 8 0 M220 210 q4 -5 8 1" stroke-width="0.8"/>
+    <path d="M245 236 h40 v-14 h-40 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M243 222 h44" stroke-width="1.0"/>
+    <path d="M253 222 Q250.4 218.7 254.2 216.8 Q253.3 212.6 257.5 212.6 Q258.5 208.5 262.3 210.3 Q265.0 207.0 267.7 210.3 Q271.5 208.5 272.5 212.6 Q276.7 212.6 275.8 216.8 Q279.6 218.7 277.0 222.0 Z" stroke-width="1.3" fill="#fff"/>
+    <path d="M257 214 q4 -6 8 0 M267 210 q4 -5 8 1" stroke-width="0.8"/>
+    <path d="M100 196 H292" stroke-width="0.9"/>
+    <path d="M100 150 H292" stroke-width="0.9"/>
+    <path d="M100 104 H292" stroke-width="0.9"/>
+    <path d="M100 70 H292" stroke-width="0.9"/>
+    <path d="M118 74 v5 M165 74 v5 M212 74 v5 M259 74 v5" stroke-width="0.8"/>
+    <path d="M302 246 V70" stroke-width="0.9"/>
+    <path d="M124 106 l0 4 M170 106 l0 4 M124 152 l0 4 M218 152 l0 4 M170 198 l0 4 M265 198 l0 4" stroke-width="0.9"/>
+    <path d="M100 66 H292" stroke-width="1.4"/>
+    <path d="M94 60 q0 -10 10 -8 H288 q10 -2 10 8 q0 8 -10 8 H104 q-10 0 -10 -8 z" stroke-width="1.5" fill="#fff"/>
+    <path d="M112 56 H282 M112 64 H282" stroke-width="0.7"/>
+    <path d="M116 54 q6 8 12 0 M146 58 q6 8 12 0 M236 54 q6 8 12 0 M266 58 q6 8 12 0" stroke-width="0.7"/>
+    <path d="M304 148 h30 v22 h-30 z" stroke-width="1.4" fill="#fff"/>
+    <path d="M308 154 h14 M308 160 h22 M308 165 h10" stroke-width="0.9"/>
+    <path d="M304 148 h30 v22 h-30 z" stroke-width="0.8"/>
+    <path d="M302 158 h2" stroke-width="0.9"/>
+    <path d="M136 82 v14" stroke-width="0.8"/>
+    <path d="M130 104 q6 -12 12 0 z M136 104 v3" stroke-width="1.1" fill="#fff"/>
+    <path d="M344 246 V214 q18 -4 36 0 V246 Z" stroke-width="1.6" fill="#fff"/>
+    <path d="M340 214 q22 -6 44 0 M342 220 q20 -4 40 0" stroke-width="1.1"/>
+    <path d="M348 244 V222 M356 244 V222" stroke-width="0.6"/>
+    <path d="M352 214 q10 -18 20 0" stroke-width="1.0"/>
+    <path d="M346 224 q4 -2 8 -2 V244 h-8 z" stroke-width="1.2" fill="url(#m0504-hatch)" stroke="none"/>
+    <path d="M38.6 246 L35.0 226 H61.0 L57.4 246 Z" stroke-width="1.4" fill="#fff"/>
+    <path d="M33.5 226 H62.5 M33.5 230 H62.5" stroke-width="1.0"/>
+    <path d="M48 226 q-8.4 -13.0 -14.0 -19.0 M48 226 q-5.6 -13.0 -9.4 -21.3 M48 226 q-2.8 -13.0 -4.7 -23.7 M48 226 q0.0 -13.0 0.0 -26.0 M48 226 q2.8 -13.0 4.7 -23.7 M48 226 q5.6 -13.0 9.4 -21.3 " stroke-width="1.1"/>
+    <path d="M20 252 l2 -7 l2 7 M27 253 l2 -6 M340 252 l2 -7 l2 7 M347 253 l2 -6 M392 250 l2 -7 l2 7 M399 251 l2 -6 " stroke-width="0.9"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0504</text>
+</svg>
+
+    <figcaption><span class="hand">速写 · 平视：四层镀锌管种植架，每层一排种植箱长着菜，侧面挂小屏幕，架顶滴灌管</span></figcaption>
+  </figure>
+
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">早上七点，太阳刚翻过东边的树梢，种植架顶上那根滴灌管准时滋滋响了二十秒，水珠顺着生菜叶滚下来。架子是镀锌管拼的，四层，每层六个种植箱，第一层是芝麻菜和罗勒，第二层小番茄已经挂了两串青果，第三层空心菜疯长，最上层是刚播的秋葵。架子侧面一块小屏幕闪着『土壤湿度 42%，今日不浇』。你摘了一把芝麻菜和几片罗勒，下午拌面用。旁边一只矿泉水桶改的液肥桶里，泡着上周的香蕉皮和淘米水，闻起来有点酸。风一吹，架子上挂的那串旧铜铃叮当响。</p></section>
+
+  <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
+    <ol class="plan"><li><span class="box"></span><span>南侧向阳处用 25mm 镀锌管搭 2m 宽×0.6m 深×1.8m 高的四层架子，每层放 6 个 40cm 种植箱</span></li><li><span class="box"></span><span>每层一根 16mm 滴灌主管，每个箱子 2 个可调滴头，总管接雨水罐的加压泵</span></li><li><span class="box"></span><span>每层埋一颗电容式土壤湿度传感器，ESPHome 本地判断低于 40% 才浇，不看时间表</span></li><li><span class="box"></span><span>架顶装可收放的遮阳网，夏天 35℃ 以上自动放下，靠温度传感器触发</span></li><li><span class="box"></span><span>按层分区：底层香草、二层茄果、三层叶菜、顶层新苗，高的放下面矮的放上面</span></li><li><span class="box"></span><span>侧面挂一块 2.9 寸墨水屏，显示每层湿度和上次浇水时间，数据同步全屋中枢大屏</span></li><li><span class="box"></span><span>架子旁放一只 20L 液肥桶，厨余泡水两周稀释十倍，每周日手动补一次</span></li></ol></section>
+
+  <div class="two">
+    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>小红书『阳台种菜』的加强版：搬到庭院就能上四层，产量直接翻四倍</li><li>『去家务化』思路：浇水交给传感器，人只做摘菜这种有成就感的事</li><li>『墨水屏小面板』是今年智能家居爆款，挂在架子上又复古又硬核</li></ul></section>
+    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>滴头一个月不清就堵，雨水罐来的水一定加一级过滤网</li><li>杭州夏天叶菜三天就抽薹，七八月改种空心菜和苋菜，别硬种生菜</li><li>传感器别插在滴头正下方，永远显示湿润，根本不浇水</li></ul></section>
+  </div>
+
+  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,500～3,000（镀锌管、种植箱、滴灌件、传感器、墨水屏）；年度电费 ¥30 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+
+  <section class="blk"><h2><em>🔗</em> 联动模块</h2>
+    <div class="link-grid">
+      <a class="link-card" href="../modules/0602.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0602-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0602-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0602-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0602-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground surface -->
+    <path d="M14 204 Q100 200 200 203 T390 201" stroke-width="1.3"/>
+    <!-- soil section (cut-away block) -->
+    <path d="M40 206 V270 H360 V204" stroke-width="1.6"/>
+    <path d="M42 208 V268 H358" stroke-width="0.8"/>
+    <path d="M60 232 l3 1 M92 250 l3 1 M120 226 l3 1 M170 256 l3 1 M230 228 l3 1 M262 258 l3 1 M300 236 l3 1 M330 254 l3 1 M86 262 l3 1 M250 248 l3 1 M340 226 l3 1 M140 246 l3 1" stroke-width="0.9"/>
+    <path d="M70 244 q4 -2 8 0 M200 262 q4 -2 8 0 M300 258 q4 -2 8 0 M110 260 q4 -2 8 0 M320 244 q4 -2 8 0" stroke-width="0.8"/>
+    <!-- roots hanging from the surface -->
+    <path d="M100 206 q-2 8 -6 14 q-2 6 2 12 M108 206 q3 10 0 18 M150 205 q-3 8 -1 16 q2 6 -2 10 M158 205 q2 8 5 14 M250 205 q-2 10 -5 16 M258 204 q2 8 4 14 q1 6 -2 10 M300 204 q-1 8 -4 14 M120 206 q1 6 -1 12" stroke-width="0.8"/>
+    <!-- buried post foot -->
+    <path d="M186 206 V236 H214 V206" stroke-width="1.3"/>
+    <path d="M188 208 V234 H212 V208 Z" fill="url(#m0602-hatch)" stroke="none"/>
+    <!-- soil moisture probe (fork) inserted among roots, cable from post -->
+    <path d="M186 216 q-20 0 -34 4 q-18 4 -22 -2 q-4 -4 -2 -10" stroke-width="1"/>
+    <path d="M118 194 H138 V208 H118 Z" stroke-width="1.5"/>
+    <path d="M120 196 H136" stroke-width="0.8"/>
+    <path d="M123 208 V246 M133 208 V246" stroke-width="1.6"/>
+    <path d="M124 210 V244 M134 210 V244" stroke-width="0.8"/>
+    <path d="M121 246 l2 4 l2 -4 M131 246 l2 4 l2 -4" stroke-width="1.2"/>
+    <!-- buried drip pipe cross-section with emitter -->
+    <circle cx="290" cy="238" r="7" stroke-width="1.5"/>
+    <circle cx="290" cy="238" r="4" stroke-width="0.8"/>
+    <path d="M290 245 v6 M286 254 q4 4 8 0 M283 260 q7 6 14 0" stroke-width="0.9"/>
+    <!-- post: front face + side face -->
+    <path d="M186 206 V74 H214 V206" stroke-width="1.9"/>
+    <path d="M188 204 V76 H212" stroke-width="0.9"/>
+    <path d="M214 74 L226 68 V200 L214 206" stroke-width="1.6"/>
+    <path d="M216 76 L224 71 V198 L216 203 Z" fill="url(#m0602-hatch)" stroke="none"/>
+    <path d="M190 100 q4 -2 8 0 M192 180 q6 -3 12 0 M194 128 q5 -2 10 0" stroke-width="0.7"/>
+    <!-- little pitched roof cap -->
+    <path d="M172 76 L200 50 L228 76" stroke-width="2"/>
+    <path d="M174 79 L200 54 L226 79" stroke-width="1"/>
+    <path d="M228 76 L240 70 L212 44 L200 50" stroke-width="1.6"/>
+    <path d="M226 72 L236 67 L212 47 Z" fill="url(#m0602-hatch)" stroke="none"/>
+    <path d="M182 68 L200 52 M192 60 L212 46" stroke-width="0.7"/>
+    <!-- bracket + tipping-bucket rain gauge on the right -->
+    <path d="M226 92 H262 M226 92 l14 -12 M262 92 v-4" stroke-width="1.3"/>
+    <path d="M244 60 v28 h28 v-28" stroke-width="1.6"/>
+    <path d="M246 62 v24 h24" stroke-width="0.8"/>
+    <ellipse cx="258" cy="60" rx="14" ry="3.5" stroke-width="1.5"/>
+    <path d="M247 63 L258 78 L269 63" stroke-width="1.1"/>
+    <path d="M258 78 v4 M252 84 l6 -2 l6 2" stroke-width="1"/>
+    <path d="M262 64 q4 8 6 20 q-2 -2 -6 0 Z" fill="url(#m0602-hatch)" stroke="none"/>
+    <!-- rain drops into the funnel -->
+    <path d="M250 36 v6 M258 30 v6 M266 40 v6 M254 46 v4 M262 50 v4" stroke-width="0.9"/>
+    <!-- indicator LED with glow ticks -->
+    <circle cx="200" cy="112" r="3.2" stroke-width="1.3"/>
+    <path d="M200 104 v-3 M207 106 l2 -2 M193 106 l-2 -2 M208 112 h3 M192 112 h-3" stroke-width="0.8"/>
+    <!-- big button -->
+    <circle cx="200" cy="146" r="10" stroke-width="1.8"/>
+    <circle cx="200" cy="146" r="6.5" stroke-width="1"/>
+    <path d="M194 150 q6 4 12 0" stroke-width="0.7"/>
+    <path d="M192 150 q6 8 16 3 q-8 3 -16 -3 Z" fill="url(#m0602-hatch)" stroke="none"/>
+    <!-- label plate -->
+    <path d="M190 164 H210 V172 H190 Z" stroke-width="1.1"/>
+    <path d="M193 168 h14" stroke-width="0.7"/>
+    <!-- cable from post to the probe (above ground bit hidden inside the post) -->
+    <!-- grass on the surface -->
+    <path d="M96 202 q1.5 -8 4.2 -14 M99 202 q1.5 -8 5.0 -14 M101 202 q1.5 -8 5.8 -14 M140 203 q1.5 -9 4.2 -16 M142 203 q1.5 -9 5.0 -16 M115 206 q1.5 -6 4.2 -11 M118 206 q1.5 -6 5.0 -11 M120 206 q1.5 -6 5.8 -11 M125 201 q1.5 -7 4.2 -13 M127 201 q1.5 -7 5.0 -13 M110 201 q1.5 -7 4.2 -12 M113 201 q1.5 -7 5.0 -12 M115 201 q1.5 -7 5.8 -12 M75 201 q1.5 -8 4.2 -14 M78 201 q1.5 -8 5.0 -14 M46 201 q1.5 -7 4.2 -12 M48 201 q1.5 -7 5.0 -12 M51 201 q1.5 -7 5.8 -12 M54 205 q1.5 -5 4.2 -8 M57 205 q1.5 -5 5.0 -8 M93 200 q1.5 -7 4.2 -12 M95 200 q1.5 -7 5.0 -12 M98 200 q1.5 -7 5.8 -12 M72 202 q1.5 -6 4.2 -11 M75 202 q1.5 -6 5.0 -11 M54 204 q1.5 -8 4.2 -15 M57 204 q1.5 -8 5.0 -15 M43 203 q1.5 -7 4.2 -13 M45 203 q1.5 -7 5.0 -13 M58 202 q1.5 -7 4.2 -12 M61 202 q1.5 -7 5.0 -12 M86 203 q1.5 -9 4.2 -16 M89 203 q1.5 -9 5.0 -16" stroke-width="0.9"/>
+    <path d="M332 203 q1.5 -6 4.2 -11 M335 203 q1.5 -6 5.0 -11 M326 204 q1.5 -7 4.2 -13 M329 204 q1.5 -7 5.0 -13 M331 204 q1.5 -7 5.8 -13 M332 203 q1.5 -7 4.2 -12 M335 203 q1.5 -7 5.0 -12 M337 203 q1.5 -7 5.8 -12 M273 201 q1.5 -8 4.2 -15 M276 201 q1.5 -8 5.0 -15 M278 201 q1.5 -8 5.8 -15 M330 201 q1.5 -5 4.2 -8 M333 201 q1.5 -5 5.0 -8 M254 204 q1.5 -8 4.2 -15 M257 204 q1.5 -8 5.0 -15 M324 201 q1.5 -7 4.2 -12 M326 201 q1.5 -7 5.0 -12 M249 200 q1.5 -7 4.2 -12 M252 200 q1.5 -7 5.0 -12 M254 200 q1.5 -7 5.8 -12 M300 200 q1.5 -5 4.2 -9 M303 200 q1.5 -5 5.0 -9 M305 200 q1.5 -5 5.8 -9 M329 204 q1.5 -5 4.2 -9 M332 204 q1.5 -5 5.0 -9 M293 199 q1.5 -9 4.2 -16 M295 199 q1.5 -9 5.0 -16 M298 199 q1.5 -9 5.8 -16 M308 202 q1.5 -9 4.2 -15 M310 202 q1.5 -9 5.0 -15 M313 202 q1.5 -9 5.8 -15" stroke-width="0.9"/>
+    <!-- a couple of far-off tufts beyond the block -->
+    <path d="M370 200 l2 -8 l2 8 M378 201 l2 -6 M18 204 l2 -8 l2 8 M26 205 l2 -6" stroke-width="0.9"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0602</text>
+</svg>
+</div><div><i>0602</i><b>自动浇灌</b><p>土壤、雨量、水位三个传感器开会决定要不要浇，我只负责看结果。</p></div></a>
+    
+      <a class="link-card" href="../modules/0603.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0603-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0603-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0603-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0603-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground line -->
+    <path d="M14 236 Q120 231 220 235 T392 232" stroke-width="1.2"/>
+    <!-- eave with gutter, top-left -->
+    <path d="M10 34 L156 56" stroke-width="2"/>
+    <path d="M10 38 L154 60" stroke-width="1"/>
+    <path d="M10 50 L152 72 q6 2 4 6 L10 56" stroke-width="1.5"/>
+    <path d="M12 52 L150 74" stroke-width="0.8"/>
+    <path d="M20 36 l-2 10 M50 40 l-2 10 M80 45 l-2 10 M110 49 l-2 10 M140 54 l-2 10" stroke-width="0.8"/>
+    <path d="M12 26 q40 6 70 12 M60 20 q40 6 80 14" stroke-width="0.8"/>
+    <!-- rain -->
+    <path d="M30 14 v6 M52 10 v6 M76 18 v6 M100 12 v6 M120 22 v6 M160 30 v6 M180 20 v6 M210 40 v6 M240 24 v6 M270 46 v6 M300 30 v6 M330 44 v6 M360 26 v6 M380 50 v6 M170 60 v6 M320 70 v6 M370 90 v6 M40 80 v6 M60 110 v6 M90 100 v6 M20 150 v6 M50 170 v6 M100 140 v6 M230 70 v6 M350 120 v6" stroke-width="0.8"/>
+    <!-- downspout -->
+    <path d="M144 78 V104 M156 76 V104" stroke-width="1.6"/>
+    <path d="M146 80 V102" stroke-width="0.8"/>
+    <!-- T splitter: branch to tank filter, continue down to first-flush bucket -->
+    <path d="M144 104 H138 V116 H144 M156 104 H162 V116 H156" stroke-width="1.4"/>
+    <path d="M162 106 H236 M162 114 H236" stroke-width="1.4"/>
+    <path d="M144 116 V152 M156 116 V152" stroke-width="1.6"/>
+    <!-- first-flush bucket (small barrel) -->
+    <ellipse cx="150" cy="154" rx="16" ry="4" stroke-width="1.5"/>
+    <path d="M134 154 V190 q16 6 32 0 V154" stroke-width="1.6"/>
+    <path d="M136 156 V188" stroke-width="0.8"/>
+    <path d="M134 170 q16 5 32 0 M134 181 q16 5 32 0" stroke-width="0.9"/>
+    <path d="M158 158 q5 16 5 30 q-5 3 -7 -2 q0 -16 2 -28 Z" fill="url(#m0603-hatch)" stroke="none"/>
+    <path d="M150 194 v4 M150 202 v3 M147 210 q3 3 6 0" stroke-width="0.9"/>
+    <path d="M122 172 h12" stroke-width="1"/>
+    <path d="M114 174 q-4 -6 4 -8 q6 0 6 6 Z" stroke-width="1"/>
+    <!-- horizontal 1500L tank on brick base -->
+    <ellipse cx="204" cy="158" rx="18" ry="52" stroke-width="1.8"/>
+    <path d="M204 106 H340 q24 0 24 52 q0 52 -24 52 H204" stroke-width="1.9"/>
+    <path d="M206 108 H338 q22 2 22 50" stroke-width="0.9"/>
+    <path d="M222 116 H336 M222 200 H336" stroke-width="0.8"/>
+    <path d="M208 146 H230 M208 170 H230" stroke-width="0.7"/>
+    <path d="M300 110 q32 4 46 24 q6 24 0 48 q-14 20 -46 22 q20 -16 22 -46 q-2 -32 -22 -48 Z" fill="url(#m0603-hatch)" stroke="none"/>
+    <!-- filter basket on top of the tank -->
+    <path d="M236 92 H262 V108 H236 Z" stroke-width="1.5"/>
+    <ellipse cx="249" cy="90" rx="15" ry="3.5" stroke-width="1.4"/>
+    <path d="M238 97 h22 M238 102 h22 M242 93 v13 M249 93 v13 M256 93 v13" stroke-width="0.6"/>
+    <!-- level tube with float and marks -->
+    <path d="M188 114 H180 V202 H188" stroke-width="1"/>
+    <path d="M182 116 V200 M186 116 V200" stroke-width="1.3"/>
+    <path d="M176 124 h4 M176 140 h4 M176 156 h4 M176 172 h4 M176 188 h4" stroke-width="0.9"/>
+    <circle cx="184" cy="150" r="2.6" stroke-width="1.2"/>
+    <path d="M182 153 V200" stroke-width="0.6"/>
+    <!-- brick base -->
+    <path d="M206 210 H346 V230 H206 Z" stroke-width="1.6"/>
+    <path d="M206 220 H346" stroke-width="0.9"/>
+    <path d="M218 210 v10 M242 210 v10 M230 220 v10 M254 220 v10" stroke-width="0.8"/>
+    <!-- wooden lattice screen in front of the right half -->
+    <path d="M262 80 H378 V232 H262 Z" fill="#fff" stroke="none"/>
+    <path d="M262 80 H378 V232 H262 Z" stroke-width="1.9"/>
+    <path d="M264 82 H376 V230" stroke-width="0.9"/>
+    <path d="M274 82 V230 M286 82 V230 M298 82 V186 M310 82 V186 M322 82 V230 M334 82 V230 M346 82 V230 M358 82 V230 M370 82 V230" stroke-width="1"/>
+    <path d="M262 96 H378 M262 156 H378" stroke-width="1.3"/>
+    <path d="M264 98 q30 -2 56 0" stroke-width="0.7"/>
+    <path d="M276 90 q2 30 0 60 M348 110 q2 40 0 80" stroke-width="0.6"/>
+    <!-- access door at the bottom of the screen -->
+    <path d="M294 186 H318 V230 H294 Z" stroke-width="1.6"/>
+    <path d="M296 188 H316 V228" stroke-width="0.9"/>
+    <path d="M298 190 L314 226 M314 190 L298 226" stroke-width="0.8"/>
+    <circle cx="312" cy="210" r="1.6" stroke-width="1"/>
+    <path d="M294 192 h3 M294 222 h3" stroke-width="1.2"/>
+    <!-- clematis on top of the screen -->
+    <path d="M300 80 q-6 -10 6 -12 q8 -6 14 2 q10 -8 14 4 q10 -2 6 8" stroke-width="1.1"/>
+    <path d="M304 74 q3 -5 8 -3 M320 70 q3 -5 8 -2 M340 78 l-4 -8 l6 2" stroke-width="0.9"/>
+    <path d="M316 80 q-2 -12 4 -20 M330 80 q4 -10 2 -16" stroke-width="0.8"/>
+    <!-- gravel drain channel at the foot, to the left -->
+    <path d="M24 236 q6 -3 10 0 q6 -3 10 0 M50 238 q5 -3 9 0 M70 236 q6 -3 10 0 q5 -3 9 0 M100 238 q5 -3 9 0" stroke-width="0.9"/>
+    <path d="M14 244 q60 -4 110 -2" stroke-width="0.9"/>
+    <path d="M379 233 q1.5 -6 4.2 -11 M382 233 q1.5 -6 5.0 -11 M386 233 q1.5 -6 4.2 -11 M389 233 q1.5 -6 5.0 -11 M391 233 q1.5 -6 5.8 -11 M385 231 q1.5 -5 4.2 -9 M388 231 q1.5 -5 5.0 -9 M390 231 q1.5 -5 5.8 -9" stroke-width="0.9"/>
+    <path d="M190 235 q1.2 -6 3.2 -11 M192 235 q1.2 -6 4.0 -11 M195 235 q1.2 -6 4.8 -11 M126 237 q1.2 -6 3.2 -12 M128 237 q1.2 -6 4.0 -12 M123 239 q1.2 -4 3.2 -7 M125 239 q1.2 -4 4.0 -7 M128 239 q1.2 -4 4.8 -7 M178 236 q1.2 -7 3.2 -12 M180 236 q1.2 -7 4.0 -12 M145 235 q1.2 -4 3.2 -8 M147 235 q1.2 -4 4.0 -8 M155 235 q1.2 -6 3.2 -11 M158 235 q1.2 -6 4.0 -11" stroke-width="0.9"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0603</text>
+</svg>
+</div><div><i>0603</i><b>雨水存储过滤</b><p>一只藏在木格栅后面的大水罐，接住屋顶每一滴雨，脏的先扔掉，干净的留下来。</p></div></a>
+    
+      <a class="link-card" href="../modules/0211.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0211-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0211-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0211-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0211-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room shell -->
+    <path d="M70 44 H330 V212 H70 Z" stroke-width="1.8"/>
+    <path d="M72 46 H328 V210" stroke-width="0.9"/>
+    <path d="M70 44 L18 12 M330 44 L382 12" stroke-width="1.5"/>
+    <path d="M70 212 L18 262 M330 212 L382 262" stroke-width="1.5"/>
+    <path d="M18 262 Q200 258 382 262" stroke-width="1.2"/>
+    <path d="M20 14 L68 46 V210 L20 260 Z" fill="url(#m0211-hatch)" stroke="none"/>
+    <path d="M332 46 L380 14 V260 L332 210 Z" fill="url(#m0211-hatch)" stroke="none"/>
+
+    <!-- centre: tall portrait screen -->
+    <path d="M156 52 H244 V196 H156 Z" fill="#fff" stroke="none"/>
+    <path d="M156 52 H244 V196 H156 Z" stroke-width="2.2"/>
+    <path d="M158 54 H242 V194" stroke-width="1"/>
+    <path d="M162 58 H238 V190 H162 Z" stroke-width="0.8"/>
+    <!-- isometric house on screen: cabin + bunker below + a few module dots -->
+    <path d="M200 74 l24 12 l-24 12 l-24 -12 Z" stroke-width="1"/>
+    <path d="M176 86 v14 l24 12 v-14 M224 86 v14 l-24 12 v-14" stroke-width="1"/>
+    <path d="M186 72 l14 -10 l14 10 M200 62 v12" stroke-width="0.9"/>
+    <path d="M200 112 v6 M180 124 l20 -10 l20 10 l-20 10 Z M180 124 v10 l20 10 v-10 M220 124 v10 l-20 10 v-10" stroke-width="0.9"/>
+    <path d="M232 100 q8 -6 4 -14 M234 116 q6 6 2 14" stroke-width="0.7"/>
+    <circle cx="192" cy="82" r="1.8" stroke-width="0.8"/>
+    <circle cx="210" cy="92" r="1.8" stroke-width="0.8"/>
+    <circle cx="200" cy="128" r="1.8" stroke-width="0.8"/>
+    <circle cx="200" cy="128" r="4" stroke-width="0.5"/>
+    <path d="M168 86 h6 M168 96 h6 M168 106 h6" stroke-width="0.7"/>
+    <!-- curves below the map -->
+    <path d="M166 150 H234 M166 150 V136" stroke-width="0.7"/>
+    <path d="M168 148 q10 -12 20 -6 t18 -4 t20 6 t8 -8" stroke-width="1"/>
+    <path d="M166 184 H234 M166 184 V162" stroke-width="0.7"/>
+    <path d="M170 184 v-10 h4 v10 M178 184 v-16 h4 v16 M186 184 v-8 h4 v8 M194 184 v-14 h4 v14 M202 184 v-18 h4 v18 M210 184 v-6 h4 v6 M218 184 v-12 h4 v12 M226 184 v-9 h4 v9" stroke-width="0.7"/>
+    <path d="M166 158 h30" stroke-width="0.6"/>
+
+    <!-- left small screen: light / temperature curves -->
+    <path d="M88 92 H148 V136 H88 Z" fill="#fff" stroke="none"/>
+    <path d="M88 92 H148 V136 H88 Z" stroke-width="1.7"/>
+    <path d="M90 94 H146 V134" stroke-width="0.8"/>
+    <path d="M94 128 H142 M94 128 V98" stroke-width="0.6"/>
+    <path d="M94 124 q10 -22 24 -20 q14 2 22 14" stroke-width="1"/>
+    <path d="M94 116 q12 6 24 0 q12 -6 22 2" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <path d="M118 136 v6 M108 142 h20" stroke-width="1.2"/>
+    <!-- right small screen: water / power bars + tank gauge -->
+    <path d="M252 92 H312 V136 H252 Z" fill="#fff" stroke="none"/>
+    <path d="M252 92 H312 V136 H252 Z" stroke-width="1.7"/>
+    <path d="M254 94 H310 V134" stroke-width="0.8"/>
+    <path d="M258 128 H278 M258 128 V98" stroke-width="0.6"/>
+    <path d="M260 128 v-12 h4 v12 M266 128 v-20 h4 v20 M272 128 v-8 h4 v8" stroke-width="0.7"/>
+    <path d="M288 100 h16 v28 h-16 Z" stroke-width="0.9"/>
+    <path d="M289 112 h14 v15 h-14 Z" fill="url(#m0211-hatch)" stroke="none"/>
+    <path d="M286 110 q10 -3 20 0" stroke-width="0.6"/>
+    <path d="M282 136 v6 M272 142 h20" stroke-width="1.2"/>
+
+    <!-- panel with physical toggle switches under the screens -->
+    <path d="M140 202 H260 V212 H140 Z" stroke-width="1.5"/>
+    <path d="M142 204 H258" stroke-width="0.7"/>
+    <path d="M140 202 V190 H260 V202" stroke-width="1.3"/>
+    <circle cx="154" cy="196" r="3" stroke-width="1"/>
+    <path d="M154 196 l0 -6" stroke-width="1.3"/>
+    <circle cx="172" cy="196" r="3" stroke-width="1"/>
+    <path d="M172 196 l2 -6" stroke-width="1.3"/>
+    <circle cx="190" cy="196" r="3" stroke-width="1"/>
+    <path d="M190 196 l-2 -6" stroke-width="1.3"/>
+    <circle cx="208" cy="196" r="3" stroke-width="1"/>
+    <path d="M208 196 l0 -6" stroke-width="1.3"/>
+    <circle cx="226" cy="196" r="3" stroke-width="1"/>
+    <path d="M226 196 l2 -6" stroke-width="1.3"/>
+    <circle cx="246" cy="196" r="4" stroke-width="1.2"/>
+    <circle cx="246" cy="196" r="1.5" stroke-width="0.8"/>
+    <path d="M148 208 h8 M166 208 h8 M184 208 h8 M202 208 h8 M220 208 h8" stroke-width="0.5"/>
+    <!-- small host + UPS on the floor under the panel -->
+    <path d="M232 212 v-0" stroke-width="0.6"/>
+    <path d="M268 212 V232 H304 V212" stroke-width="1.3"/>
+    <path d="M272 218 h20 M272 224 h14" stroke-width="0.7"/>
+    <circle cx="298" cy="218" r="1.5" stroke-width="0.8"/>
+    <path d="M300 96 v-0" stroke-width="0.6"/>
+    <!-- cable duct up the wall -->
+    <path d="M250 212 q0 -14 -6 -16" stroke-width="0.7"/>
+
+    <!-- person standing with a mug, seen from behind -->
+    <circle cx="112" cy="160" r="10" stroke-width="1.6"/>
+    <path d="M112 170 V178" stroke-width="1.6"/>
+    <path d="M94 258 V196 q0 -18 18 -18 q18 0 18 18 V258" fill="#fff" stroke="none"/>
+    <path d="M94 258 V196 q0 -18 18 -18 q18 0 18 18 V258" stroke-width="1.6"/>
+    <path d="M96 256 V198 q0 -14 16 -16" stroke-width="0.8"/>
+    <path d="M94 200 L84 222 L92 222 M130 200 L138 214 L134 220" stroke-width="1.5"/>
+    <path d="M130 220 q4 -4 8 -2" stroke-width="1.2"/>
+    <path d="M134 210 v-8 h9 v8 Z M143 204 q5 0 3 4" stroke-width="1.1"/>
+    <path d="M136 200 q-2 -6 2 -8 M140 200 q-2 -6 2 -8" stroke-width="0.6"/>
+    <path d="M100 258 v10 M124 258 v10 M96 268 h10 M120 268 h10" stroke-width="1.5"/>
+    <path d="M96 236 H128" stroke-width="0.6"/>
+    <!-- floor shadow under the person -->
+    <path d="M86 272 q26 -4 54 0" stroke-width="0.7"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0211</text>
+</svg>
+</div><div><i>0211</i><b>全屋中枢</b><p>一整面数据墙，七个区域的温度、水位、光照、鱼缸都在上面跳动。</p></div></a>
+    </div></section>
+
+  <nav class="pager">
+    <a href="../modules/0503.html">← 0503 盆栽</a>
+    <a class="up" href="../areas/05.html">回到 庭院</a>
+    <a href="../modules/0505.html">0505 电摩充电桩 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>
