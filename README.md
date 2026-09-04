@@ -14,6 +14,7 @@ illos/      每模块一张速写 NNNN.svg + 每区域一张全景 area-0X.svg�
 build.py    生成器：data + illos -> docs/
 docs/       生成出来的静态站点（GitHub Pages 从 main 分支 /docs 发布）
 render.py   把若干 SVG 拼成一张 PNG 预览图，方便检查插图
+data/refs-0X.json  每模块的 GitHub 成熟方案 + 小红书关键词（规范见 REFS_BRIEF.md），build.py 会合并进模块页并生成 docs/refs.html
 ```
 
 ## 本地重新生成

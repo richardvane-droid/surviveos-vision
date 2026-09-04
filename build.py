@@ -37,7 +37,7 @@ def real_status(mid):
 
 # ---------- load ----------
 modules, by_id = [], {}
-for f in sorted(glob.glob(str(ROOT / "data" / "*.json"))):
+for f in sorted(glob.glob(str(ROOT / "data" / "0?.json"))):
     for m in json.load(open(f, encoding="utf-8")):
         m["area"] = m["id"][:2]
         m["status"], m["status_note"] = real_status(m["id"])
@@ -53,6 +53,21 @@ for i, m in enumerate(modules):
     m["prev"] = modules[i-1] if i > 0 else None
     m["next"] = modules[i+1] if i < len(modules)-1 else None
     m["linked"] = [by_id[x] for x in m["links"] if x in by_id]
+from urllib.parse import quote
+refs_by_id = {}
+for f in sorted(glob.glob(str(ROOT / "data" / "refs-*.json"))):
+    for r in json.load(open(f, encoding="utf-8")): refs_by_id[r["id"]] = r
+for m in modules:
+    r = refs_by_id.get(m["id"], {"github": [], "xhs": []})
+    m["github"] = r["github"]
+    m["xhs"] = [{**x, "url": "https://www.xiaohongshu.com/search_result?keyword=" + quote(x["keyword"]) + "&source=web_explore_feed"} for x in r["xhs"]]
+repo_index = {}
+for m in modules:
+    for g in m["github"]:
+        e = repo_index.setdefault(g["name"], {**g, "used_by": []})
+        e["used_by"].append(m)
+repo_list = sorted(repo_index.values(), key=lambda e: -float(e["stars"].lower().replace("k", "e3").replace(",", "")) if e["stars"][:1].isdigit() else 0)
+refs_stats = {"repos": len(repo_index), "links": sum(len(m["github"]) for m in modules), "xhs": sum(len(m["xhs"]) for m in modules)}
 all_tags = {}
 for m in modules:
     for t in m["tags"]: all_tags[t] = all_tags.get(t, 0) + 1
@@ -86,6 +101,7 @@ BASE = r"""<!doctype html>
   <a class="wordmark" href="{{ root }}index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     {% for a in areas.values() %}<a href="{{ root }}areas/{{ a.id }}.html" {% if area and area.id == a.id %}class="on"{% endif %}><i>{{ a.id }}</i>{{ a.name }}</a>{% endfor %}
+    <a href="{{ root }}refs.html" class="about {% if page == 'refs' %}on{% endif %}">参考索引</a>
     <a href="{{ root }}about.html" class="about {% if page == 'about' %}on{% endif %}">关于</a>
   </nav>
 </header>
@@ -227,6 +243,22 @@ MODULE = r"""{% extends "base" %}{% block title %}{{ m.id }} {{ m.name }}{% endb
 
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>{{ m.budget }}</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
+  {% if m.github %}<section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
+    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
+    <div class="gh-list">{% for g in m.github %}
+      <a class="gh" href="{{ g.url }}" target="_blank" rel="noopener">
+        <div class="gh-head"><b>{{ g.name }}</b><span class="stars">★ {{ g.stars }}</span></div>
+        <p class="gh-desc">{{ g.desc }}</p>
+        <p class="gh-why">→ {{ g.why }}</p>
+      </a>{% endfor %}
+    </div></section>{% endif %}
+
+  {% if m.xhs %}<section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
+    <p class="tiny">点关键词直接跳到小红书站内搜索（需登录小红书），看热门帖里的实拍效果。</p>
+    <div class="xhs-list">{% for x in m.xhs %}
+      <a class="xhs" href="{{ x.url }}" target="_blank" rel="noopener"><span class="kw">🔍 {{ x.keyword }}</span><span class="xnote">{{ x.note }}</span></a>{% endfor %}
+    </div></section>{% endif %}
+
   {% if m.linked %}<section class="blk"><h2><em>🔗</em> 联动模块</h2>
     <div class="link-grid">{% for l in m.linked %}
       <a class="link-card" href="{{ root }}modules/{{ l.id }}.html"><div class="thumb">{{ l.svg_inline|safe }}</div><div><i>{{ l.id }}</i><b>{{ l.name }}</b><p>{{ l.tagline }}</p></div></a>
@@ -255,12 +287,37 @@ ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endbloc
     <p class="scene">标题带钩子、短句、口语、适量 emoji；正文固定五段：沉浸式想象 → 设想方案清单 → 小红书灵感点 → 避坑提醒 → 预算幻想。灵感点里反复出现的"适我主义""精神角落 / 精神领地 / 逃避间""痛屋""家的丰容计划""去家务化 / 动线""动手主义""和植物一起住""观鸟"等，来自小红书 2026 年度居住趋势和热门话题。</p></section>
   <section class="blk"><h2><em>③</em> 插图是统一风格的黑白钢笔速写</h2>
     <p class="scene">全站 {{ stats.modules }} 张模块速写 + 7 张区域全景都是原创的 inline SVG：只有一种墨色，阴影全部用 45° 排线，轮廓"描两遍"，线条经过轻微的扰动滤镜制造手绘感，右下角是编号签名。没有任何外部图片，页面在离线状态也能完整显示。</p></section>
-  <section class="blk"><h2><em>④</em> 怎么用它</h2>
+  <section class="blk"><h2><em>④</em> 每页附了真实的参考链接</h2>
+    <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 2～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），每个都在 2026-09 打开核实过、星数取自当时页面；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见<a href="{{ root }}refs.html">参考索引</a>。</p></section>
+  <section class="blk"><h2><em>⑤</em> 怎么用它</h2>
     <ol class="plan">
       <li><span class="box"></span><span>开某个模块的真实设计对话前，先看一眼它的设想页，把"想要的感觉"带进去。</span></li>
       <li><span class="box"></span><span>家人朋友逛完在微信里说"这个我想要 / 这个算了"，比看方案文档快得多。</span></li>
       <li><span class="box"></span><span>真实模块跨阶段时不需要改这个站——它就是一次性的完整形态快照，和真实进度是两条线。</span></li>
     </ol></section>
+  <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><span></span></nav>
+</article>
+{% endblock %}"""
+
+REFS = r"""{% extends "base" %}{% block title %}参考索引{% endblock %}
+{% block body %}
+<nav class="crumb"><a href="{{ root }}index.html">首页</a> › <span>参考索引</span></nav>
+<article class="mod about">
+  <header class="mod-head">
+    <p class="kicker">全站引用</p>
+    <h1>{{ refs_stats.repos }} 个开源项目，{{ refs_stats.xhs }} 组小红书关键词</h1>
+    <p class="lede">{{ stats.modules }} 个模块专题页里引用的 GitHub 项目汇总（按星数排序，去重），每个都在 2026-09 打开核实过存在。点模块编号回到对应专题页看“为什么用它”。小红书关键词在各模块页里。</p>
+  </header>
+  <section class="blk">
+    <div class="repo-table">{% for e in repo_list %}
+      <div class="repo-row">
+        <a class="rname" href="{{ e.url }}" target="_blank" rel="noopener">{{ e.name }}</a>
+        <span class="stars">★ {{ e.stars }}</span>
+        <span class="rdesc">{{ e.desc }}</span>
+        <span class="rused">{% for m in e.used_by %}<a href="{{ root }}modules/{{ m.id }}.html" title="{{ m.name }}">{{ m.id }}</a>{% endfor %}</span>
+      </div>{% endfor %}
+    </div>
+  </section>
   <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><span></span></nav>
 </article>
 {% endblock %}"""
@@ -381,6 +438,27 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .link-card:hover{box-shadow:3px 3px 0 var(--ink)}
 .link-card b{display:block;font-family:"Noto Serif SC",serif}
 .link-card p{margin:2px 0 0;color:var(--ink3);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gh-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.gh{display:block;border:1.6px solid var(--line);border-radius:200px 12px 180px 12px/12px 180px 12px 200px;padding:10px 14px;background:rgba(255,255,255,.4);font-size:.88rem}
+.gh:hover{box-shadow:3px 3px 0 var(--ink)}
+.gh-head{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.gh-head b{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85rem;word-break:break-all}
+.stars{font-size:.78rem;color:var(--red);white-space:nowrap}
+.gh-desc{margin:6px 0 4px;color:var(--ink2);line-height:1.5}
+.gh-why{margin:0;color:var(--ink);line-height:1.5}
+.xhs-list{display:flex;flex-direction:column;gap:8px}
+.xhs{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;border-bottom:1px dotted rgba(28,28,28,.3);padding:6px 0}
+.xhs .kw{font-weight:700;color:var(--red);white-space:nowrap}
+.xhs .xnote{color:var(--ink2);font-size:.9rem}
+.xhs:hover .kw{border-bottom:1.5px solid var(--red)}
+.repo-table{display:flex;flex-direction:column}
+.repo-row{display:grid;grid-template-columns:230px 60px 1fr 150px;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px dotted rgba(28,28,28,.3);font-size:.88rem}
+.repo-row .rname{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.82rem;word-break:break-all;border-bottom:1px solid transparent}
+.repo-row .rname:hover{border-bottom-color:var(--red)}
+.repo-row .rdesc{color:var(--ink2)}
+.repo-row .rused a{font-family:ui-monospace,monospace;font-size:.78rem;color:var(--ink3);margin-right:6px}
+.repo-row .rused a:hover{color:var(--red)}
+@media (max-width:820px){.repo-row{grid-template-columns:1fr 60px;}.repo-row .rdesc,.repo-row .rused{grid-column:1/-1}}
 .pager{display:flex;justify-content:space-between;gap:12px;padding:26px 0 10px;font-size:.92rem;border-top:1.6px solid var(--line);margin-top:26px}
 .pager a{border-bottom:1.5px solid transparent;white-space:nowrap}.pager a:hover{border-bottom-color:var(--red)}
 .pager .up{font-family:"Long Cang",cursive;font-size:1.15rem;color:var(--red)}
@@ -400,7 +478,7 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#f5f0e6"/><path d="M5 26 L16 7 L27 26 Z" fill="none" stroke="#1c1c1c" stroke-width="2.4" stroke-linejoin="round"/><path d="M12 26 V19 H20 V26" fill="none" stroke="#1c1c1c" stroke-width="2"/></svg>"""
 
-env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT}),
+env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS}),
                   autoescape=select_autoescape(default=True))
 
 # ---------- build ----------
@@ -408,10 +486,11 @@ if DIST.exists(): shutil.rmtree(DIST)
 (DIST / "areas").mkdir(parents=True); (DIST / "modules").mkdir()
 for m in modules: m["svg_inline"] = inline_svg(m["svg"], "sk-art")
 for a in AREAS.values(): a["svg_inline"] = inline_svg(a["svg"], "sk-art")
-ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None)
+ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, refs_stats=refs_stats)
 
 (DIST / "index.html").write_text(env.get_template("index").render(root="", **ctx), encoding="utf-8")
 (DIST / "about.html").write_text(env.get_template("about").render(root="", **{**ctx, "page": "about"}), encoding="utf-8")
+(DIST / "refs.html").write_text(env.get_template("refs").render(root="", **{**ctx, "page": "refs"}), encoding="utf-8")
 alist = list(AREAS.values())
 for i, a in enumerate(alist):
     (DIST / "areas" / f"{a['id']}.html").write_text(env.get_template("area").render(
@@ -423,7 +502,7 @@ for m in modules:
 (DIST / "favicon.svg").write_text(FAVICON, encoding="utf-8")
 (DIST / ".nojekyll").write_text("")
 # sitemap
-urls = ["index.html", "about.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules]
+urls = ["index.html", "about.html", "refs.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules]
 (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     "".join(f"<url><loc>{SITE_URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
 print(f"built {len(urls)} pages -> {DIST}")
