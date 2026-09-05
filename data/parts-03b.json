@@ -1,0 +1,425 @@
+[
+ {
+  "id": "0302",
+  "parts": [
+   {
+    "k": 1,
+    "kind": "hw",
+    "name": "斜墙松木挂板墙",
+    "intro": "把阁楼那面斜顶墙钉满横向松木条，做成一整面可以随处挂东西的“挂板墙”。原理和户外店的陈列墙一样：木条之间留 3cm 缝，S 钩和挂杆随插随换，登山包按 20L、38L、65L 由小到大排开，一眼看全。斜墙的受力顺着龙骨传到屋架，比单颗膨胀螺丝稳得多；松木本身透气，潮气未干的背包挂上去也不闷。",
+    "points": [
+     "松木条 60×20mm，间距 30mm，龙骨打进屋架",
+     "大号不锈钢 S 钩，单钩承重不低于 10kg",
+     "三只登山包由小到大排，登山杖、水袋挂下排",
+     "整面墙可拆卸，换钩位不留洞"
+    ],
+    "github": []
+   },
+   {
+    "k": 2,
+    "kind": "hw",
+    "name": "睡袋格子柜与整备区",
+    "intro": "阁楼矮墙处一排 30×30cm 的木格子柜，睡袋和防潮垫卷成圆筒立着放，像酒窖里的酒瓶。这样设计是因为睡袋长期压缩会失去蓬松度，松卷立放既省地方又不掉保暖性。最下面一排做成斜格放登山鞋，鞋头朝外方便拿，旁边共用一台小烘鞋器。柜前留 1 米宽的地垫做整备区：装备回来先在这里晾干再上墙，每样东西只有一个家。",
+    "points": [
+     "格子 30×30×40cm，每格贴标签，格满即停",
+     "睡袋松卷立放，不压缩，保蓬松",
+     "底排斜格放登山鞋，鞋头朝外接烘鞋器",
+     "1 米宽整备地垫，先晾干再上墙"
+    ],
+    "github": []
+   },
+   {
+    "k": 3,
+    "kind": "logic",
+    "name": "出发清单核对器",
+    "intro": "解决“出门总忘带东西”的问题。把墙上的手写出发清单搬进自部署的 LighterPack，日徒步、两日露营、钓鱼三条线各存一份。出发前手机选线路，系统列出应带清单并算出背包总重；每个格子和收纳箱在 Homebox 里是一个“位置”，贴二维码，扫一下就知道气罐还剩几罐。空格子就是忘带的东西，勾完即可出发。",
+    "points": [
+     "触发：手机选“日徒步 / 两日露营 / 钓鱼”",
+     "出口：应带清单 + 背包总重 + 缺件提示",
+     "气罐、电池等耗材低于阈值提前提醒补货",
+     "兜底：墙上手写板同步一份，断网也能核对"
+    ],
+    "impl": "用 galenmaly/lighterpack 存三条线路清单和重量，sysadminsmedia/homebox 管格子库存与二维码",
+    "github": [
+     {
+      "name": "galenmaly/lighterpack",
+      "url": "https://github.com/galenmaly/lighterpack"
+     },
+     {
+      "name": "sysadminsmedia/homebox",
+      "url": "https://github.com/sysadminsmedia/homebox"
+     }
+    ]
+   },
+   {
+    "k": 4,
+    "kind": "logic",
+    "name": "装备湿度看护",
+    "intro": "阁楼夏天热、梅雨季潮，睡袋和登山包最怕发霉。一颗温湿度传感器接 ESP32 跑 ESPHome，每分钟把格子柜里的温湿度送进 HomeAssistant。湿度连续 10 分钟超过 70% 就推送提醒，并自动打开烘鞋器和除湿盒的小风扇；温度超过 35℃ 则提醒把气罐移到阴凉处。数据每天画成曲线，看得出哪几天最该通风。",
+    "points": [
+     "阈值：湿度 >70% 持续 10 分钟触发",
+     "动作：推送 + 打开烘鞋器 / 除湿风扇 30 分钟",
+     "温度 >35℃ 提醒转移气罐",
+     "兜底：传感器掉线 1 小时发离线告警"
+    ],
+    "impl": "用 esphome/esphome 的 sht3xd 组件上报温湿度，HomeAssistant 自动化做阈值判断和插座联动",
+    "github": [
+     {
+      "name": "esphome/esphome",
+      "url": "https://github.com/esphome/esphome"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "0303",
+  "parts": [
+   {
+    "k": 1,
+    "kind": "hw",
+    "name": "常驻双人帐篷总成",
+    "intro": "一顶 2 米 × 2.2 米的双人帐篷搭在阁楼最高处，门朝天窗，永远不拆。思路是把露营的“睡眠系统”原样搬进屋：底层 3cm 泡沫拼接地垫隔凉隔震，中间 5cm 自充气垫承托身体，最上层是羽绒睡袋。室内不用防风防雨，所以只搭轻量铝杆内帐，外帐省掉，天窗的光和雨声直接透进来。侧面网兜放书和耳机，门口小地毯做分界。",
+    "points": [
+     "帐篷 200×220cm，铝杆内帐，不挂外帐",
+     "地垫 3cm 泡沫 + 5cm 自充气垫，两层缓冲",
+     "门正对天窗，选阁楼最高处避免撞头",
+     "侧网兜放书和耳机，门口地毯 + 拖鞋"
+    ],
+    "github": []
+   },
+   {
+    "k": 2,
+    "kind": "hw",
+    "name": "5V 帐篷灯光组",
+    "intro": "帐篷里所有灯都走 5V USB，不用 220V，安全第一。5 米暖黄串灯换成 WS2812 可寻址灯带，由一块 ESP32 刷 WLED 固件控制，手机上调色调亮度，还能做“星空闪烁”和“呼吸”效果；顶部一盏圆形露营灯做主光，最低档就是夜灯。整组灯从光伏储能的 USB 口取电，功率不到 10W，一晚上用不到 0.05 度电。",
+    "points": [
+     "WS2812 灯带 5 米 + ESP32 刷 WLED",
+     "露营灯 USB 充电款，三档亮度可调",
+     "整组灯功率 <10W，全部从储能 USB 口取电",
+     "灯带沿帐篷顶内侧走，磁吸挂钩固定"
+    ],
+    "github": [
+     {
+      "name": "Aircoookie/WLED",
+      "url": "https://github.com/Aircoookie/WLED"
+     }
+    ]
+   },
+   {
+    "k": 3,
+    "kind": "hw",
+    "name": "天窗电动遮光帘",
+    "intro": "天窗遮光帘不用买智能款，用一颗 28BYJ-48 步进电机加几件 3D 打印的支架和卷轴接头，就能把普通卷帘改成 HomeAssistant 里的 cover 实体。ESP32 跑 ESPHome，记住上下两个端点，早上 7 点自动卷起让阳光进帐篷，雨天由气象站联动关上。电机功率很小，从储能的 USB 口取电就够，断电时还能手拉。",
+    "points": [
+     "28BYJ-48 步进电机 + ULN2003 驱动板",
+     "3D 打印卷轴接头和电机支架，由 0305 打印",
+     "ESPHome cover 实体，记忆开 / 关两端点",
+     "手拉备用：断电时可手动卷帘"
+    ],
+    "github": [
+     {
+      "name": "RoadkillUK/Motor-on-a-Roller-Blind-for-ESPHOME",
+      "url": "https://github.com/RoadkillUK/Motor-on-a-Roller-Blind-for-ESPHOME"
+     }
+    ]
+   },
+   {
+    "k": 4,
+    "kind": "logic",
+    "name": "帐篷场景调度器",
+    "intro": "把帐篷区的灯、帘、声音串成几个“场景”，由 HomeAssistant 按时间和天气自动切换。早上 7 点：天窗帘卷起、串灯关闭；晚上 10 点：串灯调到暖黄 20%、露营灯夜灯档；收到 0306 的下雨事件：帘关上、白噪音机播雨声混篝火；梅雨季湿度高时切除湿模式。每个场景是一组实体状态，一键覆盖，随时能手动打断。",
+    "points": [
+     "触发：时间点 / 0306 下雨事件 / 人进帐篷",
+     "四个场景：晨起 · 夜读 · 雨夜 · 梅雨",
+     "动作：WLED 灯效 + 天窗帘 + moodist 音景",
+     "兜底：手动开关优先，30 秒无响应回退默认"
+    ],
+    "impl": "HA scene 编排：灯效调 Aircoookie/WLED 的 JSON API，音景开 remvze/moodist 预设，帘走 ESPHome cover",
+    "github": [
+     {
+      "name": "Aircoookie/WLED",
+      "url": "https://github.com/Aircoookie/WLED"
+     },
+     {
+      "name": "remvze/moodist",
+      "url": "https://github.com/remvze/moodist"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "0304",
+  "parts": [
+   {
+    "k": 1,
+    "kind": "hw",
+    "name": "屋顶光伏阵列",
+    "intro": "屋顶南坡贴装 4 块 400W 单晶光伏板，总功率 1.6kW。用铝合金导轨顺着斜顶走，夹具卡在瓦面挂钩上，不打穿瓦片，靠挂钩和自重固定。四块板串联后经一根 6mm² 光伏专用线穿过屋顶下到阁楼，穿孔处用防水穿线套加密封胶，这是最容易漏水的地方。板下留 10cm 空气层散热，因为板温越高发电效率越低。",
+    "points": [
+     "4 × 400W 单晶板，串联后开路电压约 160V",
+     "铝合金导轨 + 瓦面挂钩，不破坏瓦面",
+     "6mm² 光伏线 + MC4 接头，穿顶处防水套",
+     "板下留 10cm 散热空隙，晴天日发电 3～5 度"
+    ],
+    "github": []
+   },
+   {
+    "k": 2,
+    "kind": "hw",
+    "name": "储能主机与备用电池架",
+    "intro": "阁楼靠墙角落放一台 2kWh 户外储能电源，内置 MPPT 控制器，光伏线直接插输入口，输出口给阁楼所有低压设备供电。旁边自焊一个木架子，放两块备用磷酸铁锂电池，每块配一片 JK 保护板（BMS），用魔术贴固定，块间留 10cm 散热间隙。储能电源离斜顶至少 50cm，因为温度超过 40℃ 它会自动降速充电。",
+    "points": [
+     "2kWh 储能，内置 MPPT，光伏输入 ≤ 500W",
+     "备用 LiFePO4 2 × 100Ah，各配 JK BMS",
+     "木架留 10cm 间隙，离斜顶 ≥ 50cm",
+     "USB / 12V / 220V 三种输出口按优先级分配"
+    ],
+    "github": [
+     {
+      "name": "syssi/esphome-jk-bms",
+      "url": "https://github.com/syssi/esphome-jk-bms"
+     }
+    ]
+   },
+   {
+    "k": 3,
+    "kind": "hw",
+    "name": "监测与安全面板",
+    "intro": "墙上一块小木板集中放三样东西：一块复古指针电流表，串在储能输出主线上，指针抖动就说明有电在流；一块小屏幕显示当前发电功率和剩余电量；还有一枚独立烟感。面板下方紧挨着放一罐二氧化碳灭火器。指针表是纯物理的，不依赖任何网络和程序，是一个“肉眼可信”的兜底；小屏幕的数据则来自 HomeAssistant。",
+    "points": [
+     "指针电流表 0～30A，串分流器在主线上",
+     "小屏幕显示发电 / 剩余，数据来自 HA",
+     "独立烟感 + CO₂ 灭火器紧挨储能",
+     "面板离储能 30cm，方便伸手拔线"
+    ],
+    "github": []
+   },
+   {
+    "k": 4,
+    "kind": "logic",
+    "name": "充放电与负载调度器",
+    "intro": "储能电量有限，谁先用电要有规矩。HomeAssistant 读到储能的 SOC（剩余电量百分比）和光伏输入功率，按优先级开关输出口：帐篷串灯 > 气象站 > 3D 打印机待机 > 楼下充电。SOC 高于 80% 全开；降到 50% 关楼下充电；30% 关打印机待机；低于 20% 只留串灯和气象站，并推送“今晚省着用”。白天光伏输入大于负载时逐级恢复。",
+    "points": [
+     "输入：SOC、光伏输入功率、各口负载功率",
+     "阈值：80/50/30/20% 四级，回升 10% 才恢复",
+     "动作：按优先级开关储能输出口或智能插座",
+     "出口：每日发电量推送 0211 中枢大屏"
+    ],
+    "impl": "用 tolwi/hassio-ecoflow-cloud 读 SOC 和输入功率并切输出口，HA 自动化按四级阈值调度",
+    "github": [
+     {
+      "name": "tolwi/hassio-ecoflow-cloud",
+      "url": "https://github.com/tolwi/hassio-ecoflow-cloud"
+     }
+    ]
+   },
+   {
+    "k": 5,
+    "kind": "logic",
+    "name": "电池健康看护",
+    "intro": "备用磷酸铁锂电池每一节的电压和温度，由保护板 BMS 实时测量。一块 ESP32 通过串口读 JK BMS，或用 batmon 加载项走蓝牙，把单体电压、压差、温度、循环次数送进 HomeAssistant。压差超过 50mV 说明要均衡，温度超过 45℃ 立刻推送并切断充电，冬天低于 0℃ 也禁止充电。每月自动出一份电池健康报告。",
+    "points": [
+     "输入：单体电压、压差、温度、循环次数",
+     "阈值：压差 >50mV 均衡；>45℃ 或 <0℃ 停充",
+     "动作：推送 + 切断充电继电器",
+     "兜底：BMS 硬件保护独立于软件之外"
+    ],
+    "impl": "用 syssi/esphome-jk-bms 串口读 JK 保护板，或 fl4p/batmon-ha 走蓝牙，HA 做阈值告警和切充电",
+    "github": [
+     {
+      "name": "syssi/esphome-jk-bms",
+      "url": "https://github.com/syssi/esphome-jk-bms"
+     },
+     {
+      "name": "fl4p/batmon-ha",
+      "url": "https://github.com/fl4p/batmon-ha"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "0305",
+  "parts": [
+   {
+    "k": 1,
+    "kind": "hw",
+    "name": "打印机矮柜与减震",
+    "intro": "拓竹 P1S 是一台四面封闭的桌面打印机，放在斜顶下一张 60×60cm 的实木矮柜上。矮柜内放工具、备用喷头、胶水和刮刀，柜面铺一块 2cm 的橡胶减震垫，打印机的高速运动就不会传到阁楼木地板上共振。矮柜高 50cm，正好让人蹲着看清打印仓；四脚用可调脚垫找平，因为打印机水平与否直接影响首层附着。",
+    "points": [
+     "矮柜 60×60×50cm 实木，四脚可调找平",
+     "2cm 橡胶减震垫，隔断振动传导",
+     "柜内放工具、备用喷头、耗材干燥剂",
+     "打印机离斜顶 ≥ 30cm，留顶盖开启空间"
+    ],
+    "github": []
+   },
+   {
+    "k": 2,
+    "kind": "hw",
+    "name": "排风系统",
+    "intro": "打印 PLA 味道不大，但 ABS、PETG 会散发微粒和气味，在阁楼这种小空间会闷一整天。在 P1S 顶盖后方开一个 100mm 排风口，接铝箔排风管顺斜顶走到天窗边的排气口，管路中段装一台 12V 静音管道风扇。风扇由 HomeAssistant 控制，打印开始自动开、结束后再抽 10 分钟。管里加一片活性炭滤棉，冬天关天窗也不闷。",
+    "points": [
+     "100mm 铝箔排风管 + 12V 静音管道风扇",
+     "排气口在天窗边，加防虫网和防雨罩",
+     "打印开始联动开风扇，结束后延时 10 分钟",
+     "活性炭滤棉，每 3 个月换一片"
+    ],
+    "github": [
+     {
+      "name": "greghesp/ha-bambulab",
+      "url": "https://github.com/greghesp/ha-bambulab"
+     }
+    ]
+   },
+   {
+    "k": 3,
+    "kind": "hw",
+    "name": "八格耗材架",
+    "intro": "柜旁一个八格的耗材架，每格立放一卷 PLA，按颜色排开：木色、黑、白、绿……本身就是装饰。PLA 吸潮后打印会出气泡和拉丝，阁楼温差大更容易吸潮，所以每格是一个带盖的密封筒，里面放一小包干燥剂和一张湿度卡。每卷贴一张标签，写颜色、材质和剩余克数，格子满了就不再买，八卷就是耗材预算。",
+    "points": [
+     "8 个密封筒，每筒放干燥剂 + 湿度卡",
+     "标签：颜色 / 材质 / 剩余克数 / 开封日期",
+     "湿度卡 >20% 换干燥剂或进烘干箱",
+     "格满即停：八卷是耗材预算上限"
+    ],
+    "github": []
+   },
+   {
+    "k": 4,
+    "kind": "logic",
+    "name": "打印任务队列",
+    "intro": "地堡 0204 工作台用 OrcaSlicer 切好模型，局域网直接推给阁楼的 P1S，不用来回跑。任务进入一个队列，按优先级排序：全屋小配件（挂钩、标牌）> 玩具 > 试验件。HomeAssistant 读打印机状态：空闲时自动发队列头部的任务，开始、结束、失败各推一条通知，摄像头随时看层数。失败时暂停队列，人工清理平台后再继续。",
+    "points": [
+     "触发：打印机空闲且队列非空",
+     "优先级：配件 > 玩具 > 试验件，同级先进先出",
+     "出口：开始 / 结束 / 失败推送 + 摄像头快照",
+     "兜底：失败自动暂停队列，人工确认后继续"
+    ],
+    "impl": "OrcaSlicer/OrcaSlicer 局域网直发 P1S，greghesp/ha-bambulab 读状态和摄像头，HA 管队列",
+    "github": [
+     {
+      "name": "OrcaSlicer/OrcaSlicer",
+      "url": "https://github.com/OrcaSlicer/OrcaSlicer"
+     },
+     {
+      "name": "greghesp/ha-bambulab",
+      "url": "https://github.com/greghesp/ha-bambulab"
+     }
+    ]
+   },
+   {
+    "k": 5,
+    "kind": "logic",
+    "name": "耗材管理",
+    "intro": "八卷 PLA 每卷登记进自托管的 Spoolman：颜色、材质、初始重量、开封日期。每次打印结束，切片文件里的预计用量自动从对应卷扣减，标签上的“剩余克数”不用再手写。剩余低于 150g 推送提醒补货；库存超过八卷就提示“先用完再买”。打印机 AMS 槽位状态也读进来，换卷时自动匹配是哪一卷。",
+    "points": [
+     "输入：每卷初始重量 + 每次打印预计用量",
+     "阈值：剩余 <150g 提醒补货；库存 >8 卷提示停买",
+     "出口：Spoolman 网页看板 + HA 推送",
+     "兜底：每月称重一次校准数据"
+    ],
+    "impl": "用 Donkie/Spoolman 记每卷剩余克数，greghesp/ha-bambulab 读 AMS 槽位和用量回写扣减",
+    "github": [
+     {
+      "name": "Donkie/Spoolman",
+      "url": "https://github.com/Donkie/Spoolman"
+     },
+     {
+      "name": "greghesp/ha-bambulab",
+      "url": "https://github.com/greghesp/ha-bambulab"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "0306",
+  "parts": [
+   {
+    "k": 1,
+    "kind": "hw",
+    "name": "气象杆与传感器三件套",
+    "intro": "天窗旁伸出一根 1.5 米的铝合金杆，顶端装风杯（测风速）、风向标（测风向）和翻斗式雨量筒（每翻一次约 0.28mm 雨）。杆子中段挂一个百叶盒，里面是温湿度气压传感器，百叶结构让空气流通又挡住太阳直晒，否则温度会虚高。杆底是一个铰链底座，台风天从天窗伸手就能放倒。杆子要离开屋脊，屋顶挡风会让风速数据失真。",
+    "points": [
+     "风杯 + 风向标 + 翻斗雨量筒，杆顶高 1.5m",
+     "百叶盒内 BME280，测温湿压",
+     "铰链底座 + 插销，台风天可放倒",
+     "离屋脊 ≥ 1m，避免屋顶挡风"
+    ],
+    "github": [
+     {
+      "name": "hugokernel/esphome-weather-station",
+      "url": "https://github.com/hugokernel/esphome-weather-station"
+     }
+    ]
+   },
+   {
+    "k": 2,
+    "kind": "hw",
+    "name": "墨水屏天气面板",
+    "intro": "阁楼墙上一块 7.5 寸黑白墨水屏，由一块 ESP32 驱动，显示当前温湿度、气压、风速和过去 24 小时的曲线。墨水屏只有刷新时耗电，静态画面不用电，一天刷新几十次，一节 18650 电池能撑几个月。屏幕装在木框里，正面没有按键，极简。数据从 HomeAssistant 拉取，屏上留一行给降雨预警文字。",
+    "points": [
+     "7.5 寸 800×480 墨水屏 + ESP32 驱动板",
+     "每 10 分钟刷新一次，其余时间深度睡眠",
+     "显示：当前值 + 24 小时曲线 + 预警行",
+     "木框壁挂，数据来自 HA 模板实体"
+    ],
+    "github": [
+     {
+      "name": "Madelena/esphome-weatherman-dashboard",
+      "url": "https://github.com/Madelena/esphome-weatherman-dashboard"
+     }
+    ]
+   },
+   {
+    "k": 3,
+    "kind": "logic",
+    "name": "降雨预警器",
+    "intro": "手机天气 APP 报的是全城的雨，气压计感受到的是你家头顶这片云。逻辑很简单：3 小时内气压下降超过 3hPa、湿度同时升到 80% 以上，就是雨要来了。这是航海时代的 Zambretti 预报法，本地算，不用联网。预警一触发，HomeAssistant 就暂停 0602 草地浇灌、关上天窗帘，并推送“收衣服”提醒。雨量筒真的翻斗了，再确认“已下雨”。",
+    "points": [
+     "触发：3 小时气压降 >3hPa 且湿度 >80%",
+     "动作：暂停浇灌 + 关天窗帘 + 推送收衣服",
+     "雨量筒翻斗确认落雨，误报自动统计",
+     "兜底：连续 2 次误报则阈值自动收紧"
+    ],
+    "impl": "移植 3KUdelta/Solar_WiFi_Weather_Station 的 Zambretti 算法到 HA 模板传感器，联动浇灌和帘",
+    "github": [
+     {
+      "name": "3KUdelta/Solar_WiFi_Weather_Station",
+      "url": "https://github.com/3KUdelta/Solar_WiFi_Weather_Station"
+     },
+     {
+      "name": "hugokernel/esphome-weather-station",
+      "url": "https://github.com/hugokernel/esphome-weather-station"
+     }
+    ]
+   },
+   {
+    "k": 4,
+    "kind": "logic",
+    "name": "数据上报与年度气候图",
+    "intro": "气象杆上所有传感器由一块 ESP32 跑 ESPHome，每 30 秒把一组读数送进 HomeAssistant。HA 默认只留 10 天历史，所以再把数据写进 InfluxDB 时序数据库长期保存，按天聚合出最高最低温、总雨量、主导风向。年底自动生成一张“我家的一年气候图”，推到 0211 大屏。传感器掉线 10 分钟告警，雨量筒一周没翻斗提醒清落叶。",
+    "points": [
+     "频率：30 秒一组读数，10 分钟聚合一次",
+     "存储：HA 短期 10 天 + InfluxDB 长期",
+     "出口：墨水屏 + 0211 大屏年度气候图",
+     "兜底：掉线 10 分钟告警，雨量筒一周不动提醒清理"
+    ],
+    "impl": "抄 hugokernel/esphome-weather-station 的 YAML 采集，HA influxdb 集成写入 influxdata/influxdb",
+    "github": [
+     {
+      "name": "hugokernel/esphome-weather-station",
+      "url": "https://github.com/hugokernel/esphome-weather-station"
+     },
+     {
+      "name": "influxdata/influxdb",
+      "url": "https://github.com/influxdata/influxdb"
+     }
+    ]
+   }
+  ]
+ }
+]

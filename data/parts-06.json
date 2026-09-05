@@ -1,0 +1,320 @@
+[
+ {
+  "id": "0601",
+  "parts": [
+   {
+    "k": 1,
+    "kind": "hw",
+    "name": "地埋滴灌草原植床",
+    "intro": "草原带不是铺草皮，而是一块按层做出来的“植床”。最底下是原土掺粗砂的排水层，梅雨季芒草根不泡水全靠它；往上 15cm 埋一圈带内嵌滴头的滴灌管，水直接渗到根区，表面一滴不飞；再上是种植土，细叶芒、狼尾草、蓝羊茅按比例混播；最表面盖一层蒲席草，压籽保湿，也遮住出土口。整床没有一条直线，但每株的位置都在图纸上。",
+    "points": [
+     "排水层：原土掺三成粗砂，翻深 30cm",
+     "滴灌管埋深 15cm，滴头间距 30cm，流量 1.6L/h",
+     "混播比例：细叶芒 5 · 狼尾草 3 · 蓝羊茅 2",
+     "蓝羊茅怕涝，垫高 5cm 种"
+    ],
+    "github": [
+     {
+      "name": "openfarmcc/OpenFarm",
+      "url": "https://github.com/openfarmcc/OpenFarm"
+     }
+    ]
+   },
+   {
+    "k": 2,
+    "kind": "hw",
+    "name": "疏林带朴树护根圈",
+    "intro": "疏林带只种 3 棵朴树和 1 棵乌桕，间距 4m 以上，故意挑歪脖子苗，草原感全靠这几棵树的姿态。每棵树根部做一个“护根圈”：树穴底垫碎石排水，根球用三角木桩撑住，歪着长也不倒；滴灌管在这里露出唯一的 3cm 出土口，环根球绕一圈；上面铺 8cm 厚碎树皮，保湿压草，二月割下的草秆也垫在这里。树皮慢慢腐烂就是肥。",
+    "points": [
+     "树穴 80cm 见方，底垫 10cm 碎石排水",
+     "三角木桩支撑，麻绳绑扎，两年后拆",
+     "滴灌出土口只露 3cm，环管绕根球一圈",
+     "碎树皮护根圈直径 1m、厚 8cm，每年补一次"
+    ],
+    "github": [
+     {
+      "name": "cofade/open-garden-planner",
+      "url": "https://github.com/cofade/open-garden-planner"
+     }
+    ]
+   },
+   {
+    "k": 3,
+    "kind": "hw",
+    "name": "碎石干河道与看草石",
+    "intro": "草地和庭院之间不立围栏，用一条 30cm 宽的碎石“干河道”分隔。这是枯山水里的老办法：挖 20cm 浅沟，铺防草布，先填粗砾再铺河卵石，平时是一条石头河，暴雨时真有水在石缝里流，把雨水罐溢流和草地积水一起排走。河道旁半埋一块 60×80cm 青石当“看草石”，旁边压一块桧木牌手写各分区植物名，这是整片草原唯一的坐标。",
+    "points": [
+     "沟宽 30cm 深 20cm，底铺防草布防泥沙上翻",
+     "粗砾垫层 10cm，面层 3~8cm 河卵石",
+     "青石 60×80cm，埋入三分之一，坐面朝草原",
+     "桧木名牌 15×25cm，烙印分区植物名"
+    ],
+    "github": []
+   },
+   {
+    "k": 4,
+    "kind": "logic",
+    "name": "分区养护日历",
+    "intro": "草原的麻烦不在活多，在于“什么时候该做哪件事”容易忘。这段逻辑把三个分区的植物档案（各自的割、补播、覆盖月份）和气候节点合在一起，按月生成养护任务：二月底连续 3 天无雨才贴地割草，梅雨前查干河道排水，六月野花补播，十一月补树皮。任务进 HomeAssistant 日历，到期推送手机，完成打勾，一年就是一本成长日志。",
+    "points": [
+     "输入：三区植物档案 + 当地气候节点",
+     "关键判断：割草前看未来 3 天无雨且气温 >5℃",
+     "出口：HA 日历 + 手机推送 + 完成打勾",
+     "兜底：桧木名牌背面手写全年月份表"
+    ],
+    "impl": "用 Ecohackerfarm/powerplant 的种植时间表建三区植物档案，任务写进 HA 本地日历按月推送",
+    "github": [
+     {
+      "name": "Ecohackerfarm/powerplant",
+      "url": "https://github.com/Ecohackerfarm/powerplant"
+     },
+     {
+      "name": "cofade/open-garden-planner",
+      "url": "https://github.com/cofade/open-garden-planner"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "0602",
+  "parts": [
+   {
+    "k": 1,
+    "kind": "hw",
+    "name": "桧木传感器杆总成",
+    "intro": "一米高的桧木杆是自动浇灌的大脑兼感官。8cm 方料桧木掏空走线，顶上做小斜屋顶防雨，屋顶下装翻斗雨量计：每翻一次斗记 0.2mm 雨。控制盒藏在杆内，装 ESP32 和三路继电器；杆面只露一颗指示灯和一颗大红按钮，按下就手动浇 5 分钟。杆脚的电容式土壤探针埋 15cm 深，正是草根最密的地方。",
+    "points": [
+     "桧木方料 8×8cm，高 1m，内部掏空 4cm 走线槽",
+     "翻斗雨量计 0.2mm/翻，离树 3m 以上",
+     "电容式探针埋深 15cm，每区一根，线缆穿波纹管",
+     "ESP32 + 三路 12V 继电器藏在杆内，IP54 盒"
+    ],
+    "github": [
+     {
+      "name": "lrswss/esp32-irrigation-automation",
+      "url": "https://github.com/lrswss/esp32-irrigation-automation"
+     }
+    ]
+   },
+   {
+    "k": 2,
+    "kind": "hw",
+    "name": "三路滴灌首部",
+    "intro": "“首部”是滴灌行业对水源接入总成的叫法。雨水罐的水先过球阀，进 120 目叠片过滤器滤掉碎屑和藻类，滴头只有 1.6mm 孔，堵一次就要挖地；再经减压阀把压力稳在 1bar，滴头出水才均匀；然后是三路 12V 电磁阀并排的歧管，分别通向三个分区。每路末端留快接口，冬天接气泵吹空防冻。",
+    "points": [
+     "120 目叠片过滤器，每月拆洗一次",
+     "减压阀出口 1.0bar，滴头流量才准",
+     "三路 12V 常闭电磁阀，断电即关",
+     "每路末端快接口，冬季排空防冻"
+    ],
+    "github": [
+     {
+      "name": "OpenSprinkler/OpenSprinkler-Firmware",
+      "url": "https://github.com/OpenSprinkler/OpenSprinkler-Firmware"
+     }
+    ]
+   },
+   {
+    "k": 3,
+    "kind": "logic",
+    "name": "三传感器灌溉判断",
+    "intro": "浇不浇由三个传感器“开会”决定。每天凌晨四点 ESP32 醒来，读三区含水率、雨量和罐水位，三个条件同时满足才开阀：含水率低于该区阈值（芒草 18%、朴树 25%、野花 22%）、未来 6 小时无雨、罐里有水。浇多久由 HomeAssistant 按前一天蒸散量算出各区需水量再折成分钟。白天绝不浇，除非按红按钮。",
+    "points": [
+     "触发：每天 04:00，窗口 04:00~06:00",
+     "阈值：芒草 18% · 朴树 25% · 野花 22%",
+     "时长：蒸散量折算，单区 5~15 分钟封顶",
+     "兜底：断网时用昨日时长；红按钮手动 5 分钟"
+    ],
+    "impl": "altmenorg/HAsmartirrigation 按蒸散量算各区分钟数，ESPHome 本地三条件判断开阀",
+    "github": [
+     {
+      "name": "altmenorg/HAsmartirrigation",
+      "url": "https://github.com/altmenorg/HAsmartirrigation"
+     },
+     {
+      "name": "OpenSprinkler/OpenSprinkler-Firmware",
+      "url": "https://github.com/OpenSprinkler/OpenSprinkler-Firmware"
+     }
+    ]
+   },
+   {
+    "k": 4,
+    "kind": "logic",
+    "name": "草地体检看板",
+    "intro": "浇了多少水、用的是雨水还是自来水，没人记一个月后就说不清。这段逻辑把每次开阀时长乘以该区滴头总流量，折算成升数写进 HomeAssistant 用水计量表，按水源分成雨水和自来水两笔账。看板上是三条含水率曲线、本周用水量和雨水占比，接进 0211 大屏。某区浇后含水率三天不回升，说明滴头可能堵了，看板标黄点提醒去挖。",
+    "points": [
+     "输入：阀开启时长 × 滴头总流量 + 当前水源",
+     "出口：HA 计量表 → 周用水量、雨水占比",
+     "曲线：三区含水率，7 天 / 30 天两档",
+     "告警：浇后 3 天含水率不回升，疑似堵头"
+    ],
+    "impl": "petergridge/Irrigation-V5 做多区面板，用水量由阀时长折算写入 HA utility_meter",
+    "github": [
+     {
+      "name": "petergridge/Irrigation-V5",
+      "url": "https://github.com/petergridge/Irrigation-V5"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "0603",
+  "parts": [
+   {
+    "k": 1,
+    "kind": "hw",
+    "name": "首雨弃流桶",
+    "intro": "一场雨的头两分钟，冲下来的是屋顶积了半个月的灰尘、鸟粪和落叶，这部分水不能进罐。首雨弃流桶就是拦住这一段的小机关：落水管先接进一只 20L 铁桶，脏水把桶灌满，桶里的浮球顶住进口，之后的干净雨水从三通翻进主罐。桶底钻一个 2mm 小孔慢慢排空，几小时后桶又空了，下一场雨照样能弃。整个装置没有电、没有阀，全靠水位和浮力。",
+    "points": [
+     "桶容 20L，约等于 50㎡ 屋顶前 2 分钟雨量",
+     "浮球封口，满桶后雨水自动转入主罐",
+     "桶底 2mm 慢排孔，3~4 小时排空",
+     "桶口粗滤网拦树叶，每季清一次"
+    ],
+    "github": []
+   },
+   {
+    "k": 2,
+    "kind": "hw",
+    "name": "1500L 卧式雨水罐组",
+    "intro": "主罐选墨绿色卧式 PE 罐，避光才不长绿藻。罐子架在 30cm 高的红砖基座上，让水面高过滴灌首部，靠重力出水。罐顶开一个 DN50 快开口，里面吊一只 300 目不锈钢滤篮，进罐的水再过一遍。罐身外接透明水位管，管里放红色浮子，刻度用马克笔手写。溢流口接碎石干河道，暴雨时看得见水在石缝里流。罐前立桧木格栅遮丑。",
+    "points": [
+     "1500L 卧式 PE 罐，墨绿避光，空罐 45kg",
+     "红砖基座 30cm，罐底高过首部 20cm",
+     "300 目滤篮 + DN50 快开口，梅雨前清淤",
+     "透明水位管 + 红浮子，手写 300~1500 刻度"
+    ],
+    "github": []
+   },
+   {
+    "k": 3,
+    "kind": "hw",
+    "name": "水位监测与补水接头",
+    "intro": "罐顶还有一颗一颗防水超声波探头朝下对着水面，测距离减一减就是水位。探头接一块 ESP32-C3 跑 ESPHome，每 10 分钟醒一次上报，其余时间深睡，小太阳能板就够养活。补水用一只 12V 自来水电磁阀，出口不插进罐里，而是悬在罐口上方留出“空气隔断”，落差至少 2.5 倍管径，罐里的水永远倒灌不回水管。",
+    "points": [
+     "JSN-SR04T 防水超声波，量程 0.25~4.5m",
+     "ESP32-C3 深睡眠，10 分钟上报一次",
+     "自来水 12V 常闭电磁阀，DN15",
+     "空气隔断落差 ≥ 2.5 倍管径，防倒灌"
+    ],
+    "github": [
+     {
+      "name": "kane5432/ESP32-Water-Level-Sensor",
+      "url": "https://github.com/kane5432/ESP32-Water-Level-Sensor"
+     },
+     {
+      "name": "tomsbasement/esp32-water-tank-sensor",
+      "url": "https://github.com/tomsbasement/esp32-water-tank-sensor"
+     }
+    ]
+   },
+   {
+    "k": 4,
+    "kind": "logic",
+    "name": "弃流与补位逻辑",
+    "intro": "它管两件事：下雨算清接了多少，不下雨保证罐不空。雨量计一有脉冲就进入“接雨”状态，前 2 分钟记为弃流不计，之后按屋顶面积乘降雨量估算进罐升数。平时每 10 分钟看一次水位：低于 20% 且未来 12 小时无雨才开自来水阀，补到 40% 就停。阀开 30 分钟还没到 40%，判定漏水，关阀报警。",
+    "points": [
+     "触发：雨量脉冲 / 每 10 分钟水位巡检",
+     "阈值：<20% 开补水，到 40% 停",
+     "兜底：补水超 30 分钟未达标即关阀报警",
+     "出口：HA 月度雨水占比 + 每场雨进罐升数"
+    ],
+    "impl": "kane5432/ESP32-Water-Level-Sensor 报水位，ESPHome 数雨量脉冲，HA 控补水阀",
+    "github": [
+     {
+      "name": "kane5432/ESP32-Water-Level-Sensor",
+      "url": "https://github.com/kane5432/ESP32-Water-Level-Sensor"
+     },
+     {
+      "name": "hugokernel/esphome-weather-station",
+      "url": "https://github.com/hugokernel/esphome-weather-station"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "0604",
+  "parts": [
+   {
+    "k": 1,
+    "kind": "hw",
+    "name": "双机观测杆",
+    "intro": "2.5m 热镀锌钢杆立在疏林带边，挂两只眼睛一只耳朵。杆顶是广角摄像头，朝西南拍整片草地，避开早上的逆光；中段是长焦摄像头，对准 3m 外的水盆和喂鸟器；杆身还绑一支带防风毛套的麦克风，给 BirdNET 听叫声。两机走 PoE，一根网线搞定。杆脚装 850nm 红外补光，人眼看不见，夜里刺猬照样能拍到。",
+    "points": [
+     "热镀锌钢杆 Φ60mm × 2.5m，混凝土基础 40cm",
+     "广角机 2.8mm 拍全景，长焦机 12mm 对水盆",
+     "两机 PoE 供电，一根网线进小主机",
+     "850nm 红外补光，不惊扰夜行动物"
+    ],
+    "github": [
+     {
+      "name": "blakeblackshear/frigate",
+      "url": "https://github.com/blakeblackshear/frigate"
+     }
+    ]
+   },
+   {
+    "k": 2,
+    "kind": "hw",
+    "name": "浅水盆与桧木喂鸟器",
+    "intro": "想让鸟来，先给水再给吃的。水盆用 40cm 直径的浅陶盆，深度不超过 5cm，小鸟才敢下脚；盆边斜放一块石头当踏板，盆底冬天垫一片 12V 加热垫，结冰的清晨也有水喝。喂鸟器是桧木做的小房子，托盘放葵花籽和苹果块，屋顶挡雨，四周敞开让鸟看得见有没有猫。两样都离灌木 2m 以上，野猫没处埋伏，而且都在长焦机的对焦距离上。",
+    "points": [
+     "陶盆 Φ40cm，水深 3~5cm，斜石踏板",
+     "12V 加热垫 10W，低于 2℃ 自动通电",
+     "桧木喂鸟器 20×20cm，托盘可抽出清洗",
+     "离灌木 2m 以上，离杆 3m 正对长焦"
+    ],
+    "github": []
+   },
+   {
+    "k": 3,
+    "kind": "logic",
+    "name": "来访者识别通知",
+    "intro": "长焦机的画面进小主机上的 Frigate，先做粗筛：画面里有动的东西，且被认成鸟、猫或人，才往下走，风吹草动直接丢掉。认出是鸟的截图交给 WhosAtMyFeeder，用鸟类分类模型判断是哪一种；同一时刻麦克风的声纹识别结果拿来交叉印证，图像和声音都说是白头鹎才算数。结果写进来访者名单，新物种推送手机，老熟客只记不推。",
+    "points": [
+     "触发：Frigate 检测到 bird / cat / person",
+     "阈值：图像置信度 >0.7，或声纹同时命中",
+     "出口：来访者名单 + 新物种推送 + 月度卡片",
+     "兜底：识别失败标“未知”，留图人工认"
+    ],
+    "impl": "Frigate 检出鸟交 mmcc-xx/WhosAtMyFeeder 分种，BirdNET-Pi 印证，推新物种",
+    "github": [
+     {
+      "name": "mmcc-xx/WhosAtMyFeeder",
+      "url": "https://github.com/mmcc-xx/WhosAtMyFeeder"
+     },
+     {
+      "name": "Nachtzuster/BirdNET-Pi",
+      "url": "https://github.com/Nachtzuster/BirdNET-Pi"
+     }
+    ]
+   },
+   {
+    "k": 4,
+    "kind": "logic",
+    "name": "草地延时合成",
+    "intro": "全景机每小时一张，一年 8,760 张，靠人整理不过来。这段逻辑让 HomeAssistant 整点调一次快照按日期存盘；夜里太黑的照片按亮度筛掉。每季度末自动跑一次 FFmpeg，把当季白天照片拼成每秒 24 帧的延时，一季浓缩成一分钟，四段接起来就是草地从绿到金再冒头的一整年。视频存 NAS，缩略图挂大屏。",
+    "points": [
+     "触发：每个整点快照，亮度 <15% 的丢弃",
+     "输出：季度延时 1 分钟，年度合集 4 分钟",
+     "存储：原图约 1.5GB / 季，NAS 保留 3 年",
+     "兜底：断电漏拍不补，时间轴按实际帧"
+    ],
+    "impl": "HA 整点调 camera.snapshot 存图，季度末用 FFmpeg/FFmpeg 拼成延时视频",
+    "github": [
+     {
+      "name": "FFmpeg/FFmpeg",
+      "url": "https://github.com/FFmpeg/FFmpeg"
+     },
+     {
+      "name": "home-assistant/core",
+      "url": "https://github.com/home-assistant/core"
+     }
+    ]
+   }
+  ]
+ }
+]
