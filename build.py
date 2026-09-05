@@ -145,7 +145,7 @@ INDEX = r"""{% extends "base" %}{% block title %}一座乡野生存系统，做�
       <div><b>{{ parts_stats.total }}</b><span>个核心拆解</span></div>
     </div>
     <p class="stamp-row"><span class="stamp">设想版 · 非真实进度</span><span class="hand">看看就好，别当施工图 ↗</span></p>
-    <a class="pref-entry" href="preface.html"><span class="pref-mark">序</span><span><b>{{ preface.title }}</b><small>这座园子为什么存在——先读这 500 字</small></span><span class="arrow">→</span></a>
+    <a class="pref-entry" href="preface.html"><span class="pref-mark">序</span><span><b>{{ preface.title }}</b><small>这座园子为什么存在——三千字的代序</small></span><span class="arrow">→</span></a>
   </div>
   <figure class="hero-art">{{ areas['01'].svg_inline|safe }}<figcaption>01 暖村木屋 · 区域速写</figcaption></figure>
 </section>
@@ -340,7 +340,10 @@ PREFACE = r"""{% extends "base" %}{% block title %}序 · {{ preface.title }}{% 
     <p class="epigraph">{{ preface.epigraph }}</p>
   </header>
   <div class="pref-body">
-    {% for p in preface.paragraphs %}<p{% if loop.first %} class="first"{% endif %}>{{ p }}</p>{% endfor %}
+    {% for sec in preface.sections %}
+    <h2 class="pref-h"><span>{{ sec.h }}</span></h2>
+    {% for p in sec.ps %}<p{% if loop.first and loop.index0 == 0 and sec == preface.sections[0] %} class="first"{% endif %}>{{ p }}</p>{% endfor %}
+    {% endfor %}
   </div>
   <p class="signoff"><span class="hand">{{ preface.signoff }}</span><span class="seal">序</span></p>
   <figure class="pref-art">{{ preface.svg_inline|safe }}<figcaption>那段对话的最后一个问题：三道门进去，人藏在最里面。</figcaption></figure>
@@ -594,6 +597,10 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .pref-body p{font-family:"Noto Serif SC","Songti SC",serif;font-size:1.08rem;line-height:2.05;margin:0 0 1.1em;text-indent:2em;color:var(--ink)}
 .pref-body p.first::first-letter{font-size:2.6em;font-weight:900;float:left;line-height:1;margin:6px 8px 0 0;font-family:"Noto Serif SC",serif}
 .pref-body p.first{text-indent:0}
+.pref-h{font-family:"Long Cang","Kaiti SC",cursive;font-weight:400;font-size:1.5rem;color:var(--red);margin:30px 0 10px;display:flex;align-items:center;gap:12px}
+.pref-h::before,.pref-h::after{content:"";flex:1;border-top:1px dashed rgba(28,28,28,.35)}
+.pref-h span{white-space:nowrap}
+.pref-h:first-child{margin-top:4px}
 .signoff{display:flex;justify-content:flex-end;align-items:center;gap:14px;margin:6px 0 30px;font-size:1.2rem}
 .seal{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:2px solid var(--red);color:var(--red);font-family:"Long Cang","Kaiti SC",cursive;font-size:1.5rem;border-radius:4px;transform:rotate(-6deg);opacity:.9}
 .pref-art{margin:0;border:1.6px solid var(--line);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;padding:10px 14px 4px;background:rgba(255,255,255,.4)}
