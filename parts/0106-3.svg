@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0106-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0106-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0106-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">烟温监测与补风提醒 · 流程图</text>
+  <g filter="url(#p0106-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <rect x="172" y="49" width="116" height="40" rx="6"/><rect x="174" y="51" width="112" height="36" rx="5" stroke-width="0.5"/><path d="M176 91 h112 v3 h-112 Z" fill="url(#p0106-3-shade)" stroke="none"/>
+    <path d="M85 128 l55 24 l-55 24 l-55 -24 Z"/><path d="M87 176 l53 -22 l4 2 l-55 24 Z" fill="url(#p0106-3-shade)" stroke="none"/>
+    <path d="M230 128 l55 24 l-55 24 l-55 -24 Z"/><path d="M232 176 l53 -22 l4 2 l-55 24 Z" fill="url(#p0106-3-shade)" stroke="none"/>
+    <path d="M390 128 l55 24 l-55 24 l-55 -24 Z"/><path d="M392 176 l53 -22 l4 2 l-55 24 Z" fill="url(#p0106-3-shade)" stroke="none"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/><rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M34 272 h106 v3 h-106 Z" fill="url(#p0106-3-shade)" stroke="none"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/><rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M179 272 h106 v3 h-106 Z" fill="url(#p0106-3-shade)" stroke="none"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/><rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 272 h116 v3 h-116 Z" fill="url(#p0106-3-shade)" stroke="none"/>
+    <rect x="155" y="312" width="150" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0106-3-arrow)" stroke-linecap="round">
+    <path d="M140 69 H170"/>
+    <path d="M230 89 V108 H85 V126"/>
+    <path d="M140 152 H173"/>
+    <path d="M285 152 H333"/>
+    <path d="M85 176 V228"/>
+    <path d="M230 176 V228"/>
+    <path d="M390 176 V228"/>
+    <path d="M85 270 V327 H153"/>
+    <path d="M230 270 V310"/>
+    <path d="M390 270 V327 H307"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每 10 秒读热电偶</text>
+    <text x="230" y="66">读烟管温度 T烟</text><text x="230" y="80">读对面墙室温 T室</text>
+    <text x="85" y="153">T烟 &lt; 120℃？</text><text x="85" y="166" font-size="8.5" fill="#666">柴湿/要熄</text>
+    <text x="230" y="153">T烟 &gt; 350℃？</text><text x="230" y="166" font-size="8.5" fill="#666">烧过头</text>
+    <text x="390" y="153">T室 &gt; 26℃？</text><text x="390" y="166" font-size="8.5" fill="#666">屋里太热</text>
+    <text x="85" y="247">是 → 提醒添柴</text><text x="85" y="261">或开大风门</text>
+    <text x="230" y="247">是 → 提醒</text><text x="230" y="261">关小风门</text>
+    <text x="390" y="247">是 → 提醒关风门</text><text x="390" y="261">室温回到 22℃</text>
+    <text x="230" y="331">HA 通知 + 蜂鸣器提醒</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="155" y="147">否</text><text x="300" y="147">否</text><text x="92" y="202">是</text><text x="237" y="202">是</text><text x="397" y="214">是</text><text x="400" y="190">否 → 等下一轮</text><text x="240" y="300">间隔 ≥ 10 分钟</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0106-3</text>
+</svg>

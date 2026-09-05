@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0205-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0205-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0205-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0205-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="60" y="282" width="100" height="34" stroke-width="1.5"/>
+    <path d="M60 282 l16 -9 h100 l-16 9" stroke-width="1.5"/>
+    <path d="M160 282 l16 -9 v34 l-16 9" stroke-width="1.5"/>
+    <path d="M161 283 l14 -8 v32 l-14 8 Z" fill="url(#p0205-1-shade)" stroke="none"/>
+    <rect x="62" y="284" width="96" height="30" stroke-width="0.5"/>
+    <path d="M110 284 v30 M84 300 h6 M120 300 h6" stroke-width="0.9"/>
+    <path d="M64 316 v6 M156 316 v6 M80 316 v6 M140 316 v6" stroke-width="1.2"/>
+    <rect x="140" y="226" width="70" height="24" stroke-width="1.4"/>
+    <path d="M140 226 l16 -9 h70 l-16 9" stroke-width="1.4"/>
+    <path d="M210 226 l16 -9 v24 l-16 9" stroke-width="1.4"/>
+    <path d="M211 227 l14 -8 v22 l-14 8 Z" fill="url(#p0205-1-shade)" stroke="none"/>
+    <path d="M163 226 v24 M186 226 v24" stroke-width="0.9"/>
+    <rect x="144" y="230" width="15" height="16" fill="url(#p0205-1-shade2)" stroke="none"/>
+    <path d="M167 232 h3 M172 236 h3 M168 240 h3 M176 242 h3 M180 234 h3" stroke-width="0.8"/>
+    <rect x="192" y="234" width="12" height="12" rx="2" stroke-width="1"/><circle cx="198" cy="240" r="3" stroke-width="0.8"/>
+    <path d="M198 234 v-14 l4 -2" stroke-width="0.9"/>
+    <rect x="190" y="158" width="110" height="44" stroke-width="1.5"/>
+    <path d="M190 158 l16 -9 h110 l-16 9" stroke-width="1.5"/>
+    <path d="M300 158 l16 -9 v44 l-16 9" stroke-width="1.5"/>
+    <path d="M193 168 q10 -4 20 0 t20 0 t20 0 t20 0 t18 0" stroke-width="0.8"/>
+    <path d="M206 199 l16 -9 h80" stroke-width="0.5"/>
+    <circle cx="282" cy="190" r="1.3" stroke-width="0.6"/><circle cx="286" cy="183" r="1.6" stroke-width="0.6"/><circle cx="283" cy="176" r="1.1" stroke-width="0.6"/>
+    <rect x="288" y="164" width="8" height="36" stroke-width="0.8"/><path d="M290 172 h4 M290 178 h4" stroke-width="0.6"/>
+    <path d="M198 196 l6 -30" stroke-width="0.5"/>
+    <path d="M262 130 l16 -9 h90 l-16 9 Z" stroke-width="1.3"/>
+    <path d="M264 128 l14 -8 h86" stroke-width="0.5"/>
+    <path d="M276 126 q6 -10 14 -14 q8 -4 10 -14 q2 -6 8 -6" stroke-width="1.5"/>
+    <path d="M280 124 q6 -8 12 -12 q6 -4 9 -12" stroke-width="0.7"/>
+    <path d="M308 92 q-6 -6 -12 -2 M308 92 q2 -8 8 -8 M308 92 q6 -4 10 2" stroke-width="0.9"/>
+    <ellipse cx="318" cy="124" rx="9" ry="5" stroke-width="1.1"/><ellipse cx="334" cy="120" rx="7" ry="4" stroke-width="1"/>
+    <path d="M312 122 q3 -3 6 -1 M320 123 q3 -3 6 -1" stroke-width="0.6"/>
+    <path d="M300 126 v-6 M304 127 v-8 M308 125 v-6 M344 122 v-7 M348 123 v-6 M352 120 v-7 M290 128 v-5" stroke-width="0.9"/>
+    <path d="M264 129 l14 -8 h86 v2 l-14 8 h-86 Z" fill="url(#p0205-1-shade)" stroke="none" opacity="0.6"/>
+    <rect x="322" y="66" width="68" height="10" stroke-width="1.4"/>
+    <path d="M322 66 l16 -9 h68 l-16 9" stroke-width="1.4"/>
+    <path d="M390 66 l16 -9 v10 l-16 9" stroke-width="1.4"/>
+    <path d="M391 67 l14 -8 v8 l-14 8 Z" fill="url(#p0205-1-shade)" stroke="none"/>
+    <path d="M332 80 v7 M346 80 v9 M360 80 v9 M374 80 v7" stroke-width="0.7"/>
+    <path d="M338 66 v-9 M374 66 v-9 M338 57 h36" stroke-width="0.9"/>
+    <path d="M326 70 h60" stroke-width="0.5"/>
+    <rect x="360" y="12" width="80" height="40" stroke-width="1.6"/>
+    <rect x="366" y="18" width="68" height="28" stroke-width="0.9"/>
+    <path d="M400 18 v28 M366 32 h68" stroke-width="1"/>
+    <path d="M362 14 q30 2 76 1 M362 49 q40 -2 76 0 M363 16 v34" stroke-width="0.5"/>
+    <path d="M360 52 h80 v3 h-80 Z" fill="url(#p0205-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M160 300 H206"/>
+    <path d="M140 238 H120"/>
+    <path d="M300 180 H330"/>
+    <path d="M262 118 H232"/>
+    <path d="M390 72 H420"/>
+    <path d="M440 32 H448"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="300" r="8"/>
+      <circle cx="110" cy="238" r="8"/>
+      <circle cx="340" cy="180" r="8"/>
+      <circle cx="222" cy="118" r="8"/>
+      <circle cx="430" cy="72" r="8"/>
+      <circle cx="458" cy="32" r="8"/>
+    </g>
+    <text x="216" y="303.5">1</text>
+    <text x="110" y="241.5">2</text>
+    <text x="340" y="183.5">3</text>
+    <text x="222" y="121.5">4</text>
+    <text x="430" y="75.5">5</text>
+    <text x="458" y="35.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">嵌墙缸体与过滤总成 · 爆炸图</text>
+    <text x="16" y="52">1 钢木底柜（独立承重）</text>
+    <text x="16" y="68">2 底滤仓：棉 → 陶瓷环 → 泵</text>
+    <text x="16" y="84">3 超白缸体 + 溢流管</text>
+    <text x="16" y="100">4 造景层：沉木 / 莫斯石 / 水草</text>
+    <text x="16" y="116">5 水草灯（PWM 调光）</text>
+    <text x="16" y="132">6 做旧木窗框</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0205-1</text>
+</svg>

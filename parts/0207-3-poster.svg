@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0207-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="24" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0207-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0207-3p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0207-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0207-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <rect x="46" y="176" width="44" height="52" rx="4" stroke-width="1.4"/><circle cx="68" cy="202" r="12" stroke-width="1.6"/><circle cx="68" cy="202" r="7" stroke-width="0.8"/><circle cx="68" cy="202" r="7" fill="url(#p0207-3p-shade)" stroke="none"/>
+    <circle cx="51" cy="181" r="1.2" stroke-width="0.6"/><circle cx="85" cy="181" r="1.2" stroke-width="0.6"/><circle cx="51" cy="223" r="1.2" stroke-width="0.6"/><circle cx="85" cy="223" r="1.2" stroke-width="0.6"/>
+    <path d="M136 176 a20 20 0 0 1 40 0" stroke-width="1.4"/><path d="M156 150 v-6 M142 158 l-4 -4 M170 158 l4 -4" stroke-width="1"/><path d="M130 176 h52" stroke-width="1.2"/>
+    <path d="M144 170 h24 M148 164 h16" stroke-width="0.5"/>
+    <rect x="186" y="150" width="14" height="10" rx="2" stroke-width="1.3"/><path d="M186 160 h14" stroke-width="0.6"/><path d="M192 160 v10 M188 170 h8" stroke-width="0.8"/>
+    <rect x="152" y="180" width="76" height="6" stroke-width="1.2"/><rect x="156" y="186" width="68" height="44" stroke-width="1.4"/><path d="M158 188 h64 v40 h-64 Z" stroke-width="0.4"/>
+    <path d="M190 194 v-6 M186 190 l4 -4 l4 4" stroke-width="0.9"/><path d="M160 232 h60" stroke-width="1.1"/>
+    <path d="M262 174 h30 l4 12 h-38 Z" stroke-width="1.4"/><path d="M277 186 v20 M270 206 h14" stroke-width="1.2"/><path d="M270 170 q7 -6 14 0" stroke-width="0.8"/>
+    <circle cx="300" cy="222" r="14" stroke-width="1.4"/><path d="M300 222 q-8 -8 0 -12 q8 4 0 12 q8 8 0 12 q-8 -4 0 -12 q-8 8 -12 0 q4 -8 12 0 q8 -8 12 0 q-4 8 -12 0" stroke-width="0.9"/>
+    <path d="M94 202 Q112 200 128 196" stroke-width="1" stroke-dasharray="3 3"/><path d="M232 196 Q246 196 260 196" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/><path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0207 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">观影场景</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">一个按钮，太阳落山，幕布落下</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">按钮 → 落日 90 秒 → 幕布 + 投影 → 夜灯 5% → 按播放状态回灯</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">0201 模拟阳光先落日，眼睛不会被突然的黑吓到</text>
+    <text x="64" y="366">暂停时灯光回到 20%，去倒咖啡不用摸黑</text>
+    <text x="64" y="396">新风保持静音档不停，两小时提醒通风一次</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HomeAssistant 场景 · 数据出口：Kodi 播放状态 / 0211 大屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：xbmc/xbmc · jellyfin/jellyfin</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0201-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0201-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0201-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0201-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 太阳弧 + 小太阳 -->
+    <path d="M70 128 Q180 84 290 128" stroke-width="1" stroke-dasharray="4 4"/>
+    <circle cx="180" cy="106" r="7" stroke-width="1.4"/>
+    <path d="M180 95 v-4 M180 117 v4 M169 106 h-4 M191 106 h4 M172 98 l-3 -3 M188 114 l3 3 M188 98 l3 -3 M172 114 l-3 3" stroke-width="1"/>
+    <!-- 滑轨 -->
+    <path d="M56 132 H304 M56 138 H304" stroke-width="1.5"/>
+    <path d="M60 132 v-6 M300 132 v-6 M180 132 v-6" stroke-width="1.2"/>
+    <path d="M58 135 H302" stroke-width="0.5" stroke-dasharray="1.5 2"/>
+    <!-- 三个位置的灯 -->
+    <rect x="70" y="140" width="22" height="14" rx="3" stroke-width="1.4"/>
+    <rect x="169" y="140" width="22" height="14" rx="3" stroke-width="1.4"/>
+    <rect x="268" y="140" width="22" height="14" rx="3" stroke-width="1.4"/>
+    <rect x="72" y="148" width="18" height="5" fill="url(#p0201-3p-shade)" stroke="none"/>
+    <rect x="171" y="148" width="18" height="5" fill="url(#p0201-3p-shade)" stroke="none"/>
+    <rect x="270" y="148" width="18" height="5" fill="url(#p0201-3p-shade)" stroke="none"/>
+    <!-- 光锥 -->
+    <path d="M76 154 L110 214 M88 154 L150 214" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <path d="M174 154 L156 214 M186 154 L204 214" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <path d="M272 154 L210 214 M284 154 L250 214" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <!-- 地面 -->
+    <path d="M40 216 Q180 210 320 216" stroke-width="1.2"/>
+    <path d="M60 216 v4 M180 216 v4 M300 216 v4" stroke-width="1"/>
+    <!-- 场景芯片 -->
+    <rect x="35" y="244" width="68" height="24" rx="4" stroke-width="1.1"/>
+    <rect x="109" y="244" width="68" height="24" rx="4" stroke-width="1.1"/>
+    <rect x="183" y="244" width="68" height="24" rx="4" stroke-width="1.1"/>
+    <rect x="257" y="244" width="68" height="24" rx="4" stroke-width="1.1"/>
+    <path d="M40 258 a5 5 0 0 1 10 0 Z" stroke-width="1"/>
+    <circle cx="119" cy="256" r="3.5" stroke-width="1"/><path d="M119 251 v-1.5 M119 261 v1.5 M114 256 h-1.5 M124 256 h1.5" stroke-width="0.8"/>
+    <path d="M188 258 a5 5 0 0 1 10 0 Z" stroke-width="1"/><path d="M187 258 h12" stroke-width="0.8"/>
+    <path d="M262 259 q0 -4 3 -4 q2 -3 5 -1 q3 -1 4 2 q3 1 2 3 Z" stroke-width="1"/>
+    <!-- 覆盖箭头 -->
+    <path d="M180 240 V226" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0201 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">日轨场景编排</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">一天十二小时，压进三米轨道</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">时刻 → 进度 t → 滑轨步数 + 云台角 + 太阳色温曲线</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每 5 分钟一拍，6:30 东端亮起、18:30 西端落下</text>
+    <text x="64" y="366">色温走太阳曲线，四场景只是临时覆盖层</text>
+    <text x="64" y="396">断网时 ESP32 用本地时钟继续走位</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 自动化 + ESPHome stepper · 数据出口：滑轨位置 / 色温实体</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：basnijholt/adaptive-lighting</text>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="60" y="230">6:30 东</text><text x="180" y="230">12:00 中</text><text x="300" y="230">18:30 西</text>
+  </g>
+  <g font-size="8" fill="#555">
+    <text x="55" y="259">晨光 3200K</text><text x="129" y="259">正午 5600K</text><text x="203" y="259">黄昏 2700K</text><text x="277" y="259">阴天 4500K</text>
+  </g>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="180" y="282">↑ 场景是叠在曲线上的临时覆盖层</text>
+  </g>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0203-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0203-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0203-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 326 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0203-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 楼梯下柜体（内衬隔音棉，前面开口） -->
+    <path d="M66 300 l30 -16 h60 l-30 16 Z" stroke-width="1.5"/>
+    <path d="M66 300 v30 h60 v-30 M156 284 v30 l-30 16" stroke-width="1.4"/>
+    <path d="M127 301 l29 -16 v29 l-29 16 Z" fill="url(#p0203-1-shade2)" stroke="none"/>
+    <path d="M70 304 h52 v22 h-52 Z" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <path d="M74 310 q4 -3 8 0 q4 -3 8 0 M100 310 q4 -3 8 0 q4 -3 8 0 M74 320 q4 -3 8 0 q4 -3 8 0 M100 320 q4 -3 8 0 q4 -3 8 0" stroke-width="0.6"/>
+    <path d="M96 284 l8 -6 l8 4 l8 -6 l8 4" stroke-width="0.7"/>
+    <!-- ② 橡胶减震垫 ×4 -->
+    <ellipse cx="150" cy="258" rx="6" ry="2.5" stroke-width="1.2"/><path d="M144 258 v3 a6 2.5 0 0 0 12 0 v-3" stroke-width="1"/>
+    <ellipse cx="176" cy="258" rx="6" ry="2.5" stroke-width="1.2"/><path d="M170 258 v3 a6 2.5 0 0 0 12 0 v-3" stroke-width="1"/>
+    <ellipse cx="164" cy="248" rx="6" ry="2.5" stroke-width="1.2"/><path d="M158 248 v3 a6 2.5 0 0 0 12 0 v-3" stroke-width="1"/>
+    <ellipse cx="190" cy="248" rx="6" ry="2.5" stroke-width="1.2"/><path d="M184 248 v3 a6 2.5 0 0 0 12 0 v-3" stroke-width="1"/>
+    <path d="M145 259 a6 2.5 0 0 0 10 2 v2 a6 2.5 0 0 1 -10 -2 Z M171 259 a6 2.5 0 0 0 10 2 v2 a6 2.5 0 0 1 -10 -2 Z M159 249 a6 2.5 0 0 0 10 2 v2 a6 2.5 0 0 1 -10 -2 Z M185 249 a6 2.5 0 0 0 10 2 v2 a6 2.5 0 0 1 -10 -2 Z" fill="url(#p0203-1-shade)" stroke="none"/>
+    <!-- ③ 工业除湿机 50L/天 -->
+    <path d="M200 196 l18 -10 h30 l-18 10 Z" stroke-width="1.5"/>
+    <path d="M200 196 v30 h30 v-30 M248 186 v30 l-18 10" stroke-width="1.4"/>
+    <path d="M231 197 l17 -10 v29 l-17 10 Z" fill="url(#p0203-1-shade)" stroke="none"/>
+    <path d="M203 204 h24 M203 209 h24 M203 214 h24 M203 219 h24" stroke-width="0.7"/>
+    <ellipse cx="226" cy="190" rx="6" ry="2.6" stroke-width="1"/>
+    <path d="M222 190 h8 M226 188 v4" stroke-width="0.5"/>
+    <path d="M230 224 h6" stroke-width="1"/>
+    <circle cx="226" cy="199" r="1.2" stroke-width="0.6"/>
+    <!-- ④ 冷凝水管 DN25（带坡度） -->
+    <path d="M258 136 h34 v20 M258 141 h29 v15" stroke-width="1.2"/>
+    <path d="M256 134 v9 M290 156 h6 M287 156 h6" stroke-width="1"/>
+    <path d="M259 137 h32 v3 h-32 Z" fill="url(#p0203-1-shade)" stroke="none"/>
+    <path d="M264 148 l14 0 l-3 -2 M278 148 l-3 2" stroke-width="0.6"/>
+    <!-- ⑤ Φ100 风管软接（波纹管） -->
+    <ellipse cx="327" cy="84" rx="12" ry="4" stroke-width="1.4"/>
+    <path d="M315 84 v30 M339 84 v30" stroke-width="1.3"/>
+    <path d="M315 114 a12 4 0 0 0 24 0" stroke-width="1.3"/>
+    <path d="M315 90 q12 4 24 0 M315 96 q12 4 24 0 M315 102 q12 4 24 0 M315 108 q12 4 24 0" stroke-width="0.7"/>
+    <path d="M316 110 a12 4 0 0 0 22 0 v4 a12 4 0 0 1 -22 0 Z" fill="url(#p0203-1-shade)" stroke="none"/>
+    <path d="M313 82 h28 v3 h-28 Z" stroke-width="0.8"/>
+    <!-- ⑥ 柜门整面进风格栅 -->
+    <path d="M346 86 l50 -22 v-40 l-50 22 Z" stroke-width="1.5"/>
+    <path d="M350 78 l42 -18 M350 72 l42 -18 M350 66 l42 -18 M350 60 l42 -18 M350 54 l42 -18" stroke-width="0.7"/>
+    <path d="M347 85 l48 -21 v2 l-48 21 Z" fill="url(#p0203-1-shade)" stroke="none"/>
+    <circle cx="390" cy="72" r="1.6" stroke-width="0.8"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M126 320 H176"/><path d="M144 254 H100"/><path d="M248 200 H290"/><path d="M258 140 H226"/><path d="M339 100 H400"/><path d="M396 64 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="186" cy="320" r="8"/><circle cx="90" cy="254" r="8"/><circle cx="300" cy="200" r="8"/><circle cx="216" cy="140" r="8"/><circle cx="410" cy="100" r="8"/><circle cx="450" cy="64" r="8"/>
+    </g>
+    <text x="186" y="323.5">1</text><text x="90" y="257.5">2</text><text x="300" y="203.5">3</text><text x="216" y="143.5">4</text><text x="410" y="103.5">5</text><text x="450" y="67.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">隐藏除湿机柜 · 爆炸图</text>
+    <text x="16" y="52">1 楼梯下柜体 + 30mm 隔音棉内衬</text>
+    <text x="16" y="68">2 橡胶减震垫 ×4</text>
+    <text x="16" y="84">3 工业除湿机 50L/天（压缩机式）</text>
+    <text x="16" y="100">4 冷凝水管 DN25，坡度 ≥ 2%</text>
+    <text x="16" y="116">5 Φ100 风管软接</text>
+    <text x="16" y="132">6 柜门整面进风格栅</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0203-1</text>
+</svg>

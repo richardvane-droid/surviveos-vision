@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0106-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0106-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0106-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">炉热循环风扇调度 · 流程图</text>
+  <g filter="url(#p0106-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <rect x="172" y="49" width="116" height="40" rx="6"/><rect x="174" y="51" width="112" height="36" rx="5" stroke-width="0.5"/><path d="M176 91 h112 v3 h-112 Z" fill="url(#p0106-4-shade)" stroke="none"/>
+    <path d="M350 56 a40 6 0 0 1 80 0 v34 a40 6 0 0 1 -80 0 Z"/><ellipse cx="390" cy="56" rx="40" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/><rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M34 172 h106 v3 h-106 Z" fill="url(#p0106-4-shade)" stroke="none"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/><path d="M232 176 l56 -22 l4 2 l-58 24 Z" fill="url(#p0106-4-shade)" stroke="none"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/><rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 172 h116 v3 h-116 Z" fill="url(#p0106-4-shade)" stroke="none"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/><rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 272 h116 v3 h-116 Z" fill="url(#p0106-4-shade)" stroke="none"/>
+    <rect x="155" y="312" width="150" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0106-4-arrow)" stroke-linecap="round">
+    <path d="M140 69 H170"/>
+    <path d="M350 73 H320 V69 H290" stroke-dasharray="3 3"/>
+    <path d="M230 89 V126"/>
+    <path d="M172 152 H157 V150 H142"/>
+    <path d="M288 152 H308 V150 H328"/>
+    <path d="M390 170 V228"/>
+    <path d="M390 270 V327 H307"/>
+    <path d="M85 170 V327 H153"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">炉温 &gt; 40℃ 生火中</text>
+    <text x="230" y="66">读炉侧 + 远角温度</text><text x="230" y="80">算温差 ΔT</text>
+    <text x="390" y="74">两只温度传感器</text><text x="390" y="87" font-size="8.5" fill="#666">炉对面墙 + 远角</text>
+    <text x="85" y="147">否 → 风扇停转</text><text x="85" y="161">60 秒后再算</text>
+    <text x="230" y="153">ΔT &gt; 2℃？</text><text x="230" y="166" font-size="8.5" fill="#666">两点温差</text>
+    <text x="390" y="147">是 → PID 算转速</text><text x="390" y="161">占空比 0~100%</text>
+    <text x="390" y="247">23:00~7:00</text><text x="390" y="261">转速上限压到 40%</text>
+    <text x="230" y="331">输出 PWM 风扇 + 上传 HA</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="158" y="146">否</text><text x="300" y="146">是</text><text x="100" y="300">传感器掉线 5 分钟 → 固定 30%</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0106-4</text>
+</svg>

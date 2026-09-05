@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0103-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0103-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0103-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0103-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：窗外太阳与云（左） → 光照传感器 + 对数曲线（中） → 九屏（右） -->
+    <!-- 窗 -->
+    <rect x="40" y="126" width="68" height="84" rx="2" stroke-width="1.5"/>
+    <path d="M74 126 V210 M40 168 H108" stroke-width="0.9"/>
+    <circle cx="60" cy="148" r="9" stroke-width="1.4"/>
+    <path d="M60 134 v-3 M60 162 v3 M46 148 h-3 M74 148 h3 M50 138 l-2 -2 M70 158 l2 2 M70 138 l2 -2 M50 158 l-2 2" stroke-width="0.9"/>
+    <path d="M78 186 a6 6 0 0 1 10 -6 a8 8 0 0 1 14 4 a5 5 0 0 1 0 8 H80 a5 5 0 0 1 -2 -6 Z" stroke-width="1.1"/>
+    <rect x="42" y="196" width="30" height="12" fill="url(#p0103-4p-shade)" stroke="none"/>
+    <!-- 传感器小板 -->
+    <rect x="150" y="196" width="34" height="20" rx="3" stroke-width="1.4"/>
+    <rect x="156" y="201" width="8" height="8" stroke-width="0.9"/>
+    <rect x="156" y="201" width="8" height="8" fill="url(#p0103-4p-shade)" stroke="none"/>
+    <path d="M168 203 h10 M168 207 h10 M168 211 h6" stroke-width="0.7"/>
+    <path d="M160 194 v-4 M166 192 l2 -4 M154 192 l-2 -4" stroke-width="0.8"/>
+    <!-- 对数曲线小图 -->
+    <path d="M148 178 V126 M148 178 H214" stroke-width="1.1"/>
+    <path d="M150 176 Q158 140 176 134 Q196 128 212 126" stroke-width="1.5"/>
+    <path d="M148 138 h3 M148 158 h3 M170 178 v-3 M192 178 v-3" stroke-width="0.7"/>
+    <path d="M176 134 V178" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <!-- 九屏 -->
+    <rect x="246" y="128" width="78" height="96" rx="2" stroke-width="1.6"/>
+    <rect x="252" y="134" width="66" height="84" rx="1" stroke-width="0.8"/>
+    <path d="M274 134 V218 M296 134 V218 M252 162 H318 M252 190 H318" stroke-width="0.9"/>
+    <rect x="253" y="135" width="20" height="26" fill="url(#p0103-4p-dots)" stroke="none"/>
+    <rect x="275" y="163" width="20" height="26" fill="url(#p0103-4p-dots)" stroke="none"/>
+    <rect x="297" y="191" width="20" height="26" fill="url(#p0103-4p-dots)" stroke="none"/>
+    <path d="M330 150 l6 0 M330 162 l8 0 M330 174 l6 0" stroke-width="0.7"/>
+    <path d="M334 144 v36" stroke-width="0.9"/>
+    <path d="M331 146 l3 -4 l3 4" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M112 168 Q126 168 142 168" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M218 168 Q230 168 242 168" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地平线 -->
+    <path d="M40 256 Q180 248 320 256" stroke-width="1.2"/>
+    <path d="M44 260 q40 -3 80 0 M236 260 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层 -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0103 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">自然光跟随调光</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">窗外阴一点，画就暗一点</text>
+  <text x="74" y="226" text-anchor="middle" font-size="8.5" fill="#666">窗边照度 lx</text>
+  <text x="181" y="230" text-anchor="middle" font-size="8.5" fill="#666">对数映射 5%~70%</text>
+  <text x="285" y="240" text-anchor="middle" font-size="8.5" fill="#666">九屏亮度参数</text>
+  <text x="180" y="290" text-anchor="middle" font-size="9.5" fill="#666">BH1750 照度 → 变化 &gt;15% → 对数曲线 → immich-kiosk 亮度</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">0~2000lx 对数映射到 5%~70%，小抖动不推</text>
+    <text x="64" y="366">23:00 后亮度封顶 15%，离家 30 分钟黑屏</text>
+    <text x="64" y="396">传感器离线按日出日落曲线估算，不会全亮</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HA 自动化 · 数据出口：illuminance 实体 / 各屏亮度</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome · damongolding/immich-kiosk</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

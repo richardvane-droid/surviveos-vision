@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0206-5p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0206-5p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0206-5p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0206-5p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0206-5p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <path d="M44 226 v-26 q0 -6 6 -6 h4 v-14 q0 -5 5 -5 q5 0 5 5 v14 h4 v-8 q0 -5 5 -5 q5 0 5 5 v8 h4 v-4 q0 -5 5 -5 q5 0 5 5 v22 q0 14 -12 18 h-20 q-16 0 -16 -18 Z" stroke-width="1.4"/>
+    <rect x="60" y="150" width="34" height="26" rx="2" stroke-width="1.3"/>
+    <rect x="66" y="154" width="18" height="18" stroke-width="0.7"/>
+    <rect x="66.8" y="154.8" width="3.6" height="3.6" stroke-width="0.5599999999999999"/>
+    <rect x="79.6" y="154.8" width="3.6" height="3.6" stroke-width="0.5599999999999999"/>
+    <rect x="66.8" y="167.6" width="3.6" height="3.6" stroke-width="0.5599999999999999"/>
+    <path d="M74.4 154.6 h1.3 v1.3 h-1.3 Z M74.4 157.2 h1.3 v1.3 h-1.3 Z M71.8 159.8 h1.3 v1.3 h-1.3 Z M76.9 159.8 h1.3 v1.3 h-1.3 Z M74.4 162.4 h1.3 v1.3 h-1.3 Z M79.5 162.4 h1.3 v1.3 h-1.3 Z M69.2 162.4 h1.3 v1.3 h-1.3 Z M66.6 162.4 h1.3 v1.3 h-1.3 Z M71.8 164.9 h1.3 v1.3 h-1.3 Z M76.9 164.9 h1.3 v1.3 h-1.3 Z M82.1 164.9 h1.3 v1.3 h-1.3 Z M74.4 167.5 h1.3 v1.3 h-1.3 Z M79.5 167.5 h1.3 v1.3 h-1.3 Z M76.9 170.1 h1.3 v1.3 h-1.3 Z M82.1 170.1 h1.3 v1.3 h-1.3 Z M71.8 170.1 h1.3 v1.3 h-1.3 Z" fill="#3d3d3d" stroke="none" opacity="0.85"/>
+    <path d="M88 158 h3 M88 164 h3 M88 170 h3" stroke-width="0.6"/><path d="M48 236 h48" stroke-width="0.6"/>
+    <rect x="140" y="166" width="80" height="64" rx="3" stroke-width="1.5"/><path d="M140 180 h80" stroke-width="1.2"/><path d="M156 160 v12 M204 160 v12" stroke-width="1.4"/>
+    <path d="M140 167 h80 v12 h-80 Z" fill="url(#p0206-5p-shade)" stroke="none"/>
+    <rect x="148" y="188" width="8" height="8" stroke-width="0.5"/>
+    <rect x="162" y="188" width="8" height="8" stroke-width="0.5"/>
+    <rect x="176" y="188" width="8" height="8" stroke-width="0.5"/>
+    <rect x="190" y="188" width="8" height="8" stroke-width="0.5"/>
+    <rect x="204" y="188" width="8" height="8" stroke-width="0.5"/>
+    <rect x="148" y="201" width="8" height="8" stroke-width="0.5"/>
+    <rect x="162" y="201" width="8" height="8" stroke-width="0.5"/>
+    <rect x="176" y="201" width="8" height="8" stroke-width="0.5"/>
+    <rect x="190" y="201" width="8" height="8" stroke-width="0.5"/>
+    <rect x="204" y="201" width="8" height="8" stroke-width="0.5"/>
+    <rect x="148" y="214" width="8" height="8" stroke-width="0.5"/>
+    <rect x="162" y="214" width="8" height="8" stroke-width="0.5"/>
+    <rect x="176" y="214" width="8" height="8" stroke-width="0.5"/>
+    <rect x="190" y="214" width="8" height="8" stroke-width="0.5"/>
+    <rect x="204" y="214" width="8" height="8" stroke-width="0.5"/>
+    <path d="M176 214 l4 4 l6 -8" stroke-width="1.1"/><circle cx="208" cy="206" r="6" stroke-width="1.2"/><path d="M204 200 l8 12" stroke-width="0.8"/>
+    <path d="M262 190 q0 -18 14 -18 q14 0 14 18 v10 l4 4 h-36 l4 -4 Z" stroke-width="1.5"/><path d="M272 206 q4 6 8 0" stroke-width="1.2"/><path d="M276 168 v4" stroke-width="1.3"/>
+    <path d="M254 178 l-4 -3 M298 178 l4 -3" stroke-width="0.9"/>
+    <rect x="256" y="214" width="56" height="30" rx="2" stroke-width="1.2"/><path d="M262 222 h20 M262 230 h28 M262 238 h16" stroke-width="0.8"/><path d="M298 220 l3 3 l5 -6" stroke-width="0.9"/>
+    <path d="M104 190 Q120 190 136 194" stroke-width="1" stroke-dasharray="3 3"/><path d="M222 196 Q238 194 254 194" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/><path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0206 · L5</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">借还提醒</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">拿走扫一下，放回扫一下，忘了它替你记</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">两次扫码翻转状态 → 每日巡检外借 / 消耗品 → 手机推送 + 采购单</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">外借超过 7 天推送提醒，不再问“谁拿了”</text>
+    <text x="64" y="366">电池、滤芯、种子设最低数量，低于即进采购单</text>
+    <text x="64" y="396">盘点日批量扫码，没扫到的箱子列成待查</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：Homebox + HA 自动化 · 数据出口：HA 通知 / 采购清单</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：snipe/snipe-it · inventree/InvenTree</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

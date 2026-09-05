@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0107-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0107-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0107-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0107-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：木架上三只玻璃罐 -->
+    <path d="M36 200 H116" stroke-width="1.4"/>
+    <path d="M36 200 v4 h80 v-4" stroke-width="0.8"/>
+    <rect x="42" y="168" width="20" height="32" rx="3" stroke-width="1.4"/><rect x="45" y="160" width="14" height="8" rx="1.5" stroke-width="1.1"/>
+    <rect x="68" y="168" width="20" height="32" rx="3" stroke-width="1.4"/><rect x="71" y="160" width="14" height="8" rx="1.5" stroke-width="1.1"/>
+    <rect x="94" y="168" width="20" height="32" rx="3" stroke-width="1.4"/><rect x="97" y="160" width="14" height="8" rx="1.5" stroke-width="1.1"/>
+    <rect x="45" y="184" width="14" height="13" fill="url(#p0107-4p-dots)" stroke="none"/>
+    <rect x="71" y="178" width="14" height="19" fill="url(#p0107-4p-dots)" stroke="none"/>
+    <rect x="97" y="190" width="14" height="7" fill="url(#p0107-4p-dots)" stroke="none"/>
+    <path d="M46 178 h12 M72 178 h12 M98 178 h12" stroke-width="0.6"/>
+    <!-- 中：平板 + 配方清单 -->
+    <rect x="146" y="120" width="68" height="92" rx="6" stroke-width="1.6"/>
+    <rect x="152" y="128" width="56" height="74" rx="2" stroke-width="0.7"/>
+    <circle cx="160" cy="142" r="4" stroke-width="1"/><path d="M158 142 l1.5 1.5 l3 -3.5" stroke-width="1"/>
+    <path d="M168 142 h30" stroke-width="1"/>
+    <circle cx="160" cy="158" r="4" stroke-width="1"/><path d="M158 158 l1.5 1.5 l3 -3.5" stroke-width="1"/>
+    <path d="M168 158 h24" stroke-width="1"/>
+    <circle cx="160" cy="174" r="4" stroke-width="1"/>
+    <path d="M168 174 h28" stroke-width="1" stroke-dasharray="2 2"/>
+    <circle cx="160" cy="190" r="4" stroke-width="1"/>
+    <path d="M168 190 h20" stroke-width="1" stroke-dasharray="2 2"/>
+    <path d="M176 206 h8" stroke-width="1"/>
+    <!-- 右：热红酒杯 + 热气 -->
+    <path d="M254 176 h40 v22 a20 12 0 0 1 -40 0 Z" stroke-width="1.6"/>
+    <path d="M294 180 a8 8 0 0 1 0 16" stroke-width="1.4"/>
+    <path d="M256 190 h36 v6 a18 10 0 0 1 -36 0 Z" fill="url(#p0107-4p-shade)" stroke="none"/>
+    <path d="M264 166 q3 -6 0 -12 M274 164 q3 -6 0 -12 M284 166 q3 -6 0 -12" stroke-width="0.9"/>
+    <path d="M262 214 h24" stroke-width="1"/>
+    <!-- 购物车（右下小图标） -->
+    <path d="M292 226 h6 l5 14 h20 l4 -10 h-26" stroke-width="1.1"/>
+    <circle cx="306" cy="245" r="2" stroke-width="1"/><circle cx="320" cy="245" r="2" stroke-width="1"/>
+    <!-- 箭头：罐 → 平板 → 杯 → 购物车 -->
+    <path d="M118 176 Q132 166 142 158" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M136 156 l7 1 l-3 6" stroke-width="1"/>
+    <path d="M216 164 Q236 166 250 178" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M244 178 l7 1 l-1 -7" stroke-width="1"/>
+    <path d="M284 208 Q296 216 300 226" stroke-width="0.9" stroke-dasharray="2 3"/>
+    <!-- 地平线 -->
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0107 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">吧台点单账本</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">问一句手冲还是热红酒，架子上有什么它比我清楚</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">8 只罐子登记库存 → 按库存筛配方 → 点单扣用量 → 缺料进购物清单</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">只列今晚做得出来的，不会答应了才发现没桂花</text>
+    <text x="64" y="366">每杯按配方克数扣库存，罐子空前一周就知道</text>
+    <text x="64" y="396">购物清单直接推到手机，赶集顺手买齐</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：Bar Assistant（自托管） · 数据出口：库存 API + 购物清单推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：karlomikus/bar-assistant</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

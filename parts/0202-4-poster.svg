@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0202-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0202-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0202-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0202-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 毫米波雷达模块 + 波纹 -->
+    <rect x="46" y="126" width="30" height="18" rx="3" stroke-width="1.4"/>
+    <rect x="50" y="130" width="10" height="10" stroke-width="0.8"/>
+    <path d="M84 128 a12 12 0 0 1 0 14 M92 122 a20 20 0 0 1 0 26 M100 116 a28 28 0 0 1 0 38" stroke-width="1" stroke-dasharray="3 2"/>
+    <!-- 站着不动的人 -->
+    <circle cx="70" cy="196" r="6" stroke-width="1.4"/>
+    <path d="M70 202 v18 M60 210 h20 M70 220 l-7 14 M70 220 l7 14" stroke-width="1.4"/>
+    <path d="M52 236 q18 -4 36 0" stroke-width="0.8"/>
+    <!-- 时钟 -->
+    <circle cx="180" cy="150" r="21" stroke-width="1.6"/>
+    <path d="M180 150 V136 M180 150 L190 156" stroke-width="1.6"/>
+    <path d="M180 131 v3 M180 169 v-3 M161 150 h3 M199 150 h-3" stroke-width="1"/>
+    <path d="M166 137 l2 2 M194 137 l-2 2 M166 163 l2 -2 M194 163 l-2 -2" stroke-width="0.8"/>
+    <!-- 三档灯箱 -->
+    <rect x="240" y="126" width="72" height="18" rx="3" stroke-width="1.4"/>
+    <rect x="240" y="174" width="72" height="18" rx="3" stroke-width="1.4"/>
+    <rect x="240" y="222" width="72" height="18" rx="3" stroke-width="1.4"/>
+    <rect x="244" y="136" width="64" height="6" fill="url(#p0202-4p-shade)" stroke="none"/>
+    <rect x="244" y="184" width="64" height="6" fill="url(#p0202-4p-dots)" stroke="none"/>
+    <rect x="244" y="232" width="64" height="6" fill="url(#p0202-4p-shade)" stroke="none"/>
+    <path d="M262 144 l-3 5 M276 144 v5 M290 144 l3 5" stroke-width="0.7"/>
+    <path d="M254 192 l-5 7 M265 192 l-2 7 M276 192 v7 M287 192 l2 7 M298 192 l5 7" stroke-width="0.9"/>
+    <path d="M258 240 l-4 6 M276 240 v6 M294 240 l4 6" stroke-width="0.8"/>
+    <!-- 箭头：雷达 → 时钟 → 三档 -->
+    <path d="M112 138 Q136 126 156 144" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M90 204 Q132 190 162 166" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M202 146 Q222 136 238 135" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M203 152 Q222 180 238 183" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M200 158 Q218 220 238 231" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M154 141 l4 3 l-5 1 M234 134 l4 1 l-3 3 M234 182 l4 1 l-3 3 M234 230 l4 1 l-3 3" stroke-width="1"/>
+    <!-- 特性勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0202 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">三档光自动切换</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">推门那一秒，灯已经知道现在几点</text>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="61" y="158">毫米波雷达</text>
+    <text x="70" y="250">站着不动也看得见</text>
+    <text x="180" y="184">现在几点</text>
+    <text x="276" y="159">夜起 2200K · 5%</text>
+    <text x="276" y="207">晨浴 5000K 全亮 + 除雾膜</text>
+    <text x="276" y="257">日常 4000K · 60%</text>
+  </g>
+  <text x="180" y="298" text-anchor="middle" font-size="9.5" fill="#666">有人 + 时刻 → 时段 → 灯箱档位 / 除雾膜继电器</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">22~6 点只给夜起档，眼睛不用重新适应</text>
+    <text x="64" y="366">6~9 点晨浴全亮，除雾膜同时通电</text>
+    <text x="64" y="396">人离开 3 分钟才关，出门取东西不闪灯</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 自动化 + ESPHome ld2410 · 数据出口：灯箱档位 / 除雾膜状态</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome · Aircoookie/WLED</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

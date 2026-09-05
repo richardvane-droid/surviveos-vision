@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0101-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0101-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0101-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0101-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：U 盘 → 树莓派 → 7 寸屏 -->
+    <!-- U 盘（左） -->
+    <rect x="46" y="176" width="44" height="22" rx="4" stroke-width="1.5"/>
+    <rect x="90" y="181" width="14" height="12" stroke-width="1.3"/>
+    <path d="M93 184 h8 M93 188 h8" stroke-width="0.7"/>
+    <rect x="50" y="188" width="36" height="7" fill="url(#p0101-4p-shade)" stroke="none"/>
+    <path d="M54 182 h10 M54 186 h6" stroke-width="0.6"/>
+    <!-- 树莓派（中） -->
+    <rect x="146" y="118" width="68" height="46" rx="3" stroke-width="1.5"/>
+    <rect x="154" y="126" width="18" height="18" rx="1" stroke-width="1"/>
+    <rect x="154" y="126" width="18" height="18" fill="url(#p0101-4p-shade)" stroke="none"/>
+    <rect x="196" y="122" width="16" height="10" stroke-width="0.9"/><rect x="196" y="136" width="16" height="10" stroke-width="0.9"/>
+    <path d="M150 156 h4 M156 156 h4 M162 156 h4 M168 156 h4 M174 156 h4 M180 156 h4 M186 156 h4" stroke-width="0.9"/>
+    <path d="M178 128 h8 M178 132 h8 M178 136 h8" stroke-width="0.6"/>
+    <circle cx="150" cy="122" r="1.5" stroke-width="0.6"/><circle cx="210" cy="160" r="1.5" stroke-width="0.6"/>
+    <!-- 7 寸屏（右） -->
+    <rect x="248" y="166" width="80" height="54" rx="3" stroke-width="1.6"/>
+    <rect x="253" y="171" width="70" height="44" rx="1.5" stroke-width="0.8"/>
+    <!-- 屏里的盒子 + 播放三角 -->
+    <rect x="272" y="192" width="30" height="12" rx="1.5" stroke-width="1.1"/>
+    <path d="M272 192 L302 192 L307 178 L277 178 Z" stroke-width="0.9"/>
+    <path d="M262 176 l0 10 l8 -5 Z" stroke-width="1"/>
+    <path d="M262 176 l0 10 l8 -5 Z" fill="url(#p0101-4p-shade)" stroke="none"/>
+    <path d="M258 210 h60" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <!-- 声波（有人时有声） -->
+    <path d="M334 186 a6 6 0 0 1 0 12 M339 182 a10 10 0 0 1 0 20" stroke-width="0.8"/>
+    <!-- 箭头 -->
+    <path d="M108 180 Q126 150 140 142" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M218 148 Q236 160 244 172" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 循环箭头（屏 → 自己） -->
+    <path d="M300 228 a24 14 0 1 1 -40 -2" stroke-width="0.9" stroke-dasharray="3 3"/>
+    <path d="M258 226 l4 -4 M258 226 l5 1" stroke-width="0.9"/>
+    <!-- 展台面（地平线） -->
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/>
+    <path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0101 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">侧屏轮播</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">插电就放，没人管它也不会停</text>
+  <text x="180" y="296" text-anchor="middle" font-size="9.5" fill="#666">U 盘播放列表 → 树莓派循环播放 → 有人切视频 / 无人放幻灯</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">开机自启，无需登录，新素材拷进 U 盘就行</text>
+    <text x="64" y="366">有人时放有声实测视频，无人时静音幻灯</text>
+    <text x="64" y="396">无人 30 分钟屏幕休眠，来人 1 秒内唤醒</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：树莓派 · 数据出口：HA 媒体状态 / 播放日志</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：adafruit/pi_video_looper</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0107-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0107-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0107-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0107-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 底柜框架（含小冰箱格） -->
+    <path d="M66 282 L88 266 H170 L150 282 Z" stroke-width="1.5"/>
+    <rect x="66" y="282" width="84" height="40" stroke-width="1.5"/>
+    <path d="M150 282 L170 266 V306 L150 322" stroke-width="1.4"/>
+    <path d="M152 284 L168 270 V304 L152 320 Z" fill="url(#p0107-1-shade)" stroke="none"/>
+    <rect x="100" y="288" width="44" height="30" rx="2" stroke-width="1"/>
+    <path d="M104 296 v14" stroke-width="1.4"/>
+    <path d="M70 286 v32 M76 286 v32 M82 286 v32 M88 286 v32" stroke-width="0.6"/>
+    <path d="M66 316 h84" stroke-width="0.6"/>
+    <path d="M72 322 v6 M146 322 v6 M166 306 v6" stroke-width="1.1"/>
+    <!-- ② 台面下横撑 + 铜钩 -->
+    <path d="M130 240 L140 232 H228 L218 240 Z" stroke-width="1.3"/>
+    <rect x="130" y="240" width="88" height="9" stroke-width="1.3"/>
+    <path d="M218 240 L228 232 V241 L218 249" stroke-width="1"/>
+    <rect x="132" y="244" width="84" height="4" fill="url(#p0107-1-shade)" stroke="none"/>
+    <path d="M144 249 v9 a5 5 0 0 0 10 0 v-3" stroke-width="1.2"/>
+    <path d="M154 255 l6 -4 v10 l-6 -3" stroke-width="0.9"/>
+    <!-- ③ 老榆木自然边台面 -->
+    <path d="M204 166 H306 L292 182 Q272 178 254 186 T216 184 T190 184 Z" stroke-width="1.5"/>
+    <path d="M292 182 L306 166 V174 L292 190" stroke-width="1.2"/>
+    <path d="M190 184 Q214 190 236 186 T272 186 T292 190 V182" stroke-width="0.9"/>
+    <path d="M292 190 Q270 186 254 194 T216 192 T190 192 V184" stroke-width="1.2"/>
+    <path d="M192 186 Q214 192 236 188 T272 188 T290 192 V190 Q270 186 254 194 T216 192 T192 192 Z" fill="url(#p0107-1-shade)" stroke="none"/>
+    <path d="M212 170 q30 4 60 -1 M218 176 q28 3 54 0 M230 181 q20 2 40 0" stroke-width="0.6"/>
+    <path d="M196 182 q-4 3 -6 8 M208 186 q-4 2 -6 6 M232 186 q-2 3 -4 7 M256 186 q-2 3 -3 7 M280 184 q-2 3 -4 7" stroke-width="0.6"/>
+    <!-- ④ 手冲架 + 磨豆机 -->
+    <path d="M276 140 h22" stroke-width="1.4"/>
+    <path d="M279 140 v-32 h20" stroke-width="1.3"/>
+    <path d="M292 108 l4 8 h6 l4 -8 Z" stroke-width="1.1"/>
+    <path d="M295 116 l3 6 h2 l3 -6" stroke-width="0.8"/>
+    <path d="M295 132 a5 3 0 0 1 10 0 v6 a5 3 0 0 1 -10 0 Z" stroke-width="0.9"/>
+    <rect x="314" y="118" width="14" height="22" rx="2" stroke-width="1.3"/>
+    <path d="M312 118 l3 -8 h12 l3 8 Z" stroke-width="1.1"/>
+    <path d="M321 110 v-4 h6 l2 -3" stroke-width="1"/>
+    <rect x="316" y="130" width="10" height="8" fill="url(#p0107-1-shade2)" stroke="none"/>
+    <!-- ⑤ 电陶炉 + 小铸铁锅 -->
+    <path d="M334 92 L344 84 H384 L374 92 Z" stroke-width="1.3"/>
+    <rect x="334" y="92" width="40" height="6" stroke-width="1.2"/>
+    <path d="M374 92 L384 84 V90 L374 98" stroke-width="1"/>
+    <ellipse cx="358" cy="88" rx="12" ry="3" stroke-width="0.7"/>
+    <ellipse cx="358" cy="70" rx="14" ry="5" stroke-width="1.4"/>
+    <path d="M344 70 v8 a14 5 0 0 0 28 0 v-8" stroke-width="1.3"/>
+    <path d="M344 72 h-6 M372 72 h6" stroke-width="1.4"/>
+    <path d="M346 76 a14 5 0 0 0 24 2 v-3 a14 5 0 0 1 -24 -2 Z" fill="url(#p0107-1-shade)" stroke="none"/>
+    <path d="M352 60 q2 -4 0 -8 M358 58 q2 -4 0 -8 M364 60 q2 -4 0 -8" stroke-width="0.7"/>
+    <!-- ⑥ 黄铜吊灯 ×3 -->
+    <path d="M370 24 H434" stroke-width="1.3"/>
+    <path d="M384 24 v12 M402 24 v12 M420 24 v12" stroke-width="0.8"/>
+    <path d="M378 50 l3 -14 h6 l3 14 Z M396 50 l3 -14 h6 l3 14 Z M414 50 l3 -14 h6 l3 14 Z" stroke-width="1.3"/>
+    <path d="M378 50 h12 M396 50 h12 M414 50 h12" stroke-width="0.9"/>
+    <path d="M384 52 v3 M402 52 v3 M420 52 v3" stroke-width="1"/>
+    <path d="M380 50 l2 -12 h2 l-2 12 Z M398 50 l2 -12 h2 l-2 12 Z M416 50 l2 -12 h2 l-2 12 Z" fill="url(#p0107-1-shade)" stroke="none"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M170 298 H206"/><path d="M130 244 H104"/><path d="M306 172 H344"/><path d="M276 128 H250"/><path d="M384 90 H408"/><path d="M434 44 H442"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="298" r="8"/><circle cx="96" cy="244" r="8"/><circle cx="354" cy="172" r="8"/><circle cx="242" cy="128" r="8"/><circle cx="418" cy="90" r="8"/><circle cx="452" cy="44" r="8"/>
+    </g>
+    <text x="216" y="301.5">1</text><text x="96" y="247.5">2</text><text x="354" y="175.5">3</text><text x="242" y="131.5">4</text><text x="418" y="93.5">5</text><text x="452" y="47.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">老榆木自然边吧台 · 爆炸图</text>
+    <text x="16" y="52">1 松木底柜（小冰箱格 + 黄酒层）</text>
+    <text x="16" y="68">2 台面下横撑 + 铜钩挂开瓶器</text>
+    <text x="16" y="84">3 6cm 老榆木自然边台面</text>
+    <text x="16" y="100">4 手冲架 + 手摇磨豆机</text>
+    <text x="16" y="116">5 电陶炉 + 小铸铁锅（热红酒）</text>
+    <text x="16" y="132">6 黄铜小吊灯 ×3（2700K）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0107-1</text>
+</svg>

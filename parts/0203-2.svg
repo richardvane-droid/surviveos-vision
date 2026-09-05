@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0203-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0203-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0203-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0203-2-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 326 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0203-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 黄铜表壳（后盖，带挂孔） -->
+    <ellipse cx="111" cy="300" rx="42" ry="15" stroke-width="1.5"/>
+    <path d="M69 300 v12 a42 15 0 0 0 84 0 v-12" stroke-width="1.4"/>
+    <path d="M71 306 a42 15 0 0 0 80 0" stroke-width="0.7"/>
+    <path d="M73 312 a40 13 0 0 0 76 0 v-6 a40 13 0 0 1 -76 0 Z" fill="url(#p0203-2-shade)" stroke="none"/>
+    <ellipse cx="111" cy="300" rx="36" ry="12" stroke-width="0.7"/>
+    <path d="M111 288 v-5 M108 286 h6" stroke-width="0.9"/>
+    <path d="M111 301 m-3 0 a3 1.2 0 1 0 6 0 a3 1.2 0 1 0 -6 0" stroke-width="0.8"/>
+    <!-- ② ESP32 主板 -->
+    <path d="M143 258 l16 -9 h32 l-16 9 Z" stroke-width="1.4"/>
+    <path d="M144 257 l15 -8 h30 l-15 8 Z" stroke="none" fill="none"/>
+    <path d="M154 254 l6 -3 l6 3 l-6 3 Z" stroke-width="0.9"/>
+    <path d="M155 254 l5 -3 l5 3 l-5 3 Z" fill="url(#p0203-2-shade2)" stroke="none"/>
+    <path d="M170 250 l2 -1 M173 252 l2 -1 M176 254 l2 -1 M179 256 l2 -1" stroke-width="1"/>
+    <path d="M183 250 l3 -3 l2 3 l3 -3" stroke-width="0.7"/>
+    <path d="M143 258 v3 h32 v-3" stroke-width="0.9"/>
+    <!-- ③ X27 微型步进表针电机 ×2 -->
+    <ellipse cx="214" cy="204" rx="7" ry="3" stroke-width="1.2"/>
+    <path d="M207 204 v8 a7 3 0 0 0 14 0 v-8" stroke-width="1.2"/>
+    <path d="M214 201 v-12 M212 189 h4" stroke-width="1"/>
+    <ellipse cx="232" cy="196" rx="7" ry="3" stroke-width="1.2"/>
+    <path d="M225 196 v8 a7 3 0 0 0 14 0 v-8" stroke-width="1.2"/>
+    <path d="M232 193 v-12 M230 181 h4" stroke-width="1"/>
+    <path d="M208 209 a7 3 0 0 0 12 2 v2 a7 3 0 0 1 -12 -2 Z M226 201 a7 3 0 0 0 12 2 v2 a7 3 0 0 1 -12 -2 Z" fill="url(#p0203-2-shade)" stroke="none"/>
+    <path d="M211 213 l-3 4 M235 205 l3 4" stroke-width="0.6"/>
+    <!-- ④ 表盘面（45~65% 舒适区） -->
+    <ellipse cx="279" cy="146" rx="36" ry="13" stroke-width="1.5"/>
+    <ellipse cx="279" cy="146" rx="30" ry="10.5" stroke-width="0.6"/>
+    <path d="M262 137 a30 10.5 0 0 1 34 0" stroke-width="2.2"/>
+    <path d="M249 146 l3 0 M309 146 l-3 0 M279 136 v2 M279 156 v-2 M256 141 l3 1 M302 141 l-3 1 M256 151 l3 -1 M302 151 l-3 -1" stroke-width="0.8"/>
+    <circle cx="270" cy="147" r="1.4" stroke-width="0.8"/><circle cx="288" cy="145" r="1.4" stroke-width="0.8"/>
+    <path d="M245 148 a36 13 0 0 0 68 0 v3 a36 13 0 0 1 -68 0 Z" fill="url(#p0203-2-shade)" stroke="none"/>
+    <!-- ⑤ 双指针 -->
+    <path d="M316 108 l28 -13 l-27 9 Z" stroke-width="1.1"/>
+    <circle cx="317" cy="107" r="2" stroke-width="0.9"/>
+    <path d="M328 100 l26 -12 l-25 8 Z" stroke-width="1.1"/>
+    <circle cx="329" cy="99" r="2" stroke-width="0.9"/>
+    <path d="M317 106 l27 -13 l-26 10 Z" fill="url(#p0203-2-shade)" stroke="none"/>
+    <!-- ⑥ 玻璃表镜 + 黄铜圈 -->
+    <ellipse cx="371" cy="62" rx="40" ry="14" stroke-width="1.5"/>
+    <ellipse cx="371" cy="62" rx="34" ry="11.5" stroke-width="0.9"/>
+    <path d="M331 62 v4 a40 14 0 0 0 80 0 v-4" stroke-width="1.1"/>
+    <path d="M333 64 a40 14 0 0 0 76 0 v3 a40 14 0 0 1 -76 0 Z" fill="url(#p0203-2-shade)" stroke="none"/>
+    <path d="M351 56 l14 -6 M357 58 l16 -7" stroke-width="0.6"/>
+    <ellipse cx="371" cy="62" rx="34" ry="11.5" fill="url(#p0203-2-dots)" stroke="none" fill-opacity="0.5"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M153 300 H200"/><path d="M143 256 H100"/><path d="M241 196 H280"/><path d="M243 146 H226"/><path d="M344 96 H400"/><path d="M411 62 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="210" cy="300" r="8"/><circle cx="90" cy="256" r="8"/><circle cx="290" cy="196" r="8"/><circle cx="216" cy="146" r="8"/><circle cx="410" cy="96" r="8"/><circle cx="450" cy="62" r="8"/>
+    </g>
+    <text x="210" y="303.5">1</text><text x="90" y="259.5">2</text><text x="290" y="199.5">3</text><text x="216" y="149.5">4</text><text x="410" y="99.5">5</text><text x="450" y="65.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">指针温湿度表盘 · 爆炸图</text>
+    <text x="16" y="52">1 黄铜表壳（后盖 + 挂孔）</text>
+    <text x="16" y="68">2 ESP32 主板（I²C 接 4 探头）</text>
+    <text x="16" y="84">3 X27 微型步进表针电机 ×2</text>
+    <text x="16" y="100">4 表盘面 Φ120（45~65% 绿区）</text>
+    <text x="16" y="116">5 温度 / 湿度双指针</text>
+    <text x="16" y="132">6 玻璃表镜 + 黄铜圈</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0203-2</text>
+</svg>

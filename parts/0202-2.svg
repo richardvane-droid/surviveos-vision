@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0202-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0202-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0202-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0202-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 防潮基板（立板，带卡扣） -->
+    <path d="M80 322 l60 -26 v-50 l-60 26 Z" stroke-width="1.5"/>
+    <path d="M80 322 l-5 -2 v-50 l5 2 M75 320 l60 -26 l5 2" stroke-width="1.2"/>
+    <path d="M75 270 l60 -26 v50 l-60 26 Z" stroke="none" fill="none"/>
+    <path d="M76 320 l58 -25 v3 l-58 25 Z M76 269 v50 l3 1 v-50 Z" fill="url(#p0202-2-shade)" stroke="none"/>
+    <path d="M84 300 l4 -2 v4 l-4 2 Z M130 280 l4 -2 v4 l-4 2 Z M84 316 l4 -2 v4 l-4 2 Z M130 296 l4 -2 v4 l-4 2 Z" stroke-width="0.9"/>
+    <path d="M86 310 l48 -21 M86 288 l48 -21" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <!-- ② 电热除雾膜（蛇形电热丝） -->
+    <path d="M152 258 l52 -22 v-40 l-52 22 Z" stroke-width="1.3"/>
+    <path d="M158 250 l40 -17 M158 242 l40 -17 M158 234 l40 -17 M158 226 l40 -17" stroke-width="0.7"/>
+    <path d="M198 233 v-8 M158 242 v-8 M198 217 v-8" stroke-width="0.7"/>
+    <path d="M162 258 v7 M167 256 v7" stroke-width="0.9"/>
+    <path d="M153 257 l50 -21 v2 l-50 21 Z" fill="url(#p0202-2-shade)" stroke="none"/>
+    <!-- ③ 主镜 900×700（银镜，反光线） -->
+    <path d="M212 202 l64 -28 v-50 l-64 28 Z" stroke-width="1.5"/>
+    <path d="M212 202 v4 l64 -28 v-4" stroke-width="1.1"/>
+    <path d="M213 203 l62 -27 v3 l-62 27 Z" fill="url(#p0202-2-shade2)" stroke="none"/>
+    <path d="M226 186 l22 -32 M234 190 l24 -34 M258 172 l10 -14" stroke-width="0.6"/>
+    <path d="M214 200 l60 -26" stroke-width="0.5"/>
+    <!-- ④ 两侧壁镜 + 顶面镜（围成光箱） -->
+    <path d="M283 142 l8 -3 v-44 l-8 3 Z" stroke-width="1.3"/>
+    <path d="M335 120 l8 -3 v-44 l-8 3 Z" stroke-width="1.3"/>
+    <path d="M283 98 l60 -26 v-8 l-60 26 Z" stroke-width="1.3"/>
+    <path d="M284 141 l6 -2 v-42 l-6 2 Z M336 119 l6 -2 v-42 l-6 2 Z" fill="url(#p0202-2-shade)" stroke="none"/>
+    <path d="M286 130 l3 -12 M288 120 l2 -8 M338 108 l3 -12 M300 90 l6 -8 M320 82 l6 -8" stroke-width="0.6"/>
+    <!-- ⑤ 镜前灯带（藏在夹角） -->
+    <path d="M348 78 l50 -22 v-6 l-50 22 Z" stroke-width="1.3"/>
+    <path d="M352 74 h1 M358 71 h1 M364 68 h1 M370 66 h1 M376 63 h1 M382 60 h1 M388 58 h1 M394 55 h1" stroke-width="1.6"/>
+    <path d="M348 78 v4 q6 6 12 2" stroke-width="0.8"/>
+    <path d="M349 77 l48 -21 v2 l-48 21 Z" fill="url(#p0202-2-shade)" stroke="none"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M78 290 H50"/><path d="M204 236 H240"/><path d="M276 172 H320"/><path d="M343 100 H400"/><path d="M398 58 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="40" cy="290" r="8"/><circle cx="250" cy="236" r="8"/><circle cx="330" cy="172" r="8"/><circle cx="410" cy="100" r="8"/><circle cx="450" cy="58" r="8"/>
+    </g>
+    <text x="40" y="293.5">1</text><text x="250" y="239.5">2</text><text x="330" y="175.5">3</text><text x="410" y="103.5">4</text><text x="450" y="61.5">5</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">六面镜光箱 · 爆炸图</text>
+    <text x="16" y="52">1 防潮基板 + 卡扣（防霉胶收边）</text>
+    <text x="16" y="68">2 电热除雾膜 40W</text>
+    <text x="16" y="84">3 主镜 900×700 银镜 5mm</text>
+    <text x="16" y="100">4 两侧壁镜 + 顶面镜（无影光）</text>
+    <text x="16" y="116">5 镜前双色温灯带（藏夹角）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0202-2</text>
+</svg>

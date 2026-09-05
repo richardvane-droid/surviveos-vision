@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0104-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0104-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0104-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0104-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 横梁 + 铁钩（最下） -->
+    <path d="M56 296 l60 -24 l30 12 l-60 24 Z" stroke-width="1.5"/>
+    <path d="M56 296 v14 l30 12 v-14 M86 322 l60 -24 v-14" stroke-width="1.4"/>
+    <path d="M57 297 l29 11 v13 l-29 -11 Z" fill="url(#p0104-1-shade)" stroke="none"/>
+    <path d="M62 302 l16 6 M62 308 l16 6" stroke-width="0.5"/>
+    <path d="M100 286 v-6 M100 280 a5 5 0 0 1 8 -4 M100 286 h4 M96 288 l3 -1" stroke-width="1.3"/>
+    <path d="M100 280 v10 q0 6 6 6 q6 0 6 -6" stroke-width="1.5"/>
+    <path d="M98 282 h6" stroke-width="0.8"/>
+    <!-- ② 5mm 麻绳（下垂） -->
+    <path d="M148 246 q40 22 80 -10" stroke-width="2.2"/>
+    <path d="M148 246 q40 22 80 -10" stroke-width="0.6" stroke-dasharray="2 2" transform="translate(0 -1.5)"/>
+    <path d="M156 249 l2 -3 M164 252 l2 -3 M172 254 l2 -3 M180 255 l2 -3 M188 254 l2 -3 M196 252 l2 -3 M204 249 l2 -3 M212 245 l2 -3 M220 240 l2 -3" stroke-width="0.7"/>
+    <path d="M148 246 a3 3 0 1 0 -6 0 a3 3 0 1 0 6 0" stroke-width="1"/>
+    <path d="M228 236 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0" stroke-width="1"/>
+    <!-- ③ 原木小夹子 -->
+    <path d="M232 178 l10 -4 l18 8 l-10 4 Z" stroke-width="1.4"/>
+    <path d="M232 178 v22 l10 4 v-22" stroke-width="1.3"/>
+    <path d="M242 182 v22 l18 -8 v-22" stroke-width="1.3"/>
+    <path d="M243 183 l17 -8 v21 l-17 8 Z" fill="url(#p0104-1-shade)" stroke="none"/>
+    <path d="M236 186 h3 M236 190 h3" stroke-width="0.6"/>
+    <path d="M230 174 q6 -4 12 0 q6 4 12 0" stroke-width="1.1"/>
+    <path d="M234 172 q8 -8 16 0" stroke-width="0.8"/>
+    <path d="M238 184 l0 -6 M254 178 l0 -6" stroke-width="0.9"/>
+    <!-- ④ 4×6 富士相纸照片 -->
+    <path d="M292 138 l46 -18 l30 12 l-46 18 Z" stroke-width="1.5"/>
+    <path d="M298 138 l38 -15 l20 8 l-38 15 Z" stroke-width="0.8"/>
+    <path d="M306 136 l10 -10 l8 6 l8 -8 l12 6" stroke-width="0.9"/>
+    <path d="M300 139 l37 -15 l19 8 l-37 15 Z" fill="url(#p0104-1-shade2)" stroke="none"/>
+    <path d="M292 138 q-4 4 -2 8" stroke-width="0.8"/>
+    <path d="M368 132 q4 -4 2 -8" stroke-width="0.8"/>
+    <path d="M322 148 l3 -1 M326 150 l3 -1" stroke-width="0.6"/>
+    <!-- ⑤ 2400K 灯带（最上） -->
+    <path d="M362 70 l56 -22" stroke-width="1.5"/>
+    <path d="M362 70 v8 l56 -22 v-8" stroke-width="1.4"/>
+    <path d="M362 78 l56 -22" stroke-width="1.2"/>
+    <path d="M366 71 l3 -1 M376 67 l3 -1 M386 63 l3 -1 M396 59 l3 -1 M406 55 l3 -1" stroke-width="1.4"/>
+    <path d="M364 74 l52 -20" stroke-width="0.5" stroke-dasharray="1.5 1.5"/>
+    <path d="M370 82 v4 M384 76 v4 M398 70 v4 M412 64 v4" stroke-width="0.5" stroke-dasharray="1 1.5"/>
+    <path d="M362 70 h-6 q-4 0 -6 4" stroke-width="0.8"/>
+    <path d="M372 48 q10 -12 24 -6 M400 40 l10 -6" stroke-width="0.6" stroke-dasharray="2 2"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M148 300 H196"/><path d="M142 246 H104"/><path d="M262 190 H300"/><path d="M290 142 H244"/><path d="M420 64 H444"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="204" cy="300" r="8"/><circle cx="96" cy="246" r="8"/><circle cx="308" cy="190" r="8"/><circle cx="236" cy="142" r="8"/><circle cx="452" cy="64" r="8"/>
+    </g>
+    <text x="204" y="303.5">1</text><text x="96" y="249.5">2</text><text x="308" y="193.5">3</text><text x="236" y="145.5">4</text><text x="452" y="67.5">5</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">麻绳木夹挂片系统 · 爆炸图</text>
+    <text x="16" y="52">1 横梁铁钩（吃住 3m 拉力）</text>
+    <text x="16" y="68">2 5mm 麻绳（中点下垂 6cm）</text>
+    <text x="16" y="84">3 3cm 原木小夹子（本色）</text>
+    <text x="16" y="100">4 4×6 富士相纸照片（不塑封）</text>
+    <text x="16" y="116">5 2400K 暖光灯带（斜上方）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0104-1</text>
+</svg>

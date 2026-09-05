@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0204-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0204-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0204-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0204-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：工作台上的显示器 + 户型图 -->
+    <rect x="40" y="128" width="76" height="52" rx="3" stroke-width="1.5"/>
+    <path d="M70 180 h16 M78 180 v6 M64 186 h28" stroke-width="1.2"/>
+    <path d="M48 136 h60 v36 h-60 Z" stroke-width="0.7"/>
+    <path d="M48 154 h28 M76 136 v36 M90 154 h18" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <circle cx="62" cy="145" r="2" stroke-width="0.8"/><circle cx="92" cy="145" r="2" stroke-width="0.8"/><circle cx="62" cy="164" r="2" stroke-width="0.8"/><circle cx="96" cy="164" r="2" stroke-width="0.8"/>
+    <!-- 中：插件 逐灯渲染（两张小图：亮/灭） -->
+    <rect x="150" y="122" width="26" height="20" rx="2" stroke-width="1.2"/>
+    <rect x="150" y="150" width="26" height="20" rx="2" stroke-width="1.2"/>
+    <rect x="152" y="152" width="22" height="16" fill="url(#p0204-4p-shade)" stroke="none"/>
+    <circle cx="163" cy="132" r="3" stroke-width="1"/>
+    <path d="M163 126 v-2 M158 128 l-1.5 -1.5 M168 128 l1.5 -1.5 M156 132 h-2 M170 132 h2" stroke-width="0.8"/>
+    <circle cx="163" cy="160" r="3" stroke-width="1"/>
+    <!-- 齿轮（插件） -->
+    <circle cx="200" cy="146" r="10" stroke-width="1.3"/>
+    <circle cx="200" cy="146" r="4" stroke-width="1"/>
+    <path d="M200 133 v-4 M200 159 v4 M187 146 h-4 M213 146 h4 M191 137 l-3 -3 M209 155 l3 3 M209 137 l3 -3 M191 155 l-3 3" stroke-width="1.6"/>
+    <!-- 校验勾 -->
+    <circle cx="200" cy="190" r="9" stroke-width="1.2"/>
+    <path d="M196 190 l3 3 l5 -6" stroke-width="1.3"/>
+    <!-- 右：挂墙大屏 + 平面图 + 亮着的灯 -->
+    <rect x="244" y="130" width="80" height="60" rx="3" stroke-width="1.6"/>
+    <path d="M248 134 h72 v52 h-72 Z" stroke-width="0.6"/>
+    <path d="M250 162 h32 M282 136 v48 M300 162 h18" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <circle cx="265" cy="148" r="5" stroke-width="1.2"/>
+    <circle cx="265" cy="148" r="5" fill="url(#p0204-4p-dots)" stroke="none"/>
+    <path d="M265 140 v-3 M258 142 l-2 -2 M272 142 l2 -2 M256 148 h-3 M274 148 h3" stroke-width="0.8"/>
+    <circle cx="300" cy="148" r="3" stroke-width="0.8"/><circle cx="265" cy="174" r="3" stroke-width="0.8"/><circle cx="304" cy="174" r="3" stroke-width="0.8"/>
+    <path d="M280 190 v8 M270 198 h20" stroke-width="1"/>
+    <!-- 手机/开关：灯一开 -->
+    <rect x="292" y="220" width="22" height="14" rx="7" stroke-width="1.2"/>
+    <circle cx="308" cy="227" r="5" stroke-width="1"/>
+    <path d="M308 227 m-3 0 h6" stroke-width="0.6"/>
+    <!-- 箭头 -->
+    <path d="M116 150 Q130 146 146 146" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M218 146 Q230 150 240 156" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M200 170 V178" stroke-width="1" stroke-dasharray="2 2"/>
+    <path d="M292 227 Q276 222 268 156" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M142 143 l4 3 l-5 1 M236 153 l4 3 l-5 1 M265 160 l3 -4 l3 4" stroke-width="1"/>
+    <!-- 特性勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0204 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">图纸到大屏</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">今晚画的墙，明早亮在墙上</text>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="78" y="200">Sweet Home 3D 户型</text>
+    <text x="163" y="184">亮 / 灭各一张</text>
+    <text x="200" y="212">entity_id 校验</text>
+    <text x="284" y="212">0211 大屏 picture-elements</text>
+    <text x="303" y="248">灯一开，图上亮</text>
+  </g>
+  <g font-size="8" fill="#555" text-anchor="middle">
+    <text x="163" y="118">逐灯渲染</text>
+  </g>
+  <text x="180" y="298" text-anchor="middle" font-size="9.5" fill="#666">FreeCAD / Sweet Home 3D → 分灯渲染 + YAML → 0211 大屏</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每盏灯逐一渲染亮 / 灭两张图，按需叠加</text>
+    <text x="64" y="366">灯和 entity_id 缺一不导出，图亮灯不亮就抓到</text>
+    <text x="64" y="396">每次导出打日期标签，旧图保留随时回滚</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：Sweet Home 3D 插件 + HA picture-elements · 出口：渲染图 / YAML / 0211</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：shmuelzon/home-assistant-floor-plan · FreeCAD/FreeCAD</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

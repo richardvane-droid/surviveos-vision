@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0203-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0203-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0203-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0203-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- CO2 曲线仪表 -->
+    <rect x="40" y="124" width="84" height="56" rx="4" stroke-width="1.5"/>
+    <path d="M48 170 q10 -2 18 -8 q10 -8 16 -20 q8 -14 20 -10 q8 4 14 -2" stroke-width="1.3"/>
+    <path d="M48 140 h68" stroke-width="0.7" stroke-dasharray="3 2"/>
+    <path d="M48 154 h68" stroke-width="0.7" stroke-dasharray="1.5 2"/>
+    <path d="M44 184 h76 v4 h-76 Z" fill="url(#p0203-4p-shade)" stroke="none"/>
+    <!-- 新风机 + 风扇 -->
+    <rect x="152" y="118" width="56" height="70" rx="4" stroke-width="1.5"/>
+    <circle cx="180" cy="146" r="16" stroke-width="1.3"/>
+    <circle cx="180" cy="146" r="3" stroke-width="1"/>
+    <path d="M180 143 q6 -12 12 -5 q-5 2 -11 5 M182 148 q12 5 8 12 q-3 -5 -9 -10 M177 149 q-13 2 -10 -8 q4 3 11 6" stroke-width="1"/>
+    <path d="M158 170 h44 M158 176 h44 M158 182 h44" stroke-width="0.7"/>
+    <path d="M160 172 h40 v10 h-40 Z" fill="url(#p0203-4p-dots)" stroke="none"/>
+    <path d="M136 132 h10 M136 146 h14 M136 160 h10" stroke-width="0.9"/>
+    <path d="M132 130 l4 2 l-4 2 M136 144 l4 2 l-4 2 M132 158 l4 2 l-4 2" stroke-width="0.7"/>
+    <!-- 通风井（进风）：两滴湿度对比 -->
+    <path d="M250 128 h52 v62" stroke-width="1.3"/>
+    <path d="M250 128 v62" stroke-width="1.3"/>
+    <path d="M254 132 h44 v4 h-44 Z" fill="url(#p0203-4p-shade)" stroke="none"/>
+    <path d="M266 144 q-6 8 -6 12 a6 6 0 0 0 12 0 q0 -4 -6 -12 Z" stroke-width="1.2"/>
+    <path d="M286 144 q-6 8 -6 12 a6 6 0 0 0 12 0 q0 -4 -6 -12 Z" stroke-width="1.2"/>
+    <path d="M262 156 a6 5 0 0 0 8 3 v-4 a6 5 0 0 1 -8 -3 Z" fill="url(#p0203-4p-shade)" stroke="none"/>
+    <path d="M275 164 h2 M275 168 h2" stroke-width="1.6"/>
+    <!-- 除湿机小图 -->
+    <rect x="256" y="200" width="40" height="30" rx="3" stroke-width="1.3"/>
+    <path d="M261 206 h30 M261 211 h30" stroke-width="0.6"/>
+    <circle cx="276" cy="222" r="5" stroke-width="1"/>
+    <path d="M276 222 l3 -3" stroke-width="1"/>
+    <!-- 滤芯 -->
+    <rect x="64" y="204" width="44" height="22" rx="2" stroke-width="1.2"/>
+    <path d="M70 204 v22 M76 204 v22 M82 204 v22 M88 204 v22 M94 204 v22 M100 204 v22" stroke-width="0.6"/>
+    <path d="M65 218 h42 v7 h-42 Z" fill="url(#p0203-4p-shade)" stroke="none"/>
+    <!-- 箭头 -->
+    <path d="M124 150 Q136 150 148 150" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M208 150 Q228 150 246 150" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M276 190 V196" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M180 190 Q180 214 130 214 H112" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M144 147 l4 3 l-5 1 M242 147 l4 3 l-5 1 M273 193 l3 4 l3 -4 M116 211 l-4 3 l4 3" stroke-width="1"/>
+    <!-- 特性勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0203 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">新风换气判断</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">闷了就换气，但先看看外面潮不潮</text>
+  <g font-size="8" fill="#555">
+    <text x="50" y="138">1000 高速</text>
+    <text x="50" y="165">800 回低速</text>
+  </g>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="82" y="198">CO2 ppm 曲线</text>
+    <text x="180" y="202">新风机 低速 / 高速</text>
+    <text x="276" y="187" font-size="8">通风井进风 vs 室内</text>
+    <text x="266" y="177" font-size="8">井</text><text x="286" y="177" font-size="8">室内</text>
+    <text x="276" y="244">除湿机陪跑</text>
+    <text x="86" y="240">滤芯 2000h 提醒</text>
+  </g>
+  <text x="180" y="298" text-anchor="middle" font-size="9.5" fill="#666">CO2 ppm → 低速 / 高速 → 进风湿度对比 → 除湿机陪跑</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">1000ppm 切高速，800 回低速，中间不抖</text>
+    <text x="64" y="366">进风比室内潮，除湿机同步强力档</text>
+    <text x="64" y="396">HEPA / 活性炭滤芯 2000 小时推送更换</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome fan 组件 + HA · 数据出口：CO2 曲线 / 新风档位 / 滤芯小时</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：airgradienthq/arduino · esphome/esphome</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

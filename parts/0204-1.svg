@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0204-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0204-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0204-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0204-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 40×40 方管支架 + 可调地脚 -->
+    <path d="M60 296 l30 -16 h70 l-30 16 Z" stroke-width="1.5"/>
+    <path d="M63 296 l27 -14 h64 l-27 14 Z" stroke-width="0.6"/>
+    <path d="M60 296 v34 M130 296 v34 M160 280 v34 M90 280 v10" stroke-width="1.5"/>
+    <path d="M64 296 v34 M134 296 v34 M164 280 v34" stroke-width="0.6"/>
+    <path d="M60 322 h70 M130 322 l30 -16" stroke-width="1.2"/>
+    <path d="M60 296 v3 h70 v-3 Z" fill="url(#p0204-1-shade)" stroke="none"/>
+    <ellipse cx="62" cy="332" rx="5" ry="2" stroke-width="1"/><ellipse cx="132" cy="332" rx="5" ry="2" stroke-width="1"/><ellipse cx="162" cy="316" rx="5" ry="2" stroke-width="1"/>
+    <path d="M62 330 v-3 M132 330 v-3 M162 314 v-3" stroke-width="0.7"/>
+    <!-- ② 走线槽 + UPS -->
+    <path d="M150 246 l14 -8 h50 l-14 8 Z" stroke-width="1.4"/>
+    <path d="M150 246 v8 h50 v-8 M214 238 v8 l-14 8" stroke-width="1.3"/>
+    <path d="M201 247 l13 -8 v7 l-13 8 Z" fill="url(#p0204-1-shade)" stroke="none"/>
+    <path d="M160 246 v-10 h14 v10 M162 240 h2 M164 238 h4" stroke-width="1"/>
+    <path d="M161 237 h12 v3 h-12 Z" fill="url(#p0204-1-shade2)" stroke="none"/>
+    <path d="M178 244 q4 -5 8 0 q4 -5 8 0 M182 242 q2 -3 4 0" stroke-width="0.7"/>
+    <path d="M154 250 h42" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <!-- ③ ESPHome 按键板（3 键） -->
+    <path d="M228 186 l14 -7 h28 l-14 7 Z" stroke-width="1.3"/>
+    <path d="M228 186 v3 h28 v-3" stroke-width="0.9"/>
+    <circle cx="240" cy="182" r="2.4" stroke-width="1"/><circle cx="250" cy="182" r="2.4" stroke-width="1"/><circle cx="260" cy="182" r="2.4" stroke-width="1"/>
+    <path d="M229 187 h27 v2 h-27 Z" fill="url(#p0204-1-shade)" stroke="none"/>
+    <path d="M256 179 h6 l3 -2" stroke-width="0.7"/>
+    <!-- ④ 胡桃木整板 2400×800×40 -->
+    <path d="M262 126 l32 -18 h70 l-32 18 Z" stroke-width="1.6"/>
+    <path d="M262 126 v8 h70 v-8 M364 108 v8 l-32 18" stroke-width="1.4"/>
+    <path d="M333 127 l31 -18 v7 l-31 18 Z" fill="url(#p0204-1-shade)" stroke="none"/>
+    <path d="M270 122 q20 -4 34 -10 q10 -4 24 -6 M278 124 q18 -3 30 -9 q12 -6 30 -7 M288 125 q14 -2 26 -8 q8 -4 18 -5" stroke-width="0.6"/>
+    <path d="M264 130 v2 M268 130 v2 M328 130 v2 M330 130 v2" stroke-width="0.6"/>
+    <!-- ⑤ 样件托盘（3D 打印件） -->
+    <path d="M346 68 l14 -8 h36 l-14 8 Z" stroke-width="1.3"/>
+    <path d="M346 68 v5 h36 v-5 M396 60 v5 l-14 8" stroke-width="1.1"/>
+    <path d="M383 69 l13 -8 v4 l-13 8 Z" fill="url(#p0204-1-shade)" stroke="none"/>
+    <path d="M352 66 l4 -2 l4 2 l-4 2 Z M352 66 v-4 l4 -2 l4 2 v4 M356 68 v-4" stroke-width="0.8"/>
+    <ellipse cx="370" cy="62" rx="3.5" ry="1.4" stroke-width="0.8"/><path d="M366.5 62 v-4 a3.5 1.4 0 0 1 7 0 v4" stroke-width="0.8"/>
+    <path d="M378 62 l5 -3 l3 2 l-5 3 Z" stroke-width="0.8"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M164 300 H206"/><path d="M150 250 H130"/><path d="M270 184 H320"/><path d="M364 116 H400"/><path d="M396 64 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="300" r="8"/><circle cx="120" cy="250" r="8"/><circle cx="330" cy="184" r="8"/><circle cx="410" cy="116" r="8"/><circle cx="450" cy="64" r="8"/>
+    </g>
+    <text x="216" y="303.5">1</text><text x="120" y="253.5">2</text><text x="330" y="187.5">3</text><text x="410" y="119.5">4</text><text x="450" y="67.5">5</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">整板工作台 · 爆炸图</text>
+    <text x="16" y="52">1 40×40 方管支架 + 可调地脚</text>
+    <text x="16" y="68">2 走线槽 + 1000VA UPS</text>
+    <text x="16" y="84">3 ESPHome 3 键板（设计/休息/关机）</text>
+    <text x="16" y="100">4 胡桃木整板 2400×800×40</text>
+    <text x="16" y="116">5 样件托盘（3D 打印件）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0204-1</text>
+</svg>

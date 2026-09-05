@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0102-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0102-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0102-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0102-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：新盒子（左） → 藏品卡片（中） → 托架上的盒子 + 牛皮纸标签（右） -->
+    <!-- 新一代盒子（打开盖子） -->
+    <path d="M40 176 L96 176 L108 166 L52 166 Z" stroke-width="1.3"/>
+    <rect x="40" y="176" width="56" height="26" rx="2" stroke-width="1.5"/>
+    <path d="M96 176 L108 166 V192 L96 202" stroke-width="1.3"/>
+    <path d="M97 177 L107 168 V191 L97 200 Z" fill="url(#p0102-4p-shade)" stroke="none"/>
+    <path d="M52 166 L58 138 L114 138 L108 166" stroke-width="1.3"/>
+    <path d="M62 144 h44 M60 152 h44" stroke-width="0.5"/>
+    <path d="M48 186 h10 M64 186 h10 M80 186 h10 M48 194 h10 M64 194 h10" stroke-width="0.7"/>
+    <!-- 藏品卡片（中） -->
+    <rect x="140" y="130" width="80" height="100" rx="3" stroke-width="1.5"/>
+    <rect x="148" y="138" width="30" height="24" rx="2" stroke-width="1"/>
+    <rect x="149" y="139" width="28" height="22" fill="url(#p0102-4p-dots)" stroke="none"/>
+    <path d="M184 144 h28 M184 152 h22 M184 160 h26" stroke-width="0.8"/>
+    <path d="M148 172 h64 M148 184 h52 M148 196 h60 M148 208 h40" stroke-width="0.8"/>
+    <path d="M148 216 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0" stroke-width="1"/>
+    <path d="M150 216 l2 2 l3 -4" stroke-width="1"/>
+    <path d="M160 220 h44" stroke-width="0.8"/>
+    <!-- 托架上的盒子 + 标签（右） -->
+    <path d="M250 176 H320" stroke-width="1.5"/>
+    <path d="M250 176 L258 170 L328 170 L320 176" stroke-width="1.1"/>
+    <path d="M250 176 V182 H320 V176" stroke-width="1.1"/>
+    <rect x="252" y="177" width="68" height="4" fill="url(#p0102-4p-shade)" stroke="none"/>
+    <rect x="266" y="152" width="40" height="22" rx="2" stroke-width="1.4"/>
+    <path d="M266 152 L272 146 L312 146 L306 152" stroke-width="1"/>
+    <path d="M306 152 L312 146 V168 L306 174" stroke-width="1"/>
+    <path d="M272 160 h10 M286 160 h10 M272 166 h10" stroke-width="0.6"/>
+    <rect x="270" y="192" width="34" height="46" rx="1.5" stroke-width="1.3"/>
+    <circle cx="287" cy="197" r="1.6" stroke-width="0.9"/>
+    <path d="M276 208 h22 M276 216 h16 M276 224 h20 M276 232 h12" stroke-width="0.7"/>
+    <path d="M287 182 V192" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <!-- 箭头 -->
+    <path d="M114 178 Q126 178 136 178" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M224 178 Q236 178 246 178" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地平线 -->
+    <path d="M40 256 Q180 248 320 256" stroke-width="1.2"/>
+    <path d="M44 260 q40 -3 80 0 M236 260 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层 -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0102 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">藏品档案与标签</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">每一代盒子都有身份证，标签照旧手写</text>
+  <text x="76" y="216" text-anchor="middle" font-size="8.5" fill="#666">新一代完工</text>
+  <text x="180" y="244" text-anchor="middle" font-size="8.5" fill="#666">藏品记录 · 托架号</text>
+  <text x="287" y="248" text-anchor="middle" font-size="8.5" fill="#666">6×9 牛皮纸标签</text>
+  <text x="180" y="290" text-anchor="middle" font-size="9.5" fill="#666">录入记录 → 查托架空位 → 出稿标签字段 → 手写誊抄上墙</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">托架 21 位减 2 个预留，满了最老一代进抽屉</text>
+    <text x="64" y="366">标签字段按模板出稿，再手写誊到牛皮纸</text>
+    <text x="64" y="396">藏品库筛“在墙上”，就是墙面清单</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：Koillection 自建藏品库 · 数据出口：托架号 / 在墙上字段 / 标签稿</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：benjaminjonard/koillection</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

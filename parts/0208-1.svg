@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0208-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="31" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0208-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0208-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0208-1-dots" width="4" height="4" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.6" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L410 24" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0208-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 花岗岩避震底板 + 钉脚 -->
+    <rect x="70" y="296" width="84" height="7" stroke-width="1.5"/>
+    <path d="M70 296 l16 -9 h84 l-16 9" stroke-width="1.5"/>
+    <path d="M154 296 l16 -9 v7 l-16 9" stroke-width="1.5"/>
+    <path d="M155 297 l14 -8 v5 l-14 8 Z" fill="url(#p0208-1-shade)" stroke="none"/>
+    <path d="M78 303 l-3 8 l3 0 Z M148 303 l-3 8 l3 0 Z M160 297 l-3 8 l3 0 Z M100 291 l-3 8 l3 0 Z" stroke-width="1"/>
+    <path d="M90 292 q10 -2 20 0 M118 290 q8 -1 16 0" stroke-width="0.5"/>
+    <!-- ② 多层板箱体 -->
+    <rect x="154" y="180" width="52" height="104" stroke-width="1.5"/>
+    <path d="M154 180 l14 -8 h52 l-14 8" stroke-width="1.5"/>
+    <path d="M206 180 l14 -8 v104 l-14 8" stroke-width="1.5"/>
+    <path d="M207 181 l12 -7 v102 l-12 7 Z" fill="url(#p0208-1-shade)" stroke="none"/>
+    <circle cx="180" cy="256" r="16" stroke-width="1"/>
+    <circle cx="180" cy="220" r="9" stroke-width="1"/>
+    <circle cx="180" cy="198" r="5.5" stroke-width="1"/>
+    <path d="M166 256 a14 14 0 0 0 14 14 v-3 a11 11 0 0 1 -11 -11 Z" fill="url(#p0208-1-shade)" stroke="none"/>
+    <path d="M158 176 l12 -6 M168 176 l12 -6 M178 176 l12 -6 M188 176 l12 -6" stroke-width="0.5"/>
+    <!-- ③ 分频器电路板 -->
+    <path d="M231 176 l30 -14 l26 8 l-30 14 Z" stroke-width="1.5"/>
+    <path d="M233 177 l28 -13 l22 7" stroke-width="0.6"/>
+    <circle cx="252" cy="170" r="5" stroke-width="1"/><circle cx="252" cy="170" r="2" stroke-width="0.7"/>
+    <path d="M262 164 l8 -3 l3 1 l-8 3 Z M266 171 l7 -3 l3 1 l-7 3 Z" stroke-width="0.9"/>
+    <path d="M262 164 l8 -3 l3 1 l-8 3 Z" fill="url(#p0208-1-shade2)" stroke="none"/>
+    <path d="M240 168 l3 -1 M244 172 l3 -1 M256 178 h3 M260 176 h3" stroke-width="1"/>
+    <!-- ④ 12 寸低音单元 -->
+    <circle cx="305" cy="122" r="24" stroke-width="1.5"/>
+    <circle cx="305" cy="122" r="19" stroke-width="0.9"/>
+    <circle cx="305" cy="122" r="13" stroke-width="0.7"/>
+    <circle cx="305" cy="122" r="6" stroke-width="1.1"/>
+    <path d="M286 122 a19 19 0 0 0 19 19 v-5 a14 14 0 0 1 -14 -14 Z" fill="url(#p0208-1-shade)" stroke="none"/>
+    <path d="M305 100 v2 M305 142 v2 M283 122 h2 M325 122 h2" stroke-width="1.2"/>
+    <path d="M289 108 l3 3 M318 133 l3 3" stroke-width="0.6"/>
+    <!-- ⑤ 中音单元 + 号角高音 -->
+    <circle cx="340" cy="92" r="11" stroke-width="1.4"/>
+    <circle cx="340" cy="92" r="7" stroke-width="0.7"/>
+    <circle cx="340" cy="92" r="2.5" stroke-width="0.9"/>
+    <path d="M331 92 a9 9 0 0 0 9 9 v-3 a6 6 0 0 1 -6 -6 Z" fill="url(#p0208-1-shade)" stroke="none"/>
+    <rect x="356" y="58" width="22" height="16" rx="2" stroke-width="1.3"/>
+    <path d="M360 62 l6 3 v2 l-6 3 Z" stroke-width="0.9"/>
+    <path d="M366 65 l8 -3 v8 l-8 -3" stroke-width="0.9"/>
+    <path d="M366 65 l8 -3 v8 l-8 -3 Z" fill="url(#p0208-1-shade2)" stroke="none"/>
+    <!-- ⑥ 前面网罩（最上） -->
+    <rect x="384" y="10" width="40" height="60" rx="3" stroke-width="1.5"/>
+    <rect x="387" y="13" width="34" height="54" rx="2" stroke-width="0.6"/>
+    <rect x="388" y="14" width="32" height="52" rx="2" fill="url(#p0208-1-dots)" stroke="none"/>
+    <path d="M386 12 l-2 -2 M424 12 l2 -2 M386 68 l-2 2 M424 68 l2 2" stroke-width="0.8"/>
+  </g>
+  <!-- 引线 + 编号（不加滤镜） -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M154 300 H206"/>
+    <path d="M154 240 H130"/>
+    <path d="M287 170 H310"/>
+    <path d="M281 122 H250"/>
+    <path d="M329 92 H300"/>
+    <path d="M424 40 H442"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="300" r="8"/><circle cx="120" cy="240" r="8"/><circle cx="320" cy="170" r="8"/><circle cx="240" cy="122" r="8"/><circle cx="290" cy="92" r="8"/><circle cx="452" cy="40" r="8"/>
+    </g>
+    <text x="216" y="303.5">1</text><text x="120" y="243.5">2</text><text x="320" y="173.5">3</text><text x="240" y="125.5">4</text><text x="290" y="95.5">5</text><text x="452" y="43.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">落地音箱单元总成 · 爆炸图</text>
+    <text x="16" y="52">1 花岗岩避震底板 + 钉脚</text>
+    <text x="16" y="68">2 多层板箱体（内填吸音棉）</text>
+    <text x="16" y="84">3 分频器（电感 / 电容）</text>
+    <text x="16" y="100">4 12 寸低音单元</text>
+    <text x="16" y="116">5 中音单元 + 号角高音</text>
+    <text x="16" y="132">6 前面网罩（磁吸）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0208-1</text>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0206-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0206-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0206-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0206-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="56" y="270" width="108" height="48" rx="3" stroke-width="1.5"/>
+    <circle cx="62" cy="276" r="1.8" stroke-width="0.8"/><circle cx="158" cy="276" r="1.8" stroke-width="0.8"/><circle cx="62" cy="312" r="1.8" stroke-width="0.8"/><circle cx="158" cy="312" r="1.8" stroke-width="0.8"/>
+    <rect x="100" y="288" width="44" height="20" stroke-width="1.3"/>
+    <path d="M100 288 l16 -9 h44 l-16 9" stroke-width="1.3"/>
+    <path d="M144 288 l16 -9 v20 l-16 9" stroke-width="1.3"/>
+    <path d="M145 289 l14 -8 v18 l-14 8 Z" fill="url(#p0206-2-shade)" stroke="none"/>
+    <rect x="102" y="290" width="40" height="16" stroke-width="0.5"/>
+    <path d="M106 293 h30 M106 297 h30 M106 301 h30" stroke-width="0.5"/>
+    <path d="M70 280 v30 M76 280 v30" stroke-width="0.6"/><path d="M66 300 h6 M80 300 h6" stroke-width="0.6"/>
+    <rect x="150" y="224" width="60" height="26" stroke-width="1.4"/>
+    <path d="M150 224 l16 -9 h60 l-16 9" stroke-width="1.4"/>
+    <path d="M210 224 l16 -9 v26 l-16 9" stroke-width="1.4"/>
+    <path d="M211 225 l14 -8 v24 l-14 8 Z" fill="url(#p0206-2-shade)" stroke="none"/>
+    <path d="M158 220 l12 -7 h36" stroke-width="0.9"/>
+    <rect x="160" y="200" width="26" height="14" stroke-width="0.9"/>
+    <rect x="163" y="202.5" width="9" height="9" stroke-width="0.6"/>
+    <rect x="163.4" y="202.9" width="1.8" height="1.8" stroke-width="0.48"/>
+    <rect x="169.8" y="202.9" width="1.8" height="1.8" stroke-width="0.48"/>
+    <rect x="163.4" y="209.3" width="1.8" height="1.8" stroke-width="0.48"/>
+    <path d="M167.2 202.8 h0.6 v0.6 h-0.6 Z M167.2 204.1 h0.6 v0.6 h-0.6 Z M165.9 205.4 h0.6 v0.6 h-0.6 Z M168.5 205.4 h0.6 v0.6 h-0.6 Z M167.2 206.7 h0.6 v0.6 h-0.6 Z M169.8 206.7 h0.6 v0.6 h-0.6 Z M164.6 206.7 h0.6 v0.6 h-0.6 Z M163.3 206.7 h0.6 v0.6 h-0.6 Z M165.9 208.0 h0.6 v0.6 h-0.6 Z M168.5 208.0 h0.6 v0.6 h-0.6 Z M171.0 208.0 h0.6 v0.6 h-0.6 Z M167.2 209.2 h0.6 v0.6 h-0.6 Z M169.8 209.2 h0.6 v0.6 h-0.6 Z M168.5 210.5 h0.6 v0.6 h-0.6 Z M171.0 210.5 h0.6 v0.6 h-0.6 Z M165.9 210.5 h0.6 v0.6 h-0.6 Z" fill="#3d3d3d" stroke="none" opacity="0.85"/>
+    <path d="M175 205 h8 M175 209 h8" stroke-width="0.5"/>
+    <path d="M154 232 h10 M154 236 h10" stroke-width="0.5"/><circle cx="200" cy="240" r="2" stroke-width="0.8"/>
+    <rect x="232" y="160" width="38" height="14" rx="5" stroke-width="1.4"/>
+    <path d="M246 174 l-5 22 h14 l-3 -22" stroke-width="1.4"/><path d="M243 180 q-3 3 0 6" stroke-width="0.9"/>
+    <path d="M242 177 l-4 18 h10 l-2 -18 Z" fill="url(#p0206-2-shade)" stroke="none"/>
+    <path d="M232 167 h-8 M222 163 h-5 M222 171 h-5" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M252 198 h14 v6 h-14 Z" stroke-width="1"/>
+    <rect x="288" y="92" width="76" height="54" rx="4" stroke-width="1.5"/>
+    <rect x="294" y="98" width="64" height="42" stroke-width="0.7"/>
+    <path d="M310 126 l16 -9 l16 9 l-16 9 Z M300 118 l10 -6 l10 6 l-10 6 Z M336 112 l12 -7 l12 7 l-12 7 Z" stroke-width="0.8"/>
+    <path d="M310 126 v6 l16 9 v-6 M342 133 v-6 M300 124 v5 l10 6 v-5" stroke-width="0.6"/>
+    <circle cx="326" cy="126" r="1.8" fill="#3d3d3d" stroke="none"/><path d="M326 126 v-8 M323 118 h6" stroke-width="0.8"/>
+    <path d="M298 102 h20 v6 h-20 Z" stroke-width="0.6"/><path d="M301 105 h12" stroke-width="0.4"/>
+    <rect x="356" y="24" width="82" height="58" rx="4" stroke-width="1.6"/>
+    <rect x="363" y="31" width="68" height="44" rx="2" stroke-width="0.9"/>
+    <path d="M356 24 l6 -2 M438 24 l-6 -2" stroke-width="0.4"/>
+    <path d="M357 25 h6 v6 h-6 Z M431 25 h6 v6 h-6 Z M357 75 h6 v6 h-6 Z M431 75 h6 v6 h-6 Z" fill="url(#p0206-2-shade2)" stroke="none"/>
+    <circle cx="360" cy="28" r="1.2" stroke-width="0.7"/><circle cx="434" cy="28" r="1.2" stroke-width="0.7"/><circle cx="360" cy="78" r="1.2" stroke-width="0.7"/><circle cx="434" cy="78" r="1.2" stroke-width="0.7"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M164 296 H206"/>
+    <path d="M150 236 H122"/>
+    <path d="M232 180 H206"/>
+    <path d="M364 118 H384"/>
+    <path d="M438 52 H448"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="296" r="8"/>
+      <circle cx="112" cy="236" r="8"/>
+      <circle cx="196" cy="180" r="8"/>
+      <circle cx="394" cy="118" r="8"/>
+      <circle cx="458" cy="52" r="8"/>
+    </g>
+    <text x="216" y="299.5">1</text>
+    <text x="112" y="239.5">2</text>
+    <text x="196" y="183.5">3</text>
+    <text x="394" y="121.5">4</text>
+    <text x="458" y="55.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">扫码入库站 · 爆炸图</text>
+    <text x="16" y="52">1 墙挂底板 + N100 小主机</text>
+    <text x="16" y="68">2 热敏标签机（合成纸卷）</text>
+    <text x="16" y="84">3 蓝牙扫码枪 + 挂座</text>
+    <text x="16" y="100">4 12.9 寸平板（等距地图）</text>
+    <text x="16" y="116">5 铝合金壁挂框</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0206-2</text>
+</svg>

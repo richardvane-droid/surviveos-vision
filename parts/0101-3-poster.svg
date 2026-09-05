@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0101-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0101-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0101-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0101-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：来人 → 毫米波传感器 → 射灯光锥落在盒子上 -->
+    <!-- 来人（左） -->
+    <circle cx="70" cy="182" r="9" stroke-width="1.5"/>
+    <path d="M70 191 V218 M70 200 L58 212 M70 200 L84 208 M70 218 L60 240 M70 218 L82 238" stroke-width="1.5"/>
+    <path d="M52 206 q-4 8 0 16 M46 202 q-6 12 0 24" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <!-- 传感器板（中） -->
+    <rect x="160" y="128" width="40" height="24" rx="3" stroke-width="1.5"/>
+    <rect x="166" y="134" width="10" height="8" stroke-width="0.9"/>
+    <rect x="166" y="134" width="10" height="8" fill="url(#p0101-3p-shade)" stroke="none"/>
+    <path d="M180 136 h12 M180 140 h12 M180 144 h8" stroke-width="0.7"/>
+    <path d="M154 134 a10 10 0 0 0 0 12 M148 130 a15 15 0 0 0 0 20 M142 126 a20 20 0 0 0 0 28" stroke-width="0.9"/>
+    <!-- 射灯（右） -->
+    <path d="M290 104 v12" stroke-width="1.3"/>
+    <rect x="274" y="116" width="32" height="22" rx="4" stroke-width="1.5"/>
+    <rect x="278" y="128" width="24" height="8" fill="url(#p0101-3p-shade)" stroke="none"/>
+    <path d="M276 138 L246 250 M304 138 L334 250" stroke-width="0.9" stroke-dasharray="3 3"/>
+    <path d="M278 140 L302 140 L332 248 L248 248 Z" fill="url(#p0101-3p-dots)" stroke="none"/>
+    <!-- 展台上的盒子 -->
+    <rect x="272" y="236" width="36" height="14" rx="1.5" stroke-width="1.4"/>
+    <path d="M272 236 L308 236 L314 214 L278 214 Z" stroke-width="1.2"/>
+    <path d="M282 232 h4 M290 232 h4 M298 232 h4" stroke-width="0.8"/>
+    <!-- 箭头 -->
+    <path d="M92 194 Q120 168 150 148" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M204 138 Q236 124 266 126" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地平线（展台面） -->
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/>
+    <path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层 -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0101 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">来客感应亮灯</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">你一走近，光就只落在它身上</text>
+  <text x="180" y="296" text-anchor="middle" font-size="9.5" fill="#666">毫米波存在 → 照度判断 → 射灯 2 秒渐亮 → 3 分钟无人渐暗</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">毫米波看得见站着不动的人，不会看一半黑灯</text>
+    <text x="64" y="366">环境亮度超过 30lx 的白天不打扰</text>
+    <text x="64" y="396">传感器掉线自动退回日落定时常亮</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HA 自动化 · 数据出口：occupancy 实体 / 灯光状态</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：EverythingSmartHome/everything-presence-lite</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

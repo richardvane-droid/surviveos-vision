@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0208-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="36" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0208-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0208-4p-dots" width="4" height="4" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.6" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 海报边框（双线，手绘） -->
+  <g filter="url(#p0208-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：测量麦 → 频响曲线 → 音箱 -->
+    <!-- 测量麦克风（左） -->
+    <rect x="58" y="124" width="18" height="34" rx="9" stroke-width="1.5"/>
+    <rect x="60" y="126" width="14" height="18" rx="7" fill="url(#p0208-4p-dots)" stroke="none"/>
+    <path d="M67 158 v40" stroke-width="1.4"/>
+    <path d="M52 198 h30" stroke-width="1.4"/>
+    <path d="M60 198 l-6 12 M74 198 l6 12" stroke-width="1"/>
+    <path d="M54 146 q-4 8 0 16 M80 146 q4 8 0 16" stroke-width="0.7"/>
+    <!-- 频响曲线框（中） -->
+    <rect x="114" y="126" width="132" height="78" rx="3" stroke-width="1.5"/>
+    <path d="M124 192 H236 M124 192 V136" stroke-width="0.8"/>
+    <path d="M124 176 q8 -30 18 -8 q8 16 16 -14 q8 -22 16 4 q8 20 18 -2 q10 -18 22 -4 q10 8 22 2" stroke-width="1.4"/>
+    <path d="M124 172 q56 -6 112 -4" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M142 168 v-6 M158 154 v10 M174 166 v-6" stroke-width="0.6"/>
+    <path d="M126 186 h20 M154 186 h30 M192 186 h40" stroke-width="0.5"/>
+    <!-- 音箱（右） -->
+    <rect x="270" y="122" width="40" height="88" rx="3" stroke-width="1.5"/>
+    <circle cx="290" cy="184" r="12" stroke-width="1.3"/>
+    <circle cx="290" cy="184" r="4" stroke-width="0.7"/>
+    <circle cx="290" cy="154" r="7" stroke-width="1.1"/>
+    <circle cx="290" cy="136" r="3.5" stroke-width="0.9"/>
+    <path d="M278 184 a12 12 0 0 0 12 12 v-3 a9 9 0 0 1 -9 -9 Z" fill="url(#p0208-4p-shade)" stroke="none"/>
+    <path d="M274 200 h32 v6 h-32 Z" fill="url(#p0208-4p-shade)" stroke="none"/>
+    <path d="M262 172 q-6 12 0 24 M254 166 q-10 18 0 36" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M86 150 Q98 150 110 158" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M250 160 Q258 160 266 164" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地面线 -->
+    <path d="M40 236 Q180 228 320 236" stroke-width="1.2"/>
+    <path d="M44 240 q40 -3 80 0 M236 240 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <!-- 底部信息条 -->
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层（不加滤镜） -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0208 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">房间校正</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">地下室的低频糊，用算法修，不用搬箱子</text>
+  <g font-size="7" fill="#777"><text x="126" y="200">20Hz</text><text x="232" y="200" text-anchor="end">200Hz</text></g>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">REW 测量 → 生成滤波器 → CamillaDSP 实时卷积 → 削峰后送胆机</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">只修 20~200Hz 房间模式，中高频保持原味</text>
+    <text x="64" y="366">每个摆位一套滤波器，换位置一键切换</text>
+    <text x="64" y="396">黑胶可选直通留模拟味，数字源必经 DSP</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：CamillaDSP（moOde 树莓派）· 数据出口：频响曲线 / 0211 大屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：HEnquist/camilladsp · moode-player/moode</text>
+  <!-- 印章 -->
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0205-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0205-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0205-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0205-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="66" y="284" width="88" height="30" stroke-width="1.5"/>
+    <path d="M66 284 l16 -9 h88 l-16 9" stroke-width="1.5"/>
+    <path d="M154 284 l16 -9 v30 l-16 9" stroke-width="1.5"/>
+    <path d="M155 285 l14 -8 v28 l-14 8 Z" fill="url(#p0205-2-shade)" stroke="none"/>
+    <rect x="68" y="286" width="84" height="26" stroke-width="0.5"/>
+    <circle cx="72" cy="290" r="1.8" stroke-width="0.8"/><circle cx="148" cy="290" r="1.8" stroke-width="0.8"/><circle cx="72" cy="308" r="1.8" stroke-width="0.8"/><circle cx="148" cy="308" r="1.8" stroke-width="0.8"/>
+    <circle cx="163" cy="300" r="3" stroke-width="0.9"/><circle cx="163" cy="292" r="3" stroke-width="0.9"/>
+    <path d="M148 248 l64 -22 l24 11 l-64 22 Z" stroke-width="1.5"/>
+    <path d="M150 249 l62 -21 l21 10" stroke-width="0.6"/>
+    <path d="M170 242 l22 -8 l8 4 l-22 8 Z" stroke-width="1"/><path d="M172 242 l20 -7 l6 3 l-20 7 Z" fill="url(#p0205-2-shade2)" stroke="none"/>
+    <path d="M156 244 l3 -1 M160 246 l3 -1 M200 226 l3 -1 M204 228 l3 -1" stroke-width="1"/>
+    <path d="M210 236 l4 -2 l2 4 l4 -2 l2 4 l4 -2" stroke-width="0.9"/>
+    <rect x="154" y="234" width="6" height="8" stroke-width="0.8"/>
+    <path d="M220 192 l30 -10 l14 6 l-30 10 Z" stroke-width="1.3"/><circle cx="233" cy="189" r="4" stroke-width="1"/><circle cx="233" cy="189" r="1.5" stroke-width="0.7"/>
+    <path d="M252 178 l30 -10 l14 6 l-30 10 Z" stroke-width="1.3"/><rect x="262" y="172" width="8" height="5" stroke-width="0.8" transform="rotate(-18 266 174)"/>
+    <path d="M238 194 l4 -1 M241 196 l4 -1 M272 180 l4 -1 M275 182 l4 -1" stroke-width="0.9"/>
+    <path d="M254 179 l28 -9 l10 4 l-28 9 Z" fill="url(#p0205-2-shade)" stroke="none" opacity="0.5"/>
+    <path d="M292 104 v34 a4 2 0 0 0 8 0 v-34" stroke-width="1.3"/><ellipse cx="296" cy="104" rx="4" ry="2" stroke-width="1"/>
+    <path d="M296 102 q0 -10 8 -14" stroke-width="0.8"/>
+    <rect x="293" y="112" width="6" height="14" fill="url(#p0205-2-shade)" stroke="none"/>
+    <path d="M310 104 v34 a4 2 0 0 0 8 0 v-34" stroke-width="1.3"/><ellipse cx="314" cy="104" rx="4" ry="2" stroke-width="1"/>
+    <path d="M314 102 q0 -10 8 -14" stroke-width="0.8"/>
+    <rect x="311" y="112" width="6" height="14" fill="url(#p0205-2-shade)" stroke="none"/>
+    <path d="M328 104 v34 a4 2 0 0 0 8 0 v-34" stroke-width="1.3"/><ellipse cx="332" cy="104" rx="4" ry="2" stroke-width="1"/>
+    <path d="M332 102 q0 -10 8 -14" stroke-width="0.8"/>
+    <rect x="329" y="112" width="6" height="14" fill="url(#p0205-2-shade)" stroke="none"/>
+    <circle cx="314" cy="142" r="3" stroke-width="0.9"/><path d="M330 136 h4 M330 139 h4" stroke-width="0.7"/><path d="M294 140 h4" stroke-width="0.8"/>
+    <rect x="346" y="44" width="84" height="14" stroke-width="1.5"/>
+    <path d="M346 44 l16 -9 h84 l-16 9" stroke-width="1.5"/>
+    <path d="M430 44 l16 -9 v14 l-16 9" stroke-width="1.5"/>
+    <path d="M431 45 l14 -8 v12 l-14 8 Z" fill="url(#p0205-2-shade)" stroke="none"/>
+    <rect x="348" y="46" width="80" height="10" stroke-width="0.5"/>
+    <rect x="356" y="48" width="26" height="7" stroke-width="0.8"/><path d="M359 51 h8 M370 51 h8" stroke-width="0.5"/>
+    <ellipse cx="404" cy="40" rx="4" ry="2" stroke-width="0.9"/><ellipse cx="416" cy="38" rx="4" ry="2" stroke-width="0.9"/><ellipse cx="428" cy="36" rx="4" ry="2" stroke-width="0.9"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M154 300 H200"/>
+    <path d="M148 245 H124"/>
+    <path d="M220 190 H196"/>
+    <path d="M340 120 H372"/>
+    <path d="M430 51 H448"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="210" cy="300" r="8"/>
+      <circle cx="114" cy="245" r="8"/>
+      <circle cx="186" cy="190" r="8"/>
+      <circle cx="382" cy="120" r="8"/>
+      <circle cx="458" cy="51" r="8"/>
+    </g>
+    <text x="210" y="303.5">1</text>
+    <text x="114" y="248.5">2</text>
+    <text x="186" y="193.5">3</text>
+    <text x="382" y="123.5">4</text>
+    <text x="458" y="54.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">水质监测探头盒 · 爆炸图</text>
+    <text x="16" y="52">1 防水盒底壳（穿线接头）</text>
+    <text x="16" y="68">2 ESP32 主控板（ESPHome）</text>
+    <text x="16" y="84">3 pH BNC 放大板 + TDS 板</text>
+    <text x="16" y="100">4 温度 / pH / TDS 三探头</text>
+    <text x="16" y="116">5 上盖 + 小屏窗</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0205-2</text>
+</svg>

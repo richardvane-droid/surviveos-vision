@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0103-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0103-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0103-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0103-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：Pinterest 画板（左） → 筛选漏斗（中） → 3×3 画框墙（右） -->
+    <!-- 画板：几张错落的图钉卡片 -->
+    <rect x="40" y="136" width="30" height="38" rx="2" stroke-width="1.3"/>
+    <rect x="76" y="128" width="30" height="46" rx="2" stroke-width="1.3"/>
+    <rect x="40" y="180" width="30" height="46" rx="2" stroke-width="1.3"/>
+    <rect x="76" y="180" width="30" height="34" rx="2" stroke-width="1.3"/>
+    <rect x="42" y="138" width="26" height="34" fill="url(#p0103-3p-dots)" stroke="none"/>
+    <rect x="42" y="182" width="26" height="42" fill="url(#p0103-3p-shade)" stroke="none"/>
+    <path d="M80 150 l8 -10 l6 8 l6 -12 l4 6" stroke-width="0.9"/>
+    <circle cx="86" cy="192" r="6" stroke-width="0.9"/><path d="M80 210 l6 -8 l6 6 l6 -6" stroke-width="0.9"/>
+    <circle cx="73" cy="130" r="3" stroke-width="1.2"/><path d="M73 133 v6" stroke-width="1.2"/>
+    <circle cx="73" cy="180" r="3" stroke-width="1.2"/><path d="M73 183 v6" stroke-width="1.2"/>
+    <!-- 漏斗（筛尺寸） -->
+    <path d="M150 132 H210 L188 170 V204 L172 212 V170 Z" stroke-width="1.5"/>
+    <path d="M154 138 H206 M160 148 H200" stroke-width="0.6"/>
+    <path d="M173 172 h14 v30 l-14 7 Z" fill="url(#p0103-3p-shade)" stroke="none"/>
+    <path d="M166 118 l4 -6 M180 116 v-8 M194 118 l-4 -6" stroke-width="0.9"/>
+    <path d="M156 224 l-8 6 M162 226 l-4 8" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <!-- 3×3 画框墙 -->
+    <rect x="246" y="126" width="78" height="96" rx="2" stroke-width="1.6"/>
+    <rect x="252" y="132" width="66" height="84" rx="1" stroke-width="0.8"/>
+    <path d="M274 132 V216 M296 132 V216 M252 160 H318 M252 188 H318" stroke-width="0.9"/>
+    <rect x="253" y="133" width="20" height="26" fill="url(#p0103-3p-dots)" stroke="none"/>
+    <rect x="297" y="161" width="20" height="26" fill="url(#p0103-3p-dots)" stroke="none"/>
+    <rect x="275" y="189" width="20" height="26" fill="url(#p0103-3p-shade)" stroke="none"/>
+    <path d="M278 150 l6 -8 l5 6 l4 -4" stroke-width="0.7"/>
+    <path d="M256 176 l6 -8 l5 6 l4 -4" stroke-width="0.7"/>
+    <path d="M300 204 l6 -8 l5 6 l4 -4" stroke-width="0.7"/>
+    <path d="M276 226 q6 -6 12 0 q-6 6 -12 0" stroke-width="0.8"/>
+    <!-- 箭头 -->
+    <path d="M112 176 Q128 172 144 168" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M214 174 Q228 174 240 174" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地平线 -->
+    <path d="M40 256 Q180 248 320 256" stroke-width="1.2"/>
+    <path d="M44 260 q40 -3 80 0 M236 260 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层 -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0103 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">每日换画调度</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">策展人是 Pinterest，七点整准时换画</text>
+  <text x="73" y="240" text-anchor="middle" font-size="8.5" fill="#666">四个主题画板</text>
+  <text x="180" y="240" text-anchor="middle" font-size="8.5" fill="#666">筛横竖比 · 分辨率</text>
+  <text x="285" y="240" text-anchor="middle" font-size="8.5" fill="#666">九屏依次淡入</text>
+  <text x="180" y="290" text-anchor="middle" font-size="9.5" fill="#666">4:00 拉画板 → 尺寸筛选 → 导入主题相册 → 7:00 上屏</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">只收横竖比 3:4~4:3、短边 ≥1600px 的图</text>
+    <text x="64" y="366">四套主题相册，说一句主题名就切换</text>
+    <text x="64" y="396">拉图失败沿用昨天的相册，不留黑屏</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：NAS 定时任务 + Immich · 数据出口：主题相册 / 各屏 kiosk 序列</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：mikf/gallery-dl · damongolding/immich-kiosk</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

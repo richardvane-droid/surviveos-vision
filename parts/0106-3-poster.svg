@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0106-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0106-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0106-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0106-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 柴火炉 + 烟管 + 热电偶 -->
+    <rect x="40" y="166" width="62" height="48" rx="3" stroke-width="1.6"/>
+    <rect x="48" y="176" width="46" height="28" rx="2" stroke-width="1"/>
+    <path d="M56 200 q6 -14 10 -6 q4 -12 10 0 q4 -10 8 4" stroke-width="1"/>
+    <rect x="50" y="190" width="42" height="12" fill="url(#p0106-3p-shade)" stroke="none"/>
+    <path d="M46 214 v8 M96 214 v8" stroke-width="1.4"/>
+    <path d="M64 166 v-48 M78 166 v-48" stroke-width="1.5"/><ellipse cx="71" cy="118" rx="7" ry="2.5" stroke-width="1.2"/>
+    <circle cx="78" cy="140" r="4" stroke-width="1.3"/><circle cx="78" cy="140" r="4" fill="url(#p0106-3p-dots)" stroke="none"/>
+    <path d="M82 140 h16" stroke-width="1"/>
+    <!-- 温度表盘 -->
+    <circle cx="180" cy="176" r="36" stroke-width="1.6"/>
+    <path d="M150 196 A36 36 0 0 1 150 156" stroke-width="3" stroke-opacity="0.5"/>
+    <path d="M150 156 A36 36 0 0 1 208 154" stroke-width="3" stroke-dasharray="2 2"/>
+    <path d="M208 154 A36 36 0 0 1 210 196" stroke-width="3"/>
+    <path d="M180 176 L196 154" stroke-width="1.8"/><circle cx="180" cy="176" r="3" stroke-width="1.2"/>
+    <path d="M180 140 v4 M216 176 h-4 M144 176 h4 M154 150 l3 3 M206 150 l-3 3" stroke-width="0.9"/>
+    <!-- 铃铛 + 手机 -->
+    <path d="M276 178 a16 16 0 0 1 32 0 v10 h-32 Z" stroke-width="1.5"/>
+    <path d="M272 188 h40 M288 192 a4 4 0 0 0 8 0" stroke-width="1.2"/>
+    <path d="M292 160 v-4" stroke-width="1.4"/>
+    <path d="M266 166 l-6 -4 M318 166 l6 -4 M262 178 h-6 M322 178 h6" stroke-width="0.8"/>
+    <path d="M280 178 a12 12 0 0 1 8 -11 v20 h-8 Z" fill="url(#p0106-3p-shade)" stroke="none"/>
+    <rect x="280" y="206" width="24" height="42" rx="4" stroke-width="1.3"/>
+    <path d="M286 216 h12 M286 224 h12 M286 232 h8" stroke-width="0.7"/>
+    <!-- 箭头 -->
+    <path d="M100 140 Q120 130 142 158" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M218 176 H270" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M292 194 v10" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地面 -->
+    <path d="M36 236 Q180 230 324 236" stroke-width="1.2"/>
+    <path d="M44 240 q40 -3 80 0 M232 240 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0106 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">烟温补风提醒</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">看烟不看火，柴火炉烧得对不对一表就知道</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">K 型热电偶 → 烟温 150~300℃ 甜区判断 → 添柴 / 关风门提醒 → HA 曲线</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">烟温比室温更诚实，甜区 150~300℃ 一眼看清</text>
+    <text x="64" y="366">低于 120℃ 提醒添柴开风门，高于 350℃ 提醒关小</text>
+    <text x="64" y="396">ESP32 本地判断，断网也有蜂鸣器叫你</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome（ESP32 + MAX6675） · 数据出口：HA 曲线 + 手机通知</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：lenne0815/hafireplaceautomation</text>
+  <g font-size="8" fill="#666" text-anchor="middle"><text x="138" y="212">120</text><text x="164" y="132">150</text><text x="206" y="146">300</text><text x="230" y="204">350℃</text></g>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

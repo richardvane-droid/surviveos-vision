@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0201-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0201-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0201-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0201-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 云 + 雨 -->
+    <path d="M44 156 q0 -14 14 -14 q6 -12 20 -8 q14 -4 18 10 q12 2 10 12 Z" stroke-width="1.5"/>
+    <path d="M48 154 h56" stroke-width="0.6"/>
+    <path d="M56 166 l-4 10 M68 166 l-4 10 M80 166 l-4 10 M92 166 l-4 10" stroke-width="1"/>
+    <path d="M50 146 q4 -6 10 -4" stroke-width="0.6"/>
+    <!-- 房子剖面 -->
+    <path d="M150 140 L180 112 L210 140" stroke-width="1.6"/>
+    <path d="M156 140 v40 h48 v-40" stroke-width="1.4"/>
+    <path d="M170 180 v-16 h10 v16" stroke-width="1"/>
+    <rect x="186" y="150" width="10" height="10" stroke-width="0.9"/>
+    <path d="M120 180 H240" stroke-width="1.3"/>
+    <path d="M124 178 l2 -4 l2 4 M134 178 l2 -4 l2 4 M222 178 l2 -4 l2 4 M232 178 l2 -4 l2 4" stroke-width="0.7"/>
+    <path d="M124 184 h112" stroke-width="0.5" stroke-dasharray="2 3"/>
+    <!-- 地下房间 -->
+    <rect x="152" y="188" width="56" height="44" rx="2" stroke-width="1.4"/>
+    <path d="M154 190 h52 v40 h-52 Z" stroke-width="0.5"/>
+    <path d="M152 232 h56 v3 h-56 Z" fill="url(#p0201-4p-shade)" stroke="none"/>
+    <rect x="168" y="192" width="14" height="6" rx="2" stroke-width="1.1"/>
+    <path d="M170 198 l-8 22 M180 198 l8 22" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M160 222 h24 v6 h-24 Z" stroke-width="0.9"/><path d="M160 222 q2 -4 6 0" stroke-width="0.8"/>
+    <path d="M194 210 a5 5 0 1 0 5 5 a4 4 0 0 1 -5 -5 Z" stroke-width="0.9"/>
+    <!-- 时钟 -->
+    <circle cx="296" cy="150" r="22" stroke-width="1.5"/>
+    <path d="M296 150 V134 M296 150 L286 158" stroke-width="1.6"/>
+    <path d="M296 130 v3 M296 170 v-3 M276 150 h3 M316 150 h-3" stroke-width="1"/>
+    <circle cx="296" cy="150" r="1.5" stroke-width="1"/>
+    <!-- 箭头 -->
+    <path d="M104 152 Q128 152 150 160" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M272 158 Q240 168 212 172" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M144 158 l6 2 l-5 4" stroke-width="1"/>
+    <path d="M218 170 l-6 2 l5 3" stroke-width="1"/>
+    <!-- 月亮 -->
+    <path d="M320 196 a12 12 0 1 0 12 12 a9 9 0 0 1 -12 -12 Z" stroke-width="1.3"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0201 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">天气同频·落日入睡</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">地面下雨地下也阴，到点太阳替你关灯</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">气象站 + 就寝时间 → 覆盖层（落日 > 阴天）→ 灯 + 夜灯</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">雨量 > 0 或照度低于晴天 1/3，10 分钟后切阴天</text>
+    <text x="64" y="366">睡前 30 分钟起，亮度按曲线压到 1%、2200K</text>
+    <text x="64" y="396">气象站离线 15 分钟视为晴天，不会永远阴天</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 自动化 · 数据出口：覆盖层实体，0202 / 0204 可订阅</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：basnijholt/adaptive-lighting</text>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="74" y="188">雨量 / 照度</text><text x="296" y="186">就寝前 30 分</text>
+    <text x="180" y="246">地下 3m：阴天 4500K → 落日 → 1% 月光</text>
+  </g>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

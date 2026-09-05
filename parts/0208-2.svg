@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0208-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="32" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0208-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0208-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L410 24" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0208-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 避震板 + 三只锥形脚 -->
+    <rect x="66" y="294" width="92" height="6" stroke-width="1.5"/>
+    <path d="M66 294 l16 -9 h92 l-16 9" stroke-width="1.5"/>
+    <path d="M158 294 l16 -9 v6 l-16 9" stroke-width="1.5"/>
+    <path d="M159 295 l14 -8 v4 l-14 8 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <path d="M74 300 l-4 9 h8 Z M150 300 l-4 9 h8 Z M166 293 l-4 9 h8 Z" stroke-width="1"/>
+    <path d="M74 300 l-4 9 h8 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <!-- ② 实木底座（内置电机） -->
+    <rect x="144" y="222" width="70" height="22" stroke-width="1.5"/>
+    <path d="M144 222 l16 -9 h70 l-16 9" stroke-width="1.5"/>
+    <path d="M214 222 l16 -9 v22 l-16 9" stroke-width="1.5"/>
+    <path d="M215 223 l14 -8 v20 l-14 8 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <path d="M150 226 q30 -1 60 0 M150 236 q30 -1 60 0" stroke-width="0.5"/>
+    <ellipse cx="164" cy="216" rx="5" ry="2.5" stroke-width="1"/>
+    <ellipse cx="164" cy="216" rx="5" ry="2.5" fill="url(#p0208-2-shade2)" stroke="none"/>
+    <ellipse cx="196" cy="216" rx="3" ry="1.5" stroke-width="0.9"/>
+    <rect x="150" y="230" width="10" height="6" rx="1" stroke-width="0.9"/>
+    <path d="M196 214 v-6" stroke-width="1"/>
+    <!-- ③ 副盘 + 皮带传动 -->
+    <ellipse cx="252" cy="170" rx="18" ry="7" stroke-width="1.5"/>
+    <path d="M234 170 v8 a18 7 0 0 0 36 0 v-8" stroke-width="1.2"/>
+    <path d="M236 174 a18 6 0 0 0 32 0 v3 a18 6 0 0 1 -32 0 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <ellipse cx="222" cy="164" rx="3" ry="1.5" stroke-width="1"/>
+    <path d="M219 164 q10 12 33 12 M225 163 q10 5 27 6" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <path d="M252 162 v4" stroke-width="1"/>
+    <!-- ④ 铝合金转盘 + 唱片垫 -->
+    <ellipse cx="305" cy="120" rx="42" ry="15" stroke-width="1.5"/>
+    <path d="M263 120 v8 a42 15 0 0 0 84 0 v-8" stroke-width="1.3"/>
+    <path d="M265 124 a42 14 0 0 0 80 0 v6 a42 14 0 0 1 -80 0 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <ellipse cx="305" cy="120" rx="34" ry="12" stroke-width="0.8"/>
+    <ellipse cx="305" cy="120" rx="20" ry="7" stroke-width="0.5"/>
+    <ellipse cx="305" cy="120" rx="8" ry="3" stroke-width="0.5"/>
+    <path d="M305 113 v-8" stroke-width="1.2"/>
+    <!-- ⑤ 唱臂 + 唱头 + 配重 -->
+    <circle cx="344" cy="88" r="8" stroke-width="1.4"/>
+    <circle cx="344" cy="88" r="3" stroke-width="0.8"/>
+    <path d="M338 92 a8 8 0 0 0 10 3 v-3 a5 5 0 0 1 -7 -2 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <path d="M348 84 L378 60" stroke-width="2"/>
+    <path d="M340 92 L332 98" stroke-width="2"/>
+    <circle cx="329" cy="100" r="4.5" stroke-width="1.2"/>
+    <path d="M378 60 l6 -2 l3 4 l-6 3 Z" stroke-width="1.1"/>
+    <path d="M383 63 v4" stroke-width="0.9"/>
+    <!-- ⑥ 亚克力防尘罩（最上） -->
+    <rect x="370" y="30" width="62" height="20" stroke-width="1.5"/>
+    <path d="M370 30 l16 -9 h62 l-16 9" stroke-width="1.5"/>
+    <path d="M432 30 l16 -9 v20 l-16 9" stroke-width="1.5"/>
+    <path d="M380 44 q22 -1 44 0" stroke-width="0.5"/>
+    <path d="M376 26 l12 -6 M444 24 l2 -2" stroke-width="0.5"/>
+    <path d="M433 31 l14 -8 v4 l-14 8 Z" fill="url(#p0208-2-shade)" stroke="none" opacity="0.6"/>
+  </g>
+  <!-- 引线 + 编号（不加滤镜） -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M158 298 H206"/>
+    <path d="M144 234 H124"/>
+    <path d="M270 172 H300"/>
+    <path d="M263 122 H240"/>
+    <path d="M336 88 H300"/>
+    <path d="M448 40 H452"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="298" r="8"/><circle cx="114" cy="234" r="8"/><circle cx="310" cy="172" r="8"/><circle cx="230" cy="122" r="8"/><circle cx="290" cy="88" r="8"/><circle cx="462" cy="40" r="8"/>
+    </g>
+    <text x="216" y="301.5">1</text><text x="114" y="237.5">2</text><text x="310" y="175.5">3</text><text x="230" y="125.5">4</text><text x="290" y="91.5">5</text><text x="462" y="43.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">黑胶唱盘总成 · 爆炸图</text>
+    <text x="16" y="52">1 避震板 + 三只锥形脚</text>
+    <text x="16" y="68">2 实木底座（内置同步电机）</text>
+    <text x="16" y="84">3 副盘 + 皮带传动</text>
+    <text x="16" y="100">4 铝合金转盘 + 橡胶唱片垫</text>
+    <text x="16" y="116">5 唱臂 + MM 唱头 + 配重</text>
+    <text x="16" y="132">6 亚克力防尘罩</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0208-2</text>
+</svg>

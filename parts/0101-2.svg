@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0101-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0101-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0101-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M90 322 L416 26" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0101-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 顶梁安装座（最下） -->
+    <rect x="76" y="294" width="60" height="12" rx="2" stroke-width="1.5"/>
+    <path d="M76 294 L92 284 L152 284 L136 294 Z" stroke-width="1.2"/>
+    <path d="M136 294 L152 284 V296 L136 306 Z" stroke-width="1.2"/>
+    <path d="M137 295 L151 286 V295 L137 304 Z" fill="url(#p0101-2-shade)" stroke="none"/>
+    <circle cx="88" cy="300" r="2" stroke-width="0.9"/><circle cx="124" cy="300" r="2" stroke-width="0.9"/>
+    <path d="M106 284 v-6 M100 280 a6 3 0 0 1 12 0" stroke-width="1"/>
+    <path d="M96 272 a10 5 0 0 1 20 0" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <!-- ② 恒流驱动器 -->
+    <rect x="144" y="242" width="48" height="20" rx="3" stroke-width="1.5"/>
+    <path d="M144 242 L156 234 L204 234 L192 242 Z" stroke-width="1.2"/>
+    <path d="M192 242 L204 234 V254 L192 262 Z" stroke-width="1.2"/>
+    <path d="M193 243 L203 236 V253 L193 260 Z" fill="url(#p0101-2-shade)" stroke="none"/>
+    <path d="M150 248 h20 M150 254 h14" stroke-width="0.6"/>
+    <path d="M192 252 q12 2 14 10 M144 250 q-8 0 -10 6" stroke-width="0.8"/>
+    <!-- ③ 云台关节 -->
+    <path d="M212 180 v22 a18 8 0 0 0 36 0 v-22" stroke-width="1.4"/>
+    <circle cx="212" cy="196" r="3" stroke-width="1"/><circle cx="248" cy="196" r="3" stroke-width="1"/>
+    <path d="M230 176 v-10" stroke-width="1.2"/><circle cx="230" cy="163" r="3.5" stroke-width="1.2"/>
+    <path d="M214 170 a16 16 0 0 1 32 0" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M216 175 l-3 -2 M244 175 l3 -2" stroke-width="0.8"/>
+    <path d="M214 202 a18 8 0 0 0 32 2 v3 a18 8 0 0 1 -32 -2 Z" fill="url(#p0101-2-shade)" stroke="none"/>
+    <!-- ④ COB 灯体 + 散热鳍 -->
+    <ellipse cx="292" cy="128" rx="22" ry="8" stroke-width="1.5"/>
+    <path d="M270 128 v20 a22 8 0 0 0 44 0 v-20" stroke-width="1.4"/>
+    <path d="M271 134 h42 M271 140 h42 M272 146 h40" stroke-width="0.6"/>
+    <path d="M272 142 a22 8 0 0 0 40 2 v4 a22 8 0 0 1 -40 -2 Z" fill="url(#p0101-2-shade)" stroke="none"/>
+    <circle cx="292" cy="128" r="6" stroke-width="1"/>
+    <circle cx="292" cy="128" r="2.5" fill="url(#p0101-2-shade2)" stroke="none"/>
+    <!-- ⑤ 蜂窝防眩罩 -->
+    <ellipse cx="351" cy="84" rx="20" ry="7" stroke-width="1.4"/>
+    <path d="M331 84 v6 a20 7 0 0 0 40 0 v-6" stroke-width="1.1"/>
+    <path d="M333 87 a20 7 0 0 0 36 2 v3 a20 7 0 0 1 -36 -2 Z" fill="url(#p0101-2-shade)" stroke="none"/>
+    <circle cx="343" cy="82" r="1.5" stroke-width="0.6"/><circle cx="349" cy="81" r="1.5" stroke-width="0.6"/><circle cx="355" cy="81" r="1.5" stroke-width="0.6"/><circle cx="361" cy="82" r="1.5" stroke-width="0.6"/>
+    <circle cx="340" cy="85" r="1.5" stroke-width="0.6"/><circle cx="346" cy="86" r="1.5" stroke-width="0.6"/><circle cx="352" cy="86" r="1.5" stroke-width="0.6"/><circle cx="358" cy="86" r="1.5" stroke-width="0.6"/><circle cx="364" cy="85" r="1.5" stroke-width="0.6"/>
+    <!-- ⑥ 毫米波传感器小板（最上） -->
+    <rect x="386" y="33" width="28" height="16" rx="2" stroke-width="1.3"/>
+    <rect x="390" y="37" width="8" height="6" stroke-width="0.8"/>
+    <rect x="390" y="37" width="8" height="6" fill="url(#p0101-2-shade2)" stroke="none"/>
+    <path d="M402 38 h8 M402 41 h8 M402 44 h6" stroke-width="0.6"/>
+    <path d="M418 36 a7 7 0 0 1 0 10 M422 33 a11 11 0 0 1 0 16" stroke-width="0.8"/>
+  </g>
+  <!-- 引线 + 编号（不加滤镜） -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M152 292 H198"/><path d="M144 252 H100"/><path d="M248 200 H316"/><path d="M270 140 H220"/><path d="M371 86 H420"/><path d="M400 49 V64"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="292" r="8"/><circle cx="92" cy="252" r="8"/><circle cx="324" cy="200" r="8"/><circle cx="212" cy="140" r="8"/><circle cx="428" cy="86" r="8"/><circle cx="400" cy="72" r="8"/>
+    </g>
+    <text x="206" y="295.5">1</text><text x="92" y="255.5">2</text><text x="324" y="203.5">3</text><text x="212" y="143.5">4</text><text x="428" y="89.5">5</text><text x="400" y="75.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">展台射灯灯头 · 爆炸图</text>
+    <text x="16" y="52">1 顶梁安装座（可旋转 350°）</text>
+    <text x="16" y="68">2 恒流驱动器（0-10V 调光）</text>
+    <text x="16" y="84">3 云台关节（俯仰 ±45°）</text>
+    <text x="16" y="100">4 COB 灯体 + 散热鳍（3000K）</text>
+    <text x="16" y="116">5 蜂窝防眩罩（15° 窄光束）</text>
+    <text x="16" y="132">6 毫米波存在传感器小板</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0101-2</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0103-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0103-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0103-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0103-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 3mm 铝背板（最下，带走线槽） -->
+    <path d="M60 310 l56 -22 l36 14 l-56 22 Z" stroke-width="1.5"/>
+    <path d="M60 310 v4 l36 14 v-4 M96 324 l56 -22 v-4" stroke-width="1.2"/>
+    <path d="M62 311 l34 13 v3 l-34 -13 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <path d="M72 306 l40 -16 M80 309 l40 -16 M88 312 l40 -16" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <path d="M70 302 l4 -2 M110 302 l4 -2 M90 314 l4 -2" stroke-width="0.9"/>
+    <path d="M104 300 a3 1.5 0 1 0 6 0 a3 1.5 0 1 0 -6 0" stroke-width="0.7"/>
+    <!-- ② 9 口 USB 电源 + 线束 -->
+    <path d="M150 256 l26 -10 l16 6 l-26 10 Z" stroke-width="1.5"/>
+    <path d="M150 256 v8 l16 6 v-8 M166 270 l26 -10 v-8" stroke-width="1.2"/>
+    <path d="M167 263 l25 -10 v6 l-25 10 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <path d="M156 253 l3 -1 M161 251 l3 -1 M166 249 l3 -1 M171 247 l3 -1" stroke-width="1.1"/>
+    <path d="M160 258 l3 -1 M165 256 l3 -1 M170 254 l3 -1" stroke-width="1.1"/>
+    <path d="M176 246 q6 -12 14 -8 M178 248 q8 -10 18 -4 M180 250 q10 -8 20 0 M182 252 q10 -4 18 4" stroke-width="0.7"/>
+    <path d="M148 262 q-8 -2 -10 6" stroke-width="0.9"/>
+    <!-- ③ 隔屏格栅（间距 8mm） -->
+    <path d="M186 208 l56 -22 l36 14 l-56 22 Z" stroke-width="1.5"/>
+    <path d="M198 213 l56 -22 M210 218 l56 -22" stroke-width="1.1"/>
+    <path d="M205 201 l36 14 M223 194 l36 14" stroke-width="1.1"/>
+    <path d="M186 208 v3 l36 14 v-3" stroke-width="0.9"/>
+    <path d="M187 209 l35 13 v3 l-35 -13 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <!-- ④ 九块 iPad 屏幕 -->
+    <path d="M244 160 l56 -22 l36 14 l-56 22 Z" stroke-width="1.5"/>
+    <path d="M250 158 l16 -6 l10 4 l-16 6 Z M268 151 l16 -6 l10 4 l-16 6 Z M286 144 l16 -6 l10 4 l-16 6 Z" stroke-width="0.9"/>
+    <path d="M261 162 l16 -6 l10 4 l-16 6 Z M279 155 l16 -6 l10 4 l-16 6 Z M297 148 l16 -6 l10 4 l-16 6 Z" stroke-width="0.9"/>
+    <path d="M272 166 l16 -6 l10 4 l-16 6 Z M290 159 l16 -6 l10 4 l-16 6 Z M308 152 l16 -6 l10 4 l-16 6 Z" stroke-width="0.9"/>
+    <path d="M268 151 l16 -6 l10 4 l-16 6 Z" fill="url(#p0103-1-shade2)" stroke="none"/>
+    <path d="M297 148 l16 -6 l10 4 l-16 6 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <!-- ⑤ 胡桃木外框 -->
+    <path d="M296 112 l64 -26 l42 16 l-64 26 Z" stroke-width="1.6"/>
+    <path d="M306 110 l54 -22 l30 12 l-54 22 Z" stroke-width="1.2"/>
+    <path d="M296 112 v4 l42 16 v-4 M338 132 l64 -26 v-4" stroke-width="1.2"/>
+    <path d="M297 113 l41 15 v4 l-41 -15 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <path d="M300 112 l54 -22 M392 100 l-54 22" stroke-width="0.5"/>
+    <path d="M300 116 l3 -1 M304 118 l3 -1 M394 96 l3 -1 M398 98 l3 -1" stroke-width="0.6"/>
+    <!-- ⑥ 松枝凸台（最上） -->
+    <path d="M382 52 l22 -9 l14 5 l-22 9 Z" stroke-width="1.4"/>
+    <path d="M382 52 v5 l14 5 v-5 M396 62 l22 -9 v-5" stroke-width="1.1"/>
+    <path d="M383 53 l13 5 v4 l-13 -5 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <path d="M398 48 q-4 -14 6 -24" stroke-width="1.1"/>
+    <path d="M400 40 l-6 -4 M401 36 l-5 -5 M402 32 l-4 -6 M400 40 l5 -5 M401 36 l6 -3 M403 30 l5 -4" stroke-width="0.8"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M152 302 H198"/><path d="M150 258 H108"/><path d="M278 200 H310"/><path d="M244 156 H200"/><path d="M402 104 H432"/><path d="M418 50 H444"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="302" r="8"/><circle cx="100" cy="258" r="8"/><circle cx="318" cy="200" r="8"/><circle cx="192" cy="156" r="8"/><circle cx="440" cy="104" r="8"/><circle cx="452" cy="50" r="8"/>
+    </g>
+    <text x="206" y="305.5">1</text><text x="100" y="261.5">2</text><text x="318" y="203.5">3</text><text x="192" y="159.5">4</text><text x="440" y="107.5">5</text><text x="452" y="53.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">九屏胡桃木画框 · 爆炸图</text>
+    <text x="16" y="52">1 3mm 铝背板（走线槽 + 散热）</text>
+    <text x="16" y="68">2 9 口 USB 电源 + 线束</text>
+    <text x="16" y="84">3 隔屏格栅（间距 8mm）</text>
+    <text x="16" y="100">4 九块 iPad Pro 12.9 屏幕</text>
+    <text x="16" y="116">5 胡桃木外框 92×70cm</text>
+    <text x="16" y="132">6 松枝凸台（前景）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0103-1</text>
+</svg>
