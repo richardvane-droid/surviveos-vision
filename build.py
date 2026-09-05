@@ -61,6 +61,8 @@ for m in modules:
     r = refs_by_id.get(m["id"], {"github": [], "xhs": []})
     m["github"] = r["github"]
     m["xhs"] = [{**x, "url": "https://www.xiaohongshu.com/search_result?keyword=" + quote(x["keyword"]) + "&source=web_explore_feed"} for x in r["xhs"]]
+preface = json.load(open(ROOT / "data" / "preface.json", encoding="utf-8"))
+preface["svg"] = (ROOT / "illos" / "preface-doors.svg").read_text(encoding="utf-8")
 parts_by_id = {}
 for f in sorted(glob.glob(str(ROOT / "data" / "parts-*.json"))):
     for r in json.load(open(f, encoding="utf-8")): parts_by_id[r["id"]] = r["parts"]
@@ -111,6 +113,7 @@ BASE = r"""<!doctype html>
 <header class="top">
   <a class="wordmark" href="{{ root }}index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
+    <a href="{{ root }}preface.html" class="pref {% if page == 'preface' %}on{% endif %}">序</a>
     {% for a in areas.values() %}<a href="{{ root }}areas/{{ a.id }}.html" {% if area and area.id == a.id %}class="on"{% endif %}><i>{{ a.id }}</i>{{ a.name }}</a>{% endfor %}
     <a href="{{ root }}refs.html" class="about {% if page == 'refs' %}on{% endif %}">参考索引</a>
     <a href="{{ root }}about.html" class="about {% if page == 'about' %}on{% endif %}">关于</a>
@@ -142,6 +145,7 @@ INDEX = r"""{% extends "base" %}{% block title %}一座乡野生存系统，做�
       <div><b>{{ parts_stats.total }}</b><span>个核心拆解</span></div>
     </div>
     <p class="stamp-row"><span class="stamp">设想版 · 非真实进度</span><span class="hand">看看就好，别当施工图 ↗</span></p>
+    <a class="pref-entry" href="preface.html"><span class="pref-mark">序</span><span><b>{{ preface.title }}</b><small>这座园子为什么存在——先读这 500 字</small></span><span class="arrow">→</span></a>
   </div>
   <figure class="hero-art">{{ areas['01'].svg_inline|safe }}<figcaption>01 暖村木屋 · 区域速写</figcaption></figure>
 </section>
@@ -321,6 +325,27 @@ ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endbloc
       <li><span class="box"></span><span>真实模块跨阶段时不需要改这个站——它就是一次性的完整形态快照，和真实进度是两条线。</span></li>
     </ol></section>
   <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><span></span></nav>
+</article>
+{% endblock %}"""
+
+PREFACE = r"""{% extends "base" %}{% block title %}序 · {{ preface.title }}{% endblock %}
+{% block desc %}{{ preface.epigraph }}{% endblock %}
+{% block bodyclass %}preface-page{% endblock %}
+{% block body %}
+<article class="preface">
+  <header class="pref-head">
+    <div class="pref-glyph">序</div>
+    <p class="kicker">SurviveOs · 设想版 · 代序</p>
+    <h1>{{ preface.title }}</h1>
+    <p class="epigraph">{{ preface.epigraph }}</p>
+  </header>
+  <div class="pref-body">
+    {% for p in preface.paragraphs %}<p{% if loop.first %} class="first"{% endif %}>{{ p }}</p>{% endfor %}
+  </div>
+  <p class="signoff"><span class="hand">{{ preface.signoff }}</span><span class="seal">序</span></p>
+  <figure class="pref-art">{{ preface.svg_inline|safe }}<figcaption>那段对话的最后一个问题：三道门进去，人藏在最里面。</figcaption></figure>
+  <p class="tiny pref-src">{{ preface.source }}。</p>
+  <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">进入这座园子 →</a><span></span></nav>
 </article>
 {% endblock %}"""
 
@@ -553,6 +578,27 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .gh-chips a:hover{border-color:var(--red);color:var(--red)}
 .td .mod-head{padding-bottom:4px}
 @media (max-width:820px){.logic-art{grid-template-columns:1fr}.logic-art .poster{max-width:360px}}
+.areas-nav .pref{font-family:"Long Cang","Kaiti SC",cursive;font-size:1.25rem;color:var(--red);padding-right:6px;border-right:1.4px solid var(--ink3);margin-right:4px}
+.pref-entry{display:flex;align-items:center;gap:14px;margin:22px 0 0;padding:12px 16px;border:1.6px solid var(--line);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;background:rgba(255,255,255,.45);max-width:520px;transition:transform .15s}
+.pref-entry:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.pref-entry .pref-mark{font-family:"Long Cang","Kaiti SC",cursive;font-size:2rem;color:var(--red);line-height:1;flex:0 0 auto}
+.pref-entry b{display:block;font-family:"Noto Serif SC",serif;font-weight:900}
+.pref-entry small{display:block;color:var(--ink3);font-size:.82rem}
+.pref-entry .arrow{margin-left:auto;color:var(--red)}
+.preface{max-width:640px;margin:0 auto;padding:30px 0 20px}
+.pref-head{text-align:center;padding:26px 0 10px}
+.pref-glyph{font-family:"Long Cang","Kaiti SC",cursive;font-size:6rem;line-height:1;color:var(--ink);opacity:.9;margin-bottom:6px}
+.pref-head h1{font-size:clamp(1.7rem,3.4vw,2.3rem);font-weight:900;letter-spacing:.04em}
+.epigraph{font-family:"Long Cang","Kaiti SC",cursive;font-size:1.35rem;color:var(--red);margin:14px auto 0;max-width:560px;line-height:1.7}
+.pref-body{margin-top:26px;border-top:1.6px solid var(--line);padding-top:22px}
+.pref-body p{font-family:"Noto Serif SC","Songti SC",serif;font-size:1.08rem;line-height:2.05;margin:0 0 1.1em;text-indent:2em;color:var(--ink)}
+.pref-body p.first::first-letter{font-size:2.6em;font-weight:900;float:left;line-height:1;margin:6px 8px 0 0;font-family:"Noto Serif SC",serif}
+.pref-body p.first{text-indent:0}
+.signoff{display:flex;justify-content:flex-end;align-items:center;gap:14px;margin:6px 0 30px;font-size:1.2rem}
+.seal{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:2px solid var(--red);color:var(--red);font-family:"Long Cang","Kaiti SC",cursive;font-size:1.5rem;border-radius:4px;transform:rotate(-6deg);opacity:.9}
+.pref-art{margin:0;border:1.6px solid var(--line);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;padding:10px 14px 4px;background:rgba(255,255,255,.4)}
+.pref-art figcaption{text-align:right;font-size:.85rem;color:var(--ink3);margin-top:2px;font-family:"Long Cang","Kaiti SC",cursive;font-size:1.05rem}
+.pref-src{margin-top:16px;text-align:center}
 .pager{display:flex;justify-content:space-between;gap:12px;padding:26px 0 10px;font-size:.92rem;border-top:1.6px solid var(--line);margin-top:26px}
 .pager a{border-bottom:1.5px solid transparent;white-space:nowrap}.pager a:hover{border-bottom-color:var(--red)}
 .pager .up{font-family:"Long Cang",cursive;font-size:1.15rem;color:var(--red)}
@@ -572,7 +618,7 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#f5f0e6"/><path d="M5 26 L16 7 L27 26 Z" fill="none" stroke="#1c1c1c" stroke-width="2.4" stroke-linejoin="round"/><path d="M12 26 V19 H20 V26" fill="none" stroke="#1c1c1c" stroke-width="2"/></svg>"""
 
-env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS, "teardown": TEARDOWN}),
+env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS, "teardown": TEARDOWN, "preface": PREFACE}),
                   autoescape=select_autoescape(default=True))
 
 # ---------- build ----------
@@ -580,15 +626,17 @@ if DIST.exists(): shutil.rmtree(DIST)
 (DIST / "areas").mkdir(parents=True); (DIST / "modules").mkdir(); (DIST / "teardown").mkdir()
 for m in modules: m["svg_inline"] = inline_svg(m["svg"], "sk-art")
 for a in AREAS.values(): a["svg_inline"] = inline_svg(a["svg"], "sk-art")
+preface["svg_inline"] = inline_svg(preface["svg"], "sk-art")
 for m in modules:
     for p in m["parts"]:
         p["img_inline"] = inline_svg(p["img"], "pc-art")
         p["poster_inline"] = inline_svg(p["poster"], "pc-poster") if p["poster"] else None
-ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, refs_stats=refs_stats, parts_stats=parts_stats)
+ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface)
 
 (DIST / "index.html").write_text(env.get_template("index").render(root="", **ctx), encoding="utf-8")
 (DIST / "about.html").write_text(env.get_template("about").render(root="", **{**ctx, "page": "about"}), encoding="utf-8")
 (DIST / "refs.html").write_text(env.get_template("refs").render(root="", **{**ctx, "page": "refs"}), encoding="utf-8")
+(DIST / "preface.html").write_text(env.get_template("preface").render(root="", **{**ctx, "page": "preface"}), encoding="utf-8")
 alist = list(AREAS.values())
 for i, a in enumerate(alist):
     (DIST / "areas" / f"{a['id']}.html").write_text(env.get_template("area").render(
@@ -603,7 +651,7 @@ for m in modules:
 (DIST / "favicon.svg").write_text(FAVICON, encoding="utf-8")
 (DIST / ".nojekyll").write_text("")
 # sitemap
-urls = ["index.html", "about.html", "refs.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
+urls = ["index.html", "preface.html", "about.html", "refs.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
 (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     "".join(f"<url><loc>{SITE_URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
 print(f"built {len(urls)} pages -> {DIST}")
