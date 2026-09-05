@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0505 电摩充电桩 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="电摩充电桩 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" class="on"><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/05.html">05 庭院</a> › <a href="../modules/0505.html">0505 电摩充电桩</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">庭院 · 模块 0505 · 核心拆解</p>
+    <h1>电摩充电桩：4 个核心模块与逻辑</h1>
+    <p class="lede">一根杉木立柱做的充电桩，电摩一停上去就通电，太阳能充满一整晚。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>杉木充电桩柱</a><a href="#p2"><i>2</i>计量充电插座</a><a href="#p3"><i>3</i>到家自动充电</a><a href="#p4"><i>4</i>光伏优先充电</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 杉木充电桩柱</h2>
+    <p class="scene">一根 15cm 见方、1.6 米高的杉木柱，顶上做一个 40cm 宽的小坡屋檐，屋檐下 1.2 米高处装防水插座和卷线盘，背面钉三个铸铁挂钩挂头盔、雨衣和充气泵。木柱下端用镀锌柱脚架空 5cm，不直接埋土，杭州的潮气就烂不了它。所有电线走柱子背面的一条凹槽，盖木条封住，从地下 PVC 管接到木屋配电箱。屋檐正下方一盏人体感应暖光灯，回家亮 3 分钟，兼做院门夜灯。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0505-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0505-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0505-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0505-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 青石板 + 镀锌柱脚 -->
+    <path d="M50 302 l96 -34 l46 18 l-96 34 Z" stroke-width="1.5"/>
+    <path d="M50 302 v6 l46 18 v-6 M96 326 l96 -34 v-6" stroke-width="1.1"/>
+    <path d="M97 320 l94 -33 v4 l-94 33 Z" fill="url(#p0505-1-shade)" stroke="none"/>
+    <path d="M70 296 l30 -10 M110 300 l40 -14 M80 286 l20 -7" stroke-width="0.5"/>
+    <path d="M100 284 l16 -6 l8 3 l-16 6 Z" stroke-width="1.2"/>
+    <path d="M104 284 v-10 h3 v10 M113 281 v-10 h3 v10 M104 274 l16 -6 l3 1 l-16 6 Z" stroke-width="1.1"/>
+    <path d="M108 268 v-4 l6 -2 v4" stroke-width="0.9"/>
+    <!-- 2 杉木柱（背槽） -->
+    <path d="M160 262 v-70 l16 -6 v70 Z" stroke-width="1.5"/>
+    <path d="M176 262 l10 4 v-70 l-10 -4 M186 196 l16 -6 l-10 -4 l-16 6" stroke-width="1.2"/>
+    <path d="M177 261 l8 3 v-68 l-8 -3 Z" fill="url(#p0505-1-shade)" stroke="none"/>
+    <path d="M164 256 v-58 M170 254 v-58" stroke-width="0.5"/>
+    <path d="M180 250 v-50 M183 251 v-50" stroke-width="0.8"/>
+    <path d="M180 250 v-50 h3 v50 Z" fill="url(#p0505-1-shade2)" stroke="none"/>
+    <path d="M190 236 q4 -3 4 -6 q-4 1 -4 6 Z M190 222 q4 -3 4 -6 q-4 1 -4 6 Z M190 208 q4 -3 4 -6 q-4 1 -4 6 Z" stroke-width="1"/>
+    <!-- 3 卷线盘 -->
+    <ellipse cx="240" cy="178" rx="18" ry="16" stroke-width="1.5"/>
+    <ellipse cx="240" cy="178" rx="12" ry="10" stroke-width="0.9"/>
+    <ellipse cx="240" cy="178" rx="4" ry="3.5" stroke-width="1"/>
+    <path d="M258 178 q6 0 8 4 v14 q-4 4 -8 0" stroke-width="1.1"/>
+    <path d="M258 172 l6 -2 v14" stroke-width="0.8"/>
+    <path d="M259 171 l5 -2 v14 l-5 2 Z" fill="url(#p0505-1-shade)" stroke="none"/>
+    <path d="M226 170 q14 -6 28 0 M226 186 q14 6 28 0" stroke-width="0.5"/>
+    <path d="M250 190 q10 8 20 10 q6 0 8 -4" stroke-width="1.1"/>
+    <path d="M276 196 l4 -1 v4 l-4 1 Z" stroke-width="1"/>
+    <!-- 4 防水插座 + 计量插座 -->
+    <path d="M298 128 l30 -11 l10 4 l-30 11 Z" stroke-width="1.4"/>
+    <path d="M298 128 v18 l10 4 v-18 M308 150 l30 -11 v-18" stroke-width="1.2"/>
+    <path d="M309 136 l28 -10 v14 l-28 10 Z" fill="url(#p0505-1-shade)" stroke="none"/>
+    <path d="M300 124 l8 -3 M302 140 v-8" stroke-width="0.7"/>
+    <path d="M312 118 l24 -9 l6 3 l-24 9 Z" stroke-width="1.2"/>
+    <path d="M312 118 v-10 l24 -9 v10 M336 109 l6 3 v-10 l-6 -3" stroke-width="1.1"/>
+    <path d="M320 112 l2 -1 v-3 l-2 1 Z M328 109 l2 -1 v-3 l-2 1 Z M324 106 l2 -1 v-2 l-2 1 Z" stroke-width="0.9"/>
+    <path d="M337 110 l5 3 v-10 l-5 -3 Z" fill="url(#p0505-1-shade)" stroke="none"/>
+    <!-- 5 坡屋檐 + 感应灯 -->
+    <path d="M354 76 l56 -20 l-14 -22 l-56 20 Z" stroke-width="1.5"/>
+    <path d="M354 76 l6 4 l56 -20 l-6 -4 M416 60 l-14 -22" stroke-width="1"/>
+    <path d="M360 72 l48 -17 M362 66 l44 -16 M364 60 l40 -14 M366 54 l36 -13 M368 48 l32 -12" stroke-width="0.5"/>
+    <path d="M356 78 l6 3 l56 -20 l-4 -3 Z" fill="url(#p0505-1-shade)" stroke="none"/>
+    <path d="M384 72 v8 a6 4 0 0 0 12 0 v-8" stroke-width="1.1"/>
+    <path d="M384 80 a6 4 0 0 0 12 0" stroke-width="0.8"/>
+    <path d="M382 90 l3 3 M398 90 l-3 3 M390 88 v5" stroke-width="0.7"/>
+    <path d="M350 40 q-6 -2 -6 -8 M350 44 q-8 0 -10 -4" stroke-width="0.6"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M150 310 H206"/><path d="M160 228 H116"/><path d="M280 172 H300"/><path d="M340 108 H378"/><path d="M414 56 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="310" r="8"/><circle cx="106" cy="228" r="8"/><circle cx="310" cy="172" r="8"/><circle cx="388" cy="108" r="8"/><circle cx="460" cy="56" r="8"/>
+    </g>
+    <text x="216" y="313.5">1</text><text x="106" y="231.5">2</text><text x="310" y="175.5">3</text><text x="388" y="111.5">4</text><text x="460" y="59.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">杉木充电桩柱 · 爆炸图</text>
+    <text x="16" y="52">1 青石板车位 + 镀锌柱脚（架空 5cm）</text>
+    <text x="16" y="68">2 15cm 方杉木柱 1.6m（背面走线槽）</text>
+    <text x="16" y="84">3 5m 自动卷线盘 + 插头</text>
+    <text x="16" y="100">4 防水插座 + 计量插座（1.2m 高）</text>
+    <text x="16" y="116">5 40cm 坡屋檐 + 人体感应暖灯</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0505-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>15cm 方杉木柱 1.6m，40cm 坡屋檐挡雨</li><li>镀锌柱脚架空 5cm，电线走背槽 + 地下 PVC 管</li><li>插座与卷线盘装屋檐下 1.2m 处</li><li>背面三个铸铁挂钩：头盔 / 雨衣 / 充气泵</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 计量充电插座</h2>
+    <p class="scene">充电桩的大脑是一只带功率计量的智能插座，串在防水插座和卷线盘之间。它里面是一颗 ESP32 和一片 BL0937 计量芯片，刷上开源的 ESPHome 配置后，每秒报一次功率，并且能在本地按功率阈值断电，不依赖网络。电摩充电时功率大约 150~250W，充满后充电器进入涓流，功率掉到 10W 以下并保持 10 分钟，插座自己切断，电池不会一直泡在满电状态里鼓包。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0505-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0505-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0505-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0505-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 后壳 + 插脚 -->
+    <path d="M58 296 l60 -22 v-44 l-60 22 Z" stroke-width="1.5"/>
+    <path d="M58 296 l14 6 l60 -22 l-14 -6 M132 280 v-44 l-14 -6" stroke-width="1.1"/>
+    <path d="M73 302 l58 -21 v-42 l-58 21 Z" fill="url(#p0505-2-shade)" stroke="none"/>
+    <path d="M80 274 l4 -1.5 v8 l-4 1.5 Z M96 268 l4 -1.5 v8 l-4 1.5 Z M88 260 l4 -1.5 v6 l-4 1.5 Z" stroke-width="1.1"/>
+    <path d="M81 274 l3 -1 v7 l-3 1 Z M97 268 l3 -1 v7 l-3 1 Z" fill="url(#p0505-2-shade2)" stroke="none"/>
+    <path d="M64 290 l6 -2 M108 270 l6 -2" stroke-width="0.5"/>
+    <!-- 2 继电器 + 计量板 -->
+    <path d="M144 246 l58 -21 l14 6 l-58 21 Z" stroke-width="1.5"/>
+    <path d="M146 248 l56 -20 l11 5" stroke-width="0.6"/>
+    <path d="M154 240 l14 -5 l8 3 l-14 5 Z M154 240 v-8 l14 -5 v8 M168 235 l8 3 v-8 l-8 -3" stroke-width="1.1"/>
+    <path d="M169 236 l7 3 v-7 l-7 -3 Z" fill="url(#p0505-2-shade)" stroke="none"/>
+    <path d="M178 232 l8 -3 l4 2 l-8 3 Z" stroke-width="0.9"/>
+    <path d="M179 232 l7 -3 l3 2 l-7 3 Z" fill="url(#p0505-2-shade2)" stroke="none"/>
+    <path d="M190 226 h3 M194 225 h3 M198 224 h3" stroke-width="1"/>
+    <circle cx="160" cy="248" r="1.8" stroke-width="0.8"/><circle cx="200" cy="234" r="1.8" stroke-width="0.8"/>
+    <!-- 3 ESP32 模块 -->
+    <path d="M226 184 l34 -12 l8 3 l-34 12 Z" stroke-width="1.5"/>
+    <path d="M228 186 l32 -11 l5 2" stroke-width="0.6"/>
+    <path d="M236 180 l12 -4 l5 2 l-12 4 Z" stroke-width="1"/>
+    <path d="M237 180 l11 -4 l4 2 l-11 4 Z" fill="url(#p0505-2-shade2)" stroke="none"/>
+    <path d="M252 178 l4 -1 l2 1 l-4 1 Z" stroke-width="0.8"/>
+    <path d="M228 188 h2 M231 187 h2 M234 186 h2 M237 185 h2 M240 184 h2 M243 183 h2 M246 182 h2 M249 181 h2 M252 180 h2 M255 179 h2" stroke-width="1"/>
+    <path d="M254 172 l4 -2 l2 -2 l2 2" stroke-width="0.7"/>
+    <!-- 4 前壳 + 插孔面板 -->
+    <path d="M288 130 l60 -22 v-44 l-60 22 Z" stroke-width="1.5"/>
+    <path d="M294 126 l48 -18 v-34 l-48 18 Z" stroke-width="0.8"/>
+    <path d="M288 130 l-6 -3 v-44 l6 3 M282 83 l60 -22 l6 3" stroke-width="1"/>
+    <path d="M306 108 l4 -1.5 v6 l-4 1.5 Z M322 102 l4 -1.5 v6 l-4 1.5 Z M314 94 l4 -1.5 v4 l-4 1.5 Z" stroke-width="1.1"/>
+    <path d="M307 108 l3 -1 v5 l-3 1 Z M323 102 l3 -1 v5 l-3 1 Z" fill="url(#p0505-2-shade2)" stroke="none"/>
+    <circle cx="336" cy="98" r="2" stroke-width="0.9"/>
+    <path d="M298 122 l6 -2" stroke-width="0.6"/>
+    <!-- 5 防水翻盖 -->
+    <path d="M362 76 l56 -20 v-36 l-56 20 Z" stroke-width="1.4"/>
+    <path d="M366 74 l48 -17 v-30 l-48 17 Z" stroke-width="0.6"/>
+    <path d="M362 76 l-4 -2 v-36 l4 2 M358 38 l56 -20 l4 2" stroke-width="0.9"/>
+    <path d="M362 40 q-4 0 -4 -4 q0 -4 4 -4 l56 -20 q4 0 4 4" stroke-width="1"/>
+    <path d="M359 39 l56 -20 v2 l-56 20 Z" fill="url(#p0505-2-shade)" stroke="none"/>
+    <path d="M384 76 q4 4 8 0" stroke-width="0.8"/>
+    <path d="M370 66 l14 -5 M370 60 l24 -8 M398 52 l14 -5" stroke-width="0.4"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M134 296 H206"/><path d="M144 250 H116"/><path d="M268 184 H300"/><path d="M348 110 H378"/><path d="M418 66 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="296" r="8"/><circle cx="106" cy="250" r="8"/><circle cx="310" cy="184" r="8"/><circle cx="388" cy="110" r="8"/><circle cx="460" cy="66" r="8"/>
+    </g>
+    <text x="216" y="299.5">1</text><text x="106" y="253.5">2</text><text x="310" y="187.5">3</text><text x="388" y="113.5">4</text><text x="460" y="69.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">计量充电插座 · 爆炸图</text>
+    <text x="16" y="52">1 后壳 + 16A 插脚</text>
+    <text x="16" y="68">2 继电器 + BL0937 计量板</text>
+    <text x="16" y="84">3 ESP32 模块（刷 ESPHome）</text>
+    <text x="16" y="100">4 前壳 + 插孔面板 + 状态灯</text>
+    <text x="16" y="116">5 防水翻盖（IP44）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0505-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>16A 计量插座，ESP32 + BL0937 计量芯片</li><li>每秒上报功率，精度约 ±2%</li><li>本地规则：&lt;10W 持续 10 分钟自动断电</li><li>防水翻盖 IP44，装屋檐下</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/KaufHA/PLF10" target="_blank" rel="noopener">KaufHA/PLF10</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 到家自动充电</h2>
+    <p class="scene">让“停车、插电、充电、断电”变成不用想的事。手机进入家的地理围栏时，HomeAssistant 把充电桩置为“待命”，屋檐感应灯准备亮；插头一插上，计量插座测到功率跃升到 50W 以上，说明车接上了，此时看时间：晚上 11 点前先记为“已接入”只等待，11 点后才真正通电，避开晚高峰电价。充电中功率掉到 10W 以下持续 10 分钟判定充满，断电并推送“已充满，本次用电 1.2 度”。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0505-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0505-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0505-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 海报边框（双线，手绘） -->
+  <g filter="url(#p0505-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <!-- 顶部小字条 -->
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：手机围栏 → 充电桩 → 电摩 -->
+    <circle cx="70" cy="150" r="34" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <rect x="58" y="134" width="24" height="34" rx="4" stroke-width="1.4"/><path d="M64 140 h12 M64 145 h12 M70 160 v3" stroke-width="0.9"/>
+    <rect x="160" y="112" width="40" height="90" rx="4" stroke-width="1.6"/><rect x="164" y="118" width="32" height="20" rx="2" stroke-width="1"/>
+    <rect x="164" y="146" width="32" height="50" fill="url(#p0505-3p-shade)" stroke="none"/>
+    <path d="M180 202 v14 M172 216 h16" stroke-width="1.4"/>
+    <path d="M200 150 q40 -10 60 30" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <path d="M256 208 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0 M300 208 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0" stroke-width="1.4"/>
+    <path d="M270 196 l22 -30 h22 l10 26 M292 166 l-8 -12 h-10 M270 196 h28" stroke-width="1.4"/>
+    <path d="M104 150 Q130 150 156 150" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="70" y="110" text-anchor="middle" font-size="9" fill="#666">到家围栏</text>
+    <text x="180" y="102" text-anchor="middle" font-size="9" fill="#666">计量充电桩</text>
+    <text x="290" y="240" text-anchor="middle" font-size="9" fill="#666">电摩</text>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <!-- 特性行左侧小图标 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <!-- 底部信息条 -->
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层（不加滤镜） -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0505 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">到家自动充电</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">停车、插电、断电，都不用你想</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">手机围栏 → 插座功率跃升 → 谷电时段通电 → 充满断电推送</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">到家 + 插座 >50W 判定车已接入</text>
+    <text x="64" y="366">23:00 后才通电，急用可手动立即充</text>
+    <text x="64" y="396">&lt;10W 持续 10 分钟判充满，推送用电量</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome 计量插座 + HomeAssistant 自动化 · 数据出口：充电记录</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：KaufHA/PLF10</text>
+  <!-- 印章 -->
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0505-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0505-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0505-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">到家自动充电 · 流程图</text>
+  <!-- 节点框（手绘感由滤镜提供；圆角矩形=步骤，菱形=判断，圆柱=数据源，胶囊=起止） -->
+  <g filter="url(#p0505-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 步骤 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <!-- 阴影：判断框右下 -->
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0505-3-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0505-3-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0505-3-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <!-- 连线（不加滤镜，带箭头） -->
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0505-3-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M85 170 V228"/>
+    <path d="M140 250 H173"/>
+    <path d="M230 270 V310"/>
+    <path d="M330 250 H287"/>
+    <path d="M30 250 Q10 250 10 150 Q10 130 28 130" stroke-dasharray="3 3"/>
+  </g>
+  <!-- 文字 -->
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">手机进入家围栏</text>
+    <text x="230" y="74">计量插座</text><text x="230" y="87" font-size="8.5" fill="#666">功率 / 电量</text>
+    <text x="85" y="147">充电桩置待命</text><text x="85" y="161">屋檐灯预亮</text>
+    <text x="230" y="149">功率 &gt; 50W？</text><text x="230" y="162" font-size="8.5" fill="#666">车已插上</text>
+    <text x="390" y="147">是 → 记为已接入</text><text x="390" y="161">看当前时间</text>
+    <text x="85" y="247">否 → 继续等待</text><text x="85" y="261">12 小时未接告警</text>
+    <text x="230" y="247">23:00 前只等待</text><text x="230" y="261">23:00 后通电</text>
+    <text x="390" y="247">&lt;10W 持续 10 分</text><text x="390" y="261">判定充满断电</text>
+    <text x="240" y="331">推送：已充满 · 本次 1.2 度</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="216" y="200">否</text><text x="70" y="200">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0505-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：手机到家 + 插座功率 &gt;50W 判定车已接入</li><li>23:00 后才通电；电量紧急可手动“立即充”</li><li>充满：&lt;10W 持续 10 分钟断电，推送用电量</li><li>兜底：接入超过 12 小时未充满则告警</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 KaufHA/PLF10 的 ESPHome 计量插座配置上报功率并本地断电，HomeAssistant 自动化结合手机定位与时间表做接入判断</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/KaufHA/PLF10" target="_blank" rel="noopener">KaufHA/PLF10</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 光伏优先充电</h2>
+    <p class="scene">电摩的电最好来自阁楼的光伏储能。白天光伏有余电时优先给它充；储能电池低于 30% 就切回市电，晚上 11 点后再补。这段逻辑读三个数：光伏当前发电功率、储能剩余电量、电摩插座功率。判断很简单：发电减去全屋用电还剩 200W 以上且储能高于 30%，就允许插座通电；否则关掉，等到夜间谷电再充。每天算一次“本次充电太阳能占比”，推到手机上。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0505-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0505-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0505-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 海报边框（双线，手绘） -->
+  <g filter="url(#p0505-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <!-- 顶部小字条 -->
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：光伏板 → 储能 → 插座 → 电摩 -->
+    <path d="M40 190 l60 -30 h60 l-60 30 Z" stroke-width="1.6"/><path d="M60 180 l60 -30 M80 170 l60 -30 M70 185 l40 -20 M90 175 l40 -20" stroke-width="0.7"/>
+    <circle cx="150" cy="128" r="12" stroke-width="1.4"/><path d="M150 110 v-6 M150 146 v6 M132 128 h-6 M168 128 h6" stroke-width="1.2"/>
+    <rect x="190" y="150" width="46" height="60" rx="4" stroke-width="1.6"/><rect x="196" y="158" width="34" height="14" stroke-width="1"/><rect x="196" y="176" width="34" height="14" stroke-width="1"/><rect x="196" y="194" width="34" height="10" fill="url(#p0505-4p-shade)" stroke="none"/>
+    <text x="213" y="226" text-anchor="middle" font-size="9" fill="#666">储能 SOC</text>
+    <text x="100" y="212" text-anchor="middle" font-size="9" fill="#666">光伏余电</text>
+    <path d="M162 172 Q175 172 188 172" stroke-width="1" stroke-dasharray="3 3"/>
+    <rect x="268" y="120" width="40" height="70" rx="4" stroke-width="1.6"/><rect x="274" y="128" width="28" height="16" rx="2" stroke-width="1"/><path d="M288 190 v12 M280 202 h16" stroke-width="1.4"/>
+    <path d="M236 172 Q252 160 266 150" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="288" y="226" text-anchor="middle" font-size="9" fill="#666">计量插座</text>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <!-- 特性行左侧小图标 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <!-- 底部信息条 -->
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层（不加滤镜） -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0505 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">光伏优先充电</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">电摩的电，先从屋顶来</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">光伏余电 + 储能 SOC + 插座功率 → 允许/断电 → 夜间谷电兜底</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">余电 >200W 且储能 >30% 才通电</text>
+    <text x="64" y="366">储能 &lt;30% 切市电，23:00 后谷电补充</text>
+    <text x="64" y="396">每次充电算太阳能占比推到手机</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HomeAssistant（solar_optimizer）· 数据出口：太阳能占比</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：evcc-io/evcc · jmcollin78/solar_optimizer</text>
+  <!-- 印章 -->
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0505-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0505-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0505-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">光伏优先充电 · 流程图</text>
+  <!-- 节点框（手绘感由滤镜提供；圆角矩形=步骤，菱形=判断，圆柱=数据源，胶囊=起止） -->
+  <g filter="url(#p0505-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 步骤 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <!-- 阴影：判断框右下 -->
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0505-4-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0505-4-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0505-4-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <!-- 连线（不加滤镜，带箭头） -->
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0505-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M85 170 V228"/>
+    <path d="M140 250 H173"/>
+    <path d="M230 270 V310"/>
+    <path d="M330 250 H287"/>
+    <path d="M30 250 Q10 250 10 150 Q10 130 28 130" stroke-dasharray="3 3"/>
+  </g>
+  <!-- 文字 -->
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每 5 分钟采样</text>
+    <text x="230" y="74">光伏 / 储能</text><text x="230" y="87" font-size="8.5" fill="#666">发电 · SOC · 全屋负载</text>
+    <text x="85" y="147">余电 = 发电</text><text x="85" y="161">− 全屋用电</text>
+    <text x="230" y="149">余电&gt;200W 且</text><text x="230" y="162" font-size="8.5" fill="#666">储能 &gt; 30%？</text>
+    <text x="390" y="147">是 → 插座通电</text><text x="390" y="161">太阳能充电</text>
+    <text x="85" y="247">否 → 插座断电</text><text x="85" y="261">等夜间谷电</text>
+    <text x="230" y="247">23:00 后按谷电</text><text x="230" y="261">补充到充满</text>
+    <text x="390" y="247">数据离线时</text><text x="390" y="261">退回时间表充电</text>
+    <text x="240" y="331">每日推送：太阳能占比 · 用电量</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="216" y="200">否</text><text x="70" y="200">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0505-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>允许条件：光伏余电 &gt;200W 且储能 &gt;30%</li><li>储能 &lt;30% 切市电，23:00 后按谷电补充</li><li>输出：每次充电的太阳能占比与用电量</li><li>兜底：光伏数据离线时按时间表充电</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 evcc-io/evcc 的 pv 模式把计量插座当充电器管理，或用 jmcollin78/solar_optimizer 在 HA 里按净发电量启停插座</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/evcc-io/evcc" target="_blank" rel="noopener">evcc-io/evcc</a><a href="https://github.com/jmcollin78/solar_optimizer" target="_blank" rel="noopener">jmcollin78/solar_optimizer</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0504.html">← 0504 自动种植架 拆解</a>
+    <a class="up" href="../modules/0505.html">回到 电摩充电桩 专题页</a>
+    <a href="../teardown/0601.html">0601 稀树草原环境系统 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

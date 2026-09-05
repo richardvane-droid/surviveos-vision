@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0504 自动种植架 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="自动种植架 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" class="on"><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/05.html">05 庭院</a> › <a href="../modules/0504.html">0504 自动种植架</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">庭院 · 模块 0504 · 核心拆解</p>
+    <h1>自动种植架：4 个核心模块与逻辑</h1>
+    <p class="lede">一座四层的自动滴灌种植架，土壤湿度自己判断，我只负责摘和吃。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 3</span>
+      <span class="tag">联动逻辑 1</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>镀锌管四层种植架</a><a href="#p2"><i>2</i>滴灌供水单元</a><a href="#p3"><i>3</i>墨水屏状态面板</a><a href="#p4"><i>4</i>滴灌调度器</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 镀锌管四层种植架</h2>
+    <p class="scene">架子用 25mm 镀锌水管加铸铁卡扣拼成，2 米宽、0.6 米深、1.8 米高，四层，不用焊接，一把内六角就能装。每层横管上铺一块防腐木板，放 6 个 40cm 种植箱；层高从下往上 55/45/40/35cm，高的茄果放下面，矮的叶菜和新苗放上面，谁也不挡谁的光。架顶横管兼作遮阳网的导轨，侧面立管上挂墨水屏和液肥桶。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0504-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0504-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0504-1-net" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(20)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#5a5a5a" stroke-width="0.5"/>
+      <line x1="0" y1="2.5" x2="5" y2="2.5" stroke="#5a5a5a" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0504-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 底脚 + 底层横管框 -->
+    <path d="M54 300 l96 -34 l44 18 l-96 34 Z" stroke-width="1.5"/>
+    <path d="M60 300 l90 -32 l34 14 l-90 32 Z" stroke-width="0.8"/>
+    <path d="M54 300 l96 -34 l44 18 l-96 34 Z M60 300 l90 -32 l34 14 l-90 32 Z" fill="url(#p0504-1-shade)" fill-rule="evenodd" stroke="none"/>
+    <path d="M54 300 v4 l6 2 M150 266 v4 M194 284 v4 l-4 2 M98 318 v4" stroke-width="1"/>
+    <path d="M48 306 h12 v3 h-12 Z M144 272 h12 v3 h-12 Z M188 290 h12 v3 h-12 Z M92 324 h12 v3 h-12 Z" stroke-width="1.1"/>
+    <!-- 2 立管 ×4 + 卡扣 -->
+    <path d="M146 262 v-46 M152 262 v-46 M146 216 a3 2 0 0 1 6 0" stroke-width="1.4"/>
+    <path d="M172 252 v-46 M178 252 v-46 M172 206 a3 2 0 0 1 6 0" stroke-width="1.4"/>
+    <path d="M198 242 v-46 M204 242 v-46 M198 196 a3 2 0 0 1 6 0" stroke-width="1.4"/>
+    <path d="M224 232 v-46 M230 232 v-46 M224 186 a3 2 0 0 1 6 0" stroke-width="1.4"/>
+    <path d="M147 226 h4 v14 h-4 Z M147 250 h4 v8 h-4 Z M173 216 h4 v14 h-4 Z M199 206 h4 v14 h-4 Z M225 196 h4 v14 h-4 Z M225 224 h4 v6 h-4 Z" fill="url(#p0504-1-shade)" stroke="none"/>
+    <path d="M143 230 h12 v8 h-12 Z M169 220 h12 v8 h-12 Z M195 210 h12 v8 h-12 Z M221 200 h12 v8 h-12 Z" stroke-width="1.1"/>
+    <path d="M145 234 h2 M153 234 h2 M171 224 h2 M179 224 h2" stroke-width="0.6"/>
+    <!-- 3 层板 + 种植箱 -->
+    <path d="M214 202 l70 -26 l30 12 l-70 26 Z" stroke-width="1.5"/>
+    <path d="M214 202 v4 l30 12 v-4 M244 218 l70 -26 v-4" stroke-width="0.9"/>
+    <path d="M245 214 l68 -25 v3 l-68 25 Z" fill="url(#p0504-1-shade)" stroke="none"/>
+    <path d="M226 190 l16 -6 l12 5 l-16 6 Z M226 190 v-12 l16 -6 v12 M242 184 l12 5 v-12 l-12 -5 l-16 6" stroke-width="1.2"/>
+    <path d="M248 182 l16 -6 l12 5 l-16 6 Z M248 182 v-12 l16 -6 v12 M264 176 l12 5 v-12 l-12 -5 l-16 6" stroke-width="1.2"/>
+    <path d="M270 174 l16 -6 l12 5 l-16 6 Z M270 174 v-12 l16 -6 v12 M286 168 l12 5 v-12 l-12 -5 l-16 6" stroke-width="1.2"/>
+    <path d="M243 185 l11 4 v-11 l-11 -4 Z M265 177 l11 4 v-11 l-11 -4 Z M287 169 l11 4 v-11 l-11 -4 Z" fill="url(#p0504-1-shade)" stroke="none"/>
+    <path d="M234 176 q0 -8 4 -12 M236 170 q4 -4 8 -2 M256 168 q0 -8 4 -12 M258 162 q-4 -4 -8 -2 M278 160 q0 -8 4 -12 M280 154 q4 -4 8 -2" stroke-width="0.9"/>
+    <!-- 4 滴灌主管 -->
+    <path d="M292 130 L352 108 M292 134 L352 112 M292 130 a2 2 0 0 0 0 4 M352 108 a2 2 0 0 1 0 4" stroke-width="1.3"/>
+    <path d="M293 132 l58 -22 v2 l-58 22 Z" fill="url(#p0504-1-shade)" stroke="none"/>
+    <path d="M304 129 v6 M320 123 v6 M336 117 v6" stroke-width="1.2"/>
+    <path d="M301 135 h6 M317 129 h6 M333 123 h6" stroke-width="1.2"/>
+    <path d="M304 140 q-2 3 0 5 q2 -2 0 -5 Z M320 134 q-2 3 0 5 q2 -2 0 -5 Z M336 128 q-2 3 0 5 q2 -2 0 -5 Z" stroke-width="0.8"/>
+    <path d="M286 133 h6 v-4 h-6 Z" stroke-width="1"/>
+    <!-- 5 遮阳网 + 导轨 -->
+    <path d="M350 78 l70 -26 l22 10 l-70 26 Z" stroke-width="1.4"/>
+    <path d="M352 78 l68 -25 l18 8 l-68 25 Z" fill="url(#p0504-1-net)" stroke="none"/>
+    <path d="M346 82 L418 56 M348 85 L420 59" stroke-width="1.3"/>
+    <path d="M356 80 v-6 M400 64 v-6" stroke-width="1"/>
+    <path d="M418 52 q6 -4 8 -8 M440 62 q6 -4 8 -8" stroke-width="0.7"/>
+    <path d="M420 52 q-3 -6 4 -8 q4 3 -4 8" stroke-width="0.8"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M150 310 H206"/><path d="M143 240 H116"/><path d="M290 190 H316"/><path d="M352 124 H378"/><path d="M442 66 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="310" r="8"/><circle cx="106" cy="240" r="8"/><circle cx="326" cy="190" r="8"/><circle cx="388" cy="124" r="8"/><circle cx="460" cy="66" r="8"/>
+    </g>
+    <text x="216" y="313.5">1</text><text x="106" y="243.5">2</text><text x="326" y="193.5">3</text><text x="388" y="127.5">4</text><text x="460" y="69.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">镀锌管四层种植架 · 爆炸图</text>
+    <text x="16" y="52">1 底层横管框 + 法兰脚（2×0.6m）</text>
+    <text x="16" y="68">2 25mm 立管 ×4 + 铸铁卡扣</text>
+    <text x="16" y="84">3 防腐木层板 + 40cm 种植箱 ×6</text>
+    <text x="16" y="100">4 16mm 滴灌主管（每箱 2 滴头）</text>
+    <text x="16" y="116">5 遮阳网 + 架顶导轨（35℃ 放下）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0504-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>25mm 镀锌管 + 卡扣，2×0.6×1.8m 四层</li><li>每层 6 个 40cm 种植箱，层高 55/45/40/35cm</li><li>底层茄果、二层香草、三层叶菜、顶层新苗</li><li>架顶横管做遮阳网导轨，35℃ 自动放下</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 滴灌供水单元</h2>
+    <p class="scene">水从雨水罐来，先过一级 120 目过滤网，再进一台 12V 隔膜加压泵，泵后接一只 4 路电磁阀分配器，每层一路 16mm 主管，每个种植箱两个可调滴头。分层控制的好处是每层可以有自己的浇水量：茄果多、新苗少。整套装在架子底层的一只防水配电箱里，泵和阀都由一块 ESP32 继电器扩展板驱动，断网也照常工作，只是曲线暂时不上传。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0504-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0504-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0504-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0504-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 防水配电箱 -->
+    <path d="M54 292 l80 -28 l44 18 l-80 28 Z" stroke-width="1.5"/>
+    <path d="M54 292 v30 l44 18 v-30 M98 340 l80 -28 v-30" stroke-width="1.4"/>
+    <path d="M99 310 l78 -27 v28 l-78 27 Z" fill="url(#p0504-2-shade)" stroke="none"/>
+    <path d="M60 304 l32 13 M60 318 l32 13" stroke-width="0.6"/>
+    <path d="M76 312 a2 1.5 0 1 0 4 0 a2 1.5 0 1 0 -4 0" stroke-width="0.8"/>
+    <path d="M64 322 h4 v6 h-4 Z" stroke-width="0.9"/>
+    <path d="M70 272 l50 -17 l24 10 l-50 17 Z" stroke-width="0.6"/>
+    <!-- 2 ESP32 继电器板 -->
+    <path d="M144 244 l58 -20 l24 10 l-58 20 Z" stroke-width="1.5"/>
+    <path d="M146 246 l56 -19 l21 9" stroke-width="0.6"/>
+    <path d="M152 240 h8 v-4 h-8 Z M164 236 h8 v-4 h-8 Z M176 232 h8 v-4 h-8 Z M188 228 h8 v-4 h-8 Z" stroke-width="1"/>
+    <path d="M153 239 h6 v-2 h-6 Z M165 235 h6 v-2 h-6 Z M177 231 h6 v-2 h-6 Z M189 227 h6 v-2 h-6 Z" fill="url(#p0504-2-shade2)" stroke="none"/>
+    <path d="M160 250 l10 -3 l6 3 l-10 3 Z" stroke-width="1"/>
+    <path d="M186 240 h2 M190 239 h2 M194 238 h2 M198 237 h2" stroke-width="1.2"/>
+    <path d="M204 234 l4 -2 M206 238 l4 -2" stroke-width="0.9"/>
+    <!-- 3 120 目过滤器 -->
+    <path d="M226 190 h4 M266 176 h4" stroke-width="1.4"/>
+    <path d="M230 182 l36 -12 v14 l-36 12 Z" stroke-width="1.4"/>
+    <path d="M233 184 l30 -10 M233 188 l30 -10 M233 192 l30 -10 M238 180 v14 M246 177 v14 M254 174 v14" stroke-width="0.5"/>
+    <path d="M230 182 a3 6 0 0 1 0 14 M266 170 a3 6 0 0 1 0 14" stroke-width="1"/>
+    <path d="M222 192 h8 v-4 h-8 Z M268 176 h8 v-4 h-8 Z" stroke-width="1.1"/>
+    <path d="M232 200 q4 4 8 0" stroke-width="0.7"/>
+    <!-- 4 12V 隔膜泵 -->
+    <path d="M300 128 l32 -12 l14 6 l-32 12 Z" stroke-width="1.5"/>
+    <path d="M300 128 v12 l14 6 v-12 M314 146 l32 -12 v-12" stroke-width="1.3"/>
+    <path d="M315 135 l30 -11 v10 l-30 11 Z" fill="url(#p0504-2-shade)" stroke="none"/>
+    <ellipse cx="322" cy="118" rx="10" ry="4" transform="rotate(-20 322 118)" stroke-width="1.2"/>
+    <path d="M296 134 h-8 v-4 h8 Z M346 118 h8 v-4 h-8 Z" stroke-width="1"/>
+    <path d="M304 140 v4 M308 142 v4" stroke-width="0.8"/>
+    <!-- 5 四路电磁阀 -->
+    <path d="M362 78 L440 50 M362 84 L440 56" stroke-width="1.4"/>
+    <path d="M363 81 l76 -27 v4 l-76 27 Z" fill="url(#p0504-2-shade)" stroke="none"/>
+    <path d="M374 76 v-14 h8 v10 M392 70 v-14 h8 v10 M410 64 v-14 h8 v10 M428 58 v-14 h8 v10" stroke-width="1.2"/>
+    <path d="M374 62 h8 M392 56 h8 M410 50 h8 M428 44 h8" stroke-width="1.2"/>
+    <path d="M375 63 h6 v8 h-6 Z M393 57 h6 v8 h-6 Z M411 51 h6 v8 h-6 Z M429 45 h6 v8 h-6 Z" fill="url(#p0504-2-shade2)" stroke="none"/>
+    <path d="M376 84 v6 M394 78 v6 M412 72 v6 M430 66 v6" stroke-width="1.3"/>
+    <path d="M356 82 h6 v-4 h-6 Z" stroke-width="1"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M178 300 H206"/><path d="M144 246 H116"/><path d="M270 184 H300"/><path d="M354 116 H378"/><path d="M440 66 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="300" r="8"/><circle cx="106" cy="246" r="8"/><circle cx="310" cy="184" r="8"/><circle cx="388" cy="116" r="8"/><circle cx="460" cy="66" r="8"/>
+    </g>
+    <text x="216" y="303.5">1</text><text x="106" y="249.5">2</text><text x="310" y="187.5">3</text><text x="388" y="119.5">4</text><text x="460" y="69.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">滴灌供水单元 · 爆炸图</text>
+    <text x="16" y="52">1 防水配电箱（架子底层）</text>
+    <text x="16" y="68">2 ESP32 + 8 路继电器板</text>
+    <text x="16" y="84">3 120 目过滤器（防泥沙堵滴头）</text>
+    <text x="16" y="100">4 12V 隔膜泵（4L/min）</text>
+    <text x="16" y="116">5 四路电磁阀（每层一路）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0504-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>120 目过滤器，防雨水罐来的泥沙堵滴头</li><li>12V 隔膜泵 4L/min，4 路电磁阀分层</li><li>16mm 主管 + 可调滴头，每箱 2 个</li><li>ESP32 + 8 路继电器板驱动，装防水箱</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/makstech/esphome-irrigation-system" target="_blank" rel="noopener">makstech/esphome-irrigation-system</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-hw">产品模块</span> 3. 墨水屏状态面板</h2>
+    <p class="scene">架子侧面挂一块 2.9 寸墨水屏，显示每层土壤湿度、上次浇水时间和今日是否浇水。墨水屏不发光、不刷新时零功耗，在户外阳光下反而最清楚，一颗 18650 电池能撑几个月。它接一块 ESP32，每 10 分钟从 HomeAssistant 拉一次数据刷新一屏，然后深睡；装在一只 3D 打印的小盒里，前面盖一片亚克力挡雨。同样的数据也同步到全屋中枢的大屏上。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0504-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0504-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0504-3-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0504-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 后壳 + 18650 电池 -->
+    <path d="M52 296 l84 -30 v-40 l-84 30 Z" stroke-width="1.5"/>
+    <path d="M52 296 l8 4 l84 -30 l-8 -4 M144 270 v-40 l-8 -4" stroke-width="1"/>
+    <path d="M60 300 l84 -30 v-40 l-84 30 Z" fill="url(#p0504-3-shade)" stroke="none"/>
+    <path d="M58 270 l60 -22" stroke-width="1.3"/>
+    <path d="M58 270 a4 3 0 0 0 4 4 l60 -22 a4 3 0 0 0 -4 -4 M58 270 a4 3 0 0 1 4 -4" stroke-width="1.2"/>
+    <path d="M62 274 l60 -22 v-4 l-60 22 Z" fill="url(#p0504-3-shade2)" stroke="none"/>
+    <path d="M122 248 l4 -1.5 v3 l-4 1.5" stroke-width="1"/>
+    <path d="M70 290 q-4 -6 0 -10 M126 268 q4 2 4 6" stroke-width="0.7"/>
+    <!-- 2 ESP32 板 -->
+    <path d="M146 240 l60 -22 l16 8 l-60 22 Z" stroke-width="1.5"/>
+    <path d="M148 242 l58 -21 l13 6" stroke-width="0.6"/>
+    <path d="M160 234 l14 -5 l6 3 l-14 5 Z" stroke-width="1"/>
+    <path d="M161 234 l13 -5 l5 3 l-13 5 Z" fill="url(#p0504-3-shade2)" stroke="none"/>
+    <path d="M182 226 l8 -3 l4 2 l-8 3 Z" stroke-width="0.9"/>
+    <path d="M196 236 h2 M199 235 h2 M202 234 h2 M205 233 h2 M208 232 h2" stroke-width="1.2"/>
+    <path d="M150 246 h2 M153 245 h2 M156 244 h2 M159 243 h2 M162 242 h2" stroke-width="1.2"/>
+    <path d="M186 218 l4 -2 l2 2 l-4 2 Z" stroke-width="0.8"/>
+    <!-- 3 2.9 寸墨水屏 -->
+    <path d="M214 186 l62 -22 v-30 l-62 22 Z" stroke-width="1.5"/>
+    <path d="M218 183 l54 -19 v-24 l-54 19 Z" stroke-width="0.7"/>
+    <path d="M276 164 l3 1 v-30 l-3 -1" stroke-width="0.8"/>
+    <path d="M276 164 l3 1 v-30 l-3 -1 Z" fill="url(#p0504-3-shade)" stroke="none"/>
+    <path d="M222 176 l20 -7 M222 170 l30 -11 M222 164 l14 -5 M250 166 l20 -7" stroke-width="0.6"/>
+    <path d="M258 172 l3 -1 M262 171 l3 -1 M266 170 l3 -1" stroke-width="0.8"/>
+    <!-- 4 3D 打印前壳（开窗） -->
+    <path d="M288 128 l70 -25 v-40 l-70 25 Z" stroke-width="1.5"/>
+    <path d="M296 122 l54 -19 v-26 l-54 19 Z" stroke-width="1"/>
+    <path d="M288 128 l70 -25 v-40 l-70 25 Z M296 122 l54 -19 v-26 l-54 19 Z" fill="url(#p0504-3-shade)" fill-rule="evenodd" stroke="none"/>
+    <path d="M288 128 l-4 -2 v-40 l4 2 M284 86 l70 -25 l4 2" stroke-width="0.9"/>
+    <path d="M320 110 l4 -1.5" stroke-width="0.6"/>
+    <!-- 5 亚克力挡雨片 -->
+    <path d="M362 74 l58 -20 v-30 l-58 20 Z" stroke-width="1.3"/>
+    <path d="M362 74 l-3 -2 v-30 l3 2 M359 42 l58 -20 l3 2" stroke-width="0.7"/>
+    <path d="M370 66 l14 -5 M370 58 l24 -8 M398 50 l14 -5" stroke-width="0.5"/>
+    <path d="M362 40 q-6 -6 -4 -12 M420 20 q-4 -6 0 -10" stroke-width="0.7"/>
+    <path d="M366 78 l50 -17" stroke-width="0.9" stroke-dasharray="2 2"/>
+  </g>
+  <g font-size="7" fill="#2a2a2a" font-family="'Long Cang','Kaiti SC',cursive">
+    <text x="224" y="176" transform="rotate(-20 224 176)">L1 42% 07:00</text>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M144 296 H206"/><path d="M146 246 H116"/><path d="M279 180 H300"/><path d="M356 110 H378"/><path d="M420 64 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="296" r="8"/><circle cx="106" cy="246" r="8"/><circle cx="310" cy="180" r="8"/><circle cx="388" cy="110" r="8"/><circle cx="460" cy="64" r="8"/>
+    </g>
+    <text x="216" y="299.5">1</text><text x="106" y="249.5">2</text><text x="310" y="183.5">3</text><text x="388" y="113.5">4</text><text x="460" y="67.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">墨水屏状态面板 · 爆炸图</text>
+    <text x="16" y="52">1 3D 打印后壳 + 18650 电池</text>
+    <text x="16" y="68">2 ESP32 板（10 分钟醒一次）</text>
+    <text x="16" y="84">3 2.9 寸墨水屏（296×128）</text>
+    <text x="16" y="100">4 3D 打印前壳（开窗）</text>
+    <text x="16" y="116">5 亚克力挡雨片</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0504-3</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>2.9 寸墨水屏 296×128，阳光下可读</li><li>ESP32 每 10 分钟拉一次 HA 数据后深睡</li><li>18650 电池，续航约 3 个月</li><li>3D 打印外壳 + 亚克力挡雨片</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 滴灌调度器</h2>
+    <p class="scene">种植架不看时间表，看土。每层埋一颗电容式土壤湿度传感器，插在滴头之间而不是正下方。每半小时读一次，低于 40% 才给这一层开阀浇 20 秒，然后等 10 分钟再测，没到 55% 就再补一轮，最多三轮。夏天 35℃ 以上先放下遮阳网再浇；雨天由 HomeAssistant 的天气实体告诉它跳过。所有判断在 ESP32 本地执行，断网也照常浇，只是曲线暂时不上传。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0504-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0504-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0504-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0504-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：四层架子 + 探头 -->
+    <path d="M40 130 v90 M96 130 v90" stroke-width="1.6"/>
+    <path d="M40 150 h56 M40 172 h56 M40 194 h56 M40 216 h56" stroke-width="1.3"/>
+    <path d="M46 150 v-8 h10 v8 M62 150 v-8 h10 v8 M78 150 v-8 h10 v8 M46 172 v-8 h10 v8 M62 172 v-8 h10 v8 M78 172 v-8 h10 v8 M46 194 v-8 h10 v8 M62 194 v-8 h10 v8 M78 194 v-8 h10 v8 M46 216 v-8 h10 v8 M62 216 v-8 h10 v8 M78 216 v-8 h10 v8" stroke-width="0.9"/>
+    <path d="M47 148 h8 v-4 h-8 Z M63 170 h8 v-4 h-8 Z M79 192 h8 v-4 h-8 Z M47 214 h8 v-4 h-8 Z" fill="url(#p0504-4p-shade)" stroke="none"/>
+    <path d="M100 160 h6 v-14 M100 182 h6 v-14 M100 204 h6 v-14" stroke-width="0.8"/>
+    <!-- 中：ESP32 判断（芯片 + 水滴 + 问号） -->
+    <rect x="156" y="152" width="48" height="40" rx="4" stroke-width="1.6"/>
+    <rect x="164" y="160" width="32" height="24" rx="2" stroke-width="0.8"/>
+    <path d="M156 160 h-6 M156 168 h-6 M156 176 h-6 M156 184 h-6 M204 160 h6 M204 168 h6 M204 176 h6 M204 184 h6 M164 152 v-6 M172 152 v-6 M180 152 v-6 M188 152 v-6 M196 152 v-6 M164 192 v6 M172 192 v6 M180 192 v6 M188 192 v6 M196 192 v6" stroke-width="1"/>
+    <path d="M180 164 q-5 6 -5 9 a5 5 0 0 0 10 0 q0 -3 -5 -9 Z" stroke-width="1.1"/>
+    <path d="M158 188 h44 v3 h-44 Z" fill="url(#p0504-4p-shade)" stroke="none"/>
+    <path d="M180 130 q-8 -2 -8 -8 a8 8 0 0 1 16 0 q0 6 -6 8 v4" stroke-width="1.2"/>
+    <circle cx="180" cy="139" r="0.8" stroke-width="0.8"/>
+    <!-- 右：电磁阀 + 滴头 + 菜 -->
+    <path d="M262 150 h52" stroke-width="1.6"/>
+    <path d="M282 150 v-12 h12 v12 M282 138 h12" stroke-width="1.3"/>
+    <path d="M283 139 h10 v10 h-10 Z" fill="url(#p0504-4p-shade)" stroke="none"/>
+    <path d="M268 150 v10 M288 150 v10 M308 150 v10" stroke-width="1.2"/>
+    <path d="M268 164 q-2 4 0 6 q2 -2 0 -6 Z M288 164 q-2 4 0 6 q2 -2 0 -6 Z M308 164 q-2 4 0 6 q2 -2 0 -6 Z" stroke-width="0.9"/>
+    <path d="M256 210 h64" stroke-width="1.3"/>
+    <path d="M268 210 q0 -14 4 -20 M272 200 q6 -6 10 -4 q-2 6 -10 6 M270 194 q-6 -6 -10 -4 q2 6 10 6" stroke-width="1.1"/>
+    <path d="M288 210 q0 -14 4 -20 M292 200 q6 -6 10 -4 q-2 6 -10 6 M290 194 q-6 -6 -10 -4 q2 6 10 6" stroke-width="1.1"/>
+    <path d="M308 210 q0 -14 4 -20 M312 200 q6 -6 10 -4 q-2 6 -10 6 M310 194 q-6 -6 -10 -4 q2 6 10 6" stroke-width="1.1"/>
+    <!-- 箭头 -->
+    <path d="M110 174 Q126 172 146 172" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M214 172 Q232 172 250 168" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M142 168 l5 4 l-5 4 M246 164 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0504 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">滴灌调度器</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">不看钟点看土，渴了才浇、浇了再测</text>
+  <text x="68" y="232" text-anchor="middle" font-size="8.5" fill="#666">每层一颗湿度探头</text>
+  <text x="180" y="212" text-anchor="middle" font-size="8.5" fill="#666">&lt;40% 才开阀</text>
+  <text x="288" y="232" text-anchor="middle" font-size="8.5" fill="#666">该层阀 20 秒</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">四层探头 → 阈值 + 天气 + 气温 → 分层电磁阀 → 复测补浇</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每半小时逐层判断，低于 40% 才给这一层浇 20 秒</text>
+    <text x="64" y="366">十分钟后复测，不到 55% 再补，最多三轮</text>
+    <text x="64" y="396">全部在 ESP32 本地跑，断网照常浇</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome（ESP32 本地） · 数据出口：Mycodo 曲线 + 侧面墨水屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：makstech/esphome-irrigation-system</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0504-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0504-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0504-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">滴灌调度逻辑 · 流程图</text>
+  <g filter="url(#p0504-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 230 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="150" y="312" width="180" height="30" rx="15"/>
+    <path d="M34 172 h106 v3 h-106 Z" fill="url(#p0504-4-shade)" stroke="none"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0504-4-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0504-4-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z" fill="url(#p0504-4-shade)" stroke="none"/>
+    <path d="M232 278 l56 -24 l4 2 l-58 26 Z" fill="url(#p0504-4-shade)" stroke="none"/>
+    <path d="M334 272 h116 v3 h-116 Z" fill="url(#p0504-4-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0504-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M288 254 H328"/>
+    <path d="M230 278 V310"/>
+    <path d="M85 170 V228" stroke-dasharray="3 3"/>
+    <path d="M390 270 V327 H332" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每 30 分钟唤醒</text>
+    <text x="230" y="80">四层湿度探头</text><text x="230" y="93" font-size="8.5" fill="#666">电容式 / HA 天气</text>
+    <text x="85" y="147">逐层读土壤湿度</text><text x="85" y="161">读气温 / 天气</text>
+    <text x="230" y="156">该层 &lt;40%？</text>
+    <text x="390" y="147">否 → 记录曲线</text><text x="390" y="161">看下一层</text>
+    <text x="85" y="247">读数 0% 或 100%</text><text x="85" y="261">→ 回退每日定时</text>
+    <text x="230" y="258">雨天或 &gt;35℃？</text>
+    <text x="390" y="247">雨天 → 跳过</text><text x="390" y="261">高温 → 先放遮阳网</text>
+    <text x="240" y="331">开该层阀 20 秒 · 10 分钟后复测</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="300" y="146">否</text><text x="236" y="200">是</text><text x="300" y="248">是</text><text x="236" y="296">否</text><text x="92" y="200">异常</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0504-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：每 30 分钟读湿度，&lt;40% 开该层阀 20 秒</li><li>补浇：10 分钟后仍 &lt;55% 再来一轮，最多 3 轮</li><li>高温 &gt;35℃ 先放遮阳网；雨天跳过</li><li>兜底：传感器读数异常（0% 或 100%）回退每日一次定时</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 makstech/esphome-irrigation-system 的 ESPHome 8 路阀 YAML 本地排程，kizniche/Mycodo 做湿度曲线与阈值面板</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/makstech/esphome-irrigation-system" target="_blank" rel="noopener">makstech/esphome-irrigation-system</a><a href="https://github.com/kizniche/Mycodo" target="_blank" rel="noopener">kizniche/Mycodo</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0503.html">← 0503 盆栽 拆解</a>
+    <a class="up" href="../modules/0504.html">回到 自动种植架 专题页</a>
+    <a href="../teardown/0505.html">0505 电摩充电桩 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

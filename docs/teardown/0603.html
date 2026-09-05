@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0603 雨水存储过滤 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="雨水存储过滤 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" class="on"><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/06.html">06 草地</a> › <a href="../modules/0603.html">0603 雨水存储过滤</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">草地 · 模块 0603 · 核心拆解</p>
+    <h1>雨水存储过滤：4 个核心模块与逻辑</h1>
+    <p class="lede">一只藏在木格栅后面的大水罐，接住屋顶每一滴雨，脏的先扔掉，干净的留下来。</p>
+    <p class="meta"><span class="st st-✅">✅ 真实三阶段已完成</span>
+      <span class="tag">产品模块 3</span>
+      <span class="tag">联动逻辑 1</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>首雨弃流桶</a><a href="#p2"><i>2</i>1500L 卧式雨水罐组</a><a href="#p3"><i>3</i>水位监测与补水接头</a><a href="#p4"><i>4</i>弃流与补位逻辑</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 首雨弃流桶</h2>
+    <p class="scene">一场雨的头两分钟，冲下来的是屋顶积了半个月的灰尘、鸟粪和落叶，这部分水不能进罐。首雨弃流桶就是拦住这一段的小机关：落水管先接进一只 20L 铁桶，脏水把桶灌满，桶里的浮球顶住进口，之后的干净雨水从三通翻进主罐。桶底钻一个 2mm 小孔慢慢排空，几小时后桶又空了，下一场雨照样能弃。整个装置没有电、没有阀，全靠水位和浮力。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0603-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0603-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0603-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0603-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 碎石沟 + 慢排孔滴水 -->
+    <path d="M56 302 l80 -28 l40 14 l-80 28 Z" stroke-width="1.5"/>
+    <path d="M56 302 v10 l40 14 v-10 M96 316 v10 l80 -28 v-10" stroke-width="1.3"/>
+    <path d="M58 304 v8 l38 13 v-8 Z" fill="url(#p0603-1-shade)" stroke="none"/>
+    <path d="M98 318 l78 -27 v6 l-78 27 Z" fill="url(#p0603-1-shade2)" stroke="none"/>
+    <circle cx="80" cy="300" r="2.6" stroke-width="0.8"/><circle cx="98" cy="304" r="2.2" stroke-width="0.8"/><circle cx="112" cy="294" r="2.6" stroke-width="0.8"/>
+    <circle cx="126" cy="300" r="2.2" stroke-width="0.8"/><circle cx="134" cy="286" r="2.4" stroke-width="0.8"/><circle cx="150" cy="292" r="2.2" stroke-width="0.8"/><circle cx="104" cy="288" r="2" stroke-width="0.8"/>
+    <path d="M110 272 q-3 5 0 7 q3 -2 0 -7 Z M110 260 q-3 5 0 7 q3 -2 0 -7 Z" stroke-width="0.9"/>
+    <!-- 2 20L 弃流桶身 -->
+    <ellipse cx="175" cy="220" rx="24" ry="7" stroke-width="1.5"/>
+    <path d="M151 220 v44 a24 7 0 0 0 48 0 v-44" stroke-width="1.5"/>
+    <path d="M153 262 a24 7 0 0 0 44 0 v4 a24 7 0 0 1 -44 0 Z" fill="url(#p0603-1-shade)" stroke="none"/>
+    <path d="M186 224 v40 h10 v-40 Z" fill="url(#p0603-1-shade)" stroke="none"/>
+    <path d="M151 232 a24 7 0 0 0 48 0 M151 252 a24 7 0 0 0 48 0" stroke-width="0.6"/>
+    <circle cx="175" cy="269" r="1.6" stroke-width="0.9"/>
+    <path d="M157 216 h-8 M197 216 h8" stroke-width="1"/>
+    <!-- 3 浮球 + 溢流三通 -->
+    <path d="M244 150 V202 M256 150 V202" stroke-width="1.5"/>
+    <path d="M256 162 h24 M256 172 h24" stroke-width="1.5"/>
+    <ellipse cx="280" cy="167" rx="2" ry="5" stroke-width="1"/>
+    <ellipse cx="250" cy="150" rx="6" ry="2" stroke-width="1"/><ellipse cx="250" cy="202" rx="6" ry="2" stroke-width="1"/>
+    <path d="M251 152 h5 v48 h-5 Z" fill="url(#p0603-1-shade)" stroke="none"/>
+    <path d="M258 168 h22 v3 h-22 Z" fill="url(#p0603-1-shade)" stroke="none"/>
+    <circle cx="250" cy="192" r="7" stroke-width="1.4"/>
+    <path d="M246 188 q3 -3 6 -1" stroke-width="0.7"/>
+    <path d="M243 184 h14" stroke-width="0.9"/>
+    <path d="M250 214 q-3 4 0 6 q3 -2 0 -6 Z" stroke-width="0.8"/>
+    <!-- 4 落水管接入弯头 -->
+    <path d="M312 84 V112 q0 14 14 14 h24" stroke-width="1.5"/>
+    <path d="M326 84 V108 q0 4 4 4 h20" stroke-width="1.5"/>
+    <ellipse cx="319" cy="84" rx="7" ry="2.5" stroke-width="1"/>
+    <ellipse cx="350" cy="119" rx="2.5" ry="7" stroke-width="1"/>
+    <path d="M319 86 h7 v22 q0 4 4 4 h20 v7 h-24 q-7 0 -7 -7 Z" fill="url(#p0603-1-shade)" stroke="none"/>
+    <path d="M314 94 h12 M314 100 h12" stroke-width="0.5"/>
+    <!-- 5 桶盖 + 粗滤网 -->
+    <ellipse cx="392" cy="56" rx="26" ry="9" stroke-width="1.5"/>
+    <path d="M366 56 v5 a26 9 0 0 0 52 0 v-5" stroke-width="1.2"/>
+    <path d="M368 58 a26 9 0 0 0 48 0 v4 a26 9 0 0 1 -48 0 Z" fill="url(#p0603-1-shade)" stroke="none"/>
+    <path d="M374 52 l36 0 M372 56 l40 0 M376 60 l32 0 M382 48 v16 M392 47 v18 M402 48 v16" stroke-width="0.5"/>
+    <path d="M388 44 h8 v4 h-8 Z" stroke-width="1"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M176 300 H216"/><path d="M150 240 H110"/><path d="M282 175 H340"/><path d="M354 120 H400"/><path d="M420 54 H445"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="225" cy="300" r="8"/><circle cx="100" cy="240" r="8"/><circle cx="350" cy="175" r="8"/><circle cx="410" cy="120" r="8"/><circle cx="455" cy="54" r="8"/>
+    </g>
+    <text x="225" y="303.5">1</text><text x="100" y="243.5">2</text><text x="350" y="178.5">3</text><text x="410" y="123.5">4</text><text x="455" y="57.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">首雨弃流桶 · 爆炸图</text>
+    <text x="16" y="52">1 碎石沟 + 桶底 2mm 慢排孔</text>
+    <text x="16" y="68">2 20L 弃流桶身（铁桶）</text>
+    <text x="16" y="84">3 浮球封口 + 溢流三通 → 主罐</text>
+    <text x="16" y="100">4 落水管接入弯头</text>
+    <text x="16" y="116">5 桶盖 + 粗滤网（拦树叶）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0603-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>桶容 20L，约等于 50㎡ 屋顶前 2 分钟雨量</li><li>浮球封口，满桶后雨水自动转入主罐</li><li>桶底 2mm 慢排孔，3~4 小时排空</li><li>桶口粗滤网拦树叶，每季清一次</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 1500L 卧式雨水罐组</h2>
+    <p class="scene">主罐选墨绿色卧式 PE 罐，避光才不长绿藻。罐子架在 30cm 高的红砖基座上，让水面高过滴灌首部，靠重力出水。罐顶开一个 DN50 快开口，里面吊一只 300 目不锈钢滤篮，进罐的水再过一遍。罐身外接透明水位管，管里放红色浮子，刻度用马克笔手写。溢流口接碎石干河道，暴雨时看得见水在石缝里流。罐前立桧木格栅遮丑。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0603-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0603-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0603-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0603-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 红砖基座 -->
+    <path d="M56 300 l64 -22 l44 16 l-64 22 Z" stroke-width="1.5"/>
+    <path d="M56 300 v14 l44 16 v-14 M100 316 v14 l64 -22 v-14" stroke-width="1.4"/>
+    <path d="M56 307 l44 16 M100 323 l64 -22 M70 305 v7 M84 310 v7 M120 322 v-7 M140 315 v-7 M112 316 v7 M132 309 v7" stroke-width="0.6"/>
+    <path d="M102 318 l60 -21 v10 l-60 21 Z" fill="url(#p0603-2-shade)" stroke="none"/>
+    <!-- 2 卧式 PE 罐 -->
+    <ellipse cx="136" cy="250" rx="9" ry="19" stroke-width="1.5"/>
+    <path d="M136 231 H200 a9 19 0 0 1 0 38 H136" stroke-width="1.5"/>
+    <path d="M150 231 v38 M166 231 v38 M182 231 v38" stroke-width="0.6"/>
+    <path d="M140 262 H200 a9 19 0 0 0 8 -12 v7 a9 19 0 0 1 -8 12 H140 Z" fill="url(#p0603-2-shade)" stroke="none"/>
+    <ellipse cx="172" cy="231" rx="7" ry="2.5" stroke-width="1"/>
+    <path d="M165 231 v-3 a7 2.5 0 0 1 14 0 v3" stroke-width="1"/>
+    <path d="M204 250 h6 M126 250 h-6" stroke-width="1"/>
+    <!-- 3 透明水位管 + 红浮子 -->
+    <path d="M237 160 V212 M243 160 V212" stroke-width="1.3"/>
+    <path d="M237 160 h-8 M237 212 h-8 M243 160 h2 M243 212 h2" stroke-width="1"/>
+    <path d="M245 170 h4 M245 180 h4 M245 190 h4 M245 200 h4" stroke-width="0.7"/>
+    <circle cx="240" cy="188" r="2.6" stroke-width="1.2"/>
+    <circle cx="240" cy="188" r="2.6" fill="url(#p0603-2-shade2)" stroke="none"/>
+    <path d="M238 192 v18" stroke-width="0.5"/>
+    <!-- 4 300 目滤篮 + DN50 快开口 -->
+    <ellipse cx="290" cy="112" rx="17" ry="5" stroke-width="1.4"/>
+    <ellipse cx="290" cy="112" rx="11" ry="3" stroke-width="0.9"/>
+    <path d="M273 112 v4 a17 5 0 0 0 34 0 v-4" stroke-width="1"/>
+    <ellipse cx="290" cy="126" rx="13" ry="4" stroke-width="1.3"/>
+    <path d="M277 126 v22 a13 4 0 0 0 26 0 v-22" stroke-width="1.3"/>
+    <path d="M280 132 h20 M279 138 h22 M280 144 h20 M284 128 v22 M290 130 v22 M296 128 v22" stroke-width="0.45"/>
+    <path d="M294 128 v22 h6 v-22 Z" fill="url(#p0603-2-shade)" stroke="none"/>
+    <!-- 5 溢流口 → 干河道 -->
+    <path d="M326 78 h22 q7 0 7 7 v14 M326 88 h22 q-3 0 -3 3 v8" stroke-width="1.4"/>
+    <ellipse cx="326" cy="83" rx="2" ry="5" stroke-width="1"/>
+    <path d="M345 99 h10" stroke-width="1"/>
+    <path d="M336 84 h12 v4 h-12 Z" fill="url(#p0603-2-shade)" stroke="none"/>
+    <path d="M350 104 q-3 4 0 6 q3 -2 0 -6 Z" stroke-width="0.8"/>
+    <path d="M340 116 q6 -4 12 0 q6 4 12 0" stroke-width="0.8"/>
+    <circle cx="338" cy="122" r="2.2" stroke-width="0.7"/><circle cx="350" cy="124" r="2.4" stroke-width="0.7"/><circle cx="362" cy="121" r="2" stroke-width="0.7"/>
+    <!-- 6 桧木格栅 + 检修门 -->
+    <path d="M372 30 h44 v42 h-44 Z" stroke-width="1.5"/>
+    <path d="M378 30 v42 M384 30 v42 M390 30 v42 M396 30 v42 M402 30 v42 M408 30 v42" stroke-width="0.7"/>
+    <path d="M372 40 h44 M372 60 h44" stroke-width="0.9"/>
+    <path d="M382 60 h24 v12 h-24 Z" stroke-width="1.2"/>
+    <path d="M383 61 h22 v10 h-22 Z" fill="url(#p0603-2-shade)" stroke="none"/>
+    <path d="M402 66 h2" stroke-width="1.2"/>
+    <path d="M416 30 l4 -2 v42 l-4 2" stroke-width="1"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M166 300 H216"/><path d="M126 250 H110"/><path d="M246 186 H340"/><path d="M306 138 H400"/><path d="M368 96 H420"/><path d="M420 50 H445"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="225" cy="300" r="8"/><circle cx="100" cy="250" r="8"/><circle cx="350" cy="186" r="8"/><circle cx="410" cy="138" r="8"/><circle cx="430" cy="96" r="8"/><circle cx="455" cy="50" r="8"/>
+    </g>
+    <text x="225" y="303.5">1</text><text x="100" y="253.5">2</text><text x="350" y="189.5">3</text><text x="410" y="141.5">4</text><text x="430" y="99.5">5</text><text x="455" y="53.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">1500L 卧式雨水罐组 · 爆炸图</text>
+    <text x="16" y="52">1 红砖基座（高 30cm）</text>
+    <text x="16" y="68">2 1500L 卧式 PE 罐（墨绿）</text>
+    <text x="16" y="84">3 透明水位管 + 红浮子</text>
+    <text x="16" y="100">4 300 目滤篮 + DN50 快开口</text>
+    <text x="16" y="116">5 溢流口 → 碎石干河道</text>
+    <text x="16" y="132">6 桧木格栅 + 40cm 检修门</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0603-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>1500L 卧式 PE 罐，墨绿避光，空罐 45kg</li><li>红砖基座 30cm，罐底高过首部 20cm</li><li>300 目滤篮 + DN50 快开口，梅雨前清淤</li><li>透明水位管 + 红浮子，手写 300~1500 刻度</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-hw">产品模块</span> 3. 水位监测与补水接头</h2>
+    <p class="scene">罐顶还有一颗一颗防水超声波探头朝下对着水面，测距离减一减就是水位。探头接一块 ESP32-C3 跑 ESPHome，每 10 分钟醒一次上报，其余时间深睡，小太阳能板就够养活。补水用一只 12V 自来水电磁阀，出口不插进罐里，而是悬在罐口上方留出“空气隔断”，落差至少 2.5 倍管径，罐里的水永远倒灌不回水管。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0603-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0603-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0603-3-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0603-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 罐顶安装法兰 -->
+    <ellipse cx="110" cy="300" rx="34" ry="12" stroke-width="1.5"/>
+    <ellipse cx="110" cy="300" rx="16" ry="5.5" stroke-width="1.1"/>
+    <path d="M76 300 v5 a34 12 0 0 0 68 0 v-5" stroke-width="1.2"/>
+    <path d="M78 302 a34 12 0 0 0 64 0 v4 a34 12 0 0 1 -64 0 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <circle cx="86" cy="298" r="1.8" stroke-width="0.9"/><circle cx="134" cy="298" r="1.8" stroke-width="0.9"/><circle cx="110" cy="291" r="1.8" stroke-width="0.9"/><circle cx="110" cy="309" r="1.8" stroke-width="0.9"/>
+    <path d="M94 299 a16 5.5 0 0 0 32 0" fill="url(#p0603-3-shade2)" stroke="none"/>
+    <!-- 2 超声波探头 -->
+    <ellipse cx="175" cy="224" rx="13" ry="4.5" stroke-width="1.4"/>
+    <path d="M162 224 v20 a13 4.5 0 0 0 26 0 v-20" stroke-width="1.4"/>
+    <path d="M164 244 a13 4.5 0 0 0 22 0 v4 a13 4.5 0 0 1 -22 0 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <path d="M166 250 a9 3 0 0 0 18 0" stroke-width="0.8"/>
+    <path d="M168 232 h14 M168 238 h14" stroke-width="0.5"/>
+    <path d="M175 220 v-8 q6 -4 12 0" stroke-width="0.9"/>
+    <path d="M165 262 q10 6 20 0 M161 270 q14 8 28 0 M157 278 q18 10 36 0" stroke-width="0.7"/>
+    <!-- 3 ESP32-C3 盒 + 太阳能板 -->
+    <path d="M232 186 l30 -10 l16 7 l-30 10 Z" stroke-width="1.5"/>
+    <path d="M232 186 v10 l16 7 v-10 M248 193 v10 l30 -10 v-10" stroke-width="1.3"/>
+    <path d="M234 188 v8 l14 6 v-8 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <path d="M240 180 l12 -4 l5 2 l-12 4 Z" stroke-width="0.9"/>
+    <path d="M262 176 v-10" stroke-width="1"/><circle cx="262" cy="165" r="1.5" stroke-width="0.9"/>
+    <path d="M236 168 l28 -10 l10 4 l-28 10 Z" stroke-width="1.3"/>
+    <path d="M240 168 l24 -8 M244 170 l24 -8 M248 172 l24 -8 M243 166 l24 -8 M252 162 l8 3 M258 160 l8 3" stroke-width="0.5"/>
+    <path d="M238 168 l26 -9 l8 3 l-26 9 Z" fill="url(#p0603-3-shade2)" stroke="none"/>
+    <path d="M250 174 v4" stroke-width="0.8"/>
+    <!-- 4 自来水电磁阀 -->
+    <path d="M288 120 h60 M288 128 h60" stroke-width="1.5"/>
+    <ellipse cx="288" cy="124" rx="2" ry="4" stroke-width="1"/><ellipse cx="348" cy="124" rx="2" ry="4" stroke-width="1"/>
+    <path d="M290 125 h58 v3 h-58 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <path d="M308 120 v-12 h20 v12" stroke-width="1.4"/>
+    <path d="M311 108 v-12 h14 v12" stroke-width="1.3"/>
+    <path d="M311 102 h14" stroke-width="0.6"/>
+    <path d="M318 96 v-8 q6 -4 10 0" stroke-width="0.9"/>
+    <path d="M320 109 h5 v10 h-5 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <!-- 5 空气隔断补水口 -->
+    <path d="M372 34 h24 M372 40 h24" stroke-width="1.4"/>
+    <path d="M396 34 q6 0 6 6 v8 M396 40 q0 0 0 4 v4" stroke-width="1.4"/>
+    <path d="M400 54 l-2 3 M404 54 l2 3" stroke-width="0.8"/>
+    <path d="M402 58 v6 M402 68 v6" stroke-width="0.8"/>
+    <path d="M384 78 h36 l-4 20 h-28 Z" stroke-width="1.5"/>
+    <ellipse cx="402" cy="78" rx="18" ry="4" stroke-width="1.1"/>
+    <path d="M390 98 h24 v4 h-24 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <path d="M402 102 v8" stroke-width="1.2"/>
+    <path d="M410 56 h8 M410 72 h8 M414 56 v16" stroke-width="0.6"/>
+    <path d="M412 58 l2 -2 l2 2 M412 70 l2 2 l2 -2" stroke-width="0.6"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M146 300 H216"/><path d="M160 236 H110"/><path d="M280 190 H340"/><path d="M350 124 H400"/><path d="M422 88 H445"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="225" cy="300" r="8"/><circle cx="100" cy="236" r="8"/><circle cx="350" cy="190" r="8"/><circle cx="410" cy="124" r="8"/><circle cx="455" cy="88" r="8"/>
+    </g>
+    <text x="225" y="303.5">1</text><text x="100" y="239.5">2</text><text x="350" y="193.5">3</text><text x="410" y="127.5">4</text><text x="455" y="91.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">水位监测与补水接头 · 爆炸图</text>
+    <text x="16" y="52">1 罐顶安装法兰（DN50 口）</text>
+    <text x="16" y="68">2 JSN-SR04T 防水超声波探头</text>
+    <text x="16" y="84">3 ESP32-C3 盒 + 小太阳能板</text>
+    <text x="16" y="100">4 自来水 12V 电磁阀（DN15）</text>
+    <text x="16" y="116">5 空气隔断补水口（落差 ≥2.5D）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0603-3</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>JSN-SR04T 防水超声波，量程 0.25~4.5m</li><li>ESP32-C3 深睡眠，10 分钟上报一次</li><li>自来水 12V 常闭电磁阀，DN15</li><li>空气隔断落差 ≥ 2.5 倍管径，防倒灌</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">kane5432/ESP32-Water-Level-Sensor</a><a href="https://github.com/tomsbasement/esp32-water-tank-sensor" target="_blank" rel="noopener">tomsbasement/esp32-water-tank-sensor</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 弃流与补位逻辑</h2>
+    <p class="scene">它管两件事：下雨算清接了多少，不下雨保证罐不空。雨量计一有脉冲就进入“接雨”状态，前 2 分钟记为弃流不计，之后按屋顶面积乘降雨量估算进罐升数。平时每 10 分钟看一次水位：低于 20% 且未来 12 小时无雨才开自来水阀，补到 40% 就停。阀开 30 分钟还没到 40%，判定漏水，关阀报警。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0603-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0603-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0603-4p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0603-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0603-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左上：雨云 + 檐沟 -->
+    <path d="M52 120 q-10 -2 -8 -10 q2 -8 12 -6 q4 -10 16 -6 q10 -2 12 8 q8 2 4 10 q-4 6 -12 4 Z" stroke-width="1.3"/>
+    <path d="M58 128 l-3 7 M68 128 l-3 7 M78 128 l-3 7" stroke-width="0.9"/>
+    <path d="M40 146 h56 l-4 6 h-48 Z" stroke-width="1.2"/>
+    <path d="M70 152 v14" stroke-width="1.2"/>
+    <!-- 左下：弃流小桶 -->
+    <path d="M56 172 h28 v26 a14 4 0 0 1 -28 0 Z" stroke-width="1.4"/>
+    <ellipse cx="70" cy="172" rx="14" ry="4" stroke-width="1.1"/>
+    <path d="M58 190 a14 4 0 0 0 24 0 v6 a14 4 0 0 1 -24 0 Z" fill="url(#p0603-4p-shade)" stroke="none"/>
+    <path d="M70 204 v6" stroke-width="0.8"/>
+    <path d="M84 180 h18 q6 0 6 6 v-14" stroke-width="1.1"/>
+    <!-- 中：大罐 + 水位线 -->
+    <rect x="128" y="130" width="84" height="84" rx="8" stroke-width="1.6"/>
+    <path d="M132 190 q10 -6 20 0 q10 6 20 0 q10 -6 20 0 q10 6 16 0" stroke-width="1"/>
+    <path d="M132 192 v18 a4 4 0 0 0 4 4 h72 a4 4 0 0 0 4 -4 v-18 Z" fill="url(#p0603-4p-dots)" stroke="none"/>
+    <path d="M132 198 h76" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <path d="M132 176 h76" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <path d="M214 198 h6 M214 176 h6" stroke-width="0.8"/>
+    <text x="234" y="201" font-size="8" fill="#3d3d3d" stroke="none">20%</text>
+    <text x="234" y="179" font-size="8" fill="#3d3d3d" stroke="none">40%</text>
+    <ellipse cx="170" cy="130" rx="10" ry="3" stroke-width="1"/>
+    <!-- 右：自来水阀 + 空气隔断 -->
+    <g transform="translate(0 40)">
+    <path d="M320 120 h-40 q-8 0 -8 8 v14 M320 128 h-40 q0 0 0 0 v14" stroke-width="1.3"/>
+    <path d="M292 120 v-10 h14 v10" stroke-width="1.2"/>
+    <path d="M294 110 v-8 h10 v8" stroke-width="1.1"/>
+    <path d="M299 102 v-6" stroke-width="0.8"/>
+    <path d="M274 148 l2 4 M278 148 l-2 4" stroke-width="0.7"/>
+    <path d="M276 156 v4 M276 164 v4 M276 172 v4" stroke-width="0.9"/>
+    <path d="M262 182 h28 l-3 14 h-22 Z" stroke-width="1.3"/>
+    <path d="M276 196 v6 q-20 6 -50 -2" stroke-width="1" stroke-dasharray="3 3"/>
+    </g>
+    <!-- 箭头 -->
+    <path d="M100 178 q14 -14 26 -20" stroke-width="1" stroke-dasharray="3 3"/><path d="M121 156 l6 1 l-3 6" stroke-width="1"/>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0603 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">弃流与补位逻辑</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">脏的先扔掉，空了再补上</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">雨量脉冲 → 弃流 2 分钟后计升数 · 水位 &lt;20% 且无雨 → 自来水补到 40%</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">头两分钟脏水不计数，屋顶面积 × 雨量算进罐升数</text>
+    <text x="64" y="366">低于 20% 且未来 12 小时无雨才补，到 40% 就停</text>
+    <text x="64" y="396">补水 30 分钟还不达标判为漏水，关阀并报警</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HA · 数据出口：月度雨水占比 + 每场雨进罐量</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：kane5432/ESP32-Water-Level-Sensor</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0603-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0603-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0603-4-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <marker id="p0603-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">弃流与补位逻辑 · 流程图</text>
+  <g filter="url(#p0603-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30.0" y="52.0" width="110" height="34" rx="17.0"/>
+    <path d="M196.0 53.0 a34.0 6 0 0 1 68 0 v38 a34.0 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="53.0" rx="34.0" ry="6"/>
+    <rect x="30.0" y="130.0" width="110" height="40" rx="6"/>
+    <rect x="32.0" y="132.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M34.0 172.0 h106 v3 h-106 Z" fill="url(#p0603-4-shade)" stroke="none"/>
+    <path d="M230 128.0 l58.0 24.0 l-58.0 24.0 l-58.0 -24.0 Z"/>
+    <path d="M232 176.0 l56.0 -22.0 l4 2 l-58.0 26.0 Z" fill="url(#p0603-4-shade)" stroke="none"/>
+    <rect x="330.0" y="130.0" width="120" height="40" rx="6"/>
+    <rect x="332.0" y="132.0" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M334.0 172.0 h116 v3 h-116 Z" fill="url(#p0603-4-shade)" stroke="none"/>
+    <path d="M85 228.0 l56.0 24.0 l-56.0 24.0 l-56.0 -24.0 Z"/>
+    <path d="M87 276.0 l54.0 -22.0 l4 2 l-56.0 26.0 Z" fill="url(#p0603-4-shade)" stroke="none"/>
+    <rect x="175.0" y="230.0" width="110" height="40" rx="6"/>
+    <rect x="177.0" y="232.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M179.0 272.0 h106 v3 h-106 Z" fill="url(#p0603-4-shade)" stroke="none"/>
+    <rect x="330.0" y="230.0" width="120" height="40" rx="6"/>
+    <rect x="332.0" y="232.0" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M334.0 272.0 h116 v3 h-116 Z" fill="url(#p0603-4-shade)" stroke="none"/>
+    <rect x="80.0" y="312.0" width="320" height="30" rx="15.0"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0603-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M390 170 V228"/>
+    <path d="M230 176 V212 H85 V226"/>
+    <path d="M141 252 H173"/>
+    <path d="M85 276 V327 H78"/>
+    <path d="M230 270 V310"/>
+    <path d="M390 270 V310"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每 10 分钟 / 雨量脉冲</text>
+    <text x="230" y="71.5">水位 + 雨量</text>
+    <text x="230" y="84.5" font-size="8.5" fill="#666">超声波 · 翻斗</text>
+    <text x="85" y="147.5">读罐水位 %</text>
+    <text x="85" y="161">看最近脉冲</text>
+    <text x="230" y="149.5">正在下雨？</text>
+    <text x="230" y="162.5" font-size="8.5" fill="#666">10 分钟内有脉冲</text>
+    <text x="390" y="147.5">是 → 前 2 分钟弃流</text>
+    <text x="390" y="161">之后按雨量计升数</text>
+    <text x="85" y="249.5">水位 &lt;20%？</text>
+    <text x="85" y="262.5" font-size="8.5" fill="#666">且 12h 无雨</text>
+    <text x="230" y="247.5">是 → 开自来水阀</text>
+    <text x="230" y="261">补到 40% 即关</text>
+    <text x="390" y="247.5">记本场雨进罐量</text>
+    <text x="390" y="261">与水位涨幅印证</text>
+    <text x="240" y="331">写 HA 算月度雨水占比 · 补水超 30 分钟未达标关阀报警</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="150" y="246">是</text><text x="70" y="300">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0603-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：雨量脉冲 / 每 10 分钟水位巡检</li><li>阈值：&lt;20% 开补水，到 40% 停</li><li>兜底：补水超 30 分钟未达标即关阀报警</li><li>出口：HA 月度雨水占比 + 每场雨进罐升数</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">kane5432/ESP32-Water-Level-Sensor 报水位，ESPHome 数雨量脉冲，HA 控补水阀</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">kane5432/ESP32-Water-Level-Sensor</a><a href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">hugokernel/esphome-weather-station</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0602.html">← 0602 自动浇灌 拆解</a>
+    <a class="up" href="../modules/0603.html">回到 雨水存储过滤 专题页</a>
+    <a href="../teardown/0604.html">0604 摄像头监测微环境 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

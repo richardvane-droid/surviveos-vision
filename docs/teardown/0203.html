@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0203 控温控湿 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="控温控湿 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/02.html">02 地堡</a> › <a href="../modules/0203.html">0203 控温控湿</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">地堡 · 模块 0203 · 核心拆解</p>
+    <h1>控温控湿：4 个核心模块与逻辑</h1>
+    <p class="lede">全年 22℃、湿度 55%，地堡是全屋最舒服的一间房。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>隐藏除湿机柜</a><a href="#p2"><i>2</i>指针温湿度表盘</a><a href="#p3"><i>3</i>湿度区间调度</a><a href="#p4"><i>4</i>新风换气判断</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 隐藏除湿机柜</h2>
+    <p class="scene">把一台吵闹的工业除湿机变成“听不见的空调”的柜子。楼梯下的柜体内壁贴一层隔音棉，机器脚下垫橡胶减震垫，噪音从机身传到柜板的路径被切断。除湿机的原理和空调一样：潮湿空气吹过冷凝器时水汽结成水珠流走，再经加热片回温后送出干燥空气。冷凝水通过一根带 2% 坡度的排水管直接流进 0202 的污水提升泵，不用倒水桶。干燥空气从机顶经软接接进 Φ100 风管，送到房间四个角落；柜门本身就是进风格栅，房间里的湿空气从这里回到机器。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0203-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0203-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0203-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 326 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0203-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 楼梯下柜体（内衬隔音棉，前面开口） -->
+    <path d="M66 300 l30 -16 h60 l-30 16 Z" stroke-width="1.5"/>
+    <path d="M66 300 v30 h60 v-30 M156 284 v30 l-30 16" stroke-width="1.4"/>
+    <path d="M127 301 l29 -16 v29 l-29 16 Z" fill="url(#p0203-1-shade2)" stroke="none"/>
+    <path d="M70 304 h52 v22 h-52 Z" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <path d="M74 310 q4 -3 8 0 q4 -3 8 0 M100 310 q4 -3 8 0 q4 -3 8 0 M74 320 q4 -3 8 0 q4 -3 8 0 M100 320 q4 -3 8 0 q4 -3 8 0" stroke-width="0.6"/>
+    <path d="M96 284 l8 -6 l8 4 l8 -6 l8 4" stroke-width="0.7"/>
+    <!-- ② 橡胶减震垫 ×4 -->
+    <ellipse cx="150" cy="258" rx="6" ry="2.5" stroke-width="1.2"/><path d="M144 258 v3 a6 2.5 0 0 0 12 0 v-3" stroke-width="1"/>
+    <ellipse cx="176" cy="258" rx="6" ry="2.5" stroke-width="1.2"/><path d="M170 258 v3 a6 2.5 0 0 0 12 0 v-3" stroke-width="1"/>
+    <ellipse cx="164" cy="248" rx="6" ry="2.5" stroke-width="1.2"/><path d="M158 248 v3 a6 2.5 0 0 0 12 0 v-3" stroke-width="1"/>
+    <ellipse cx="190" cy="248" rx="6" ry="2.5" stroke-width="1.2"/><path d="M184 248 v3 a6 2.5 0 0 0 12 0 v-3" stroke-width="1"/>
+    <path d="M145 259 a6 2.5 0 0 0 10 2 v2 a6 2.5 0 0 1 -10 -2 Z M171 259 a6 2.5 0 0 0 10 2 v2 a6 2.5 0 0 1 -10 -2 Z M159 249 a6 2.5 0 0 0 10 2 v2 a6 2.5 0 0 1 -10 -2 Z M185 249 a6 2.5 0 0 0 10 2 v2 a6 2.5 0 0 1 -10 -2 Z" fill="url(#p0203-1-shade)" stroke="none"/>
+    <!-- ③ 工业除湿机 50L/天 -->
+    <path d="M200 196 l18 -10 h30 l-18 10 Z" stroke-width="1.5"/>
+    <path d="M200 196 v30 h30 v-30 M248 186 v30 l-18 10" stroke-width="1.4"/>
+    <path d="M231 197 l17 -10 v29 l-17 10 Z" fill="url(#p0203-1-shade)" stroke="none"/>
+    <path d="M203 204 h24 M203 209 h24 M203 214 h24 M203 219 h24" stroke-width="0.7"/>
+    <ellipse cx="226" cy="190" rx="6" ry="2.6" stroke-width="1"/>
+    <path d="M222 190 h8 M226 188 v4" stroke-width="0.5"/>
+    <path d="M230 224 h6" stroke-width="1"/>
+    <circle cx="226" cy="199" r="1.2" stroke-width="0.6"/>
+    <!-- ④ 冷凝水管 DN25（带坡度） -->
+    <path d="M258 136 h34 v20 M258 141 h29 v15" stroke-width="1.2"/>
+    <path d="M256 134 v9 M290 156 h6 M287 156 h6" stroke-width="1"/>
+    <path d="M259 137 h32 v3 h-32 Z" fill="url(#p0203-1-shade)" stroke="none"/>
+    <path d="M264 148 l14 0 l-3 -2 M278 148 l-3 2" stroke-width="0.6"/>
+    <!-- ⑤ Φ100 风管软接（波纹管） -->
+    <ellipse cx="327" cy="84" rx="12" ry="4" stroke-width="1.4"/>
+    <path d="M315 84 v30 M339 84 v30" stroke-width="1.3"/>
+    <path d="M315 114 a12 4 0 0 0 24 0" stroke-width="1.3"/>
+    <path d="M315 90 q12 4 24 0 M315 96 q12 4 24 0 M315 102 q12 4 24 0 M315 108 q12 4 24 0" stroke-width="0.7"/>
+    <path d="M316 110 a12 4 0 0 0 22 0 v4 a12 4 0 0 1 -22 0 Z" fill="url(#p0203-1-shade)" stroke="none"/>
+    <path d="M313 82 h28 v3 h-28 Z" stroke-width="0.8"/>
+    <!-- ⑥ 柜门整面进风格栅 -->
+    <path d="M346 86 l50 -22 v-40 l-50 22 Z" stroke-width="1.5"/>
+    <path d="M350 78 l42 -18 M350 72 l42 -18 M350 66 l42 -18 M350 60 l42 -18 M350 54 l42 -18" stroke-width="0.7"/>
+    <path d="M347 85 l48 -21 v2 l-48 21 Z" fill="url(#p0203-1-shade)" stroke="none"/>
+    <circle cx="390" cy="72" r="1.6" stroke-width="0.8"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M126 320 H176"/><path d="M144 254 H100"/><path d="M248 200 H290"/><path d="M258 140 H226"/><path d="M339 100 H400"/><path d="M396 64 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="186" cy="320" r="8"/><circle cx="90" cy="254" r="8"/><circle cx="300" cy="200" r="8"/><circle cx="216" cy="140" r="8"/><circle cx="410" cy="100" r="8"/><circle cx="450" cy="64" r="8"/>
+    </g>
+    <text x="186" y="323.5">1</text><text x="90" y="257.5">2</text><text x="300" y="203.5">3</text><text x="216" y="143.5">4</text><text x="410" y="103.5">5</text><text x="450" y="67.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">隐藏除湿机柜 · 爆炸图</text>
+    <text x="16" y="52">1 楼梯下柜体 + 30mm 隔音棉内衬</text>
+    <text x="16" y="68">2 橡胶减震垫 ×4</text>
+    <text x="16" y="84">3 工业除湿机 50L/天（压缩机式）</text>
+    <text x="16" y="100">4 冷凝水管 DN25，坡度 ≥ 2%</text>
+    <text x="16" y="116">5 Φ100 风管软接</text>
+    <text x="16" y="132">6 柜门整面进风格栅</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0203-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>工业除湿机 50L/天，压缩机式，柜内工作温度 5~35℃</li><li>隔音棉 30mm 内衬 + 橡胶减震垫，柜外噪音 &lt; 40dB</li><li>冷凝水管 DN25，坡度 ≥ 2%，直排提升泵</li><li>Φ100 风管软接，柜门整面进风格栅</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/Chreece/ESPHome-Dehumidifier" target="_blank" rel="noopener">Chreece/ESPHome-Dehumidifier</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 指针温湿度表盘</h2>
+    <p class="scene">墙上那块像老式仪表一样的温湿度表，其实是一台 ESP32。房间里四个 SHT31 温湿度探头（床头、墙角、柜内、风管出口）把数据送到它这里，它再驱动两根指针：一根指温度，一根指湿度。指针用的是汽车仪表同款的微型步进电机，转 315° 只需一个小驱动芯片，比液晶屏更安静也更有工作室气质。表盘面上把 45%~65% 这一段涂成绿色，一眼就知道现在是不是在舒适区。表壳是黄铜圈加玻璃表镜，和木屋的旧物风格一致。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0203-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0203-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0203-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0203-2-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 326 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0203-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 黄铜表壳（后盖，带挂孔） -->
+    <ellipse cx="111" cy="300" rx="42" ry="15" stroke-width="1.5"/>
+    <path d="M69 300 v12 a42 15 0 0 0 84 0 v-12" stroke-width="1.4"/>
+    <path d="M71 306 a42 15 0 0 0 80 0" stroke-width="0.7"/>
+    <path d="M73 312 a40 13 0 0 0 76 0 v-6 a40 13 0 0 1 -76 0 Z" fill="url(#p0203-2-shade)" stroke="none"/>
+    <ellipse cx="111" cy="300" rx="36" ry="12" stroke-width="0.7"/>
+    <path d="M111 288 v-5 M108 286 h6" stroke-width="0.9"/>
+    <path d="M111 301 m-3 0 a3 1.2 0 1 0 6 0 a3 1.2 0 1 0 -6 0" stroke-width="0.8"/>
+    <!-- ② ESP32 主板 -->
+    <path d="M143 258 l16 -9 h32 l-16 9 Z" stroke-width="1.4"/>
+    <path d="M144 257 l15 -8 h30 l-15 8 Z" stroke="none" fill="none"/>
+    <path d="M154 254 l6 -3 l6 3 l-6 3 Z" stroke-width="0.9"/>
+    <path d="M155 254 l5 -3 l5 3 l-5 3 Z" fill="url(#p0203-2-shade2)" stroke="none"/>
+    <path d="M170 250 l2 -1 M173 252 l2 -1 M176 254 l2 -1 M179 256 l2 -1" stroke-width="1"/>
+    <path d="M183 250 l3 -3 l2 3 l3 -3" stroke-width="0.7"/>
+    <path d="M143 258 v3 h32 v-3" stroke-width="0.9"/>
+    <!-- ③ X27 微型步进表针电机 ×2 -->
+    <ellipse cx="214" cy="204" rx="7" ry="3" stroke-width="1.2"/>
+    <path d="M207 204 v8 a7 3 0 0 0 14 0 v-8" stroke-width="1.2"/>
+    <path d="M214 201 v-12 M212 189 h4" stroke-width="1"/>
+    <ellipse cx="232" cy="196" rx="7" ry="3" stroke-width="1.2"/>
+    <path d="M225 196 v8 a7 3 0 0 0 14 0 v-8" stroke-width="1.2"/>
+    <path d="M232 193 v-12 M230 181 h4" stroke-width="1"/>
+    <path d="M208 209 a7 3 0 0 0 12 2 v2 a7 3 0 0 1 -12 -2 Z M226 201 a7 3 0 0 0 12 2 v2 a7 3 0 0 1 -12 -2 Z" fill="url(#p0203-2-shade)" stroke="none"/>
+    <path d="M211 213 l-3 4 M235 205 l3 4" stroke-width="0.6"/>
+    <!-- ④ 表盘面（45~65% 舒适区） -->
+    <ellipse cx="279" cy="146" rx="36" ry="13" stroke-width="1.5"/>
+    <ellipse cx="279" cy="146" rx="30" ry="10.5" stroke-width="0.6"/>
+    <path d="M262 137 a30 10.5 0 0 1 34 0" stroke-width="2.2"/>
+    <path d="M249 146 l3 0 M309 146 l-3 0 M279 136 v2 M279 156 v-2 M256 141 l3 1 M302 141 l-3 1 M256 151 l3 -1 M302 151 l-3 -1" stroke-width="0.8"/>
+    <circle cx="270" cy="147" r="1.4" stroke-width="0.8"/><circle cx="288" cy="145" r="1.4" stroke-width="0.8"/>
+    <path d="M245 148 a36 13 0 0 0 68 0 v3 a36 13 0 0 1 -68 0 Z" fill="url(#p0203-2-shade)" stroke="none"/>
+    <!-- ⑤ 双指针 -->
+    <path d="M316 108 l28 -13 l-27 9 Z" stroke-width="1.1"/>
+    <circle cx="317" cy="107" r="2" stroke-width="0.9"/>
+    <path d="M328 100 l26 -12 l-25 8 Z" stroke-width="1.1"/>
+    <circle cx="329" cy="99" r="2" stroke-width="0.9"/>
+    <path d="M317 106 l27 -13 l-26 10 Z" fill="url(#p0203-2-shade)" stroke="none"/>
+    <!-- ⑥ 玻璃表镜 + 黄铜圈 -->
+    <ellipse cx="371" cy="62" rx="40" ry="14" stroke-width="1.5"/>
+    <ellipse cx="371" cy="62" rx="34" ry="11.5" stroke-width="0.9"/>
+    <path d="M331 62 v4 a40 14 0 0 0 80 0 v-4" stroke-width="1.1"/>
+    <path d="M333 64 a40 14 0 0 0 76 0 v3 a40 14 0 0 1 -76 0 Z" fill="url(#p0203-2-shade)" stroke="none"/>
+    <path d="M351 56 l14 -6 M357 58 l16 -7" stroke-width="0.6"/>
+    <ellipse cx="371" cy="62" rx="34" ry="11.5" fill="url(#p0203-2-dots)" stroke="none" fill-opacity="0.5"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M153 300 H200"/><path d="M143 256 H100"/><path d="M241 196 H280"/><path d="M243 146 H226"/><path d="M344 96 H400"/><path d="M411 62 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="210" cy="300" r="8"/><circle cx="90" cy="256" r="8"/><circle cx="290" cy="196" r="8"/><circle cx="216" cy="146" r="8"/><circle cx="410" cy="96" r="8"/><circle cx="450" cy="62" r="8"/>
+    </g>
+    <text x="210" y="303.5">1</text><text x="90" y="259.5">2</text><text x="290" y="199.5">3</text><text x="216" y="149.5">4</text><text x="410" y="99.5">5</text><text x="450" y="65.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">指针温湿度表盘 · 爆炸图</text>
+    <text x="16" y="52">1 黄铜表壳（后盖 + 挂孔）</text>
+    <text x="16" y="68">2 ESP32 主板（I²C 接 4 探头）</text>
+    <text x="16" y="84">3 X27 微型步进表针电机 ×2</text>
+    <text x="16" y="100">4 表盘面 Φ120（45~65% 绿区）</text>
+    <text x="16" y="116">5 温度 / 湿度双指针</text>
+    <text x="16" y="132">6 玻璃表镜 + 黄铜圈</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0203-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>SHT31 探头 ×4，I²C 总线，精度 ±2% RH / ±0.3℃</li><li>X27 微型步进表针 ×2，ESP32 直接驱动</li><li>表盘 Φ120mm，45~65% 舒适区绿色标示</li><li>黄铜圈 + 玻璃表镜，与 ESPHome 一体，数据同步 HA</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 湿度区间调度</h2>
+    <p class="scene">让除湿机既不偷懒也不过劳的控制逻辑。输入是四个探头的湿度，取“最高值”而不是平均值，因为发霉总是从最潮的那个角落开始；输出是除湿机的档位和一条推送。规则很简单：湿度超过 65% 切强力档并通知，回到 55% 目标以下就退回自动档，低于 45% 干脆停机，防止软木地板和书本过干开裂。为了不让机器在阈值附近来回启停，每次切档后至少保持 15 分钟。每天累计的排水量按提升泵的启动次数换算，晚上推一条“今日排水 4.2L”。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0203-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0203-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0203-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0203-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 房间平面 + 四个探头 -->
+    <rect x="40" y="124" width="84" height="64" rx="2" stroke-width="1.4"/>
+    <path d="M40 156 h30 M70 124 v32" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M48 134 q-4 5 -4 8 a4 4 0 0 0 8 0 q0 -3 -4 -8 Z M116 134 q-4 5 -4 8 a4 4 0 0 0 8 0 q0 -3 -4 -8 Z M48 172 q-4 5 -4 8 a4 4 0 0 0 8 0 q0 -3 -4 -8 Z M116 172 q-4 5 -4 8 a4 4 0 0 0 8 0 q0 -3 -4 -8 Z" stroke-width="1"/>
+    <path d="M112 168 a6 6 0 0 1 8 8" stroke-width="0.7" stroke-dasharray="1.5 1.5"/>
+    <!-- 湿度标尺（45 / 55 / 65） -->
+    <path d="M182 116 v88" stroke-width="1.6"/>
+    <path d="M176 124 h12 M176 148 h12 M176 172 h12 M176 196 h12" stroke-width="1"/>
+    <rect x="186" y="148" width="10" height="48" fill="url(#p0203-3p-dots)" stroke="none"/>
+    <rect x="186" y="124" width="10" height="24" fill="url(#p0203-3p-shade)" stroke="none"/>
+    <path d="M182 120 l-4 -6 l8 0 Z" stroke-width="1" fill="url(#p0203-3p-shade)"/>
+    <!-- 除湿机 -->
+    <rect x="236" y="130" width="56" height="80" rx="4" stroke-width="1.6"/>
+    <path d="M242 138 h44 M242 144 h44 M242 150 h44 M242 156 h44" stroke-width="0.7"/>
+    <circle cx="264" cy="184" r="12" stroke-width="1.3"/>
+    <path d="M264 184 l6 -8" stroke-width="1.3"/>
+    <path d="M256 176 l-2 -3 M264 172 v-3 M272 176 l2 -3" stroke-width="0.8"/>
+    <path d="M240 206 h48 M280 210 v8 M284 218 h8" stroke-width="1"/>
+    <path d="M242 201 h44 v2 h-44 Z" fill="url(#p0203-3p-shade)" stroke="none"/>
+    <!-- 手机推送 -->
+    <rect x="304" y="226" width="24" height="38" rx="4" stroke-width="1.3"/>
+    <path d="M308 232 h16 M308 238 h16 M308 244 h10" stroke-width="0.7"/>
+    <path d="M316 260 h0.5" stroke-width="1.6"/>
+    <!-- 箭头 -->
+    <path d="M124 156 Q136 156 140 156" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M198 156 Q216 150 232 152" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M292 176 Q312 184 316 222" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M136 153 l4 3 l-5 1 M228 149 l4 3 l-5 1 M314 218 l2 5 l2 -5" stroke-width="1"/>
+    <!-- 特性勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0203 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">湿度区间调度</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">盯着最潮的那个角落，而不是平均数</text>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="82" y="202">4 探头取最高值</text>
+    <text x="264" y="226">除湿机档位</text>
+    <text x="312" y="276">今日排水 4.2L</text>
+  </g>
+  <g font-size="8" fill="#555">
+    <text x="130" y="127">65% 强力</text>
+    <text x="130" y="151">55% 目标</text>
+    <text x="130" y="175">45% 停机</text>
+  </g>
+  <g font-size="8" fill="#555" text-anchor="middle">
+    <text x="66" y="146">床头</text><text x="100" y="146">墙角</text><text x="66" y="184">柜内</text><text x="100" y="184">风管</text>
+  </g>
+  <text x="180" y="298" text-anchor="middle" font-size="9.5" fill="#666">4 探头取最高 → 45~65% 区间 → 除湿机档位 + 推送</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">超 65% 切强力档并推送，回 55% 退自动</text>
+    <text x="64" y="366">低于 45% 停机，木地板和书不开裂</text>
+    <text x="64" y="396">切档后至少保持 15 分钟，不在阈值边上抖</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA generic_hygrostat + ESPHome · 出口：档位 / 湿度曲线 / 排水量</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：Chreece/ESPHome-Dehumidifier</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0203-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0203-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0203-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">湿度区间调度 · 流程图</text>
+  <g filter="url(#p0203-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M196 54 a34 6 0 0 1 68 0 v30 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <rect x="330" y="52" width="120" height="40" rx="6"/>
+    <rect x="332" y="54" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M85 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 228 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="150" y="312" width="180" height="30" rx="15"/>
+    <path d="M334 94 h116 v3 h-116 Z M87 176 l56 -24 l4 2 l-58 26 Z M232 176 l56 -24 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M232 276 l56 -24 l4 2 l-58 26 Z M334 272 h116 v3 h-116 Z" fill="url(#p0203-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0203-3-arrow)" stroke-linecap="round">
+    <path d="M140 69 H194"/>
+    <path d="M264 69 H328"/>
+    <path d="M390 92 V112 H85 V126"/>
+    <path d="M143 152 H170"/>
+    <path d="M27 152 H14 V327 H148" stroke-dasharray="3 3"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V226"/>
+    <path d="M172 252 H142"/>
+    <path d="M288 252 H328"/>
+    <path d="M450 150 H466 V327 H332"/>
+  </g>
+  <path d="M85 270 V327 M390 270 V327" stroke="#3d3d3d" stroke-width="1.2" fill="none"/>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每分钟一拍</text>
+    <text x="230" y="71">4 探头湿度</text><text x="230" y="84" font-size="8.5" fill="#666">床头/墙角/柜内/风管</text>
+    <text x="390" y="69">取最高值 H</text><text x="390" y="83">最潮的角落优先</text>
+    <text x="85" y="151">距上次切档</text><text x="85" y="164">≥ 15 分钟？</text>
+    <text x="230" y="151">H &gt; 65%？</text><text x="230" y="164" font-size="8.5" fill="#666">发霉线</text>
+    <text x="390" y="147">是 → 强力档</text><text x="390" y="161">+ 推送提醒</text>
+    <text x="85" y="247">是 → 停机</text><text x="85" y="261">保护木地板 / 书</text>
+    <text x="230" y="251">H &lt; 45%？</text><text x="230" y="264" font-size="8.5" fill="#666">过干线</text>
+    <text x="390" y="247">否 → 自动档</text><text x="390" y="261">目标 55%</text>
+    <text x="240" y="331">写 HA · 晚间推日排水量</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="160" y="146">是</text><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="150" y="246">是</text><text x="305" y="246">否</text></g>
+  <g font-size="8.5" fill="#666"><text x="18" y="200">否 · 保持</text><text x="18" y="211">现档不动</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0203-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>输入：4 探头取最高湿度，每分钟一拍</li><li>阈值：&gt; 65% 强力档 + 推送，&lt; 45% 停机保护木制品</li><li>防抖：切档后最少保持 15 分钟</li><li>数据出口：档位、湿度曲线、日排水量写入 HA</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">Chreece/ESPHome-Dehumidifier 接管除湿机档位，HA 用 generic_hygrostat 做 45~65% 区间控制，排水量按提升泵启动次数换算</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/Chreece/ESPHome-Dehumidifier" target="_blank" rel="noopener">Chreece/ESPHome-Dehumidifier</a><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 新风换气判断</h2>
+    <p class="scene">只除湿不换气会闷，这段逻辑决定什么时候把地面的空气引进来。核心输入是一只 CO2 探头：人在密闭房间里待着，CO2 会从 400ppm 一路往上爬，超过 1000ppm 就开始犯困。低于 800 时新风机低速常转，保证最低换气；超过 1000 就切到高速。但新风进来的空气如果比室内更潮，就等于给除湿机添活，所以进风前先看通风井里的湿度，比室内高就让除湿机同步切强力档陪跑。HEPA 和活性炭滤芯按累计运行小时提醒更换。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0203-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0203-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0203-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0203-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- CO2 曲线仪表 -->
+    <rect x="40" y="124" width="84" height="56" rx="4" stroke-width="1.5"/>
+    <path d="M48 170 q10 -2 18 -8 q10 -8 16 -20 q8 -14 20 -10 q8 4 14 -2" stroke-width="1.3"/>
+    <path d="M48 140 h68" stroke-width="0.7" stroke-dasharray="3 2"/>
+    <path d="M48 154 h68" stroke-width="0.7" stroke-dasharray="1.5 2"/>
+    <path d="M44 184 h76 v4 h-76 Z" fill="url(#p0203-4p-shade)" stroke="none"/>
+    <!-- 新风机 + 风扇 -->
+    <rect x="152" y="118" width="56" height="70" rx="4" stroke-width="1.5"/>
+    <circle cx="180" cy="146" r="16" stroke-width="1.3"/>
+    <circle cx="180" cy="146" r="3" stroke-width="1"/>
+    <path d="M180 143 q6 -12 12 -5 q-5 2 -11 5 M182 148 q12 5 8 12 q-3 -5 -9 -10 M177 149 q-13 2 -10 -8 q4 3 11 6" stroke-width="1"/>
+    <path d="M158 170 h44 M158 176 h44 M158 182 h44" stroke-width="0.7"/>
+    <path d="M160 172 h40 v10 h-40 Z" fill="url(#p0203-4p-dots)" stroke="none"/>
+    <path d="M136 132 h10 M136 146 h14 M136 160 h10" stroke-width="0.9"/>
+    <path d="M132 130 l4 2 l-4 2 M136 144 l4 2 l-4 2 M132 158 l4 2 l-4 2" stroke-width="0.7"/>
+    <!-- 通风井（进风）：两滴湿度对比 -->
+    <path d="M250 128 h52 v62" stroke-width="1.3"/>
+    <path d="M250 128 v62" stroke-width="1.3"/>
+    <path d="M254 132 h44 v4 h-44 Z" fill="url(#p0203-4p-shade)" stroke="none"/>
+    <path d="M266 144 q-6 8 -6 12 a6 6 0 0 0 12 0 q0 -4 -6 -12 Z" stroke-width="1.2"/>
+    <path d="M286 144 q-6 8 -6 12 a6 6 0 0 0 12 0 q0 -4 -6 -12 Z" stroke-width="1.2"/>
+    <path d="M262 156 a6 5 0 0 0 8 3 v-4 a6 5 0 0 1 -8 -3 Z" fill="url(#p0203-4p-shade)" stroke="none"/>
+    <path d="M275 164 h2 M275 168 h2" stroke-width="1.6"/>
+    <!-- 除湿机小图 -->
+    <rect x="256" y="200" width="40" height="30" rx="3" stroke-width="1.3"/>
+    <path d="M261 206 h30 M261 211 h30" stroke-width="0.6"/>
+    <circle cx="276" cy="222" r="5" stroke-width="1"/>
+    <path d="M276 222 l3 -3" stroke-width="1"/>
+    <!-- 滤芯 -->
+    <rect x="64" y="204" width="44" height="22" rx="2" stroke-width="1.2"/>
+    <path d="M70 204 v22 M76 204 v22 M82 204 v22 M88 204 v22 M94 204 v22 M100 204 v22" stroke-width="0.6"/>
+    <path d="M65 218 h42 v7 h-42 Z" fill="url(#p0203-4p-shade)" stroke="none"/>
+    <!-- 箭头 -->
+    <path d="M124 150 Q136 150 148 150" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M208 150 Q228 150 246 150" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M276 190 V196" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M180 190 Q180 214 130 214 H112" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M144 147 l4 3 l-5 1 M242 147 l4 3 l-5 1 M273 193 l3 4 l3 -4 M116 211 l-4 3 l4 3" stroke-width="1"/>
+    <!-- 特性勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0203 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">新风换气判断</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">闷了就换气，但先看看外面潮不潮</text>
+  <g font-size="8" fill="#555">
+    <text x="50" y="138">1000 高速</text>
+    <text x="50" y="165">800 回低速</text>
+  </g>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="82" y="198">CO2 ppm 曲线</text>
+    <text x="180" y="202">新风机 低速 / 高速</text>
+    <text x="276" y="187" font-size="8">通风井进风 vs 室内</text>
+    <text x="266" y="177" font-size="8">井</text><text x="286" y="177" font-size="8">室内</text>
+    <text x="276" y="244">除湿机陪跑</text>
+    <text x="86" y="240">滤芯 2000h 提醒</text>
+  </g>
+  <text x="180" y="298" text-anchor="middle" font-size="9.5" fill="#666">CO2 ppm → 低速 / 高速 → 进风湿度对比 → 除湿机陪跑</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">1000ppm 切高速，800 回低速，中间不抖</text>
+    <text x="64" y="366">进风比室内潮，除湿机同步强力档</text>
+    <text x="64" y="396">HEPA / 活性炭滤芯 2000 小时推送更换</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome fan 组件 + HA · 数据出口：CO2 曲线 / 新风档位 / 滤芯小时</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：airgradienthq/arduino · esphome/esphome</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0203-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0203-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0203-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">新风换气判断 · 流程图</text>
+  <g filter="url(#p0203-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M196 54 a34 6 0 0 1 68 0 v30 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 228 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="150" y="312" width="180" height="30" rx="15"/>
+    <path d="M34 172 h106 v3 h-106 Z M232 176 l56 -24 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M232 276 l56 -24 l4 2 l-58 26 Z M334 272 h116 v3 h-116 Z" fill="url(#p0203-4-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0203-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 70 Q160 70 140 70" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V196 H85 V228"/>
+    <path d="M390 170 V210 H230 V226"/>
+    <path d="M140 252 H170"/>
+    <path d="M288 252 H328"/>
+    <path d="M230 276 V310"/>
+    <path d="M390 270 V327 H332"/>
+    <path d="M264 66 Q300 40 345 34" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每分钟一拍</text>
+    <text x="230" y="71">S8 CO2 探头</text><text x="230" y="84" font-size="8.5" fill="#666">+ 两路湿度</text>
+    <text x="85" y="147">读 CO2 ppm</text><text x="85" y="161">读进风 / 室内湿度</text>
+    <text x="230" y="151">CO2 &gt; 1000？</text><text x="230" y="164" font-size="8.5" fill="#666">迟滞 200ppm</text>
+    <text x="390" y="147">是 → 新风高速</text><text x="390" y="161">&lt; 800 才回低速</text>
+    <text x="85" y="247">否 → 低速常转</text><text x="85" y="261">保证最低换气</text>
+    <text x="230" y="251">进风比室内</text><text x="230" y="264">更潮？</text>
+    <text x="390" y="247">是 → 除湿机</text><text x="390" y="261">同步切强力档</text>
+    <text x="240" y="331">记运行小时 · 2000h 提醒换芯</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="190">否</text><text x="305" y="246">是</text><text x="236" y="296">否</text></g>
+  <g font-size="8.5" fill="#666" text-anchor="middle"><text x="400" y="30">探头离线 → 新风固定低速，不停机</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0203-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：CO2 &gt; 1000ppm 高速，&lt; 800ppm 回低速，迟滞 200ppm</li><li>进风湿度 &gt; 室内湿度 时，除湿机同步强力档</li><li>滤芯累计 2000 小时推送更换提醒</li><li>探头离线：新风固定低速，不停机</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">照 airgradienthq/arduino 用 SenseAir S8 做 CO2 探头，ESPHome 汇入 HA，新风机 PWM 用 esphome fan 组件按 ppm 分档</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/airgradienthq/arduino" target="_blank" rel="noopener">airgradienthq/arduino</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0202.html">← 0202 卫生间灯箱系统 拆解</a>
+    <a class="up" href="../modules/0203.html">回到 控温控湿 专题页</a>
+    <a href="../teardown/0204.html">0204 系统设计工作台 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0104 PSK 照片墙 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="PSK 照片墙 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" class="on"><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/01.html">01 暖村木屋</a> › <a href="../modules/0104.html">0104 PSK 照片墙</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">暖村木屋 · 模块 0104 · 核心拆解</p>
+    <h1>PSK 照片墙：4 个核心模块与逻辑</h1>
+    <p class="lede">麻绳加木夹子挂满照片，每一张都是一只盒子的出生和它去过的地方。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>麻绳木夹挂片系统</a><a href="#p2"><i>2</i>客人拍照亭小机</a><a href="#p3"><i>3</i>拍了就挂</a><a href="#p4"><i>4</i>月度换展与相册归档</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 麻绳木夹挂片系统</h2>
+    <p class="scene">照片墙用的是最经典的麻绳加木夹子，成本几乎为零，但每个细节都有讲究。系统从梁到光分五层：拧在横梁上、要吃住 3m 拉力的铁钩；三根 5mm 麻绳，故意拉得微微下垂才像随手挂的；3cm 原木小夹子，不用彩色的免得抢了照片；4×6 寸富士相纸暖调冲印的照片，不塑封，卷边和烤痕都是内容；绳上方一条 2400K 暖光灯带。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0104-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0104-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0104-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0104-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 横梁 + 铁钩（最下） -->
+    <path d="M56 296 l60 -24 l30 12 l-60 24 Z" stroke-width="1.5"/>
+    <path d="M56 296 v14 l30 12 v-14 M86 322 l60 -24 v-14" stroke-width="1.4"/>
+    <path d="M57 297 l29 11 v13 l-29 -11 Z" fill="url(#p0104-1-shade)" stroke="none"/>
+    <path d="M62 302 l16 6 M62 308 l16 6" stroke-width="0.5"/>
+    <path d="M100 286 v-6 M100 280 a5 5 0 0 1 8 -4 M100 286 h4 M96 288 l3 -1" stroke-width="1.3"/>
+    <path d="M100 280 v10 q0 6 6 6 q6 0 6 -6" stroke-width="1.5"/>
+    <path d="M98 282 h6" stroke-width="0.8"/>
+    <!-- ② 5mm 麻绳（下垂） -->
+    <path d="M148 246 q40 22 80 -10" stroke-width="2.2"/>
+    <path d="M148 246 q40 22 80 -10" stroke-width="0.6" stroke-dasharray="2 2" transform="translate(0 -1.5)"/>
+    <path d="M156 249 l2 -3 M164 252 l2 -3 M172 254 l2 -3 M180 255 l2 -3 M188 254 l2 -3 M196 252 l2 -3 M204 249 l2 -3 M212 245 l2 -3 M220 240 l2 -3" stroke-width="0.7"/>
+    <path d="M148 246 a3 3 0 1 0 -6 0 a3 3 0 1 0 6 0" stroke-width="1"/>
+    <path d="M228 236 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0" stroke-width="1"/>
+    <!-- ③ 原木小夹子 -->
+    <path d="M232 178 l10 -4 l18 8 l-10 4 Z" stroke-width="1.4"/>
+    <path d="M232 178 v22 l10 4 v-22" stroke-width="1.3"/>
+    <path d="M242 182 v22 l18 -8 v-22" stroke-width="1.3"/>
+    <path d="M243 183 l17 -8 v21 l-17 8 Z" fill="url(#p0104-1-shade)" stroke="none"/>
+    <path d="M236 186 h3 M236 190 h3" stroke-width="0.6"/>
+    <path d="M230 174 q6 -4 12 0 q6 4 12 0" stroke-width="1.1"/>
+    <path d="M234 172 q8 -8 16 0" stroke-width="0.8"/>
+    <path d="M238 184 l0 -6 M254 178 l0 -6" stroke-width="0.9"/>
+    <!-- ④ 4×6 富士相纸照片 -->
+    <path d="M292 138 l46 -18 l30 12 l-46 18 Z" stroke-width="1.5"/>
+    <path d="M298 138 l38 -15 l20 8 l-38 15 Z" stroke-width="0.8"/>
+    <path d="M306 136 l10 -10 l8 6 l8 -8 l12 6" stroke-width="0.9"/>
+    <path d="M300 139 l37 -15 l19 8 l-37 15 Z" fill="url(#p0104-1-shade2)" stroke="none"/>
+    <path d="M292 138 q-4 4 -2 8" stroke-width="0.8"/>
+    <path d="M368 132 q4 -4 2 -8" stroke-width="0.8"/>
+    <path d="M322 148 l3 -1 M326 150 l3 -1" stroke-width="0.6"/>
+    <!-- ⑤ 2400K 灯带（最上） -->
+    <path d="M362 70 l56 -22" stroke-width="1.5"/>
+    <path d="M362 70 v8 l56 -22 v-8" stroke-width="1.4"/>
+    <path d="M362 78 l56 -22" stroke-width="1.2"/>
+    <path d="M366 71 l3 -1 M376 67 l3 -1 M386 63 l3 -1 M396 59 l3 -1 M406 55 l3 -1" stroke-width="1.4"/>
+    <path d="M364 74 l52 -20" stroke-width="0.5" stroke-dasharray="1.5 1.5"/>
+    <path d="M370 82 v4 M384 76 v4 M398 70 v4 M412 64 v4" stroke-width="0.5" stroke-dasharray="1 1.5"/>
+    <path d="M362 70 h-6 q-4 0 -6 4" stroke-width="0.8"/>
+    <path d="M372 48 q10 -12 24 -6 M400 40 l10 -6" stroke-width="0.6" stroke-dasharray="2 2"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M148 300 H196"/><path d="M142 246 H104"/><path d="M262 190 H300"/><path d="M290 142 H244"/><path d="M420 64 H444"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="204" cy="300" r="8"/><circle cx="96" cy="246" r="8"/><circle cx="308" cy="190" r="8"/><circle cx="236" cy="142" r="8"/><circle cx="452" cy="64" r="8"/>
+    </g>
+    <text x="204" y="303.5">1</text><text x="96" y="249.5">2</text><text x="308" y="193.5">3</text><text x="236" y="145.5">4</text><text x="452" y="67.5">5</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">麻绳木夹挂片系统 · 爆炸图</text>
+    <text x="16" y="52">1 横梁铁钩（吃住 3m 拉力）</text>
+    <text x="16" y="68">2 5mm 麻绳（中点下垂 6cm）</text>
+    <text x="16" y="84">3 3cm 原木小夹子（本色）</text>
+    <text x="16" y="100">4 4×6 富士相纸照片（不塑封）</text>
+    <text x="16" y="116">5 2400K 暖光灯带（斜上方）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0104-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>三根 5mm 麻绳横拉 3m，两端铁钩，中点下垂约 6cm</li><li>3cm 原木小夹子，本色，每根绳约 30 只</li><li>4×6 富士相纸，暖调冲印，背面铅笔写一句话</li><li>2400K 灯带斜上方打，离柴火炉留 80cm</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 客人拍照亭小机</h2>
+    <p class="scene">墙下挂着的旧拍立得是气氛，真正让客人“拍一张挂上去”的是旁边这只木盒：一台树莓派拍照亭。拍立得相纸太贵，改用热升华小打印机出 4×6 相片，成本降到几分之一，风格靠软件里的宝丽来边框统一。盒子从里到外分五层：藏电源的木盒体、树莓派和摄像头模组、热升华打印机、大红按钮和 3.5 寸预览屏、开了镜头孔和出片口的前面板。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0104-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0104-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0104-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0104-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 老松木盒体（最下，前面开口，藏电源） -->
+    <path d="M56 300 l56 -22 l40 16 l-56 22 Z" stroke-width="1.5"/>
+    <path d="M56 300 v20 l40 16 v-20 M96 336 l56 -22 v-20" stroke-width="1.5"/>
+    <path d="M57 301 l39 15 v19 l-39 -15 Z" fill="url(#p0104-2-shade)" stroke="none"/>
+    <path d="M100 300 l48 -19 l-4 -1 M104 306 l44 -17" stroke-width="0.5"/>
+    <path d="M60 306 l30 12 M60 312 l30 12" stroke-width="0.5"/>
+    <path d="M72 292 l20 -8 l10 4 l-20 8 Z" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <path d="M78 289 l6 -2 M84 286 h3 M86 291 v-4" stroke-width="0.6"/>
+    <!-- ② 树莓派 + 摄像头模组 -->
+    <path d="M152 244 l32 -13 l18 7 l-32 13 Z" stroke-width="1.5"/>
+    <path d="M152 244 v3 l18 7 v-3" stroke-width="1"/>
+    <path d="M153 245 l17 6 v3 l-17 -6 Z" fill="url(#p0104-2-shade)" stroke="none"/>
+    <rect x="164" y="235" width="8" height="6" rx="1" stroke-width="0.9" transform="rotate(-22 168 238)"/>
+    <path d="M176 238 l3 -1 M178 240 l3 -1 M180 242 l3 -1" stroke-width="1"/>
+    <path d="M186 232 h4 M188 230 v4" stroke-width="0.9"/>
+    <path d="M196 222 l10 -4 l6 3 l-10 4 Z" stroke-width="1.2"/>
+    <circle cx="204" cy="222" r="2.5" stroke-width="1"/>
+    <path d="M198 226 q-4 6 -8 6" stroke-width="0.7"/>
+    <!-- ③ 热升华打印机 -->
+    <path d="M224 180 l44 -18 l26 10 l-44 18 Z" stroke-width="1.5"/>
+    <path d="M224 180 v12 l26 10 v-12 M250 202 l44 -18 v-12" stroke-width="1.4"/>
+    <path d="M225 181 l25 9 v11 l-25 -9 Z" fill="url(#p0104-2-shade)" stroke="none"/>
+    <path d="M232 178 l30 -12 l10 4 l-30 12 Z" stroke-width="0.7"/>
+    <path d="M258 190 l30 -12 v3 l-30 12 Z" stroke-width="0.8"/>
+    <path d="M262 194 l24 -10 l4 12 l-24 10 Z" stroke-width="0.9"/>
+    <path d="M266 198 l16 -6 M266 202 l16 -6" stroke-width="0.5"/>
+    <!-- ④ 大红按钮 + 3.5 寸屏 -->
+    <path d="M300 128 l30 -12 l18 7 l-30 12 Z" stroke-width="1.4"/>
+    <path d="M304 128 l24 -10 l12 5 l-24 10 Z" stroke-width="0.7"/>
+    <path d="M305 129 l23 -9 l11 4 l-23 9 Z" fill="url(#p0104-2-shade2)" stroke="none"/>
+    <path d="M300 128 v3 l18 7 v-3" stroke-width="0.9"/>
+    <ellipse cx="354" cy="108" rx="9" ry="4.5" stroke-width="1.5"/>
+    <path d="M345 108 v5 a9 4.5 0 0 0 18 0 v-5" stroke-width="1.2"/>
+    <ellipse cx="354" cy="104" rx="6" ry="3" stroke-width="1.2"/>
+    <path d="M348 104 v4 a6 3 0 0 0 12 0 v-4" stroke-width="1"/>
+    <path d="M346 110 a9 4.5 0 0 0 16 2 v3 a9 4.5 0 0 1 -16 -2 Z" fill="url(#p0104-2-shade)" stroke="none"/>
+    <!-- ⑤ 前面板（镜头孔 + 出片口，最上） -->
+    <path d="M360 72 l44 -18 l30 12 l-44 18 Z" stroke-width="1.5"/>
+    <path d="M360 72 v3 l30 12 v-3" stroke-width="1"/>
+    <path d="M361 73 l29 11 v3 l-29 -11 Z" fill="url(#p0104-2-shade)" stroke="none"/>
+    <path d="M388 62 a4 2 0 1 0 8 0 a4 2 0 1 0 -8 0" stroke-width="1.1"/>
+    <path d="M382 78 l26 -11 l4 2 l-26 11 Z" stroke-width="1"/>
+    <path d="M370 70 a2.5 1.2 0 1 0 5 0 a2.5 1.2 0 1 0 -5 0" stroke-width="0.8"/>
+    <path d="M408 58 l6 -2 l4 2 l-6 2 Z" stroke-width="0.7"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M154 296 H200"/><path d="M152 246 H112"/><path d="M296 186 H326"/><path d="M300 130 H262"/><path d="M436 68 H452"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="208" cy="296" r="8"/><circle cx="104" cy="246" r="8"/><circle cx="334" cy="186" r="8"/><circle cx="254" cy="130" r="8"/><circle cx="460" cy="68" r="8"/>
+    </g>
+    <text x="208" y="299.5">1</text><text x="104" y="249.5">2</text><text x="334" y="189.5">3</text><text x="254" y="133.5">4</text><text x="460" y="71.5">5</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">客人拍照亭小机 · 爆炸图</text>
+    <text x="16" y="52">1 老松木盒体（藏电源和线）</text>
+    <text x="16" y="68">2 树莓派 4 + 摄像头模组</text>
+    <text x="16" y="84">3 热升华打印机（4×6 出片）</text>
+    <text x="16" y="100">4 3.5 寸预览屏 + 大红街机按钮</text>
+    <text x="16" y="116">5 前面板（镜头孔 + 出片口）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0104-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>树莓派 4 + 官方摄像头模组，3.5 寸屏取景预览</li><li>热升华打印机（Selphy 类），4×6 一张约 20 秒</li><li>大红街机按钮触发，带 3 秒倒计时</li><li>木盒体与作品墙同一批老松木，藏电源和线</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/pibooth/pibooth" target="_blank" rel="noopener">pibooth/pibooth</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 拍了就挂</h2>
+    <p class="scene">这段逻辑把“客人来了拍一张挂上去”变成不需要主人插手的流程。输入是客人按下红按钮，输出是一张带宝丽来边框和日期的 4×6 相片，以及相册里的一份原片。流程是三秒倒计时取景、拍照、套边框烫日期、先把原片存进相册再打印；相纸不够时亮黄灯提示，但照片已经存好不会丢。出片后客人自己夹到下排的空夹子上，还能扫码把原片带走。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0104-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0104-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0104-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0104-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：红按钮 + 拍照亭（左） → 宝丽来相片（中） → 麻绳夹子（右） -->
+    <!-- 拍照亭木盒 -->
+    <rect x="40" y="150" width="64" height="70" rx="3" stroke-width="1.5"/>
+    <circle cx="72" cy="168" r="7" stroke-width="1.4"/>
+    <circle cx="72" cy="168" r="3" stroke-width="0.9"/>
+    <rect x="50" y="184" width="44" height="14" rx="1" stroke-width="1"/>
+    <rect x="52" y="186" width="40" height="10" fill="url(#p0104-3p-dots)" stroke="none"/>
+    <path d="M50 208 h44" stroke-width="1.2"/>
+    <path d="M54 210 h36" stroke-width="0.6"/>
+    <!-- 大红按钮（盒顶） -->
+    <path d="M60 150 v-6 a12 5 0 0 1 24 0 v6" stroke-width="1.4"/>
+    <ellipse cx="72" cy="144" rx="12" ry="5" stroke-width="1.4"/>
+    <ellipse cx="72" cy="140" rx="8" ry="3.5" stroke-width="1.2"/>
+    <path d="M64 140 v4 a8 3.5 0 0 0 16 0 v-4" stroke-width="1"/>
+    <path d="M60 128 l4 4 M72 124 v6 M84 128 l-4 4" stroke-width="1"/>
+    <!-- 宝丽来相片（中） -->
+    <rect x="146" y="132" width="66" height="82" rx="2" stroke-width="1.5" transform="rotate(-6 179 173)"/>
+    <rect x="152" y="138" width="54" height="54" stroke-width="0.9" transform="rotate(-6 179 173)"/>
+    <rect x="153" y="139" width="52" height="52" fill="url(#p0104-3p-dots)" stroke="none" transform="rotate(-6 179 173)"/>
+    <circle cx="171" cy="160" r="6" stroke-width="0.9" transform="rotate(-6 179 173)"/>
+    <circle cx="189" cy="162" r="6" stroke-width="0.9" transform="rotate(-6 179 173)"/>
+    <path d="M160 190 q11 -18 22 0 M178 190 q11 -18 22 0" stroke-width="0.9" transform="rotate(-6 179 173)"/>
+    <path d="M160 204 h20 M186 204 h14" stroke-width="0.7" transform="rotate(-6 179 173)"/>
+    <!-- 麻绳 + 夹子 + 相片（右） -->
+    <path d="M244 132 q40 18 84 -4" stroke-width="1.8"/>
+    <path d="M250 136 l2 -3 M262 141 l2 -3 M274 143 l2 -3 M286 143 l2 -3 M298 140 l2 -3 M310 136 l2 -3" stroke-width="0.6"/>
+    <path d="M280 139 v10 M276 149 h8 v12 h-8 Z" stroke-width="1.3"/>
+    <rect x="277" y="150" width="6" height="10" fill="url(#p0104-3p-shade)" stroke="none"/>
+    <rect x="258" y="158" width="44" height="54" rx="1.5" stroke-width="1.4"/>
+    <rect x="262" y="162" width="36" height="36" stroke-width="0.8"/>
+    <rect x="263" y="163" width="34" height="34" fill="url(#p0104-3p-dots)" stroke="none"/>
+    <path d="M266 204 h20" stroke-width="0.7"/>
+    <path d="M306 190 h10 v10 h-10 Z M308 192 h2 v2 h-2 Z M312 192 h2 v2 h-2 Z M308 196 h2 v2 h-2 Z M312 196 h2 v2 h-2 Z" stroke-width="0.7"/>
+    <!-- 箭头 -->
+    <path d="M110 178 Q126 176 140 174" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M216 178 Q232 176 250 176" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地平线 -->
+    <path d="M40 256 Q180 248 320 256" stroke-width="1.2"/>
+    <path d="M44 260 q40 -3 80 0 M236 260 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层 -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0104 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">拍了就挂</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">按一下红按钮，二十秒后自己夹上墙</text>
+  <text x="72" y="234" text-anchor="middle" font-size="8.5" fill="#666">红按钮 · 3 秒倒计时</text>
+  <text x="180" y="234" text-anchor="middle" font-size="8.5" fill="#666">白边 + 日期烫印</text>
+  <text x="284" y="234" text-anchor="middle" font-size="8.5" fill="#666">下排空夹 · 扫码取原片</text>
+  <text x="180" y="290" text-anchor="middle" font-size="9.5" fill="#666">按钮 → 倒计时拍照 → 套边框 → 原片存相册 → 打印出片</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">宝丽来白边 + 日期烫印，和拍立得一个风格</text>
+    <text x="64" y="366">先把原片存进相册再打印，相纸不够也不丢</text>
+    <text x="64" y="396">相纸不足亮黄灯提示，扫码就能带走原片</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：树莓派 pibooth · 数据出口：Immich 客人相册 / 打印计数</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：pibooth/pibooth · PhotoboothProject/photobooth</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0104-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0104-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0104-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">拍了就挂 · 流程图</text>
+  <g filter="url(#p0104-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊：按下红按钮 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 步骤：倒计时取景 -->
+    <rect x="175" y="49" width="110" height="40" rx="6"/>
+    <rect x="177" y="51" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 步骤：套边框 -->
+    <rect x="330" y="49" width="120" height="40" rx="6"/>
+    <rect x="332" y="51" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 数据源 圆柱：Immich 客人相册 -->
+    <path d="M356 130 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="390" cy="130" rx="34" ry="6"/>
+    <!-- 判断 菱形：相纸充足？ -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤 左：打印 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0104-3-shade)" stroke="none"/>
+    <path d="M179 91 h106 v3 h-106 Z M334 91 h116 v3 h-116 Z M34 172 h106 v3 h-106 Z" fill="url(#p0104-3-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0104-3-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <!-- 连线 -->
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0104-3-arrow)" stroke-linecap="round">
+    <path d="M140 69 H173"/>
+    <path d="M285 69 H328"/>
+    <path d="M390 89 V122"/>
+    <path d="M356 150 H290"/>
+    <path d="M172 152 H140"/>
+    <path d="M230 176 V228"/>
+    <path d="M85 170 V228"/>
+    <path d="M390 174 V228" stroke-dasharray="3 3"/>
+    <path d="M85 270 V327 H173"/>
+    <path d="M285 250 H328" stroke-dasharray="3 3"/>
+    <path d="M390 270 V327 H307"/>
+  </g>
+  <!-- 文字 -->
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">客人按下红按钮</text>
+    <text x="230" y="66">3 秒倒计时</text><text x="230" y="80">预览屏取景拍照</text>
+    <text x="390" y="66">套宝丽来白边</text><text x="390" y="80">烫印日期</text>
+    <text x="390" y="150">客人相册</text><text x="390" y="163" font-size="8.5" fill="#666">Immich · 原片先存</text>
+    <text x="230" y="149">相纸充足？</text><text x="230" y="162" font-size="8.5" fill="#666">打印机计数</text>
+    <text x="85" y="147">是 → 打印 4×6</text><text x="85" y="161">约 20 秒出片</text>
+    <text x="85" y="247">客人自己夹到</text><text x="85" y="261">下排空夹子上</text>
+    <text x="230" y="247">否 → 亮黄灯提示</text><text x="230" y="261">照片已存好</text>
+    <text x="390" y="247">扫码取原片</text><text x="390" y="261">相册分享链接</text>
+    <text x="240" y="331">主人全程不用插手</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="172" y="146">是</text><text x="240" y="196">否</text><text x="300" y="120" text-anchor="middle">先存原片再打印</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0104-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：红按钮按下，3 秒倒计时，预览屏取景</li><li>边框：宝丽来白边 + 日期烫印，风格和拍立得统一</li><li>失败兜底：相纸不足亮黄灯，原片先存云端不丢</li><li>数据出口：Immich 客人相册，扫码可取原片</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 pibooth/pibooth 做按键拍照与打印，宝丽来边框借 photobooth 模板，原片备份到 Immich</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/pibooth/pibooth" target="_blank" rel="noopener">pibooth/pibooth</a><a href="https://github.com/PhotoboothProject/photobooth" target="_blank" rel="noopener">PhotoboothProject/photobooth</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 月度换展与相册归档</h2>
+    <p class="scene">下排是客人合影，每月满了就换一批，换下来的进牛皮纸相册，相册本身也是展品。这段逻辑解决“换哪些、换下来放哪、背面那句话怎么不丢”。输入是每月 1 号的提醒和下排夹子的使用数，输出是取下的照片清单和归档记录。核心判断是下排是否满 27 张：满了取下最早 10 张放进当年相册，没满只补空夹；背面的铅笔句子录进描述字段。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0104-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0104-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0104-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0104-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：日历 1 号（左） → 满了的下排麻绳（中） → 牛皮纸相册（右） -->
+    <!-- 日历 -->
+    <rect x="40" y="136" width="60" height="64" rx="3" stroke-width="1.5"/>
+    <path d="M40 150 H100" stroke-width="1.2"/>
+    <rect x="42" y="138" width="56" height="10" fill="url(#p0104-4p-shade)" stroke="none"/>
+    <path d="M52 132 v8 M88 132 v8" stroke-width="1.3"/>
+    <path d="M48 160 h8 M60 160 h8 M72 160 h8 M84 160 h8 M48 172 h8 M60 172 h8 M72 172 h8 M84 172 h8 M48 184 h8 M60 184 h8" stroke-width="0.6"/>
+    <circle cx="52" cy="159" r="6" stroke-width="1.2"/>
+    <!-- 下排麻绳，夹满了相片 -->
+    <path d="M130 128 q50 20 100 0" stroke-width="1.8"/>
+    <path d="M144 134 v8 M164 139 v8 M184 140 v8 M204 139 v8 M224 134 v8" stroke-width="1.1"/>
+    <rect x="136" y="142" width="18" height="22" rx="1" stroke-width="1.1"/>
+    <rect x="156" y="147" width="18" height="22" rx="1" stroke-width="1.1"/>
+    <rect x="176" y="148" width="18" height="22" rx="1" stroke-width="1.1"/>
+    <rect x="196" y="147" width="18" height="22" rx="1" stroke-width="1.1"/>
+    <rect x="216" y="142" width="18" height="22" rx="1" stroke-width="1.1"/>
+    <rect x="138" y="144" width="14" height="14" fill="url(#p0104-4p-dots)" stroke="none"/>
+    <rect x="158" y="149" width="14" height="14" fill="url(#p0104-4p-dots)" stroke="none"/>
+    <rect x="178" y="150" width="14" height="14" fill="url(#p0104-4p-shade)" stroke="none"/>
+    <rect x="198" y="149" width="14" height="14" fill="url(#p0104-4p-dots)" stroke="none"/>
+    <rect x="218" y="144" width="14" height="14" fill="url(#p0104-4p-dots)" stroke="none"/>
+    <!-- 取下最早的两张（虚线轮廓，向下飘） -->
+    <rect x="150" y="182" width="18" height="22" rx="1" stroke-width="0.9" stroke-dasharray="2 2" transform="rotate(-8 159 193)"/>
+    <rect x="186" y="186" width="18" height="22" rx="1" stroke-width="0.9" stroke-dasharray="2 2" transform="rotate(6 195 197)"/>
+    <path d="M160 172 v6 M196 172 v8" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <!-- 牛皮纸相册（右） -->
+    <path d="M254 150 L316 150 L322 156 V218 L260 218 L254 212 Z" stroke-width="1.5"/>
+    <path d="M254 150 V212 L260 218 M254 212 H316 L322 218 M316 150 V212" stroke-width="1"/>
+    <path d="M255 151 h60 v60 h-60 Z" fill="url(#p0104-4p-shade)" stroke="none" stroke-opacity="0.3"/>
+    <path d="M262 160 h46 M262 168 h30" stroke-width="0.7" stroke-opacity="0.6"/>
+    <rect x="270" y="176" width="30" height="26" rx="1" stroke-width="1.1" fill="none"/>
+    <path d="M264 174 l4 6 M306 174 l-4 6 M264 208 l4 -6 M306 208 l-4 -6" stroke-width="0.8"/>
+    <path d="M254 150 q-6 8 -6 30 q0 22 6 32" stroke-width="1"/>
+    <!-- 箭头 -->
+    <path d="M106 168 Q118 168 128 166" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M226 190 Q238 190 248 186" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地平线 -->
+    <path d="M40 256 Q180 248 320 256" stroke-width="1.2"/>
+    <path d="M44 260 q40 -3 80 0 M236 260 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层 -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0104 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">月度换展归档</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">墙上永远有空夹子，相册永远在长</text>
+  <text x="52" y="162.5" text-anchor="middle" font-size="7" fill="#2a2a2a">1</text>
+  <text x="70" y="218" text-anchor="middle" font-size="8.5" fill="#666">每月 1 号提醒</text>
+  <text x="182" y="230" text-anchor="middle" font-size="8.5" fill="#666">满 27 张 → 取下最早 10 张</text>
+  <text x="288" y="236" text-anchor="middle" font-size="8.5" fill="#666">当年牛皮纸相册</text>
+  <text x="180" y="290" text-anchor="middle" font-size="9.5" fill="#666">日历提醒 → 数夹子 → 满则归档 10 张 → 铅笔句子录入描述</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">下排满 27 张才动，取下最早 10 张进相册</text>
+    <text x="64" y="366">背面铅笔那句话录入描述字段，正面不写字</text>
+    <text x="64" y="396">相册分“在墙上 / 已归档 2026”，随时能翻</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 日历自动化 + Immich · 数据出口：两组相册 / 归档记录</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：immich-app/immich · home-assistant/core</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0104-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0104-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0104-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">月度换展与相册归档 · 流程图</text>
+  <g filter="url(#p0104-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱：Immich 相册 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤：数夹子 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤 右：取下最早 10 张 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0104-4-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0104-4-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0104-4-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <!-- 连线 -->
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0104-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V200 H85 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M330 250 H287"/>
+    <path d="M230 270 V310"/>
+    <path d="M85 270 V327 H173"/>
+  </g>
+  <!-- 文字 -->
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每月 1 号日历提醒</text>
+    <text x="230" y="74">照片相册</text><text x="230" y="87" font-size="8.5" fill="#666">Immich 在墙上/已归档</text>
+    <text x="85" y="147">数下排夹子</text><text x="85" y="161">已用了几张</text>
+    <text x="230" y="149">满 27 张？</text><text x="230" y="162" font-size="8.5" fill="#666">下排合影区</text>
+    <text x="390" y="147">是 → 取下最早 10 张</text><text x="390" y="161">放进当年牛皮纸相册</text>
+    <text x="85" y="247">否 → 只补空夹</text><text x="85" y="261">墙面不动</text>
+    <text x="230" y="247">相册移到</text><text x="230" y="261">“已归档 2026”</text>
+    <text x="390" y="247">背面铅笔那句话</text><text x="390" y="261">录入描述字段</text>
+    <text x="240" y="331">永远留 5 个空夹子</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="196">否</text><text x="428" y="204" text-anchor="middle">在墙上减 10</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0104-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：每月 1 号提醒，数下排夹子是否满 27 张</li><li>满了取下最早 10 张进当年相册，永远留 5 个空夹</li><li>背面铅笔那句话录入描述字段，正面不写字</li><li>数据出口：Immich 相册“在墙上 / 已归档 2026”</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 immich-app/immich 的相册与描述字段管理在墙上/已归档两组照片，月初提醒由 HA 日历自动化发出</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/immich-app/immich" target="_blank" rel="noopener">immich-app/immich</a><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0103.html">← 0103 电子画框墙 拆解</a>
+    <a class="up" href="../modules/0104.html">回到 PSK 照片墙 专题页</a>
+    <a href="../teardown/0105.html">0105 PSK 工作台 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

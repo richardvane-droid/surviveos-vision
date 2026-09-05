@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0404 木工间 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="木工间 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" class="on"><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/04.html">04 阁楼仓库</a> › <a href="../modules/0404.html">0404 木工间</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">阁楼仓库 · 模块 0404 · 核心拆解</p>
+    <h1>木工间：4 个核心模块与逻辑</h1>
+    <p class="lede">台锯、工作台、法式挂条墙围成一个 U 形，木屑全部被一根管子吃掉。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>旋风集尘器与分路阀</a><a href="#p2"><i>2</i>法式挂条工具墙</a><a href="#p3"><i>3</i>集尘随机联动</a><a href="#p4"><i>4</i>粉尘监测与新风调速</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 旋风集尘器与分路阀</h2>
+    <p class="scene">木工间角落那台“吃木屑的机器”分三层：最下面是集尘桶，中间是旋风分离器，上面是带滤芯的抽风电机。木屑随气流进入旋风筒后沿筒壁螺旋下落，靠离心力甩进桶里，只有极细粉尘才到达滤芯，所以滤芯很久不堵。桶上方汇集来自台锯、带锯、刨床的三根 100mm 管路，每路一只舵机驱动的金属挡板阀，用哪台机器只开哪路，风量集中到当前工位。管路以直管为主少弯头，每个弯头都会吃掉一截风量。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0404-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0404-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0404-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0404-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 集尘桶 -->
+    <ellipse cx="110" cy="256" rx="40" ry="13" stroke-width="1.5"/>
+    <path d="M70 256 v52 a40 13 0 0 0 80 0 v-52" stroke-width="1.4"/>
+    <path d="M72 262 a40 13 0 0 0 76 0" stroke-width="0.7"/>
+    <path d="M78 314 a38 12 0 0 0 66 2 v-8 a38 12 0 0 1 -66 -2 Z" fill="url(#p0404-1-shade)" stroke="none"/>
+    <path d="M96 272 h20 v22 h-20 Z" stroke-width="1"/>
+    <path d="M98 276 l16 14 M100 290 l12 -12" stroke-width="0.4"/>
+    <path d="M66 270 q-6 4 0 8 M154 270 q6 4 0 8" stroke-width="1"/>
+    <!-- 2 旋风分离器 -->
+    <ellipse cx="180" cy="190" rx="26" ry="9" stroke-width="1.5"/>
+    <path d="M154 190 v18 l18 40 h16 l18 -40 v-18" stroke-width="1.4"/>
+    <path d="M156 208 a24 8 0 0 0 48 0" stroke-width="0.7"/>
+    <path d="M172 248 a8 3 0 0 0 16 0" stroke-width="0.9"/>
+    <path d="M160 214 q20 10 0 20 q-16 8 8 14" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <path d="M188 208 l16 -6 v8 l-16 6" stroke-width="1.2"/>
+    <path d="M190 210 l12 -4 v6 l-12 4 Z" fill="url(#p0404-1-shade)" stroke="none"/>
+    <path d="M190 226 l18 -35 h12 l-18 35 Z" fill="url(#p0404-1-shade)" stroke="none"/>
+    <!-- 3 滤芯 + 抽风电机 -->
+    <ellipse cx="258" cy="152" rx="24" ry="8" stroke-width="1.4"/>
+    <path d="M234 152 v24 a24 8 0 0 0 48 0 v-24" stroke-width="1.3"/>
+    <path d="M236 176 v-24" stroke-width="0.5"/><path d="M240 176 v-24" stroke-width="0.5"/><path d="M244 176 v-24" stroke-width="0.5"/><path d="M248 176 v-24" stroke-width="0.5"/><path d="M252 176 v-24" stroke-width="0.5"/><path d="M256 176 v-24" stroke-width="0.5"/><path d="M260 176 v-24" stroke-width="0.5"/><path d="M264 176 v-24" stroke-width="0.5"/><path d="M268 176 v-24" stroke-width="0.5"/><path d="M272 176 v-24" stroke-width="0.5"/><path d="M276 176 v-24" stroke-width="0.5"/><path d="M280 176 v-24" stroke-width="0.5"/>
+    <path d="M244 144 a14 6 0 0 1 28 0 v-16 a14 6 0 0 0 -28 0 Z" stroke-width="1.4"/>
+    <ellipse cx="258" cy="128" rx="14" ry="6" stroke-width="1"/>
+    <path d="M250 128 h16 M258 122 v-6 M254 116 h8" stroke-width="0.9"/>
+    <path d="M244 136 a14 6 0 0 0 28 0 v8 a14 6 0 0 1 -28 0 Z" fill="url(#p0404-1-shade)" stroke="none"/>
+    <!-- 4 舵机挡板阀 -->
+    <path d="M300 116 l30 -9 v22 l-30 9 Z" stroke-width="1.4"/>
+    <path d="M306 108 l18 -5.5 v22 l-18 5.5 Z" stroke-width="1" stroke-dasharray="3 2"/>
+    <ellipse cx="315" cy="124" rx="7" ry="4" transform="rotate(-17 315 124)" stroke-width="1"/>
+    <path d="M330 107 l3 1.5 v22 l-3 -1.5 Z" fill="url(#p0404-1-shade)" stroke="none"/>
+    <path d="M334 100 l10 -3 v10 l-10 3 Z" stroke-width="1.2"/>
+    <path d="M334 100 l10 -3 v10 l-10 3 Z" fill="url(#p0404-1-shade2)" stroke="none"/>
+    <path d="M339 98 v-6 l6 -2" stroke-width="1"/>
+    <!-- 5 100mm 集尘管 x3 -->
+    <path d="M350 82 l40 -30 M356 90 l40 -30" stroke-width="1.4"/>
+    <ellipse cx="353" cy="86" rx="3.5" ry="5" transform="rotate(-37 353 86)" stroke-width="1.1"/>
+    <ellipse cx="393" cy="56" rx="3.5" ry="5" transform="rotate(-37 393 56)" stroke-width="1.1"/>
+    <path d="M366 78 l40 -30 M372 86 l40 -30" stroke-width="1.4"/>
+    <ellipse cx="369" cy="82" rx="3.5" ry="5" transform="rotate(-37 369 82)" stroke-width="1.1"/>
+    <ellipse cx="409" cy="52" rx="3.5" ry="5" transform="rotate(-37 409 52)" stroke-width="1.1"/>
+    <path d="M382 74 l40 -30 M388 82 l40 -30" stroke-width="1.4"/>
+    <ellipse cx="385" cy="78" rx="3.5" ry="5" transform="rotate(-37 385 78)" stroke-width="1.1"/>
+    <ellipse cx="425" cy="48" rx="3.5" ry="5" transform="rotate(-37 425 48)" stroke-width="1.1"/>
+    <path d="M360 84 l32 -24 M376 80 l32 -24" stroke-width="0.4"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M150 300 H196"/><path d="M154 214 H118"/><path d="M282 166 H300"/><path d="M344 108 H364"/><path d="M420 60 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="300" r="8"/><circle cx="108" cy="214" r="8"/><circle cx="310" cy="166" r="8"/><circle cx="374" cy="108" r="8"/><circle cx="450" cy="60" r="8"/>
+    </g>
+    <text x="206" y="303.5">1</text><text x="108" y="217.5">2</text><text x="310" y="169.5">3</text><text x="374" y="111.5">4</text><text x="450" y="63.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">旋风集尘器与分路阀 · 爆炸图</text>
+    <text x="16" y="52">1 集尘桶 60L（带视窗）</text>
+    <text x="16" y="68">2 旋风分离器（离心甩出木屑）</text>
+    <text x="16" y="84">3 滤芯 + 抽风电机</text>
+    <text x="16" y="100">4 舵机挡板阀（每路一只）</text>
+    <text x="16" y="116">5 100mm 集尘管 ×3（直管为主）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0404-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>旋风分离器分离 95% 以上木屑，滤芯不易堵</li><li>集尘桶 60L，带透明视窗看余量</li><li>三路 100mm 阀门，9g 舵机驱动挡板</li><li>管路直管为主，弯头用大半径</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/FoxDotBuild/DustCollection" target="_blank" rel="noopener">FoxDotBuild/DustCollection</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 法式挂条工具墙</h2>
+    <p class="scene">对着窗的整面墙钉满 45° 斜切的木条，就是木工房经典的“法式挂条”。原理很简单：墙上的条斜面朝上，工具挂架背面也有一根斜面朝下的条，两个斜面一搭，重力把挂架往墙里压，越重越牢，又能随时提起换位。墙条用 18mm 多层板裁成 90mm 宽，每隔 100mm 一条打进龙骨。每类工具做专属挂架：刨子做搁板、凿子做斜插槽、木工夹做横杆，常用的放在视线平齐处。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0404-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0404-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0404-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0404-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 墙体龙骨 -->
+    <path d="M62 312 l8 -2.5 v-70 l-8 2.5 Z M70 309.5 l4 2 v-70 l-4 -2" stroke-width="1.4"/>
+    <path d="M62 312 l8 -2.5 v-70 l-8 2.5 Z" fill="url(#p0404-2-shade)" stroke="none"/>
+    <path d="M106 298 l8 -2.5 v-70 l-8 2.5 Z M114 295.5 l4 2 v-70 l-4 -2" stroke-width="1.4"/>
+    <path d="M106 298 l8 -2.5 v-70 l-8 2.5 Z" fill="url(#p0404-2-shade)" stroke="none"/>
+    <path d="M66 256 h3 M66 276 h3 M66 296 h3 M110 242 h3 M110 262 h3 M110 282 h3" stroke-width="1.2"/>
+    <!-- 2 45° 斜切挂条排 -->
+    <path d="M148 268 l60 -18 v6 l-60 18 Z" stroke-width="1.2"/><path d="M148 268 l-4 -3 l60 -18 l4 3" stroke-width="0.8"/><path d="M144 265 l60 -18 v3 l-60 18 Z" fill="url(#p0404-2-shade)" stroke="none"/><path d="M148 252 l60 -18 v6 l-60 18 Z" stroke-width="1.2"/><path d="M148 252 l-4 -3 l60 -18 l4 3" stroke-width="0.8"/><path d="M144 249 l60 -18 v3 l-60 18 Z" fill="url(#p0404-2-shade)" stroke="none"/><path d="M148 236 l60 -18 v6 l-60 18 Z" stroke-width="1.2"/><path d="M148 236 l-4 -3 l60 -18 l4 3" stroke-width="0.8"/><path d="M144 233 l60 -18 v3 l-60 18 Z" fill="url(#p0404-2-shade)" stroke="none"/><path d="M148 220 l60 -18 v6 l-60 18 Z" stroke-width="1.2"/><path d="M148 220 l-4 -3 l60 -18 l4 3" stroke-width="0.8"/><path d="M144 217 l60 -18 v3 l-60 18 Z" fill="url(#p0404-2-shade)" stroke="none"/>
+    <!-- 3 专属挂架（背面反向斜条） -->
+    <path d="M232 186 l30 -9 v14 l-30 9 Z" stroke-width="1.3"/>
+    <path d="M262 177 l4 2 v14 l-4 -2" stroke-width="0.9"/>
+    <path d="M232 200 l30 -9 l4 2 l-30 9 Z" stroke-width="1"/>
+    <path d="M232 174 l30 -9 l-4 -4 l-30 9 Z" stroke-width="1.1"/>
+    <path d="M232 174 l30 -9 l-4 -4 l-30 9 Z" fill="url(#p0404-2-shade2)" stroke="none"/>
+    <path d="M238 194 v6 M256 189 v6" stroke-width="0.6"/>
+    <path d="M248 178 v10" stroke-width="0.6"/>
+    <!-- 4 刨子 + 凿子 -->
+    <path d="M292 132 l40 -12 l6 3 l-40 12 Z" stroke-width="1.4"/>
+    <path d="M292 132 v-8 l40 -12 v8 M338 123 v-8 l-6 -3" stroke-width="1.2"/>
+    <path d="M304 118 q6 -12 12 -4 M318 116 l4 -12 l4 2 l-3 10" stroke-width="1.1"/>
+    <path d="M300 130 l30 -9" stroke-width="0.5"/>
+    <path d="M332 120 l6 3 v8 l-6 -3 Z" fill="url(#p0404-2-shade)" stroke="none"/>
+    <path d="M344 112 l14 -30 M348 113 l14 -30 M344 112 l4 1" stroke-width="1.2"/>
+    <path d="M358 82 l4 1 l3 -10 l-4 -1 Z" stroke-width="1.1"/>
+    <path d="M358 82 l4 1 l3 -10 l-4 -1 Z" fill="url(#p0404-2-shade)" stroke="none"/>
+    <!-- 5 木工夹 -->
+    <path d="M376 78 l30 -9" stroke-width="1.8"/>
+    <path d="M376 78 v-14 l6 -2 v14 M400 71 v-14 l6 -2 v14" stroke-width="1.2"/>
+    <path d="M378 66 h2 v-10 h-2 Z M401 59 h2 v-10 h-2 Z" stroke-width="0.9"/>
+    <path d="M382 54 h-6 M405 47 h-6" stroke-width="1"/>
+    <path d="M384 70 v-8 M398 66 v-8" stroke-width="0.6"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M118 290 H196"/><path d="M148 262 H118"/><path d="M266 196 H300"/><path d="M340 130 H372"/><path d="M406 74 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="290" r="8"/><circle cx="108" cy="262" r="8"/><circle cx="310" cy="196" r="8"/><circle cx="382" cy="130" r="8"/><circle cx="450" cy="74" r="8"/>
+    </g>
+    <text x="206" y="293.5">1</text><text x="108" y="265.5">2</text><text x="310" y="199.5">3</text><text x="382" y="133.5">4</text><text x="450" y="77.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">法式挂条工具墙 · 爆炸图</text>
+    <text x="16" y="52">1 墙体龙骨（打进砖墙）</text>
+    <text x="16" y="68">2 45° 斜切挂条排（间距 100mm）</text>
+    <text x="16" y="84">3 专属挂架（背面反向斜条）</text>
+    <text x="16" y="100">4 刨子 / 凿子</text>
+    <text x="16" y="116">5 木工夹（挂横杆）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0404-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>墙条 18mm 多层板 45° 斜切，间距 100mm</li><li>龙骨打进墙体，每条不少于 3 颗螺丝</li><li>挂架可提起换位，工具越多越好看</li><li>常用工具在视线高度，重物放低层</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 集尘随机联动</h2>
+    <p class="scene">解决“开台锯前先去角落开集尘器，再跑回来开锯”的两步操作。每台机器的电源线穿过一只夹式电流传感器，ESP32 持续读电流：哪台机器电流超过 2A 就判定它在工作，先让舵机打开对应那路阀门、关上其他路，再通过继电器启动集尘器。机器停机后集尘器不马上停，延时 8 秒把管道里残留木屑吸干净再关。集尘桶满时光电开关发出信号，推送提醒倒桶。整个逻辑在 ESP32 本地执行，与网络无关。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0404-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0404-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0404-3p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0404-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0404-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 台锯 + 电流夹（左） -->
+    <path d="M40 160 h56 v-8 h-56 Z" stroke-width="1.5"/>
+    <path d="M44 160 v22 M92 160 v22 M44 182 h48" stroke-width="1.2"/>
+    <path d="M68 152 a10 10 0 0 1 0 -20 v20" stroke-width="1.4"/>
+    <path d="M68 132 l3 3 l-3 3 l3 3 l-3 3 l3 3 l-3 3" stroke-width="0.8"/>
+    <path d="M48 170 h40 v6 h-40 Z" fill="url(#p0404-3p-shade)" stroke="none"/>
+    <path d="M60 182 q0 12 10 14 h10" stroke-width="1"/>
+    <circle cx="86" cy="196" r="6" stroke-width="1.3"/><path d="M86 190 v-3" stroke-width="1"/>
+    <!-- ESP32 + 阀门（中） -->
+    <rect x="156" y="127" width="48" height="30" rx="3" stroke-width="1.4"/>
+    <rect x="161" y="132" width="38" height="20" rx="2" stroke-width="0.7"/>
+    <path d="M162 127.0 v-5 M162 157.0 v5 M170 127.0 v-5 M170 157.0 v5 M178 127.0 v-5 M178 157.0 v5 M186 127.0 v-5 M186 157.0 v5 M194 127.0 v-5 M194 157.0 v5 " stroke-width="1"/>
+    <rect x="161" y="146" width="38" height="6" fill="url(#p0404-3p-shade)" stroke="none"/>
+    <rect x="164" y="176" width="32" height="24" rx="2" stroke-width="1.3"/>
+    <path d="M170 176 v-8 h20 v8" stroke-width="1" stroke-dasharray="3 2"/>
+    <circle cx="180" cy="188" r="6" stroke-width="1"/>
+    <path d="M198 178 h8 v8 h-8 Z" stroke-width="1"/>
+    <path d="M198 178 h8 v8 h-8 Z" fill="url(#p0404-3p-shade2)" stroke="none"/>
+    <path d="M202 178 v-4 h4" stroke-width="0.8"/>
+    <!-- 旋风集尘器（右） -->
+    <ellipse cx="290" cy="128" rx="20" ry="7" stroke-width="1.4"/>
+    <path d="M270 128 v14 l14 30 h12 l14 -30 v-14" stroke-width="1.3"/>
+    <path d="M272 142 a18 6 0 0 0 36 0" stroke-width="0.7"/>
+    <path d="M284 172 a6 2 0 0 0 12 0" stroke-width="0.9"/>
+    <ellipse cx="290" cy="184" rx="22" ry="7" stroke-width="1.3"/>
+    <path d="M268 184 v22 a22 7 0 0 0 44 0 v-22" stroke-width="1.3"/>
+    <path d="M272 206 a20 6 0 0 0 40 0 v-4 a20 6 0 0 1 -40 0 Z" fill="url(#p0404-3p-shade)" stroke="none"/>
+    <path d="M296 146 l16 -5 v6 l-16 5" stroke-width="1.1"/>
+    <path d="M298 152 l16 -5 v-6" stroke-width="0.6"/>
+    <path d="M290 121 v-10 M284 111 h12" stroke-width="1"/>
+    <!-- 箭头 -->
+    <path d="M100 176 Q126 170 152 160" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M149.9 164.9 L154 159 L146.9 157.5" stroke-width="1"/>
+    <path d="M206 168 Q236 164 262 158" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M259.1 162.3 L264 157 L257.2 154.6" stroke-width="1"/>
+    <path d="M208 142 Q240 138 264 132" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M261.1 136.3 L266 131 L259.2 128.6" stroke-width="1"/>
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/>
+    <path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="40" y="216" font-size="8" fill="#666">电流夹 >2A</text><text x="160" y="214" font-size="8" fill="#666">舵机阀门</text><text x="270" y="228" font-size="8" fill="#666">旋风集尘器</text>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0404 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">集尘随机联动</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">锯一开，管子就醒了</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">电流 >2A → 舵机开对应阀门 → 继电器启动集尘器 → 停机延时 8 秒</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">哪台机器开机，就只开哪路阀门</text>
+    <text x="64" y="366">停机延时 8 秒，先把管路吸干净</text>
+    <text x="64" y="396">桶满光电提醒倒桶，可手动强制开</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome（ESP32 本地）· 数据出口：HA 集尘器状态 + 倒桶提醒</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：FoxDotBuild/DustCollection</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0404-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0404-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0404-3-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <marker id="p0404-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">集尘随机联动 · 流程图</text>
+  <g filter="url(#p0404-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M190 47 a40 6 0 0 1 80 0 v36 a40 6 0 0 1 -80 0 Z"/><ellipse cx="230" cy="47" rx="40" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="110" y="312" width="300" height="30" rx="15"/>
+    <path d="M34 172 h106 v3 h-106 Z M232 176 l56 -22 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0404-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0404-3-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M230 270 V310"/>
+    <path d="M390 270 V310"/>
+    <path d="M85 270 V327 H108"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="72.5">持续读电流</text>
+    <text x="230" y="70">电流传感器 ×3</text>
+    <text x="230" y="83" font-size="8.5" fill="#666">台锯 / 带锯 / 刨床</text>
+    <text x="85" y="147.5">ESP32 本地判断</text>
+    <text x="85" y="161">哪台机器 >2A</text>
+    <text x="230" y="155.5">有机器开机？</text>
+    <text x="390" y="147.5">是 → 舵机开对应阀门</text>
+    <text x="390" y="161">关上其他两路</text>
+    <text x="85" y="247.5">并行：桶满光电</text>
+    <text x="85" y="261">→ 推送倒桶</text>
+    <text x="230" y="247.5">否 → 延时 8 秒</text>
+    <text x="230" y="261">关集尘器清空管路</text>
+    <text x="390" y="247.5">1 秒后继电器</text>
+    <text x="390" y="261">启动集尘器</text>
+    <text x="260" y="330.5">集尘器随工具启停 · 手动开关可强制 · 全部本地执行</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="395" y="200">阀门到位</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0404-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：任一机器电流 &gt;2A 判定开机</li><li>动作：先开对应阀门，1 秒后启动集尘器</li><li>阈值：停机后延时 8 秒关闭，清空管路</li><li>兜底：桶满光电开关提醒倒桶，可手动强制开</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">沿用 FoxDotBuild/DustCollection 的电流检测 + 舵机阀门 + 继电器方案，用 ESPHome 的 ct_clamp 组件实现</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/FoxDotBuild/DustCollection" target="_blank" rel="noopener">FoxDotBuild/DustCollection</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 粉尘监测与新风调速</h2>
+    <p class="scene">集尘器抓走的是大颗粒，真正伤肺的是悬浮在空气里的细粉。天花那台空气过滤箱平时低速转，一颗激光颗粒物传感器每 10 秒把 PM2.5 / PM10 上报 HomeAssistant：PM10 超过 100µg/m³ 切到高速，回落到 50 以下持续 10 分钟再降回低速；人踩进黄线安全区（地垫压力开关）也自动高速。数值同步显示在 0211 中枢屏，收工时 PM10 仍偏高就提醒再开 20 分钟。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0404-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0404-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0404-4p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0404-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0404-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 颗粒物传感器 + 粉尘（左） -->
+    <rect x="42" y="140" width="46" height="30" rx="3" stroke-width="1.4"/>
+    <rect x="48" y="146" width="20" height="18" rx="1" stroke-width="0.8"/>
+    <circle cx="78" cy="155" r="5" stroke-width="1"/>
+    <path d="M88 150 h6 M88 160 h6" stroke-width="1"/>
+    <path d="M48 150 h20 v14 h-20 Z" fill="url(#p0404-4p-dots)" stroke="none"/>
+    <circle cx="50" cy="122" r="1.2" stroke-width="0.8"/><circle cx="60" cy="116" r="1.6" stroke-width="0.8"/><circle cx="72" cy="124" r="1" stroke-width="0.8"/><circle cx="82" cy="118" r="1.4" stroke-width="0.8"/><circle cx="66" cy="108" r="1" stroke-width="0.8"/>
+    <path d="M40 186 q24 6 50 0" stroke-width="0.6"/>
+    <path d="M40 190 h50 v4 h-50 Z" stroke-width="0.9"/>
+    <path d="M42 191 h46 v2 h-46 Z" fill="url(#p0404-4p-shade)" stroke="none"/>
+    <!-- HA 房子（中） -->
+    <path d="M150 164 l30 -26 l30 26 v34 h-60 Z" stroke-width="1.6"/>
+    <path d="M144 166 l36 -32 l36 32" stroke-width="1.2"/>
+    <circle cx="180" cy="176" r="8" stroke-width="1.2"/>
+    <path d="M180 168 v-3 M180 184 v3 M172 176 h-3 M188 176 h3" stroke-width="1"/>
+    <path d="M152 194 h56 v3 h-56 Z" fill="url(#p0404-4p-shade)" stroke="none"/>
+    <!-- 天花过滤箱（右上） + 中枢屏（右下） -->
+    <path d="M244 122 h60 v30 h-60 Z" stroke-width="1.4"/>
+    <path d="M248 128 h52 M248 134 h52 M248 140 h52 M248 146 h52" stroke-width="0.6"/>
+    <circle cx="274" cy="137" r="9" stroke-width="1.3"/>
+    <path d="M274 137 q-4.5 -8.1 0 -7.65 M274 137 q8.55 0.9 6.75 4.5 M274 137 q-4.5 7.65 -7.2 3.15" stroke-width="1.1"/>
+    <circle cx="274" cy="137" r="2" stroke-width="0.9"/>
+    <path d="M244 122 h60 v-4 h-60 Z" fill="url(#p0404-4p-shade)" stroke="none"/>
+    <path d="M304 128 h10 q4 0 4 4 v6" stroke-width="1"/>
+    <rect x="254" y="174" width="52" height="34" rx="2" stroke-width="1.3"/>
+    <rect x="258" y="178" width="44" height="26" rx="1" stroke-width="0.6"/>
+    <path d="M262 198 l8 -8 l6 4 l8 -10 l6 2 l8 -6" stroke-width="1"/>
+    <path d="M276 208 v5 M270 213 h12" stroke-width="1"/>
+    <!-- 箭头 -->
+    <path d="M96 166 Q120 168 144 166" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M140.0 170.0 L146 166 L140.0 162.0" stroke-width="1"/>
+    <path d="M212 164 Q226 150 240 140" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M238.9 145.5 L242 139 L234.8 138.7" stroke-width="1"/>
+    <path d="M212 186 Q232 192 250 192" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M246.0 196.0 L252 192 L246.0 188.0" stroke-width="1"/>
+    <text x="180" y="180" text-anchor="middle" font-size="7.5" fill="#3d3d3d" stroke="none">PM10</text>
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/>
+    <path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="44" y="206" font-size="8" fill="#666">PMS5003 · 地垫开关</text><text x="256" y="166" font-size="8" fill="#666">天花过滤箱</text><text x="262" y="228" font-size="8" fill="#666">0211 中枢屏</text>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0404 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">粉尘监测调速</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">看不见的木粉，也得有人管</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">PMS5003 颗粒物 → ESPHome → HA 迟滞分档 → 过滤箱高 / 低速 + 0211 屏</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">PM10 >100 切高速，&lt;50 持续 10 分钟降速</text>
+    <text x="64" y="366">踩进黄线安全区，过滤箱自动高速</text>
+    <text x="64" y="396">收工偏高提醒再开 20 分钟别急着关</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：0211 中枢屏 + 每日曲线</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0404-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0404-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0404-4-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <marker id="p0404-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">粉尘监测与新风调速 · 流程图</text>
+  <g filter="url(#p0404-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M190 47 a40 6 0 0 1 80 0 v36 a40 6 0 0 1 -80 0 Z"/><ellipse cx="230" cy="47" rx="40" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 226 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="110" y="312" width="300" height="30" rx="15"/>
+    <path d="M34 172 h106 v3 h-106 Z M232 176 l56 -22 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M232 274 l56 -22 l4 2 l-58 26 Z M334 272 h116 v3 h-116 Z" fill="url(#p0404-4-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0404-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V226"/>
+    <path d="M288 252 H328"/>
+    <path d="M172 252 H142"/>
+    <path d="M85 270 V327 H108"/>
+    <path d="M390 270 V310"/>
+    <path d="M390 170 V196 H462 V327 H412"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="72.5">每 10 秒采样</text>
+    <text x="230" y="70">PMS5003</text>
+    <text x="230" y="83" font-size="8.5" fill="#666">PM2.5 / PM10</text>
+    <text x="85" y="147.5">ESPHome 上报 HA</text>
+    <text x="85" y="161">显示到 0211 中枢屏</text>
+    <text x="230" y="155.5">PM10 >100？</text>
+    <text x="230" y="168.5" font-size="8.5" fill="#666">或有人进区</text>
+    <text x="390" y="147.5">是 → 过滤箱切高速</text>
+    <text x="390" y="161">记录起始时间</text>
+    <text x="85" y="247.5">否 → 保持当前档</text>
+    <text x="85" y="261">只记曲线</text>
+    <text x="230" y="253.5">PM10 &lt;50？</text>
+    <text x="230" y="266.5" font-size="8.5" fill="#666">持续 10 分钟</text>
+    <text x="390" y="247.5">是 → 降回低速</text>
+    <text x="390" y="261">24 小时常转</text>
+    <text x="260" y="330.5">收工 PM10 偏高提醒再开 20 分钟 · 掉线保持低速</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="305" y="246">是</text><text x="150" y="246">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0404-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>输入：PMS5003 颗粒物传感器，每 10 秒一次</li><li>阈值：PM10 &gt;100 高速，&lt;50 持续 10 分钟降速</li><li>地垫压力开关进人即高速，出口 0211 中枢屏</li><li>兜底：传感器掉线保持低速常转</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 pmsx003 组件上报 PM2.5 / PM10，HomeAssistant 自动化做带迟滞的风速分档</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a><a href="https://github.com/MallocArray/airgradient_esphome" target="_blank" rel="noopener">MallocArray/airgradient_esphome</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0403.html">← 0403 喷漆间 拆解</a>
+    <a class="up" href="../modules/0404.html">回到 木工间 专题页</a>
+    <a href="../teardown/0501.html">0501 柴火堆墙 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

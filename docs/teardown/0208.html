@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0208 大柏林音响 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="大柏林音响 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/02.html">02 地堡</a> › <a href="../modules/0208.html">0208 大柏林音响</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">地堡 · 模块 0208 · 核心拆解</p>
+    <h1>大柏林音响：4 个核心模块与逻辑</h1>
+    <p class="lede">两只落地大箱 + 一张单人椅，正三角形，坐进去世界就安静了。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>落地音箱单元总成</a><a href="#p2"><i>2</i>黑胶唱盘总成</a><a href="#p3"><i>3</i>听音场景</a><a href="#p4"><i>4</i>房间校正</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 落地音箱单元总成</h2>
+    <p class="scene">一只“比人还高”的落地箱，拆开其实是六层东西。最底下是花岗岩避震底板和四只钉脚，把箱体和地面的震动隔开；箱体用多层板做，内部加了加强筋和吸音棉，目的是让箱壁本身不发声，只让喇叭发声。分频器是一块带电感和电容的电路板，把功放送来的全频信号切成低、中、高三段，分别送给 12 寸低音单元、中音单元和号角高音；最外面是一块磁吸的前面网罩，防灰也防手。大箱在小房间里低频容易糊，离后墙 80 厘米那口气，也是这只箱子的一部分。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0208-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="31" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0208-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0208-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0208-1-dots" width="4" height="4" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.6" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L410 24" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0208-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 花岗岩避震底板 + 钉脚 -->
+    <rect x="70" y="296" width="84" height="7" stroke-width="1.5"/>
+    <path d="M70 296 l16 -9 h84 l-16 9" stroke-width="1.5"/>
+    <path d="M154 296 l16 -9 v7 l-16 9" stroke-width="1.5"/>
+    <path d="M155 297 l14 -8 v5 l-14 8 Z" fill="url(#p0208-1-shade)" stroke="none"/>
+    <path d="M78 303 l-3 8 l3 0 Z M148 303 l-3 8 l3 0 Z M160 297 l-3 8 l3 0 Z M100 291 l-3 8 l3 0 Z" stroke-width="1"/>
+    <path d="M90 292 q10 -2 20 0 M118 290 q8 -1 16 0" stroke-width="0.5"/>
+    <!-- ② 多层板箱体 -->
+    <rect x="154" y="180" width="52" height="104" stroke-width="1.5"/>
+    <path d="M154 180 l14 -8 h52 l-14 8" stroke-width="1.5"/>
+    <path d="M206 180 l14 -8 v104 l-14 8" stroke-width="1.5"/>
+    <path d="M207 181 l12 -7 v102 l-12 7 Z" fill="url(#p0208-1-shade)" stroke="none"/>
+    <circle cx="180" cy="256" r="16" stroke-width="1"/>
+    <circle cx="180" cy="220" r="9" stroke-width="1"/>
+    <circle cx="180" cy="198" r="5.5" stroke-width="1"/>
+    <path d="M166 256 a14 14 0 0 0 14 14 v-3 a11 11 0 0 1 -11 -11 Z" fill="url(#p0208-1-shade)" stroke="none"/>
+    <path d="M158 176 l12 -6 M168 176 l12 -6 M178 176 l12 -6 M188 176 l12 -6" stroke-width="0.5"/>
+    <!-- ③ 分频器电路板 -->
+    <path d="M231 176 l30 -14 l26 8 l-30 14 Z" stroke-width="1.5"/>
+    <path d="M233 177 l28 -13 l22 7" stroke-width="0.6"/>
+    <circle cx="252" cy="170" r="5" stroke-width="1"/><circle cx="252" cy="170" r="2" stroke-width="0.7"/>
+    <path d="M262 164 l8 -3 l3 1 l-8 3 Z M266 171 l7 -3 l3 1 l-7 3 Z" stroke-width="0.9"/>
+    <path d="M262 164 l8 -3 l3 1 l-8 3 Z" fill="url(#p0208-1-shade2)" stroke="none"/>
+    <path d="M240 168 l3 -1 M244 172 l3 -1 M256 178 h3 M260 176 h3" stroke-width="1"/>
+    <!-- ④ 12 寸低音单元 -->
+    <circle cx="305" cy="122" r="24" stroke-width="1.5"/>
+    <circle cx="305" cy="122" r="19" stroke-width="0.9"/>
+    <circle cx="305" cy="122" r="13" stroke-width="0.7"/>
+    <circle cx="305" cy="122" r="6" stroke-width="1.1"/>
+    <path d="M286 122 a19 19 0 0 0 19 19 v-5 a14 14 0 0 1 -14 -14 Z" fill="url(#p0208-1-shade)" stroke="none"/>
+    <path d="M305 100 v2 M305 142 v2 M283 122 h2 M325 122 h2" stroke-width="1.2"/>
+    <path d="M289 108 l3 3 M318 133 l3 3" stroke-width="0.6"/>
+    <!-- ⑤ 中音单元 + 号角高音 -->
+    <circle cx="340" cy="92" r="11" stroke-width="1.4"/>
+    <circle cx="340" cy="92" r="7" stroke-width="0.7"/>
+    <circle cx="340" cy="92" r="2.5" stroke-width="0.9"/>
+    <path d="M331 92 a9 9 0 0 0 9 9 v-3 a6 6 0 0 1 -6 -6 Z" fill="url(#p0208-1-shade)" stroke="none"/>
+    <rect x="356" y="58" width="22" height="16" rx="2" stroke-width="1.3"/>
+    <path d="M360 62 l6 3 v2 l-6 3 Z" stroke-width="0.9"/>
+    <path d="M366 65 l8 -3 v8 l-8 -3" stroke-width="0.9"/>
+    <path d="M366 65 l8 -3 v8 l-8 -3 Z" fill="url(#p0208-1-shade2)" stroke="none"/>
+    <!-- ⑥ 前面网罩（最上） -->
+    <rect x="384" y="10" width="40" height="60" rx="3" stroke-width="1.5"/>
+    <rect x="387" y="13" width="34" height="54" rx="2" stroke-width="0.6"/>
+    <rect x="388" y="14" width="32" height="52" rx="2" fill="url(#p0208-1-dots)" stroke="none"/>
+    <path d="M386 12 l-2 -2 M424 12 l2 -2 M386 68 l-2 2 M424 68 l2 2" stroke-width="0.8"/>
+  </g>
+  <!-- 引线 + 编号（不加滤镜） -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M154 300 H206"/>
+    <path d="M154 240 H130"/>
+    <path d="M287 170 H310"/>
+    <path d="M281 122 H250"/>
+    <path d="M329 92 H300"/>
+    <path d="M424 40 H442"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="300" r="8"/><circle cx="120" cy="240" r="8"/><circle cx="320" cy="170" r="8"/><circle cx="240" cy="122" r="8"/><circle cx="290" cy="92" r="8"/><circle cx="452" cy="40" r="8"/>
+    </g>
+    <text x="216" y="303.5">1</text><text x="120" y="243.5">2</text><text x="320" y="173.5">3</text><text x="240" y="125.5">4</text><text x="290" y="95.5">5</text><text x="452" y="43.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">落地音箱单元总成 · 爆炸图</text>
+    <text x="16" y="52">1 花岗岩避震底板 + 钉脚</text>
+    <text x="16" y="68">2 多层板箱体（内填吸音棉）</text>
+    <text x="16" y="84">3 分频器（电感 / 电容）</text>
+    <text x="16" y="100">4 12 寸低音单元</text>
+    <text x="16" y="116">5 中音单元 + 号角高音</text>
+    <text x="16" y="132">6 前面网罩（磁吸）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0208-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>三分频落地箱，高约 1.2m，单只 60kg 以上</li><li>12 寸低音 + 中音 + 号角高音，灵敏度 90dB 以上</li><li>分频器电感 / 电容分三段，分频点约 500Hz / 3kHz</li><li>花岗岩底板 + 钉脚，离后墙 80cm、间距 2.5m</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/pierreaubert/spinorama" target="_blank" rel="noopener">pierreaubert/spinorama</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 黑胶唱盘总成</h2>
+    <p class="scene">唱针落下那一秒的“嚓”声，来自这一叠零件。唱盘最怕震动，所以从下往上先是一块避震板和三只锥形脚，再是实木底座，电机藏在底座里；电机不直接带转盘，而是通过皮带拖动副盘，皮带像一根软弹簧，把电机的抖动滤掉，这就是“皮带传动”的道理。副盘上压着一块沉重的铝合金转盘和橡胶唱片垫，重量本身就是稳定转速的飞轮。唱臂固定在底座右后角，前端装 MM 唱头，尾端的配重决定针压。最上面是一只亚克力防尘罩，地堡里灰不多，但湿气要靠 0203 挡住。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0208-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="32" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0208-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0208-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L410 24" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0208-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 避震板 + 三只锥形脚 -->
+    <rect x="66" y="294" width="92" height="6" stroke-width="1.5"/>
+    <path d="M66 294 l16 -9 h92 l-16 9" stroke-width="1.5"/>
+    <path d="M158 294 l16 -9 v6 l-16 9" stroke-width="1.5"/>
+    <path d="M159 295 l14 -8 v4 l-14 8 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <path d="M74 300 l-4 9 h8 Z M150 300 l-4 9 h8 Z M166 293 l-4 9 h8 Z" stroke-width="1"/>
+    <path d="M74 300 l-4 9 h8 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <!-- ② 实木底座（内置电机） -->
+    <rect x="144" y="222" width="70" height="22" stroke-width="1.5"/>
+    <path d="M144 222 l16 -9 h70 l-16 9" stroke-width="1.5"/>
+    <path d="M214 222 l16 -9 v22 l-16 9" stroke-width="1.5"/>
+    <path d="M215 223 l14 -8 v20 l-14 8 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <path d="M150 226 q30 -1 60 0 M150 236 q30 -1 60 0" stroke-width="0.5"/>
+    <ellipse cx="164" cy="216" rx="5" ry="2.5" stroke-width="1"/>
+    <ellipse cx="164" cy="216" rx="5" ry="2.5" fill="url(#p0208-2-shade2)" stroke="none"/>
+    <ellipse cx="196" cy="216" rx="3" ry="1.5" stroke-width="0.9"/>
+    <rect x="150" y="230" width="10" height="6" rx="1" stroke-width="0.9"/>
+    <path d="M196 214 v-6" stroke-width="1"/>
+    <!-- ③ 副盘 + 皮带传动 -->
+    <ellipse cx="252" cy="170" rx="18" ry="7" stroke-width="1.5"/>
+    <path d="M234 170 v8 a18 7 0 0 0 36 0 v-8" stroke-width="1.2"/>
+    <path d="M236 174 a18 6 0 0 0 32 0 v3 a18 6 0 0 1 -32 0 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <ellipse cx="222" cy="164" rx="3" ry="1.5" stroke-width="1"/>
+    <path d="M219 164 q10 12 33 12 M225 163 q10 5 27 6" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <path d="M252 162 v4" stroke-width="1"/>
+    <!-- ④ 铝合金转盘 + 唱片垫 -->
+    <ellipse cx="305" cy="120" rx="42" ry="15" stroke-width="1.5"/>
+    <path d="M263 120 v8 a42 15 0 0 0 84 0 v-8" stroke-width="1.3"/>
+    <path d="M265 124 a42 14 0 0 0 80 0 v6 a42 14 0 0 1 -80 0 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <ellipse cx="305" cy="120" rx="34" ry="12" stroke-width="0.8"/>
+    <ellipse cx="305" cy="120" rx="20" ry="7" stroke-width="0.5"/>
+    <ellipse cx="305" cy="120" rx="8" ry="3" stroke-width="0.5"/>
+    <path d="M305 113 v-8" stroke-width="1.2"/>
+    <!-- ⑤ 唱臂 + 唱头 + 配重 -->
+    <circle cx="344" cy="88" r="8" stroke-width="1.4"/>
+    <circle cx="344" cy="88" r="3" stroke-width="0.8"/>
+    <path d="M338 92 a8 8 0 0 0 10 3 v-3 a5 5 0 0 1 -7 -2 Z" fill="url(#p0208-2-shade)" stroke="none"/>
+    <path d="M348 84 L378 60" stroke-width="2"/>
+    <path d="M340 92 L332 98" stroke-width="2"/>
+    <circle cx="329" cy="100" r="4.5" stroke-width="1.2"/>
+    <path d="M378 60 l6 -2 l3 4 l-6 3 Z" stroke-width="1.1"/>
+    <path d="M383 63 v4" stroke-width="0.9"/>
+    <!-- ⑥ 亚克力防尘罩（最上） -->
+    <rect x="370" y="30" width="62" height="20" stroke-width="1.5"/>
+    <path d="M370 30 l16 -9 h62 l-16 9" stroke-width="1.5"/>
+    <path d="M432 30 l16 -9 v20 l-16 9" stroke-width="1.5"/>
+    <path d="M380 44 q22 -1 44 0" stroke-width="0.5"/>
+    <path d="M376 26 l12 -6 M444 24 l2 -2" stroke-width="0.5"/>
+    <path d="M433 31 l14 -8 v4 l-14 8 Z" fill="url(#p0208-2-shade)" stroke="none" opacity="0.6"/>
+  </g>
+  <!-- 引线 + 编号（不加滤镜） -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M158 298 H206"/>
+    <path d="M144 234 H124"/>
+    <path d="M270 172 H300"/>
+    <path d="M263 122 H240"/>
+    <path d="M336 88 H300"/>
+    <path d="M448 40 H452"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="298" r="8"/><circle cx="114" cy="234" r="8"/><circle cx="310" cy="172" r="8"/><circle cx="230" cy="122" r="8"/><circle cx="290" cy="88" r="8"/><circle cx="462" cy="40" r="8"/>
+    </g>
+    <text x="216" y="301.5">1</text><text x="114" y="237.5">2</text><text x="310" y="175.5">3</text><text x="230" y="125.5">4</text><text x="290" y="91.5">5</text><text x="462" y="43.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">黑胶唱盘总成 · 爆炸图</text>
+    <text x="16" y="52">1 避震板 + 三只锥形脚</text>
+    <text x="16" y="68">2 实木底座（内置同步电机）</text>
+    <text x="16" y="84">3 副盘 + 皮带传动</text>
+    <text x="16" y="100">4 铝合金转盘 + 橡胶唱片垫</text>
+    <text x="16" y="116">5 唱臂 + MM 唱头 + 配重</text>
+    <text x="16" y="132">6 亚克力防尘罩</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0208-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>皮带传动，33⅓ / 45 转，同步电机藏在底座内</li><li>铝合金转盘 2kg 以上，靠惯量稳转速</li><li>9 寸直臂 + MM 唱头，针压约 1.8g</li><li>避震板 + 锥形脚三点支撑，防尘罩合页开启</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 听音场景</h2>
+    <p class="scene">一个按钮把听音角准备好，这段逻辑管的是顺序。按下按钮后先读场景配置，让 0201 灯光只打皮椅和唱盘，其余全暗；然后判断音源：黑胶就切到唱放通道并启动唱盘电机，流媒体就让 moOde 打开本地曲库或网络电台。同时 0203 新风切静音档，0207 影音室把主声道让出来。胆机需要预热，所以功放上电后保持静音 60 秒再解除，避免开机的“砰”声伤到喇叭。再按一次按钮整个流程倒放：静音、灯光回升、电机停转。输入是一次按钮，输出是灯光、功放、音源、新风四路动作。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0208-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="35" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0208-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0208-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 海报边框（双线，手绘） -->
+  <g filter="url(#p0208-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：按钮 → 灯下的唱盘 → 音箱 -->
+    <!-- 墙上的听音按钮（左） -->
+    <rect x="44" y="140" width="48" height="48" rx="4" stroke-width="1.5"/>
+    <circle cx="68" cy="164" r="13" stroke-width="1.5"/>
+    <circle cx="68" cy="164" r="8" stroke-width="0.9"/>
+    <circle cx="68" cy="164" r="8" fill="url(#p0208-3p-dots)" stroke="none"/>
+    <path d="M48 180 h40 v5 h-40 Z" fill="url(#p0208-3p-shade)" stroke="none"/>
+    <path d="M50 146 l3 3 M86 146 l-3 3" stroke-width="0.7"/>
+    <!-- 顶灯 + 光锥（中） -->
+    <path d="M170 108 h20 l6 9 h-32 Z" stroke-width="1.3"/>
+    <path d="M180 108 v-6" stroke-width="1"/>
+    <path d="M172 118 L136 152 M188 118 L224 152" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <!-- 唱盘（俯视） -->
+    <rect x="132" y="150" width="96" height="66" rx="3" stroke-width="1.5"/>
+    <circle cx="166" cy="183" r="24" stroke-width="1.4"/>
+    <circle cx="166" cy="183" r="16" stroke-width="0.6"/>
+    <circle cx="166" cy="183" r="8" stroke-width="0.8"/>
+    <circle cx="166" cy="183" r="2" stroke-width="1"/>
+    <path d="M142 183 a24 24 0 0 0 24 24 v-4 a20 20 0 0 1 -20 -20 Z" fill="url(#p0208-3p-shade)" stroke="none"/>
+    <circle cx="210" cy="164" r="5" stroke-width="1.2"/>
+    <path d="M207 168 L184 196" stroke-width="1.8"/>
+    <path d="M184 196 l-5 3 l2 3 l5 -3 Z" stroke-width="0.9"/>
+    <path d="M212 160 l4 -5" stroke-width="1.6"/>
+    <!-- 落地音箱（右） -->
+    <rect x="270" y="132" width="42" height="94" rx="3" stroke-width="1.5"/>
+    <circle cx="291" cy="200" r="13" stroke-width="1.3"/>
+    <circle cx="291" cy="200" r="5" stroke-width="0.7"/>
+    <circle cx="291" cy="168" r="8" stroke-width="1.1"/>
+    <circle cx="291" cy="148" r="4" stroke-width="0.9"/>
+    <path d="M278 200 a13 13 0 0 0 13 13 v-3 a10 10 0 0 1 -10 -10 Z" fill="url(#p0208-3p-shade)" stroke="none"/>
+    <path d="M274 216 h34 v6 h-34 Z" fill="url(#p0208-3p-shade)" stroke="none"/>
+    <path d="M260 172 q-8 14 0 28 M250 164 q-12 22 0 44" stroke-width="0.9"/>
+    <!-- 箭头：按钮 → 唱盘 → 音箱 -->
+    <path d="M96 164 Q112 164 128 176" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M232 190 Q250 196 266 210" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地面线 -->
+    <path d="M40 240 Q180 232 320 240" stroke-width="1.2"/>
+    <path d="M44 244 q40 -3 80 0 M236 244 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <!-- 底部信息条 -->
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层（不加滤镜） -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0208 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">听音场景</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">一个按钮，光只留给椅子和唱盘</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">按钮 → 灯光聚焦 → 选源 → 胆机静音预热 60 秒 → 解除静音</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">灯光只留椅子和唱盘，其余全暗</text>
+    <text x="64" y="366">胆机先静音预热 60 秒，保护灯管和喇叭</text>
+    <text x="64" y="396">再按一次倒放，音箱交还 0207 影音室</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 场景 + moOde · 数据出口：播放状态 / 0211 大屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：moode-player/moode</text>
+  <!-- 印章 -->
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0208-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="33" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0208-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0208-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">听音场景 · 流程图</text>
+  <g filter="url(#p0208-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱：场景配置 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤：灯光 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断：音源 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤：黑胶通道 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <!-- 阴影 -->
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0208-3-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0208-3-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0208-3-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <!-- 连线 -->
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0208-3-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M85 170 V228"/>
+    <path d="M285 250 H328"/>
+    <path d="M390 270 V327 H307"/>
+    <path d="M85 270 V327 H173"/>
+    <path d="M240 342 V352 H12 V69 H28" stroke-dasharray="3 3"/>
+  </g>
+  <!-- 文字 -->
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">按下听音按钮</text>
+    <text x="230" y="74">场景配置</text><text x="230" y="87" font-size="8.5" fill="#666">源 / 灯光 / 预热</text>
+    <text x="85" y="147">0201 灯光只打</text><text x="85" y="161">皮椅 + 唱盘</text>
+    <text x="230" y="149">音源＝黑胶？</text><text x="230" y="162" font-size="8.5" fill="#666">黑胶 / 流媒体</text>
+    <text x="390" y="147">是 → 切唱放通道</text><text x="390" y="161">唱盘电机启动</text>
+    <text x="85" y="247">0203 新风静音档</text><text x="85" y="261">0207 主声道让位</text>
+    <text x="230" y="247">否 → moOde 播放</text><text x="230" y="261">本地曲库 / 电台</text>
+    <text x="390" y="247">胆机上电预热</text><text x="390" y="261">静音 60 秒</text>
+    <text x="240" y="331">解除静音，唱针落下</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="216" y="200">否</text><text x="100" y="346">再按一次 · 流程倒放</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0208-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：听音按钮或语音，灯光只留椅子和唱盘</li><li>音源二选一：黑胶走唱放通道，数字走 moOde</li><li>胆机上电静音 60 秒再解除，保护喇叭</li><li>再按一次倒放，音箱交还 0207 影音室</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 HomeAssistant 场景串联 0201 灯光、智能插座和新风，数字源由 moode-player/moode 的 MPD 接口播放，功放静音和输入切换走 IR / 继电器</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/moode-player/moode" target="_blank" rel="noopener">moode-player/moode</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 房间校正</h2>
+    <p class="scene">大箱在小地下室里低频会糊，这是房间的问题，不是箱子的问题：某几个频率在墙和墙之间来回反射叠加，形成“房间模式”，听起来就是轰。校正的办法是先用测量麦克风和 REW 扫频，记录听音位的频响，生成一组反向的滤波器，再由 CamillaDSP 在播放时实时套用。只修 20 到 200 赫兹的房间模式，中高频保持原味；每个摆位一套滤波器，换椅子位置一键切换。数字源天然经过 DSP，黑胶可以选择直通保留模拟味。输出前再做削波监测，超限自动降音量，保护胆机和喇叭。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0208-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="36" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0208-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0208-4p-dots" width="4" height="4" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.6" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 海报边框（双线，手绘） -->
+  <g filter="url(#p0208-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：测量麦 → 频响曲线 → 音箱 -->
+    <!-- 测量麦克风（左） -->
+    <rect x="58" y="124" width="18" height="34" rx="9" stroke-width="1.5"/>
+    <rect x="60" y="126" width="14" height="18" rx="7" fill="url(#p0208-4p-dots)" stroke="none"/>
+    <path d="M67 158 v40" stroke-width="1.4"/>
+    <path d="M52 198 h30" stroke-width="1.4"/>
+    <path d="M60 198 l-6 12 M74 198 l6 12" stroke-width="1"/>
+    <path d="M54 146 q-4 8 0 16 M80 146 q4 8 0 16" stroke-width="0.7"/>
+    <!-- 频响曲线框（中） -->
+    <rect x="114" y="126" width="132" height="78" rx="3" stroke-width="1.5"/>
+    <path d="M124 192 H236 M124 192 V136" stroke-width="0.8"/>
+    <path d="M124 176 q8 -30 18 -8 q8 16 16 -14 q8 -22 16 4 q8 20 18 -2 q10 -18 22 -4 q10 8 22 2" stroke-width="1.4"/>
+    <path d="M124 172 q56 -6 112 -4" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M142 168 v-6 M158 154 v10 M174 166 v-6" stroke-width="0.6"/>
+    <path d="M126 186 h20 M154 186 h30 M192 186 h40" stroke-width="0.5"/>
+    <!-- 音箱（右） -->
+    <rect x="270" y="122" width="40" height="88" rx="3" stroke-width="1.5"/>
+    <circle cx="290" cy="184" r="12" stroke-width="1.3"/>
+    <circle cx="290" cy="184" r="4" stroke-width="0.7"/>
+    <circle cx="290" cy="154" r="7" stroke-width="1.1"/>
+    <circle cx="290" cy="136" r="3.5" stroke-width="0.9"/>
+    <path d="M278 184 a12 12 0 0 0 12 12 v-3 a9 9 0 0 1 -9 -9 Z" fill="url(#p0208-4p-shade)" stroke="none"/>
+    <path d="M274 200 h32 v6 h-32 Z" fill="url(#p0208-4p-shade)" stroke="none"/>
+    <path d="M262 172 q-6 12 0 24 M254 166 q-10 18 0 36" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M86 150 Q98 150 110 158" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M250 160 Q258 160 266 164" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地面线 -->
+    <path d="M40 236 Q180 228 320 236" stroke-width="1.2"/>
+    <path d="M44 240 q40 -3 80 0 M236 240 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <!-- 底部信息条 -->
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层（不加滤镜） -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0208 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">房间校正</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">地下室的低频糊，用算法修，不用搬箱子</text>
+  <g font-size="7" fill="#777"><text x="126" y="200">20Hz</text><text x="232" y="200" text-anchor="end">200Hz</text></g>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">REW 测量 → 生成滤波器 → CamillaDSP 实时卷积 → 削峰后送胆机</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">只修 20~200Hz 房间模式，中高频保持原味</text>
+    <text x="64" y="366">每个摆位一套滤波器，换位置一键切换</text>
+    <text x="64" y="396">黑胶可选直通留模拟味，数字源必经 DSP</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：CamillaDSP（moOde 树莓派）· 数据出口：频响曲线 / 0211 大屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：HEnquist/camilladsp · moode-player/moode</text>
+  <!-- 印章 -->
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0208-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="34" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0208-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0208-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">房间校正 · 流程图</text>
+  <g filter="url(#p0208-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱：滤波器库 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 判断：数字源？ -->
+    <path d="M85 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <path d="M87 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0208-4-shade)" stroke="none"/>
+    <!-- 步骤：CamillaDSP -->
+    <rect x="175" y="130" width="110" height="40" rx="6"/>
+    <rect x="177" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 步骤：低频削峰 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <!-- 阴影 -->
+    <path d="M179 172 h106 v3 h-106 Z M334 172 h116 v3 h-116 Z" fill="url(#p0208-4-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0208-4-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <!-- 连线 -->
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0208-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V126"/>
+    <path d="M230 92 V128" stroke-dasharray="3 3"/>
+    <path d="M143 152 H173"/>
+    <path d="M85 176 V228"/>
+    <path d="M285 150 H328"/>
+    <path d="M390 170 V228"/>
+    <path d="M330 250 H287"/>
+    <path d="M140 250 H173"/>
+    <path d="M230 270 V310"/>
+  </g>
+  <!-- 文字 -->
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">播放开始 / 切源</text>
+    <text x="230" y="74">校正滤波器库</text><text x="230" y="87" font-size="8.5" fill="#666">每摆位一套</text>
+    <text x="85" y="149">数字源？</text><text x="85" y="162" font-size="8.5" fill="#666">moOde / 黑胶</text>
+    <text x="230" y="147">是 → CamillaDSP</text><text x="230" y="161">加载 FIR + IIR 校正</text>
+    <text x="390" y="147">低频房间模式削峰</text><text x="390" y="161">只动 20~200Hz</text>
+    <text x="85" y="247">否 → 黑胶经 ADC</text><text x="85" y="261">或直通保留模拟味</text>
+    <text x="230" y="247">削波监测</text><text x="230" y="261">超限自动降 3dB</text>
+    <text x="390" y="247">峰值限幅</text><text x="390" y="261">护胆机与喇叭</text>
+    <text x="240" y="331">送胆机 → 音箱</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="158" y="146">是</text><text x="72" y="200">否</text><text x="246" y="112">查表</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0208-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>REW 扫频测量，每个摆位一套滤波器，每季度重测</li><li>只校 20~200Hz 房间模式，中高频不动</li><li>黑胶可选直通，数字源必经 DSP</li><li>削波监测超限自动降 3dB，频响曲线上 0211 大屏</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">滤波器用 HEnquist/camilladsp 的 FIR / IIR 管线套用，跑在 moode-player/moode 的树莓派上，配置切换走 CamillaDSP 的 websocket 接口</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/HEnquist/camilladsp" target="_blank" rel="noopener">HEnquist/camilladsp</a><a href="https://github.com/moode-player/moode" target="_blank" rel="noopener">moode-player/moode</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0207.html">← 0207 影音室 拆解</a>
+    <a class="up" href="../modules/0208.html">回到 大柏林音响 专题页</a>
+    <a href="../teardown/0209.html">0209 藏宝阁 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

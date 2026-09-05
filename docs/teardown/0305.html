@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0305 3D 打印 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="3D 打印 的 5 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" class="on"><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/03.html">03 阁楼间</a> › <a href="../modules/0305.html">0305 3D 打印</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">阁楼间 · 模块 0305 · 核心拆解</p>
+    <h1>3D 打印：5 个核心模块与逻辑</h1>
+    <p class="lede">和地堡共用一台拓竹 P1S，白天设计楼下画图，晚上上楼打印，通宵也不吵人。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 3</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>打印机矮柜与减震</a><a href="#p2"><i>2</i>排风系统</a><a href="#p3"><i>3</i>八格耗材架</a><a href="#p4"><i>4</i>打印任务队列</a><a href="#p5"><i>5</i>耗材管理</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 打印机矮柜与减震</h2>
+    <p class="scene">拓竹 P1S 是一台四面封闭的桌面打印机，放在斜顶下一张 60×60cm 的实木矮柜上。矮柜内放工具、备用喷头、胶水和刮刀，柜面铺一块 2cm 的橡胶减震垫，打印机的高速运动就不会传到阁楼木地板上共振。矮柜高 50cm，正好让人蹲着看清打印仓；四脚用可调脚垫找平，因为打印机水平与否直接影响首层附着。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0305-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0305-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0305-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0305-1-dots" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="0.6" fill="#6b6b6b"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0305-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 可调脚垫 ×4 -->
+    <ellipse cx="84" cy="302" rx="7" ry="2.6" stroke-width="1.2"/>
+    <path d="M77 302 v4 a7 2.6 0 0 0 14 0 v-4" stroke-width="1"/>
+    <path d="M84 300 v-9 M82 297 h4 M82 294 h4" stroke-width="0.8"/>
+    <path d="M78 303 a7 2.6 0 0 0 12 0 v3 a7 2.6 0 0 1 -12 0 Z" fill="url(#p0305-1-shade)" stroke="none"/>
+    <ellipse cx="112" cy="312" rx="7" ry="2.6" stroke-width="1.2"/>
+    <path d="M105 312 v4 a7 2.6 0 0 0 14 0 v-4" stroke-width="1"/>
+    <path d="M112 310 v-9 M110 307 h4 M110 304 h4" stroke-width="0.8"/>
+    <path d="M106 313 a7 2.6 0 0 0 12 0 v3 a7 2.6 0 0 1 -12 0 Z" fill="url(#p0305-1-shade)" stroke="none"/>
+    <ellipse cx="122" cy="290" rx="7" ry="2.6" stroke-width="1.2"/>
+    <path d="M115 290 v4 a7 2.6 0 0 0 14 0 v-4" stroke-width="1"/>
+    <path d="M122 288 v-9 M120 285 h4 M120 282 h4" stroke-width="0.8"/>
+    <path d="M116 291 a7 2.6 0 0 0 12 0 v3 a7 2.6 0 0 1 -12 0 Z" fill="url(#p0305-1-shade)" stroke="none"/>
+    <ellipse cx="150" cy="300" rx="7" ry="2.6" stroke-width="1.2"/>
+    <path d="M143 300 v4 a7 2.6 0 0 0 14 0 v-4" stroke-width="1"/>
+    <path d="M150 298 v-9 M148 295 h4 M148 292 h4" stroke-width="0.8"/>
+    <path d="M144 301 a7 2.6 0 0 0 12 0 v3 a7 2.6 0 0 1 -12 0 Z" fill="url(#p0305-1-shade)" stroke="none"/>
+    <!-- ② 实木矮柜柜体 -->
+    <path d="M126 268 l60 -20 l40 10 l-60 20 Z" stroke-width="1.5"/>
+    <path d="M126 268 v34 l40 10 v-34 M166 312 l60 -20 v-34" stroke-width="1.2"/>
+    <path d="M127 294 l38 10 v7 l-38 -10 Z" fill="url(#p0305-1-shade)" stroke="none"/>
+    <path d="M130 276 q14 2 30 8 M130 284 q14 2 30 8 M130 292 q14 2 30 8" stroke-width="0.5"/>
+    <path d="M170 286 l50 -17 M170 296 l50 -17" stroke-width="0.5"/>
+    <path d="M168 283 v29" stroke-width="0.8"/>
+    <!-- ③ 抽屉 -->
+    <path d="M196 210 l52 -17 l34 9 l-52 17 Z" stroke-width="1.3"/>
+    <path d="M196 210 v12 l34 9 v-12 M230 231 l52 -17 v-12" stroke-width="1.0"/>
+    <path d="M197 216.6 l32 9 v4.4 l-32 -9 Z" fill="url(#p0305-1-shade)" stroke="none"/>
+    <path d="M210 226 l8 -3" stroke-width="1.4"/>
+    <circle cx="222" cy="205" r="2.6" stroke-width="0.9"/><path d="M222 202 v-5 M220 197 h4" stroke-width="0.9"/>
+    <rect x="234" y="196" width="10" height="6" rx="1" stroke-width="0.9" transform="rotate(-18 239 199)"/>
+    <path d="M204 206 l10 -3.5 l2 1 l-10 3.5 Z" stroke-width="0.8"/>
+    <!-- ④ 橡胶减震垫 -->
+    <path d="M252 160 l60 -20 l40 10 l-60 20 Z" stroke-width="1.3"/>
+    <path d="M252 160 v5 l40 10 v-5 M292 175 l60 -20 v-5" stroke-width="1.0"/>
+    <path d="M253 162.75 l38 10 v1.25 l-38 -10 Z" fill="url(#p0305-1-shade)" stroke="none"/>
+    <path d="M256 160 l58 -19 M260 162 l58 -19 M264 164 l58 -19 M268 166 l58 -19 M272 168 l58 -19" stroke-width="0.4"/>
+    <!-- ⑤ P1S 机身 -->
+    <path d="M300 110 l56 -19 l38 10 l-56 19 Z" stroke-width="1.6"/>
+    <path d="M300 110 v44 l38 10 v-44 M338 164 l56 -19 v-44" stroke-width="1.3"/>
+    <path d="M301 146 l36 10 v7 l-36 -10 Z" fill="url(#p0305-1-shade)" stroke="none"/>
+    <path d="M306 122 l26 7 v24 l-26 -7 Z" stroke-width="0.9"/>
+    <path d="M308 126 l22 6 v18 l-22 -6 Z" fill="url(#p0305-1-dots)" stroke="none"/>
+    <path d="M344 132 l8 -3 v5 l-8 3 Z" stroke-width="0.8"/>
+    <path d="M346 140 h3 M350 138 h3" stroke-width="0.8"/>
+    <circle cx="324" cy="102" r="3" stroke-width="0.8"/>
+    <path d="M352 96 l14 -5" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <!-- ⑥ 顶盖玻璃 -->
+    <path d="M360 52 l50 -17 l34 9 l-50 17 Z" stroke-width="1.3"/>
+    <path d="M360 52 v3 l34 9 v-3 M394 64 l50 -17 v-3" stroke-width="1.0"/>
+    <path d="M366 52 l40 -13 M370 54 l40 -13" stroke-width="0.5"/>
+    <path d="M410 35 q-2 12 -12 20" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <path d="M410 35 l-3 3 M410 35 l3 3" stroke-width="0.8"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M76 302 H60"/><path d="M226 258 H250"/><path d="M196 214 H170"/><path d="M252 165 H230"/><path d="M394 122 H420"/><path d="M410 52 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="50" cy="302" r="8"/><circle cx="260" cy="258" r="8"/><circle cx="160" cy="214" r="8"/><circle cx="220" cy="165" r="8"/><circle cx="430" cy="122" r="8"/><circle cx="450" cy="52" r="8"/>
+    </g>
+    <text x="50" y="305.5">1</text><text x="260" y="261.5">2</text><text x="160" y="217.5">3</text><text x="220" y="168.5">4</text><text x="430" y="125.5">5</text><text x="450" y="55.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">打印机矮柜与减震 · 爆炸图</text>
+    <text x="16" y="52">1 可调脚垫 ×4（找平）</text>
+    <text x="16" y="68">2 实木矮柜 60×60×50cm</text>
+    <text x="16" y="84">3 抽屉：工具 / 备用喷头 / 干燥剂</text>
+    <text x="16" y="100">4 2cm 橡胶减震垫</text>
+    <text x="16" y="116">5 拓竹 P1S 封闭机身</text>
+    <text x="16" y="132">6 顶盖玻璃（离斜顶 ≥30cm）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0305-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>矮柜 60×60×50cm 实木，四脚可调找平</li><li>2cm 橡胶减震垫，隔断振动传导</li><li>柜内放工具、备用喷头、耗材干燥剂</li><li>打印机离斜顶 ≥ 30cm，留顶盖开启空间</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 排风系统</h2>
+    <p class="scene">打印 PLA 味道不大，但 ABS、PETG 会散发微粒和气味，在阁楼这种小空间会闷一整天。在 P1S 顶盖后方开一个 100mm 排风口，接铝箔排风管顺斜顶走到天窗边的排气口，管路中段装一台 12V 静音管道风扇。风扇由 HomeAssistant 控制，打印开始自动开、结束后再抽 10 分钟。管里加一片活性炭滤棉，冬天关天窗也不闷。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0305-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0305-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0305-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0305-2-dots" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="0.6" fill="#6b6b6b"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0305-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① P1S 顶盖后排风口 -->
+    <path d="M60 300 l70 -24 l46 12 l-70 24 Z" stroke-width="1.5"/>
+    <path d="M60 300 v14 l46 12 v-14 M106 326 l70 -24 v-14" stroke-width="1.2"/>
+    <path d="M61 307.7 l44 12 v5.3 l-44 -12 Z" fill="url(#p0305-2-shade)" stroke="none"/>
+    <ellipse cx="118" cy="294" rx="13" ry="5" stroke-width="1.3"/>
+    <ellipse cx="118" cy="294" rx="8" ry="3" stroke-width="0.8"/>
+    <path d="M105 294 v-8 a13 5 0 0 1 26 0 v8" stroke-width="1.2"/>
+    <ellipse cx="118" cy="286" rx="13" ry="5" stroke-width="1.1"/>
+    <path d="M107 296 a13 5 0 0 0 22 0 v2 a13 5 0 0 1 -22 0 Z" fill="url(#p0305-2-shade)" stroke="none"/>
+    <path d="M96 292 l-3 -1 M140 282 l3 1 M118 300 v2" stroke-width="0.8"/>
+    <!-- ② 铝箔排风管 -->
+    <path d="M153 255 L219 193 M167 269 L233 207" stroke-width="1.4"/>
+    <ellipse cx="160" cy="262" rx="5" ry="9.5" transform="rotate(-43 160 262)" stroke-width="1.2"/>
+    <ellipse cx="226" cy="200" rx="5" ry="9.5" transform="rotate(-43 226 200)" stroke-width="1.2"/>
+    <path d="M160 248 l14 14" stroke-width="0.55"/>
+    <path d="M168 241 l14 14" stroke-width="0.55"/>
+    <path d="M175 234 l14 14" stroke-width="0.55"/>
+    <path d="M183 227 l14 14" stroke-width="0.55"/>
+    <path d="M190 220 l14 14" stroke-width="0.55"/>
+    <path d="M197 214 l14 14" stroke-width="0.55"/>
+    <path d="M205 207 l14 14" stroke-width="0.55"/>
+    <path d="M212 200 l14 14" stroke-width="0.55"/>
+    <path d="M156 258 L222 196" stroke-width="0.4" stroke-dasharray="1 3"/>
+    <!-- ③ 12V 静音管道风扇 -->
+    <path d="M246 160 a18 18 0 0 0 6 24 M247 158 l4 -4 M251 186 l5 -5" stroke-width="0.9"/>
+    <circle cx="262" cy="170" r="18" stroke-width="1.5"/>
+    <circle cx="262" cy="170" r="14" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <circle cx="262" cy="170" r="4" stroke-width="1"/>
+    <path d="M264 167 q9 -9 12 3 q-6 -1 -12 -3 Z" stroke-width="1"/>
+    <path d="M264 167 q9 -9 12 3 q-6 -1 -12 -3 Z" stroke-width="1" transform="rotate(120 262 170)"/>
+    <path d="M264 167 q9 -9 12 3 q-6 -1 -12 -3 Z" stroke-width="1" transform="rotate(240 262 170)"/>
+    <path d="M264 167 q9 -9 12 3 q-6 -1 -12 -3 Z" fill="url(#p0305-2-shade)" stroke="none"/>
+    <path d="M250 190 h6 l-2 5 h4 l-2 5" stroke-width="0.9"/>
+    <!-- ④ 活性炭滤棉 -->
+    <ellipse cx="310" cy="122" rx="16" ry="7" stroke-width="1.4"/>
+    <path d="M294 122 v5 a16 7 0 0 0 32 0 v-5" stroke-width="1.1"/>
+    <ellipse cx="310" cy="122" rx="16" ry="7" fill="url(#p0305-2-dots)" stroke="none"/>
+    <path d="M296 126 a16 7 0 0 0 28 0 v3 a16 7 0 0 1 -28 0 Z" fill="url(#p0305-2-shade)" stroke="none"/>
+    <!-- ⑤ 防虫网 + 防雨罩 -->
+    <path d="M336 96 h34 v-16 l-7 -12 h-20 l-7 12 Z" stroke-width="1.5"/>
+    <path d="M336 80 h34" stroke-width="0.9"/>
+    <path d="M343 68 l-4 -6 h28 l-4 6" stroke-width="1.2"/>
+    <path d="M341 84 h24 M341 88 h24 M341 92 h24 M345 80 v16 M351 80 v16 M357 80 v16 M363 80 v16" stroke-width="0.45"/>
+    <path d="M338 62 h30 v2 h-30 Z" fill="url(#p0305-2-shade)" stroke="none"/>
+    <path d="M346 52 l-2 4 M353 50 l-2 4 M360 52 l-2 4" stroke-width="0.8"/>
+    <!-- ⑥ 联动控制盒 -->
+    <path d="M392 46 l26 -9 l18 5 l-26 9 Z" stroke-width="1.3"/>
+    <path d="M392 46 v12 l18 5 v-12 M410 63 l26 -9 v-12" stroke-width="1.0"/>
+    <path d="M393 52.6 l16 5 v4.4 l-16 -5 Z" fill="url(#p0305-2-shade)" stroke="none"/>
+    <path d="M404 52 l6 -2 M404 55 l6 -2" stroke-width="0.7"/>
+    <circle cx="398" cy="43" r="1.6" stroke-width="0.8"/>
+    <path d="M418 37 q4 -8 -2 -12" stroke-width="0.9"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M136 300 H160"/><path d="M156 236 H130"/><path d="M280 168 H304"/><path d="M294 118 H270"/><path d="M370 88 H400"/><path d="M420 46 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="170" cy="300" r="8"/><circle cx="120" cy="236" r="8"/><circle cx="314" cy="168" r="8"/><circle cx="260" cy="118" r="8"/><circle cx="410" cy="88" r="8"/><circle cx="450" cy="46" r="8"/>
+    </g>
+    <text x="170" y="303.5">1</text><text x="120" y="239.5">2</text><text x="314" y="171.5">3</text><text x="260" y="121.5">4</text><text x="410" y="91.5">5</text><text x="450" y="49.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">排风系统 · 爆炸图</text>
+    <text x="16" y="52">1 P1S 顶盖后 100mm 排风口</text>
+    <text x="16" y="68">2 铝箔波纹排风管（顺斜顶）</text>
+    <text x="16" y="84">3 12V 静音管道风扇</text>
+    <text x="16" y="100">4 活性炭滤棉（3 个月一换）</text>
+    <text x="16" y="116">5 天窗边排气口：防虫网 + 防雨罩</text>
+    <text x="16" y="132">6 HA 联动控制盒（延时 10 分钟）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0305-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>100mm 铝箔排风管 + 12V 静音管道风扇</li><li>排气口在天窗边，加防虫网和防雨罩</li><li>打印开始联动开风扇，结束后延时 10 分钟</li><li>活性炭滤棉，每 3 个月换一片</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/greghesp/ha-bambulab" target="_blank" rel="noopener">greghesp/ha-bambulab</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-hw">产品模块</span> 3. 八格耗材架</h2>
+    <p class="scene">柜旁一个八格的耗材架，每格立放一卷 PLA，按颜色排开：木色、黑、白、绿……本身就是装饰。PLA 吸潮后打印会出气泡和拉丝，阁楼温差大更容易吸潮，所以每格是一个带盖的密封筒，里面放一小包干燥剂和一张湿度卡。每卷贴一张标签，写颜色、材质和剩余克数，格子满了就不再买，八卷就是耗材预算。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0305-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0305-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0305-3-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0305-3-dots" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="0.6" fill="#6b6b6b"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0305-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 木架框（八格） -->
+    <path d="M56 274 h112 v56 h-112 Z" stroke-width="1.5"/>
+    <path d="M56 274 l16 -11 h112 l-16 11 M168 274 l16 -11 v56 l-16 11" stroke-width="1.3"/>
+    <path d="M84 274 v56 M112 274 v56 M140 274 v56 M56 302 h112" stroke-width="0.8"/>
+    <path d="M170 276 l12 -8 v50 l-12 8 Z" fill="url(#p0305-3-shade)" stroke="none"/>
+    <path d="M60 280 q8 3 20 0 M60 308 q8 3 20 0" stroke-width="0.4"/>
+    <!-- ② 密封筒身 -->
+    <ellipse cx="200" cy="202" rx="18" ry="7" stroke-width="1.4"/>
+    <path d="M182 202 v44 a18 7 0 0 0 36 0 v-44" stroke-width="1.4"/>
+    <path d="M186 212 v28 M214 212 v28" stroke-width="0.5"/>
+    <path d="M184 244 a18 7 0 0 0 30 2 v3 a18 7 0 0 1 -30 -2 Z" fill="url(#p0305-3-shade)" stroke="none"/>
+    <!-- ③ PLA 料卷 -->
+    <circle cx="252" cy="158" r="20" stroke-width="1" transform="translate(-6 -3)"/>
+    <path d="M232 143 l6 3 M232 168 l6 3" stroke-width="0.8"/>
+    <circle cx="258" cy="160" r="21" stroke-width="1.5"/>
+    <circle cx="258" cy="160" r="6" stroke-width="1"/>
+    <circle cx="258" cy="160" r="15" stroke-width="0.6"/>
+    <circle cx="258" cy="160" r="11" stroke-width="0.6"/>
+    <path d="M243 160 a15 15 0 0 0 15 15" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <path d="M258 160 m-6 0 a6 6 0 0 0 12 0 a6 6 0 0 0 -12 0" fill="url(#p0305-3-shade)" stroke="none"/>
+    <path d="M276 150 q8 -6 4 -14" stroke-width="0.9"/>
+    <!-- ④ 干燥剂包 + 湿度卡 -->
+    <rect x="296" y="106" width="22" height="14" rx="2" stroke-width="1.2"/>
+    <path d="M296 109 h22 M296 117 h22" stroke-width="0.5"/>
+    <rect x="299" y="110" width="16" height="6" fill="url(#p0305-3-dots)" stroke="none"/>
+    <rect x="326" y="96" width="14" height="18" rx="1" stroke-width="1.1"/>
+    <circle cx="333" cy="101" r="2" stroke-width="0.7"/><circle cx="333" cy="106" r="2" stroke-width="0.7"/><circle cx="333" cy="111" r="2" stroke-width="0.7"/>
+    <circle cx="333" cy="111" r="2" fill="url(#p0305-3-shade2)" stroke="none"/>
+    <!-- ⑤ 密封筒盖 + 硅胶圈 -->
+    <ellipse cx="352" cy="72" rx="18" ry="7" stroke-width="1.4"/>
+    <path d="M334 72 v5 a18 7 0 0 0 36 0 v-5" stroke-width="1.2"/>
+    <ellipse cx="352" cy="72" rx="12" ry="4.5" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <path d="M336 74 a18 7 0 0 0 32 0 v3 a18 7 0 0 1 -32 0 Z" fill="url(#p0305-3-shade)" stroke="none"/>
+    <path d="M346 66 q6 -3 12 0" stroke-width="0.7"/>
+    <!-- ⑥ 标签 -->
+    <rect x="384" y="30" width="34" height="18" rx="1.5" stroke-width="1.2" transform="rotate(-19 401 39)"/>
+    <path d="M389 34 h14 M389 38 h22 M389 42 h18" stroke-width="0.6" transform="rotate(-19 401 39)"/>
+    <circle cx="410" cy="34" r="2.2" stroke-width="0.7" transform="rotate(-19 401 39)"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M184 302 H200"/><path d="M182 224 H150"/><path d="M280 160 H310"/><path d="M296 112 H270"/><path d="M370 74 H400"/><path d="M420 38 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="210" cy="302" r="8"/><circle cx="140" cy="224" r="8"/><circle cx="320" cy="160" r="8"/><circle cx="260" cy="112" r="8"/><circle cx="410" cy="74" r="8"/><circle cx="450" cy="38" r="8"/>
+    </g>
+    <text x="210" y="305.5">1</text><text x="140" y="227.5">2</text><text x="320" y="163.5">3</text><text x="260" y="115.5">4</text><text x="410" y="77.5">5</text><text x="450" y="41.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">八格耗材架 · 爆炸图</text>
+    <text x="16" y="52">1 实木格架 4×2（八格）</text>
+    <text x="16" y="68">2 透明密封筒（每格一只）</text>
+    <text x="16" y="84">3 1kg PLA 料卷</text>
+    <text x="16" y="100">4 干燥剂包 + 湿度卡</text>
+    <text x="16" y="116">5 密封盖 + 硅胶圈</text>
+    <text x="16" y="132">6 标签：颜色 / 材质 / 剩余克数</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0305-3</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>8 个密封筒，每筒放干燥剂 + 湿度卡</li><li>标签：颜色 / 材质 / 剩余克数 / 开封日期</li><li>湿度卡 &gt;20% 换干燥剂或进烘干箱</li><li>格满即停：八卷是耗材预算上限</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 打印任务队列</h2>
+    <p class="scene">地堡 0204 工作台用 OrcaSlicer 切好模型，局域网直接推给阁楼的 P1S，不用来回跑。任务进入一个队列，按优先级排序：全屋小配件（挂钩、标牌）&gt; 玩具 &gt; 试验件。HomeAssistant 读打印机状态：空闲时自动发队列头部的任务，开始、结束、失败各推一条通知，摄像头随时看层数。失败时暂停队列，人工清理平台后再继续。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0305-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0305-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0305-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0305-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：地堡笔记本（切片） → 排队卡片 → 阁楼 P1S + 手机推送 -->
+    <!-- 笔记本 -->
+    <path d="M40 214 l8 -30 h58 l-8 30 Z" stroke-width="1.6"/>
+    <path d="M46 210 l6 -22 h48 l-6 22 Z" stroke-width="0.7"/>
+    <path d="M30 216 h76 l-2 5 h-76 Z" stroke-width="1.4"/>
+    <path d="M56 194 l16 -4 l6 4 l-14 6 Z" stroke-width="0.9"/>
+    <path d="M58 196 l12 -3" stroke-width="0.5"/>
+    <path d="M60 204 h20 M62 200 h8" stroke-width="0.6"/>
+    <!-- 队列卡片（三张叠） -->
+    <rect x="150" y="146" width="56" height="30" rx="3" stroke-width="1"/>
+    <rect x="144" y="156" width="56" height="30" rx="3" stroke-width="1.2"/>
+    <rect x="138" y="166" width="56" height="30" rx="3" stroke-width="1.6"/>
+    <rect x="139" y="167" width="54" height="7" fill="url(#p0305-4p-shade)" stroke="none"/>
+    <path d="M144 182 h30 M144 188 h20" stroke-width="0.7"/>
+    <path d="M150 151 h6 v6 M156 161 h6 v6" stroke-width="0.7"/>
+    <path d="M186 178 l-2 -3 l4 0 Z M186 178 v10" stroke-width="0.9"/>
+    <!-- 打印机 -->
+    <rect x="236" y="176" width="72" height="66" rx="5" stroke-width="1.6"/>
+    <rect x="246" y="190" width="40" height="40" rx="2" stroke-width="1"/>
+    <rect x="248" y="192" width="36" height="36" fill="url(#p0305-4p-dots)" stroke="none"/>
+    <path d="M254 222 h24 M258 218 l8 -10 l8 10" stroke-width="0.9"/>
+    <rect x="292" y="186" width="10" height="16" rx="1" stroke-width="0.8"/>
+    <path d="M294 190 h6 M294 194 h6" stroke-width="0.5"/>
+    <path d="M240 178 h64" stroke-width="0.6"/>
+    <circle cx="272" cy="170" r="4" stroke-width="0.9"/><path d="M272 166 v-4" stroke-width="0.9"/>
+    <!-- 摄像头 + 手机 -->
+    <path d="M300 168 l6 -6 h12 l-4 8 Z" stroke-width="0.9"/>
+    <rect x="316" y="212" width="14" height="24" rx="2" stroke-width="1.2"/>
+    <path d="M320 232 h6" stroke-width="0.7"/>
+    <path d="M323 218 a4 4 0 0 1 4 4 v3 h-8 v-3 a4 4 0 0 1 4 -4 Z M321 226 a2 2 0 0 0 4 0" stroke-width="0.8"/>
+    <!-- 箭头 -->
+    <path d="M110 200 Q124 190 136 184" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M196 184 Q214 190 232 200" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M232 196 l4 3 l-5 1" stroke-width="1"/>
+    <path d="M136 184 l-5 -1 l3 4" stroke-width="1"/>
+    <path d="M308 224 h6" stroke-width="1" stroke-dasharray="2 2"/>
+
+    <!-- 地面线 -->
+    <path d="M40 268 Q180 262 320 268" stroke-width="1.2"/>
+    <path d="M44 272 q40 -3 80 0 M236 272 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0305 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">打印任务队列</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">地堡切好片，阁楼自己排队打</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">切片推送 → 队列按优先级 → 空闲即发 → 开始/结束/失败推送</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">配件 › 玩具 › 试验件，同级先进先出</text>
+    <text x="64" y="366">打印机空闲自动发，摄像头随时看层数</text>
+    <text x="64" y="396">失败自动暂停队列，人工清理后再继续</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HomeAssistant 自动化 · 数据出口：手机推送 + 摄像头快照</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：OrcaSlicer/OrcaSlicer · greghesp/ha-bambulab</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0305-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0305-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0305-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">打印任务队列 · 流程图</text>
+  <g filter="url(#p0305-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0305-4-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0305-4-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0305-4-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="155" y="312" width="170" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0305-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M390 170 V228"/>
+    <path d="M230 176 V205 H85 V228"/>
+    <path d="M330 250 H287"/>
+    <path d="M230 270 V310"/>
+    <path d="M30 250 Q10 250 10 150 Q10 130 28 130" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">OrcaSlicer 切片推送</text>
+    <text x="230" y="74">任务队列</text><text x="230" y="87" font-size="8.5" fill="#666">配件 › 玩具 › 试验件</text>
+    <text x="85" y="147">入队按优先级排序</text><text x="85" y="161">同级先进先出</text>
+    <text x="230" y="149">打印机空闲？</text><text x="230" y="162" font-size="8.5" fill="#666">ha-bambulab 状态</text>
+    <text x="390" y="147">是 → 发送队列头部</text><text x="390" y="161" font-size="8.5" fill="#666">推送“开始打印”</text>
+    <text x="85" y="247">否 → 等 30 秒</text><text x="85" y="261">再查一次状态</text>
+    <text x="230" y="247">失败？暂停队列</text><text x="230" y="261">人工清理平台后继续</text>
+    <text x="390" y="247">监控层数 + 摄像头</text><text x="390" y="261">关键层推快照</text>
+    <text x="240" y="331">结束推送 · 自动取下一任务</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="195">否</text><text x="14" y="200">轮询</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0305-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：打印机空闲且队列非空</li><li>优先级：配件 &gt; 玩具 &gt; 试验件，同级先进先出</li><li>出口：开始 / 结束 / 失败推送 + 摄像头快照</li><li>兜底：失败自动暂停队列，人工确认后继续</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">OrcaSlicer/OrcaSlicer 局域网直发 P1S，greghesp/ha-bambulab 读状态和摄像头，HA 管队列</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/OrcaSlicer/OrcaSlicer" target="_blank" rel="noopener">OrcaSlicer/OrcaSlicer</a><a href="https://github.com/greghesp/ha-bambulab" target="_blank" rel="noopener">greghesp/ha-bambulab</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p5">
+    <h2><span class="kind kind-logic">联动逻辑</span> 5. 耗材管理</h2>
+    <p class="scene">八卷 PLA 每卷登记进自托管的 Spoolman：颜色、材质、初始重量、开封日期。每次打印结束，切片文件里的预计用量自动从对应卷扣减，标签上的“剩余克数”不用再手写。剩余低于 150g 推送提醒补货；库存超过八卷就提示“先用完再买”。打印机 AMS 槽位状态也读进来，换卷时自动匹配是哪一卷。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0305-5p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0305-5p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0305-5p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0305-5p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：AMS 四槽料卷 → 账本（Spoolman） → 手机提醒 -->
+    <!-- AMS 盒 -->
+    <rect x="34" y="176" width="92" height="56" rx="5" stroke-width="1.6"/>
+    <path d="M38 180 h84" stroke-width="0.6"/>
+    <circle cx="50" cy="206" r="10" stroke-width="1.2"/><circle cx="50" cy="206" r="3" stroke-width="0.8"/>
+    <circle cx="72" cy="206" r="10" stroke-width="1.2"/><circle cx="72" cy="206" r="3" stroke-width="0.8"/>
+    <circle cx="94" cy="206" r="10" stroke-width="1.2"/><circle cx="94" cy="206" r="3" stroke-width="0.8"/>
+    <circle cx="116" cy="206" r="10" stroke-width="1.2"/><circle cx="116" cy="206" r="3" stroke-width="0.8"/>
+    <path d="M50 206 m-10 0 a10 10 0 0 0 20 0 Z" fill="url(#p0305-5p-shade)" stroke="none"/>
+    <path d="M116 206 m-10 0 a10 10 0 0 1 20 0 Z" fill="url(#p0305-5p-dots)" stroke="none"/>
+    <path d="M44 226 h12 M66 226 h12 M88 226 h12 M110 226 h12" stroke-width="0.7"/>
+    <!-- 账本 -->
+    <path d="M150 148 h64 v72 h-64 Z" stroke-width="1.6"/>
+    <path d="M150 148 l-6 4 v72 h64 l6 -4" stroke-width="1"/>
+    <path d="M144 152 h64 v72" stroke-width="0.6"/>
+    <path d="M156 162 h20 M156 176 h36 M156 190 h30 M156 204 h40" stroke-width="0.8"/>
+    <path d="M186 160 h20 M196 174 h10 M190 188 h16 M200 202 h6" stroke-width="0.8"/>
+    <rect x="156" y="170" width="52" height="3" fill="url(#p0305-5p-shade)" stroke="none"/>
+    <rect x="156" y="198" width="52" height="3" fill="url(#p0305-5p-shade)" stroke="none"/>
+    <!-- 天平（校准） -->
+    <path d="M182 240 v-12 M168 228 h28 M168 228 l-6 12 h12 Z M196 228 l-6 12 h12 Z" stroke-width="0.9"/>
+    <path d="M172 244 h20" stroke-width="1"/>
+    <!-- 手机 + 铃铛 -->
+    <rect x="266" y="170" width="34" height="58" rx="4" stroke-width="1.6"/>
+    <path d="M278 174 h10 M280 222 h6" stroke-width="0.7"/>
+    <path d="M283 184 a7 7 0 0 1 7 7 v6 h-14 v-6 a7 7 0 0 1 7 -7 Z M280 198 a3 3 0 0 0 6 0" stroke-width="1"/>
+    <path d="M272 208 h22 M272 214 h14" stroke-width="0.7"/>
+    <path d="M304 174 l4 -4 M306 182 h5 M304 166 v-4" stroke-width="0.9"/>
+    <!-- 料卷条形量表 -->
+    <rect x="312" y="196" width="10" height="40" rx="1" stroke-width="1"/>
+    <rect x="313" y="222" width="8" height="13" fill="url(#p0305-5p-shade)" stroke="none"/>
+    <path d="M310 222 h14" stroke-width="0.8" stroke-dasharray="2 1"/>
+    <!-- 箭头 -->
+    <path d="M128 196 Q136 184 146 176" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M146 176 l-5 0 l2 4" stroke-width="1"/>
+    <path d="M216 186 Q240 186 262 194" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M262 194 l-5 1 l3 -4" stroke-width="1"/>
+
+    <!-- 地面线 -->
+    <path d="M40 268 Q180 262 320 268" stroke-width="1.2"/>
+    <path d="M44 272 q40 -3 80 0 M236 272 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0305 · L5</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">耗材管理</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">八卷料，每一克都记在账上</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">打印结束 → 扣减对应卷 → 剩余 &lt;150g 提醒 → 库存 &gt;8 卷停买</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每卷登记颜色 / 材质 / 初始重量 / 开封日期</text>
+    <text x="64" y="366">打印完自动从对应卷扣减预计用量，AMS 自动匹配</text>
+    <text x="64" y="396">剩余 &lt;150g 提醒补货，超过 8 卷提示先用完再买</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：Spoolman + HomeAssistant · 数据出口：Spoolman 看板 + HA 推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：Donkie/Spoolman · greghesp/ha-bambulab</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0305-5-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0305-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0305-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">耗材管理 · 流程图</text>
+  <g filter="url(#p0305-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0305-5-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0305-5-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0305-5-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="165" y="312" width="150" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0305-5-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M390 170 V228"/>
+    <path d="M230 176 V205 H85 V228"/>
+    <path d="M140 250 H173"/>
+    <path d="M330 250 H287"/>
+    <path d="M230 270 V310"/>
+    <path d="M390 130 V72 H266" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">新卷登记 Spoolman</text>
+    <text x="230" y="74">Spoolman 库</text><text x="230" y="87" font-size="8.5" fill="#666">颜色·材质·克数</text>
+    <text x="85" y="147">打印结束</text><text x="85" y="161">读切片预计用量</text>
+    <text x="230" y="149">AMS 槽位匹配？</text><text x="230" y="162" font-size="8.5" fill="#666">对应是哪一卷</text>
+    <text x="390" y="147">是 → 扣减剩余克数</text><text x="390" y="161" font-size="8.5" fill="#666">回写 Spoolman</text>
+    <text x="85" y="247">否 → 推送“请选卷”</text><text x="85" y="261">人工指定后再扣</text>
+    <text x="230" y="247">剩余 &lt;150g？</text><text x="230" y="261">推送补货提醒</text>
+    <text x="390" y="247">库存 &gt;8 卷？</text><text x="390" y="261">提示“先用完再买”</text>
+    <text x="240" y="331">每月称重一次校准数据</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="195">否</text><text x="300" y="68">回写</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0305-5</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>输入：每卷初始重量 + 每次打印预计用量</li><li>阈值：剩余 &lt;150g 提醒补货；库存 &gt;8 卷提示停买</li><li>出口：Spoolman 网页看板 + HA 推送</li><li>兜底：每月称重一次校准数据</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 Donkie/Spoolman 记每卷剩余克数，greghesp/ha-bambulab 读 AMS 槽位和用量回写扣减</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/Donkie/Spoolman" target="_blank" rel="noopener">Donkie/Spoolman</a><a href="https://github.com/greghesp/ha-bambulab" target="_blank" rel="noopener">greghesp/ha-bambulab</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0304.html">← 0304 光伏储能 拆解</a>
+    <a class="up" href="../modules/0305.html">回到 3D 打印 专题页</a>
+    <a href="../teardown/0306.html">0306 微型气象站 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

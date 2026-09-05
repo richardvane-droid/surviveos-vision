@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0103 电子画框墙 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="电子画框墙 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" class="on"><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/01.html">01 暖村木屋</a> › <a href="../modules/0103.html">0103 电子画框墙</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">暖村木屋 · 模块 0103 · 核心拆解</p>
+    <h1>电子画框墙：4 个核心模块与逻辑</h1>
+    <p class="lede">一面每天早上自动换画的墙，Pinterest 就是我的策展人。</p>
+    <p class="meta"><span class="st st-🚧">🚧 真实设计进行中</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>九屏胡桃木画框总成</a><a href="#p2"><i>2</i>iPad 常供电改装件</a><a href="#p3"><i>3</i>每日换画调度</a><a href="#p4"><i>4</i>自然光跟随调光</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 九屏胡桃木画框总成</h2>
+    <p class="scene">九台闲鱼来的 iPad Pro 12.9 一代拆掉外壳拼成 3×3，装进一只 92×70cm 的胡桃木大框，看上去是一幅画而不是九台平板。总成从墙面往外分六层：带走线槽的 3mm 铝背板、9 口 USB 电源和线束、把屏幕间距压到 8mm 的隔屏格栅、九块屏幕、胡桃木外框，以及框下放一支松枝的小凸台。背板兼散热。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0103-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0103-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0103-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0103-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 3mm 铝背板（最下，带走线槽） -->
+    <path d="M60 310 l56 -22 l36 14 l-56 22 Z" stroke-width="1.5"/>
+    <path d="M60 310 v4 l36 14 v-4 M96 324 l56 -22 v-4" stroke-width="1.2"/>
+    <path d="M62 311 l34 13 v3 l-34 -13 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <path d="M72 306 l40 -16 M80 309 l40 -16 M88 312 l40 -16" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <path d="M70 302 l4 -2 M110 302 l4 -2 M90 314 l4 -2" stroke-width="0.9"/>
+    <path d="M104 300 a3 1.5 0 1 0 6 0 a3 1.5 0 1 0 -6 0" stroke-width="0.7"/>
+    <!-- ② 9 口 USB 电源 + 线束 -->
+    <path d="M150 256 l26 -10 l16 6 l-26 10 Z" stroke-width="1.5"/>
+    <path d="M150 256 v8 l16 6 v-8 M166 270 l26 -10 v-8" stroke-width="1.2"/>
+    <path d="M167 263 l25 -10 v6 l-25 10 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <path d="M156 253 l3 -1 M161 251 l3 -1 M166 249 l3 -1 M171 247 l3 -1" stroke-width="1.1"/>
+    <path d="M160 258 l3 -1 M165 256 l3 -1 M170 254 l3 -1" stroke-width="1.1"/>
+    <path d="M176 246 q6 -12 14 -8 M178 248 q8 -10 18 -4 M180 250 q10 -8 20 0 M182 252 q10 -4 18 4" stroke-width="0.7"/>
+    <path d="M148 262 q-8 -2 -10 6" stroke-width="0.9"/>
+    <!-- ③ 隔屏格栅（间距 8mm） -->
+    <path d="M186 208 l56 -22 l36 14 l-56 22 Z" stroke-width="1.5"/>
+    <path d="M198 213 l56 -22 M210 218 l56 -22" stroke-width="1.1"/>
+    <path d="M205 201 l36 14 M223 194 l36 14" stroke-width="1.1"/>
+    <path d="M186 208 v3 l36 14 v-3" stroke-width="0.9"/>
+    <path d="M187 209 l35 13 v3 l-35 -13 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <!-- ④ 九块 iPad 屏幕 -->
+    <path d="M244 160 l56 -22 l36 14 l-56 22 Z" stroke-width="1.5"/>
+    <path d="M250 158 l16 -6 l10 4 l-16 6 Z M268 151 l16 -6 l10 4 l-16 6 Z M286 144 l16 -6 l10 4 l-16 6 Z" stroke-width="0.9"/>
+    <path d="M261 162 l16 -6 l10 4 l-16 6 Z M279 155 l16 -6 l10 4 l-16 6 Z M297 148 l16 -6 l10 4 l-16 6 Z" stroke-width="0.9"/>
+    <path d="M272 166 l16 -6 l10 4 l-16 6 Z M290 159 l16 -6 l10 4 l-16 6 Z M308 152 l16 -6 l10 4 l-16 6 Z" stroke-width="0.9"/>
+    <path d="M268 151 l16 -6 l10 4 l-16 6 Z" fill="url(#p0103-1-shade2)" stroke="none"/>
+    <path d="M297 148 l16 -6 l10 4 l-16 6 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <!-- ⑤ 胡桃木外框 -->
+    <path d="M296 112 l64 -26 l42 16 l-64 26 Z" stroke-width="1.6"/>
+    <path d="M306 110 l54 -22 l30 12 l-54 22 Z" stroke-width="1.2"/>
+    <path d="M296 112 v4 l42 16 v-4 M338 132 l64 -26 v-4" stroke-width="1.2"/>
+    <path d="M297 113 l41 15 v4 l-41 -15 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <path d="M300 112 l54 -22 M392 100 l-54 22" stroke-width="0.5"/>
+    <path d="M300 116 l3 -1 M304 118 l3 -1 M394 96 l3 -1 M398 98 l3 -1" stroke-width="0.6"/>
+    <!-- ⑥ 松枝凸台（最上） -->
+    <path d="M382 52 l22 -9 l14 5 l-22 9 Z" stroke-width="1.4"/>
+    <path d="M382 52 v5 l14 5 v-5 M396 62 l22 -9 v-5" stroke-width="1.1"/>
+    <path d="M383 53 l13 5 v4 l-13 -5 Z" fill="url(#p0103-1-shade)" stroke="none"/>
+    <path d="M398 48 q-4 -14 6 -24" stroke-width="1.1"/>
+    <path d="M400 40 l-6 -4 M401 36 l-5 -5 M402 32 l-4 -6 M400 40 l5 -5 M401 36 l6 -3 M403 30 l5 -4" stroke-width="0.8"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M152 302 H198"/><path d="M150 258 H108"/><path d="M278 200 H310"/><path d="M244 156 H200"/><path d="M402 104 H432"/><path d="M418 50 H444"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="302" r="8"/><circle cx="100" cy="258" r="8"/><circle cx="318" cy="200" r="8"/><circle cx="192" cy="156" r="8"/><circle cx="440" cy="104" r="8"/><circle cx="452" cy="50" r="8"/>
+    </g>
+    <text x="206" y="305.5">1</text><text x="100" y="261.5">2</text><text x="318" y="203.5">3</text><text x="192" y="159.5">4</text><text x="440" y="107.5">5</text><text x="452" y="53.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">九屏胡桃木画框 · 爆炸图</text>
+    <text x="16" y="52">1 3mm 铝背板（走线槽 + 散热）</text>
+    <text x="16" y="68">2 9 口 USB 电源 + 线束</text>
+    <text x="16" y="84">3 隔屏格栅（间距 8mm）</text>
+    <text x="16" y="100">4 九块 iPad Pro 12.9 屏幕</text>
+    <text x="16" y="116">5 胡桃木外框 92×70cm</text>
+    <text x="16" y="132">6 松枝凸台（前景）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0103-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>外框 92×70cm 胡桃木，接缝刨到 1mm</li><li>隔屏格栅把屏幕间距压到 8mm，超过 12mm 就散了</li><li>3mm 铝背板走 9 条 Type-C 线，兼作散热面</li><li>框下松枝凸台 6cm 深，给画面一个前景</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. iPad 常供电改装件</h2>
+    <p class="scene">一代 iPad 的电池早就老化，装进木框半年就会鼓包顶裂屏幕，所以每台都要拆掉电池改成常供电。改装件分五层：iPad 后壳、装在电池位的替换板（把 5V 降到电池电压并骗过电量检测）、贴在板与铝背板之间的导热硅胶垫、从背板槽引出的 Type-C 供电尾线，以及回装的原屏幕总成。九台平板没有一块电池，断电重启也能开机。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0103-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0103-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0103-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0103-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① iPad 后壳（最下，电池位挖空） -->
+    <path d="M56 312 l64 -26 l44 18 l-64 26 Z" stroke-width="1.5"/>
+    <path d="M56 312 v4 l44 18 v-4 M100 334 l64 -26 v-4" stroke-width="1.2"/>
+    <path d="M57 313 l43 17 v3 l-43 -17 Z" fill="url(#p0103-2-shade)" stroke="none"/>
+    <path d="M74 310 l30 -12 l18 7 l-30 12 Z" stroke-width="0.9" stroke-dasharray="2 2"/>
+    <path d="M76 311 l28 -11 l16 6 l-28 11 Z" fill="url(#p0103-2-shade)" stroke="none"/>
+    <path d="M118 292 a2 1 0 1 0 4 0 a2 1 0 1 0 -4 0" stroke-width="0.8"/>
+    <path d="M64 314 l6 -2" stroke-width="1"/>
+    <!-- ② 电池替换板（装在电池位） -->
+    <path d="M154 244 l30 -12 l18 7 l-30 12 Z" stroke-width="1.5"/>
+    <path d="M154 244 v3 l18 7 v-3" stroke-width="1"/>
+    <path d="M155 245 l17 6 v3 l-17 -6 Z" fill="url(#p0103-2-shade)" stroke="none"/>
+    <rect x="164" y="236" width="8" height="6" rx="1" stroke-width="0.9" transform="rotate(-22 168 239)"/>
+    <path d="M176 236 l3 -1 M178 238 l3 -1 M180 240 l3 -1" stroke-width="1"/>
+    <path d="M160 246 l2 -1 M163 247 l2 -1" stroke-width="0.8"/>
+    <path d="M186 236 h4 M188 234 v4" stroke-width="0.9"/>
+    <path d="M198 238 q10 -2 12 6" stroke-width="0.8"/>
+    <!-- ③ 导热硅胶垫（薄片） -->
+    <path d="M222 178 l44 -18 l30 12 l-44 18 Z" stroke-width="1.4"/>
+    <path d="M222 178 v2 l30 12 v-2 M252 192 l44 -18 v-2" stroke-width="0.8"/>
+    <path d="M223 179 l29 11 v2 l-29 -11 Z" fill="url(#p0103-2-shade)" stroke="none"/>
+    <path d="M232 178 l30 -12 M240 181 l30 -12 M248 184 l30 -12" stroke-width="0.5" stroke-dasharray="1.5 2"/>
+    <path d="M238 166 q3 -6 0 -10 M246 163 q3 -6 0 -10 M254 160 q3 -6 0 -10" stroke-width="0.6" stroke-dasharray="1.5 1.5"/>
+    <!-- ④ Type-C 供电尾线 -->
+    <rect x="306" y="104" width="16" height="8" rx="3" stroke-width="1.4"/>
+    <path d="M322 108 h10" stroke-width="1.2"/>
+    <path d="M332 108 q14 -2 20 8 q6 10 20 6" stroke-width="1.3"/>
+    <path d="M332 108 q14 -2 20 8 q6 10 20 6" stroke-width="0.5" stroke-dasharray="2 3" transform="translate(0 2)"/>
+    <path d="M306 108 h-8" stroke-width="1"/>
+    <path d="M298 106 v4" stroke-width="1.2"/>
+    <path d="M310 106 h8 M310 110 h8" stroke-width="0.5"/>
+    <!-- ⑤ 原屏幕总成（最上） -->
+    <path d="M356 74 l52 -21 l36 14 l-52 21 Z" stroke-width="1.5"/>
+    <path d="M362 73 l46 -19 l26 10 l-46 19 Z" stroke-width="0.9"/>
+    <path d="M356 74 v3 l36 14 v-3" stroke-width="1"/>
+    <path d="M357 75 l35 13 v3 l-35 -13 Z" fill="url(#p0103-2-shade)" stroke="none"/>
+    <path d="M366 74 l40 -16 M374 77 l40 -16" stroke-width="0.5" stroke-opacity="0.6"/>
+    <path d="M404 54 a1.5 1 0 1 0 3 0 a1.5 1 0 1 0 -3 0" stroke-width="0.7"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M164 304 H206"/><path d="M154 246 H112"/><path d="M296 176 H330"/><path d="M298 108 H258"/><path d="M446 67 H454"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="214" cy="304" r="8"/><circle cx="104" cy="246" r="8"/><circle cx="338" cy="176" r="8"/><circle cx="250" cy="108" r="8"/><circle cx="462" cy="67" r="8"/>
+    </g>
+    <text x="214" y="307.5">1</text><text x="104" y="249.5">2</text><text x="338" y="179.5">3</text><text x="250" y="111.5">4</text><text x="462" y="70.5">5</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">iPad 常供电改装件 · 爆炸图</text>
+    <text x="16" y="52">1 iPad 后壳（电池位挖空）</text>
+    <text x="16" y="68">2 电池替换板（3.8V + 电量模拟）</text>
+    <text x="16" y="84">3 2mm 导热硅胶垫</text>
+    <text x="16" y="100">4 Type-C 供电尾线（走背板槽）</text>
+    <text x="16" y="116">5 原屏幕总成（回装）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0103-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>电池替换板输出 3.8V，带电量模拟，系统不报警</li><li>导热硅胶垫 2mm，把热量传给铝背板</li><li>Type-C 尾线走背板槽，9 条汇到一个电源</li><li>开机自动进入全屏画框网页，无需人工点</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 每日换画调度</h2>
+    <p class="scene">画框墙每天早上自动换一批画，策展人是 Pinterest。输入是四个主题画板（北欧木屋、生存手册插画、旧地图、雪地动物），输出是九块屏各自显示的图片序列。核心流程：凌晨四点定时拉取画板新图，按横竖比和分辨率筛掉不合适的，导入对应主题相册；七点整九屏依次淡入，之后每屏每 20 分钟换一张；说一句主题名就切相册。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0103-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0103-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0103-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0103-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：Pinterest 画板（左） → 筛选漏斗（中） → 3×3 画框墙（右） -->
+    <!-- 画板：几张错落的图钉卡片 -->
+    <rect x="40" y="136" width="30" height="38" rx="2" stroke-width="1.3"/>
+    <rect x="76" y="128" width="30" height="46" rx="2" stroke-width="1.3"/>
+    <rect x="40" y="180" width="30" height="46" rx="2" stroke-width="1.3"/>
+    <rect x="76" y="180" width="30" height="34" rx="2" stroke-width="1.3"/>
+    <rect x="42" y="138" width="26" height="34" fill="url(#p0103-3p-dots)" stroke="none"/>
+    <rect x="42" y="182" width="26" height="42" fill="url(#p0103-3p-shade)" stroke="none"/>
+    <path d="M80 150 l8 -10 l6 8 l6 -12 l4 6" stroke-width="0.9"/>
+    <circle cx="86" cy="192" r="6" stroke-width="0.9"/><path d="M80 210 l6 -8 l6 6 l6 -6" stroke-width="0.9"/>
+    <circle cx="73" cy="130" r="3" stroke-width="1.2"/><path d="M73 133 v6" stroke-width="1.2"/>
+    <circle cx="73" cy="180" r="3" stroke-width="1.2"/><path d="M73 183 v6" stroke-width="1.2"/>
+    <!-- 漏斗（筛尺寸） -->
+    <path d="M150 132 H210 L188 170 V204 L172 212 V170 Z" stroke-width="1.5"/>
+    <path d="M154 138 H206 M160 148 H200" stroke-width="0.6"/>
+    <path d="M173 172 h14 v30 l-14 7 Z" fill="url(#p0103-3p-shade)" stroke="none"/>
+    <path d="M166 118 l4 -6 M180 116 v-8 M194 118 l-4 -6" stroke-width="0.9"/>
+    <path d="M156 224 l-8 6 M162 226 l-4 8" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <!-- 3×3 画框墙 -->
+    <rect x="246" y="126" width="78" height="96" rx="2" stroke-width="1.6"/>
+    <rect x="252" y="132" width="66" height="84" rx="1" stroke-width="0.8"/>
+    <path d="M274 132 V216 M296 132 V216 M252 160 H318 M252 188 H318" stroke-width="0.9"/>
+    <rect x="253" y="133" width="20" height="26" fill="url(#p0103-3p-dots)" stroke="none"/>
+    <rect x="297" y="161" width="20" height="26" fill="url(#p0103-3p-dots)" stroke="none"/>
+    <rect x="275" y="189" width="20" height="26" fill="url(#p0103-3p-shade)" stroke="none"/>
+    <path d="M278 150 l6 -8 l5 6 l4 -4" stroke-width="0.7"/>
+    <path d="M256 176 l6 -8 l5 6 l4 -4" stroke-width="0.7"/>
+    <path d="M300 204 l6 -8 l5 6 l4 -4" stroke-width="0.7"/>
+    <path d="M276 226 q6 -6 12 0 q-6 6 -12 0" stroke-width="0.8"/>
+    <!-- 箭头 -->
+    <path d="M112 176 Q128 172 144 168" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M214 174 Q228 174 240 174" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地平线 -->
+    <path d="M40 256 Q180 248 320 256" stroke-width="1.2"/>
+    <path d="M44 260 q40 -3 80 0 M236 260 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层 -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0103 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">每日换画调度</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">策展人是 Pinterest，七点整准时换画</text>
+  <text x="73" y="240" text-anchor="middle" font-size="8.5" fill="#666">四个主题画板</text>
+  <text x="180" y="240" text-anchor="middle" font-size="8.5" fill="#666">筛横竖比 · 分辨率</text>
+  <text x="285" y="240" text-anchor="middle" font-size="8.5" fill="#666">九屏依次淡入</text>
+  <text x="180" y="290" text-anchor="middle" font-size="9.5" fill="#666">4:00 拉画板 → 尺寸筛选 → 导入主题相册 → 7:00 上屏</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">只收横竖比 3:4~4:3、短边 ≥1600px 的图</text>
+    <text x="64" y="366">四套主题相册，说一句主题名就切换</text>
+    <text x="64" y="396">拉图失败沿用昨天的相册，不留黑屏</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：NAS 定时任务 + Immich · 数据出口：主题相册 / 各屏 kiosk 序列</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：mikf/gallery-dl · damongolding/immich-kiosk</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0103-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0103-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0103-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">每日换画调度 · 流程图</text>
+  <g filter="url(#p0103-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱：Pinterest 画板 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤：拉取 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤 右：导入相册 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0103-3-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0103-3-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0103-3-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <!-- 连线 -->
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0103-3-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V200 H85 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M330 250 H287"/>
+    <path d="M230 270 V310"/>
+    <path d="M85 270 V292 H360 V272" stroke-dasharray="3 3"/>
+  </g>
+  <!-- 文字 -->
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每天 4:00 定时拉图</text>
+    <text x="230" y="74">Pinterest</text><text x="230" y="87" font-size="8.5" fill="#666">四个主题画板</text>
+    <text x="85" y="147">gallery-dl 拉新图</text><text x="85" y="161">按四个主题分目录</text>
+    <text x="230" y="149">尺寸合格？</text><text x="230" y="162" font-size="8.5" fill="#666">比例 · 分辨率</text>
+    <text x="390" y="147">是 → 导入 Immich</text><text x="390" y="161">对应主题相册</text>
+    <text x="85" y="247">否 → 丢弃这张</text><text x="85" y="261">拉图失败沿用昨天</text>
+    <text x="230" y="247">每屏每 20 分钟</text><text x="230" y="261">换一张，语音切主题</text>
+    <text x="390" y="247">7:00 九屏依次淡入</text><text x="390" y="261">间隔 1.5 秒</text>
+    <text x="240" y="331">immich-kiosk 循环显示</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="196">否</text><text x="340" y="304" text-anchor="middle">昨天的相册照样 7:00 上屏，不留黑屏</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0103-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：每天 4:00 拉图，7:00 淡入，间隔 1.5 秒</li><li>筛选：只收横竖比 3:4~4:3、短边 ≥1600px 的图</li><li>四套主题相册，语音切换，每屏每 20 分钟换一张</li><li>兜底：拉图失败沿用昨天的相册，不留黑屏</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 mikf/gallery-dl 定时拉 Pinterest 画板进 Immich，各屏开 immich-kiosk</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/mikf/gallery-dl" target="_blank" rel="noopener">mikf/gallery-dl</a><a href="https://github.com/damongolding/immich-kiosk" target="_blank" rel="noopener">damongolding/immich-kiosk</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 自然光跟随调光</h2>
+    <p class="scene">让九块屏看起来像画而不是屏幕，关键是亮度跟着窗外的光走：阴天暗一点，晴天亮一点，夜里更暗。输入是窗边一颗 ESPHome 光照传感器每 10 秒上报的照度和人在不在家，输出是推给各屏画框网页的亮度参数。核心是一条对数映射曲线，把 0~2000lx 映射到 5%~70% 亮度，23 点后封顶 15%；离家半小时黑屏。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0103-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0103-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0103-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0103-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：窗外太阳与云（左） → 光照传感器 + 对数曲线（中） → 九屏（右） -->
+    <!-- 窗 -->
+    <rect x="40" y="126" width="68" height="84" rx="2" stroke-width="1.5"/>
+    <path d="M74 126 V210 M40 168 H108" stroke-width="0.9"/>
+    <circle cx="60" cy="148" r="9" stroke-width="1.4"/>
+    <path d="M60 134 v-3 M60 162 v3 M46 148 h-3 M74 148 h3 M50 138 l-2 -2 M70 158 l2 2 M70 138 l2 -2 M50 158 l-2 2" stroke-width="0.9"/>
+    <path d="M78 186 a6 6 0 0 1 10 -6 a8 8 0 0 1 14 4 a5 5 0 0 1 0 8 H80 a5 5 0 0 1 -2 -6 Z" stroke-width="1.1"/>
+    <rect x="42" y="196" width="30" height="12" fill="url(#p0103-4p-shade)" stroke="none"/>
+    <!-- 传感器小板 -->
+    <rect x="150" y="196" width="34" height="20" rx="3" stroke-width="1.4"/>
+    <rect x="156" y="201" width="8" height="8" stroke-width="0.9"/>
+    <rect x="156" y="201" width="8" height="8" fill="url(#p0103-4p-shade)" stroke="none"/>
+    <path d="M168 203 h10 M168 207 h10 M168 211 h6" stroke-width="0.7"/>
+    <path d="M160 194 v-4 M166 192 l2 -4 M154 192 l-2 -4" stroke-width="0.8"/>
+    <!-- 对数曲线小图 -->
+    <path d="M148 178 V126 M148 178 H214" stroke-width="1.1"/>
+    <path d="M150 176 Q158 140 176 134 Q196 128 212 126" stroke-width="1.5"/>
+    <path d="M148 138 h3 M148 158 h3 M170 178 v-3 M192 178 v-3" stroke-width="0.7"/>
+    <path d="M176 134 V178" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <!-- 九屏 -->
+    <rect x="246" y="128" width="78" height="96" rx="2" stroke-width="1.6"/>
+    <rect x="252" y="134" width="66" height="84" rx="1" stroke-width="0.8"/>
+    <path d="M274 134 V218 M296 134 V218 M252 162 H318 M252 190 H318" stroke-width="0.9"/>
+    <rect x="253" y="135" width="20" height="26" fill="url(#p0103-4p-dots)" stroke="none"/>
+    <rect x="275" y="163" width="20" height="26" fill="url(#p0103-4p-dots)" stroke="none"/>
+    <rect x="297" y="191" width="20" height="26" fill="url(#p0103-4p-dots)" stroke="none"/>
+    <path d="M330 150 l6 0 M330 162 l8 0 M330 174 l6 0" stroke-width="0.7"/>
+    <path d="M334 144 v36" stroke-width="0.9"/>
+    <path d="M331 146 l3 -4 l3 4" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M112 168 Q126 168 142 168" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M218 168 Q230 168 242 168" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地平线 -->
+    <path d="M40 256 Q180 248 320 256" stroke-width="1.2"/>
+    <path d="M44 260 q40 -3 80 0 M236 260 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层 -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0103 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">自然光跟随调光</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">窗外阴一点，画就暗一点</text>
+  <text x="74" y="226" text-anchor="middle" font-size="8.5" fill="#666">窗边照度 lx</text>
+  <text x="181" y="230" text-anchor="middle" font-size="8.5" fill="#666">对数映射 5%~70%</text>
+  <text x="285" y="240" text-anchor="middle" font-size="8.5" fill="#666">九屏亮度参数</text>
+  <text x="180" y="290" text-anchor="middle" font-size="9.5" fill="#666">BH1750 照度 → 变化 &gt;15% → 对数曲线 → immich-kiosk 亮度</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">0~2000lx 对数映射到 5%~70%，小抖动不推</text>
+    <text x="64" y="366">23:00 后亮度封顶 15%，离家 30 分钟黑屏</text>
+    <text x="64" y="396">传感器离线按日出日落曲线估算，不会全亮</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HA 自动化 · 数据出口：illuminance 实体 / 各屏亮度</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome · damongolding/immich-kiosk</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0103-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="8" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0103-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0103-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">自然光跟随调光 · 流程图</text>
+  <g filter="url(#p0103-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤 右：对数映射 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0103-4-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0103-4-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0103-4-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <!-- 连线 -->
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0103-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V200 H85 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M330 250 H287"/>
+    <path d="M230 270 V310"/>
+    <path d="M30 250 Q10 250 10 69 H28" stroke-dasharray="3 3"/>
+  </g>
+  <!-- 文字 -->
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">照度每 10 秒上报</text>
+    <text x="230" y="74">光照传感器</text><text x="230" y="87" font-size="8.5" fill="#666">BH1750 · 在家</text>
+    <text x="85" y="147">读当前照度</text><text x="85" y="161">读在家状态与时刻</text>
+    <text x="230" y="149">变化 &gt; 15%？</text><text x="230" y="162" font-size="8.5" fill="#666">小抖动不推</text>
+    <text x="390" y="147">是 → 对数映射</text><text x="390" y="161">0~2000lx → 5%~70%</text>
+    <text x="85" y="247">否 → 不推送</text><text x="85" y="261">保持上次亮度</text>
+    <text x="230" y="247">下发 immich-kiosk</text><text x="230" y="261">亮度参数到九屏</text>
+    <text x="390" y="247">23:00 后封顶 15%</text><text x="390" y="261">离家 30 分钟黑屏</text>
+    <text x="240" y="331">九屏像画，不像屏幕</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="196">否</text><text x="390" y="104" text-anchor="middle">离线兜底：按日出日落曲线估算照度</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0103-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：照度每 10 秒上报，变化超过 15% 才推送</li><li>对数映射：0~2000lx → 亮度 5%~70%</li><li>离家 30 分钟黑屏，23:00 后亮度封顶 15%</li><li>兜底：传感器离线按日出日落曲线估算</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 BH1750 上报照度，HA 算亮度，经 immich-kiosk 参数下发</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a><a href="https://github.com/damongolding/immich-kiosk" target="_blank" rel="noopener">damongolding/immich-kiosk</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0102.html">← 0102 PSK 作品展示墙 拆解</a>
+    <a class="up" href="../modules/0103.html">回到 电子画框墙 专题页</a>
+    <a href="../teardown/0104.html">0104 PSK 照片墙 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

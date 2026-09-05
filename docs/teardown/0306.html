@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0306 微型气象站 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="微型气象站 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" class="on"><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/03.html">03 阁楼间</a> › <a href="../modules/0306.html">0306 微型气象站</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">阁楼间 · 模块 0306 · 核心拆解</p>
+    <h1>微型气象站：4 个核心模块与逻辑</h1>
+    <p class="lede">阁楼天窗外伸一根气象杆，风向风速雨量温湿度全都自己测，草地浇不浇水它说了算。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>气象杆与传感器三件套</a><a href="#p2"><i>2</i>墨水屏天气面板</a><a href="#p3"><i>3</i>降雨预警器</a><a href="#p4"><i>4</i>数据上报与年度气候图</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 气象杆与传感器三件套</h2>
+    <p class="scene">天窗旁伸出一根 1.5 米的铝合金杆，顶端装风杯（测风速）、风向标（测风向）和翻斗式雨量筒（每翻一次约 0.28mm 雨）。杆子中段挂一个百叶盒，里面是温湿度气压传感器，百叶结构让空气流通又挡住太阳直晒，否则温度会虚高。杆底是一个铰链底座，台风天从天窗伸手就能放倒。杆子要离开屋脊，屋顶挡风会让风速数据失真。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0306-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0306-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0306-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0306-1-dots" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="0.6" fill="#6b6b6b"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0306-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 铰链底座 + 插销 -->
+    <path d="M76 300 l44 -14 l36 10 l-44 14 Z" stroke-width="1.4"/>
+    <path d="M76 300 v5 l36 10 v-5 M112 315 l44 -14 v-5" stroke-width="1.0999999999999999"/>
+    <path d="M77 302.75 l34 10 v1.25 l-34 -10 Z" fill="url(#p0306-1-shade)" stroke="none"/>
+    <path d="M98 296 l6 -2 v-10 h-6 Z M110 292 l6 -2 v-10 h-6 Z" stroke-width="1.1"/>
+    <circle cx="101" cy="287" r="1.8" stroke-width="0.8"/><circle cx="113" cy="283" r="1.8" stroke-width="0.8"/>
+    <path d="M92 289 h26" stroke-width="1.2"/>
+    <path d="M130 302 h12 M142 302 v3 M130 300 v4" stroke-width="1.1"/>
+    <path d="M84 310 l3 -1 M148 296 l-3 1" stroke-width="0.7"/>
+    <!-- ② 铝合金杆 -->
+    <path d="M138 275 L232 189 M144 281 L238 195" stroke-width="1.4"/>
+    <ellipse cx="141" cy="278" rx="2.5" ry="4.2" transform="rotate(-43 141 278)" stroke-width="1"/>
+    <ellipse cx="235" cy="192" rx="2.5" ry="4.2" transform="rotate(-43 235 192)" stroke-width="1"/>
+    <path d="M141 278 L235 192" stroke-width="0.4" stroke-dasharray="1 3"/>
+    <path d="M183 230 l-3 3 l6 5 l3 -3 Z M186 236 l3 -3" stroke-width="1"/>
+    <!-- ③ 百叶盒 BME280 -->
+    <ellipse cx="268" cy="166" rx="16" ry="5" stroke-width="1.3"/>
+    <ellipse cx="268" cy="160" rx="16" ry="5" stroke-width="1.1"/>
+    <ellipse cx="268" cy="154" rx="16" ry="5" stroke-width="1.1"/>
+    <ellipse cx="268" cy="148" rx="16" ry="5" stroke-width="1.1"/>
+    <ellipse cx="268" cy="142" rx="16" ry="5" stroke-width="1.1"/>
+    <path d="M252 142 v-6 a16 5 0 0 1 32 0 v6" stroke-width="1.2"/>
+    <ellipse cx="268" cy="136" rx="16" ry="5" stroke-width="1.3"/>
+    <path d="M254 168 a16 5 0 0 0 28 0 v3 a16 5 0 0 1 -28 0 Z" fill="url(#p0306-1-shade)" stroke="none"/>
+    <path d="M268 131 v-6" stroke-width="1"/>
+    <rect x="286" y="150" width="9" height="7" rx="1" stroke-width="0.8"/><path d="M287 152 h7 M287 154 h7" stroke-width="0.4"/>
+    <!-- ④ 翻斗雨量筒 -->
+    <ellipse cx="316" cy="96" rx="14" ry="5" stroke-width="1.4"/>
+    <path d="M302 96 v26 a14 5 0 0 0 28 0 v-26" stroke-width="1.3"/>
+    <path d="M304 100 l12 14 l12 -14" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M308 118 l8 -5 l8 5 M316 113 v6" stroke-width="0.9"/>
+    <path d="M304 124 a14 5 0 0 0 24 0 v3 a14 5 0 0 1 -24 0 Z" fill="url(#p0306-1-shade)" stroke="none"/>
+    <path d="M312 86 l-1 4 M320 86 l1 4" stroke-width="0.7"/>
+    <!-- ⑤ 风向标 -->
+    <path d="M338 82 L382 62" stroke-width="1.5"/>
+    <path d="M382 62 l-8 -3 l2 6 Z" stroke-width="1.2"/>
+    <path d="M338 82 l-6 -8 l12 -2 Z" stroke-width="1.2"/>
+    <path d="M338 82 l-6 -8 l12 -2 Z" fill="url(#p0306-1-shade)" stroke="none"/>
+    <circle cx="360" cy="72" r="3" stroke-width="1"/><path d="M360 75 v8" stroke-width="1"/>
+    <!-- ⑥ 风杯 -->
+    <circle cx="400" cy="40" r="3" stroke-width="1.1"/><path d="M400 43 v7" stroke-width="1"/>
+    <path d="M400 40 l0 -14 M400 40 l12 7 M400 40 l-12 7" stroke-width="1.1"/>
+    <path d="M395 26 a5 5 0 0 1 10 0 Z" stroke-width="1.2"/>
+    <path d="M412 47 a5 5 0 0 1 4 9 Z" stroke-width="1.2"/>
+    <path d="M388 47 a5 5 0 0 0 -4 9 Z" stroke-width="1.2"/>
+    <path d="M395 26 a5 5 0 0 1 10 0 Z" fill="url(#p0306-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M156 300 H190"/><path d="M176 242 H140"/><path d="M284 150 H320"/><path d="M302 108 H270"/><path d="M384 76 H410"/><path d="M414 40 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="200" cy="300" r="8"/><circle cx="130" cy="242" r="8"/><circle cx="330" cy="150" r="8"/><circle cx="260" cy="108" r="8"/><circle cx="420" cy="76" r="8"/><circle cx="450" cy="40" r="8"/>
+    </g>
+    <text x="200" y="303.5">1</text><text x="130" y="245.5">2</text><text x="330" y="153.5">3</text><text x="260" y="111.5">4</text><text x="420" y="79.5">5</text><text x="450" y="43.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">气象杆与传感器三件套 · 爆炸图</text>
+    <text x="16" y="52">1 铰链底座 + 插销（可放倒）</text>
+    <text x="16" y="68">2 1.5m 铝合金杆 + 抱箍</text>
+    <text x="16" y="84">3 百叶盒（内置 BME280 温湿压）</text>
+    <text x="16" y="100">4 翻斗式雨量筒（0.28mm/翻）</text>
+    <text x="16" y="116">5 风向标</text>
+    <text x="16" y="132">6 三杯风速计</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0306-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>风杯 + 风向标 + 翻斗雨量筒，杆顶高 1.5m</li><li>百叶盒内 BME280，测温湿压</li><li>铰链底座 + 插销，台风天可放倒</li><li>离屋脊 ≥ 1m，避免屋顶挡风</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">hugokernel/esphome-weather-station</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 墨水屏天气面板</h2>
+    <p class="scene">阁楼墙上一块 7.5 寸黑白墨水屏，由一块 ESP32 驱动，显示当前温湿度、气压、风速和过去 24 小时的曲线。墨水屏只有刷新时耗电，静态画面不用电，一天刷新几十次，一节 18650 电池能撑几个月。屏幕装在木框里，正面没有按键，极简。数据从 HomeAssistant 拉取，屏上留一行给降雨预警文字。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0306-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="8" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0306-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0306-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0306-2-dots" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="0.6" fill="#6b6b6b"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0306-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 木框背板 + 挂钩 -->
+    <path d="M60 306 l86 -30 l56 14 l-86 30 Z" stroke-width="1.5"/>
+    <path d="M60 306 v6 l56 14 v-6 M116 326 l86 -30 v-6" stroke-width="1.2"/>
+    <path d="M61 309.3 l54 14 v1.7000000000000002 l-54 -14 Z" fill="url(#p0306-2-shade)" stroke="none"/>
+    <path d="M70 312 q30 -8 60 -18 M70 316 q30 -8 60 -18" stroke-width="0.4"/>
+    <path d="M102 284 l-2 -4 h4 Z M102 280 v-3" stroke-width="0.9"/>
+    <path d="M100 300 v3 M104 299 v3" stroke-width="0.6"/>
+    <!-- ② 18650 电池盒 -->
+    <path d="M176 246 l40 -14 l16 4 l-40 14 Z" stroke-width="1.2"/>
+    <path d="M176 246 v8 l16 4 v-8 M192 258 l40 -14 v-8" stroke-width="1"/>
+    <path d="M177 250 l14 4 v3 l-14 -4 Z" fill="url(#p0306-2-shade)" stroke="none"/>
+    <path d="M184 239 l32 -11 M190 245 l32 -11" stroke-width="1.1"/>
+    <ellipse cx="187" cy="242" rx="3.2" ry="4" transform="rotate(-19 187 242)" stroke-width="1"/>
+    <ellipse cx="219" cy="231" rx="3.2" ry="4" transform="rotate(-19 219 231)" stroke-width="1"/>
+    <path d="M222 229 l3 -1 M196 236 l16 -6" stroke-width="0.6"/>
+    <!-- ③ ESP32 驱动板 -->
+    <path d="M222 198 l48 -17 l30 8 l-48 17 Z" stroke-width="1.5"/>
+    <path d="M224 200 l46 -16 l27 7" stroke-width="0.6"/>
+    <path d="M240 194 l14 -5 l6 3 l-14 5 Z" stroke-width="1"/>
+    <path d="M242 195 l12 -4 l4 2 l-12 4 Z" fill="url(#p0306-2-shade2)" stroke="none"/>
+    <path d="M262 200 h3 M266 198 h3 M270 197 h3 M274 195 h3 M278 194 h3" stroke-width="1.1"/>
+    <path d="M228 194 l5 -2 M228 191 l5 -2" stroke-width="0.7"/>
+    <path d="M268 182 l3 -6 l3 4 l3 -6" stroke-width="0.8"/>
+    <rect x="252" y="200" width="7" height="5" rx="0.8" stroke-width="0.8" transform="rotate(-19 255 202)"/>
+    <!-- ④ 7.5 寸墨水屏 -->
+    <path d="M268 146 l86 -30 l56 14 l-86 30 Z" stroke-width="1.5"/>
+    <path d="M268 146 v2 l56 14 v-2 M324 162 l86 -30 v-2" stroke-width="1.2"/>
+    <path d="M276 148 l72 -25 l40 10 l-72 25 Z" stroke-width="0.6"/>
+    <path d="M284 148 l18 -6 M286 152 l30 -10 M290 156 l14 -5" stroke-width="0.8"/>
+    <path d="M300 160 q8 -12 18 -8 q8 4 14 -8 q6 -10 18 -8" stroke-width="1"/>
+    <path d="M298 163 l52 -18" stroke-width="0.5" stroke-dasharray="1.5 2"/>
+    <path d="M330 138 l14 -5 M332 134 l8 -3" stroke-width="0.7"/>
+    <path d="M312 132 l10 -3 v2 l-10 3 Z" fill="url(#p0306-2-shade)" stroke="none"/>
+    <!-- ⑤ 前框卡纸 -->
+    <path d="M326 88 l70 -24 l46 12 l-70 24 Z" stroke-width="1.5"/>
+    <path d="M336 89 l54 -18 l32 8 l-54 18 Z" stroke-width="1"/>
+    <path d="M328 89 l68 -23 M328 91 l46 12" stroke-width="0.4"/>
+    <path d="M330 89 l6 0 l54 -18 l-4 -1 Z" fill="url(#p0306-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M202 292 H230"/><path d="M176 250 H150"/><path d="M300 190 H330"/><path d="M268 152 H240"/><path d="M396 62 V44"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="240" cy="292" r="8"/><circle cx="140" cy="250" r="8"/><circle cx="340" cy="190" r="8"/><circle cx="230" cy="152" r="8"/><circle cx="396" cy="34" r="8"/>
+    </g>
+    <text x="240" y="295.5">1</text><text x="140" y="253.5">2</text><text x="340" y="193.5">3</text><text x="230" y="155.5">4</text><text x="396" y="37.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">墨水屏天气面板 · 爆炸图</text>
+    <text x="16" y="52">1 实木背板 + 挂钩</text>
+    <text x="16" y="68">2 18650 电池盒（撑数月）</text>
+    <text x="16" y="84">3 ESP32 驱动板（深度睡眠）</text>
+    <text x="16" y="100">4 7.5 寸 800×480 墨水屏</text>
+    <text x="16" y="116">5 前框卡纸（无按键）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0306-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>7.5 寸 800×480 墨水屏 + ESP32 驱动板</li><li>每 10 分钟刷新一次，其余时间深度睡眠</li><li>显示：当前值 + 24 小时曲线 + 预警行</li><li>木框壁挂，数据来自 HA 模板实体</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/Madelena/esphome-weatherman-dashboard" target="_blank" rel="noopener">Madelena/esphome-weatherman-dashboard</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 降雨预警器</h2>
+    <p class="scene">手机天气 APP 报的是全城的雨，气压计感受到的是你家头顶这片云。逻辑很简单：3 小时内气压下降超过 3hPa、湿度同时升到 80% 以上，就是雨要来了。这是航海时代的 Zambretti 预报法，本地算，不用联网。预警一触发，HomeAssistant 就暂停 0602 草地浇灌、关上天窗帘，并推送“收衣服”提醒。雨量筒真的翻斗了，再确认“已下雨”。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0306-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0306-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0306-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0306-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：气压表（降） → 头顶的雨云 → 家：天窗帘关 + 浇灌停 + 收衣服 -->
+    <!-- 气压表 -->
+    <circle cx="70" cy="196" r="30" stroke-width="1.6"/>
+    <circle cx="70" cy="196" r="25" stroke-width="0.6"/>
+    <path d="M50 176 l3 3 M90 176 l-3 3 M70 168 v4 M44 196 h4 M96 196 h-4" stroke-width="1"/>
+    <path d="M70 196 L52 210" stroke-width="1.6"/>
+    <circle cx="70" cy="196" r="2.5" stroke-width="1"/>
+    <path d="M86 184 a20 20 0 0 1 -6 26" stroke-width="1" stroke-dasharray="2 2"/>
+    <path d="M80 210 l-4 1 l3 -4" stroke-width="1"/>
+    <path d="M60 236 h20 v6 h-20 Z" stroke-width="1"/>
+    <!-- 雨云 -->
+    <path d="M150 156 a14 14 0 0 1 26 -8 a12 12 0 0 1 22 6 a10 10 0 0 1 -2 20 h-46 a9 9 0 0 1 0 -18 Z" stroke-width="1.6"/>
+    <path d="M156 160 a10 10 0 0 1 18 -6" stroke-width="0.6"/>
+    <path d="M154 166 h40 v6 h-40 Z" fill="url(#p0306-3p-shade)" stroke="none"/>
+    <path d="M158 184 l-3 8 M170 184 l-3 8 M182 184 l-3 8 M194 184 l-3 8 M164 198 l-3 8 M176 198 l-3 8 M188 198 l-3 8" stroke-width="1"/>
+    <!-- 房子 -->
+    <path d="M234 210 l40 -30 l40 30 v40 h-80 Z" stroke-width="1.6"/>
+    <path d="M226 212 l48 -38 l48 38" stroke-width="1.2"/>
+    <!-- 天窗 + 帘 -->
+    <path d="M254 200 l10 -8 l12 8 l-10 8 Z" stroke-width="1"/>
+    <path d="M256 200 l8 -6 l10 6 l-8 6 Z" fill="url(#p0306-3p-shade)" stroke="none"/>
+    <!-- 门 + 收衣服 -->
+    <path d="M262 250 v-20 h14 v20" stroke-width="1"/>
+    <path d="M290 232 h20 M300 232 v-6 M292 236 l-2 12 h20 l-2 -12 M296 232 l4 -3 l4 3" stroke-width="1"/>
+    <!-- 喷头 停 -->
+    <path d="M226 246 h12 M232 246 v-8 M228 238 h8" stroke-width="1"/>
+    <path d="M226 232 l12 12" stroke-width="1.2"/>
+    <circle cx="232" cy="238" r="7" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M100 180 Q120 166 144 164" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M144 164 l-4 -3 l0 5" stroke-width="1"/>
+    <path d="M204 176 Q222 184 236 192" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M236 192 l-5 0 l2 -4" stroke-width="1"/>
+
+    <!-- 地面线 -->
+    <path d="M40 268 Q180 262 320 268" stroke-width="1.2"/>
+    <path d="M44 272 q40 -3 80 0 M236 272 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0306 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">降雨预警器</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">气压计感受到的是你家头顶这片云</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">气压降 + 湿度升 → 预警 → 停浇灌 · 关帘 · 收衣服 → 翻斗确认</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">Zambretti 航海预报法，本地算不用联网</text>
+    <text x="64" y="366">预警即暂停 0602 浇灌、关天窗帘、推送收衣服</text>
+    <text x="64" y="396">雨量筒翻斗确认，连续 2 次误报自动收紧阈值</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 模板传感器 · 数据出口：手机推送 + 0602 浇灌 + 天窗帘</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：3KUdelta/Solar_WiFi_Weather_Station</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0306-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0306-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0306-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">降雨预警器 · 流程图</text>
+  <g filter="url(#p0306-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0306-3-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0306-3-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0306-3-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="145" y="312" width="190" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0306-3-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M390 170 V228"/>
+    <path d="M230 176 V205 H85 V228"/>
+    <path d="M330 250 H287"/>
+    <path d="M230 270 V310"/>
+    <path d="M30 250 Q10 250 10 150 Q10 130 28 130" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每 10 分钟采样</text>
+    <text x="230" y="74">气压 · 湿度</text><text x="230" y="87" font-size="8.5" fill="#666">3 小时滚动历史</text>
+    <text x="85" y="147">算 3 小时气压差</text><text x="85" y="161">Zambretti 趋势</text>
+    <text x="230" y="149">气压降 &gt;3hPa？</text><text x="230" y="162" font-size="8.5" fill="#666">且湿度 &gt;80%</text>
+    <text x="390" y="147">是 → 暂停 0602 浇灌</text><text x="390" y="161" font-size="8.5" fill="#666">关天窗帘</text>
+    <text x="85" y="247">否 → 只记趋势</text><text x="85" y="261">下个周期再算</text>
+    <text x="230" y="247">雨量筒翻斗？</text><text x="230" y="261">落雨确认 / 记误报</text>
+    <text x="390" y="247">推送“收衣服”</text><text x="390" y="261">HA 通知手机</text>
+    <text x="240" y="331">连续 2 次误报 → 阈值自动收紧</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="195">否</text><text x="14" y="200">循环</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0306-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：3 小时气压降 &gt;3hPa 且湿度 &gt;80%</li><li>动作：暂停浇灌 + 关天窗帘 + 推送收衣服</li><li>雨量筒翻斗确认落雨，误报自动统计</li><li>兜底：连续 2 次误报则阈值自动收紧</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">移植 3KUdelta/Solar_WiFi_Weather_Station 的 Zambretti 算法到 HA 模板传感器，联动浇灌和帘</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/3KUdelta/Solar_WiFi_Weather_Station" target="_blank" rel="noopener">3KUdelta/Solar_WiFi_Weather_Station</a><a href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">hugokernel/esphome-weather-station</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 数据上报与年度气候图</h2>
+    <p class="scene">气象杆上所有传感器由一块 ESP32 跑 ESPHome，每 30 秒把一组读数送进 HomeAssistant。HA 默认只留 10 天历史，所以再把数据写进 InfluxDB 时序数据库长期保存，按天聚合出最高最低温、总雨量、主导风向。年底自动生成一张“我家的一年气候图”，推到 0211 大屏。传感器掉线 10 分钟告警，雨量筒一周没翻斗提醒清落叶。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0306-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0306-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0306-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0306-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：气象杆 → 数据库圆柱（HA 10 天 + InfluxDB 长期） → 年度气候图挂画 -->
+    <!-- 气象杆 -->
+    <path d="M60 250 V150" stroke-width="1.6"/>
+    <path d="M60 150 v-12 M52 138 a8 6 0 0 1 16 0 Z M72 154 a4 4 0 0 1 3 7 Z M48 154 a4 4 0 0 0 -3 7 Z M60 150 l12 6 M60 150 l-12 6" stroke-width="1.1"/>
+    <path d="M60 176 h18 l-5 -3 M78 176 l-5 3" stroke-width="1"/>
+    <ellipse cx="60" cy="200" rx="9" ry="3" stroke-width="1"/><ellipse cx="60" cy="206" rx="9" ry="3" stroke-width="1"/><ellipse cx="60" cy="212" rx="9" ry="3" stroke-width="1"/>
+    <path d="M44 250 h32 v4 h-32 Z" stroke-width="1"/>
+    <path d="M78 226 q4 -8 -2 -14 M80 236 q4 -8 -2 -14" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <!-- 数据库：两个圆柱 -->
+    <path d="M124 190 a18 5 0 0 1 36 0 v22 a18 5 0 0 1 -36 0 Z" stroke-width="1.4"/><ellipse cx="142" cy="190" rx="18" ry="5" stroke-width="1.2"/>
+    <path d="M126 208 a18 5 0 0 0 32 0 v3 a18 5 0 0 1 -32 0 Z" fill="url(#p0306-4p-shade)" stroke="none"/>
+    <path d="M166 176 a22 6 0 0 1 44 0 v46 a22 6 0 0 1 -44 0 Z" stroke-width="1.6"/><ellipse cx="188" cy="176" rx="22" ry="6" stroke-width="1.3"/>
+    <ellipse cx="188" cy="192" rx="22" ry="6" stroke-width="0.6"/><ellipse cx="188" cy="208" rx="22" ry="6" stroke-width="0.6"/>
+    <path d="M168 218 a22 6 0 0 0 40 0 v4 a22 6 0 0 1 -40 0 Z" fill="url(#p0306-4p-shade)" stroke="none"/>
+    <path d="M134 196 h16 M134 202 h10" stroke-width="0.6"/>
+    <!-- 年度气候图挂画 -->
+    <rect x="238" y="150" width="88" height="70" rx="2" stroke-width="1.6"/>
+    <rect x="242" y="154" width="80" height="62" rx="1" stroke-width="0.6"/>
+    <path d="M248 208 h68 M248 208 v-46" stroke-width="0.9"/>
+    <path d="M250 196 q10 -26 20 -30 q12 -6 20 -20 q8 12 22 30" stroke-width="1.2"/>
+    <path d="M250 202 q10 -14 20 -16 q12 -4 20 -10 q8 6 22 10" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <path d="M256 208 v-8 h4 v8 M266 208 v-14 h4 v14 M276 208 v-6 h4 v6 M292 208 v-18 h4 v18 M304 208 v-10 h4 v10" stroke-width="0.6"/>
+    <path d="M257 200 h2 v8 h-2 Z M267 194 h2 v14 h-2 Z M293 190 h2 v18 h-2 Z" fill="url(#p0306-4p-shade)" stroke="none"/>
+    <path d="M282 150 v-8 l-10 -6 M282 142 l10 -6" stroke-width="0.8"/>
+    <path d="M254 224 h56" stroke-width="0.6"/>
+    <!-- 箭头 -->
+    <path d="M84 200 Q100 194 118 196" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M118 196 l-4 -3 l0 5" stroke-width="1"/>
+    <path d="M160 196 H164" stroke-width="1" stroke-dasharray="2 2"/>
+    <path d="M212 190 Q224 184 234 182" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M234 182 l-5 -1 l2 4" stroke-width="1"/>
+
+    <!-- 地面线 -->
+    <path d="M40 268 Q180 262 320 268" stroke-width="1.2"/>
+    <path d="M44 272 q40 -3 80 0 M236 272 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0306 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">年度气候图</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">把我家头顶的一年天气画成一张图</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">30 秒采样 → HA 10 天 → InfluxDB 长期 → 按天聚合 → 年度气候图</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">30 秒一组读数，10 分钟聚合写入 InfluxDB</text>
+    <text x="64" y="366">年底自动生成年度气候图，推到 0211 大屏</text>
+    <text x="64" y="396">掉线 10 分钟告警，雨量筒一周不动提醒清落叶</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HA + InfluxDB · 数据出口：墨水屏 + 0211 大屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：hugokernel/esphome-weather-station · influxdata/influxdb</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0306-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="8" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0306-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0306-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">数据上报与年度气候图 · 流程图</text>
+  <g filter="url(#p0306-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 步骤 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0306-4-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0306-4-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0306-4-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="140" y="312" width="200" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0306-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M390 170 V228"/>
+    <path d="M390 130 V72 H266" stroke-dasharray="3 3"/>
+    <path d="M230 176 V205 H85 V228"/>
+    <path d="M330 250 H287"/>
+    <path d="M230 270 V310"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">ESPHome 30 秒上报</text>
+    <text x="230" y="74">InfluxDB</text><text x="230" y="87" font-size="8.5" fill="#666">长期时序库</text>
+    <text x="85" y="147">HA 收到读数</text><text x="85" y="161">短期留 10 天</text>
+    <text x="230" y="149">传感器在线？</text><text x="230" y="162" font-size="8.5" fill="#666">10 分钟无数据</text>
+    <text x="390" y="147">是 → 10 分钟聚合</text><text x="390" y="161" font-size="8.5" fill="#666">写入 InfluxDB</text>
+    <text x="85" y="247">否 → 掉线告警</text><text x="85" y="261">推送检查线路</text>
+    <text x="230" y="247">按天聚合</text><text x="230" y="261">最高低温·雨量·风向</text>
+    <text x="390" y="247">雨量筒一周没翻斗？</text><text x="390" y="261">提醒清落叶</text>
+    <text x="240" y="331">年底生成年度气候图 → 0211 大屏</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="195">否</text><text x="300" y="68">写入</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0306-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>频率：30 秒一组读数，10 分钟聚合一次</li><li>存储：HA 短期 10 天 + InfluxDB 长期</li><li>出口：墨水屏 + 0211 大屏年度气候图</li><li>兜底：掉线 10 分钟告警，雨量筒一周不动提醒清理</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">抄 hugokernel/esphome-weather-station 的 YAML 采集，HA influxdb 集成写入 influxdata/influxdb</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">hugokernel/esphome-weather-station</a><a href="https://github.com/influxdata/influxdb" target="_blank" rel="noopener">influxdata/influxdb</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0305.html">← 0305 3D 打印 拆解</a>
+    <a class="up" href="../modules/0306.html">回到 微型气象站 专题页</a>
+    <a href="../teardown/0401.html">0401 过道工具间 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

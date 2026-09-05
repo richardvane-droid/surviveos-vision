@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0703 钓台照明与电源 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="钓台照明与电源 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" class="on"><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/07.html">07 钓台</a> › <a href="../modules/0703.html">0703 钓台照明与电源</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">钓台 · 模块 0703 · 核心拆解</p>
+    <h1>钓台照明与电源：4 个核心模块与逻辑</h1>
+    <p class="lede">顶棚上一块太阳能板，柱子上一盏暖光灯，插座随时给手机和夜钓灯补电。</p>
+    <p class="meta"><span class="st st-设想">设想 真实项目尚未拆解此区域</span>
+      <span class="tag">产品模块 3</span>
+      <span class="tag">联动逻辑 1</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>顶棚光伏板支架总成</a><a href="#p2"><i>2</i>离网电池箱</a><a href="#p3"><i>3</i>马灯改暖光灯头</a><a href="#p4"><i>4</i>光伏电量看护</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 顶棚光伏板支架总成</h2>
+    <p class="scene">一块 200W 单晶硅光伏板装在顶棚向阳坡面上，用铝合金支架垫出 15° 倾角，正好和棚坡一致，远看像一片深色的瓦。单晶板比多晶板转换效率高，在杭州多云天气下更划算。支架用不锈钢螺栓穿过檩条固定，板的四角留通风间隙，夏天板背散热好，发电量不会因过热掉太多。板背出来的两根线用 MC4 防水插头接到柱脚电池箱，接头都在檐下淋不到雨。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0703-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0703-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0703-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0703-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 顶棚檩条 + 竹瓦局部 -->
+    <path d="M50 300 l80 -32 M60 310 l80 -32 M70 320 l80 -32" stroke-width="1.5"/>
+    <path d="M50 300 v5 l80 -32 v-5 M60 310 v5 l80 -32 v-5 M70 320 v5 l80 -32 v-5" stroke-width="0.8"/>
+    <path d="M50 305 l80 -32 v2 l-80 32 Z M70 325 l80 -32 v2 l-80 32 Z" fill="url(#p0703-1-shade2)" stroke="none"/>
+    <path d="M44 290 q4 -3 8 0 M56 285 q4 -3 8 0 M68 280 q4 -3 8 0 M80 275 q4 -3 8 0 M92 270 q4 -3 8 0 M104 265 q4 -3 8 0 M116 260 q4 -3 8 0" stroke-width="0.9"/>
+    <path d="M40 292 l84 -34" stroke-width="0.6"/>
+    <!-- 2 M8 不锈钢螺栓 四颗 -->
+    <path d="M150 250 v-14 M147 236 h6 M150 236 l-2 -3 h4 Z" stroke-width="1.2"/>
+    <path d="M149 244 h2 M149 247 h2" stroke-width="0.6"/>
+    <path d="M166 242 v-14 M163 228 h6 M166 228 l-2 -3 h4 Z" stroke-width="1.2"/>
+    <path d="M182 234 v-14 M179 220 h6 M182 220 l-2 -3 h4 Z" stroke-width="1.2"/>
+    <path d="M198 226 v-14 M195 212 h6 M198 212 l-2 -3 h4 Z" stroke-width="1.2"/>
+    <path d="M148 225 a3 1.5 0 1 0 6 0 a3 1.5 0 1 0 -6 0 M180 209 a3 1.5 0 1 0 6 0 a3 1.5 0 1 0 -6 0" stroke-width="0.7"/>
+    <!-- 3 铝合金支架 两条三角 -->
+    <path d="M212 190 l36 -14 v-18 Z" stroke-width="1.5"/>
+    <path d="M248 158 l6 3 v18 l-6 -3 M212 190 l6 3 l36 -14" stroke-width="0.9"/>
+    <path d="M214 193 l4 2 l36 -14 v-2 l-4 -2 l-36 14 Z" fill="url(#p0703-1-shade)" stroke="none"/>
+    <path d="M232 182 l0 -8" stroke-width="0.6"/>
+    <path d="M246 178 l36 -14 v-18 Z" stroke-width="1.5"/>
+    <path d="M282 146 l6 3 v18 l-6 -3 M246 178 l6 3 l36 -14" stroke-width="0.9"/>
+    <path d="M248 181 l4 2 l36 -14 v-2 l-4 -2 l-36 14 Z" fill="url(#p0703-1-shade)" stroke="none"/>
+    <path d="M216 187 q4 -1 8 0 M250 175 q4 -1 8 0" stroke-width="0.5"/>
+    <!-- 4 200W 单晶光伏板 -->
+    <path d="M262 124 l90 -36 l44 16 l-90 36 Z" stroke-width="1.6"/>
+    <path d="M262 124 v4 l44 16 v-4 M396 104 v4 l-90 36 v-4" stroke-width="0.9"/>
+    <path d="M264 128 l42 16 v3 l-42 -16 Z" fill="url(#p0703-1-shade)" stroke="none"/>
+    <path d="M277 118 l44 16 M292 112 l44 16 M307 106 l44 16 M322 100 l44 16 M337 94 l44 16" stroke-width="0.7"/>
+    <path d="M273 128 l90 -36 M284 132 l90 -36 M295 136 l90 -36" stroke-width="0.7"/>
+    <path d="M266 126 l6 2 M278 122 l6 2" stroke-width="0.4"/>
+    <!-- 5 MC4 插头 + 线缆 -->
+    <path d="M372 62 q14 -14 30 -8" stroke-width="1.3"/>
+    <path d="M402 54 h10 v6 h-10 Z" stroke-width="1.3"/>
+    <path d="M412 55 h6 v4 h-6 Z" stroke-width="1"/>
+    <path d="M403 55 h8 v4 h-8 Z" fill="url(#p0703-1-shade)" stroke="none"/>
+    <path d="M380 72 q14 -14 30 -8" stroke-width="1.3"/>
+    <path d="M410 64 h10 v6 h-10 Z" stroke-width="1.3"/>
+    <path d="M420 65 h6 v4 h-6 Z" stroke-width="1"/>
+    <path d="M411 65 h8 v4 h-8 Z" fill="url(#p0703-1-shade)" stroke="none"/>
+    <path d="M426 57 q10 0 12 8 M428 67 q6 2 10 -2" stroke-width="0.8"/>
+    <path d="M405 52 v-3 M405 48 l1 -1 M413 62 v-2" stroke-width="0.5"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M154 296 H206"/><path d="M146 230 H120"/><path d="M290 176 H372"/><path d="M260 120 H244"/><path d="M438 76 H452"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="296" r="8"/><circle cx="110" cy="230" r="8"/><circle cx="382" cy="176" r="8"/><circle cx="234" cy="120" r="8"/><circle cx="460" cy="76" r="8"/>
+    </g>
+    <text x="216" y="299.5">1</text><text x="110" y="233.5">2</text><text x="382" y="179.5">3</text><text x="234" y="123.5">4</text><text x="460" y="79.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">顶棚光伏板支架总成 · 爆炸图</text>
+    <text x="16" y="52">1 顶棚檩条 + 竹瓦（向阳坡）</text>
+    <text x="16" y="68">2 M8 不锈钢螺栓（穿檩条）</text>
+    <text x="16" y="84">3 铝合金三角支架（15°）</text>
+    <text x="16" y="100">4 200W 单晶光伏板</text>
+    <text x="16" y="116">5 MC4 防水插头 + 线缆</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0703-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>200W 单晶光伏板 1.1×0.7m，铝支架倾角 15°</li><li>M8 不锈钢螺栓穿檩条固定，四角留 5cm 通风缝</li><li>MC4 防水插头，线走檐下不淋雨</li><li>杭州年均日照下日发电约 0.5～0.8 度</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 离网电池箱</h2>
+    <p class="scene">钓台的“心脏”是一只防水箱，固定在杉木柱脚、离水面 50cm 以上。箱内按能量流向排列：光伏板的电先进 MPPT 控制器，调好电压充进 12V 100Ah 磷酸铁锂电池；电池再分三路：12V 直流给马灯和电热垫，小逆变器变 220V 给插座，USB 降压模块给手机。磷酸铁锂比铅酸轻一半、寿命长五倍，冬天低温充电由 BMS 保护板把关。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0703-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0703-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0703-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0703-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 防水箱底壳 -->
+    <path d="M56 290 l80 -32 l44 16 l-80 32 Z" stroke-width="1.5"/>
+    <path d="M56 290 v22 l44 16 v-22 M180 274 v22 l-80 32 v-22" stroke-width="1.5"/>
+    <path d="M58 294 l40 16 v18 l-40 -16 Z" fill="url(#p0703-2-shade)" stroke="none"/>
+    <path d="M104 308 l72 -29 M104 316 l72 -29" stroke-width="0.5"/>
+    <circle cx="80" cy="288" r="1.5" stroke-width="0.7"/><circle cx="112" cy="276" r="1.5" stroke-width="0.7"/><circle cx="140" cy="286" r="1.5" stroke-width="0.7"/>
+    <path d="M50 312 l6 -2 v6 M186 296 l-6 2 v6" stroke-width="0.9"/>
+    <!-- 2 磷酸铁锂电池 + BMS -->
+    <path d="M130 240 l44 -18 l26 10 l-44 18 Z" stroke-width="1.5"/>
+    <path d="M130 240 v18 l26 10 v-18 M200 232 v18 l-44 18 v-18" stroke-width="1.4"/>
+    <path d="M132 244 l22 9 v14 l-22 -9 Z" fill="url(#p0703-2-shade)" stroke="none"/>
+    <path d="M148 232 h4 M164 226 h4 M166 224 v4" stroke-width="1.1"/>
+    <path d="M160 254 l32 -13 M160 260 l32 -13" stroke-width="0.5"/>
+    <path d="M176 246 l16 -6 v4 l-16 6 Z" stroke-width="0.8"/>
+    <!-- 3 MPPT 控制器 -->
+    <path d="M214 190 l30 -12 l18 7 l-30 12 Z" stroke-width="1.4"/>
+    <path d="M214 190 v10 l18 7 v-10 M262 185 v10 l-30 12 v-10" stroke-width="1.2"/>
+    <path d="M216 194 l14 6 v7 l-14 -6 Z" fill="url(#p0703-2-shade)" stroke="none"/>
+    <path d="M224 186 l14 -6 l6 2 l-14 6 Z" stroke-width="0.8"/>
+    <path d="M226 186 l12 -5 l4 2 l-12 5 Z" fill="url(#p0703-2-shade2)" stroke="none"/>
+    <path d="M236 202 l3 -1 M240 200 l3 -1 M244 198 l3 -1 M248 196 l3 -1" stroke-width="1"/>
+    <path d="M230 178 v-8 M244 174 v-8" stroke-width="0.8"/>
+    <!-- 4 逆变器 + USB 模块 -->
+    <path d="M262 150 l40 -16 l18 7 l-40 16 Z" stroke-width="1.4"/>
+    <path d="M262 150 v12 l18 7 v-12 M320 141 v12 l-40 16 v-12" stroke-width="1.2"/>
+    <path d="M264 154 l14 6 v9 l-14 -6 Z" fill="url(#p0703-2-shade)" stroke="none"/>
+    <path d="M284 156 l30 -12 M284 160 l30 -12 M284 164 l30 -12" stroke-width="0.5"/>
+    <path d="M292 152 l6 -2 v3 l-6 2 Z M302 148 l6 -2 v3 l-6 2 Z" stroke-width="0.8"/>
+    <path d="M318 120 l16 -6 l8 3 l-16 6 Z" stroke-width="1.2"/>
+    <path d="M318 120 v5 l8 3 v-5 M342 117 v5 l-16 6 v-5" stroke-width="0.9"/>
+    <path d="M326 118 l6 -2 v2 l-6 2 Z" stroke-width="0.6"/>
+    <!-- 5 ESP32 节点小板 -->
+    <path d="M334 106 l26 -10 l10 4 l-26 10 Z" stroke-width="1.3"/>
+    <path d="M336 106 l24 -9 l7 3" stroke-width="0.6"/>
+    <path d="M342 104 l8 -3 l4 2 l-8 3 Z" stroke-width="0.9"/>
+    <path d="M343 104 l7 -3 l3 1 l-7 3 Z" fill="url(#p0703-2-shade2)" stroke="none"/>
+    <path d="M352 110 h2 M355 109 h2 M358 108 h2 M361 107 h2" stroke-width="0.9"/>
+    <path d="M356 96 q4 -6 8 -2" stroke-width="0.7"/>
+    <!-- 6 箱盖 -->
+    <path d="M350 78 l80 -32 l44 16 l-80 32 Z" stroke-width="1.5"/>
+    <path d="M350 78 v6 l44 16 v-6 M474 62 v6 l-80 32 v-6" stroke-width="0.9"/>
+    <path d="M352 82 l42 16 v4 l-42 -16 Z" fill="url(#p0703-2-shade)" stroke="none"/>
+    <path d="M364 74 l60 -24 M376 78 l60 -24" stroke-width="0.4"/>
+    <path d="M388 66 l8 -3 v3 l-8 3 Z" stroke-width="0.8"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M182 306 H206"/><path d="M126 246 H108"/><path d="M262 205 H302"/><path d="M256 156 H228"/><path d="M362 114 H382"/><path d="M446 84 H452"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="306" r="8"/><circle cx="98" cy="246" r="8"/><circle cx="312" cy="205" r="8"/><circle cx="218" cy="156" r="8"/><circle cx="392" cy="114" r="8"/><circle cx="460" cy="84" r="8"/>
+    </g>
+    <text x="216" y="309.5">1</text><text x="98" y="249.5">2</text><text x="312" y="208.5">3</text><text x="218" y="159.5">4</text><text x="392" y="117.5">5</text><text x="460" y="87.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">离网电池箱 · 爆炸图</text>
+    <text x="16" y="52">1 IP65 防水箱（底留排水孔）</text>
+    <text x="16" y="68">2 12V 100Ah 磷酸铁锂 + BMS</text>
+    <text x="16" y="84">3 MPPT 控制器 20A</text>
+    <text x="16" y="100">4 300W 逆变器 + USB 降压模块</text>
+    <text x="16" y="116">5 ESP32 监测节点</text>
+    <text x="16" y="132">6 箱盖（架高离水 50cm）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0703-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>12V 100Ah 磷酸铁锂电池，含 JK BMS 保护板</li><li>MPPT 控制器 20A，支持 RS485 读数据</li><li>300W 纯正弦逆变器 + 12V + USB-C 输出</li><li>IP65 防水箱架高 ≥50cm，箱底留排水孔</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">syssi/esphome-jk-bms</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-hw">产品模块</span> 3. 马灯改暖光灯头</h2>
+    <p class="scene">一盏黄铜马灯拆掉煤油芯，换进去一颗 5W 2700K 的 LED 灯珠，保留玻璃罩和提手，看上去还是那盏老灯。灯挂在顶棚下正中，罩内贴一圈哑光黑纸遮光，让光只往台面上打，边缘留暗，不照进水里惊鱼。调光旋钮装在杉木柱上，PWM 从 5% 调到 100%。台边另装两个带盖 IP66 插座和两个 USB-C 口，全走 12V 直流。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0703-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0703-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0703-3-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0703-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 黄铜油壶底座 -->
+    <ellipse cx="110" cy="274" rx="30" ry="10" stroke-width="1.5"/>
+    <path d="M80 274 v20 q0 12 30 12 q30 0 30 -12 v-20" stroke-width="1.5"/>
+    <path d="M82 280 a30 10 0 0 0 56 0" stroke-width="0.6"/>
+    <path d="M84 292 q10 10 26 12 q16 -2 26 -12 v-8 a30 10 0 0 1 -52 0 Z" fill="url(#p0703-3-shade)" stroke="none"/>
+    <path d="M100 268 h20 M104 264 h12" stroke-width="0.8"/>
+    <path d="M86 300 q-6 4 -4 10 M134 300 q6 4 4 10" stroke-width="1"/>
+    <!-- 2 LED 灯珠 + 驱动板 -->
+    <path d="M170 232 l30 -12 l14 6 l-30 12 Z" stroke-width="1.3"/>
+    <path d="M172 232 l28 -11 l11 4" stroke-width="0.6"/>
+    <path d="M180 230 l6 -3 l4 2 l-6 3 Z" fill="url(#p0703-3-shade2)" stroke="none"/>
+    <path d="M186 236 h2 M190 234 h2 M194 232 h2" stroke-width="0.9"/>
+    <path d="M188 218 a7 7 0 1 1 14 0 v4 h-14 Z" stroke-width="1.4"/>
+    <path d="M191 216 a4 4 0 0 1 8 0" stroke-width="0.6"/>
+    <path d="M195 204 v-4 M188 208 l-3 -3 M202 208 l3 -3" stroke-width="0.9"/>
+    <!-- 3 哑光黑遮光环 -->
+    <ellipse cx="236" cy="190" rx="22" ry="8" stroke-width="1.4"/>
+    <ellipse cx="236" cy="190" rx="14" ry="5" stroke-width="1"/>
+    <path d="M214 190 v6 a22 8 0 0 0 44 0 v-6" stroke-width="1"/>
+    <path d="M216 194 a22 8 0 0 0 40 0 v3 a22 8 0 0 1 -40 0 Z" fill="url(#p0703-3-shade)" stroke="none"/>
+    <path d="M222 190 a14 5 0 0 0 28 0 a22 8 0 0 1 -28 0 Z" fill="url(#p0703-3-shade2)" stroke="none"/>
+    <!-- 4 玻璃罩 -->
+    <path d="M292 158 q-14 -10 -14 -30 q0 -14 14 -18 q14 4 14 18 q0 20 -14 30" stroke-width="1.5"/>
+    <path d="M280 128 a12 4 0 0 1 24 0" stroke-width="0.9"/>
+    <path d="M278 158 a14 5 0 0 0 28 0" stroke-width="1.2"/>
+    <path d="M284 128 q0 18 6 26" stroke-width="0.5"/>
+    <path d="M298 114 q6 6 6 18" stroke-width="0.4"/>
+    <path d="M296 148 q4 -8 4 -18 q0 -8 -2 -12 l4 4 q2 8 2 14 q0 8 -4 14 Z" fill="url(#p0703-3-shade)" stroke="none"/>
+    <path d="M280 156 v4 a12 4 0 0 0 24 0 v-4" stroke-width="0.9"/>
+    <!-- 5 顶盖 + 提手 -->
+    <ellipse cx="352" cy="94" rx="18" ry="6" stroke-width="1.4"/>
+    <path d="M334 94 v-4 q0 -12 18 -14 q18 2 18 14 v4" stroke-width="1.4"/>
+    <path d="M346 76 q6 -3 12 0" stroke-width="0.9"/>
+    <path d="M336 96 a18 6 0 0 0 32 0 v2 a18 6 0 0 1 -32 0 Z" fill="url(#p0703-3-shade)" stroke="none"/>
+    <path d="M340 90 h24 M342 86 h20" stroke-width="0.5"/>
+    <path d="M336 82 q16 -44 32 0" stroke-width="1.5"/>
+    <path d="M338 82 q14 -38 28 0" stroke-width="0.6"/>
+    <path d="M352 56 a3 3 0 1 0 0.1 0" stroke-width="1"/>
+    <path d="M352 50 q-4 -8 0 -12 q4 4 0 12" stroke-width="1.1"/>
+    <!-- 柱上调光旋钮 单独小图（右下角） -->
+    <rect x="400" y="230" width="34" height="34" rx="4" stroke-width="1.3"/>
+    <circle cx="417" cy="247" r="9" stroke-width="1.3"/><path d="M417 247 l4 -7" stroke-width="1.4"/>
+    <path d="M404 262 q13 -6 26 0" stroke-width="0.5"/>
+    <rect x="400" y="272" width="34" height="22" rx="3" stroke-width="1.2"/>
+    <path d="M400 276 h34" stroke-width="0.6"/>
+    <circle cx="410" cy="285" r="3" stroke-width="0.9"/><circle cx="424" cy="285" r="3" stroke-width="0.9"/>
+    <path d="M409 285 h2 M423 285 h2" stroke-width="0.8"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M142 282 H206"/><path d="M166 230 H140"/><path d="M260 190 H300"/><path d="M276 140 H244"/><path d="M372 90 H400"/><path d="M436 258 H448"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="282" r="8"/><circle cx="130" cy="230" r="8"/><circle cx="310" cy="190" r="8"/><circle cx="234" cy="140" r="8"/><circle cx="410" cy="90" r="8"/><circle cx="456" cy="258" r="8"/>
+    </g>
+    <text x="216" y="285.5">1</text><text x="130" y="233.5">2</text><text x="310" y="193.5">3</text><text x="234" y="143.5">4</text><text x="410" y="93.5">5</text><text x="456" y="261.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">马灯改暖光灯头 · 爆炸图</text>
+    <text x="16" y="52">1 黄铜马灯底座（原油壶）</text>
+    <text x="16" y="68">2 5W 2700K LED 灯珠 + 驱动板</text>
+    <text x="16" y="84">3 哑光黑遮光环（不照水面）</text>
+    <text x="16" y="100">4 玻璃灯罩</text>
+    <text x="16" y="116">5 顶盖 + 提手（挂顶棚）</text>
+    <text x="16" y="132">6 柱上调光旋钮 + IP66 插座</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0703-3</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>黄铜马灯壳 + 5W 2700K LED 灯珠，12V 直流</li><li>罩内哑光黑遮光环，只照台面不照水面</li><li>柱上 PWM 调光旋钮 5%～100%</li><li>IP66 带盖插座 ×2 + USB-C ×2</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 光伏电量看护</h2>
+    <p class="scene">让钓台的电“自己管自己”。电池箱里的 ESP32 通过串口读 MPPT 和 BMS：电压、剩余电量、当日发电量，每分钟推到 HomeAssistant。逻辑分三段：太阳落山后自动把马灯点到 30%，地脚灯同步亮起；电量低于 20% 推送提醒并关掉逆变器，只留马灯和 USB；低于 10% 关掉一切只留监测，等第二天太阳把电充回来。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0703-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0703-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0703-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0703-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：太阳 + 光伏板 -->
+    <circle cx="62" cy="126" r="11" stroke-width="1.4"/>
+    <path d="M62 110 v-5 M62 142 v5 M46 126 h-5 M78 126 h5 M51 115 l-4 -4 M73 137 l4 4 M73 115 l4 -4 M51 137 l-4 4" stroke-width="1.1"/>
+    <path d="M46 176 l60 -22 l16 8 l-60 22 Z" stroke-width="1.5"/>
+    <path d="M56 174 l16 8 M66 170 l16 8 M76 166 l16 8 M86 162 l16 8" stroke-width="0.7"/>
+    <path d="M48 178 l14 7 v3 l-14 -7 Z" fill="url(#p0703-4p-shade)" stroke="none"/>
+    <path d="M78 184 v14 M72 198 h12" stroke-width="1.2"/>
+    <!-- 中：电池 + 电量 -->
+    <rect x="150" y="128" width="60" height="70" rx="5" stroke-width="1.5"/>
+    <path d="M170 128 v-7 h20 v7" stroke-width="1.3"/>
+    <rect x="156" y="150" width="48" height="42" rx="2" stroke-width="0.6"/>
+    <path d="M157 172 h46 v19 h-46 Z" fill="url(#p0703-4p-dots)" stroke="none"/>
+    <path d="M156 164 h48" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <!-- 右：马灯 + 月亮 -->
+    <path d="M232 108 a12 12 0 1 0 8 20 a10 10 0 0 1 -8 -20 Z" stroke-width="1.2"/>
+    <path d="M262 150 q-6 -22 8 -24 q14 2 8 24" stroke-width="1.4"/>
+    <path d="M258 150 a12 4 0 0 0 24 0" stroke-width="1.2"/>
+    <path d="M256 150 v6 q0 10 14 10 q14 0 14 -10 v-6" stroke-width="1.4"/>
+    <path d="M258 156 q0 8 12 8 q12 0 12 -8 v-3 a12 4 0 0 1 -24 0 Z" fill="url(#p0703-4p-shade)" stroke="none"/>
+    <path d="M262 126 q8 -26 16 0" stroke-width="1.3"/>
+    <path d="M270 112 v-6" stroke-width="1"/>
+    <path d="M248 176 l6 -6 M292 176 l-6 -6 M270 184 v-8" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <path d="M232 196 h76" stroke-width="1.2"/>
+    <!-- 箭头 -->
+    <path d="M114 166 Q130 160 144 160" stroke-width="1" stroke-dasharray="3 3"/><path d="M140 156 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M214 160 Q230 160 246 160" stroke-width="1" stroke-dasharray="3 3"/><path d="M242 156 l5 4 l-5 4" stroke-width="1"/>
+    <!-- 地平 -->
+    <path d="M40 258 Q180 250 320 258" stroke-width="1.2"/>
+    <path d="M44 262 q40 -3 80 0 M236 262 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0703 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">光伏电量看护</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">天黑自己亮，没电自己省，钓台的电自己管</text>
+  <text x="180" y="144" text-anchor="middle" font-size="11" font-weight="700" fill="#2a2a2a">82%</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">MPPT / BMS → ESPHome → HA sun + 电量阈值 → 亮灯 / 分级断电 / 推送</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">日落自动把马灯点到 30%，地脚灯一起亮</text>
+    <text x="64" y="366">电量 20% 关逆变器，10% 只留监测，天亮再补回</text>
+    <text x="64" y="396">冬天电芯低于 0℃ 禁止充电，电池多活几年</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：大屏电量卡片 + 手机推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：KinDR007/VictronMPPT-ESPHOME · Bettapro/Solar-Tracer</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0703-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0703-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0703-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">光伏电量看护 · 流程图</text>
+  <g filter="url(#p0703-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M190 48 a40 6 0 0 1 80 0 v38 a40 6 0 0 1 -80 0 Z"/><ellipse cx="230" cy="48" rx="40" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 228 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="110" y="312" width="300" height="30" rx="15"/>
+    <path d="M34 172 h106 v3 h-106 Z M232 176 l56 -22 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M232 276 l56 -22 l4 2 l-58 26 Z M334 272 h116 v3 h-116 Z" fill="url(#p0703-4-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0703-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M190 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V226"/>
+    <path d="M390 170 V228"/>
+    <path d="M288 252 H328"/>
+    <path d="M172 252 H142"/>
+    <path d="M85 270 V327 H108"/>
+    <path d="M390 270 V310"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每 60 秒读取</text>
+    <text x="230" y="70.5" font-size="10">MPPT + BMS</text>
+    <text x="230" y="84" font-size="8.5" fill="#666">电压 / 电量 / 发电量</text>
+    <text x="85" y="147.5">ESPHome 上报 HA</text>
+    <text x="85" y="161">更新大屏电量卡片</text>
+    <text x="230" y="149.5">太阳已落山？</text>
+    <text x="230" y="163" font-size="8.5" fill="#666">HA sun 实体</text>
+    <text x="390" y="147.5">是 → 马灯亮到 30%</text>
+    <text x="390" y="161">栈道地脚灯同步亮</text>
+    <text x="85" y="247.5">否 → 正常供电</text>
+    <text x="85" y="261">逆变 / USB 全开</text>
+    <text x="230" y="249.5">电量 &lt;20%？</text>
+    <text x="230" y="263" font-size="8.5" fill="#666">或电芯 &lt;0℃</text>
+    <text x="390" y="247.5">是 → 推送 + 关逆变器</text>
+    <text x="390" y="261">只留马灯和 USB</text>
+    <text x="260" y="331">电量 &lt;10% 只留监测 · 节点离线 15 分钟告警</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="305" y="246">是</text><text x="150" y="246">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0703-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：HA sun 日落事件 / 电量阈值 20%、10%</li><li>动作：日落自动亮灯 30%，低电量分级断负载</li><li>冬天电芯 &lt;0℃ 时禁止充电，由 BMS 数据判断</li><li>出口：大屏卡片 + 手机推送，节点离线 15 分钟告警</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 KinDR007/VictronMPPT-ESPHOME 读 MPPT 电量，HomeAssistant sun 实体触发亮灯与分级断电</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/KinDR007/VictronMPPT-ESPHOME" target="_blank" rel="noopener">KinDR007/VictronMPPT-ESPHOME</a><a href="https://github.com/Bettapro/Solar-Tracer-Blynk-V3" target="_blank" rel="noopener">Bettapro/Solar-Tracer-Blynk-V3</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0702.html">← 0702 钓具储物与展示 拆解</a>
+    <a class="up" href="../modules/0703.html">回到 钓台照明与电源 专题页</a>
+    <a href="../teardown/0704.html">0704 水边茶席·小火塘 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

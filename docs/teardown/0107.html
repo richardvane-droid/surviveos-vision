@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0107 小吧台 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="小吧台 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" class="on"><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/01.html">01 暖村木屋</a> › <a href="../modules/0107.html">0107 小吧台</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">暖村木屋 · 模块 0107 · 核心拆解</p>
+    <h1>小吧台：4 个核心模块与逻辑</h1>
+    <p class="lede">一张老榆木吧台加三把高脚凳，客人看完生存盒，坐下来聊到炉火熄灭。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>老榆木自然边吧台</a><a href="#p2"><i>2</i>台后三层木架</a><a href="#p3"><i>3</i>落座调光</a><a href="#p4"><i>4</i>吧台点单账本</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 老榆木自然边吧台</h2>
+    <p class="scene">吧台的核心是一整块 1.8m 长、6cm 厚的老榆木板，一侧保留树皮弧线不切直，“自然边”让一块板看起来像一段树。台高 105cm 配 75cm 高脚凳，手肘搁上去刚好；板下是松木底柜，放小冰箱和几瓶黄酒，侧面一枚铜钩挂开瓶器。台面只留手冲架加磨豆机、煨热红酒的小铸铁锅两套。自然边必须整体封闭上油，否则树皮一年掉渣。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0107-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0107-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0107-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0107-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 底柜框架（含小冰箱格） -->
+    <path d="M66 282 L88 266 H170 L150 282 Z" stroke-width="1.5"/>
+    <rect x="66" y="282" width="84" height="40" stroke-width="1.5"/>
+    <path d="M150 282 L170 266 V306 L150 322" stroke-width="1.4"/>
+    <path d="M152 284 L168 270 V304 L152 320 Z" fill="url(#p0107-1-shade)" stroke="none"/>
+    <rect x="100" y="288" width="44" height="30" rx="2" stroke-width="1"/>
+    <path d="M104 296 v14" stroke-width="1.4"/>
+    <path d="M70 286 v32 M76 286 v32 M82 286 v32 M88 286 v32" stroke-width="0.6"/>
+    <path d="M66 316 h84" stroke-width="0.6"/>
+    <path d="M72 322 v6 M146 322 v6 M166 306 v6" stroke-width="1.1"/>
+    <!-- ② 台面下横撑 + 铜钩 -->
+    <path d="M130 240 L140 232 H228 L218 240 Z" stroke-width="1.3"/>
+    <rect x="130" y="240" width="88" height="9" stroke-width="1.3"/>
+    <path d="M218 240 L228 232 V241 L218 249" stroke-width="1"/>
+    <rect x="132" y="244" width="84" height="4" fill="url(#p0107-1-shade)" stroke="none"/>
+    <path d="M144 249 v9 a5 5 0 0 0 10 0 v-3" stroke-width="1.2"/>
+    <path d="M154 255 l6 -4 v10 l-6 -3" stroke-width="0.9"/>
+    <!-- ③ 老榆木自然边台面 -->
+    <path d="M204 166 H306 L292 182 Q272 178 254 186 T216 184 T190 184 Z" stroke-width="1.5"/>
+    <path d="M292 182 L306 166 V174 L292 190" stroke-width="1.2"/>
+    <path d="M190 184 Q214 190 236 186 T272 186 T292 190 V182" stroke-width="0.9"/>
+    <path d="M292 190 Q270 186 254 194 T216 192 T190 192 V184" stroke-width="1.2"/>
+    <path d="M192 186 Q214 192 236 188 T272 188 T290 192 V190 Q270 186 254 194 T216 192 T192 192 Z" fill="url(#p0107-1-shade)" stroke="none"/>
+    <path d="M212 170 q30 4 60 -1 M218 176 q28 3 54 0 M230 181 q20 2 40 0" stroke-width="0.6"/>
+    <path d="M196 182 q-4 3 -6 8 M208 186 q-4 2 -6 6 M232 186 q-2 3 -4 7 M256 186 q-2 3 -3 7 M280 184 q-2 3 -4 7" stroke-width="0.6"/>
+    <!-- ④ 手冲架 + 磨豆机 -->
+    <path d="M276 140 h22" stroke-width="1.4"/>
+    <path d="M279 140 v-32 h20" stroke-width="1.3"/>
+    <path d="M292 108 l4 8 h6 l4 -8 Z" stroke-width="1.1"/>
+    <path d="M295 116 l3 6 h2 l3 -6" stroke-width="0.8"/>
+    <path d="M295 132 a5 3 0 0 1 10 0 v6 a5 3 0 0 1 -10 0 Z" stroke-width="0.9"/>
+    <rect x="314" y="118" width="14" height="22" rx="2" stroke-width="1.3"/>
+    <path d="M312 118 l3 -8 h12 l3 8 Z" stroke-width="1.1"/>
+    <path d="M321 110 v-4 h6 l2 -3" stroke-width="1"/>
+    <rect x="316" y="130" width="10" height="8" fill="url(#p0107-1-shade2)" stroke="none"/>
+    <!-- ⑤ 电陶炉 + 小铸铁锅 -->
+    <path d="M334 92 L344 84 H384 L374 92 Z" stroke-width="1.3"/>
+    <rect x="334" y="92" width="40" height="6" stroke-width="1.2"/>
+    <path d="M374 92 L384 84 V90 L374 98" stroke-width="1"/>
+    <ellipse cx="358" cy="88" rx="12" ry="3" stroke-width="0.7"/>
+    <ellipse cx="358" cy="70" rx="14" ry="5" stroke-width="1.4"/>
+    <path d="M344 70 v8 a14 5 0 0 0 28 0 v-8" stroke-width="1.3"/>
+    <path d="M344 72 h-6 M372 72 h6" stroke-width="1.4"/>
+    <path d="M346 76 a14 5 0 0 0 24 2 v-3 a14 5 0 0 1 -24 -2 Z" fill="url(#p0107-1-shade)" stroke="none"/>
+    <path d="M352 60 q2 -4 0 -8 M358 58 q2 -4 0 -8 M364 60 q2 -4 0 -8" stroke-width="0.7"/>
+    <!-- ⑥ 黄铜吊灯 ×3 -->
+    <path d="M370 24 H434" stroke-width="1.3"/>
+    <path d="M384 24 v12 M402 24 v12 M420 24 v12" stroke-width="0.8"/>
+    <path d="M378 50 l3 -14 h6 l3 14 Z M396 50 l3 -14 h6 l3 14 Z M414 50 l3 -14 h6 l3 14 Z" stroke-width="1.3"/>
+    <path d="M378 50 h12 M396 50 h12 M414 50 h12" stroke-width="0.9"/>
+    <path d="M384 52 v3 M402 52 v3 M420 52 v3" stroke-width="1"/>
+    <path d="M380 50 l2 -12 h2 l-2 12 Z M398 50 l2 -12 h2 l-2 12 Z M416 50 l2 -12 h2 l-2 12 Z" fill="url(#p0107-1-shade)" stroke="none"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M170 298 H206"/><path d="M130 244 H104"/><path d="M306 172 H344"/><path d="M276 128 H250"/><path d="M384 90 H408"/><path d="M434 44 H442"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="298" r="8"/><circle cx="96" cy="244" r="8"/><circle cx="354" cy="172" r="8"/><circle cx="242" cy="128" r="8"/><circle cx="418" cy="90" r="8"/><circle cx="452" cy="44" r="8"/>
+    </g>
+    <text x="216" y="301.5">1</text><text x="96" y="247.5">2</text><text x="354" y="175.5">3</text><text x="242" y="131.5">4</text><text x="418" y="93.5">5</text><text x="452" y="47.5">6</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">老榆木自然边吧台 · 爆炸图</text>
+    <text x="16" y="52">1 松木底柜（小冰箱格 + 黄酒层）</text>
+    <text x="16" y="68">2 台面下横撑 + 铜钩挂开瓶器</text>
+    <text x="16" y="84">3 6cm 老榆木自然边台面</text>
+    <text x="16" y="100">4 手冲架 + 手摇磨豆机</text>
+    <text x="16" y="116">5 电陶炉 + 小铸铁锅（热红酒）</text>
+    <text x="16" y="132">6 黄铜小吊灯 ×3（2700K）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0107-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>老榆木自然边板 180×6cm，台高 105cm</li><li>松木底柜：小冰箱格 + 黄酒层 + 侧面铜钩</li><li>手冲架 + 磨豆机一角，电陶炉 + 铸铁锅一角</li><li>黄铜小吊灯 ×3，2700K，离台面 70cm 以上</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 台后三层木架</h2>
+    <p class="scene">吧台后墙的三层木架是这个角落的背景板，也是所有材料的家。两根榆木立柱用膨胀螺栓上墙，三层隔板榫槽插进立柱，没有一颗外露螺丝。中层放 8 只玻璃罐：咖啡豆、桂花、陈皮、干柠檬片，每罐系一张手写牛皮纸标签；上层一根杯钩条把十几只杯子倒挂起来，既晾干又是展示。架子只放这两类东西，台面就能永远空着，收拾只要三分钟。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0107-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0107-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0107-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0107-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 墙面立柱 ×2 + 膨胀螺栓 -->
+    <path d="M84 268 L92 262 H104 L96 268 Z M84 268 V332 H96 V268 M96 332 L104 326 V262" stroke-width="1.4"/>
+    <path d="M124 246 L132 240 H144 L136 246 Z M124 246 V310 H136 V246 M136 310 L144 304 V240" stroke-width="1.4"/>
+    <path d="M97 270 L103 265 V325 L97 330 Z M137 248 L143 243 V303 L137 308 Z" fill="url(#p0107-2-shade)" stroke="none"/>
+    <circle cx="90" cy="278" r="2.2" stroke-width="0.9"/><circle cx="90" cy="300" r="2.2" stroke-width="0.9"/><circle cx="90" cy="322" r="2.2" stroke-width="0.9"/>
+    <circle cx="130" cy="256" r="2.2" stroke-width="0.9"/><circle cx="130" cy="278" r="2.2" stroke-width="0.9"/><circle cx="130" cy="300" r="2.2" stroke-width="0.9"/>
+    <path d="M86 290 h8 M86 312 h8 M126 268 h8 M126 290 h8" stroke-width="0.6"/>
+    <!-- ② 榆木隔板 ×3 -->
+    <path d="M150 262 L166 250 H244 L228 262 Z M150 262 V267 H228 V262 M228 267 L244 255 V250" stroke-width="1.3"/>
+    <path d="M160 236 L176 224 H254 L238 236 Z M160 236 V241 H238 V236 M238 241 L254 229 V224" stroke-width="1.3"/>
+    <path d="M170 210 L186 198 H264 L248 210 Z M170 210 V215 H248 V210 M248 215 L264 203 V198" stroke-width="1.3"/>
+    <path d="M152 264 H226 V266 H152 Z M162 238 H236 V240 H162 Z M172 212 H246 V214 H172 Z" fill="url(#p0107-2-shade)" stroke="none"/>
+    <path d="M172 256 q30 1 60 -1 M182 230 q30 1 60 -1 M192 204 q30 1 60 -1" stroke-width="0.5"/>
+    <!-- ③ 玻璃罐 ×8（画 4 只示意） -->
+    <rect x="226" y="166" width="14" height="22" rx="2" stroke-width="1.3"/><rect x="228" y="160" width="10" height="6" rx="1" stroke-width="1"/>
+    <rect x="246" y="166" width="14" height="22" rx="2" stroke-width="1.3"/><rect x="248" y="160" width="10" height="6" rx="1" stroke-width="1"/>
+    <rect x="266" y="166" width="14" height="22" rx="2" stroke-width="1.3"/><rect x="268" y="160" width="10" height="6" rx="1" stroke-width="1"/>
+    <rect x="286" y="166" width="14" height="22" rx="2" stroke-width="1.3"/><rect x="288" y="160" width="10" height="6" rx="1" stroke-width="1"/>
+    <path d="M229 176 v9 M249 178 v7 M269 174 v11 M289 180 v5" stroke-width="0.7"/>
+    <path d="M232 180 h6 M252 182 h6 M272 178 h6 M292 184 h6" stroke-width="0.5"/>
+    <rect x="234" y="178" width="5" height="9" fill="url(#p0107-2-shade2)" stroke="none"/><rect x="274" y="176" width="5" height="11" fill="url(#p0107-2-shade2)" stroke="none"/>
+    <path d="M226 190 h74" stroke-width="0.6"/>
+    <!-- ④ 杯钩条 + 杯子 -->
+    <path d="M282 112 L292 106 H370 L360 112 Z M282 112 V118 H360 V112" stroke-width="1.3"/>
+    <path d="M284 114 H358 V117 H284 Z" fill="url(#p0107-2-shade)" stroke="none"/>
+    <path d="M296 118 v5 M318 118 v5 M340 118 v5" stroke-width="1"/>
+    <path d="M290 123 h12 v12 a6 4 0 0 1 -12 0 Z M302 126 a3 3 0 0 1 0 6" stroke-width="1.1"/>
+    <path d="M312 123 h12 v12 a6 4 0 0 1 -12 0 Z M324 126 a3 3 0 0 1 0 6" stroke-width="1.1"/>
+    <path d="M334 123 h12 v12 a6 4 0 0 1 -12 0 Z M346 126 a3 3 0 0 1 0 6" stroke-width="1.1"/>
+    <path d="M292 131 h8 v4 a4 2 0 0 1 -8 0 Z M314 131 h8 v4 a4 2 0 0 1 -8 0 Z M336 131 h8 v4 a4 2 0 0 1 -8 0 Z" fill="url(#p0107-2-shade)" stroke="none"/>
+    <!-- ⑤ 牛皮纸标签 + 麻绳 -->
+    <path d="M374 44 l10 -8 h22 v22 l-10 8 h-22 Z" stroke-width="1.3"/>
+    <path d="M384 36 v22 M374 44 h22" stroke-width="0.6"/>
+    <circle cx="380" cy="49" r="1.6" stroke-width="0.8"/>
+    <path d="M380 49 q-10 -6 -18 2" stroke-width="0.8" stroke-dasharray="1.5 1.5"/>
+    <path d="M388 46 h10 M388 51 h8 M388 56 h10" stroke-width="0.8"/>
+    <path d="M404 62 l8 -6 h18 v18 l-8 6 h-18 Z" stroke-width="1.2"/>
+    <path d="M410 66 h8 M410 71 h6 M410 76 h8" stroke-width="0.8"/>
+    <path d="M405 74 h16 v5 h-16 Z" fill="url(#p0107-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M144 300 H176"/><path d="M158 250 V234 H130"/><path d="M300 178 H332"/><path d="M282 116 H246"/><path d="M430 68 H444"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="186" cy="300" r="8"/><circle cx="122" cy="234" r="8"/><circle cx="342" cy="178" r="8"/><circle cx="238" cy="116" r="8"/><circle cx="454" cy="68" r="8"/>
+    </g>
+    <text x="186" y="303.5">1</text><text x="122" y="237.5">2</text><text x="342" y="181.5">3</text><text x="238" y="119.5">4</text><text x="454" y="71.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">台后三层木架 · 爆炸图</text>
+    <text x="16" y="52">1 榆木立柱 ×2（膨胀螺栓上墙）</text>
+    <text x="16" y="68">2 榆木隔板 ×3（榫槽插接）</text>
+    <text x="16" y="84">3 玻璃罐 ×8（咖啡豆/桂花/陈皮）</text>
+    <text x="16" y="100">4 杯钩条 + 倒挂杯子</text>
+    <text x="16" y="116">5 手写牛皮纸标签 + 麻绳</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0107-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>榆木立柱 ×2 膨胀螺栓上墙，隔板 ×3 榫槽插接</li><li>玻璃罐 ×8：咖啡豆 / 桂花 / 陈皮 / 干柠檬片</li><li>杯钩条倒挂十几只不同的杯子</li><li>手写牛皮纸标签 + 麻绳，罐内物一眼看清</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 落座调光</h2>
+    <p class="scene">解决的问题是：客人一坐下，吧台的灯应该自己退到刚好照亮台面的程度，不用谁去摸开关。输入是三把高脚凳凳面下的压力垫和 HA 的日落状态；输出是三盏吊灯的目标亮度。核心判断是“日落后且至少一把凳子有人”：吊灯 5 秒渐变从 80% 降到 30%，同时关台后射灯；白天不干预。离席后计时 3 分钟，再坐下续期，到时回 80%。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0107-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0107-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0107-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0107-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：高脚凳（左）→ 吊灯（中）→ 调光条（右） -->
+    <!-- 高脚凳 + 压力垫 -->
+    <ellipse cx="72" cy="196" rx="24" ry="7" stroke-width="1.5"/>
+    <path d="M48 196 v5 a24 7 0 0 0 48 0 v-5" stroke-width="1.2"/>
+    <path d="M50 200 a24 6 0 0 0 44 1 v3 a24 6 0 0 1 -44 -1 Z" fill="url(#p0107-3p-shade)" stroke="none"/>
+    <path d="M56 206 l-6 46 M88 206 l6 46 M64 205 l-2 47 M80 205 l2 47" stroke-width="1.3"/>
+    <path d="M52 236 h40" stroke-width="1"/>
+    <path d="M60 190 h24" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M72 180 l-3 -6 M72 180 l3 -6" stroke-width="0.9"/>
+    <!-- 吊灯（中） -->
+    <path d="M180 100 v22" stroke-width="1.2"/>
+    <path d="M172 100 h16" stroke-width="1.4"/>
+    <path d="M158 156 l6 -34 h32 l6 34 Z" stroke-width="1.6"/>
+    <path d="M160 152 l6 -28 h4 l-6 28 Z" fill="url(#p0107-3p-shade)" stroke="none"/>
+    <path d="M158 156 h44" stroke-width="1"/>
+    <path d="M174 156 a6 4 0 0 0 12 0" stroke-width="1.2"/>
+    <!-- 光锥（虚线）+ 台面 -->
+    <path d="M166 162 L130 232 M194 162 L230 232" stroke-width="0.9" stroke-dasharray="3 3"/>
+    <path d="M124 232 Q180 226 236 232 v10 Q180 236 124 242 Z" stroke-width="1.4"/>
+    <path d="M126 236 Q180 230 234 236 v4 Q180 234 126 240 Z" fill="url(#p0107-3p-dots)" stroke="none"/>
+    <path d="M140 224 q40 -6 80 0" stroke-width="0.6"/>
+    <!-- 调光条（右） -->
+    <rect x="270" y="132" width="30" height="100" rx="6" stroke-width="1.4"/>
+    <rect x="278" y="192" width="14" height="34" rx="3" fill="url(#p0107-3p-shade)" stroke="none"/>
+    <path d="M285 140 v84" stroke-width="0.8"/>
+    <rect x="276" y="190" width="18" height="10" rx="3" stroke-width="1.4"/>
+    <path d="M300 142 h6 M300 168 h6 M300 194 h6" stroke-width="0.9"/>
+    <!-- 箭头：凳 → 灯 → 调光条 -->
+    <path d="M98 188 Q130 176 154 154" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M148 150 l6 4 l-7 3" stroke-width="1"/>
+    <path d="M206 150 Q240 160 266 190" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M259 189 l7 1 l-1 -7" stroke-width="1"/>
+    <!-- 地平线 -->
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0107 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">落座调光</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">坐下那一刻，灯自己退到三成，只剩台面在发光</text>
+  <text x="309" y="145" font-size="7.5" fill="#666">80</text>
+  <text x="309" y="197" font-size="7.5" fill="#666">30</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">凳面压力垫 → 日落后有人落座 → 吊灯 5 秒渐暗 30% → 离席 3 分钟回 80%</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">三把凳子任一有人就触发，白天不干预</text>
+    <text x="64" y="366">渐变 5 秒，不是啪一下黑，客人察觉不到</text>
+    <text x="64" y="396">离席 3 分钟自动回迎客亮度，忘了也没事</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：吊灯亮度实体 + 待客日志</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome · home-assistant/core</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0107-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0107-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0107-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">落座自动调光 · 流程图</text>
+  <g filter="url(#p0107-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0107-3-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0107-3-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0107-3-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0107-3-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M230 98 V126" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V200 H85 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M330 250 H287"/>
+    <path d="M230 270 V310"/>
+    <path d="M30 250 Q10 250 10 150 Q10 130 28 130" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">凳面压力垫变化</text>
+    <text x="230" y="74">HA 状态</text><text x="230" y="87" font-size="8.5" fill="#666">sun.sun / 灯亮度</text>
+    <text x="85" y="147">数三把凳子</text><text x="85" y="161">有人数 N</text>
+    <text x="230" y="149">日落后且 N≥1？</text><text x="230" y="162" font-size="8.5" fill="#666">白天不干预</text>
+    <text x="390" y="147">是 → 吊灯 5 秒</text><text x="390" y="161">渐暗到 30%</text>
+    <text x="85" y="247">否 → 灯保持 80%</text><text x="85" y="261">等下一次落座</text>
+    <text x="230" y="247">N 归零计时 3 分钟</text><text x="230" y="261">到时回 80% 迎客</text>
+    <text x="390" y="247">同时关台后射灯</text><text x="390" y="261">只留台面一圈光</text>
+    <text x="240" y="331">亮度写回 HA + 待客日志</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="196">否</text><text x="150" y="196">日落前也走这条</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0107-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：任一凳面压力垫有人，且 sun.sun 已日落</li><li>动作：吊灯 5 秒渐变到 30%，关台后射灯</li><li>兜底：离席 3 分钟回 80%，白天完全不干预</li><li>出口：吊灯亮度实体 + 一条待客日志</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">ESPHome 读凳面压力垫上报 HA，自动化按 sun.sun 调 light.turn_on 渐变 5 秒</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 吧台点单账本</h2>
+    <p class="scene">解决的问题是：架子上 8 只罐子和台下几瓶黄酒还剩多少、今晚能做什么，靠记忆总会答应了才发现缺料。输入是 Bar Assistant 的库存和配方库；输出是“今晚能做的”清单、每杯扣减后的库存和购物清单。核心逻辑是按库存反查配方：只列材料齐全的饮品，客人选定后按配方克数扣减；任一材料低于 1 份就进购物清单并推送手机。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0107-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0107-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0107-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0107-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：木架上三只玻璃罐 -->
+    <path d="M36 200 H116" stroke-width="1.4"/>
+    <path d="M36 200 v4 h80 v-4" stroke-width="0.8"/>
+    <rect x="42" y="168" width="20" height="32" rx="3" stroke-width="1.4"/><rect x="45" y="160" width="14" height="8" rx="1.5" stroke-width="1.1"/>
+    <rect x="68" y="168" width="20" height="32" rx="3" stroke-width="1.4"/><rect x="71" y="160" width="14" height="8" rx="1.5" stroke-width="1.1"/>
+    <rect x="94" y="168" width="20" height="32" rx="3" stroke-width="1.4"/><rect x="97" y="160" width="14" height="8" rx="1.5" stroke-width="1.1"/>
+    <rect x="45" y="184" width="14" height="13" fill="url(#p0107-4p-dots)" stroke="none"/>
+    <rect x="71" y="178" width="14" height="19" fill="url(#p0107-4p-dots)" stroke="none"/>
+    <rect x="97" y="190" width="14" height="7" fill="url(#p0107-4p-dots)" stroke="none"/>
+    <path d="M46 178 h12 M72 178 h12 M98 178 h12" stroke-width="0.6"/>
+    <!-- 中：平板 + 配方清单 -->
+    <rect x="146" y="120" width="68" height="92" rx="6" stroke-width="1.6"/>
+    <rect x="152" y="128" width="56" height="74" rx="2" stroke-width="0.7"/>
+    <circle cx="160" cy="142" r="4" stroke-width="1"/><path d="M158 142 l1.5 1.5 l3 -3.5" stroke-width="1"/>
+    <path d="M168 142 h30" stroke-width="1"/>
+    <circle cx="160" cy="158" r="4" stroke-width="1"/><path d="M158 158 l1.5 1.5 l3 -3.5" stroke-width="1"/>
+    <path d="M168 158 h24" stroke-width="1"/>
+    <circle cx="160" cy="174" r="4" stroke-width="1"/>
+    <path d="M168 174 h28" stroke-width="1" stroke-dasharray="2 2"/>
+    <circle cx="160" cy="190" r="4" stroke-width="1"/>
+    <path d="M168 190 h20" stroke-width="1" stroke-dasharray="2 2"/>
+    <path d="M176 206 h8" stroke-width="1"/>
+    <!-- 右：热红酒杯 + 热气 -->
+    <path d="M254 176 h40 v22 a20 12 0 0 1 -40 0 Z" stroke-width="1.6"/>
+    <path d="M294 180 a8 8 0 0 1 0 16" stroke-width="1.4"/>
+    <path d="M256 190 h36 v6 a18 10 0 0 1 -36 0 Z" fill="url(#p0107-4p-shade)" stroke="none"/>
+    <path d="M264 166 q3 -6 0 -12 M274 164 q3 -6 0 -12 M284 166 q3 -6 0 -12" stroke-width="0.9"/>
+    <path d="M262 214 h24" stroke-width="1"/>
+    <!-- 购物车（右下小图标） -->
+    <path d="M292 226 h6 l5 14 h20 l4 -10 h-26" stroke-width="1.1"/>
+    <circle cx="306" cy="245" r="2" stroke-width="1"/><circle cx="320" cy="245" r="2" stroke-width="1"/>
+    <!-- 箭头：罐 → 平板 → 杯 → 购物车 -->
+    <path d="M118 176 Q132 166 142 158" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M136 156 l7 1 l-3 6" stroke-width="1"/>
+    <path d="M216 164 Q236 166 250 178" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M244 178 l7 1 l-1 -7" stroke-width="1"/>
+    <path d="M284 208 Q296 216 300 226" stroke-width="0.9" stroke-dasharray="2 3"/>
+    <!-- 地平线 -->
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0107 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">吧台点单账本</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">问一句手冲还是热红酒，架子上有什么它比我清楚</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">8 只罐子登记库存 → 按库存筛配方 → 点单扣用量 → 缺料进购物清单</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">只列今晚做得出来的，不会答应了才发现没桂花</text>
+    <text x="64" y="366">每杯按配方克数扣库存，罐子空前一周就知道</text>
+    <text x="64" y="396">购物清单直接推到手机，赶集顺手买齐</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：Bar Assistant（自托管） · 数据出口：库存 API + 购物清单推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：karlomikus/bar-assistant</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0107-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0107-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0107-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">吧台库存与点单 · 流程图</text>
+  <g filter="url(#p0107-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0107-4-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0107-4-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0107-4-shade)" stroke="none"/>
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0107-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V200 H85 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M330 250 H287"/>
+    <path d="M230 270 V310"/>
+    <path d="M30 250 Q10 250 10 150 Q10 130 28 130" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">客人坐下翻平板</text>
+    <text x="230" y="74">Bar Assistant</text><text x="230" y="87" font-size="8.5" fill="#666">库存 + 配方库</text>
+    <text x="85" y="147">按现有库存筛出</text><text x="85" y="161">今晚能做的配方</text>
+    <text x="230" y="149">客人选了一款？</text><text x="230" y="162" font-size="8.5" fill="#666">手冲 / 热红酒</text>
+    <text x="390" y="147">是 → 按配方扣减</text><text x="390" y="161">黄酒/桂花/陈皮用量</text>
+    <text x="85" y="247">否 → 推荐今晚招牌</text><text x="85" y="261">再翻一页继续聊</text>
+    <text x="230" y="247">库存看板更新</text><text x="230" y="261">记一杯待客日志</text>
+    <text x="390" y="247">有料低于 1 份 →</text><text x="390" y="261">购物清单 + 手机推送</text>
+    <text x="240" y="331">饮品上桌 · 数据回到库存</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="196">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0107-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：客人坐下翻平板，按库存筛可做配方</li><li>扣减：每杯按配方克数扣黄酒 / 桂花 / 陈皮</li><li>阈值：任一材料低于 1 份用量进购物清单</li><li>出口：库存 API + 购物清单手机推送</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 karlomikus/bar-assistant 自托管库存、配方与购物清单，HA 经 REST API 推缺料通知</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/karlomikus/bar-assistant" target="_blank" rel="noopener">karlomikus/bar-assistant</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0106.html">← 0106 柴火炉系统 拆解</a>
+    <a class="up" href="../modules/0107.html">回到 小吧台 专题页</a>
+    <a href="../teardown/0201.html">0201 模拟阳光 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

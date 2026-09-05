@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0304 光伏储能 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="光伏储能 的 5 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" class="on"><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/03.html">03 阁楼间</a> › <a href="../modules/0304.html">0304 光伏储能</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">阁楼间 · 模块 0304 · 核心拆解</p>
+    <h1>光伏储能：5 个核心模块与逻辑</h1>
+    <p class="lede">阁楼是离屋顶最近的房间，把光伏和储能都放在这里，太阳直接喂电。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 3</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>屋顶光伏阵列</a><a href="#p2"><i>2</i>储能主机与备用电池架</a><a href="#p3"><i>3</i>监测与安全面板</a><a href="#p4"><i>4</i>充放电与负载调度器</a><a href="#p5"><i>5</i>电池健康看护</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 屋顶光伏阵列</h2>
+    <p class="scene">屋顶南坡贴装 4 块 400W 单晶光伏板，总功率 1.6kW。用铝合金导轨顺着斜顶走，夹具卡在瓦面挂钩上，不打穿瓦片，靠挂钩和自重固定。四块板串联后经一根 6mm² 光伏专用线穿过屋顶下到阁楼，穿孔处用防水穿线套加密封胶，这是最容易漏水的地方。板下留 10cm 空气层散热，因为板温越高发电效率越低。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0304-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0304-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0304-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0304-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 瓦面 + 挂钩 -->
+    <path d="M52 314 l72 -24 l52 13 l-72 24 Z" stroke-width="1.5"/>
+    <path d="M52 314 v5 l52 13 v-5 M104 332 l72 -24 v-5" stroke-width="1.1"/>
+    <path d="M54 316 l48 12 v3 l-48 -12 Z" fill="url(#p0304-1-shade)" stroke="none"/>
+    <path d="M62 311 q8 -6 16 0 q8 -6 16 0 q8 -6 16 0 q8 -6 16 0" stroke-width="0.7"/>
+    <path d="M70 302 q8 -6 16 0 q8 -6 16 0 q8 -6 16 0 q8 -6 16 0" stroke-width="0.7"/>
+    <path d="M60 307 l60 -20 M78 310 l60 -20" stroke-width="0.5"/>
+    <path d="M100 302 v-12 q0 -5 5 -5 h8 M136 292 v-12 q0 -5 5 -5 h8" stroke-width="1.3"/>
+    <path d="M100 302 l3 2 M136 292 l3 2" stroke-width="0.9"/>
+    <!-- ② 铝合金导轨 ×2 -->
+    <path d="M118 270 l72 -24 l6 3 l-72 24 Z" stroke-width="1.4"/>
+    <path d="M118 270 v4 l6 3 v-4 M124 277 l72 -24 v-4" stroke-width="1"/>
+    <path d="M136 268 l50 -17" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <path d="M120 272 l4 2 v3 l-4 -2 Z" fill="url(#p0304-1-shade)" stroke="none"/>
+    <path d="M136 282 l72 -24 l6 3 l-72 24 Z" stroke-width="1.4"/>
+    <path d="M136 282 v4 l6 3 v-4 M142 289 l72 -24 v-4" stroke-width="1"/>
+    <path d="M154 280 l50 -17" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <path d="M138 284 l4 2 v3 l-4 -2 Z" fill="url(#p0304-1-shade)" stroke="none"/>
+    <!-- ③ 中压块 / 边压块 -->
+    <path d="M200 212 l10 -3 l6 2 l-10 3 Z" stroke-width="1.2"/>
+    <path d="M200 212 v5 l6 2 v-5 M206 219 l10 -3 v-5" stroke-width="1"/>
+    <circle cx="208" cy="210.5" r="2.2" stroke-width="0.9"/><path d="M208 202 v6" stroke-width="1"/>
+    <path d="M222 204 l10 -3 l6 2 l-10 3 Z" stroke-width="1.2"/>
+    <path d="M222 204 v5 l6 2 v-5 M228 211 l10 -3 v-5" stroke-width="1"/>
+    <circle cx="230" cy="202.5" r="2.2" stroke-width="0.9"/><path d="M230 194 v6" stroke-width="1"/>
+    <path d="M201 214 l4 1.5 v3 l-4 -1.5 Z M223 206 l4 1.5 v3 l-4 -1.5 Z" fill="url(#p0304-1-shade)" stroke="none"/>
+    <!-- ④ 光伏板 ×4 串联 -->
+    <path d="M226 172 l70 -30 l50 14 l-70 30 Z" stroke-width="1.6"/>
+    <path d="M230 172 l66 -28 l44 12 l-66 28 Z" stroke-width="0.7"/>
+    <path d="M226 172 v3 l50 14 v-3 M276 189 l70 -30 v-3" stroke-width="1"/>
+    <path d="M228 174 l48 13 v3 l-48 -13 Z" fill="url(#p0304-1-shade)" stroke="none"/>
+    <path d="M243 176 l66 -28 M259 181 l66 -28" stroke-width="0.55"/>
+    <path d="M244 166 l50 14 M261 159 l50 14 M278 152 l50 14 M295 145 l50 14" stroke-width="0.55"/>
+    <path d="M245 168 l7 2 M243 168 l1 -3" stroke-width="0.9"/>
+    <!-- ⑤ MC4 接头 + 光伏线 -->
+    <path d="M300 118 q10 -12 22 -8 q10 4 18 -6" stroke-width="1.3"/>
+    <path d="M360 100 h14 M376 100 h-2" stroke-width="1.3"/>
+    <rect x="340" y="96" width="16" height="8" rx="3.5" stroke-width="1.3"/>
+    <rect x="357" y="94" width="14" height="8" rx="3.5" stroke-width="1.3"/>
+    <path d="M356 100 h1 M344 96 v8 M348 96 v8" stroke-width="0.7"/>
+    <path d="M342 98 h12 v4 h-12 Z" fill="url(#p0304-1-shade)" stroke="none"/>
+    <path d="M371 98 q10 -10 4 -22" stroke-width="1.2"/>
+    <!-- ⑥ 穿顶防水套 + 密封胶 -->
+    <path d="M376 52 a16 6 0 0 1 32 0 a16 6 0 0 1 -32 0 Z" stroke-width="1.4"/>
+    <path d="M382 50 l6 -16 h8 l6 16" stroke-width="1.4"/>
+    <path d="M388 34 a4 2 0 0 1 8 0" stroke-width="1"/>
+    <path d="M392 32 v-10 q0 -4 4 -6 M396 32 v-9" stroke-width="1.1"/>
+    <path d="M384 52 a12 4 0 0 0 24 0 v2 a12 4 0 0 1 -24 0 Z" fill="url(#p0304-1-shade)" stroke="none"/>
+    <path d="M378 56 q4 3 8 1 M400 57 q4 3 8 0" stroke-width="0.8"/>
+    <path d="M386 42 l-4 1 M402 42 l4 1" stroke-width="0.6"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M176 304 H200"/><path d="M118 262 H108"/><path d="M200 206 H170"/><path d="M346 156 H400"/><path d="M372 88 H408"/><path d="M410 44 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="210" cy="304" r="8"/><circle cx="98" cy="262" r="8"/><circle cx="160" cy="206" r="8"/><circle cx="410" cy="156" r="8"/><circle cx="418" cy="88" r="8"/><circle cx="450" cy="44" r="8"/>
+    </g>
+    <text x="210" y="307.5">1</text><text x="98" y="265.5">2</text><text x="160" y="209.5">3</text><text x="410" y="159.5">4</text><text x="418" y="91.5">5</text><text x="450" y="47.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">屋顶光伏阵列 · 爆炸图</text>
+    <text x="16" y="52">1 瓦面挂钩（卡瓦不打孔）</text>
+    <text x="16" y="68">2 铝合金导轨 ×2</text>
+    <text x="16" y="84">3 中压块 / 边压块</text>
+    <text x="16" y="100">4 400W 单晶板 ×4（串联）</text>
+    <text x="16" y="116">5 MC4 接头 + 6mm² 光伏线</text>
+    <text x="16" y="132">6 穿顶防水套 + 密封胶</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0304-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>4 × 400W 单晶板，串联后开路电压约 160V</li><li>铝合金导轨 + 瓦面挂钩，不破坏瓦面</li><li>6mm² 光伏线 + MC4 接头，穿顶处防水套</li><li>板下留 10cm 散热空隙，晴天日发电 3～5 度</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 储能主机与备用电池架</h2>
+    <p class="scene">阁楼靠墙角落放一台 2kWh 户外储能电源，内置 MPPT 控制器，光伏线直接插输入口，输出口给阁楼所有低压设备供电。旁边自焊一个木架子，放两块备用磷酸铁锂电池，每块配一片 JK 保护板（BMS），用魔术贴固定，块间留 10cm 散热间隙。储能电源离斜顶至少 50cm，因为温度超过 40℃ 它会自动降速充电。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0304-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0304-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0304-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0304-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 木架（两层） -->
+    <path d="M56 292 h60 l16 -10 h-60 Z" stroke-width="1.5"/>
+    <path d="M56 292 v4 h60 v-4 M116 292 l16 -10 v4 l-16 10" stroke-width="1"/>
+    <path d="M56 318 h60 l16 -10 h-60 Z" stroke-width="1.5"/>
+    <path d="M56 318 v4 h60 v-4 M116 318 l16 -10 v4 l-16 10" stroke-width="1"/>
+    <path d="M58 296 v30 M114 296 v30 M130 286 v30 M72 282 v10" stroke-width="1.4"/>
+    <path d="M57 319 h58 v3 h-58 Z" fill="url(#p0304-2-shade)" stroke="none"/>
+    <path d="M64 288 h40 M66 314 h40" stroke-width="0.5"/>
+    <path d="M62 286 q12 -2 24 0 q12 2 24 0" stroke-width="0.4"/>
+    <!-- ② LiFePO4 电池 ×2 -->
+    <path d="M150 252 l30 -10 l18 6 l-30 10 Z" stroke-width="1.5"/>
+    <path d="M150 252 v14 l18 6 v-14 M168 272 l30 -10 v-14" stroke-width="1.3"/>
+    <path d="M152 262 l14 5 v3 l-14 -5 Z" fill="url(#p0304-2-shade)" stroke="none"/>
+    <circle cx="160" cy="250" r="2" stroke-width="0.9"/><circle cx="178" cy="244" r="2" stroke-width="0.9"/>
+    <path d="M158 246 h4 M160 244 v4 M176 240 h4" stroke-width="0.8"/>
+    <path d="M154 258 l22 -7" stroke-width="0.5" stroke-dasharray="1.5 2"/>
+    <path d="M200 235 l30 -10 l18 6 l-30 10 Z" stroke-width="1.5"/>
+    <path d="M200 235 v14 l18 6 v-14 M218 255 l30 -10 v-14" stroke-width="1.3"/>
+    <path d="M202 245 l14 5 v3 l-14 -5 Z" fill="url(#p0304-2-shade)" stroke="none"/>
+    <circle cx="210" cy="233" r="2" stroke-width="0.9"/><circle cx="228" cy="227" r="2" stroke-width="0.9"/>
+    <path d="M208 229 h4 M210 227 v4 M226 223 h4" stroke-width="0.8"/>
+    <path d="M204 241 l22 -7" stroke-width="0.5" stroke-dasharray="1.5 2"/>
+    <!-- ③ JK BMS 保护板 + 均衡线 -->
+    <path d="M228 192 l30 -10 l14 5 l-30 10 Z" stroke-width="1.4"/>
+    <path d="M228 192 v2 l14 5 v-2 M242 199 l30 -10 v-2" stroke-width="0.8"/>
+    <path d="M236 190 l6 -2 l3 1 l-6 2 Z M248 186 l6 -2 l3 1 l-6 2 Z" stroke-width="0.9"/>
+    <path d="M237 190 l5 -1.5 l2 0.7 l-5 1.5 Z" fill="url(#p0304-2-shade2)" stroke="none"/>
+    <path d="M240 195 l3 -1 M244 196 l3 -1 M248 197 l3 -1 M252 198 l3 -1" stroke-width="1.1"/>
+    <circle cx="231" cy="192" r="0.9" stroke-width="0.6"/><circle cx="268" cy="187" r="0.9" stroke-width="0.6"/>
+    <path d="M232 189 q-8 -6 -16 -6 M232 190 q-8 -4 -16 -1 M232 191 q-8 -2 -16 4" stroke-width="0.7"/>
+    <path d="M212 180 h4 v18 h-4 Z" stroke-width="0.9"/>
+    <path d="M213 183 h2 M213 187 h2 M213 191 h2 M213 195 h2" stroke-width="0.6"/>
+    <!-- ④ 2kWh 储能电源 -->
+    <path d="M286 140 l44 -16 l22 8 l-44 16 Z" stroke-width="1.6"/>
+    <path d="M286 140 v26 l22 8 v-26 M308 174 l44 -16 v-26" stroke-width="1.4"/>
+    <path d="M288 160 l18 6 v5 l-18 -6 Z" fill="url(#p0304-2-shade)" stroke="none"/>
+    <path d="M300 132 q18 -14 36 -4" stroke-width="1.3"/>
+    <path d="M300 132 v3 M336 128 v3" stroke-width="1"/>
+    <path d="M290 147 l12 4 v8 l-12 -4 Z" stroke-width="0.9"/>
+    <path d="M292 151 l8 3" stroke-width="0.6"/>
+    <circle cx="296" cy="163" r="1.3" stroke-width="0.8"/><circle cx="302" cy="165" r="1.3" stroke-width="0.8"/>
+    <circle cx="330" cy="150" r="2.6" stroke-width="1"/><circle cx="330" cy="150" r="1" stroke-width="0.6"/>
+    <path d="M316 160 l22 -8 M316 165 l22 -8 M316 170 l22 -8" stroke-width="0.5"/>
+    <!-- ⑤ 输出口面板 -->
+    <rect x="352" y="50" width="48" height="26" rx="2" stroke-width="1.4"/>
+    <rect x="354" y="52" width="44" height="22" stroke-width="0.6"/>
+    <rect x="358" y="56" width="8" height="5" stroke-width="0.9"/><rect x="358" y="65" width="8" height="5" stroke-width="0.9"/>
+    <circle cx="378" cy="63" r="4.5" stroke-width="1"/><circle cx="378" cy="63" r="1.8" stroke-width="0.7"/>
+    <rect x="386" y="56" width="10" height="14" rx="2" stroke-width="1"/>
+    <path d="M389 60 v6 M393 60 v6" stroke-width="1"/>
+    <path d="M355 71 h42 v2 h-42 Z" fill="url(#p0304-2-shade)" stroke="none"/>
+    <!-- ⑥ 光伏 MC4 输入插头 -->
+    <path d="M400 20 q10 -4 18 4" stroke-width="1.2"/>
+    <rect x="418" y="22" width="14" height="8" rx="3.5" stroke-width="1.3"/>
+    <rect x="433" y="24" width="12" height="6" rx="3" stroke-width="1.2"/>
+    <path d="M422 22 v8 M426 22 v8" stroke-width="0.7"/>
+    <path d="M420 24 h10 v4 h-10 Z" fill="url(#p0304-2-shade)" stroke="none"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M132 310 H200"/><path d="M150 258 H120"/><path d="M272 190 H302"/><path d="M352 144 H400"/><path d="M400 63 H420"/><path d="M446 27 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="210" cy="310" r="8"/><circle cx="110" cy="258" r="8"/><circle cx="312" cy="190" r="8"/><circle cx="410" cy="144" r="8"/><circle cx="430" cy="63" r="8"/><circle cx="460" cy="27" r="8"/>
+    </g>
+    <text x="210" y="313.5">1</text><text x="110" y="261.5">2</text><text x="312" y="193.5">3</text><text x="410" y="147.5">4</text><text x="430" y="66.5">5</text><text x="460" y="30.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">储能主机与电池架 · 爆炸图</text>
+    <text x="16" y="52">1 木架（两层，留 10cm 间隙）</text>
+    <text x="16" y="68">2 LiFePO4 电池 2×100Ah</text>
+    <text x="16" y="84">3 JK BMS 保护板 + 均衡线</text>
+    <text x="16" y="100">4 2kWh 储能电源（内置 MPPT）</text>
+    <text x="16" y="116">5 输出口面板 USB / 12V / 220V</text>
+    <text x="16" y="132">6 光伏 MC4 输入插头</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0304-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>2kWh 储能，内置 MPPT，光伏输入 ≤ 500W</li><li>备用 LiFePO4 2 × 100Ah，各配 JK BMS</li><li>木架留 10cm 间隙，离斜顶 ≥ 50cm</li><li>USB / 12V / 220V 三种输出口按优先级分配</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">syssi/esphome-jk-bms</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-hw">产品模块</span> 3. 监测与安全面板</h2>
+    <p class="scene">墙上一块小木板集中放三样东西：一块复古指针电流表，串在储能输出主线上，指针抖动就说明有电在流；一块小屏幕显示当前发电功率和剩余电量；还有一枚独立烟感。面板下方紧挨着放一罐二氧化碳灭火器。指针表是纯物理的，不依赖任何网络和程序，是一个“肉眼可信”的兜底；小屏幕的数据则来自 HomeAssistant。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0304-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0304-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0304-3-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0304-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 木面板底板 -->
+    <path d="M56 318 l90 -30 l40 10 l-90 30 Z" stroke-width="1.5"/>
+    <path d="M56 318 v4 l40 10 v-4 M96 332 l90 -30 v-4" stroke-width="1.1"/>
+    <path d="M58 320 l36 9 v3 l-36 -9 Z" fill="url(#p0304-3-shade)" stroke="none"/>
+    <path d="M66 312 l80 -27 M80 318 l80 -27 M94 324 l60 -20" stroke-width="0.45"/>
+    <path d="M72 306 q10 -6 20 -3 q10 3 20 -4" stroke-width="0.4"/>
+    <circle cx="64" cy="317" r="1.4" stroke-width="0.7"/><circle cx="142" cy="291" r="1.4" stroke-width="0.7"/><circle cx="178" cy="299" r="1.4" stroke-width="0.7"/><circle cx="100" cy="325" r="1.4" stroke-width="0.7"/>
+    <!-- ② 分流器 + 接线端子 -->
+    <path d="M156 252 l28 -9 l6 2 l-28 9 Z" stroke-width="1.4"/>
+    <path d="M156 252 v3 l6 2 v-3 M162 257 l28 -9 v-3" stroke-width="1"/>
+    <path d="M157 254 l5 1.5 v2.5 l-5 -1.5 Z" fill="url(#p0304-3-shade2)" stroke="none"/>
+    <circle cx="164" cy="250" r="2.2" stroke-width="0.9"/><circle cx="182" cy="244" r="2.2" stroke-width="0.9"/>
+    <path d="M163 248.5 l2 3 M165 248.5 l-2 3 M181 242.5 l2 3 M183 242.5 l-2 3" stroke-width="0.5"/>
+    <path d="M168 251 l10 -3.5" stroke-width="0.6"/>
+    <path d="M156 254 q-10 2 -14 8 M190 245 q8 -3 12 -10" stroke-width="1.1"/>
+    <!-- ③ 指针电流表 -->
+    <circle cx="245" cy="180" r="22" stroke-width="1.5"/>
+    <circle cx="245" cy="180" r="19" stroke-width="0.6"/>
+    <path d="M229 188 a18 18 0 0 1 32 0" stroke-width="0.9"/>
+    <path d="M230 186 l-2 -1 M235 178 l-2 -2 M245 172 v-3 M255 178 l2 -2 M260 186 l2 -1" stroke-width="0.8"/>
+    <path d="M245 190 l8 -16" stroke-width="1.4"/>
+    <circle cx="245" cy="190" r="1.6" stroke-width="0.9"/>
+    <path d="M233 194 h24 v4 h-24 Z" fill="url(#p0304-3-shade)" stroke="none"/>
+    <path d="M236 202 h18 v5 h-18 Z" stroke-width="1"/>
+    <path d="M240 207 v4 M250 207 v4" stroke-width="1"/>
+    <!-- ④ 小屏幕（ESP32 + 显示屏） -->
+    <rect x="292" y="108" width="48" height="30" rx="2" stroke-width="1.5"/>
+    <rect x="295" y="111" width="42" height="24" stroke-width="0.6"/>
+    <path d="M298 128 q6 -14 12 0 t12 0 t12 0" stroke-width="0.9"/>
+    <path d="M298 116 h10 M298 119 h6" stroke-width="0.6"/>
+    <path d="M322 114 h4 v4 h-4 Z M328 114 h4 v4 h-4 Z" stroke-width="0.5"/>
+    <rect x="300" y="140" width="32" height="6" stroke-width="1"/>
+    <path d="M301 141 h30 v4 h-30 Z" fill="url(#p0304-3-shade)" stroke="none"/>
+    <path d="M305 146 v3 M311 146 v3 M317 146 v3 M323 146 v3 M329 146 v3" stroke-width="0.8"/>
+    <!-- ⑤ 独立烟感 -->
+    <ellipse cx="378" cy="60" rx="20" ry="7" stroke-width="1.4"/>
+    <path d="M358 60 v8 a20 7 0 0 0 40 0 v-8" stroke-width="1.3"/>
+    <path d="M360 64 a20 6 0 0 0 36 4 v3 a20 6 0 0 1 -36 -4 Z" fill="url(#p0304-3-shade)" stroke="none"/>
+    <path d="M366 68 v3 M372 69.5 v3 M378 70 v3 M384 69.5 v3 M390 68 v3" stroke-width="0.7"/>
+    <circle cx="378" cy="60" r="4" stroke-width="0.7"/>
+    <circle cx="370" cy="61" r="1.3" stroke-width="0.8"/>
+    <!-- ⑥ CO₂ 灭火器 -->
+    <rect x="426" y="16" width="16" height="36" rx="6" stroke-width="1.5"/>
+    <path d="M431 16 v-4 h6 v4" stroke-width="1.1"/>
+    <path d="M434 12 l-6 -5 M434 12 l8 -3" stroke-width="1.1"/>
+    <path d="M441 11 q10 4 8 14 q-1 6 -4 9" stroke-width="1.1"/>
+    <path d="M445 34 l5 3 l-7 3 Z" stroke-width="0.9"/>
+    <rect x="428" y="30" width="12" height="10" stroke-width="0.6"/>
+    <path d="M429 31 h10 v8 h-10 Z" fill="url(#p0304-3-shade)" stroke="none"/>
+    <path d="M430 46 h8" stroke-width="0.6"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M186 306 H200"/><path d="M156 250 H120"/><path d="M245 158 V134"/><path d="M340 124 H400"/><path d="M398 66 H404"/><path d="M444 30 H452"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="210" cy="306" r="8"/><circle cx="110" cy="250" r="8"/><circle cx="245" cy="126" r="8"/><circle cx="410" cy="124" r="8"/><circle cx="414" cy="66" r="8"/><circle cx="462" cy="30" r="8"/>
+    </g>
+    <text x="210" y="309.5">1</text><text x="110" y="253.5">2</text><text x="245" y="129.5">3</text><text x="410" y="127.5">4</text><text x="414" y="69.5">5</text><text x="462" y="33.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">监测与安全面板 · 爆炸图</text>
+    <text x="16" y="52">1 木面板底板（挂墙）</text>
+    <text x="16" y="68">2 分流器 + 主线接线端子</text>
+    <text x="16" y="84">3 指针电流表 0~30A</text>
+    <text x="16" y="100">4 小屏幕（发电 / 剩余电量）</text>
+    <text x="16" y="116">5 独立烟感</text>
+    <text x="16" y="132">6 CO₂ 灭火器</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0304-3</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>指针电流表 0～30A，串分流器在主线上</li><li>小屏幕显示发电 / 剩余，数据来自 HA</li><li>独立烟感 + CO₂ 灭火器紧挨储能</li><li>面板离储能 30cm，方便伸手拔线</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 充放电与负载调度器</h2>
+    <p class="scene">储能电量有限，谁先用电要有规矩。HomeAssistant 读到储能的 SOC（剩余电量百分比）和光伏输入功率，按优先级开关输出口：帐篷串灯 &gt; 气象站 &gt; 3D 打印机待机 &gt; 楼下充电。SOC 高于 80% 全开；降到 50% 关楼下充电；30% 关打印机待机；低于 20% 只留串灯和气象站，并推送“今晚省着用”。白天光伏输入大于负载时逐级恢复。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0304-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0304-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0304-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0304-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：储能电量（左） → 四级阈值台阶（中上） → 输出口与负载（右） -->
+    <!-- 电池 -->
+    <rect x="50" y="178" width="40" height="56" rx="4" stroke-width="1.6"/>
+    <rect x="62" y="172" width="16" height="6" rx="1" stroke-width="1.2"/>
+    <rect x="56" y="186" width="28" height="8" rx="1" stroke-width="0.8"/>
+    <rect x="56" y="197" width="28" height="8" rx="1" stroke-width="0.8"/>
+    <rect x="56" y="208" width="28" height="8" rx="1" stroke-width="0.8"/>
+    <rect x="56" y="219" width="28" height="8" rx="1" stroke-width="0.8"/>
+    <rect x="57" y="209" width="26" height="6" fill="url(#p0304-4p-shade)" stroke="none"/>
+    <rect x="57" y="220" width="26" height="6" fill="url(#p0304-4p-shade)" stroke="none"/>
+    <path d="M94 186 h6 M94 198 h6 M94 210 h6 M94 222 h6" stroke-width="0.6"/>
+    <!-- 四级台阶 80 / 50 / 30 / 20 -->
+    <path d="M148 164 v-46 h16 v12 h16 v12 h16 v12 h16 v10 Z" stroke-width="1.6"/>
+    <path d="M150 162 v-42 h12 v12 h16 v12 h16 v12 h16 v6 Z" fill="url(#p0304-4p-dots)" stroke="none"/>
+    <path d="M156 124 h4 M172 136 h4 M188 148 h4 M204 160 h4" stroke-width="0.9"/>
+    <circle cx="204" cy="114" r="6" stroke-width="1.2"/>
+    <path d="M204 104 v-3 M204 124 v3 M194 114 h-3 M214 114 h3 M197 107 l-2 -2 M211 121 l2 2 M211 107 l2 -2 M197 121 l-2 2" stroke-width="0.9"/>
+    <!-- 输出口排插 -->
+    <rect x="244" y="176" width="84" height="22" rx="3" stroke-width="1.6"/>
+    <circle cx="256" cy="187" r="5" stroke-width="1"/><circle cx="278" cy="187" r="5" stroke-width="1"/><circle cx="300" cy="187" r="5" stroke-width="1"/><circle cx="322" cy="187" r="5" stroke-width="1"/>
+    <path d="M254 185 v4 M258 185 v4 M276 185 v4 M280 185 v4" stroke-width="0.8"/>
+    <path d="M297 184 l6 6 M303 184 l-6 6 M319 184 l6 6 M325 184 l-6 6" stroke-width="1.2"/>
+    <path d="M256 198 v10 M278 198 v10 M300 198 v10 M322 198 v10" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <!-- 负载：串灯 / 气象站 / 打印机 / 手机 -->
+    <circle cx="256" cy="216" r="6" stroke-width="1.3"/><path d="M253 222 h6 v3 h-6 Z" stroke-width="1"/>
+    <path d="M278 210 v20 M272 212 h12 M272 212 a3 2 0 1 0 -6 0 a3 2 0 1 0 6 0 M290 212 a3 2 0 1 0 -6 0 a3 2 0 1 0 6 0 M274 230 h8" stroke-width="1"/>
+    <rect x="292" y="214" width="16" height="12" rx="2" stroke-width="1.2"/><path d="M296 214 v-4 h8 v4 M295 220 h10" stroke-width="0.9"/>
+    <rect x="316" y="210" width="12" height="20" rx="2" stroke-width="1.2"/><path d="M319 227 h6 M319 213 h6" stroke-width="0.7"/>
+    <!-- 箭头 -->
+    <path d="M96 176 Q122 150 146 138" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M214 148 Q232 160 250 174" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地面线 -->
+    <path d="M40 268 Q180 262 320 268" stroke-width="1.2"/>
+    <path d="M44 272 q40 -3 80 0 M236 272 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0304 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">负载调度器</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">电量像水位，谁先关灯早就排好了队</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">SOC + 光伏输入 → 四级阈值 → 按优先级开关输出口 → 大屏日报</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">串灯 › 气象站 › 打印机待机 › 楼下充电，四级优先</text>
+    <text x="64" y="366">80 / 50 / 30 / 20% 逐级断电，回升 10% 才恢复</text>
+    <text x="64" y="396">低于 20% 推送“今晚省着用”，白天够用自动放开</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HomeAssistant 自动化 · 数据出口：0211 大屏 · 每日发电量</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：tolwi/hassio-ecoflow-cloud</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0304-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0304-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0304-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">充放电与负载调度 · 流程图</text>
+  <g filter="url(#p0304-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱：储能状态 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤：算净功率 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 是 → 关一路 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0304-4-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0304-4-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0304-4-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="165" y="312" width="150" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0304-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M175 250 H142"/>
+    <path d="M230 270 V310"/>
+    <path d="M390 270 V327 H317"/>
+    <path d="M30 250 Q10 250 10 150 Q10 130 28 130" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每 5 分钟读储能状态</text>
+    <text x="230" y="74">储能状态</text><text x="230" y="87" font-size="8.5" fill="#666">SOC · 光伏 W</text>
+    <text x="85" y="147">算净功率</text><text x="85" y="161">光伏输入 − 各口负载</text>
+    <text x="230" y="149">SOC 跌破阈值？</text><text x="230" y="162" font-size="8.5" fill="#666">80 / 50 / 30 / 20%</text>
+    <text x="390" y="147">是 → 按优先级关一路</text><text x="390" y="161" font-size="8.5" fill="#666">楼下充电 › 打印机 › 气象站</text>
+    <text x="85" y="247">回升 10% 再恢复</text><text x="85" y="261">避免反复开关</text>
+    <text x="230" y="247">否 → 光伏 &gt; 负载时</text><text x="230" y="261">逐级恢复输出口</text>
+    <text x="390" y="247">&lt;20% 只留串灯气象站</text><text x="390" y="261">推送“今晚省着用”</text>
+    <text x="240" y="331">每日发电量推送 0211 大屏</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="200">否</text><text x="158" y="242">滞回</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0304-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>输入：SOC、光伏输入功率、各口负载功率</li><li>阈值：80/50/30/20% 四级，回升 10% 才恢复</li><li>动作：按优先级开关储能输出口或智能插座</li><li>出口：每日发电量推送 0211 中枢大屏</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 tolwi/hassio-ecoflow-cloud 读 SOC 和输入功率并切输出口，HA 自动化按四级阈值调度</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/tolwi/hassio-ecoflow-cloud" target="_blank" rel="noopener">tolwi/hassio-ecoflow-cloud</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p5">
+    <h2><span class="kind kind-logic">联动逻辑</span> 5. 电池健康看护</h2>
+    <p class="scene">备用磷酸铁锂电池每一节的电压和温度，由保护板 BMS 实时测量。一块 ESP32 通过串口读 JK BMS，或用 batmon 加载项走蓝牙，把单体电压、压差、温度、循环次数送进 HomeAssistant。压差超过 50mV 说明要均衡，温度超过 45℃ 立刻推送并切断充电，冬天低于 0℃ 也禁止充电。每月自动出一份电池健康报告。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0304-5p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0304-5p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0304-5p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0304-5p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：电芯组 + BMS（左） → ESP32 / 蓝牙（中上） → 手机告警 + 继电器（右） -->
+    <!-- 电芯 ×4 + BMS 板 -->
+    <rect x="46" y="184" width="10" height="48" rx="2" stroke-width="1.4"/>
+    <rect x="58" y="184" width="10" height="48" rx="2" stroke-width="1.4"/>
+    <rect x="70" y="184" width="10" height="48" rx="2" stroke-width="1.4"/>
+    <rect x="82" y="184" width="10" height="48" rx="2" stroke-width="1.4"/>
+    <path d="M49 180 h4 M61 180 h4 M73 180 h4 M85 180 h4 M51 178 v4 M75 178 v4" stroke-width="0.9"/>
+    <rect x="47" y="216" width="8" height="14" fill="url(#p0304-5p-shade)" stroke="none"/>
+    <rect x="71" y="216" width="8" height="14" fill="url(#p0304-5p-shade)" stroke="none"/>
+    <rect x="44" y="164" width="50" height="9" rx="1.5" stroke-width="1.4"/>
+    <rect x="46" y="166" width="46" height="5" fill="url(#p0304-5p-dots)" stroke="none"/>
+    <path d="M51 173 v6 M63 173 v6 M75 173 v6 M87 173 v6" stroke-width="0.8"/>
+    <!-- 温度计 -->
+    <path d="M104 190 v26 a5 5 0 1 0 6 0 v-26 a3 3 0 0 0 -6 0 Z" stroke-width="1.1"/>
+    <path d="M107 202 v14" stroke-width="1.6"/>
+    <path d="M112 194 h3 M112 200 h3 M112 206 h3" stroke-width="0.6"/>
+    <!-- ESP32 + 蓝牙 -->
+    <rect x="160" y="120" width="40" height="40" rx="3" stroke-width="1.6"/>
+    <rect x="168" y="128" width="24" height="24" rx="1" stroke-width="0.9"/>
+    <rect x="170" y="130" width="20" height="20" fill="url(#p0304-5p-dots)" stroke="none"/>
+    <path d="M160 128 h-6 M160 140 h-6 M160 152 h-6 M200 128 h6 M200 140 h6 M200 152 h6 M168 160 v6 M180 160 v6 M192 160 v6" stroke-width="1"/>
+    <path d="M180 120 v-10 M174 110 h12" stroke-width="1.1"/>
+    <path d="M210 128 a14 14 0 0 1 0 24 M216 122 a22 22 0 0 1 0 36" stroke-width="0.9" stroke-dasharray="2 3"/>
+    <!-- 手机告警 -->
+    <rect x="256" y="170" width="40" height="66" rx="6" stroke-width="1.6"/>
+    <rect x="260" y="178" width="32" height="50" rx="2" stroke-width="0.8"/>
+    <path d="M270 174 h12" stroke-width="0.8"/>
+    <path d="M276 190 l12 20 h-24 Z" stroke-width="1.3"/>
+    <path d="M276 197 v7 M276 207 v1" stroke-width="1.4"/>
+    <path d="M262 216 h28 M262 221 h20" stroke-width="0.6"/>
+    <!-- 充电继电器（断开） -->
+    <path d="M304 214 h8 l10 -8 M324 214 h8" stroke-width="1.3"/>
+    <circle cx="312" cy="214" r="1.6" stroke-width="0.9"/><circle cx="324" cy="214" r="1.6" stroke-width="0.9"/>
+    <rect x="308" y="222" width="20" height="10" rx="2" stroke-width="1"/>
+    <path d="M309 223 h18 v8 h-18 Z" fill="url(#p0304-5p-shade)" stroke="none"/>
+    <path d="M318 222 v-6" stroke-width="0.8" stroke-dasharray="1.5 1.5"/>
+    <!-- 箭头 -->
+    <path d="M100 176 Q126 156 156 140" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M222 148 Q238 164 254 186" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地面线 -->
+    <path d="M40 268 Q180 262 320 268" stroke-width="1.2"/>
+    <path d="M44 272 q40 -3 80 0 M236 272 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0304 · L5</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">电池健康看护</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">每一节电芯的体温和血压，都有人盯着</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">JK BMS → ESP32 / 蓝牙 → HA 阈值判断 → 推送 + 切充电继电器</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">单体电压、压差、温度、循环次数每 10 秒进 HA</text>
+    <text x="64" y="366">压差 &gt;50mV 均衡；&gt;45℃ 或 &lt;0℃ 立即停充并推送</text>
+    <text x="64" y="396">BMS 硬件保护独立于软件，每月自动出健康报告</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HA · 数据出口：HA 电池实体 · 月度健康报告</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：syssi/esphome-jk-bms · fl4p/batmon-ha</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0304-5-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="8" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0304-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0304-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">电池健康看护 · 流程图</text>
+  <g filter="url(#p0304-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源 圆柱：JK BMS -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤：ESP32 解析 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 1：温度 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 是 → 切断充电 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行：均衡 / 判断 2：压差 / 硬件兜底 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <path d="M230 226 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="230" width="120" height="40" rx="6" stroke-dasharray="4 3"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0304-5-shade)" stroke="none"/>
+    <path d="M232 274 l56 -24 l4 2 l-58 26 Z" fill="url(#p0304-5-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z" fill="url(#p0304-5-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="165" y="312" width="150" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0304-5-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V224"/>
+    <path d="M390 170 V228" stroke-dasharray="3 3"/>
+    <path d="M172 250 H142"/>
+    <path d="M230 274 V310"/>
+    <path d="M390 270 V327 H317"/>
+    <path d="M85 270 V327 H163"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每 10 秒读一次 BMS</text>
+    <text x="230" y="74">JK BMS</text><text x="230" y="87" font-size="8.5" fill="#666">串口 / 蓝牙</text>
+    <text x="85" y="147">ESP32 解析数据帧</text><text x="85" y="161" font-size="8.5" fill="#666">单体电压 · 温度 · 循环数</text>
+    <text x="230" y="149">温度越界？</text><text x="230" y="162" font-size="8.5" fill="#666">&gt;45℃ 或 &lt;0℃</text>
+    <text x="390" y="147">是 → 切断充电继电器</text><text x="390" y="161">立即推送手机</text>
+    <text x="85" y="247">是 → 开启均衡</text><text x="85" y="261">压差记入待办</text>
+    <text x="230" y="247">压差 &gt; 50mV？</text><text x="230" y="260" font-size="8.5" fill="#666">单体最高 − 最低</text>
+    <text x="390" y="247">BMS 硬件保护独立生效</text><text x="390" y="261" font-size="8.5" fill="#666">软件挂了也会断电</text>
+    <text x="240" y="331">写 HA 曲线 · 每月健康报告</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="200">否</text><text x="156" y="244">是</text><text x="240" y="294">否</text><text x="398" y="200">兜底</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0304-5</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>输入：单体电压、压差、温度、循环次数</li><li>阈值：压差 &gt;50mV 均衡；&gt;45℃ 或 &lt;0℃ 停充</li><li>动作：推送 + 切断充电继电器</li><li>兜底：BMS 硬件保护独立于软件之外</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 syssi/esphome-jk-bms 串口读 JK 保护板，或 fl4p/batmon-ha 走蓝牙，HA 做阈值告警和切充电</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">syssi/esphome-jk-bms</a><a href="https://github.com/fl4p/batmon-ha" target="_blank" rel="noopener">fl4p/batmon-ha</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0303.html">← 0303 帐篷区 拆解</a>
+    <a class="up" href="../modules/0304.html">回到 光伏储能 专题页</a>
+    <a href="../teardown/0305.html">0305 3D 打印 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

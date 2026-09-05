@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0403 喷漆间 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="喷漆间 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" class="on"><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/04.html">04 阁楼仓库</a> › <a href="../modules/0403.html">0403 喷漆间</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">阁楼仓库 · 模块 0403 · 核心拆解</p>
+    <h1>喷漆间：4 个核心模块与逻辑</h1>
+    <p class="lede">一个带抽风墙的透明小房间，喷完的木盒排队晾在杆上，像小型画廊。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>过滤棉排风墙</a><a href="#p2"><i>2</i>阳光板小间门框</a><a href="#p3"><i>3</i>排风联锁</a><a href="#p4"><i>4</i>VOC 监测告警</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 过滤棉排风墙</h2>
+    <p class="scene">喷漆间背面整面墙就是一台“抽风机”：最前面一层 60×120cm 过滤棉框拦住漆雾颗粒，后面一个薄静压箱把气流均匀收拢，再接 300m³/h 管道风机，经 150mm 铝箔管直排到阁楼外墙的防雨出风口。目的是在小间里形成稳定负压：空气只往过滤墙走，雾不飘回操作者脸前。过滤棉堵了自己感觉不到，所以面板做成快拆扣按月更换；风机装在过滤棉之后，电机不接触溶剂雾。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0403-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0403-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0403-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0403-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 静压箱壳体 -->
+    <path d="M56 312 l72 -22 v-50 l-72 22 Z" stroke-width="1.5"/>
+    <path d="M128 290 l22 11 v-50 l-22 -11 M56 262 l72 -22 l22 11" stroke-width="1.2"/>
+    <path d="M128 290 l22 11 v-50 l-22 -11 Z" fill="url(#p0403-1-shade)" stroke="none"/>
+    <path d="M64 306 l56 -17 v-38 l-56 17 Z" stroke-width="0.7"/>
+    <ellipse cx="139" cy="252" rx="6" ry="9" transform="rotate(-20 139 252)" stroke-width="1"/>
+    <!-- 2 管道风机 -->
+    <ellipse cx="160" cy="236" rx="8" ry="16" transform="rotate(-70 160 236)" stroke-width="1.4"/>
+    <path d="M154 221 l40 -12 M166 251 l40 -12" stroke-width="1.4"/>
+    <ellipse cx="200" cy="224" rx="8" ry="16" transform="rotate(-70 200 224)" stroke-width="1.4"/>
+    <path d="M200 224 l-6 -10 M200 224 l10 4 M200 224 l-4 8" stroke-width="1"/><circle cx="200" cy="224" r="2" stroke-width="0.9"/>
+    <path d="M172 238 h14 v6 h-14 Z" stroke-width="0.9"/>
+    <path d="M172 238 h14 v6 h-14 Z" fill="url(#p0403-1-shade)" stroke="none"/>
+    <path d="M160 232 l34 -10 M160 240 l34 -10" stroke-width="0.5"/>
+    <!-- 3 铝箔管 + 出风百叶 -->
+    <path d="M226 190 q6 -6 12 0 q6 6 12 0 q6 -6 12 0 q6 6 12 0" stroke-width="1.2"/>
+    <path d="M226 202 q6 -6 12 0 q6 6 12 0 q6 -6 12 0 q6 6 12 0" stroke-width="1.2"/>
+    <path d="M226 190 v12 M274 190 v12" stroke-width="1"/>
+    <path d="M232 192 v9 M244 192 v9 M256 192 v9 M268 192 v9" stroke-width="0.5"/>
+    <path d="M278 200 l24 -8 v-22 l-24 8 Z" stroke-width="1.4"/>
+    <path d="M280 194 l20 -6 M280 188 l20 -6 M280 182 l20 -6" stroke-width="0.9"/>
+    <path d="M278 200 l24 -8 v-3 l-24 8 Z" fill="url(#p0403-1-shade)" stroke="none"/>
+    <!-- 4 快拆框架 -->
+    <path d="M292 140 l60 -18 v46 l-60 18 Z" stroke-width="1.5"/>
+    <path d="M298 140 l48 -14.5 v36 l-48 14.5 Z" stroke-width="0.9"/>
+    <path d="M292 140 l6 0 v46 l-6 0 Z" fill="url(#p0403-1-shade)" stroke="none"/>
+    <path d="M296 136 l-4 -2 M350 120 l-4 -2 M296 184 l-4 -2 M350 168 l-4 -2" stroke-width="1.2"/>
+    <!-- 5 过滤棉 -->
+    <path d="M356 84 l60 -18 v46 l-60 18 Z" stroke-width="1.5"/>
+    <path d="M416 66 l3 1.5 v46 l-3 -1.5" stroke-width="0.9"/>
+    <path d="M356 84 l60 -18 v46 l-60 18 Z" fill="url(#p0403-1-shade2)" stroke="none"/>
+    <path d="M362 90 l48 -14 M362 100 l48 -14 M362 110 l48 -14 M362 120 l48 -14" stroke-width="0.4" stroke-dasharray="1 2"/>
+
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M150 290 H196"/><path d="M154 236 H118"/><path d="M250 210 V230"/><path d="M352 158 H372"/><path d="M416 90 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="290" r="8"/><circle cx="108" cy="236" r="8"/><circle cx="250" cy="240" r="8"/><circle cx="382" cy="158" r="8"/><circle cx="450" cy="90" r="8"/>
+    </g>
+    <text x="206" y="293.5">1</text><text x="108" y="239.5">2</text><text x="250" y="243.5">3</text><text x="382" y="161.5">4</text><text x="450" y="93.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">过滤棉排风墙 · 爆炸图</text>
+    <text x="16" y="52">1 静压箱壳体（深 150mm）</text>
+    <text x="16" y="68">2 管道风机 300m³/h</text>
+    <text x="16" y="84">3 150mm 铝箔管 + 外墙防雨百叶</text>
+    <text x="16" y="100">4 快拆卡扣框架</text>
+    <text x="16" y="116">5 过滤棉 60×120cm（每月更换）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0403-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>过滤棉 60×120cm，快拆卡扣，每月更换</li><li>静压箱深 150mm，让风速在棉面均匀</li><li>管道风机 300m³/h，1.5m³ 小间每分钟换气 3 次</li><li>外墙出风口带防雨百叶和防虫网</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 阳光板小间门框</h2>
+    <p class="scene">喷漆间是一个用 30 系列铝型材搭骨架、四面封 6mm 阳光板的透明盒子，门是其中最关键的一片。门扇同样用型材加阳光板，中间开一块透明视窗让过道看得到里面；门缝四周贴密封条，关门后小间才封得住负压。门框上方装一颗磁性门磁开关，门一开就给控制器发信号；门外挂一盏橙色“喷漆中”警示灯。铝型材全部螺栓连接，随时改尺寸，阳光板轻且耐溶剂。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0403-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0403-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0403-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0403-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 铝型材门框 -->
+    <path d="M54 312 l64 -20 v-80 l-64 20 Z" stroke-width="1.5"/>
+    <path d="M62 306 l48 -15 v-70 l-48 15 Z" stroke-width="1.2"/>
+    <path d="M54 312 l8 -6 M118 292 l-8 -6 M54 232 l8 6 M118 212 l-8 6" stroke-width="0.7"/>
+    <path d="M54 312 l8 -6 v-70 l-8 -4 Z" fill="url(#p0403-2-shade)" stroke="none"/>
+    <path d="M58 300 v-60 M60 298 v-60" stroke-width="0.4"/>
+    <!-- 2 门扇骨架（带视窗） -->
+    <path d="M150 262 l52 -16 v-72 l-52 16 Z" stroke-width="1.5"/>
+    <path d="M158 244 l36 -11 v-40 l-36 11 Z" stroke-width="1.1"/>
+    <path d="M150 262 l52 -16 v-4 l-52 16 Z M150 190 l52 -16 v-4 l-52 16 Z" fill="url(#p0403-2-shade)" stroke="none"/>
+    <path d="M154 252 l44 -13 M154 178 l44 -13" stroke-width="0.6"/>
+    <path d="M196 218 q3 0 3 3 q0 3 -3 3" stroke-width="1"/>
+    <!-- 3 阳光板 + 密封条 -->
+    <path d="M236 184 l52 -16 v-48 l-52 16 Z" stroke-width="1.4"/>
+    <path d="M238 180.0 v-44" stroke-width="0.4"/><path d="M244 178.1 v-44" stroke-width="0.4"/><path d="M250 176.2 v-44" stroke-width="0.4"/><path d="M256 174.3 v-44" stroke-width="0.4"/><path d="M262 172.4 v-44" stroke-width="0.4"/><path d="M268 170.5 v-44" stroke-width="0.4"/><path d="M274 168.6 v-44" stroke-width="0.4"/><path d="M280 166.7 v-44" stroke-width="0.4"/>
+    <path d="M232 186 l52 -16 M232 186 v-50 l52 -16" stroke-width="1.6" stroke-dasharray="4 2"/>
+    <path d="M288 168 l3 1.5 v-48 l-3 -1.5" stroke-width="0.8"/>
+    <!-- 4 门磁开关 -->
+    <path d="M312 104 l10 -3 v8 l-10 3 Z M322 101 l3 1.5 v8 l-3 -1.5" stroke-width="1.2"/>
+    <path d="M312 104 l10 -3 v8 l-10 3 Z" fill="url(#p0403-2-shade)" stroke="none"/>
+    <path d="M330 98 l12 -4 v8 l-12 4 Z M342 94 l3 1.5 v8 l-3 -1.5" stroke-width="1.2"/>
+    <path d="M334 100 l4 -1.5 M334 103 l6 -2" stroke-width="0.6"/>
+    <path d="M326 108 l2 -4 M328 110 l2 -4" stroke-width="0.6"/>
+    <!-- 5 橙色警示灯 -->
+    <path d="M380 70 a12 12 0 0 1 24 0 v10 h-24 Z" stroke-width="1.5"/>
+    <path d="M384 70 a8 8 0 0 1 16 0" stroke-width="0.7"/>
+    <path d="M378 80 h28 v5 h-28 Z" stroke-width="1.2"/>
+    <path d="M378 80 h28 v5 h-28 Z" fill="url(#p0403-2-shade)" stroke="none"/>
+    <path d="M392 85 v6 M386 91 h12" stroke-width="1.1"/>
+    <path d="M392 52 v-6 M378 58 l-5 -4 M406 58 l5 -4 M372 68 h-6 M412 68 h6" stroke-width="1"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M118 290 H196"/><path d="M150 238 H118"/><path d="M290 158 H310"/><path d="M346 98 H372"/><path d="M406 66 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="290" r="8"/><circle cx="108" cy="238" r="8"/><circle cx="320" cy="158" r="8"/><circle cx="382" cy="98" r="8"/><circle cx="450" cy="66" r="8"/>
+    </g>
+    <text x="206" y="293.5">1</text><text x="108" y="241.5">2</text><text x="320" y="161.5">3</text><text x="382" y="101.5">4</text><text x="450" y="69.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">阳光板小间门框 · 爆炸图</text>
+    <text x="16" y="52">1 30 系列铝型材门框</text>
+    <text x="16" y="68">2 门扇骨架（带透明视窗）</text>
+    <text x="16" y="84">3 6mm 阳光板 + D 型密封条</text>
+    <text x="16" y="100">4 门磁开关（开门触发）</text>
+    <text x="16" y="116">5 橙色“喷漆中”警示灯</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0403-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>30×30 铝型材骨架，角件螺栓连接可改尺寸</li><li>6mm 双层阳光板，透光、轻、耐溶剂</li><li>门缝 D 型密封条，关门维持负压</li><li>门磁开关 + 橙色警示灯挂门外</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 排风联锁</h2>
+    <p class="scene">解决“忘开风机就开喷、喷完立刻关风机味道倒灌”两个人为失误。门磁是主输入：门一打开，ESP32 立刻启动风机并点亮门外橙灯；喷漆期间风机一直转；门关上时不马上停，而是启动 30 分钟倒计时，把残余漆雾和溶剂气排干净。期间门再开则清零重计。计时结束风机停、橙灯灭，“排风还剩多少分钟”同步显示在手机上。整套逻辑跑在 ESP32 本地，断网照常联锁。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0403-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0403-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0403-3p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0403-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0403-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 门（左） -->
+    <rect x="44" y="118" width="40" height="70" rx="2" stroke-width="1.6"/>
+    <path d="M48 122 h32 v62 h-32 Z" stroke-width="0.7"/>
+    <rect x="54" y="128" width="20" height="24" rx="1" stroke-width="1"/>
+    <path d="M56 130 l16 20" stroke-width="0.5"/>
+    <circle cx="76" cy="164" r="2" stroke-width="1"/>
+    <path d="M84 122 h6 v6 h-6 Z" stroke-width="1"/>
+    <path d="M84 122 h6 v6 h-6 Z" fill="url(#p0403-3p-shade)" stroke="none"/>
+    <path d="M60 110 v-6 M52 108 l-3 -4 M68 108 l3 -4" stroke-width="0.9"/>
+    <!-- ESP32 + 倒计时钟（中） -->
+    <rect x="156" y="132" width="48" height="32" rx="3" stroke-width="1.4"/>
+    <rect x="161" y="137" width="38" height="22" rx="2" stroke-width="0.7"/>
+    <path d="M162 132.0 v-5 M162 164.0 v5 M170 132.0 v-5 M170 164.0 v5 M178 132.0 v-5 M178 164.0 v5 M186 132.0 v-5 M186 164.0 v5 M194 132.0 v-5 M194 164.0 v5 " stroke-width="1"/>
+    <rect x="161" y="153" width="38" height="6" fill="url(#p0403-3p-shade)" stroke="none"/>
+    <circle cx="180" cy="204" r="18" stroke-width="1.4"/>
+    <path d="M180 204 V190 M180 204 L190 210" stroke-width="1.6"/>
+    <path d="M180 188 v3 M180 220 v-3 M164 204 h3 M196 204 h-3" stroke-width="1"/>
+    <path d="M180 190 a14 14 0 0 1 12 20" stroke-width="2.4" stroke-opacity="0.5"/>
+    <!-- 风机 + 橙灯（右） -->
+    <circle cx="280" cy="140" r="16" stroke-width="1.3"/>
+    <path d="M280 140 q-8 -14.4 0 -13.6 M280 140 q15.2 1.6 12 8 M280 140 q-8 13.6 -12.8 5.6" stroke-width="1.1"/>
+    <circle cx="280" cy="140" r="2" stroke-width="0.9"/>
+    <path d="M262 122 h36 v36 h-36 Z" stroke-width="1"/>
+    <path d="M298 128 h16 q4 0 4 4 v6" stroke-width="1.1"/>
+    <path d="M300 120 h14 v-6" stroke-width="0.6"/>
+    <path d="M270 184 a10 10 0 0 1 20 0 v8 h-20 Z" stroke-width="1.4"/>
+    <path d="M268 192 h24 v4 h-24 Z" stroke-width="1.1"/>
+    <path d="M268 192 h24 v4 h-24 Z" fill="url(#p0403-3p-shade)" stroke="none"/>
+    <path d="M280 170 v-5 M270 174 l-4 -3 M290 174 l4 -3" stroke-width="1"/>
+    <path d="M280 196 v6 M274 202 h12" stroke-width="1"/>
+    <!-- 箭头 -->
+    <path d="M94 150 Q120 148 150 148" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M146.0 152.0 L152 148 L146.0 144.0" stroke-width="1"/>
+    <path d="M208 146 Q230 142 254 140" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M250.4 144.6 L256 140 L249.6 136.6" stroke-width="1"/>
+    <path d="M200 200 Q230 196 262 190" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M258.9 195.1 L264 190 L257.3 187.3" stroke-width="1"/>
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/>
+    <path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="50" y="204" font-size="8" fill="#666">门磁</text><text x="196" y="236" font-size="8" fill="#666">30 分钟倒计时</text><text x="296" y="214" font-size="8" fill="#666">风机 · 橙灯</text>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0403 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">排风联锁</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">门一开风就走，门关了风再多走三十分钟</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">门磁 → ESP32 本地联锁 → 风机 + 橙灯 → 关门延时 30 分钟停</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">门开即启动风机和橙灯，想忘都忘不掉</text>
+    <text x="64" y="366">关门延时 30 分钟，漆雾排干净再停</text>
+    <text x="64" y="396">ESP32 本地执行，断网照常联锁</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome（ESP32 本地）· 数据出口：HA 剩余时间 + 手机加时</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：patrickcollins12/esphome-fan-controller</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0403-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0403-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0403-3-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <marker id="p0403-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">排风联锁 · 流程图</text>
+  <g filter="url(#p0403-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M196 47 a34 6 0 0 1 68 0 v36 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="47" rx="34" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 226 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="110" y="312" width="300" height="30" rx="15"/>
+    <path d="M34 172 h106 v3 h-106 Z M232 176 l56 -22 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M232 274 l56 -22 l4 2 l-58 26 Z M334 272 h116 v3 h-116 Z" fill="url(#p0403-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0403-3-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V200 H85 V228"/>
+    <path d="M140 250 H170"/>
+    <path d="M288 252 H328"/>
+    <path d="M230 274 V310"/>
+    <path d="M390 270 V310"/>
+    <path d="M390 170 V196 H462 V327 H412"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="72.5">门磁状态变化</text>
+    <text x="230" y="70">门磁 / 物理开关</text>
+    <text x="230" y="83" font-size="8.5" fill="#666">binary_sensor</text>
+    <text x="85" y="147.5">ESP32 本地读取</text>
+    <text x="85" y="161">判断开门或关门</text>
+    <text x="230" y="155.5">门打开？</text>
+    <text x="390" y="147.5">是 → 风机启动</text>
+    <text x="390" y="161">橙灯亮 · 倒计时清零</text>
+    <text x="85" y="247.5">否（关门）→</text>
+    <text x="85" y="261">启动 30 分钟倒计时</text>
+    <text x="230" y="253.5">倒计时归零？</text>
+    <text x="390" y="247.5">是 → 风机停</text>
+    <text x="390" y="261">橙灯灭</text>
+    <text x="260" y="330.5">剩余分钟同步 HA · 手机可加时 · 断网本地照常</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="238" y="196">否</text><text x="300" y="246">是</text><text x="236" y="296">否 · 计时中</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0403-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：门磁打开 → 风机 + 橙灯立即启动</li><li>阈值：关门后延时 30 分钟停机，重开门则重计</li><li>出口：HA 显示排风剩余时间，手机可手动加时</li><li>兜底：门旁物理开关可强制开风机</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">照 patrickcollins12/esphome-fan-controller 的 ESPHome 风扇控制改写：门磁 binary_sensor 触发风扇 + 延时脚本</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">patrickcollins12/esphome-fan-controller</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. VOC 监测告警</h2>
+    <p class="scene">溶剂型漆挥发出的 VOC 闻不到不等于没有。小间里装一颗 SGP41 挥发性有机物传感器和一颗 PM2.5 传感器，接 ESPHome 每 10 秒上报。VOC 折算成 0~500 的相对指数：超过 150 判“偏高”，风机切高速并手机提醒；超过 250 判“超标”，推送开窗并在中枢屏红字显示。喷完 30 分钟 VOC 仍不回落到 100 以下，说明过滤棉可能堵了，提示检查。数据按天画曲线，看得出哪种漆最“毒”。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0403-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0403-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0403-4p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0403-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0403-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 传感器板 + 气体（左） -->
+    <rect x="44" y="141" width="44" height="30" rx="3" stroke-width="1.4"/>
+    <rect x="49" y="146" width="34" height="20" rx="2" stroke-width="0.7"/>
+    <path d="M50 141.0 v-5 M50 171.0 v5 M58 141.0 v-5 M58 171.0 v5 M66 141.0 v-5 M66 171.0 v5 M74 141.0 v-5 M74 171.0 v5 " stroke-width="1"/>
+    <rect x="49" y="160" width="34" height="6" fill="url(#p0403-4p-shade)" stroke="none"/>
+    <path d="M52 120 q6 -8 0 -16 M62 122 q6 -8 0 -16 M72 120 q6 -8 0 -16" stroke-width="1" stroke-dasharray="2 2"/>
+    <circle cx="80" cy="132" r="4" stroke-width="0.8"/><circle cx="90" cy="126" r="2.5" stroke-width="0.7"/>
+    <path d="M40 186 q26 6 52 0" stroke-width="0.6"/>
+    <!-- HA 房子（中） -->
+    <path d="M150 164 l30 -26 l30 26 v34 h-60 Z" stroke-width="1.6"/>
+    <path d="M144 166 l36 -32 l36 32" stroke-width="1.2"/>
+    <circle cx="180" cy="176" r="8" stroke-width="1.2"/>
+    <path d="M180 168 v-3 M180 184 v3 M172 176 h-3 M188 176 h3" stroke-width="1"/>
+    <path d="M152 194 h56 v3 h-56 Z" fill="url(#p0403-4p-shade)" stroke="none"/>
+    <!-- 手机 + 风机（右） -->
+    <rect x="250" y="124" width="28" height="46" rx="5" stroke-width="1.4"/>
+    <rect x="253" y="130" width="22" height="32" rx="2" stroke-width="0.6"/>
+    <path d="M257 138 h14 M257 146 h14 M257 154 h8" stroke-width="0.8"/>
+    <circle cx="264.0" cy="166" r="1.6" stroke-width="0.8"/>
+    <rect x="253" y="134" width="22" height="10" rx="1" fill="url(#p0403-4p-shade)" stroke="none"/>
+    <path d="M280 130 q6 -3 5 -9 M282 138 q9 -4 8 -14" stroke-width="0.8"/>
+    <circle cx="300" cy="196" r="15" stroke-width="1.3"/>
+    <path d="M300 196 q-7.5 -13.5 0 -12.75 M300 196 q14.25 1.5 11.25 7.5 M300 196 q-7.5 12.75 -12 5.25" stroke-width="1.1"/>
+    <circle cx="300" cy="196" r="2" stroke-width="0.9"/>
+    <path d="M284 180 h32 v32 h-32 Z" stroke-width="1"/>
+    <path d="M316 186 h10 v20" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M92 164 Q116 166 144 166" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M140.0 170.0 L146 166 L140.0 162.0" stroke-width="1"/>
+    <path d="M212 166 Q228 154 244 148" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M241.9 152.9 L246 147 L238.9 145.5" stroke-width="1"/>
+    <path d="M212 186 Q246 194 280 196" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M275.8 199.7 L282 196 L276.2 191.7" stroke-width="1"/>
+    <text x="180" y="180" text-anchor="middle" font-size="8" fill="#3d3d3d" stroke="none">VOC</text>
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/>
+    <path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="46" y="200" font-size="8" fill="#666">SGP41 · PM2.5</text><text x="290" y="226" font-size="8" fill="#666">风机高速</text>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0403 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">VOC 监测告警</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">闻不到的味道，传感器替你闻</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">SGP41 VOC 指数 → ESPHome → HA 分级阈值 → 风机高速 / 推送 / 中枢屏</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">>150 风机切高速，>250 推送开窗</text>
+    <text x="64" y="366">喷后 30 分钟不降，提示换过滤棉</text>
+    <text x="64" y="396">按天画曲线，看得出哪种漆最毒</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：手机推送 + 0211 中枢屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：MallocArray/airgradient_esphome</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0403-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0403-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0403-4-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <marker id="p0403-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">VOC 监测告警 · 流程图</text>
+  <g filter="url(#p0403-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M190 47 a40 6 0 0 1 80 0 v36 a40 6 0 0 1 -80 0 Z"/><ellipse cx="230" cy="47" rx="40" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 226 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="110" y="312" width="300" height="30" rx="15"/>
+    <path d="M34 172 h106 v3 h-106 Z M232 176 l56 -22 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M232 274 l56 -22 l4 2 l-58 26 Z M334 272 h116 v3 h-116 Z" fill="url(#p0403-4-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0403-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V226"/>
+    <path d="M288 252 H328"/>
+    <path d="M172 252 H142"/>
+    <path d="M85 270 V327 H108"/>
+    <path d="M390 270 V310"/>
+    <path d="M390 170 V196 H462 V327 H412"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="72.5">每 10 秒采样</text>
+    <text x="230" y="70">VOC / PM2.5</text>
+    <text x="230" y="83" font-size="8.5" fill="#666">SGP41 + PMS5003</text>
+    <text x="85" y="147.5">ESPHome 上报 HA</text>
+    <text x="85" y="161">写入每日曲线</text>
+    <text x="230" y="155.5">VOC >250？</text>
+    <text x="230" y="168.5" font-size="8.5" fill="#666">超标</text>
+    <text x="390" y="147.5">是 → 推送开窗</text>
+    <text x="390" y="161">中枢屏红字显示</text>
+    <text x="85" y="247.5">否 → 正常</text>
+    <text x="85" y="261">风机按联锁运行</text>
+    <text x="230" y="253.5">VOC >150？</text>
+    <text x="230" y="266.5" font-size="8.5" fill="#666">偏高</text>
+    <text x="390" y="247.5">是 → 风机切高速</text>
+    <text x="390" y="261">手机轻提醒</text>
+    <text x="260" y="330.5">喷后 30 分钟不降 → 提示换过滤棉 · 异常读数 5 次告警</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="305" y="246">是</text><text x="150" y="246">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0403-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>输入：SGP41 VOC 指数 + PM2.5，每 10 秒一次</li><li>阈值：&gt;150 风机高速，&gt;250 推送 + 中枢屏红字</li><li>喷后 30 分钟 VOC 不降提示换过滤棉</li><li>兜底：传感器异常读数连续 5 次即告警</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">抄 MallocArray/airgradient_esphome 的 SGP41 与 PMS5003 配置上报，HomeAssistant 自动化做分级阈值与推送</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/MallocArray/airgradient_esphome" target="_blank" rel="noopener">MallocArray/airgradient_esphome</a><a href="https://github.com/airgradienthq/arduino" target="_blank" rel="noopener">airgradienthq/arduino</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0402.html">← 0402 材料仓库 拆解</a>
+    <a class="up" href="../modules/0403.html">回到 喷漆间 专题页</a>
+    <a href="../teardown/0404.html">0404 木工间 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

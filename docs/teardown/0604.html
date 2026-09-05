@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0604 摄像头监测微环境 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="摄像头监测微环境 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" class="on"><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/06.html">06 草地</a> › <a href="../modules/0604.html">0604 摄像头监测微环境</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">草地 · 模块 0604 · 核心拆解</p>
+    <h1>摄像头监测微环境：4 个核心模块与逻辑</h1>
+    <p class="lede">一根 2.5 米杆子上的两只眼睛，一只看草长，一只看谁来做客。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>双机观测杆</a><a href="#p2"><i>2</i>浅水盆与桧木喂鸟器</a><a href="#p3"><i>3</i>来访者识别通知</a><a href="#p4"><i>4</i>草地延时合成</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 双机观测杆</h2>
+    <p class="scene">2.5m 热镀锌钢杆立在疏林带边，挂两只眼睛一只耳朵。杆顶是广角摄像头，朝西南拍整片草地，避开早上的逆光；中段是长焦摄像头，对准 3m 外的水盆和喂鸟器；杆身还绑一支带防风毛套的麦克风，给 BirdNET 听叫声。两机走 PoE，一根网线搞定。杆脚装 850nm 红外补光，人眼看不见，夜里刺猬照样能拍到。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0604-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0604-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0604-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0604-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 混凝土基础 + 红外补光灯 -->
+    <path d="M72 302 l36 -12 l30 10 l-36 12 Z" stroke-width="1.5"/>
+    <path d="M72 302 v18 l30 10 v-18 M102 312 v18 l36 -12 v-18" stroke-width="1.4"/>
+    <path d="M74 304 v16 l28 9 v-16 Z" fill="url(#p0604-1-shade)" stroke="none"/>
+    <path d="M104 314 l34 -11 v14 l-34 11 Z" fill="url(#p0604-1-shade2)" stroke="none"/>
+    <path d="M92 296 l14 -5 l6 2 l-14 5 Z" stroke-width="0.9"/>
+    <circle cx="96" cy="292" r="1.2" stroke-width="0.6"/><circle cx="102" cy="290" r="1.2" stroke-width="0.6"/>
+    <path d="M124 300 h12 v-10 h-12 Z" stroke-width="1.3"/>
+    <path d="M126 298 h8 v-6 h-8 Z" fill="url(#p0604-1-shade)" stroke="none"/>
+    <path d="M140 292 l8 -4 M140 296 l9 0 M140 300 l8 4" stroke-width="0.7"/>
+    <path d="M124 300 l-6 -2" stroke-width="1"/>
+    <!-- 2 热镀锌钢杆 -->
+    <path d="M156 300 V212 M164 300 V212" stroke-width="1.5"/>
+    <ellipse cx="160" cy="212" rx="4" ry="1.5" stroke-width="1"/>
+    <path d="M160 300 h4 v-88 h-4 Z" fill="url(#p0604-1-shade)" stroke="none"/>
+    <path d="M146 302 h28 M148 302 v-3 h24 v3" stroke-width="1.2"/>
+    <path d="M150 301 h4 M166 301 h4" stroke-width="0.6"/>
+    <path d="M158 240 h4 M158 270 h4" stroke-width="0.6"/>
+    <!-- 3 长焦摄像头 -->
+    <path d="M206 202 h30 a6 6 0 0 1 0 12 h-30 Z" stroke-width="1.5"/>
+    <ellipse cx="206" cy="208" rx="3" ry="6" stroke-width="1.3"/>
+    <ellipse cx="206" cy="208" rx="1.5" ry="3" stroke-width="0.9"/>
+    <path d="M198 206 h8 M198 210 h8" stroke-width="1"/>
+    <ellipse cx="198" cy="208" rx="2.5" ry="5" stroke-width="1.1"/>
+    <path d="M210 209 h26 a6 6 0 0 1 -2 5 h-24 Z" fill="url(#p0604-1-shade)" stroke="none"/>
+    <path d="M220 202 v-6 h6 v6" stroke-width="1"/>
+    <path d="M218 196 h10" stroke-width="1"/>
+    <path d="M238 210 l6 4" stroke-width="0.7"/>
+    <!-- 4 麦克风 + 防风毛套 -->
+    <path d="M262 150 l3 -4 l3 4 l3 -4 l3 4 l3 -4 l3 4 l3 -4 l3 4 v14 l-3 4 l-3 -4 l-3 4 l-3 -4 l-3 4 l-3 -4 l-3 4 l-3 -4 Z" stroke-width="1.2"/>
+    <rect x="268" y="152" width="18" height="10" rx="5" stroke-width="1"/>
+    <path d="M272 155 h10 M272 158 h10" stroke-width="0.5"/>
+    <path d="M286 157 h10 q4 0 4 4 v8" stroke-width="0.9"/>
+    <path d="M264 148 l-2 -3 M290 148 l2 -3" stroke-width="0.6"/>
+    <!-- 5 广角全景机（半球） -->
+    <ellipse cx="325" cy="112" rx="22" ry="7" stroke-width="1.5"/>
+    <path d="M303 112 v4 a22 7 0 0 0 44 0 v-4" stroke-width="1.2"/>
+    <path d="M305 114 a22 7 0 0 0 40 0 v3 a22 7 0 0 1 -40 0 Z" fill="url(#p0604-1-shade)" stroke="none"/>
+    <path d="M307 112 a18 18 0 0 1 36 0" stroke-width="1.4"/>
+    <path d="M313 106 a12 12 0 0 1 12 -8" stroke-width="0.6"/>
+    <circle cx="325" cy="102" r="4" stroke-width="1.1"/>
+    <path d="M325 96 v-4" stroke-width="0.8"/>
+    <!-- 6 防雨帽 -->
+    <path d="M362 66 l24 -26 l24 26" stroke-width="1.5"/>
+    <ellipse cx="386" cy="66" rx="24" ry="6" stroke-width="1.3"/>
+    <path d="M364 66 a22 5 0 0 0 44 0 v3 a22 5 0 0 1 -44 0 Z" fill="url(#p0604-1-shade)" stroke="none"/>
+    <path d="M386 40 v-6" stroke-width="1"/>
+    <path d="M374 54 l12 -12 l12 12" stroke-width="0.6"/>
+    <path d="M386 66 v10" stroke-width="1"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M140 306 H216"/><path d="M154 258 H110"/><path d="M240 206 H300"/><path d="M300 158 H340"/><path d="M349 112 H400"/><path d="M412 60 H445"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="225" cy="306" r="8"/><circle cx="100" cy="258" r="8"/><circle cx="310" cy="206" r="8"/><circle cx="350" cy="158" r="8"/><circle cx="410" cy="112" r="8"/><circle cx="455" cy="60" r="8"/>
+    </g>
+    <text x="225" y="309.5">1</text><text x="100" y="261.5">2</text><text x="310" y="209.5">3</text><text x="350" y="161.5">4</text><text x="410" y="115.5">5</text><text x="455" y="63.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">双机观测杆 · 爆炸图</text>
+    <text x="16" y="52">1 混凝土基础 + 850nm 红外补光</text>
+    <text x="16" y="68">2 热镀锌钢杆 Φ60 × 2.5m</text>
+    <text x="16" y="84">3 长焦摄像头 12mm（对水盆）</text>
+    <text x="16" y="100">4 麦克风 + 防风毛套（BirdNET）</text>
+    <text x="16" y="116">5 广角全景机 2.8mm（杆顶）</text>
+    <text x="16" y="132">6 防雨帽</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0604-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>热镀锌钢杆 Φ60mm × 2.5m，混凝土基础 40cm</li><li>广角机 2.8mm 拍全景，长焦机 12mm 对水盆</li><li>两机 PoE 供电，一根网线进小主机</li><li>850nm 红外补光，不惊扰夜行动物</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/blakeblackshear/frigate" target="_blank" rel="noopener">blakeblackshear/frigate</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 浅水盆与桧木喂鸟器</h2>
+    <p class="scene">想让鸟来，先给水再给吃的。水盆用 40cm 直径的浅陶盆，深度不超过 5cm，小鸟才敢下脚；盆边斜放一块石头当踏板，盆底冬天垫一片 12V 加热垫，结冰的清晨也有水喝。喂鸟器是桧木做的小房子，托盘放葵花籽和苹果块，屋顶挡雨，四周敞开让鸟看得见有没有猫。两样都离灌木 2m 以上，野猫没处埋伏，而且都在长焦机的对焦距离上。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0604-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0604-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0604-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0604-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 斜石踏板 + 碎石 -->
+    <path d="M66 304 l40 -20 l40 8 l-16 14 l-40 4 Z" stroke-width="1.5"/>
+    <path d="M66 304 v8 l24 2 v-8 M90 310 l40 -4 v6 l-40 4 Z" stroke-width="1.2"/>
+    <path d="M92 312 l38 -4 v4 l-38 4 Z" fill="url(#p0604-2-shade)" stroke="none"/>
+    <path d="M84 296 l20 -10 M100 300 l14 -8" stroke-width="0.6"/>
+    <circle cx="140" cy="306" r="2.6" stroke-width="0.8"/><circle cx="150" cy="300" r="2.2" stroke-width="0.8"/><circle cx="58" cy="318" r="2.4" stroke-width="0.8"/><circle cx="150" cy="310" r="2" stroke-width="0.8"/>
+    <!-- 2 浅陶盆 -->
+    <ellipse cx="175" cy="232" rx="34" ry="11" stroke-width="1.5"/>
+    <path d="M141 232 q4 20 34 20 q30 0 34 -20" stroke-width="1.5"/>
+    <ellipse cx="175" cy="232" rx="28" ry="8" stroke-width="0.8"/>
+    <path d="M152 236 q10 -4 22 0 q12 4 24 -2" stroke-width="0.7"/>
+    <path d="M180 250 q22 -2 28 -16 q-2 12 -12 16 q-8 3 -16 0 Z" fill="url(#p0604-2-shade)" stroke="none"/>
+    <path d="M175 252 v3" stroke-width="0.8"/>
+    <!-- 3 加热垫 -->
+    <ellipse cx="245" cy="180" rx="24" ry="8" stroke-width="1.4"/>
+    <path d="M221 180 v3 a24 8 0 0 0 48 0 v-3" stroke-width="1"/>
+    <path d="M223 182 a24 8 0 0 0 44 0 v2 a24 8 0 0 1 -44 0 Z" fill="url(#p0604-2-shade)" stroke="none"/>
+    <path d="M228 180 l4 -3 l4 3 l4 -3 l4 3 l4 -3 l4 3 l4 -3 l4 3 l4 -3" stroke-width="0.7"/>
+    <path d="M269 180 h8 q6 0 6 6" stroke-width="0.9"/>
+    <path d="M280 186 l6 -3 l1 3" stroke-width="0.6"/>
+    <!-- 4 桧木喂鸟器托盘 -->
+    <path d="M290 122 l36 -12 l28 10 l-36 12 Z" stroke-width="1.5"/>
+    <path d="M290 122 v6 l28 10 v-6 M318 132 v6 l36 -12 v-6" stroke-width="1.3"/>
+    <path d="M320 134 l34 -11 v4 l-34 11 Z" fill="url(#p0604-2-shade)" stroke="none"/>
+    <circle cx="306" cy="120" r="1.2" stroke-width="0.7"/><circle cx="314" cy="124" r="1.2" stroke-width="0.7"/><circle cx="322" cy="116" r="1.2" stroke-width="0.7"/><circle cx="330" cy="120" r="1.2" stroke-width="0.7"/><circle cx="318" cy="128" r="1.2" stroke-width="0.7"/><circle cx="338" cy="116" r="1.2" stroke-width="0.7"/>
+    <path d="M292 120 v-16 M326 108 v-16 M354 118 v-16 M318 130 v-16" stroke-width="1.2"/>
+    <path d="M314 118 l6 -2 l3 1 l-6 2 Z" stroke-width="0.8"/>
+    <!-- 5 小屋顶 + 挂链 -->
+    <path d="M356 64 l30 -18 l30 18" stroke-width="1.5"/>
+    <path d="M356 64 l4 -1 l30 -18 M386 46 l30 18 l4 -1" stroke-width="0.8"/>
+    <path d="M360 62 l26 -15 v6 l-26 15 Z" fill="url(#p0604-2-shade)" stroke="none"/>
+    <path d="M362 60 l24 -14 M368 64 l18 -10" stroke-width="0.5"/>
+    <path d="M386 46 v-6" stroke-width="1"/>
+    <ellipse cx="386" cy="36" rx="2" ry="3.5" stroke-width="1"/><ellipse cx="386" cy="30" rx="2" ry="3.5" stroke-width="1"/><ellipse cx="386" cy="24" rx="2" ry="3.5" stroke-width="1"/>
+    <path d="M386 20 q-4 -6 2 -6 q4 0 2 4" stroke-width="1"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M150 304 H216"/><path d="M140 236 H110"/><path d="M270 180 H340"/><path d="M356 128 H400"/><path d="M418 60 H445"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="225" cy="304" r="8"/><circle cx="100" cy="236" r="8"/><circle cx="350" cy="180" r="8"/><circle cx="410" cy="128" r="8"/><circle cx="455" cy="60" r="8"/>
+    </g>
+    <text x="225" y="307.5">1</text><text x="100" y="239.5">2</text><text x="350" y="183.5">3</text><text x="410" y="131.5">4</text><text x="455" y="63.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">浅水盆与桧木喂鸟器 · 爆炸图</text>
+    <text x="16" y="52">1 斜石踏板 + 碎石底座</text>
+    <text x="16" y="68">2 浅陶盆 Φ40cm（水深 3~5cm）</text>
+    <text x="16" y="84">3 12V 加热垫（冬季防冻）</text>
+    <text x="16" y="100">4 桧木喂鸟器托盘（可抽出）</text>
+    <text x="16" y="116">5 小屋顶 + 挂链（挂朴树上）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0604-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>陶盆 Φ40cm，水深 3~5cm，斜石踏板</li><li>12V 加热垫 10W，低于 2℃ 自动通电</li><li>桧木喂鸟器 20×20cm，托盘可抽出清洗</li><li>离灌木 2m 以上，离杆 3m 正对长焦</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 来访者识别通知</h2>
+    <p class="scene">长焦机的画面进小主机上的 Frigate，先做粗筛：画面里有动的东西，且被认成鸟、猫或人，才往下走，风吹草动直接丢掉。认出是鸟的截图交给 WhosAtMyFeeder，用鸟类分类模型判断是哪一种；同一时刻麦克风的声纹识别结果拿来交叉印证，图像和声音都说是白头鹎才算数。结果写进来访者名单，新物种推送手机，老熟客只记不推。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0604-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0604-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0604-3p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0604-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0604-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：摄像头 + 麦克风 -->
+    <path d="M40 150 h34 a7 7 0 0 1 0 14 h-34 Z" stroke-width="1.5"/>
+    <ellipse cx="40" cy="157" rx="3.5" ry="7" stroke-width="1.3"/>
+    <path d="M44 158 h30 a7 7 0 0 1 -2 6 h-28 Z" fill="url(#p0604-3p-shade)" stroke="none"/>
+    <path d="M56 150 v-6 h8 v6" stroke-width="1"/>
+    <path d="M48 188 l3 -3 l3 3 l3 -3 l3 3 l3 -3 l3 3 v12 l-3 3 l-3 -3 l-3 3 l-3 -3 l-3 3 l-3 -3 Z" stroke-width="1.1"/>
+    <path d="M66 194 h8 v10" stroke-width="0.9"/>
+    <path d="M80 188 q6 6 0 12 M86 184 q10 10 0 20" stroke-width="0.7"/>
+    <!-- 中：检测框里的鸟 -->
+    <path d="M132 130 v-8 h8 M196 122 h8 v8 M132 200 v8 h8 M204 200 v8 h-8" stroke-width="1.4"/>
+    <path d="M150 178 q-10 -6 -6 -18 q4 -12 20 -10 q10 0 14 -8 q6 -6 12 0 q-4 2 -2 6 q10 4 6 16 q-4 12 -20 14 q-10 2 -24 0 Z" stroke-width="1.4"/>
+    <path d="M186 148 l8 2 l-8 2" stroke-width="1"/>
+    <circle cx="182" cy="146" r="1.4" stroke-width="0.8"/>
+    <path d="M152 176 q6 -14 26 -14" stroke-width="0.7"/>
+    <path d="M150 178 l-14 10 l6 0 l-4 6" stroke-width="1"/>
+    <path d="M160 180 v10 M170 180 v10 M156 190 h8 M166 190 h8" stroke-width="0.9"/>
+    <path d="M156 164 q8 -8 20 -4 q-2 8 -12 10 q-8 0 -8 -6 Z" fill="url(#p0604-3p-shade)" stroke="none"/>
+    <path d="M128 214 h80" stroke-width="0.8"/>
+    <!-- 右：手机通知 + 名单 -->
+    <rect x="256" y="128" width="40" height="70" rx="5" stroke-width="1.5"/>
+    <rect x="260" y="136" width="32" height="52" rx="2" stroke-width="0.6"/>
+    <rect x="263" y="140" width="26" height="12" rx="2" stroke-width="0.9"/>
+    <rect x="264" y="141" width="24" height="10" fill="url(#p0604-3p-shade)" stroke="none"/>
+    <path d="M266 160 h20 M266 168 h20 M266 176 h14" stroke-width="0.8"/>
+    <circle cx="268" cy="160" r="1" stroke-width="0.6"/>
+    <path d="M296 134 q10 -8 6 -18" stroke-width="0.8"/>
+    <path d="M300 124 l6 -4 l2 6" stroke-width="0.8"/>
+    <path d="M304 168 h14 M304 176 h14 M304 184 h10" stroke-width="0.7"/>
+    <path d="M300 168 l2 2 l3 -4 M300 176 l2 2 l3 -4" stroke-width="0.7"/>
+    <!-- 箭头 -->
+    <path d="M84 160 H124" stroke-width="1" stroke-dasharray="3 3"/><path d="M120 156 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M212 164 H250" stroke-width="1" stroke-dasharray="3 3"/><path d="M246 160 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0604 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">来访者识别通知</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">第一次来的鸟，手机会告诉你</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">Frigate 检测 → WhosAtMyFeeder 分种 → BirdNET 声纹印证 → 新物种推送</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">只有被认成鸟、猫、人的动静才往下走</text>
+    <text x="64" y="366">图像分类 + 声纹识别同时命中才算认出</text>
+    <text x="64" y="396">新物种推手机，老熟客只记名单不打扰</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：小主机 Frigate + Docker · 数据出口：来访者名单 + 手机推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：mmcc-xx/WhosAtMyFeeder</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0604-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0604-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0604-3-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <marker id="p0604-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">来访者识别通知 · 流程图</text>
+  <g filter="url(#p0604-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30.0" y="52.0" width="110" height="34" rx="17.0"/>
+    <path d="M196.0 53.0 a34.0 6 0 0 1 68 0 v38 a34.0 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="53.0" rx="34.0" ry="6"/>
+    <rect x="30.0" y="130.0" width="110" height="40" rx="6"/>
+    <rect x="32.0" y="132.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M34.0 172.0 h106 v3 h-106 Z" fill="url(#p0604-3-shade)" stroke="none"/>
+    <path d="M230 128.0 l58.0 24.0 l-58.0 24.0 l-58.0 -24.0 Z"/>
+    <path d="M232 176.0 l56.0 -22.0 l4 2 l-58.0 26.0 Z" fill="url(#p0604-3-shade)" stroke="none"/>
+    <rect x="330.0" y="130.0" width="120" height="40" rx="6"/>
+    <rect x="332.0" y="132.0" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M334.0 172.0 h116 v3 h-116 Z" fill="url(#p0604-3-shade)" stroke="none"/>
+    <rect x="30.0" y="230.0" width="110" height="40" rx="6"/>
+    <rect x="32.0" y="232.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M34.0 272.0 h106 v3 h-106 Z" fill="url(#p0604-3-shade)" stroke="none"/>
+    <rect x="175.0" y="230.0" width="110" height="40" rx="6"/>
+    <rect x="177.0" y="232.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M179.0 272.0 h106 v3 h-106 Z" fill="url(#p0604-3-shade)" stroke="none"/>
+    <path d="M390 228.0 l60.0 24.0 l-60.0 24.0 l-60.0 -24.0 Z"/>
+    <path d="M392 276.0 l58.0 -22.0 l4 2 l-60.0 26.0 Z" fill="url(#p0604-3-shade)" stroke="none"/>
+    <rect x="90.0" y="312.0" width="300" height="30" rx="15.0"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0604-3-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M390 170 V226"/>
+    <path d="M330 252 H287"/>
+    <path d="M230 176 V212 H85 V228"/>
+    <path d="M85 270 V327 H88"/>
+    <path d="M230 270 V310"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">长焦机移动侦测</text>
+    <text x="230" y="71.5">Frigate 事件</text>
+    <text x="230" y="84.5" font-size="8.5" fill="#666">bird·cat·person</text>
+    <text x="85" y="147.5">取事件截图</text>
+    <text x="85" y="161">裁出目标框</text>
+    <text x="230" y="149.5">目标是鸟？</text>
+    <text x="230" y="162.5" font-size="8.5" fill="#666">置信度 >0.7</text>
+    <text x="390" y="147.5">是 → WhosAtMyFeeder</text>
+    <text x="390" y="161">分类模型判种</text>
+    <text x="85" y="247.5">否 → 猫 / 人 / 风</text>
+    <text x="85" y="261">只记录不推送</text>
+    <text x="230" y="247.5">写入来访者名单</text>
+    <text x="230" y="261">更新月度卡片</text>
+    <text x="390" y="249.5">声纹同时命中？</text>
+    <text x="390" y="262.5" font-size="8.5" fill="#666">BirdNET-Pi 印证</text>
+    <text x="240" y="331">新物种 → 推手机 · 老熟客只记 · 存疑标未知留图</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="296" y="246">是/否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0604-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：Frigate 检测到 bird / cat / person</li><li>阈值：图像置信度 &gt;0.7，或声纹同时命中</li><li>出口：来访者名单 + 新物种推送 + 月度卡片</li><li>兜底：识别失败标“未知”，留图人工认</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">Frigate 检出鸟交 mmcc-xx/WhosAtMyFeeder 分种，BirdNET-Pi 印证，推新物种</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/mmcc-xx/WhosAtMyFeeder" target="_blank" rel="noopener">mmcc-xx/WhosAtMyFeeder</a><a href="https://github.com/Nachtzuster/BirdNET-Pi" target="_blank" rel="noopener">Nachtzuster/BirdNET-Pi</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 草地延时合成</h2>
+    <p class="scene">全景机每小时一张，一年 8,760 张，靠人整理不过来。这段逻辑让 HomeAssistant 整点调一次快照按日期存盘；夜里太黑的照片按亮度筛掉。每季度末自动跑一次 FFmpeg，把当季白天照片拼成每秒 24 帧的延时，一季浓缩成一分钟，四段接起来就是草地从绿到金再冒头的一整年。视频存 NAS，缩略图挂大屏。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0604-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0604-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0604-4p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0604-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0604-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：杆顶广角机 -->
+    <path d="M58 210 V150" stroke-width="1.6"/>
+    <path d="M50 212 h16" stroke-width="1.2"/>
+    <ellipse cx="58" cy="148" rx="12" ry="4" stroke-width="1.3"/>
+    <path d="M48 148 a10 10 0 0 1 20 0" stroke-width="1.3"/>
+    <circle cx="58" cy="142" r="2.5" stroke-width="1"/>
+    <path d="M46 144 a12 4 0 0 0 24 0 v3 a12 4 0 0 1 -24 0 Z" fill="url(#p0604-4p-shade)" stroke="none"/>
+    <path d="M70 140 l10 -6 M70 146 l12 0 M70 152 l10 6" stroke-width="0.6"/>
+    <path d="M40 216 q10 -4 36 0" stroke-width="0.9"/>
+    <path d="M44 216 q-4 -10 -2 -18 M50 216 q0 -12 4 -20 M68 216 q4 -10 2 -18" stroke-width="0.9"/>
+    <!-- 中：一叠照片 + 时钟 -->
+    <rect x="118" y="146" width="52" height="40" rx="2" stroke-width="1.1"/>
+    <rect x="124" y="140" width="52" height="40" rx="2" stroke-width="1.2"/>
+    <rect x="130" y="134" width="52" height="40" rx="2" stroke-width="1.5"/>
+    <path d="M136 168 q6 -10 12 -6 q8 6 14 -4 q6 -8 14 -2" stroke-width="0.9"/>
+    <circle cx="170" cy="144" r="4" stroke-width="0.9"/>
+    <path d="M132 170 h48 v2 h-48 Z" fill="url(#p0604-4p-shade)" stroke="none"/>
+    <circle cx="146" cy="204" r="11" stroke-width="1.3"/>
+    <path d="M146 204 V196 M146 204 L152 207" stroke-width="1.4"/>
+    <path d="M162 204 h6 M172 204 h6 M182 204 h6" stroke-width="0.8"/>
+    <text x="196" y="207" font-size="8" fill="#3d3d3d" stroke="none">×8760</text>
+    <!-- 右：胶片 + 播放 -->
+    <rect x="228" y="130" width="94" height="66" rx="3" stroke-width="1.6"/>
+    <path d="M228 140 h94 M228 186 h94" stroke-width="0.9"/>
+    <path d="M234 132 h6 v5 h-6 Z M248 132 h6 v5 h-6 Z M262 132 h6 v5 h-6 Z M276 132 h6 v5 h-6 Z M290 132 h6 v5 h-6 Z M304 132 h6 v5 h-6 Z" stroke-width="0.7"/>
+    <path d="M234 189 h6 v5 h-6 Z M248 189 h6 v5 h-6 Z M262 189 h6 v5 h-6 Z M276 189 h6 v5 h-6 Z M290 189 h6 v5 h-6 Z M304 189 h6 v5 h-6 Z" stroke-width="0.7"/>
+    <path d="M266 152 l20 11 l-20 11 Z" stroke-width="1.4"/>
+    <path d="M268 156 l14 7 l-14 7 Z" fill="url(#p0604-4p-shade)" stroke="none"/>
+    <path d="M236 180 q10 -8 18 -4 q10 6 18 -6 q10 -12 22 -6 q8 4 22 -2" stroke-width="0.8"/>
+    <path d="M236 214 q2 -8 6 -12 M300 214 q6 -8 4 -16 M312 214 q-2 -8 4 -14" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M86 176 q14 -10 26 -14" stroke-width="1" stroke-dasharray="3 3"/><path d="M107 160 l6 1 l-2 6" stroke-width="1"/>
+    <path d="M188 160 H222" stroke-width="1" stroke-dasharray="3 3"/><path d="M218 156 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0604 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">草地延时合成</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">没人在意的时候，它也在长</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">整点快照 → 亮度筛选 → 季度末 FFmpeg 24fps → 一季浓缩一分钟</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每小时一张，一年 8,760 张自动按日期归档</text>
+    <text x="64" y="366">太黑的夜间照片按亮度剔除，不进视频</text>
+    <text x="64" y="396">一季一分钟，四段接起来就是草地的一整年</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA + 小主机 FFmpeg · 数据出口：NAS 视频 + 大屏缩略图</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：FFmpeg/FFmpeg</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0604-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="8" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0604-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0604-4-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <marker id="p0604-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">草地延时合成 · 流程图</text>
+  <g filter="url(#p0604-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30.0" y="52.0" width="110" height="34" rx="17.0"/>
+    <path d="M196.0 53.0 a34.0 6 0 0 1 68 0 v38 a34.0 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="53.0" rx="34.0" ry="6"/>
+    <rect x="30.0" y="130.0" width="110" height="40" rx="6"/>
+    <rect x="32.0" y="132.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M34.0 172.0 h106 v3 h-106 Z" fill="url(#p0604-4-shade)" stroke="none"/>
+    <path d="M230 128.0 l58.0 24.0 l-58.0 24.0 l-58.0 -24.0 Z"/>
+    <path d="M232 176.0 l56.0 -22.0 l4 2 l-58.0 26.0 Z" fill="url(#p0604-4-shade)" stroke="none"/>
+    <rect x="330.0" y="130.0" width="120" height="40" rx="6"/>
+    <rect x="332.0" y="132.0" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M334.0 172.0 h116 v3 h-116 Z" fill="url(#p0604-4-shade)" stroke="none"/>
+    <rect x="30.0" y="230.0" width="110" height="40" rx="6"/>
+    <rect x="32.0" y="232.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M34.0 272.0 h106 v3 h-106 Z" fill="url(#p0604-4-shade)" stroke="none"/>
+    <rect x="175.0" y="230.0" width="110" height="40" rx="6"/>
+    <rect x="177.0" y="232.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M179.0 272.0 h106 v3 h-106 Z" fill="url(#p0604-4-shade)" stroke="none"/>
+    <path d="M390 228.0 l60.0 24.0 l-60.0 24.0 l-60.0 -24.0 Z"/>
+    <path d="M392 276.0 l58.0 -22.0 l4 2 l-60.0 26.0 Z" fill="url(#p0604-4-shade)" stroke="none"/>
+    <rect x="90.0" y="312.0" width="300" height="30" rx="15.0"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0604-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M390 170 V226"/>
+    <path d="M330 252 H287"/>
+    <path d="M230 176 V212 H85 V228"/>
+    <path d="M85 270 V327 H88"/>
+    <path d="M230 270 V310"/>
+    <path d="M390 276 V310"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每个整点触发</text>
+    <text x="230" y="71.5">全景机 RTSP</text>
+    <text x="230" y="84.5" font-size="8.5" fill="#666">2.8mm 广角</text>
+    <text x="85" y="147.5">camera.snapshot</text>
+    <text x="85" y="161">存 timelapse/日期</text>
+    <text x="230" y="149.5">亮度 >15%？</text>
+    <text x="230" y="162.5" font-size="8.5" fill="#666">剔除夜间黑图</text>
+    <text x="390" y="147.5">是 → 保留原图</text>
+    <text x="390" y="161">写入时间戳</text>
+    <text x="85" y="247.5">否 → 删除</text>
+    <text x="85" y="261">只留一条日志</text>
+    <text x="230" y="247.5">是 → FFmpeg 拼接</text>
+    <text x="230" y="261">image2 · 24fps</text>
+    <text x="390" y="249.5">到季度末？</text>
+    <text x="390" y="262.5" font-size="8.5" fill="#666">3·6·9·12 月末</text>
+    <text x="240" y="331">视频存 NAS + 缩略图卡片 · 未到季末等下个整点</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="300" y="246">是</text><text x="396" y="296">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0604-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：每个整点快照，亮度 &lt;15% 的丢弃</li><li>输出：季度延时 1 分钟，年度合集 4 分钟</li><li>存储：原图约 1.5GB / 季，NAS 保留 3 年</li><li>兜底：断电漏拍不补，时间轴按实际帧</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">HA 整点调 camera.snapshot 存图，季度末用 FFmpeg/FFmpeg 拼成延时视频</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/FFmpeg/FFmpeg" target="_blank" rel="noopener">FFmpeg/FFmpeg</a><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0603.html">← 0603 雨水存储过滤 拆解</a>
+    <a class="up" href="../modules/0604.html">回到 摄像头监测微环境 专题页</a>
+    <a href="../teardown/0701.html">0701 钓台本体与顶棚 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

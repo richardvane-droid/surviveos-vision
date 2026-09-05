@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0201 模拟阳光 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="模拟阳光 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/02.html">02 地堡</a> › <a href="../modules/0201.html">0201 模拟阳光</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">地堡 · 模块 0201 · 核心拆解</p>
+    <h1>模拟阳光：4 个核心模块与逻辑</h1>
+    <p class="lede">一盏影视灯沿着天花板滑轨走一整天，地堡里也有晨光和黄昏。</p>
+    <p class="meta"><span class="st st-✅">✅ 真实三阶段已完成</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>电动滑轨云台</a><a href="#p2"><i>2</i>菲涅尔假窗光学组</a><a href="#p3"><i>3</i>日轨场景编排</a><a href="#p4"><i>4</i>天气同频与落日入睡</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 电动滑轨云台</h2>
+    <p class="scene">让一盏影视灯每天从东走到西的“轨道车”。天花板上吊一根 3 米铝合金 V 型滑轨，滑车靠同步带由步进电机拖着走，位置由步数直接换算，不需要额外的位置传感器；滑车下面挂一个双轴云台，负责水平转向和俯仰，灯走到哪儿都能把光斑对准床或沙发。电源和信号线塞在拖链里跟着滑车伸缩，避免线缆被拉扯。整套结构的关键是承重：灯体、云台、透镜和线缆合计约 6 公斤，吊架必须用膨胀螺栓打进楼板，而不是靠石膏板承重。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0201-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0201-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0201-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M110 320 L400 44" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0201-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 吊架 -->
+    <path d="M70 300 l50 -16 l40 8 l-50 16 Z" stroke-width="1.5"/>
+    <path d="M70 300 v8 l40 8 v-8 M110 316 l50 -16 v-8" stroke-width="1.4"/>
+    <path d="M72 302 v5 l38 8 v-5 Z" fill="url(#p0201-1-shade)" stroke="none"/>
+    <circle cx="90" cy="294" r="3" stroke-width="1"/><circle cx="135" cy="290" r="3" stroke-width="1"/>
+    <path d="M90 291 v-16 M135 287 v-16 M86 275 h8 M131 271 h8" stroke-width="1.2"/>
+    <path d="M100 318 v10 h28 v-10" stroke-width="1.2"/>
+    <!-- 2 滑轨 -->
+    <path d="M118 262 l130 -52 l12 6 l-130 52 Z" stroke-width="1.5"/>
+    <path d="M118 262 v10 l12 6 v-10 M130 278 l130 -52 v-10" stroke-width="1.4"/>
+    <path d="M120 268 l130 -52" stroke-width="0.7"/>
+    <path d="M118 272 l12 6 l130 -52 v-4 l-130 52 l-12 -6 Z" fill="url(#p0201-1-shade)" stroke="none"/>
+    <path d="M128 259 l116 -46" stroke-width="0.9" stroke-dasharray="1.5 1.5"/>
+    <path d="M116 258 l4 -2 v8 l-4 2 Z M246 206 l4 -2 v8 l-4 2 Z" stroke-width="0.9"/>
+    <!-- 3 滑车 + 电机 -->
+    <rect x="220" y="172" width="40" height="26" rx="3" stroke-width="1.5"/>
+    <rect x="222" y="174" width="36" height="22" rx="2" stroke-width="0.6"/>
+    <rect x="222" y="190" width="36" height="6" fill="url(#p0201-1-shade)" stroke="none"/>
+    <circle cx="240" cy="185" r="6" stroke-width="1.2"/><circle cx="240" cy="185" r="2" stroke-width="1"/>
+    <circle cx="226" cy="201" r="4.5" stroke-width="1.1"/><circle cx="254" cy="201" r="4.5" stroke-width="1.1"/>
+    <circle cx="226" cy="201" r="1.3" stroke-width="0.8"/><circle cx="254" cy="201" r="1.3" stroke-width="0.8"/>
+    <path d="M260 178 h16 a4 7 0 0 1 0 14 h-16" stroke-width="1.3"/><ellipse cx="276" cy="185" rx="4" ry="7" stroke-width="0.9"/>
+    <path d="M262 180 h12 M262 190 h12" stroke-width="0.5"/>
+    <!-- 4 拖链 -->
+    <path d="M280 150 q18 -28 44 -26" stroke-width="1.4"/>
+    <path d="M284 157 q18 -28 44 -26" stroke-width="1.4"/>
+    <path d="M280 150 l4 7 M324 124 l4 7" stroke-width="1.2"/>
+    <path d="M286 142 l4 6 M293 135 l4 6 M301 130 l4 6 M310 127 l4 6 M318 125 l4 6" stroke-width="0.8"/>
+    <path d="M283 152 q18 -28 44 -26" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <!-- 5 云台 -->
+    <rect x="336" y="70" width="28" height="7" rx="2" stroke-width="1.4"/>
+    <ellipse cx="350" cy="82" rx="14" ry="4.5" stroke-width="1.3"/>
+    <path d="M336 82 v6 a14 4.5 0 0 0 28 0 v-6" stroke-width="1.2"/>
+    <path d="M338 85 a12 4 0 0 0 24 0 v3 a12 4 0 0 1 -24 0 Z" fill="url(#p0201-1-shade)" stroke="none"/>
+    <path d="M338 92 v24 h4 v-14 h16 v14 h4 v-24" stroke-width="1.4"/>
+    <circle cx="364" cy="108" r="5" stroke-width="1.2"/><circle cx="364" cy="108" r="1.5" stroke-width="0.8"/>
+    <path d="M342 108 h16" stroke-width="0.8"/>
+    <!-- 6 快装板 -->
+    <path d="M378 52 l30 -10 l14 6 l-30 10 Z" stroke-width="1.5"/>
+    <path d="M378 52 v5 l14 6 v-5 M392 63 l30 -10 v-5" stroke-width="1.2"/>
+    <path d="M390 50 l14 -5 M392 53 l14 -5" stroke-width="0.7"/>
+    <circle cx="400" cy="46" r="2.5" stroke-width="1"/><path d="M400 43 v-8 M397 35 h6" stroke-width="1"/>
+    <path d="M420 46 l8 -4" stroke-width="1.6"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M160 302 H190"/><path d="M250 236 H280"/><path d="M262 198 H290"/><path d="M330 145 H350"/><path d="M372 100 H390"/><path d="M424 58 H430"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="200" cy="302" r="8"/><circle cx="290" cy="236" r="8"/><circle cx="300" cy="198" r="8"/><circle cx="360" cy="145" r="8"/><circle cx="400" cy="100" r="8"/><circle cx="440" cy="58" r="8"/>
+    </g>
+    <text x="200" y="305.5">1</text><text x="290" y="239.5">2</text><text x="300" y="201.5">3</text><text x="360" y="148.5">4</text><text x="400" y="103.5">5</text><text x="440" y="61.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">电动滑轨云台 · 爆炸图</text>
+    <text x="16" y="52">1 天花板吊架（膨胀螺栓）</text>
+    <text x="16" y="68">2 3m 铝合金 V 型滑轨 + 同步带</text>
+    <text x="16" y="84">3 滑车 + NEMA17 步进电机</text>
+    <text x="16" y="100">4 拖链（电源 / 信号线）</text>
+    <text x="16" y="116">5 双轴云台（水平 / 俯仰）</text>
+    <text x="16" y="132">6 快装板（挂灯）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0201-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>滑轨 3m 铝型材，同步带传动，步进电机 NEMA17 + 减速</li><li>云台双轴，俯仰 ±45°、水平 180°，慢速关键帧运动</li><li>承重按 3 倍冗余设计，吊架膨胀螺栓固定楼板</li><li>拖链走线，电源 + 信号线随滑车伸缩不外露</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/isaac879/Pan-Tilt-Mount" target="_blank" rel="noopener">isaac879/Pan-Tilt-Mount</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 菲涅尔假窗光学组</h2>
+    <p class="scene">决定“光像不像从窗户进来”的那几片玻璃。南光 FS-300B 本身出的是宽而散的光，加一片菲涅尔透镜后，光线被压成一束平行硬光，边缘锐利，投在墙上才会有真实日光的影子。透镜前再插一片木质窗棂遮片，墙上就会出现窗格影子；最外层的四叶挡光板用来裁掉不想照到的区域，比如皮沙发和塑料收纳。菲涅尔透镜的原理是把厚凸透镜切成一圈圈同心环再摊平，所以又薄又轻，同样的聚光能力重量只有玻璃透镜的几分之一。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0201-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0201-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0201-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M110 318 L400 44" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0201-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 灯体 -->
+    <rect x="70" y="262" width="76" height="52" rx="5" stroke-width="1.5"/>
+    <rect x="72" y="264" width="72" height="48" rx="4" stroke-width="0.6"/>
+    <rect x="72" y="302" width="72" height="10" fill="url(#p0201-2-shade)" stroke="none"/>
+    <circle cx="108" cy="288" r="17" stroke-width="1.3"/><circle cx="108" cy="288" r="4" stroke-width="1"/>
+    <path d="M108 271 v34 M91 288 h34 M96 276 l24 24 M120 276 l-24 24" stroke-width="0.7"/>
+    <path d="M76 268 h8 M76 272 h8 M76 276 h8 M132 268 h8 M132 272 h8 M132 276 h8" stroke-width="0.7"/>
+    <circle cx="62" cy="288" r="5" stroke-width="1.2"/><circle cx="154" cy="288" r="5" stroke-width="1.2"/>
+    <path d="M60 293 v22 h96 v-22" stroke-width="1"/>
+    <!-- 2 保荣卡口 -->
+    <circle cx="200" cy="222" r="24" stroke-width="1.5"/><circle cx="200" cy="222" r="17" stroke-width="1.2"/>
+    <rect x="196" y="194" width="8" height="8" rx="1" stroke-width="1.1"/>
+    <rect x="196" y="194" width="8" height="8" rx="1" stroke-width="1.1" transform="rotate(120 200 222)"/>
+    <rect x="196" y="194" width="8" height="8" rx="1" stroke-width="1.1" transform="rotate(240 200 222)"/>
+    <path d="M181 228 a20 20 0 0 0 38 0 a23 23 0 0 1 -38 0 Z" fill="url(#p0201-2-shade)" stroke="none"/>
+    <!-- 3 透镜筒 -->
+    <path d="M250 134 a22 26 0 0 0 0 52" stroke-width="1.3"/>
+    <path d="M250 134 h32 M250 186 h32" stroke-width="1.4"/>
+    <ellipse cx="282" cy="160" rx="22" ry="26" stroke-width="1.5"/>
+    <ellipse cx="282" cy="160" rx="16" ry="19" stroke-width="0.8"/><ellipse cx="282" cy="160" rx="11" ry="13" stroke-width="0.8"/><ellipse cx="282" cy="160" rx="6" ry="7" stroke-width="0.8"/>
+    <path d="M250 172 a22 26 0 0 0 10 14 h24 a22 26 0 0 1 -10 -14 Z" fill="url(#p0201-2-shade)" stroke="none"/>
+    <path d="M262 134 v-8 h6 v8" stroke-width="1"/>
+    <!-- 4 窗棂遮片 -->
+    <path d="M318 82 l40 -8 v46 l-40 8 Z" stroke-width="1.5"/>
+    <path d="M322 86 l32 -6 v38 l-32 6 Z" stroke-width="0.7"/>
+    <path d="M338 78 v46 M320 105 l38 -8" stroke-width="1.3"/>
+    <path d="M354 76 l4 -2 v46 l-4 2 Z" fill="url(#p0201-2-shade)" stroke="none"/>
+    <!-- 5 四叶挡光板 -->
+    <path d="M382 40 l32 -6 v32 l-32 6 Z" stroke-width="1.5"/>
+    <path d="M384 39 l-6 -18 l32 -6 l4 18" stroke-width="1.2"/>
+    <path d="M382 72 l-6 16 l32 -6 l6 -16" stroke-width="1.2"/>
+    <path d="M382 40 l-22 6 v30 l22 -4" stroke-width="1.2"/>
+    <path d="M414 34 l22 -8 v30 l-22 6" stroke-width="1.2"/>
+    <path d="M416 36 l18 -6 v6 l-18 6 Z" fill="url(#p0201-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M148 288 H160"/><path d="M200 246 V252"/><path d="M282 186 V196"/><path d="M358 122 H370"/><path d="M436 60 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="170" cy="288" r="8"/><circle cx="200" cy="262" r="8"/><circle cx="282" cy="206" r="8"/><circle cx="380" cy="122" r="8"/><circle cx="450" cy="60" r="8"/>
+    </g>
+    <text x="170" y="291.5">1</text><text x="200" y="265.5">2</text><text x="282" y="209.5">3</text><text x="380" y="125.5">4</text><text x="450" y="63.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">菲涅尔假窗光学组 · 爆炸图</text>
+    <text x="16" y="52">1 南光 FS-300B 灯体 + 散热风扇</text>
+    <text x="16" y="68">2 保荣卡口（Bowens）</text>
+    <text x="16" y="84">3 菲涅尔透镜筒（前后调焦）</text>
+    <text x="16" y="100">4 窗棂遮片（椴木激光切）</text>
+    <text x="16" y="116">5 四叶挡光板</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0201-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>南光 FS-300B：300W COB，2700~6500K 双色温，保荣卡口</li><li>菲涅尔透镜 Φ200mm，前后调焦，光斑 15°~55° 可变</li><li>窗棂遮片用椴木激光切，双格或三格可换</li><li>四叶挡光板铝制，长时间硬光下不变形</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 日轨场景编排</h2>
+    <p class="scene">把一天 12 小时的太阳压缩进一根 3 米的滑轨。输入是当前时刻和一张日程表（6:30 东端亮起、12:00 走到正中、18:30 西端落下），输出是三个量：滑轨位置、云台角度、灯的色温和亮度。色温不自己拍脑袋，而是沿用太阳的自然曲线，早晚偏暖、正午最白；四个手动场景（晨光/正午/黄昏/阴天）是叠在曲线之上的“覆盖层”，按一下就临时接管，过期自动回到轨道上。滑轨走位不靠传感器，而是把时刻换算成进度 0~1，再乘以总步数。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0201-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0201-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0201-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0201-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 太阳弧 + 小太阳 -->
+    <path d="M70 128 Q180 84 290 128" stroke-width="1" stroke-dasharray="4 4"/>
+    <circle cx="180" cy="106" r="7" stroke-width="1.4"/>
+    <path d="M180 95 v-4 M180 117 v4 M169 106 h-4 M191 106 h4 M172 98 l-3 -3 M188 114 l3 3 M188 98 l3 -3 M172 114 l-3 3" stroke-width="1"/>
+    <!-- 滑轨 -->
+    <path d="M56 132 H304 M56 138 H304" stroke-width="1.5"/>
+    <path d="M60 132 v-6 M300 132 v-6 M180 132 v-6" stroke-width="1.2"/>
+    <path d="M58 135 H302" stroke-width="0.5" stroke-dasharray="1.5 2"/>
+    <!-- 三个位置的灯 -->
+    <rect x="70" y="140" width="22" height="14" rx="3" stroke-width="1.4"/>
+    <rect x="169" y="140" width="22" height="14" rx="3" stroke-width="1.4"/>
+    <rect x="268" y="140" width="22" height="14" rx="3" stroke-width="1.4"/>
+    <rect x="72" y="148" width="18" height="5" fill="url(#p0201-3p-shade)" stroke="none"/>
+    <rect x="171" y="148" width="18" height="5" fill="url(#p0201-3p-shade)" stroke="none"/>
+    <rect x="270" y="148" width="18" height="5" fill="url(#p0201-3p-shade)" stroke="none"/>
+    <!-- 光锥 -->
+    <path d="M76 154 L110 214 M88 154 L150 214" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <path d="M174 154 L156 214 M186 154 L204 214" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <path d="M272 154 L210 214 M284 154 L250 214" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <!-- 地面 -->
+    <path d="M40 216 Q180 210 320 216" stroke-width="1.2"/>
+    <path d="M60 216 v4 M180 216 v4 M300 216 v4" stroke-width="1"/>
+    <!-- 场景芯片 -->
+    <rect x="35" y="244" width="68" height="24" rx="4" stroke-width="1.1"/>
+    <rect x="109" y="244" width="68" height="24" rx="4" stroke-width="1.1"/>
+    <rect x="183" y="244" width="68" height="24" rx="4" stroke-width="1.1"/>
+    <rect x="257" y="244" width="68" height="24" rx="4" stroke-width="1.1"/>
+    <path d="M40 258 a5 5 0 0 1 10 0 Z" stroke-width="1"/>
+    <circle cx="119" cy="256" r="3.5" stroke-width="1"/><path d="M119 251 v-1.5 M119 261 v1.5 M114 256 h-1.5 M124 256 h1.5" stroke-width="0.8"/>
+    <path d="M188 258 a5 5 0 0 1 10 0 Z" stroke-width="1"/><path d="M187 258 h12" stroke-width="0.8"/>
+    <path d="M262 259 q0 -4 3 -4 q2 -3 5 -1 q3 -1 4 2 q3 1 2 3 Z" stroke-width="1"/>
+    <!-- 覆盖箭头 -->
+    <path d="M180 240 V226" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0201 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">日轨场景编排</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">一天十二小时，压进三米轨道</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">时刻 → 进度 t → 滑轨步数 + 云台角 + 太阳色温曲线</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每 5 分钟一拍，6:30 东端亮起、18:30 西端落下</text>
+    <text x="64" y="366">色温走太阳曲线，四场景只是临时覆盖层</text>
+    <text x="64" y="396">断网时 ESP32 用本地时钟继续走位</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 自动化 + ESPHome stepper · 数据出口：滑轨位置 / 色温实体</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：basnijholt/adaptive-lighting</text>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="60" y="230">6:30 东</text><text x="180" y="230">12:00 中</text><text x="300" y="230">18:30 西</text>
+  </g>
+  <g font-size="8" fill="#555">
+    <text x="55" y="259">晨光 3200K</text><text x="129" y="259">正午 5600K</text><text x="203" y="259">黄昏 2700K</text><text x="277" y="259">阴天 4500K</text>
+  </g>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="180" y="282">↑ 场景是叠在曲线上的临时覆盖层</text>
+  </g>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0201-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0201-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0201-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">日轨场景编排 · 流程图</text>
+  <g filter="url(#p0201-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M196 54 a34 6 0 0 1 68 0 v32 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+    <path d="M34 172 h106 v3 h-106 Z M232 176 l56 -24 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0201-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0201-3-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 70 Q160 70 140 70" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M85 170 V228"/>
+    <path d="M285 250 H328"/>
+    <path d="M85 270 V327 H173"/>
+    <path d="M390 270 V327 H307"/>
+    <path d="M390 130 V108 Q390 100 382 100 H238 Q230 100 230 108 V126" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每 5 分钟唤醒</text>
+    <text x="230" y="71">日程表</text><text x="230" y="84" font-size="8.5" fill="#666">6:30 ~ 18:30</text>
+    <text x="85" y="147">时刻 → 进度 t</text><text x="85" y="161">t = 0 ~ 1</text>
+    <text x="230" y="151">有场景覆盖？</text><text x="230" y="164" font-size="8.5" fill="#666">晨 / 午 / 昏 / 阴</text>
+    <text x="390" y="147">是 → 用场景的</text><text x="390" y="161">色温 / 亮度</text>
+    <text x="85" y="247">位置 = t × 总步数</text><text x="85" y="261">云台指向床 / 沙发</text>
+    <text x="230" y="247">否 → 太阳曲线</text><text x="230" y="261">插值色温 / 亮度</text>
+    <text x="390" y="247">发到 ESPHome</text><text x="390" y="261">stepper + 灯</text>
+    <text x="240" y="331">灯 + 滑轨同步更新</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="312" y="96">2 小时后过期</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0201-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：每 5 分钟一拍，6:30~18:30 之间才动</li><li>色温曲线 2700K → 5600K → 2700K，亮度随高度角</li><li>手动场景覆盖 2 小时后自动过期，回到曲线</li><li>断网时 ESP32 用本地 RTC 继续走，只丢场景覆盖</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 basnijholt/adaptive-lighting 出色温亮度曲线，HA 自动化把时刻换算成滑轨步数，ESPHome 的 stepper 组件本地走位</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">basnijholt/adaptive-lighting</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 天气同频与落日入睡</h2>
+    <p class="scene">两段让假太阳“懂事”的小逻辑。第一段是天气同频：地面的微型气象站每分钟报一次雨量和照度，只要外面在下雨或者照度低于晴天的三分之一，地堡里的灯就切到阴天模式，4500K、亮度 40%，让人在地下也知道外面是什么天。第二段是落日入睡：以设定的睡觉时间为锚点，提前 30 分钟开始把亮度按曲线压下去、色温拉到 2200K，最后只留床头 1% 的月光夜灯，整个过程没有一次突变。两段都是“覆盖层”，优先级高于日轨曲线。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0201-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0201-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0201-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0201-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 云 + 雨 -->
+    <path d="M44 156 q0 -14 14 -14 q6 -12 20 -8 q14 -4 18 10 q12 2 10 12 Z" stroke-width="1.5"/>
+    <path d="M48 154 h56" stroke-width="0.6"/>
+    <path d="M56 166 l-4 10 M68 166 l-4 10 M80 166 l-4 10 M92 166 l-4 10" stroke-width="1"/>
+    <path d="M50 146 q4 -6 10 -4" stroke-width="0.6"/>
+    <!-- 房子剖面 -->
+    <path d="M150 140 L180 112 L210 140" stroke-width="1.6"/>
+    <path d="M156 140 v40 h48 v-40" stroke-width="1.4"/>
+    <path d="M170 180 v-16 h10 v16" stroke-width="1"/>
+    <rect x="186" y="150" width="10" height="10" stroke-width="0.9"/>
+    <path d="M120 180 H240" stroke-width="1.3"/>
+    <path d="M124 178 l2 -4 l2 4 M134 178 l2 -4 l2 4 M222 178 l2 -4 l2 4 M232 178 l2 -4 l2 4" stroke-width="0.7"/>
+    <path d="M124 184 h112" stroke-width="0.5" stroke-dasharray="2 3"/>
+    <!-- 地下房间 -->
+    <rect x="152" y="188" width="56" height="44" rx="2" stroke-width="1.4"/>
+    <path d="M154 190 h52 v40 h-52 Z" stroke-width="0.5"/>
+    <path d="M152 232 h56 v3 h-56 Z" fill="url(#p0201-4p-shade)" stroke="none"/>
+    <rect x="168" y="192" width="14" height="6" rx="2" stroke-width="1.1"/>
+    <path d="M170 198 l-8 22 M180 198 l8 22" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M160 222 h24 v6 h-24 Z" stroke-width="0.9"/><path d="M160 222 q2 -4 6 0" stroke-width="0.8"/>
+    <path d="M194 210 a5 5 0 1 0 5 5 a4 4 0 0 1 -5 -5 Z" stroke-width="0.9"/>
+    <!-- 时钟 -->
+    <circle cx="296" cy="150" r="22" stroke-width="1.5"/>
+    <path d="M296 150 V134 M296 150 L286 158" stroke-width="1.6"/>
+    <path d="M296 130 v3 M296 170 v-3 M276 150 h3 M316 150 h-3" stroke-width="1"/>
+    <circle cx="296" cy="150" r="1.5" stroke-width="1"/>
+    <!-- 箭头 -->
+    <path d="M104 152 Q128 152 150 160" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M272 158 Q240 168 212 172" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M144 158 l6 2 l-5 4" stroke-width="1"/>
+    <path d="M218 170 l-6 2 l5 3" stroke-width="1"/>
+    <!-- 月亮 -->
+    <path d="M320 196 a12 12 0 1 0 12 12 a9 9 0 0 1 -12 -12 Z" stroke-width="1.3"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0201 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">天气同频·落日入睡</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">地面下雨地下也阴，到点太阳替你关灯</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">气象站 + 就寝时间 → 覆盖层（落日 > 阴天）→ 灯 + 夜灯</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">雨量 > 0 或照度低于晴天 1/3，10 分钟后切阴天</text>
+    <text x="64" y="366">睡前 30 分钟起，亮度按曲线压到 1%、2200K</text>
+    <text x="64" y="396">气象站离线 15 分钟视为晴天，不会永远阴天</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 自动化 · 数据出口：覆盖层实体，0202 / 0204 可订阅</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：basnijholt/adaptive-lighting</text>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="74" y="188">雨量 / 照度</text><text x="296" y="186">就寝前 30 分</text>
+    <text x="180" y="246">地下 3m：阴天 4500K → 落日 → 1% 月光</text>
+  </g>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0201-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0201-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0201-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">天气同频与落日入睡 · 流程图</text>
+  <g filter="url(#p0201-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M196 54 a34 6 0 0 1 68 0 v32 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <path d="M90 128 l60 24 l-60 24 l-60 -24 Z"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+    <path d="M92 176 l58 -24 l4 2 l-60 26 Z M232 176 l56 -24 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0201-4-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0201-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V126"/>
+    <path d="M230 92 V126" stroke-dasharray="3 3"/>
+    <path d="M150 152 H170"/>
+    <path d="M90 176 V228"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M285 250 H328"/>
+    <path d="M85 270 V327 H173"/>
+    <path d="M390 270 V327 H307"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每分钟检查</text>
+    <text x="230" y="71">微型气象站</text><text x="230" y="84" font-size="8.5" fill="#666">雨量 / 照度</text>
+    <text x="90" y="151">睡前 30 分内？</text><text x="90" y="164" font-size="8.5" fill="#666">锚定就寝时间</text>
+    <text x="230" y="151">下雨或暗？</text><text x="230" y="164" font-size="8.5" fill="#666">持续 10 分钟</text>
+    <text x="390" y="147">否 → 无覆盖层</text><text x="390" y="161">日轨曲线接管</text>
+    <text x="85" y="247">是 → 落日层</text><text x="85" y="261">30 分渐暗到 1%</text>
+    <text x="230" y="247">是 → 阴天层</text><text x="230" y="261">4500K · 40%</text>
+    <text x="390" y="247">覆盖层状态写 HA</text><text x="390" y="261">0202 · 0204 订阅</text>
+    <text x="240" y="331">按优先级合成 → 灯 + 夜灯</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="70" y="200">是</text><text x="150" y="146">否</text><text x="236" y="200">是</text><text x="305" y="146">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0201-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>阴天判据：雨量 &gt; 0 或 照度 &lt; 晴天基准 1/3，持续 10 分钟</li><li>落日：睡前 30 分钟起，亮度 100% → 1%，色温到 2200K</li><li>气象站离线 15 分钟即视为晴天，不让地堡永远阴天</li><li>两段状态都写进 HA 实体，0202 灯箱和 0204 台灯可订阅</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">HA 自动化订阅气象站 weather/照度实体触发阴天场景，adaptive-lighting 的 sleep_mode 开关做 30 分钟落日渐暗，最后交接给床头夜灯</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">basnijholt/adaptive-lighting</a><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0107.html">← 0107 小吧台 拆解</a>
+    <a class="up" href="../modules/0201.html">回到 模拟阳光 专题页</a>
+    <a href="../teardown/0202.html">0202 卫生间灯箱系统 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

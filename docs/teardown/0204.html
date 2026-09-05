@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0204 系统设计工作台 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="系统设计工作台 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/02.html">02 地堡</a> › <a href="../modules/0204.html">0204 系统设计工作台</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">地堡 · 模块 0204 · 核心拆解</p>
+    <h1>系统设计工作台：4 个核心模块与逻辑</h1>
+    <p class="lede">三块弧形屏 + 一整面图纸墙，全屋每个模块都是在这里画出来的。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>整板工作台</a><a href="#p2"><i>2</i>三屏弧形支架</a><a href="#p3"><i>3</i>设计模式一键</a><a href="#p4"><i>4</i>图纸到大屏</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 整板工作台</h2>
+    <p class="scene">SurviveOs 所有图纸诞生的那张桌子。桌面是一整块 2.4 米长、4cm 厚的胡桃木板，木板不拼接才不会在地下湿度变化时沿拼缝翘起；支架用 40×40 的黑色方管焊成，方管的好处是刚性高、腿细，桌下空间完整。桌面背沿下方挂一条走线槽，插排、UPS 和所有变压器都躺在里面，桌面上只露出显示器线。右侧留 60cm 的样件托盘放 3D 打印件，桌下贴一块 ESPHome 按键板，一键切换设计模式。木板表面用硬蜡油而不是清漆，划痕可以局部补。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0204-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0204-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0204-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0204-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 40×40 方管支架 + 可调地脚 -->
+    <path d="M60 296 l30 -16 h70 l-30 16 Z" stroke-width="1.5"/>
+    <path d="M63 296 l27 -14 h64 l-27 14 Z" stroke-width="0.6"/>
+    <path d="M60 296 v34 M130 296 v34 M160 280 v34 M90 280 v10" stroke-width="1.5"/>
+    <path d="M64 296 v34 M134 296 v34 M164 280 v34" stroke-width="0.6"/>
+    <path d="M60 322 h70 M130 322 l30 -16" stroke-width="1.2"/>
+    <path d="M60 296 v3 h70 v-3 Z" fill="url(#p0204-1-shade)" stroke="none"/>
+    <ellipse cx="62" cy="332" rx="5" ry="2" stroke-width="1"/><ellipse cx="132" cy="332" rx="5" ry="2" stroke-width="1"/><ellipse cx="162" cy="316" rx="5" ry="2" stroke-width="1"/>
+    <path d="M62 330 v-3 M132 330 v-3 M162 314 v-3" stroke-width="0.7"/>
+    <!-- ② 走线槽 + UPS -->
+    <path d="M150 246 l14 -8 h50 l-14 8 Z" stroke-width="1.4"/>
+    <path d="M150 246 v8 h50 v-8 M214 238 v8 l-14 8" stroke-width="1.3"/>
+    <path d="M201 247 l13 -8 v7 l-13 8 Z" fill="url(#p0204-1-shade)" stroke="none"/>
+    <path d="M160 246 v-10 h14 v10 M162 240 h2 M164 238 h4" stroke-width="1"/>
+    <path d="M161 237 h12 v3 h-12 Z" fill="url(#p0204-1-shade2)" stroke="none"/>
+    <path d="M178 244 q4 -5 8 0 q4 -5 8 0 M182 242 q2 -3 4 0" stroke-width="0.7"/>
+    <path d="M154 250 h42" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <!-- ③ ESPHome 按键板（3 键） -->
+    <path d="M228 186 l14 -7 h28 l-14 7 Z" stroke-width="1.3"/>
+    <path d="M228 186 v3 h28 v-3" stroke-width="0.9"/>
+    <circle cx="240" cy="182" r="2.4" stroke-width="1"/><circle cx="250" cy="182" r="2.4" stroke-width="1"/><circle cx="260" cy="182" r="2.4" stroke-width="1"/>
+    <path d="M229 187 h27 v2 h-27 Z" fill="url(#p0204-1-shade)" stroke="none"/>
+    <path d="M256 179 h6 l3 -2" stroke-width="0.7"/>
+    <!-- ④ 胡桃木整板 2400×800×40 -->
+    <path d="M262 126 l32 -18 h70 l-32 18 Z" stroke-width="1.6"/>
+    <path d="M262 126 v8 h70 v-8 M364 108 v8 l-32 18" stroke-width="1.4"/>
+    <path d="M333 127 l31 -18 v7 l-31 18 Z" fill="url(#p0204-1-shade)" stroke="none"/>
+    <path d="M270 122 q20 -4 34 -10 q10 -4 24 -6 M278 124 q18 -3 30 -9 q12 -6 30 -7 M288 125 q14 -2 26 -8 q8 -4 18 -5" stroke-width="0.6"/>
+    <path d="M264 130 v2 M268 130 v2 M328 130 v2 M330 130 v2" stroke-width="0.6"/>
+    <!-- ⑤ 样件托盘（3D 打印件） -->
+    <path d="M346 68 l14 -8 h36 l-14 8 Z" stroke-width="1.3"/>
+    <path d="M346 68 v5 h36 v-5 M396 60 v5 l-14 8" stroke-width="1.1"/>
+    <path d="M383 69 l13 -8 v4 l-13 8 Z" fill="url(#p0204-1-shade)" stroke="none"/>
+    <path d="M352 66 l4 -2 l4 2 l-4 2 Z M352 66 v-4 l4 -2 l4 2 v4 M356 68 v-4" stroke-width="0.8"/>
+    <ellipse cx="370" cy="62" rx="3.5" ry="1.4" stroke-width="0.8"/><path d="M366.5 62 v-4 a3.5 1.4 0 0 1 7 0 v4" stroke-width="0.8"/>
+    <path d="M378 62 l5 -3 l3 2 l-5 3 Z" stroke-width="0.8"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M164 300 H206"/><path d="M150 250 H130"/><path d="M270 184 H320"/><path d="M364 116 H400"/><path d="M396 64 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="300" r="8"/><circle cx="120" cy="250" r="8"/><circle cx="330" cy="184" r="8"/><circle cx="410" cy="116" r="8"/><circle cx="450" cy="64" r="8"/>
+    </g>
+    <text x="216" y="303.5">1</text><text x="120" y="253.5">2</text><text x="330" y="187.5">3</text><text x="410" y="119.5">4</text><text x="450" y="67.5">5</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">整板工作台 · 爆炸图</text>
+    <text x="16" y="52">1 40×40 方管支架 + 可调地脚</text>
+    <text x="16" y="68">2 走线槽 + 1000VA UPS</text>
+    <text x="16" y="84">3 ESPHome 3 键板（设计/休息/关机）</text>
+    <text x="16" y="100">4 胡桃木整板 2400×800×40</text>
+    <text x="16" y="116">5 样件托盘（3D 打印件）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0204-1</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>胡桃木整板 2400×800×40mm，硬蜡油面，两端留伸缩缝</li><li>40×40 黑色方管支架，粉末喷涂，可调地脚</li><li>走线槽 + 1000VA UPS，三屏 + 主机断电可撑 15 分钟</li><li>桌下 ESPHome 按键板：3 键（设计/休息/关机）</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 三屏弧形支架</h2>
+    <p class="scene">把三块屏幕排成一段弧、正好包住视野的支架。中间是 34 寸带鱼屏，两侧各一块 27 寸竖屏，弧形排列的意义是让每块屏到眼睛的距离都差不多，转头看侧屏时不用重新对焦。支架是一根桌夹立柱加三条独立的气弹簧臂，每块屏都能单独调高低和角度；侧屏的 VESA 板做成快拆，换成竖屏或横屏只需拔一下销。人眼的舒适视野大约是左右各 30°，三屏合起来正好落在这个范围里，再宽就要转脖子了。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0204-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0204-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0204-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <!-- 爆炸轴线 -->
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0204-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 桌夹底座 + Φ35 立柱 -->
+    <path d="M96 298 h36 v20 h-36 Z" stroke-width="1.5"/>
+    <path d="M100 302 h28 M100 314 h28" stroke-width="0.6"/>
+    <path d="M97 310 h34 v7 h-34 Z" fill="url(#p0204-2-shade)" stroke="none"/>
+    <path d="M114 318 v8" stroke-width="1.2"/>
+    <ellipse cx="114" cy="328" rx="6" ry="2.5" stroke-width="1.1"/>
+    <path d="M111 298 v-36 M117 298 v-36" stroke-width="1.4"/>
+    <ellipse cx="114" cy="262" rx="3" ry="1.4" stroke-width="1"/>
+    <path d="M111 280 h6 M111 272 h6" stroke-width="0.5"/>
+    <path d="M114 296 v2" stroke-width="0.5"/>
+    <!-- ② 气弹簧臂 ×3（独立调高调倾） -->
+    <path d="M150 256 l18 -14 l18 6 M150 259 l18 -14" stroke-width="1.4"/>
+    <circle cx="150" cy="257" r="2.4" stroke-width="1"/><circle cx="168" cy="242" r="2.4" stroke-width="1"/><circle cx="186" cy="248" r="2" stroke-width="1"/>
+    <path d="M162 246 l18 -14 l18 6 M162 249 l18 -14" stroke-width="1.4"/>
+    <circle cx="162" cy="247" r="2.4" stroke-width="1"/><circle cx="180" cy="232" r="2.4" stroke-width="1"/><circle cx="198" cy="238" r="2" stroke-width="1"/>
+    <path d="M174 236 l18 -14 l18 6 M174 239 l18 -14" stroke-width="1.4"/>
+    <circle cx="174" cy="237" r="2.4" stroke-width="1"/><circle cx="192" cy="222" r="2.4" stroke-width="1"/><circle cx="210" cy="228" r="2" stroke-width="1"/>
+    <path d="M154 254 l5 -4 M166 244 l5 -4 M178 234 l5 -4" stroke-width="0.6"/>
+    <!-- ③ VESA 75/100 快拆板 + 销 -->
+    <path d="M228 190 l30 -14 v-22 l-30 14 Z" stroke-width="1.4"/>
+    <circle cx="234" cy="182" r="1.6" stroke-width="0.8"/><circle cx="252" cy="174" r="1.6" stroke-width="0.8"/><circle cx="234" cy="170" r="1.6" stroke-width="0.8"/><circle cx="252" cy="162" r="1.6" stroke-width="0.8"/>
+    <path d="M229 189 l28 -13 v2 l-28 13 Z" fill="url(#p0204-2-shade)" stroke="none"/>
+    <path d="M236 176 l14 -6 v6 l-14 6 Z" stroke-width="0.6" stroke-dasharray="1.5 1.5"/>
+    <path d="M258 166 h8 M266 164 a2 2 0 1 0 0 4" stroke-width="1"/>
+    <!-- ④ 34 寸带鱼屏（居中） -->
+    <path d="M262 142 l84 -38 v-32 l-84 38 Z" stroke-width="1.6"/>
+    <path d="M265 139 l78 -35 v-27 l-78 35 Z" stroke-width="0.6"/>
+    <path d="M263 141 l82 -37 v3 l-82 37 Z" fill="url(#p0204-2-shade2)" stroke="none"/>
+    <path d="M272 124 l22 -22 M280 128 l30 -30" stroke-width="0.5"/>
+    <path d="M300 130 l4 -2 v4 l-4 2 Z" stroke-width="0.7"/>
+    <!-- ⑤ 27 寸竖屏 ×2（内收 25°） -->
+    <path d="M338 92 l22 -10 v-42 l-22 10 Z" stroke-width="1.5"/>
+    <path d="M340 90 l18 -8 v-38 l-18 8 Z" stroke-width="0.6"/>
+    <path d="M339 91 l20 -9 v2 l-20 9 Z" fill="url(#p0204-2-shade2)" stroke="none"/>
+    <path d="M372 78 l22 -10 v-42 l-22 10 Z" stroke-width="1.5"/>
+    <path d="M374 76 l18 -8 v-38 l-18 8 Z" stroke-width="0.6"/>
+    <path d="M373 77 l20 -9 v2 l-20 9 Z" fill="url(#p0204-2-shade2)" stroke="none"/>
+    <path d="M344 76 l10 -18 M378 62 l10 -18" stroke-width="0.5"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M132 308 H200"/><path d="M148 246 H128"/><path d="M262 184 H300"/><path d="M346 110 H400"/><path d="M394 50 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="210" cy="308" r="8"/><circle cx="118" cy="246" r="8"/><circle cx="310" cy="184" r="8"/><circle cx="410" cy="110" r="8"/><circle cx="450" cy="50" r="8"/>
+    </g>
+    <text x="210" y="311.5">1</text><text x="118" y="249.5">2</text><text x="310" y="187.5">3</text><text x="410" y="113.5">4</text><text x="450" y="53.5">5</text>
+  </g>
+  <!-- 图例 -->
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">三屏弧形支架 · 爆炸图</text>
+    <text x="16" y="52">1 桌夹底座 + Φ35 铝合金立柱</text>
+    <text x="16" y="68">2 气弹簧臂 ×3（各 2~9kg）</text>
+    <text x="16" y="84">3 VESA 75/100 快拆板 + 拔销</text>
+    <text x="16" y="100">4 34 寸带鱼屏 3440×1440</text>
+    <text x="16" y="116">5 27 寸竖屏 ×2（内收 25°）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0204-2</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>桌夹立柱 Φ35 铝合金，夹持桌板 20~60mm 厚</li><li>气弹簧臂 ×3，各承重 2~9kg，独立调高调倾</li><li>带鱼屏 34 寸 3440×1440 居中，竖屏 27 寸 ×2 内收 25°</li><li>VESA 75/100 快拆板，一键拔销换向</li></ul></div>
+      <div>
+        </div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 设计模式一键</h2>
+    <p class="scene">一个按键把地堡从“卧室”切成“大脑”的场景逻辑。桌下按键板短按一次，ESPHome 把按键事件发给 HA，HA 接着做四件事：台灯亮到 2700K、60%；三块屏幕通过网络唤醒包点亮；音箱放上设计歌单；0201 的假太阳降到 30% 当环境光，不和屏幕抢眼睛。长按同一个键则退出，一切回到日轨曲线。这段逻辑还订阅 0201 的落日状态：夜里落日渐暗开始时，台灯也跟着一起暗，桌面不会是全屋最后一个亮着的地方。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0204-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0204-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0204-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0204-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 中央大按键 -->
+    <circle cx="180" cy="176" r="30" stroke-width="1.8"/>
+    <circle cx="180" cy="176" r="21" stroke-width="1.1"/>
+    <circle cx="180" cy="176" r="21" fill="url(#p0204-3p-dots)" stroke="none"/>
+    <path d="M154 190 a30 30 0 0 0 52 0 v4 a30 30 0 0 1 -52 0 Z" fill="url(#p0204-3p-shade)" stroke="none"/>
+    <path d="M180 166 v10 l6 4" stroke-width="1.3"/>
+    <!-- 手指 -->
+    <path d="M190 136 q4 -14 -2 -22 q-3 -4 -6 0 v18" stroke-width="1.2"/>
+    <path d="M182 132 q-6 0 -6 6 v8" stroke-width="1"/>
+    <!-- 左上：台灯 -->
+    <path d="M60 116 l16 -22 h16 l-6 22 Z" stroke-width="1.4"/>
+    <path d="M70 116 v22 M62 138 h16" stroke-width="1.3"/>
+    <path d="M62 114 l24 0 v2 l-24 0 Z" fill="url(#p0204-3p-shade)" stroke="none"/>
+    <path d="M64 124 l-4 6 M76 124 l0 8 M88 124 l4 6" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <!-- 右上：三屏 -->
+    <rect x="252" y="116" width="22" height="30" rx="2" stroke-width="1.3"/>
+    <rect x="278" y="112" width="34" height="34" rx="2" stroke-width="1.3"/>
+    <rect x="316" y="116" width="18" height="30" rx="2" stroke-width="1.3"/>
+    <path d="M254 142 h18 M280 142 h30 M318 142 h14" stroke-width="0.6"/>
+    <path d="M292 146 v6 M284 152 h16" stroke-width="1"/>
+    <!-- 左下：音箱 -->
+    <rect x="54" y="220" width="30" height="42" rx="3" stroke-width="1.4"/>
+    <circle cx="69" cy="232" r="5" stroke-width="1"/>
+    <circle cx="69" cy="250" r="7" stroke-width="1"/>
+    <circle cx="69" cy="250" r="2" stroke-width="0.8"/>
+    <path d="M90 236 a10 10 0 0 1 0 14 M96 230 a18 18 0 0 1 0 26" stroke-width="0.9"/>
+    <!-- 右下：假太阳 30% -->
+    <circle cx="292" cy="240" r="12" stroke-width="1.4"/>
+    <circle cx="292" cy="240" r="12" fill="url(#p0204-3p-shade)" stroke="none"/>
+    <path d="M292 222 v-5 M292 258 v5 M274 240 h-5 M310 240 h5 M279 227 l-3 -3 M305 253 l3 3 M305 227 l3 -3 M279 253 l-3 3" stroke-width="1" stroke-dasharray="2 2"/>
+    <!-- 箭头：按键 → 四件事 -->
+    <path d="M154 160 Q120 150 96 130" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M208 164 Q236 158 262 150" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M154 190 Q120 210 98 234" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M208 190 Q240 214 274 232" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M100 134 l-4 -4 l5 -1 M258 152 l4 -2 l-1 5 M102 230 l-4 4 l5 1 M270 232 l4 0 l-2 4" stroke-width="1"/>
+    <!-- 特性勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0204 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">设计模式一键</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">一个键，把卧室切成大脑</text>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="74" y="152">台灯 2700K · 60%</text>
+    <text x="292" y="166">三屏 WoL 唤醒</text>
+    <text x="72" y="276">音箱设计歌单</text>
+    <text x="292" y="276">假太阳降到 30%</text>
+    <text x="180" y="222">短按进入 · 长按退出</text>
+  </g>
+  <text x="180" y="298" text-anchor="middle" font-size="9.5" fill="#666">按键短按 → HA 场景 → 台灯 / 三屏 / 歌单 / 阳光；长按退出</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">短按进入、长按 1.5 秒退出，同一个键</text>
+    <text x="64" y="366">三屏靠网络唤醒包点亮，失败重试 3 次</text>
+    <text x="64" y="396">订阅 0201 落日实体，台灯跟着一起暗</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HA scene · 数据出口：设计模式开关实体 / 唤醒失败推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome · basnijholt/adaptive-lighting</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0204-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0204-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0204-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">设计模式一键 · 流程图</text>
+  <g filter="url(#p0204-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M196 54 a34 6 0 0 1 68 0 v30 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="150" y="312" width="180" height="30" rx="15"/>
+    <path d="M34 172 h106 v3 h-106 Z M232 176 l56 -24 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0204-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0204-3-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M175 250 H142"/>
+    <path d="M285 250 H328"/>
+    <path d="M85 270 V327 H148"/>
+    <path d="M450 150 H466 V327 H332"/>
+    <path d="M264 70 H328" stroke-dasharray="3 3"/>
+    <path d="M196 76 Q110 100 18 120 V250 H28" stroke-dasharray="3 3"/>
+  </g>
+  <path d="M390 270 V327" stroke="#3d3d3d" stroke-width="1.2" fill="none"/>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">桌下按键按下</text>
+    <text x="230" y="71">0201 落日实体</text><text x="230" y="84" font-size="8.5" fill="#666">sun_position</text>
+    <text x="85" y="147">ESPHome 上报</text><text x="85" y="161">on_multi_click</text>
+    <text x="230" y="151">短按 / 长按？</text><text x="230" y="164" font-size="8.5" fill="#666">长按 ≥ 1.5 秒</text>
+    <text x="390" y="147">长按 → 退出</text><text x="390" y="161">灯光回日轨曲线</text>
+    <text x="85" y="247">台灯 2700K 60%</text><text x="85" y="261">阳光 30% · 歌单</text>
+    <text x="230" y="247">scene.turn_on</text><text x="230" y="261">设计模式场景</text>
+    <text x="390" y="247">三屏 WoL 唤醒</text><text x="390" y="261">失败重试 3 次</text>
+    <text x="240" y="331">各动作并行 · 失败只推送</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="300" y="146">长按</text><text x="236" y="200">短按</text><text x="22" y="206">落日 → 台灯跟随</text></g>
+  <g font-size="8.5" fill="#666" text-anchor="middle"><text x="390" y="69">落日渐暗开始 →</text><text x="390" y="82">台灯同步暗到 5%</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0204-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：ESPHome 按键 on_click 短按进入，长按 1.5s 退出</li><li>动作：台灯 2700K 60% / 三屏 WoL 唤醒 / 音箱歌单 / 阳光 30%</li><li>订阅 0201 落日实体，台灯同步渐暗到 5%</li><li>屏幕唤醒失败重试 3 次后推送提醒，不阻塞其它动作</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">ESPHome binary_sensor 的 on_multi_click 区分短按长按触发 HA scene.turn_on，屏幕用 wake_on_lan 集成，台灯跟随 adaptive-lighting 的落日曲线</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a><a href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">basnijholt/adaptive-lighting</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 图纸到大屏</h2>
+    <p class="scene">让今晚画的墙明天一早就出现在全屋大屏上的数据流。木屋剖面、风管走向和打印件在 FreeCAD 里建模，户型和家具在 Sweet Home 3D 里布置；一个插件把 Sweet Home 3D 的 3D 户型按“每盏灯亮/灭”分别渲染成图片，再自动生成 HA 的 picture-elements 卡片配置，灯在 HA 里一开，平面图上对应位置就真的亮起来。流程中最容易出错的是实体映射：图里的灯和 HA 里的 entity_id 名字对不上，就会出现“灯亮了图没亮”，所以导出前有一步校验。打印件由拓竹切片后直接进右屏排队。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0204-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0204-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0204-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0204-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：工作台上的显示器 + 户型图 -->
+    <rect x="40" y="128" width="76" height="52" rx="3" stroke-width="1.5"/>
+    <path d="M70 180 h16 M78 180 v6 M64 186 h28" stroke-width="1.2"/>
+    <path d="M48 136 h60 v36 h-60 Z" stroke-width="0.7"/>
+    <path d="M48 154 h28 M76 136 v36 M90 154 h18" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <circle cx="62" cy="145" r="2" stroke-width="0.8"/><circle cx="92" cy="145" r="2" stroke-width="0.8"/><circle cx="62" cy="164" r="2" stroke-width="0.8"/><circle cx="96" cy="164" r="2" stroke-width="0.8"/>
+    <!-- 中：插件 逐灯渲染（两张小图：亮/灭） -->
+    <rect x="150" y="122" width="26" height="20" rx="2" stroke-width="1.2"/>
+    <rect x="150" y="150" width="26" height="20" rx="2" stroke-width="1.2"/>
+    <rect x="152" y="152" width="22" height="16" fill="url(#p0204-4p-shade)" stroke="none"/>
+    <circle cx="163" cy="132" r="3" stroke-width="1"/>
+    <path d="M163 126 v-2 M158 128 l-1.5 -1.5 M168 128 l1.5 -1.5 M156 132 h-2 M170 132 h2" stroke-width="0.8"/>
+    <circle cx="163" cy="160" r="3" stroke-width="1"/>
+    <!-- 齿轮（插件） -->
+    <circle cx="200" cy="146" r="10" stroke-width="1.3"/>
+    <circle cx="200" cy="146" r="4" stroke-width="1"/>
+    <path d="M200 133 v-4 M200 159 v4 M187 146 h-4 M213 146 h4 M191 137 l-3 -3 M209 155 l3 3 M209 137 l3 -3 M191 155 l-3 3" stroke-width="1.6"/>
+    <!-- 校验勾 -->
+    <circle cx="200" cy="190" r="9" stroke-width="1.2"/>
+    <path d="M196 190 l3 3 l5 -6" stroke-width="1.3"/>
+    <!-- 右：挂墙大屏 + 平面图 + 亮着的灯 -->
+    <rect x="244" y="130" width="80" height="60" rx="3" stroke-width="1.6"/>
+    <path d="M248 134 h72 v52 h-72 Z" stroke-width="0.6"/>
+    <path d="M250 162 h32 M282 136 v48 M300 162 h18" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <circle cx="265" cy="148" r="5" stroke-width="1.2"/>
+    <circle cx="265" cy="148" r="5" fill="url(#p0204-4p-dots)" stroke="none"/>
+    <path d="M265 140 v-3 M258 142 l-2 -2 M272 142 l2 -2 M256 148 h-3 M274 148 h3" stroke-width="0.8"/>
+    <circle cx="300" cy="148" r="3" stroke-width="0.8"/><circle cx="265" cy="174" r="3" stroke-width="0.8"/><circle cx="304" cy="174" r="3" stroke-width="0.8"/>
+    <path d="M280 190 v8 M270 198 h20" stroke-width="1"/>
+    <!-- 手机/开关：灯一开 -->
+    <rect x="292" y="220" width="22" height="14" rx="7" stroke-width="1.2"/>
+    <circle cx="308" cy="227" r="5" stroke-width="1"/>
+    <path d="M308 227 m-3 0 h6" stroke-width="0.6"/>
+    <!-- 箭头 -->
+    <path d="M116 150 Q130 146 146 146" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M218 146 Q230 150 240 156" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M200 170 V178" stroke-width="1" stroke-dasharray="2 2"/>
+    <path d="M292 227 Q276 222 268 156" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M142 143 l4 3 l-5 1 M236 153 l4 3 l-5 1 M265 160 l3 -4 l3 4" stroke-width="1"/>
+    <!-- 特性勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0204 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">图纸到大屏</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">今晚画的墙，明早亮在墙上</text>
+  <g font-size="8.5" fill="#666" text-anchor="middle">
+    <text x="78" y="200">Sweet Home 3D 户型</text>
+    <text x="163" y="184">亮 / 灭各一张</text>
+    <text x="200" y="212">entity_id 校验</text>
+    <text x="284" y="212">0211 大屏 picture-elements</text>
+    <text x="303" y="248">灯一开，图上亮</text>
+  </g>
+  <g font-size="8" fill="#555" text-anchor="middle">
+    <text x="163" y="118">逐灯渲染</text>
+  </g>
+  <text x="180" y="298" text-anchor="middle" font-size="9.5" fill="#666">FreeCAD / Sweet Home 3D → 分灯渲染 + YAML → 0211 大屏</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每盏灯逐一渲染亮 / 灭两张图，按需叠加</text>
+    <text x="64" y="366">灯和 entity_id 缺一不导出，图亮灯不亮就抓到</text>
+    <text x="64" y="396">每次导出打日期标签，旧图保留随时回滚</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：Sweet Home 3D 插件 + HA picture-elements · 出口：渲染图 / YAML / 0211</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：shmuelzon/home-assistant-floor-plan · FreeCAD/FreeCAD</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0204-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0204-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0204-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">图纸到大屏 · 流程图</text>
+  <g filter="url(#p0204-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <path d="M196 54 a34 6 0 0 1 68 0 v30 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <path d="M356 54 a34 6 0 0 1 68 0 v30 a34 6 0 0 1 -68 0 Z"/><ellipse cx="390" cy="54" rx="34" ry="6"/>
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="150" y="312" width="180" height="30" rx="15"/>
+    <path d="M34 172 h106 v3 h-106 Z M232 176 l56 -24 l4 2 l-58 26 Z M334 172 h116 v3 h-116 Z M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0204-4-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0204-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 70 Q160 70 140 70" stroke-dasharray="3 3"/>
+    <path d="M390 92 V110 H230 V126" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M175 250 H142"/>
+    <path d="M285 250 H328"/>
+    <path d="M85 270 V327 H148"/>
+    <path d="M390 270 V327 H332"/>
+    <path d="M450 150 H468 V42 H85 V50" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">画完，点导出</text>
+    <text x="230" y="71">Sweet Home 3D</text><text x="230" y="84" font-size="8.5" fill="#666">户型 + 灯具</text>
+    <text x="390" y="71">灯具实体表</text><text x="390" y="84" font-size="8.5" fill="#666">HA entity_id</text>
+    <text x="85" y="147">插件逐灯渲染</text><text x="85" y="161">亮 / 灭各一张</text>
+    <text x="230" y="151">每盏灯都对上</text><text x="230" y="164" font-size="8.5" fill="#666">entity_id？</text>
+    <text x="390" y="147">否 → 停止导出</text><text x="390" y="161">列出缺失的灯</text>
+    <text x="85" y="247">打日期标签</text><text x="85" y="261">旧图保留可回滚</text>
+    <text x="230" y="247">生成 picture-</text><text x="230" y="261">elements YAML</text>
+    <text x="390" y="247">推到 0211 大屏</text><text x="390" y="261">HA 面板刷新</text>
+    <text x="240" y="331">灯一开，平面图对应位置亮起</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">否</text><text x="236" y="200">是</text></g>
+  <g font-size="8.5" fill="#666" text-anchor="middle"><text x="300" y="39">补齐映射后重新导出</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0204-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>输入：FreeCAD 剖面 / Sweet Home 3D 户型 / 灯具实体表</li><li>校验：每盏灯必须匹配到一个 HA entity_id，缺一不导出</li><li>输出：渲染图 + picture-elements YAML，推到 0211 大屏</li><li>版本：每次导出打日期标签，旧图保留可回滚</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">Sweet Home 3D 户型经 shmuelzon/home-assistant-floor-plan 导出分灯渲染图和 picture-elements YAML，推到 0211 大屏；打印件由 BambuStudio 切片</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/shmuelzon/home-assistant-floor-plan" target="_blank" rel="noopener">shmuelzon/home-assistant-floor-plan</a><a href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">FreeCAD/FreeCAD</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0203.html">← 0203 控温控湿 拆解</a>
+    <a class="up" href="../modules/0204.html">回到 系统设计工作台 专题页</a>
+    <a href="../teardown/0205.html">0205 生态鱼缸 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>
