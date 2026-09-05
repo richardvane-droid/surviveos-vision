@@ -135,6 +135,31 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .repo-row .rused a{font-family:ui-monospace,monospace;font-size:.78rem;color:var(--ink3);margin-right:6px}
 .repo-row .rused a:hover{color:var(--red)}
 @media (max-width:820px){.repo-row{grid-template-columns:1fr 60px;}.repo-row .rdesc,.repo-row .rused{grid-column:1/-1}}
+.td-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.td-item{display:flex;flex-direction:column;gap:4px;border:1.6px solid var(--line);border-radius:12px 200px 12px 180px/180px 12px 200px 12px;padding:10px 14px;background:rgba(255,255,255,.4);font-size:.9rem}
+.td-item:hover{box-shadow:3px 3px 0 var(--ink)}
+.td-item b{font-family:"Noto Serif SC",serif}
+.td-brief{color:var(--ink3);font-size:.8rem;line-height:1.45}
+.kind{display:inline-block;font-size:.72rem;padding:1px 8px;border:1.3px solid currentColor;border-radius:200px 8px 180px 8px/8px 180px 8px 200px;letter-spacing:.06em;align-self:flex-start;vertical-align:middle}
+.kind-hw{color:#2f6b3a}.kind-logic{color:var(--red)}
+.td-cta{margin:14px 0 0}
+.btn{display:inline-block;padding:8px 18px;border:1.6px solid var(--ink);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;font-weight:700;background:rgba(255,255,255,.5)}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.td-nav{display:flex;flex-wrap:wrap;gap:6px 14px;margin:14px 0 0;font-size:.85rem}
+.td-nav a{border-bottom:1.5px solid transparent}.td-nav a:hover{border-bottom-color:var(--red)}
+.td-nav a i{margin-right:4px}
+.part h2 .kind{margin-right:6px;font-size:.7rem}
+.part h3{font-size:.95rem;margin:12px 0 6px;font-weight:900}
+.part-art{margin:16px 0 4px}
+.pc-frame{border:1.6px solid var(--line);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;padding:10px 12px 6px;background:#f9f6ef}
+.part-art figcaption{text-align:right;font-size:.85rem;color:var(--ink3);margin-top:2px}
+.logic-art{display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start}
+.logic-art .poster .pc-frame{padding:8px}
+.impl{margin:0;color:var(--ink);line-height:1.6}
+.gh-chips a{display:inline-block;margin:0 8px 6px 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;border:1.3px solid var(--ink3);border-radius:200px 8px 180px 8px/8px 180px 8px 200px;padding:1px 8px;color:var(--ink2)}
+.gh-chips a:hover{border-color:var(--red);color:var(--red)}
+.td .mod-head{padding-bottom:4px}
+@media (max-width:820px){.logic-art{grid-template-columns:1fr}.logic-art .poster{max-width:360px}}
 .pager{display:flex;justify-content:space-between;gap:12px;padding:26px 0 10px;font-size:.92rem;border-top:1.6px solid var(--line);margin-top:26px}
 .pager a{border-bottom:1.5px solid transparent;white-space:nowrap}.pager a:hover{border-bottom-color:var(--red)}
 .pager .up{font-family:"Long Cang",cursive;font-size:1.15rem;color:var(--red)}
