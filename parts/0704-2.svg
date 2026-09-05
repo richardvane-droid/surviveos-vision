@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0704-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0704-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0704-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0704-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 蒲团 两个 -->
+    <ellipse cx="90" cy="300" rx="30" ry="11" stroke-width="1.5"/>
+    <path d="M60 300 v8 a30 11 0 0 0 60 0 v-8" stroke-width="1.3"/>
+    <path d="M62 306 a30 11 0 0 0 56 0 v3 a30 11 0 0 1 -56 0 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+    <path d="M70 296 q20 -6 40 0 M74 302 q16 4 32 0 M90 290 v20" stroke-width="0.5"/>
+    <ellipse cx="146" cy="278" rx="30" ry="11" stroke-width="1.5"/>
+    <path d="M116 278 v8 a30 11 0 0 0 60 0 v-8" stroke-width="1.3"/>
+    <path d="M118 284 a30 11 0 0 0 56 0 v3 a30 11 0 0 1 -56 0 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+    <path d="M126 274 q20 -6 40 0 M130 280 q16 4 32 0" stroke-width="0.5"/>
+    <!-- 2 锯短桌腿 四根 -->
+    <path d="M166 240 l6 -2 v22 l-6 2 Z M172 238 l4 2 v22 l-4 -2" stroke-width="1.3"/>
+    <path d="M172 238 l4 2 v22 l-4 -2 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+    <path d="M186 232 l6 -2 v22 l-6 2 Z M192 230 l4 2 v22 l-4 -2" stroke-width="1.3"/>
+    <path d="M192 230 l4 2 v22 l-4 -2 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+    <path d="M206 224 l6 -2 v22 l-6 2 Z M212 222 l4 2 v22 l-4 -2" stroke-width="1.3"/>
+    <path d="M212 222 l4 2 v22 l-4 -2 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+    <path d="M226 216 l6 -2 v22 l-6 2 Z M232 214 l4 2 v22 l-4 -2" stroke-width="1.3"/>
+    <path d="M232 214 l4 2 v22 l-4 -2 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+    <path d="M164 262 q4 -2 8 -1 M204 246 q4 -2 8 -1" stroke-width="0.5"/>
+    <!-- 3 木抽屉 + 铜拉手 -->
+    <path d="M226 186 l50 -20 l24 10 l-50 20 Z" stroke-width="1.4"/>
+    <path d="M226 186 v12 l24 10 v-12 M300 176 v12 l-50 20 v-12" stroke-width="1.3"/>
+    <path d="M228 190 l20 8 v9 l-20 -8 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+    <path d="M236 196 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0" stroke-width="1"/>
+    <path d="M250 186 l26 -10 M246 192 l22 -9" stroke-width="0.4"/>
+    <path d="M256 180 l4 -2 l6 2 M266 176 l4 -2 l6 2" stroke-width="0.7"/>
+    <!-- 4 榆木桌面 -->
+    <path d="M280 140 l80 -32 l40 16 l-80 32 Z" stroke-width="1.6"/>
+    <path d="M280 140 v6 l40 16 v-6 M400 124 v6 l-80 32 v-6" stroke-width="1"/>
+    <path d="M282 144 l38 16 v4 l-38 -16 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+    <path d="M292 138 q30 -14 60 -22 M300 144 q30 -14 62 -24 M312 148 q26 -12 56 -22" stroke-width="0.5"/>
+    <path d="M330 130 q6 -4 12 -2 q-4 4 -12 2 Z" stroke-width="0.6"/>
+    <!-- 5 粗陶茶壶 + 杯 + 炭炉座 -->
+    <path d="M356 84 q-14 0 -14 -12 q0 -12 14 -12 q14 0 14 12 q0 12 -14 12 Z" stroke-width="1.5"/>
+    <path d="M350 60 h12 M356 60 v-4" stroke-width="1.1"/>
+    <path d="M370 68 q10 -2 8 6" stroke-width="1.2"/>
+    <path d="M342 68 q-10 4 -6 12" stroke-width="1"/>
+    <path d="M346 78 q4 6 10 6 q6 0 10 -6 v4 q-4 4 -10 4 q-6 0 -10 -4 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+    <ellipse cx="356" cy="92" rx="16" ry="5" stroke-width="1.2"/>
+    <path d="M340 92 v5 a16 5 0 0 0 32 0 v-5" stroke-width="1"/>
+    <path d="M342 96 a16 5 0 0 0 28 0 v2 a16 5 0 0 1 -28 0 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+    <path d="M384 50 q-5 0 -5 5 v6 q0 4 5 4 q5 0 5 -4 v-6 q0 -5 -5 -5 Z" stroke-width="1.1"/>
+    <path d="M396 44 q-5 0 -5 5 v6 q0 4 5 4 q5 0 5 -4 v-6 q0 -5 -5 -5 Z" stroke-width="1.1"/>
+    <path d="M380 60 v3 q0 3 4 3 q4 0 4 -3 v-3 Z" fill="url(#p0704-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M178 290 H206"/><path d="M162 250 H128"/><path d="M302 190 H332"/><path d="M278 150 H254"/><path d="M404 60 H422"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="290" r="8"/><circle cx="118" cy="250" r="8"/><circle cx="342" cy="190" r="8"/><circle cx="244" cy="150" r="8"/><circle cx="432" cy="60" r="8"/>
+    </g>
+    <text x="216" y="293.5">1</text><text x="118" y="253.5">2</text><text x="342" y="193.5">3</text><text x="244" y="153.5">4</text><text x="432" y="63.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">老榆木矮桌茶席 · 爆炸图</text>
+    <text x="16" y="52">1 蒲团 ×4（围火塘摆）</text>
+    <text x="16" y="68">2 桌腿 ×4（锯短至 30cm）</text>
+    <text x="16" y="84">3 木抽屉（内衬竹席，铜拉手）</text>
+    <text x="16" y="100">4 老榆木桌面 90×50cm</text>
+    <text x="16" y="116">5 粗陶茶壶 + 杯 + 炭炉座</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0704-2</text>
+</svg>

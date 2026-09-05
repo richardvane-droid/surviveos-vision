@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0505-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0505-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0505-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 海报边框（双线，手绘） -->
+  <g filter="url(#p0505-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <!-- 顶部小字条 -->
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：手机围栏 → 充电桩 → 电摩 -->
+    <circle cx="70" cy="150" r="34" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <rect x="58" y="134" width="24" height="34" rx="4" stroke-width="1.4"/><path d="M64 140 h12 M64 145 h12 M70 160 v3" stroke-width="0.9"/>
+    <rect x="160" y="112" width="40" height="90" rx="4" stroke-width="1.6"/><rect x="164" y="118" width="32" height="20" rx="2" stroke-width="1"/>
+    <rect x="164" y="146" width="32" height="50" fill="url(#p0505-3p-shade)" stroke="none"/>
+    <path d="M180 202 v14 M172 216 h16" stroke-width="1.4"/>
+    <path d="M200 150 q40 -10 60 30" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <path d="M256 208 a14 14 0 1 0 28 0 a14 14 0 1 0 -28 0 M300 208 a12 12 0 1 0 24 0 a12 12 0 1 0 -24 0" stroke-width="1.4"/>
+    <path d="M270 196 l22 -30 h22 l10 26 M292 166 l-8 -12 h-10 M270 196 h28" stroke-width="1.4"/>
+    <path d="M104 150 Q130 150 156 150" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="70" y="110" text-anchor="middle" font-size="9" fill="#666">到家围栏</text>
+    <text x="180" y="102" text-anchor="middle" font-size="9" fill="#666">计量充电桩</text>
+    <text x="290" y="240" text-anchor="middle" font-size="9" fill="#666">电摩</text>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <!-- 特性行左侧小图标 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <!-- 底部信息条 -->
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层（不加滤镜） -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0505 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">到家自动充电</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">停车、插电、断电，都不用你想</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">手机围栏 → 插座功率跃升 → 谷电时段通电 → 充满断电推送</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">到家 + 插座 >50W 判定车已接入</text>
+    <text x="64" y="366">23:00 后才通电，急用可手动立即充</text>
+    <text x="64" y="396">&lt;10W 持续 10 分钟判充满，推送用电量</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome 计量插座 + HomeAssistant 自动化 · 数据出口：充电记录</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：KaufHA/PLF10</text>
+  <!-- 印章 -->
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

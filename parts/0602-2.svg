@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0602-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0602-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0602-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0602-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 进水总管 + 球阀 -->
+    <path d="M62 296 H96 M62 304 H96 M124 296 H150 M124 304 H150" stroke-width="1.5"/>
+    <ellipse cx="62" cy="300" rx="2" ry="4" stroke-width="1"/><ellipse cx="150" cy="300" rx="2" ry="4" stroke-width="1"/>
+    <path d="M96 292 v16 M124 292 v16" stroke-width="1.2"/>
+    <circle cx="110" cy="300" r="11" stroke-width="1.5"/>
+    <circle cx="110" cy="300" r="4" stroke-width="0.9"/>
+    <path d="M110 289 l14 -18" stroke-width="1.8"/>
+    <path d="M122 273 l6 -4 l2 3 l-6 4 Z" stroke-width="1"/>
+    <path d="M100 304 a11 11 0 0 0 20 0 v3 a11 11 0 0 1 -20 0 Z" fill="url(#p0602-2-shade)" stroke="none"/>
+    <path d="M64 301 h32 v3 h-32 Z M124 301 h26 v3 h-26 Z" fill="url(#p0602-2-shade)" stroke="none"/>
+    <!-- 2 叠片过滤器 -->
+    <rect x="160" y="222" width="30" height="42" rx="4" stroke-width="1.5"/>
+    <rect x="156" y="212" width="38" height="10" rx="2" stroke-width="1.4"/>
+    <path d="M146 218 h10 M194 218 h10" stroke-width="1.5"/>
+    <path d="M146 214 h10 M194 214 h10" stroke-width="1.5"/>
+    <path d="M164 230 h22 M164 236 h22 M164 242 h22 M164 248 h22 M164 254 h22" stroke-width="0.6"/>
+    <path d="M180 224 v38 h8 v-38 Z" fill="url(#p0602-2-shade)" stroke="none"/>
+    <path d="M170 264 v6 h10 v-6" stroke-width="1"/>
+    <!-- 3 减压阀 + 压力表 -->
+    <path d="M222 182 h46 M222 190 h46" stroke-width="1.5"/>
+    <ellipse cx="222" cy="186" rx="2" ry="4" stroke-width="1"/><ellipse cx="268" cy="186" rx="2" ry="4" stroke-width="1"/>
+    <path d="M234 182 v-12 q11 -12 22 0 v12" stroke-width="1.4"/>
+    <path d="M236 172 h18" stroke-width="0.7"/>
+    <path d="M245 160 v-8" stroke-width="1.1"/>
+    <circle cx="245" cy="146" r="7" stroke-width="1.3"/>
+    <path d="M245 146 l3 -4 M241 144 l1 -1 M249 144 l-1 -1 M245 141 v1" stroke-width="0.8"/>
+    <path d="M246 182 h9 v-10 q-4 -4 -9 -2 Z" fill="url(#p0602-2-shade)" stroke="none"/>
+    <path d="M224 187 h44 v3 h-44 Z" fill="url(#p0602-2-shade)" stroke="none"/>
+    <!-- 4 三路电磁阀歧管 -->
+    <path d="M278 120 H352 M278 128 H352" stroke-width="1.5"/>
+    <ellipse cx="278" cy="124" rx="2" ry="4" stroke-width="1"/><ellipse cx="352" cy="124" rx="2" ry="4" stroke-width="1"/>
+    <path d="M280 125 h72 v3 h-72 Z" fill="url(#p0602-2-shade)" stroke="none"/>
+    <path d="M289 120 v-10 h12 v10 M309 120 v-10 h12 v10 M329 120 v-10 h12 v10" stroke-width="1.3"/>
+    <path d="M291 110 v-9 h8 v9 M311 110 v-9 h8 v9 M331 110 v-9 h8 v9" stroke-width="1.2"/>
+    <path d="M291 104 h8 M311 104 h8 M331 104 h8" stroke-width="0.6"/>
+    <path d="M295 101 v-5 M315 101 v-5 M335 101 v-5" stroke-width="0.8"/>
+    <path d="M295 128 v10 M315 128 v10 M335 128 v10" stroke-width="1.3"/>
+    <path d="M293 128 v10 h4 v-10 Z M313 128 v10 h4 v-10 Z M333 128 v10 h4 v-10 Z" fill="url(#p0602-2-shade)" stroke="none"/>
+    <!-- 5 分区快接口 + 排空阀 -->
+    <path d="M372 76 v-18 M378 76 v-18 M388 68 v-18 M394 68 v-18 M404 60 v-18 M410 60 v-18" stroke-width="1.4"/>
+    <ellipse cx="375" cy="58" rx="5" ry="2.2" stroke-width="1.2"/><ellipse cx="391" cy="50" rx="5" ry="2.2" stroke-width="1.2"/><ellipse cx="407" cy="42" rx="5" ry="2.2" stroke-width="1.2"/>
+    <ellipse cx="375" cy="64" rx="5" ry="2.2" stroke-width="0.8"/><ellipse cx="391" cy="56" rx="5" ry="2.2" stroke-width="0.8"/><ellipse cx="407" cy="48" rx="5" ry="2.2" stroke-width="0.8"/>
+    <path d="M375 78 h6 v3 h-6 Z M391 70 h6 v3 h-6 Z M407 62 h6 v3 h-6 Z" fill="url(#p0602-2-shade)" stroke="none"/>
+    <path d="M370 78 h10 M386 70 h10 M402 62 h10" stroke-width="1"/>
+    <circle cx="424" cy="72" r="4" stroke-width="1.2"/>
+    <path d="M424 68 v-6 M420 62 h8 M424 76 v6" stroke-width="1"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M152 300 H216"/><path d="M156 244 H110"/><path d="M270 180 H340"/><path d="M354 122 H400"/><path d="M416 48 H445"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="225" cy="300" r="8"/><circle cx="100" cy="244" r="8"/><circle cx="350" cy="180" r="8"/><circle cx="410" cy="122" r="8"/><circle cx="455" cy="48" r="8"/>
+    </g>
+    <text x="225" y="303.5">1</text><text x="100" y="247.5">2</text><text x="350" y="183.5">3</text><text x="410" y="125.5">4</text><text x="455" y="51.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">三路滴灌首部 · 爆炸图</text>
+    <text x="16" y="52">1 进水总管 + 球阀（雨水罐来水）</text>
+    <text x="16" y="68">2 120 目叠片过滤器</text>
+    <text x="16" y="84">3 减压阀 + 压力表（1.0bar）</text>
+    <text x="16" y="100">4 三路 12V 电磁阀歧管</text>
+    <text x="16" y="116">5 分区快接口 + 排空阀</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0602-2</text>
+</svg>

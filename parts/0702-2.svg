@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0702-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0702-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0702-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0702-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 青砖 两块 -->
+    <path d="M60 300 l30 -12 l24 9 l-30 12 Z" stroke-width="1.5"/>
+    <path d="M60 300 v8 l24 9 v-8 M114 297 v8 l-30 12 v-8" stroke-width="1"/>
+    <path d="M62 306 l22 9 v4 l-22 -9 Z" fill="url(#p0702-2-shade)" stroke="none"/>
+    <path d="M110 282 l30 -12 l24 9 l-30 12 Z" stroke-width="1.5"/>
+    <path d="M110 282 v8 l24 9 v-8 M164 279 v8 l-30 12 v-8" stroke-width="1"/>
+    <path d="M112 288 l22 9 v4 l-22 -9 Z" fill="url(#p0702-2-shade)" stroke="none"/>
+    <path d="M70 296 l14 -6 M120 278 l14 -6" stroke-width="0.5"/>
+    <!-- 2 樟木箱体 -->
+    <path d="M150 226 l74 -30 l40 16 l-74 30 Z" stroke-width="1.5"/>
+    <path d="M150 226 v40 l40 16 v-40 M264 212 v40 l-74 30 v-40" stroke-width="1.5"/>
+    <path d="M152 230 l36 15 v36 l-36 -15 Z" fill="url(#p0702-2-shade)" stroke="none"/>
+    <path d="M196 246 l64 -26 M196 258 l64 -26" stroke-width="0.6"/>
+    <path d="M204 248 q6 -3 12 -1 M226 238 q8 -3 14 -1" stroke-width="0.5"/>
+    <path d="M186 244 h6 v6 h-6 Z" stroke-width="0.9"/>
+    <path d="M160 238 q8 4 0 10 M172 246 q8 4 0 10" stroke-width="0.5"/>
+    <!-- 3 六格井字架 -->
+    <path d="M232 170 l60 -24 l32 12 l-60 24 Z" stroke-width="1.4"/>
+    <path d="M232 170 v6 l32 12 v-6 M324 158 v6 l-60 24 v-6" stroke-width="0.8"/>
+    <path d="M252 162 l32 12 M272 154 l32 12" stroke-width="1.2"/>
+    <path d="M248 176 l60 -24" stroke-width="1.2"/>
+    <path d="M252 162 l32 12 v4 l-32 -12 Z M272 154 l32 12 v4 l-32 -12 Z" fill="url(#p0702-2-shade2)" stroke="none"/>
+    <path d="M248 176 l60 -24 v3 l-60 24 Z" fill="url(#p0702-2-shade2)" stroke="none"/>
+    <!-- 4 箱盖 -->
+    <path d="M296 112 l74 -30 l40 16 l-74 30 Z" stroke-width="1.5"/>
+    <path d="M296 112 v6 l40 16 v-6 M410 98 v6 l-74 30 v-6" stroke-width="0.9"/>
+    <path d="M298 118 l38 16 v3 l-38 -16 Z" fill="url(#p0702-2-shade)" stroke="none"/>
+    <path d="M308 110 l60 -24 M316 114 l60 -24 M324 118 l60 -24" stroke-width="0.5"/>
+    <path d="M336 106 l4 -2 v4 l-4 2 Z" stroke-width="0.9"/>
+    <path d="M348 100 q8 -2 12 2" stroke-width="0.6"/>
+    <!-- 5 线轮 + 浮漂 -->
+    <circle cx="392" cy="52" r="12" stroke-width="1.5"/>
+    <circle cx="392" cy="52" r="7" stroke-width="0.9"/><circle cx="392" cy="52" r="2" stroke-width="0.9"/>
+    <path d="M392 52 l12 -12 M392 52 l-12 -12 M392 52 v-16" stroke-width="0.5"/>
+    <path d="M400 60 a12 12 0 0 0 0 -16 v16" fill="url(#p0702-2-shade)" stroke="none"/>
+    <path d="M404 48 q10 2 12 10" stroke-width="1"/>
+    <path d="M426 30 v34 M426 30 l-2 6 M426 30 l2 6" stroke-width="1.2"/>
+    <path d="M422 44 q4 -2 8 0 v10 q-4 2 -8 0 Z" stroke-width="1.1"/>
+    <path d="M423 46 h6 v7 h-6 Z" fill="url(#p0702-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M166 288 H206"/><path d="M148 250 H120"/><path d="M328 168 H372"/><path d="M294 122 H250"/><path d="M438 48 H452"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="288" r="8"/><circle cx="110" cy="250" r="8"/><circle cx="382" cy="168" r="8"/><circle cx="240" cy="122" r="8"/><circle cx="460" cy="48" r="8"/>
+    </g>
+    <text x="216" y="291.5">1</text><text x="110" y="253.5">2</text><text x="382" y="171.5">3</text><text x="240" y="125.5">4</text><text x="460" y="51.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">老樟木箱分格储物 · 爆炸图</text>
+    <text x="16" y="52">1 青砖 ×2（垫高 6cm 通风）</text>
+    <text x="16" y="68">2 老樟木箱体（保留包浆）</text>
+    <text x="16" y="84">3 六格井字分格架（6mm 薄板）</text>
+    <text x="16" y="100">4 箱盖（内贴分格示意图）</text>
+    <text x="16" y="116">5 线轮 / 浮漂等钓具</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0702-2</text>
+</svg>

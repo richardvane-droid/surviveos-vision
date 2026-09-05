@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0504-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0504-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0504-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0504-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：四层架子 + 探头 -->
+    <path d="M40 130 v90 M96 130 v90" stroke-width="1.6"/>
+    <path d="M40 150 h56 M40 172 h56 M40 194 h56 M40 216 h56" stroke-width="1.3"/>
+    <path d="M46 150 v-8 h10 v8 M62 150 v-8 h10 v8 M78 150 v-8 h10 v8 M46 172 v-8 h10 v8 M62 172 v-8 h10 v8 M78 172 v-8 h10 v8 M46 194 v-8 h10 v8 M62 194 v-8 h10 v8 M78 194 v-8 h10 v8 M46 216 v-8 h10 v8 M62 216 v-8 h10 v8 M78 216 v-8 h10 v8" stroke-width="0.9"/>
+    <path d="M47 148 h8 v-4 h-8 Z M63 170 h8 v-4 h-8 Z M79 192 h8 v-4 h-8 Z M47 214 h8 v-4 h-8 Z" fill="url(#p0504-4p-shade)" stroke="none"/>
+    <path d="M100 160 h6 v-14 M100 182 h6 v-14 M100 204 h6 v-14" stroke-width="0.8"/>
+    <!-- 中：ESP32 判断（芯片 + 水滴 + 问号） -->
+    <rect x="156" y="152" width="48" height="40" rx="4" stroke-width="1.6"/>
+    <rect x="164" y="160" width="32" height="24" rx="2" stroke-width="0.8"/>
+    <path d="M156 160 h-6 M156 168 h-6 M156 176 h-6 M156 184 h-6 M204 160 h6 M204 168 h6 M204 176 h6 M204 184 h6 M164 152 v-6 M172 152 v-6 M180 152 v-6 M188 152 v-6 M196 152 v-6 M164 192 v6 M172 192 v6 M180 192 v6 M188 192 v6 M196 192 v6" stroke-width="1"/>
+    <path d="M180 164 q-5 6 -5 9 a5 5 0 0 0 10 0 q0 -3 -5 -9 Z" stroke-width="1.1"/>
+    <path d="M158 188 h44 v3 h-44 Z" fill="url(#p0504-4p-shade)" stroke="none"/>
+    <path d="M180 130 q-8 -2 -8 -8 a8 8 0 0 1 16 0 q0 6 -6 8 v4" stroke-width="1.2"/>
+    <circle cx="180" cy="139" r="0.8" stroke-width="0.8"/>
+    <!-- 右：电磁阀 + 滴头 + 菜 -->
+    <path d="M262 150 h52" stroke-width="1.6"/>
+    <path d="M282 150 v-12 h12 v12 M282 138 h12" stroke-width="1.3"/>
+    <path d="M283 139 h10 v10 h-10 Z" fill="url(#p0504-4p-shade)" stroke="none"/>
+    <path d="M268 150 v10 M288 150 v10 M308 150 v10" stroke-width="1.2"/>
+    <path d="M268 164 q-2 4 0 6 q2 -2 0 -6 Z M288 164 q-2 4 0 6 q2 -2 0 -6 Z M308 164 q-2 4 0 6 q2 -2 0 -6 Z" stroke-width="0.9"/>
+    <path d="M256 210 h64" stroke-width="1.3"/>
+    <path d="M268 210 q0 -14 4 -20 M272 200 q6 -6 10 -4 q-2 6 -10 6 M270 194 q-6 -6 -10 -4 q2 6 10 6" stroke-width="1.1"/>
+    <path d="M288 210 q0 -14 4 -20 M292 200 q6 -6 10 -4 q-2 6 -10 6 M290 194 q-6 -6 -10 -4 q2 6 10 6" stroke-width="1.1"/>
+    <path d="M308 210 q0 -14 4 -20 M312 200 q6 -6 10 -4 q-2 6 -10 6 M310 194 q-6 -6 -10 -4 q2 6 10 6" stroke-width="1.1"/>
+    <!-- 箭头 -->
+    <path d="M110 174 Q126 172 146 172" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M214 172 Q232 172 250 168" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M142 168 l5 4 l-5 4 M246 164 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0504 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">滴灌调度器</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">不看钟点看土，渴了才浇、浇了再测</text>
+  <text x="68" y="232" text-anchor="middle" font-size="8.5" fill="#666">每层一颗湿度探头</text>
+  <text x="180" y="212" text-anchor="middle" font-size="8.5" fill="#666">&lt;40% 才开阀</text>
+  <text x="288" y="232" text-anchor="middle" font-size="8.5" fill="#666">该层阀 20 秒</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">四层探头 → 阈值 + 天气 + 气温 → 分层电磁阀 → 复测补浇</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每半小时逐层判断，低于 40% 才给这一层浇 20 秒</text>
+    <text x="64" y="366">十分钟后复测，不到 55% 再补，最多三轮</text>
+    <text x="64" y="396">全部在 ESP32 本地跑，断网照常浇</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome（ESP32 本地） · 数据出口：Mycodo 曲线 + 侧面墨水屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：makstech/esphome-irrigation-system</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

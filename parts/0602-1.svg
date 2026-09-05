@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0602-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0602-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0602-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0602-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 混凝土地脚 + 土壤探针 -->
+    <path d="M80 302 l30 -10 l26 8 l-30 10 Z" stroke-width="1.5"/>
+    <path d="M80 302 v16 l26 8 v-16 M106 310 v16 l30 -10 v-16" stroke-width="1.4"/>
+    <path d="M82 304 v14 l24 7 v-14 Z" fill="url(#p0602-1-shade)" stroke="none"/>
+    <path d="M108 312 l28 -9 v12 l-28 9 Z" fill="url(#p0602-1-shade2)" stroke="none"/>
+    <path d="M96 296 l8 -3 v-8 l-8 3 Z" stroke-width="1"/>
+    <path d="M100 287 h6 v-4" stroke-width="0.9"/>
+    <path d="M40 318 l30 -10 l3 4 l-30 10 Z" stroke-width="1.3"/>
+    <path d="M40 318 l-12 4 M43 322 l-12 4" stroke-width="1.1"/>
+    <path d="M70 308 q10 -8 12 -2 q2 8 -6 4" stroke-width="0.7"/>
+    <path d="M52 314 l16 -5" stroke-width="0.6"/>
+    <!-- 2 桧木方杆（掏空走线） -->
+    <path d="M148 296 V218 h20 V296 Z" stroke-width="1.5"/>
+    <path d="M168 218 l8 -4 V292 l-8 4" stroke-width="1.4"/>
+    <path d="M148 218 l8 -4 h20" stroke-width="1.4"/>
+    <path d="M169 219 l6 -3 V291 l-6 3 Z" fill="url(#p0602-1-shade)" stroke="none"/>
+    <path d="M154 226 V290 M162 224 V288" stroke-width="0.6"/>
+    <path d="M155 222 l6 -2 v6 l-6 2 Z" stroke-width="0.9"/>
+    <path d="M150 260 q4 4 8 0 M150 244 q6 6 12 0" stroke-width="0.5"/>
+    <!-- 3 ESP32 控制盒 + 三路继电器 -->
+    <path d="M196 214 l34 -12 l18 8 l-34 12 Z" stroke-width="1.5"/>
+    <path d="M196 214 v10 l18 8 v-10 M214 222 v10 l34 -12 v-10" stroke-width="1.3"/>
+    <path d="M198 216 v8 l16 7 v-8 Z" fill="url(#p0602-1-shade)" stroke="none"/>
+    <path d="M204 208 l12 -4 l6 3 l-12 4 Z" stroke-width="0.9"/>
+    <path d="M206 209 l10 -3 l4 2 l-10 3 Z" fill="url(#p0602-1-shade2)" stroke="none"/>
+    <path d="M222 206 l4 -1 l3 1 l-4 1 Z M228 204 l4 -1 l3 1 l-4 1 Z M234 202 l4 -1 l3 1 l-4 1 Z" stroke-width="0.8"/>
+    <path d="M236 216 h3 M240 214 h3 M244 212 h3" stroke-width="1"/>
+    <path d="M226 198 q4 -6 8 -2" stroke-width="0.7"/>
+    <!-- 4 面板：大红按钮 + 指示灯 -->
+    <path d="M262 176 l14 -6 v-36 l-14 6 Z" stroke-width="1.5"/>
+    <path d="M276 134 l4 2 v36 l-4 -2" stroke-width="1.2"/>
+    <path d="M277 135 l2 1 v35 l-2 -1 Z" fill="url(#p0602-1-shade)" stroke="none"/>
+    <ellipse cx="269" cy="160" rx="5" ry="6" transform="rotate(-24 269 160)" stroke-width="1.4"/>
+    <ellipse cx="269" cy="158" rx="3.5" ry="4.2" transform="rotate(-24 269 158)" stroke-width="0.9"/>
+    <ellipse cx="269" cy="143" rx="1.8" ry="2.2" transform="rotate(-24 269 143)" stroke-width="1"/>
+    <path d="M265 142 l-2 -1 M273 142 l2 -1" stroke-width="0.6"/>
+    <!-- 5 翻斗雨量计 -->
+    <path d="M304 90 h42 l-14 22 h-14 Z" stroke-width="1.5"/>
+    <ellipse cx="325" cy="90" rx="21" ry="4" stroke-width="1.1"/>
+    <path d="M320 112 h10 v6 h-10 Z" stroke-width="1"/>
+    <path d="M311 130 l14 -12 l14 12" stroke-width="1.3"/>
+    <path d="M325 118 v12" stroke-width="1"/>
+    <circle cx="325" cy="130" r="2" stroke-width="1"/>
+    <path d="M306 134 h38" stroke-width="1.2"/>
+    <path d="M308 134 h34 v3 h-34 Z" fill="url(#p0602-1-shade)" stroke="none"/>
+    <path d="M312 96 l12 18" stroke-width="0.5"/>
+    <!-- 6 小斜屋顶 -->
+    <path d="M356 66 l30 -20 l44 10 l-30 20 Z" stroke-width="1.5"/>
+    <path d="M356 66 v5 l44 10 v-5 M400 76 l30 -20 v-5" stroke-width="1.2"/>
+    <path d="M358 68 v3 l42 9 v-3 Z" fill="url(#p0602-1-shade)" stroke="none"/>
+    <path d="M364 62 l30 -20 M372 64 l30 -20 M380 66 l30 -20 M388 68 l30 -20 M396 70 l30 -20" stroke-width="0.6"/>
+    <path d="M384 44 l4 -3 l6 2" stroke-width="1"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M138 302 H216"/><path d="M146 256 H110"/><path d="M250 208 H300"/><path d="M282 154 H340"/><path d="M348 108 H400"/><path d="M432 60 H445"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="225" cy="302" r="8"/><circle cx="100" cy="256" r="8"/><circle cx="310" cy="208" r="8"/><circle cx="350" cy="154" r="8"/><circle cx="410" cy="108" r="8"/><circle cx="455" cy="60" r="8"/>
+    </g>
+    <text x="225" y="305.5">1</text><text x="100" y="259.5">2</text><text x="310" y="211.5">3</text><text x="350" y="157.5">4</text><text x="410" y="111.5">5</text><text x="455" y="63.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">桧木传感器杆总成 · 爆炸图</text>
+    <text x="16" y="52">1 混凝土地脚 + 电容式土壤探针</text>
+    <text x="16" y="68">2 8cm 桧木方杆（掏空走线）</text>
+    <text x="16" y="84">3 ESP32 控制盒 + 三路继电器</text>
+    <text x="16" y="100">4 面板：大红按钮 + 指示灯</text>
+    <text x="16" y="116">5 翻斗雨量计（0.2mm/翻）</text>
+    <text x="16" y="132">6 小斜屋顶（防雨）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0602-1</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0604-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0604-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0604-4p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0604-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0604-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：杆顶广角机 -->
+    <path d="M58 210 V150" stroke-width="1.6"/>
+    <path d="M50 212 h16" stroke-width="1.2"/>
+    <ellipse cx="58" cy="148" rx="12" ry="4" stroke-width="1.3"/>
+    <path d="M48 148 a10 10 0 0 1 20 0" stroke-width="1.3"/>
+    <circle cx="58" cy="142" r="2.5" stroke-width="1"/>
+    <path d="M46 144 a12 4 0 0 0 24 0 v3 a12 4 0 0 1 -24 0 Z" fill="url(#p0604-4p-shade)" stroke="none"/>
+    <path d="M70 140 l10 -6 M70 146 l12 0 M70 152 l10 6" stroke-width="0.6"/>
+    <path d="M40 216 q10 -4 36 0" stroke-width="0.9"/>
+    <path d="M44 216 q-4 -10 -2 -18 M50 216 q0 -12 4 -20 M68 216 q4 -10 2 -18" stroke-width="0.9"/>
+    <!-- 中：一叠照片 + 时钟 -->
+    <rect x="118" y="146" width="52" height="40" rx="2" stroke-width="1.1"/>
+    <rect x="124" y="140" width="52" height="40" rx="2" stroke-width="1.2"/>
+    <rect x="130" y="134" width="52" height="40" rx="2" stroke-width="1.5"/>
+    <path d="M136 168 q6 -10 12 -6 q8 6 14 -4 q6 -8 14 -2" stroke-width="0.9"/>
+    <circle cx="170" cy="144" r="4" stroke-width="0.9"/>
+    <path d="M132 170 h48 v2 h-48 Z" fill="url(#p0604-4p-shade)" stroke="none"/>
+    <circle cx="146" cy="204" r="11" stroke-width="1.3"/>
+    <path d="M146 204 V196 M146 204 L152 207" stroke-width="1.4"/>
+    <path d="M162 204 h6 M172 204 h6 M182 204 h6" stroke-width="0.8"/>
+    <text x="196" y="207" font-size="8" fill="#3d3d3d" stroke="none">×8760</text>
+    <!-- 右：胶片 + 播放 -->
+    <rect x="228" y="130" width="94" height="66" rx="3" stroke-width="1.6"/>
+    <path d="M228 140 h94 M228 186 h94" stroke-width="0.9"/>
+    <path d="M234 132 h6 v5 h-6 Z M248 132 h6 v5 h-6 Z M262 132 h6 v5 h-6 Z M276 132 h6 v5 h-6 Z M290 132 h6 v5 h-6 Z M304 132 h6 v5 h-6 Z" stroke-width="0.7"/>
+    <path d="M234 189 h6 v5 h-6 Z M248 189 h6 v5 h-6 Z M262 189 h6 v5 h-6 Z M276 189 h6 v5 h-6 Z M290 189 h6 v5 h-6 Z M304 189 h6 v5 h-6 Z" stroke-width="0.7"/>
+    <path d="M266 152 l20 11 l-20 11 Z" stroke-width="1.4"/>
+    <path d="M268 156 l14 7 l-14 7 Z" fill="url(#p0604-4p-shade)" stroke="none"/>
+    <path d="M236 180 q10 -8 18 -4 q10 6 18 -6 q10 -12 22 -6 q8 4 22 -2" stroke-width="0.8"/>
+    <path d="M236 214 q2 -8 6 -12 M300 214 q6 -8 4 -16 M312 214 q-2 -8 4 -14" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M86 176 q14 -10 26 -14" stroke-width="1" stroke-dasharray="3 3"/><path d="M107 160 l6 1 l-2 6" stroke-width="1"/>
+    <path d="M188 160 H222" stroke-width="1" stroke-dasharray="3 3"/><path d="M218 156 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0604 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">草地延时合成</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">没人在意的时候，它也在长</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">整点快照 → 亮度筛选 → 季度末 FFmpeg 24fps → 一季浓缩一分钟</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每小时一张，一年 8,760 张自动按日期归档</text>
+    <text x="64" y="366">太黑的夜间照片按亮度剔除，不进视频</text>
+    <text x="64" y="396">一季一分钟，四段接起来就是草地的一整年</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA + 小主机 FFmpeg · 数据出口：NAS 视频 + 大屏缩略图</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：FFmpeg/FFmpeg</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

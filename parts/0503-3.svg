@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0503-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0503-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0503-3-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.8" fill="#6b6b6b"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0503-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 旧陶缸 -->
+    <ellipse cx="110" cy="256" rx="40" ry="14" stroke-width="1.5"/>
+    <ellipse cx="110" cy="256" rx="34" ry="11" stroke-width="0.8"/>
+    <path d="M70 256 q-10 40 6 66 a36 12 0 0 0 68 0 q16 -26 6 -66" stroke-width="1.5"/>
+    <path d="M112 334 a36 12 0 0 0 32 -12 q12 -20 8 -50 a40 13 0 0 1 -36 12 Z" fill="url(#p0503-3-shade)" stroke="none"/>
+    <path d="M78 276 q-2 20 4 36 M96 280 q6 -2 12 0" stroke-width="0.5"/>
+    <path d="M140 250 q4 -4 8 0" stroke-width="1.2"/>
+    <path d="M68 260 a42 14 0 0 1 84 0" stroke-width="0.6"/>
+    <!-- 2 塘泥层 -->
+    <ellipse cx="180" cy="220" rx="30" ry="10" stroke-width="1.4"/>
+    <path d="M150 220 v8 a30 10 0 0 0 60 0 v-8" stroke-width="1.2"/>
+    <path d="M151 221 a30 10 0 0 0 58 0 a30 10 0 0 0 -58 0 Z" fill="url(#p0503-3-dots)" stroke="none"/>
+    <path d="M152 224 a30 10 0 0 0 56 0 v4 a30 10 0 0 1 -56 0 Z" fill="url(#p0503-3-shade)" stroke="none"/>
+    <!-- 3 菖蒲丛 -->
+    <path d="M244 196 q-4 -30 -10 -50 M246 196 q0 -34 4 -56 M248 196 q6 -28 16 -44 M242 196 q-10 -20 -22 -30 M250 196 q12 -22 26 -30" stroke-width="1.3"/>
+    <path d="M245 196 q-2 -24 -4 -40 M247 196 q4 -24 10 -38" stroke-width="0.8"/>
+    <path d="M232 200 q14 6 28 0" stroke-width="1"/>
+    <path d="M226 160 q-3 -4 -1 -8 M262 158 q3 -4 1 -8" stroke-width="0.7"/>
+    <!-- 4 水体 + 黑鱼 -->
+    <ellipse cx="320" cy="112" rx="34" ry="12" stroke-width="1.4"/>
+    <path d="M286 112 v4 a34 12 0 0 0 68 0 v-4" stroke-width="0.9"/>
+    <path d="M296 110 q6 -3 12 0 q6 3 12 0 q6 -3 12 0 M300 116 q6 -3 12 0 q6 3 12 0" stroke-width="0.6"/>
+    <path d="M304 108 q8 -6 14 0 q-6 6 -14 0 Z M318 108 l4 -3 v6 Z" stroke-width="1.1"/>
+    <path d="M305 108 q7 -5 12 0 q-5 5 -12 0 Z" fill="url(#p0503-3-shade)" stroke="none"/>
+    <path d="M330 116 q-8 -6 -14 0 q6 6 14 0 Z M316 116 l-4 -3 v6 Z" stroke-width="1.1"/>
+    <path d="M329 116 q-7 -5 -12 0 q5 5 12 0 Z" fill="url(#p0503-3-shade)" stroke="none"/>
+    <circle cx="309" cy="107" r="0.8" stroke-width="0.6"/><circle cx="325" cy="115" r="0.8" stroke-width="0.6"/>
+    <!-- 5 浮叶 -->
+    <path d="M374 62 q10 -20 34 -16 q4 20 -18 26 q-12 2 -16 -10 Z" stroke-width="1.4"/>
+    <path d="M376 62 q14 -8 30 -14" stroke-width="0.8"/>
+    <path d="M384 60 q4 -2 8 -6 M392 60 q4 -2 8 -6 M382 54 q4 -2 8 -6" stroke-width="0.5"/>
+    <path d="M376 63 q12 -12 30 -15 q2 14 -18 20 q-8 0 -12 -5 Z" fill="url(#p0503-3-dots)" stroke="none"/>
+    <path d="M372 64 q-8 2 -12 8" stroke-width="1"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M150 300 H206"/><path d="M150 226 H116"/><path d="M270 176 H300"/><path d="M354 112 H378"/><path d="M410 60 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="300" r="8"/><circle cx="106" cy="226" r="8"/><circle cx="310" cy="176" r="8"/><circle cx="388" cy="112" r="8"/><circle cx="460" cy="60" r="8"/>
+    </g>
+    <text x="216" y="303.5">1</text><text x="106" y="229.5">2</text><text x="310" y="179.5">3</text><text x="388" y="115.5">4</text><text x="460" y="63.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">陶缸小水景 · 爆炸图</text>
+    <text x="16" y="52">1 旧陶缸 φ60cm（缸沿溢流缺口）</text>
+    <text x="16" y="68">2 塘泥层 10cm（种菖蒲）</text>
+    <text x="16" y="84">3 菖蒲丛（地下茎越冬）</text>
+    <text x="16" y="100">4 水体 + 两条本地黑鱼</text>
+    <text x="16" y="116">5 浮叶（落叶就让它漂着）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0503-3</text>
+</svg>

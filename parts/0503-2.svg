@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0503-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0503-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0503-2-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.8" fill="#6b6b6b"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0503-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 托盘 -->
+    <ellipse cx="110" cy="298" rx="46" ry="16" stroke-width="1.5"/>
+    <ellipse cx="110" cy="298" rx="38" ry="12" stroke-width="0.8"/>
+    <path d="M64 298 v8 a46 16 0 0 0 92 0 v-8" stroke-width="1.3"/>
+    <path d="M66 302 a46 15 0 0 0 88 0 v4 a46 15 0 0 1 -88 0 Z" fill="url(#p0503-2-shade)" stroke="none"/>
+    <!-- 2 陶脚 ×3 -->
+    <path d="M160 236 l6 -8 h10 l6 8 Z M158 236 h26 v3 h-26 Z" stroke-width="1.3"/>
+    <path d="M182 232 l6 -8 h10 l6 8 Z M180 232 h26 v3 h-26 Z" stroke-width="1.3"/>
+    <path d="M170 250 l6 -8 h10 l6 8 Z M168 250 h26 v3 h-26 Z" stroke-width="1.3"/>
+    <path d="M161 236 l5 -7 h9 l5 7 Z M183 232 l5 -7 h9 l5 7 Z M171 250 l5 -7 h9 l5 7 Z" fill="url(#p0503-2-shade)" stroke="none"/>
+    <!-- 3 粗陶盆 -->
+    <ellipse cx="245" cy="150" rx="34" ry="12" stroke-width="1.5"/>
+    <path d="M211 150 l7 42 a27 9 0 0 0 54 0 l7 -42" stroke-width="1.4"/>
+    <path d="M209 150 a36 12 0 0 1 72 0 v5 a36 12 0 0 1 -72 0 Z" stroke-width="1"/>
+    <path d="M248 201 a27 9 0 0 0 24 -7 l6 -38 a34 11 0 0 1 -30 10 Z" fill="url(#p0503-2-shade)" stroke="none"/>
+    <path d="M226 168 q3 10 2 20 M238 176 q6 -2 12 0" stroke-width="0.5"/>
+    <path d="M245 201 a4 1.5 0 1 0 0.1 0" stroke-width="0.8"/>
+    <!-- 4 盆土 + 陶粒层 -->
+    <ellipse cx="320" cy="104" rx="30" ry="10" stroke-width="1.4"/>
+    <path d="M290 104 l3 18 a27 9 0 0 0 54 0 l3 -18" stroke-width="1.2"/>
+    <path d="M291 105 a30 10 0 0 0 58 0 a30 10 0 0 0 -58 0 Z" fill="url(#p0503-2-dots)" stroke="none"/>
+    <path d="M296 118 a24 8 0 0 0 48 0" stroke-width="0.8"/>
+    <circle cx="300" cy="123" r="2" stroke-width="0.7"/><circle cx="308" cy="126" r="2" stroke-width="0.7"/><circle cx="318" cy="128" r="2" stroke-width="0.7"/><circle cx="328" cy="127" r="2" stroke-width="0.7"/><circle cx="338" cy="124" r="2" stroke-width="0.7"/>
+    <path d="M300 96 q6 -3 12 0 M322 100 q6 -3 12 0" stroke-width="0.6"/>
+    <!-- 5 植物 + 身份竹签 -->
+    <path d="M388 82 q-2 -16 4 -28 M392 62 q10 -8 16 -4 q-4 8 -16 8 M390 54 q-10 -8 -16 -4 q4 8 16 8 M393 46 q8 -8 14 -6 q-2 8 -14 10 M391 40 q-8 -8 -14 -4 q4 8 14 6" stroke-width="1.2"/>
+    <path d="M393 40 q2 -8 -1 -12" stroke-width="1"/>
+    <path d="M410 84 l4 -2 v-30 l-2 -4 l-2 4 Z" stroke-width="1.3"/>
+    <path d="M411 82 l2 -1 v-26 l-1 -2 l-1 2 Z" fill="url(#p0503-2-shade)" stroke="none"/>
+    <path d="M410 70 l4 -2 M410 64 l4 -2 M410 76 l4 -2" stroke-width="0.6"/>
+    <path d="M380 86 q12 4 34 -2" stroke-width="0.7"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M156 298 H206"/><path d="M158 240 H116"/><path d="M279 166 H300"/><path d="M350 112 H378"/><path d="M416 60 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="298" r="8"/><circle cx="106" cy="240" r="8"/><circle cx="310" cy="166" r="8"/><circle cx="388" cy="112" r="8"/><circle cx="460" cy="60" r="8"/>
+    </g>
+    <text x="216" y="301.5">1</text><text x="106" y="243.5">2</text><text x="310" y="169.5">3</text><text x="388" y="115.5">4</text><text x="460" y="63.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">粗陶盆与身份竹签 · 爆炸图</text>
+    <text x="16" y="52">1 陶托盘（不积水）</text>
+    <text x="16" y="68">2 陶脚 ×3（垫高 2cm）</text>
+    <text x="16" y="84">3 无釉粗陶盆（20 / 28 / 36cm）</text>
+    <text x="16" y="100">4 盆土 + 底层陶粒</text>
+    <text x="16" y="116">5 植物 + 刻名竹签（背面日期）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0503-2</text>
+</svg>

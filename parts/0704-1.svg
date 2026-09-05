@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0704-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0704-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0704-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0704-1-dots" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="0.8" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0704-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 木台面开口 -->
+    <path d="M40 300 l100 -40 l60 24 l-100 40 Z" stroke-width="1.5"/>
+    <path d="M40 300 v5 l60 24 v-5 M200 284 v5 l-100 40 v-5" stroke-width="0.9"/>
+    <path d="M42 304 l58 24 v3 l-58 -24 Z" fill="url(#p0704-1-shade)" stroke="none"/>
+    <path d="M96 292 l36 -14 l22 9 l-36 14 Z" stroke-width="1.4"/>
+    <path d="M98 292 l34 -13 l20 8 l-34 13 Z" fill="url(#p0704-1-shade2)" stroke="none"/>
+    <path d="M56 296 l80 -32 M72 302 l80 -32 M88 308 l80 -32 M104 314 l80 -32" stroke-width="0.4"/>
+    <!-- 2 火山岩板 -->
+    <path d="M140 232 l40 -16 l24 10 l-40 16 Z" stroke-width="1.5"/>
+    <path d="M140 232 v6 l24 10 v-6 M204 226 v6 l-40 16 v-6" stroke-width="1"/>
+    <path d="M142 236 l22 9 v4 l-22 -9 Z" fill="url(#p0704-1-shade)" stroke="none"/>
+    <path d="M150 230 l26 -10 l14 6 l-26 10 Z" fill="url(#p0704-1-dots)" stroke="none"/>
+    <path d="M154 226 l3 -1 M170 220 l3 -1 M164 230 l3 -1" stroke-width="0.5"/>
+    <!-- 3 铸铁火盆 -->
+    <ellipse cx="240" cy="176" rx="30" ry="11" stroke-width="1.6"/>
+    <ellipse cx="240" cy="176" rx="24" ry="8" stroke-width="0.8"/>
+    <path d="M212 178 q2 24 28 26 q26 -2 28 -26" stroke-width="1.5"/>
+    <path d="M214 184 q6 18 26 20 q4 -2 2 -6 q-16 -2 -22 -14 Z" fill="url(#p0704-1-shade)" stroke="none"/>
+    <path d="M228 204 v6 M252 204 v6 M240 206 v6" stroke-width="1.2"/>
+    <path d="M206 172 q-6 -2 -4 4 M274 172 q6 -2 4 4" stroke-width="1"/>
+    <path d="M232 174 q4 -6 8 -2 q4 -8 8 0" stroke-width="0.6"/>
+    <!-- 4 烤网 + 鱼串 -->
+    <path d="M280 130 l54 -22 l26 10 l-54 22 Z" stroke-width="1.4"/>
+    <path d="M288 128 l26 10 M296 125 l26 10 M304 122 l26 10 M312 118 l26 10 M320 115 l26 10 M328 112 l26 10" stroke-width="0.5"/>
+    <path d="M290 132 l54 -22 M300 136 l54 -22" stroke-width="0.5"/>
+    <path d="M296 120 q14 -10 30 -6 q-2 6 -8 8 q-12 4 -22 -2 Z" stroke-width="1.1"/>
+    <path d="M296 120 l-8 -3 v7 Z" stroke-width="0.9"/>
+    <path d="M300 118 l40 -14" stroke-width="0.7"/>
+    <path d="M298 122 q10 4 22 0 v2 q-12 4 -22 0 Z" fill="url(#p0704-1-shade2)" stroke="none"/>
+    <!-- 5 三脚吊架 + 链条 + 壶 -->
+    <path d="M374 40 l-22 60 M374 40 l24 58 M374 40 l-2 64" stroke-width="1.5"/>
+    <path d="M374 40 a3 3 0 1 0 0.1 0" stroke-width="1"/>
+    <path d="M374 44 v4 M374 50 a2 2 0 1 0 0.1 0 M374 54 v3 M374 59 a2 2 0 1 0 0.1 0 M374 63 v3" stroke-width="0.9"/>
+    <path d="M374 68 q-8 0 -8 8 v6 q0 6 8 6 q8 0 8 -6 v-6 q0 -8 -8 -8 Z" stroke-width="1.3"/>
+    <path d="M382 78 q6 0 6 6" stroke-width="1"/>
+    <path d="M368 80 v8 q0 4 6 4 q6 0 6 -4 v-4 q-6 2 -12 -4 Z" fill="url(#p0704-1-shade)" stroke="none"/>
+    <path d="M370 68 q4 -4 8 0" stroke-width="0.8"/>
+    <path d="M350 102 h6 M396 100 h6 M370 106 h6" stroke-width="1.2"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M160 318 H206"/><path d="M136 236 H118"/><path d="M272 180 H302"/><path d="M276 132 H252"/><path d="M400 78 H420"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="318" r="8"/><circle cx="108" cy="236" r="8"/><circle cx="312" cy="180" r="8"/><circle cx="242" cy="132" r="8"/><circle cx="430" cy="78" r="8"/>
+    </g>
+    <text x="216" y="321.5">1</text><text x="108" y="239.5">2</text><text x="312" y="183.5">3</text><text x="242" y="135.5">4</text><text x="430" y="81.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">嵌入式铁盆火塘 · 爆炸图</text>
+    <text x="16" y="52">1 木台面 60cm 见方开口</text>
+    <text x="16" y="68">2 火山岩隔热板（5cm 厚）</text>
+    <text x="16" y="84">3 铸铁火盆 Φ50cm（留 3cm 空气缝）</text>
+    <text x="16" y="100">4 烤网 + 竹签鱼串</text>
+    <text x="16" y="116">5 三脚吊架 + 链条 + 水壶</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0704-1</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0601-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0601-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0601-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0601-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 排水层 slab -->
+    <path d="M60 300 l70 -24 l40 14 l-70 24 Z" stroke-width="1.5"/>
+    <path d="M60 300 v16 l40 14 v-16 M100 314 v16 l70 -24 v-16" stroke-width="1.4"/>
+    <path d="M62 302 v14 l38 13 v-14 Z" fill="url(#p0601-1-shade)" stroke="none"/>
+    <path d="M102 316 l68 -23 v12 l-68 23 Z" fill="url(#p0601-1-shade2)" stroke="none"/>
+    <circle cx="88" cy="297" r="2.6" stroke-width="0.8"/><circle cx="108" cy="303" r="2.2" stroke-width="0.8"/>
+    <circle cx="126" cy="291" r="2.6" stroke-width="0.8"/><circle cx="118" cy="282" r="2" stroke-width="0.8"/>
+    <circle cx="146" cy="290" r="2.4" stroke-width="0.8"/><circle cx="104" cy="289" r="1.8" stroke-width="0.8"/>
+    <path d="M76 300 l2 1 M136 285 l2 1 M92 306 l2 1 M150 298 l2 1 M70 306 l2 1" stroke-width="0.7"/>
+    <!-- 2 滴灌管 + 滴头 -->
+    <path d="M139 252 L229 221 M141 258 L231 227" stroke-width="1.5"/>
+    <ellipse cx="140" cy="255" rx="1.6" ry="3.2" transform="rotate(-19 140 255)" stroke-width="1"/>
+    <ellipse cx="230" cy="224" rx="1.6" ry="3.2" transform="rotate(-19 230 224)" stroke-width="1"/>
+    <path d="M143 258 L231 228 v-2 L143 256 Z" fill="url(#p0601-1-shade)" stroke="none"/>
+    <path d="M160 248 l8 -3 v5 l-8 3 Z M186 239 l8 -3 v5 l-8 3 Z M212 230 l8 -3 v5 l-8 3 Z" stroke-width="1"/>
+    <path d="M164 258 q-3 5 0 7 q3 -2 0 -7 Z M190 249 q-3 5 0 7 q3 -2 0 -7 Z M216 240 q-3 5 0 7 q3 -2 0 -7 Z" stroke-width="0.8"/>
+    <!-- 3 种植土层 slab -->
+    <path d="M200 190 l70 -24 l40 14 l-70 24 Z" stroke-width="1.5"/>
+    <path d="M200 190 v18 l40 14 v-18 M240 204 v18 l70 -24 v-18" stroke-width="1.4"/>
+    <path d="M202 192 v16 l38 13 v-16 Z" fill="url(#p0601-1-shade)" stroke="none"/>
+    <path d="M242 206 l68 -23 v14 l-68 23 Z" fill="url(#p0601-1-shade2)" stroke="none"/>
+    <path d="M218 186 l6 -2 M240 178 l5 -2 M262 176 l6 -2 M230 196 l5 -2 M276 184 l5 -2 M252 190 l4 -1" stroke-width="0.7"/>
+    <!-- 4 蒲席草覆盖 thin slab -->
+    <path d="M270 130 l70 -24 l40 14 l-70 24 Z" stroke-width="1.5"/>
+    <path d="M270 130 v5 l40 14 v-5 M310 144 v5 l70 -24 v-5" stroke-width="1.2"/>
+    <path d="M282 128 q6 -6 12 -2 q6 -6 12 -2 M290 136 q6 -6 12 -2 q6 -6 12 -2 M304 122 q6 -6 12 -2 q6 -6 12 -2 M316 130 q6 -6 12 -2 q6 -6 12 -2 M326 116 q6 -6 12 -2 q6 -6 12 -2 M340 124 q6 -6 12 -2" stroke-width="0.7"/>
+    <!-- 5 混播草丛 -->
+    <path d="M362 86 q24 -4 60 0" stroke-width="1"/>
+    <path d="M372 86 q-8 -22 -4 -44 M376 86 q-2 -20 4 -40 M380 86 q6 -18 12 -34" stroke-width="1.1"/>
+    <path d="M394 86 q-4 -24 2 -48 M398 86 q2 -22 10 -40 M392 86 q-10 -16 -14 -30" stroke-width="1.1"/>
+    <path d="M414 86 q4 -20 12 -36 M410 86 q-4 -22 0 -44 M406 86 q-8 -16 -10 -28" stroke-width="1.1"/>
+    <ellipse cx="366" cy="38" rx="3.5" ry="9" transform="rotate(-8 366 38)" stroke-width="0.9"/>
+    <ellipse cx="366" cy="38" rx="3.5" ry="9" transform="rotate(-8 366 38)" fill="url(#p0601-1-shade)" stroke="none"/>
+    <ellipse cx="410" cy="38" rx="3.5" ry="10" transform="rotate(6 410 38)" stroke-width="0.9"/>
+    <ellipse cx="410" cy="38" rx="3.5" ry="10" transform="rotate(6 410 38)" fill="url(#p0601-1-shade)" stroke="none"/>
+    <path d="M396 36 l-3 -6 M396 36 l3 -6 M396 36 l0 -8 M394 30 l-4 -4 M398 30 l4 -4" stroke-width="0.8"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M172 300 H216"/><path d="M138 255 H110"/><path d="M312 182 H350"/><path d="M382 122 H420"/><path d="M424 60 H445"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="225" cy="300" r="8"/><circle cx="100" cy="255" r="8"/><circle cx="360" cy="182" r="8"/><circle cx="430" cy="122" r="8"/><circle cx="455" cy="60" r="8"/>
+    </g>
+    <text x="225" y="303.5">1</text><text x="100" y="258.5">2</text><text x="360" y="185.5">3</text><text x="430" y="125.5">4</text><text x="455" y="63.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">地埋滴灌草原植床 · 爆炸图</text>
+    <text x="16" y="52">1 排水层（原土掺三成粗砂）</text>
+    <text x="16" y="68">2 地埋滴灌管 + 内嵌滴头</text>
+    <text x="16" y="84">3 种植土层（埋深 15cm）</text>
+    <text x="16" y="100">4 蒲席草覆盖（压籽保湿）</text>
+    <text x="16" y="116">5 混播草丛（芒 / 狼尾 / 羊茅）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0601-1</text>
+</svg>

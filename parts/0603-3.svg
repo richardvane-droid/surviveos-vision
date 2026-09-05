@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0603-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0603-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0603-3-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0603-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 罐顶安装法兰 -->
+    <ellipse cx="110" cy="300" rx="34" ry="12" stroke-width="1.5"/>
+    <ellipse cx="110" cy="300" rx="16" ry="5.5" stroke-width="1.1"/>
+    <path d="M76 300 v5 a34 12 0 0 0 68 0 v-5" stroke-width="1.2"/>
+    <path d="M78 302 a34 12 0 0 0 64 0 v4 a34 12 0 0 1 -64 0 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <circle cx="86" cy="298" r="1.8" stroke-width="0.9"/><circle cx="134" cy="298" r="1.8" stroke-width="0.9"/><circle cx="110" cy="291" r="1.8" stroke-width="0.9"/><circle cx="110" cy="309" r="1.8" stroke-width="0.9"/>
+    <path d="M94 299 a16 5.5 0 0 0 32 0" fill="url(#p0603-3-shade2)" stroke="none"/>
+    <!-- 2 超声波探头 -->
+    <ellipse cx="175" cy="224" rx="13" ry="4.5" stroke-width="1.4"/>
+    <path d="M162 224 v20 a13 4.5 0 0 0 26 0 v-20" stroke-width="1.4"/>
+    <path d="M164 244 a13 4.5 0 0 0 22 0 v4 a13 4.5 0 0 1 -22 0 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <path d="M166 250 a9 3 0 0 0 18 0" stroke-width="0.8"/>
+    <path d="M168 232 h14 M168 238 h14" stroke-width="0.5"/>
+    <path d="M175 220 v-8 q6 -4 12 0" stroke-width="0.9"/>
+    <path d="M165 262 q10 6 20 0 M161 270 q14 8 28 0 M157 278 q18 10 36 0" stroke-width="0.7"/>
+    <!-- 3 ESP32-C3 盒 + 太阳能板 -->
+    <path d="M232 186 l30 -10 l16 7 l-30 10 Z" stroke-width="1.5"/>
+    <path d="M232 186 v10 l16 7 v-10 M248 193 v10 l30 -10 v-10" stroke-width="1.3"/>
+    <path d="M234 188 v8 l14 6 v-8 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <path d="M240 180 l12 -4 l5 2 l-12 4 Z" stroke-width="0.9"/>
+    <path d="M262 176 v-10" stroke-width="1"/><circle cx="262" cy="165" r="1.5" stroke-width="0.9"/>
+    <path d="M236 168 l28 -10 l10 4 l-28 10 Z" stroke-width="1.3"/>
+    <path d="M240 168 l24 -8 M244 170 l24 -8 M248 172 l24 -8 M243 166 l24 -8 M252 162 l8 3 M258 160 l8 3" stroke-width="0.5"/>
+    <path d="M238 168 l26 -9 l8 3 l-26 9 Z" fill="url(#p0603-3-shade2)" stroke="none"/>
+    <path d="M250 174 v4" stroke-width="0.8"/>
+    <!-- 4 自来水电磁阀 -->
+    <path d="M288 120 h60 M288 128 h60" stroke-width="1.5"/>
+    <ellipse cx="288" cy="124" rx="2" ry="4" stroke-width="1"/><ellipse cx="348" cy="124" rx="2" ry="4" stroke-width="1"/>
+    <path d="M290 125 h58 v3 h-58 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <path d="M308 120 v-12 h20 v12" stroke-width="1.4"/>
+    <path d="M311 108 v-12 h14 v12" stroke-width="1.3"/>
+    <path d="M311 102 h14" stroke-width="0.6"/>
+    <path d="M318 96 v-8 q6 -4 10 0" stroke-width="0.9"/>
+    <path d="M320 109 h5 v10 h-5 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <!-- 5 空气隔断补水口 -->
+    <path d="M372 34 h24 M372 40 h24" stroke-width="1.4"/>
+    <path d="M396 34 q6 0 6 6 v8 M396 40 q0 0 0 4 v4" stroke-width="1.4"/>
+    <path d="M400 54 l-2 3 M404 54 l2 3" stroke-width="0.8"/>
+    <path d="M402 58 v6 M402 68 v6" stroke-width="0.8"/>
+    <path d="M384 78 h36 l-4 20 h-28 Z" stroke-width="1.5"/>
+    <ellipse cx="402" cy="78" rx="18" ry="4" stroke-width="1.1"/>
+    <path d="M390 98 h24 v4 h-24 Z" fill="url(#p0603-3-shade)" stroke="none"/>
+    <path d="M402 102 v8" stroke-width="1.2"/>
+    <path d="M410 56 h8 M410 72 h8 M414 56 v16" stroke-width="0.6"/>
+    <path d="M412 58 l2 -2 l2 2 M412 70 l2 2 l2 -2" stroke-width="0.6"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M146 300 H216"/><path d="M160 236 H110"/><path d="M280 190 H340"/><path d="M350 124 H400"/><path d="M422 88 H445"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="225" cy="300" r="8"/><circle cx="100" cy="236" r="8"/><circle cx="350" cy="190" r="8"/><circle cx="410" cy="124" r="8"/><circle cx="455" cy="88" r="8"/>
+    </g>
+    <text x="225" y="303.5">1</text><text x="100" y="239.5">2</text><text x="350" y="193.5">3</text><text x="410" y="127.5">4</text><text x="455" y="91.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">水位监测与补水接头 · 爆炸图</text>
+    <text x="16" y="52">1 罐顶安装法兰（DN50 口）</text>
+    <text x="16" y="68">2 JSN-SR04T 防水超声波探头</text>
+    <text x="16" y="84">3 ESP32-C3 盒 + 小太阳能板</text>
+    <text x="16" y="100">4 自来水 12V 电磁阀（DN15）</text>
+    <text x="16" y="116">5 空气隔断补水口（落差 ≥2.5D）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0603-3</text>
+</svg>

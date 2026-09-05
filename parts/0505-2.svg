@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0505-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0505-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0505-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0505-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 后壳 + 插脚 -->
+    <path d="M58 296 l60 -22 v-44 l-60 22 Z" stroke-width="1.5"/>
+    <path d="M58 296 l14 6 l60 -22 l-14 -6 M132 280 v-44 l-14 -6" stroke-width="1.1"/>
+    <path d="M73 302 l58 -21 v-42 l-58 21 Z" fill="url(#p0505-2-shade)" stroke="none"/>
+    <path d="M80 274 l4 -1.5 v8 l-4 1.5 Z M96 268 l4 -1.5 v8 l-4 1.5 Z M88 260 l4 -1.5 v6 l-4 1.5 Z" stroke-width="1.1"/>
+    <path d="M81 274 l3 -1 v7 l-3 1 Z M97 268 l3 -1 v7 l-3 1 Z" fill="url(#p0505-2-shade2)" stroke="none"/>
+    <path d="M64 290 l6 -2 M108 270 l6 -2" stroke-width="0.5"/>
+    <!-- 2 继电器 + 计量板 -->
+    <path d="M144 246 l58 -21 l14 6 l-58 21 Z" stroke-width="1.5"/>
+    <path d="M146 248 l56 -20 l11 5" stroke-width="0.6"/>
+    <path d="M154 240 l14 -5 l8 3 l-14 5 Z M154 240 v-8 l14 -5 v8 M168 235 l8 3 v-8 l-8 -3" stroke-width="1.1"/>
+    <path d="M169 236 l7 3 v-7 l-7 -3 Z" fill="url(#p0505-2-shade)" stroke="none"/>
+    <path d="M178 232 l8 -3 l4 2 l-8 3 Z" stroke-width="0.9"/>
+    <path d="M179 232 l7 -3 l3 2 l-7 3 Z" fill="url(#p0505-2-shade2)" stroke="none"/>
+    <path d="M190 226 h3 M194 225 h3 M198 224 h3" stroke-width="1"/>
+    <circle cx="160" cy="248" r="1.8" stroke-width="0.8"/><circle cx="200" cy="234" r="1.8" stroke-width="0.8"/>
+    <!-- 3 ESP32 模块 -->
+    <path d="M226 184 l34 -12 l8 3 l-34 12 Z" stroke-width="1.5"/>
+    <path d="M228 186 l32 -11 l5 2" stroke-width="0.6"/>
+    <path d="M236 180 l12 -4 l5 2 l-12 4 Z" stroke-width="1"/>
+    <path d="M237 180 l11 -4 l4 2 l-11 4 Z" fill="url(#p0505-2-shade2)" stroke="none"/>
+    <path d="M252 178 l4 -1 l2 1 l-4 1 Z" stroke-width="0.8"/>
+    <path d="M228 188 h2 M231 187 h2 M234 186 h2 M237 185 h2 M240 184 h2 M243 183 h2 M246 182 h2 M249 181 h2 M252 180 h2 M255 179 h2" stroke-width="1"/>
+    <path d="M254 172 l4 -2 l2 -2 l2 2" stroke-width="0.7"/>
+    <!-- 4 前壳 + 插孔面板 -->
+    <path d="M288 130 l60 -22 v-44 l-60 22 Z" stroke-width="1.5"/>
+    <path d="M294 126 l48 -18 v-34 l-48 18 Z" stroke-width="0.8"/>
+    <path d="M288 130 l-6 -3 v-44 l6 3 M282 83 l60 -22 l6 3" stroke-width="1"/>
+    <path d="M306 108 l4 -1.5 v6 l-4 1.5 Z M322 102 l4 -1.5 v6 l-4 1.5 Z M314 94 l4 -1.5 v4 l-4 1.5 Z" stroke-width="1.1"/>
+    <path d="M307 108 l3 -1 v5 l-3 1 Z M323 102 l3 -1 v5 l-3 1 Z" fill="url(#p0505-2-shade2)" stroke="none"/>
+    <circle cx="336" cy="98" r="2" stroke-width="0.9"/>
+    <path d="M298 122 l6 -2" stroke-width="0.6"/>
+    <!-- 5 防水翻盖 -->
+    <path d="M362 76 l56 -20 v-36 l-56 20 Z" stroke-width="1.4"/>
+    <path d="M366 74 l48 -17 v-30 l-48 17 Z" stroke-width="0.6"/>
+    <path d="M362 76 l-4 -2 v-36 l4 2 M358 38 l56 -20 l4 2" stroke-width="0.9"/>
+    <path d="M362 40 q-4 0 -4 -4 q0 -4 4 -4 l56 -20 q4 0 4 4" stroke-width="1"/>
+    <path d="M359 39 l56 -20 v2 l-56 20 Z" fill="url(#p0505-2-shade)" stroke="none"/>
+    <path d="M384 76 q4 4 8 0" stroke-width="0.8"/>
+    <path d="M370 66 l14 -5 M370 60 l24 -8 M398 52 l14 -5" stroke-width="0.4"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M134 296 H206"/><path d="M144 250 H116"/><path d="M268 184 H300"/><path d="M348 110 H378"/><path d="M418 66 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="296" r="8"/><circle cx="106" cy="250" r="8"/><circle cx="310" cy="184" r="8"/><circle cx="388" cy="110" r="8"/><circle cx="460" cy="66" r="8"/>
+    </g>
+    <text x="216" y="299.5">1</text><text x="106" y="253.5">2</text><text x="310" y="187.5">3</text><text x="388" y="113.5">4</text><text x="460" y="69.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">计量充电插座 · 爆炸图</text>
+    <text x="16" y="52">1 后壳 + 16A 插脚</text>
+    <text x="16" y="68">2 继电器 + BL0937 计量板</text>
+    <text x="16" y="84">3 ESP32 模块（刷 ESPHome）</text>
+    <text x="16" y="100">4 前壳 + 插孔面板 + 状态灯</text>
+    <text x="16" y="116">5 防水翻盖（IP44）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0505-2</text>
+</svg>

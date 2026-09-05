@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0701-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0701-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0701-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0701-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 杉木柱 四根 高低 -->
+    <path d="M66 246 v78 M78 246 v78" stroke-width="1.5"/><ellipse cx="72" cy="246" rx="6" ry="2.5" stroke-width="1.2"/>
+    <path d="M100 262 v62 M112 262 v62" stroke-width="1.5"/><ellipse cx="106" cy="262" rx="6" ry="2.5" stroke-width="1.2"/>
+    <path d="M126 236 v88 M138 236 v88" stroke-width="1.5"/><ellipse cx="132" cy="236" rx="6" ry="2.5" stroke-width="1.2"/>
+    <path d="M160 252 v72 M172 252 v72" stroke-width="1.5"/><ellipse cx="166" cy="252" rx="6" ry="2.5" stroke-width="1.2"/>
+    <path d="M74 250 v70 h4 v-70 Z M108 266 v56 h4 v-56 Z M134 240 v80 h4 v-80 Z M168 256 v64 h4 v-64 Z" fill="url(#p0701-2-shade)" stroke="none"/>
+    <path d="M60 324 h18 M94 324 h18 M120 324 h18 M154 324 h18" stroke-width="1.2"/>
+    <path d="M70 280 q2 6 0 12 M130 270 q-2 8 0 16" stroke-width="0.5"/>
+    <!-- 2 横梁 两根 -->
+    <path d="M176 222 l40 -16 l8 3 l-40 16 Z" stroke-width="1.4"/>
+    <path d="M176 222 v6 l8 3 v-6 M224 209 v6 l-40 16 v-6" stroke-width="0.8"/>
+    <path d="M178 228 l6 3 l40 -16 v-4 l-6 -2 l-40 16 Z" fill="url(#p0701-2-shade)" stroke="none"/>
+    <path d="M196 238 l40 -16 l8 3 l-40 16 Z" stroke-width="1.4"/>
+    <path d="M196 238 v6 l8 3 v-6 M244 225 v6 l-40 16 v-6" stroke-width="0.8"/>
+    <!-- 3 檩条 五根平行 -->
+    <path d="M232 178 l60 -24 M240 184 l60 -24 M248 190 l60 -24 M256 196 l60 -24 M264 202 l60 -24" stroke-width="1.5"/>
+    <path d="M232 178 v4 l60 -24 v-4 M240 184 v4 l60 -24 v-4 M248 190 v4 l60 -24 v-4 M256 196 v4 l60 -24 v-4 M264 202 v4 l60 -24 v-4" stroke-width="0.7"/>
+    <path d="M232 182 l60 -24 v2 l-60 24 Z M248 194 l60 -24 v2 l-60 24 Z M264 206 l60 -24 v2 l-60 24 Z" fill="url(#p0701-2-shade2)" stroke="none"/>
+    <!-- 4 竹瓦屋面 一仰一覆 -->
+    <path d="M292 122 l66 -26 l44 16 l-66 26 Z" stroke-width="1.5"/>
+    <path d="M292 122 v4 l44 16 v-4 M402 112 v4 l-66 26 v-4" stroke-width="0.8"/>
+    <path d="M300 119 l44 16 M310 115 l44 16 M320 111 l44 16 M330 107 l44 16 M340 103 l44 16 M350 99 l44 16" stroke-width="0.8"/>
+    <path d="M296 121 q4 -3 8 0 M306 117 q4 -3 8 0 M316 113 q4 -3 8 0 M326 109 q4 -3 8 0 M336 105 q4 -3 8 0 M346 101 q4 -3 8 0 M356 97 q4 -3 8 0" stroke-width="0.9"/>
+    <path d="M338 138 q4 -3 8 0 M348 134 q4 -3 8 0 M358 130 q4 -3 8 0 M368 126 q4 -3 8 0 M378 122 q4 -3 8 0 M388 118 q4 -3 8 0" stroke-width="0.9"/>
+    <path d="M305 117 l44 16 v2 l-44 -16 Z M325 109 l44 16 v2 l-44 -16 Z M345 101 l44 16 v2 l-44 -16 Z" fill="url(#p0701-2-shade)" stroke="none"/>
+    <!-- 5 雨链 檐口一串 -->
+    <path d="M392 44 l24 -10" stroke-width="1.3"/>
+    <path d="M404 40 v6 M404 46 a3 3 0 1 0 0.1 0 M404 52 v4 M404 56 a3 3 0 1 0 0.1 0 M404 62 v4 M404 66 a3 3 0 1 0 0.1 0 M404 72 v4 M404 76 a3 3 0 1 0 0.1 0" stroke-width="1"/>
+    <path d="M398 88 a6 3 0 1 0 12 0 a6 3 0 1 0 -12 0" stroke-width="1"/>
+    <path d="M400 92 q4 2 8 0" stroke-width="0.6"/>
+    <path d="M404 100 q-1 3 0 5 M404 108 q1 3 0 5" stroke-width="0.6"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M176 296 H206"/><path d="M170 226 H150"/><path d="M328 190 H372"/><path d="M290 130 H244"/><path d="M412 60 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="296" r="8"/><circle cx="140" cy="226" r="8"/><circle cx="382" cy="190" r="8"/><circle cx="234" cy="130" r="8"/><circle cx="450" cy="60" r="8"/>
+    </g>
+    <text x="216" y="299.5">1</text><text x="140" y="229.5">2</text><text x="382" y="193.5">3</text><text x="234" y="133.5">4</text><text x="450" y="63.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">竹瓦单坡顶棚 · 爆炸图</text>
+    <text x="16" y="52">1 杉木柱 ×4（高侧 2.4m 低侧 2.0m）</text>
+    <text x="16" y="68">2 杉木横梁（榫接柱顶）</text>
+    <text x="16" y="84">3 檩条 ×5（间距 600mm）</text>
+    <text x="16" y="100">4 竹瓦屋面（一仰一覆，坡 15°）</text>
+    <text x="16" y="116">5 檐口铜雨链</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0701-2</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0604-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0604-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0604-3p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0604-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0604-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：摄像头 + 麦克风 -->
+    <path d="M40 150 h34 a7 7 0 0 1 0 14 h-34 Z" stroke-width="1.5"/>
+    <ellipse cx="40" cy="157" rx="3.5" ry="7" stroke-width="1.3"/>
+    <path d="M44 158 h30 a7 7 0 0 1 -2 6 h-28 Z" fill="url(#p0604-3p-shade)" stroke="none"/>
+    <path d="M56 150 v-6 h8 v6" stroke-width="1"/>
+    <path d="M48 188 l3 -3 l3 3 l3 -3 l3 3 l3 -3 l3 3 v12 l-3 3 l-3 -3 l-3 3 l-3 -3 l-3 3 l-3 -3 Z" stroke-width="1.1"/>
+    <path d="M66 194 h8 v10" stroke-width="0.9"/>
+    <path d="M80 188 q6 6 0 12 M86 184 q10 10 0 20" stroke-width="0.7"/>
+    <!-- 中：检测框里的鸟 -->
+    <path d="M132 130 v-8 h8 M196 122 h8 v8 M132 200 v8 h8 M204 200 v8 h-8" stroke-width="1.4"/>
+    <path d="M150 178 q-10 -6 -6 -18 q4 -12 20 -10 q10 0 14 -8 q6 -6 12 0 q-4 2 -2 6 q10 4 6 16 q-4 12 -20 14 q-10 2 -24 0 Z" stroke-width="1.4"/>
+    <path d="M186 148 l8 2 l-8 2" stroke-width="1"/>
+    <circle cx="182" cy="146" r="1.4" stroke-width="0.8"/>
+    <path d="M152 176 q6 -14 26 -14" stroke-width="0.7"/>
+    <path d="M150 178 l-14 10 l6 0 l-4 6" stroke-width="1"/>
+    <path d="M160 180 v10 M170 180 v10 M156 190 h8 M166 190 h8" stroke-width="0.9"/>
+    <path d="M156 164 q8 -8 20 -4 q-2 8 -12 10 q-8 0 -8 -6 Z" fill="url(#p0604-3p-shade)" stroke="none"/>
+    <path d="M128 214 h80" stroke-width="0.8"/>
+    <!-- 右：手机通知 + 名单 -->
+    <rect x="256" y="128" width="40" height="70" rx="5" stroke-width="1.5"/>
+    <rect x="260" y="136" width="32" height="52" rx="2" stroke-width="0.6"/>
+    <rect x="263" y="140" width="26" height="12" rx="2" stroke-width="0.9"/>
+    <rect x="264" y="141" width="24" height="10" fill="url(#p0604-3p-shade)" stroke="none"/>
+    <path d="M266 160 h20 M266 168 h20 M266 176 h14" stroke-width="0.8"/>
+    <circle cx="268" cy="160" r="1" stroke-width="0.6"/>
+    <path d="M296 134 q10 -8 6 -18" stroke-width="0.8"/>
+    <path d="M300 124 l6 -4 l2 6" stroke-width="0.8"/>
+    <path d="M304 168 h14 M304 176 h14 M304 184 h10" stroke-width="0.7"/>
+    <path d="M300 168 l2 2 l3 -4 M300 176 l2 2 l3 -4" stroke-width="0.7"/>
+    <!-- 箭头 -->
+    <path d="M84 160 H124" stroke-width="1" stroke-dasharray="3 3"/><path d="M120 156 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M212 164 H250" stroke-width="1" stroke-dasharray="3 3"/><path d="M246 160 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0604 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">来访者识别通知</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">第一次来的鸟，手机会告诉你</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">Frigate 检测 → WhosAtMyFeeder 分种 → BirdNET 声纹印证 → 新物种推送</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">只有被认成鸟、猫、人的动静才往下走</text>
+    <text x="64" y="366">图像分类 + 声纹识别同时命中才算认出</text>
+    <text x="64" y="396">新物种推手机，老熟客只记名单不打扰</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：小主机 Frigate + Docker · 数据出口：来访者名单 + 手机推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：mmcc-xx/WhosAtMyFeeder</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0702-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0702-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0702-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0702-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：鱼竿 + 二维码吊牌 -->
+    <path d="M46 206 L104 118" stroke-width="1.6"/>
+    <path d="M46 206 l6 -9" stroke-width="3"/>
+    <circle cx="56" cy="192" r="3" stroke-width="1"/>
+    <path d="M70 170 l3 2 M84 149 l3 2 M96 131 l2 2" stroke-width="0.7"/>
+    <path d="M62 180 l6 6" stroke-width="0.8"/>
+    <rect x="62" y="186" width="24" height="24" rx="2" stroke-width="1.2"/>
+    <path d="M66 190 h6 v6 h-6 Z M76 190 h6 v6 h-6 Z M66 200 h6 v6 h-6 Z" stroke-width="0.9"/>
+    <path d="M77 200 h2 v2 h-2 Z M81 200 h2 v2 h-2 Z M79 204 h2 v2 h-2 Z M77 204 h1 v1 M83 204 h1 v2" stroke-width="0.8"/>
+    <path d="M67 191 h4 v4 h-4 Z M77 191 h4 v4 h-4 Z M67 201 h4 v4 h-4 Z" fill="url(#p0702-4p-shade)" stroke="none"/>
+    <!-- 中：手机扫码 -->
+    <rect x="150" y="120" width="52" height="88" rx="6" stroke-width="1.5"/>
+    <rect x="154" y="128" width="44" height="72" rx="2" stroke-width="0.6"/>
+    <path d="M162 142 h8 M162 142 v8 M190 142 h-8 M190 142 v8 M162 172 h8 M162 172 v-8 M190 172 h-8 M190 172 v-8" stroke-width="1.3"/>
+    <path d="M160 157 h32" stroke-width="0.9" stroke-dasharray="3 2"/>
+    <path d="M170 150 h4 v4 h-4 Z M178 150 h4 v4 h-4 Z M170 160 h4 v4 h-4 Z M180 162 h2 v2 h-2 Z" fill="url(#p0702-4p-dots)" stroke-width="0.6"/>
+    <path d="M160 184 h32 M160 190 h20" stroke-width="0.8"/>
+    <path d="M136 112 q-8 8 -6 18 M216 112 q8 8 6 18" stroke-width="0.7"/>
+    <!-- 右：账本 + 小鱼 -->
+    <path d="M250 124 h52 q6 0 6 6 v70 q0 6 -6 6 h-52 Z" stroke-width="1.5"/>
+    <path d="M250 124 q-6 0 -6 6 v70 q0 6 6 6" stroke-width="1"/>
+    <path d="M252 132 v72" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <path d="M260 142 h36 M260 154 h36 M260 166 h36 M260 178 h24" stroke-width="0.8"/>
+    <path d="M262 190 q10 -8 22 -2 q-3 5 -8 6 q-8 2 -14 -4 Z" stroke-width="1.1"/>
+    <path d="M262 190 l-5 -3 v7 Z" stroke-width="0.9"/>
+    <circle cx="279" cy="187" r="1" stroke-width="0.6"/>
+    <path d="M296 128 l6 -3 v3 l-6 3 Z" fill="url(#p0702-4p-shade)" stroke="none"/>
+    <!-- 箭头 -->
+    <path d="M92 196 Q120 196 142 176" stroke-width="1" stroke-dasharray="3 3"/><path d="M136 176 l6 -2 l0 6" stroke-width="1"/>
+    <path d="M206 166 H238" stroke-width="1" stroke-dasharray="3 3"/><path d="M234 162 l5 4 l-5 4" stroke-width="1"/>
+    <!-- 地平 -->
+    <path d="M40 258 Q180 250 320 258" stroke-width="1.2"/>
+    <path d="M44 262 q40 -3 80 0 M236 262 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0702 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">钓具借还账本</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">每根竿都记得自己上次钓了什么</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">扫二维码 → 借出 / 归还 → 填鱼获 → 库存状态 + 饵 × 月份统计</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">竿和饵盒各贴一枚二维码，扫一下即借还</text>
+    <text x="64" y="366">归还顺手记鱼种、饵、天气，黑板有数字备份</text>
+    <text x="64" y="396">借出超 7 天自动催还，饵在哪月最好用一查便知</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：自托管 Docker · 数据出口：钓具库存页 + 手机鱼获统计</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：m1ndgames/OpenFishing · cohenadair/anglers-log</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

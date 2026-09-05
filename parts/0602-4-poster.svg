@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0602-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0602-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0602-4p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0602-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0602-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：阀 + 时钟 -->
+    <path d="M36 150 h48 M36 158 h48" stroke-width="1.3"/>
+    <circle cx="60" cy="154" r="9" stroke-width="1.4"/>
+    <path d="M60 145 l8 -12" stroke-width="1.5"/>
+    <path d="M38 155 h44 v3 h-44 Z" fill="url(#p0602-4p-shade)" stroke="none"/>
+    <circle cx="60" cy="200" r="16" stroke-width="1.4"/>
+    <path d="M60 200 V189 M60 200 L68 205" stroke-width="1.5"/>
+    <path d="M60 186 v2 M60 214 v-2 M46 200 h2 M74 200 h-2" stroke-width="0.9"/>
+    <!-- 中：两本账 -->
+    <path d="M132 140 h44 v60 h-44 Z" stroke-width="1.5"/>
+    <path d="M132 140 q-6 4 -6 10 v50 q0 6 6 6" stroke-width="1.1"/>
+    <path d="M140 152 h28 M140 162 h28 M140 172 h18 M140 182 h28" stroke-width="0.8"/>
+    <path d="M134 184 h40 v14 h-40 Z" fill="url(#p0602-4p-shade)" stroke="none"/>
+    <path d="M148 132 q-4 -6 0 -10 q4 4 0 10 Z" stroke-width="1"/>
+    <path d="M160 128 h6 v6 h-6 Z" stroke-width="0.9"/>
+    <!-- 右：看板屏幕 -->
+    <rect x="216" y="130" width="104" height="72" rx="4" stroke-width="1.6"/>
+    <rect x="221" y="135" width="94" height="62" rx="2" stroke-width="0.6"/>
+    <path d="M228 168 q10 -14 20 -6 q10 8 18 -4 q10 -10 18 -2 q10 8 24 -8" stroke-width="1.2"/>
+    <path d="M228 178 q12 -8 22 -2 q12 6 20 -6 q12 -8 22 0 q10 6 16 -4" stroke-width="0.8"/>
+    <path d="M228 186 q14 -6 26 0 q14 4 22 -4 q14 -6 32 0" stroke-width="0.8"/>
+    <path d="M228 146 h30" stroke-width="2"/>
+    <path d="M266 142 h44 v10 h-44 Z" fill="url(#p0602-4p-shade)" stroke="none"/>
+    <circle cx="300" cy="180" r="3" stroke-width="1.2"/>
+    <path d="M300 177 v-2 M298 182 l-2 2" stroke-width="0.8"/>
+    <path d="M256 202 v10 h24 v-10" stroke-width="1.1"/>
+    <!-- 箭头 -->
+    <path d="M90 176 H124" stroke-width="1" stroke-dasharray="3 3"/><path d="M120 172 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M182 170 H210" stroke-width="1" stroke-dasharray="3 3"/><path d="M206 166 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0602 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">草地体检看板</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">朋友来了，先看草地的心电图</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">阀时长 × 滴头流量 → 雨水 / 自来水两本账 → 三曲线 + 占比看板</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每次开阀自动折算升数，雨水和自来水分开记账</text>
+    <text x="64" y="366">三区含水率曲线 + 本周用水 + 雨水占比一屏看完</text>
+    <text x="64" y="396">浇后三天含水率不回升就标黄点，提醒挖滴头</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA utility_meter · 数据出口：Lovelace 卡片 → 0211 大屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：petergridge/Irrigation-V5</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

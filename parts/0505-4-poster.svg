@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0505-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0505-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0505-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <!-- 海报边框（双线，手绘） -->
+  <g filter="url(#p0505-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <!-- 顶部小字条 -->
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：光伏板 → 储能 → 插座 → 电摩 -->
+    <path d="M40 190 l60 -30 h60 l-60 30 Z" stroke-width="1.6"/><path d="M60 180 l60 -30 M80 170 l60 -30 M70 185 l40 -20 M90 175 l40 -20" stroke-width="0.7"/>
+    <circle cx="150" cy="128" r="12" stroke-width="1.4"/><path d="M150 110 v-6 M150 146 v6 M132 128 h-6 M168 128 h6" stroke-width="1.2"/>
+    <rect x="190" y="150" width="46" height="60" rx="4" stroke-width="1.6"/><rect x="196" y="158" width="34" height="14" stroke-width="1"/><rect x="196" y="176" width="34" height="14" stroke-width="1"/><rect x="196" y="194" width="34" height="10" fill="url(#p0505-4p-shade)" stroke="none"/>
+    <text x="213" y="226" text-anchor="middle" font-size="9" fill="#666">储能 SOC</text>
+    <text x="100" y="212" text-anchor="middle" font-size="9" fill="#666">光伏余电</text>
+    <path d="M162 172 Q175 172 188 172" stroke-width="1" stroke-dasharray="3 3"/>
+    <rect x="268" y="120" width="40" height="70" rx="4" stroke-width="1.6"/><rect x="274" y="128" width="28" height="16" rx="2" stroke-width="1"/><path d="M288 190 v12 M280 202 h16" stroke-width="1.4"/>
+    <path d="M236 172 Q252 160 266 150" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="288" y="226" text-anchor="middle" font-size="9" fill="#666">计量插座</text>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <!-- 特性行左侧小图标 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <!-- 底部信息条 -->
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <!-- 文字层（不加滤镜） -->
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0505 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">光伏优先充电</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">电摩的电，先从屋顶来</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">光伏余电 + 储能 SOC + 插座功率 → 允许/断电 → 夜间谷电兜底</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">余电 >200W 且储能 >30% 才通电</text>
+    <text x="64" y="366">储能 &lt;30% 切市电，23:00 后谷电补充</text>
+    <text x="64" y="396">每次充电算太阳能占比推到手机</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HomeAssistant（solar_optimizer）· 数据出口：太阳能占比</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：evcc-io/evcc · jmcollin78/solar_optimizer</text>
+  <!-- 印章 -->
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

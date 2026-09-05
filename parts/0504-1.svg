@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0504-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0504-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0504-1-net" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(20)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#5a5a5a" stroke-width="0.5"/>
+      <line x1="0" y1="2.5" x2="5" y2="2.5" stroke="#5a5a5a" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0504-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 底脚 + 底层横管框 -->
+    <path d="M54 300 l96 -34 l44 18 l-96 34 Z" stroke-width="1.5"/>
+    <path d="M60 300 l90 -32 l34 14 l-90 32 Z" stroke-width="0.8"/>
+    <path d="M54 300 l96 -34 l44 18 l-96 34 Z M60 300 l90 -32 l34 14 l-90 32 Z" fill="url(#p0504-1-shade)" fill-rule="evenodd" stroke="none"/>
+    <path d="M54 300 v4 l6 2 M150 266 v4 M194 284 v4 l-4 2 M98 318 v4" stroke-width="1"/>
+    <path d="M48 306 h12 v3 h-12 Z M144 272 h12 v3 h-12 Z M188 290 h12 v3 h-12 Z M92 324 h12 v3 h-12 Z" stroke-width="1.1"/>
+    <!-- 2 立管 ×4 + 卡扣 -->
+    <path d="M146 262 v-46 M152 262 v-46 M146 216 a3 2 0 0 1 6 0" stroke-width="1.4"/>
+    <path d="M172 252 v-46 M178 252 v-46 M172 206 a3 2 0 0 1 6 0" stroke-width="1.4"/>
+    <path d="M198 242 v-46 M204 242 v-46 M198 196 a3 2 0 0 1 6 0" stroke-width="1.4"/>
+    <path d="M224 232 v-46 M230 232 v-46 M224 186 a3 2 0 0 1 6 0" stroke-width="1.4"/>
+    <path d="M147 226 h4 v14 h-4 Z M147 250 h4 v8 h-4 Z M173 216 h4 v14 h-4 Z M199 206 h4 v14 h-4 Z M225 196 h4 v14 h-4 Z M225 224 h4 v6 h-4 Z" fill="url(#p0504-1-shade)" stroke="none"/>
+    <path d="M143 230 h12 v8 h-12 Z M169 220 h12 v8 h-12 Z M195 210 h12 v8 h-12 Z M221 200 h12 v8 h-12 Z" stroke-width="1.1"/>
+    <path d="M145 234 h2 M153 234 h2 M171 224 h2 M179 224 h2" stroke-width="0.6"/>
+    <!-- 3 层板 + 种植箱 -->
+    <path d="M214 202 l70 -26 l30 12 l-70 26 Z" stroke-width="1.5"/>
+    <path d="M214 202 v4 l30 12 v-4 M244 218 l70 -26 v-4" stroke-width="0.9"/>
+    <path d="M245 214 l68 -25 v3 l-68 25 Z" fill="url(#p0504-1-shade)" stroke="none"/>
+    <path d="M226 190 l16 -6 l12 5 l-16 6 Z M226 190 v-12 l16 -6 v12 M242 184 l12 5 v-12 l-12 -5 l-16 6" stroke-width="1.2"/>
+    <path d="M248 182 l16 -6 l12 5 l-16 6 Z M248 182 v-12 l16 -6 v12 M264 176 l12 5 v-12 l-12 -5 l-16 6" stroke-width="1.2"/>
+    <path d="M270 174 l16 -6 l12 5 l-16 6 Z M270 174 v-12 l16 -6 v12 M286 168 l12 5 v-12 l-12 -5 l-16 6" stroke-width="1.2"/>
+    <path d="M243 185 l11 4 v-11 l-11 -4 Z M265 177 l11 4 v-11 l-11 -4 Z M287 169 l11 4 v-11 l-11 -4 Z" fill="url(#p0504-1-shade)" stroke="none"/>
+    <path d="M234 176 q0 -8 4 -12 M236 170 q4 -4 8 -2 M256 168 q0 -8 4 -12 M258 162 q-4 -4 -8 -2 M278 160 q0 -8 4 -12 M280 154 q4 -4 8 -2" stroke-width="0.9"/>
+    <!-- 4 滴灌主管 -->
+    <path d="M292 130 L352 108 M292 134 L352 112 M292 130 a2 2 0 0 0 0 4 M352 108 a2 2 0 0 1 0 4" stroke-width="1.3"/>
+    <path d="M293 132 l58 -22 v2 l-58 22 Z" fill="url(#p0504-1-shade)" stroke="none"/>
+    <path d="M304 129 v6 M320 123 v6 M336 117 v6" stroke-width="1.2"/>
+    <path d="M301 135 h6 M317 129 h6 M333 123 h6" stroke-width="1.2"/>
+    <path d="M304 140 q-2 3 0 5 q2 -2 0 -5 Z M320 134 q-2 3 0 5 q2 -2 0 -5 Z M336 128 q-2 3 0 5 q2 -2 0 -5 Z" stroke-width="0.8"/>
+    <path d="M286 133 h6 v-4 h-6 Z" stroke-width="1"/>
+    <!-- 5 遮阳网 + 导轨 -->
+    <path d="M350 78 l70 -26 l22 10 l-70 26 Z" stroke-width="1.4"/>
+    <path d="M352 78 l68 -25 l18 8 l-68 25 Z" fill="url(#p0504-1-net)" stroke="none"/>
+    <path d="M346 82 L418 56 M348 85 L420 59" stroke-width="1.3"/>
+    <path d="M356 80 v-6 M400 64 v-6" stroke-width="1"/>
+    <path d="M418 52 q6 -4 8 -8 M440 62 q6 -4 8 -8" stroke-width="0.7"/>
+    <path d="M420 52 q-3 -6 4 -8 q4 3 -4 8" stroke-width="0.8"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M150 310 H206"/><path d="M143 240 H116"/><path d="M290 190 H316"/><path d="M352 124 H378"/><path d="M442 66 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="310" r="8"/><circle cx="106" cy="240" r="8"/><circle cx="326" cy="190" r="8"/><circle cx="388" cy="124" r="8"/><circle cx="460" cy="66" r="8"/>
+    </g>
+    <text x="216" y="313.5">1</text><text x="106" y="243.5">2</text><text x="326" y="193.5">3</text><text x="388" y="127.5">4</text><text x="460" y="69.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">镀锌管四层种植架 · 爆炸图</text>
+    <text x="16" y="52">1 底层横管框 + 法兰脚（2×0.6m）</text>
+    <text x="16" y="68">2 25mm 立管 ×4 + 铸铁卡扣</text>
+    <text x="16" y="84">3 防腐木层板 + 40cm 种植箱 ×6</text>
+    <text x="16" y="100">4 16mm 滴灌主管（每箱 2 滴头）</text>
+    <text x="16" y="116">5 遮阳网 + 架顶导轨（35℃ 放下）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0504-1</text>
+</svg>

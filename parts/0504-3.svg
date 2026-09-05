@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0504-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0504-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0504-3-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0504-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 后壳 + 18650 电池 -->
+    <path d="M52 296 l84 -30 v-40 l-84 30 Z" stroke-width="1.5"/>
+    <path d="M52 296 l8 4 l84 -30 l-8 -4 M144 270 v-40 l-8 -4" stroke-width="1"/>
+    <path d="M60 300 l84 -30 v-40 l-84 30 Z" fill="url(#p0504-3-shade)" stroke="none"/>
+    <path d="M58 270 l60 -22" stroke-width="1.3"/>
+    <path d="M58 270 a4 3 0 0 0 4 4 l60 -22 a4 3 0 0 0 -4 -4 M58 270 a4 3 0 0 1 4 -4" stroke-width="1.2"/>
+    <path d="M62 274 l60 -22 v-4 l-60 22 Z" fill="url(#p0504-3-shade2)" stroke="none"/>
+    <path d="M122 248 l4 -1.5 v3 l-4 1.5" stroke-width="1"/>
+    <path d="M70 290 q-4 -6 0 -10 M126 268 q4 2 4 6" stroke-width="0.7"/>
+    <!-- 2 ESP32 板 -->
+    <path d="M146 240 l60 -22 l16 8 l-60 22 Z" stroke-width="1.5"/>
+    <path d="M148 242 l58 -21 l13 6" stroke-width="0.6"/>
+    <path d="M160 234 l14 -5 l6 3 l-14 5 Z" stroke-width="1"/>
+    <path d="M161 234 l13 -5 l5 3 l-13 5 Z" fill="url(#p0504-3-shade2)" stroke="none"/>
+    <path d="M182 226 l8 -3 l4 2 l-8 3 Z" stroke-width="0.9"/>
+    <path d="M196 236 h2 M199 235 h2 M202 234 h2 M205 233 h2 M208 232 h2" stroke-width="1.2"/>
+    <path d="M150 246 h2 M153 245 h2 M156 244 h2 M159 243 h2 M162 242 h2" stroke-width="1.2"/>
+    <path d="M186 218 l4 -2 l2 2 l-4 2 Z" stroke-width="0.8"/>
+    <!-- 3 2.9 寸墨水屏 -->
+    <path d="M214 186 l62 -22 v-30 l-62 22 Z" stroke-width="1.5"/>
+    <path d="M218 183 l54 -19 v-24 l-54 19 Z" stroke-width="0.7"/>
+    <path d="M276 164 l3 1 v-30 l-3 -1" stroke-width="0.8"/>
+    <path d="M276 164 l3 1 v-30 l-3 -1 Z" fill="url(#p0504-3-shade)" stroke="none"/>
+    <path d="M222 176 l20 -7 M222 170 l30 -11 M222 164 l14 -5 M250 166 l20 -7" stroke-width="0.6"/>
+    <path d="M258 172 l3 -1 M262 171 l3 -1 M266 170 l3 -1" stroke-width="0.8"/>
+    <!-- 4 3D 打印前壳（开窗） -->
+    <path d="M288 128 l70 -25 v-40 l-70 25 Z" stroke-width="1.5"/>
+    <path d="M296 122 l54 -19 v-26 l-54 19 Z" stroke-width="1"/>
+    <path d="M288 128 l70 -25 v-40 l-70 25 Z M296 122 l54 -19 v-26 l-54 19 Z" fill="url(#p0504-3-shade)" fill-rule="evenodd" stroke="none"/>
+    <path d="M288 128 l-4 -2 v-40 l4 2 M284 86 l70 -25 l4 2" stroke-width="0.9"/>
+    <path d="M320 110 l4 -1.5" stroke-width="0.6"/>
+    <!-- 5 亚克力挡雨片 -->
+    <path d="M362 74 l58 -20 v-30 l-58 20 Z" stroke-width="1.3"/>
+    <path d="M362 74 l-3 -2 v-30 l3 2 M359 42 l58 -20 l3 2" stroke-width="0.7"/>
+    <path d="M370 66 l14 -5 M370 58 l24 -8 M398 50 l14 -5" stroke-width="0.5"/>
+    <path d="M362 40 q-6 -6 -4 -12 M420 20 q-4 -6 0 -10" stroke-width="0.7"/>
+    <path d="M366 78 l50 -17" stroke-width="0.9" stroke-dasharray="2 2"/>
+  </g>
+  <g font-size="7" fill="#2a2a2a" font-family="'Long Cang','Kaiti SC',cursive">
+    <text x="224" y="176" transform="rotate(-20 224 176)">L1 42% 07:00</text>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M144 296 H206"/><path d="M146 246 H116"/><path d="M279 180 H300"/><path d="M356 110 H378"/><path d="M420 64 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="296" r="8"/><circle cx="106" cy="246" r="8"/><circle cx="310" cy="180" r="8"/><circle cx="388" cy="110" r="8"/><circle cx="460" cy="64" r="8"/>
+    </g>
+    <text x="216" y="299.5">1</text><text x="106" y="249.5">2</text><text x="310" y="183.5">3</text><text x="388" y="113.5">4</text><text x="460" y="67.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">墨水屏状态面板 · 爆炸图</text>
+    <text x="16" y="52">1 3D 打印后壳 + 18650 电池</text>
+    <text x="16" y="68">2 ESP32 板（10 分钟醒一次）</text>
+    <text x="16" y="84">3 2.9 寸墨水屏（296×128）</text>
+    <text x="16" y="100">4 3D 打印前壳（开窗）</text>
+    <text x="16" y="116">5 亚克力挡雨片</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0504-3</text>
+</svg>

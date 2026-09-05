@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0601-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0601-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0601-4-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <marker id="p0601-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">分区养护日历 · 流程图</text>
+  <g filter="url(#p0601-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <rect x="30.0" y="52.0" width="110" height="34" rx="17.0"/>
+    <path d="M196.0 53.0 a34.0 6 0 0 1 68 0 v38 a34.0 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="53.0" rx="34.0" ry="6"/>
+    <rect x="30.0" y="130.0" width="110" height="40" rx="6"/>
+    <rect x="32.0" y="132.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M34.0 172.0 h106 v3 h-106 Z" fill="url(#p0601-4-shade)" stroke="none"/>
+    <path d="M230 128.0 l58.0 24.0 l-58.0 24.0 l-58.0 -24.0 Z"/>
+    <path d="M232 176.0 l56.0 -22.0 l4 2 l-58.0 26.0 Z" fill="url(#p0601-4-shade)" stroke="none"/>
+    <rect x="330.0" y="130.0" width="120" height="40" rx="6"/>
+    <rect x="332.0" y="132.0" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M334.0 172.0 h116 v3 h-116 Z" fill="url(#p0601-4-shade)" stroke="none"/>
+    <rect x="30.0" y="230.0" width="110" height="40" rx="6"/>
+    <rect x="32.0" y="232.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M34.0 272.0 h106 v3 h-106 Z" fill="url(#p0601-4-shade)" stroke="none"/>
+    <rect x="175.0" y="230.0" width="110" height="40" rx="6"/>
+    <rect x="177.0" y="232.0" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <path d="M179.0 272.0 h106 v3 h-106 Z" fill="url(#p0601-4-shade)" stroke="none"/>
+    <path d="M390 228.0 l60.0 24.0 l-60.0 24.0 l-60.0 -24.0 Z"/>
+    <path d="M392 276.0 l58.0 -22.0 l4 2 l-60.0 26.0 Z" fill="url(#p0601-4-shade)" stroke="none"/>
+    <rect x="90.0" y="312.0" width="300" height="30" rx="15.0"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0601-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M390 170 V226"/>
+    <path d="M330 252 H287"/>
+    <path d="M230 176 V212 H85 V228"/>
+    <path d="M85 270 V327 H88"/>
+    <path d="M230 270 V310"/>
+    <path d="M390 276 V310"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">每月 1 日唤醒</text>
+    <text x="230" y="71.5">植物档案</text>
+    <text x="230" y="84.5" font-size="8.5" fill="#666">割 / 播 / 覆盖月份</text>
+    <text x="85" y="147.5">读本月任务</text>
+    <text x="85" y="161">匹配三区档案</text>
+    <text x="230" y="149.5">本月有任务？</text>
+    <text x="230" y="162.5" font-size="8.5" fill="#666">割草/补播/覆盖</text>
+    <text x="390" y="147.5">是 → 建 HA 日历事件</text>
+    <text x="390" y="161">提前 3 天提醒</text>
+    <text x="85" y="247.5">否 → 等下月</text>
+    <text x="85" y="261">只记温度雨量</text>
+    <text x="230" y="247.5">是 → 推送手机</text>
+    <text x="230" y="261">附操作要点</text>
+    <text x="390" y="249.5">到期天气允许？</text>
+    <text x="390" y="262.5" font-size="8.5" fill="#666">3 天无雨 · >5℃</text>
+    <text x="240" y="331">完成打勾写入成长日志 · 天气不允许顺延一周</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="300" y="246">是</text><text x="396" y="296">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0601-4</text>
+</svg>

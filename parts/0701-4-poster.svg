@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0701-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0701-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0701-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0701-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：台面 + 超声波探头朝下 + 水波 -->
+    <path d="M40 132 h76" stroke-width="1.6"/>
+    <path d="M44 132 v6 M60 132 v6 M76 132 v6 M92 132 v6 M108 132 v6" stroke-width="0.8"/>
+    <rect x="70" y="138" width="16" height="10" rx="2" stroke-width="1.3"/>
+    <path d="M78 148 v6 M72 156 q6 6 12 0 M69 162 q9 9 18 0" stroke-width="0.9" stroke-dasharray="2 2"/>
+    <path d="M40 184 q10 -6 20 0 q10 6 20 0 q10 -6 20 0 q10 6 16 0" stroke-width="1.3"/>
+    <path d="M44 192 q10 -5 20 0 q10 5 20 0 q10 -5 20 0" stroke-width="0.7"/>
+    <path d="M40 186 q10 -6 20 0 q10 6 20 0 q10 -6 20 0 q10 6 16 0 v10 h-76 Z" fill="url(#p0701-4p-dots)" stroke="none"/>
+    <path d="M120 138 v46 M117 142 h6 M117 180 h6" stroke-width="0.8"/>
+    <!-- 中：杯式风速计 -->
+    <path d="M180 170 v34" stroke-width="1.6"/>
+    <path d="M168 204 h24" stroke-width="1.4"/>
+    <circle cx="180" cy="168" r="3" stroke-width="1.2"/>
+    <path d="M180 168 l-22 -10 M180 168 l22 -10 M180 168 v-24" stroke-width="1.2"/>
+    <path d="M158 158 a6 6 0 1 0 -0.1 0 M202 158 a6 6 0 1 0 -0.1 0 M180 144 a6 6 0 1 0 -0.1 0" stroke-width="1.4"/>
+    <path d="M152 158 a6 6 0 0 1 12 0 v2 a6 6 0 0 1 -12 0 Z M196 158 a6 6 0 0 1 12 0 v2 a6 6 0 0 1 -12 0 Z" fill="url(#p0701-4p-shade)" stroke="none"/>
+    <path d="M140 128 q10 -4 20 0 M146 120 q8 -3 16 0 M210 128 q10 -4 20 0" stroke-width="0.8"/>
+    <!-- 右：手机 + 红色卡片 -->
+    <rect x="256" y="128" width="40" height="66" rx="5" stroke-width="1.4"/>
+    <rect x="260" y="136" width="32" height="50" rx="2" stroke-width="0.6"/>
+    <rect x="263" y="142" width="26" height="14" rx="2" stroke-width="1"/>
+    <path d="M264 143 h24 v12 h-24 Z" fill="url(#p0701-4p-shade)" stroke="none"/>
+    <path d="M266 164 h20 M266 171 h14 M266 178 h18" stroke-width="0.8"/>
+    <path d="M300 136 q10 -6 6 -16 M304 146 q14 -4 12 -18" stroke-width="0.8"/>
+    <!-- 箭头 -->
+    <path d="M124 166 H150" stroke-width="1" stroke-dasharray="3 3"/><path d="M146 162 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M212 166 H246" stroke-width="1" stroke-dasharray="3 3"/><path d="M242 162 l5 4 l-5 4" stroke-width="1"/>
+    <!-- 地平 -->
+    <path d="M40 258 Q180 250 320 258" stroke-width="1.2"/>
+    <path d="M44 262 q40 -3 80 0 M236 262 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0701 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">水位风力安全提醒</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">涨水和大风来之前，钓台先给你发消息</text>
+  <text x="276" y="152" text-anchor="middle" font-size="7" fill="#b5372b" font-weight="700">钓台 !</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">超声波水位 + 杯式风速 → ESPHome → HA 阈值判断 → 推送 / 卡片变红</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">水面离台面不足 30cm 立即提醒，电池箱不泡水</text>
+    <text x="64" y="366">风速超 8m/s 持续 5 分钟才报，阵风不误报</text>
+    <text x="64" y="396">双超限升级为“禁止上台”，离线 10 分钟也报</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：手机推送 + 大屏钓台卡片</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome · home-assistant/core</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0703-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0703-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0703-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0703-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 防水箱底壳 -->
+    <path d="M56 290 l80 -32 l44 16 l-80 32 Z" stroke-width="1.5"/>
+    <path d="M56 290 v22 l44 16 v-22 M180 274 v22 l-80 32 v-22" stroke-width="1.5"/>
+    <path d="M58 294 l40 16 v18 l-40 -16 Z" fill="url(#p0703-2-shade)" stroke="none"/>
+    <path d="M104 308 l72 -29 M104 316 l72 -29" stroke-width="0.5"/>
+    <circle cx="80" cy="288" r="1.5" stroke-width="0.7"/><circle cx="112" cy="276" r="1.5" stroke-width="0.7"/><circle cx="140" cy="286" r="1.5" stroke-width="0.7"/>
+    <path d="M50 312 l6 -2 v6 M186 296 l-6 2 v6" stroke-width="0.9"/>
+    <!-- 2 磷酸铁锂电池 + BMS -->
+    <path d="M130 240 l44 -18 l26 10 l-44 18 Z" stroke-width="1.5"/>
+    <path d="M130 240 v18 l26 10 v-18 M200 232 v18 l-44 18 v-18" stroke-width="1.4"/>
+    <path d="M132 244 l22 9 v14 l-22 -9 Z" fill="url(#p0703-2-shade)" stroke="none"/>
+    <path d="M148 232 h4 M164 226 h4 M166 224 v4" stroke-width="1.1"/>
+    <path d="M160 254 l32 -13 M160 260 l32 -13" stroke-width="0.5"/>
+    <path d="M176 246 l16 -6 v4 l-16 6 Z" stroke-width="0.8"/>
+    <!-- 3 MPPT 控制器 -->
+    <path d="M214 190 l30 -12 l18 7 l-30 12 Z" stroke-width="1.4"/>
+    <path d="M214 190 v10 l18 7 v-10 M262 185 v10 l-30 12 v-10" stroke-width="1.2"/>
+    <path d="M216 194 l14 6 v7 l-14 -6 Z" fill="url(#p0703-2-shade)" stroke="none"/>
+    <path d="M224 186 l14 -6 l6 2 l-14 6 Z" stroke-width="0.8"/>
+    <path d="M226 186 l12 -5 l4 2 l-12 5 Z" fill="url(#p0703-2-shade2)" stroke="none"/>
+    <path d="M236 202 l3 -1 M240 200 l3 -1 M244 198 l3 -1 M248 196 l3 -1" stroke-width="1"/>
+    <path d="M230 178 v-8 M244 174 v-8" stroke-width="0.8"/>
+    <!-- 4 逆变器 + USB 模块 -->
+    <path d="M262 150 l40 -16 l18 7 l-40 16 Z" stroke-width="1.4"/>
+    <path d="M262 150 v12 l18 7 v-12 M320 141 v12 l-40 16 v-12" stroke-width="1.2"/>
+    <path d="M264 154 l14 6 v9 l-14 -6 Z" fill="url(#p0703-2-shade)" stroke="none"/>
+    <path d="M284 156 l30 -12 M284 160 l30 -12 M284 164 l30 -12" stroke-width="0.5"/>
+    <path d="M292 152 l6 -2 v3 l-6 2 Z M302 148 l6 -2 v3 l-6 2 Z" stroke-width="0.8"/>
+    <path d="M318 120 l16 -6 l8 3 l-16 6 Z" stroke-width="1.2"/>
+    <path d="M318 120 v5 l8 3 v-5 M342 117 v5 l-16 6 v-5" stroke-width="0.9"/>
+    <path d="M326 118 l6 -2 v2 l-6 2 Z" stroke-width="0.6"/>
+    <!-- 5 ESP32 节点小板 -->
+    <path d="M334 106 l26 -10 l10 4 l-26 10 Z" stroke-width="1.3"/>
+    <path d="M336 106 l24 -9 l7 3" stroke-width="0.6"/>
+    <path d="M342 104 l8 -3 l4 2 l-8 3 Z" stroke-width="0.9"/>
+    <path d="M343 104 l7 -3 l3 1 l-7 3 Z" fill="url(#p0703-2-shade2)" stroke="none"/>
+    <path d="M352 110 h2 M355 109 h2 M358 108 h2 M361 107 h2" stroke-width="0.9"/>
+    <path d="M356 96 q4 -6 8 -2" stroke-width="0.7"/>
+    <!-- 6 箱盖 -->
+    <path d="M350 78 l80 -32 l44 16 l-80 32 Z" stroke-width="1.5"/>
+    <path d="M350 78 v6 l44 16 v-6 M474 62 v6 l-80 32 v-6" stroke-width="0.9"/>
+    <path d="M352 82 l42 16 v4 l-42 -16 Z" fill="url(#p0703-2-shade)" stroke="none"/>
+    <path d="M364 74 l60 -24 M376 78 l60 -24" stroke-width="0.4"/>
+    <path d="M388 66 l8 -3 v3 l-8 3 Z" stroke-width="0.8"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M182 306 H206"/><path d="M126 246 H108"/><path d="M262 205 H302"/><path d="M256 156 H228"/><path d="M362 114 H382"/><path d="M446 84 H452"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="306" r="8"/><circle cx="98" cy="246" r="8"/><circle cx="312" cy="205" r="8"/><circle cx="218" cy="156" r="8"/><circle cx="392" cy="114" r="8"/><circle cx="460" cy="84" r="8"/>
+    </g>
+    <text x="216" y="309.5">1</text><text x="98" y="249.5">2</text><text x="312" y="208.5">3</text><text x="218" y="159.5">4</text><text x="392" y="117.5">5</text><text x="460" y="87.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">离网电池箱 · 爆炸图</text>
+    <text x="16" y="52">1 IP65 防水箱（底留排水孔）</text>
+    <text x="16" y="68">2 12V 100Ah 磷酸铁锂 + BMS</text>
+    <text x="16" y="84">3 MPPT 控制器 20A</text>
+    <text x="16" y="100">4 300W 逆变器 + USB 降压模块</text>
+    <text x="16" y="116">5 ESP32 监测节点</text>
+    <text x="16" y="132">6 箱盖（架高离水 50cm）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0703-2</text>
+</svg>
