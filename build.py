@@ -61,6 +61,17 @@ for m in modules:
     r = refs_by_id.get(m["id"], {"github": [], "xhs": []})
     m["github"] = r["github"]
     m["xhs"] = [{**x, "url": "https://www.xiaohongshu.com/search_result?keyword=" + quote(x["keyword"]) + "&source=web_explore_feed"} for x in r["xhs"]]
+parts_by_id = {}
+for f in sorted(glob.glob(str(ROOT / "data" / "parts-*.json"))):
+    for r in json.load(open(f, encoding="utf-8")): parts_by_id[r["id"]] = r["parts"]
+for m in modules:
+    m["parts"] = sorted(parts_by_id.get(m["id"], []), key=lambda p: p["k"])
+    for p in m["parts"]:
+        p["img"] = (ROOT / "parts" / f"{m['id']}-{p['k']}.svg").read_text(encoding="utf-8")
+        p["poster"] = (ROOT / "parts" / f"{m['id']}-{p['k']}-poster.svg").read_text(encoding="utf-8") if p["kind"] == "logic" else None
+parts_stats = {"total": sum(len(m["parts"]) for m in modules),
+               "hw": sum(1 for m in modules for p in m["parts"] if p["kind"] == "hw"),
+               "logic": sum(1 for m in modules for p in m["parts"] if p["kind"] == "logic")}
 repo_index = {}
 for m in modules:
     for g in m["github"]:
@@ -123,12 +134,12 @@ INDEX = r"""{% extends "base" %}{% block title %}一座乡野生存系统，做�
   <div class="hero-text">
     <p class="kicker">SurviveOs · 完整形态设想</p>
     <h1>一座乡野生存系统，<br>做完之后的样子。</h1>
-    <p class="lede">杭州乡下的一栋木屋、一个地堡、一层阁楼、一片草地和一座钓台。真实项目还在一个模块一个模块地做；这个站先把 <b>{{ stats.modules }} 个模块全部想完</b>——每个模块一页专题，小红书式的放飞文案，配一张黑白钢笔速写。</p>
+    <p class="lede">杭州乡下的一栋木屋、一个地堡、一层阁楼、一片草地和一座钓台。真实项目还在一个模块一个模块地做；这个站先把 <b>{{ stats.modules }} 个模块全部想完</b>——每个模块一页专题，小红书式的放飞文案，配一张黑白钢笔速写；再往下拆成 {{ parts_stats.total }} 个核心产品模块与联动逻辑，每个都有铅笔画的爆炸图或流程图。</p>
     <div class="stats">
       <div><b>{{ stats.areas }}</b><span>个区域</span></div>
       <div><b>{{ stats.modules }}</b><span>个模块专题</span></div>
       <div><b>{{ stats.done }}</b><span>个真实已完成</span></div>
-      <div><b>{{ stats.modules - stats.done - stats.wip }}</b><span>个纯幻想</span></div>
+      <div><b>{{ parts_stats.total }}</b><span>个核心拆解</span></div>
     </div>
     <p class="stamp-row"><span class="stamp">设想版 · 非真实进度</span><span class="hand">看看就好，别当施工图 ↗</span></p>
   </div>
@@ -236,6 +247,18 @@ MODULE = r"""{% extends "base" %}{% block title %}{{ m.id }} {{ m.name }}{% endb
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan">{% for p in m.plan %}<li><span class="box"></span><span>{{ p }}</span></li>{% endfor %}</ol></section>
 
+  {% if m.parts %}<section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">{{ m.parts|length }} 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">{% for p in m.parts %}
+      <a class="td-item" href="{{ root }}teardown/{{ m.id }}.html#p{{ p.k }}">
+        <span class="kind kind-{{ p.kind }}">{{ '产品模块' if p.kind == 'hw' else '联动逻辑' }}</span>
+        <b>{{ p.k }}. {{ p.name }}</b>
+        <span class="td-brief">{{ p.intro[:52] }}…</span>
+      </a>{% endfor %}
+    </div>
+    <p class="td-cta"><a class="btn" href="{{ root }}teardown/{{ m.id }}.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>{% endif %}
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo">{% for p in m.inspo %}<li>{{ p }}</li>{% endfor %}</ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit">{% for p in m.pitfalls %}<li>{{ p }}</li>{% endfor %}</ul></section>
@@ -289,13 +312,59 @@ ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endbloc
     <p class="scene">全站 {{ stats.modules }} 张模块速写 + 7 张区域全景都是原创的 inline SVG：只有一种墨色，阴影全部用 45° 排线，轮廓"描两遍"，线条经过轻微的扰动滤镜制造手绘感，右下角是编号签名。没有任何外部图片，页面在离线状态也能完整显示。</p></section>
   <section class="blk"><h2><em>④</em> 每页附了真实的参考链接</h2>
     <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 2～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），每个都在 2026-09 打开核实过、星数取自当时页面；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见<a href="{{ root }}refs.html">参考索引</a>。</p></section>
-  <section class="blk"><h2><em>⑤</em> 怎么用它</h2>
+  <section class="blk"><h2><em>⑤</em> 每个模块再往下拆一层</h2>
+    <p class="scene">每个模块页的“核心拆解”把它拆成 3～5 个最核心的东西，一共 {{ parts_stats.total }} 个：{{ parts_stats.hw }} 个<b>产品模块</b>（物理的总成——灯头、除湿柜、雨水罐组、洞洞板系统……）给科普式介绍和一张铅笔画<b>爆炸拆解图</b>；{{ parts_stats.logic }} 个<b>联动逻辑</b>（自动化 / 算法 / 数据流）当成“逻辑产品”做一张<b>海报</b>，再配一张与爆炸图对应的铅笔画<b>流程图</b>，并写明主要实现路径参考的是哪个 GitHub 项目，让逻辑可以顺着推演下去。</p></section>
+  <section class="blk"><h2><em>⑥</em> 怎么用它</h2>
     <ol class="plan">
       <li><span class="box"></span><span>开某个模块的真实设计对话前，先看一眼它的设想页，把"想要的感觉"带进去。</span></li>
       <li><span class="box"></span><span>家人朋友逛完在微信里说"这个我想要 / 这个算了"，比看方案文档快得多。</span></li>
       <li><span class="box"></span><span>真实模块跨阶段时不需要改这个站——它就是一次性的完整形态快照，和真实进度是两条线。</span></li>
     </ol></section>
   <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><span></span></nav>
+</article>
+{% endblock %}"""
+
+TEARDOWN = r"""{% extends "base" %}{% block title %}{{ m.id }} {{ m.name }} · 核心拆解{% endblock %}
+{% block desc %}{{ m.name }} 的 {{ m.parts|length }} 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。{% endblock %}
+{% block body %}
+<nav class="crumb"><a href="{{ root }}index.html">首页</a> › <a href="{{ root }}areas/{{ area.id }}.html">{{ area.id }} {{ area.name }}</a> › <a href="{{ root }}modules/{{ m.id }}.html">{{ m.id }} {{ m.name }}</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">{{ area.name }} · 模块 {{ m.id }} · 核心拆解</p>
+    <h1>{{ m.name }}：{{ m.parts|length }} 个核心模块与逻辑</h1>
+    <p class="lede">{{ m.tagline }}</p>
+    <p class="meta"><span class="st st-{{ m.status }}">{{ m.status }} {{ m.status_note }}</span>
+      <span class="tag">产品模块 {{ m.parts|selectattr('kind','equalto','hw')|list|length }}</span>
+      <span class="tag">联动逻辑 {{ m.parts|selectattr('kind','equalto','logic')|list|length }}</span></p>
+    <div class="td-nav">{% for p in m.parts %}<a href="#p{{ p.k }}"><i>{{ p.k }}</i>{{ p.name }}</a>{% endfor %}</div>
+  </header>
+
+  {% for p in m.parts %}
+  <section class="blk part" id="p{{ p.k }}">
+    <h2><span class="kind kind-{{ p.kind }}">{{ '产品模块' if p.kind == 'hw' else '联动逻辑' }}</span> {{ p.k }}. {{ p.name }}</h2>
+    <p class="scene">{{ p.intro }}</p>
+    {% if p.kind == 'hw' %}
+    <figure class="part-art"><div class="pc-frame">{{ p.img_inline|safe }}</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    {% else %}
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame">{{ p.poster_inline|safe }}</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame">{{ p.img_inline|safe }}</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    {% endif %}
+    <div class="two">
+      <div><h3>{{ '关键参数 / 组成' if p.kind == 'hw' else '触发 · 阈值 · 兜底 · 出口' }}</h3>
+        <ul class="inspo">{% for x in p.points %}<li>{{ x }}</li>{% endfor %}</ul></div>
+      <div>{% if p.impl %}<h3>主要实现路径</h3><p class="impl">{{ p.impl }}</p>{% endif %}
+        {% if p.github %}<h3>参考项目</h3><p class="gh-chips">{% for g in p.github %}<a href="{{ g.url }}" target="_blank" rel="noopener">{{ g.name }}</a>{% endfor %}</p>{% endif %}</div>
+    </div>
+  </section>
+  {% endfor %}
+
+  <nav class="pager">
+    {% if m.prev %}<a href="{{ root }}teardown/{{ m.prev.id }}.html">← {{ m.prev.id }} {{ m.prev.name }} 拆解</a>{% else %}<span></span>{% endif %}
+    <a class="up" href="{{ root }}modules/{{ m.id }}.html">回到 {{ m.name }} 专题页</a>
+    {% if m.next %}<a href="{{ root }}teardown/{{ m.next.id }}.html">{{ m.next.id }} {{ m.next.name }} 拆解 →</a>{% endif %}
+  </nav>
 </article>
 {% endblock %}"""
 
@@ -459,6 +528,31 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .repo-row .rused a{font-family:ui-monospace,monospace;font-size:.78rem;color:var(--ink3);margin-right:6px}
 .repo-row .rused a:hover{color:var(--red)}
 @media (max-width:820px){.repo-row{grid-template-columns:1fr 60px;}.repo-row .rdesc,.repo-row .rused{grid-column:1/-1}}
+.td-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.td-item{display:flex;flex-direction:column;gap:4px;border:1.6px solid var(--line);border-radius:12px 200px 12px 180px/180px 12px 200px 12px;padding:10px 14px;background:rgba(255,255,255,.4);font-size:.9rem}
+.td-item:hover{box-shadow:3px 3px 0 var(--ink)}
+.td-item b{font-family:"Noto Serif SC",serif}
+.td-brief{color:var(--ink3);font-size:.8rem;line-height:1.45}
+.kind{display:inline-block;font-size:.72rem;padding:1px 8px;border:1.3px solid currentColor;border-radius:200px 8px 180px 8px/8px 180px 8px 200px;letter-spacing:.06em;align-self:flex-start;vertical-align:middle}
+.kind-hw{color:#2f6b3a}.kind-logic{color:var(--red)}
+.td-cta{margin:14px 0 0}
+.btn{display:inline-block;padding:8px 18px;border:1.6px solid var(--ink);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;font-weight:700;background:rgba(255,255,255,.5)}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.td-nav{display:flex;flex-wrap:wrap;gap:6px 14px;margin:14px 0 0;font-size:.85rem}
+.td-nav a{border-bottom:1.5px solid transparent}.td-nav a:hover{border-bottom-color:var(--red)}
+.td-nav a i{margin-right:4px}
+.part h2 .kind{margin-right:6px;font-size:.7rem}
+.part h3{font-size:.95rem;margin:12px 0 6px;font-weight:900}
+.part-art{margin:16px 0 4px}
+.pc-frame{border:1.6px solid var(--line);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;padding:10px 12px 6px;background:#f9f6ef}
+.part-art figcaption{text-align:right;font-size:.85rem;color:var(--ink3);margin-top:2px}
+.logic-art{display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start}
+.logic-art .poster .pc-frame{padding:8px}
+.impl{margin:0;color:var(--ink);line-height:1.6}
+.gh-chips a{display:inline-block;margin:0 8px 6px 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;border:1.3px solid var(--ink3);border-radius:200px 8px 180px 8px/8px 180px 8px 200px;padding:1px 8px;color:var(--ink2)}
+.gh-chips a:hover{border-color:var(--red);color:var(--red)}
+.td .mod-head{padding-bottom:4px}
+@media (max-width:820px){.logic-art{grid-template-columns:1fr}.logic-art .poster{max-width:360px}}
 .pager{display:flex;justify-content:space-between;gap:12px;padding:26px 0 10px;font-size:.92rem;border-top:1.6px solid var(--line);margin-top:26px}
 .pager a{border-bottom:1.5px solid transparent;white-space:nowrap}.pager a:hover{border-bottom-color:var(--red)}
 .pager .up{font-family:"Long Cang",cursive;font-size:1.15rem;color:var(--red)}
@@ -478,15 +572,19 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#f5f0e6"/><path d="M5 26 L16 7 L27 26 Z" fill="none" stroke="#1c1c1c" stroke-width="2.4" stroke-linejoin="round"/><path d="M12 26 V19 H20 V26" fill="none" stroke="#1c1c1c" stroke-width="2"/></svg>"""
 
-env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS}),
+env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS, "teardown": TEARDOWN}),
                   autoescape=select_autoescape(default=True))
 
 # ---------- build ----------
 if DIST.exists(): shutil.rmtree(DIST)
-(DIST / "areas").mkdir(parents=True); (DIST / "modules").mkdir()
+(DIST / "areas").mkdir(parents=True); (DIST / "modules").mkdir(); (DIST / "teardown").mkdir()
 for m in modules: m["svg_inline"] = inline_svg(m["svg"], "sk-art")
 for a in AREAS.values(): a["svg_inline"] = inline_svg(a["svg"], "sk-art")
-ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, refs_stats=refs_stats)
+for m in modules:
+    for p in m["parts"]:
+        p["img_inline"] = inline_svg(p["img"], "pc-art")
+        p["poster_inline"] = inline_svg(p["poster"], "pc-poster") if p["poster"] else None
+ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, refs_stats=refs_stats, parts_stats=parts_stats)
 
 (DIST / "index.html").write_text(env.get_template("index").render(root="", **ctx), encoding="utf-8")
 (DIST / "about.html").write_text(env.get_template("about").render(root="", **{**ctx, "page": "about"}), encoding="utf-8")
@@ -498,11 +596,14 @@ for i, a in enumerate(alist):
 for m in modules:
     (DIST / "modules" / f"{m['id']}.html").write_text(env.get_template("module").render(
         root="../", **{**ctx, "m": m, "area": AREAS[m["area"]]}), encoding="utf-8")
+    if m["parts"]:
+        (DIST / "teardown" / f"{m['id']}.html").write_text(env.get_template("teardown").render(
+            root="../", **{**ctx, "m": m, "area": AREAS[m["area"]]}), encoding="utf-8")
 (DIST / "style.css").write_text(CSS, encoding="utf-8")
 (DIST / "favicon.svg").write_text(FAVICON, encoding="utf-8")
 (DIST / ".nojekyll").write_text("")
 # sitemap
-urls = ["index.html", "about.html", "refs.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules]
+urls = ["index.html", "about.html", "refs.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
 (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     "".join(f"<url><loc>{SITE_URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
 print(f"built {len(urls)} pages -> {DIST}")
