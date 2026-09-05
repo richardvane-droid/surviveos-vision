@@ -152,6 +152,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>靠墙做一组竖立木料架：底部 10cm 高脚踢板防潮，分 6 格，每格贴木种 + 厚度标签</span></li><li><span class="box"></span><span>另一面墙 4 层重型货架（每层承重 200kg），下层放板材，上层放轻的周转箱</span></li><li><span class="box"></span><span>统一用同一款透明周转箱，箱口贴打印标签 + 二维码，扫码跳到 0206 数字孪生库</span></li><li><span class="box"></span><span>板材竖放在带脚轮的 A 字架上，推出来选料，推回去贴墙，不占过道</span></li><li><span class="box"></span><span>小窗边挂一个温湿度传感器（ESPHome），湿度超 65% 自动开除湿机</span></li><li><span class="box"></span><span>门后留一格“半成品暂存区”，没做完的项目连零件一起装箱贴日期，不散</span></li><li><span class="box"></span><span>地面画一条黄色胶带线，线外是走道，箱子不许过线，永远能推门进来</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0402.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 竖立木料架</b>
+        <span class="td-brief">靠墙一组把木料“竖着立”的架子，分 6 格，每格按木种和厚度贴标签。木料竖放是防潮防变形的基本功：木材吸…</span>
+      </a>
+      <a class="td-item" href="../teardown/0402.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 脚轮 A 字板材架</b>
+        <span class="td-brief">整张多层板不能平放也不能散靠墙，于是做一个带脚轮的 A 字架：两侧各斜靠一组板材，推出来选料，推回去贴墙…</span>
+      </a>
+      <a class="td-item" href="../teardown/0402.html#p3">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>3. 扫码库存与标签流</b>
+        <span class="td-brief">每个周转箱在库存系统里是一个“位置”，箱内每样材料是一个“物品”。入库时手机录入名称、数量和箱号，系统生…</span>
+      </a>
+      <a class="td-item" href="../teardown/0402.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 湿度看护与除湿联动</b>
+        <span class="td-brief">木料怕的是持续高湿，不是一阵潮气。小窗边的温湿度传感器接 ESP32，每分钟把仓库湿度上报 HomeAs…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0402.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“物品数字孪生”话题：每箱贴二维码，手机扫一下就知道里面有什么，仓库变成可搜索的</li><li>透明收纳箱 + 白底黑字标签的“性冷淡仓库风”，整齐到能拍延时视频</li><li>木料按颜色渐变排列，小红书上“木头调色盘”的排列法，好看又能一眼选料</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>板材千万别平放在地上，杭州梅雨天一周就吸潮翘边，竖放离地是底线</li><li>货架别贪高，最上层超过 1.8m 拿东西要爬梯，久了就变成永远不碰的死角</li><li>周转箱别买杂牌，尺寸对不上叠不起来，两年后一柜子歪歪扭扭</li></ul></section>

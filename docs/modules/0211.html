@@ -152,6 +152,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>楼梯正对墙装 65 寸竖屏 + 两块 27 寸横屏，全部用 HomeAssistant 仪表盘驱动</span></li><li><span class="box"></span><span>中屏做整栋房子的等距地图，每个模块一个动态图标，状态异常就变色闪</span></li><li><span class="box"></span><span>左屏：光照 / 温湿度曲线（0201、0203、0306）；右屏：水电（0304、0603、0602）</span></li><li><span class="box"></span><span>屏幕下方一排实体开关：模拟阳光四场景、观影模式、全屋关灯，按下去有咔哒声</span></li><li><span class="box"></span><span>小主机（N100）跑 HA + ESPHome + 数字孪生数据库，UPS 保 30 分钟</span></li><li><span class="box"></span><span>手机端同一份仪表盘，出门也能看，但大屏只在地堡有——这是回家的理由</span></li><li><span class="box"></span><span>每天 22:00 屏幕自动切“夜航模式”，只剩黑底上几个红色数字</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0211.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 指挥室屏墙总成</b>
+        <span class="td-brief">全屋中枢的硬件是一面屏墙加一台小主机。65 寸竖屏居中，两块 27 寸横屏分列左右，三块屏都用薄型壁挂支…</span>
+      </a>
+      <a class="td-item" href="../teardown/0211.html#p2">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>2. 全屋数据汇聚总线</b>
+        <span class="td-brief">七个区域的几十个传感器用的协议不一样：ESP32 节点走 ESPHome 原生 API，电池传感器走 Z…</span>
+      </a>
+      <a class="td-item" href="../teardown/0211.html#p3">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>3. 三屏仪表盘布局</b>
+        <span class="td-brief">三块屏各有分工，避免“看板疲劳”。中屏是整栋房子的等距地图：一张手绘 SVG，每个模块一个图标，图标的颜…</span>
+      </a>
+      <a class="td-item" href="../teardown/0211.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 异常告警分级</b>
+        <span class="td-brief">屏幕角落那行“今天所有模块正常”，背后是一套分级告警。每个关键实体设一条规则：鱼缸温度出 22~28℃、…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0211.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“家的仪表盘”：小红书上晒 HomeAssistant 大屏的帖子流量都很高，等距地图是加分项</li><li>“指挥室 / 舰桥感”：实体开关 + 竖屏，做出一点太空舱氛围</li><li>“数据可视化当装饰”：曲线本身就好看，白天当壁画，晚上当夜灯</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>屏太多会变“看板疲劳”，先只放真正会看的 10 个数据，其余藏在二级页</li><li>所有模块都接进来后，一个断网就全灰，本地跑 + UPS 是底线</li><li>屏幕在地下 24 小时开，发热要算进 0203 的负荷</li></ul></section>

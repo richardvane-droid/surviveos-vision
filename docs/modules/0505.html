@@ -124,6 +124,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>院门内侧立一根 15cm 方杉木柱，高 1.6m，顶部做一个 40cm 的小坡屋檐挡雨</span></li><li><span class="box"></span><span>柱身装一个防水 16A 插座 + 5m 自动卷线盘，全部装在屋檐下 1.2m 高处</span></li><li><span class="box"></span><span>地面铺 1×2m 的青石板停车位，边缘嵌一圈白色鹅卵石当停车线</span></li><li><span class="box"></span><span>插座串一个智能计量插座，接 HomeAssistant，充满自动断电，晚上 11 点后才开始充</span></li><li><span class="box"></span><span>屋檐下装一盏人体感应暖光灯，回家亮 3 分钟，兼做院门夜灯</span></li><li><span class="box"></span><span>柱子背面钉三个铸铁挂钩，挂头盔、雨衣、充气泵，出门一次拿齐</span></li><li><span class="box"></span><span>白天电摩优先吃阁楼光伏储能的电，储能低于 30% 再切市电</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0505.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 杉木充电桩柱</b>
+        <span class="td-brief">一根 15cm 见方、1.6 米高的杉木柱，顶上做一个 40cm 宽的小坡屋檐，屋檐下 1.2 米高处装…</span>
+      </a>
+      <a class="td-item" href="../teardown/0505.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 计量充电插座</b>
+        <span class="td-brief">充电桩的大脑是一只带功率计量的智能插座，串在防水插座和卷线盘之间。它里面是一颗 ESP32 和一片 BL…</span>
+      </a>
+      <a class="td-item" href="../teardown/0505.html#p3">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>3. 到家自动充电</b>
+        <span class="td-brief">让“停车、插电、充电、断电”变成不用想的事。手机进入家的地理围栏时，HomeAssistant 把充电桩…</span>
+      </a>
+      <a class="td-item" href="../teardown/0505.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 光伏优先充电</b>
+        <span class="td-brief">电摩的电最好来自阁楼的光伏储能。白天光伏有余电时优先给它充；储能电池低于 30% 就切回市电，晚上 11…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0505.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>小红书『院子里的停车位』：一根木柱加青石板，比水泥地上一根白桩高级多了</li><li>『回家动线』玩法：车停下、灯亮、充电、挂头盔，四步不超过 30 秒</li><li>『能源可视化』：手机上看电摩吃了多少太阳能，发朋友圈很硬核</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>插座一定要带防水盖并且装在屋檐下，杭州台风天雨是横着打的</li><li>别在电摩满电后一直插着，夏天电池鼓包很快，一定装自动断电</li><li>卷线盘别买太便宜的，一年就卡死，宁可多花一百块</li></ul></section>

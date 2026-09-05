@@ -160,6 +160,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>工作台 1.8×0.8m 榉木台面，带木工桌钳和狗洞，靠墙一侧装排插和风批充电位</span></li><li><span class="box"></span><span>台锯、带锯、刨床沿墙 U 形摆，每台机器接一根 100mm 集尘管到角落的旋风集尘器</span></li><li><span class="box"></span><span>集尘器加一个金属阀门联动：哪台机器开机，ESPHome 就自动打开哪路阀门</span></li><li><span class="box"></span><span>对着窗的墙做法式挂条（French cleat），手工具按使用频率高低分层挂</span></li><li><span class="box"></span><span>天花装一台空气过滤箱，24 小时低速转，粉尘 PM10 数值显示在 0211 中枢屏上</span></li><li><span class="box"></span><span>地面画黄色安全线，台锯周围 80cm 内不放任何杂物，长木料从过道方向进料</span></li><li><span class="box"></span><span>留一面“样板墙”贴不同木种的小方块 + 表面处理试片，选料时对着看</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0404.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 旋风集尘器与分路阀</b>
+        <span class="td-brief">木工间角落那台“吃木屑的机器”分三层：最下面是集尘桶，中间是旋风分离器，上面是带滤芯的抽风电机。木屑随气…</span>
+      </a>
+      <a class="td-item" href="../teardown/0404.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 法式挂条工具墙</b>
+        <span class="td-brief">对着窗的整面墙钉满 45° 斜切的木条，就是木工房经典的“法式挂条”。原理很简单：墙上的条斜面朝上，工具…</span>
+      </a>
+      <a class="td-item" href="../teardown/0404.html#p3">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>3. 集尘随机联动</b>
+        <span class="td-brief">解决“开台锯前先去角落开集尘器，再跑回来开锯”的两步操作。每台机器的电源线穿过一只夹式电流传感器，ESP…</span>
+      </a>
+      <a class="td-item" href="../teardown/0404.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 粉尘监测与新风调速</b>
+        <span class="td-brief">集尘器抓走的是大颗粒，真正伤肺的是悬浮在空气里的细粉。天花那台空气过滤箱平时低速转，一颗激光颗粒物传感器…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0404.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>动手主义热潮：木工间就是精神领地，做完一个盒子发帖“第一次把木头切直了”</li><li>法式挂条墙是木工博主的标配，可拆可调，工具越多墙越好看</li><li>日式木工房那种“台面永远干净”的松弛感，靠的是集尘 + 每次收工五分钟归位</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>集尘管别用软管走长距离，弯头一多风量掉光，直管 + 少弯才有用</li><li>木工间和喷漆间一定要隔开，木屑飘进喷漆间就是一层砂纸面</li><li>台锯周围别放脚轮柜，踢一下滚过来卡在推料路径上，是真的会受伤</li></ul></section>

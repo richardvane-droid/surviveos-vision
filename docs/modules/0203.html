@@ -143,6 +143,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>楼梯下柜体装一台 50L/天工业除湿机，冷凝水直排到 0202 的污水提升泵，不用倒桶</span></li><li><span class="box"></span><span>沿天花板走一圈 Φ100 风管，四个出风口分别对着床、沙发、书架和衣柜角落</span></li><li><span class="box"></span><span>墙面刷防潮底漆 + 软木地板，地面下铺一层防潮膜，先把“源头”堵住</span></li><li><span class="box"></span><span>布 4 个 ESPHome 温湿度探头（床头/墙角/柜内/风管出口），墙上一块小表盘实时显示</span></li><li><span class="box"></span><span>新风从地面的通风井引进来，进风口加 HEPA + 活性炭，出风走独立管道</span></li><li><span class="box"></span><span>冬天用小风管式暖风机补温，夏天靠地下本身的凉，目标全年 20～24℃</span></li><li><span class="box"></span><span>湿度超过 65% 自动强力除湿并推送提醒，低于 45% 停机保护木制品</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0203.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 隐藏除湿机柜</b>
+        <span class="td-brief">把一台吵闹的工业除湿机变成“听不见的空调”的柜子。楼梯下的柜体内壁贴一层隔音棉，机器脚下垫橡胶减震垫，噪…</span>
+      </a>
+      <a class="td-item" href="../teardown/0203.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 指针温湿度表盘</b>
+        <span class="td-brief">墙上那块像老式仪表一样的温湿度表，其实是一台 ESP32。房间里四个 SHT31 温湿度探头（床头、墙角…</span>
+      </a>
+      <a class="td-item" href="../teardown/0203.html#p3">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>3. 湿度区间调度</b>
+        <span class="td-brief">让除湿机既不偷懒也不过劳的控制逻辑。输入是四个探头的湿度，取“最高值”而不是平均值，因为发霉总是从最潮的…</span>
+      </a>
+      <a class="td-item" href="../teardown/0203.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 新风换气判断</b>
+        <span class="td-brief">只除湿不换气会闷，这段逻辑决定什么时候把地面的空气引进来。核心输入是一只 CO2 探头：人在密闭房间里待…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0203.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“洞穴风卧室”：地下恒温恒湿其实是优势，把它包装成夏天的避暑洞穴</li><li>“数据可视化墙”：温湿度表盘用复古指针表，比液晶屏更有 workshop 氛围</li><li>“和植物一起住”：湿度稳定之后，地堡角落可以养蕨类和苔藓球</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>除湿机噪音别小看，一定藏进柜子并做隔音，不然睡觉像睡在空调外机旁</li><li>冷凝水管一定要有坡度，平走两米必堵，堵了就是一地水</li><li>只除湿不换气会闷，新风一定要有，CO2 探头也别省</li></ul></section>

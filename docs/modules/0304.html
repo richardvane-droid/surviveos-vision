@@ -151,6 +151,38 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>屋顶南坡装 4 块 400W 光伏板，用铝合金支架顺着斜顶贴装，不破坏瓦面</span></li><li><span class="box"></span><span>阁楼靠墙角落放一台 2kWh 户外储能电源，输入接光伏 MPPT，输出给阁楼所有低压设备</span></li><li><span class="box"></span><span>自焊一个木架子放 2 块备用磷酸铁锂电池，用魔术贴固定，留 10cm 散热间隙</span></li><li><span class="box"></span><span>墙上装一块复古指针电流表 + 一块小屏幕，实时显示发电和剩余电量</span></li><li><span class="box"></span><span>储能电源接 HomeAssistant，每天发电量推送到 0211 中枢大屏</span></li><li><span class="box"></span><span>用电优先级：帐篷区串灯 &gt; 气象站 &gt; 3D 打印机待机 &gt; 楼下木屋充电区</span></li><li><span class="box"></span><span>阁楼里放一个二氧化碳灭火器 + 烟感，紧挨储能放，安全第一</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">5 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0304.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 屋顶光伏阵列</b>
+        <span class="td-brief">屋顶南坡贴装 4 块 400W 单晶光伏板，总功率 1.6kW。用铝合金导轨顺着斜顶走，夹具卡在瓦面挂钩…</span>
+      </a>
+      <a class="td-item" href="../teardown/0304.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 储能主机与备用电池架</b>
+        <span class="td-brief">阁楼靠墙角落放一台 2kWh 户外储能电源，内置 MPPT 控制器，光伏线直接插输入口，输出口给阁楼所有…</span>
+      </a>
+      <a class="td-item" href="../teardown/0304.html#p3">
+        <span class="kind kind-hw">产品模块</span>
+        <b>3. 监测与安全面板</b>
+        <span class="td-brief">墙上一块小木板集中放三样东西：一块复古指针电流表，串在储能输出主线上，指针抖动就说明有电在流；一块小屏幕…</span>
+      </a>
+      <a class="td-item" href="../teardown/0304.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 充放电与负载调度器</b>
+        <span class="td-brief">储能电量有限，谁先用电要有规矩。HomeAssistant 读到储能的 SOC（剩余电量百分比）和光伏输…</span>
+      </a>
+      <a class="td-item" href="../teardown/0304.html#p5">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>5. 电池健康看护</b>
+        <span class="td-brief">备用磷酸铁锂电池每一节的电压和温度，由保护板 BMS 实时测量。一块 ESP32 通过串口读 JK BM…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0304.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“能源自由”话题：晒每天发电数字截图，评论区一定有人问型号</li><li>“工业风”角落：储能 + 电流表 + 铝架子，露出来反而好看</li><li>“低成本高质感”：光伏板不用最贵的，支架自己焊，省下来买储能</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>阁楼夏天温度高，储能电源别贴斜顶放，温度超 40 度会降速充电</li><li>光伏线缆穿屋顶一定要做防水，不然第一场大雨就哭</li><li>别一上来就全屋离网，先喂阁楼这几个小东西，够用再扩</li></ul></section>

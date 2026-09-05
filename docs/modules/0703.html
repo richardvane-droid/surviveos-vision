@@ -146,6 +146,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>顶棚向阳坡装一块 200W 单晶光伏板，用铝支架垫 15° 角，正好和棚坡一致不突兀</span></li><li><span class="box"></span><span>杉木柱脚固定一个防水箱，里面装 12V 100Ah 磷酸铁锂电池 + MPPT 控制器 + 小逆变器</span></li><li><span class="box"></span><span>顶棚下挂一盏黄铜马灯改的 LED 暖光灯，2700K，功率只要 5W，调光旋钮在柱子上</span></li><li><span class="box"></span><span>台边装两个防水插座 + 两个 USB-C 口，专门给夜钓灯、手机和电动饵盘充电</span></li><li><span class="box"></span><span>栈道两侧埋六个太阳能地脚灯，天黑自动亮，走夜路不摔</span></li><li><span class="box"></span><span>电池箱装一个 ESPHome 节点，把电压、电量、发电量推到 HomeAssistant，电量低于 20% 手机报警</span></li><li><span class="box"></span><span>留一个 12V 输出口，冬天接一块小电热垫放在椅子上，屁股不冰</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0703.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 顶棚光伏板支架总成</b>
+        <span class="td-brief">一块 200W 单晶硅光伏板装在顶棚向阳坡面上，用铝合金支架垫出 15° 倾角，正好和棚坡一致，远看像一…</span>
+      </a>
+      <a class="td-item" href="../teardown/0703.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 离网电池箱</b>
+        <span class="td-brief">钓台的“心脏”是一只防水箱，固定在杉木柱脚、离水面 50cm 以上。箱内按能量流向排列：光伏板的电先进 …</span>
+      </a>
+      <a class="td-item" href="../teardown/0703.html#p3">
+        <span class="kind kind-hw">产品模块</span>
+        <b>3. 马灯改暖光灯头</b>
+        <span class="td-brief">一盏黄铜马灯拆掉煤油芯，换进去一颗 5W 2700K 的 LED 灯珠，保留玻璃罩和提手，看上去还是那盏…</span>
+      </a>
+      <a class="td-item" href="../teardown/0703.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 光伏电量看护</b>
+        <span class="td-brief">让钓台的电“自己管自己”。电池箱里的 ESP32 通过串口读 MPPT 和 BMS：电压、剩余电量、当日…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0703.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>「露营风」灯光公式：马灯 + 暖光 + 一点点蓝光夜钓灯，小红书夜钓视频都是这个配置</li><li>「去家务化」思维：光伏自给自足，不用拉电线不用换电池，装完就忘了它存在</li><li>「全屋数据可视化」：钓台电量做成地堡大屏上的一个小卡片，出门前看一眼</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>灯别对着水面照，鱼会跑，光只往台面上打，边缘留暗</li><li>电池箱一定要架高离水面 50cm 以上，涨水那几天你会感谢自己</li><li>插座买真正 IP66 的，带盖子的那种，水边湿气比你想象的重</li></ul></section>

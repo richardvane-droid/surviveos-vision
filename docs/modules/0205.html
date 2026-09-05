@@ -139,6 +139,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>1200×450×500mm 超白缸嵌进沙发对面的墙，背面留 60cm 检修通道，前面做旧木窗框</span></li><li><span class="box"></span><span>水陆缸布景：左边沉木上长苔藓和蕨类，水里铺莫斯石和矮珍珠，做一小片“水下草原”</span></li><li><span class="box"></span><span>养 30 条宝莲灯 + 几只黑壳虾 + 一条清道夫，鱼小密度低，生态自己转</span></li><li><span class="box"></span><span>底滤 + 外置过滤双保险，自动补水接 0603 雨水系统过滤后的软水</span></li><li><span class="box"></span><span>水草灯用 ESPHome 控制日出日落曲线，跟 0201 模拟阳光同一份时间表</span></li><li><span class="box"></span><span>缸外装温度 / pH / TDS 三探头，数据汇到 0211 大屏，异常推送</span></li><li><span class="box"></span><span>缸前放一张单人小凳，专门用来“发呆”</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0205.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 嵌墙缸体与过滤总成</b>
+        <span class="td-brief">把一口 1.2 米的超白缸嵌进墙里，靠的不是墙，而是缸下面一只独立承重的钢木底柜：满水近 300 公斤，…</span>
+      </a>
+      <a class="td-item" href="../teardown/0205.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 水质监测探头盒</b>
+        <span class="td-brief">生态缸“自己转”的前提是有人盯着水质，这个盒子就是盯梢的人。三根探头插在缸角：温度探头是防水的 DS18…</span>
+      </a>
+      <a class="td-item" href="../teardown/0205.html#p3">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>3. 鱼缸日程器</b>
+        <span class="td-brief">把鱼缸每天要做的事写成一张表，由一块 ESP32 按分钟执行。表里有三类事件：灯光曲线（时刻直接取自 0…</span>
+      </a>
+      <a class="td-item" href="../teardown/0205.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 补水与告警</b>
+        <span class="td-brief">缸里的事最好在人发现之前就被处理掉，这段逻辑做两件事：自动补水和水质告警。每 60 秒采样一次水位开关和…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0205.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“嵌墙鱼缸当电视”：小红书上很多人把缸嵌在沙发对面，比电视更耐看</li><li>“水陆缸/雨林缸”热潮：缸上半截养苔藓和小蕨，地堡的湿度反而是加分项</li><li>“精神角落”：缸前一张小凳一盏灯，这是地堡里最不“生存”的角落</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>1.2 米缸满水近 300kg，嵌墙前一定加固底座，别信“墙挺结实”</li><li>地下换水麻烦，自动补水和溢流一定做，不然每周提水桶会想放弃</li><li>水草灯太亮长绿藻，前两个月别贪亮，慢慢往上调</li></ul></section>

@@ -136,6 +136,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>2.5m 热镀锌杆立在疏林带边缘，顶端广角摄像头拍全景，中段长焦对准水盆和喂鸟器</span></li><li><span class="box"></span><span>全景机每小时定格一张，按季度合成延时视频，一年 8,760 张看草地从绿到金</span></li><li><span class="box"></span><span>长焦机开移动侦测，接 Frigate 本地识别，鸟类用 BirdNET 声纹 + 图像双重识别</span></li><li><span class="box"></span><span>水盆用 40cm 浅陶盆，离杆 3m，边上放一块斜石让小鸟站脚，冬天加个小加热垫</span></li><li><span class="box"></span><span>朴树上挂一个桧木喂鸟器，放葵花籽和苹果块，每天七点前补一次</span></li><li><span class="box"></span><span>识别结果推到 HomeAssistant，新物种自动发通知，每月生成“草地来访者名单”卡片上 0211 大屏</span></li><li><span class="box"></span><span>杆子底部装一个红外补光，夜里能看见刺猬和黄鼬，但不惊扰它们</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0604.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 双机观测杆</b>
+        <span class="td-brief">2.5m 热镀锌钢杆立在疏林带边，挂两只眼睛一只耳朵。杆顶是广角摄像头，朝西南拍整片草地，避开早上的逆光…</span>
+      </a>
+      <a class="td-item" href="../teardown/0604.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 浅水盆与桧木喂鸟器</b>
+        <span class="td-brief">想让鸟来，先给水再给吃的。水盆用 40cm 直径的浅陶盆，深度不超过 5cm，小鸟才敢下脚；盆边斜放一块…</span>
+      </a>
+      <a class="td-item" href="../teardown/0604.html#p3">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>3. 来访者识别通知</b>
+        <span class="td-brief">长焦机的画面进小主机上的 Frigate，先做粗筛：画面里有动的东西，且被认成鸟、猫或人，才往下走，风吹…</span>
+      </a>
+      <a class="td-item" href="../teardown/0604.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 草地延时合成</b>
+        <span class="td-brief">全景机每小时一张，一年 8,760 张，靠人整理不过来。这段逻辑让 HomeAssistant 整点调一…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0604.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>小红书“观鸟”热潮：在自家院子建“鸟类档案”，每拍到新鸟发一张打卡帖，被问爆装备</li><li>“家的丰容计划 / 人类丰容”：给草地做丰容，来的鸟越多说明这片草地越健康</li><li>“沉浸式延时”帖：一年芒草生长延时配一句“没人在意的时候它也在长”，松弛感拉满</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>摄像头别朝东正对朝阳，早上全是过曝，鸟在逆光里就是一个黑点</li><li>喂鸟器和水盆离灌木至少 2m，不然野猫埋伏得太方便</li><li>本地识别别开太灵敏，风吹草动一天能推你三百条通知，一整个崩溃</li></ul></section>

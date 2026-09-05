@@ -132,6 +132,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>1500L 卧式 PE 雨水罐架在 30cm 高的红砖基座上，保证重力能把水压到滴灌首部</span></li><li><span class="box"></span><span>屋顶檐沟 → 落水管 → 首雨弃流桶（20L，前 2 分钟脏水）→ 300 目不锈钢滤篮 → 主罐</span></li><li><span class="box"></span><span>罐外做透明水位管 + 红色浮子，刻度用黑色马克笔手写 300/600/900/1200/1500</span></li><li><span class="box"></span><span>水位低于 20% 时自来水电磁阀补位到 40%，补水量记录进 HomeAssistant 统计雨水占比</span></li><li><span class="box"></span><span>罐前立一面桧木格栅遮丑，格栅上爬铁线莲，下面留 40cm 检修门</span></li><li><span class="box"></span><span>溢流口接草地边碎石干河道，暴雨时看得见水在石头缝里流，也是景</span></li><li><span class="box"></span><span>罐顶留一个 DN50 快开口，每年梅雨前清一次淤泥，顺便晒罐</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0603.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 首雨弃流桶</b>
+        <span class="td-brief">一场雨的头两分钟，冲下来的是屋顶积了半个月的灰尘、鸟粪和落叶，这部分水不能进罐。首雨弃流桶就是拦住这一段…</span>
+      </a>
+      <a class="td-item" href="../teardown/0603.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 1500L 卧式雨水罐组</b>
+        <span class="td-brief">主罐选墨绿色卧式 PE 罐，避光才不长绿藻。罐子架在 30cm 高的红砖基座上，让水面高过滴灌首部，靠重…</span>
+      </a>
+      <a class="td-item" href="../teardown/0603.html#p3">
+        <span class="kind kind-hw">产品模块</span>
+        <b>3. 水位监测与补水接头</b>
+        <span class="td-brief">罐顶还有一颗一颗防水超声波探头朝下对着水面，测距离减一减就是水位。探头接一块 ESP32-C3 跑 ES…</span>
+      </a>
+      <a class="td-item" href="../teardown/0603.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 弃流与补位逻辑</b>
+        <span class="td-brief">它管两件事：下雨算清接了多少，不下雨保证罐不空。雨量计一有脉冲就进入“接雨”状态，前 2 分钟记为弃流不…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0603.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“低成本高质感”：一个 PE 罐加木格栅一共不到两千，拍出来像日式雨水庭</li><li>小红书“雨天氛围感”帖：把首雨弃流桶溢水拍成慢动作，配雨声 ASMR 就是流量</li><li>“可持续生活”话题正在起势，晒一张“本月雨水占比 94%”的截图就够种草了</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>罐一定要避光，透明或浅色罐两周就长绿藻，墨绿或黑色罐最省心</li><li>首雨弃流桶记得开底部小孔慢排，不然第二场雨来的时候它还是满的等于没弃</li><li>补水管和雨水罐之间要有空气隔断，别让罐里水倒灌回自来水管</li></ul></section>

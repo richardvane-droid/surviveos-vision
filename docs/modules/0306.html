@@ -147,6 +147,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>天窗旁边伸出一根 1.5 米铝合金杆，顶端装风杯、风向标、雨量筒三件套</span></li><li><span class="box"></span><span>杆子中段装温湿度 + 气压传感器的百叶盒，避免太阳直晒</span></li><li><span class="box"></span><span>所有传感器接一块 ESP32 跑 ESPHome，数据直接进 HomeAssistant</span></li><li><span class="box"></span><span>阁楼墙上装一块 7.5 寸墨水屏，显示当前天气 + 过去 24 小时曲线</span></li><li><span class="box"></span><span>气压下降 + 湿度上升 → 自动暂停 0602 草地浇灌，并推送“收衣服”提醒</span></li><li><span class="box"></span><span>杆子底部做一个可以放倒的铰链，台风天从天窗伸手就能放倒</span></li><li><span class="box"></span><span>每年数据存进 0211 中枢，做一张“我家的一年气候图”</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0306.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 气象杆与传感器三件套</b>
+        <span class="td-brief">天窗旁伸出一根 1.5 米的铝合金杆，顶端装风杯（测风速）、风向标（测风向）和翻斗式雨量筒（每翻一次约 …</span>
+      </a>
+      <a class="td-item" href="../teardown/0306.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 墨水屏天气面板</b>
+        <span class="td-brief">阁楼墙上一块 7.5 寸黑白墨水屏，由一块 ESP32 驱动，显示当前温湿度、气压、风速和过去 24 小…</span>
+      </a>
+      <a class="td-item" href="../teardown/0306.html#p3">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>3. 降雨预警器</b>
+        <span class="td-brief">手机天气 APP 报的是全城的雨，气压计感受到的是你家头顶这片云。逻辑很简单：3 小时内气压下降超过 3…</span>
+      </a>
+      <a class="td-item" href="../teardown/0306.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 数据上报与年度气候图</b>
+        <span class="td-brief">气象杆上所有传感器由一块 ESP32 跑 ESPHome，每 30 秒把一组读数送进 HomeAssis…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0306.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“观鸟”热潮周边：气象站旁边加一个小摄像头，风向 + 鸟一起记</li><li>墨水屏天气屏：极简风，小红书上的爆款桌面单品，放墙上更出片</li><li>“自然生活”话题：自己家的气压曲线比手机 APP 更有仪式感</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>风杯别装在屋脊正下方，屋顶会挡风，数据全是假的</li><li>雨量筒一定要定期清落叶，秋天一周不清就堵</li><li>杆子一定要做放倒机构，杭州台风季真的会吹弯</li></ul></section>

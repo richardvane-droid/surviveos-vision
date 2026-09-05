@@ -165,6 +165,33 @@
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
     <ol class="plan"><li><span class="box"></span><span>选一台 8kW 铸铁柴火炉带大玻璃门，炉体尺寸约 60×45×70cm，热效率 80% 以上</span></li><li><span class="box"></span><span>炉子下铺 90×90cm 青石板，后墙贴 1.2m 高老红砖做防火背墙，砖缝故意不勾平</span></li><li><span class="box"></span><span>烟囱用双层保温不锈钢管，直上屋顶，室内段露出来不包，外面刷黑色耐高温漆</span></li><li><span class="box"></span><span>炉旁 L 形铁艺柴火架，三层分粗柴细柴和引火松果，一次放两天的量</span></li><li><span class="box"></span><span>炉顶放一把铸铁水壶和一口小铁锅，烤红薯、煮茶、热汤全在炉顶上</span></li><li><span class="box"></span><span>炉旁一个可折叠烘鞋烘袜架，客人进门鞋湿了先挂上去</span></li><li><span class="box"></span><span>一个 ESPHome 温度传感器挂在炉子对面墙上，温度上 HomeAssistant 大屏，超 26 度提醒关风门</span></li></ol></section>
 
+  <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
+    <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
+    <div class="td-list">
+      <a class="td-item" href="../teardown/0106.html#p1">
+        <span class="kind kind-hw">产品模块</span>
+        <b>1. 铸铁柴火炉本体</b>
+        <span class="td-brief">柴火炉本体是一台 8kW 的铸铁壳体炉，热效率 80% 以上。铸铁厚重、蓄热慢放，火熄了炉体还能温两小时…</span>
+      </a>
+      <a class="td-item" href="../teardown/0106.html#p2">
+        <span class="kind kind-hw">产品模块</span>
+        <b>2. 双层保温烟囱系统</b>
+        <span class="td-brief">烟囱决定柴火炉烧得顺不顺、安不安全。双层不锈钢管中间夹岩棉，内管保持烟温、外壁摸着不烫，烟气不会在管壁上…</span>
+      </a>
+      <a class="td-item" href="../teardown/0106.html#p3">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>3. 烟温补风提醒</b>
+        <span class="td-brief">解决的问题是：新手看火焰判断不了炉子烧得对不对，但烟管温度不会骗人。输入是夹在烟管上的 K 型热电偶和对…</span>
+      </a>
+      <a class="td-item" href="../teardown/0106.html#p4">
+        <span class="kind kind-logic">联动逻辑</span>
+        <b>4. 炉热循环风扇</b>
+        <span class="td-brief">解决的问题是：炉边 30 度、远角落 16 度，热量堆在炉子周围出不去。输入是炉对面墙和远角两只温度传感…</span>
+      </a>
+    </div>
+    <p class="td-cta"><a class="btn" href="../teardown/0106.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
+  </section>
+
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>小红书壁炉氛围感：大家开的是电壁炉视频，我的是真火，玻璃门里的火光打在原木墙上</li><li>露营风室内化：炉顶烤红薯、铸铁壶煮茶，把营地那一套搬进木屋</li><li>精神领地：炉子对面一把老皮沙发就是我的冬天专属座位，谁来都不让</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>烟囱别省钱用单层管，室内段烫手还容易积焦油，双层保温管是底线</li><li>柴要提前一年劈好晾干，湿柴烧起来全是烟，玻璃门一天就黑</li><li>炉子别贴墙放，离防火墙至少 30cm，后面要留空气流通的空间</li></ul></section>
