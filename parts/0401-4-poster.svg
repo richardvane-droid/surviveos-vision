@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0401-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0401-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0401-4p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0401-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0401-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- NFC 标签 + 手机（左） -->
+    <rect x="40" y="130" width="30" height="30" rx="5" stroke-width="1.5"/>
+    <circle cx="55" cy="145" r="10" stroke-width="1.1"/><circle cx="55" cy="145" r="6.5" stroke-width="0.9"/><circle cx="55" cy="145" r="3" stroke-width="0.8"/>
+    <rect x="76" y="140" width="26" height="44" rx="5" stroke-width="1.4"/>
+    <rect x="79" y="146" width="20" height="30" rx="2" stroke-width="0.6"/>
+    <path d="M83 154 h12 M83 162 h12 M83 170 h6" stroke-width="0.8"/>
+    <circle cx="89.0" cy="180" r="1.6" stroke-width="0.8"/>
+    <path d="M74 150 l-4 -6 M74 158 l-6 0" stroke-width="0.9"/>
+    <!-- 锤子影子（左下小图） -->
+    <path d="M44 208 l4 2 l16 -24 l-4 -2 Z M54 190 l9 -5 l6 9 l-9 5 Z" stroke-width="1.8" stroke-opacity="0.55"/>
+    <!-- HA 房子（中） -->
+    <path d="M150 164 l30 -26 l30 26 v34 h-60 Z" stroke-width="1.6"/>
+    <path d="M144 166 l36 -32 l36 32" stroke-width="1.2"/>
+    <circle cx="180" cy="176" r="8" stroke-width="1.2"/>
+    <path d="M180 168 v-3 M180 184 v3 M172 176 h-3 M188 176 h3" stroke-width="1"/>
+    <path d="M152 194 h56 v3 h-56 Z" fill="url(#p0401-4p-shade)" stroke="none"/>
+    <!-- 手机通知 + 白板（右） -->
+    <rect x="250" y="128" width="30" height="50" rx="5" stroke-width="1.4"/>
+    <rect x="253" y="134" width="24" height="36" rx="2" stroke-width="0.6"/>
+    <path d="M257 142 h16 M257 150 h16 M257 158 h10" stroke-width="0.8"/>
+    <circle cx="265.0" cy="174" r="1.6" stroke-width="0.8"/>
+    <path d="M280 136 q8 -4 6 -12 M284 140 q12 -6 10 -18" stroke-width="0.8"/>
+    <rect x="252" y="140" width="26" height="12" rx="2" fill="url(#p0401-4p-shade)" stroke="none"/>
+    <rect x="288" y="190" width="40" height="30" rx="2" stroke-width="1.4"/>
+    <path d="M293 198 h18 M293 205 h24 M293 212 h14" stroke-width="0.8"/>
+    <path d="M296 190 v-5 M320 190 v-5" stroke-width="1"/>
+    <!-- 箭头 -->
+    <path d="M104 160 Q126 166 144 168" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M139.6 171.4 L146 168 L140.4 163.4" stroke-width="1"/>
+    <path d="M212 168 Q232 158 246 152" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M243.9 156.9 L248 151 L240.9 149.5" stroke-width="1"/>
+    <path d="M212 188 Q250 200 284 204" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M279.6 207.4 L286 204 L280.4 199.4" stroke-width="1"/>
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/>
+    <path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="55" y="176" font-size="8" fill="#666">碰一下</text><text x="256" y="238" font-size="8" fill="#666">推送 · 白板</text>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0401 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">借还归位提醒</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">工具去哪了，墙比你先知道</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">NFC 碰一下 → HA 借出 / 归还状态机 → 每晚巡检 → 推送 + 中枢屏</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">碰一下借出，再碰一下归还，零登记</text>
+    <text x="64" y="366">3 天未还推送借用人，7 天中枢屏亮黄</text>
+    <text x="64" y="396">小白板手写借出卡兜底，断网照常</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HomeAssistant · 数据出口：借出清单实体 + 手机推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：home-assistant/core</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

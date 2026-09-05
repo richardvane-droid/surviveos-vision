@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0306-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0306-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0306-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0306-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：气象杆 → 数据库圆柱（HA 10 天 + InfluxDB 长期） → 年度气候图挂画 -->
+    <!-- 气象杆 -->
+    <path d="M60 250 V150" stroke-width="1.6"/>
+    <path d="M60 150 v-12 M52 138 a8 6 0 0 1 16 0 Z M72 154 a4 4 0 0 1 3 7 Z M48 154 a4 4 0 0 0 -3 7 Z M60 150 l12 6 M60 150 l-12 6" stroke-width="1.1"/>
+    <path d="M60 176 h18 l-5 -3 M78 176 l-5 3" stroke-width="1"/>
+    <ellipse cx="60" cy="200" rx="9" ry="3" stroke-width="1"/><ellipse cx="60" cy="206" rx="9" ry="3" stroke-width="1"/><ellipse cx="60" cy="212" rx="9" ry="3" stroke-width="1"/>
+    <path d="M44 250 h32 v4 h-32 Z" stroke-width="1"/>
+    <path d="M78 226 q4 -8 -2 -14 M80 236 q4 -8 -2 -14" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <!-- 数据库：两个圆柱 -->
+    <path d="M124 190 a18 5 0 0 1 36 0 v22 a18 5 0 0 1 -36 0 Z" stroke-width="1.4"/><ellipse cx="142" cy="190" rx="18" ry="5" stroke-width="1.2"/>
+    <path d="M126 208 a18 5 0 0 0 32 0 v3 a18 5 0 0 1 -32 0 Z" fill="url(#p0306-4p-shade)" stroke="none"/>
+    <path d="M166 176 a22 6 0 0 1 44 0 v46 a22 6 0 0 1 -44 0 Z" stroke-width="1.6"/><ellipse cx="188" cy="176" rx="22" ry="6" stroke-width="1.3"/>
+    <ellipse cx="188" cy="192" rx="22" ry="6" stroke-width="0.6"/><ellipse cx="188" cy="208" rx="22" ry="6" stroke-width="0.6"/>
+    <path d="M168 218 a22 6 0 0 0 40 0 v4 a22 6 0 0 1 -40 0 Z" fill="url(#p0306-4p-shade)" stroke="none"/>
+    <path d="M134 196 h16 M134 202 h10" stroke-width="0.6"/>
+    <!-- 年度气候图挂画 -->
+    <rect x="238" y="150" width="88" height="70" rx="2" stroke-width="1.6"/>
+    <rect x="242" y="154" width="80" height="62" rx="1" stroke-width="0.6"/>
+    <path d="M248 208 h68 M248 208 v-46" stroke-width="0.9"/>
+    <path d="M250 196 q10 -26 20 -30 q12 -6 20 -20 q8 12 22 30" stroke-width="1.2"/>
+    <path d="M250 202 q10 -14 20 -16 q12 -4 20 -10 q8 6 22 10" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <path d="M256 208 v-8 h4 v8 M266 208 v-14 h4 v14 M276 208 v-6 h4 v6 M292 208 v-18 h4 v18 M304 208 v-10 h4 v10" stroke-width="0.6"/>
+    <path d="M257 200 h2 v8 h-2 Z M267 194 h2 v14 h-2 Z M293 190 h2 v18 h-2 Z" fill="url(#p0306-4p-shade)" stroke="none"/>
+    <path d="M282 150 v-8 l-10 -6 M282 142 l10 -6" stroke-width="0.8"/>
+    <path d="M254 224 h56" stroke-width="0.6"/>
+    <!-- 箭头 -->
+    <path d="M84 200 Q100 194 118 196" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M118 196 l-4 -3 l0 5" stroke-width="1"/>
+    <path d="M160 196 H164" stroke-width="1" stroke-dasharray="2 2"/>
+    <path d="M212 190 Q224 184 234 182" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M234 182 l-5 -1 l2 4" stroke-width="1"/>
+
+    <!-- 地面线 -->
+    <path d="M40 268 Q180 262 320 268" stroke-width="1.2"/>
+    <path d="M44 272 q40 -3 80 0 M236 272 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0306 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">年度气候图</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">把我家头顶的一年天气画成一张图</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">30 秒采样 → HA 10 天 → InfluxDB 长期 → 按天聚合 → 年度气候图</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">30 秒一组读数，10 分钟聚合写入 InfluxDB</text>
+    <text x="64" y="366">年底自动生成年度气候图，推到 0211 大屏</text>
+    <text x="64" y="396">掉线 10 分钟告警，雨量筒一周不动提醒清落叶</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HA + InfluxDB · 数据出口：墨水屏 + 0211 大屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：hugokernel/esphome-weather-station · influxdata/influxdb</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

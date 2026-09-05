@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0212-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0212-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0212-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0212-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 承重墙 + 膨胀螺栓 -->
+    <path d="M56 250 l80 -24 v66 l-80 24 Z" stroke-width="1.5"/>
+    <path d="M136 226 l12 4 v66 l-12 -4" stroke-width="1.2"/>
+    <path d="M138 230 l8 3 v62 l-8 -3 Z" fill="url(#p0212-2-shade)" stroke="none"/>
+    <path d="M62 262 l30 -9 M98 251 l34 -10 M62 280 l70 -21 M62 298 l30 -9 M98 287 l34 -10" stroke-width="0.5"/>
+    <circle cx="78" cy="266" r="2.6" stroke-width="0.9"/><circle cx="112" cy="256" r="2.6" stroke-width="0.9"/>
+    <circle cx="78" cy="292" r="2.6" stroke-width="0.9"/><circle cx="112" cy="282" r="2.6" stroke-width="0.9"/>
+    <path d="M76 264 l4 4 M80 264 l-4 4 M110 254 l4 4 M114 254 l-4 4 M76 290 l4 4 M80 290 l-4 4 M110 280 l4 4 M114 280 l-4 4" stroke-width="0.6"/>
+    <!-- ② 三角支架 ×2 -->
+    <path d="M158 246 v-30 l28 30 Z" stroke-width="1.4"/>
+    <path d="M188 236 v-30 l28 30 Z" stroke-width="1.4"/>
+    <path d="M160 244 v-24 l22 24 Z" fill="url(#p0212-2-shade)" stroke="none"/>
+    <circle cx="164" cy="240" r="1.6" stroke-width="0.8"/><circle cx="164" cy="222" r="1.6" stroke-width="0.8"/>
+    <circle cx="194" cy="230" r="1.6" stroke-width="0.8"/><circle cx="194" cy="212" r="1.6" stroke-width="0.8"/>
+    <path d="M154 216 h4 v30 h-4 Z M184 206 h4 v30 h-4 Z" stroke-width="0.9"/>
+    <!-- ③ 单杠 32mm 滚花钢管 -->
+    <rect x="206" y="165" width="88" height="9" rx="4.5" stroke-width="1.5"/>
+    <path d="M232 166 l-3 7 M238 166 l-3 7 M244 166 l-3 7 M250 166 l-3 7 M256 166 l-3 7 M262 166 l-3 7 M268 166 l-3 7" stroke-width="0.6"/>
+    <path d="M212 170 h76 v3 h-76 Z" fill="url(#p0212-2-shade)" stroke="none"/>
+    <path d="M212 174 h6 v5 h-6 Z M282 174 h6 v5 h-6 Z" stroke-width="0.9"/>
+    <path d="M206 169.5 h4 M290 169.5 h4" stroke-width="0.7"/>
+    <!-- ④ 折叠仰卧板 -->
+    <path d="M290 136 l52 -24 l9 4 l-52 24 Z" stroke-width="1.5"/>
+    <path d="M290 136 v3 l9 4 v-3 M299 143 l52 -24 v-3" stroke-width="1"/>
+    <path d="M292 138 l7 3 v3 l-7 -3 Z" fill="url(#p0212-2-shade)" stroke="none"/>
+    <path d="M298 132 l40 -18 M304 138 l40 -18" stroke-width="0.5"/>
+    <circle cx="336" cy="110" r="3" stroke-width="1"/><circle cx="344" cy="114" r="3" stroke-width="1"/>
+    <circle cx="292" cy="140" r="2.2" stroke-width="1"/>
+    <path d="M292 142 l-8 6 M292 142 l6 6" stroke-width="0.8"/>
+    <path d="M320 128 l-6 16 M311 145 h6" stroke-width="1.1"/>
+    <!-- ⑤ 镜子 + 镜顶灯带 -->
+    <rect x="340" y="44" width="28" height="60" stroke-width="1.5"/>
+    <rect x="342" y="46" width="24" height="56" stroke-width="0.6"/>
+    <path d="M346 92 l14 -40 M352 98 l14 -40" stroke-width="0.6"/>
+    <path d="M342 96 h24 v6 h-24 Z" fill="url(#p0212-2-shade)" stroke="none"/>
+    <rect x="338" y="37" width="32" height="4" rx="2" stroke-width="1.1"/>
+    <circle cx="343" cy="39" r="0.7" stroke-width="0.6"/><circle cx="349" cy="39" r="0.7" stroke-width="0.6"/><circle cx="355" cy="39" r="0.7" stroke-width="0.6"/><circle cx="361" cy="39" r="0.7" stroke-width="0.6"/><circle cx="367" cy="39" r="0.7" stroke-width="0.6"/>
+    <!-- ⑥ 木凳 / 毛巾钩 / 水壶架 -->
+    <path d="M386 22 h18 v4 h-18 Z" stroke-width="1.2"/>
+    <path d="M388 26 v10 M402 26 v10 M389 32 h12" stroke-width="1"/>
+    <path d="M414 14 v10 q0 6 5 6 q4 0 4 -4" stroke-width="1.3"/>
+    <path d="M412 14 h4" stroke-width="1"/>
+    <path d="M420 26 q4 3 2 10 q-1 4 3 6" stroke-width="0.8"/>
+    <rect x="430" y="18" width="8" height="18" rx="2" stroke-width="1.2"/>
+    <rect x="432" y="14" width="4" height="4" stroke-width="0.9"/>
+    <path d="M428 30 h12" stroke-width="0.8"/>
+    <path d="M432 24 h4 v8 h-4 Z" fill="url(#p0212-2-shade)" stroke="none"/>
+  </g>
+  <!-- 引线 + 编号 -->
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M148 292 H200"/><path d="M158 214 H128"/><path d="M250 164 V140"/><path d="M351 118 H400"/><path d="M368 84 H400"/><path d="M440 28 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="210" cy="292" r="8"/><circle cx="118" cy="214" r="8"/><circle cx="250" cy="132" r="8"/><circle cx="410" cy="118" r="8"/><circle cx="410" cy="84" r="8"/><circle cx="460" cy="28" r="8"/>
+    </g>
+    <text x="210" y="295.5">1</text><text x="118" y="217.5">2</text><text x="250" y="135.5">3</text><text x="410" y="121.5">4</text><text x="410" y="87.5">5</text><text x="460" y="31.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">墙装单杠与仰卧板 · 爆炸图</text>
+    <text x="16" y="52">1 承重墙 + M12 膨胀螺栓 ×4</text>
+    <text x="16" y="68">2 三角支架 ×2</text>
+    <text x="16" y="84">3 32mm 滚花钢管单杠</text>
+    <text x="16" y="100">4 折叠仰卧板（铰链 + 撑杆）</text>
+    <text x="16" y="116">5 1.8m 镜子 + 镜顶灯带</text>
+    <text x="16" y="132">6 木凳 / 毛巾钩 / 水壶架</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0212-2</text>
+</svg>

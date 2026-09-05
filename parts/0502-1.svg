@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0502-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0502-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0502-1-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.8" fill="#6b6b6b"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0502-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 陶粒排水层 -->
+    <path d="M50 300 l98 -34 l46 18 l-98 34 Z" stroke-width="1.5"/>
+    <path d="M50 300 v8 l46 18 v-8 M96 326 l98 -34 v-8" stroke-width="1.2"/>
+    <path d="M97 318 l96 -33 v6 l-96 33 Z" fill="url(#p0502-1-shade)" stroke="none"/>
+    <circle cx="70" cy="294" r="3" stroke-width="0.8"/><circle cx="84" cy="288" r="3" stroke-width="0.8"/><circle cx="100" cy="282" r="3" stroke-width="0.8"/><circle cx="116" cy="276" r="3" stroke-width="0.8"/><circle cx="132" cy="270" r="3" stroke-width="0.8"/>
+    <circle cx="82" cy="302" r="3" stroke-width="0.8"/><circle cx="98" cy="296" r="3" stroke-width="0.8"/><circle cx="114" cy="290" r="3" stroke-width="0.8"/><circle cx="130" cy="284" r="3" stroke-width="0.8"/><circle cx="146" cy="278" r="3" stroke-width="0.8"/>
+    <circle cx="94" cy="310" r="3" stroke-width="0.8"/><circle cx="110" cy="304" r="3" stroke-width="0.8"/><circle cx="126" cy="298" r="3" stroke-width="0.8"/><circle cx="142" cy="292" r="3" stroke-width="0.8"/><circle cx="158" cy="286" r="3" stroke-width="0.8"/>
+    <!-- 2 腐叶土种植带 -->
+    <path d="M128 250 l98 -34 l46 18 l-98 34 Z" stroke-width="1.5"/>
+    <path d="M128 250 v12 l46 18 v-12 M174 280 l98 -34 v-12" stroke-width="1.2"/>
+    <path d="M175 270 l96 -33 v10 l-96 33 Z" fill="url(#p0502-1-shade)" stroke="none"/>
+    <path d="M130 251 l96 -33 l44 17 l-96 33 Z" fill="url(#p0502-1-dots)" stroke="none"/>
+    <path d="M150 240 l8 -3 M170 250 l8 -3 M190 236 l8 -3 M210 244 l8 -3 M230 228 l8 -3" stroke-width="0.7"/>
+    <!-- 3 三叶地锦苗（带吸盘藤） -->
+    <path d="M244 212 q-2 -20 4 -34 q6 -14 2 -28" stroke-width="1.4"/>
+    <path d="M246 190 q-14 -4 -22 -14 M248 176 q14 -2 22 -12 M250 160 q-12 -6 -14 -18" stroke-width="1.1"/>
+    <path d="M224 176 q-8 -8 -2 -14 q6 -2 8 6 Z M218 170 q-8 -4 -4 -12 q6 -1 6 6 Z M230 168 q0 -10 6 -10 q4 6 -2 12 Z" stroke-width="1"/>
+    <path d="M270 164 q8 -8 4 -14 q-6 -2 -8 6 Z M274 160 q8 -4 4 -12 q-6 -1 -6 6 Z M262 156 q0 -10 -6 -10 q-4 6 2 12 Z" stroke-width="1"/>
+    <path d="M236 142 q-8 -8 -2 -14 q6 -2 8 6 Z M230 138 q-8 -4 -4 -12 q6 -1 6 6 Z M242 134 q0 -10 6 -10 q4 6 -2 12 Z" stroke-width="1"/>
+    <path d="M252 150 q10 -8 14 -2 q2 4 -2 6" stroke-width="0.9"/>
+    <circle cx="266" cy="150" r="2" stroke-width="0.9"/><circle cx="262" cy="156" r="1.5" stroke-width="0.8"/>
+    <path d="M238 214 q6 -3 12 0" stroke-width="1"/>
+    <!-- 4 观察窗铁皮框 -->
+    <path d="M298 130 l46 -17 v-40 l-46 17 Z" stroke-width="1.5"/>
+    <path d="M303 126 l36 -13 v-32 l-36 13 Z" stroke-width="1"/>
+    <path d="M298 130 l46 -17 v-40 l-46 17 Z M303 126 l36 -13 v-32 l-36 13 Z" fill="url(#p0502-1-shade)" fill-rule="evenodd" stroke="none"/>
+    <path d="M344 113 l3 1 v-40 l-3 -1" stroke-width="0.8"/>
+    <path d="M310 118 l6 -2 M310 112 l6 -2 M326 96 l6 -2 M326 90 l6 -2" stroke-width="0.6"/>
+    <!-- 5 毛竹横杆 + 角铁托架 -->
+    <path d="M350 76 L442 40 M350 82 L442 46" stroke-width="1.5"/>
+    <path d="M350 76 a3 3 0 0 0 0 6 M442 40 a3 3 0 0 1 0 6" stroke-width="1.2"/>
+    <path d="M372 67 l1 6 M396 58 l1 6 M420 48 l1 6" stroke-width="1.2"/>
+    <path d="M370 67 q2 2 4 0 M394 58 q2 2 4 0 M418 48 q2 2 4 0" stroke-width="0.7"/>
+    <path d="M352 79 l90 -36 v4 l-90 36 Z" fill="url(#p0502-1-shade)" stroke="none"/>
+    <path d="M384 72 v12 h-12 M406 63 v12 h-12" stroke-width="1.3"/>
+    <path d="M384 72 l4 2 v12 l-4 -2 M372 84 l4 2 h12 M406 63 l4 2 v12 l-4 -2 M394 75 l4 2 h12" stroke-width="0.8"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M150 314 H206"/><path d="M128 256 H116"/><path d="M276 172 H300"/><path d="M347 100 H378"/><path d="M442 66 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="314" r="8"/><circle cx="106" cy="256" r="8"/><circle cx="310" cy="172" r="8"/><circle cx="388" cy="100" r="8"/><circle cx="460" cy="66" r="8"/>
+    </g>
+    <text x="216" y="317.5">1</text><text x="106" y="259.5">2</text><text x="310" y="175.5">3</text><text x="388" y="103.5">4</text><text x="460" y="69.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">种植带与引蔓横杆 · 爆炸图</text>
+    <text x="16" y="52">1 陶粒排水层（5cm，防积水）</text>
+    <text x="16" y="68">2 腐叶土种植带（40cm 宽）</text>
+    <text x="16" y="84">3 三叶地锦苗（吸盘攀砖）</text>
+    <text x="16" y="100">4 观察窗铁皮框（60×60cm）</text>
+    <text x="16" y="116">5 毛竹横杆 3m + 角铁托架</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0502-1</text>
+</svg>

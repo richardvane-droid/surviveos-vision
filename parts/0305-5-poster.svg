@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0305-5p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0305-5p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0305-5p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0305-5p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：AMS 四槽料卷 → 账本（Spoolman） → 手机提醒 -->
+    <!-- AMS 盒 -->
+    <rect x="34" y="176" width="92" height="56" rx="5" stroke-width="1.6"/>
+    <path d="M38 180 h84" stroke-width="0.6"/>
+    <circle cx="50" cy="206" r="10" stroke-width="1.2"/><circle cx="50" cy="206" r="3" stroke-width="0.8"/>
+    <circle cx="72" cy="206" r="10" stroke-width="1.2"/><circle cx="72" cy="206" r="3" stroke-width="0.8"/>
+    <circle cx="94" cy="206" r="10" stroke-width="1.2"/><circle cx="94" cy="206" r="3" stroke-width="0.8"/>
+    <circle cx="116" cy="206" r="10" stroke-width="1.2"/><circle cx="116" cy="206" r="3" stroke-width="0.8"/>
+    <path d="M50 206 m-10 0 a10 10 0 0 0 20 0 Z" fill="url(#p0305-5p-shade)" stroke="none"/>
+    <path d="M116 206 m-10 0 a10 10 0 0 1 20 0 Z" fill="url(#p0305-5p-dots)" stroke="none"/>
+    <path d="M44 226 h12 M66 226 h12 M88 226 h12 M110 226 h12" stroke-width="0.7"/>
+    <!-- 账本 -->
+    <path d="M150 148 h64 v72 h-64 Z" stroke-width="1.6"/>
+    <path d="M150 148 l-6 4 v72 h64 l6 -4" stroke-width="1"/>
+    <path d="M144 152 h64 v72" stroke-width="0.6"/>
+    <path d="M156 162 h20 M156 176 h36 M156 190 h30 M156 204 h40" stroke-width="0.8"/>
+    <path d="M186 160 h20 M196 174 h10 M190 188 h16 M200 202 h6" stroke-width="0.8"/>
+    <rect x="156" y="170" width="52" height="3" fill="url(#p0305-5p-shade)" stroke="none"/>
+    <rect x="156" y="198" width="52" height="3" fill="url(#p0305-5p-shade)" stroke="none"/>
+    <!-- 天平（校准） -->
+    <path d="M182 240 v-12 M168 228 h28 M168 228 l-6 12 h12 Z M196 228 l-6 12 h12 Z" stroke-width="0.9"/>
+    <path d="M172 244 h20" stroke-width="1"/>
+    <!-- 手机 + 铃铛 -->
+    <rect x="266" y="170" width="34" height="58" rx="4" stroke-width="1.6"/>
+    <path d="M278 174 h10 M280 222 h6" stroke-width="0.7"/>
+    <path d="M283 184 a7 7 0 0 1 7 7 v6 h-14 v-6 a7 7 0 0 1 7 -7 Z M280 198 a3 3 0 0 0 6 0" stroke-width="1"/>
+    <path d="M272 208 h22 M272 214 h14" stroke-width="0.7"/>
+    <path d="M304 174 l4 -4 M306 182 h5 M304 166 v-4" stroke-width="0.9"/>
+    <!-- 料卷条形量表 -->
+    <rect x="312" y="196" width="10" height="40" rx="1" stroke-width="1"/>
+    <rect x="313" y="222" width="8" height="13" fill="url(#p0305-5p-shade)" stroke="none"/>
+    <path d="M310 222 h14" stroke-width="0.8" stroke-dasharray="2 1"/>
+    <!-- 箭头 -->
+    <path d="M128 196 Q136 184 146 176" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M146 176 l-5 0 l2 4" stroke-width="1"/>
+    <path d="M216 186 Q240 186 262 194" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M262 194 l-5 1 l3 -4" stroke-width="1"/>
+
+    <!-- 地面线 -->
+    <path d="M40 268 Q180 262 320 268" stroke-width="1.2"/>
+    <path d="M44 272 q40 -3 80 0 M236 272 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0305 · L5</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">耗材管理</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">八卷料，每一克都记在账上</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">打印结束 → 扣减对应卷 → 剩余 &lt;150g 提醒 → 库存 &gt;8 卷停买</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每卷登记颜色 / 材质 / 初始重量 / 开封日期</text>
+    <text x="64" y="366">打印完自动从对应卷扣减预计用量，AMS 自动匹配</text>
+    <text x="64" y="396">剩余 &lt;150g 提醒补货，超过 8 卷提示先用完再买</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：Spoolman + HomeAssistant · 数据出口：Spoolman 看板 + HA 推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：Donkie/Spoolman · greghesp/ha-bambulab</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

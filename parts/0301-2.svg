@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0301-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0301-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0301-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0301-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 橡胶减震垫 + 托盘 -->
+    <path d="M56 300 L80 284 H172 L148 300 Z" stroke-width="1.5"/>
+    <path d="M56 300 V308 H148 V300 M148 308 L172 292 V284" stroke-width="1.3"/>
+    <path d="M58 302 H146 V307 H58 Z" fill="url(#p0301-2-shade)" stroke="none"/>
+    <path d="M66 314 h8 M92 314 h8 M118 314 h8 M140 314 h8" stroke-width="1.6"/>
+    <path d="M62 296 L84 282 M74 296 L96 282 M86 296 L108 282 M98 296 L120 282 M110 296 L132 282 M122 296 L144 282 M134 296 L156 282" stroke-width="0.5"/>
+    <!-- ② 铝型材机架 + GRBL 控制板 -->
+    <path d="M124 246 L142 232 H212 L194 246 Z" stroke-width="1.4"/>
+    <path d="M124 246 V262 H194 V246 M194 262 L212 248 V232" stroke-width="1.4"/>
+    <path d="M128 250 V258 M132 250 V258 M186 250 V258 M190 250 V258 M196 248 L208 240 M196 258 L208 250" stroke-width="0.6"/>
+    <path d="M128 240 L136 234 V252 L128 258 Z" stroke-width="0.9"/>
+    <path d="M196 250 L210 240 V250 L196 260 Z" fill="url(#p0301-2-shade)" stroke="none"/>
+    <path d="M150 248 h30 v12 h-30 Z" stroke-width="1"/>
+    <path d="M154 252 h6 v4 h-6 Z M164 252 h10 v4 h-10 Z M154 258 h22" stroke-width="0.6"/>
+    <path d="M150 262 v4 M156 262 v4 M162 262 v4" stroke-width="0.7"/>
+    <!-- ③ X/Y 滑台 + T 槽夹具板 -->
+    <path d="M198 186 L216 172 H300 L282 186 Z" stroke-width="1.4"/>
+    <path d="M198 186 V193 H282 V186 M282 193 L300 179 V172" stroke-width="1.2"/>
+    <path d="M208 182 L224 170 M222 182 L238 170 M236 182 L252 170 M250 182 L266 170 M264 182 L280 170" stroke-width="0.7"/>
+    <path d="M200 188 H280 V192 H200 Z" fill="url(#p0301-2-shade)" stroke="none"/>
+    <path d="M190 196 H292 M190 196 v4 h102 v-4" stroke-width="1"/>
+    <path d="M292 200 L310 186 V182" stroke-width="0.9"/>
+    <path d="M206 178 l6 -4 M266 178 l6 -4" stroke-width="1.4"/>
+    <!-- ④ 主轴电机 + 铣刀 -->
+    <path d="M296 108 a12 4 0 0 1 24 0 v30 a12 4 0 0 1 -24 0 Z" stroke-width="1.5"/>
+    <ellipse cx="308" cy="108" rx="12" ry="4" stroke-width="1.1"/>
+    <path d="M298 124 a12 4 0 0 0 20 1 v6 a12 4 0 0 1 -20 -1 Z" fill="url(#p0301-2-shade)" stroke="none"/>
+    <path d="M300 116 h16 M300 120 h16" stroke-width="0.5"/>
+    <path d="M304 142 h8 v6 h-8 Z M308 148 v14 l-2 4 h4 l-2 -4" stroke-width="1.2"/>
+    <path d="M308 100 v-6 M304 96 h8" stroke-width="1"/>
+    <path d="M320 112 q8 0 8 -6" stroke-width="0.8"/>
+    <!-- ⑤ 吸尘罩 + 软管 -->
+    <path d="M336 84 a14 5 0 0 1 28 0 v8 l-6 10 h-16 l-6 -10 Z" stroke-width="1.4"/>
+    <ellipse cx="350" cy="84" rx="14" ry="5" stroke-width="1"/>
+    <path d="M338 92 l5 8 h14 l5 -8" stroke-width="0.7"/>
+    <path d="M346 100 h8 v4 h-8 Z" fill="url(#p0301-2-shade)" stroke="none"/>
+    <path d="M364 86 q14 2 18 14 q3 8 -6 10" stroke-width="1.3"/>
+    <path d="M368 88 q12 3 14 12 M372 86 q10 4 12 12 M378 92 q6 4 6 10" stroke-width="0.5"/>
+    <path d="M342 104 h4 M354 104 h4" stroke-width="0.7"/>
+    <!-- ⑥ 亚克力防护罩 -->
+    <path d="M370 52 L388 38 H444 L426 52 Z" stroke-width="1.4"/>
+    <path d="M370 52 V72 H426 V52 M426 72 L444 58 V38" stroke-width="1.4"/>
+    <path d="M372 54 L440 40" stroke-width="0.4"/>
+    <path d="M376 66 l10 -8 M382 70 l14 -12" stroke-width="0.5"/>
+    <path d="M428 54 L442 44 V58 L428 68 Z" fill="url(#p0301-2-shade2)" stroke="none"/>
+    <path d="M396 60 h6" stroke-width="1.2"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M172 296 H198"/><path d="M124 254 H96"/><path d="M310 186 H340"/><path d="M296 128 H260"/><path d="M382 98 H412"/><path d="M444 46 H446"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="208" cy="296" r="8"/><circle cx="88" cy="254" r="8"/><circle cx="350" cy="186" r="8"/><circle cx="252" cy="128" r="8"/><circle cx="422" cy="98" r="8"/><circle cx="456" cy="46" r="8"/>
+    </g>
+    <text x="208" y="299.5">1</text><text x="88" y="257.5">2</text><text x="350" y="189.5">3</text><text x="252" y="131.5">4</text><text x="422" y="101.5">5</text><text x="456" y="49.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">桌面 CNC 工位 · 爆炸图</text>
+    <text x="16" y="52">1 橡胶减震垫 + 亚克力托盘</text>
+    <text x="16" y="68">2 铝型材机架 + GRBL 控制板</text>
+    <text x="16" y="84">3 X/Y 滑台 + T 槽夹具板</text>
+    <text x="16" y="100">4 主轴电机 + 3.175mm 铣刀</text>
+    <text x="16" y="116">5 吸尘罩 + 软管（接碎屑桶）</text>
+    <text x="16" y="132">6 亚克力防护罩（降噪挡屑）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0301-2</text>
+</svg>

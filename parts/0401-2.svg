@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0401-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0401-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0401-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0401-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 柜体外壳 -->
+    <path d="M58 316 l76 -24 v-52 l-76 24 Z" stroke-width="1.5"/>
+    <path d="M134 292 l10 5 v-52 l-10 -5 M58 264 l76 -24 l10 5" stroke-width="1.2"/>
+    <path d="M134 292 l10 5 v-52 l-10 -5 Z" fill="url(#p0401-2-shade)" stroke="none"/>
+    <path d="M64 310.0 l19 -6 v11 l-19 6 Z" stroke-width="0.7"/><path d="M87 302.7 l19 -6 v11 l-19 6 Z" stroke-width="0.7"/><path d="M110 295.4 l19 -6 v11 l-19 6 Z" stroke-width="0.7"/><path d="M64 294.0 l19 -6 v11 l-19 6 Z" stroke-width="0.7"/><path d="M87 286.7 l19 -6 v11 l-19 6 Z" stroke-width="0.7"/><path d="M110 279.4 l19 -6 v11 l-19 6 Z" stroke-width="0.7"/><path d="M64 278.0 l19 -6 v11 l-19 6 Z" stroke-width="0.7"/><path d="M87 270.7 l19 -6 v11 l-19 6 Z" stroke-width="0.7"/><path d="M110 263.4 l19 -6 v11 l-19 6 Z" stroke-width="0.7"/>
+    <!-- 2 透明抽屉 -->
+    <path d="M154 250 l40 -12 v18 l-40 12 Z" stroke-width="1.5"/>
+    <path d="M154 250 l40 -12 l14 6 l-40 12 Z" stroke-width="1.1"/>
+    <path d="M194 238 l14 6 v18 l-14 -6" stroke-width="1.1"/>
+    <path d="M168 256 l14 -4 M170 258 l10 -3" stroke-width="0.7"/>
+    <path d="M196 240 l10 5 v14 l-10 -5 Z" fill="url(#p0401-2-shade)" stroke="none"/>
+    <path d="M160 256 q4 -6 8 0" stroke-width="0.9"/>
+    <!-- 3 Gridfinity 分格盒 -->
+    <path d="M232 178 l34 -10 l12 5 l-34 10 Z" stroke-width="1.4"/>
+    <path d="M232 178 v10 l12 5 v-10 M278 173 v10 l-34 10 v-10" stroke-width="1.1"/>
+    <path d="M249 173 l12 5 M238 183.5 l34 -10" stroke-width="0.9"/>
+    <path d="M244 193 l34 -10 v10 l-34 10 Z" fill="url(#p0401-2-shade)" stroke="none"/>
+    <!-- 4 螺丝 x3 -->
+    <path d="M300 124 l18 -26 M296 126 l8 4 M302 118 l4 2 M306 112 l4 2 M310 106 l4 2 M314 100 l4 2" stroke-width="1.3"/>
+    <path d="M316 128 l18 -26 M312 130 l8 4 M318 122 l4 2 M322 116 l4 2 M326 110 l4 2 M330 104 l4 2" stroke-width="1.3"/>
+    <path d="M332 132 l18 -26 M328 134 l8 4 M334 126 l4 2 M338 120 l4 2 M342 114 l4 2 M346 108 l4 2" stroke-width="1.3"/>
+    <!-- 5 标签 -->
+    <path d="M370 62 l40 -12 v14 l-40 12 Z" stroke-width="1.5"/>
+    <path d="M374 63 l20 -6 M374 68 l30 -9" stroke-width="0.9"/>
+    <path d="M370 62 l40 -12 v3 l-40 12 Z" fill="url(#p0401-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M144 300 H196"/><path d="M154 254 H118"/><path d="M280 190 H300"/><path d="M352 112 H372"/><path d="M412 56 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="300" r="8"/><circle cx="108" cy="254" r="8"/><circle cx="310" cy="190" r="8"/><circle cx="382" cy="112" r="8"/><circle cx="450" cy="56" r="8"/>
+    </g>
+    <text x="206" y="303.5">1</text><text x="108" y="257.5">2</text><text x="310" y="193.5">3</text><text x="382" y="115.5">4</text><text x="450" y="59.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">透明分格抽屉柜 · 爆炸图</text>
+    <text x="16" y="52">1 ABS 柜体（48 格，螺栓上墙）</text>
+    <text x="16" y="68">2 透明 PS 抽屉（带止退卡口）</text>
+    <text x="16" y="84">3 Gridfinity 分格盒（42mm 模数）</text>
+    <text x="16" y="100">4 内容物：螺丝 / 螺母 / 扎带</text>
+    <text x="16" y="116">5 标签机白底黑字标签</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0401-2</text>
+</svg>

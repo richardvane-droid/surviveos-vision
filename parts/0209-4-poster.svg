@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0209-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0209-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0209-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0209-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 木牌（左）：挂绳 + 翻面牌 -->
+    <path d="M56 150 l18 22 M92 150 l-18 22" stroke-width="1"/>
+    <circle cx="56" cy="150" r="2.5" stroke-width="0.9"/><circle cx="92" cy="150" r="2.5" stroke-width="0.9"/>
+    <rect x="46" y="172" width="56" height="40" rx="5" stroke-width="1.6"/>
+    <path d="M48 178 q26 -3 52 0 M48 206 q26 3 52 0" stroke-width="0.6"/>
+    <path d="M46 206 h56 v6 h-56 Z" fill="url(#p0209-4p-shade)" stroke="none"/>
+    <path d="M100 168 q10 -8 8 -18" stroke-width="0.9" stroke-dasharray="2 2"/>
+    <path d="M104 152 l4 -3 l1 5" stroke-width="0.9"/>
+    <!-- 铃铛（中）带斜杠 -->
+    <path d="M160 168 v-16 a20 20 0 0 1 40 0 v16 l8 8 h-56 Z" stroke-width="1.6"/>
+    <path d="M174 176 a6 6 0 0 0 12 0" stroke-width="1.3"/>
+    <path d="M180 132 v-6" stroke-width="1.3"/>
+    <path d="M162 168 h36 v8 h-36 Z" fill="url(#p0209-4p-shade)" stroke="none"/>
+    <path d="M148 188 L212 118" stroke-width="2"/>
+    <path d="M150 190 L214 120" stroke-width="0.7"/>
+    <!-- 房子小图标（中下，代表其他区域） -->
+    <path d="M156 240 l24 -18 l24 18 v20 h-48 Z" stroke-width="1.2"/>
+    <path d="M174 260 v-12 h12 v12" stroke-width="0.9"/>
+    <path d="M158 250 h44 v10 h-44 Z" fill="url(#p0209-4p-dots)" stroke="none"/>
+    <!-- 手机（右）：一条摘要 -->
+    <rect x="262" y="140" width="48" height="84" rx="7" stroke-width="1.6"/>
+    <path d="M280 146 h12" stroke-width="1"/>
+    <rect x="268" y="156" width="36" height="20" rx="3" stroke-width="1"/>
+    <path d="M272 162 h20 M272 168 h28" stroke-width="0.8"/>
+    <path d="M268 182 h36 v34 h-36 Z" fill="url(#p0209-4p-shade)" stroke="none" opacity="0.5"/>
+    <circle cx="286" cy="219" r="2.5" stroke-width="0.9"/>
+    <path d="M300 150 l6 -8 M296 146 l8 -6" stroke-width="0.7"/>
+    <!-- 箭头 -->
+    <path d="M106 192 Q130 190 150 182" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M180 196 V222" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M212 168 Q240 176 258 178" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M40 274 Q180 266 320 274" stroke-width="1.2"/>
+    <path d="M56 280 q30 -3 60 0 M244 280 q30 -3 60 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0209 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">请勿打扰模式</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">翻一块木牌，整栋房子替你闭嘴一会儿</text>
+  <text x="74" y="197" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="14" fill="#2a2a2a">不 在</text>
+  <text x="180" y="304" text-anchor="middle" font-size="9.5" fill="#666">木牌倾斜开关 → HA dnd 开关 → 告警按等级过滤 → 退出时一条摘要</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">翻到“不在”即生效，门口指示灯亮红</text>
+    <text x="64" y="366">漏水、烟感、鱼缸断电这类一级告警照常响</text>
+    <text x="64" y="396">超过 4 小时自动退出，忘了翻牌也不怕</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HA · 数据出口：input_boolean.dnd + 告警摘要</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome · home-assistant/core</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

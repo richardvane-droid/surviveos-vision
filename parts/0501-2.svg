@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0501-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0501-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0501-2-net" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#4a4a4a" stroke-width="0.6"/>
+      <line x1="0" y1="3.5" x2="7" y2="3.5" stroke="#4a4a4a" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0501-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 小黑板 -->
+    <path d="M56 312 l84 -30 v-56 l-84 30 Z" stroke-width="1.5"/>
+    <path d="M62 306 l72 -26 v-44 l-72 26 Z" stroke-width="0.8"/>
+    <path d="M62 306 l72 -26 v-44 l-72 26 Z" fill="url(#p0501-2-shade)" stroke="none"/>
+    <path d="M140 282 l6 3 v-56 l-6 -3 M56 312 l6 3 l84 -30" stroke-width="1"/>
+    <path d="M54 316 l88 -32 l6 3 l-88 32 Z" stroke-width="1"/>
+    <path d="M72 286 l14 -5 M72 293 l24 -9 M72 300 l10 -4" stroke="#f7f4ee" stroke-width="1.6"/>
+    <path d="M100 268 l18 -6 M100 275 l26 -10" stroke="#f7f4ee" stroke-width="1.6"/>
+    <path d="M60 314 l8 -3 M70 311 l8 -3" stroke-width="1.6"/>
+    <!-- 2 横档 + 挂钩 -->
+    <path d="M138 252 l74 -26 l8 4 l-74 26 Z" stroke-width="1.5"/>
+    <path d="M138 252 v5 l8 4 v-5 M146 261 l74 -26 v-5" stroke-width="1"/>
+    <path d="M147 258 l72 -25 v3 l-72 25 Z" fill="url(#p0501-2-shade)" stroke="none"/>
+    <path d="M160 254 v10 q0 5 4 5 q4 0 4 -4 M192 243 v10 q0 5 4 5 q4 0 4 -4" stroke-width="1.2"/>
+    <path d="M160 254 v-4 M192 243 v-4" stroke-width="0.8"/>
+    <!-- 3 渔网兜 -->
+    <path d="M226 150 q-16 30 -2 52 q22 10 44 0 q14 -22 -2 -52 Z" stroke-width="1.5"/>
+    <path d="M228 152 q-14 28 -2 48 q20 8 40 0 q12 -20 -2 -48 Z" fill="url(#p0501-2-net)" stroke="none"/>
+    <path d="M226 150 q20 6 40 0" stroke-width="1"/>
+    <path d="M226 150 q20 -4 40 0" stroke-width="0.8"/>
+    <path d="M246 148 v-10 q0 -5 5 -5" stroke-width="1.2"/>
+    <path d="M232 160 l6 -2 M254 160 l6 -2 M238 172 l8 -2 M250 176 l8 -2" stroke-width="0.9"/>
+    <!-- 4 烙字木牌 -->
+    <path d="M298 124 l44 -16 v-18 l-44 16 Z" stroke-width="1.5"/>
+    <path d="M342 108 l4 2 v-18 l-4 -2 M298 124 l4 2 l44 -16" stroke-width="0.9"/>
+    <path d="M300 122 l40 -14 M300 110 l40 -14" stroke-width="0.5"/>
+    <path d="M343 109 l3 2 v-16 l-3 -2 Z" fill="url(#p0501-2-shade)" stroke="none"/>
+    <circle cx="304" cy="110" r="1.8" stroke-width="0.9"/>
+    <path d="M304 108 q-2 -14 8 -18 q10 -4 12 4" stroke-width="1" stroke-dasharray="1.5 1.5"/>
+    <!-- 5 引火松枝束 -->
+    <path d="M382 78 q-6 -8 -8 -10 M382 78 l14 -24 M382 78 l24 -18 M382 78 l30 -8 M382 78 l6 -30 M382 78 l-4 -28" stroke-width="1.2"/>
+    <path d="M388 68 l-4 -4 M388 68 l4 -1 M392 60 l-4 -3 M392 60 l5 -1 M396 66 l-2 -4 M396 66 l4 -2 M402 64 l-2 -4 M402 64 l4 0 M386 60 l-3 -3 M386 60 l3 -3 M384 52 l-3 -2 M384 52 l3 -3 M380 62 l-3 -1 M380 62 l1 -4 M379 55 l-3 -2 M379 55 l2 -4 M406 58 l-1 -4 M406 58 l4 -2" stroke-width="0.7"/>
+    <path d="M374 78 q8 -6 16 0 q0 8 -8 8 q-8 0 -8 -8 Z" stroke-width="1.3"/>
+    <path d="M376 82 q6 6 12 0" stroke-width="0.8"/>
+    <path d="M375 78 q8 -5 14 0 v6 q-6 4 -14 0 Z" fill="url(#p0501-2-shade)" stroke="none"/>
+  </g>
+  <g font-size="9" fill="#2a2a2a" text-anchor="middle">
+    <text x="320" y="118" transform="rotate(-20 320 118)" font-family="'Long Cang','Kaiti SC',cursive" font-size="10">香樟</text>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M146 294 H196"/><path d="M138 254 H116"/><path d="M270 176 H300"/><path d="M346 108 H378"/><path d="M414 62 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="294" r="8"/><circle cx="106" cy="254" r="8"/><circle cx="310" cy="176" r="8"/><circle cx="388" cy="108" r="8"/><circle cx="460" cy="62" r="8"/>
+    </g>
+    <text x="206" y="297.5">1</text><text x="106" y="257.5">2</text><text x="310" y="179.5">3</text><text x="388" y="111.5">4</text><text x="460" y="65.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">分格标牌与引火兜 · 爆炸图</text>
+    <text x="16" y="52">1 小黑板 + 粉笔槽（记入库月份）</text>
+    <text x="16" y="68">2 横档 + 铁钩（挂牌挂兜）</text>
+    <text x="16" y="84">3 旧渔网兜（引火料不散架）</text>
+    <text x="16" y="100">4 烙字杉木牌 12×6cm + 麻绳</text>
+    <text x="16" y="116">5 引火松枝束（松脂多易燃）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0501-2</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0401-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0401-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0401-3p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0401-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0401-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 手机拍照（左） -->
+    <rect x="46" y="122" width="34" height="56" rx="5" stroke-width="1.4"/>
+    <rect x="49" y="128" width="28" height="42" rx="2" stroke-width="0.6"/>
+    <path d="M53 136 h20 M53 144 h20 M53 152 h14" stroke-width="0.8"/>
+    <circle cx="63.0" cy="174" r="1.6" stroke-width="0.8"/>
+    <path d="M56 116 q7 -8 14 0" stroke-width="0.9"/>
+    <path d="M66 112 v-6 M58 108 l-3 -4 M74 108 l3 -4" stroke-width="0.9"/>
+    <!-- 纸上的扳手轮廓（中） -->
+    <path d="M134 128 l66 -20 v52 l-66 20 Z" stroke-width="1.5"/>
+    <path d="M148 158 l22 -22 M154 162 l22 -22" stroke-width="1.6"/>
+    <path d="M144 152 q-6 -2 -4 -8 q4 -6 10 -2 l6 6 l-6 6 q-4 2 -6 -2 Z" stroke-width="1.6"/>
+    <path d="M172 134 q6 -8 12 -6 q6 4 2 10 l-6 6 l-6 -6 Z" stroke-width="1.6"/>
+    <path d="M140 156 l60 -18" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <text x="167" y="177" text-anchor="middle" font-size="8" fill="#3d3d3d" stroke="none">DXF</text>
+    <!-- 打印出的影子板（右） -->
+    <path d="M240 150 l60 -18 l16 8 l-60 18 Z" stroke-width="1.5"/>
+    <path d="M240 150 v8 l16 8 v-8 M316 140 v8 l-60 18 v-8" stroke-width="1.1"/>
+    <path d="M256 166 l60 -18 v8 l-60 18 Z" fill="url(#p0401-3p-shade)" stroke="none"/>
+    <path d="M258 152 l24 -8 l6 4 l-24 8 Z" fill="url(#p0401-3p-dots)" stroke="none"/>
+    <path d="M258 152 l24 -8 l6 4 l-24 8 Z" stroke-width="1"/>
+    <path d="M286 138 v-10 h20 v14" stroke-width="1.2"/>
+    <path d="M290 128 v-6 h12 v6" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M86 150 Q110 146 128 142" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M124.9 146.1 L130 141 L123.3 138.3" stroke-width="1"/>
+    <path d="M204 150 Q220 150 236 148" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M232.4 152.6 L238 148 L231.6 144.6" stroke-width="1"/>
+
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/>
+    <path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="80" y="230" font-size="8" fill="#666">拍照</text><text x="140" y="240" font-size="8" fill="#666">抠轮廓 · 换算</text><text x="250" y="232" font-size="8" fill="#666">打印贴墙</text>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0401 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">影子板生成流水线</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">拍一张照片，工具就有了自己的影子</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">手机照片 → 抠轮廓换算毫米 → DXF → OpenSCAD → 3D 打印影子板</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">拍照即出轮廓，不用趴在墙上手描</text>
+    <text x="64" y="366">凹槽外扩 1mm，取放不卡手</text>
+    <text x="64" y="396">打印失败可直接打印纸样手描</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：电脑 Python + OpenSCAD · 数据出口：DXF / STL 文件</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：tkubic/GridfinityShadowMaker</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

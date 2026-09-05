@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0302-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0302-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0302-3p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0302-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0302-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 手机（左） -->
+    <rect x="46" y="122" width="44" height="76" rx="6" stroke-width="1.5"/>
+    <rect x="50" y="130" width="36" height="56" rx="2" stroke-width="0.7"/>
+    <path d="M56 140 h24 M56 150 h24 M56 160 h16" stroke-width="0.9"/>
+    <path d="M52 144 l2 2 l4 -4 M52 154 l2 2 l4 -4" stroke-width="1"/>
+    <circle cx="68" cy="192" r="2.5" stroke-width="0.9"/>
+    <!-- 清单板（中） -->
+    <rect x="132" y="112" width="96" height="112" rx="4" stroke-width="1.6"/>
+    <rect x="164" y="104" width="32" height="14" rx="4" stroke-width="1.2"/>
+    <rect x="166" y="106" width="28" height="10" fill="url(#p0302-3p-shade)" stroke="none"/>
+    <path d="M146 138 h60 M146 158 h60 M146 178 h60 M146 198 h44" stroke-width="0.9"/>
+    <circle cx="142" cy="138" r="4" stroke-width="1"/><path d="M140 138 l1.5 1.5 l3 -3" stroke-width="1"/>
+    <circle cx="142" cy="158" r="4" stroke-width="1"/><path d="M140 158 l1.5 1.5 l3 -3" stroke-width="1"/>
+    <circle cx="142" cy="178" r="4" stroke-width="1"/>
+    <circle cx="142" cy="198" r="4" stroke-width="1"/>
+    <path d="M212 134 h10 v8 h-10 Z" stroke-width="0.8"/>
+    <path d="M212 134 h10 v8 h-10 Z" fill="url(#p0302-3p-dots)" stroke="none"/>
+    <!-- 登山包（右） -->
+    <path d="M266 150 q0 -16 20 -16 q20 0 20 16 v40 q0 6 -6 6 h-28 q-6 0 -6 -6 Z" stroke-width="1.6"/>
+    <path d="M266 160 q20 -6 40 0" stroke-width="0.9"/>
+    <path d="M270 168 h32 v22 h-32 Z" stroke-width="0.9"/>
+    <path d="M272 170 h28 v18 h-28 Z" fill="url(#p0302-3p-shade)" stroke="none"/>
+    <path d="M276 134 q10 -8 20 0" stroke-width="1.1"/>
+    <path d="M306 156 q6 4 6 12 v12" stroke-width="0.9"/>
+    <path d="M266 156 q-6 4 -6 12 v12" stroke-width="0.9"/>
+    <circle cx="300" cy="140" r="9" stroke-width="1.3"/><path d="M296 140 l3 3 l6 -7" stroke-width="1.3"/>
+    <!-- 二维码格子（下） -->
+    <rect x="142" y="238" width="24" height="24" stroke-width="1.2"/>
+    <rect x="145" y="241" width="7" height="7" stroke-width="0.8"/><rect x="156" y="241" width="7" height="7" stroke-width="0.8"/><rect x="145" y="252" width="7" height="7" stroke-width="0.8"/>
+    <path d="M156 252 h3 v3 h-3 Z M160 256 h3 v3 h-3 Z" fill="#3d3d3d" stroke="none"/>
+    <rect x="194" y="238" width="24" height="24" stroke-width="1.2"/>
+    <path d="M196 240 h20 v20 h-20 Z" fill="url(#p0302-3p-shade)" stroke="none"/>
+    <!-- 箭头 -->
+    <path d="M94 160 H126" stroke-width="1" stroke-dasharray="3 3"/><path d="M122 156 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M232 168 H258" stroke-width="1" stroke-dasharray="3 3"/><path d="M254 164 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M180 226 V236" stroke-width="1" stroke-dasharray="3 3"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0302 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">出发清单核对器</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">空格子就是你忘带的东西</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">选线路 → LighterPack 清单 → 扫格子二维码 → 缺件提示 + 总重</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">三条线路各存一份清单，重量自动累加</text>
+    <text x="64" y="366">格子贴二维码，扫一下知道气罐剩几罐</text>
+    <text x="64" y="396">墙上手写板同步，断网照样核对</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：自部署 LighterPack + Homebox · 数据出口：HA 推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：galenmaly/lighterpack · sysadminsmedia/homebox</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

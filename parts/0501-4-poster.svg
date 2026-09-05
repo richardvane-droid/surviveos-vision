@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0501-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0501-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0501-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0501-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：日历（入库月份） -->
+    <rect x="44" y="150" width="52" height="46" rx="3" stroke-width="1.6"/>
+    <path d="M44 162 h52" stroke-width="1.2"/>
+    <path d="M56 150 v-8 M84 150 v-8" stroke-width="1.4"/>
+    <path d="M46 152 h48 v9 h-48 Z" fill="url(#p0501-4p-shade)" stroke="none"/>
+    <path d="M52 172 h6 M62 172 h6 M72 172 h6 M82 172 h6 M52 182 h6 M62 182 h6 M72 182 h6 M82 182 h6" stroke-width="0.8"/>
+    <path d="M60 176 l4 4 l7 -8" stroke-width="1.4"/>
+    <!-- 中：柴堆（切面）+ 水滴 -->
+    <circle cx="160" cy="196" r="11" stroke-width="1.6"/><circle cx="160" cy="196" r="5" stroke-width="0.8"/>
+    <circle cx="184" cy="196" r="11" stroke-width="1.6"/><circle cx="184" cy="196" r="5" stroke-width="0.8"/>
+    <circle cx="208" cy="196" r="11" stroke-width="1.6"/><circle cx="208" cy="196" r="5" stroke-width="0.8"/>
+    <circle cx="172" cy="176" r="11" stroke-width="1.6"/><circle cx="172" cy="176" r="5" stroke-width="0.8"/>
+    <circle cx="196" cy="176" r="11" stroke-width="1.6"/><circle cx="196" cy="176" r="5" stroke-width="0.8"/>
+    <circle cx="184" cy="156" r="11" stroke-width="1.6"/><circle cx="184" cy="156" r="5" stroke-width="0.8"/>
+    <path d="M150 207 h68" stroke-width="1.2"/>
+    <path d="M144 214 h80 v4 h-80 Z" fill="url(#p0501-4p-shade)" stroke="none"/>
+    <path d="M184 118 q-9 12 -9 18 a9 9 0 0 0 18 0 q0 -6 -9 -18 Z" stroke-width="1.4"/>
+    <path d="M178 136 a6 6 0 0 0 5 5" stroke-width="0.7"/>
+    <path d="M198 128 q6 -4 8 2 M200 136 q6 -4 8 2" stroke-width="0.8"/>
+    <!-- 右：火焰 + 手机 -->
+    <path d="M296 130 q-16 16 -10 34 q4 10 14 10 q12 0 14 -12 q2 -10 -6 -18 q0 10 -6 12 q2 -12 -6 -26 Z" stroke-width="1.6"/>
+    <path d="M296 168 q-4 -8 2 -14 q4 6 2 14" stroke-width="0.9"/>
+    <path d="M286 172 q10 6 20 0" stroke-width="1"/>
+    <rect x="278" y="186" width="36" height="22" rx="4" stroke-width="1.4"/>
+    <path d="M284 194 h20 M284 200 h14" stroke-width="0.8"/>
+    <path d="M280 204 h32 v3 h-32 Z" fill="url(#p0501-4p-shade)" stroke="none"/>
+    <!-- 箭头 -->
+    <path d="M100 176 Q120 176 142 180" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M222 178 Q246 176 266 172" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M138 176 l5 4 l-5 4 M262 168 l5 4 l-5 4" stroke-width="1"/>
+    <!-- 地平线 -->
+    <path d="M40 232 Q180 224 320 232" stroke-width="1.2"/>
+    <path d="M44 236 q40 -3 80 0 M236 236 q40 -3 80 0" stroke-width="0.6"/>
+    <!-- 特性行勾选圈 -->
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0501 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">柴火干燥计时器</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">晒够八个月、缝里够干，才准进炉子</text>
+  <text x="70" y="212" text-anchor="middle" font-size="8.5" fill="#666">入库 8 个月</text>
+  <text x="184" y="112" text-anchor="middle" font-size="8.5" fill="#666">柴缝湿度 &lt;70%</text>
+  <text x="296" y="222" text-anchor="middle" font-size="8.5" fill="#666">可以烧了</text>
+  <text x="180" y="272" text-anchor="middle" font-size="9.5" fill="#666">入库日期 + 柴缝湿度 → 双条件判断 → 每格“可烧”状态</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">满 8 个月且 7 日均湿度低于 70% 才亮绿灯</text>
+    <text x="64" y="366">梅雨回潮超过 85% 两天，提醒翻晒或加盖</text>
+    <text x="64" y="396">探头掉线一天，自动退回只看入库日期</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HomeAssistant · 数据出口：面板每格状态 + 手机推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：blaineventurine/simple_inventory</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

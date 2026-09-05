@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0301-4-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0301-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0301-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">CNC 静音排程 · 流程图</text>
+  <g filter="url(#p0301-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 数据源：HA 存在状态 -->
+    <path d="M196 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="54" rx="34" ry="6"/>
+    <!-- 步骤：Candle 探高 -->
+    <rect x="30" y="130" width="110" height="40" rx="6"/>
+    <rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断：楼下有客 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 是：排队 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0301-4-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z" fill="url(#p0301-4-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0301-4-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="175" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0301-4-arrow)" stroke-linecap="round">
+    <path d="M85 86 V128"/>
+    <path d="M230 98 V126" stroke-dasharray="3 3"/>
+    <path d="M140 150 H170"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V228"/>
+    <path d="M175 250 H142"/>
+    <path d="M285 250 H328"/>
+    <path d="M390 270 V327 H307"/>
+    <path d="M450 150 Q466 150 466 112 H250 V134" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">拖入 SVG · 出 G 代码</text>
+    <text x="230" y="74">HA 存在状态</text><text x="230" y="87" font-size="8.5" fill="#666">木屋门磁 + 毫米波</text>
+    <text x="85" y="147">Candle 探针扫高度图</text><text x="85" y="161">木牌不平也刻得准</text>
+    <text x="230" y="149">楼下有客人？</text><text x="230" y="162" font-size="8.5" fill="#666">或 22 点后</text>
+    <text x="390" y="147">是 → 任务排队</text><text x="390" y="161">客人走后推送可开机</text>
+    <text x="85" y="247">报警 → 急停 + 推送</text><text x="85" y="261">限位 / 断刀 / 失步</text>
+    <text x="230" y="247">否 → 发 GRBL 开雕</text><text x="230" y="261">吸尘器随主轴联动</text>
+    <text x="390" y="247">完成 → 吸尘延时 10 秒</text><text x="390" y="261">摄像头拍一张成品</text>
+    <text x="240" y="331">成品照 + G 代码存 NAS</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="146" y="245">报警</text><text x="296" y="245">完成</text><text x="300" y="108">客人离开 → 重新判断</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0301-4</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0209-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0209-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0209-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0209-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：帘子（左） → PIR（中上） → 灯串（右） -->
+    <path d="M44 176 H108" stroke-width="1.6"/>
+    <path d="M52 178 q4 16 -2 32 q-4 16 2 32 M66 178 q4 16 -2 32 q-4 16 2 32 M80 178 q-4 16 2 32 q4 16 -2 32" stroke-width="1.2"/>
+    <path d="M48 242 q16 5 34 0" stroke-width="1.1"/>
+    <path d="M88 178 q10 10 16 30 q3 12 -4 34" stroke-width="1.2"/>
+    <path d="M84 180 h20 v60 h-20 Z" fill="url(#p0209-3p-shade)" stroke="none" opacity="0.6"/>
+    <!-- PIR 圆顶 -->
+    <path d="M150 150 a30 30 0 0 1 60 0 Z" stroke-width="1.6"/>
+    <path d="M150 150 h60 v10 h-60 Z" stroke-width="1.3"/>
+    <path d="M152 152 h56 v6 h-56 Z" fill="url(#p0209-3p-shade)" stroke="none"/>
+    <path d="M160 145 a20 20 0 0 1 40 0 M168 148 a12 12 0 0 1 24 0" stroke-width="0.8"/>
+    <path d="M180 120 a20 20 0 0 1 0 0" stroke-width="0.8"/>
+    <path d="M136 168 a48 48 0 0 1 -6 -30 M224 168 a48 48 0 0 0 6 -30" stroke-width="0.9" stroke-dasharray="2 3"/>
+    <path d="M144 176 a40 40 0 0 1 -4 -22 M216 176 a40 40 0 0 0 4 -22" stroke-width="0.9" stroke-dasharray="2 3"/>
+    <!-- 灯串 + 灯泡 -->
+    <path d="M240 190 q20 -14 40 -4 q16 8 32 -6" stroke-width="1.2"/>
+    <circle cx="292" cy="222" r="16" stroke-width="1.6"/>
+    <circle cx="292" cy="222" r="16" fill="url(#p0209-3p-dots)" stroke="none"/>
+    <path d="M292 188 v18 M286 238 h12 v6 h-12 Z" stroke-width="1.2"/>
+    <path d="M292 196 v-6 M268 222 h-8 M316 222 h8 M275 205 l-5 -5 M309 205 l5 -5 M275 239 l-5 5 M309 239 l5 5" stroke-width="1"/>
+    <path d="M256 190 v6 a3 3 0 0 0 6 0 v-6 M268 186 v6 a3 3 0 0 0 6 0 v-6" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M112 200 Q130 170 150 162" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M212 162 Q240 176 266 208" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地面线（毯子） -->
+    <path d="M40 268 Q180 260 320 268" stroke-width="1.2"/>
+    <path d="M56 274 q30 -3 60 0 M244 274 q30 -3 60 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0209 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">进入感应亮灯</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">掀开帘子的那一秒，烛光替你先进去</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">帘子磁簧 + PIR → 状态判断 → WLED 预设（亮起 / 阅读 / 夜灯）</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">拉开帘子 3 秒呼吸到 30%，固定 2200K 烛光色</text>
+    <text x="64" y="366">15 分钟没动静就退到 5% 夜灯，再半小时全灭</text>
+    <text x="64" y="396">手动调过亮度，一小时内自动逻辑不插手</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：WLED + ESPHome · 数据出口：HA light.tent_string 实体</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：Aircoookie/WLED · esphome/esphome</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

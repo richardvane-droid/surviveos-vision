@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0501-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0501-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0501-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0501-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 碎石带 -->
+    <path d="M52 298 l96 -32 l46 18 l-96 32 Z" stroke-width="1.5"/>
+    <path d="M52 298 v9 l46 18 v-9 M98 316 l96 -32 v-9" stroke-width="1.2"/>
+    <path d="M54 300 v8 l44 17 v-8 Z" fill="url(#p0501-1-shade)" stroke="none"/>
+    <path d="M66 292 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M84 286 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M104 280 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M124 274 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M76 300 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M96 294 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M116 288 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M136 282 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M90 306 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M110 300 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M130 294 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0" stroke-width="0.7"/>
+    <!-- 2 横木托梁 ×2 -->
+    <path d="M136 246 l84 -28 l10 5 l-84 28 Z" stroke-width="1.5"/>
+    <path d="M136 246 v6 l10 5 v-6 M146 257 l84 -28 v-6" stroke-width="1"/>
+    <path d="M147 252 l82 -27 v4 l-82 27 Z" fill="url(#p0501-1-shade)" stroke="none"/>
+    <path d="M142 246 l74 -24 M150 250 l60 -20" stroke-width="0.5"/>
+    <path d="M158 262 l84 -28 l10 5 l-84 28 Z" stroke-width="1.5"/>
+    <path d="M158 262 v6 l10 5 v-6 M168 273 l84 -28 v-6" stroke-width="1"/>
+    <path d="M169 268 l82 -27 v4 l-82 27 Z" fill="url(#p0501-1-shade)" stroke="none"/>
+    <!-- 3 杉木立柱 ×4 + 横档 -->
+    <path d="M196 206 v-62 h7 v62 Z M222 197 v-62 h7 v62 Z M248 188 v-62 h7 v62 Z M274 179 v-62 h7 v62 Z" stroke-width="1.5"/>
+    <path d="M203 206 l4 -2 v-62 l-4 2 M229 197 l4 -2 v-62 l-4 2 M255 188 l4 -2 v-62 l-4 2 M281 179 l4 -2 v-62 l-4 2" stroke-width="0.9"/>
+    <path d="M203 206 l4 -2 v-62 l-4 2 Z M229 197 l4 -2 v-62 l-4 2 Z M255 188 l4 -2 v-62 l-4 2 Z M281 179 l4 -2 v-62 l-4 2 Z" fill="url(#p0501-1-shade)" stroke="none"/>
+    <path d="M203 150 l19 -6 M229 141 l19 -6 M255 132 l19 -6" stroke-width="1.2"/>
+    <path d="M203 188 l19 -6 M229 179 l19 -6 M255 170 l19 -6" stroke-width="1.2"/>
+    <path d="M203 153 l19 -6 M229 144 l19 -6 M255 135 l19 -6 M203 191 l19 -6 M229 182 l19 -6 M255 173 l19 -6" stroke-width="0.6"/>
+    <!-- 4 柴火段 -->
+    <path d="M306 118 l14 -9 M306 104 l14 -9 M320 118 l14 -9 M320 104 l14 -9 M334 118 l14 -9 M334 104 l14 -9 M313 106 l14 -9 M313 92 l14 -9 M327 106 l14 -9 M327 92 l14 -9 M320 94 l14 -9 M320 80 l14 -9" stroke-width="0.9"/>
+    <circle cx="306" cy="111" r="7" stroke-width="1.4"/><circle cx="306" cy="111" r="3.5" stroke-width="0.7"/>
+    <circle cx="320" cy="111" r="7" stroke-width="1.4"/><circle cx="320" cy="111" r="3.5" stroke-width="0.7"/>
+    <circle cx="334" cy="111" r="7" stroke-width="1.4"/><circle cx="334" cy="111" r="3.5" stroke-width="0.7"/>
+    <circle cx="313" cy="99" r="7" stroke-width="1.4"/><circle cx="313" cy="99" r="3.5" stroke-width="0.7"/>
+    <circle cx="327" cy="99" r="7" stroke-width="1.4"/><circle cx="327" cy="99" r="3.5" stroke-width="0.7"/>
+    <circle cx="320" cy="87" r="7" stroke-width="1.4"/><circle cx="320" cy="87" r="3.5" stroke-width="0.7"/>
+    <path d="M320 118 l14 -9 l7 0 l-14 9 Z M334 118 l14 -9 v-4 l-14 9 Z" fill="url(#p0501-1-shade)" stroke="none"/>
+    <!-- 5 波浪瓦顶 -->
+    <path d="M354 68 q6 -9 12 0 q6 9 12 0 q6 -9 12 0 q6 9 12 0 q6 -9 12 0 q6 9 12 0" stroke-width="1.5"/>
+    <path d="M376 50 q6 -9 12 0 q6 9 12 0 q6 -9 12 0 q6 9 12 0 q6 -9 12 0 q6 9 12 0" stroke-width="1.2"/>
+    <path d="M354 68 L376 50 M426 68 L448 50" stroke-width="1.3"/>
+    <path d="M360 61 L382 43 M372 61 L394 43 M384 61 L406 43 M396 61 L418 43 M408 61 L430 43 M420 61 L442 43" stroke-width="0.6"/>
+    <path d="M354 68 q6 -9 12 0 q6 9 12 0 v4 q-6 -9 -12 0 q-6 9 -12 0 Z" fill="url(#p0501-1-shade)" stroke="none"/>
+    <path d="M378 68 q6 -9 12 0 q6 9 12 0 v4 q-6 -9 -12 0 q-6 9 -12 0 Z M402 68 q6 -9 12 0 q6 9 12 0 v4 q-6 -9 -12 0 q-6 9 -12 0 Z" fill="url(#p0501-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M150 306 H206"/><path d="M136 252 H116"/><path d="M285 160 H316"/><path d="M348 100 H378"/><path d="M440 60 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="306" r="8"/><circle cx="106" cy="252" r="8"/><circle cx="326" cy="160" r="8"/><circle cx="388" cy="100" r="8"/><circle cx="460" cy="60" r="8"/>
+    </g>
+    <text x="216" y="309.5">1</text><text x="106" y="255.5">2</text><text x="326" y="163.5">3</text><text x="388" y="103.5">4</text><text x="460" y="63.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">杉木柴架总成 · 爆炸图</text>
+    <text x="16" y="52">1 碎石带（15cm，防潮防蚁）</text>
+    <text x="16" y="68">2 横木托梁 ×2（柴离地 20cm）</text>
+    <text x="16" y="84">3 杉木立柱 ×4 + 横档（4 格）</text>
+    <text x="16" y="100">4 柴火段（切面朝外码放）</text>
+    <text x="16" y="116">5 波浪瓦顶（前后出檐 20cm）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0501-1</text>
+</svg>

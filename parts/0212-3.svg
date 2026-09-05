@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0212-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0212-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0212-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">训练模式心率上屏 · 流程图</text>
+  <g filter="url(#p0212-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 胶囊 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 步骤：ESP32 接收 -->
+    <rect x="175" y="49" width="110" height="40" rx="6"/>
+    <rect x="177" y="51" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 兜底：断连（虚线框） -->
+    <rect x="330" y="49" width="120" height="40" rx="6" stroke-dasharray="4 3"/>
+    <!-- 数据源 圆柱：PIR -->
+    <path d="M51 132 a34 6 0 0 1 68 0 v34 a34 6 0 0 1 -68 0 Z"/><ellipse cx="85" cy="132" rx="34" ry="6"/>
+    <!-- 判断 菱形 -->
+    <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
+    <!-- 是 → 切训练模式 -->
+    <rect x="330" y="130" width="120" height="40" rx="6"/>
+    <rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 底行 -->
+    <rect x="30" y="230" width="110" height="40" rx="6"/>
+    <rect x="175" y="230" width="110" height="40" rx="6"/>
+    <rect x="330" y="230" width="120" height="40" rx="6"/>
+    <path d="M232 176 l56 -24 l4 2 l-58 26 Z" fill="url(#p0212-3-shade)" stroke="none"/>
+    <path d="M334 172 h116 v3 h-116 Z M179 91 h106 v3 h-106 Z" fill="url(#p0212-3-shade)" stroke="none"/>
+    <path d="M34 272 h106 v3 h-106 Z M179 272 h106 v3 h-106 Z M334 272 h116 v3 h-116 Z" fill="url(#p0212-3-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="165" y="312" width="150" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0212-3-arrow)" stroke-linecap="round">
+    <path d="M140 69 H173"/>
+    <path d="M285 69 H328" stroke-dasharray="3 3"/>
+    <path d="M230 89 V126"/>
+    <path d="M119 152 H170" stroke-dasharray="3 3"/>
+    <path d="M288 152 H328"/>
+    <path d="M230 176 V205 H85 V228"/>
+    <path d="M390 170 V228"/>
+    <path d="M330 250 H287"/>
+    <path d="M230 270 V310"/>
+    <path d="M30 250 Q12 250 12 200 V160 Q12 152 22 152 H49" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">手环 BLE 心率广播</text>
+    <text x="230" y="65">ESP32 接收 BLE</text><text x="230" y="79">转 HA 心率实体</text>
+    <text x="390" y="65">断连 60 秒 → 显示 --</text><text x="390" y="79" font-size="8.5" fill="#666">计时继续跑，不打断训练</text>
+    <text x="85" y="152">健身角 PIR</text><text x="85" y="165" font-size="8.5" fill="#666">有人 / 无人</text>
+    <text x="230" y="149">有人且 &gt;100？</text><text x="230" y="162" font-size="8.5" fill="#666">持续 30 秒</text>
+    <text x="390" y="147">是 → 大屏切训练模式</text><text x="390" y="161">黑底大数字 + 计时</text>
+    <text x="85" y="247">否 → 普通仪表盘</text><text x="85" y="261">继续监听</text>
+    <text x="230" y="247">回落 &lt;100 满 5 分钟</text><text x="230" y="261">或人离开健身角</text>
+    <text x="390" y="247">按心率区间变色</text><text x="390" y="261" font-size="8.5" fill="#666">绿 &lt;120 · 黄 · 红 &gt;150</text>
+    <text x="240" y="331">切回仪表盘 · 写时长与均值</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="198">否</text><text x="290" y="60">兜底</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0212-3</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0301-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0301-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <marker id="p0301-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">烙铁双保险断电 · 流程图</text>
+  <g filter="url(#p0301-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+    <!-- 起点 -->
+    <rect x="30" y="52" width="110" height="34" rx="17"/>
+    <!-- 步骤：插座通电 -->
+    <rect x="180" y="50" width="110" height="40" rx="6"/>
+    <rect x="182" y="52" width="106" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 数据源：IronOS -->
+    <path d="M336 54 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="370" cy="54" rx="34" ry="6"/>
+    <!-- 判断 1 -->
+    <path d="M235 128 l62 24 l-62 24 l-62 -24 Z"/>
+    <rect x="30" y="132" width="110" height="40" rx="6"/>
+    <rect x="330" y="132" width="120" height="40" rx="6"/>
+    <rect x="332" y="134" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 判断 2 -->
+    <path d="M235 228 l62 24 l-62 24 l-62 -24 Z"/>
+    <rect x="30" y="232" width="110" height="40" rx="6"/>
+    <rect x="330" y="232" width="120" height="40" rx="6"/>
+    <rect x="332" y="234" width="116" height="36" rx="5" stroke-width="0.5"/>
+    <!-- 阴影 -->
+    <path d="M237 176 l60 -24 l4 2 l-62 26 Z M237 276 l60 -24 l4 2 l-62 26 Z" fill="url(#p0301-3-shade)" stroke="none"/>
+    <path d="M184 92 h106 v3 h-106 Z M334 174 h116 v3 h-116 Z M34 174 h106 v3 h-106 Z M34 274 h106 v3 h-106 Z M334 274 h116 v3 h-116 Z" fill="url(#p0301-3-shade)" stroke="none"/>
+    <!-- 终点 -->
+    <rect x="170" y="312" width="130" height="30" rx="15"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0301-3-arrow)" stroke-linecap="round">
+    <path d="M140 69 H178"/>
+    <path d="M336 72 H292" stroke-dasharray="3 3"/>
+    <path d="M235 90 V126"/>
+    <path d="M173 152 H142"/>
+    <path d="M297 152 H328"/>
+    <path d="M85 172 V200 H231"/>
+    <path d="M390 172 V200 H239"/>
+    <path d="M235 176 V226"/>
+    <path d="M173 252 H142"/>
+    <path d="M297 252 H328"/>
+    <path d="M390 272 V327 H302"/>
+    <path d="M85 232 V210" stroke-dasharray="3 3"/>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
+    <text x="85" y="73">毫米波：有人坐下</text>
+    <text x="235" y="67">智能插座通电</text><text x="235" y="81">臂灯亮 · 烙铁预热</text>
+    <text x="370" y="74">IronOS 烙铁</text><text x="370" y="87" font-size="8.5" fill="#666">加速度计 + 温度</text>
+    <text x="235" y="149">烙铁静置 &gt; 30 秒？</text><text x="235" y="162" font-size="8.5" fill="#666">加速度计没动静</text>
+    <text x="85" y="149">否 → 保持 320℃</text><text x="85" y="163">正常焊接</text>
+    <text x="390" y="149">是 → 降到 150℃ 休眠</text><text x="390" y="163">拿起 2 秒回温</text>
+    <text x="235" y="249">无人 ≥ 10 分钟？</text><text x="235" y="262" font-size="8.5" fill="#666">毫米波持续无人</text>
+    <text x="85" y="249">否 → 继续计时</text><text x="85" y="263">人回来就清零</text>
+    <text x="390" y="249">是 → 插座断电</text><text x="390" y="263">功率读到 0W 才算</text>
+    <text x="235" y="331">手机推送“阁楼已断电”</text>
+  </g>
+  <g font-size="8.5" fill="#666"><text x="148" y="147">否</text><text x="312" y="147">是</text><text x="148" y="247">否</text><text x="312" y="247">是</text><text x="242" y="196">汇合</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0301-3</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0403-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0403-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0403-4p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0403-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0403-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 传感器板 + 气体（左） -->
+    <rect x="44" y="141" width="44" height="30" rx="3" stroke-width="1.4"/>
+    <rect x="49" y="146" width="34" height="20" rx="2" stroke-width="0.7"/>
+    <path d="M50 141.0 v-5 M50 171.0 v5 M58 141.0 v-5 M58 171.0 v5 M66 141.0 v-5 M66 171.0 v5 M74 141.0 v-5 M74 171.0 v5 " stroke-width="1"/>
+    <rect x="49" y="160" width="34" height="6" fill="url(#p0403-4p-shade)" stroke="none"/>
+    <path d="M52 120 q6 -8 0 -16 M62 122 q6 -8 0 -16 M72 120 q6 -8 0 -16" stroke-width="1" stroke-dasharray="2 2"/>
+    <circle cx="80" cy="132" r="4" stroke-width="0.8"/><circle cx="90" cy="126" r="2.5" stroke-width="0.7"/>
+    <path d="M40 186 q26 6 52 0" stroke-width="0.6"/>
+    <!-- HA 房子（中） -->
+    <path d="M150 164 l30 -26 l30 26 v34 h-60 Z" stroke-width="1.6"/>
+    <path d="M144 166 l36 -32 l36 32" stroke-width="1.2"/>
+    <circle cx="180" cy="176" r="8" stroke-width="1.2"/>
+    <path d="M180 168 v-3 M180 184 v3 M172 176 h-3 M188 176 h3" stroke-width="1"/>
+    <path d="M152 194 h56 v3 h-56 Z" fill="url(#p0403-4p-shade)" stroke="none"/>
+    <!-- 手机 + 风机（右） -->
+    <rect x="250" y="124" width="28" height="46" rx="5" stroke-width="1.4"/>
+    <rect x="253" y="130" width="22" height="32" rx="2" stroke-width="0.6"/>
+    <path d="M257 138 h14 M257 146 h14 M257 154 h8" stroke-width="0.8"/>
+    <circle cx="264.0" cy="166" r="1.6" stroke-width="0.8"/>
+    <rect x="253" y="134" width="22" height="10" rx="1" fill="url(#p0403-4p-shade)" stroke="none"/>
+    <path d="M280 130 q6 -3 5 -9 M282 138 q9 -4 8 -14" stroke-width="0.8"/>
+    <circle cx="300" cy="196" r="15" stroke-width="1.3"/>
+    <path d="M300 196 q-7.5 -13.5 0 -12.75 M300 196 q14.25 1.5 11.25 7.5 M300 196 q-7.5 12.75 -12 5.25" stroke-width="1.1"/>
+    <circle cx="300" cy="196" r="2" stroke-width="0.9"/>
+    <path d="M284 180 h32 v32 h-32 Z" stroke-width="1"/>
+    <path d="M316 186 h10 v20" stroke-width="0.9"/>
+    <!-- 箭头 -->
+    <path d="M92 164 Q116 166 144 166" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M140.0 170.0 L146 166 L140.0 162.0" stroke-width="1"/>
+    <path d="M212 166 Q228 154 244 148" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M241.9 152.9 L246 147 L238.9 145.5" stroke-width="1"/>
+    <path d="M212 186 Q246 194 280 196" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M275.8 199.7 L282 196 L276.2 191.7" stroke-width="1"/>
+    <text x="180" y="180" text-anchor="middle" font-size="8" fill="#3d3d3d" stroke="none">VOC</text>
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/>
+    <path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="46" y="200" font-size="8" fill="#666">SGP41 · PM2.5</text><text x="290" y="226" font-size="8" fill="#666">风机高速</text>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0403 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">VOC 监测告警</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">闻不到的味道，传感器替你闻</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">SGP41 VOC 指数 → ESPHome → HA 分级阈值 → 风机高速 / 推送 / 中枢屏</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">>150 风机切高速，>250 推送开窗</text>
+    <text x="64" y="366">喷后 30 分钟不降，提示换过滤棉</text>
+    <text x="64" y="396">按天画曲线，看得出哪种漆最毒</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：手机推送 + 0211 中枢屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：MallocArray/airgradient_esphome</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

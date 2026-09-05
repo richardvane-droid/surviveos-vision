@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0304-5p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0304-5p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0304-5p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0304-5p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 主视觉：电芯组 + BMS（左） → ESP32 / 蓝牙（中上） → 手机告警 + 继电器（右） -->
+    <!-- 电芯 ×4 + BMS 板 -->
+    <rect x="46" y="184" width="10" height="48" rx="2" stroke-width="1.4"/>
+    <rect x="58" y="184" width="10" height="48" rx="2" stroke-width="1.4"/>
+    <rect x="70" y="184" width="10" height="48" rx="2" stroke-width="1.4"/>
+    <rect x="82" y="184" width="10" height="48" rx="2" stroke-width="1.4"/>
+    <path d="M49 180 h4 M61 180 h4 M73 180 h4 M85 180 h4 M51 178 v4 M75 178 v4" stroke-width="0.9"/>
+    <rect x="47" y="216" width="8" height="14" fill="url(#p0304-5p-shade)" stroke="none"/>
+    <rect x="71" y="216" width="8" height="14" fill="url(#p0304-5p-shade)" stroke="none"/>
+    <rect x="44" y="164" width="50" height="9" rx="1.5" stroke-width="1.4"/>
+    <rect x="46" y="166" width="46" height="5" fill="url(#p0304-5p-dots)" stroke="none"/>
+    <path d="M51 173 v6 M63 173 v6 M75 173 v6 M87 173 v6" stroke-width="0.8"/>
+    <!-- 温度计 -->
+    <path d="M104 190 v26 a5 5 0 1 0 6 0 v-26 a3 3 0 0 0 -6 0 Z" stroke-width="1.1"/>
+    <path d="M107 202 v14" stroke-width="1.6"/>
+    <path d="M112 194 h3 M112 200 h3 M112 206 h3" stroke-width="0.6"/>
+    <!-- ESP32 + 蓝牙 -->
+    <rect x="160" y="120" width="40" height="40" rx="3" stroke-width="1.6"/>
+    <rect x="168" y="128" width="24" height="24" rx="1" stroke-width="0.9"/>
+    <rect x="170" y="130" width="20" height="20" fill="url(#p0304-5p-dots)" stroke="none"/>
+    <path d="M160 128 h-6 M160 140 h-6 M160 152 h-6 M200 128 h6 M200 140 h6 M200 152 h6 M168 160 v6 M180 160 v6 M192 160 v6" stroke-width="1"/>
+    <path d="M180 120 v-10 M174 110 h12" stroke-width="1.1"/>
+    <path d="M210 128 a14 14 0 0 1 0 24 M216 122 a22 22 0 0 1 0 36" stroke-width="0.9" stroke-dasharray="2 3"/>
+    <!-- 手机告警 -->
+    <rect x="256" y="170" width="40" height="66" rx="6" stroke-width="1.6"/>
+    <rect x="260" y="178" width="32" height="50" rx="2" stroke-width="0.8"/>
+    <path d="M270 174 h12" stroke-width="0.8"/>
+    <path d="M276 190 l12 20 h-24 Z" stroke-width="1.3"/>
+    <path d="M276 197 v7 M276 207 v1" stroke-width="1.4"/>
+    <path d="M262 216 h28 M262 221 h20" stroke-width="0.6"/>
+    <!-- 充电继电器（断开） -->
+    <path d="M304 214 h8 l10 -8 M324 214 h8" stroke-width="1.3"/>
+    <circle cx="312" cy="214" r="1.6" stroke-width="0.9"/><circle cx="324" cy="214" r="1.6" stroke-width="0.9"/>
+    <rect x="308" y="222" width="20" height="10" rx="2" stroke-width="1"/>
+    <path d="M309 223 h18 v8 h-18 Z" fill="url(#p0304-5p-shade)" stroke="none"/>
+    <path d="M318 222 v-6" stroke-width="0.8" stroke-dasharray="1.5 1.5"/>
+    <!-- 箭头 -->
+    <path d="M100 176 Q126 156 156 140" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M222 148 Q238 164 254 186" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 地面线 -->
+    <path d="M40 268 Q180 262 320 268" stroke-width="1.2"/>
+    <path d="M44 272 q40 -3 80 0 M236 272 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0304 · L5</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">电池健康看护</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">每一节电芯的体温和血压，都有人盯着</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">JK BMS → ESP32 / 蓝牙 → HA 阈值判断 → 推送 + 切充电继电器</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">单体电压、压差、温度、循环次数每 10 秒进 HA</text>
+    <text x="64" y="366">压差 &gt;50mV 均衡；&gt;45℃ 或 &lt;0℃ 立即停充并推送</text>
+    <text x="64" y="396">BMS 硬件保护独立于软件，每月自动出健康报告</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HA · 数据出口：HA 电池实体 · 月度健康报告</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：syssi/esphome-jk-bms · fl4p/batmon-ha</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

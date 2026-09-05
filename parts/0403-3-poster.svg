@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0403-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0403-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0403-3p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0403-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+
+  <g filter="url(#p0403-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 门（左） -->
+    <rect x="44" y="118" width="40" height="70" rx="2" stroke-width="1.6"/>
+    <path d="M48 122 h32 v62 h-32 Z" stroke-width="0.7"/>
+    <rect x="54" y="128" width="20" height="24" rx="1" stroke-width="1"/>
+    <path d="M56 130 l16 20" stroke-width="0.5"/>
+    <circle cx="76" cy="164" r="2" stroke-width="1"/>
+    <path d="M84 122 h6 v6 h-6 Z" stroke-width="1"/>
+    <path d="M84 122 h6 v6 h-6 Z" fill="url(#p0403-3p-shade)" stroke="none"/>
+    <path d="M60 110 v-6 M52 108 l-3 -4 M68 108 l3 -4" stroke-width="0.9"/>
+    <!-- ESP32 + 倒计时钟（中） -->
+    <rect x="156" y="132" width="48" height="32" rx="3" stroke-width="1.4"/>
+    <rect x="161" y="137" width="38" height="22" rx="2" stroke-width="0.7"/>
+    <path d="M162 132.0 v-5 M162 164.0 v5 M170 132.0 v-5 M170 164.0 v5 M178 132.0 v-5 M178 164.0 v5 M186 132.0 v-5 M186 164.0 v5 M194 132.0 v-5 M194 164.0 v5 " stroke-width="1"/>
+    <rect x="161" y="153" width="38" height="6" fill="url(#p0403-3p-shade)" stroke="none"/>
+    <circle cx="180" cy="204" r="18" stroke-width="1.4"/>
+    <path d="M180 204 V190 M180 204 L190 210" stroke-width="1.6"/>
+    <path d="M180 188 v3 M180 220 v-3 M164 204 h3 M196 204 h-3" stroke-width="1"/>
+    <path d="M180 190 a14 14 0 0 1 12 20" stroke-width="2.4" stroke-opacity="0.5"/>
+    <!-- 风机 + 橙灯（右） -->
+    <circle cx="280" cy="140" r="16" stroke-width="1.3"/>
+    <path d="M280 140 q-8 -14.4 0 -13.6 M280 140 q15.2 1.6 12 8 M280 140 q-8 13.6 -12.8 5.6" stroke-width="1.1"/>
+    <circle cx="280" cy="140" r="2" stroke-width="0.9"/>
+    <path d="M262 122 h36 v36 h-36 Z" stroke-width="1"/>
+    <path d="M298 128 h16 q4 0 4 4 v6" stroke-width="1.1"/>
+    <path d="M300 120 h14 v-6" stroke-width="0.6"/>
+    <path d="M270 184 a10 10 0 0 1 20 0 v8 h-20 Z" stroke-width="1.4"/>
+    <path d="M268 192 h24 v4 h-24 Z" stroke-width="1.1"/>
+    <path d="M268 192 h24 v4 h-24 Z" fill="url(#p0403-3p-shade)" stroke="none"/>
+    <path d="M280 170 v-5 M270 174 l-4 -3 M290 174 l4 -3" stroke-width="1"/>
+    <path d="M280 196 v6 M274 202 h12" stroke-width="1"/>
+    <!-- 箭头 -->
+    <path d="M94 150 Q120 148 150 148" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M146.0 152.0 L152 148 L146.0 144.0" stroke-width="1"/>
+    <path d="M208 146 Q230 142 254 140" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M250.4 144.6 L256 140 L249.6 136.6" stroke-width="1"/>
+    <path d="M200 200 Q230 196 262 190" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M258.9 195.1 L264 190 L257.3 187.3" stroke-width="1"/>
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/>
+    <path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="50" y="204" font-size="8" fill="#666">门磁</text><text x="196" y="236" font-size="8" fill="#666">30 分钟倒计时</text><text x="296" y="214" font-size="8" fill="#666">风机 · 橙灯</text>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0403 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">排风联锁</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">门一开风就走，门关了风再多走三十分钟</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">门磁 → ESP32 本地联锁 → 风机 + 橙灯 → 关门延时 30 分钟停</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">门开即启动风机和橙灯，想忘都忘不掉</text>
+    <text x="64" y="366">关门延时 30 分钟，漆雾排干净再停</text>
+    <text x="64" y="396">ESP32 本地执行，断网照常联锁</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome（ESP32 本地）· 数据出口：HA 剩余时间 + 手机加时</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：patrickcollins12/esphome-fan-controller</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

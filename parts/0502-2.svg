@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0502-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0502-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0502-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0502-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 预埋套筒 -->
+    <ellipse cx="110" cy="266" rx="30" ry="11" stroke-width="1.5"/>
+    <ellipse cx="110" cy="266" rx="24" ry="8" stroke-width="0.8"/>
+    <path d="M80 266 v50 a30 11 0 0 0 60 0 v-50" stroke-width="1.4"/>
+    <path d="M82 296 a30 11 0 0 0 56 0" stroke-width="0.6"/>
+    <path d="M112 316 a30 11 0 0 0 26 -4 v-46 a30 11 0 0 1 -26 4 Z" fill="url(#p0502-2-shade)" stroke="none"/>
+    <path d="M96 318 a2 1.5 0 1 0 4 0 a2 1.5 0 1 0 -4 0 M108 322 a2 1.5 0 1 0 4 0 a2 1.5 0 1 0 -4 0 M120 320 a2 1.5 0 1 0 4 0 a2 1.5 0 1 0 -4 0" stroke-width="0.8"/>
+    <path d="M84 280 h4 M84 292 h4 M84 304 h4" stroke-width="0.6"/>
+    <!-- 2 24V 驱动 + 接线盒 -->
+    <path d="M150 236 l40 -14 l16 7 l-40 14 Z" stroke-width="1.5"/>
+    <path d="M150 236 v14 l16 7 v-14 M166 257 l40 -14 v-14" stroke-width="1.2"/>
+    <path d="M167 244 l38 -13 v12 l-38 13 Z" fill="url(#p0502-2-shade)" stroke="none"/>
+    <path d="M156 232 l26 -9 M158 246 v-6 M162 248 v-6" stroke-width="0.7"/>
+    <path d="M150 244 q-14 4 -18 14 M206 236 q10 -6 14 -12" stroke-width="1.1"/>
+    <path d="M186 224 h6 v4 h-6 Z" stroke-width="0.8"/>
+    <!-- 3 灯体（LED + 反光杯） -->
+    <ellipse cx="245" cy="160" rx="24" ry="9" stroke-width="1.5"/>
+    <path d="M221 160 v28 a24 9 0 0 0 48 0 v-28" stroke-width="1.4"/>
+    <path d="M247 197 a24 9 0 0 0 22 -6 v-26 a24 9 0 0 1 -22 6 Z" fill="url(#p0502-2-shade)" stroke="none"/>
+    <ellipse cx="245" cy="160" rx="15" ry="5.5" stroke-width="0.9"/>
+    <ellipse cx="245" cy="160" rx="6" ry="2.4" stroke-width="1"/>
+    <path d="M239 156 l-4 -6 M251 156 l4 -6 M245 155 v-7" stroke-width="0.7"/>
+    <path d="M245 196 v10" stroke-width="1"/>
+    <!-- 4 钢化玻璃面盖 + 密封圈 -->
+    <ellipse cx="320" cy="104" rx="30" ry="11" stroke-width="1.5"/>
+    <path d="M290 104 v4 a30 11 0 0 0 60 0 v-4" stroke-width="1"/>
+    <path d="M292 108 a30 10 0 0 0 56 0 v2 a30 10 0 0 1 -56 0 Z" fill="url(#p0502-2-shade)" stroke="none"/>
+    <path d="M300 100 q10 -4 20 -2" stroke-width="0.6"/>
+    <ellipse cx="320" cy="128" rx="28" ry="9" stroke-width="1.2"/>
+    <ellipse cx="320" cy="128" rx="24" ry="7" stroke-width="0.8"/>
+    <path d="M294 128 a28 9 0 0 0 52 0 M296 128 a24 7 0 0 0 48 0" fill="url(#p0502-2-shade2)" stroke="none" fill-rule="evenodd"/>
+    <!-- 5 防踩格栅盖 -->
+    <ellipse cx="392" cy="56" rx="32" ry="12" stroke-width="1.5"/>
+    <ellipse cx="392" cy="56" rx="26" ry="9" stroke-width="1"/>
+    <path d="M360 56 v4 a32 12 0 0 0 64 0 v-4" stroke-width="1.1"/>
+    <path d="M362 60 a32 11 0 0 0 60 0 v3 a32 11 0 0 1 -60 0 Z" fill="url(#p0502-2-shade)" stroke="none"/>
+    <path d="M366 56 h52 M392 47 v18 M374 51 l36 10 M374 61 l36 -10" stroke-width="1"/>
+    <path d="M361 56 a32 12 0 0 1 64 0 a26 9 0 0 0 -52 0 Z" fill="url(#p0502-2-shade)" stroke="none" fill-rule="evenodd"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M140 296 H206"/><path d="M150 248 H116"/><path d="M269 176 H300"/><path d="M350 104 H378"/><path d="M424 56 H450"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="296" r="8"/><circle cx="106" cy="248" r="8"/><circle cx="310" cy="176" r="8"/><circle cx="388" cy="104" r="8"/><circle cx="460" cy="56" r="8"/>
+    </g>
+    <text x="216" y="299.5">1</text><text x="106" y="251.5">2</text><text x="310" y="179.5">3</text><text x="388" y="107.5">4</text><text x="460" y="59.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">透光地灯 · 爆炸图</text>
+    <text x="16" y="52">1 预埋 PVC 套筒（底部排水孔）</text>
+    <text x="16" y="68">2 24V 驱动 + 接线盒</text>
+    <text x="16" y="84">3 灯体（3W COB + 反光杯）</text>
+    <text x="16" y="100">4 钢化玻璃面盖 + 密封圈</text>
+    <text x="16" y="116">5 防踩格栅盖（IP67）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0502-2</text>
+</svg>

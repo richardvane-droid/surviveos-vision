@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0502-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0502-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0502-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0502-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：屋檐下的相机盒 -->
+    <path d="M36 150 l48 -14 v6 l-48 14 Z" stroke-width="1.4"/>
+    <path d="M38 151 l44 -13 v4 l-44 13 Z" fill="url(#p0502-4p-shade)" stroke="none"/>
+    <rect x="46" y="160" width="44" height="34" rx="4" stroke-width="1.6"/>
+    <circle cx="68" cy="177" r="10" stroke-width="1.4"/>
+    <circle cx="68" cy="177" r="5" stroke-width="0.9"/>
+    <circle cx="68" cy="177" r="10" fill="url(#p0502-4p-dots)" stroke="none"/>
+    <path d="M52 166 h6" stroke-width="0.9"/>
+    <path d="M90 168 h10 M90 186 h10" stroke-width="0.9"/>
+    <!-- 中：一叠照片 + 太阳 -->
+    <rect x="160" y="170" width="46" height="34" rx="2" stroke-width="1.4" transform="rotate(-6 183 187)"/>
+    <rect x="156" y="164" width="46" height="34" rx="2" stroke-width="1.4" transform="rotate(4 179 181)"/>
+    <rect x="152" y="156" width="46" height="34" rx="2" stroke-width="1.6"/>
+    <path d="M156 184 q10 -14 18 -6 q6 -10 20 4" stroke-width="1"/>
+    <path d="M154 186 h42 v2 h-42 Z" fill="url(#p0502-4p-shade)" stroke="none"/>
+    <circle cx="186" cy="166" r="4" stroke-width="0.9"/>
+    <circle cx="180" cy="126" r="9" stroke-width="1.4"/>
+    <path d="M180 113 v-4 M180 139 v4 M167 126 h-4 M193 126 h4 M171 117 l-3 -3 M189 135 l3 3 M189 117 l3 -3 M171 135 l-3 3" stroke-width="1"/>
+    <!-- 右：视频片段（胶片 + 播放键） -->
+    <rect x="262" y="158" width="62" height="42" rx="3" stroke-width="1.6"/>
+    <path d="M262 166 h62 M262 192 h62" stroke-width="0.9"/>
+    <path d="M268 160 h4 v4 h-4 Z M278 160 h4 v4 h-4 Z M288 160 h4 v4 h-4 Z M298 160 h4 v4 h-4 Z M308 160 h4 v4 h-4 Z M268 194 h4 v4 h-4 Z M278 194 h4 v4 h-4 Z M288 194 h4 v4 h-4 Z M298 194 h4 v4 h-4 Z M308 194 h4 v4 h-4 Z" stroke-width="0.7"/>
+    <path d="M286 172 l14 7 l-14 7 Z" stroke-width="1.3"/>
+    <path d="M287 173 l12 6 l-12 6 Z" fill="url(#p0502-4p-shade)" stroke="none"/>
+    <!-- 箭头 -->
+    <path d="M102 178 Q122 178 146 176" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M214 180 Q234 180 256 180" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M142 172 l5 4 l-5 4 M252 176 l5 4 l-5 4" stroke-width="1"/>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0502 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">四季延时机</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">同一个机位，把一年的绿与红压成三十秒</text>
+  <text x="68" y="212" text-anchor="middle" font-size="8.5" fill="#666">每天 12:00 一张</text>
+  <text x="180" y="222" text-anchor="middle" font-size="8.5" fill="#666">按日期归档到 NAS</text>
+  <text x="293" y="216" text-anchor="middle" font-size="8.5" fill="#666">月末合成预览</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">树莓派相机 → 自动曝光抓拍 → 同步 NAS → ffmpeg 合成</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">固定机位固定构图，曝光跟着日出日落自动调</text>
+    <text x="64" y="366">十月变红那几周加密到每天三张</text>
+    <text x="64" y="396">拍失败或文件过小，当天就推送提醒补拍</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：树莓派（pi-timolo） · 数据出口：NAS 照片库 + 每月预览短片</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：pageauc/pi-timolo</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

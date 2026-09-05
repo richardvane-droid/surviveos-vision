@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0301-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0301-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0301-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0301-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：烙铁搁在架上 -->
+    <rect x="42" y="192" width="46" height="12" rx="5" stroke-width="1.5"/>
+    <path d="M50 195 v6 M56 195 v6 M62 195 v6" stroke-width="0.7"/>
+    <path d="M66 194 h20 v8 h-20 Z" fill="url(#p0301-3p-shade)" stroke="none"/>
+    <path d="M88 198 h18" stroke-width="1.6"/>
+    <path d="M106 195 l16 3 l-16 3 Z" stroke-width="1.1"/>
+    <path d="M104 214 a10 7 0 0 0 20 0" stroke-width="1.2"/>
+    <path d="M114 221 v6 M100 227 h28" stroke-width="1.2"/>
+    <path d="M120 190 q3 -6 0 -12 M128 188 q3 -6 0 -12" stroke-width="0.8"/>
+    <path d="M36 198 h4" stroke-width="1.6"/>
+    <!-- 中：计时钟 -->
+    <circle cx="180" cy="160" r="30" stroke-width="1.6"/>
+    <circle cx="180" cy="160" r="30" fill="url(#p0301-3p-dots)" stroke="none"/>
+    <path d="M180 134 v4 M180 186 v-4 M154 160 h4 M206 160 h-4" stroke-width="1.2"/>
+    <path d="M180 160 V140 M180 160 L194 168" stroke-width="1.8"/>
+    <path d="M172 126 h16 M180 126 v-6" stroke-width="1.2"/>
+    <path d="M180 160 L180 140 A20 20 0 0 1 199 166 Z" fill="url(#p0301-3p-shade)" stroke="none"/>
+    <!-- 右：智能插座 + 断电叉 -->
+    <rect x="262" y="176" width="56" height="44" rx="6" stroke-width="1.6"/>
+    <circle cx="290" cy="198" r="14" stroke-width="1.3"/>
+    <circle cx="284" cy="198" r="2" stroke-width="1"/><circle cx="296" cy="198" r="2" stroke-width="1"/>
+    <path d="M300 168 l16 -16 M316 168 l-16 -16" stroke-width="1.8"/>
+    <rect x="266" y="210" width="48" height="6" fill="url(#p0301-3p-shade)" stroke="none"/>
+    <path d="M270 184 h4 v3 h-4 Z" stroke-width="0.8"/>
+    <!-- 箭头 -->
+    <path d="M136 194 Q150 180 152 166" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M148 172 l4 -7 l4 7" stroke-width="1"/>
+    <path d="M208 166 Q236 172 260 190" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M253 190 l7 1 l-1 -7" stroke-width="1"/>
+    <!-- 地平线 -->
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M44 274 q40 -3 80 0 M236 274 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0301 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">烙铁双保险</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">放下三十秒自己睡，走开十分钟自己断电</text>
+  <text x="180" y="204" text-anchor="middle" font-size="8.5" fill="#666">30 秒 / 10 分钟</text>
+  <text x="290" y="232" text-anchor="middle" font-size="8.5" fill="#666">0W</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">IronOS 静置休眠 → 毫米波无人计时 → 智能插座断电 → 功率 0W 推送确认</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">第一道：烙铁自己的加速度计，静置 30 秒降温休眠</text>
+    <text x="64" y="366">第二道：人离开阁楼 10 分钟，插座整路断电</text>
+    <text x="64" y="396">断没断以功率计量为准，0W 才推送，不靠猜</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：IronOS + HomeAssistant · 数据出口：插座功率曲线 + 手机推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：Ralim/IronOS · home-assistant/core</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

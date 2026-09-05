@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0301-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0301-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0301-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0301-1-holes" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1" fill="none" stroke="#5a5a5a" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0301-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- ① 松木腿架 + 碎屑桶 -->
+    <path d="M62 284 L84 268 H168 L146 284 Z" stroke-width="1.5"/>
+    <path d="M62 284 v40 M146 284 v40 M168 268 v40 M84 268 v6" stroke-width="1.4"/>
+    <path d="M62 290 H146 M146 290 L168 274" stroke-width="0.9"/>
+    <path d="M62 306 H146 M146 306 L168 290 M62 322 H146 M146 322 L168 306" stroke-width="0.7"/>
+    <path d="M148 286 L166 272 V306 L148 320 Z" fill="url(#p0301-1-shade)" stroke="none"/>
+    <path d="M40 300 a8 3 0 0 1 16 0 v22 a8 3 0 0 1 -16 0 Z" stroke-width="1.2"/>
+    <ellipse cx="48" cy="300" rx="8" ry="3" stroke-width="0.9"/>
+    <path d="M42 312 a8 3 0 0 0 12 1 v6 a8 3 0 0 1 -12 -1 Z" fill="url(#p0301-1-shade)" stroke="none"/>
+    <!-- ② 两层浅抽屉 + 分格盒 -->
+    <path d="M128 244 L140 235 H214 L202 244 Z M128 244 V254 H202 V244 M202 254 L214 245 V235" stroke-width="1.3"/>
+    <path d="M160 249 h10" stroke-width="1.4"/>
+    <path d="M134 232 L146 223 H220 L208 232 Z M134 232 V240 H208 V232 M208 240 L220 231 V223" stroke-width="1.3"/>
+    <path d="M166 236 h10" stroke-width="1.4"/>
+    <path d="M150 230 h8 v-6 h-8 Z M160 230 h12 v-6 h-12 Z M174 230 h6 v-6 h-6 Z M182 230 h20 v-6 h-20 Z" stroke-width="0.7"/>
+    <path d="M204 246 L212 240 V252 L204 258 Z" fill="url(#p0301-1-shade)" stroke="none"/>
+    <!-- ③ 120×50 松木台面 -->
+    <path d="M188 190 L206 176 H318 L300 190 Z" stroke-width="1.5"/>
+    <path d="M188 190 V198 H300 V190 M300 198 L318 184 V176" stroke-width="1.3"/>
+    <path d="M190 192 H298 V197 H190 Z" fill="url(#p0301-1-shade)" stroke="none"/>
+    <path d="M212 182 q30 2 60 -1 M220 186 q30 2 60 -1 M204 187 q10 -3 20 -2" stroke-width="0.6"/>
+    <!-- ④ 洞洞板背板（四类分区） -->
+    <path d="M280 104 L292 96 H386 L374 104 Z" stroke-width="1.2"/>
+    <rect x="280" y="104" width="94" height="48" stroke-width="1.5"/>
+    <path d="M374 104 L386 96 V144 L374 152" stroke-width="1"/>
+    <rect x="283" y="107" width="88" height="42" fill="url(#p0301-1-holes)" stroke="none"/>
+    <path d="M304 104 v48 M327 104 v48 M350 104 v48" stroke-width="0.7" stroke-dasharray="3 2"/>
+    <!-- ⑤ 挂钩 + 工具（螺丝刀/台钳/胶带） -->
+    <path d="M318 62 v-20 M318 42 l-4 -3 M316 62 h4 v12 h-4 Z" stroke-width="1.1"/>
+    <path d="M330 60 v-18 M330 42 l-4 -3 M328 60 h4 v12 h-4 Z" stroke-width="1.1"/>
+    <path d="M344 42 h20 v7 h-5 v10 h-10 v-10 h-5 Z M349 59 v9 h10 v-9" stroke-width="1.1"/>
+    <path d="M340 60 h9" stroke-width="1"/>
+    <path d="M349 59 h10 v9 h-10 Z" fill="url(#p0301-1-shade2)" stroke="none"/>
+    <circle cx="378" cy="56" r="7" stroke-width="1.2"/><circle cx="378" cy="56" r="3" stroke-width="0.8"/>
+    <!-- ⑥ 臂灯 + 智能插座 -->
+    <rect x="396" y="46" width="12" height="8" rx="1" stroke-width="1"/>
+    <circle cx="400" cy="50" r="1" stroke-width="0.6"/><circle cx="404" cy="50" r="1" stroke-width="0.6"/>
+    <path d="M402 46 l10 -20 M412 26 l20 6" stroke-width="1.4"/>
+    <circle cx="412" cy="26" r="2" stroke-width="0.9"/>
+    <path d="M432 28 l-3 6 l14 5 l3 -6 Z" stroke-width="1.4"/>
+    <path d="M430 34 l14 5 l-2 4 l-14 -5 Z" fill="url(#p0301-1-shade)" stroke="none"/>
+    <path d="M432 42 l1 4 M438 44 l1 4 M444 42 l3 3" stroke-width="0.7"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M168 300 H196"/><path d="M128 250 H100"/><path d="M318 190 H352"/><path d="M280 128 H250"/><path d="M314 54 H304"/><path d="M448 34 H452"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="300" r="8"/><circle cx="92" cy="250" r="8"/><circle cx="362" cy="190" r="8"/><circle cx="242" cy="128" r="8"/><circle cx="296" cy="54" r="8"/><circle cx="460" cy="34" r="8"/>
+    </g>
+    <text x="206" y="303.5">1</text><text x="92" y="253.5">2</text><text x="362" y="193.5">3</text><text x="242" y="131.5">4</text><text x="296" y="57.5">5</text><text x="460" y="37.5">6</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">斜顶松木工具台 · 爆炸图</text>
+    <text x="16" y="52">1 松木腿架（高 70cm）+ 碎屑桶</text>
+    <text x="16" y="68">2 两层浅抽屉 + Gridfinity 分格盒</text>
+    <text x="16" y="84">3 120×50cm 松木台面</text>
+    <text x="16" y="100">4 洞洞板背板（拆-量-切-焊四区）</text>
+    <text x="16" y="116">5 挂钩 + 螺丝刀 / 台钳 / 胶带</text>
+    <text x="16" y="132">6 臂灯 + 智能计量插座</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0301-1</text>
+</svg>

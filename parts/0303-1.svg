@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0303-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0303-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0303-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0303-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 泡沫拼接地垫 -->
+    <path d="M56 306 l64 -22 l56 12 l-64 22 Z" stroke-width="1.5"/>
+    <path d="M56 306 v5 l56 12 l64 -22 v-5" stroke-width="0.9"/>
+    <path d="M56 311 l56 12 l64 -22 v-5 l-64 22 Z" fill="url(#p0303-1-shade)" stroke="none"/>
+    <path d="M84 296 l56 12 M100 291 l56 12 M76 302 l32 -11 M96 306 l32 -11 M116 310 l32 -11" stroke-width="0.6"/>
+    <path d="M90 300 q3 -3 6 0 q-3 3 -6 0 M118 294 q3 -3 6 0 q-3 3 -6 0" stroke-width="0.6"/>
+    <!-- 2 自充气垫 -->
+    <path d="M146 240 q0 -5 5 -7 l50 -18 q6 -2 6 4 v8 q0 4 -5 6 l-50 18 q-6 2 -6 -4 Z" stroke-width="1.5"/>
+    <path d="M146 246 l6 -2 l50 -18 M160 236 l40 -14 M174 242 l28 -10" stroke-width="0.6"/>
+    <path d="M152 244 l50 -18 v6 l-50 18 Z" fill="url(#p0303-1-shade)" stroke="none"/>
+    <circle cx="204" cy="226" r="3" stroke-width="0.9"/><path d="M207 226 h4" stroke-width="0.9"/>
+    <!-- 3 羽绒睡袋 -->
+    <path d="M224 186 q-6 -10 4 -16 l26 -13 q12 -5 16 4 q4 9 -6 13 l-26 13 q-10 4 -14 -1 Z" stroke-width="1.5"/>
+    <path d="M232 178 l30 -14 M240 184 l26 -12 M246 166 l6 10 M256 161 l6 10" stroke-width="0.6"/>
+    <path d="M254 158 q8 -8 16 -2" stroke-width="0.9"/>
+    <path d="M226 184 l26 -13 v4 l-26 13 Z" fill="url(#p0303-1-shade)" stroke="none"/>
+    <!-- 4 铝杆内帐（穹顶） -->
+    <path d="M290 122 h54" stroke-width="1.5"/>
+    <path d="M290 122 q27 -48 54 0" stroke-width="1.6"/>
+    <path d="M298 122 q19 -34 38 0" stroke-width="0.8"/>
+    <path d="M317 86 q-14 12 -22 36 M317 86 q14 12 22 36" stroke-width="0.7"/>
+    <path d="M317 98 v24" stroke-width="0.9"/>
+    <path d="M306 122 q11 -22 22 0" stroke-width="0.7"/>
+    <path d="M308 122 q9 -18 18 0 Z" fill="url(#p0303-1-shade)" stroke="none"/>
+    <path d="M344 122 l6 -4 M290 122 l-6 -4" stroke-width="0.8"/>
+    <!-- 5 侧挂网兜 -->
+    <path d="M368 40 h34 v26 q-17 6 -34 0 Z" stroke-width="1.4"/>
+    <path d="M372 44 l26 20 M380 42 l20 16 M390 41 l10 8 M398 44 l-26 20 M390 42 l-20 16 M380 41 l-10 8" stroke-width="0.5"/>
+    <path d="M374 40 q-2 -8 4 -8 M396 40 q2 -8 -4 -8" stroke-width="1"/>
+    <path d="M376 46 h8 v10 h-8 Z" stroke-width="0.8"/>
+    <path d="M377 47 h6 v8 h-6 Z" fill="url(#p0303-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M124 300 H206"/><path d="M146 240 H118"/><path d="M270 172 H300"/><path d="M344 106 H368"/><path d="M402 52 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="216" cy="300" r="8"/><circle cx="108" cy="240" r="8"/><circle cx="310" cy="172" r="8"/><circle cx="378" cy="106" r="8"/><circle cx="450" cy="52" r="8"/>
+    </g>
+    <text x="216" y="303.5">1</text><text x="108" y="243.5">2</text><text x="310" y="175.5">3</text><text x="378" y="109.5">4</text><text x="450" y="55.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">常驻双人帐篷 · 爆炸图</text>
+    <text x="16" y="52">1 泡沫拼接地垫（3cm）</text>
+    <text x="16" y="68">2 自充气垫（5cm）</text>
+    <text x="16" y="84">3 羽绒睡袋</text>
+    <text x="16" y="100">4 铝杆内帐（200×220cm）</text>
+    <text x="16" y="116">5 侧挂网兜（书 / 耳机 / 眼罩）</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0303-1</text>
+</svg>

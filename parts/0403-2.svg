@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0403-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0403-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0403-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0403-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <!-- 1 铝型材门框 -->
+    <path d="M54 312 l64 -20 v-80 l-64 20 Z" stroke-width="1.5"/>
+    <path d="M62 306 l48 -15 v-70 l-48 15 Z" stroke-width="1.2"/>
+    <path d="M54 312 l8 -6 M118 292 l-8 -6 M54 232 l8 6 M118 212 l-8 6" stroke-width="0.7"/>
+    <path d="M54 312 l8 -6 v-70 l-8 -4 Z" fill="url(#p0403-2-shade)" stroke="none"/>
+    <path d="M58 300 v-60 M60 298 v-60" stroke-width="0.4"/>
+    <!-- 2 门扇骨架（带视窗） -->
+    <path d="M150 262 l52 -16 v-72 l-52 16 Z" stroke-width="1.5"/>
+    <path d="M158 244 l36 -11 v-40 l-36 11 Z" stroke-width="1.1"/>
+    <path d="M150 262 l52 -16 v-4 l-52 16 Z M150 190 l52 -16 v-4 l-52 16 Z" fill="url(#p0403-2-shade)" stroke="none"/>
+    <path d="M154 252 l44 -13 M154 178 l44 -13" stroke-width="0.6"/>
+    <path d="M196 218 q3 0 3 3 q0 3 -3 3" stroke-width="1"/>
+    <!-- 3 阳光板 + 密封条 -->
+    <path d="M236 184 l52 -16 v-48 l-52 16 Z" stroke-width="1.4"/>
+    <path d="M238 180.0 v-44" stroke-width="0.4"/><path d="M244 178.1 v-44" stroke-width="0.4"/><path d="M250 176.2 v-44" stroke-width="0.4"/><path d="M256 174.3 v-44" stroke-width="0.4"/><path d="M262 172.4 v-44" stroke-width="0.4"/><path d="M268 170.5 v-44" stroke-width="0.4"/><path d="M274 168.6 v-44" stroke-width="0.4"/><path d="M280 166.7 v-44" stroke-width="0.4"/>
+    <path d="M232 186 l52 -16 M232 186 v-50 l52 -16" stroke-width="1.6" stroke-dasharray="4 2"/>
+    <path d="M288 168 l3 1.5 v-48 l-3 -1.5" stroke-width="0.8"/>
+    <!-- 4 门磁开关 -->
+    <path d="M312 104 l10 -3 v8 l-10 3 Z M322 101 l3 1.5 v8 l-3 -1.5" stroke-width="1.2"/>
+    <path d="M312 104 l10 -3 v8 l-10 3 Z" fill="url(#p0403-2-shade)" stroke="none"/>
+    <path d="M330 98 l12 -4 v8 l-12 4 Z M342 94 l3 1.5 v8 l-3 -1.5" stroke-width="1.2"/>
+    <path d="M334 100 l4 -1.5 M334 103 l6 -2" stroke-width="0.6"/>
+    <path d="M326 108 l2 -4 M328 110 l2 -4" stroke-width="0.6"/>
+    <!-- 5 橙色警示灯 -->
+    <path d="M380 70 a12 12 0 0 1 24 0 v10 h-24 Z" stroke-width="1.5"/>
+    <path d="M384 70 a8 8 0 0 1 16 0" stroke-width="0.7"/>
+    <path d="M378 80 h28 v5 h-28 Z" stroke-width="1.2"/>
+    <path d="M378 80 h28 v5 h-28 Z" fill="url(#p0403-2-shade)" stroke="none"/>
+    <path d="M392 85 v6 M386 91 h12" stroke-width="1.1"/>
+    <path d="M392 52 v-6 M378 58 l-5 -4 M406 58 l5 -4 M372 68 h-6 M412 68 h6" stroke-width="1"/>
+  </g>
+  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
+    <path d="M118 290 H196"/><path d="M150 238 H118"/><path d="M290 158 H310"/><path d="M346 98 H372"/><path d="M406 66 H440"/>
+  </g>
+  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
+    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
+      <circle cx="206" cy="290" r="8"/><circle cx="108" cy="238" r="8"/><circle cx="320" cy="158" r="8"/><circle cx="382" cy="98" r="8"/><circle cx="450" cy="66" r="8"/>
+    </g>
+    <text x="206" y="293.5">1</text><text x="108" y="241.5">2</text><text x="320" y="161.5">3</text><text x="382" y="101.5">4</text><text x="450" y="69.5">5</text>
+  </g>
+  <g font-size="10.5" fill="#2a2a2a">
+    <text x="16" y="34" font-weight="700" font-size="12">阳光板小间门框 · 爆炸图</text>
+    <text x="16" y="52">1 30 系列铝型材门框</text>
+    <text x="16" y="68">2 门扇骨架（带透明视窗）</text>
+    <text x="16" y="84">3 6mm 阳光板 + D 型密封条</text>
+    <text x="16" y="100">4 门磁开关（开门触发）</text>
+    <text x="16" y="116">5 橙色“喷漆中”警示灯</text>
+  </g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0403-2</text>
+</svg>
