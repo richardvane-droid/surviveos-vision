@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>户型图与空间标注 · SurviveOs 设想版</title>
+<meta name="description" content="SurviveOs 设想版的空间底图：场地总图、一层平面、阁楼层、地堡与木屋家具平面、木屋北墙立面，铅笔重绘自 0008。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="preface.html" class="pref ">序</a>
+    <a href="areas/01.html" ><i>01</i>暖村木屋</a><a href="areas/02.html" ><i>02</i>地堡</a><a href="areas/03.html" ><i>03</i>阁楼间</a><a href="areas/04.html" ><i>04</i>阁楼仓库</a><a href="areas/05.html" ><i>05</i>庭院</a><a href="areas/06.html" ><i>06</i>草地</a><a href="areas/07.html" ><i>07</i>钓台</a>
+    <a href="space.html" class="about on">户型图</a>
+    <a href="refs.html" class="about ">参考索引</a>
+    <a href="about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="index.html">首页</a> › <span>户型图</span></nav>
+<article class="mod space">
+  <header class="mod-head">
+    <p class="kicker">空间底图 · 重绘自 00-总览 / 0008 户型图与空间标注 v1（2026-09-05）</p>
+    <h1>先把地量清楚，再往上做梦</h1>
+    <p class="lede">设想可以天马行空，但每个模块落在哪、有多大、朝哪边，都以这五张图为准：东南角一户 + 整个阁楼层是自己的，一层其余五户是邻居；庭院往南是过道、缓坡和一条 10 米宽的河；草地在东侧，是一条 100㎡ 的长条。<span class="est">灰色斜体的数字是按图面比例预估的，还没实测。</span></p>
+  </header>
+  
+  <section class="blk plan-blk" id="site">
+    <h2><em>📐</em> 1 · 场地总图</h2>
+    <figure class="plan-fig big"><div class="pc-frame"><svg class="pc-art plan-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 644" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="pl-site-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="pl-site-h01" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-site-h02" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-site-h03" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-site-h04" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-site-h05" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-site-h06" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-site-h07" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-site-hw" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#6b6b6b" stroke-width="0.9" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-site-hn" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+      <line x1="4" y1="0" x2="0" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+    </pattern>
+    <marker id="pl-site-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="14" y="20" font-weight="700" font-size="12" fill="#2a2a2a">场地总图 · 上北下南</text>
+  <g transform="translate(0,30)">
+    <g filter="url(#pl-site-pencil)" stroke-linecap="round" stroke-linejoin="round">
+            <rect fill="url(#pl-site-h06)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="268.6" y="60.5" width="91.4" height="326.2"/>
+      <rect fill="url(#pl-site-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="40.7" y="60.5" width="217.5" height="239.1"/>
+      <rect fill="url(#pl-site-h02)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="170.2" y="172.7" width="88" height="88.1"/>
+      <rect fill="url(#pl-site-h01)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="170.2" y="260.8" width="88" height="38.8"/>
+      <rect fill="url(#pl-site-h05)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="170.2" y="299.6" width="88" height="75.1"/>
+      <rect fill="url(#pl-site-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="170.2" y="374.7" width="88" height="34.5"/>
+      <rect fill="url(#pl-site-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="170.2" y="409.2" width="88" height="103.6"/>
+      <rect fill="url(#pl-site-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="20" y="512.8" width="340" height="52.2"/>
+      <rect fill="url(#pl-site-h07)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="195" y="480.9" width="51.8" height="31.9"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="170.2" y1="60.5" x2="170.2" y2="299.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="40.7" y1="172.7" x2="258.2" y2="172.7"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="105" y1="60.5" x2="105" y2="299.6"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.7" stroke-opacity="0.95" x="40.7" y="60.5" width="217.5" height="239.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.7" stroke-opacity="0.95" x1="170.2" y1="260.8" x2="258.2" y2="260.8"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="20" y1="527" x2="360" y2="527"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="20" y1="543" x2="360" y2="543"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="20" y1="559" x2="360" y2="559"/>
+    </g>
+    <g>
+            <line x1="32" y1="40" x2="32" y2="20" stroke="#3d3d3d" stroke-width="1.2" marker-end="url(#pl-site-arrow)"/>
+      <text font-size="10" fill="#555" x="42" y="34">北</text>
+      <text font-size="11" fill="#555" x="105" y="125" text-anchor="middle">其他五户</text>
+      <text font-size="11" fill="#555" x="105" y="230" text-anchor="middle">不可用</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="214" y="212" text-anchor="middle">02 地堡</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="214" y="284" text-anchor="middle">01 木屋</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="214" y="330" text-anchor="middle">05 庭院</text>
+      <text font-size="10.5" font-style="italic" fill="#8a8a8a" x="214" y="346" text-anchor="middle">≈ 22.2㎡</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="314" y="196" text-anchor="middle">06 草地</text>
+      <text font-size="10.5" font-style="italic" fill="#8a8a8a" x="314" y="212" text-anchor="middle">5.3 × 18.9m</text>
+      <text font-size="10.5" font-style="italic" fill="#8a8a8a" x="314" y="228" text-anchor="middle">≈ 100㎡</text>
+      <text font-size="11" fill="#555" x="214" y="396" text-anchor="middle">过道 2m</text>
+      <text font-size="11" fill="#555" x="214" y="440" text-anchor="middle">缓坡 6m</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="221" y="495" text-anchor="middle">07</text>
+      <text font-size="11" fill="#2a2a2a" x="221" y="509" text-anchor="middle">钓台</text>
+      <text font-size="10.5" font-style="italic" fill="#8a8a8a" x="298" y="500" text-anchor="middle">≈ 5.5㎡</text>
+      <text font-size="11" fill="#555" x="88" y="547" text-anchor="middle">河 · 宽 10m</text>
+    </g>
+  </g>
+  <text x="368" y="638" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0008-1</text>
+</svg>
+</div><figcaption>上北下南。东南角一户 + 整个阁楼层是自己的；庭院往南依次是 2m 过道、6m 缓坡、10m 宽的河，钓台在缓坡临河端；草地是东侧 5.3×18.9m 的长条。</figcaption></figure>
+  </section>
+  
+  <section class="blk plan-blk" id="floor1">
+    <h2><em>📐</em> 2 · 一层平面</h2>
+    <figure class="plan-fig big"><div class="pc-frame"><svg class="pc-art plan-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 484" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="pl-floor1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="pl-floor1-h01" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h02" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h03" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h04" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h05" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h06" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h07" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-hw" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#6b6b6b" stroke-width="0.9" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-hn" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+      <line x1="4" y1="0" x2="0" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+    </pattern>
+    <marker id="pl-floor1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="14" y="20" font-weight="700" font-size="12" fill="#2a2a2a">一层平面 · 东南角一户</text>
+  <g transform="translate(0,30)">
+    <g filter="url(#pl-floor1-pencil)" stroke-linecap="round" stroke-linejoin="round">
+            <rect fill="none" stroke="#7a7a7a" stroke-width="0.6" stroke-dasharray="4 3" x="20" y="40" width="339.8" height="383.5"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="48.3" y="61.2" width="75.5" height="115.7"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="48.3" y="176.9" width="75.5" height="211.2"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="123.8" y="61.2" width="101.5" height="115.7"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="123.8" y="176.9" width="101.5" height="211.2"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="61.2" width="120.4" height="153.4"/>
+      <rect fill="url(#pl-floor1-h05)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="388.1" width="120.4" height="35"/>
+      <rect fill="url(#pl-floor1-h02)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="214.6" width="120.4" height="120.4"/>
+      <rect fill="url(#pl-floor1-h01)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="335" width="120.4" height="53.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="48.3" y1="139.1" x2="225.3" y2="139.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="48.3" y1="176.9" x2="225.3" y2="176.9"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="48.3" y1="214.6" x2="225.3" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="86" y1="139.1" x2="86" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="174" y1="139.1" x2="174" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="123.8" y1="61.2" x2="123.8" y2="388.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="225.3" y1="61.2" x2="225.3" y2="388.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="148.6" x2="310.3" y2="335"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="225.3" y1="214.6" x2="345.7" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="148.6" x2="345.7" y2="148.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="184" x2="345.7" y2="184"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="257.1" x2="345.7" y2="257.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="287.8" x2="345.7" y2="287.8"/>
+      <line x1="225.3" y1="335" x2="345.7" y2="335" stroke="#3d3d3d" stroke-width="1.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="225.3" y1="339.7" x2="345.7" y2="339.7"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.7" stroke-opacity="0.95" x="48.3" y="61.2" width="297.4" height="326.9"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="62.1" y="59.7" width="28.3" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="96.6" y="59.7" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="153.3" y="59.7" width="42.5" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="202.2" y="59.7" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="274.9" y="59.7" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="300.8" y="59.7" width="35.4" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="55.4" y="386.6" width="35.4" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="107.3" y="386.6" width="21.3" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="142.7" y="386.6" width="70.8" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="238.3" y="386.6" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="276.1" y="386.6" width="35.4" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="344.2" y="148.6" width="3" height="28.3"/>
+    </g>
+    <g>
+            <line x1="352" y1="36" x2="352" y2="16" stroke="#3d3d3d" stroke-width="1.2" marker-end="url(#pl-floor1-arrow)"/>
+      <text font-size="10" fill="#555" x="344" y="30" text-anchor="end">北</text>
+      <text font-size="11" fill="#555" x="86" y="102" text-anchor="middle">24.35㎡</text>
+      <text font-size="11" fill="#555" x="86" y="300" text-anchor="middle">29.87㎡</text>
+      <text font-size="11" fill="#555" x="174" y="102" text-anchor="middle">32.05㎡</text>
+      <text font-size="11" fill="#555" x="174" y="300" text-anchor="middle">25.20㎡</text>
+      <text font-size="11" fill="#555" x="267" y="130" text-anchor="middle">36.70㎡</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="265" y="248" text-anchor="middle">02 地堡</text>
+      <text font-size="11" fill="#2a2a2a" x="265" y="265" text-anchor="middle">无窗 · 净高 2660</text>
+      <text font-size="11" fill="#2a2a2a" x="328" y="239" text-anchor="middle">0202</text>
+      <text font-size="11" fill="#2a2a2a" x="270" y="315" text-anchor="middle">储藏室</text>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-dasharray="2 2" x1="297" y1="311" x2="309" y2="311"/>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="285" y="356" text-anchor="middle">01 暖村木屋</text>
+      <text font-size="11" fill="#2a2a2a" x="285" y="373" text-anchor="middle">梁北缘以南</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="285" y="410" text-anchor="middle">05 庭院</text>
+    </g>
+  </g>
+  <text x="368" y="478" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0008-2</text>
+</svg>
+</div><figcaption>六户各带独立厨卫，只有东南角这户可用。地堡完全无窗，卫生间即 0202 灯箱；南侧梁底 2400，梁北缘就是地堡与木屋的分界线。</figcaption></figure>
+  </section>
+  
+  <section class="blk plan-blk" id="attic">
+    <h2><em>📐</em> 3 · 阁楼层</h2>
+    <figure class="plan-fig big"><div class="pc-frame"><svg class="pc-art plan-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 444" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="pl-attic-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="pl-attic-h01" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-attic-h02" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-attic-h03" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-attic-h04" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-attic-h05" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-attic-h06" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-attic-h07" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-attic-hw" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#6b6b6b" stroke-width="0.9" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-attic-hn" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+      <line x1="4" y1="0" x2="0" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+    </pattern>
+    <marker id="pl-attic-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="14" y="20" font-weight="700" font-size="12" fill="#2a2a2a">阁楼层 · 分区与可站立核心区</text>
+  <g transform="translate(0,30)">
+    <g filter="url(#pl-attic-pencil)" stroke-linecap="round" stroke-linejoin="round">
+            <rect fill="url(#pl-attic-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="48.3" y="332.6" width="94.4" height="55.5"/>
+      <rect fill="url(#pl-attic-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="142.7" y="311.4" width="82.6" height="76.7"/>
+      <rect fill="url(#pl-attic-h04)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="48.3" y="61.2" width="177" height="77.9"/>
+      <rect fill="url(#pl-attic-h04)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="61.2" width="120.4" height="250.2"/>
+      <rect fill="url(#pl-attic-h04)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="311.4" width="120.4" height="76.7"/>
+      <rect fill="url(#pl-attic-h04)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="142.7" y="139.1" width="82.6" height="75.5"/>
+      <rect fill="url(#pl-attic-h04)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="25" y="139.1" width="117.7" height="75.5"/>
+      <polygon fill="url(#pl-attic-h03)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" points="48.3,214.6 225.3,214.6 225.3,311.4 142.7,311.4 142.7,332.6 48.3,332.6"/>
+      <path d="M48.3,61.2 H345.7 V388.1 H48.3 Z M96.9,109.9 H297.1 V339.5 H96.9 Z" fill="url(#pl-attic-hn)" fill-opacity="0.6" fill-rule="evenodd"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.7" stroke-opacity="0.95" x="48.3" y="61.2" width="297.4" height="326.9"/>
+      <polygon points="48.3,214.6 225.3,214.6 225.3,311.4 142.7,311.4 142.7,332.6 48.3,332.6" fill="none" stroke="#3d3d3d" stroke-width="1.6"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x="25" y="139.1" width="117.7" height="75.5"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="142.7" y1="139.1" x2="142.7" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="48.3" y1="139.1" x2="225.3" y2="139.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="225.3" y1="61.2" x2="225.3" y2="388.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="225.3" y1="311.4" x2="345.7" y2="311.4"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="93.9" y="214.6" width="55.4" height="48.9"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="154.8" y="221" width="44.3" height="19.8"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-dasharray="6 3" stroke-opacity="0.9" x="96.9" y="109.9" width="200.2" height="229.6"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="23.5" y="155" width="3" height="35.4"/>
+      <rect fill="url(#pl-attic-hw)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="261.7" y="252.4" width="35.4" height="23.6"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-opacity="0.9" x="173.4" y="283.1" width="18.9" height="22.4" stroke-width="1.2"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="173.4" y1="283.1" x2="192.3" y2="305.5"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="192.3" y1="283.1" x2="173.4" y2="305.5"/>
+    </g>
+    <g>
+            <line x1="352" y1="36" x2="352" y2="16" stroke="#3d3d3d" stroke-width="1.2" marker-end="url(#pl-attic-arrow)"/>
+      <text font-size="10" fill="#555" x="344" y="30" text-anchor="end">北</text>
+      <line x1="298" y1="264" x2="343" y2="264" stroke="#3d3d3d" stroke-width="1.2" marker-end="url(#pl-attic-arrow)"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-dasharray="2 2" x1="127" y1="317" x2="171" y2="303"/>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="137" y="98" text-anchor="middle">0402 材料仓库</text>
+      <text font-size="11" fill="#2a2a2a" x="137" y="115" text-anchor="middle">24.8㎡ · 可站立 6.7</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="283" y="170" text-anchor="middle">0404 木工间</text>
+      <text font-size="11" fill="#2a2a2a" x="283" y="187" text-anchor="middle">54.1㎡ · 可站立 26.0</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="184" y="170" text-anchor="middle">过道 0401</text>
+      <text font-size="11" fill="#2a2a2a" x="184" y="187" text-anchor="middle">11.2㎡ 全可站</text>
+      <text font-size="11" fill="#2a2a2a" x="84" y="180" text-anchor="middle">楼梯</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="285" y="345" text-anchor="middle">成品暂存</text>
+      <text font-size="11" fill="#2a2a2a" x="285" y="362" text-anchor="middle">16.6㎡ · 低矮</text>
+      <text font-size="11" fill="#555" x="121.6" y="234" text-anchor="middle">0303</text>
+      <text font-size="11" fill="#555" x="121.6" y="250" text-anchor="middle">帐篷</text>
+      <text font-size="11" fill="#555" x="177" y="235" text-anchor="middle">0301</text>
+      <text font-size="11" fill="#555" x="177" y="257" text-anchor="middle">工具台</text>
+      <text font-size="11" fill="#2a2a2a" font-weight="700" x="279" y="246" text-anchor="middle">喷涂柜</text>
+      <text font-size="11" fill="#2a2a2a" font-weight="700" x="279" y="268" text-anchor="middle">0403</text>
+      <text font-size="11" fill="#555" x="320" y="257" text-anchor="middle">排风出东墙</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="105" y="280" text-anchor="middle">03 阁楼间</text>
+      <text font-size="11" fill="#2a2a2a" x="105" y="296" text-anchor="middle">可站立 24.1㎡</text>
+      <text font-size="10.5" font-style="italic" fill="#8a8a8a" x="92" y="322" text-anchor="middle">天窗 800×900</text>
+      <text font-size="11" fill="#555" x="95" y="364" text-anchor="middle">爬行储物</text>
+      <text font-size="11" fill="#555" x="184" y="356" text-anchor="middle">爬行储物</text>
+    </g>
+  </g>
+  <text x="368" y="438" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0008-3</text>
+</svg>
+</div><figcaption>45° 四坡屋面，中间最高 2060。虚线框内为可站立核心区（外轮廓内缩 2060，约 82㎡，占整层 47%）；帐篷与工具台都在核心区内。</figcaption></figure>
+  </section>
+  
+  <section class="blk plan-blk" id="bunker-cabin">
+    <h2><em>📐</em> 4 · 地堡与木屋家具平面</h2>
+    <figure class="plan-fig big"><div class="pc-frame"><svg class="pc-art plan-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 514" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="pl-bunker-cabin-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="pl-bunker-cabin-h01" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h02" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h03" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h04" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h05" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h06" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h07" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-hw" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#6b6b6b" stroke-width="0.9" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-hn" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+      <line x1="4" y1="0" x2="0" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+    </pattern>
+    <marker id="pl-bunker-cabin-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="14" y="20" font-weight="700" font-size="12" fill="#2a2a2a">地堡与木屋 · 家具平面</text>
+  <g transform="translate(0,30)">
+    <g filter="url(#pl-bunker-cabin-pencil)" stroke-linecap="round" stroke-linejoin="round">
+            <rect fill="url(#pl-bunker-cabin-h02)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="35" y="15" width="310" height="300.7"/>
+      <rect fill="url(#pl-bunker-cabin-h01)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="35" y="321.9" width="310" height="124"/>
+      <rect x="35" y="315.7" width="310" height="6.2" fill="#3d3d3d"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="35" y="15" width="74.4" height="124" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="112.5" y="15" width="124" height="15.5" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="113.7" y="89.4" width="86.8" height="55.8" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="35" y="139" width="74.4" height="37.2" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="121.8" y="152.6" width="114.7" height="111.6" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="35" y="194.8" width="49.6" height="99.2" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="242.7" y="15" width="102.3" height="77.5" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="242.7" y="92.5" width="102.3" height="151.9" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="286.1" y="250.6" width="51.9" height="55.8" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="338" y="250.6" width="7" height="43.4" rx="1"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-opacity="0.9" x="97" y="303.3" width="136.4" height="12.4" rx="1" stroke-width="1.2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="35" y="325" width="117.8" height="34.1" rx="2"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="59.8" y1="325" x2="59.8" y2="359.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="85.8" y1="325" x2="85.8" y2="359.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="110.6" y1="325" x2="110.6" y2="359.1"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="36.9" y="364.7" width="12.4" height="40.3" rx="1"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="128" y="411.8" width="24.8" height="24.8" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="177.6" y="399.4" width="108.5" height="43.4" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="286.1" y="325" width="55.8" height="114.7" rx="2"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.7" stroke-opacity="0.95" x="35" y="15" width="310" height="430.9"/>
+    </g>
+    <g>
+            <text font-size="11" fill="#555" x="72" y="70" text-anchor="middle">床（架空）</text>
+      <text font-size="11" fill="#555" x="72" y="86" text-anchor="middle">200×120</text>
+      <text font-size="11" fill="#2a2a2a" x="72" y="102" text-anchor="middle">下方 0209</text>
+      <text font-size="11" fill="#555" x="174" y="27" text-anchor="middle">书架 200×25</text>
+      <text font-size="11" fill="#555" x="157" y="111" text-anchor="middle">沙发</text>
+      <text font-size="11" fill="#555" x="157" y="127" text-anchor="middle">140×90</text>
+      <text font-size="11" fill="#555" x="72" y="153" text-anchor="middle">双层衣架</text>
+      <text font-size="11" fill="#555" x="72" y="169" text-anchor="middle">120×60</text>
+      <text font-size="11" fill="#555" x="179" y="204" text-anchor="middle">地毯</text>
+      <text font-size="11" fill="#555" x="179" y="220" text-anchor="middle">180×180</text>
+      <text font-size="11" fill="#555" x="60" y="232" text-anchor="middle">写字台</text>
+      <text font-size="11" fill="#555" x="60" y="248" text-anchor="middle">0204</text>
+      <text font-size="11" fill="#555" x="60" y="264" text-anchor="middle">80×160</text>
+      <text font-size="11" fill="#555" x="294" y="48" text-anchor="middle">卫生间</text>
+      <text font-size="11" fill="#2a2a2a" x="294" y="64" text-anchor="middle">0202 灯箱</text>
+      <text font-size="11" fill="#555" x="294" y="160" text-anchor="middle">储藏室</text>
+      <text font-size="11" fill="#2a2a2a" x="294" y="176" text-anchor="middle">0210 防灾食品</text>
+      <text font-size="11" fill="#555" x="312" y="272" text-anchor="middle">开门</text>
+      <text font-size="11" fill="#555" x="312" y="288" text-anchor="middle">90×90</text>
+      <text font-size="11" fill="#2a2a2a" x="165" y="290" text-anchor="middle">98寸电视 220 · 0207</text>
+      <text font-size="11" fill="#2a2a2a" x="94" y="346" text-anchor="middle">0107 吧台设备带</text>
+      <text font-size="11" fill="#555" x="55" y="388">空调</text>
+      <text font-size="11" fill="#2a2a2a" x="124" y="427" text-anchor="end">0106 炉区 40×40</text>
+      <text font-size="11" fill="#555" x="232" y="418" text-anchor="middle">写字台 0105</text>
+      <text font-size="11" fill="#555" x="232" y="434" text-anchor="middle">260×70（床下）</text>
+      <text font-size="11" fill="#555" x="314" y="370" text-anchor="middle">梯子床</text>
+      <text font-size="11" fill="#555" x="314" y="386" text-anchor="middle">90×185</text>
+      <text font-size="11" fill="#2a2a2a" x="314" y="402" text-anchor="middle">床下暗门</text>
+    </g>
+  </g>
+  <text x="368" y="508" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0008-4</text>
+</svg>
+</div><figcaption>地堡 4.85×5.00，木屋 2.00×5.00。两张床都架空：地堡架子床下是 0209 藏宝阁，木屋梯子床下是写字台与通往地堡的暗门。</figcaption></figure>
+  </section>
+  
+  <section class="blk plan-blk" id="northwall">
+    <h2><em>📐</em> 5 · 木屋北墙立面</h2>
+    <figure class="plan-fig big"><div class="pc-frame"><svg class="pc-art plan-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 289" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="pl-northwall-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="pl-northwall-h01" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-northwall-h02" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-northwall-h03" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-northwall-h04" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-northwall-h05" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-northwall-h06" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-northwall-h07" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-northwall-hw" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#6b6b6b" stroke-width="0.9" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-northwall-hn" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+      <line x1="4" y1="0" x2="0" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+    </pattern>
+    <marker id="pl-northwall-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="14" y="20" font-weight="700" font-size="12" fill="#2a2a2a">木屋北墙立面 · 自室内向北看</text>
+  <g transform="translate(0,30)">
+    <g filter="url(#pl-northwall-pencil)" stroke-linecap="round" stroke-linejoin="round">
+            <rect fill="url(#pl-northwall-h01)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="25" y="44.4" width="330" height="175.6"/>
+      <rect fill="url(#pl-northwall-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="25" y="44.4" width="330" height="17.2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="25" y="160.6" width="165" height="59.4" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="25" y="127.6" width="33" height="33" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="58" y="127.6" width="33" height="33" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="91" y="127.6" width="33" height="33" rx="2"/>
+      <rect fill="url(#pl-northwall-h03)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="130.6" y="121" width="52.8" height="39.6" rx="2"/>
+      <rect fill="url(#pl-northwall-h04)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="38.2" y="61.6" width="79.2" height="59.4" rx="2"/>
+      <rect fill="url(#pl-northwall-h04)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="124" y="61.6" width="66" height="59.4" rx="2"/>
+      <rect fill="url(#pl-northwall-h04)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="196.6" y="64.9" width="89.1" height="89.1" rx="2"/>
+      <rect fill="url(#pl-northwall-h04)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="196.6" y="160.6" width="89.1" height="46.2" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="292.3" y="61.6" width="59.4" height="36.4" rx="2"/>
+      <rect x="292.3" y="92" width="59.4" height="6" fill="#3d3d3d"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-dasharray="6 3" stroke-opacity="0.9" x="298.9" y="101.2" width="46.2" height="118.8"/>
+      <line x1="25" y1="220" x2="355" y2="220" stroke="#3d3d3d" stroke-width="2"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x="25" y="44.4" width="330" height="175.6"/>
+    </g>
+    <g>
+            <text font-size="11" fill="#555" x="190" y="57" text-anchor="middle">梁 · 梁底 2400</text>
+      <text font-size="11" fill="#2a2a2a" x="107" y="194" text-anchor="middle">0107 吧台矮柜 · 900 高</text>
+      <text font-size="11" fill="#2a2a2a" x="157" y="145" text-anchor="middle">0205</text>
+      <text font-size="11" fill="#2a2a2a" x="78" y="82" text-anchor="middle">0103</text>
+      <text font-size="11" fill="#2a2a2a" x="78" y="98" text-anchor="middle">电子画框墙</text>
+      <text font-size="11" fill="#2a2a2a" x="78" y="114" text-anchor="middle">1200×900</text>
+      <text font-size="11" fill="#2a2a2a" x="157" y="85" text-anchor="middle">0104</text>
+      <text font-size="11" fill="#2a2a2a" x="157" y="101" text-anchor="middle">照片墙</text>
+      <text font-size="11" fill="#2a2a2a" x="241" y="95" text-anchor="middle">0102</text>
+      <text font-size="11" fill="#2a2a2a" x="241" y="111" text-anchor="middle">作品展示墙</text>
+      <text font-size="10.5" font-style="italic" fill="#8a8a8a" x="241" y="127" text-anchor="middle">3×3 每框 430</text>
+      <text font-size="11" fill="#2a2a2a" x="241" y="178" text-anchor="middle">0101</text>
+      <text font-size="11" fill="#2a2a2a" x="241" y="194" text-anchor="middle">主产品展示</text>
+      <text font-size="11" fill="#555" x="322" y="75" text-anchor="middle">梯子床</text>
+      <text font-size="11" fill="#555" x="322" y="89" text-anchor="middle">床板 1850</text>
+      <text font-size="11" fill="#2a2a2a" x="322" y="152" text-anchor="middle">暗门</text>
+      <text font-size="11" fill="#2a2a2a" x="322" y="168" text-anchor="middle">→ 地堡</text>
+    </g>
+  </g>
+  <text x="368" y="283" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0008-5</text>
+</svg>
+</div><figcaption>5000×2660，自室内向北看。吧台矮柜 900 高、台面电器顶 1500，上方从西到东是 0103 电子画框墙、0104 照片墙、0102 作品展示墙，0101 主产品展示在 0102 正下方。</figcaption></figure>
+  </section>
+  
+  <section class="blk"><h2><em>📏</em> 关键尺寸与净高</h2>
+    <div class="tbl-wrap"><table class="size-tbl"><thead><tr><th>区域 / 空间</th><th>尺寸</th><th>面积</th><th>净高</th></tr></thead>
+    <tbody><tr><td>01 暖村木屋</td><td>2.00 × 5.00m</td><td>10.0㎡</td><td>2660（梁下 2400）</td></tr><tr><td>02 地堡（含卫生间、储藏室）</td><td>4.85 × 5.00m</td><td>24.3㎡</td><td>2660 · 无窗</td></tr><tr><td>03 阁楼间</td><td>≈7.5 × 5.35m（带缺口）</td><td>34.5㎡ / 可站立 24.1㎡</td><td>最高 2060 · 均 1830</td></tr><tr><td>0401 过道</td><td>≈3.5 × 3.2m</td><td>11.2㎡ 全可站</td><td>2060</td></tr><tr><td>0402 材料仓库</td><td>≈7.5 × 3.3m</td><td>24.8㎡ / 可站立 6.7㎡</td><td>0 → 2060 渐变</td></tr><tr><td>0404 木工间</td><td>≈5.1 × 10.6m</td><td>54.1㎡ / 可站立 26.0㎡</td><td>0 → 2060 渐变</td></tr><tr><td>成品暂存</td><td>≈5.1 × 3.25m</td><td>16.6㎡ / 可站立 3.6㎡</td><td>低矮为主</td></tr><tr><td>05 庭院</td><td>≈5.1 × 4.35m</td><td>22.2㎡</td><td>露天</td></tr><tr><td>06 草地</td><td>5.3 × 18.9m</td><td>100㎡</td><td>露天</td></tr><tr><td>07 钓台</td><td>≈2.5 × 2.2m</td><td>≈5.5㎡</td><td>露天</td></tr><tr><td>天窗</td><td>≈800 × 900</td><td>—</td><td>可开启</td></tr></tbody></table></div>
+    <p class="tiny">带 ≈ 的按图面比例预估。阁楼规则：离外墙多少米，天花板就多高；可站立区 = 外轮廓向内缩 2060mm。</p>
+  </section>
+  <section class="blk"><h2><em>⛔</em> 设想版也绕不过的四个硬约束</h2>
+    <ul class="pit"><li><b>0601~0603 草地面积翻倍</b>——已完成方案按 50㎡ 设计，实测 100㎡ 且是 5.3×18.9m 长条，管网/水泵/雨水罐/植物配置退回 🚧 重做。设想版按长条重写。</li><li><b>0201 可用净高 2660 → 2400</b>——滑轨贴梁固定在梁内侧天花板上，梁底就是轨道净高上限；灯具吊挂高度、光斑落点、云台俯仰行程都按 2400 重算。</li><li><b>阁楼楼板承重未核算</b>——台锯、平刨、压刨合计 250~400kg，材料仓库满载可能上吨；核算前重型设备只停在选型阶段。设想版画出来的重家伙都带这个前提。</li><li><b>木屋明火与睡眠同室</b>——0106 炉区 40×40 在西南角，距南墙 150、距写字台 400；一氧化碳报警器必装，烟囱穿墙是必须找工人的工序。</li></ul>
+  </section>
+  <section class="blk"><h2><em>🧭</em> 按区域看</h2>
+    <div class="link-grid"><a class="link-card" href="areas/01.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="marea-01-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="marea-01-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="marea-01-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="marea-01-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
+  </defs>
+  <g filter="url(#marea-01-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M90 72 H330 V200 H90 Z" stroke-width="1.9"/>
+<path d="M90 72 L27.6 31.4 M330 72 L392.4 31.4 M90 200 L27.6 226.0 M330 200 L392.4 226.0" stroke-width="1.5"/>
+<path d="M27.6 31.4 L27.6 226.0 M392.4 31.4 L392.4 226.0" stroke-width="1.2"/>
+<path d="M90 85 H330" stroke-width="1.4"/><path d="M92 74 h236 v9 h-236 Z" fill="url(#marea-01-hatchl)" stroke="none"/>
+<path d="M90 85 L27.6 51.2 M330 85 L392.4 51.2" stroke-width="0.9"/>
+<path d="M79.6 204.3 L340.4 204.3" stroke-width="0.6"/>
+<path d="M69.2 208.7 L350.8 208.7" stroke-width="0.6"/>
+<path d="M58.8 213.0 L361.2 213.0" stroke-width="0.6"/>
+<path d="M48.4 217.3 L371.6 217.3" stroke-width="0.6"/>
+<path d="M38.0 221.7 L382.0 221.7" stroke-width="0.6"/>
+<path d="M92 96 H328" stroke-width="0.5"/>
+<path d="M92 110 H328" stroke-width="0.5"/>
+<path d="M92 124 H328" stroke-width="0.5"/>
+<path d="M92 138 H328" stroke-width="0.5"/>
+<path d="M92 152 H328" stroke-width="0.5"/>
+<path d="M92 166 H328" stroke-width="0.5"/>
+<path d="M92 180 H328" stroke-width="0.5"/>
+<path d="M92 194 H328" stroke-width="0.5"/>
+<rect x="90" y="157" width="120" height="43" stroke-width="1.6"/><path d="M90 157 l-16 9 v43 l16 -9 M74 166 h0" stroke-width="1.1"/>
+<path d="M75 168 v40 l14 -8 v-40 Z" fill="url(#marea-01-hatch)" stroke="none"/>
+<path d="M120 160 v37 M150 160 v37 M180 160 v37 M125 178 h4 M155 178 h4 M185 178 h4" stroke-width="0.8"/>
+<rect x="96" y="138" width="14" height="19" rx="2" stroke-width="1"/><rect x="114" y="141" width="18" height="16" rx="2" stroke-width="1"/><path d="M136 143 h18 v14 h-18 Z M140 143 v-5 h10 v5" stroke-width="1"/>
+<rect x="163" y="130" width="42" height="27" stroke-width="1.4"/><path d="M165 136 q10 -3 20 0 t18 0 M170 150 q5 -8 10 0 M186 147 l6 -3 l-6 -3 Z" stroke-width="0.8"/><path d="M165 132 h38 v3 h-38 Z" fill="url(#marea-01-hatch)" stroke="none"/>
+<rect x="96" y="86" width="58" height="42" stroke-width="1.5"/>
+<rect x="99.0" y="89.0" width="16" height="11" stroke-width="0.7"/>
+<rect x="99.0" y="102.3" width="16" height="11" stroke-width="0.7"/>
+<rect x="99.0" y="115.6" width="16" height="11" stroke-width="0.7"/>
+<rect x="117.5" y="89.0" width="16" height="11" stroke-width="0.7"/>
+<rect x="117.5" y="102.3" width="16" height="11" stroke-width="0.7"/>
+<rect x="117.5" y="115.6" width="16" height="11" stroke-width="0.7"/>
+<rect x="136.0" y="89.0" width="16" height="11" stroke-width="0.7"/>
+<rect x="136.0" y="102.3" width="16" height="11" stroke-width="0.7"/>
+<rect x="136.0" y="115.6" width="16" height="11" stroke-width="0.7"/>
+<path d="M101 96 l4 -4 l4 4 M120 108 q3 -4 6 0 M137 94 a2 2 0 1 0 0.1 0" stroke-width="0.6"/>
+<path d="M159 92 q24 3 48 0" stroke-width="0.7"/>
+<rect x="163" y="92" width="8" height="7" stroke-width="0.6"/>
+<rect x="174" y="92" width="8" height="7" stroke-width="0.6"/>
+<rect x="185" y="92" width="8" height="7" stroke-width="0.6"/>
+<rect x="196" y="92" width="8" height="7" stroke-width="0.6"/>
+<path d="M159 106 q24 3 48 0" stroke-width="0.7"/>
+<rect x="163" y="106" width="8" height="7" stroke-width="0.6"/>
+<rect x="174" y="106" width="8" height="7" stroke-width="0.6"/>
+<rect x="185" y="106" width="8" height="7" stroke-width="0.6"/>
+<rect x="196" y="106" width="8" height="7" stroke-width="0.6"/>
+<path d="M159 120 q24 3 48 0" stroke-width="0.7"/>
+<rect x="163" y="120" width="8" height="7" stroke-width="0.6"/>
+<rect x="174" y="120" width="8" height="7" stroke-width="0.6"/>
+<rect x="185" y="120" width="8" height="7" stroke-width="0.6"/>
+<rect x="196" y="120" width="8" height="7" stroke-width="0.6"/>
+<rect x="216" y="87" width="64" height="65" stroke-width="1.5"/>
+<rect x="219.0" y="90.0" width="18" height="18" stroke-width="0.7"/><rect x="223.0" y="97.0" width="10" height="6" rx="1" stroke-width="0.7"/>
+<rect x="219.0" y="110.5" width="18" height="18" stroke-width="0.7"/><rect x="223.0" y="117.5" width="10" height="6" rx="1" stroke-width="0.7"/>
+<rect x="219.0" y="131.0" width="18" height="18" stroke-width="0.7"/><rect x="223.0" y="138.0" width="10" height="6" rx="1" stroke-width="0.7"/>
+<rect x="239.5" y="90.0" width="18" height="18" stroke-width="0.7"/><rect x="243.5" y="97.0" width="10" height="6" rx="1" stroke-width="0.7"/>
+<rect x="239.5" y="110.5" width="18" height="18" stroke-width="0.7"/><rect x="243.5" y="117.5" width="10" height="6" rx="1" stroke-width="0.7"/>
+<rect x="239.5" y="131.0" width="18" height="18" stroke-width="0.7"/><rect x="243.5" y="138.0" width="10" height="6" rx="1" stroke-width="0.7"/>
+<rect x="260.0" y="90.0" width="18" height="18" stroke-width="0.7"/><rect x="264.0" y="97.0" width="10" height="6" rx="1" stroke-width="0.7"/>
+<rect x="260.0" y="110.5" width="18" height="18" stroke-width="0.7"/><rect x="264.0" y="117.5" width="10" height="6" rx="1" stroke-width="0.7"/>
+<rect x="260.0" y="131.0" width="18" height="18" stroke-width="0.7"/><rect x="264.0" y="138.0" width="10" height="6" rx="1" stroke-width="0.7"/>
+<rect x="216" y="160" width="64" height="30" stroke-width="1.4"/><path d="M216 160 l-8 5 v30 l8 -5" stroke-width="1"/><path d="M209 166 v28 l6 -4 v-28 Z" fill="url(#marea-01-hatch)" stroke="none"/>
+<path d="M234 178 h26 v9 h-26 Z M234 178 l4 -11 h26 l-4 11" stroke-width="1.1"/><path d="M238 182 h4 M244 182 h5 M251 182 h6 M238 168 h18" stroke-width="0.6"/>
+<path d="M248 152 v6 M242 158 h12" stroke-width="0.8"/><path d="M248 158 l-10 12 M248 158 l10 12" stroke-width="0.5" stroke-dasharray="2 2"/>
+<path d="M284 111 H330 L386.2 92.7 L318.6 92.7 Z" stroke-width="1.6"/><path d="M286 113 h42 L383.2 95.7" stroke-width="0.8"/>
+<path d="M290 111 v-8 h36 v8 M330 111 v-8 M386.2 92.7 v-8" stroke-width="1"/>
+<path d="M286 104 h38 v6 h-38 Z" fill="url(#marea-01-hatch)" stroke="none"/>
+<path d="M330 111 V200 M386.2 92.7 L386.2 223.4 M284 111 V200 M318.6 92.7 L318.6 223.4" stroke-width="1.3"/>
+<path d="M337.1 92.7 L337.1 223.4 M347.1 92.7 L347.1 223.4" stroke-width="1"/>
+<path d="M337.1 114.5 h10" stroke-width="0.9"/>
+<path d="M337.1 136.3 h10" stroke-width="0.9"/>
+<path d="M337.1 158.1 h10" stroke-width="0.9"/>
+<path d="M337.1 179.8 h10" stroke-width="0.9"/>
+<path d="M337.1 201.6 h10" stroke-width="0.9"/>
+<path d="M296 164 H330 L383.0 170.2 L334.0 170.2 Z" stroke-width="1.3"/><path d="M296 164 V200 M334.0 170.2 L334.0 222.1" stroke-width="0.9"/>
+<rect x="304" y="150" width="14" height="10" stroke-width="0.8"/><path d="M311 160 v4 M305 164 h12" stroke-width="0.7"/>
+<path d="M294 200 V115 H322 V200" stroke-width="1" stroke-dasharray="4 3"/><circle cx="318" cy="160" r="1.5" stroke-width="0.8"/>
+<path d="M43.2 58.3 L68.2 72.0 L68.2 90.9 L43.2 80.5 Z" stroke-width="1.2"/><path d="M45.1 70.3 L66.3 80.5 M45.1 77.2 L66.3 86.5" stroke-width="0.6"/>
+<rect x="46" y="176" width="30" height="40" stroke-width="1.6"/><rect x="51" y="184" width="20" height="16" rx="2" stroke-width="1"/><path d="M56 197 q5 -11 10 0 M59 195 q2 -5 4 0" stroke-width="0.8"/>
+<path d="M48 203 h26 v11 h-26 Z" fill="url(#marea-01-hatch)" stroke="none"/><path d="M42 216 h38 M46 216 v5 M76 216 v5" stroke-width="1.2"/>
+<path d="M57 176 v-8 h8 v8 M59 168 V40 h4 V168" stroke-width="1.3"/><path d="M60 36 q4 -8 0 -14 M65 32 q4 -8 0 -12" stroke-width="0.8"/>
+<path d="M82 204 l12 -6 M82 212 l12 -6" stroke-width="0.7"/><circle cx="87" cy="207" r="3" stroke-width="0.8"/><circle cx="87" cy="214" r="3" stroke-width="0.8"/>
+<circle cx="118" cy="186.95" r="4.75" stroke-width="1.2"/><path d="M118 191.7 V208.8 M118 199.29999999999998 L109.45 210.7 M118 199.29999999999998 L126.55 210.7 M118 208.8 L111.35 224 M118 208.8 L124.65 224" stroke-width="1.2"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">area-01</text>
+<text x="150" y="188" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">0107 吧台 · 900 高</text>
+<text x="125" y="66" font-family="'Long Cang','Kaiti SC',cursive" font-size="8.5" fill="#5a5a5a" text-anchor="middle" filter="none">0103 画框墙</text>
+<text x="182" y="66" font-family="'Long Cang','Kaiti SC',cursive" font-size="8.5" fill="#5a5a5a" text-anchor="middle" filter="none">0104 照片墙</text>
+<text x="248" y="66" font-family="'Long Cang','Kaiti SC',cursive" font-size="8.5" fill="#5a5a5a" text-anchor="middle" filter="none">0102 作品墙</text>
+<text x="248" y="202" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0101 主产品</text>
+<text x="186" y="127" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0205</text>
+<text x="356" y="40" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">梁底 2400</text>
+<text x="356" y="92" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">梯子床 1850</text>
+<text x="308" y="194" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">暗门</text>
+<text x="345" y="176" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">0105</text>
+<text x="62" y="234" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">0106 炉区</text>
+<text x="48" y="118" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">空调</text>
+<text x="210" y="262" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c" text-anchor="middle" filter="none">暖村木屋 · 2.00 × 5.00 m · 自南向北看</text>
+</svg>
+</div><div><i>01</i><b>暖村木屋</b><p>2.00 × 5.00m · 10㎡ · 净高 2660（梁下 2400）</p></div></a><a class="link-card" href="areas/02.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="marea-02-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="marea-02-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="marea-02-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="marea-02-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
+  </defs>
+  <g filter="url(#marea-02-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M210.0 78.0 L345.0 155.6 L205.8 235.6 L70.8 158.0 Z" stroke-width="1.8"/>
+<path d="M70.8 126.0 L210.0 46.0 L345.0 123.6 M210.0 46.0 L210.0 78.0" stroke-width="1.6"/>
+<path d="M208.6 46.8 L70.8 126.0 L70.8 158.0 M345.0 123.6 L345.0 155.6" stroke-width="1.4"/>
+<path d="M211.4 47.8 L343.6 123.8 L343.6 153.8 L211.4 77.8 Z" fill="url(#marea-02-hatchl)" stroke="none"/>
+<path d="M300.5 114.0 L194.1 175.1 L194.1 191.1 M300.5 114.0 L300.5 130.0 M264.6 134.6 L309.1 160.2 M264.6 134.6 L264.6 150.6 M194.1 175.1 L238.7 200.7" stroke-width="1.2"/>
+<path d="M300.5 114.0 L194.1 175.1 L197.5 177.0 L303.8 115.9 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<ellipse cx="304.7" cy="151.6" rx="7" ry="4" stroke-width="0.9"/><path d="M301.9 137.2 L276.8 151.6 M301.9 137.2 L313.0 143.6" stroke-width="0.7" stroke-dasharray="2 2"/>
+<path d="M262.9 142.0 L299.1 162.8 L289.3 168.4 L253.2 147.6 Z" stroke-width="0.8"/><path d="M253.2 147.6 L253.2 162.0 L289.3 182.8 L289.3 168.4 M289.3 168.4 L289.3 182.8 L299.1 177.2 L299.1 162.8" stroke-width="0.8"/>
+<path d="M243.4 153.2 L279.6 174.0 L269.9 179.6 L233.7 158.8 Z" stroke-width="0.8"/><path d="M233.7 158.8 L233.7 173.2 L269.9 194.0 L269.9 179.6 M269.9 179.6 L269.9 194.0 L279.6 188.4 L279.6 174.0" stroke-width="0.8"/>
+<path d="M223.9 164.4 L260.1 185.2 L250.4 190.8 L214.2 170.0 Z" stroke-width="0.8"/><path d="M214.2 170.0 L214.2 184.4 L250.4 205.2 L250.4 190.8 M250.4 190.8 L250.4 205.2 L260.1 199.6 L260.1 185.2" stroke-width="0.8"/>
+<path d="M210.0 23.6 L242.0 42.0 L187.7 73.2 L155.7 54.8 Z" stroke-width="1.3"/><path d="M155.7 54.8 L155.7 59.6 L187.7 78.0 L187.7 73.2 M187.7 73.2 L187.7 78.0 L242.0 46.8 L242.0 42.0" stroke-width="1.3"/><path d="M187.7 73.2 L187.7 78.0 L242.0 46.8 L242.0 42.0 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<path d="M210.0 25.2 q20 -6 40 0 M193.3 44.4 q14 -4 28 0" stroke-width="0.7"/>
+<path d="M210.0 30.0 L210.0 81.2" stroke-width="1.1"/>
+<path d="M239.2 46.8 L239.2 98.0" stroke-width="1.1"/>
+<path d="M187.7 76.4 L187.7 127.6" stroke-width="1.1"/>
+<path d="M158.5 59.6 L158.5 110.8" stroke-width="1.1"/>
+<path d="M205.8 85.2 L218.4 49.2 L232.3 100.4 Z M164.1 109.2 L176.6 73.2 L190.5 124.4 Z M218.4 49.2 L176.6 73.2" stroke-width="1.1"/>
+<path d="M164.1 109.2 L176.6 73.2 L197.5 61.2 L184.9 97.2 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<path d="M176.6 114.8 L176.6 87.6" stroke-width="0.8"/><circle cx="185.5" cy="89.5" r="2.5" stroke-width="0.8"/>
+<path d="M244.2 34.3 L297.1 64.7 L290.5 68.6 L237.6 38.2 Z" stroke-width="1.1"/><path d="M237.6 38.2 L237.6 102.2 L290.5 132.6 L290.5 68.6 M290.5 68.6 L290.5 132.6 L297.1 128.7 L297.1 64.7" stroke-width="1.1"/>
+<path d="M237.6 86.2 L290.5 116.6" stroke-width="0.7"/>
+<path d="M237.6 70.2 L290.5 100.6" stroke-width="0.7"/>
+<path d="M237.6 54.2 L290.5 84.6" stroke-width="0.7"/>
+<path d="M210.0 103.6 L247.6 125.2 L222.5 139.6 L184.9 118.0 Z" stroke-width="1.1"/><path d="M184.9 118.0 L184.9 132.4 L222.5 154.0 L222.5 139.6 M222.5 139.6 L222.5 154.0 L247.6 139.6 L247.6 125.2" stroke-width="1.1"/><path d="M222.5 139.6 L222.5 154.0 L247.6 139.6 L247.6 125.2 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<path d="M210.0 90.8 L247.6 112.4 L240.6 116.4 L203.0 94.8 Z" stroke-width="1.0"/><path d="M203.0 94.8 L203.0 107.6 L240.6 129.2 L240.6 116.4 M240.6 116.4 L240.6 129.2 L247.6 125.2 L247.6 112.4" stroke-width="1.0"/><path d="M240.6 116.4 L240.6 129.2 L247.6 125.2 L247.6 112.4 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<path d="M183.8 136.6 L233.7 165.2 L182.4 194.6 L132.6 166.0 Z" stroke-width="0.9"/><path d="M183.6 141.2 L225.3 165.2 L182.2 190.0 L140.4 166.0 Z" stroke-width="0.5" stroke-dasharray="2 3"/>
+<path d="M147.4 117.2 L147.4 62.8 L175.2 78.8 L175.2 133.2 M147.4 85.2 L175.2 101.2" stroke-width="1"/>
+<path d="M151.5 65.2 L151.5 79.6 M151.5 87.6 L151.5 100.4" stroke-width="0.6"/>
+<path d="M156.5 68.1 L156.5 82.5 M156.5 90.5 L156.5 103.3" stroke-width="0.6"/>
+<path d="M161.6 71.0 L161.6 85.4 M161.6 93.4 L161.6 106.2" stroke-width="0.6"/>
+<path d="M166.6 73.8 L166.6 88.2 M166.6 96.2 L166.6 109.0" stroke-width="0.6"/>
+<path d="M171.6 76.7 L171.6 91.1 M171.6 99.1 L171.6 111.9" stroke-width="0.6"/>
+<path d="M127.9 102.8 L148.8 114.8 L104.2 140.4 L83.3 128.4 Z" stroke-width="1.1"/><path d="M83.3 128.4 L83.3 130.0 L104.2 142.0 L104.2 140.4 M104.2 140.4 L104.2 142.0 L148.8 116.4 L148.8 114.8" stroke-width="1.1"/>
+<path d="M129.3 103.6 L129.3 127.6 M102.8 139.6 L102.8 163.6 M84.7 129.2 L84.7 153.2" stroke-width="0.9"/>
+<path d="M123.1 104.9 L112.0 111.3 L112.0 100.1 L123.1 93.7 Z" stroke-width="0.9"/>
+<path d="M109.2 112.9 L98.1 119.3 L98.1 108.1 L109.2 101.7 Z" stroke-width="0.9"/>
+<path d="M95.3 120.9 L84.2 127.3 L84.2 116.1 L95.3 109.7 Z" stroke-width="0.9"/>
+<path d="M120.9 114.8 L120.9 115.8" stroke-width="0.6"/>
+<path d="M99.2 156.7 L158.5 190.8 L158.5 150.8 L99.2 116.7 Z" stroke-width="1.5"/>
+<path d="M101.4 155.4 L156.3 187.0 L156.3 152.1 L101.4 120.6 Z" fill="url(#marea-02-hatchl)" stroke="none"/>
+<path d="M111.2 150.8 l14 -12 l10 8 l12 -14 l14 10" stroke-width="0.8"/>
+<path d="M180.2 220.9 L202.8 233.8" stroke-width="2.2"/><path d="M180.2 220.9 L203.9 207.3" stroke-width="1"/><path d="M203.9 207.3 Q215.6 218.8 202.8 233.8" stroke-width="0.7" stroke-dasharray="3 3"/>
+<path d="M345.0 123.6 L205.8 203.6 L205.8 235.6 M205.8 203.6 L70.8 126.0" stroke-width="1.5"/>
+<path d="M345.0 123.6 L205.8 203.6 L203.0 202.0 L342.2 122.0 Z M205.8 203.6 L70.8 126.0 L73.6 124.4 L208.6 202.0 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<path d="M95.9 87.6 L196.1 145.2" stroke-width="1.3"/><path d="M140.4 113.2 l0 8 l-6 6 l12 0 Z" stroke-width="1"/><path d="M140.4 124.4 l-14 22 M140.4 124.4 l14 22" stroke-width="0.5" stroke-dasharray="2 2"/><path d="M95.9 87.6 L95.9 86.0 L196.1 143.6 L196.1 145.2" stroke-width="0.6" stroke-dasharray="3 2"/>
+<circle cx="196.1" cy="145.65" r="4.25" stroke-width="1.2"/><path d="M196.1 149.9 V165.20000000000002 M196.1 156.70000000000002 L188.45 166.9 M196.1 156.70000000000002 L203.75 166.9 M196.1 165.20000000000002 L190.15 178.8 M196.1 165.20000000000002 L202.04999999999998 178.8" stroke-width="1.2"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">area-02</text>
+<text x="96" y="40" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">架空床 200×120 · 床板 1750</text>
+<text x="96" y="52" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">床下 1.2×1.5 帐篷 = 0209</text>
+<text x="282.4" y="42.8" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">书架</text>
+<text x="215.6" y="98.8" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">沙发</text>
+<text x="184.9" y="164.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">地毯</text>
+<text x="77.8" y="138.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0204</text>
+<text x="157.1" y="63.6" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">衣架</text>
+<text x="304.7" y="135.6" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">卫生间 0202</text>
+<text x="251.8" y="154.8" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">储藏室 0210</text>
+<text x="70" y="248" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">南墙梁下 98 寸电视 0207</text>
+<text x="180.8" y="232.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">门</text>
+<text x="60" y="118" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0201 日轨 · 贴梁 2400</text>
+<text x="200" y="292" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c" text-anchor="middle" filter="none">地堡 · 4.85 × 5.00 m · 无窗 · 墙剖到 1 米看进去，北在上方</text>
+</svg>
+</div><div><i>02</i><b>地堡</b><p>4.85 × 5.00m · 24.3㎡（含卫生间、储藏室）· 净高 2660 · 完全无窗</p></div></a><a class="link-card" href="areas/03.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <filter id="ma03-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="ma03-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="ma03-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#ma03-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- floor / joists -->
+    <path d="M14 262 Q150 258 300 262 T586 260" stroke-width="1.6"/>
+    <path d="M30 270 H570" stroke-width="1"/>
+    <path d="M60 262 V270 M140 262 V270 M220 262 V270 M300 262 V270 M380 262 V270 M460 262 V270 M540 262 V270" stroke-width="0.8"/>
+
+    <!-- A-frame roof section -->
+    <path d="M30 184 L300 34 L570 184" stroke-width="2.2"/>
+    <path d="M18 178 L300 22 L582 178" stroke-width="1.6"/>
+    <path d="M33 187 L301 38 L568 187" stroke-width="0.9"/>
+    <path d="M18 178 L300 22 L582 178 L570 184 L300 34 L30 184 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <!-- knee walls -->
+    <path d="M30 184 V262 M570 184 V262" stroke-width="1.6"/>
+    <path d="M33 187 V260 M567 187 V260" stroke-width="0.8"/>
+    <!-- collar tie + rafter ticks -->
+    <path d="M170 106 H430" stroke-width="1.4"/>
+    <path d="M172 109 H428" stroke-width="0.7"/>
+    <path d="M90 151 l3 6 M130 129 l3 6 M210 84 l3 6 M250 62 l3 6 M350 62 l-3 6 M390 84 l-3 6 M470 129 l-3 6 M510 151 l-3 6" stroke-width="0.9"/>
+
+    <!-- skylight on the left slope -->
+    <path d="M110 134 L164 104 L184 118 L130 148 Z" stroke-width="1.7"/>
+    <path d="M113 136 L164 108 L180 119" stroke-width="0.9"/>
+    <path d="M116 136 L164 110 L178 120 L130 146 Z" fill="url(#ma03-hatch2)" stroke="none"/>
+    <path d="M147 118 l-4 14" stroke-width="1"/>
+    <!-- light rays through skylight -->
+    <path d="M140 150 L120 200 M156 146 L146 200 M172 140 L172 200" stroke-width="0.6"/>
+
+    <!-- PV panels on the right slope (outside) -->
+    <path d="M360 62 L500 140 L516 122 L376 44 Z" stroke-width="1.9"/>
+    <path d="M363 62 L378 47 L513 122" stroke-width="0.9"/>
+    <path d="M368 53 L508 131" stroke-width="0.8"/>
+    <path d="M395 81 L411 63 M430 101 L446 83 M465 120 L481 102" stroke-width="0.8"/>
+    <path d="M380 66 V74 M440 100 V108 M500 134 V140" stroke-width="1.3"/>
+    <!-- sun -->
+    <circle cx="540" cy="46" r="14" stroke-width="1.5"/>
+    <path d="M540 24 v-6 M562 46 h6 M556 30 l4 -4 M556 62 l4 4 M524 30 l-4 -4" stroke-width="1"/>
+    <!-- cable from PV down into the attic -->
+    <path d="M498 146 L510 152 V168 L552 190 V214" stroke-width="1"/>
+
+    <!-- weather mast at the right eave -->
+    <path d="M552 168 V96" stroke-width="1.8"/>
+    <path d="M555 170 V98" stroke-width="0.8"/>
+    <path d="M552 96 L540 90 M552 96 L564 90 M552 96 L554 84" stroke-width="1"/>
+    <path d="M540 90 m-4 0 a4 3 0 1 0 8 0 a4 3 0 1 0 -8 0 M564 90 m-4 0 a4 3 0 1 0 8 0 a4 3 0 1 0 -8 0 M554 84 m-4 0 a4 3 0 1 0 8 0 a4 3 0 1 0 -8 0" stroke-width="1.1"/>
+    <path d="M552 112 h22 l-6 -4 v8 Z" stroke-width="1.1"/>
+    <path d="M540 130 v14 h10 v-14 M538 130 h14" stroke-width="1.1"/>
+    <path d="M546 166 l12 5" stroke-width="1.2"/>
+
+    <!-- tent in the middle -->
+    <path d="M214 258 Q216 168 300 150 Q384 168 386 258 Z" stroke-width="2"/>
+    <path d="M218 258 Q220 172 300 154" stroke-width="1"/>
+    <path d="M300 150 Q262 190 254 258 M300 150 Q338 190 346 258" stroke-width="1.1"/>
+    <path d="M272 258 Q276 200 300 176 Q324 200 328 258" stroke-width="1.5"/>
+    <path d="M286 258 Q289 210 300 180 Q323 202 326 258 Z" fill="#fff" stroke="none"/>
+    <path d="M286 258 Q289 210 300 180 Q323 202 326 258" stroke-width="1.4"/>
+    <path d="M292 200 q8 6 16 4 q6 -2 12 4" stroke-width="0.8"/>
+    <circle cx="296" cy="204" r="1.8" stroke-width="0.9"/>
+    <circle cx="306" cy="205" r="1.8" stroke-width="0.9"/>
+    <circle cx="316" cy="206" r="1.8" stroke-width="0.9"/>
+    <path d="M302 210 h10 v10 h-10 Z M307 204 v6" stroke-width="1"/>
+    <path d="M292 254 h30 M294 246 q10 -5 20 0" stroke-width="1"/>
+    <path d="M290 256 Q292 222 300 196 Q306 212 300 256 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M220 254 Q222 184 274 162 Q250 190 240 254 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M222 206 L190 254 M378 206 L410 254" stroke-width="0.9"/>
+    <path d="M188 250 l4 8 M408 250 l4 8" stroke-width="1.2"/>
+
+    <!-- left: gear wall - backpack hanging on the slope + cubby -->
+    <path d="M52 150 l14 -8 l14 8 l4 42 q-18 6 -36 0 Z" stroke-width="1.7"/>
+    <path d="M52 166 q18 5 32 0" stroke-width="1"/>
+    <path d="M58 172 h20 v12 h-20 Z" stroke-width="0.9"/>
+    <path d="M66 142 v-6" stroke-width="1.2"/>
+    <path d="M54 154 q6 10 8 38 q-6 0 -8 -2 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M88 132 V190 M96 132 V190 M84 134 h8 M92 134 h8" stroke-width="1.2"/>
+    <path d="M44 200 H132 V258 H44 Z M44 230 H132 M88 200 V258" stroke-width="1.5"/>
+    <path d="M46 202 H130 V256" stroke-width="0.8"/>
+    <circle cx="66" cy="215" r="10" stroke-width="1.3"/>
+    <circle cx="66" cy="215" r="4" stroke-width="0.8"/>
+    <circle cx="110" cy="215" r="10" stroke-width="1.3"/>
+    <circle cx="110" cy="215" r="4" stroke-width="0.8"/>
+    <path d="M52 238 h28 v14 h-28 Z M96 244 h24 M100 244 v-8 h16 v8" stroke-width="1.1"/>
+    <!-- boots -->
+    <path d="M150 258 v-22 q2 -6 8 -4 l3 8 q8 3 14 6 v12 Z" stroke-width="1.4"/>
+    <path d="M154 246 l5 3 M154 240 l4 2" stroke-width="0.8"/>
+
+    <!-- right: workbench with pegboard + 3D printer on it -->
+    <path d="M430 178 H520 V194 H430 Z" stroke-width="1.5"/>
+    <path d="M436 182 v8 M446 182 v8 M456 182 v8 M466 182 v8 M478 182 v8 M488 182 v8 M500 182 v8 M510 182 v8" stroke-width="0.9"/>
+    <path d="M424 200 H526 V208 H424 Z" stroke-width="1.8"/>
+    <path d="M426 202 H524" stroke-width="0.9"/>
+    <path d="M430 208 V262 M436 208 V262 M514 208 V262 M520 208 V262" stroke-width="1.5"/>
+    <path d="M440 214 H510 V232 H440 Z M470 223 h10" stroke-width="1.1"/>
+    <path d="M440 236 H510 V258 H440 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <path d="M440 200 V160 H484 V200" stroke-width="1.6"/>
+    <path d="M440 160 L448 154 H492 L484 160 M484 160 L492 154 V194 L484 200" stroke-width="1.3"/>
+    <path d="M446 168 H478 V194 H446 Z M452 176 h20 M458 188 h8 v-8 h-8 Z" stroke-width="1"/>
+    <path d="M486 162 L490 158 V192 L486 196 Z" fill="url(#ma03-hatch)" stroke="none"/>
+    <!-- lamp -->
+    <path d="M516 200 L520 176 L504 162 M504 162 l-8 -2 l-2 8 Z" stroke-width="1.3"/>
+
+    <!-- far right: power station beneath the knee wall -->
+    <path d="M534 262 V214 H566 V262" stroke-width="1.6"/>
+    <path d="M540 212 V206 Q550 200 560 206 V212" stroke-width="1.3"/>
+    <path d="M538 220 H550 V232 H538 Z" stroke-width="1"/>
+    <path d="M540 224 h6 M540 228 h4" stroke-width="0.8"/>
+    <circle cx="558" cy="222" r="1.8" stroke-width="0.9"/>
+    <circle cx="558" cy="230" r="1.8" stroke-width="0.9"/>
+    <path d="M538 240 H562 M538 246 H562 M538 252 H562" stroke-width="0.8"/>
+
+    <!-- little person walking to the tent -->
+    <circle cx="196" cy="206" r="6" stroke-width="1.4"/>
+    <path d="M196 212 V236 M196 220 L186 230 M196 220 L206 226 M196 236 L188 258 M196 236 L204 258" stroke-width="1.4"/>
+    <!-- mug on floor + small rug -->
+    <path d="M262 258 q38 -3 76 0 q-4 5 -76 4 Z" stroke-width="0.9"/>
+
+    <!-- raindrops on the left outside -->
+    <path d="M60 120 l-3 8 M84 100 l-3 8 M40 150 l-3 8 M110 78 l-3 8 M140 56 l-3 8 M74 62 l-3 8 M180 36 l-3 8" stroke-width="0.8"/>
+    <path d="M40 90 q4 -12 18 -8 q10 -8 20 2 q10 4 4 12 h-40 q-6 -2 -2 -6 Z" stroke-width="1.3"/>
+  </g>
+  <text x="586" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">area-03</text>
+</svg>
+</div><div><i>03</i><b>阁楼间</b><p>≈7.5 × 5.35m（带缺口）· 34.5㎡ / 可站立 24.1㎡ · 最高 2060、均 1830</p></div></a><a class="link-card" href="areas/04.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="marea-04-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="marea-04-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="marea-04-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="marea-04-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
+  </defs>
+  <g filter="url(#marea-04-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M206.0 46.0 L383.6 148.1 L188.4 260.2 L10.8 158.2 Z" stroke-width="1.8"/>
+<path d="M206.0 46.0 L383.6 148.1 L188.4 260.2 L10.8 158.2 Z M206.0 79.4 L325.5 148.1 L188.4 226.9 L68.9 158.2 Z" fill="url(#marea-04-hatchl)" stroke="none" fill-rule="evenodd"/>
+<path d="M206.0 79.4 L325.5 148.1 L188.4 226.9 L68.9 158.2 Z" stroke-width="1.1" stroke-dasharray="6 3"/>
+<path d="M206.0 46.0 L206.0 46.0" stroke-width="0.6" stroke-dasharray="2 3"/>
+<path d="M383.6 148.1 L325.5 114.7" stroke-width="0.6" stroke-dasharray="2 3"/>
+<path d="M188.4 260.2 L188.4 193.5" stroke-width="0.6" stroke-dasharray="2 3"/>
+<path d="M10.8 158.2 L68.9 124.8" stroke-width="0.6" stroke-dasharray="2 3"/>
+<path d="M206.0 46.0 L325.5 114.7 L188.4 193.5 L68.9 124.8 Z" stroke-width="0.6" stroke-dasharray="2 3"/>
+<path d="M159.5 72.7 L265.2 133.5 M311.7 106.8 L116.5 218.9 M215.9 105.1 L170.8 131.1 M114.4 98.7 L220.1 159.4 M162.3 192.6 L234.2 233.9 M43.9 139.1 L100.3 171.6 L113.0 164.3 L162.3 192.6" stroke-width="0.9"/>
+<path d="M145.4 64.6 L215.9 105.1 L170.8 131.1 L100.3 90.5 Z" stroke-width="1.0"/>
+<path d="M151.7 69.9 L109.5 94.2" stroke-width="0.5"/>
+<path d="M159.5 74.3 L117.2 98.7" stroke-width="0.5"/>
+<path d="M167.2 78.8 L125.0 103.1" stroke-width="0.5"/>
+<path d="M175.0 83.3 L132.7 107.6" stroke-width="0.5"/>
+<path d="M182.7 87.7 L140.5 112.0" stroke-width="0.5"/>
+<path d="M190.5 92.2 L148.2 116.5" stroke-width="0.5"/>
+<path d="M198.2 96.6 L156.0 120.9" stroke-width="0.5"/>
+<path d="M206.0 36.3 L303.2 92.2 L294.8 97.0 L197.5 41.1 Z M197.5 41.1 L197.5 55.7 L294.8 111.6 L294.8 97.0 M294.8 111.6 L303.2 106.8 L303.2 92.2" stroke-width="1.0"/><path d="M294.8 97.0 L294.8 111.6 L303.2 106.8 L303.2 92.2 Z" fill="url(#marea-04-hatch)" stroke="none"/>
+<path d="M191.9 36.3 L289.2 92.2 L280.7 97.0 L183.4 41.1 Z M183.4 41.1 L183.4 63.8 L280.7 119.7 L280.7 97.0 M280.7 119.7 L289.2 114.8 L289.2 92.2" stroke-width="1.0"/><path d="M280.7 97.0 L280.7 119.7 L289.2 114.8 L289.2 92.2 Z" fill="url(#marea-04-hatch)" stroke="none"/>
+<path d="M220.1 59.0 L220.1 44.4 M206.0 67.1 L206.0 44.4" stroke-width="0.5"/>
+<path d="M234.2 67.1 L234.2 52.5 M220.1 75.2 L220.1 52.5" stroke-width="0.5"/>
+<path d="M248.3 75.2 L248.3 60.6 M234.2 83.3 L234.2 60.6" stroke-width="0.5"/>
+<path d="M262.4 83.3 L262.4 68.7 M248.3 91.4 L248.3 68.7" stroke-width="0.5"/>
+<path d="M276.5 91.4 L276.5 76.8 M262.4 99.5 L262.4 76.8" stroke-width="0.5"/>
+<path d="M290.6 99.5 L290.6 84.9 M276.5 107.6 L276.5 84.9" stroke-width="0.5"/>
+<path d="M284.9 126.2 L301.8 135.9 L279.3 148.9 L262.4 139.1 Z M262.4 139.1 L262.4 152.9 L279.3 162.6 L279.3 148.9 M279.3 162.6 L301.8 149.7 L301.8 135.9" stroke-width="1.1"/><path d="M279.3 148.9 L279.3 162.6 L301.8 149.7 L301.8 135.9 Z" fill="url(#marea-04-hatch)" stroke="none"/>
+<path d="M290.6 132.7 L273.7 142.4" stroke-width="0.8"/>
+<path d="M245.5 144.8 L262.4 154.5 L228.6 174.0 L211.6 164.3 Z M211.6 164.3 L211.6 178.8 L228.6 188.6 L228.6 174.0 M228.6 188.6 L262.4 169.1 L262.4 154.5" stroke-width="1.1"/><path d="M228.6 174.0 L228.6 188.6 L262.4 169.1 L262.4 154.5 Z" fill="url(#marea-04-hatch)" stroke="none"/>
+<path d="M313.1 172.4 a5 3 0 1 0 0.1 0" stroke-width="0.9"/><path d="M313.1 172.4 l0 -14 M313.1 156.2 a5 3 0 1 0 0.1 0" stroke-width="0.8"/>
+<path d="M272.2 174.8 L290.6 185.3 L262.4 201.5 L244.1 191.0 Z M244.1 191.0 L244.1 200.7 L262.4 211.2 L262.4 201.5 M262.4 211.2 L290.6 195.0 L290.6 185.3" stroke-width="0.8"/><path d="M262.4 201.5 L262.4 211.2 L290.6 195.0 L290.6 185.3 Z" fill="url(#marea-04-hatch)" stroke="none"/>
+<path d="M219.2 158.9 L240.4 171.1 L226.3 179.2 L205.2 167.0 Z M205.2 167.0 L205.2 192.9 L226.3 205.1 L226.3 179.2 M226.3 205.1 L240.4 197.0 L240.4 171.1" stroke-width="1.3"/><path d="M226.3 179.2 L226.3 205.1 L240.4 197.0 L240.4 171.1 Z" fill="url(#marea-04-hatch)" stroke="none"/>
+<path d="M233.3 178.4 L262.4 195.0 M233.3 175.1 L262.4 191.8 M262.4 195.0 L262.4 191.8" stroke-width="1"/>
+<path d="M263.8 194.2 l8 0 l-3 -3 M263.8 194.2 l8 0 l-3 3" stroke-width="0.7"/>
+<path d="M218.0 107.2 L218.0 78.0 L261.7 103.1 L261.7 132.3" stroke-width="1"/>
+<path d="M222.2 90.1 l0 -6 M222.2 98.2 l0 -5" stroke-width="0.6"/>
+<path d="M229.3 94.2 l0 -6 M229.3 102.3 l0 -5" stroke-width="0.6"/>
+<path d="M236.3 98.2 l0 -6 M236.3 106.3 l0 -5" stroke-width="0.6"/>
+<path d="M243.3 102.3 l0 -6 M243.3 110.4 l0 -5" stroke-width="0.6"/>
+<path d="M250.4 106.3 l0 -6 M250.4 114.4 l0 -5" stroke-width="0.6"/>
+<path d="M257.4 110.4 l0 -6 M257.4 118.5 l0 -5" stroke-width="0.6"/>
+<path d="M141.6 114.3 L174.7 133.3 L144.3 150.8 L111.1 131.8 Z" stroke-width="0.9"/>
+<path d="M141.6 114.3 L142.9 108.2 L174.7 133.3 M144.3 150.8 L142.9 108.2 L111.1 131.8" stroke-width="1.1"/>
+<path d="M111.1 131.8 L142.9 108.2 L144.3 150.8 Z" fill="url(#marea-04-hatch)" stroke="none"/>
+<path d="M174.0 125.1 L200.8 140.5 L189.1 147.2 L162.3 131.9 Z M162.3 131.9 L162.3 144.0 L189.1 159.4 L189.1 147.2 M189.1 159.4 L200.8 152.7 L200.8 140.5" stroke-width="1.0"/><path d="M189.1 147.2 L189.1 159.4 L200.8 152.7 L200.8 140.5 Z" fill="url(#marea-04-hatch)" stroke="none"/>
+<path d="M148.2 165.1 L159.5 171.6 L146.1 179.2 L134.8 172.8 Z M148.2 165.1 L146.1 179.2 M159.5 171.6 L134.8 172.8" stroke-width="0.9"/>
+<path d="M160.9 196.7 L173.6 203.9 L163.7 209.6 L151.0 202.3 Z M151.0 202.3 L151.0 210.4 L163.7 217.7 L163.7 209.6 M163.7 217.7 L173.6 212.0 L173.6 203.9" stroke-width="0.7"/>
+<path d="M177.8 206.4 L190.5 213.7 L180.6 219.3 L167.9 212.1 Z M167.9 212.1 L167.9 220.2 L180.6 227.4 L180.6 219.3 M180.6 227.4 L190.5 221.8 L190.5 213.7" stroke-width="0.7"/>
+<path d="M194.7 216.1 L207.4 223.4 L197.5 229.1 L184.9 221.8 Z M184.9 221.8 L184.9 229.9 L197.5 237.2 L197.5 229.1 M197.5 237.2 L207.4 231.5 L207.4 223.4" stroke-width="0.7"/>
+<path d="M48.1 144.8 L60.8 152.1 L51.0 157.8 L38.3 150.5 Z M38.3 150.5 L38.3 158.6 L51.0 165.9 L51.0 157.8 M51.0 165.9 L60.8 160.2 L60.8 152.1" stroke-width="0.7"/>
+<path d="M65.1 154.5 L77.7 161.8 L67.9 167.5 L55.2 160.2 Z M55.2 160.2 L55.2 168.3 L67.9 175.6 L67.9 167.5 M67.9 175.6 L77.7 169.9 L77.7 161.8" stroke-width="0.7"/>
+<circle cx="214.5" cy="113.64999999999999" r="2.75" stroke-width="1.2"/><path d="M214.5 116.39999999999999 V126.3 M214.5 120.8 L209.55 127.39999999999999 M214.5 120.8 L219.45 127.39999999999999 M214.5 126.3 L210.65 135.1 M214.5 126.3 L218.35 135.1" stroke-width="1.2"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">area-04</text>
+<text x="273.7" y="46.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">0402 材料仓库 · 北条长货架</text>
+<text x="345.5" y="88.9" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">0404 木工间 · 整个东侧</text>
+<text x="220.1" y="86.5" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0401 过道</text>
+<text x="103.1" y="95.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0303 帐篷</text>
+<text x="184.9" y="119.7" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0301</text>
+<text x="183.4" y="162.6" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0403 喷涂柜 1.5×1.0</text>
+<text x="286.3" y="194.2" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">排风出东墙</text>
+<text x="142.6" y="166.7" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">天窗</text>
+<text x="114.4" y="59.8" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">楼梯</text>
+<text x="165.1" y="213.7" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">成品暂存 · 爬行</text>
+<text x="310.3" y="110.8" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">台锯</text>
+<text x="87.6" y="149.7" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">虚线内可站立 2060</text>
+<text x="200" y="293" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c" text-anchor="middle" filter="none">阁楼层 · 45° 四坡顶下：越靠外墙越矮，虚线框内才能站直</text>
+</svg>
+</div><div><i>04</i><b>阁楼仓库</b><p>过道 11.2㎡ · 材料仓库 24.8㎡ · 木工间 54.1㎡ · 成品暂存 16.6㎡（可站立合计约 46㎡）</p></div></a><a class="link-card" href="areas/05.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <filter id="ma05-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="ma05-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="ma05-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#ma05-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 250 Q150 246 300 249 T590 247" stroke-width="1.2"/>
+    <path d="M240 250 q16 -70 40 -120 M330 250 q-10 -70 -30 -120" stroke-width="1.0"/>
+    <path d="M252 232 h64 M258 216 h48 M264 200 h36 M268 186 h28 M272 172 h20" stroke-width="0.7"/>
+    <path d="M60 156 q-30 10 -34 -16 q-16 -24 8 -34 q2 -28 30 -22 q26 -14 32 12 q22 8 6 32 q6 22 -42 28 z" stroke-width="1.6" fill="#fff"/>
+    <path d="M40 130 q10 4 18 0 M52 114 q12 6 22 -2 M64 144 q10 6 20 0" stroke-width="0.9"/>
+    <path d="M30 140 q10 8 28 8 q4 10 -8 12" stroke-width="1.2" fill="url(#ma05-hatch)" stroke="none"/>
+    <path d="M64 246 q2 -40 0 -90 M68 246 q2 -40 0 -88" stroke-width="1.6"/>
+    <path d="M26 244 H118 M26 240 H118" stroke-width="1.2"/>
+    <path d="M28 246 V168 M32 246 V168" stroke-width="1.5"/>
+    <path d="M58 246 V168 M62 246 V168" stroke-width="1.5"/>
+    <path d="M88 246 V168 M92 246 V168" stroke-width="1.5"/>
+    <path d="M114 246 V168 M118 246 V168" stroke-width="1.5"/>
+    <path d="M22 164 q5 -7 10 0 q5 -7 10 0 q5 -7 10 0 q5 -7 10 0 q5 -7 10 0 q5 -7 10 0 q5 -7 10 0 q5 -7 10 0 q5 -7 10 0 q5 -7 10 0" stroke-width="1.5"/>
+    <path d="M22 167 H122" stroke-width="1.0"/>
+    <path d="M32.6 235.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M42.0 235.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M62.6 235.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M72.0 235.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M92.6 235.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M102.0 235.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M37.3 226.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M46.7 226.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M67.3 226.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M76.7 226.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M97.3 226.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M106.7 226.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M32.6 217.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M42.0 217.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M62.6 217.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M72.0 217.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M92.6 217.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M102.0 217.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M37.3 208.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M46.7 208.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M67.3 208.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M76.7 208.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M97.3 208.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M106.7 208.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M32.6 199.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M42.0 199.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M62.6 199.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M72.0 199.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M92.6 199.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M102.0 199.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M37.3 190.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M46.7 190.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M67.3 190.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M76.7 190.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M97.3 190.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M106.7 190.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M32.6 181.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M42.0 181.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M62.6 181.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M72.0 181.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M92.6 181.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M102.0 181.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M37.3 172.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M46.7 172.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M67.3 172.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M76.7 172.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M97.3 172.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 M106.7 172.0 a4.4 4.4 0 1 0 8.8 0 a4.4 4.4 0 1 0 -8.8 0 " stroke-width="0.9"/>
+    <path d="M118 168 L136 158 L136 234 L118 244" stroke-width="1.3"/>
+    <path d="M120 170 L134 161 L134 232 L120 242 Z" stroke-width="1.2" fill="url(#ma05-hatch)" stroke="none"/>
+    <path d="M150 244 V110 H420" stroke-width="1.7"/>
+    <path d="M146 110 H424 V104 H146 Z" stroke-width="1.3"/>
+    <path d="M152 242 V114" stroke-width="0.8"/>
+    <path d="M352 118 H416 M392 118 v10 M368 118 v10 M348 128 H416 M380 128 v10 M356 128 v10 M344 138 H416 M392 138 v10 M368 138 v10 M340 148 H416 M380 148 v10 M356 148 v10 M336 158 H416 M392 158 v10 M368 158 v10 M332 168 H416 M380 168 v10 M356 168 v10 M328 178 H416 M392 178 v10 M368 178 v10 M324 188 H416 M380 188 v10 M356 188 v10 M320 198 H416 M392 198 v10 M368 198 v10 M316 208 H416 M380 208 v10 M356 208 v10 M312 218 H416 M392 218 v10 M368 218 v10 M308 228 H416 M380 228 v10 M356 228 v10 M304 238 H416 M392 238 v10 M368 238 v10 " stroke-width="0.7"/>
+    <path d="M277.6 205.5 Q274.1 197.6 280.7 195.5 Q281.4 200.1 286.1 199.3 Q286.2 206.2 277.6 205.5 M277.6 205.5 L281.4 200.1 M163.6 172.9 Q156.9 166.7 162.3 161.9 Q165.0 166.0 169.2 163.3 Q172.2 170.0 163.6 172.9 M163.6 172.9 L165.0 166.0 M331.0 131.4 Q323.6 130.0 325.3 124.2 Q329.0 125.9 330.7 122.2 Q335.7 125.5 331.0 131.4 M331.0 131.4 L329.0 125.9 M262.4 185.7 Q256.6 184.9 257.7 180.3 Q260.7 181.5 261.9 178.6 Q265.9 181.0 262.4 185.7 M262.4 185.7 L260.7 181.5 M211.7 226.1 Q203.2 225.6 204.2 218.9 Q208.7 220.3 210.1 215.9 Q216.1 218.9 211.7 226.1 M211.7 226.1 L208.7 220.3 M311.1 134.4 Q303.1 134.2 303.8 127.9 Q308.0 129.0 309.1 124.8 Q314.9 127.4 311.1 134.4 M311.1 134.4 L308.0 129.0 M158.3 220.8 Q151.8 219.9 153.1 214.8 Q156.4 216.2 157.7 212.8 Q162.2 215.5 158.3 220.8 M158.3 220.8 L156.4 216.2 M213.5 231.5 Q208.1 226.0 212.9 222.1 Q215.0 225.7 218.6 223.5 Q220.9 229.2 213.5 231.5 M213.5 231.5 L215.0 225.7 M197.3 229.0 Q194.3 221.4 200.6 219.5 Q201.2 224.0 205.6 223.4 Q205.5 229.9 197.3 229.0 M197.3 229.0 L201.2 224.0 M227.3 137.6 Q221.0 138.0 221.2 133.0 Q224.6 133.6 225.2 130.2 Q230.0 131.8 227.3 137.6 M227.3 137.6 L224.6 133.6 M215.9 189.2 Q211.7 185.0 215.3 182.1 Q217.0 184.8 219.7 183.2 Q221.5 187.5 215.9 189.2 M215.9 189.2 L217.0 184.8 M222.9 154.6 Q215.3 150.3 219.3 144.6 Q222.7 147.9 226.0 144.4 Q230.2 149.9 222.9 154.6 M222.9 154.6 L222.7 147.9 M218.6 174.8 Q210.4 175.4 210.5 168.8 Q214.9 169.6 215.7 165.1 Q222.0 167.2 218.6 174.8 M218.6 174.8 L214.9 169.6 M161.5 211.0 Q155.8 206.6 159.6 202.5 Q162.1 205.5 165.1 203.1 Q167.9 208.0 161.5 211.0 M161.5 211.0 L162.1 205.5 M159.7 123.5 Q157.3 117.5 162.2 116.0 Q162.7 119.5 166.2 119.0 Q166.2 124.1 159.7 123.5 M159.7 123.5 L162.7 119.5 M195.7 207.2 Q192.1 198.9 199.0 196.6 Q199.8 201.5 204.7 200.6 Q204.8 207.9 195.7 207.2 M195.7 207.2 L199.8 201.5 M224.1 159.9 Q219.5 153.7 224.7 150.5 Q226.3 154.4 230.2 152.8 Q231.7 158.7 224.1 159.9 M224.1 159.9 L226.3 154.4 M178.7 206.3 Q174.4 198.9 180.6 196.0 Q181.9 200.5 186.5 199.2 Q187.4 206.0 178.7 206.3 M178.7 206.3 L181.9 200.5 M165.0 229.6 Q159.2 227.7 161.1 223.2 Q164.0 225.0 165.8 222.1 Q169.5 225.4 165.0 229.6 M165.0 229.6 L164.0 225.0 M275.3 226.3 Q272.3 220.0 277.6 218.1 Q278.3 221.8 282.1 221.1 Q282.3 226.7 275.3 226.3 M275.3 226.3 L278.3 221.8 M262.7 154.9 Q255.8 154.2 256.8 148.8 Q260.3 150.0 261.6 146.5 Q266.5 149.1 262.7 154.9 M262.7 154.9 L260.3 150.0 M173.0 135.6 Q170.3 127.8 176.7 126.2 Q177.1 130.7 181.6 130.3 Q181.2 136.8 173.0 135.6 M173.0 135.6 L177.1 130.7 M189.0 123.7 Q181.3 118.6 185.9 112.8 Q189.3 116.6 193.1 113.2 Q197.2 119.3 189.0 123.7 M189.0 123.7 L189.3 116.6 M235.9 146.0 Q231.6 139.4 237.2 136.4 Q238.6 140.5 242.7 139.1 Q243.8 145.3 235.9 146.0 M235.9 146.0 L238.6 140.5 M245.5 167.8 Q242.9 162.3 247.4 160.7 Q248.0 163.9 251.3 163.2 Q251.5 168.0 245.5 167.8 M245.5 167.8 L248.0 163.9 M164.3 176.2 Q155.5 176.0 156.3 169.1 Q160.9 170.4 162.2 165.7 Q168.6 168.6 164.3 176.2 M164.3 176.2 L160.9 170.4 M279.0 211.0 Q273.4 208.3 276.0 204.1 Q278.6 206.2 280.8 203.6 Q284.0 207.3 279.0 211.0 M279.0 211.0 L278.6 206.2 M186.7 217.7 Q180.6 214.5 183.5 209.9 Q186.3 212.4 188.8 209.6 Q192.3 213.8 186.7 217.7 M186.7 217.7 L186.3 212.4 M251.7 204.1 Q244.5 202.2 246.5 196.6 Q250.1 198.5 252.0 194.9 Q256.8 198.5 251.7 204.1 M251.7 204.1 L250.1 198.5 M235.5 135.3 Q233.1 128.6 238.6 127.1 Q239.0 131.0 242.9 130.6 Q242.6 136.3 235.5 135.3 M235.5 135.3 L239.0 131.0 M253.9 157.9 Q247.9 156.6 249.4 151.9 Q252.4 153.4 253.9 150.4 Q257.9 153.3 253.9 157.9 M253.9 157.9 L252.4 153.4 M227.4 210.8 Q221.5 204.6 226.9 200.3 Q229.1 204.4 233.2 202.1 Q235.6 208.5 227.4 210.8 M227.4 210.8 L229.1 204.4 M285.5 207.6 Q280.7 202.4 285.2 199.0 Q287.0 202.4 290.4 200.5 Q292.4 205.8 285.5 207.6 M285.5 207.6 L287.0 202.4 M211.9 175.3 Q206.0 169.2 211.3 164.9 Q213.7 169.0 217.7 166.7 Q220.1 173.0 211.9 175.3 M211.9 175.3 L213.7 169.0 M214.4 229.6 Q208.0 224.7 212.4 219.9 Q215.1 223.4 218.6 220.6 Q221.8 226.2 214.4 229.6 M214.4 229.6 L215.1 223.4 M160.2 182.5 Q155.5 177.8 159.6 174.4 Q161.5 177.5 164.6 175.6 Q166.6 180.6 160.2 182.5 M160.2 182.5 L161.5 177.5 M246.9 214.4 Q242.2 207.8 247.8 204.5 Q249.4 208.7 253.5 207.1 Q254.9 213.4 246.9 214.4 M246.9 214.4 L249.4 208.7 M224.8 194.0 Q220.2 186.9 226.2 183.8 Q227.7 188.2 232.0 186.7 Q233.2 193.3 224.8 194.0 M224.8 194.0 L227.7 188.2 M225.2 217.5 Q219.0 211.1 224.6 206.6 Q227.0 210.8 231.2 208.4 Q233.7 215.0 225.2 217.5 M225.2 217.5 L227.0 210.8 M257.5 180.5 Q254.1 175.0 258.6 172.7 Q259.7 176.1 263.1 175.0 Q263.9 180.0 257.5 180.5 M257.5 180.5 L259.7 176.1 M290.8 202.9 Q282.4 202.2 283.6 195.6 Q287.9 197.1 289.4 192.8 Q295.3 195.9 290.8 202.9 M290.8 202.9 L287.9 197.1 M307.8 186.5 Q300.4 183.1 303.7 177.5 Q307.1 180.3 309.9 176.8 Q314.3 181.6 307.8 186.5 M307.8 186.5 L307.1 180.3 M277.8 209.4 Q272.4 203.4 277.6 199.6 Q279.6 203.5 283.5 201.5 Q285.6 207.6 277.8 209.4 M277.8 209.4 L279.6 203.5 M163.3 136.9 Q157.9 131.9 162.3 127.9 Q164.5 131.3 167.9 129.1 Q170.3 134.5 163.3 136.9 M163.3 136.9 L164.5 131.3 M200.1 198.9 Q192.1 199.7 192.0 193.3 Q196.4 194.0 197.0 189.6 Q203.1 191.5 200.1 198.9 M200.1 198.9 L196.4 194.0 M248.5 144.7 Q242.5 144.5 243.1 139.8 Q246.3 140.6 247.2 137.5 Q251.5 139.5 248.5 144.7 M248.5 144.7 L246.3 140.6 M218.9 139.4 Q212.5 140.1 212.4 134.9 Q215.9 135.4 216.4 131.9 Q221.4 133.4 218.9 139.4 M218.9 139.4 L215.9 135.4 M247.3 162.9 Q241.1 157.9 245.5 153.3 Q248.1 156.8 251.6 154.1 Q254.6 159.7 247.3 162.9 M247.3 162.9 L248.1 156.8 " stroke-width="0.9"/>
+    <path d="M354 114 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 q-6 5 -4 10 " stroke-width="1.2"/>
+    <path d="M170 200 q26 -8 50 4 q6 18 -18 24 q-36 2 -32 -28 z M250 140 q26 -6 42 8 q-4 16 -26 16 q-22 -6 -16 -24 z" stroke-width="1.2" fill="url(#ma05-hatch)" stroke="none"/>
+    <path d="M172 246 L186 210 L216 210 L222 246" stroke-width="1.5" fill="#fff"/>
+    <path d="M186 210 L184 194 L214 192 L216 210" stroke-width="1.3" fill="#fff"/>
+    <path d="M174 244 L214 214 M220 244 L184 214" stroke-width="1.0"/>
+    <path d="M146 246 V232 H166 V212 H186 V192 H206 V246" stroke-width="1.4" fill="#fff"/>
+    <path d="M146 232 H236 V238 H146 Z M166 212 H216 V218 H166 Z M186 192 H196 V198 H186 Z" stroke-width="1.3" fill="#fff"/>
+    <path d="M232 246 V232 H212 V212 H196" stroke-width="1.4"/>
+    <path d="M150.2 232 L148.0 219 H164.0 L161.8 232 Z" stroke-width="1.2" fill="#fff"/>
+    <path d="M146.5 219 H165.5 M146.5 223 H165.5" stroke-width="1.0"/>
+    <path d="M148 219 Q146.3 216.8 148.8 215.5 Q148.2 212.8 151.0 212.7 Q151.7 210.0 154.2 211.2 Q156.0 209.0 157.8 211.2 Q160.3 210.0 161.0 212.7 Q163.8 212.8 163.2 215.5 Q165.7 216.8 164.0 219.0 Z" stroke-width="1.1" fill="#fff"/>
+    <path d="M170.2 232 L168.0 219 H184.0 L181.8 232 Z" stroke-width="1.2" fill="#fff"/>
+    <path d="M166.5 219 H185.5 M166.5 223 H185.5" stroke-width="1.0"/>
+    <path d="M168 219 Q166.3 216.8 168.8 215.5 Q168.2 212.8 171.0 212.7 Q171.7 210.0 174.2 211.2 Q176.0 209.0 177.8 211.2 Q180.3 210.0 181.0 212.7 Q183.8 212.8 183.2 215.5 Q185.7 216.8 184.0 219.0 Z" stroke-width="1.1" fill="#fff"/>
+    <path d="M192.2 232 L190.0 219 H206.0 L203.8 232 Z" stroke-width="1.2" fill="#fff"/>
+    <path d="M188.5 219 H207.5 M188.5 223 H207.5" stroke-width="1.0"/>
+    <path d="M190 219 Q188.3 216.8 190.8 215.5 Q190.2 212.8 193.0 212.7 Q193.7 210.0 196.2 211.2 Q198.0 209.0 199.8 211.2 Q202.3 210.0 203.0 212.7 Q205.8 212.8 205.2 215.5 Q207.7 216.8 206.0 219.0 Z" stroke-width="1.1" fill="#fff"/>
+    <path d="M216.2 232 L214.0 219 H230.0 L227.8 232 Z" stroke-width="1.2" fill="#fff"/>
+    <path d="M212.5 219 H231.5 M212.5 223 H231.5" stroke-width="1.0"/>
+    <path d="M214 219 Q212.3 216.8 214.8 215.5 Q214.2 212.8 217.0 212.7 Q217.7 210.0 220.2 211.2 Q222.0 209.0 223.8 211.2 Q226.3 210.0 227.0 212.7 Q229.8 212.8 229.2 215.5 Q231.7 216.8 230.0 219.0 Z" stroke-width="1.1" fill="#fff"/>
+    <path d="M174.2 212 L172.0 199 H188.0 L185.8 212 Z" stroke-width="1.2" fill="#fff"/>
+    <path d="M170.5 199 H189.5 M170.5 203 H189.5" stroke-width="1.0"/>
+    <path d="M172 199 Q170.3 196.8 172.8 195.5 Q172.2 192.8 175.0 192.7 Q175.7 190.0 178.2 191.2 Q180.0 189.0 181.8 191.2 Q184.3 190.0 185.0 192.7 Q187.8 192.8 187.2 195.5 Q189.7 196.8 188.0 199.0 Z" stroke-width="1.1" fill="#fff"/>
+    <path d="M198.2 212 L196.0 199 H212.0 L209.8 212 Z" stroke-width="1.2" fill="#fff"/>
+    <path d="M194.5 199 H213.5 M194.5 203 H213.5" stroke-width="1.0"/>
+    <path d="M196 199 Q194.3 196.8 196.8 195.5 Q196.2 192.8 199.0 192.7 Q199.7 190.0 202.2 191.2 Q204.0 189.0 205.8 191.2 Q208.3 190.0 209.0 192.7 Q211.8 192.8 211.2 195.5 Q213.7 196.8 212.0 199.0 Z" stroke-width="1.1" fill="#fff"/>
+    <path d="M186.2 192 L184.0 179 H200.0 L197.8 192 Z" stroke-width="1.2" fill="#fff"/>
+    <path d="M182.5 179 H201.5 M182.5 183 H201.5" stroke-width="1.0"/>
+    <path d="M184 179 Q182.3 176.8 184.8 175.5 Q184.2 172.8 187.0 172.7 Q187.7 170.0 190.2 171.2 Q192.0 169.0 193.8 171.2 Q196.3 170.0 197.0 172.7 Q199.8 172.8 199.2 175.5 Q201.7 176.8 200.0 179.0 Z" stroke-width="1.1" fill="#fff"/>
+    <path d="M192 179 V166 M188 172 q-6 -4 -8 2 M196 168 q6 -4 8 2" stroke-width="1.0"/>
+    <path d="M298 246 V96 M302 246 V96" stroke-width="1.5"/>
+    <path d="M398 246 V96 M402 246 V96" stroke-width="1.5"/>
+    <path d="M300 96 H400 M300 96 L316 88 M400 96 L416 88 M316 88 H416 M416 88 V236" stroke-width="1.2"/>
+    <path d="M300 236 H400 M300 239 H400 M400 236 L416 228" stroke-width="1.2"/>
+    <path d="M306 236 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M310 226 Q308.0 223.5 310.9 222.1 Q310.2 219.0 313.4 219.0 Q314.1 215.9 317.0 217.2 Q319.0 214.8 321.0 217.2 Q323.9 215.9 324.6 219.0 Q327.8 219.0 327.1 222.1 Q330.0 223.5 328.0 226.0 Z" stroke-width="1.0" fill="#fff"/>
+    <path d="M337 236 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M341 226 Q339.0 223.5 341.9 222.1 Q341.2 219.0 344.4 219.0 Q345.1 215.9 348.0 217.2 Q350.0 214.8 352.0 217.2 Q354.9 215.9 355.6 219.0 Q358.8 219.0 358.1 222.1 Q361.0 223.5 359.0 226.0 Z" stroke-width="1.0" fill="#fff"/>
+    <path d="M368 236 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M372 226 Q370.0 223.5 372.9 222.1 Q372.2 219.0 375.4 219.0 Q376.1 215.9 379.0 217.2 Q381.0 214.8 383.0 217.2 Q385.9 215.9 386.6 219.0 Q389.8 219.0 389.1 222.1 Q392.0 223.5 390.0 226.0 Z" stroke-width="1.0" fill="#fff"/>
+    <path d="M300 200 H400 M300 203 H400 M400 200 L416 192" stroke-width="1.2"/>
+    <path d="M306 200 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M319 190 V170 M319 178 q-6 -3 -8 -8 M319 184 q6 -3 8 -8" stroke-width="0.9"/>
+    <circle cx="313" cy="180" r="2.2" stroke-width="0.8"/>
+    <circle cx="325" cy="176" r="2.2" stroke-width="0.8"/>
+    <path d="M337 200 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M350 190 V170 M350 178 q-6 -3 -8 -8 M350 184 q6 -3 8 -8" stroke-width="0.9"/>
+    <circle cx="344" cy="180" r="2.2" stroke-width="0.8"/>
+    <circle cx="356" cy="176" r="2.2" stroke-width="0.8"/>
+    <path d="M368 200 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M381 190 V170 M381 178 q-6 -3 -8 -8 M381 184 q6 -3 8 -8" stroke-width="0.9"/>
+    <circle cx="375" cy="180" r="2.2" stroke-width="0.8"/>
+    <circle cx="387" cy="176" r="2.2" stroke-width="0.8"/>
+    <path d="M300 164 H400 M300 167 H400 M400 164 L416 156" stroke-width="1.2"/>
+    <path d="M306 164 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M312 154 q-2 -12 0 -22 M319 154 q2 -14 -1 -24 M326 154 q-1 -12 2 -20 M310 134 q3 -5 0 -9 M327 136 q4 -5 0 -9" stroke-width="0.9"/>
+    <path d="M337 164 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M343 154 q-2 -12 0 -22 M350 154 q2 -14 -1 -24 M357 154 q-1 -12 2 -20 M341 134 q3 -5 0 -9 M358 136 q4 -5 0 -9" stroke-width="0.9"/>
+    <path d="M368 164 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M374 154 q-2 -12 0 -22 M381 154 q2 -14 -1 -24 M388 154 q-1 -12 2 -20 M372 134 q3 -5 0 -9 M389 136 q4 -5 0 -9" stroke-width="0.9"/>
+    <path d="M300 128 H400 M300 131 H400 M400 128 L416 120" stroke-width="1.2"/>
+    <path d="M306 128 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M313 118 v-5 M319 118 v-6 M325 118 v-5" stroke-width="0.8"/>
+    <path d="M337 128 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M344 118 v-5 M350 118 v-6 M356 118 v-5" stroke-width="0.8"/>
+    <path d="M368 128 h26 v-10 h-26 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M375 118 v-5 M381 118 v-6 M387 118 v-5" stroke-width="0.8"/>
+    <path d="M306 84 H394" stroke-width="0.9"/>
+    <path d="M298 78 q0 -6 8 -6 H394 q8 0 8 6 q0 6 -8 6 H306 q-8 0 -8 -6 z" stroke-width="1.2" fill="#fff"/>
+    <path d="M404 150 h18 v14 h-18 z" stroke-width="1.1" fill="#fff"/>
+    <path d="M407 155 h10 M407 159 h7" stroke-width="0.8"/>
+    <path d="M470 246 V150 H482 V246" stroke-width="1.6"/>
+    <path d="M473 244 V152" stroke-width="0.7"/>
+    <path d="M456 152 L476 134 L496 152 Z M476 134 L488 128 L508 146 L496 152" stroke-width="1.4" fill="#fff"/>
+    <path d="M466 176 h20 v14 h-20 z" stroke-width="1.2" fill="#fff"/>
+    <circle cx="476" cy="208" r="8" stroke-width="1.2" fill="#fff"/>
+    <circle cx="476" cy="208" r="4" stroke-width="0.8"/>
+    <path d="M484 210 q20 26 40 22 q10 -4 18 2" stroke-width="1.2"/>
+    <path d="M458 174 q-2 -10 10 -12 q10 2 8 12 z" stroke-width="1.2" fill="#fff"/>
+    <circle cx="528" cy="232" r="12" stroke-width="1.5" fill="#fff"/>
+    <circle cx="528" cy="232" r="7" stroke-width="0.8"/>
+    <circle cx="528" cy="232" r="2" stroke-width="0.9"/>
+    <circle cx="578" cy="232" r="12" stroke-width="1.5" fill="#fff"/>
+    <circle cx="578" cy="232" r="7" stroke-width="0.8"/>
+    <circle cx="578" cy="232" r="2" stroke-width="0.9"/>
+    <path d="M516 226 q2 -12 18 -14 L552 208 L552 218 L520 224 Z" stroke-width="1.2" fill="#fff"/>
+    <path d="M540 226 H570 L572 232 H542 Z" stroke-width="1.2" fill="#fff"/>
+    <path d="M530 210 q18 -6 34 -2 q2 4 -4 5 q-18 1 -30 3 z" stroke-width="1.3" fill="#fff"/>
+    <path d="M570 226 L572 202 q4 -12 12 -18 M574 200 L578 226 M580 184 q-6 -1 -10 -4 M584 184 q6 -1 10 -4" stroke-width="1.2"/>
+    <path d="M586 190 q6 -1 8 4 q-2 4 -8 2 z" stroke-width="1.0" fill="#fff"/>
+    <path d="M500 250 L506 238 H596 L590 250 Z" stroke-width="1.1"/>
+    <path d="M508 250 q40 -4 84 -2 q-4 4 -30 4 q-40 0 -54 -2 z" stroke-width="1.2" fill="url(#ma05-hatch)" stroke="none"/>
+    <circle cx="284" cy="206" r="5" stroke-width="1.4"/>
+    <path d="M284 211 V228 M284 216 L276 224 M284 216 L292 222 M284 228 L278 240 M284 228 L290 240" stroke-width="1.4"/>
+    <path d="M20 252 l2 -7 l2 7 M27 253 l2 -6 M140 253 l2 -7 l2 7 M147 254 l2 -6 M250 252 l2 -7 l2 7 M257 253 l2 -6 M440 252 l2 -7 l2 7 M447 253 l2 -6 M580 253 l2 -7 l2 7 M587 254 l2 -6 M300 253 l2 -7 l2 7 M307 254 l2 -6 " stroke-width="0.9"/>
+  </g>
+  <text x="586" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">area-05</text>
+</svg>
+</div><div><i>05</i><b>庭院</b><p>≈5.1 × 4.35m · 22.2㎡ · 露天</p></div></a><a class="link-card" href="areas/06.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <filter id="m0600-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0600-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0600-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0600-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- horizon and far treeline / cabin corner at far left -->
+    <path d="M10 190 Q150 186 300 189 T592 187" stroke-width="1.2"/>
+    <path d="M10 60 L108 78 M10 66 L106 84" stroke-width="1.6"/>
+    <path d="M14 84 V190 M100 90 V190" stroke-width="1.6"/>
+    <path d="M14 100 H100 M14 116 H100 M14 132 H100 M14 148 H100 M14 164 H100 M14 180 H100" stroke-width="0.8"/>
+    <path d="M40 106 H70 V130 H40 Z" stroke-width="1.2"/>
+    <path d="M42 108 H68 V128 H42 Z" fill="url(#m0600-hatch2)" stroke="none"/>
+    <path d="M12 74 L110 92 q4 2 2 6 L12 80" stroke-width="1.3"/>
+    <!-- downspout to first-flush bucket and rain tank behind lattice -->
+    <path d="M104 96 V118 M112 96 V118" stroke-width="1.3"/>
+    <path d="M112 106 H150 V100 M104 118 V150 M112 118 V150" stroke-width="1.2"/>
+    <ellipse cx="108" cy="152" rx="10" ry="3" stroke-width="1.2"/>
+    <path d="M98 152 V184 q10 5 20 0 V152" stroke-width="1.3"/>
+    <ellipse cx="130" cy="146" rx="9" ry="34" stroke-width="1.5"/>
+    <path d="M130 112 H184 q12 0 12 34 q0 34 -12 34 H130" stroke-width="1.6"/>
+    <path d="M150 100 H164 V112 H150 Z" stroke-width="1.2"/>
+    <ellipse cx="157" cy="98" rx="8" ry="2.5" stroke-width="1.1"/>
+    <path d="M176 114 q14 8 16 32 q-2 24 -16 32 q8 -14 8 -32 q0 -18 -8 -32 Z" fill="url(#m0600-hatch)" stroke="none"/>
+    <path d="M132 184 H196 V196 H132 Z" stroke-width="1.3"/>
+    <path d="M132 190 H196 M146 184 v6 M164 184 v6 M182 184 v6 M154 190 v6 M172 190 v6" stroke-width="0.7"/>
+    <path d="M168 96 H206 V198 H168 Z" fill="#fff" stroke="none"/>
+    <path d="M168 96 H206 V198 H168 Z" stroke-width="1.6"/>
+    <path d="M176 96 V198 M184 96 V198 M192 96 V198 M200 96 V198" stroke-width="0.9"/>
+    <path d="M168 110 H206 M168 150 H206" stroke-width="1.1"/>
+    <path d="M182 90 q6 -10 14 -2 q8 -6 10 6" stroke-width="1"/>
+    <path d="M260 192 Q268 148 284 118" stroke-width="1.8"/>
+    <path d="M268 192 Q276 148 288 118" stroke-width="1.8"/>
+    <path d="M266 189 Q274 148 287 122" stroke-width="0.8"/>
+    <path d="M254 192 q4 -4 8 -2 M274 192 q-4 -4 -8 -2" stroke-width="1.3"/>
+    <path d="M286 118 l-15 -12 M286 118 l17 -14 M286 118 l2 -17 M271 106 l-12 -5" stroke-width="1.1"/>
+    <path d="M240 116 Q241 102 254 92 Q256 84 268 85 Q272 78 281 82 Q288 76 295 82 Q304 78 309 85 Q320 84 322 92 Q335 102 336 116 Q324 120 312 116 Q300 120 288 116 Q276 120 264 116 Q252 120 240 116" stroke-width="1.8"/>
+    <path d="M242 115 Q251 90 268 84" stroke-width="0.8"/>
+    <path d="M324 102 q3 -4 6 -1 q3 -3 6 0 M283 111 q3 -4 6 -1 q3 -3 6 0 M323 103 q3 -4 6 -1 q3 -3 6 0 M284 110 q3 -4 6 -1 q3 -3 6 0 M304 101 q3 -4 6 -1 q3 -3 6 0 M249 109 q3 -4 6 -1 q3 -3 6 0 M298 95 q3 -4 6 -1 q3 -3 6 0 M261 92 q3 -4 6 -1 q3 -3 6 0 M261 95 q3 -4 6 -1 q3 -3 6 0 M279 104 q3 -4 6 -1 q3 -3 6 0" stroke-width="0.9"/>
+    <path d="M244 105 Q274 112 300 115 L246 115 Z" fill="url(#m0600-hatch)" stroke="none"/>
+    <path d="M393 194 Q387 144 380 110" stroke-width="1.9"/>
+    <path d="M403 194 Q397 144 384 110" stroke-width="1.9"/>
+    <path d="M401 191 Q395 144 384 114" stroke-width="0.8"/>
+    <path d="M387 194 q4 -4 8 -2 M409 194 q-4 -4 -8 -2" stroke-width="1.3"/>
+    <path d="M382 110 l-21 -15 M382 110 l23 -17 M382 110 l-2 -21 M361 95 l-16 -6" stroke-width="1.1"/>
+    <path d="M315 108 Q316 92 332 80 Q334 71 348 72 Q352 63 364 67 Q371 59 380 66 Q390 59 397 67 Q409 63 413 72 Q427 71 429 80 Q444 92 445 108 Q429 112 413 108 Q397 112 380 108 Q364 112 348 108 Q332 112 315 108" stroke-width="1.9"/>
+    <path d="M317 107 Q329 78 348 71" stroke-width="0.8"/>
+    <path d="M415 80 q3 -4 6 -1 q3 -3 6 0 M428 92 q3 -4 6 -1 q3 -3 6 0 M401 89 q3 -4 6 -1 q3 -3 6 0 M415 84 q3 -4 6 -1 q3 -3 6 0 M392 74 q3 -4 6 -1 q3 -3 6 0 M396 84 q3 -4 6 -1 q3 -3 6 0 M397 90 q3 -4 6 -1 q3 -3 6 0 M389 101 q3 -4 6 -1 q3 -3 6 0 M431 90 q3 -4 6 -1 q3 -3 6 0 M340 103 q3 -4 6 -1 q3 -3 6 0 M380 96 q3 -4 6 -1 q3 -3 6 0 M366 91 q3 -4 6 -1 q3 -3 6 0 M423 80 q3 -4 6 -1 q3 -3 6 0 M349 93 q3 -4 6 -1 q3 -3 6 0" stroke-width="0.9"/>
+    <path d="M321 95 Q361 103 396 107 L323 107 Z" fill="url(#m0600-hatch)" stroke="none"/>
+    <path d="M573 190 Q570 159 564 138" stroke-width="1.5"/>
+    <path d="M579 190 Q576 159 568 138" stroke-width="1.5"/>
+    <path d="M577 187 Q574 159 566 142" stroke-width="0.8"/>
+    <path d="M567 190 q4 -4 8 -2 M585 190 q-4 -4 -8 -2" stroke-width="1.0"/>
+    <path d="M566 138 l-11 -8 M566 138 l13 -10 M566 138 l-1 -12 M555 130 l-8 -4" stroke-width="0.9"/>
+    <path d="M530 136 Q531 126 542 118 Q544 112 553 113 Q558 108 565 112 Q572 108 577 113 Q586 112 588 118 Q599 126 600 136 Q591 140 582 136 Q574 140 565 136 Q556 140 548 136 Q539 140 530 136" stroke-width="1.5"/>
+    <path d="M532 135 Q539 116 553 112" stroke-width="0.8"/>
+    <path d="M567 130 q3 -4 6 -1 q3 -3 6 0 M568 121 q3 -4 6 -1 q3 -3 6 0 M555 128 q3 -4 6 -1 q3 -3 6 0 M546 127 q3 -4 6 -1 q3 -3 6 0 M561 119 q3 -4 6 -1 q3 -3 6 0 M574 119 q3 -4 6 -1 q3 -3 6 0 M588 132 q3 -4 6 -1 q3 -3 6 0" stroke-width="0.9"/>
+    <path d="M533 128 Q554 133 573 135 L534 135 Z" fill="url(#m0600-hatch)" stroke="none"/>
+    <!-- far shrub band -->
+    <path d="M420 188 q8 -10 18 -2 q8 -10 18 -1 q10 -10 20 0 q8 -8 18 0 q8 -8 16 0" stroke-width="1"/>
+    <!-- sensor post with rain gauge -->
+    <path d="M226 204 V130 H238 V204" stroke-width="1.5"/>
+    <path d="M220 131 L232 120 L244 131" stroke-width="1.4"/>
+    <path d="M238 140 H252 M246 124 v16 h12 v-16" stroke-width="1.1"/>
+    <ellipse cx="252" cy="124" rx="6" ry="1.8" stroke-width="1"/>
+    <circle cx="232" cy="150" r="2" stroke-width="1"/>
+    <circle cx="232" cy="170" r="4" stroke-width="1.3"/>
+    <!-- camera pole (front right) -->
+    <path d="M470 236 V56 M476 236 V56" stroke-width="1.8"/>
+    <path d="M472 234 V58" stroke-width="0.8"/>
+    <path d="M464 236 H482 V242 H464 Z" stroke-width="1.3"/>
+    <path d="M476 60 H484 V50 H504 V66 H484 Z" stroke-width="1.5"/>
+    <path d="M484 48 H508 L510 52" stroke-width="1.1"/>
+    <circle cx="504" cy="58" r="4" stroke-width="1.3"/>
+    <path d="M476 110 H486 L510 124 L506 132 L482 118 Z" stroke-width="1.4"/>
+    <path d="M510 124 q4 2 2 8" stroke-width="1"/>
+    <path d="M512 132 L526 176" stroke-width="0.7" stroke-dasharray="3 4"/>
+    <ellipse cx="530" cy="186" rx="22" ry="5" stroke-width="1.4"/>
+    <path d="M508 186 q4 8 22 8 q18 0 22 -8" stroke-width="1.3"/>
+    <path d="M514 180 q4 -6 10 -4 q4 2 4 6 M510 182 l-5 -3 l6 1" stroke-width="1"/>
+    <!-- mid-ground grass -->
+    <path d="M422 196 q1.8 -5 5.2 -9 M424 196 q1.8 -5 6.0 -9 M250 196 q1.8 -8 5.2 -14 M253 196 q1.8 -8 6.0 -14 M561 199 q1.8 -5 5.2 -9 M564 199 q1.8 -5 6.0 -9 M224 194 q1.8 -7 5.2 -12 M227 194 q1.8 -7 6.0 -12 M229 194 q1.8 -7 6.8 -12 M265 193 q1.8 -6 5.2 -12 M267 193 q1.8 -6 6.0 -12 M270 193 q1.8 -6 6.8 -12 M345 192 q1.8 -5 5.2 -10 M347 192 q1.8 -5 6.0 -10 M350 192 q1.8 -5 6.8 -10 M265 195 q1.8 -7 5.2 -12 M268 195 q1.8 -7 6.0 -12 M270 195 q1.8 -7 6.8 -12 M323 195 q1.8 -4 5.2 -8 M326 195 q1.8 -4 6.0 -8 M328 195 q1.8 -4 6.8 -8 M521 199 q1.8 -7 5.2 -13 M524 199 q1.8 -7 6.0 -13 M242 198 q1.8 -7 5.2 -12 M244 198 q1.8 -7 6.0 -12 M242 193 q1.8 -5 5.2 -8 M244 193 q1.8 -5 6.0 -8 M247 193 q1.8 -5 6.8 -8 M565 198 q1.8 -5 5.2 -10 M567 198 q1.8 -5 6.0 -10 M373 197 q1.8 -6 5.2 -12 M375 197 q1.8 -6 6.0 -12 M378 197 q1.8 -6 6.8 -12 M561 196 q1.8 -8 5.2 -14 M563 196 q1.8 -8 6.0 -14 M371 193 q1.8 -7 5.2 -13 M373 193 q1.8 -7 6.0 -13 M215 195 q1.8 -7 5.2 -13 M218 195 q1.8 -7 6.0 -13 M371 197 q1.8 -8 5.2 -14 M373 197 q1.8 -8 6.0 -14 M515 198 q1.8 -5 5.2 -9 M517 198 q1.8 -5 6.0 -9 M251 198 q1.8 -5 5.2 -8 M253 198 q1.8 -5 6.0 -8 M256 198 q1.8 -5 6.8 -8 M314 194 q1.8 -5 5.2 -10 M316 194 q1.8 -5 6.0 -10 M268 199 q1.8 -7 5.2 -12 M270 199 q1.8 -7 6.0 -12 M273 199 q1.8 -7 6.8 -12 M538 200 q1.8 -8 5.2 -14 M540 200 q1.8 -8 6.0 -14 M543 200 q1.8 -8 6.8 -14 M521 193 q1.8 -5 5.2 -9 M523 193 q1.8 -5 6.0 -9 M526 193 q1.8 -5 6.8 -9 M359 196 q1.8 -7 5.2 -13 M361 196 q1.8 -7 6.0 -13 M364 196 q1.8 -7 6.8 -13 M325 197 q1.8 -5 5.2 -9 M327 197 q1.8 -5 6.0 -9 M284 193 q1.8 -4 5.2 -8 M287 193 q1.8 -4 6.0 -8 M289 193 q1.8 -4 6.8 -8 M489 193 q1.8 -8 5.2 -14 M491 193 q1.8 -8 6.0 -14 M494 193 q1.8 -8 6.8 -14 M571 197 q1.8 -6 5.2 -11 M574 197 q1.8 -6 6.0 -11 M519 195 q1.8 -6 5.2 -10 M522 195 q1.8 -6 6.0 -10 M268 193 q1.8 -5 5.2 -9 M270 193 q1.8 -5 6.0 -9 M273 193 q1.8 -5 6.8 -9 M412 196 q1.8 -7 5.2 -13 M414 196 q1.8 -7 6.0 -13 M396 195 q1.8 -5 5.2 -8 M398 195 q1.8 -5 6.0 -8 M286 194 q1.8 -7 5.2 -13 M289 194 q1.8 -7 6.0 -13 M476 198 q1.8 -6 5.2 -12 M478 198 q1.8 -6 6.0 -12 M481 198 q1.8 -6 6.8 -12 M530 194 q1.8 -7 5.2 -12 M533 194 q1.8 -7 6.0 -12 M535 194 q1.8 -7 6.8 -12 M358 195 q1.8 -7 5.2 -13 M361 195 q1.8 -7 6.0 -13" stroke-width="0.9"/>
+    <path d="M259 182 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M570 190 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M233 182 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M274 182 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M573 188 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M569 182 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M224 181 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M546 186 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M529 184 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M367 183 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M333 188 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M580 186 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M528 185 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M276 184 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M420 183 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M484 186 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M539 182 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M367 183 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3" stroke-width="0.8"/>
+    <path d="M79 212 q2.4 -9 7.2 -16 M82 212 q2.4 -9 8.0 -16 M84 212 q2.4 -9 8.8 -16 M120 209 q2.4 -7 7.2 -12 M122 209 q2.4 -7 8.0 -12 M554 215 q2.4 -9 7.2 -17 M556 215 q2.4 -9 8.0 -17 M341 216 q2.4 -8 7.2 -15 M343 216 q2.4 -8 8.0 -15 M402 221 q2.4 -11 7.2 -19 M404 221 q2.4 -11 8.0 -19 M407 221 q2.4 -11 8.8 -19 M49 212 q2.4 -7 7.2 -13 M52 212 q2.4 -7 8.0 -13 M54 212 q2.4 -7 8.8 -13 M221 218 q2.4 -7 7.2 -12 M224 218 q2.4 -7 8.0 -12 M51 216 q2.4 -7 7.2 -13 M53 216 q2.4 -7 8.0 -13 M56 216 q2.4 -7 8.8 -13 M301 209 q2.4 -9 7.2 -16 M304 209 q2.4 -9 8.0 -16 M583 215 q2.4 -9 7.2 -17 M585 215 q2.4 -9 8.0 -17 M588 215 q2.4 -9 8.8 -17 M20 216 q2.4 -8 7.2 -15 M22 216 q2.4 -8 8.0 -15 M18 213 q2.4 -9 7.2 -16 M20 213 q2.4 -9 8.0 -16 M23 213 q2.4 -9 8.8 -16 M45 210 q2.4 -10 7.2 -19 M47 210 q2.4 -10 8.0 -19 M515 216 q2.4 -9 7.2 -17 M517 216 q2.4 -9 8.0 -17 M520 216 q2.4 -9 8.8 -17 M309 207 q2.4 -8 7.2 -14 M312 207 q2.4 -8 8.0 -14 M314 207 q2.4 -8 8.8 -14 M574 219 q2.4 -7 7.2 -12 M576 219 q2.4 -7 8.0 -12 M423 219 q2.4 -9 7.2 -15 M426 219 q2.4 -9 8.0 -15 M454 211 q2.4 -9 7.2 -17 M457 211 q2.4 -9 8.0 -17 M66 207 q2.4 -7 7.2 -12 M69 207 q2.4 -7 8.0 -12 M425 217 q2.4 -8 7.2 -15 M427 217 q2.4 -8 8.0 -15 M430 217 q2.4 -8 8.8 -15 M86 212 q2.4 -10 7.2 -18 M89 212 q2.4 -10 8.0 -18 M461 212 q2.4 -7 7.2 -13 M463 212 q2.4 -7 8.0 -13 M562 208 q2.4 -9 7.2 -16 M565 208 q2.4 -9 8.0 -16 M378 218 q2.4 -7 7.2 -13 M381 218 q2.4 -7 8.0 -13 M383 218 q2.4 -7 8.8 -13 M334 215 q2.4 -9 7.2 -16 M337 215 q2.4 -9 8.0 -16 M339 215 q2.4 -9 8.8 -16 M457 216 q2.4 -11 7.2 -19 M460 216 q2.4 -11 8.0 -19 M199 221 q2.4 -11 7.2 -20 M202 221 q2.4 -11 8.0 -20 M371 221 q2.4 -9 7.2 -17 M374 221 q2.4 -9 8.0 -17 M376 221 q2.4 -9 8.8 -17 M53 217 q2.4 -8 7.2 -14 M55 217 q2.4 -8 8.0 -14 M58 217 q2.4 -8 8.8 -14 M315 217 q2.4 -11 7.2 -20 M317 217 q2.4 -11 8.0 -20 M372 219 q2.4 -11 7.2 -19 M374 219 q2.4 -11 8.0 -19 M377 219 q2.4 -11 8.8 -19 M351 220 q2.4 -9 7.2 -17 M353 220 q2.4 -9 8.0 -17 M356 220 q2.4 -9 8.8 -17 M115 213 q2.4 -9 7.2 -16 M118 213 q2.4 -9 8.0 -16 M340 214 q2.4 -7 7.2 -13 M343 214 q2.4 -7 8.0 -13 M345 211 q2.4 -9 7.2 -17 M347 211 q2.4 -9 8.0 -17 M350 211 q2.4 -9 8.8 -17 M448 214 q2.4 -9 7.2 -17 M451 214 q2.4 -9 8.0 -17 M453 214 q2.4 -9 8.8 -17 M557 215 q2.4 -8 7.2 -14 M560 215 q2.4 -8 8.0 -14 M561 213 q2.4 -9 7.2 -16 M563 213 q2.4 -9 8.0 -16 M132 209 q2.4 -7 7.2 -12 M135 209 q2.4 -7 8.0 -12 M137 209 q2.4 -7 8.8 -12 M331 213 q2.4 -7 7.2 -13 M334 213 q2.4 -7 8.0 -13 M526 209 q2.4 -10 7.2 -18 M528 209 q2.4 -10 8.0 -18 M584 215 q2.4 -9 7.2 -17 M587 215 q2.4 -9 8.0 -17 M589 215 q2.4 -9 8.8 -17 M474 215 q2.4 -9 7.2 -17 M476 215 q2.4 -9 8.0 -17 M154 209 q2.4 -10 7.2 -18 M157 209 q2.4 -10 8.0 -18 M417 207 q2.4 -10 7.2 -18 M419 207 q2.4 -10 8.0 -18 M422 207 q2.4 -10 8.8 -18 M204 221 q2.4 -9 7.2 -16 M207 221 q2.4 -9 8.0 -16" stroke-width="0.9"/>
+    <path d="M90 196 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M130 197 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M564 198 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M412 202 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M60 199 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M312 193 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M30 201 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M320 192 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M465 195 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M435 201 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M97 194 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M573 192 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M389 205 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M345 199 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M468 197 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M210 202 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M382 204 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M63 203 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M325 198 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M382 200 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M361 203 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M126 196 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M351 201 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M355 195 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M571 197 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M342 201 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M536 191 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M484 198 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M165 192 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M215 206 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3" stroke-width="0.8"/>
+    <!-- front edge of the ground block (cut-away) -->
+    <path d="M20 232 Q200 228 400 231 T580 230" stroke-width="1.8"/>
+    <path d="M22 234 Q200 230 400 233" stroke-width="0.8"/>
+    <path d="M114 228 q2.4 -7 7.2 -12 M116 228 q2.4 -7 8.0 -12 M119 228 q2.4 -7 8.8 -12 M93 231 q2.4 -9 7.2 -17 M95 231 q2.4 -9 8.0 -17 M98 231 q2.4 -9 8.8 -17 M253 230 q2.4 -8 7.2 -15 M255 230 q2.4 -8 8.0 -15 M45 227 q2.4 -11 7.2 -20 M48 227 q2.4 -11 8.0 -20 M50 227 q2.4 -11 8.8 -20 M541 229 q2.4 -10 7.2 -17 M543 229 q2.4 -10 8.0 -17 M546 229 q2.4 -10 8.8 -17 M223 230 q2.4 -7 7.2 -12 M225 230 q2.4 -7 8.0 -12 M228 230 q2.4 -7 8.8 -12 M99 229 q2.4 -9 7.2 -17 M102 229 q2.4 -9 8.0 -17 M104 229 q2.4 -9 8.8 -17 M72 230 q2.4 -8 7.2 -14 M74 230 q2.4 -8 8.0 -14 M471 230 q2.4 -10 7.2 -18 M473 230 q2.4 -10 8.0 -18 M540 230 q2.4 -10 7.2 -17 M542 230 q2.4 -10 8.0 -17 M545 230 q2.4 -10 8.8 -17 M512 231 q2.4 -8 7.2 -14 M514 231 q2.4 -8 8.0 -14 M517 231 q2.4 -8 8.8 -14 M205 227 q2.4 -10 7.2 -19 M208 227 q2.4 -10 8.0 -19 M312 228 q2.4 -9 7.2 -17 M315 228 q2.4 -9 8.0 -17 M317 228 q2.4 -9 8.8 -17 M225 226 q2.4 -10 7.2 -18 M228 226 q2.4 -10 8.0 -18 M230 226 q2.4 -10 8.8 -18 M23 231 q2.4 -7 7.2 -13 M26 231 q2.4 -7 8.0 -13 M28 231 q2.4 -7 8.8 -13 M512 228 q2.4 -9 7.2 -17 M515 228 q2.4 -9 8.0 -17 M572 228 q2.4 -11 7.2 -20 M574 228 q2.4 -11 8.0 -20 M577 228 q2.4 -11 8.8 -20 M99 226 q2.4 -8 7.2 -15 M101 226 q2.4 -8 8.0 -15 M104 226 q2.4 -8 8.8 -15 M177 228 q2.4 -11 7.2 -20 M179 228 q2.4 -11 8.0 -20 M290 231 q2.4 -10 7.2 -18 M292 231 q2.4 -10 8.0 -18 M295 231 q2.4 -10 8.8 -18 M304 232 q2.4 -10 7.2 -18 M306 232 q2.4 -10 8.0 -18 M408 228 q2.4 -10 7.2 -18 M411 228 q2.4 -10 8.0 -18 M418 228 q2.4 -11 7.2 -19 M420 228 q2.4 -11 8.0 -19 M423 228 q2.4 -11 8.8 -19 M57 227 q2.4 -10 7.2 -19 M59 227 q2.4 -10 8.0 -19 M62 227 q2.4 -10 8.8 -19 M347 230 q2.4 -7 7.2 -14 M350 230 q2.4 -7 8.0 -14 M238 230 q2.4 -8 7.2 -14 M241 230 q2.4 -8 8.0 -14 M39 231 q2.4 -8 7.2 -15 M42 231 q2.4 -8 8.0 -15 M44 231 q2.4 -8 8.8 -15 M549 229 q2.4 -8 7.2 -15 M552 229 q2.4 -8 8.0 -15 M554 229 q2.4 -8 8.8 -15 M267 230 q2.4 -7 7.2 -12 M270 230 q2.4 -7 8.0 -12 M272 230 q2.4 -7 8.8 -12 M565 226 q2.4 -8 7.2 -14 M568 226 q2.4 -8 8.0 -14 M570 226 q2.4 -8 8.8 -14 M161 231 q2.4 -11 7.2 -20 M163 231 q2.4 -11 8.0 -20 M62 227 q2.4 -10 7.2 -19 M65 227 q2.4 -10 8.0 -19 M67 227 q2.4 -10 8.8 -19 M298 230 q2.4 -8 7.2 -14 M300 230 q2.4 -8 8.0 -14 M303 230 q2.4 -8 8.8 -14 M565 232 q2.4 -10 7.2 -18 M568 232 q2.4 -10 8.0 -18" stroke-width="1"/>
+    <path d="M124 215 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M56 208 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M551 212 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M233 218 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M110 212 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M82 216 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M522 217 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M216 209 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M236 208 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M34 217 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M523 212 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M582 209 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M109 211 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M314 214 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M419 210 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M428 209 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M358 216 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M249 216 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M50 216 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M560 215 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M278 218 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M576 212 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M171 212 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M73 209 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M308 216 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3 M576 214 l3 -3 m-2 -1 l3 -2 m-4 -1 l3 -3" stroke-width="0.8"/>
+    <!-- soil section: buried drip line with emitters -->
+    <path d="M20 232 V282 H580 V230" stroke-width="1.6"/>
+    <path d="M22 234 V280 H578" stroke-width="0.8"/>
+    <path d="M60 254 l3 1 M120 270 l3 1 M200 250 l3 1 M280 272 l3 1 M360 252 l3 1 M440 270 l3 1 M520 254 l3 1 M160 262 l3 1 M400 264 l3 1 M480 246 l3 1 M90 246 l3 1 M330 266 l3 1 M560 268 l3 1" stroke-width="0.9"/>
+    <path d="M80 234 q-2 8 -6 12 M88 234 q2 8 0 14 M250 234 q-2 8 -4 12 M258 233 q2 8 4 12 M420 234 q-2 8 -5 12 M428 233 q2 8 3 12 M550 233 q-2 8 -4 12 M330 234 q1 6 -1 12" stroke-width="0.8"/>
+    <path d="M30 258 H570" stroke-width="1.5"/>
+    <path d="M30 263 H570" stroke-width="1.5"/>
+    <path d="M32 260 H568" stroke-width="0.6"/>
+    <path d="M110 258 v-3 h6 v3 M230 258 v-3 h6 v3 M350 258 v-3 h6 v3 M470 258 v-3 h6 v3" stroke-width="1.1"/>
+    <path d="M113 263 v5 M110 272 q3 3 6 0 M233 263 v5 M230 272 q3 3 6 0 M353 263 v5 M350 272 q3 3 6 0 M473 263 v5 M470 272 q3 3 6 0" stroke-width="0.9"/>
+  </g>
+  <text x="586" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">06</text>
+</svg>
+</div><div><i>06</i><b>草地</b><p>5.3 × 18.9m · 100㎡ · 露天 · 南北向长条</p></div></a><a class="link-card" href="areas/07.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="marea-07-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="marea-07-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="marea-07-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="marea-07-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
+  </defs>
+  <g filter="url(#marea-07-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M40 232 Q140 226 250 236 T390 230" stroke-width="1.4"/>
+<path d="M20 246 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M32 258 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M24 270 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M36 280 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M14 60 q60 -10 120 0 M250 58 q40 -8 80 0" stroke-width="0.6" stroke-dasharray="3 3"/>
+<path d="M14 120 L60 122 L130 200 L200 214" stroke-width="1.6"/><path d="M14 138 L58 140 L120 208" stroke-width="0.9"/>
+<path d="M14 122 L60 124 L130 202 L124 212 L58 142 L14 140 Z" fill="url(#marea-07-hatchl)" stroke="none"/>
+<path d="M66 130 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M82 148 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M98 166 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M114 184 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M62 112 L128 186" stroke-width="1.2"/><path d="M66 128 v-14 M92 156 v-14 M118 184 v-14" stroke-width="0.9"/>
+<path d="M14 104 h30 v14 h-30 Z" stroke-width="1"/><path d="M16 106 h26 v10 h-26 Z" fill="url(#marea-07-hatch)" stroke="none"/>
+<path d="M150 214 L300 214 L340 190 L190 190 Z" stroke-width="1.8"/><path d="M150 214 v12 h150 v-12 M300 226 l40 -24 v-12" stroke-width="1.3"/>
+<path d="M300 214 l40 -24 v12 l-40 24 Z" fill="url(#marea-07-hatch)" stroke="none"/>
+<path d="M167 214 l40 -24" stroke-width="0.5"/>
+<path d="M184 214 l40 -24" stroke-width="0.5"/>
+<path d="M201 214 l40 -24" stroke-width="0.5"/>
+<path d="M218 214 l40 -24" stroke-width="0.5"/>
+<path d="M235 214 l40 -24" stroke-width="0.5"/>
+<path d="M252 214 l40 -24" stroke-width="0.5"/>
+<path d="M269 214 l40 -24" stroke-width="0.5"/>
+<path d="M286 214 l40 -24" stroke-width="0.5"/>
+<path d="M160 226 v8 h10 v-8 M280 226 v8 h10 v-8 M322 202 v8 h8 v-8" stroke-width="0.9"/>
+<path d="M300 212 l40 -24 M300 209 l40 -24" stroke-width="0.9"/>
+<path d="M160 214 V120 M292 214 V128 M198 190 V104 M332 190 V112" stroke-width="1.4"/>
+<path d="M150 118 L302 126 L342 108 L192 100 Z" stroke-width="1.6"/>
+<path d="M169 119 l40 -18" stroke-width="0.6"/>
+<path d="M188 120 l40 -18" stroke-width="0.6"/>
+<path d="M207 121 l40 -18" stroke-width="0.6"/>
+<path d="M226 122 l40 -18" stroke-width="0.6"/>
+<path d="M245 123 l40 -18" stroke-width="0.6"/>
+<path d="M264 124 l40 -18" stroke-width="0.6"/>
+<path d="M283 125 l40 -18" stroke-width="0.6"/>
+<path d="M150 118 l0 -6 l152 8 l0 6 M302 126 v-6 l40 -18 v6" stroke-width="0.9"/>
+<path d="M300 130 v14 a3 3 0 1 0 0.1 0 M300 150 v10 a3 3 0 1 0 0.1 0" stroke-width="0.8"/>
+<path d="M212 206 h16 v-14 h-16 Z M212 192 v-16 h16 v16 M214 206 v8 M226 206 v8" stroke-width="1.1"/>
+<path d="M262 208 v-12 M262 196 L370 150" stroke-width="1"/><path d="M370 150 L376 232" stroke-width="0.5" stroke-dasharray="2 3"/>
+<path d="M258 196 l8 0 M262 196 l-3 -4 M262 196 l3 -4" stroke-width="0.8"/>
+<path d="M240 204 h18 l6 -4 h-18 Z M240 204 v8 M258 204 v8 M264 200 v8" stroke-width="0.9"/>
+<circle cx="300" cy="178.75" r="3.75" stroke-width="1.2"/><path d="M300 182.5 V196.0 M300 188.5 L293.25 197.5 M300 188.5 L306.75 197.5 M300 196.0 L294.75 208 M300 196.0 L305.25 208" stroke-width="1.2"/>
+<path d="M120 216 l2 -8 l2 8 M136 224 l2 -9 M360 226 l2 -8 l2 8 M376 224 l2 -7 M30 226 l3 -10 l3 10" stroke-width="0.9"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">07 钓台</text>
+<text x="14" y="98" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="start" filter="none">庭院 → 2m 过道</text>
+<text x="40" y="186" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="start" filter="none">6m 缓坡</text>
+<text x="245" y="96" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">钓台 ≈2.5×2.2</text>
+<text x="330" y="262" font-family="'Long Cang','Kaiti SC',cursive" font-size="9" fill="#5a5a5a" text-anchor="middle" filter="none">河 · 宽 10m</text>
+<text x="200" y="290" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">钓台 · 缓坡尽头临河 ≈2.5 × 2.2 m，面前是 10 米宽的河</text>
+</svg>
+</div><div><i>07</i><b>钓台</b><p>≈2.5 × 2.2m · ≈5.5㎡ · 露天 · 缓坡临河端（按庭院四分之一预估）</p></div></a></div>
+  </section>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>
