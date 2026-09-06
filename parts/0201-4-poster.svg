@@ -56,7 +56,7 @@
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0201 · L4</text>
   <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">天气同频·落日入睡</text>
-  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">地面下雨地下也阴，到点太阳替你关灯</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">外面下雨屋里也阴，到点太阳替你关灯</text>
   <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">气象站 + 就寝时间 → 覆盖层（落日 > 阴天）→ 灯 + 夜灯</text>
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">雨量 > 0 或照度低于晴天 1/3，10 分钟后切阴天</text>
@@ -67,7 +67,7 @@
   <text x="30" y="454" font-size="9" fill="#666">参考实现：basnijholt/adaptive-lighting</text>
   <g font-size="8.5" fill="#666" text-anchor="middle">
     <text x="74" y="188">雨量 / 照度</text><text x="296" y="186">就寝前 30 分</text>
-    <text x="180" y="246">地下 3m：阴天 4500K → 落日 → 1% 月光</text>
+    <text x="180" y="246">无窗地堡：阴天 4500K → 落日 → 1% 月光</text>
   </g>
   <g transform="rotate(-8 296 108)">
     <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>

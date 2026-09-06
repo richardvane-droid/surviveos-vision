@@ -21,7 +21,7 @@
     <!-- 步骤：套边框 -->
     <rect x="330" y="49" width="120" height="40" rx="6"/>
     <rect x="332" y="51" width="116" height="36" rx="5" stroke-width="0.5"/>
-    <!-- 数据源 圆柱：Immich 客人相册 -->
+    <!-- 数据源 圆柱：Immich 木屋相册 -->
     <path d="M356 130 a34 6 0 0 1 68 0 v38 a34 6 0 0 1 -68 0 Z"/><ellipse cx="390" cy="130" rx="34" ry="6"/>
     <!-- 判断 菱形：相纸充足？ -->
     <path d="M230 128 l58 24 l-58 24 l-58 -24 Z"/>
@@ -54,13 +54,13 @@
   </g>
   <!-- 文字 -->
   <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
-    <text x="85" y="73">客人按下红按钮</text>
+    <text x="85" y="73">按下红按钮</text>
     <text x="230" y="66">3 秒倒计时</text><text x="230" y="80">预览屏取景拍照</text>
     <text x="390" y="66">套宝丽来白边</text><text x="390" y="80">烫印日期</text>
-    <text x="390" y="150">客人相册</text><text x="390" y="163" font-size="8.5" fill="#666">Immich · 原片先存</text>
+    <text x="390" y="150">木屋相册</text><text x="390" y="163" font-size="8.5" fill="#666">Immich · 原片先存</text>
     <text x="230" y="149">相纸充足？</text><text x="230" y="162" font-size="8.5" fill="#666">打印机计数</text>
     <text x="85" y="147">是 → 打印 4×6</text><text x="85" y="161">约 20 秒出片</text>
-    <text x="85" y="247">客人自己夹到</text><text x="85" y="261">下排空夹子上</text>
+    <text x="85" y="247">自己夹到</text><text x="85" y="261">下排空夹子上</text>
     <text x="230" y="247">否 → 亮黄灯提示</text><text x="230" y="261">照片已存好</text>
     <text x="390" y="247">扫码取原片</text><text x="390" y="261">相册分享链接</text>
     <text x="240" y="331">主人全程不用插手</text>

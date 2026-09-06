@@ -51,7 +51,7 @@
   <!-- 文字层 -->
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0101 · L3</text>
-  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">来客感应亮灯</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">人近感应亮灯</text>
   <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">你一走近，光就只落在它身上</text>
   <text x="180" y="296" text-anchor="middle" font-size="9.5" fill="#666">毫米波存在 → 照度判断 → 射灯 2 秒渐亮 → 3 分钟无人渐暗</text>
   <g font-size="11" fill="#2a2a2a">

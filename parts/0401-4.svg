@@ -16,7 +16,7 @@
     </marker>
   </defs>
 
-  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">借还归位提醒 · 流程图</text>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">取用归位提醒 · 流程图</text>
   <g filter="url(#p0401-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
     <rect x="30" y="52" width="110" height="34" rx="17"/>
     <path d="M196 47 a34 6 0 0 1 68 0 v36 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="47" rx="34" ry="6"/>

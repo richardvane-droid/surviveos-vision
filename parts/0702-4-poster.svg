@@ -55,11 +55,11 @@
   </g>
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0702 · L4</text>
-  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">钓具借还账本</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">钓具出入账本</text>
   <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">每根竿都记得自己上次钓了什么</text>
   <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">扫二维码 → 借出 / 归还 → 填鱼获 → 库存状态 + 饵 × 月份统计</text>
   <g font-size="11" fill="#2a2a2a">
-    <text x="64" y="336">竿和饵盒各贴一枚二维码，扫一下即借还</text>
+    <text x="64" y="336">竿和饵盒各贴一枚二维码，扫一下即出入</text>
     <text x="64" y="366">归还顺手记鱼种、饵、天气，黑板有数字备份</text>
     <text x="64" y="396">借出超 7 天自动催还，饵在哪月最好用一查便知</text>
   </g>

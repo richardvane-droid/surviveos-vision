@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="p0701-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="51" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="p0701-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
@@ -12,59 +12,50 @@
       <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
     </pattern>
   </defs>
-  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
   <g filter="url(#p0701-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
-    <!-- 1 钢管桩 三根 + 塘泥线 -->
-    <path d="M70 258 v66 M84 258 v66" stroke-width="1.5"/><ellipse cx="77" cy="258" rx="7" ry="3" stroke-width="1.4"/>
-    <path d="M104 250 v74 M118 250 v74" stroke-width="1.5"/><ellipse cx="111" cy="250" rx="7" ry="3" stroke-width="1.4"/>
-    <path d="M138 242 v82 M152 242 v82" stroke-width="1.5"/><ellipse cx="145" cy="242" rx="7" ry="3" stroke-width="1.4"/>
-    <path d="M72 300 h10 v22 h-10 Z M106 300 h10 v22 h-10 Z M140 300 h10 v22 h-10 Z" fill="url(#p0701-1-shade)" stroke="none"/>
-    <path d="M56 300 q12 -4 24 0 q12 4 24 0 q12 -4 24 0 q12 4 24 0 q12 -4 24 0" stroke-width="0.9"/>
-    <path d="M60 330 q20 -4 40 0 q20 4 40 0 q20 -4 30 0" stroke-width="0.7"/>
-    <path d="M78 308 l2 4 M112 312 l-2 4 M146 306 l2 4" stroke-width="0.6"/>
-    <!-- 2 桩顶法兰 圆盘 + 螺栓 -->
-    <ellipse cx="190" cy="222" rx="16" ry="6" stroke-width="1.5"/>
-    <path d="M174 222 v4 a16 6 0 0 0 32 0 v-4" stroke-width="1.1"/>
-    <path d="M176 226 a16 6 0 0 0 28 0 v2 a16 6 0 0 1 -28 0 Z" fill="url(#p0701-1-shade)" stroke="none"/>
-    <circle cx="180" cy="221" r="1.6" stroke-width="0.8"/><circle cx="200" cy="221" r="1.6" stroke-width="0.8"/><circle cx="190" cy="225" r="1.6" stroke-width="0.8"/>
-    <ellipse cx="190" cy="212" rx="6" ry="2.5" stroke-width="1"/><path d="M184 212 v8 M196 212 v8" stroke-width="1"/>
-    <!-- 3 松木龙骨 框架 -->
-    <path d="M214 180 l70 -30 l50 18 l-70 30 Z" stroke-width="1.5"/>
-    <path d="M214 186 l50 18 l70 -30 M214 180 v6 M334 168 v6" stroke-width="0.9"/>
-    <path d="M232 174 l50 18 M250 166 l50 18 M268 158 l50 18" stroke-width="1.1"/>
-    <path d="M232 174 l50 18 v3 l-50 -18 Z M250 166 l50 18 v3 l-50 -18 Z M268 158 l50 18 v3 l-50 -18 Z" fill="url(#p0701-1-shade2)" stroke="none"/>
-    <path d="M216 186 l48 18 v3 l-48 -18 Z" fill="url(#p0701-1-shade)" stroke="none"/>
-    <!-- 4 防腐木面板 留缝 -->
-    <path d="M282 122 l70 -30 l50 18 l-70 30 Z" stroke-width="1.5"/>
-    <path d="M282 126 l50 18 l70 -30 M282 122 v4 M402 110 v4" stroke-width="0.9"/>
-    <path d="M292 118 l50 18 M302 113 l50 18 M312 109 l50 18 M322 105 l50 18 M332 100 l50 18 M342 96 l50 18" stroke-width="0.7"/>
-    <path d="M294 117 l50 18 M304 112 l50 18 M314 108 l50 18 M324 104 l50 18 M334 99 l50 18 M344 95 l50 18" stroke-width="0.5"/>
-    <path d="M284 126 l48 18 v3 l-48 -18 Z" fill="url(#p0701-1-shade)" stroke="none"/>
-    <!-- 5 挡水条 + 木长凳 -->
-    <path d="M356 74 l40 -17 l6 2 l-40 17 Z" stroke-width="1.4"/>
-    <path d="M356 74 v5 l6 2 v-5 M402 59 v5 l-40 17 v-5" stroke-width="0.8"/>
-    <path d="M358 79 l4 2 l40 -17 v-3 l-4 -1 l-40 17 Z" fill="url(#p0701-1-shade)" stroke="none"/>
-    <path d="M404 46 l30 -12 l10 4 l-30 12 Z" stroke-width="1.4"/>
-    <path d="M404 46 v3 l10 4 v-3 M444 38 v3 l-30 12 v-3" stroke-width="0.8"/>
-    <path d="M408 53 v10 M412 55 v10 M438 42 v10 M442 44 v10" stroke-width="1.1"/>
-    <path d="M406 49 l8 4 v3 l-8 -4 Z" fill="url(#p0701-1-shade)" stroke="none"/>
+<path d="M50.0 300.0 h16 v10 h-16 Z M50.0 300.0 l6 -4 h16 l-6 4 M66.0 300.0 l6 -4 v10 l-6 4" stroke-width="1.1"/><path d="M58.0 300.0 v-6" stroke-width="0.8"/>
+<path d="M100.0 290.0 h16 v10 h-16 Z M100.0 290.0 l6 -4 h16 l-6 4 M116.0 290.0 l6 -4 v10 l-6 4" stroke-width="1.1"/><path d="M108.0 290.0 v-6" stroke-width="0.8"/>
+<path d="M150.0 280.0 h16 v10 h-16 Z M150.0 280.0 l6 -4 h16 l-6 4 M166.0 280.0 l6 -4 v10 l-6 4" stroke-width="1.1"/><path d="M158.0 280.0 v-6" stroke-width="0.8"/>
+<path d="M70.0 316.0 h16 v10 h-16 Z M70.0 316.0 l6 -4 h16 l-6 4 M86.0 316.0 l6 -4 v10 l-6 4" stroke-width="1.1"/><path d="M78.0 316.0 v-6" stroke-width="0.8"/>
+<path d="M120.0 306.0 h16 v10 h-16 Z M120.0 306.0 l6 -4 h16 l-6 4 M136.0 306.0 l6 -4 v10 l-6 4" stroke-width="1.1"/><path d="M128.0 306.0 v-6" stroke-width="0.8"/>
+<path d="M170.0 296.0 h16 v10 h-16 Z M170.0 296.0 l6 -4 h16 l-6 4 M186.0 296.0 l6 -4 v10 l-6 4" stroke-width="1.1"/><path d="M178.0 296.0 v-6" stroke-width="0.8"/>
+<path d="M40.0 334.0 q20 -6 40 0 t40 0 t40 0 t40 0" stroke-width="0.6" stroke-dasharray="2 2"/>
+<path d="M117.5 246.0 h110 l30 -16 h-110 Z M117.5 246.0 v-6 h110 v6 M227.5 240.0 l30 -16" stroke-width="1.3"/>
+<path d="M139.5 246.0 l30 -16" stroke-width="0.9"/>
+<path d="M161.5 246.0 l30 -16" stroke-width="0.9"/>
+<path d="M183.5 246.0 l30 -16" stroke-width="0.9"/>
+<path d="M205.5 246.0 l30 -16" stroke-width="0.9"/>
+<path d="M183.0 188.0 h114 l32 -18 h-114 Z" stroke-width="1.5"/>
+<path d="M192.5 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M202.0 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M211.5 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M221.0 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M230.5 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M240.0 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M249.5 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M259.0 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M268.5 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M278.0 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M287.5 188.0 l32 -18" stroke-width="0.6"/>
+<path d="M183.0 188.0 v4 h114 v-4 M297.0 192.0 l32 -18 v-4" stroke-width="1"/><path d="M298.0 191.0 l30 -17 v-3 l-30 17 Z" fill="url(#p0701-1-shade)" stroke="none"/>
+<path d="M352.5 130.0 l32 -18 v-6 l-32 18 Z" stroke-width="1.2"/><path d="M353.5 129.0 l30 -17 v-4 l-30 17 Z" fill="url(#p0701-1-shade)" stroke="none"/>
+<path d="M350.0 60.0 h50 v6 h-50 Z M354.0 66.0 v12 M396.0 66.0 v12" stroke-width="1.1"/><path d="M352.0 63.0 h46" stroke-width="0.5"/>
   </g>
-  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
-    <path d="M160 300 H206"/><path d="M172 222 H150"/><path d="M336 185 H372"/><path d="M280 110 H244"/><path d="M444 52 H452"/>
+  <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
+<path d="M44.0 298.0 L12.0 292.0"/>
+<path d="M115.5 234.0 L83.5 228.0"/>
+<path d="M181.0 174.0 L149.0 168.0"/>
+<path d="M350.5 108.0 L318.5 102.0"/>
+<path d="M348.0 56.0 L316.0 50.0"/>
   </g>
-  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
-    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
-      <circle cx="216" cy="300" r="8"/><circle cx="140" cy="222" r="8"/><circle cx="382" cy="185" r="8"/><circle cx="234" cy="110" r="8"/><circle cx="460" cy="52" r="8"/>
-    </g>
-    <text x="216" y="303.5">1</text><text x="140" y="225.5">2</text><text x="382" y="188.5">3</text><text x="234" y="113.5">4</text><text x="460" y="55.5">5</text>
-  </g>
-  <g font-size="10.5" fill="#2a2a2a">
-    <text x="16" y="34" font-weight="700" font-size="12">钢桩龙骨钓台平台 · 爆炸图</text>
-    <text x="16" y="52">1 Φ100 镀锌钢管桩（入硬土 80cm）</text>
-    <text x="16" y="68">2 桩顶法兰盘 + 螺栓</text>
-    <text x="16" y="84">3 防腐松木龙骨（间距 400mm）</text>
-    <text x="16" y="100">4 防腐木面板（板缝 5mm）</text>
-    <text x="16" y="116">5 木挡水条 + 靠岸长凳</text>
-  </g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">预制墩木框钓台平台 · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 预制混凝土墩 ×6 · 40cm 碎石垫层 · 不打桩不下水</text><text x="16" y="59">2 镀锌柱脚件 + 防腐松木框龙骨 90×45 @400</text><text x="16" y="72">3 防腐木面板 2.5×2.2m · 板缝 5mm 排水</text><text x="16" y="85">4 临河侧 10cm 木挡水条</text><text x="16" y="98">5 靠岸一侧固定长凳（凳下放鱼护）</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0701-1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="12.0" cy="292.0" r="7"/></g><text x="12.0" y="295.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="83.5" cy="228.0" r="7"/></g><text x="83.5" y="231.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="149.0" cy="168.0" r="7"/></g><text x="149.0" y="171.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="318.5" cy="102.0" r="7"/></g><text x="318.5" y="105.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="316.0" cy="50.0" r="7"/></g><text x="316.0" y="53.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<text x="16" y="120" font-size="8" fill="#888" font-style="italic">岸上、缓坡坡脚 · ≈5.5㎡ · 一人尺度</text>
 </svg>

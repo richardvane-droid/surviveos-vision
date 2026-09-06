@@ -74,7 +74,7 @@
     <text x="64" y="366">先把原片存进相册再打印，相纸不够也不丢</text>
     <text x="64" y="396">相纸不足亮黄灯提示，扫码就能带走原片</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：树莓派 pibooth · 数据出口：Immich 客人相册 / 打印计数</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：树莓派 pibooth · 数据出口：Immich 木屋相册 / 打印计数</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：pibooth/pibooth · PhotoboothProject/photobooth</text>
   <g transform="rotate(-8 296 108)">
     <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>

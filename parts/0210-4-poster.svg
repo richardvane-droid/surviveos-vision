@@ -54,9 +54,9 @@
   <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">白板上那个 92 天，是算出来的不是猜的</text>
   <text x="180" y="184" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="24" fill="#2a2a2a">92</text>
   <text x="180" y="198" text-anchor="middle" font-size="9" fill="#666">天</text>
-  <text x="180" y="284" text-anchor="middle" font-size="9.5" fill="#666">库存 × 热量 ÷ 两人日需 → 取水与食较小值 → 缺口进采购单</text>
+  <text x="180" y="284" text-anchor="middle" font-size="9.5" fill="#666">库存 × 热量 ÷ 一人日需 → 取水与食较小值 → 缺口进采购单</text>
   <g font-size="11" fill="#2a2a2a">
-    <text x="64" y="336">食品按 8000 千卡/天，水按 6L/天各算一遍</text>
+    <text x="64" y="336">食品按 2500 千卡/天，水按 3L/天各算一遍</text>
     <text x="64" y="366">低于 90 天或品类见底，缺口自动进采购单</text>
     <text x="64" y="396">4 月和 10 月轮换日，提前两周列好换水换罐清单</text>
   </g>

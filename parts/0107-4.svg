@@ -40,13 +40,13 @@
     <path d="M30 250 Q10 250 10 150 Q10 130 28 130" stroke-dasharray="3 3"/>
   </g>
   <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
-    <text x="85" y="73">客人坐下翻平板</text>
+    <text x="85" y="73">坐下翻平板</text>
     <text x="230" y="74">Bar Assistant</text><text x="230" y="87" font-size="8.5" fill="#666">库存 + 配方库</text>
     <text x="85" y="147">按现有库存筛出</text><text x="85" y="161">今晚能做的配方</text>
-    <text x="230" y="149">客人选了一款？</text><text x="230" y="162" font-size="8.5" fill="#666">手冲 / 热红酒</text>
+    <text x="230" y="149">自己选了一款？</text><text x="230" y="162" font-size="8.5" fill="#666">手冲 / 热红酒</text>
     <text x="390" y="147">是 → 按配方扣减</text><text x="390" y="161">黄酒/桂花/陈皮用量</text>
     <text x="85" y="247">否 → 推荐今晚招牌</text><text x="85" y="261">再翻一页继续聊</text>
-    <text x="230" y="247">库存看板更新</text><text x="230" y="261">记一杯待客日志</text>
+    <text x="230" y="247">库存看板更新</text><text x="230" y="261">记一杯饮品日志</text>
     <text x="390" y="247">有料低于 1 份 →</text><text x="390" y="261">购物清单 + 手机推送</text>
     <text x="240" y="331">饮品上桌 · 数据回到库存</text>
   </g>

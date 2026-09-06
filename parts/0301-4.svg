@@ -51,13 +51,13 @@
     <text x="85" y="73">拖入 SVG · 出 G 代码</text>
     <text x="230" y="74">HA 存在状态</text><text x="230" y="87" font-size="8.5" fill="#666">木屋门磁 + 毫米波</text>
     <text x="85" y="147">Candle 探针扫高度图</text><text x="85" y="161">木牌不平也刻得准</text>
-    <text x="230" y="149">楼下有客人？</text><text x="230" y="162" font-size="8.5" fill="#666">或 22 点后</text>
-    <text x="390" y="147">是 → 任务排队</text><text x="390" y="161">客人走后推送可开机</text>
+    <text x="230" y="149">楼下在休息？</text><text x="230" y="162" font-size="8.5" fill="#666">或 22 点后</text>
+    <text x="390" y="147">是 → 任务排队</text><text x="390" y="161">人离开后推送可开机</text>
     <text x="85" y="247">报警 → 急停 + 推送</text><text x="85" y="261">限位 / 断刀 / 失步</text>
     <text x="230" y="247">否 → 发 GRBL 开雕</text><text x="230" y="261">吸尘器随主轴联动</text>
     <text x="390" y="247">完成 → 吸尘延时 10 秒</text><text x="390" y="261">摄像头拍一张成品</text>
     <text x="240" y="331">成品照 + G 代码存 NAS</text>
   </g>
-  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="146" y="245">报警</text><text x="296" y="245">完成</text><text x="300" y="108">客人离开 → 重新判断</text></g>
+  <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="200">否</text><text x="146" y="245">报警</text><text x="296" y="245">完成</text><text x="300" y="108">人离开 → 重新判断</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0301-4</text>
 </svg>

@@ -85,13 +85,13 @@
     <text x="458" y="35.5">6</text>
   </g>
   <g font-size="10.5" fill="#2a2a2a">
-    <text x="16" y="34" font-weight="700" font-size="12">嵌墙缸体与过滤总成 · 爆炸图</text>
-    <text x="16" y="52">1 钢木底柜（独立承重）</text>
+    <text x="16" y="34" font-weight="700" font-size="12">吧台缸体与过滤总成 · 爆炸图</text>
+    <text x="16" y="52">1 吧台矮柜段（方钢框架承重）</text>
     <text x="16" y="68">2 底滤仓：棉 → 陶瓷环 → 泵</text>
     <text x="16" y="84">3 超白缸体 + 溢流管</text>
     <text x="16" y="100">4 造景层：沉木 / 莫斯石 / 水草</text>
     <text x="16" y="116">5 水草灯（PWM 调光）</text>
-    <text x="16" y="132">6 做旧木窗框</text>
+    <text x="16" y="132">6 做旧木窗框（收边）</text>
   </g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0205-1</text>
 </svg>

@@ -59,7 +59,7 @@
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0602 · L4</text>
   <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">草地体检看板</text>
-  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">朋友来了，先看草地的心电图</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">每天回家，先看草地的心电图</text>
   <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">阀时长 × 滴头流量 → 雨水 / 自来水两本账 → 三曲线 + 占比看板</text>
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">每次开阀自动折算升数，雨水和自来水分开记账</text>

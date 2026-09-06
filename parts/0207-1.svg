@@ -12,65 +12,90 @@
       <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
     </pattern>
   </defs>
-  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <path d="M96 326 L392 44" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
   <g filter="url(#p0207-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
-    <path d="M56 306 l24 -14 h90 l-24 14 Z" stroke-width="1.5"/>
-    <path d="M58 305 l22 -12 h86 v3 l-22 12 h-86 Z" fill="url(#p0207-1-shade)" stroke="none" opacity="0.5"/>
-    <circle cx="70" cy="302" r="2" stroke-width="0.9"/><circle cx="90" cy="294" r="2" stroke-width="0.9"/><circle cx="136" cy="302" r="2" stroke-width="0.9"/><circle cx="156" cy="294" r="2" stroke-width="0.9"/>
-    <path d="M113 299 v-16 M109 283 h8" stroke-width="1.3"/><path d="M111 299 h4" stroke-width="0.8"/>
-    <rect x="146" y="226" width="70" height="26" stroke-width="1.5"/>
-    <path d="M146 226 l16 -9 h70 l-16 9" stroke-width="1.5"/>
-    <path d="M216 226 l16 -9 v26 l-16 9" stroke-width="1.5"/>
-    <path d="M217 227 l14 -8 v24 l-14 8 Z" fill="url(#p0207-1-shade)" stroke="none"/>
-    <rect x="148" y="228" width="66" height="22" stroke-width="0.5"/>
-    <circle cx="200" cy="239" r="7" stroke-width="1.3"/><circle cx="200" cy="239" r="3.5" stroke-width="0.8"/>
-    <path d="M152 231 h20 M152 235 h20 M152 239 h20 M152 243 h20" stroke-width="0.5"/>
-    <path d="M196 246 l-8 22 M204 246 l4 22" stroke-width="0.6" stroke-dasharray="2 2"/>
-    <path d="M170 226 l6 -4 M190 226 l6 -4" stroke-width="0.8"/>
-    <rect x="206" y="172" width="90" height="14" stroke-width="1.4"/>
-    <path d="M206 172 l16 -9 h90 l-16 9" stroke-width="1.4"/>
-    <path d="M296 172 l16 -9 v14 l-16 9" stroke-width="1.4"/>
-    <path d="M297 173 l14 -8 v12 l-14 8 Z" fill="url(#p0207-1-shade)" stroke="none"/>
-    <path d="M210 184 h82" stroke-width="0.6"/><path d="M206 172 v14 M208 174 v10" stroke-width="0.7"/>
-    <rect x="202" y="171" width="4" height="16" stroke-width="1"/><rect x="296" y="171" width="4" height="16" stroke-width="1"/>
-    <path d="M226 172 v-8 M276 172 v-8" stroke-width="0.9"/>
-    <rect x="279" y="95" width="82" height="46" stroke-width="1.5"/>
-    <rect x="283" y="99" width="74" height="38" stroke-width="0.6"/>
-    <path d="M279 95 h82 v4 h-82 Z" fill="url(#p0207-1-shade2)" stroke="none"/><path d="M279 141 h82 v3 h-82 Z" fill="url(#p0207-1-shade)" stroke="none"/>
-    <path d="M290 104 l10 12 M296 104 l8 10" stroke-width="0.4"/>
-    <rect x="350" y="22" width="84" height="48" rx="3" stroke-width="1.5"/>
-    <rect x="358" y="30" width="68" height="32" rx="2" stroke-width="0.8"/>
-    <path d="M356 26 h0 M364 26 h0 M372 26 h0 M380 26 h0 M388 26 h0 M396 26 h0 M404 26 h0 M412 26 h0 M420 26 h0 M428 26 h0 M356 66 h0 M364 66 h0 M372 66 h0 M380 66 h0 M388 66 h0 M396 66 h0 M404 66 h0 M412 66 h0 M420 66 h0 M428 66 h0 M354 34 h0 M354 42 h0 M354 50 h0 M354 58 h0 M430 34 h0 M430 42 h0 M430 50 h0 M430 58 h0" stroke-width="2.2"/>
-    <path d="M434 40 h8 l3 4" stroke-width="0.8"/>
+    <!-- 1 low AV cabinet 220x40 on the floor -->
+    <path d="M52 330 h108 v-16 h-108 Z" stroke-width="1.5"/>
+    <path d="M52 314 l14 -8 h108 l-14 8" stroke-width="1.5"/>
+    <path d="M160 314 l14 -8 v16 l-14 8" stroke-width="1.5"/>
+    <path d="M161 315 l12 -7 v14 l-12 7 Z" fill="url(#p0207-1-shade)" stroke="none"/>
+    <path d="M88 314 v16 M124 314 v16" stroke-width="0.7"/>
+    <path d="M68 322 h6 M104 322 h6 M140 322 h6" stroke-width="0.9"/>
+    <path d="M56 330 v4 M156 330 v4" stroke-width="1"/>
+    <!-- 2 wall segment under the beam -->
+    <path d="M112 274 h118 v-50 h-118 Z" stroke-width="1.5"/>
+    <path d="M112 224 l18 -10 h118 l-18 10" stroke-width="1.5"/>
+    <path d="M230 224 l18 -10 v50 l-18 10" stroke-width="1.5"/>
+    <path d="M231 225 l16 -9 v48 l-16 9 Z" fill="url(#p0207-1-shade)" stroke="none"/>
+    <!-- beam band on top of wall -->
+    <path d="M112 224 h118 v-8 h-118 Z" fill="url(#p0207-1-shade2)" stroke="none"/>
+    <path d="M112 216 h118" stroke-width="1.2"/>
+    <path d="M130 214 h118 v-8 l-18 10" stroke-width="0.9"/>
+    <!-- brick hint + conduit -->
+    <path d="M118 236 h24 M150 236 h24 M182 236 h24 M126 250 h24 M158 250 h24 M190 250 h24 M118 264 h24 M150 264 h24 M182 264 h24" stroke-width="0.45"/>
+    <path d="M171 274 v-38" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <!-- 3 steel wall plate + 4 bolts -->
+    <path d="M176 200 h64 v-14 h-64 Z" stroke-width="1.4"/>
+    <path d="M176 186 l12 -7 h64 l-12 7" stroke-width="1.4"/>
+    <path d="M240 186 l12 -7 v14 l-12 7" stroke-width="1.4"/>
+    <path d="M241 187 l10 -6 v12 l-10 6 Z" fill="url(#p0207-1-shade)" stroke="none"/>
+    <circle cx="184" cy="193" r="2" stroke-width="0.9"/><circle cx="232" cy="193" r="2" stroke-width="0.9"/>
+    <circle cx="194" cy="183" r="2" stroke-width="0.9"/><circle cx="242" cy="183" r="2" stroke-width="0.9"/>
+    <path d="M184 178 v-10 M232 178 v-10 M194 170 v-8 M242 170 v-8" stroke-width="1"/>
+    <path d="M181 168 h6 M229 168 h6 M191 162 h6 M239 162 h6" stroke-width="1"/>
+    <!-- 4 VESA arm -->
+    <path d="M218 160 h30 v-8 h-30 Z" stroke-width="1.3"/>
+    <path d="M248 160 l10 -6 v-8 l-10 6" stroke-width="1.3"/>
+    <path d="M218 152 l10 -6 h30 l-10 6" stroke-width="1.3"/>
+    <path d="M233 152 l0 -14 l14 -8" stroke-width="1.4"/>
+    <path d="M235 152 l0 -13 l14 -8" stroke-width="0.7"/>
+    <path d="M240 130 h26 v-16 h-26 Z" stroke-width="1.2"/>
+    <path d="M244 126 h18 M244 120 h18" stroke-width="0.5"/>
+    <!-- 5 LED strip frame behind TV -->
+    <path d="M262 132 h84 v-48 h-84 Z" stroke-width="1.3"/>
+    <path d="M270 124 h68 v-32 h-68 Z" stroke-width="0.8"/>
+    <path d="M267 88 h0 M275 88 h0 M283 88 h0 M291 88 h0 M299 88 h0 M307 88 h0 M315 88 h0 M323 88 h0 M331 88 h0 M339 88 h0 M267 128 h0 M275 128 h0 M283 128 h0 M291 128 h0 M299 128 h0 M307 128 h0 M315 128 h0 M323 128 h0 M331 128 h0 M339 128 h0 M266 96 h0 M266 104 h0 M266 112 h0 M266 120 h0 M342 96 h0 M342 104 h0 M342 112 h0 M342 120 h0" stroke-width="2.2"/>
+    <path d="M346 108 h8 l3 4" stroke-width="0.8"/>
+    <!-- 6 98 inch TV -->
+    <path d="M352 86 h110 v-66 h-110 Z" stroke-width="1.6"/>
+    <path d="M356 82 h102 v-58 h-102 Z" stroke-width="0.7"/>
+    <path d="M352 86 h110 v3 h-110 Z" fill="url(#p0207-1-shade)" stroke="none"/>
+    <path d="M362 32 l22 28 M370 30 l28 34 M378 28 l18 22" stroke-width="0.4"/>
+    <path d="M360 78 q36 -8 80 -18" stroke-width="0.5"/>
+    <path d="M402 86 h12 l-4 3 h-4 Z" stroke-width="0.8"/>
   </g>
   <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
-    <path d="M158 300 H206"/>
-    <path d="M146 238 H122"/>
-    <path d="M206 180 H186"/>
-    <path d="M361 118 H384"/>
-    <path d="M434 50 H448"/>
+    <path d="M160 322 H184"/>
+    <path d="M112 250 H88"/>
+    <path d="M176 194 H150"/>
+    <path d="M218 156 H196"/>
+    <path d="M262 108 H240"/>
+    <path d="M462 40 H470"/>
   </g>
   <g font-size="10" fill="#2a2a2a" text-anchor="middle">
     <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
-      <circle cx="216" cy="300" r="8"/>
-      <circle cx="112" cy="238" r="8"/>
-      <circle cx="176" cy="180" r="8"/>
-      <circle cx="394" cy="118" r="8"/>
-      <circle cx="458" cy="50" r="8"/>
+      <circle cx="194" cy="322" r="8"/>
+      <circle cx="78" cy="250" r="8"/>
+      <circle cx="140" cy="194" r="8"/>
+      <circle cx="186" cy="156" r="8"/>
+      <circle cx="230" cy="108" r="8"/>
+      <circle cx="470" cy="30" r="8"/>
     </g>
-    <text x="216" y="303.5">1</text>
-    <text x="112" y="241.5">2</text>
-    <text x="176" y="183.5">3</text>
-    <text x="394" y="121.5">4</text>
-    <text x="458" y="53.5">5</text>
+    <text x="194" y="325.5">1</text>
+    <text x="78" y="253.5">2</text>
+    <text x="140" y="197.5">3</text>
+    <text x="186" y="159.5">4</text>
+    <text x="230" y="111.5">5</text>
+    <text x="470" y="33.5">6</text>
   </g>
   <g font-size="10.5" fill="#2a2a2a">
-    <text x="16" y="34" font-weight="700" font-size="12">幕布投影总成 · 爆炸图</text>
-    <text x="16" y="52">1 天花吊架底板（四点固定）</text>
-    <text x="16" y="68">2 4K 激光投影仪</text>
-    <text x="16" y="84">3 电动幕布铝壳（嵌天花）</text>
-    <text x="16" y="100">4 120 寸幕布（16:9）</text>
-    <text x="16" y="116">5 氛围灯带框（约 300 颗）</text>
+    <text x="16" y="34" font-weight="700" font-size="12">98 寸电视挂墙总成 · 爆炸图</text>
+    <text x="16" y="52">1 电视下矮机柜 220×40（功放 / 唱盘）</text>
+    <text x="16" y="68">2 梁下隔墙段（地堡侧，暗管走线）</text>
+    <text x="16" y="84">3 钢制壁挂底板 + M10 膨胀螺栓 ×4</text>
+    <text x="16" y="100">4 VESA 800×400 挂臂（可前倾）</text>
+    <text x="16" y="116">5 背面跟色灯带框（约 300 颗）</text>
+    <text x="16" y="132">6 98 寸 4K 电视（宽约 220）</text>
   </g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0207-1</text>
 </svg>

@@ -54,7 +54,7 @@
   <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
     <text x="85" y="73">按下听音按钮</text>
     <text x="230" y="74">场景配置</text><text x="230" y="87" font-size="8.5" fill="#666">源 / 灯光 / 预热</text>
-    <text x="85" y="147">0201 灯光只打</text><text x="85" y="161">皮椅 + 唱盘</text>
+    <text x="85" y="147">0201 灯光只打</text><text x="85" y="161">沙发 + 唱盘</text>
     <text x="230" y="149">音源＝黑胶？</text><text x="230" y="162" font-size="8.5" fill="#666">黑胶 / 流媒体</text>
     <text x="390" y="147">是 → 切唱放通道</text><text x="390" y="161">唱盘电机启动</text>
     <text x="85" y="247">0203 新风静音档</text><text x="85" y="261">0207 主声道让位</text>

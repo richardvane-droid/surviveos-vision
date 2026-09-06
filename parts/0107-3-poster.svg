@@ -65,10 +65,10 @@
   <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">凳面压力垫 → 日落后有人落座 → 吊灯 5 秒渐暗 30% → 离席 3 分钟回 80%</text>
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">三把凳子任一有人就触发，白天不干预</text>
-    <text x="64" y="366">渐变 5 秒，不是啪一下黑，客人察觉不到</text>
+    <text x="64" y="366">渐变 5 秒，不是啪一下黑，眼睛察觉不到</text>
     <text x="64" y="396">离席 3 分钟自动回迎客亮度，忘了也没事</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：吊灯亮度实体 + 待客日志</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：吊灯亮度实体 + 落座日志</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome · home-assistant/core</text>
   <g transform="rotate(-8 296 108)">
     <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>

@@ -70,8 +70,8 @@
   <g font-size="8.5" fill="#666" text-anchor="middle">
     <text x="82" y="198">CO2 ppm 曲线</text>
     <text x="180" y="202">新风机 低速 / 高速</text>
-    <text x="276" y="187" font-size="8">通风井进风 vs 室内</text>
-    <text x="266" y="177" font-size="8">井</text><text x="286" y="177" font-size="8">室内</text>
+    <text x="276" y="187" font-size="8">风口进风 vs 室内</text>
+    <text x="266" y="177" font-size="8">外</text><text x="286" y="177" font-size="8">室内</text>
     <text x="276" y="244">除湿机陪跑</text>
     <text x="86" y="240">滤芯 2000h 提醒</text>
   </g>

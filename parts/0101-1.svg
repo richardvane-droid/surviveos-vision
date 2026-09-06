@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="p0101-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="41" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="p0101-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
@@ -12,69 +12,40 @@
       <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
     </pattern>
   </defs>
-  <!-- 爆炸轴线 -->
-  <path d="M90 322 L416 26" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
   <g filter="url(#p0101-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
-    <!-- ① 四腿底框（最下） -->
-    <path d="M62 292 L110 272 L158 290 L110 310 Z" stroke-width="1.5"/>
-    <path d="M62 292 v8 L110 318 v-8 M110 318 L158 298 v-8" stroke-width="1.2"/>
-    <path d="M63 293 L109 311 v7 L63 300 Z" fill="url(#p0101-1-shade)" stroke="none"/>
-    <path d="M64 300 V326 M156 298 V324 M110 318 V344" stroke-width="1.5"/>
-    <path d="M110 272 V282" stroke-width="0.7" stroke-dasharray="2 2"/>
-    <path d="M64 318 L86 326 M134 328 L156 318" stroke-width="0.7" stroke-dasharray="2 2"/>
-    <path d="M80 291 l14 -6 M96 297 l14 -6 M120 284 l10 4" stroke-width="0.6"/>
-    <!-- ② 抽屉层 -->
-    <rect x="140" y="242" width="56" height="18" rx="2" stroke-width="1.5"/>
-    <path d="M140 242 L158 232 L214 232 L196 242 Z" stroke-width="1.2"/>
-    <path d="M196 242 L214 232 V250 L196 260 Z" stroke-width="1.2"/>
-    <path d="M197 243 L213 234 V249 L197 258 Z" fill="url(#p0101-1-shade)" stroke="none"/>
-    <circle cx="168" cy="251" r="2.5" stroke-width="1"/>
-    <path d="M148 240 l5 -4 l5 0 l-5 4 Z M159 240 l5 -4 l5 0 l-5 4 Z M170 240 l5 -4 l5 0 l-5 4 Z M181 240 l5 -4 l5 0 l-5 4 Z M192 240 l5 -4 l5 0 l-5 4 Z" stroke-width="0.7"/>
-    <!-- ③ 12° 倾斜台面 -->
-    <path d="M190 196 L238 172 L276 186 L228 210 Z" stroke-width="1.5"/>
-    <path d="M190 196 V206 L228 220 V210 M228 220 L276 196 V186" stroke-width="1.2"/>
-    <path d="M191 197 L227 211 V219 L191 205 Z" fill="url(#p0101-1-shade)" stroke="none"/>
-    <path d="M200 198 q12 -9 26 -14 M212 205 q12 -9 26 -14 M226 208 q10 -8 22 -12" stroke-width="0.6"/>
-    <path d="M182 210 l4 -8" stroke-width="0.8"/>
-    <!-- ④ 毛毡卡槽内衬 -->
-    <path d="M256 140 L296 120 L330 132 L290 152 Z" stroke-width="1.4"/>
-    <path d="M256 140 V143 L290 155 V152 M290 155 L330 135 V132" stroke-width="0.9"/>
-    <circle cx="276" cy="134" r="2.2" stroke-width="0.8"/><circle cx="284" cy="130" r="2.2" stroke-width="0.8"/><circle cx="304" cy="128" r="2.2" stroke-width="0.8"/>
-    <path d="M286 142 l6 -3 l6 2 l-6 3 Z M298 138 l8 -4 l5 2 l-8 4 Z M270 142 l5 -3 l4 2 l-5 3 Z M308 134 l6 -3 l4 2 l-6 3 Z M292 126 l6 -3 l4 2 l-6 3 Z" stroke-width="0.8"/>
-    <path d="M298 138 l8 -4 l5 2 l-8 4 Z" fill="url(#p0101-1-shade2)" stroke="none"/>
-    <!-- ⑤ PSK 生存盒（盖开 110°） -->
-    <rect x="330" y="84" width="44" height="16" rx="1.5" stroke-width="1.5"/>
-    <path d="M330 84 L346 74 L390 74 L374 84 Z" stroke-width="1.2"/>
-    <path d="M374 84 L390 74 V90 L374 100 Z" stroke-width="1.2"/>
-    <path d="M375 85 L389 76 V89 L375 98 Z" fill="url(#p0101-1-shade)" stroke="none"/>
-    <path d="M346 74 L390 74 L398 44 L354 44 Z" stroke-width="1.4"/>
-    <path d="M350 71 L391 71 L397 47 L356 47 Z" stroke-width="0.6"/>
-    <circle cx="352" cy="80" r="1.2" stroke-width="0.8"/><circle cx="360" cy="78" r="1.2" stroke-width="0.8"/><circle cx="368" cy="80" r="1.2" stroke-width="0.8"/>
-    <path d="M372 78 l6 -3 M362 82 l6 -3" stroke-width="0.8"/>
-    <!-- ⑥ 黄铜铭牌（最上） -->
-    <rect x="384" y="34" width="32" height="14" rx="2" stroke-width="1.3"/>
-    <path d="M390 39 h20 M390 43 h14" stroke-width="0.7"/>
-    <path d="M392 48 l-3 5 M408 48 l3 5" stroke-width="0.9"/>
+<path d="M70.0 300.0 l-14 -30 l24 -4 l10 34 Z M120.0 292.0 l-14 -30 l24 -4 l10 34 Z" stroke-width="1.5"/><path d="M72.0 298.0 l-10 -24 l16 -3 l8 27 Z" fill="url(#p0101-1-shade)" stroke="none"/><path d="M64.0 282.0 a2 2 0 1 0 0.1 0 M114.0 274.0 a2 2 0 1 0 0.1 0" stroke-width="0.8"/>
+<path d="M121.5 246.0 h96 l24 -14 h-96 Z" stroke-width="1.5"/><path d="M121.5 246.0 v12 h96 v-12 M217.5 258.0 l24 -14 v-12" stroke-width="1.2"/><path d="M218.5 257.0 l22 -13 v-11 l-22 13 Z" fill="url(#p0101-1-shade)" stroke="none"/><path d="M167.5 252.0 h10" stroke-width="1.2"/>
+<path d="M187.0 188.0 h96 l24 -14 h-96 Z" stroke-width="1.5"/><path d="M187.0 188.0 l0 4 h96 l24 -14 v-4 M283.0 192.0 l24 -14" stroke-width="1"/><path d="M191.0 183.0 l6 -10 M275.0 183.0 l6 -10" stroke-width="0.6" stroke-dasharray="2 2"/>
+<path d="M258.5 126.0 h84 l22 -12 h-84 Z" stroke-width="1.3"/><path d="M260.5 125.0 h80 l20 -11 h-80 Z" fill="url(#p0101-1-shade)" stroke="none"/>
+<path d="M266.5 122.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M284.5 122.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M302.5 122.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M320.5 122.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M272.5 118.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M290.5 118.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M308.5 118.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M326.5 118.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M278.5 114.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M296.5 114.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M314.5 114.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M332.5 114.0 h9 v3 h-9 Z" stroke-width="0.6"/>
+<path d="M350.0 66.0 h40 v20 h-40 Z M350.0 66.0 l6 -20 h40 l-6 20" stroke-width="1.4"/><path d="M356.0 48.0 h34 v16 h-34 Z" fill="url(#p0101-1-shade)" stroke="none"/><path d="M354.0 72.0 h8 M366.0 72.0 h10 M354.0 80.0 h30" stroke-width="0.6"/><path d="M398.0 76.0 h18 v8 h-18 Z" stroke-width="0.9"/>
   </g>
-  <!-- 引线 + 编号（不加滤镜） -->
-  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
-    <path d="M158 300 H198"/><path d="M140 251 H100"/><path d="M276 192 H316"/><path d="M256 142 H218"/><path d="M374 94 H420"/><path d="M416 41 H438"/>
+  <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
+<path d="M50.0 284.0 L10.0 280.0"/>
+<path d="M107.5 238.0 L67.5 234.0"/>
+<path d="M173.0 176.0 L133.0 172.0"/>
+<path d="M246.5 118.0 L206.5 114.0"/>
+<path d="M336.0 44.0 L296.0 40.0"/>
   </g>
-  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
-    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
-      <circle cx="206" cy="300" r="8"/><circle cx="92" cy="251" r="8"/><circle cx="324" cy="192" r="8"/><circle cx="210" cy="142" r="8"/><circle cx="428" cy="94" r="8"/><circle cx="446" cy="41" r="8"/>
-    </g>
-    <text x="206" y="303.5">1</text><text x="92" y="254.5">2</text><text x="324" y="195.5">3</text><text x="210" y="145.5">4</text><text x="428" y="97.5">5</text><text x="446" y="44.5">6</text>
-  </g>
-  <!-- 图例 -->
-  <g font-size="10.5" fill="#2a2a2a">
-    <text x="16" y="34" font-weight="700" font-size="12">胡桃木倾斜展台 · 爆炸图</text>
-    <text x="16" y="52">1 手刨四腿底框（留刨痕）</text>
-    <text x="16" y="68">2 抽屉层（5 只备用盒）</text>
-    <text x="16" y="84">3 12° 倾斜台面（胡桃木）</text>
-    <text x="16" y="100">4 毛毡卡槽内衬（27 位）</text>
-    <text x="16" y="116">5 PSK 生存盒（盖开 110°）</text>
-    <text x="16" y="132">6 黄铜铭牌 PSK No.1</text>
-  </g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">胡桃木挂墙展台 · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 手刨胡桃木托架 ×2（膨胀螺栓咬墙）</text><text x="16" y="59">2 薄抽屉层（3 只未开封同款）</text><text x="16" y="72">3 倾斜 12° 台面，前低后高，台高 900</text><text x="16" y="85">4 3mm 深灰毛毡内衬 · 27 卡槽刻编号</text><text x="16" y="98">5 PSK 生存盒 + 黄铜铭牌 40×18</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0101-1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="10.0" cy="280.0" r="7"/></g><text x="10.0" y="283.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="67.5" cy="234.0" r="7"/></g><text x="67.5" y="237.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="133.0" cy="172.0" r="7"/></g><text x="133.0" y="175.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="206.5" cy="114.0" r="7"/></g><text x="206.5" y="117.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="296.0" cy="40.0" r="7"/></g><text x="296.0" y="43.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<text x="16" y="120" font-size="8" fill="#888" font-style="italic">挂在北墙 0102 作品九宫格正下方，不落地</text>
 </svg>

@@ -42,7 +42,7 @@
   <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
     <text x="85" y="73">出入库后 / 每天 08:00</text>
     <text x="230" y="74">Grocy 库存</text><text x="230" y="87" font-size="8.5" fill="#666">数量 · 单份热量 · 水量</text>
-    <text x="85" y="147">总热量 ÷ 8000 千卡</text><text x="85" y="161">水 ÷ 6L，取较小值</text>
+    <text x="85" y="147">总热量 ÷ 2500 千卡</text><text x="85" y="161">水 ÷ 3L，取较小值</text>
     <text x="230" y="149">&lt; 90 天？</text><text x="230" y="162" font-size="8.5" fill="#666">或品类低于安全线</text>
     <text x="390" y="147">是 → 缺口写进</text><text x="390" y="161">KitchenOwl 采购单</text>
     <text x="85" y="247">热量缺失的 SKU</text><text x="85" y="261">按 300 千卡/份估</text>

@@ -54,7 +54,7 @@
     <text x="85" y="247">否 → 灯保持 80%</text><text x="85" y="261">等下一次落座</text>
     <text x="230" y="247">N 归零计时 3 分钟</text><text x="230" y="261">到时回 80% 迎客</text>
     <text x="390" y="247">同时关台后射灯</text><text x="390" y="261">只留台面一圈光</text>
-    <text x="240" y="331">亮度写回 HA + 待客日志</text>
+    <text x="240" y="331">亮度写回 HA + 落座日志</text>
   </g>
   <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="236" y="196">否</text><text x="150" y="196">日落前也走这条</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0107-3</text>

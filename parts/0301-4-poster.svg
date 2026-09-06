@@ -20,7 +20,7 @@
     <path d="M84 120 v12 h12" stroke-width="1"/>
     <path d="M50 146 h24 M50 154 h34 M50 162 h18" stroke-width="0.8"/>
     <path d="M52 138 q8 -8 16 0 t16 0" stroke-width="1" stroke-dasharray="2 2"/>
-    <!-- 中：木屋 + 客人问号 -->
+    <!-- 中：木屋 + 人在木屋问号 -->
     <path d="M140 176 v-34 l40 -30 l40 30 v34 Z" stroke-width="1.6"/>
     <path d="M134 144 l46 -34 l46 34" stroke-width="1.2"/>
     <path d="M170 176 v-20 h12 v20" stroke-width="1.1"/>
@@ -58,11 +58,11 @@
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0301 · L4</text>
   <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">CNC 静音排程</text>
-  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">楼下有客人，机器等一等；刻完自己拍张照</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">楼下在休息，机器等一等；刻完自己拍张照</text>
   <text x="62" y="196" text-anchor="middle" font-size="8.5" fill="#666">G 代码</text>
   <text x="180" y="196" text-anchor="middle" font-size="8.5" fill="#666">楼下有客？</text>
   <text x="286" y="236" text-anchor="middle" font-size="8.5" fill="#666">成品照</text>
-  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">图纸出 G 代码 → 查木屋有没有客人 → Candle 探高开雕 → 完成拍照归档</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">图纸出 G 代码 → 查木屋里人在不在休息 → Candle 探高开雕 → 完成拍照归档</text>
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">木屋门磁 + 毫米波说有人，任务先排队不吵客</text>
     <text x="64" y="366">探针先扫一遍高度图，歪木牌也刻得深浅一致</text>
