@@ -10,7 +10,7 @@
        "why": "工具“影子”不用手描，拍一张照片就能出轮廓，打印出来贴在洞洞板或抽屉里"},
       {"name": "chicago-tool-library/circulate", "url": "https://github.com/chicago-tool-library/circulate", "stars": "110",
        "desc": "芝加哥工具图书馆开源的借还管理系统，Rails 写的，带库存、借出、催还",
-       "why": "比小白板更进一步的工具借用登记，想让朋友也能借工具时可以自建一套，功能偏重"},
+       "why": "比小白板更进一步的工具借用登记，以后想做借用登记时可以自建一套，功能偏重"},
       {"name": "stockholmux/pegmixer", "url": "https://github.com/stockholmux/pegmixer", "stars": "34",
        "desc": "OpenSCAD 洞洞板配件库，输入物件尺寸自动算出挂钩、托盒和插销位置",
        "why": "标准挂钩挂不了的异形工具，用它按尺寸生成专属挂座打印，孔距按自家钢板改"}

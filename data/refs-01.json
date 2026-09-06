@@ -55,10 +55,10 @@
     "github": [
       {"name": "pibooth/pibooth", "url": "https://github.com/pibooth/pibooth", "stars": "823",
        "desc": "树莓派开箱即用的拍照亭软件，按键拍照、加边框、接打印机直接出片",
-       "why": "拍立得相纸贵，用它接一台小照片打印机，客人按一下就出一张挂上去"},
+       "why": "拍立得相纸贵，用它接一台小照片打印机，按一下就出一张挂上去"},
       {"name": "PhotoboothProject/photobooth", "url": "https://github.com/PhotoboothProject/photobooth", "stars": "649",
        "desc": "自托管拍照亭网页应用，带实时预览、拼图、宝丽来滤镜和自动打印",
-       "why": "宝丽来滤镜加自动打印，客人合影那一排照片的风格能和拍立得统一"},
+       "why": "宝丽来滤镜加自动打印，自拍那一排照片的风格能和拍立得统一"},
       {"name": "immich-app/immich", "url": "https://github.com/immich-app/immich", "stars": "110k",
        "desc": "高性能自托管照片视频管理系统，手机自动备份、人脸识别、共享相册",
        "why": "80 张照片的原片和背面那句话都存进去，换下来的照片也不会丢"}
@@ -112,7 +112,7 @@
     "github": [
       {"name": "karlomikus/bar-assistant", "url": "https://github.com/karlomikus/bar-assistant", "stars": "1.0k",
        "desc": "自托管家庭吧台管理系统，管酒水库存、500 多个鸡尾酒配方和购物清单",
-       "why": "台面下那几瓶黄酒和玻璃罐里的料都登记进去，客人来了直接翻能做什么"},
+       "why": "台面下那几瓶黄酒和玻璃罐里的料都登记进去，想喝的时候直接翻能做什么"},
       {"name": "alex9849/CocktailPi", "url": "https://github.com/alex9849/CocktailPi", "stars": "194",
        "desc": "树莓派 DIY 自动调酒机的网页界面和控制软件，多泵配料、自动出杯",
        "why": "想把热红酒之外再加一台自动调酒机，泵和网页点单都是现成的"},
@@ -123,7 +123,7 @@
     "xhs": [
       {"keyword": "家庭吧台 榆木 自然边", "note": "看自然边木台面配高脚凳和黄铜吊灯的组合"},
       {"keyword": "小吧台 木架 玻璃罐", "note": "看后墙木架上杯子和手写标签罐子的摆法"},
-      {"keyword": "热红酒 铸铁锅 冬天", "note": "看炉边煨热红酒的器具和待客氛围"}
+      {"keyword": "热红酒 铸铁锅 冬天", "note": "看炉边煨热红酒的器具和一个人的炉边氛围"}
     ]
   }
 ]
