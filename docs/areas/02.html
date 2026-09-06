@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>02 地堡 · SurviveOs 设想版</title>
-<meta name="description" content="地堡：没有窗的地下 3 米，反而装下了太阳、电影院和秘密基地。12 个模块专题。">
+<meta name="description" content="地堡：没有窗的 4.85×5 米，反而装下了太阳、电影院和床底的秘密基地。12 个模块专题。">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -25,156 +26,299 @@
 
 <nav class="crumb"><a href="../index.html">首页</a> › <span>02 地堡</span></nav>
 <section class="area-hero">
-  <figure class="area-art"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <figure class="area-art"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
-    <filter id="marea02-rough" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+    <filter id="marea-02-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="9" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
-    <pattern id="marea02-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="marea-02-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
     </pattern>
-    <pattern id="marea02-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="marea-02-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="marea-02-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
-  <g filter="url(#marea02-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- ground surface with grass, broken where the cabin stands -->
-    <path d="M14 78 H40 M140 78 Q300 74 440 78 T586 76" stroke-width="2"/>
-    <path d="M142 81 Q300 77 440 81 T584 79" stroke-width="0.9"/>
-    <path d="M160 78 l2 -8 l3 8 M176 77 l2 -6 M240 78 l3 -9 l2 9 M256 77 l2 -6 M320 78 l2 -8 l3 8 M340 77 l2 -6 M420 77 l3 -8 l2 8 M470 76 l2 -7 M556 76 l2 -6 M576 76 l3 -8 l2 8" stroke-width="0.9"/>
-    <!-- slice of the log cabin on the left, its floor is the ground -->
-    <path d="M40 78 V40 L90 14 L140 40 V78" stroke-width="1.8"/>
-    <path d="M32 44 L90 10 L148 44" stroke-width="1.9"/>
-    <path d="M34 47 L90 14" stroke-width="0.9"/>
-    <path d="M44 52 H136 M44 62 H136 M44 72 H136" stroke-width="0.8"/>
-    <path d="M56 78 V60 H80 V78" stroke-width="1.3"/>
-    <path d="M112 34 V22 H122 V40" stroke-width="1.3"/>
-    <path d="M118 18 q-4 -5 0 -9 q4 -4 0 -8" stroke-width="0.8"/>
-    <!-- open floor hatch in the cabin where the stairs start -->
-    <path d="M40 78 H98 M140 78 H146" stroke-width="2"/>
-    <path d="M98 78 L92 62" stroke-width="1.3"/>
-    <path d="M92 62 L134 62" stroke-width="0.9"/>
-    <!-- tree on the surface at right -->
-    <path d="M540 76 q2 -20 0 -34" stroke-width="1.6"/>
-    <path d="M540 46 q-16 6 -14 -8 q-6 -12 8 -14 q2 -12 14 -8 q12 -6 12 8 q10 8 -2 14 q0 12 -18 8 Z" stroke-width="1.5"/>
-    <path d="M530 34 q6 4 12 0" stroke-width="0.8"/>
-
-    <!-- soil band and concrete shell -->
-    <path d="M14 78 V262 H586 V78" stroke-width="1.4"/>
-    <path d="M14 96 H98 M140 96 H586" stroke-width="1"/>
-    <path d="M20 86 h6 M60 90 h5 M200 86 h6 M260 92 h5 M360 84 h6 M440 90 h5 M470 86 h6 M570 88 h5" stroke-width="0.7"/>
-    <path d="M14 96 V262 H40 V96 Z M560 96 V262 H586 V96 Z" fill="url(#marea02-hatch)" stroke="none"/>
-    <path d="M40 96 V258 H560 V96" stroke-width="2.4"/>
-    <path d="M52 108 V246 H548 V108" stroke-width="1.6"/>
-    <path d="M40 96 H98 M140 96 H560 M52 108 H98 M140 108 H548" stroke-width="1.3"/>
-    <path d="M42 98 H50 V244 H42 Z M550 98 H558 V244 H550 Z M42 248 H558 V256 H42 Z M52 98 H96 V106 H52 Z M142 98 H548 V106 H142 Z" fill="url(#marea02-hatch2)" stroke="none"/>
-    <path d="M98 96 V108 M140 96 V108" stroke-width="1"/>
-
-    <!-- staircase from the cabin floor down to the bunker floor -->
-    <path d="M98 78 V92 H112 V106 H124 V120 H136 V134 H148 V148 H160 V162 H172 V176 H184 V190 H196 V204 H208 V218 H220 V232 H232 V246" stroke-width="1.7"/>
-    <path d="M100 80 V94 H114 V108 H126 V122 H138 V136 H150 V150 H162 V164 H174 V178 H186 V192 H198 V206 H210 V220 H222 V234 H234" stroke-width="0.7"/>
-    <path d="M98 92 L224 246" stroke-width="1.2"/>
-    <path d="M100 96 L222 244 H232 V232 H220 V218 H208 V204 H196 V190 H184 V176 H172 V162 H160 V148 H148 V134 H136 V120 H124 V106 H112 V96 Z" fill="url(#marea02-hatch)" stroke="none"/>
-    <!-- handrail -->
-    <path d="M92 104 L216 236" stroke-width="1"/>
-    <path d="M92 104 V118 M116 130 V142 M140 158 V170 M164 186 V198 M188 214 V226" stroke-width="0.9"/>
-    <!-- person walking down -->
-    <circle cx="150" cy="122" r="5" stroke-width="1.3"/>
-    <path d="M150 127 V144 M150 132 L142 140 M150 132 L158 136 M150 144 L144 156 M150 144 L158 154" stroke-width="1.3"/>
-    <!-- dehumidifier cabinet under the stairs -->
-    <path d="M60 216 H140 V246 H60 Z" stroke-width="1.3"/>
-    <path d="M62 218 H138" stroke-width="0.7"/>
-    <path d="M70 224 h36 M70 230 h36 M70 236 h36" stroke-width="0.7"/>
-    <circle cx="124" cy="226" r="2" stroke-width="0.9"/>
-    <path d="M140 232 q10 2 12 14" stroke-width="0.9"/>
-    <!-- partition walls with doorways -->
-    <path d="M246 108 V246 M252 108 V246" stroke-width="1.6"/>
-    <path d="M372 108 V246 M378 108 V246" stroke-width="1.6"/>
-    <path d="M468 108 V246 M474 108 V246" stroke-width="1.6"/>
-    <path d="M246 108 H252 V246 H246 Z M372 108 H378 V246 H372 Z M468 108 H474 V246 H468 Z" fill="url(#marea02-hatch2)" stroke="none"/>
-    <path d="M243 246 V190 H255 V246 Z M369 246 V190 H381 V246 Z M465 246 V190 H477 V246 Z" fill="#fff" stroke="none"/>
-    <path d="M243 246 V190 H255 V246 M369 246 V190 H381 V246 M465 246 V190 H477 V246" stroke-width="1.2"/>
-    <path d="M52 246 H548" stroke-width="1.6"/>
-
-    <!-- room 1: media room - screen on the left partition, projector, two rows of seats -->
-    <path d="M258 122 H266 V204 H258 Z" fill="#fff" stroke-width="1.8"/>
-    <path d="M262 124 V202" stroke-width="0.7"/>
-    <path d="M330 130 h16 v10 h-16 Z M332 132 h12 M336 140 v-4" stroke-width="1.2"/>
-    <path d="M330 133 L268 126 M330 139 L268 200" stroke-width="0.7" stroke-dasharray="4 4"/>
-    <path d="M284 226 h24 v-14 h-4 v8 h-16 v-8 h-4 Z" stroke-width="1.2"/>
-    <path d="M322 226 h24 v-14 h-4 v8 h-16 v-8 h-4 Z" stroke-width="1.2"/>
-    <path d="M318 226 h32 V246 H318 Z" stroke-width="1"/>
-    <path d="M320 228 H348 V244 H320 Z" fill="url(#marea02-hatch)" stroke="none"/>
-    <path d="M284 226 V246 M308 226 V246" stroke-width="0.9"/>
-    <circle cx="296" cy="204" r="4.5" stroke-width="1.2"/>
-    <path d="M296 208 V224 M296 213 L290 220 M296 213 L302 218" stroke-width="1.1"/>
-    <path d="M270 246 q40 -4 84 0" stroke-width="0.7"/>
-    <!-- fish tank set into the middle partition wall -->
-    <path d="M360 130 H392 V176 H360 Z" fill="#fff" stroke="none"/>
-    <path d="M360 130 H392 V176 H360 Z" stroke-width="1.8"/>
-    <path d="M362 132 H390 V174" stroke-width="0.8"/>
-    <path d="M362 138 q8 -3 14 0 t14 0" stroke-width="0.7"/>
-    <path d="M362 168 q14 -4 28 0 V174 H362 Z" fill="url(#marea02-hatch)" stroke="none"/>
-    <path d="M366 168 q4 -14 12 -22 q-2 12 -6 22 Z M380 168 q2 -10 6 -14 M384 168 q0 -8 4 -12" stroke-width="0.8"/>
-    <path d="M368 148 q3 -2 6 0 q-3 2 -6 0 Z M374 148 l2 -1.5 v3 Z M382 156 q-3 -2 -6 0 q3 2 6 0 Z M376 156 l-2 -1.5 v3 Z M370 142 q3 -2 6 0 q-3 2 -6 0 Z M376 142 l2 -1.5 v3 Z" stroke-width="0.8"/>
-    <circle cx="386" cy="146" r="1" stroke-width="0.6"/>
-    <circle cx="388" cy="140" r="1.2" stroke-width="0.6"/>
-    <path d="M356 176 H396 V180 H356 Z" stroke-width="1"/>
-
-    <!-- room 2: workbench with three monitors, drawings pinned above -->
-    <path d="M382 122 H462" stroke-width="0.8"/>
-    <path d="M400 126 h18 v22 h-18 Z M424 128 h18 v22 h-18 Z M446 126 h14 v22 h-14 Z" stroke-width="1"/>
-    <path d="M404 140 l5 -7 l5 7 Z M428 134 h10 v8 h-10 Z M449 138 q4 -8 8 0" stroke-width="0.6"/>
-    <path d="M386 204 H462 V210 H386 Z" stroke-width="1.6"/>
-    <path d="M390 210 V246 M458 210 V246" stroke-width="1.3"/>
-    <path d="M392 184 h18 v20 h-18 Z M414 180 h24 v22 h-24 Z M442 184 h16 v20 h-16 Z" stroke-width="1.2"/>
-    <path d="M395 188 h12 M417 184 h18 M417 190 h12 M445 188 h10" stroke-width="0.6"/>
-    <path d="M426 202 v4 M418 206 h16" stroke-width="1"/>
-    <circle cx="404" cy="214" r="4.5" stroke-width="1.2"/>
-    <path d="M404 218 V232 M404 222 l8 -6 M404 232 l-5 14 M404 232 l5 14" stroke-width="1.2"/>
-    <path d="M396 246 h16" stroke-width="0.9"/>
-    <path d="M392 168 V204" stroke-width="0.8"/>
-    <path d="M394 170 h6 v6 h-6 Z M394 180 h6 v6 h-6 Z" stroke-width="0.7"/>
-
-    <!-- room 3: loft bed with the tent hideout beneath -->
-    <path d="M482 164 H542 V172 H482 Z" stroke-width="1.4"/>
-    <path d="M484 166 H540" stroke-width="0.7"/>
-    <path d="M484 172 V246 M540 172 V246" stroke-width="1.4"/>
-    <path d="M486 160 q28 -6 54 0 q2 4 -2 4 h-52 q-2 -2 0 -4 Z" stroke-width="1"/>
-    <path d="M490 156 q8 -4 14 0 q-2 4 -14 4 Z" stroke-width="0.9"/>
-    <path d="M488 246 Q490 194 512 182 Q534 194 536 246 Z" stroke-width="1.6"/>
-    <path d="M498 246 Q500 210 512 194 Q524 210 526 246" stroke-width="1.2"/>
-    <path d="M502 246 Q504 214 512 198 Q520 214 522 246 Z" fill="url(#marea02-hatch)" stroke="none"/>
-    <path d="M494 204 q8 6 18 4 q8 -2 14 4" stroke-width="0.7"/>
-    <circle cx="498" cy="207" r="1.5" stroke-width="0.8"/>
-    <circle cx="510" cy="208" r="1.5" stroke-width="0.8"/>
-    <circle cx="522" cy="209" r="1.5" stroke-width="0.8"/>
-    <path d="M492 234 h14 M508 240 h8" stroke-width="0.7"/>
-
-    <!-- ventilation duct along the ceiling with vents; riser up through the soil to a cowl -->
-    <path d="M258 114 H506 V126 H258 Z" fill="#fff" stroke="none"/>
-    <path d="M258 116 H500 M258 124 H500" stroke-width="1.6"/>
-    <path d="M260 118 H498" stroke-width="0.6"/>
-    <path d="M300 116 v8 M380 116 v8 M460 116 v8" stroke-width="0.8"/>
-    <path d="M296 124 h14 v5 h-14 Z M440 124 h14 v5 h-14 Z" stroke-width="1"/>
-    <path d="M300 134 l-2 6 M306 134 l2 6 M444 134 l-2 6 M450 134 l2 6" stroke-width="0.7"/>
-    <path d="M500 116 q10 0 10 -10 V50 M500 124 q18 0 18 -18 V50" stroke-width="1.6"/>
-    <path d="M512 60 V104" stroke-width="0.6"/>
-    <path d="M502 50 h24 M502 50 q12 -14 24 0" stroke-width="1.5"/>
-    <path d="M506 42 h16 M509 38 h10" stroke-width="0.8"/>
-    <path d="M514 32 q-4 -5 0 -9" stroke-width="0.8"/>
+  <g filter="url(#marea-02-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M210.0 78.0 L345.0 155.6 L205.8 235.6 L70.8 158.0 Z" stroke-width="1.8"/>
+<path d="M70.8 126.0 L210.0 46.0 L345.0 123.6 M210.0 46.0 L210.0 78.0" stroke-width="1.6"/>
+<path d="M208.6 46.8 L70.8 126.0 L70.8 158.0 M345.0 123.6 L345.0 155.6" stroke-width="1.4"/>
+<path d="M211.4 47.8 L343.6 123.8 L343.6 153.8 L211.4 77.8 Z" fill="url(#marea-02-hatchl)" stroke="none"/>
+<path d="M300.5 114.0 L194.1 175.1 L194.1 191.1 M300.5 114.0 L300.5 130.0 M264.6 134.6 L309.1 160.2 M264.6 134.6 L264.6 150.6 M194.1 175.1 L238.7 200.7" stroke-width="1.2"/>
+<path d="M300.5 114.0 L194.1 175.1 L197.5 177.0 L303.8 115.9 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<ellipse cx="304.7" cy="151.6" rx="7" ry="4" stroke-width="0.9"/><path d="M301.9 137.2 L276.8 151.6 M301.9 137.2 L313.0 143.6" stroke-width="0.7" stroke-dasharray="2 2"/>
+<path d="M262.9 142.0 L299.1 162.8 L289.3 168.4 L253.2 147.6 Z" stroke-width="0.8"/><path d="M253.2 147.6 L253.2 162.0 L289.3 182.8 L289.3 168.4 M289.3 168.4 L289.3 182.8 L299.1 177.2 L299.1 162.8" stroke-width="0.8"/>
+<path d="M243.4 153.2 L279.6 174.0 L269.9 179.6 L233.7 158.8 Z" stroke-width="0.8"/><path d="M233.7 158.8 L233.7 173.2 L269.9 194.0 L269.9 179.6 M269.9 179.6 L269.9 194.0 L279.6 188.4 L279.6 174.0" stroke-width="0.8"/>
+<path d="M223.9 164.4 L260.1 185.2 L250.4 190.8 L214.2 170.0 Z" stroke-width="0.8"/><path d="M214.2 170.0 L214.2 184.4 L250.4 205.2 L250.4 190.8 M250.4 190.8 L250.4 205.2 L260.1 199.6 L260.1 185.2" stroke-width="0.8"/>
+<path d="M210.0 23.6 L242.0 42.0 L187.7 73.2 L155.7 54.8 Z" stroke-width="1.3"/><path d="M155.7 54.8 L155.7 59.6 L187.7 78.0 L187.7 73.2 M187.7 73.2 L187.7 78.0 L242.0 46.8 L242.0 42.0" stroke-width="1.3"/><path d="M187.7 73.2 L187.7 78.0 L242.0 46.8 L242.0 42.0 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<path d="M210.0 25.2 q20 -6 40 0 M193.3 44.4 q14 -4 28 0" stroke-width="0.7"/>
+<path d="M210.0 30.0 L210.0 81.2" stroke-width="1.1"/>
+<path d="M239.2 46.8 L239.2 98.0" stroke-width="1.1"/>
+<path d="M187.7 76.4 L187.7 127.6" stroke-width="1.1"/>
+<path d="M158.5 59.6 L158.5 110.8" stroke-width="1.1"/>
+<path d="M205.8 85.2 L218.4 49.2 L232.3 100.4 Z M164.1 109.2 L176.6 73.2 L190.5 124.4 Z M218.4 49.2 L176.6 73.2" stroke-width="1.1"/>
+<path d="M164.1 109.2 L176.6 73.2 L197.5 61.2 L184.9 97.2 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<path d="M176.6 114.8 L176.6 87.6" stroke-width="0.8"/><circle cx="185.5" cy="89.5" r="2.5" stroke-width="0.8"/>
+<path d="M244.2 34.3 L297.1 64.7 L290.5 68.6 L237.6 38.2 Z" stroke-width="1.1"/><path d="M237.6 38.2 L237.6 102.2 L290.5 132.6 L290.5 68.6 M290.5 68.6 L290.5 132.6 L297.1 128.7 L297.1 64.7" stroke-width="1.1"/>
+<path d="M237.6 86.2 L290.5 116.6" stroke-width="0.7"/>
+<path d="M237.6 70.2 L290.5 100.6" stroke-width="0.7"/>
+<path d="M237.6 54.2 L290.5 84.6" stroke-width="0.7"/>
+<path d="M210.0 103.6 L247.6 125.2 L222.5 139.6 L184.9 118.0 Z" stroke-width="1.1"/><path d="M184.9 118.0 L184.9 132.4 L222.5 154.0 L222.5 139.6 M222.5 139.6 L222.5 154.0 L247.6 139.6 L247.6 125.2" stroke-width="1.1"/><path d="M222.5 139.6 L222.5 154.0 L247.6 139.6 L247.6 125.2 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<path d="M210.0 90.8 L247.6 112.4 L240.6 116.4 L203.0 94.8 Z" stroke-width="1.0"/><path d="M203.0 94.8 L203.0 107.6 L240.6 129.2 L240.6 116.4 M240.6 116.4 L240.6 129.2 L247.6 125.2 L247.6 112.4" stroke-width="1.0"/><path d="M240.6 116.4 L240.6 129.2 L247.6 125.2 L247.6 112.4 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<path d="M183.8 136.6 L233.7 165.2 L182.4 194.6 L132.6 166.0 Z" stroke-width="0.9"/><path d="M183.6 141.2 L225.3 165.2 L182.2 190.0 L140.4 166.0 Z" stroke-width="0.5" stroke-dasharray="2 3"/>
+<path d="M147.4 117.2 L147.4 62.8 L175.2 78.8 L175.2 133.2 M147.4 85.2 L175.2 101.2" stroke-width="1"/>
+<path d="M151.5 65.2 L151.5 79.6 M151.5 87.6 L151.5 100.4" stroke-width="0.6"/>
+<path d="M156.5 68.1 L156.5 82.5 M156.5 90.5 L156.5 103.3" stroke-width="0.6"/>
+<path d="M161.6 71.0 L161.6 85.4 M161.6 93.4 L161.6 106.2" stroke-width="0.6"/>
+<path d="M166.6 73.8 L166.6 88.2 M166.6 96.2 L166.6 109.0" stroke-width="0.6"/>
+<path d="M171.6 76.7 L171.6 91.1 M171.6 99.1 L171.6 111.9" stroke-width="0.6"/>
+<path d="M127.9 102.8 L148.8 114.8 L104.2 140.4 L83.3 128.4 Z" stroke-width="1.1"/><path d="M83.3 128.4 L83.3 130.0 L104.2 142.0 L104.2 140.4 M104.2 140.4 L104.2 142.0 L148.8 116.4 L148.8 114.8" stroke-width="1.1"/>
+<path d="M129.3 103.6 L129.3 127.6 M102.8 139.6 L102.8 163.6 M84.7 129.2 L84.7 153.2" stroke-width="0.9"/>
+<path d="M123.1 104.9 L112.0 111.3 L112.0 100.1 L123.1 93.7 Z" stroke-width="0.9"/>
+<path d="M109.2 112.9 L98.1 119.3 L98.1 108.1 L109.2 101.7 Z" stroke-width="0.9"/>
+<path d="M95.3 120.9 L84.2 127.3 L84.2 116.1 L95.3 109.7 Z" stroke-width="0.9"/>
+<path d="M120.9 114.8 L120.9 115.8" stroke-width="0.6"/>
+<path d="M99.2 156.7 L158.5 190.8 L158.5 150.8 L99.2 116.7 Z" stroke-width="1.5"/>
+<path d="M101.4 155.4 L156.3 187.0 L156.3 152.1 L101.4 120.6 Z" fill="url(#marea-02-hatchl)" stroke="none"/>
+<path d="M111.2 150.8 l14 -12 l10 8 l12 -14 l14 10" stroke-width="0.8"/>
+<path d="M180.2 220.9 L202.8 233.8" stroke-width="2.2"/><path d="M180.2 220.9 L203.9 207.3" stroke-width="1"/><path d="M203.9 207.3 Q215.6 218.8 202.8 233.8" stroke-width="0.7" stroke-dasharray="3 3"/>
+<path d="M345.0 123.6 L205.8 203.6 L205.8 235.6 M205.8 203.6 L70.8 126.0" stroke-width="1.5"/>
+<path d="M345.0 123.6 L205.8 203.6 L203.0 202.0 L342.2 122.0 Z M205.8 203.6 L70.8 126.0 L73.6 124.4 L208.6 202.0 Z" fill="url(#marea-02-hatch)" stroke="none"/>
+<path d="M95.9 87.6 L196.1 145.2" stroke-width="1.3"/><path d="M140.4 113.2 l0 8 l-6 6 l12 0 Z" stroke-width="1"/><path d="M140.4 124.4 l-14 22 M140.4 124.4 l14 22" stroke-width="0.5" stroke-dasharray="2 2"/><path d="M95.9 87.6 L95.9 86.0 L196.1 143.6 L196.1 145.2" stroke-width="0.6" stroke-dasharray="3 2"/>
+<circle cx="196.1" cy="145.65" r="4.25" stroke-width="1.2"/><path d="M196.1 149.9 V165.20000000000002 M196.1 156.70000000000002 L188.45 166.9 M196.1 156.70000000000002 L203.75 166.9 M196.1 165.20000000000002 L190.15 178.8 M196.1 165.20000000000002 L202.04999999999998 178.8" stroke-width="1.2"/>
   </g>
-  <text x="586" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">area-02</text>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">area-02</text>
+<text x="96" y="40" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">架空床 200×120 · 床板 1750</text>
+<text x="96" y="52" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">床下 1.2×1.5 帐篷 = 0209</text>
+<text x="282.4" y="42.8" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">书架</text>
+<text x="215.6" y="98.8" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">沙发</text>
+<text x="184.9" y="164.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">地毯</text>
+<text x="77.8" y="138.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0204</text>
+<text x="157.1" y="63.6" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">衣架</text>
+<text x="304.7" y="135.6" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">卫生间 0202</text>
+<text x="251.8" y="154.8" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">储藏室 0210</text>
+<text x="70" y="248" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">南墙梁下 98 寸电视 0207</text>
+<text x="180.8" y="232.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">门</text>
+<text x="60" y="118" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0201 日轨 · 贴梁 2400</text>
+<text x="200" y="292" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c" text-anchor="middle" filter="none">地堡 · 4.85 × 5.00 m · 无窗 · 墙剖到 1 米看进去，北在上方</text>
 </svg>
 </figure>
   <div class="area-head">
     <p class="kicker">区域 02 · Bunker</p>
     <h1>地堡</h1>
-    <p class="lede">没有窗的地下 3 米，反而装下了太阳、电影院和秘密基地</p>
-    <p class="intro">地下室天生潮、天生暗，但也天生安静、天生恒温。地堡区 12 个模块的思路很一致：先把“没有窗”这件事用光、用风、用水解决掉，再往里塞最私人的那些东西——影音室、听音角、鱼缸、帐篷密室、90 天的食物，以及一块能看到整座房子在呼吸的大屏。</p>
+    <p class="lede">没有窗的 4.85×5 米，反而装下了太阳、电影院和床底的秘密基地</p>
+    <p class="intro">地堡完全无窗，净高 2660，天生潮、天生暗，但也天生安静、天生恒温。西北角一张架空床，床下 1.2×1.5 米就是藏宝阁；北墙书架、沙发、地毯正对南侧梁墙上的 98 寸电视；东北角是卫生间灯箱，东侧储藏室放防灾食品，东南角开门。12 个模块的思路很一致：先把“没有窗”这件事用光、用风、用水解决掉，再往里塞最私人的那些东西。</p>
+    <p class="space-line"><em>📐</em> 4.85 × 5.00m · 24.3㎡（含卫生间、储藏室）· 净高 2660 · 完全无窗 <a href="../space.html">· 看户型图 →</a></p>
   </div>
+</section>
+<section class="sec plan-sec">
+  <h2 class="sec-title"><span>这块地长什么样</span><small>按 0008 户型图与空间标注重绘（铅笔版），位置和尺寸以它为准</small></h2>
+  <div class="plan-grid plan-2">
+  <figure class="plan-fig"><div class="pc-frame"><svg class="pc-art plan-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 514" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="pl-bunker-cabin-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="pl-bunker-cabin-h01" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h02" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h03" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h04" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h05" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h06" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-h07" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-hw" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#6b6b6b" stroke-width="0.9" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-bunker-cabin-hn" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+      <line x1="4" y1="0" x2="0" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+    </pattern>
+    <marker id="pl-bunker-cabin-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="14" y="20" font-weight="700" font-size="12" fill="#2a2a2a">地堡与木屋 · 家具平面</text>
+  <g transform="translate(0,30)">
+    <g filter="url(#pl-bunker-cabin-pencil)" stroke-linecap="round" stroke-linejoin="round">
+            <rect fill="url(#pl-bunker-cabin-h02)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="35" y="15" width="310" height="300.7"/>
+      <rect fill="url(#pl-bunker-cabin-h01)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="35" y="321.9" width="310" height="124"/>
+      <rect x="35" y="315.7" width="310" height="6.2" fill="#3d3d3d"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="35" y="15" width="74.4" height="124" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="112.5" y="15" width="124" height="15.5" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="113.7" y="89.4" width="86.8" height="55.8" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="35" y="139" width="74.4" height="37.2" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="121.8" y="152.6" width="114.7" height="111.6" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="35" y="194.8" width="49.6" height="99.2" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="242.7" y="15" width="102.3" height="77.5" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="242.7" y="92.5" width="102.3" height="151.9" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="286.1" y="250.6" width="51.9" height="55.8" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="338" y="250.6" width="7" height="43.4" rx="1"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-opacity="0.9" x="97" y="303.3" width="136.4" height="12.4" rx="1" stroke-width="1.2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="35" y="325" width="117.8" height="34.1" rx="2"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="59.8" y1="325" x2="59.8" y2="359.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="85.8" y1="325" x2="85.8" y2="359.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="110.6" y1="325" x2="110.6" y2="359.1"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="36.9" y="364.7" width="12.4" height="40.3" rx="1"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="128" y="411.8" width="24.8" height="24.8" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="177.6" y="399.4" width="108.5" height="43.4" rx="2"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="286.1" y="325" width="55.8" height="114.7" rx="2"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.7" stroke-opacity="0.95" x="35" y="15" width="310" height="430.9"/>
+    </g>
+    <g>
+            <text font-size="11" fill="#555" x="72" y="70" text-anchor="middle">床（架空）</text>
+      <text font-size="11" fill="#555" x="72" y="86" text-anchor="middle">200×120</text>
+      <text font-size="11" fill="#2a2a2a" x="72" y="102" text-anchor="middle">下方 0209</text>
+      <text font-size="11" fill="#555" x="174" y="27" text-anchor="middle">书架 200×25</text>
+      <text font-size="11" fill="#555" x="157" y="111" text-anchor="middle">沙发</text>
+      <text font-size="11" fill="#555" x="157" y="127" text-anchor="middle">140×90</text>
+      <text font-size="11" fill="#555" x="72" y="153" text-anchor="middle">双层衣架</text>
+      <text font-size="11" fill="#555" x="72" y="169" text-anchor="middle">120×60</text>
+      <text font-size="11" fill="#555" x="179" y="204" text-anchor="middle">地毯</text>
+      <text font-size="11" fill="#555" x="179" y="220" text-anchor="middle">180×180</text>
+      <text font-size="11" fill="#555" x="60" y="232" text-anchor="middle">写字台</text>
+      <text font-size="11" fill="#555" x="60" y="248" text-anchor="middle">0204</text>
+      <text font-size="11" fill="#555" x="60" y="264" text-anchor="middle">80×160</text>
+      <text font-size="11" fill="#555" x="294" y="48" text-anchor="middle">卫生间</text>
+      <text font-size="11" fill="#2a2a2a" x="294" y="64" text-anchor="middle">0202 灯箱</text>
+      <text font-size="11" fill="#555" x="294" y="160" text-anchor="middle">储藏室</text>
+      <text font-size="11" fill="#2a2a2a" x="294" y="176" text-anchor="middle">0210 防灾食品</text>
+      <text font-size="11" fill="#555" x="312" y="272" text-anchor="middle">开门</text>
+      <text font-size="11" fill="#555" x="312" y="288" text-anchor="middle">90×90</text>
+      <text font-size="11" fill="#2a2a2a" x="165" y="290" text-anchor="middle">98寸电视 220 · 0207</text>
+      <text font-size="11" fill="#2a2a2a" x="94" y="346" text-anchor="middle">0107 吧台设备带</text>
+      <text font-size="11" fill="#555" x="55" y="388">空调</text>
+      <text font-size="11" fill="#2a2a2a" x="124" y="427" text-anchor="end">0106 炉区 40×40</text>
+      <text font-size="11" fill="#555" x="232" y="418" text-anchor="middle">写字台 0105</text>
+      <text font-size="11" fill="#555" x="232" y="434" text-anchor="middle">260×70（床下）</text>
+      <text font-size="11" fill="#555" x="314" y="370" text-anchor="middle">梯子床</text>
+      <text font-size="11" fill="#555" x="314" y="386" text-anchor="middle">90×185</text>
+      <text font-size="11" fill="#2a2a2a" x="314" y="402" text-anchor="middle">床下暗门</text>
+    </g>
+  </g>
+  <text x="368" y="508" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0008-4</text>
+</svg>
+</div><figcaption><b>地堡与木屋家具平面</b> 地堡 4.85×5.00，木屋 2.00×5.00。两张床都架空：地堡架子床下是 0209 藏宝阁，木屋梯子床下是写字台与通往地堡的暗门。</figcaption></figure><figure class="plan-fig"><div class="pc-frame"><svg class="pc-art plan-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 484" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="pl-floor1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="pl-floor1-h01" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h02" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h03" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h04" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h05" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h06" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h07" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-hw" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#6b6b6b" stroke-width="0.9" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-hn" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+      <line x1="4" y1="0" x2="0" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+    </pattern>
+    <marker id="pl-floor1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="14" y="20" font-weight="700" font-size="12" fill="#2a2a2a">一层平面 · 东南角一户</text>
+  <g transform="translate(0,30)">
+    <g filter="url(#pl-floor1-pencil)" stroke-linecap="round" stroke-linejoin="round">
+            <rect fill="none" stroke="#7a7a7a" stroke-width="0.6" stroke-dasharray="4 3" x="20" y="40" width="339.8" height="383.5"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="48.3" y="61.2" width="75.5" height="115.7"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="48.3" y="176.9" width="75.5" height="211.2"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="123.8" y="61.2" width="101.5" height="115.7"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="123.8" y="176.9" width="101.5" height="211.2"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="61.2" width="120.4" height="153.4"/>
+      <rect fill="url(#pl-floor1-h05)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="388.1" width="120.4" height="35"/>
+      <rect fill="url(#pl-floor1-h02)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="214.6" width="120.4" height="120.4"/>
+      <rect fill="url(#pl-floor1-h01)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="335" width="120.4" height="53.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="48.3" y1="139.1" x2="225.3" y2="139.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="48.3" y1="176.9" x2="225.3" y2="176.9"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="48.3" y1="214.6" x2="225.3" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="86" y1="139.1" x2="86" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="174" y1="139.1" x2="174" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="123.8" y1="61.2" x2="123.8" y2="388.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="225.3" y1="61.2" x2="225.3" y2="388.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="148.6" x2="310.3" y2="335"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="225.3" y1="214.6" x2="345.7" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="148.6" x2="345.7" y2="148.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="184" x2="345.7" y2="184"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="257.1" x2="345.7" y2="257.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="287.8" x2="345.7" y2="287.8"/>
+      <line x1="225.3" y1="335" x2="345.7" y2="335" stroke="#3d3d3d" stroke-width="1.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="225.3" y1="339.7" x2="345.7" y2="339.7"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.7" stroke-opacity="0.95" x="48.3" y="61.2" width="297.4" height="326.9"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="62.1" y="59.7" width="28.3" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="96.6" y="59.7" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="153.3" y="59.7" width="42.5" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="202.2" y="59.7" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="274.9" y="59.7" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="300.8" y="59.7" width="35.4" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="55.4" y="386.6" width="35.4" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="107.3" y="386.6" width="21.3" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="142.7" y="386.6" width="70.8" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="238.3" y="386.6" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="276.1" y="386.6" width="35.4" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="344.2" y="148.6" width="3" height="28.3"/>
+    </g>
+    <g>
+            <line x1="352" y1="36" x2="352" y2="16" stroke="#3d3d3d" stroke-width="1.2" marker-end="url(#pl-floor1-arrow)"/>
+      <text font-size="10" fill="#555" x="344" y="30" text-anchor="end">北</text>
+      <text font-size="11" fill="#555" x="86" y="102" text-anchor="middle">24.35㎡</text>
+      <text font-size="11" fill="#555" x="86" y="300" text-anchor="middle">29.87㎡</text>
+      <text font-size="11" fill="#555" x="174" y="102" text-anchor="middle">32.05㎡</text>
+      <text font-size="11" fill="#555" x="174" y="300" text-anchor="middle">25.20㎡</text>
+      <text font-size="11" fill="#555" x="267" y="130" text-anchor="middle">36.70㎡</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="265" y="248" text-anchor="middle">02 地堡</text>
+      <text font-size="11" fill="#2a2a2a" x="265" y="265" text-anchor="middle">无窗 · 净高 2660</text>
+      <text font-size="11" fill="#2a2a2a" x="328" y="239" text-anchor="middle">0202</text>
+      <text font-size="11" fill="#2a2a2a" x="270" y="315" text-anchor="middle">储藏室</text>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-dasharray="2 2" x1="297" y1="311" x2="309" y2="311"/>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="285" y="356" text-anchor="middle">01 暖村木屋</text>
+      <text font-size="11" fill="#2a2a2a" x="285" y="373" text-anchor="middle">梁北缘以南</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="285" y="410" text-anchor="middle">05 庭院</text>
+    </g>
+  </g>
+  <text x="368" y="478" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0008-2</text>
+</svg>
+</div><figcaption><b>一层平面</b> 六户各带独立厨卫，只有东南角这户可用。地堡完全无窗，卫生间即 0202 灯箱；南侧梁底 2400，梁北缘就是地堡与木屋的分界线。</figcaption></figure>
+  </div>
+  <p class="tiny">两张图：地堡与木屋家具平面（上北下南）；一层平面里，东南角这一户才是自己的。</p>
 </section>
 <section class="sec">
   <h2 class="sec-title"><span>12 个模块专题</span><small>按编号排列，编号不代表优先级</small></h2>
@@ -275,9 +419,9 @@
 </div>
       <div class="body">
         <div class="row"><i>0201</i><b>模拟阳光</b><span class="st st-✅" title="真实三阶段已完成">✅ 真实三阶段已完成</span></div>
-        <h3>谁懂啊！地下室没窗，我给自己装了一颗会走的太阳</h3>
+        <h3>谁懂啊！地堡没窗，我给自己装了一颗会走的太阳</h3>
         <p>一盏影视灯沿着天花板滑轨走一整天，地堡里也有晨光和黄昏。</p>
-        <p class="tags"><span>#假窗户</span><span>#松弛感</span><span>#沉浸式</span><span>#无窗地下室</span><span>#智能家居</span></p>
+        <p class="tags"><span>#假窗户</span><span>#松弛感</span><span>#沉浸式</span><span>#无窗地堡</span><span>#智能家居</span></p>
       </div>
     </a>
   
@@ -381,7 +525,7 @@
       <div class="body">
         <div class="row"><i>0202</i><b>卫生间灯箱系统</b><span class="st st-✅" title="真实三阶段已完成">✅ 真实三阶段已完成</span></div>
         <h3>无窗卫生间怎么活？我把整个天花板做成了一块天空</h3>
-        <p>1000W 灯箱 + 六面镜光箱，地下刷牙也像在露台上晒晨光。</p>
+        <p>1000W 灯箱 + 六面镜光箱，无窗小间里刷牙也像在露台上晒晨光。</p>
         <p class="tags"><span>#无窗卫生间</span><span>#酒店感</span><span>#去家务化</span><span>#晨间仪式感</span></p>
       </div>
     </a>
@@ -490,9 +634,9 @@
 </div>
       <div class="body">
         <div class="row"><i>0203</i><b>控温控湿</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
-        <h3>地下室潮到长毛？我用一台除湿机 + 一条管道把它变成恒温洞穴</h3>
+        <h3>无窗地堡潮到长毛？我用一台除湿机 + 一条管道把它变成恒温洞穴</h3>
         <p>全年 22℃、湿度 55%，地堡是全屋最舒服的一间房。</p>
-        <p class="tags"><span>#地下室防潮</span><span>#恒温恒湿</span><span>#洞穴风</span><span>#ESPHome</span><span>#避坑</span></p>
+        <p class="tags"><span>#无窗房间防潮</span><span>#恒温恒湿</span><span>#洞穴风</span><span>#ESPHome</span><span>#避坑</span></p>
       </div>
     </a>
   
@@ -601,8 +745,8 @@
 </div>
       <div class="body">
         <div class="row"><i>0204</i><b>系统设计工作台</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
-        <h3>在地下 3 米设计整栋房子，这张桌子是 SurviveOs 的大脑</h3>
-        <p>三块弧形屏 + 一整面图纸墙，全屋每个模块都是在这里画出来的。</p>
+        <h3>在没窗的地堡里设计整栋房子，这张桌子是 SurviveOs 的大脑</h3>
+        <p>三块弧形屏 + 屏幕上方一整条图纸墙，全屋每个模块都是在这里画出来的。</p>
         <p class="tags"><span>#工业风</span><span>#工作台</span><span>#灵感墙</span><span>#沉浸式</span><span>#精神领地</span></p>
       </div>
     </a>
@@ -611,7 +755,7 @@
       <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
     <filter id="m0205-rough" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="23" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="m0205-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -621,95 +765,83 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0205-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
   <g filter="url(#m0205-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- room shell -->
-    <path d="M70 52 H330 V208 H70 Z" stroke-width="1.8"/>
-    <path d="M72 54 H328 V206" stroke-width="0.9"/>
-    <path d="M70 52 L18 16 M330 52 L382 16" stroke-width="1.5"/>
-    <path d="M70 208 L18 262 M330 208 L382 262" stroke-width="1.5"/>
-    <path d="M18 262 Q200 258 382 262" stroke-width="1.2"/>
-    <path d="M20 18 L68 54 V206 L20 260 Z" fill="url(#m0205-hatch)" stroke="none"/>
-    <path d="M332 54 L380 18 V260 L332 206 Z" fill="url(#m0205-hatch)" stroke="none"/>
-
-    <!-- old wooden window frame set into the wall -->
-    <path d="M100 82 H300 V172 H100 Z" stroke-width="2.2"/>
-    <path d="M102 84 H298 V170" stroke-width="1"/>
-    <path d="M108 90 H292 V164 H108 Z" stroke-width="1.6"/>
-    <path d="M100 82 L108 90 M300 82 L292 90 M100 172 L108 164 M300 172 L292 164" stroke-width="1"/>
-    <path d="M102 86 h4 M104 100 q2 4 0 8 M296 120 q-2 6 0 12 M120 84 h30 M240 168 h34" stroke-width="0.6"/>
-    <path d="M96 172 H304 V178 H96 Z" stroke-width="1.4"/>
-    <!-- water line + light bar on top -->
-    <path d="M110 96 q30 -3 60 0 t60 0 t60 0" stroke-width="0.9"/>
-    <path d="M120 80 H280 V76 H120 Z" stroke-width="1.1"/>
-    <path d="M130 90 l-2 -6 M200 90 v-6 M270 90 l2 -6" stroke-width="0.6"/>
-    <!-- substrate + hatch dark bottom -->
-    <path d="M110 154 q40 -6 90 -2 q50 4 90 2 V162 H110 Z" fill="url(#m0205-hatch)" stroke="none"/>
-    <path d="M110 154 q40 -6 90 -2 q50 4 90 2" stroke-width="1"/>
-    <!-- driftwood on the left, rising diagonally -->
-    <path d="M124 154 q10 -30 40 -46 q6 -2 10 4 q-26 14 -34 46 Z" stroke-width="1.6"/>
-    <path d="M136 132 q10 -12 22 -18" stroke-width="0.7"/>
-    <path d="M128 152 q8 -24 30 -40 q-14 18 -20 40 Z" fill="url(#m0205-hatch)" stroke="none"/>
-    <path d="M160 112 q6 -8 12 -6 q-2 8 -12 6 Z M148 122 q-8 -2 -10 -8 q8 0 10 8 Z" stroke-width="0.9"/>
-    <!-- moss stones -->
-    <path d="M232 154 q4 -12 16 -12 q14 0 16 12 Z M258 154 q2 -8 12 -8 q10 0 10 8 Z" stroke-width="1.2"/>
-    <path d="M238 146 q4 -3 8 0 M248 148 q4 -3 8 0" stroke-width="0.6"/>
-    <!-- plants: tall stems and grass -->
-    <path d="M176 154 q-2 -20 4 -40 M184 154 q0 -22 8 -38 M192 154 q4 -18 0 -34" stroke-width="1"/>
-    <path d="M178 130 q-6 -2 -8 -8 M186 122 q6 -2 8 -8 M180 116 q-6 0 -8 -6 M190 138 q6 -2 8 -6" stroke-width="0.9"/>
-    <path d="M110 154 q4 -12 6 -22 M116 154 q2 -10 6 -18 M122 154 q0 -8 4 -14" stroke-width="0.8"/>
-    <path d="M210 154 q2 -14 -2 -30 q8 8 6 30 Z M222 154 q-2 -12 4 -22 q4 12 0 22 Z" stroke-width="1"/>
-    <path d="M280 154 q-2 -10 2 -20 M286 154 q2 -10 -2 -18 M276 150 q-4 -6 -2 -12 M290 148 q4 -6 2 -12" stroke-width="0.8"/>
-    <!-- fish: small tetras -->
-    <path d="M150 104 q6 -4 12 0 q-6 4 -12 0 Z M162 104 l4 -3 v6 Z" stroke-width="1"/>
-    <path d="M200 112 q6 -4 12 0 q-6 4 -12 0 Z M212 112 l4 -3 v6 Z" stroke-width="1"/>
-    <path d="M226 122 q6 -4 12 0 q-6 4 -12 0 Z M238 122 l4 -3 v6 Z" stroke-width="1"/>
-    <path d="M254 106 q-6 -4 -12 0 q6 4 12 0 Z M242 106 l-4 -3 v6 Z" stroke-width="1"/>
-    <path d="M166 136 q-6 -4 -12 0 q6 4 12 0 Z M154 136 l-4 -3 v6 Z" stroke-width="1"/>
-    <path d="M270 132 q6 -4 12 0 q-6 4 -12 0 Z M282 132 l4 -3 v6 Z" stroke-width="1"/>
-    <circle cx="156" cy="104" r="0.7" stroke-width="0.6"/>
-    <circle cx="206" cy="112" r="0.7" stroke-width="0.6"/>
-    <circle cx="248" cy="106" r="0.7" stroke-width="0.6"/>
-    <!-- bubbles from the filter on the right -->
-    <circle cx="276" cy="140" r="1.5" stroke-width="0.7"/>
-    <circle cx="279" cy="130" r="1.8" stroke-width="0.7"/>
-    <circle cx="275" cy="118" r="1.4" stroke-width="0.7"/>
-    <circle cx="280" cy="108" r="2" stroke-width="0.7"/>
-    <circle cx="277" cy="100" r="1.3" stroke-width="0.7"/>
-    <!-- glass reflections -->
-    <path d="M114 100 l6 -8 M118 112 l10 -14" stroke-width="0.6"/>
-
-    <!-- small stool in front of the tank -->
-    <path d="M186 198 q14 -3 28 0 q2 4 -2 6 q-12 2 -24 0 q-4 -2 -2 -6 Z" stroke-width="1.4"/>
-    <path d="M190 204 L184 238 M212 204 L220 238 M200 205 V236" stroke-width="1.3"/>
-    <path d="M188 222 h24" stroke-width="0.8"/>
-    <path d="M190 200 q10 -2 20 0" stroke-width="0.7"/>
-    <!-- floor lamp beside the stool -->
-    <path d="M88 240 h16 M96 240 V150" stroke-width="1.3"/>
-    <path d="M84 150 h24 l-4 -16 h-16 Z" stroke-width="1.3"/>
-    <path d="M86 146 L104 138 V148 L86 150 Z" fill="url(#m0205-hatch)" stroke="none"/>
-    <!-- side table + mug at right -->
-    <path d="M296 208 h26 v6 h-26 Z M300 214 v20 M318 214 v20" stroke-width="1.2"/>
-    <path d="M304 208 v-9 h9 v9 Z M313 201 q5 0 3 5" stroke-width="1"/>
-
-    <!-- sofa back in the foreground (viewer's seat) -->
-    <path d="M40 262 q0 -18 16 -18 H344 q16 0 16 18" fill="#fff" stroke="none"/>
-    <path d="M40 262 q0 -18 16 -18 H344 q16 0 16 18" stroke-width="2"/>
-    <path d="M44 262 q0 -14 14 -14 H342 q14 0 14 14" stroke-width="0.9"/>
-    <path d="M140 246 v14 M260 246 v14" stroke-width="1"/>
-    <path d="M60 254 q20 -2 40 0 M300 254 q20 -2 40 0 M180 256 q20 -2 40 0" stroke-width="0.7"/>
-    <path d="M46 262 H354" stroke-width="1"/>
-    <!-- rug -->
-    <path d="M110 268 q90 -4 180 0" stroke-width="0.8"/>
+<path d="M36 79.75999999999999 H356.0 V250 H36 Z" stroke-width="1.8"/>
+<path d="M36 96.4 H356.0" stroke-width="1.3"/><path d="M38 81.75999999999999 h316 v12.64 h-316 Z" fill="url(#m0205-hatchl)" stroke="none"/>
+<path d="M38 102 H354.0" stroke-width="0.4"/>
+<path d="M38 116 H354.0" stroke-width="0.4"/>
+<path d="M38 130 H354.0" stroke-width="0.4"/>
+<path d="M38 144 H354.0" stroke-width="0.4"/>
+<path d="M38 158 H354.0" stroke-width="0.4"/>
+<path d="M38 172 H354.0" stroke-width="0.4"/>
+<path d="M38 186 H354.0" stroke-width="0.4"/>
+<path d="M38 200 H354.0" stroke-width="0.4"/>
+<path d="M38 214 H354.0" stroke-width="0.4"/>
+<path d="M38 228 H354.0" stroke-width="0.4"/>
+<path d="M38 242 H354.0" stroke-width="0.4"/>
+<path d="M36 192.4 H196.0 V250" stroke-width="1.6"/><path d="M36 188.4 H199.0 v4" stroke-width="1.2"/>
+<path d="M74.4 194.96 V246 M55.2 218.0 h8" stroke-width="0.8"/>
+<path d="M112.8 194.96 V246 M93.6 218.0 h8" stroke-width="0.8"/>
+<path d="M151.2 194.96 V246 M132.0 218.0 h8" stroke-width="0.8"/>
+<path d="M176.8 218.0 h8" stroke-width="0.8"/>
+<rect x="42.4" y="156.4" width="19.2" height="32.0" rx="3" stroke-width="1"/><rect x="68.0" y="161.52" width="25.6" height="26.88" rx="3" stroke-width="1"/><path d="M100.0 188.4 v-24.32 h25.6 v24.32 M105.12 164.08 v-8 h15.36 v8" stroke-width="1"/>
+<rect x="138.4" y="150.0" width="51.2" height="38.4" stroke-width="1.6"/><path d="M141.4 156.0 h45.2 v3 h-45.2 Z" fill="url(#m0205-hatch)" stroke="none"/>
+<path d="M144.4 184.4 q6 -18 3 -28 M152.4 184.4 q4 -14 8 -22 M179.60000000000002 184.4 q-4 -12 -2 -20 M173.60000000000002 184.4 q2 -10 -4 -16" stroke-width="0.8"/>
+<path d="M160.4 168.0 l7 -3 l-7 -3 Z M172.4 176.0 l-7 3 l7 3 Z M146.4 180.4 h35.2" stroke-width="0.8"/><path d="M183.60000000000002 158.0 v24.4 M180.60000000000002 162.0 h3" stroke-width="0.7"/>
+<path d="M191.60000000000002 178.4 h8 v-30 M199.60000000000002 148.4 h-6" stroke-width="0.7"/>
+<rect x="48.8" y="100.4" width="76.8" height="55.04" stroke-width="1.3"/>
+<rect x="51.36" y="103.4" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="51.36" y="121.32000000000001" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="51.36" y="139.24" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="76.32" y="103.4" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="76.32" y="121.32000000000001" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="76.32" y="139.24" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="101.28" y="103.4" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="101.28" y="121.32000000000001" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="101.28" y="139.24" width="22.4" height="16.0" stroke-width="0.5"/>
+<path d="M135.2 106.4 q30 4 60 0" stroke-width="0.6"/>
+<rect x="138.4" y="106.4" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="153.76" y="106.4" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="169.12" y="106.4" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="184.48000000000002" y="106.4" width="10.24" height="11.52" stroke-width="0.5"/>
+<path d="M135.2 124.32000000000001 q30 4 60 0" stroke-width="0.6"/>
+<rect x="138.4" y="124.32000000000001" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="153.76" y="124.32000000000001" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="169.12" y="124.32000000000001" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="184.48000000000002" y="124.32000000000001" width="10.24" height="11.52" stroke-width="0.5"/>
+<path d="M135.2 142.24 q30 4 60 0" stroke-width="0.6"/>
+<rect x="138.4" y="142.24" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="153.76" y="142.24" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="169.12" y="142.24" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="184.48000000000002" y="142.24" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="202.4" y="99.6" width="28.8" height="86.4" stroke-width="1"/>
+<rect x="204.32" y="101.52000000000001" width="24.96" height="25.6" stroke-width="0.5"/>
+<rect x="204.32" y="130.32000000000002" width="24.96" height="25.6" stroke-width="0.5"/>
+<rect x="204.32" y="159.12" width="24.96" height="25.6" stroke-width="0.5"/>
+<rect x="234.4" y="99.6" width="28.8" height="86.4" stroke-width="0.6" stroke-dasharray="3 3"/>
+<path d="M218.0 250 v-46 h20 v46 M218.0 230 h20" stroke-width="1"/>
+<circle cx="228.0" cy="154" r="6" stroke-width="1.2"/><path d="M228.0 160 V190 M228.0 166 l-14 8 l-10 -4 M228.0 166 l10 10 M228.0 190 l-8 16 M228.0 190 l8 16" stroke-width="1.2"/>
   </g>
-  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0205</text>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0205</text>
+<text x="166.0" y="144.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">0205 生态鱼缸 · 台面上</text>
+<text x="112.8" y="214.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">0107 吧台矮柜 · 900 高</text>
+<text x="87.2" y="90.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0103</text>
+<text x="167.2" y="90.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0104</text>
+<text x="217.12" y="90.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0102</text>
+<text x="292.0" y="90.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">梁底 2400</text>
+<text x="200" y="292" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">木屋北墙西段：缸在吧台上，人坐着看</text>
 </svg>
 </div>
       <div class="body">
         <div class="row"><i>0205</i><b>生态鱼缸</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
-        <h3>地堡唯一的“窗”是一缸水草和三十条灯鱼</h3>
-        <p>嵌进墙里的 1.2 米生态缸，不用换水，是地下室的活风景。</p>
-        <p class="tags"><span>#生态缸</span><span>#嵌墙鱼缸</span><span>#和植物一起住</span><span>#精神角落</span><span>#自然生活</span></p>
+        <h3>木屋吧台上那口 80 公分的生态缸，是隔壁地堡借来的“窗”</h3>
+        <p>坐在吧台台面上的生态缸，不用换水，隔着一道墙给无窗地堡当活风景。</p>
+        <p class="tags"><span>#生态缸</span><span>#吧台鱼缸</span><span>#和植物一起住</span><span>#精神角落</span><span>#自然生活</span></p>
       </div>
     </a>
   
@@ -933,7 +1065,7 @@
 </div>
       <div class="body">
         <div class="row"><i>0207</i><b>影音室</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
-        <h3>地堡天生就是电影院，我只是加了一块 120 寸幕布</h3>
+        <h3>地堡天生就是电影院，我只是把 98 寸电视挂上了梁下那面墙</h3>
         <p>没窗、够黑、够安静，这里的深夜场没人会敲门。</p>
         <p class="tags"><span>#家庭影院</span><span>#逃避间</span><span>#氛围感拉满</span><span>#沉浸式</span><span>#深夜场</span></p>
       </div>
@@ -1053,7 +1185,7 @@
       <div class="body">
         <div class="row"><i>0208</i><b>大柏林音响</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
         <h3>一对比我还高的音箱，地堡的听音角是我最贵的精神角落</h3>
-        <p>两只落地大箱 + 一张单人椅，正三角形，坐进去世界就安静了。</p>
+        <p>两只落地大箱分列电视两侧 + 正对的一张沙发，坐进去世界就安静了。</p>
         <p class="tags"><span>#hifi</span><span>#黑胶</span><span>#痛屋</span><span>#精神角落</span><span>#听音室</span></p>
       </div>
     </a>
@@ -1164,7 +1296,7 @@
 </div>
       <div class="body">
         <div class="row"><i>0209</i><b>藏宝阁</b><span class="st st-🚧" title="真实设计进行中">🚧 真实设计进行中</span></div>
-        <h3>高架床下 3 平米的帐篷密室，是我不给任何人看的秘密基地</h3>
+        <h3>架空床下 1.8 平米的帐篷密室，是我不给任何人看的秘密基地</h3>
         <p>掀开帘子，里面是一面写满名言、电影和对话的海报墙。</p>
         <p class="tags"><span>#秘密基地</span><span>#精神领地</span><span>#痛屋</span><span>#露营风</span><span>#海报墙</span></p>
       </div>
@@ -1273,7 +1405,7 @@
 </div>
       <div class="body">
         <div class="row"><i>0210</i><b>防灾食品</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
-        <h3>被问爆了！地堡这面墙能让两个人吃 90 天</h3>
+        <h3>被问爆了！地堡储藏室这面架子能让我一个人吃 90 天</h3>
         <p>先进先出的食品货架，罐头、米、水按日期滚动，永远不过期。</p>
         <p class="tags"><span>#防灾储备</span><span>#pantry整理</span><span>#先进先出</span><span>#动手主义</span><span>#码住</span></p>
       </div>
@@ -1497,8 +1629,8 @@
 </div>
       <div class="body">
         <div class="row"><i>0212</i><b>哑铃</b><span class="st st-⬜" title="真实项目待设计">⬜ 真实项目待设计</span></div>
-        <h3>地下 3 米练背，一整个爱住！哑铃角是我的地堡健身房</h3>
-        <p>一副可调哑铃、一块镜子、一根单杠，20 分钟就能把一天重启。</p>
+        <h3>没窗的地堡练背，一整个爱住！门口那块地毯就是我的健身房</h3>
+        <p>一副可调哑铃、一面窄镜、门框上一根单杠，20 分钟就能把一天重启。</p>
         <p class="tags"><span>#家庭健身</span><span>#人类丰容</span><span>#动手主义</span><span>#一整个爱住</span></p>
       </div>
     </a>
