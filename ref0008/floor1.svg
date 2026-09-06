@@ -1,0 +1,54 @@
+<svg viewBox="0 0 380 440" role="img" aria-label="一层平面分区">
+<defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#6B5646" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+<line x1="352" y1="36" x2="352" y2="16" stroke="#6B5646" stroke-width="1.2" marker-end="url(#ar2)"/><text x="344" y="30" text-anchor="end" class="s">北</text>
+<rect class="eave" x="20" y="40" width="339.8" height="383.5"/>
+<rect class="fn" x="48.3" y="61.2" width="75.5" height="115.7"/>
+<rect class="fn" x="48.3" y="176.9" width="75.5" height="211.2"/>
+<rect class="fn" x="123.8" y="61.2" width="101.5" height="115.7"/>
+<rect class="fn" x="123.8" y="176.9" width="101.5" height="211.2"/>
+<rect class="fn" x="225.3" y="61.2" width="120.4" height="153.4"/>
+<rect class="f05" x="225.3" y="388.1" width="120.4" height="35"/>
+<rect class="f02" x="225.3" y="214.6" width="120.4" height="120.4"/>
+<rect class="f01" x="225.3" y="335" width="120.4" height="53.1"/>
+<line x1="48.3" y1="139.1" x2="225.3" y2="139.1" class="wt"/>
+<line x1="48.3" y1="176.9" x2="225.3" y2="176.9" class="wm"/>
+<line x1="48.3" y1="214.6" x2="225.3" y2="214.6" class="wt"/>
+<line x1="86" y1="139.1" x2="86" y2="214.6" class="wt"/>
+<line x1="174" y1="139.1" x2="174" y2="214.6" class="wt"/>
+<line x1="123.8" y1="61.2" x2="123.8" y2="388.1" class="wm"/>
+<line x1="225.3" y1="61.2" x2="225.3" y2="388.1" class="wm"/>
+<line x1="310.3" y1="148.6" x2="310.3" y2="335" class="wt"/>
+<line x1="225.3" y1="214.6" x2="345.7" y2="214.6" class="wm"/>
+<line x1="310.3" y1="148.6" x2="345.7" y2="148.6" class="wt"/>
+<line x1="310.3" y1="184" x2="345.7" y2="184" class="wt"/>
+<line x1="310.3" y1="257.1" x2="345.7" y2="257.1" class="wt"/>
+<line x1="310.3" y1="287.8" x2="345.7" y2="287.8" class="wt"/>
+<line x1="225.3" y1="335" x2="345.7" y2="335" stroke="#3E2B21" stroke-width="1.6"/>
+<line x1="225.3" y1="339.7" x2="345.7" y2="339.7" class="wt"/>
+<rect class="wl" x="48.3" y="61.2" width="297.4" height="326.9"/>
+<rect class="fx" x="62.1" y="59.7" width="28.3" height="3"/>
+<rect class="fx" x="96.6" y="59.7" width="21.2" height="3"/>
+<rect class="fx" x="153.3" y="59.7" width="42.5" height="3"/>
+<rect class="fx" x="202.2" y="59.7" width="21.2" height="3"/>
+<rect class="fx" x="274.9" y="59.7" width="21.2" height="3"/>
+<rect class="fx" x="300.8" y="59.7" width="35.4" height="3"/>
+<rect class="fx" x="55.4" y="386.6" width="35.4" height="3"/>
+<rect class="fx" x="107.3" y="386.6" width="21.3" height="3"/>
+<rect class="fx" x="142.7" y="386.6" width="70.8" height="3"/>
+<rect class="fx" x="238.3" y="386.6" width="21.2" height="3"/>
+<rect class="fx" x="276.1" y="386.6" width="35.4" height="3"/>
+<rect class="fx" x="344.2" y="148.6" width="3" height="28.3"/>
+<text x="86" y="102" text-anchor="middle" class="tn">24.35㎡</text>
+<text x="86" y="300" text-anchor="middle" class="tn">29.87㎡</text>
+<text x="174" y="102" text-anchor="middle" class="tn">32.05㎡</text>
+<text x="174" y="300" text-anchor="middle" class="tn">25.20㎡</text>
+<text x="267" y="130" text-anchor="middle" class="tn">36.70㎡</text>
+<text x="265" y="248" text-anchor="middle" class="b t02">02 地堡</text>
+<text x="265" y="265" text-anchor="middle" class="t02">无窗 · 净高 2660</text>
+<text x="328" y="239" text-anchor="middle" class="t02">0202</text>
+<text x="270" y="315" text-anchor="middle" class="t02">储藏室</text>
+<line x1="297" y1="311" x2="309" y2="311" class="lead"/>
+<text x="285" y="356" text-anchor="middle" class="b t01">01 暖村木屋</text>
+<text x="285" y="373" text-anchor="middle" class="t01">梁北缘以南</text>
+<text x="285" y="410" text-anchor="middle" class="b t05">05 庭院</text>
+</svg>

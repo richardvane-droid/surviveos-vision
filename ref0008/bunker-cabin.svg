@@ -1,0 +1,53 @@
+<svg viewBox="0 0 380 470" role="img" aria-label="地堡与木屋家具平面">
+<rect class="f02" x="35" y="15" width="310" height="300.7"/>
+<rect class="f01" x="35" y="321.9" width="310" height="124"/>
+<rect x="35" y="315.7" width="310" height="6.2" fill="#3E2B21"/>
+<rect class="fx" x="35" y="15" width="74.4" height="124" rx="2"/>
+<rect class="fx" x="112.5" y="15" width="124" height="15.5" rx="2"/>
+<rect class="fx" x="113.7" y="89.4" width="86.8" height="55.8" rx="2"/>
+<rect class="fx" x="35" y="139" width="74.4" height="37.2" rx="2"/>
+<rect class="fx" x="121.8" y="152.6" width="114.7" height="111.6" rx="2"/>
+<rect class="fx" x="35" y="194.8" width="49.6" height="99.2" rx="2"/>
+<rect class="fx" x="242.7" y="15" width="102.3" height="77.5" rx="2"/>
+<rect class="fx" x="242.7" y="92.5" width="102.3" height="151.9" rx="2"/>
+<rect class="fx" x="286.1" y="250.6" width="51.9" height="55.8" rx="2"/>
+<rect class="fx" x="338" y="250.6" width="7" height="43.4" rx="1"/>
+<rect class="fx" x="97" y="303.3" width="136.4" height="12.4" rx="1" stroke-width="1.2"/>
+<rect class="fx" x="35" y="325" width="117.8" height="34.1" rx="2"/>
+<line x1="59.8" y1="325" x2="59.8" y2="359.1" class="wt"/>
+<line x1="85.8" y1="325" x2="85.8" y2="359.1" class="wt"/>
+<line x1="110.6" y1="325" x2="110.6" y2="359.1" class="wt"/>
+<rect class="fx" x="36.9" y="364.7" width="12.4" height="40.3" rx="1"/>
+<rect class="fx" x="128" y="411.8" width="24.8" height="24.8" rx="2"/>
+<rect class="fx" x="177.6" y="399.4" width="108.5" height="43.4" rx="2"/>
+<rect class="fx" x="286.1" y="325" width="55.8" height="114.7" rx="2"/>
+<rect class="wl" x="35" y="15" width="310" height="430.9"/>
+<text x="72" y="70" text-anchor="middle" class="tn">床（架空）</text>
+<text x="72" y="86" text-anchor="middle" class="tn">200×120</text>
+<text x="72" y="102" text-anchor="middle" class="t02">下方 0209</text>
+<text x="174" y="27" text-anchor="middle" class="tn">书架 200×25</text>
+<text x="157" y="111" text-anchor="middle" class="tn">沙发</text>
+<text x="157" y="127" text-anchor="middle" class="tn">140×90</text>
+<text x="72" y="153" text-anchor="middle" class="tn">双层衣架</text>
+<text x="72" y="169" text-anchor="middle" class="tn">120×60</text>
+<text x="179" y="204" text-anchor="middle" class="tn">地毯</text>
+<text x="179" y="220" text-anchor="middle" class="tn">180×180</text>
+<text x="60" y="232" text-anchor="middle" class="tn">写字台</text>
+<text x="60" y="248" text-anchor="middle" class="tn">0204</text>
+<text x="60" y="264" text-anchor="middle" class="tn">80×160</text>
+<text x="294" y="48" text-anchor="middle" class="tn">卫生间</text>
+<text x="294" y="64" text-anchor="middle" class="t02">0202 灯箱</text>
+<text x="294" y="160" text-anchor="middle" class="tn">储藏室</text>
+<text x="294" y="176" text-anchor="middle" class="t02">0210 防灾食品</text>
+<text x="312" y="272" text-anchor="middle" class="tn">开门</text>
+<text x="312" y="288" text-anchor="middle" class="tn">90×90</text>
+<text x="165" y="290" text-anchor="middle" class="t02">98寸电视 220 · 0207</text>
+<text x="94" y="346" text-anchor="middle" class="t01">0107 吧台设备带</text>
+<text x="55" y="388" class="tn">空调</text>
+<text x="124" y="427" text-anchor="end" class="t01">0106 炉区 40×40</text>
+<text x="232" y="418" text-anchor="middle" class="tn">写字台 0105</text>
+<text x="232" y="434" text-anchor="middle" class="tn">260×70（床下）</text>
+<text x="314" y="370" text-anchor="middle" class="tn">梯子床</text>
+<text x="314" y="386" text-anchor="middle" class="tn">90×185</text>
+<text x="314" y="402" text-anchor="middle" class="t01">床下暗门</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 380 245" role="img" aria-label="木屋北墙立面">
+<rect class="f01" x="25" y="44.4" width="330" height="175.6"/>
+<rect class="fn" x="25" y="44.4" width="330" height="17.2"/>
+<rect class="fx" x="25" y="160.6" width="165" height="59.4" rx="2"/>
+<rect class="fx" x="25" y="127.6" width="33" height="33" rx="2"/>
+<rect class="fx" x="58" y="127.6" width="33" height="33" rx="2"/>
+<rect class="fx" x="91" y="127.6" width="33" height="33" rx="2"/>
+<rect class="f03" x="130.6" y="121" width="52.8" height="39.6" rx="2"/>
+<rect class="f04" x="38.2" y="61.6" width="79.2" height="59.4" rx="2"/>
+<rect class="f04" x="124" y="61.6" width="66" height="59.4" rx="2"/>
+<rect class="f04" x="196.6" y="64.9" width="89.1" height="89.1" rx="2"/>
+<rect class="f04" x="196.6" y="160.6" width="89.1" height="46.2" rx="2"/>
+<rect class="fx" x="292.3" y="61.6" width="59.4" height="36.4" rx="2"/>
+<rect x="292.3" y="92" width="59.4" height="6" fill="#3E2B21"/>
+<rect class="dsh" x="298.9" y="101.2" width="46.2" height="118.8"/>
+<line x1="25" y1="220" x2="355" y2="220" stroke="#3E2B21" stroke-width="2"/>
+<rect class="wm" x="25" y="44.4" width="330" height="175.6"/>
+<text x="190" y="57" text-anchor="middle" class="tn">梁 · 梁底 2400</text>
+<text x="107" y="194" text-anchor="middle" class="t01">0107 吧台矮柜 · 900 高</text>
+<text x="157" y="145" text-anchor="middle" class="t03">0205</text>
+<text x="78" y="82" text-anchor="middle" class="t04">0103</text>
+<text x="78" y="98" text-anchor="middle" class="t04">电子画框墙</text>
+<text x="78" y="114" text-anchor="middle" class="t04">1200×900</text>
+<text x="157" y="85" text-anchor="middle" class="t04">0104</text>
+<text x="157" y="101" text-anchor="middle" class="t04">照片墙</text>
+<text x="241" y="95" text-anchor="middle" class="t04">0102</text>
+<text x="241" y="111" text-anchor="middle" class="t04">作品展示墙</text>
+<text x="241" y="127" text-anchor="middle" class="g">3×3 每框 430</text>
+<text x="241" y="178" text-anchor="middle" class="t04">0101</text>
+<text x="241" y="194" text-anchor="middle" class="t04">主产品展示</text>
+<text x="322" y="75" text-anchor="middle" class="tn">梯子床</text>
+<text x="322" y="89" text-anchor="middle" class="tn">床板 1850</text>
+<text x="322" y="152" text-anchor="middle" class="t01">暗门</text>
+<text x="322" y="168" text-anchor="middle" class="t01">→ 地堡</text>
+</svg>
