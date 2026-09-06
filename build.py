@@ -9,20 +9,34 @@ DIST = ROOT / "docs"
 SITE_URL = "https://richardvane-droid.github.io/surviveos-vision/"
 
 AREAS = {
-    "01": {"name": "暖村木屋", "en": "Cabin", "line": "PSK 生存盒的展示间 + 制作间 + 冬天最暖的那间屋",
-           "intro": "一栋木屋，白天是 PSK 生存盒的展示间和工作台，晚上柴火炉一烧就是待客的小酒馆。这里的每个模块都围着“展示、制作、取暖、待客”四件事转，是整个系统里最有烟火气的一块。"},
-    "02": {"name": "地堡", "en": "Bunker", "line": "没有窗的地下 3 米，反而装下了太阳、电影院和秘密基地",
-           "intro": "地下室天生潮、天生暗，但也天生安静、天生恒温。地堡区 12 个模块的思路很一致：先把“没有窗”这件事用光、用风、用水解决掉，再往里塞最私人的那些东西——影音室、听音角、鱼缸、帐篷密室、90 天的食物，以及一块能看到整座房子在呼吸的大屏。"},
-    "03": {"name": "阁楼间", "en": "Loft", "line": "斜顶之下：工具台、帐篷、光伏，和一根会预报天气的杆子",
-           "intro": "斜顶阁楼是最容易被浪费的空间，也是最适合“一个人待着”的空间。这里放小制作、户外装备、一顶常驻帐篷，屋顶上是光伏板和微型气象站——整栋房子的能源与天气，从这层开始。"},
-    "04": {"name": "阁楼仓库", "en": "Storage", "line": "一条过道、一间材料仓、一间喷漆房、一间木工房",
-           "intro": "仓库区不追求好看，追求“找得到、拿得顺、做得了”。过道两侧是工具墙，尽头分出喷漆间和木工间，中间是材料仓——所有模块的施工，最后都要回到这里动手。"},
-    "05": {"name": "庭院", "en": "Yard", "line": "柴火墙、爬山虎、20 个有名字的陶盆，和一根木头充电桩",
-           "intro": "庭院是从“屋里”走到“野外”的过渡带。柴火墙既是储备也是背景墙，爬山虎负责让墙自己变绿，种植架和盆栽让浇水这件事被系统接管，角落里一根木头充电桩接住每天回家的电摩。"},
-    "06": {"name": "草地", "en": "Savanna", "line": "50㎡ 的杭州稀树草原：地下滴灌、雨水罐、和一个鸟类摄像头",
-           "intro": "草地区是目前真实进度最靠前的一块：疏林草原的植物配置、三传感器自动浇灌、1500L 雨水存储已经是落地方案。设想版在这个基础上继续放飞——比如让摄像头认得出 17 种鸟。"},
-    "07": {"name": "钓台", "en": "Pier", "line": "伸进池塘的木平台：顶棚、钓具墙、光伏夜灯、小火塘",
-           "intro": "真实项目里钓台还没做范围拆解，设想版干脆先替它想好四个模块：平台本体和顶棚、钓具储物墙、离网照明与电源、水边茶席和小火塘。做完之后，这里应该是整套系统里最“什么都不干”的地方。"},
+    "01": {"name": "暖村木屋", "en": "Cabin", "line": "2×5 米的木屋：北墙一整面展示墙，西南角一只柴火炉，东墙一张梯子床",
+           "intro": "一间 2.00×5.00 米、东西向的长条木屋，夹在地堡和庭院之间。南墙开门窗，东墙是梯子床（床下写字台和通往地堡的暗门），西墙挂空调，唯一完整的展示面就是北墙——吧台矮柜在西段，上方从西到东排开电子画框墙、照片墙、作品展示墙，主产品展示在作品墙正下方。白天是 PSK 生存盒的展示间和工作台，晚上柴火炉一烧，就是一个人的小酒馆。",
+           "space": "2.00 × 5.00m · 10㎡ · 净高 2660（梁下 2400）", "plans": ["northwall", "bunker-cabin"],
+           "plan_note": "两张图：木屋北墙立面（自室内向北看）；地堡与木屋家具平面里，木屋是梁以南的那 2 米。"},
+    "02": {"name": "地堡", "en": "Bunker", "line": "没有窗的 4.85×5 米，反而装下了太阳、电影院和床底的秘密基地",
+           "intro": "地堡完全无窗，净高 2660，天生潮、天生暗，但也天生安静、天生恒温。西北角一张架空床，床下 1.2×1.5 米就是藏宝阁；北墙书架、沙发、地毯正对南侧梁墙上的 98 寸电视；东北角是卫生间灯箱，东侧储藏室放防灾食品，东南角开门。12 个模块的思路很一致：先把“没有窗”这件事用光、用风、用水解决掉，再往里塞最私人的那些东西。",
+           "space": "4.85 × 5.00m · 24.3㎡（含卫生间、储藏室）· 净高 2660 · 完全无窗", "plans": ["bunker-cabin", "floor1"],
+           "plan_note": "两张图：地堡与木屋家具平面（上北下南）；一层平面里，东南角这一户才是自己的。"},
+    "03": {"name": "阁楼间", "en": "Loft", "line": "45° 坡顶之下：帐篷、工具台、一扇天窗，和一根会预报天气的杆子",
+           "intro": "阁楼层整层归自己，屋面是 45° 四坡、中间最高 2060——离外墙多少米，天花板就多高。阁楼间在西侧偏中，34.5㎡ 里能站直的只有 24.1㎡，帐篷（约 2.35×2.16m）和工具台（约 1.88×0.84m）都落在可站立核心区里，头顶一扇约 800×900 的可开启天窗。这里放小制作、户外装备、一顶常驻帐篷，屋顶上是光伏板和微型气象站。",
+           "space": "≈7.5 × 5.35m（带缺口）· 34.5㎡ / 可站立 24.1㎡ · 最高 2060、均 1830", "plans": ["attic"],
+           "plan_note": "阁楼层分区。虚线框内为净高 2060 的可站立核心区，斜线带是檐口低矮圈，越靠外越矮。"},
+    "04": {"name": "阁楼仓库", "en": "Storage", "line": "北条材料仓、东侧木工间、一只喷涂柜，和一条全能站直的过道",
+           "intro": "仓库区不追求好看，追求“找得到、拿得顺、做得了”。材料仓库占北条（24.8㎡，能站直的只有 6.7㎡，低矮带正好放长直货架）；木工间占整个东侧（54.1㎡ / 可站立 26.0㎡，南北向 8.54 米的直线站立核心）；喷漆不做独立房间，改成木工间东缘南段一只 1.5×1.0 米的下抽式喷涂柜，排风一根直管向东出墙；中间 11.2㎡ 的过道全能站直，是整层的工具墙。楼板承重没核算之前，台锯这类重家伙先停在选型阶段。",
+           "space": "过道 11.2㎡ · 材料仓库 24.8㎡ · 木工间 54.1㎡ · 成品暂存 16.6㎡（可站立合计约 46㎡）", "plans": ["attic"],
+           "plan_note": "阁楼层分区。0402 在北条，0404 在东侧，0403 喷涂柜在木工间东缘南段，排风出东墙。"},
+    "05": {"name": "庭院", "en": "Yard", "line": "木屋以南 22㎡：柴火墙、爬山虎、有名字的陶盆，和一根木头充电桩",
+           "intro": "庭院约 5.1×4.35 米，从木屋南墙一直到南端的石墩，东边挨着草地，再往南是 2 米过道和 6 米缓坡。它是从“屋里”走到“野外”的过渡带：柴火墙既是储备也是背景墙，爬山虎负责让墙自己变绿，种植架和盆栽让浇水这件事被系统接管，靠过道一侧的角落里一根木头充电桩接住每天回家的电摩。22㎡ 不大，五个模块都得各占一边。",
+           "space": "≈5.1 × 4.35m · 22.2㎡ · 露天", "plans": ["site"],
+           "plan_note": "场地总图。庭院在木屋以南，往南依次是 2m 过道、6m 缓坡、10m 宽的河。"},
+    "06": {"name": "草地", "en": "Savanna", "line": "建筑东侧 5.3×18.9 米的长条草原：地下滴灌、雨水罐、和一个鸟类摄像头",
+           "intro": "草地在建筑东侧，是一条 5.3×18.9 米、约 100㎡ 的南北向长条——比最早按 50㎡ 做的方案大了一倍，形状也从近方形变成了长条，所以稀树草原的植物配置、管网、水泵、雨水罐都退回 🚧 重做一轮。设想版就按长条来想：乔木沿长边间隔、视线通廊贯穿南北、分区阀门分段，雨水罐和水泵靠建筑东墙落位，摄像头从东墙高处俯视整条草地。",
+           "space": "5.3 × 18.9m · 100㎡ · 露天 · 南北向长条", "plans": ["site"],
+           "plan_note": "场地总图。草地是建筑东侧那条 100㎡ 的长条，与地堡、木屋、庭院的东墙相邻。"},
+    "07": {"name": "钓台", "en": "Pier", "line": "缓坡尽头临河的 5.5㎡：一把椅子、一根竿、一盏光伏灯、一只小火塘",
+           "intro": "从庭院出来，穿过 2 米过道、走下 6 米缓坡，就是钓台——约 2.5×2.2 米、5.5㎡，在岸上临河的那一端，面前是 10 米宽的河。它不是伸进水里的栈桥平台，尺寸只够一个人、一把椅、一张小桌。真实项目里钓台还没做范围拆解，设想版先替它想好四个模块：平台本体和顶棚、钓具储物、离网照明与电源、水边茶席和小火塘。做完之后，这里应该是整套系统里最“什么都不干”的地方。",
+           "space": "≈2.5 × 2.2m · ≈5.5㎡ · 露天 · 缓坡临河端（按庭院四分之一预估）", "plans": ["site"],
+           "plan_note": "场地总图。钓台在庭院以南、缓坡临河的那一端，钓台尺寸按庭院四分之一面积预估。"},
 }
 
 STATUS = {
@@ -49,6 +63,28 @@ for m in modules: AREAS[m["area"]]["modules"].append(m)
 for aid, a in AREAS.items():
     a["id"] = aid
     a["svg"] = (ROOT / "illos" / f"area-{aid}.svg").read_text(encoding="utf-8")
+PLANS = [("site", "场地总图", "上北下南。东南角一户 + 整个阁楼层是自己的；庭院往南依次是 2m 过道、6m 缓坡、10m 宽的河，钓台在缓坡临河端；草地是东侧 5.3×18.9m 的长条。"),
+         ("floor1", "一层平面", "六户各带独立厨卫，只有东南角这户可用。地堡完全无窗，卫生间即 0202 灯箱；南侧梁底 2400，梁北缘就是地堡与木屋的分界线。"),
+         ("attic", "阁楼层", "45° 四坡屋面，中间最高 2060。虚线框内为可站立核心区（外轮廓内缩 2060，约 82㎡，占整层 47%）；帐篷与工具台都在核心区内。"),
+         ("bunker-cabin", "地堡与木屋家具平面", "地堡 4.85×5.00，木屋 2.00×5.00。两张床都架空：地堡架子床下是 0209 藏宝阁，木屋梯子床下是写字台与通往地堡的暗门。"),
+         ("northwall", "木屋北墙立面", "5000×2660，自室内向北看。吧台矮柜 900 高、台面电器顶 1500，上方从西到东是 0103 电子画框墙、0104 照片墙、0102 作品展示墙，0101 主产品展示在 0102 正下方。")]
+plans = {k: {"id": k, "name": n, "note": t, "svg": (ROOT / "illos" / f"plan-{k}.svg").read_text(encoding="utf-8")} for k, n, t in PLANS}
+for a in AREAS.values(): a["plan_figs"] = [plans[k] for k in a["plans"]]
+SIZE_TABLE = [("01 暖村木屋", "2.00 × 5.00m", "10.0㎡", "2660（梁下 2400）"),
+              ("02 地堡（含卫生间、储藏室）", "4.85 × 5.00m", "24.3㎡", "2660 · 无窗"),
+              ("03 阁楼间", "≈7.5 × 5.35m（带缺口）", "34.5㎡ / 可站立 24.1㎡", "最高 2060 · 均 1830"),
+              ("0401 过道", "≈3.5 × 3.2m", "11.2㎡ 全可站", "2060"),
+              ("0402 材料仓库", "≈7.5 × 3.3m", "24.8㎡ / 可站立 6.7㎡", "0 → 2060 渐变"),
+              ("0404 木工间", "≈5.1 × 10.6m", "54.1㎡ / 可站立 26.0㎡", "0 → 2060 渐变"),
+              ("成品暂存", "≈5.1 × 3.25m", "16.6㎡ / 可站立 3.6㎡", "低矮为主"),
+              ("05 庭院", "≈5.1 × 4.35m", "22.2㎡", "露天"),
+              ("06 草地", "5.3 × 18.9m", "100㎡", "露天"),
+              ("07 钓台", "≈2.5 × 2.2m", "≈5.5㎡", "露天"),
+              ("天窗", "≈800 × 900", "—", "可开启")]
+BLOCKS = [("0601~0603 草地面积翻倍", "已完成方案按 50㎡ 设计，实测 100㎡ 且是 5.3×18.9m 长条，管网/水泵/雨水罐/植物配置退回 🚧 重做。设想版按长条重写。"),
+          ("0201 可用净高 2660 → 2400", "滑轨贴梁固定在梁内侧天花板上，梁底就是轨道净高上限；灯具吊挂高度、光斑落点、云台俯仰行程都按 2400 重算。"),
+          ("阁楼楼板承重未核算", "台锯、平刨、压刨合计 250~400kg，材料仓库满载可能上吨；核算前重型设备只停在选型阶段。设想版画出来的重家伙都带这个前提。"),
+          ("木屋明火与睡眠同室", "0106 炉区 40×40 在西南角，距南墙 150、距写字台 400；一氧化碳报警器必装，烟囱穿墙是必须找工人的工序。")]
 for i, m in enumerate(modules):
     m["prev"] = modules[i-1] if i > 0 else None
     m["next"] = modules[i+1] if i < len(modules)-1 else None
@@ -115,6 +151,7 @@ BASE = r"""<!doctype html>
   <nav class="areas-nav">
     <a href="{{ root }}preface.html" class="pref {% if page == 'preface' %}on{% endif %}">序</a>
     {% for a in areas.values() %}<a href="{{ root }}areas/{{ a.id }}.html" {% if area and area.id == a.id %}class="on"{% endif %}><i>{{ a.id }}</i>{{ a.name }}</a>{% endfor %}
+    <a href="{{ root }}space.html" class="about {% if page == 'space' %}on{% endif %}">户型图</a>
     <a href="{{ root }}refs.html" class="about {% if page == 'refs' %}on{% endif %}">参考索引</a>
     <a href="{{ root }}about.html" class="about {% if page == 'about' %}on{% endif %}">关于</a>
   </nav>
@@ -146,6 +183,7 @@ INDEX = r"""{% extends "base" %}{% block title %}一座乡野生存系统，做�
     </div>
     <p class="stamp-row"><span class="stamp">设想版 · 非真实进度</span><span class="hand">看看就好，别当施工图 ↗</span></p>
     <a class="pref-entry" href="preface.html"><span class="pref-mark">序</span><span><b>{{ preface.title }}</b><small>这座园子为什么存在——三千字的代序</small></span><span class="arrow">→</span></a>
+    <a class="pref-entry space-entry" href="space.html"><span class="pref-mark">📐</span><span><b>户型图与空间标注</b><small>五张铅笔底图：谁的地、多大、多高——所有模块的位置都从这里来</small></span><span class="arrow">→</span></a>
   </div>
   <figure class="hero-art">{{ areas['01'].svg_inline|safe }}<figcaption>01 暖村木屋 · 区域速写</figcaption></figure>
 </section>
@@ -203,7 +241,15 @@ AREA = r"""{% extends "base" %}{% block title %}{{ area.id }} {{ area.name }}{% 
     <h1>{{ area.name }}</h1>
     <p class="lede">{{ area.line }}</p>
     <p class="intro">{{ area.intro }}</p>
+    <p class="space-line"><em>📐</em> {{ area.space }} <a href="{{ root }}space.html">· 看户型图 →</a></p>
   </div>
+</section>
+<section class="sec plan-sec">
+  <h2 class="sec-title"><span>这块地长什么样</span><small>按 0008 户型图与空间标注重绘（铅笔版），位置和尺寸以它为准</small></h2>
+  <div class="plan-grid plan-{{ area.plan_figs|length }}">
+  {% for f in area.plan_figs %}<figure class="plan-fig"><div class="pc-frame">{{ f.svg_inline|safe }}</div><figcaption><b>{{ f.name }}</b> {{ f.note }}</figcaption></figure>{% endfor %}
+  </div>
+  <p class="tiny">{{ area.plan_note }}</p>
 </section>
 <section class="sec">
   <h2 class="sec-title"><span>{{ area.modules|length }} 个模块专题</span><small>按编号排列，编号不代表优先级</small></h2>
@@ -245,6 +291,8 @@ MODULE = r"""{% extends "base" %}{% block title %}{{ m.id }} {{ m.name }}{% endb
     {{ m.svg_inline|safe }}
     <figcaption><span class="hand">速写 · {{ m.sketch_brief }}</span></figcaption>
   </figure>
+
+  {% if m.place %}<section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>{{ m.place }}</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="{{ root }}space.html">看户型图 →</a></p></section>{% endif %}
 
   <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">{{ m.scene }}</p></section>
 
@@ -299,6 +347,36 @@ MODULE = r"""{% extends "base" %}{% block title %}{{ m.id }} {{ m.name }}{% endb
 </article>
 {% endblock %}"""
 
+SPACE = r"""{% extends "base" %}{% block title %}户型图与空间标注{% endblock %}
+{% block desc %}SurviveOs 设想版的空间底图：场地总图、一层平面、阁楼层、地堡与木屋家具平面、木屋北墙立面，铅笔重绘自 0008。{% endblock %}
+{% block body %}
+<nav class="crumb"><a href="{{ root }}index.html">首页</a> › <span>户型图</span></nav>
+<article class="mod space">
+  <header class="mod-head">
+    <p class="kicker">空间底图 · 重绘自 00-总览 / 0008 户型图与空间标注 v1（2026-09-05）</p>
+    <h1>先把地量清楚，再往上做梦</h1>
+    <p class="lede">设想可以天马行空，但每个模块落在哪、有多大、朝哪边，都以这五张图为准：东南角一户 + 整个阁楼层是自己的，一层其余五户是邻居；庭院往南是过道、缓坡和一条 10 米宽的河；草地在东侧，是一条 100㎡ 的长条。<span class="est">灰色斜体的数字是按图面比例预估的，还没实测。</span></p>
+  </header>
+  {% for f in plans.values() %}
+  <section class="blk plan-blk" id="{{ f.id }}">
+    <h2><em>📐</em> {{ loop.index }} · {{ f.name }}</h2>
+    <figure class="plan-fig big"><div class="pc-frame">{{ f.svg_inline|safe }}</div><figcaption>{{ f.note }}</figcaption></figure>
+  </section>
+  {% endfor %}
+  <section class="blk"><h2><em>📏</em> 关键尺寸与净高</h2>
+    <div class="tbl-wrap"><table class="size-tbl"><thead><tr><th>区域 / 空间</th><th>尺寸</th><th>面积</th><th>净高</th></tr></thead>
+    <tbody>{% for r in size_table %}<tr><td>{{ r[0] }}</td><td>{{ r[1] }}</td><td>{{ r[2] }}</td><td>{{ r[3] }}</td></tr>{% endfor %}</tbody></table></div>
+    <p class="tiny">带 ≈ 的按图面比例预估。阁楼规则：离外墙多少米，天花板就多高；可站立区 = 外轮廓向内缩 2060mm。</p>
+  </section>
+  <section class="blk"><h2><em>⛔</em> 设想版也绕不过的四个硬约束</h2>
+    <ul class="pit">{% for b in blocks %}<li><b>{{ b[0] }}</b>——{{ b[1] }}</li>{% endfor %}</ul>
+  </section>
+  <section class="blk"><h2><em>🧭</em> 按区域看</h2>
+    <div class="link-grid">{% for a in areas.values() %}<a class="link-card" href="{{ root }}areas/{{ a.id }}.html"><div class="thumb">{{ a.svg_inline|safe }}</div><div><i>{{ a.id }}</i><b>{{ a.name }}</b><p>{{ a.space }}</p></div></a>{% endfor %}</div>
+  </section>
+</article>
+{% endblock %}"""
+
 ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endblock %}
 {% block body %}
 <nav class="crumb"><a href="{{ root }}index.html">首页</a> › <span>关于</span></nav>
@@ -306,7 +384,7 @@ ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endbloc
   <header class="mod-head">
     <p class="kicker">模块 0901 · 设想版说明</p>
     <h1>这个站是"先把结局想完"的一次练习</h1>
-    <p class="lede">真实的 SurviveOs 项目是一个模块一个模块严谨地做——方案原理推演、设备电商选型、施工。0901 反过来：不严谨、不算账、不等进度，先把 {{ stats.modules }} 个模块"做完之后的样子"一口气想完，给真实设计当参照物，也给家人朋友一个能逛的地方。</p>
+    <p class="lede">真实的 SurviveOs 项目是一个模块一个模块严谨地做——方案原理推演、设备电商选型、施工。0901 反过来：不严谨、不算账、不等进度，先把 {{ stats.modules }} 个模块"做完之后的样子"一口气想完，给真实设计当参照物，也给自己一个随时能逛一圈的地方。</p>
   </header>
   <section class="blk"><h2><em>①</em> 框架是真的，内容是想的</h2>
     <p class="scene">7 个区域和模块编号完全沿用真实项目的《0002 区域与子模块清单》。5 个真实已完成的模块（0201 模拟阳光、0202 卫生间灯箱、0601～0603 草地三件套）和 2 个进行中的模块（0103 电子画框墙、0209 藏宝阁），设想内容在真实方案基础上放飞；其余模块是纯幻想。钓台区真实项目还没拆解，这里先替它想了 0701～0704 四个模块。每页右上角的状态章（⬜ / 🚧 / ✅ / 设想）标的是<b>真实进度</b>，不是设想进度。</p></section>
@@ -318,10 +396,12 @@ ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endbloc
     <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 2～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），每个都在 2026-09 打开核实过、星数取自当时页面；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见<a href="{{ root }}refs.html">参考索引</a>。</p></section>
   <section class="blk"><h2><em>⑤</em> 每个模块再往下拆一层</h2>
     <p class="scene">每个模块页的“核心拆解”把它拆成 3～5 个最核心的东西，一共 {{ parts_stats.total }} 个：{{ parts_stats.hw }} 个<b>产品模块</b>（物理的总成——灯头、除湿柜、雨水罐组、洞洞板系统……）给科普式介绍和一张铅笔画<b>爆炸拆解图</b>；{{ parts_stats.logic }} 个<b>联动逻辑</b>（自动化 / 算法 / 数据流）当成“逻辑产品”做一张<b>海报</b>，再配一张与爆炸图对应的铅笔画<b>流程图</b>，并写明主要实现路径参考的是哪个 GitHub 项目，让逻辑可以顺着推演下去。</p></section>
-  <section class="blk"><h2><em>⑥</em> 怎么用它</h2>
+  <section class="blk"><h2><em>⑥</em> 位置和尺寸以 0008 户型图为准</h2>
+    <p class="scene">2026-09-05 真实项目做出了《0008 户型图与空间标注》：东南角一户 + 整个阁楼层是自己的，地堡 4.85×5 无窗、木屋 2×5、庭院 22㎡、草地是东侧 5.3×18.9 的长条、钓台在缓坡临河端只有 5.5㎡，阁楼是 45° 四坡顶。全站据此过了一遍：每个模块页多了一段“它在哪、有多大”，区域页嵌了铅笔重绘的户型底图（见<a href="{{ root }}space.html">户型图</a>），文案里和它打架的说法（50㎡ 方草地、池塘上的钢桩钓台、独立喷漆间、地堡开窗、木屋正中的展台、招待客人……）都改掉了，涉及空间布局的速写和拆解图按 0008 的几何重画。设想仍然放飞，但落点不再悬空。</p></section>
+  <section class="blk"><h2><em>⑦</em> 怎么用它</h2>
     <ol class="plan">
       <li><span class="box"></span><span>开某个模块的真实设计对话前，先看一眼它的设想页，把"想要的感觉"带进去。</span></li>
-      <li><span class="box"></span><span>家人朋友逛完在微信里说"这个我想要 / 这个算了"，比看方案文档快得多。</span></li>
+      <li><span class="box"></span><span>自己逛一圈就能标出"这个我想要 / 这个算了"，比翻方案文档快得多。</span></li>
       <li><span class="box"></span><span>真实模块跨阶段时不需要改这个站——它就是一次性的完整形态快照，和真实进度是两条线。</span></li>
     </ol></section>
   <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><span></span></nav>
@@ -606,6 +686,27 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .pref-art{margin:0;border:1.6px solid var(--line);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;padding:10px 14px 4px;background:rgba(255,255,255,.4)}
 .pref-art figcaption{text-align:right;font-size:.85rem;color:var(--ink3);margin-top:2px;font-family:"Long Cang","Kaiti SC",cursive;font-size:1.05rem}
 .pref-src{margin-top:16px;text-align:center}
+.space-line{margin-top:10px;font-size:.92rem;color:var(--ink2)}
+.space-line em{font-style:normal;margin-right:4px}
+.space-line a{color:var(--red);border-bottom:1.5px solid transparent}.space-line a:hover{border-bottom-color:var(--red)}
+.plan-grid{display:grid;gap:18px;align-items:start}
+.plan-grid.plan-2{grid-template-columns:1fr 1fr}
+.plan-fig{margin:0}
+.plan-fig .pc-frame{padding:10px 12px 6px}
+.plan-fig svg{width:100%;height:auto;display:block;max-height:560px;margin:0 auto}
+.plan-fig.big svg{max-height:720px}
+.plan-fig figcaption{font-size:.85rem;color:var(--ink3);margin-top:6px;line-height:1.55}
+.plan-fig figcaption b{color:var(--ink);margin-right:4px}
+.space-entry .pref-mark{font-size:1.5rem}
+.est{color:#8a8a8a;font-style:italic}
+.blk.place p:first-of-type{font-size:1.02rem;line-height:1.75}
+.tbl-wrap{overflow-x:auto}
+.size-tbl{width:100%;border-collapse:collapse;font-size:.9rem;margin:6px 0 8px}
+.size-tbl th,.size-tbl td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.size-tbl th{font-weight:700;border-bottom:1.6px solid var(--ink)}
+.size-tbl td:nth-child(2),.size-tbl td:nth-child(3),.size-tbl td:nth-child(4){white-space:nowrap}
+.plan-blk h2{margin-bottom:8px}
+@media (max-width:820px){.plan-grid.plan-2{grid-template-columns:1fr}}
 .pager{display:flex;justify-content:space-between;gap:12px;padding:26px 0 10px;font-size:.92rem;border-top:1.6px solid var(--line);margin-top:26px}
 .pager a{border-bottom:1.5px solid transparent;white-space:nowrap}.pager a:hover{border-bottom-color:var(--red)}
 .pager .up{font-family:"Long Cang",cursive;font-size:1.15rem;color:var(--red)}
@@ -625,7 +726,7 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#f5f0e6"/><path d="M5 26 L16 7 L27 26 Z" fill="none" stroke="#1c1c1c" stroke-width="2.4" stroke-linejoin="round"/><path d="M12 26 V19 H20 V26" fill="none" stroke="#1c1c1c" stroke-width="2"/></svg>"""
 
-env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS, "teardown": TEARDOWN, "preface": PREFACE}),
+env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS, "teardown": TEARDOWN, "preface": PREFACE, "space": SPACE}),
                   autoescape=select_autoescape(default=True))
 
 # ---------- build ----------
@@ -634,16 +735,18 @@ if DIST.exists(): shutil.rmtree(DIST)
 for m in modules: m["svg_inline"] = inline_svg(m["svg"], "sk-art")
 for a in AREAS.values(): a["svg_inline"] = inline_svg(a["svg"], "sk-art")
 preface["svg_inline"] = inline_svg(preface["svg"], "sk-art")
+for f in plans.values(): f["svg_inline"] = inline_svg(f["svg"], "pc-art plan-art")
 for m in modules:
     for p in m["parts"]:
         p["img_inline"] = inline_svg(p["img"], "pc-art")
         p["poster_inline"] = inline_svg(p["poster"], "pc-poster") if p["poster"] else None
-ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface)
+ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface, plans=plans, size_table=SIZE_TABLE, blocks=BLOCKS)
 
 (DIST / "index.html").write_text(env.get_template("index").render(root="", **ctx), encoding="utf-8")
 (DIST / "about.html").write_text(env.get_template("about").render(root="", **{**ctx, "page": "about"}), encoding="utf-8")
 (DIST / "refs.html").write_text(env.get_template("refs").render(root="", **{**ctx, "page": "refs"}), encoding="utf-8")
 (DIST / "preface.html").write_text(env.get_template("preface").render(root="", **{**ctx, "page": "preface"}), encoding="utf-8")
+(DIST / "space.html").write_text(env.get_template("space").render(root="", **{**ctx, "page": "space"}), encoding="utf-8")
 alist = list(AREAS.values())
 for i, a in enumerate(alist):
     (DIST / "areas" / f"{a['id']}.html").write_text(env.get_template("area").render(
@@ -658,7 +761,7 @@ for m in modules:
 (DIST / "favicon.svg").write_text(FAVICON, encoding="utf-8")
 (DIST / ".nojekyll").write_text("")
 # sitemap
-urls = ["index.html", "preface.html", "about.html", "refs.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
+urls = ["index.html", "preface.html", "space.html", "about.html", "refs.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
 (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     "".join(f"<url><loc>{SITE_URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
 print(f"built {len(urls)} pages -> {DIST}")

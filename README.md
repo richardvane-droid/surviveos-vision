@@ -18,6 +18,9 @@ data/refs-0X.json  每模块的 GitHub 成熟方案 + 小红书关键词（规�
 data/parts-*.json  每模块 3~5 个核心产品模块/联动逻辑的科普文案（规范见 PARTS_BRIEF.md）
 parts/      核心拆解的铅笔画：NNNN-K.svg（硬件爆炸图 / 逻辑流程图）、NNNN-K-poster.svg（逻辑产品海报），生成 docs/teardown/NNNN.html
 check_parts.py  检查 parts JSON 与 SVG 是否配齐
+SPACE_0008.md   空间事实表：位置 / 尺寸 / 朝向全部以真实项目《0008 户型图与空间标注》为准（审稿规范见 AUDIT_BRIEF.md）
+ref0008/        0008 的五张原图 SVG；plan2pencil.py 把它们转成 illos/plan-*.svg（铅笔版），生成 docs/space.html 与各区域页的底图
+sk.py / redraw_*.py  按 0008 几何重绘区域速写、模块速写与拆解图的生成脚本
 ```
 
 ## 本地重新生成
