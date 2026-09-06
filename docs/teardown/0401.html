@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" class="on"><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -32,13 +33,13 @@
     <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
       <span class="tag">产品模块 2</span>
       <span class="tag">联动逻辑 2</span></p>
-    <div class="td-nav"><a href="#p1"><i>1</i>钢制洞洞板影子墙</a><a href="#p2"><i>2</i>透明分格抽屉柜</a><a href="#p3"><i>3</i>影子板生成流水线</a><a href="#p4"><i>4</i>借还归位提醒</a></div>
+    <div class="td-nav"><a href="#p1"><i>1</i>钢制洞洞板影子墙</a><a href="#p2"><i>2</i>透明分格抽屉柜</a><a href="#p3"><i>3</i>影子板生成流水线</a><a href="#p4"><i>4</i>取用归位提醒</a></div>
   </header>
 
   
   <section class="blk part" id="p1">
     <h2><span class="kind kind-hw">产品模块</span> 1. 钢制洞洞板影子墙</h2>
-    <p class="scene">过道两侧整面铺 60×90cm 白色烤漆钢板洞洞板，每件工具挂好后在板面留下一圈黑色“影子”轮廓。原理来自工厂 5S 管理的影子板：把“应该在哪”画在墙上，缺件不用清点，视觉一眼报警。钢板承重远高于木板，磁吸挂钩和零件盘随意贴；板后垫 20mm 龙骨留出挂钩勾挂的空腔，角落一枚 NFC 标签把这面墙接进数字清单。</p>
+    <p class="scene">过道北侧隔断整面铺 60×90cm 白色烤漆钢板洞洞板，每件工具挂好后在板面留下一圈黑色“影子”轮廓。原理来自工厂 5S 管理的影子板：把“应该在哪”画在墙上，缺件不用清点，视觉一眼报警。钢板承重远高于木板，磁吸挂钩和零件盘随意贴；板后垫 20mm 龙骨留出挂钩勾挂的空腔，角落一枚 NFC 标签把这面墙接进数字清单。</p>
     
     <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
@@ -112,7 +113,7 @@
     
     <div class="two">
       <div><h3>关键参数 / 组成</h3>
-        <ul class="inspo"><li>钢板 0.8mm 烤漆，单板承重约 30kg，孔距 25mm</li><li>背板龙骨 20mm 空腔，膨胀螺丝固定进砖墙</li><li>影子轮廓用油性笔手描或 3D 打印贴片</li><li>角落 NFC 标签，手机碰一下打开工具清单</li></ul></div>
+        <ul class="inspo"><li>钢板 0.8mm 烤漆，单板承重约 30kg，孔距 25mm</li><li>背板龙骨 20mm 空腔，自攻螺丝固定进隔断龙骨</li><li>影子轮廓用油性笔手描或 3D 打印贴片</li><li>角落 NFC 标签，手机碰一下打开工具清单</li></ul></div>
       <div>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/stockholmux/pegmixer" target="_blank" rel="noopener">stockholmux/pegmixer</a></p></div>
     </div>
@@ -355,8 +356,8 @@
   </section>
   
   <section class="blk part" id="p4">
-    <h2><span class="kind kind-logic">联动逻辑</span> 4. 借还归位提醒</h2>
-    <p class="scene">解决“工具不知道被谁拿去哪了”。每件常借出的工具贴一枚 NFC 标签，离开过道时手机碰一下，HomeAssistant 收到 tag_scanned 事件，把它标记为“借出”并记下人和时间；归还时再碰一下即清零。每晚十点系统扫一遍借出清单，超过 3 天未还的推送提醒借用人，超过 7 天在中枢屏亮黄。墙上小白板保留，作为断网时的手写兜底。</p>
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 取用归位提醒</h2>
+    <p class="scene">解决“工具不知道被自己带去哪个区了”。每件常带走的工具贴一枚 NFC 标签，离开过道时手机碰一下，HomeAssistant 收到 tag_scanned 事件，把它标记为“在外”并记下去向和时间；放回影子里再碰一下即清零。每晚十点系统扫一遍在外清单，超过 3 天未归位的推送提醒，超过 7 天在中枢屏亮黄。墙上小白板保留，作为断网时的手写兜底。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -424,7 +425,7 @@
   <text x="55" y="176" font-size="8" fill="#666">碰一下</text><text x="256" y="238" font-size="8" fill="#666">推送 · 白板</text>
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0401 · L4</text>
-  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">借还归位提醒</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">取用归位提醒</text>
   <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">工具去哪了，墙比你先知道</text>
   <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">NFC 碰一下 → HA 借出 / 归还状态机 → 每晚巡检 → 推送 + 中枢屏</text>
   <g font-size="11" fill="#2a2a2a">
@@ -458,7 +459,7 @@
     </marker>
   </defs>
 
-  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">借还归位提醒 · 流程图</text>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">取用归位提醒 · 流程图</text>
   <g filter="url(#p0401-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
     <rect x="30" y="52" width="110" height="34" rx="17"/>
     <path d="M196 47 a34 6 0 0 1 68 0 v36 a34 6 0 0 1 -68 0 Z"/><ellipse cx="230" cy="47" rx="34" ry="6"/>
@@ -512,8 +513,8 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>触发：NFC 碰一下 = 借出，再碰一下 = 归还</li><li>阈值：3 天未还推送提醒，7 天中枢屏亮黄</li><li>出口：借出清单实体 + 每晚汇总通知</li><li>兜底：小白板手写借出卡，断网照常登记</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">用 home-assistant/core 原生 NFC 的 tag_scanned 事件做借出/归还状态机，朋友借用扩展接 chicago-tool-library/circulate</p>
+        <ul class="inspo"><li>触发：NFC 碰一下 = 带走，再碰一下 = 归位</li><li>阈值：3 天未归位推送提醒，7 天中枢屏亮黄</li><li>出口：在外清单实体 + 每晚汇总通知</li><li>兜底：小白板手写去向卡，断网照常登记</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 home-assistant/core 原生 NFC 的 tag_scanned 事件做带走/归位状态机，去向与逾期规则参考 chicago-tool-library/circulate 的借还模型</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a><a href="https://github.com/chicago-tool-library/circulate" target="_blank" rel="noopener">chicago-tool-library/circulate</a></p></div>
     </div>
   </section>

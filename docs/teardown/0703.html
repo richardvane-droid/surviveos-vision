@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" class="on"><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -38,7 +39,7 @@
   
   <section class="blk part" id="p1">
     <h2><span class="kind kind-hw">产品模块</span> 1. 顶棚光伏板支架总成</h2>
-    <p class="scene">一块 200W 单晶硅光伏板装在顶棚向阳坡面上，用铝合金支架垫出 15° 倾角，正好和棚坡一致，远看像一片深色的瓦。单晶板比多晶板转换效率高，在杭州多云天气下更划算。支架用不锈钢螺栓穿过檩条固定，板的四角留通风间隙，夏天板背散热好，发电量不会因过热掉太多。板背出来的两根线用 MC4 防水插头接到柱脚电池箱，接头都在檐下淋不到雨。</p>
+    <p class="scene">一块 200W 单晶硅光伏板装在 2.2×2m 顶棚的向阳坡面上，用铝合金支架垫出 15° 倾角，正好和棚坡一致，远看像一片深色的瓦。单晶板比多晶板转换效率高，在杭州多云天气下更划算。支架用不锈钢螺栓穿过檩条固定，板的四角留通风间隙，夏天板背散热好，发电量不会因过热掉太多。板背出来的两根线用 MC4 防水插头接到柱脚电池箱，接头都在檐下淋不到雨。</p>
     
     <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
@@ -128,7 +129,7 @@
   
   <section class="blk part" id="p2">
     <h2><span class="kind kind-hw">产品模块</span> 2. 离网电池箱</h2>
-    <p class="scene">钓台的“心脏”是一只防水箱，固定在杉木柱脚、离水面 50cm 以上。箱内按能量流向排列：光伏板的电先进 MPPT 控制器，调好电压充进 12V 100Ah 磷酸铁锂电池；电池再分三路：12V 直流给马灯和电热垫，小逆变器变 220V 给插座，USB 降压模块给手机。磷酸铁锂比铅酸轻一半、寿命长五倍，冬天低温充电由 BMS 保护板把关。</p>
+    <p class="scene">钓台的“心脏”是一只防水箱，固定在靠坡一侧的杉木柱脚、离地 30cm 以上、高过河的汛期水线。箱内按能量流向排列：光伏板的电先进 MPPT 控制器，调好电压充进 12V 100Ah 磷酸铁锂电池；电池再分三路：12V 直流给马灯和电热垫，小逆变器变 220V 给插座，USB 降压模块给手机。磷酸铁锂比铅酸轻一半、寿命长五倍，冬天低温充电由 BMS 保护板把关。</p>
     
     <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
@@ -215,7 +216,7 @@
     
     <div class="two">
       <div><h3>关键参数 / 组成</h3>
-        <ul class="inspo"><li>12V 100Ah 磷酸铁锂电池，含 JK BMS 保护板</li><li>MPPT 控制器 20A，支持 RS485 读数据</li><li>300W 纯正弦逆变器 + 12V + USB-C 输出</li><li>IP65 防水箱架高 ≥50cm，箱底留排水孔</li></ul></div>
+        <ul class="inspo"><li>12V 100Ah 磷酸铁锂电池，含 JK BMS 保护板</li><li>MPPT 控制器 20A，支持 RS485 读数据</li><li>300W 纯正弦逆变器 + 12V + USB-C 输出</li><li>IP65 防水箱架高 ≥30cm、高过汛期水线，箱底留排水孔</li></ul></div>
       <div>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">syssi/esphome-jk-bms</a></p></div>
     </div>
@@ -223,7 +224,7 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-hw">产品模块</span> 3. 马灯改暖光灯头</h2>
-    <p class="scene">一盏黄铜马灯拆掉煤油芯，换进去一颗 5W 2700K 的 LED 灯珠，保留玻璃罩和提手，看上去还是那盏老灯。灯挂在顶棚下正中，罩内贴一圈哑光黑纸遮光，让光只往台面上打，边缘留暗，不照进水里惊鱼。调光旋钮装在杉木柱上，PWM 从 5% 调到 100%。台边另装两个带盖 IP66 插座和两个 USB-C 口，全走 12V 直流。</p>
+    <p class="scene">一盏黄铜马灯拆掉煤油芯，换进去一颗 5W 2700K 的 LED 灯珠，保留玻璃罩和提手，看上去还是那盏老灯。灯挂在顶棚下正中，罩内贴一圈哑光黑纸遮光，让光只往台面上打，边缘留暗，不照进河里惊鱼。调光旋钮装在杉木柱上，PWM 从 5% 调到 100%。台边另装两个带盖 IP66 插座和两个 USB-C 口，全走 12V 直流。</p>
     
     <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>

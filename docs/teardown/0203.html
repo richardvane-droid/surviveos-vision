@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -38,7 +39,7 @@
   
   <section class="blk part" id="p1">
     <h2><span class="kind kind-hw">产品模块</span> 1. 隐藏除湿机柜</h2>
-    <p class="scene">把一台吵闹的工业除湿机变成“听不见的空调”的柜子。楼梯下的柜体内壁贴一层隔音棉，机器脚下垫橡胶减震垫，噪音从机身传到柜板的路径被切断。除湿机的原理和空调一样：潮湿空气吹过冷凝器时水汽结成水珠流走，再经加热片回温后送出干燥空气。冷凝水通过一根带 2% 坡度的排水管直接流进 0202 的污水提升泵，不用倒水桶。干燥空气从机顶经软接接进 Φ100 风管，送到房间四个角落；柜门本身就是进风格栅，房间里的湿空气从这里回到机器。</p>
+    <p class="scene">把一台吵闹的工业除湿机变成“听不见的空调”的柜子。东侧储藏室里靠卫生间隔墙的柜体内壁贴一层隔音棉，机器脚下垫橡胶减震垫，噪音从机身传到柜板的路径被切断。除湿机的原理和空调一样：潮湿空气吹过冷凝器时水汽结成水珠流走，再经加热片回温后送出干燥空气。冷凝水通过一根带 2% 坡度的排水管穿过隔墙直接流进隔壁 0202 的提升泵集水箱，不用倒水桶。干燥空气从机顶经软接接进 Φ100 风管，送到房间四个角落；柜门本身就是进风格栅，房间里的湿空气从这里回到机器。</p>
     
     <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
@@ -110,7 +111,7 @@
   <!-- 图例 -->
   <g font-size="10.5" fill="#2a2a2a">
     <text x="16" y="34" font-weight="700" font-size="12">隐藏除湿机柜 · 爆炸图</text>
-    <text x="16" y="52">1 楼梯下柜体 + 30mm 隔音棉内衬</text>
+    <text x="16" y="52">1 储藏室柜体 + 30mm 隔音棉内衬</text>
     <text x="16" y="68">2 橡胶减震垫 ×4</text>
     <text x="16" y="84">3 工业除湿机 50L/天（压缩机式）</text>
     <text x="16" y="100">4 冷凝水管 DN25，坡度 ≥ 2%</text>
@@ -233,7 +234,7 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-logic">联动逻辑</span> 3. 湿度区间调度</h2>
-    <p class="scene">让除湿机既不偷懒也不过劳的控制逻辑。输入是四个探头的湿度，取“最高值”而不是平均值，因为发霉总是从最潮的那个角落开始；输出是除湿机的档位和一条推送。规则很简单：湿度超过 65% 切强力档并通知，回到 55% 目标以下就退回自动档，低于 45% 干脆停机，防止软木地板和书本过干开裂。为了不让机器在阈值附近来回启停，每次切档后至少保持 15 分钟。每天累计的排水量按提升泵的启动次数换算，晚上推一条“今日排水 4.2L”。</p>
+    <p class="scene">让除湿机既不偷懒也不过劳的控制逻辑。输入是四个探头的湿度，取“最高值”而不是平均值，因为发霉总是从最潮的那个角落开始；输出是除湿机的档位和一条推送。规则很简单：湿度超过 65% 切强力档并通知，回到 55% 目标以下就退回自动档，低于 45% 干脆停机，防止软木地板和书本过干开裂。为了不让机器在阈值附近来回启停，每次切档后至少保持 15 分钟。每天累计的排水量按 0202 提升泵的启动次数换算，晚上推一条“今日排水 4.2L”。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -391,7 +392,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 新风换气判断</h2>
-    <p class="scene">只除湿不换气会闷，这段逻辑决定什么时候把地面的空气引进来。核心输入是一只 CO2 探头：人在密闭房间里待着，CO2 会从 400ppm 一路往上爬，超过 1000ppm 就开始犯困。低于 800 时新风机低速常转，保证最低换气；超过 1000 就切到高速。但新风进来的空气如果比室内更潮，就等于给除湿机添活，所以进风前先看通风井里的湿度，比室内高就让除湿机同步切强力档陪跑。HEPA 和活性炭滤芯按累计运行小时提醒更换。</p>
+    <p class="scene">只除湿不换气会闷，地堡没窗，这段逻辑决定什么时候通过东墙那个小风口把室外空气引进来。核心输入是一只 CO2 探头：人在密闭房间里待着，CO2 会从 400ppm 一路往上爬，超过 1000ppm 就开始犯困。低于 800 时新风机低速常转，保证最低换气；超过 1000 就切到高速。但新风进来的空气如果比室内更潮，就等于给除湿机添活，所以进风前先看风口处的室外湿度，比室内高就让除湿机同步切强力档陪跑。HEPA 和活性炭滤芯按累计运行小时提醒更换。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -466,8 +467,8 @@
   <g font-size="8.5" fill="#666" text-anchor="middle">
     <text x="82" y="198">CO2 ppm 曲线</text>
     <text x="180" y="202">新风机 低速 / 高速</text>
-    <text x="276" y="187" font-size="8">通风井进风 vs 室内</text>
-    <text x="266" y="177" font-size="8">井</text><text x="286" y="177" font-size="8">室内</text>
+    <text x="276" y="187" font-size="8">风口进风 vs 室内</text>
+    <text x="266" y="177" font-size="8">外</text><text x="286" y="177" font-size="8">室内</text>
     <text x="276" y="244">除湿机陪跑</text>
     <text x="86" y="240">滤芯 2000h 提醒</text>
   </g>

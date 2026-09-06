@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" class="on"><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -38,7 +39,7 @@
   
   <section class="blk part" id="p1">
     <h2><span class="kind kind-hw">产品模块</span> 1. 桧木传感器杆总成</h2>
-    <p class="scene">一米高的桧木杆是自动浇灌的大脑兼感官。8cm 方料桧木掏空走线，顶上做小斜屋顶防雨，屋顶下装翻斗雨量计：每翻一次斗记 0.2mm 雨。控制盒藏在杆内，装 ESP32 和三路继电器；杆面只露一颗指示灯和一颗大红按钮，按下就手动浇 5 分钟。杆脚的电容式土壤探针埋 15cm 深，正是草根最密的地方。</p>
+    <p class="scene">立在草地中段东墙下、雨水罐旁的一米高桧木杆是自动浇灌的大脑兼感官。8cm 方料桧木掏空走线，顶上做小斜屋顶防雨，屋顶下装翻斗雨量计：每翻一次斗记 0.2mm 雨。控制盒藏在杆内，装 ESP32 和三路继电器；杆面只露一颗指示灯和一颗大红按钮，按下就手动浇 5 分钟。杆脚的电容式土壤探针埋 15cm 深，正是草根最密的地方。</p>
     
     <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
@@ -134,7 +135,7 @@
     
     <div class="two">
       <div><h3>关键参数 / 组成</h3>
-        <ul class="inspo"><li>桧木方料 8×8cm，高 1m，内部掏空 4cm 走线槽</li><li>翻斗雨量计 0.2mm/翻，离树 3m 以上</li><li>电容式探针埋深 15cm，每区一根，线缆穿波纹管</li><li>ESP32 + 三路 12V 继电器藏在杆内，IP54 盒</li></ul></div>
+        <ul class="inspo"><li>桧木方料 8×8cm，高 1m，内部掏空 4cm 走线槽</li><li>翻斗雨量计 0.2mm/翻，离树 3m 以上</li><li>电容式探针埋深 15cm，北中南每段一根，线缆穿波纹管</li><li>ESP32 + 三路 12V 继电器藏在杆内，IP54 盒</li></ul></div>
       <div>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/lrswss/esp32-irrigation-automation" target="_blank" rel="noopener">lrswss/esp32-irrigation-automation</a></p></div>
     </div>
@@ -142,7 +143,7 @@
   
   <section class="blk part" id="p2">
     <h2><span class="kind kind-hw">产品模块</span> 2. 三路滴灌首部</h2>
-    <p class="scene">“首部”是滴灌行业对水源接入总成的叫法。雨水罐的水先过球阀，进 120 目叠片过滤器滤掉碎屑和藻类，滴头只有 1.6mm 孔，堵一次就要挖地；再经减压阀把压力稳在 1bar，滴头出水才均匀；然后是三路 12V 电磁阀并排的歧管，分别通向三个分区。每路末端留快接口，冬天接气泵吹空防冻。</p>
+    <p class="scene">“首部”是滴灌行业对水源接入总成的叫法。雨水罐的水先过球阀，进 120 目叠片过滤器滤掉碎屑和藻类，滴头只有 1.6mm 孔，堵一次就要挖地；再经减压阀把压力稳在 1bar，滴头出水才均匀；然后是三路 12V 电磁阀并排的歧管，装在东墙雨水罐边，干管沿长条向北、向南分段铺，分别通向北中南三段。每路末端留快接口，冬天接气泵吹空防冻。</p>
     
     <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
@@ -239,7 +240,7 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-logic">联动逻辑</span> 3. 三传感器灌溉判断</h2>
-    <p class="scene">浇不浇由三个传感器“开会”决定。每天凌晨四点 ESP32 醒来，读三区含水率、雨量和罐水位，三个条件同时满足才开阀：含水率低于该区阈值（芒草 18%、朴树 25%、野花 22%）、未来 6 小时无雨、罐里有水。浇多久由 HomeAssistant 按前一天蒸散量算出各区需水量再折成分钟。白天绝不浇，除非按红按钮。</p>
+    <p class="scene">浇不浇由三个传感器“开会”决定。每天凌晨四点 ESP32 醒来，读北中南三段含水率、雨量和罐水位，三个条件同时满足才开阀：含水率低于该区阈值（芒草 18%、朴树 25%、野花 22%）、未来 6 小时无雨、罐里有水。浇多久由 HomeAssistant 按前一天蒸散量算出各区需水量再折成分钟。白天绝不浇，除非按红按钮。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -470,7 +471,7 @@
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0602 · L4</text>
   <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">草地体检看板</text>
-  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">朋友来了，先看草地的心电图</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">每天回家，先看草地的心电图</text>
   <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">阀时长 × 滴头流量 → 雨水 / 自来水两本账 → 三曲线 + 占比看板</text>
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">每次开阀自动折算升数，雨水和自来水分开记账</text>

@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -28,7 +29,7 @@
   <header class="mod-head">
     <p class="kicker">地堡 · 模块 0208 · 核心拆解</p>
     <h1>大柏林音响：4 个核心模块与逻辑</h1>
-    <p class="lede">两只落地大箱 + 一张单人椅，正三角形，坐进去世界就安静了。</p>
+    <p class="lede">两只落地大箱分列电视两侧 + 正对的一张沙发，坐进去世界就安静了。</p>
     <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
       <span class="tag">产品模块 2</span>
       <span class="tag">联动逻辑 2</span></p>
@@ -38,7 +39,7 @@
   
   <section class="blk part" id="p1">
     <h2><span class="kind kind-hw">产品模块</span> 1. 落地音箱单元总成</h2>
-    <p class="scene">一只“比人还高”的落地箱，拆开其实是六层东西。最底下是花岗岩避震底板和四只钉脚，把箱体和地面的震动隔开；箱体用多层板做，内部加了加强筋和吸音棉，目的是让箱壁本身不发声，只让喇叭发声。分频器是一块带电感和电容的电路板，把功放送来的全频信号切成低、中、高三段，分别送给 12 寸低音单元、中音单元和号角高音；最外面是一块磁吸的前面网罩，防灰也防手。大箱在小房间里低频容易糊，离后墙 80 厘米那口气，也是这只箱子的一部分。</p>
+    <p class="scene">一只“比人还高”的落地箱，拆开其实是六层东西。最底下是花岗岩避震底板和四只钉脚，把箱体和地面的震动隔开；箱体用多层板做，内部加了加强筋和吸音棉，目的是让箱壁本身不发声，只让喇叭发声。分频器是一块带电感和电容的电路板，把功放送来的全频信号切成低、中、高三段，分别送给 12 寸低音单元、中音单元和号角高音；最外面是一块磁吸的前面网罩，防灰也防手。大箱贴南墙分列电视两侧、间距 2.6 米，低频会偏厚，所以配套的房间校正也是这只箱子的一部分。</p>
     
     <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
@@ -138,7 +139,7 @@
     
     <div class="two">
       <div><h3>关键参数 / 组成</h3>
-        <ul class="inspo"><li>三分频落地箱，高约 1.2m，单只 60kg 以上</li><li>12 寸低音 + 中音 + 号角高音，灵敏度 90dB 以上</li><li>分频器电感 / 电容分三段，分频点约 500Hz / 3kHz</li><li>花岗岩底板 + 钉脚，离后墙 80cm、间距 2.5m</li></ul></div>
+        <ul class="inspo"><li>三分频落地箱，高约 1.2m，单只 60kg 以上</li><li>12 寸低音 + 中音 + 号角高音，灵敏度 90dB 以上</li><li>分频器电感 / 电容分三段，分频点约 500Hz / 3kHz</li><li>花岗岩底板 + 钉脚，贴南墙分列电视两侧，间距 ≈2.6m</li></ul></div>
       <div>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/pierreaubert/spinorama" target="_blank" rel="noopener">pierreaubert/spinorama</a></p></div>
     </div>
@@ -254,7 +255,7 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-logic">联动逻辑</span> 3. 听音场景</h2>
-    <p class="scene">一个按钮把听音角准备好，这段逻辑管的是顺序。按下按钮后先读场景配置，让 0201 灯光只打皮椅和唱盘，其余全暗；然后判断音源：黑胶就切到唱放通道并启动唱盘电机，流媒体就让 moOde 打开本地曲库或网络电台。同时 0203 新风切静音档，0207 影音室把主声道让出来。胆机需要预热，所以功放上电后保持静音 60 秒再解除，避免开机的“砰”声伤到喇叭。再按一次按钮整个流程倒放：静音、灯光回升、电机停转。输入是一次按钮，输出是灯光、功放、音源、新风四路动作。</p>
+    <p class="scene">一个按钮把听音角准备好，这段逻辑管的是顺序。按下按钮后先读场景配置，让 0201 灯光只打沙发和唱盘，其余全暗；然后判断音源：黑胶就切到唱放通道并启动唱盘电机，流媒体就让 moOde 打开本地曲库或网络电台。同时 0203 新风切静音档，0207 影音室把主声道让出来。胆机需要预热，所以功放上电后保持静音 60 秒再解除，避免开机的“砰”声伤到喇叭。再按一次按钮整个流程倒放：静音、灯光回升、电机停转。输入是一次按钮，输出是灯光、功放、音源、新风四路动作。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -396,7 +397,7 @@
   <g font-size="10.5" fill="#2a2a2a" text-anchor="middle">
     <text x="85" y="73">按下听音按钮</text>
     <text x="230" y="74">场景配置</text><text x="230" y="87" font-size="8.5" fill="#666">源 / 灯光 / 预热</text>
-    <text x="85" y="147">0201 灯光只打</text><text x="85" y="161">皮椅 + 唱盘</text>
+    <text x="85" y="147">0201 灯光只打</text><text x="85" y="161">沙发 + 唱盘</text>
     <text x="230" y="149">音源＝黑胶？</text><text x="230" y="162" font-size="8.5" fill="#666">黑胶 / 流媒体</text>
     <text x="390" y="147">是 → 切唱放通道</text><text x="390" y="161">唱盘电机启动</text>
     <text x="85" y="247">0203 新风静音档</text><text x="85" y="261">0207 主声道让位</text>
@@ -412,7 +413,7 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>触发：听音按钮或语音，灯光只留椅子和唱盘</li><li>音源二选一：黑胶走唱放通道，数字走 moOde</li><li>胆机上电静音 60 秒再解除，保护喇叭</li><li>再按一次倒放，音箱交还 0207 影音室</li></ul></div>
+        <ul class="inspo"><li>触发：听音按钮或语音，灯光只留沙发和唱盘</li><li>音源二选一：黑胶走唱放通道，数字走 moOde</li><li>胆机上电静音 60 秒再解除，保护喇叭</li><li>再按一次倒放，音箱交还 0207 影音室</li></ul></div>
       <div><h3>主要实现路径</h3><p class="impl">用 HomeAssistant 场景串联 0201 灯光、智能插座和新风，数字源由 moode-player/moode 的 MPD 接口播放，功放静音和输入切换走 IR / 继电器</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/moode-player/moode" target="_blank" rel="noopener">moode-player/moode</a></p></div>
     </div>
@@ -420,7 +421,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 房间校正</h2>
-    <p class="scene">大箱在小地下室里低频会糊，这是房间的问题，不是箱子的问题：某几个频率在墙和墙之间来回反射叠加，形成“房间模式”，听起来就是轰。校正的办法是先用测量麦克风和 REW 扫频，记录听音位的频响，生成一组反向的滤波器，再由 CamillaDSP 在播放时实时套用。只修 20 到 200 赫兹的房间模式，中高频保持原味；每个摆位一套滤波器，换椅子位置一键切换。数字源天然经过 DSP，黑胶可以选择直通保留模拟味。输出前再做削波监测，超限自动降音量，保护胆机和喇叭。</p>
+    <p class="scene">大箱在 24㎡ 的小房间里低频会糊，这是房间的问题，不是箱子的问题：某几个频率在墙和墙之间来回反射叠加，形成“房间模式”，听起来就是轰。校正的办法是先用测量麦克风和 REW 扫频，记录听音位的频响，生成一组反向的滤波器，再由 CamillaDSP 在播放时实时套用。只修 20 到 200 赫兹的房间模式，中高频保持原味；每个摆位一套滤波器，换坐姿位置一键切换。数字源天然经过 DSP，黑胶可以选择直通保留模拟味。输出前再做削波监测，超限自动降音量，保护胆机和喇叭。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -482,7 +483,7 @@
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0208 · L4</text>
   <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">房间校正</text>
-  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">地下室的低频糊，用算法修，不用搬箱子</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">小房间的低频糊，用算法修，不用搬箱子</text>
   <g font-size="7" fill="#777"><text x="126" y="200">20Hz</text><text x="232" y="200" text-anchor="end">200Hz</text></g>
   <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">REW 测量 → 生成滤波器 → CamillaDSP 实时卷积 → 削峰后送胆机</text>
   <g font-size="11" fill="#2a2a2a">
