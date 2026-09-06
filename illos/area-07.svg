@@ -1,118 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
   <defs>
-    <filter id="ma07-rough" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+    <filter id="marea-07-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="13" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
-    <pattern id="ma07-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="marea-07-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
     </pattern>
-    <pattern id="ma07-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="marea-07-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="marea-07-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
-  <g filter="url(#ma07-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- far bank, hills, tree, reeds -->
-    <path d="M120 118 Q250 110 380 116 T600 112" stroke-width="1.1"/>
-    <path d="M300 116 Q380 84 460 100 Q520 80 600 96" stroke-width="0.9"/>
-    <path d="M540 112 q3 -50 0 -60" stroke-width="1.6"/>
-    <path d="M540 60 q-26 12 -24 -14 q-14 -14 8 -26 q6 -20 30 -12 q22 -6 22 16 q18 10 2 26 q2 20 -26 14 Z" stroke-width="1.5"/>
-    <path d="M520 48 q10 6 20 0 M534 30 q10 6 18 -2" stroke-width="0.8"/>
-    <path d="M516 40 q8 10 26 8 q4 10 -8 12" fill="url(#ma07-hatch)" stroke="none"/>
-    <path d="M470 114 l3 -22 M480 113 l1 -26 M490 114 l5 -20 M500 112 l0 -24 M510 113 l4 -18 M560 112 l-1 -22 M572 112 l3 -20 M584 111 l1 -18 M594 112 l2 -16" stroke-width="0.9"/>
-    <path d="M476 88 q4 -6 8 -2 M496 88 q4 -5 7 -1 M566 90 q3 -5 7 -2" stroke-width="0.8"/>
-    <path d="M400 118 l2 -12 M408 117 l1 -14 M416 118 l3 -10" stroke-width="0.8"/>
-    <!-- egret on far bank -->
-    <path d="M440 116 v-14 q0 -6 5 -6 q6 0 6 6 l6 -3 M446 96 v-8 q2 -4 6 -3" stroke-width="0.9"/>
-
-    <!-- water ripples -->
-    <path d="M130 132 h26 M180 138 h18 M230 130 h30 M280 136 h22 M330 128 h28 M380 134 h20 M430 126 h24 M480 132 h22 M530 128 h26 M570 134 h20" stroke-width="0.9"/>
-    <path d="M140 152 h20 M200 158 h26 M250 150 h18 M300 156 h30 M350 150 h22 M400 156 h18 M450 148 h24 M500 154 h22 M550 150 h26 M585 158 h10" stroke-width="0.9"/>
-    <path d="M480 176 h30 M520 172 h26 M560 178 h30 M486 196 h26 M530 200 h22 M572 194 h22" stroke-width="0.9"/>
-    <path d="M478 218 h34 M528 224 h30 M574 218 h20 M490 242 h26 M540 246 h30 M580 240 h14" stroke-width="0.9"/>
-    <path d="M60 256 h26 M110 262 h20 M160 256 h30 M210 264 h22 M260 258 h28 M310 264 h20 M360 256 h26 M410 262 h22 M460 258 h30 M510 264 h20 M560 258 h26" stroke-width="0.9"/>
-    <path d="M20 276 h22 M80 282 h28 M140 278 h18 M190 284 h30 M250 280 h20 M300 286 h26 M350 280 h22 M400 286 h20 M450 280 h28 M500 286 h22 M550 280 h30" stroke-width="0.9"/>
-    <path d="M100 270 h14 M285 272 h16 M395 270 h14 M470 272 h12" stroke-width="0.8"/>
-
-    <!-- left bank -->
-    <path d="M0 110 Q60 116 100 150 Q124 184 96 216 Q70 244 30 262 Q14 270 0 274 Z" fill="#fff" stroke-width="1.6"/>
-    <path d="M2 114 Q60 120 98 152" stroke-width="0.9"/>
-    <path d="M80 140 Q104 160 104 186 Q98 208 84 222" fill="url(#ma07-hatch)" stroke="none"/>
-    <path d="M30 140 l2 -9 l2 9 M50 160 l2 -8 l3 8 M70 180 l2 -9 l2 9 M20 190 l1 -8 M60 210 l3 -8 l2 8 M40 236 l2 -8 l2 8 M16 250 l2 -7 M78 250 l2 -8" stroke-width="0.9"/>
-    <path d="M22 126 l3 -20 M28 128 l1 -24 M34 124 l4 -18 M40 128 l2 -22" stroke-width="0.9"/>
-    <!-- small hut hint on bank -->
-    <path d="M14 172 L14 148 L36 134 L58 148 L58 172 Z" fill="#fff" stroke-width="1.4"/>
-    <path d="M8 150 L36 130 L64 150" stroke-width="1.5"/>
-    <path d="M30 172 V158 H42 V172" stroke-width="1"/>
-
-    <!-- boardwalk -->
-    <path d="M56 222 L176 212 L192 192 L64 204 Z" fill="#fff" stroke-width="1.7"/>
-    <path d="M58 224 L176 214" stroke-width="0.9"/>
-    <path d="M72 221 l6 -17 M88 220 l6 -17 M104 219 l6 -16 M120 218 l6 -16 M136 216 l6 -15 M152 215 l6 -15 M168 214 l6 -15" stroke-width="0.8"/>
-    <path d="M66 221 v-18 M104 218 v-18 M142 215 v-18 M64 203 Q104 199 144 197" stroke-width="1.2"/>
-    <path d="M74 203 v-16 M112 201 v-16 M150 199 v-16 M72 187 Q112 184 152 183" stroke-width="1"/>
-
-    <!-- deck -->
-    <path d="M150 230 L420 230 L470 176 L200 176 Z" fill="#fff" stroke-width="1.9"/>
-    <path d="M152 232 L422 232 L472 178" stroke-width="1"/>
-    <path d="M150 230 V239 H420 V230 M420 239 L470 185 V176" stroke-width="1.7"/>
-    <path d="M151 231 H419 V238 H151 Z" fill="url(#ma07-hatch)" stroke="none"/>
-    <path d="M421 232 L469 179 V184 L421 238 Z" fill="url(#ma07-hatch2)" stroke="none"/>
-    <path d="M180 230 L230 176 M210 230 L260 176 M240 230 L290 176 M270 230 L320 176 M300 230 L350 176 M330 230 L380 176 M360 230 L410 176 M390 230 L440 176" stroke-width="0.7"/>
-    <path d="M160 239 V268 M285 239 V272 M410 239 V268 M464 185 V210" stroke-width="2.4"/>
-    <path d="M154 269 h12 M279 273 h12 M404 269 h12 M458 211 h12" stroke-width="0.9"/>
-
-    <!-- roof posts -->
-    <path d="M172 230 V124 M398 230 V124 M218 176 V94 M448 176 V94" stroke-width="2"/>
-    <path d="M174 230 V126 M400 230 V126" stroke-width="0.9"/>
-    <path d="M172 138 l-10 -10 M172 138 l10 -10 M398 138 l10 -10 M398 138 l-10 -10" stroke-width="1.1"/>
-    <!-- roof -->
-    <path d="M148 122 L424 122 L474 88 L198 88 Z" fill="#fff" stroke-width="2"/>
-    <path d="M146 124 L426 124 M200 90 L476 90" stroke-width="1"/>
-    <path d="M148 122 V128 H424 V122" stroke-width="1.5"/>
-    <path d="M149 123 H423 V127 H149 Z" fill="url(#ma07-hatch)" stroke="none"/>
-    <path d="M166 122 L216 88 M184 122 L234 88 M202 122 L252 88 M220 122 L270 88 M238 122 L288 88 M256 122 L306 88 M274 122 L324 88 M292 122 L342 88 M310 122 L360 88 M328 122 L378 88 M346 122 L396 88 M364 122 L414 88 M382 122 L432 88 M400 122 L450 88" stroke-width="0.7"/>
-    <path d="M173 105 L450 105" stroke-width="0.9"/>
-    <!-- rain chain -->
-    <circle cx="428" cy="134" r="1.8" stroke-width="0.9"/>
-    <circle cx="428" cy="144" r="1.8" stroke-width="0.9"/>
-    <circle cx="428" cy="154" r="1.8" stroke-width="0.9"/>
-    <circle cx="428" cy="164" r="1.8" stroke-width="0.9"/>
-    <circle cx="428" cy="174" r="1.8" stroke-width="0.9"/>
-    <circle cx="428" cy="184" r="1.8" stroke-width="0.9"/>
-    <circle cx="428" cy="194" r="1.8" stroke-width="0.9"/>
-    <circle cx="428" cy="204" r="1.8" stroke-width="0.9"/>
-    <circle cx="428" cy="214" r="1.8" stroke-width="0.9"/>
-    <circle cx="428" cy="224" r="1.8" stroke-width="0.9"/>
-    <!-- lantern under roof -->
-    <path d="M300 128 v8 M294 136 h12 v14 h-12 Z" fill="#fff" stroke-width="1.1"/>
-    <path d="M297 140 q3 6 0 8" stroke-width="0.7"/>
-
-    <!-- bench at back -->
-    <path d="M232 196 L318 196 L330 184 L244 184 Z" fill="#fff" stroke-width="1.4"/>
-    <path d="M238 196 V210 M312 196 V210 M324 184 V198" stroke-width="1.2"/>
-    <!-- pegboard with rods at back-left -->
-    <path d="M206 176 V132 H244 V176" stroke-width="1.4"/>
-    <path d="M210 170 L238 138 M218 172 L242 146 M226 174 L244 156" stroke-width="1.1"/>
-
-    <!-- person on chair fishing -->
-    <path d="M338 228 V206 H356 V228 M356 206 L360 190 M340 228 V236 M354 228 V236" stroke-width="1.3"/>
-    <circle cx="362" cy="176" r="7" stroke-width="1.5"/>
-    <path d="M362 183 V208 M362 208 L346 216 L344 232 M362 208 L376 220 L372 232 M362 192 L378 198 M362 192 L376 200" stroke-width="1.5"/>
-    <path d="M376 198 Q460 168 560 150" stroke-width="1.5"/>
-    <path d="M378 200 Q460 170 560 152" stroke-width="0.7"/>
-    <path d="M560 150 Q552 190 542 232" stroke-width="0.8"/>
-    <ellipse cx="541" cy="236" rx="1.8" ry="5" stroke-width="1.1"/>
-    <path d="M530 244 h22 M534 250 h14" stroke-width="0.8"/>
-    <!-- bucket + fish keep net -->
-    <path d="M384 218 v12 q7 3 14 0 v-12" stroke-width="1.2"/>
-    <ellipse cx="391" cy="218" rx="7" ry="2.5" stroke-width="1"/>
-    <path d="M300 230 q0 20 6 34" stroke-width="0.9"/>
-    <ellipse cx="308" cy="268" rx="9" ry="5" fill="url(#ma07-hatch2)" stroke-width="1"/>
-
-    <!-- grass on deck edge / boardwalk edge -->
-    <path d="M150 246 l2 -6 l2 6 M112 236 l2 -6 l2 6" stroke-width="0.8"/>
+  <g filter="url(#marea-07-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M40 232 Q140 226 250 236 T390 230" stroke-width="1.4"/>
+<path d="M20 246 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M32 258 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M24 270 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M36 280 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M14 60 q60 -10 120 0 M250 58 q40 -8 80 0" stroke-width="0.6" stroke-dasharray="3 3"/>
+<path d="M14 120 L60 122 L130 200 L200 214" stroke-width="1.6"/><path d="M14 138 L58 140 L120 208" stroke-width="0.9"/>
+<path d="M14 122 L60 124 L130 202 L124 212 L58 142 L14 140 Z" fill="url(#marea-07-hatchl)" stroke="none"/>
+<path d="M66 130 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M82 148 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M98 166 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M114 184 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M62 112 L128 186" stroke-width="1.2"/><path d="M66 128 v-14 M92 156 v-14 M118 184 v-14" stroke-width="0.9"/>
+<path d="M14 104 h30 v14 h-30 Z" stroke-width="1"/><path d="M16 106 h26 v10 h-26 Z" fill="url(#marea-07-hatch)" stroke="none"/>
+<path d="M150 214 L300 214 L340 190 L190 190 Z" stroke-width="1.8"/><path d="M150 214 v12 h150 v-12 M300 226 l40 -24 v-12" stroke-width="1.3"/>
+<path d="M300 214 l40 -24 v12 l-40 24 Z" fill="url(#marea-07-hatch)" stroke="none"/>
+<path d="M167 214 l40 -24" stroke-width="0.5"/>
+<path d="M184 214 l40 -24" stroke-width="0.5"/>
+<path d="M201 214 l40 -24" stroke-width="0.5"/>
+<path d="M218 214 l40 -24" stroke-width="0.5"/>
+<path d="M235 214 l40 -24" stroke-width="0.5"/>
+<path d="M252 214 l40 -24" stroke-width="0.5"/>
+<path d="M269 214 l40 -24" stroke-width="0.5"/>
+<path d="M286 214 l40 -24" stroke-width="0.5"/>
+<path d="M160 226 v8 h10 v-8 M280 226 v8 h10 v-8 M322 202 v8 h8 v-8" stroke-width="0.9"/>
+<path d="M300 212 l40 -24 M300 209 l40 -24" stroke-width="0.9"/>
+<path d="M160 214 V120 M292 214 V128 M198 190 V104 M332 190 V112" stroke-width="1.4"/>
+<path d="M150 118 L302 126 L342 108 L192 100 Z" stroke-width="1.6"/>
+<path d="M169 119 l40 -18" stroke-width="0.6"/>
+<path d="M188 120 l40 -18" stroke-width="0.6"/>
+<path d="M207 121 l40 -18" stroke-width="0.6"/>
+<path d="M226 122 l40 -18" stroke-width="0.6"/>
+<path d="M245 123 l40 -18" stroke-width="0.6"/>
+<path d="M264 124 l40 -18" stroke-width="0.6"/>
+<path d="M283 125 l40 -18" stroke-width="0.6"/>
+<path d="M150 118 l0 -6 l152 8 l0 6 M302 126 v-6 l40 -18 v6" stroke-width="0.9"/>
+<path d="M300 130 v14 a3 3 0 1 0 0.1 0 M300 150 v10 a3 3 0 1 0 0.1 0" stroke-width="0.8"/>
+<path d="M212 206 h16 v-14 h-16 Z M212 192 v-16 h16 v16 M214 206 v8 M226 206 v8" stroke-width="1.1"/>
+<path d="M262 208 v-12 M262 196 L370 150" stroke-width="1"/><path d="M370 150 L376 232" stroke-width="0.5" stroke-dasharray="2 3"/>
+<path d="M258 196 l8 0 M262 196 l-3 -4 M262 196 l3 -4" stroke-width="0.8"/>
+<path d="M240 204 h18 l6 -4 h-18 Z M240 204 v8 M258 204 v8 M264 200 v8" stroke-width="0.9"/>
+<circle cx="300" cy="178.75" r="3.75" stroke-width="1.2"/><path d="M300 182.5 V196.0 M300 188.5 L293.25 197.5 M300 188.5 L306.75 197.5 M300 196.0 L294.75 208 M300 196.0 L305.25 208" stroke-width="1.2"/>
+<path d="M120 216 l2 -8 l2 8 M136 224 l2 -9 M360 226 l2 -8 l2 8 M376 224 l2 -7 M30 226 l3 -10 l3 10" stroke-width="0.9"/>
   </g>
-  <text x="586" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">07 钓台</text>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">07 钓台</text>
+<text x="14" y="98" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="start" filter="none">庭院 → 2m 过道</text>
+<text x="40" y="186" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="start" filter="none">6m 缓坡</text>
+<text x="245" y="96" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">钓台 ≈2.5×2.2</text>
+<text x="330" y="262" font-family="'Long Cang','Kaiti SC',cursive" font-size="9" fill="#5a5a5a" text-anchor="middle" filter="none">河 · 宽 10m</text>
+<text x="200" y="290" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">钓台 · 缓坡尽头临河 ≈2.5 × 2.2 m，面前是 10 米宽的河</text>
 </svg>

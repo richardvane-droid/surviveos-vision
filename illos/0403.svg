@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
   <defs>
     <filter id="m0403-rough" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="35" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="m0403-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -11,98 +11,57 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0403-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
   <g filter="url(#m0403-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- attic: sloped ceiling + rafter ticks, floor line -->
-    <path d="M12 14 L388 32" stroke-width="1.3"/>
-    <path d="M60 17 l-2 8 M140 21 l-2 8 M330 30 l-2 8" stroke-width="0.8"/>
-    <path d="M12 250 H388" stroke-width="1.6"/>
-    <path d="M14 253 H386" stroke-width="0.8"/>
-    <path d="M30 266 q20 -3 40 0 M320 268 q25 -4 50 -1" stroke-width="0.8"/>
-
-    <!-- exhaust duct: up from booth roof, elbow, along ceiling to the right, inline fan -->
-    <path d="M189 70 V58 Q189 42 205 42 H388" stroke-width="1.5"/>
-    <path d="M211 70 V62 H388" stroke-width="1.5"/>
-    <path d="M191 68 V60 Q191 44 205 44" stroke-width="0.8"/>
-    <path d="M240 42 V62 M270 42 V62 M340 42 V62 M370 42 V62" stroke-width="0.8"/>
-    <path d="M296 36 H326 V68 H296 Z" fill="#fff" stroke-width="1.4"/>
-    <circle cx="311" cy="52" r="10" stroke-width="1"/>
-    <path d="M311 52 q-8 -6 -6 -8 M311 52 q8 -6 6 -8 M311 52 q0 9 -6 8" stroke-width="0.9"/>
-    <path d="M298 38 H324 V66" stroke-width="0.7"/>
-
-    <!-- booth outer frame (double stroke) -->
-    <path d="M90 70 H310 V250 H90 Z" stroke-width="2"/>
-    <path d="M92 72 H308 V248" stroke-width="1"/>
-    <!-- interior perspective edges -->
-    <path d="M90 70 L125 96 M310 70 L275 96 M90 250 L125 224 M310 250 L275 224" stroke-width="1.1"/>
-    <path d="M125 96 H275 V224 H125 Z" stroke-width="1.3"/>
-    <!-- booth floor grate lines -->
-    <path d="M100 242 H300 M112 234 H288" stroke-width="0.7"/>
-    <!-- filter cotton grid on back wall -->
-    <path d="M175 96 V224 M225 96 V224 M125 139 H275 M125 182 H275" stroke-width="1"/>
-    <path d="M135 108 q4 -4 8 0 q4 4 8 0 M150 126 q4 -4 8 0 q4 4 8 0 M185 106 q4 -4 8 0 q4 4 8 0 M200 128 q4 -4 8 0 q4 4 8 0 M235 110 q4 -4 8 0 q4 4 8 0 M248 128 q4 -4 8 0 q4 4 8 0" stroke-width="0.7"/>
-    <path d="M135 152 q4 -4 8 0 q4 4 8 0 M152 170 q4 -4 8 0 q4 4 8 0 M186 150 q4 -4 8 0 q4 4 8 0 M202 172 q4 -4 8 0 q4 4 8 0 M236 154 q4 -4 8 0 q4 4 8 0 M250 172 q4 -4 8 0 q4 4 8 0" stroke-width="0.7"/>
-    <path d="M135 196 q4 -4 8 0 q4 4 8 0 M150 214 q4 -4 8 0 q4 4 8 0 M186 194 q4 -4 8 0 q4 4 8 0 M202 214 q4 -4 8 0 q4 4 8 0 M236 196 q4 -4 8 0 q4 4 8 0 M250 214 q4 -4 8 0 q4 4 8 0" stroke-width="0.7"/>
-    <!-- shadow strip on booth floor along back wall -->
-    <path d="M125 224 H275 L288 234 H112 Z" fill="url(#m0403-hatch)" stroke="none"/>
-
-    <!-- drying rod across the booth + hanging boxes -->
-    <path d="M110 112 H290" stroke-width="1.6"/>
-    <path d="M112 114 H288" stroke-width="0.8"/>
-    <path d="M115 112 v-6 M285 112 v-6" stroke-width="1"/>
-    <path d="M150 112 V128 M200 112 V134 M245 112 V126" stroke-width="0.9"/>
-    <path d="M138 134 H160 V150 H138 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M138 134 L146 128 H168 L160 134 M168 128 V144 L160 150" stroke-width="1.1"/>
-    <path d="M187 140 H211 V158 H187 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M187 140 L195 134 H219 L211 140 M219 134 V152 L211 158" stroke-width="1.1"/>
-    <path d="M234 132 H254 V146 H234 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M234 132 L242 126 H262 L254 132 M262 126 V140 L254 146" stroke-width="1.1"/>
-    <path d="M141 140 h10 M190 148 h10" stroke-width="0.8"/>
-
-    <!-- LED strip inside top of booth -->
-    <path d="M128 100 H272" stroke-width="0.9"/>
-    <path d="M140 100 v3 M200 100 v3 M260 100 v3" stroke-width="0.7"/>
-
-    <!-- left fixed glass panel: mullion + reflection lines -->
-    <path d="M200 70 V250" stroke-width="1.6"/>
-    <path d="M202 72 V248" stroke-width="0.8"/>
-    <path d="M104 236 L184 84 M118 240 L188 108" stroke-width="0.6"/>
-
-    <!-- glass door, hinged right, swung open toward viewer -->
-    <path d="M310 70 L262 60 V262 L310 250 Z" fill="#fff" stroke-width="1.8"/>
-    <path d="M308 73 L265 64 V258" stroke-width="0.9"/>
-    <path d="M268 68 L304 76 V244 L268 254 Z" stroke-width="0.9"/>
-    <path d="M272 240 L298 100 M280 250 L302 130" stroke-width="0.6"/>
-    <path d="M272 150 V176" stroke-width="2"/>
-    <path d="M270 150 h4 M270 176 h4" stroke-width="1"/>
-    <path d="M310 96 l3 0 M310 220 l3 0" stroke-width="1.2"/>
-    <!-- door swing arc on floor -->
-    <path d="M310 252 Q286 264 262 264" stroke-width="0.7" stroke-dasharray="3 3"/>
-
-    <!-- warning lamp on booth roof corner -->
-    <path d="M100 70 V60 a6 6 0 0 1 12 0 V70" stroke-width="1.2"/>
-    <path d="M106 52 v-5 M98 55 l-3 -3 M114 55 l3 -3" stroke-width="0.9"/>
-
-    <!-- shadow under the booth -->
-    <path d="M92 250 H308 L316 258 H84 Z" fill="url(#m0403-hatch)" stroke="none"/>
-
-    <!-- paint cans on the floor, right side -->
-    <path d="M338 226 H360 V250 H338 Z" fill="#fff" stroke-width="1.4"/>
-    <path d="M338 226 a11 3 0 0 1 22 0" stroke-width="1.1"/>
-    <path d="M341 236 h16" stroke-width="0.8"/>
-    <path d="M362 232 H380 V250 H362 Z" fill="#fff" stroke-width="1.4"/>
-    <path d="M362 232 a9 3 0 0 1 18 0" stroke-width="1.1"/>
-    <path d="M366 240 h10" stroke-width="0.8"/>
-    <path d="M336 250 H382 V255 H336 Z" fill="url(#m0403-hatch)" stroke="none"/>
-
-    <!-- person with respirator holding a spray gun, left of booth -->
-    <circle cx="52" cy="166" r="6" fill="#fff" stroke-width="1.4"/>
-    <path d="M49 168 h6 v3 h-6 Z" stroke-width="0.9"/>
-    <path d="M52 172 V208 M52 208 L45 250 M52 208 L60 250" stroke-width="1.5"/>
-    <path d="M52 182 L66 190 M52 184 L40 196" stroke-width="1.3"/>
-    <path d="M66 190 h10 v5 h-6 v6 h-4 Z" fill="#fff" stroke-width="1.1"/>
-    <path d="M76 192 l4 -1" stroke-width="1"/>
-    <path d="M82 188 q6 -3 12 -6 M83 192 q7 -1 14 -4 M82 196 q6 2 12 3" stroke-width="0.6" stroke-dasharray="1.5 2"/>
+<path d="M14 236 H372" stroke-width="1.8"/><path d="M372 236 L162.0 26.0" stroke-width="1.8"/>
+<path d="M269.0 133.0 V236" stroke-width="0.6" stroke-dasharray="4 3"/>
+<path d="M358 222 l-7 0" stroke-width="0.5"/>
+<path d="M344 208 l-7 0" stroke-width="0.5"/>
+<path d="M330 194 l-7 0" stroke-width="0.5"/>
+<path d="M316 180 l-7 0" stroke-width="0.5"/>
+<path d="M302 166 l-7 0" stroke-width="0.5"/>
+<path d="M288 152 l-7 0" stroke-width="0.5"/>
+<path d="M274 138 l-7 0" stroke-width="0.5"/>
+<path d="M260 124 l-7 0" stroke-width="0.5"/>
+<path d="M246 110 l-7 0" stroke-width="0.5"/>
+<path d="M232 96 l-7 0" stroke-width="0.5"/>
+<path d="M218 82 l-7 0" stroke-width="0.5"/>
+<path d="M204 68 l-7 0" stroke-width="0.5"/>
+<path d="M190 54 l-7 0" stroke-width="0.5"/>
+<path d="M176 40 l-7 0" stroke-width="0.5"/>
+<path d="M219.0 236 V156.0 H269.0 V236" stroke-width="1.6"/>
+<path d="M219.0 191.0 H269.0" stroke-width="1.2"/>
+<path d="M225.0 191.0 v-4 M228.0 191.0 v-4" stroke-width="0.5"/>
+<path d="M232.0 191.0 v-4 M235.0 191.0 v-4" stroke-width="0.5"/>
+<path d="M239.0 191.0 v-4 M242.0 191.0 v-4" stroke-width="0.5"/>
+<path d="M246.0 191.0 v-4 M249.0 191.0 v-4" stroke-width="0.5"/>
+<path d="M253.0 191.0 v-4 M256.0 191.0 v-4" stroke-width="0.5"/>
+<path d="M260.0 191.0 v-4 M263.0 191.0 v-4" stroke-width="0.5"/>
+<path d="M227.0 206.0 h34.0 v12.5 h-34.0 Z" stroke-width="1"/><path d="M229.0 207.0 h30.0 v3 h-30.0 Z" fill="url(#m0403-hatch)" stroke="none"/>
+<circle cx="244.0" cy="225.0" r="9" stroke-width="1.1"/><path d="M238.0 225.0 h12 M244.0 219.0 v12" stroke-width="0.7"/>
+<path d="M223.0 156.0 l-10 -14 h56.0 l4 14" stroke-width="0.9"/><path d="M221.0 158.5 v-30.0 M267.0 158.5 v-30.0" stroke-width="0.5" stroke-dasharray="2 2"/>
+<path d="M269.0 215.0 H378 M269.0 227.0 H378" stroke-width="1.2"/><path d="M378 212.0 v18 M384 215.0 l8 0 l-3 -3 M384 227.0 l8 0 l-3 3" stroke-width="0.8"/>
+<path d="M279 215.0 v12" stroke-width="0.4"/>
+<path d="M295 215.0 v12" stroke-width="0.4"/>
+<path d="M311 215.0 v12" stroke-width="0.4"/>
+<path d="M327 215.0 v12" stroke-width="0.4"/>
+<path d="M343 215.0 v12" stroke-width="0.4"/>
+<path d="M359 215.0 v12" stroke-width="0.4"/>
+<path d="M30 236 v-42.5 h50 v42.5 M40 193.5 v-8 h30 v8 M55 193.5 v-14" stroke-width="1"/>
+<path d="M84 181.0 H215.0" stroke-width="0.5" stroke-dasharray="3 3"/><path d="M84 177.0 v8 M215.0 177.0 v8" stroke-width="0.6"/>
+<circle cx="193.0" cy="195.05" r="5.25" stroke-width="1.2"/><path d="M193.0 200.3 V219.2 M193.0 208.70000000000002 L183.55 221.3 M193.0 208.70000000000002 L202.45 221.3 M193.0 219.2 L185.65 236 M193.0 219.2 L200.35 236" stroke-width="1.2"/>
+<path d="M199.0 206 l14 -4 l6 4" stroke-width="0.9"/><path d="M223.0 176.0 l-6 -6 M227.0 173.5 l-4 -8" stroke-width="0.4" stroke-dasharray="1 2"/>
+<path d="M237.0 189.0 v-12 h14 v12" stroke-width="0.9"/>
   </g>
-  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0403</text>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0403</text>
+<text x="244.0" y="130.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">0403 下抽式喷涂柜 1.5×1.0</text>
+<text x="320.5" y="207.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">排风直管 ≈2.06 m 出东墙</text>
+<text x="366" y="191.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">东墙</text>
+<text x="120" y="173.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">与台锯拉开 ≥5 m</text>
+<text x="55" y="250" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">台锯（北段）</text>
+<text x="200" y="292" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">不做喷漆间：木工间东缘一只柜子，一根直管把漆雾送出墙</text>
 </svg>

@@ -17,28 +17,27 @@
     <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
     <path d="M40 252 q30 -3 60 0" stroke-width="0.8"/>
 
-    <!-- sloped ceiling: low at left, rising to the right -->
-    <path d="M14 92 L386 16" stroke-width="2"/>
-    <path d="M14 82 L386 6" stroke-width="1.4"/>
-    <path d="M17 95 L384 20" stroke-width="0.9"/>
-    <path d="M14 82 L386 6 L386 16 L14 92 Z" fill="url(#m0305-hatch)" stroke="none"/>
-    <path d="M14 92 V246" stroke-width="1.4"/>
-    <!-- rafter ticks -->
-    <path d="M70 81 l2 9 M130 68 l2 9 M190 56 l2 9 M250 44 l2 9" stroke-width="1"/>
-    <!-- skylight on the slope, upper right -->
-    <path d="M282 40 L354 25 L362 36 L290 51 Z" stroke-width="1.7"/>
-    <path d="M285 42 L352 29" stroke-width="0.9"/>
-    <path d="M286 42 L352 29 L358 36 L292 48 Z" fill="url(#m0305-hatch2)" stroke="none"/>
-    <path d="M318 33 L322 43" stroke-width="1"/>
-    <!-- exhaust vent fan box beside skylight -->
-    <path d="M254 54 L272 48 L276 58 L258 64 Z" stroke-width="1.3"/>
-    <path d="M262 58 l4 -3 M264 54 l2 6" stroke-width="0.8"/>
+    <!-- flat ceiling at 2060 (standing core), partition behind -->
+    <path d="M14 44 H386" stroke-width="2"/>
+    <path d="M16 47 H384" stroke-width="0.9"/>
+    <path d="M14 44 V246" stroke-width="1"/>
+    <path d="M14 44 H386 V38 H14 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <!-- skylight: opening in the ceiling with a short shaft up to the tilted glass -->
+    <path d="M286 44 V22 L358 14 V44" stroke-width="1.7"/>
+    <path d="M289 42 V25 L355 18" stroke-width="0.9"/>
+    <path d="M292 24 L352 18 L352 30 L292 36 Z" fill="url(#m0305-hatch2)" stroke="none"/>
+    <path d="M286 22 L358 14" stroke-width="1.4"/>
+    <path d="M322 20 V40" stroke-width="1"/>
+    <path d="M300 10 l3 8 M330 6 l2 8 M348 4 l2 8" stroke-width="0.8"/>
+    <!-- exhaust vent fan box beside skylight, on the ceiling -->
+    <path d="M254 44 V58 H276 V44" stroke-width="1.3"/>
+    <path d="M258 48 h14 M258 52 h14 M265 46 v10" stroke-width="0.8"/>
 
-    <!-- exhaust duct: from printer top, up, then along the slope to the vent -->
-    <path d="M160 100 V80 Q160 70 172 68 L254 52" stroke-width="1.7"/>
-    <path d="M172 100 V86 Q172 78 180 78 L256 62" stroke-width="1.7"/>
-    <path d="M160 92 h12 M162 84 h12 M200 62 l1 12 M220 59 l1 11 M240 55 l1 11" stroke-width="0.8"/>
-    <path d="M186 71 L254 58 L256 62 L186 77 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <!-- exhaust duct: from printer top up to the ceiling, then along it to the vent -->
+    <path d="M160 100 V70 Q160 60 170 60 L250 60 V44" stroke-width="1.7"/>
+    <path d="M172 100 V78 Q172 72 178 72 L246 72 Q250 72 250 66" stroke-width="1.7"/>
+    <path d="M160 92 h12 M162 84 h12 M200 60 v12 M220 60 v12 M238 60 v12" stroke-width="0.8"/>
+    <path d="M182 62 H246 V70 H182 Z" fill="url(#m0305-hatch)" stroke="none"/>
 
     <!-- low cabinet -->
     <path d="M96 246 V184 H236 V246" stroke-width="1.8"/>

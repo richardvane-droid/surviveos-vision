@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 484" width="380" height="484" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="pl-floor1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="pl-floor1-h01" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h02" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h03" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h04" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h05" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h06" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-h07" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(128)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6b6b6b" stroke-width="0.65" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-hw" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#6b6b6b" stroke-width="0.9" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="pl-floor1-hn" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+      <line x1="4" y1="0" x2="0" y2="4" stroke="#8a8a8a" stroke-width="0.5" stroke-opacity="0.7"/>
+    </pattern>
+    <marker id="pl-floor1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="14" y="20" font-weight="700" font-size="12" fill="#2a2a2a">一层平面 · 东南角一户</text>
+  <g transform="translate(0,30)">
+    <g filter="url(#pl-floor1-pencil)" stroke-linecap="round" stroke-linejoin="round">
+            <rect fill="none" stroke="#7a7a7a" stroke-width="0.6" stroke-dasharray="4 3" x="20" y="40" width="339.8" height="383.5"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="48.3" y="61.2" width="75.5" height="115.7"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="48.3" y="176.9" width="75.5" height="211.2"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="123.8" y="61.2" width="101.5" height="115.7"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="123.8" y="176.9" width="101.5" height="211.2"/>
+      <rect fill="url(#pl-floor1-hn)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="61.2" width="120.4" height="153.4"/>
+      <rect fill="url(#pl-floor1-h05)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="388.1" width="120.4" height="35"/>
+      <rect fill="url(#pl-floor1-h02)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="214.6" width="120.4" height="120.4"/>
+      <rect fill="url(#pl-floor1-h01)" stroke="#3d3d3d" stroke-width="0.5" stroke-opacity="0.6" x="225.3" y="335" width="120.4" height="53.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="48.3" y1="139.1" x2="225.3" y2="139.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="48.3" y1="176.9" x2="225.3" y2="176.9"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="48.3" y1="214.6" x2="225.3" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="86" y1="139.1" x2="86" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="174" y1="139.1" x2="174" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="123.8" y1="61.2" x2="123.8" y2="388.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="225.3" y1="61.2" x2="225.3" y2="388.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="148.6" x2="310.3" y2="335"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="1.15" stroke-opacity="0.92" x1="225.3" y1="214.6" x2="345.7" y2="214.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="148.6" x2="345.7" y2="148.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="184" x2="345.7" y2="184"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="257.1" x2="345.7" y2="257.1"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="310.3" y1="287.8" x2="345.7" y2="287.8"/>
+      <line x1="225.3" y1="335" x2="345.7" y2="335" stroke="#3d3d3d" stroke-width="1.6"/>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-opacity="0.85" x1="225.3" y1="339.7" x2="345.7" y2="339.7"/>
+      <rect fill="none" stroke="#3d3d3d" stroke-width="1.7" stroke-opacity="0.95" x="48.3" y="61.2" width="297.4" height="326.9"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="62.1" y="59.7" width="28.3" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="96.6" y="59.7" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="153.3" y="59.7" width="42.5" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="202.2" y="59.7" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="274.9" y="59.7" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="300.8" y="59.7" width="35.4" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="55.4" y="386.6" width="35.4" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="107.3" y="386.6" width="21.3" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="142.7" y="386.6" width="70.8" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="238.3" y="386.6" width="21.2" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="276.1" y="386.6" width="35.4" height="3"/>
+      <rect fill="#f9f6ef" stroke="#3d3d3d" stroke-width="0.85" stroke-opacity="0.9" x="344.2" y="148.6" width="3" height="28.3"/>
+    </g>
+    <g>
+            <line x1="352" y1="36" x2="352" y2="16" stroke="#3d3d3d" stroke-width="1.2" marker-end="url(#pl-floor1-arrow)"/>
+      <text font-size="10" fill="#555" x="344" y="30" text-anchor="end">北</text>
+      <text font-size="11" fill="#555" x="86" y="102" text-anchor="middle">24.35㎡</text>
+      <text font-size="11" fill="#555" x="86" y="300" text-anchor="middle">29.87㎡</text>
+      <text font-size="11" fill="#555" x="174" y="102" text-anchor="middle">32.05㎡</text>
+      <text font-size="11" fill="#555" x="174" y="300" text-anchor="middle">25.20㎡</text>
+      <text font-size="11" fill="#555" x="267" y="130" text-anchor="middle">36.70㎡</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="265" y="248" text-anchor="middle">02 地堡</text>
+      <text font-size="11" fill="#2a2a2a" x="265" y="265" text-anchor="middle">无窗 · 净高 2660</text>
+      <text font-size="11" fill="#2a2a2a" x="328" y="239" text-anchor="middle">0202</text>
+      <text font-size="11" fill="#2a2a2a" x="270" y="315" text-anchor="middle">储藏室</text>
+      <line fill="none" stroke="#3d3d3d" stroke-width="0.6" stroke-dasharray="2 2" x1="297" y1="311" x2="309" y2="311"/>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="285" y="356" text-anchor="middle">01 暖村木屋</text>
+      <text font-size="11" fill="#2a2a2a" x="285" y="373" text-anchor="middle">梁北缘以南</text>
+      <text font-size="12.5" font-weight="700" fill="#2a2a2a" x="285" y="410" text-anchor="middle">05 庭院</text>
+    </g>
+  </g>
+  <text x="368" y="478" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0008-2</text>
+</svg>
