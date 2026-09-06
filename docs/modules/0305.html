@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" class="on"><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -54,28 +55,27 @@
     <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
     <path d="M40 252 q30 -3 60 0" stroke-width="0.8"/>
 
-    <!-- sloped ceiling: low at left, rising to the right -->
-    <path d="M14 92 L386 16" stroke-width="2"/>
-    <path d="M14 82 L386 6" stroke-width="1.4"/>
-    <path d="M17 95 L384 20" stroke-width="0.9"/>
-    <path d="M14 82 L386 6 L386 16 L14 92 Z" fill="url(#m0305-hatch)" stroke="none"/>
-    <path d="M14 92 V246" stroke-width="1.4"/>
-    <!-- rafter ticks -->
-    <path d="M70 81 l2 9 M130 68 l2 9 M190 56 l2 9 M250 44 l2 9" stroke-width="1"/>
-    <!-- skylight on the slope, upper right -->
-    <path d="M282 40 L354 25 L362 36 L290 51 Z" stroke-width="1.7"/>
-    <path d="M285 42 L352 29" stroke-width="0.9"/>
-    <path d="M286 42 L352 29 L358 36 L292 48 Z" fill="url(#m0305-hatch2)" stroke="none"/>
-    <path d="M318 33 L322 43" stroke-width="1"/>
-    <!-- exhaust vent fan box beside skylight -->
-    <path d="M254 54 L272 48 L276 58 L258 64 Z" stroke-width="1.3"/>
-    <path d="M262 58 l4 -3 M264 54 l2 6" stroke-width="0.8"/>
+    <!-- flat ceiling at 2060 (standing core), partition behind -->
+    <path d="M14 44 H386" stroke-width="2"/>
+    <path d="M16 47 H384" stroke-width="0.9"/>
+    <path d="M14 44 V246" stroke-width="1"/>
+    <path d="M14 44 H386 V38 H14 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <!-- skylight: opening in the ceiling with a short shaft up to the tilted glass -->
+    <path d="M286 44 V22 L358 14 V44" stroke-width="1.7"/>
+    <path d="M289 42 V25 L355 18" stroke-width="0.9"/>
+    <path d="M292 24 L352 18 L352 30 L292 36 Z" fill="url(#m0305-hatch2)" stroke="none"/>
+    <path d="M286 22 L358 14" stroke-width="1.4"/>
+    <path d="M322 20 V40" stroke-width="1"/>
+    <path d="M300 10 l3 8 M330 6 l2 8 M348 4 l2 8" stroke-width="0.8"/>
+    <!-- exhaust vent fan box beside skylight, on the ceiling -->
+    <path d="M254 44 V58 H276 V44" stroke-width="1.3"/>
+    <path d="M258 48 h14 M258 52 h14 M265 46 v10" stroke-width="0.8"/>
 
-    <!-- exhaust duct: from printer top, up, then along the slope to the vent -->
-    <path d="M160 100 V80 Q160 70 172 68 L254 52" stroke-width="1.7"/>
-    <path d="M172 100 V86 Q172 78 180 78 L256 62" stroke-width="1.7"/>
-    <path d="M160 92 h12 M162 84 h12 M200 62 l1 12 M220 59 l1 11 M240 55 l1 11" stroke-width="0.8"/>
-    <path d="M186 71 L254 58 L256 62 L186 77 Z" fill="url(#m0305-hatch)" stroke="none"/>
+    <!-- exhaust duct: from printer top up to the ceiling, then along it to the vent -->
+    <path d="M160 100 V70 Q160 60 170 60 L250 60 V44" stroke-width="1.7"/>
+    <path d="M172 100 V78 Q172 72 178 72 L246 72 Q250 72 250 66" stroke-width="1.7"/>
+    <path d="M160 92 h12 M162 84 h12 M200 60 v12 M220 60 v12 M238 60 v12" stroke-width="0.8"/>
+    <path d="M182 62 H246 V70 H182 Z" fill="url(#m0305-hatch)" stroke="none"/>
 
     <!-- low cabinet -->
     <path d="M96 246 V184 H236 V246" stroke-width="1.8"/>
@@ -155,13 +155,15 @@
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0305</text>
 </svg>
 
-    <figcaption><span class="hand">速写 · 斜顶下矮柜上一台方形封闭式 3D 打印机，旁边耗材卷架，上方排风管通向天窗</span></figcaption>
+    <figcaption><span class="hand">速写 · 天窗边矮柜上一台方形封闭式 3D 打印机，旁边耗材卷架，上方排风管通向天窗</span></figcaption>
   </figure>
 
-  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">晚上十一点，你从地堡的设计工作台把文件切好，走上阁楼。拓竹 P1S 放在斜顶下一张矮柜上，四面透明，里面的喷头正在一层一层堆一个帐篷区用的挂钩。柜子旁边一排耗材架上，八卷 PLA 按颜色排着：木色、黑色、白色、绿色。打印机上方装了一根排风管，顺着斜顶通到天窗边的排气口，几乎闻不到味道。旁边的小屏幕显示“剩余 2 小时 14 分”。你把台灯调暗，回帐篷区躺着，隔着帐篷布听打印机“滋滋滋”地跑，像细雨。手机上 HomeAssistant 弹出摄像头画面，第 47 层，一切正常。</p></section>
+  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>拓竹 P1S 放在 03 阁楼间可站立区的东南角、天窗东侧 ≈0.5m，60×60cm 矮柜靠着与木工间的隔断，排风管 ≈1.5m 直通天窗边的排气口；西北 2m 是 0301 工具台。（0008 未定位，设想落位）</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
+
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">晚上十一点，你从地堡的设计工作台把文件切好，走上阁楼。拓竹 P1S 放在天窗边一张矮柜上，四面透明，里面的喷头正在一层一层堆一个帐篷区用的挂钩。柜子旁边一排耗材架上，八卷 PLA 按颜色排着：木色、黑色、白色、绿色。打印机上方装了一根排风管，一米多就通到天窗边的排气口，几乎闻不到味道。旁边的小屏幕显示“剩余 2 小时 14 分”。你把台灯调暗，回帐篷区躺着，隔着帐篷布听打印机“滋滋滋”地跑，像细雨。手机上 HomeAssistant 弹出摄像头画面，第 47 层，一切正常。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>斜顶下放一张 60×60cm 矮柜，拓竹 P1S 放柜面，柜内放工具和备用喷头</span></li><li><span class="box"></span><span>打印机顶部接一根 100mm 排风管，沿斜顶走到天窗边的排气口，装小风扇</span></li><li><span class="box"></span><span>柜旁做一个 8 格耗材架，每卷 PLA 贴颜色标签 + 剩余克数，放一包干燥剂</span></li><li><span class="box"></span><span>打印机接 HomeAssistant，开始/结束/失败推送到手机，摄像头看层高</span></li><li><span class="box"></span><span>地堡 0204 设计工作台切片，局域网直接推到阁楼打印机，不用来回跑</span></li><li><span class="box"></span><span>打印任务优先级：全屋小配件（挂钩、标牌、PSK 内衬）&gt; 玩具 &gt; 试验件</span></li><li><span class="box"></span><span>打印机下面垫一块 2cm 减震垫，斜顶下的木地板不共振</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>天窗东侧靠隔断放一张 60×60cm 矮柜，拓竹 P1S 放柜面，柜内放工具和备用喷头</span></li><li><span class="box"></span><span>打印机顶部接一根 100mm 排风管，横过天花 1.5 米到天窗边的排气口，装小风扇</span></li><li><span class="box"></span><span>柜旁做一个 8 格耗材架，每卷 PLA 贴颜色标签 + 剩余克数，放一包干燥剂</span></li><li><span class="box"></span><span>打印机接 HomeAssistant，开始/结束/失败推送到手机，摄像头看层高</span></li><li><span class="box"></span><span>地堡 0204 设计工作台切片，局域网直接推到阁楼打印机，不用来回跑</span></li><li><span class="box"></span><span>打印任务优先级：全屋小配件（挂钩、标牌、PSK 内衬）&gt; 玩具 &gt; 试验件</span></li><li><span class="box"></span><span>打印机下面垫一块 2cm 减震垫，阁楼木地板不共振</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">5 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
@@ -169,7 +171,7 @@
       <a class="td-item" href="../teardown/0305.html#p1">
         <span class="kind kind-hw">产品模块</span>
         <b>1. 打印机矮柜与减震</b>
-        <span class="td-brief">拓竹 P1S 是一台四面封闭的桌面打印机，放在斜顶下一张 60×60cm 的实木矮柜上。矮柜内放工具、备…</span>
+        <span class="td-brief">拓竹 P1S 是一台四面封闭的桌面打印机，放在阁楼间天窗东侧一张 60×60cm 的实木矮柜上。矮柜内放…</span>
       </a>
       <a class="td-item" href="../teardown/0305.html#p2">
         <span class="kind kind-hw">产品模块</span>
@@ -333,7 +335,7 @@
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0204</text>
 </svg>
-</div><div><i>0204</i><b>系统设计工作台</b><p>三块弧形屏 + 一整面图纸墙，全屋每个模块都是在这里画出来的。</p></div></a>
+</div><div><i>0204</i><b>系统设计工作台</b><p>三块弧形屏 + 屏幕上方一整条图纸墙，全屋每个模块都是在这里画出来的。</p></div></a>
     
       <a class="link-card" href="../modules/0301.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
@@ -437,7 +439,7 @@
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0301</text>
 </svg>
-</div><div><i>0301</i><b>小制作工具台</b><p>阁楼最矮的那一侧，塞进一张只做小东西的工作台，每天拧两颗螺丝就很治愈。</p></div></a>
+</div><div><i>0301</i><b>小制作工具台</b><p>阁楼可站立区的北缘，塞进一张只做小东西的工作台，每天拧两颗螺丝就很治愈。</p></div></a>
     
       <a class="link-card" href="../modules/0303.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
@@ -528,7 +530,7 @@
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0303</text>
 </svg>
-</div><div><i>0303</i><b>帐篷区</b><p>屋里搭一顶永远不用收的帐篷，天窗正对着帐篷门，雨夜是我的逃避间。</p></div></a>
+</div><div><i>0303</i><b>帐篷区</b><p>屋里搭一顶永远不用收的帐篷，门斜对着天窗，雨夜是我的逃避间。</p></div></a>
     </div></section>
 
   <nav class="pager">

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>0704 水边茶席·小火塘 · SurviveOs 设想版</title>
-<meta name="description" content="松弛感天花板：钓台上挖了个小火塘，煮茶烤鱼看月亮——一方矮桌一壶茶，一个铁盆小火塘，钓上来的鱼当场烤，朋友来了不想走。">
+<meta name="description" content="松弛感天花板：钓台上挖了个小火塘，煮茶烤鱼看月亮——一方矮桌一壶茶，一个铁盆小火塘，钓上来的鱼当场烤，一个人也能坐到月亮出来。">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" class="on"><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -28,7 +29,7 @@
   <header class="mod-head">
     <p class="kicker">钓台 · 模块 0704 · 水边茶席·小火塘</p>
     <h1>松弛感天花板：钓台上挖了个小火塘，煮茶烤鱼看月亮</h1>
-    <p class="lede">一方矮桌一壶茶，一个铁盆小火塘，钓上来的鱼当场烤，朋友来了不想走。</p>
+    <p class="lede">一方矮桌一壶茶，一个铁盆小火塘，钓上来的鱼当场烤，一个人也能坐到月亮出来。</p>
     <p class="meta">
       <span class="st st-设想">设想 真实项目尚未拆解此区域</span>
       <span class="tag">#围炉煮茶</span><span class="tag">#松弛感</span><span class="tag">#人类丰容</span><span class="tag">#烤鱼</span><span class="tag">#观鸟</span>
@@ -38,7 +39,7 @@
     <svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
     <filter id="m0704-rough" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="13" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="m0704-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -48,115 +49,66 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0704-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
   <g filter="url(#m0704-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- far bank + reeds + moon -->
-    <path d="M0 74 Q100 68 200 72 T400 70" stroke-width="1.1"/>
-    <path d="M300 72 l3 -20 M310 71 l1 -24 M320 72 l4 -18 M332 70 l0 -22 M344 71 l3 -18 M356 70 l1 -20 M368 70 l4 -16 M380 70 l1 -18" stroke-width="0.9"/>
-    <path d="M20 74 l3 -16 M30 73 l1 -20 M40 74 l4 -14 M52 72 l0 -18" stroke-width="0.9"/>
-    <circle cx="350" cy="30" r="9" stroke-width="1.2"/>
-
-    <!-- water ripples all around -->
-    <path d="M20 90 h26 M70 96 h20 M120 88 h30 M170 94 h22 M220 88 h28 M270 94 h20 M320 90 h26 M360 96 h24" stroke-width="0.9"/>
-    <path d="M10 110 h20 M50 116 h26 M100 108 h18 M150 114 h30 M210 110 h22 M250 116 h18 M300 108 h24 M340 114 h22 M380 110 h14" stroke-width="0.9"/>
-    <path d="M30 132 h24 M80 138 h20 M130 130 h28 M190 136 h20 M240 132 h24 M290 138 h22 M330 130 h26 M372 136 h18" stroke-width="0.9"/>
-    <path d="M14 152 h20 M60 156 h22 M300 152 h20 M350 156 h26 M386 150 h10" stroke-width="0.9"/>
-    <path d="M10 176 h22 M50 182 h18 M340 178 h24 M376 184 h16" stroke-width="0.9"/>
-    <path d="M8 204 h20 M40 210 h14 M352 206 h22 M382 212 h12" stroke-width="0.9"/>
-    <path d="M6 236 h18 M366 236 h24" stroke-width="0.9"/>
-    <path d="M14 280 h30 M70 286 h26 M130 282 h30 M200 288 h26 M260 282 h30 M320 288 h24 M370 282 h20" stroke-width="0.9"/>
-    <!-- firelight wobble on water -->
-    <path d="M186 120 l3 -3 l3 3 l3 -3 l3 3 M180 142 l3 -3 l3 3 l3 -3 l3 3 l3 -3 l3 3" stroke-width="0.8"/>
-
-    <!-- deck -->
-    <path d="M30 268 L330 268 L390 160 L90 160 Z" fill="#fff" stroke-width="1.9"/>
-    <path d="M32 270 L332 270 L392 162" stroke-width="1"/>
-    <path d="M30 268 V276 H330 V268 M330 276 L390 168 V160" stroke-width="1.6"/>
-    <path d="M31 269 H329 V275 H31 Z" fill="url(#m0704-hatch)" stroke="none"/>
-    <path d="M60 268 L120 160 M90 268 L150 160 M120 268 L180 160 M150 268 L210 160 M180 268 L240 160 M210 268 L270 160 M240 268 L300 160 M270 268 L330 160 M300 268 L360 160" stroke-width="0.7"/>
-    <!-- roof posts (partial, going up out of frame) -->
-    <path d="M112 160 V96 M366 160 V96" stroke-width="2"/>
-    <path d="M114 160 V98 M368 160 V98" stroke-width="0.8"/>
-    <path d="M100 96 h24 M354 96 h24" stroke-width="1.2"/>
-
-    <!-- fire pit opening in deck -->
-    <path d="M160 238 L244 238 L262 206 L178 206 Z" fill="#fff" stroke-width="1.6"/>
-    <path d="M161 237 L243 237 L261 207 L179 207 Z" fill="url(#m0704-hatch2)" stroke="none"/>
-    <!-- iron bowl -->
-    <ellipse cx="211" cy="221" rx="34" ry="12" fill="#fff" stroke-width="1.8"/>
-    <ellipse cx="211" cy="223" rx="34" ry="12" stroke-width="0.8"/>
-    <path d="M177 221 q34 26 68 0" stroke-width="1.2"/>
-    <ellipse cx="211" cy="222" rx="28" ry="8" fill="url(#m0704-hatch)" stroke="none"/>
-    <!-- coals + flames -->
-    <path d="M192 226 h8 M214 228 h10 M204 218 h8" stroke="#fff" stroke-width="3"/>
-    <path d="M192 226 h8 M214 228 h10 M204 218 h8" stroke-width="1.2"/>
-    <path d="M200 216 q-6 -10 2 -18 q2 8 6 4 q-2 10 4 14 M218 214 q-4 -8 2 -14 q1 6 4 3 q0 8 -2 12" fill="#fff" stroke-width="1.2"/>
-    <path d="M198 204 q2 -8 6 -12 M224 206 q-2 -6 2 -10" stroke-width="0.8"/>
-
-    <!-- tripod + chain + grill with fish -->
-    <path d="M170 236 L211 128 M254 232 L211 128 M222 204 L211 128" stroke-width="1.6"/>
-    <path d="M172 238 L212 130" stroke-width="0.7"/>
-    <path d="M206 124 h10 v6 h-10 Z" fill="#fff" stroke-width="1.2"/>
-    <path d="M211 130 v8 M211 142 v8 M211 154 v8 M211 166 v8" stroke-width="1.2"/>
-    <circle cx="211" cy="140" r="1.6" stroke-width="0.8"/>
-    <circle cx="211" cy="152" r="1.6" stroke-width="0.8"/>
-    <circle cx="211" cy="164" r="1.6" stroke-width="0.8"/>
-    <ellipse cx="211" cy="182" rx="26" ry="7" fill="#fff" stroke-width="1.4"/>
-    <path d="M190 178 h42 M188 182 h46 M190 186 h42" stroke-width="0.7"/>
-    <path d="M199 174 v14 M211 175 v14 M223 174 v14" stroke-width="0.7"/>
-    <path d="M196 182 q14 -9 28 0 q-14 9 -28 0 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M224 182 l6 -4 v8 Z" stroke-width="1.1"/>
-    <circle cx="201" cy="181" r="0.9" stroke-width="0.8"/>
-    <path d="M204 178 q4 4 8 0 M208 186 q3 -3 6 0" stroke-width="0.7"/>
-
-    <!-- low table with teapot and cups -->
-    <path d="M56 250 L130 250 L152 220 L78 220 Z" fill="#fff" stroke-width="1.6"/>
-    <path d="M58 252 L132 252 L154 222" stroke-width="0.9"/>
-    <path d="M62 250 V262 M126 250 V262 M148 220 V232 M84 220 V228" stroke-width="1.3"/>
-    <path d="M90 244 l40 -18" stroke-width="0.7"/>
-    <!-- teapot -->
-    <path d="M100 232 a11 8 0 1 0 22 0 a11 8 0 1 0 -22 0 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M100 232 q-10 -8 -4 -16 M122 230 q8 -2 8 6" stroke-width="1.1"/>
-    <path d="M104 224 h14 M111 224 v-5" stroke-width="1"/>
-    <path d="M101 234 a11 7 0 0 0 20 0" fill="url(#m0704-hatch)" stroke="none"/>
-    <!-- cups -->
-    <path d="M72 238 h10 v7 q-5 2 -10 0 Z M134 226 h10 v7 q-5 2 -10 0 Z" fill="#fff" stroke-width="1"/>
-    <path d="M76 238 h4" stroke-width="0.7"/>
-
-    <!-- person A (right, facing fire) -->
-    <ellipse cx="300" cy="248" rx="26" ry="8" fill="#fff" stroke-width="1.3"/>
-    <path d="M280 246 q20 -6 40 0" stroke-width="0.7"/>
-    <circle cx="296" cy="196" r="8" stroke-width="1.5"/>
-    <path d="M296 204 V232 M296 214 L280 226 M296 214 L312 224 M296 232 L280 244 L302 246 M296 232 L314 240 L300 246" stroke-width="1.5"/>
-    <path d="M288 226 h-8 v-4" stroke-width="1"/>
-
-    <!-- person B (back-left, facing viewer) -->
-    <ellipse cx="146" cy="196" rx="22" ry="6" fill="#fff" stroke-width="1.3"/>
-    <circle cx="146" cy="152" r="7" stroke-width="1.5"/>
-    <path d="M146 159 V184 M146 166 L134 178 M146 166 L160 176 M146 184 L132 194 L150 196 M146 184 L162 192 L150 196" stroke-width="1.5"/>
-    <path d="M160 176 h6 v-4" stroke-width="1"/>
-
-    <!-- wood bucket with logs -->
-    <path d="M334 232 v22 q10 4 20 0 v-22" stroke-width="1.3"/>
-    <ellipse cx="344" cy="232" rx="10" ry="3.5" stroke-width="1.1"/>
-    <path d="M338 232 l-4 -14 M344 231 l2 -16 M350 232 l4 -12" stroke-width="1.2"/>
-    <path d="M336 244 q8 -2 16 0" stroke-width="0.7"/>
-
-    <!-- water bucket at front-left -->
-    <path d="M40 240 v16 q7 3 14 0 v-16" stroke-width="1.2"/>
-    <ellipse cx="47" cy="240" rx="7" ry="2.5" stroke-width="1"/>
-    <path d="M40 240 q7 -9 14 0" stroke-width="0.9"/>
+<path d="M40 232 Q140 226 250 236 T390 230" stroke-width="1.4"/>
+<path d="M20 246 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M32 258 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M24 270 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M36 280 q30 -4 60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="0.7"/>
+<path d="M14 60 q60 -10 120 0 M250 58 q40 -8 80 0" stroke-width="0.6" stroke-dasharray="3 3"/>
+<path d="M14 120 L60 122 L130 200 L200 214" stroke-width="1.6"/><path d="M14 138 L58 140 L120 208" stroke-width="0.9"/>
+<path d="M14 122 L60 124 L130 202 L124 212 L58 142 L14 140 Z" fill="url(#m0704-hatchl)" stroke="none"/>
+<path d="M66 130 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M82 148 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M98 166 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M114 184 l10 2 l0 6 l-10 -2 Z" stroke-width="0.9"/>
+<path d="M62 112 L128 186" stroke-width="1.2"/><path d="M66 128 v-14 M92 156 v-14 M118 184 v-14" stroke-width="0.9"/>
+<path d="M14 104 h30 v14 h-30 Z" stroke-width="1"/><path d="M16 106 h26 v10 h-26 Z" fill="url(#m0704-hatch)" stroke="none"/>
+<path d="M150 214 L300 214 L340 190 L190 190 Z" stroke-width="1.8"/><path d="M150 214 v12 h150 v-12 M300 226 l40 -24 v-12" stroke-width="1.3"/>
+<path d="M300 214 l40 -24 v12 l-40 24 Z" fill="url(#m0704-hatch)" stroke="none"/>
+<path d="M167 214 l40 -24" stroke-width="0.5"/>
+<path d="M184 214 l40 -24" stroke-width="0.5"/>
+<path d="M201 214 l40 -24" stroke-width="0.5"/>
+<path d="M218 214 l40 -24" stroke-width="0.5"/>
+<path d="M235 214 l40 -24" stroke-width="0.5"/>
+<path d="M252 214 l40 -24" stroke-width="0.5"/>
+<path d="M269 214 l40 -24" stroke-width="0.5"/>
+<path d="M286 214 l40 -24" stroke-width="0.5"/>
+<path d="M160 226 v8 h10 v-8 M280 226 v8 h10 v-8 M322 202 v8 h8 v-8" stroke-width="0.9"/>
+<path d="M300 212 l40 -24 M300 209 l40 -24" stroke-width="0.9"/>
+<path d="M212 206 h16 v-14 h-16 Z M212 192 v-16 h16 v16 M214 206 v8 M226 206 v8" stroke-width="1.1"/>
+<path d="M262 208 v-12 M262 196 L370 150" stroke-width="1"/><path d="M370 150 L376 232" stroke-width="0.5" stroke-dasharray="2 3"/>
+<path d="M258 196 l8 0 M262 196 l-3 -4 M262 196 l3 -4" stroke-width="0.8"/>
+<path d="M240 204 h18 l6 -4 h-18 Z M240 204 v8 M258 204 v8 M264 200 v8" stroke-width="0.9"/>
+<path d="M232 202 a12 5 0 1 0 24 0 a12 5 0 1 0 -24 0" stroke-width="1.3"/><path d="M236 200 q4 -14 8 -4 q4 -12 6 0 q2 -8 4 2" stroke-width="0.9"/>
+<path d="M238 196 q2 -30 12 -40 M248 194 q0 -20 8 -30" stroke-width="0.5" stroke-dasharray="2 3"/>
+<path d="M270 208 h16 l6 -4 h-16 Z M270 208 v6 M286 208 v6" stroke-width="0.9"/><path d="M276 204 a3 2 0 1 0 6 0 a3 2 0 1 0 -6 0 M282 203 l3 -2" stroke-width="0.8"/>
+<path d="M196 208 a8 3 0 1 0 16 0 a8 3 0 1 0 -16 0" stroke-width="1"/>
+<circle cx="204" cy="182.6" r="3.0" stroke-width="1.2"/><path d="M204 185.6 V196.4 M204 190.4 L198.6 197.6 M204 190.4 L209.4 197.6 M204 196.4 L199.8 206 M204 196.4 L208.2 206" stroke-width="1.2"/>
+<path d="M120 216 l2 -8 l2 8 M136 224 l2 -9 M360 226 l2 -8 l2 8 M376 224 l2 -7 M30 226 l3 -10 l3 10" stroke-width="0.9"/>
   </g>
-  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0704</text>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0704</text>
+<text x="14" y="98" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="start" filter="none">庭院 → 2m 过道</text>
+<text x="40" y="186" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="start" filter="none">6m 缓坡</text>
+<text x="300" y="176" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">钓台 ≈2.5×2.2</text>
+<text x="330" y="262" font-family="'Long Cang','Kaiti SC',cursive" font-size="9" fill="#5a5a5a" text-anchor="middle" filter="none">河 · 宽 10m</text>
+<text x="200" y="290" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0704 · 台面嵌一只铁盆火塘，一张矮桌，一只蒲团</text>
 </svg>
 
-    <figcaption><span class="hand">速写 · 钓台上的火塘茶席：铁盆火塘架着烤鱼，矮桌上一壶茶，两个人盘腿坐蒲团，水面倒影，俯视斜角</span></figcaption>
+    <figcaption><span class="hand">速写 · 钓台角上的火塘茶席：小铁盆火塘架着烤鱼，矮桌上一壶茶，一个人盘腿坐蒲团，面前是河，俯视斜角</span></figcaption>
   </figure>
 
-  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">傍晚六点半，你把今天的鲫鱼刮好鳞，抹上盐插在竹签上。钓台中央那个铁盆火塘里，柴火炉那边搬来的几根松木劈柴已经烧成红炭，鱼架在炭上滋滋响。矮木桌上一把粗陶茶壶坐在小炭炉上，水开了咕嘟咕嘟。朋友盘腿坐在蒲团上，手里一杯龙井，脚边水面把火光晃成一片碎金。风从池塘那头吹过来，带着一点烤鱼的焦香和芦苇的味道。你抬头，月亮从竹林上面爬出来，谁都没说话，鱼快熟了。</p></section>
+  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>小火塘嵌在钓台靠坡一侧的角上，40cm 见方；矮桌 60×40cm 贴火塘南边，一个蒲团面朝河；整个茶席占台面 ≈1.5㎡，剩下的留给椅子和鱼竿。（0008 未定位，设想落位）</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
+
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">傍晚六点半，你把今天的鲫鱼刮好鳞，抹上盐插在竹签上。钓台角上那个小铁盆火塘里，柴火炉那边搬来的几根松木劈柴已经烧成红炭，鱼架在炭上滋滋响。矮木桌上一把粗陶茶壶坐在小炭炉上，水开了咕嘟咕嘟。你盘腿坐在蒲团上，手里一杯龙井，脚边水面把火光晃成一片碎金。风从河对岸吹过来，带着一点烤鱼的焦香和芦苇的味道。你抬头，月亮从竹林上面爬出来，没人说话，只有炭响，鱼快熟了。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>钓台中央挖一个 60cm 见方的开口，嵌一只铸铁火盆，底下垫一块 5cm 厚的火山岩板隔热</span></li><li><span class="box"></span><span>火盆上架一个可旋转的三脚吊架，能挂水壶也能架烤网，高度用链条调</span></li><li><span class="box"></span><span>一张 90×50cm 的老榆木矮桌，桌腿锯短到 30cm，围着火塘摆四个蒲团</span></li><li><span class="box"></span><span>顶棚正上方留一个 40cm 的透气口，加一个竹编罩子，烟往上走不熏人</span></li><li><span class="box"></span><span>茶具用一套粗陶：一壶四杯一个茶盘，收在矮桌下面的木抽屉里，防潮</span></li><li><span class="box"></span><span>火塘旁边固定一个小竹筒当柴桶，装从柴火堆墙拿来的劈柴，够烧一晚</span></li><li><span class="box"></span><span>台边装一只铁皮水桶，专门存水灭火，规矩是走之前必须浇一遍</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>钓台靠坡一侧的角上开一个 40cm 见方的口，嵌一只铸铁小火盆，底下垫一块 5cm 厚的火山岩板隔热</span></li><li><span class="box"></span><span>火盆上架一个可旋转的三脚吊架，能挂水壶也能架烤网，高度用链条调</span></li><li><span class="box"></span><span>一张 60×40cm 的老榆木矮桌，桌腿锯短到 30cm，火塘边只放一个蒲团，面朝河</span></li><li><span class="box"></span><span>顶棚正上方留一个 40cm 的透气口，加一个竹编罩子，烟往上走不熏人</span></li><li><span class="box"></span><span>茶具用一套粗陶：一壶一杯一个小茶盘，收在矮桌下面的木抽屉里，防潮</span></li><li><span class="box"></span><span>火塘旁边固定一个小竹筒当柴桶，装从柴火堆墙拿来的劈柴，够烧一个人的一晚</span></li><li><span class="box"></span><span>台边装一只铁皮水桶，专门存水灭火，规矩是走之前必须浇一遍</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
@@ -164,12 +116,12 @@
       <a class="td-item" href="../teardown/0704.html#p1">
         <span class="kind kind-hw">产品模块</span>
         <b>1. 嵌入式铁盆火塘</b>
-        <span class="td-brief">在木平台上生火，靠的是“双保险”隔热：平台中央开一个 60cm 见方的口，先铺一块 5cm 厚火山岩板，…</span>
+        <span class="td-brief">在木平台上生火，靠的是“双保险”隔热：平台靠坡一侧的角上开一个 40cm 见方的口，先铺一块 5cm 厚…</span>
       </a>
       <a class="td-item" href="../teardown/0704.html#p2">
         <span class="kind kind-hw">产品模块</span>
         <b>2. 老榆木矮桌茶席</b>
-        <span class="td-brief">一张 90×50cm 的老榆木矮桌，桌腿锯短到 30cm，围着火塘摆四个蒲团，人坐下来视线刚好和火盆、水…</span>
+        <span class="td-brief">一张 60×40cm 的老榆木矮桌，桌腿锯短到 30cm，火塘边只放一个蒲团，人坐下来视线刚好和火盆、河…</span>
       </a>
       <a class="td-item" href="../teardown/0704.html#p3">
         <span class="kind kind-logic">联动逻辑</span>
@@ -179,14 +131,14 @@
       <a class="td-item" href="../teardown/0704.html#p4">
         <span class="kind kind-logic">联动逻辑</span>
         <b>4. 煮茶烤鱼计时器</b>
-        <span class="td-brief">围炉煮茶最容易走神，鱼烤焦、水烧干都发生在聊天的时候。给火塘装两根探针：一根插进鱼肉最厚处，一根贴在茶壶…</span>
+        <span class="td-brief">围炉煮茶最容易走神，鱼烤焦、水烧干都发生在盯着浮漂的时候。给火塘装两根探针：一根插进鱼肉最厚处，一根贴在…</span>
       </a>
     </div>
     <p class="td-cta"><a class="btn" href="../teardown/0704.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
   </section>
 
   <div class="two">
-    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>「围炉煮茶」升级版：把小红书上那种室内围炉搬到水边，火光加水光双倍氛围</li><li>「人类丰容」话题：火、水、鱼、茶四样凑齐，人在这里会不由自主地放松</li><li>「观鸟」热潮：茶席角落放一个望远镜，等鱼的间隙看对岸的白鹭和翠鸟</li></ul></section>
+    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>「围炉煮茶」升级版：把小红书上那种室内围炉缩成一人份搬到河边，火光加水光双倍氛围</li><li>「人类丰容」话题：火、水、鱼、茶四样凑齐，人在这里会不由自主地放松</li><li>「观鸟」热潮：茶席角落放一个望远镜，等鱼的间隙看对岸的白鹭和翠鸟</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>木平台上生火真的要隔热板 + 铁盆双保险，别信「火不大没事」</li><li>风大的晚上别烤鱼，火星飘到芦苇丛里不是开玩笑的</li><li>茶具别用瓷的，水边磕磕碰碰太多，粗陶摔了也不心疼</li></ul></section>
   </div>
 
@@ -235,116 +187,181 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0106-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
   </defs>
   <g filter="url(#m0106-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- floor line -->
-    <path d="M14 262 Q120 258 200 260 T388 258" stroke-width="1.2"/>
-
-    <!-- red brick fire wall behind the stove -->
-    <path d="M110 60 H290 V250" stroke-width="1.5"/>
-    <path d="M110 60 V250" stroke-width="1.5"/>
-    <path d="M110 80 H290 M110 100 H290 M110 120 H290 M110 140 H290 M110 160 H290 M110 180 H290 M110 200 H290 M110 220 H290 M110 240 H290" stroke-width="0.7"/>
-    <path d="M140 60 V80 M180 60 V80 M220 60 V80 M260 60 V80 M120 80 V100 M160 80 V100 M200 80 V100 M240 80 V100 M280 80 V100 M140 100 V120 M180 100 V120 M220 100 V120 M260 100 V120 M120 120 V140 M160 120 V140 M240 120 V140 M280 120 V140 M140 140 V160 M260 140 V160 M120 160 V180 M280 160 V180 M140 180 V200 M260 180 V200 M120 200 V220 M280 200 V220 M140 220 V240 M260 220 V240" stroke-width="0.7"/>
-    <path d="M122 88 h10 M244 108 h8 M126 208 h8 M266 168 h8" stroke-width="0.6"/>
-
-    <!-- small thermometer on wall -->
-    <path d="M60 110 V150" stroke-width="1.4"/>
-    <circle cx="60" cy="155" r="5" stroke-width="1.3"/>
-    <path d="M58 118 h-3 M58 126 h-3 M58 134 h-3 M58 142 h-3" stroke-width="0.8"/>
-    <path d="M60 134 V150" stroke-width="2.4"/>
-
-    <!-- chimney: double wall pipe straight up -->
-    <path d="M188 8 H212 V128 H188 Z" fill="#fff" stroke="none"/>
-    <path d="M188 128 V8 M212 128 V8" stroke-width="1.8"/>
-    <path d="M190 126 V10" stroke-width="0.8"/>
-    <path d="M186 40 H214 M186 44 H214" stroke-width="1"/>
-    <path d="M186 90 H214 M186 94 H214" stroke-width="1"/>
-    <path d="M204 12 H211 V126 H204 Z" fill="url(#m0106-hatch)" stroke="none"/>
-
-    <!-- stove body (white fill hides bricks) -->
-    <path d="M150 130 H250 V232 H150 Z" fill="#fff" stroke="none"/>
-    <path d="M150 130 H250 V232 H150 Z" stroke-width="2"/>
-    <path d="M152 132 H248 V230" stroke-width="1"/>
-    <!-- stove top plate -->
-    <path d="M144 130 H256 V124 H144 Z" stroke-width="1.6"/>
-    <path d="M146 126 H254" stroke-width="0.7"/>
-    <!-- glass door frame -->
-    <path d="M162 146 H238 V212 H162 Z" stroke-width="1.6"/>
-    <path d="M168 152 H232 V206 H168 Z" stroke-width="1.1"/>
-    <path d="M169 153 H231 V205 H169 Z" fill="url(#m0106-hatch2)" stroke="none"/>
-    <!-- fire inside: white flames over hatch -->
-    <path d="M176 204 q2 -18 12 -24 q0 -14 10 -18 q-2 10 6 14 q4 -10 10 -6 q-2 12 6 22 q4 10 -4 12 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M186 202 q4 -14 12 -18 q2 10 8 14 q2 -8 6 -4 q0 8 -2 8" stroke-width="0.9"/>
-    <path d="M194 200 q2 -8 6 -8 q2 4 2 8" stroke-width="0.8"/>
-    <!-- logs at the bottom of firebox -->
-    <path d="M172 204 H228" stroke-width="1.2"/>
-    <circle cx="180" cy="200" r="3.5" stroke-width="0.9"/>
-    <circle cx="220" cy="200" r="3.5" stroke-width="0.9"/>
-    <!-- door handle + air vent -->
-    <path d="M242 172 v14" stroke-width="2"/>
-    <path d="M166 220 h20 M166 224 h20" stroke-width="0.9"/>
-    <path d="M226 218 h14 M226 222 h14 M226 226 h14" stroke-width="0.8"/>
-    <!-- legs -->
-    <path d="M158 232 V246 M164 232 V246 M236 232 V246 M242 232 V246" stroke-width="1.8"/>
-    <path d="M156 246 H166 M234 246 H244" stroke-width="1.2"/>
-    <!-- stone slab -->
-    <path d="M118 246 H282 L292 256 H108 Z" stroke-width="1.6"/>
-    <path d="M120 248 H280" stroke-width="0.8"/>
-    <path d="M130 251 h20 M170 252 h30 M230 252 h24" stroke-width="0.6"/>
-
-    <!-- cast iron kettle on top -->
-    <path d="M148 124 q0 -22 22 -22 q22 0 22 22 Z" fill="#fff" stroke-width="1.6"/>
-    <path d="M150 122 q2 -18 20 -18 q18 0 20 18" stroke-width="0.8"/>
-    <path d="M154 106 q16 -20 32 0" stroke-width="1.3"/>
-    <path d="M188 112 l10 -8 l2 4 l-8 6" stroke-width="1.2"/>
-    <path d="M166 100 V96 H174 V100" stroke-width="1"/>
-    <path d="M172 90 q-4 -6 0 -12 q4 -6 0 -10" stroke-width="0.8"/>
-    <!-- small pan with sweet potatoes -->
-    <path d="M220 124 h32 q0 -8 -8 -8 h-16 q-8 0 -8 8 Z" stroke-width="1.3"/>
-    <path d="M252 120 h10" stroke-width="1.3"/>
-    <path d="M226 116 q6 -6 12 0 M240 116 q6 -6 12 0" stroke-width="0.9"/>
-
-    <!-- L-shaped wood rack at right -->
-    <path d="M300 248 V150 H370" stroke-width="1.8"/>
-    <path d="M302 246 V152 H368" stroke-width="0.8"/>
-    <path d="M300 248 H372 V150" stroke-width="1.8"/>
-    <path d="M300 182 H372 M300 216 H372" stroke-width="1.4"/>
-    <!-- top: pine cones -->
-    <path d="M312 176 q4 -12 8 0 M326 176 q4 -12 8 0 M340 176 q4 -12 8 0 M354 176 q4 -12 8 0" stroke-width="1"/>
-    <path d="M314 170 h4 M328 170 h4 M342 170 h4 M356 170 h4 M316 166 h2 M330 166 h2" stroke-width="0.7"/>
-    <!-- middle: thin sticks -->
-    <circle cx="310" cy="208" r="5" stroke-width="1"/>
-    <circle cx="322" cy="208" r="5" stroke-width="1"/>
-    <circle cx="334" cy="208" r="5" stroke-width="1"/>
-    <circle cx="346" cy="208" r="5" stroke-width="1"/>
-    <circle cx="358" cy="208" r="5" stroke-width="1"/>
-    <circle cx="316" cy="199" r="5" stroke-width="1"/>
-    <circle cx="328" cy="199" r="5" stroke-width="1"/>
-    <circle cx="340" cy="199" r="5" stroke-width="1"/>
-    <circle cx="352" cy="199" r="5" stroke-width="1"/>
-    <path d="M310 206 v4 M334 206 l3 3 M358 206 v4 M328 197 v4 M352 197 l-3 3" stroke-width="0.7"/>
-    <!-- bottom: split logs (wedge shapes) -->
-    <path d="M304 246 L314 224 L326 246 Z M326 246 L338 226 L350 246 Z M350 246 L360 226 L370 246 Z" stroke-width="1.2"/>
-    <path d="M306 244 L314 228 L324 244 Z" fill="url(#m0106-hatch)" stroke="none"/>
-    <path d="M352 244 L360 228 L368 244 Z" fill="url(#m0106-hatch)" stroke="none"/>
-    <path d="M318 236 l-4 2 M342 238 l-3 -4 M362 236 l-2 4" stroke-width="0.7"/>
-
-    <!-- shoe-drying rack, folding, at left of stove -->
-    <path d="M78 246 L96 190 M112 246 L96 190" stroke-width="1.4"/>
-    <path d="M86 226 H106 M90 210 H102" stroke-width="1.1"/>
-    <path d="M74 222 q4 -10 14 -8 q10 0 8 8 Z" stroke-width="1.1"/>
-    <path d="M100 206 q4 -8 12 -6 q6 2 4 6 Z" stroke-width="1"/>
-    <path d="M82 208 q-3 -6 0 -12 M112 194 q-3 -6 0 -12" stroke-width="0.7"/>
-
-    <!-- heat shimmer above stove -->
-    <path d="M232 100 q-4 6 0 12 q4 6 0 12 M244 96 q-4 6 0 12 q4 6 0 12" stroke-width="0.7"/>
-
-    <!-- floor detail -->
-    <path d="M24 266 q20 -3 40 0 M330 266 q20 -3 40 0" stroke-width="0.8"/>
+    <path d="M20.0 268 H392" stroke-width="1.4"/>
+    <path d="M20.0 269.5 H390" stroke-width="0.6"/>
+    <path d="M20.0 6 V268" stroke-width="1.8"/>
+    <path d="M22.0 8 V268" stroke-width="0.8"/>
+    <path d="M20.0 268 L6 286" stroke-width="1.2"/>
+    <path d="M20.0 6 L6 22" stroke-width="0.8"/>
+    <path d="M22.0 14 H392" stroke-width="0.45"/>
+    <path d="M22.0 34 H392" stroke-width="0.45"/>
+    <path d="M22.0 54 H392" stroke-width="0.45"/>
+    <path d="M22.0 74 H392" stroke-width="0.45"/>
+    <path d="M22.0 94 H392" stroke-width="0.45"/>
+    <path d="M22.0 114 H392" stroke-width="0.45"/>
+    <path d="M22.0 134 H392" stroke-width="0.45"/>
+    <path d="M22.0 154 H392" stroke-width="0.45"/>
+    <path d="M22.0 174 H392" stroke-width="0.45"/>
+    <path d="M22.0 194 H392" stroke-width="0.45"/>
+    <path d="M22.0 214 H392" stroke-width="0.45"/>
+    <path d="M22.0 234 H392" stroke-width="0.45"/>
+    <path d="M22.0 254 H392" stroke-width="0.45"/>
+    <path d="M50.0 268 V-32.0 H170.0 V268" fill="#fff" stroke-width="1.8"/>
+    <path d="M53.0 268 V-29.0 H167.0 V268" stroke-width="0.9"/>
+    <path d="M60.0 -17.0 H160.0 V103.0 H60.0 Z" stroke-width="1.1"/>
+    <path d="M110.0 -17.0 V103.0 M60.0 43.0 H160.0" stroke-width="0.9"/>
+    <path d="M62.0 -15.0 H110.0 V101.0 H62.0 Z" fill="url(#m0106-hatchl)" stroke="none"/>
+    <path d="M60.0 118.0 H160.0 V238.0 H60.0 Z" stroke-width="1.0"/>
+    <path d="M64.0 125.5 L156.0 230.5 M156.0 125.5 L64.0 230.5" stroke-width="0.7"/>
+    <circle cx="152.0" cy="122.0" r="2.4" stroke-width="1"/>
+    <path d="M320.0 -2.0 H396 M320.0 -2.0 V118.0 H396" fill="#fff" stroke-width="1.8"/>
+    <path d="M323.0 1.0 V115.0 H396" stroke-width="0.9"/>
+    <path d="M330.0 58.0 H396 M360.0 8.0 V108.0" stroke-width="1.0"/>
+    <path d="M332.0 10.0 H358.0 V56.0 H332.0 Z" fill="url(#m0106-hatch2)" stroke="none"/>
+    <path d="M316.0 118.0 H396 V123.0 H316.0 Z" stroke-width="1.2"/>
+    <path d="M215.0 268 V88.0 H327.5 V268" fill="#fff" stroke-width="1.5"/>
+    <path d="M213.0 86.0 H329.5" stroke-width="0.8"/>
+    <path d="M217.0 92 H325.5" stroke-width="0.6"/>
+    <path d="M219 92 v12" stroke-width="0.5"/>
+    <path d="M243 92 v12" stroke-width="0.5"/>
+    <path d="M267 92 v12" stroke-width="0.5"/>
+    <path d="M291 92 v12" stroke-width="0.5"/>
+    <path d="M315 92 v12" stroke-width="0.5"/>
+    <path d="M217.0 104 H325.5" stroke-width="0.6"/>
+    <path d="M231 104 v12" stroke-width="0.5"/>
+    <path d="M255 104 v12" stroke-width="0.5"/>
+    <path d="M279 104 v12" stroke-width="0.5"/>
+    <path d="M303 104 v12" stroke-width="0.5"/>
+    <path d="M217.0 116 H325.5" stroke-width="0.6"/>
+    <path d="M219 116 v12" stroke-width="0.5"/>
+    <path d="M243 116 v12" stroke-width="0.5"/>
+    <path d="M267 116 v12" stroke-width="0.5"/>
+    <path d="M291 116 v12" stroke-width="0.5"/>
+    <path d="M315 116 v12" stroke-width="0.5"/>
+    <path d="M217.0 128 H325.5" stroke-width="0.6"/>
+    <path d="M231 128 v12" stroke-width="0.5"/>
+    <path d="M255 128 v12" stroke-width="0.5"/>
+    <path d="M279 128 v12" stroke-width="0.5"/>
+    <path d="M303 128 v12" stroke-width="0.5"/>
+    <path d="M217.0 140 H325.5" stroke-width="0.6"/>
+    <path d="M219 140 v12" stroke-width="0.5"/>
+    <path d="M243 140 v12" stroke-width="0.5"/>
+    <path d="M267 140 v12" stroke-width="0.5"/>
+    <path d="M291 140 v12" stroke-width="0.5"/>
+    <path d="M315 140 v12" stroke-width="0.5"/>
+    <path d="M217.0 152 H325.5" stroke-width="0.6"/>
+    <path d="M231 152 v12" stroke-width="0.5"/>
+    <path d="M255 152 v12" stroke-width="0.5"/>
+    <path d="M279 152 v12" stroke-width="0.5"/>
+    <path d="M303 152 v12" stroke-width="0.5"/>
+    <path d="M217.0 164 H325.5" stroke-width="0.6"/>
+    <path d="M219 164 v12" stroke-width="0.5"/>
+    <path d="M243 164 v12" stroke-width="0.5"/>
+    <path d="M267 164 v12" stroke-width="0.5"/>
+    <path d="M291 164 v12" stroke-width="0.5"/>
+    <path d="M315 164 v12" stroke-width="0.5"/>
+    <path d="M217.0 176 H325.5" stroke-width="0.6"/>
+    <path d="M231 176 v12" stroke-width="0.5"/>
+    <path d="M255 176 v12" stroke-width="0.5"/>
+    <path d="M279 176 v12" stroke-width="0.5"/>
+    <path d="M303 176 v12" stroke-width="0.5"/>
+    <path d="M217.0 188 H325.5" stroke-width="0.6"/>
+    <path d="M219 188 v12" stroke-width="0.5"/>
+    <path d="M243 188 v12" stroke-width="0.5"/>
+    <path d="M267 188 v12" stroke-width="0.5"/>
+    <path d="M291 188 v12" stroke-width="0.5"/>
+    <path d="M315 188 v12" stroke-width="0.5"/>
+    <path d="M217.0 200 H325.5" stroke-width="0.6"/>
+    <path d="M231 200 v12" stroke-width="0.5"/>
+    <path d="M255 200 v12" stroke-width="0.5"/>
+    <path d="M279 200 v12" stroke-width="0.5"/>
+    <path d="M303 200 v12" stroke-width="0.5"/>
+    <path d="M217.0 212 H325.5" stroke-width="0.6"/>
+    <path d="M219 212 v12" stroke-width="0.5"/>
+    <path d="M243 212 v12" stroke-width="0.5"/>
+    <path d="M267 212 v12" stroke-width="0.5"/>
+    <path d="M291 212 v12" stroke-width="0.5"/>
+    <path d="M315 212 v12" stroke-width="0.5"/>
+    <path d="M217.0 224 H325.5" stroke-width="0.6"/>
+    <path d="M231 224 v12" stroke-width="0.5"/>
+    <path d="M255 224 v12" stroke-width="0.5"/>
+    <path d="M279 224 v12" stroke-width="0.5"/>
+    <path d="M303 224 v12" stroke-width="0.5"/>
+    <path d="M217.0 236 H325.5" stroke-width="0.6"/>
+    <path d="M219 236 v12" stroke-width="0.5"/>
+    <path d="M243 236 v12" stroke-width="0.5"/>
+    <path d="M267 236 v12" stroke-width="0.5"/>
+    <path d="M291 236 v12" stroke-width="0.5"/>
+    <path d="M315 236 v12" stroke-width="0.5"/>
+    <path d="M217.0 248 H325.5" stroke-width="0.6"/>
+    <path d="M231 248 v12" stroke-width="0.5"/>
+    <path d="M255 248 v12" stroke-width="0.5"/>
+    <path d="M279 248 v12" stroke-width="0.5"/>
+    <path d="M303 248 v12" stroke-width="0.5"/>
+    <path d="M217.0 260 H325.5" stroke-width="0.6"/>
+    <path d="M219 260 v12" stroke-width="0.5"/>
+    <path d="M243 260 v12" stroke-width="0.5"/>
+    <path d="M267 260 v12" stroke-width="0.5"/>
+    <path d="M291 260 v12" stroke-width="0.5"/>
+    <path d="M315 260 v12" stroke-width="0.5"/>
+    <path d="M218.0 228 H240.0 V264 H218.0 Z" fill="url(#m0106-hatchl)" stroke="none"/>
+    <path d="M224.0 268 H326.0 l6 8 H218.0 Z" fill="#fff" stroke-width="1.4"/>
+    <path d="M220.0 270 H326.0 V275 H220.0 Z" fill="url(#m0106-hatch)" stroke="none"/>
+    <path d="M245.0 250.0 V170.5 H305.0 V250.0" fill="#fff" stroke-width="1.9"/>
+    <path d="M247.0 250.0 V172.5 H303.0" stroke-width="0.9"/>
+    <path d="M241.0 170.5 H309.0 V166.5 H241.0 Z" fill="#fff" stroke-width="1.4"/>
+    <path d="M248.0 250.0 V268 h6 V250.0 M296.0 250.0 V268 h6 V250.0" stroke-width="1.3"/>
+    <path d="M254.0 182.5 H296.0 V236.0 H254.0 Z" stroke-width="1.3"/>
+    <path d="M257.0 185.5 H293.0 V233.0 H257.0 Z" stroke-width="0.7"/>
+    <path d="M262.0 230.0 q4 -18 10 -10 q2 -14 8 -20 q4 10 8 4 q6 10 2 22 q8 -6 6 8 z" stroke-width="1.0"/>
+    <path d="M270.0 228.0 q2 -8 6 -6 q2 -8 5 -4" stroke-width="0.7"/>
+    <path d="M258.0 186.5 H292.0 V232.0 H258.0 Z" fill="url(#m0106-hatchl)" stroke="none"/>
+    <path d="M298.0 205.25 v8" stroke-width="1.5"/>
+    <path d="M255.0 244.0 H295.0 M259.0 247.0 h6 M271.0 247.0 h6 M283.0 247.0 h6" stroke-width="0.8"/>
+    <path d="M257.0 166.5 v-12 q0 -8 8 -8 h10 q8 0 8 8 v12 z M265.0 146.5 q5 -6 10 0 M283.0 154.5 l8 -6" stroke-width="1.1"/>
+    <path d="M287.0 166.5 v-9 h20 v9 z M309.0 162.5 h6" stroke-width="1.0"/>
+    <path d="M297.0 156.5 q-3 -5 0 -10 q3 -5 0 -9" stroke-width="0.7"/>
+    <path d="M264.0 164.5 V5.5 M278.0 164.5 V5.5" fill="#fff" stroke-width="1.6"/>
+    <path d="M264.0 164.5 h14" stroke-width="0.9"/>
+    <path d="M262.0 103.0 h18 v3 h-18 z M262.0 65.5 h18 v3 h-18 z" stroke-width="1.0"/>
+    <path d="M266.0 160.5 V5.5" stroke-width="0.6"/>
+    <path d="M264.0 5.5 q0 -10 10 -10 l18 -8 M278.0 5.5 q0 -2 4 -3 l18 -8" stroke-width="1.6"/>
+    <path d="M297.0 0.5 q4 -10 -4 -14 q-6 -2 -6 4 q0 8 10 10 z" fill="#fff" stroke-width="1.3"/>
+    <path d="M289.0 -11.5 q8 -6 14 2" stroke-width="0.7"/>
+    <path d="M287.0 -13.5 H303.0 V2.5 H287.0 Z" fill="url(#m0106-hatch2)" stroke="none"/>
+    <path d="M278.0 154.5 h8 v6 h-8" stroke-width="1.1"/>
+    <path d="M176.0 268 V163.0 H213.5 V268 M176.0 215.5 H213.5" fill="#fff" stroke-width="1.4"/>
+    <path d="M178.0 266 V165.0 H211.5" stroke-width="0.7"/>
+    <circle cx="183.0" cy="179.0" r="5.5" stroke-width="1.0"/>
+    <path d="M180.0 179.0 l6 0 M183.0 176.0 l0 6" stroke-width="0.6"/>
+    <circle cx="195.0" cy="179.0" r="5.5" stroke-width="1.0"/>
+    <path d="M192.0 179.0 l6 0 M195.0 176.0 l0 6" stroke-width="0.6"/>
+    <circle cx="207.0" cy="179.0" r="5.5" stroke-width="1.0"/>
+    <path d="M204.0 179.0 l6 0 M207.0 176.0 l0 6" stroke-width="0.6"/>
+    <circle cx="183.0" cy="231.5" r="5.5" stroke-width="1.0"/>
+    <path d="M180.0 231.5 l6 0 M183.0 228.5 l0 6" stroke-width="0.6"/>
+    <circle cx="195.0" cy="231.5" r="5.5" stroke-width="1.0"/>
+    <path d="M192.0 231.5 l6 0 M195.0 228.5 l0 6" stroke-width="0.6"/>
+    <circle cx="207.0" cy="231.5" r="5.5" stroke-width="1.0"/>
+    <path d="M204.0 231.5 l6 0 M207.0 228.5 l0 6" stroke-width="0.6"/>
+    <path d="M182.0 159.0 l6 -8 l6 8 M194.0 159.0 l5 -6 l5 6" stroke-width="0.9"/>
+    <path d="M188.0 274 L202.0 240 L232.0 240 L238.0 274" fill="#fff" stroke-width="1.4"/>
+    <path d="M202.0 240 L198.0 204 L228.0 204 L232.0 240" fill="#fff" stroke-width="1.4"/>
+    <path d="M194.0 274 L228.0 240 M200.0 218 H226.0" stroke-width="1.0"/>
+    <path d="M202.0 208 H226.0 V216 H202.0 Z" fill="url(#m0106-hatchl)" stroke="none"/>
+    <circle cx="192.5" cy="-62.0" r="9" stroke-width="1.3" fill="#fff"/>
+    <circle cx="192.5" cy="-62.0" r="4" stroke-width="0.8"/>
+    <path d="M190.5 -62.0 h4 M192.5 -74.0 v2" stroke-width="0.8"/>
+    <path d="M237.0 278 q40 -4 80 0" stroke-width="1.0"/>
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0106</text>
 </svg>
-</div><div><i>0106</i><b>柴火炉系统</b><p>木屋的心脏：一台带玻璃门的铸铁炉，烧水、烤红薯、烘鞋、待客全靠它。</p></div></a>
+</div><div><i>0106</i><b>柴火炉系统</b><p>木屋的心脏：一台带玻璃门的小铸铁炉，烧水、烤红薯、烘鞋全靠它。</p></div></a>
     
       <a class="link-card" href="../modules/0501.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
@@ -422,140 +439,191 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0107-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
   </defs>
   <g filter="url(#m0107-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- floor line -->
-    <path d="M14 262 Q120 258 200 260 T388 258" stroke-width="1.2"/>
-
-    <!-- back shelves with cups and jars -->
-    <path d="M96 62 H304 M96 96 H304 M96 130 H304" stroke-width="1.7"/>
-    <path d="M96 62 V66 H304 V62 M96 96 V100 H304 V96 M96 130 V134 H304 V130" stroke-width="1"/>
-    <path d="M104 66 l-4 8 M296 66 l4 8 M104 100 l-4 8 M296 100 l4 8 M104 134 l-4 8 M296 134 l4 8" stroke-width="0.9"/>
-    <!-- shelf 1: mugs -->
-    <path d="M110 62 V48 H124 V62 M124 51 q5 0 5 4 q0 4 -5 4" stroke-width="1.1"/>
-    <path d="M136 62 V50 H150 V62 M150 53 q5 0 5 4 q0 4 -5 4" stroke-width="1.1"/>
-    <path d="M164 62 V46 H176 V62 M176 50 q5 0 5 4 q0 4 -5 4" stroke-width="1.1"/>
-    <path d="M190 62 V50 H206 V62 M206 53 q5 0 5 4 q0 4 -5 4" stroke-width="1.1"/>
-    <path d="M220 62 V48 H236 V62 M236 52 q5 0 5 4 q0 4 -5 4" stroke-width="1.1"/>
-    <path d="M250 62 V46 H266 V62 M266 50 q5 0 5 4 q0 4 -5 4" stroke-width="1.1"/>
-    <path d="M280 62 V50 H294 V62" stroke-width="1.1"/>
-    <path d="M112 50 H122 V60 H112 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <path d="M222 50 H234 V60 H222 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <!-- shelf 2: glass jars with labels -->
-    <path d="M108 96 V78 q0 -4 4 -4 h12 q4 0 4 4 V96 M110 74 V70 H126 V74" stroke-width="1.1"/>
-    <path d="M112 84 h12 M112 90 h12" stroke-width="0.6"/>
-    <path d="M136 96 V78 q0 -4 4 -4 h12 q4 0 4 4 V96 M138 74 V70 H154 V74" stroke-width="1.1"/>
-    <path d="M138 80 H154 V94 H138 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <path d="M164 96 V76 q0 -4 4 -4 h14 q4 0 4 4 V96 M166 72 V68 H184 V72" stroke-width="1.1"/>
-    <path d="M168 84 h12 M168 90 h12" stroke-width="0.6"/>
-    <path d="M194 96 V78 q0 -4 4 -4 h12 q4 0 4 4 V96 M196 74 V70 H212 V74" stroke-width="1.1"/>
-    <path d="M196 82 H212 V94 H196 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <path d="M222 96 V76 q0 -4 4 -4 h14 q4 0 4 4 V96 M224 72 V68 H242 V72" stroke-width="1.1"/>
-    <path d="M226 84 h12 M226 90 h12" stroke-width="0.6"/>
-    <path d="M252 96 V78 q0 -4 4 -4 h12 q4 0 4 4 V96 M254 74 V70 H270 V74" stroke-width="1.1"/>
-    <path d="M254 86 H270 V94 H254 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <path d="M280 96 V80 q0 -4 4 -4 h10 q4 0 4 4 V96" stroke-width="1.1"/>
-    <!-- shelf 3: bottles + a PSK box -->
-    <path d="M110 130 V116 q0 -6 6 -6 q6 0 6 6 V130 M114 110 V104 H118 V110" stroke-width="1.1"/>
-    <path d="M128 130 V114 q0 -6 6 -6 q6 0 6 6 V130 M132 108 V102 H136 V108" stroke-width="1.1"/>
-    <path d="M129 116 H139 V128 H129 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <path d="M150 130 V112 H190 V130" stroke-width="1.4"/>
-    <path d="M152 114 H188 M152 120 H188 M170 114 V130" stroke-width="0.8"/>
-    <path d="M204 130 V110 H220 V130" stroke-width="1.1"/>
-    <path d="M206 112 H218 V128 H206 Z" fill="url(#m0107-hatch2)" stroke="none"/>
-    <path d="M234 130 V118 q0 -6 6 -6 q6 0 6 6 V130 M238 112 V106 H242 V112" stroke-width="1.1"/>
-    <path d="M254 130 V120 H290 V130" stroke-width="1.2"/>
-    <path d="M256 122 H288 V128 H256 Z" fill="url(#m0107-hatch)" stroke="none"/>
-
-    <!-- three brass pendant lamps -->
-    <path d="M110 6 V52 M200 6 V44 M290 6 V52" stroke-width="1"/>
-    <path d="M100 52 H120 L128 70 H92 Z" stroke-width="1.6"/>
-    <path d="M94 68 H126" stroke-width="0.8"/>
-    <path d="M190 44 H210 L218 62 H182 Z" stroke-width="1.6"/>
-    <path d="M184 60 H216" stroke-width="0.8"/>
-    <path d="M280 52 H300 L308 70 H272 Z" stroke-width="1.6"/>
-    <path d="M274 68 H306" stroke-width="0.8"/>
-    <path d="M102 54 H118 L124 68 H96 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <path d="M192 46 H208 L214 60 H186 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <path d="M282 54 H298 L304 68 H276 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <!-- light glow lines -->
-    <path d="M100 76 l-4 8 M120 76 l4 8 M190 68 l-4 8 M210 68 l4 8 M280 76 l-4 8 M300 76 l4 8" stroke-width="0.7" stroke-dasharray="2 3"/>
-
-    <!-- elm bar top with live edge (front) -->
-    <path d="M56 150 H344 L342 164 Q330 172 310 166 Q290 160 270 168 Q240 174 220 166 Q190 158 160 170 Q130 178 100 168 Q76 160 58 168 Z" fill="#fff" stroke-width="2"/>
-    <path d="M58 152 H342" stroke-width="1"/>
-    <path d="M60 166 q20 -8 40 0 q24 10 56 -2 q30 -12 64 0 q30 8 54 -2 q22 -6 40 2" stroke-width="0.8"/>
-    <path d="M70 158 q40 -3 80 0 M180 157 q60 -2 120 0" stroke-width="0.6"/>
-    <path d="M62 168 l-4 4 M340 166 l4 5" stroke-width="0.8"/>
-    <!-- bar front panel (planks) with white to hide stools? no: stools in front -->
-    <path d="M64 168 V246 H336 V166" stroke-width="1.6"/>
-    <path d="M66 170 V244 H334" stroke-width="0.8"/>
-    <path d="M100 170 V246 M136 170 V246 M172 172 V246 M208 170 V246 M244 172 V246 M280 170 V246 M316 168 V246" stroke-width="0.8"/>
-    <path d="M80 200 q2 20 -1 36 M190 190 q-2 20 1 40 M298 196 q2 20 -1 34" stroke-width="0.5"/>
-    <!-- copper hook with bottle opener on side -->
-    <path d="M336 184 h8 q4 0 4 4 v4" stroke-width="1.1"/>
-    <path d="M348 192 v14 q0 4 -4 4 h-4" stroke-width="1"/>
-
-    <!-- items on the counter -->
-    <!-- pour-over stand + kettle at left -->
-    <path d="M84 150 V128 H112 V150" stroke-width="1.3"/>
-    <path d="M92 128 V122 q0 -6 6 -6 q6 0 6 6 V128" stroke-width="1.1"/>
-    <path d="M90 132 l4 6 l4 -6 l4 6 l4 -6" stroke-width="0.6"/>
-    <path d="M86 150 V140 H110 V150" stroke-width="0.9"/>
-    <path d="M86 144 H110" stroke-width="0.6"/>
-    <!-- coffee grinder -->
-    <path d="M124 150 V130 q0 -6 6 -6 h8 q6 0 6 6 V150" stroke-width="1.3"/>
-    <path d="M126 132 H142 V148 H126 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <path d="M134 124 V118 M134 118 L146 112" stroke-width="1.2"/>
-    <circle cx="147" cy="111" r="2" stroke-width="1"/>
-    <!-- cast iron pot with mulled wine at right + induction plate -->
-    <path d="M250 150 H300 V146 H250 Z" stroke-width="1"/>
-    <path d="M256 146 V128 q0 -4 4 -4 h30 q4 0 4 4 V146" stroke-width="1.4"/>
-    <path d="M258 128 H292" stroke-width="0.8"/>
-    <path d="M254 124 h6 M290 124 h6" stroke-width="1.2"/>
-    <path d="M266 118 q-4 -6 0 -12 M280 118 q-4 -6 0 -12 M273 116 q-3 -5 0 -10" stroke-width="0.7"/>
-    <!-- PSK box on counter as decoration -->
-    <path d="M196 150 V140 H232 V150" stroke-width="1.3"/>
-    <path d="M196 140 L204 134 H240 L232 140" stroke-width="1.2"/>
-    <path d="M232 150 L240 144 V134" stroke-width="1.1"/>
-    <path d="M234 148 L238 145 V136 Z" fill="url(#m0107-hatch)" stroke="none"/>
-    <path d="M198 145 H230" stroke-width="0.7"/>
-    <!-- two small glasses -->
-    <path d="M166 150 V138 H176 V150 M178 150 V136 H188 V150" stroke-width="1"/>
-    <path d="M168 144 H174 V148 H168 Z" fill="url(#m0107-hatch)" stroke="none"/>
-
-    <!-- three bar stools in front (white fill over bar front) -->
-    <g>
-      <path d="M92 190 q18 -8 36 0 q-18 8 -36 0 Z" fill="#fff" stroke-width="1.6"/>
-      <path d="M94 191 q16 6 32 0" stroke-width="0.8"/>
-      <path d="M92 190 V196 Q110 204 128 196 V190" stroke-width="1.2"/>
-      <path d="M94 192 Q110 200 126 192 V195 Q110 202 94 195 Z" fill="url(#m0107-hatch)" stroke="none"/>
-      <path d="M98 198 L94 258 M122 198 L126 258" stroke-width="1.5"/>
-      <path d="M96 232 H124 M97 244 H123" stroke-width="1"/>
-    </g>
-    <g>
-      <path d="M182 192 q18 -8 36 0 q-18 8 -36 0 Z" fill="#fff" stroke-width="1.6"/>
-      <path d="M184 193 q16 6 32 0" stroke-width="0.8"/>
-      <path d="M182 192 V198 Q200 206 218 198 V192" stroke-width="1.2"/>
-      <path d="M184 194 Q200 202 216 194 V197 Q200 204 184 197 Z" fill="url(#m0107-hatch)" stroke="none"/>
-      <path d="M188 200 L184 260 M212 200 L216 260" stroke-width="1.5"/>
-      <path d="M186 234 H214 M187 246 H213" stroke-width="1"/>
-    </g>
-    <g>
-      <path d="M272 190 q18 -8 36 0 q-18 8 -36 0 Z" fill="#fff" stroke-width="1.6"/>
-      <path d="M274 191 q16 6 32 0" stroke-width="0.8"/>
-      <path d="M272 190 V196 Q290 204 308 196 V190" stroke-width="1.2"/>
-      <path d="M274 192 Q290 200 306 192 V195 Q290 202 274 195 Z" fill="url(#m0107-hatch)" stroke="none"/>
-      <path d="M278 198 L274 258 M302 198 L306 258" stroke-width="1.5"/>
-      <path d="M276 232 H304 M277 244 H303" stroke-width="1"/>
-    </g>
-
-    <!-- floor detail -->
-    <path d="M24 266 q20 -3 40 0 M340 266 q20 -3 40 0" stroke-width="0.8"/>
+    <path d="M20.0 22.0 H390.0" stroke-width="1.8"/>
+    <path d="M20.0 25.0 H390.0" stroke-width="0.8"/>
+    <path d="M20.0 4 H390.0 V22.0 H20.0 Z" fill="url(#m0107-hatchl)" stroke="none"/>
+    <path d="M20.0 4 V262" stroke-width="1.8"/>
+    <path d="M21.5 6 V262" stroke-width="0.8"/>
+    <path d="M20.0 32.0 H29.0 V62.0 H20.0 Z" stroke-width="1.2"/>
+    <path d="M22.0 40.0 h5 M22.0 46.0 h5 M22.0 52.0 h5" stroke-width="0.7"/>
+    <path d="M20.0 262 Q200 259 388 262" stroke-width="1.3"/>
+    <path d="M40 267 q20 -3 40 0 M300 267 q25 -3 50 0" stroke-width="0.8"/>
+    <path d="M30.0 30 H390.0" stroke-width="0.5"/>
+    <path d="M30.0 48 H390.0" stroke-width="0.5"/>
+    <path d="M30.0 66 H390.0" stroke-width="0.5"/>
+    <path d="M30.0 84 H390.0" stroke-width="0.5"/>
+    <path d="M30.0 102 H390.0" stroke-width="0.5"/>
+    <path d="M30.0 120 H390.0" stroke-width="0.5"/>
+    <path d="M30.0 138 H390.0" stroke-width="0.5"/>
+    <path d="M30.0 156 H390.0" stroke-width="0.5"/>
+    <path d="M20.0 178.0 H270.0 V262.0 H20.0 Z" stroke-width="1.7"/>
+    <path d="M22.0 180.0 V260 H268.0" stroke-width="0.9"/>
+    <path d="M17.0 172.0 H274.0 q-2 3 0 6 H17.0 Z" stroke-width="1.8"/>
+    <path d="M20.0 173.0 q40 -3 80 1 t80 -1 t80 0" stroke-width="0.7"/>
+    <path d="M26.0 176.0 q30 -2 60 0" stroke-width="0.6"/>
+    <path d="M26.0 186.0 H80.0 V252.0 H26.0 Z" stroke-width="1.0"/>
+    <path d="M72.0 212.0 v8" stroke-width="1.4"/>
+    <path d="M88.0 186.0 H142.0 V252.0 H88.0 Z" stroke-width="1.0"/>
+    <path d="M134.0 212.0 v8" stroke-width="1.4"/>
+    <path d="M150.0 186.0 H204.0 V252.0 H150.0 Z" stroke-width="1.0"/>
+    <path d="M196.0 212.0 v8" stroke-width="1.4"/>
+    <path d="M212.0 186.0 H266.0 V252.0 H212.0 Z" stroke-width="1.0"/>
+    <path d="M258.0 212.0 v8" stroke-width="1.4"/>
+    <path d="M28.0 188.0 H78.0 V250 H28.0 Z" fill="url(#m0107-hatchl)" stroke="none"/>
+    <path d="M50.0 122.0 H90.0 V172.0 H50.0 Z" stroke-width="1.4"/>
+    <path d="M56.0 130.0 h28 M56.0 136.0 h28 M70.0 152.0 l0 12 M64.0 164.0 h12" stroke-width="0.8"/>
+    <path d="M52.0 124.0 H88.0 V132.0 H52.0 Z" fill="url(#m0107-hatch)" stroke="none"/>
+    <path d="M100.0 127.0 H140.0 V172.0 H100.0 Z" stroke-width="1.4"/>
+    <path d="M104.0 137.0 h32 M112.0 147.0 h6 v6 h-6 z M122.0 147.0 h6 v6 h-6 z M108.0 161.0 h24" stroke-width="0.8"/>
+    <path d="M150.0 172.0 V137.0 H164.0 V172.0" stroke-width="1.3"/>
+    <path d="M148.0 137.0 h18 M152.0 132.0 q5 -8 10 0 z M162.0 129.0 q6 -6 4 -12" stroke-width="0.9"/>
+    <path d="M151.0 139.0 H163.0 V153.0 H151.0 Z" fill="url(#m0107-hatch)" stroke="none"/>
+    <path d="M160.0 172.0 V142.0 M154.0 142.0 h20 M162.0 142.0 V146.0 l-4 -12 h14 l-4 12 V142.0" stroke-width="1.0"/>
+    <path d="M156.0 172.0 V158.0 h12 V172.0 M168.0 164.0 q6 0 6 6 q0 6 -6 6" stroke-width="1.0"/>
+    <path d="M180.0 112.0 H260.0 V172.0 H180.0 Z" stroke-width="1.6"/>
+    <path d="M178.0 112.0 H262.0 M182.0 114.0 V170.0" stroke-width="0.9"/>
+    <path d="M183.0 126.0 q20 -4 38 0 t36 0" stroke-width="0.8"/>
+    <path d="M190.0 169.0 q4 -20 2 -36 M196.0 169.0 q6 -14 2 -30 M240.0 169.0 q-6 -22 -2 -40 M246.0 169.0 q2 -12 4 -24" stroke-width="0.9"/>
+    <path d="M210.0 142.0 q6 -5 12 0 q-6 5 -12 0 M222.0 142.0 l4 -3 v6 z M228.0 156.0 q5 -4 10 0 q-5 4 -10 0 M238.0 156.0 l3 -2 v4 z" stroke-width="0.9"/>
+    <path d="M184.0 164.0 h72" stroke-width="0.7"/>
+    <path d="M183.0 163.0 H257.0 V170.0 H183.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M202.0 146.0 q-3 4 0 8 q3 4 0 8 M204.0 140.0 l1 -2 M250.0 134.0 l1 -3" stroke-width="0.6"/>
+    <path d="M40.0 26.0 H160.0 V108.0 H40.0 Z" fill="#fff" stroke-width="1.9"/>
+    <path d="M41.5 27.5 H158.5 V106.5 H41.5 Z" stroke-width="0.9"/>
+    <path d="M54.0 36.0 H146.0 V98.0 H54.0 Z" stroke-width="1.2"/>
+    <path d="M84.66666666666667 36.0 V98.0 M115.33333333333334 36.0 V98.0 M54.0 56.66666666666667 H146.0 M54.0 77.33333333333334 H146.0" stroke-width="1.0"/>
+    <path d="M57.0 52.66666666666667 l8 -10 l6 7 l5 -6 l8 9" stroke-width="0.8"/>
+    <path d="M90.66666666666667 52.66666666666667 v-9 l9 -6 l9 6 v9 z" stroke-width="0.8"/>
+    <path d="M119.33333333333334 42.0 q10 6 20 0 M121.33333333333334 50.0 q8 4 16 0" stroke-width="0.7"/>
+    <path d="M58.0 60.66666666666667 q8 10 24 6" stroke-width="0.7"/>
+    <path d="M88.66666666666667 72.33333333333334 l6 -9 l6 9 M100.66666666666667 72.33333333333334 l5 -7 l5 7" stroke-width="0.8"/>
+    <path d="M118.33333333333334 59.66666666666667 H143.0 V74.33333333333334 H118.33333333333334 Z" fill="url(#m0107-hatchl)" stroke="none"/>
+    <path d="M60.0 83.33333333333334 l10 8 M92.66666666666667 92.0 q6 -6 12 0 M121.33333333333334 92.0 l7 -9 l7 9" stroke-width="0.8"/>
+    <path d="M172.0 34.0 Q220.0 39.0 268.0 34.0" stroke-width="1.0"/>
+    <path d="M172.0 31.0 v6 M268.0 31.0 v6" stroke-width="1.2"/>
+    <path d="M186.0 35.0 v5 M182.0 40.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M184.0 43.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M209.0 35.0 v5 M205.0 40.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M207.0 43.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M232.0 35.0 v5 M228.0 40.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M230.0 43.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M255.0 35.0 v5 M251.0 40.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M253.0 43.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M172.0 60.0 Q220.0 65.0 268.0 60.0" stroke-width="1.0"/>
+    <path d="M172.0 57.0 v6 M268.0 57.0 v6" stroke-width="1.2"/>
+    <path d="M190.0 61.0 v5 M186.0 66.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M188.0 69.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M213.0 61.0 v5 M209.0 66.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M211.0 69.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M236.0 61.0 v5 M232.0 66.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M234.0 69.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M259.0 61.0 v5 M255.0 66.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M257.0 69.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M172.0 86.0 Q220.0 91.0 268.0 86.0" stroke-width="1.0"/>
+    <path d="M172.0 83.0 v6 M268.0 83.0 v6" stroke-width="1.2"/>
+    <path d="M186.0 87.0 v5 M182.0 92.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M184.0 95.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M209.0 87.0 v5 M205.0 92.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M207.0 95.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M232.0 87.0 v5 M228.0 92.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M230.0 95.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M255.0 87.0 v5 M251.0 92.0 h12 v16 h-12 z" stroke-width="0.9"/>
+    <path d="M253.0 95.0 l4 6 l3 -3 l3 4" stroke-width="0.6"/>
+    <path d="M280.0 27.0 H415.0 V162.0 H280.0 Z" fill="#fff" stroke-width="1.8"/>
+    <path d="M325.0 27.0 V162.0 M280.0 72.0 H415.0" stroke-width="1.2"/>
+    <path d="M370.0 27.0 V162.0 M280.0 117.0 H415.0" stroke-width="1.2"/>
+    <path d="M284.0 64.0 h37" stroke-width="0.8"/>
+    <path d="M287.0 55.0 H301.0 V62.0 H287.0 Z" stroke-width="1.2"/>
+    <path d="M289.0 57.0 H299.0 M289.0 60.0 H299.0" stroke-width="0.6"/>
+    <path d="M287.0 55.0 L285.0 46.0 H299.0 L301.0 55.0" stroke-width="1.1"/>
+    <path d="M286.0 47.0 H298.0 V54.0 H286.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M305.0 56.0 H317.0 V62.0 H305.0 Z" stroke-width="1.2"/>
+    <path d="M307.0 58.0 H315.0 M307.0 61.0 H315.0" stroke-width="0.6"/>
+    <path d="M329.0 64.0 h37" stroke-width="0.8"/>
+    <path d="M332.0 55.0 H346.0 V62.0 H332.0 Z" stroke-width="1.2"/>
+    <path d="M334.0 57.0 H344.0 M334.0 60.0 H344.0" stroke-width="0.6"/>
+    <path d="M332.0 55.0 L330.0 46.0 H344.0 L346.0 55.0" stroke-width="1.1"/>
+    <path d="M331.0 47.0 H343.0 V54.0 H331.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M350.0 56.0 H362.0 V62.0 H350.0 Z" stroke-width="1.2"/>
+    <path d="M352.0 58.0 H360.0 M352.0 61.0 H360.0" stroke-width="0.6"/>
+    <path d="M374.0 64.0 h37" stroke-width="0.8"/>
+    <path d="M377.0 55.0 H391.0 V62.0 H377.0 Z" stroke-width="1.2"/>
+    <path d="M379.0 57.0 H389.0 M379.0 60.0 H389.0" stroke-width="0.6"/>
+    <path d="M377.0 55.0 L375.0 46.0 H389.0 L391.0 55.0" stroke-width="1.1"/>
+    <path d="M376.0 47.0 H388.0 V54.0 H376.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M395.0 56.0 H407.0 V62.0 H395.0 Z" stroke-width="1.2"/>
+    <path d="M397.0 58.0 H405.0 M397.0 61.0 H405.0" stroke-width="0.6"/>
+    <path d="M284.0 109.0 h37" stroke-width="0.8"/>
+    <path d="M287.0 100.0 H301.0 V107.0 H287.0 Z" stroke-width="1.2"/>
+    <path d="M289.0 102.0 H299.0 M289.0 105.0 H299.0" stroke-width="0.6"/>
+    <path d="M287.0 100.0 L285.0 91.0 H299.0 L301.0 100.0" stroke-width="1.1"/>
+    <path d="M286.0 92.0 H298.0 V99.0 H286.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M305.0 101.0 H317.0 V107.0 H305.0 Z" stroke-width="1.2"/>
+    <path d="M307.0 103.0 H315.0 M307.0 106.0 H315.0" stroke-width="0.6"/>
+    <path d="M329.0 109.0 h37" stroke-width="0.8"/>
+    <path d="M332.0 100.0 H346.0 V107.0 H332.0 Z" stroke-width="1.2"/>
+    <path d="M334.0 102.0 H344.0 M334.0 105.0 H344.0" stroke-width="0.6"/>
+    <path d="M332.0 100.0 L330.0 91.0 H344.0 L346.0 100.0" stroke-width="1.1"/>
+    <path d="M331.0 92.0 H343.0 V99.0 H331.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M350.0 101.0 H362.0 V107.0 H350.0 Z" stroke-width="1.2"/>
+    <path d="M352.0 103.0 H360.0 M352.0 106.0 H360.0" stroke-width="0.6"/>
+    <path d="M374.0 109.0 h37" stroke-width="0.8"/>
+    <path d="M377.0 100.0 H391.0 V107.0 H377.0 Z" stroke-width="1.2"/>
+    <path d="M379.0 102.0 H389.0 M379.0 105.0 H389.0" stroke-width="0.6"/>
+    <path d="M377.0 100.0 L375.0 91.0 H389.0 L391.0 100.0" stroke-width="1.1"/>
+    <path d="M376.0 92.0 H388.0 V99.0 H376.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M395.0 101.0 H407.0 V107.0 H395.0 Z" stroke-width="1.2"/>
+    <path d="M397.0 103.0 H405.0 M397.0 106.0 H405.0" stroke-width="0.6"/>
+    <path d="M284.0 154.0 h37" stroke-width="0.8"/>
+    <path d="M287.0 145.0 H301.0 V152.0 H287.0 Z" stroke-width="1.2"/>
+    <path d="M289.0 147.0 H299.0 M289.0 150.0 H299.0" stroke-width="0.6"/>
+    <path d="M287.0 145.0 L285.0 136.0 H299.0 L301.0 145.0" stroke-width="1.1"/>
+    <path d="M286.0 137.0 H298.0 V144.0 H286.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M305.0 146.0 H317.0 V152.0 H305.0 Z" stroke-width="1.2"/>
+    <path d="M307.0 148.0 H315.0 M307.0 151.0 H315.0" stroke-width="0.6"/>
+    <path d="M329.0 154.0 h37" stroke-width="0.8"/>
+    <path d="M332.0 145.0 H346.0 V152.0 H332.0 Z" stroke-width="1.2"/>
+    <path d="M334.0 147.0 H344.0 M334.0 150.0 H344.0" stroke-width="0.6"/>
+    <path d="M332.0 145.0 L330.0 136.0 H344.0 L346.0 145.0" stroke-width="1.1"/>
+    <path d="M331.0 137.0 H343.0 V144.0 H331.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M350.0 146.0 H362.0 V152.0 H350.0 Z" stroke-width="1.2"/>
+    <path d="M352.0 148.0 H360.0 M352.0 151.0 H360.0" stroke-width="0.6"/>
+    <path d="M374.0 154.0 h37" stroke-width="0.8"/>
+    <path d="M377.0 145.0 H391.0 V152.0 H377.0 Z" stroke-width="1.2"/>
+    <path d="M379.0 147.0 H389.0 M379.0 150.0 H389.0" stroke-width="0.6"/>
+    <path d="M377.0 145.0 L375.0 136.0 H389.0 L391.0 145.0" stroke-width="1.1"/>
+    <path d="M376.0 137.0 H388.0 V144.0 H376.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M395.0 146.0 H407.0 V152.0 H395.0 Z" stroke-width="1.2"/>
+    <path d="M397.0 148.0 H405.0 M397.0 151.0 H405.0" stroke-width="0.6"/>
+    <path d="M280.0 170.0 L415.0 172.0 V194.0 H280.0 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M280.0 180.0 H415.0" stroke-width="0.9"/>
+    <path d="M332.0 163.0 H356.0 V170.0 H332.0 Z" stroke-width="1.2"/>
+    <path d="M334.0 165.0 H354.0 M334.0 168.0 H354.0" stroke-width="0.6"/>
+    <path d="M332.0 163.0 L330.0 151.0 H354.0 L356.0 163.0" stroke-width="1.1"/>
+    <path d="M331.0 152.0 H353.0 V162.0 H331.0 Z" fill="url(#m0107-hatch2)" stroke="none"/>
+    <path d="M282.0 182.0 H413.0 V192.0 H282.0 Z" fill="url(#m0107-hatchl)" stroke="none"/>
+    <path d="M119.0 197.0 H151.0 V202.0 H119.0 Z" stroke-width="1.4"/>
+    <path d="M122.0 202.0 L119.0 262 M148.0 202.0 L151.0 262 M121.0 222.0 H149.0" stroke-width="1.2"/>
+    <path d="M120.0 198.0 H150.0 V201.0 H120.0 Z" fill="url(#m0107-hatch)" stroke="none"/>
+    <path d="M65.0 22.0 V30.0 H75.0 V22.0 Z" stroke-width="1.2"/>
+    <path d="M66.0 30.0 L63.0 40.0 M74.0 30.0 L77.0 40.0" stroke-width="0.7" stroke-dasharray="3 3"/>
+    <path d="M140.0 22.0 V30.0 H150.0 V22.0 Z" stroke-width="1.2"/>
+    <path d="M141.0 30.0 L138.0 40.0 M149.0 30.0 L152.0 40.0" stroke-width="0.7" stroke-dasharray="3 3"/>
+    <path d="M215.0 22.0 V30.0 H225.0 V22.0 Z" stroke-width="1.2"/>
+    <path d="M216.0 30.0 L213.0 40.0 M224.0 30.0 L227.0 40.0" stroke-width="0.7" stroke-dasharray="3 3"/>
+    <path d="M172.0 163.0 H192.0 V171.0 H172.0 Z" stroke-width="1.2"/>
+    <path d="M174.0 165.0 H190.0 M174.0 168.0 H190.0" stroke-width="0.6"/>
+    <path d="M197.0 172.0 v-10 h9 v10 M206.0 164.0 q4 0 4 3 q0 3 -4 3" stroke-width="1.0"/>
+    <path d="M170.0 139.0 q-3 -5 0 -10 q3 -5 0 -9" stroke-width="0.7"/>
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0107</text>
 </svg>
-</div><div><i>0107</i><b>小吧台</b><p>一张老榆木吧台加三把高脚凳，客人看完生存盒，坐下来聊到炉火熄灭。</p></div></a>
+</div><div><i>0107</i><b>小吧台</b><p>一条老榆木台面的矮柜加一把凳子，看完生存盒，坐下来喝到炉火熄灭。</p></div></a>
     </div></section>
 
   <nav class="pager">

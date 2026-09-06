@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>0203 控温控湿 · SurviveOs 设想版</title>
-<meta name="description" content="地下室潮到长毛？我用一台除湿机 + 一条管道把它变成恒温洞穴——全年 22℃、湿度 55%，地堡是全屋最舒服的一间房。">
+<meta name="description" content="无窗地堡潮到长毛？我用一台除湿机 + 一条管道把它变成恒温洞穴——全年 22℃、湿度 55%，地堡是全屋最舒服的一间房。">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -27,11 +28,11 @@
 <article class="mod">
   <header class="mod-head">
     <p class="kicker">地堡 · 模块 0203 · 控温控湿</p>
-    <h1>地下室潮到长毛？我用一台除湿机 + 一条管道把它变成恒温洞穴</h1>
+    <h1>无窗地堡潮到长毛？我用一台除湿机 + 一条管道把它变成恒温洞穴</h1>
     <p class="lede">全年 22℃、湿度 55%，地堡是全屋最舒服的一间房。</p>
     <p class="meta">
       <span class="st st-⬜">⬜ 真实项目待设计</span>
-      <span class="tag">#地下室防潮</span><span class="tag">#恒温恒湿</span><span class="tag">#洞穴风</span><span class="tag">#ESPHome</span><span class="tag">#避坑</span>
+      <span class="tag">#无窗房间防潮</span><span class="tag">#恒温恒湿</span><span class="tag">#洞穴风</span><span class="tag">#ESPHome</span><span class="tag">#避坑</span>
     </p>
   </header>
   <figure class="mod-art">
@@ -136,13 +137,15 @@
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0203</text>
 </svg>
 
-    <figcaption><span class="hand">速写 · 地下室墙角一点透视，柜中除湿机连着天花板风管和出风口，墙上挂圆形温湿度表盘，地上一盆蕨类</span></figcaption>
+    <figcaption><span class="hand">速写 · 地堡储藏室墙角一点透视，柜中除湿机连着天花板风管和出风口，墙上挂圆形温湿度表盘，地上一盆蕨类</span></figcaption>
   </figure>
 
-  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">梅雨季第 11 天，外面的木屋门框已经吸水发胀，你却光着脚踩在地堡的软木地板上，一点不黏。墙上那块小表盘稳稳指着 21.8℃ / 54%，除湿机藏在楼梯下的柜子里，只听见风管里很轻的一点气流声。你顺手摸了一下藏在墙角的书脊，干燥、有点凉。手机弹了一条 HomeAssistant 通知：今日排水 4.2L，已自动排进污水泵。你想起以前住地下室时被子那股味道，然后把毯子往身上一裹，继续看片。</p></section>
+  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>除湿机柜塞在地堡东侧储藏室靠北的一角（紧挨卫生间隔墙，冷凝水就近排进卫生间下水），Φ100 风管沿天花板绕地堡一圈；表盘挂在储藏室隔墙外侧、0211 屏旁。（0008 未定位，设想落位）</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
+
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">梅雨季第 11 天，外面的木屋门框已经吸水发胀，你却光着脚踩在地堡的软木地板上，一点不黏。墙上那块小表盘稳稳指着 21.8℃ / 54%，除湿机藏在东侧储藏室的柜子里，只听见风管里很轻的一点气流声。你顺手摸了一下藏在墙角的书脊，干燥、有点凉。手机弹了一条 HomeAssistant 通知：今日排水 4.2L，已自动排进隔壁卫生间的下水。你想起以前住地下室时被子那股味道，然后把毯子往身上一裹，继续看片。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>楼梯下柜体装一台 50L/天工业除湿机，冷凝水直排到 0202 的污水提升泵，不用倒桶</span></li><li><span class="box"></span><span>沿天花板走一圈 Φ100 风管，四个出风口分别对着床、沙发、书架和衣柜角落</span></li><li><span class="box"></span><span>墙面刷防潮底漆 + 软木地板，地面下铺一层防潮膜，先把“源头”堵住</span></li><li><span class="box"></span><span>布 4 个 ESPHome 温湿度探头（床头/墙角/柜内/风管出口），墙上一块小表盘实时显示</span></li><li><span class="box"></span><span>新风从地面的通风井引进来，进风口加 HEPA + 活性炭，出风走独立管道</span></li><li><span class="box"></span><span>冬天用小风管式暖风机补温，夏天靠地下本身的凉，目标全年 20～24℃</span></li><li><span class="box"></span><span>湿度超过 65% 自动强力除湿并推送提醒，低于 45% 停机保护木制品</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>储藏室靠卫生间隔墙的柜体里装一台 50L/天工业除湿机，冷凝水直排到 0202 的污水提升泵，不用倒桶</span></li><li><span class="box"></span><span>沿天花板走一圈 Φ100 风管，四个出风口分别对着床、沙发、书架和衣柜角落</span></li><li><span class="box"></span><span>墙面刷防潮底漆 + 软木地板，地面下铺一层防潮膜，先把“源头”堵住</span></li><li><span class="box"></span><span>布 4 个 ESPHome 温湿度探头（床头/墙角/柜内/风管出口），墙上一块小表盘实时显示</span></li><li><span class="box"></span><span>地堡没窗，新风只能从东墙靠门口高处开一个小风口（找工人穿墙）引进来，进风口加 HEPA + 活性炭</span></li><li><span class="box"></span><span>冬天用小风管式暖风机补温，夏天靠无窗厚墙和水泥地本身的凉，目标全年 20～24℃</span></li><li><span class="box"></span><span>湿度超过 65% 自动强力除湿并推送提醒，低于 45% 停机保护木制品</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
@@ -150,7 +153,7 @@
       <a class="td-item" href="../teardown/0203.html#p1">
         <span class="kind kind-hw">产品模块</span>
         <b>1. 隐藏除湿机柜</b>
-        <span class="td-brief">把一台吵闹的工业除湿机变成“听不见的空调”的柜子。楼梯下的柜体内壁贴一层隔音棉，机器脚下垫橡胶减震垫，噪…</span>
+        <span class="td-brief">把一台吵闹的工业除湿机变成“听不见的空调”的柜子。东侧储藏室里靠卫生间隔墙的柜体内壁贴一层隔音棉，机器脚…</span>
       </a>
       <a class="td-item" href="../teardown/0203.html#p2">
         <span class="kind kind-hw">产品模块</span>
@@ -165,14 +168,14 @@
       <a class="td-item" href="../teardown/0203.html#p4">
         <span class="kind kind-logic">联动逻辑</span>
         <b>4. 新风换气判断</b>
-        <span class="td-brief">只除湿不换气会闷，这段逻辑决定什么时候把地面的空气引进来。核心输入是一只 CO2 探头：人在密闭房间里待…</span>
+        <span class="td-brief">只除湿不换气会闷，地堡没窗，这段逻辑决定什么时候通过东墙那个小风口把室外空气引进来。核心输入是一只 CO…</span>
       </a>
     </div>
     <p class="td-cta"><a class="btn" href="../teardown/0203.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
   </section>
 
   <div class="two">
-    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“洞穴风卧室”：地下恒温恒湿其实是优势，把它包装成夏天的避暑洞穴</li><li>“数据可视化墙”：温湿度表盘用复古指针表，比液晶屏更有 workshop 氛围</li><li>“和植物一起住”：湿度稳定之后，地堡角落可以养蕨类和苔藓球</li></ul></section>
+    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“洞穴风卧室”：无窗厚墙恒温恒湿其实是优势，把它包装成夏天的避暑洞穴</li><li>“数据可视化墙”：温湿度表盘用复古指针表，比液晶屏更有 workshop 氛围</li><li>“和植物一起住”：湿度稳定之后，地堡角落可以养蕨类和苔藓球</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>除湿机噪音别小看，一定藏进柜子并做隔音，不然睡觉像睡在空调外机旁</li><li>冷凝水管一定要有坡度，平走两米必堵，堵了就是一地水</li><li>只除湿不换气会闷，新风一定要有，CO2 探头也别省</li></ul></section>
   </div>
 
@@ -303,7 +306,7 @@
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0202</text>
 </svg>
-</div><div><i>0202</i><b>卫生间灯箱系统</b><p>1000W 灯箱 + 六面镜光箱，地下刷牙也像在露台上晒晨光。</p></div></a>
+</div><div><i>0202</i><b>卫生间灯箱系统</b><p>1000W 灯箱 + 六面镜光箱，无窗小间里刷牙也像在露台上晒晨光。</p></div></a>
     
       <a class="link-card" href="../modules/0211.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>

@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" class="on"><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -119,10 +120,12 @@
     <figcaption><span class="hand">速写 · 一根桧木传感器杆：顶上翻斗雨量计和小斜顶，杆身指示灯和大按钮，脚下土壤探针剖面插进草根</span></figcaption>
   </figure>
 
-  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">凌晨四点二十，你在木屋里睡得正香，草地边那根一米高的木杆顶上，翻斗雨量计刚刚归零，土壤探针回报根区含水率 21%，比阈值低了 4 个点，雨水罐水位 62%。杆子里那块 ESP32 不到一秒算完：“浇，草原区 8 分钟，疏林区 12 分钟。”电磁阀“咔”一声，草根下的滴管开始渗水，整片草地没有一滴水飞起来。早上七点你端着咖啡看手机，HomeAssistant 卡片上一根曲线平稳抬高，底下一行小字：今晨已浇灌，雨水 96L，自来水 0L。</p></section>
+  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>传感器木杆立在草地中段靠建筑东墙一侧、雨水罐旁，土壤探针每段各埋一根；三路电磁阀歧管挂在东墙下的雨水罐边，三条滴灌干管顺着长条向北、向南分段铺，各管一段。（0008 未定位，设想落位）</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
+
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">凌晨四点二十，你在木屋里睡得正香，草地中段东墙下那根一米高的木杆顶上，翻斗雨量计刚刚归零，土壤探针回报根区含水率 21%，比阈值低了 4 个点，雨水罐水位 62%。杆子里那块 ESP32 不到一秒算完：“浇，中段草原 8 分钟，北段疏林 12 分钟。”电磁阀“咔”一声，草根下的滴管开始渗水，整片草地没有一滴水飞起来。早上七点你端着咖啡看手机，HomeAssistant 卡片上一根曲线平稳抬高，底下一行小字：今晨已浇灌，雨水 96L，自来水 0L。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>三传感器：电容式土壤湿度探针埋 15cm 深各区一根，翻斗雨量计装杆顶，雨水罐内超声波水位计</span></li><li><span class="box"></span><span>ESP32 跑 ESPHome，本地判断不依赖云：含水率低于阈值 + 未来 6 小时无雨 + 罐里有水才开阀</span></li><li><span class="box"></span><span>三路 12V 电磁阀分别控草原/疏林/点缀带，各区阈值不同，芒草 18%、朴树 25%、野花 22%</span></li><li><span class="box"></span><span>浇灌时段锁死在凌晨四到六点，蒸发最少，白天绝不浇，除非手动按木杆上那颗大红按钮</span></li><li><span class="box"></span><span>传感器杆用 8cm 方料桧木，顶上做小斜屋顶防雨，控制盒藏在杆内，只露一颗指示灯</span></li><li><span class="box"></span><span>HomeAssistant 做“草地体检”卡片：三区含水率曲线 + 本周用水量 + 雨水占比，接入 0211 大屏</span></li><li><span class="box"></span><span>每区留一个手动快接口，冬天排空管路防冻</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>三传感器：电容式土壤湿度探针埋 15cm 深各区一根，翻斗雨量计装杆顶，雨水罐内超声波水位计</span></li><li><span class="box"></span><span>ESP32 跑 ESPHome，本地判断不依赖云：含水率低于阈值 + 未来 6 小时无雨 + 罐里有水才开阀</span></li><li><span class="box"></span><span>三路 12V 电磁阀装在东墙雨水罐旁，分别控北段疏林/中段草原/南段野花，干管沿长边分段铺，各区阈值不同，芒草 18%、朴树 25%、野花 22%</span></li><li><span class="box"></span><span>浇灌时段锁死在凌晨四到六点，蒸发最少，白天绝不浇，除非手动按木杆上那颗大红按钮</span></li><li><span class="box"></span><span>传感器杆用 8cm 方料桧木，顶上做小斜屋顶防雨，控制盒藏在杆内，只露一颗指示灯</span></li><li><span class="box"></span><span>HomeAssistant 做“草地体检”卡片：三区含水率曲线 + 本周用水量 + 雨水占比，接入 0211 大屏</span></li><li><span class="box"></span><span>每区留一个手动快接口，冬天排空管路防冻</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
@@ -130,7 +133,7 @@
       <a class="td-item" href="../teardown/0602.html#p1">
         <span class="kind kind-hw">产品模块</span>
         <b>1. 桧木传感器杆总成</b>
-        <span class="td-brief">一米高的桧木杆是自动浇灌的大脑兼感官。8cm 方料桧木掏空走线，顶上做小斜屋顶防雨，屋顶下装翻斗雨量计：…</span>
+        <span class="td-brief">立在草地中段东墙下、雨水罐旁的一米高桧木杆是自动浇灌的大脑兼感官。8cm 方料桧木掏空走线，顶上做小斜屋…</span>
       </a>
       <a class="td-item" href="../teardown/0602.html#p2">
         <span class="kind kind-hw">产品模块</span>
@@ -140,7 +143,7 @@
       <a class="td-item" href="../teardown/0602.html#p3">
         <span class="kind kind-logic">联动逻辑</span>
         <b>3. 三传感器灌溉判断</b>
-        <span class="td-brief">浇不浇由三个传感器“开会”决定。每天凌晨四点 ESP32 醒来，读三区含水率、雨量和罐水位，三个条件同时…</span>
+        <span class="td-brief">浇不浇由三个传感器“开会”决定。每天凌晨四点 ESP32 醒来，读北中南三段含水率、雨量和罐水位，三个条…</span>
       </a>
       <a class="td-item" href="../teardown/0602.html#p4">
         <span class="kind kind-logic">联动逻辑</span>
@@ -152,7 +155,7 @@
   </section>
 
   <div class="two">
-    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“去家务化”话题：浇水是院子里最大的隐形家务，做成全自动就是把这个家务从清单里划掉</li><li>小红书“保姆级 ESPHome 教程”帖很火，把 YAML 配置贴出来一整个被问爆</li><li>“数据可视化氛围感”：把三根传感器曲线投到地堡大屏，朋友来了先看草地心电图</li></ul></section>
+    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“去家务化”话题：浇水是院子里最大的隐形家务，做成全自动就是把这个家务从清单里划掉</li><li>小红书“保姆级 ESPHome 教程”帖很火，把 YAML 配置贴出来一整个被问爆</li><li>“数据可视化氛围感”：把三根传感器曲线投到地堡大屏，早上醒来先看草地心电图</li></ul></section>
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>电阻式土壤探针半年就锈穿，一定要电容式，多花二十块省一年</li><li>雨量计一定要离树远，落叶盖住翻斗会让系统以为一直在下雨</li><li>别把阈值定太高，草原草就是要旱一旱，天天浇会长得又软又倒</li></ul></section>
   </div>
 

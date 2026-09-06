@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>0205 生态鱼缸 · SurviveOs 设想版</title>
-<meta name="description" content="地堡唯一的“窗”是一缸水草和三十条灯鱼——嵌进墙里的 1.2 米生态缸，不用换水，是地下室的活风景。">
+<meta name="description" content="木屋吧台上那口 80 公分的生态缸，是隔壁地堡借来的“窗”——坐在吧台台面上的生态缸，不用换水，隔着一道墙给无窗地堡当活风景。">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -27,18 +28,18 @@
 <article class="mod">
   <header class="mod-head">
     <p class="kicker">地堡 · 模块 0205 · 生态鱼缸</p>
-    <h1>地堡唯一的“窗”是一缸水草和三十条灯鱼</h1>
-    <p class="lede">嵌进墙里的 1.2 米生态缸，不用换水，是地下室的活风景。</p>
+    <h1>木屋吧台上那口 80 公分的生态缸，是隔壁地堡借来的“窗”</h1>
+    <p class="lede">坐在吧台台面上的生态缸，不用换水，隔着一道墙给无窗地堡当活风景。</p>
     <p class="meta">
       <span class="st st-⬜">⬜ 真实项目待设计</span>
-      <span class="tag">#生态缸</span><span class="tag">#嵌墙鱼缸</span><span class="tag">#和植物一起住</span><span class="tag">#精神角落</span><span class="tag">#自然生活</span>
+      <span class="tag">#生态缸</span><span class="tag">#吧台鱼缸</span><span class="tag">#和植物一起住</span><span class="tag">#精神角落</span><span class="tag">#自然生活</span>
     </p>
   </header>
   <figure class="mod-art">
     <svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
     <filter id="m0205-rough" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="23" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="m0205-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -48,105 +49,95 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0205-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
   <g filter="url(#m0205-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- room shell -->
-    <path d="M70 52 H330 V208 H70 Z" stroke-width="1.8"/>
-    <path d="M72 54 H328 V206" stroke-width="0.9"/>
-    <path d="M70 52 L18 16 M330 52 L382 16" stroke-width="1.5"/>
-    <path d="M70 208 L18 262 M330 208 L382 262" stroke-width="1.5"/>
-    <path d="M18 262 Q200 258 382 262" stroke-width="1.2"/>
-    <path d="M20 18 L68 54 V206 L20 260 Z" fill="url(#m0205-hatch)" stroke="none"/>
-    <path d="M332 54 L380 18 V260 L332 206 Z" fill="url(#m0205-hatch)" stroke="none"/>
-
-    <!-- old wooden window frame set into the wall -->
-    <path d="M100 82 H300 V172 H100 Z" stroke-width="2.2"/>
-    <path d="M102 84 H298 V170" stroke-width="1"/>
-    <path d="M108 90 H292 V164 H108 Z" stroke-width="1.6"/>
-    <path d="M100 82 L108 90 M300 82 L292 90 M100 172 L108 164 M300 172 L292 164" stroke-width="1"/>
-    <path d="M102 86 h4 M104 100 q2 4 0 8 M296 120 q-2 6 0 12 M120 84 h30 M240 168 h34" stroke-width="0.6"/>
-    <path d="M96 172 H304 V178 H96 Z" stroke-width="1.4"/>
-    <!-- water line + light bar on top -->
-    <path d="M110 96 q30 -3 60 0 t60 0 t60 0" stroke-width="0.9"/>
-    <path d="M120 80 H280 V76 H120 Z" stroke-width="1.1"/>
-    <path d="M130 90 l-2 -6 M200 90 v-6 M270 90 l2 -6" stroke-width="0.6"/>
-    <!-- substrate + hatch dark bottom -->
-    <path d="M110 154 q40 -6 90 -2 q50 4 90 2 V162 H110 Z" fill="url(#m0205-hatch)" stroke="none"/>
-    <path d="M110 154 q40 -6 90 -2 q50 4 90 2" stroke-width="1"/>
-    <!-- driftwood on the left, rising diagonally -->
-    <path d="M124 154 q10 -30 40 -46 q6 -2 10 4 q-26 14 -34 46 Z" stroke-width="1.6"/>
-    <path d="M136 132 q10 -12 22 -18" stroke-width="0.7"/>
-    <path d="M128 152 q8 -24 30 -40 q-14 18 -20 40 Z" fill="url(#m0205-hatch)" stroke="none"/>
-    <path d="M160 112 q6 -8 12 -6 q-2 8 -12 6 Z M148 122 q-8 -2 -10 -8 q8 0 10 8 Z" stroke-width="0.9"/>
-    <!-- moss stones -->
-    <path d="M232 154 q4 -12 16 -12 q14 0 16 12 Z M258 154 q2 -8 12 -8 q10 0 10 8 Z" stroke-width="1.2"/>
-    <path d="M238 146 q4 -3 8 0 M248 148 q4 -3 8 0" stroke-width="0.6"/>
-    <!-- plants: tall stems and grass -->
-    <path d="M176 154 q-2 -20 4 -40 M184 154 q0 -22 8 -38 M192 154 q4 -18 0 -34" stroke-width="1"/>
-    <path d="M178 130 q-6 -2 -8 -8 M186 122 q6 -2 8 -8 M180 116 q-6 0 -8 -6 M190 138 q6 -2 8 -6" stroke-width="0.9"/>
-    <path d="M110 154 q4 -12 6 -22 M116 154 q2 -10 6 -18 M122 154 q0 -8 4 -14" stroke-width="0.8"/>
-    <path d="M210 154 q2 -14 -2 -30 q8 8 6 30 Z M222 154 q-2 -12 4 -22 q4 12 0 22 Z" stroke-width="1"/>
-    <path d="M280 154 q-2 -10 2 -20 M286 154 q2 -10 -2 -18 M276 150 q-4 -6 -2 -12 M290 148 q4 -6 2 -12" stroke-width="0.8"/>
-    <!-- fish: small tetras -->
-    <path d="M150 104 q6 -4 12 0 q-6 4 -12 0 Z M162 104 l4 -3 v6 Z" stroke-width="1"/>
-    <path d="M200 112 q6 -4 12 0 q-6 4 -12 0 Z M212 112 l4 -3 v6 Z" stroke-width="1"/>
-    <path d="M226 122 q6 -4 12 0 q-6 4 -12 0 Z M238 122 l4 -3 v6 Z" stroke-width="1"/>
-    <path d="M254 106 q-6 -4 -12 0 q6 4 12 0 Z M242 106 l-4 -3 v6 Z" stroke-width="1"/>
-    <path d="M166 136 q-6 -4 -12 0 q6 4 12 0 Z M154 136 l-4 -3 v6 Z" stroke-width="1"/>
-    <path d="M270 132 q6 -4 12 0 q-6 4 -12 0 Z M282 132 l4 -3 v6 Z" stroke-width="1"/>
-    <circle cx="156" cy="104" r="0.7" stroke-width="0.6"/>
-    <circle cx="206" cy="112" r="0.7" stroke-width="0.6"/>
-    <circle cx="248" cy="106" r="0.7" stroke-width="0.6"/>
-    <!-- bubbles from the filter on the right -->
-    <circle cx="276" cy="140" r="1.5" stroke-width="0.7"/>
-    <circle cx="279" cy="130" r="1.8" stroke-width="0.7"/>
-    <circle cx="275" cy="118" r="1.4" stroke-width="0.7"/>
-    <circle cx="280" cy="108" r="2" stroke-width="0.7"/>
-    <circle cx="277" cy="100" r="1.3" stroke-width="0.7"/>
-    <!-- glass reflections -->
-    <path d="M114 100 l6 -8 M118 112 l10 -14" stroke-width="0.6"/>
-
-    <!-- small stool in front of the tank -->
-    <path d="M186 198 q14 -3 28 0 q2 4 -2 6 q-12 2 -24 0 q-4 -2 -2 -6 Z" stroke-width="1.4"/>
-    <path d="M190 204 L184 238 M212 204 L220 238 M200 205 V236" stroke-width="1.3"/>
-    <path d="M188 222 h24" stroke-width="0.8"/>
-    <path d="M190 200 q10 -2 20 0" stroke-width="0.7"/>
-    <!-- floor lamp beside the stool -->
-    <path d="M88 240 h16 M96 240 V150" stroke-width="1.3"/>
-    <path d="M84 150 h24 l-4 -16 h-16 Z" stroke-width="1.3"/>
-    <path d="M86 146 L104 138 V148 L86 150 Z" fill="url(#m0205-hatch)" stroke="none"/>
-    <!-- side table + mug at right -->
-    <path d="M296 208 h26 v6 h-26 Z M300 214 v20 M318 214 v20" stroke-width="1.2"/>
-    <path d="M304 208 v-9 h9 v9 Z M313 201 q5 0 3 5" stroke-width="1"/>
-
-    <!-- sofa back in the foreground (viewer's seat) -->
-    <path d="M40 262 q0 -18 16 -18 H344 q16 0 16 18" fill="#fff" stroke="none"/>
-    <path d="M40 262 q0 -18 16 -18 H344 q16 0 16 18" stroke-width="2"/>
-    <path d="M44 262 q0 -14 14 -14 H342 q14 0 14 14" stroke-width="0.9"/>
-    <path d="M140 246 v14 M260 246 v14" stroke-width="1"/>
-    <path d="M60 254 q20 -2 40 0 M300 254 q20 -2 40 0 M180 256 q20 -2 40 0" stroke-width="0.7"/>
-    <path d="M46 262 H354" stroke-width="1"/>
-    <!-- rug -->
-    <path d="M110 268 q90 -4 180 0" stroke-width="0.8"/>
+<path d="M36 79.75999999999999 H356.0 V250 H36 Z" stroke-width="1.8"/>
+<path d="M36 96.4 H356.0" stroke-width="1.3"/><path d="M38 81.75999999999999 h316 v12.64 h-316 Z" fill="url(#m0205-hatchl)" stroke="none"/>
+<path d="M38 102 H354.0" stroke-width="0.4"/>
+<path d="M38 116 H354.0" stroke-width="0.4"/>
+<path d="M38 130 H354.0" stroke-width="0.4"/>
+<path d="M38 144 H354.0" stroke-width="0.4"/>
+<path d="M38 158 H354.0" stroke-width="0.4"/>
+<path d="M38 172 H354.0" stroke-width="0.4"/>
+<path d="M38 186 H354.0" stroke-width="0.4"/>
+<path d="M38 200 H354.0" stroke-width="0.4"/>
+<path d="M38 214 H354.0" stroke-width="0.4"/>
+<path d="M38 228 H354.0" stroke-width="0.4"/>
+<path d="M38 242 H354.0" stroke-width="0.4"/>
+<path d="M36 192.4 H196.0 V250" stroke-width="1.6"/><path d="M36 188.4 H199.0 v4" stroke-width="1.2"/>
+<path d="M74.4 194.96 V246 M55.2 218.0 h8" stroke-width="0.8"/>
+<path d="M112.8 194.96 V246 M93.6 218.0 h8" stroke-width="0.8"/>
+<path d="M151.2 194.96 V246 M132.0 218.0 h8" stroke-width="0.8"/>
+<path d="M176.8 218.0 h8" stroke-width="0.8"/>
+<rect x="42.4" y="156.4" width="19.2" height="32.0" rx="3" stroke-width="1"/><rect x="68.0" y="161.52" width="25.6" height="26.88" rx="3" stroke-width="1"/><path d="M100.0 188.4 v-24.32 h25.6 v24.32 M105.12 164.08 v-8 h15.36 v8" stroke-width="1"/>
+<rect x="138.4" y="150.0" width="51.2" height="38.4" stroke-width="1.6"/><path d="M141.4 156.0 h45.2 v3 h-45.2 Z" fill="url(#m0205-hatch)" stroke="none"/>
+<path d="M144.4 184.4 q6 -18 3 -28 M152.4 184.4 q4 -14 8 -22 M179.60000000000002 184.4 q-4 -12 -2 -20 M173.60000000000002 184.4 q2 -10 -4 -16" stroke-width="0.8"/>
+<path d="M160.4 168.0 l7 -3 l-7 -3 Z M172.4 176.0 l-7 3 l7 3 Z M146.4 180.4 h35.2" stroke-width="0.8"/><path d="M183.60000000000002 158.0 v24.4 M180.60000000000002 162.0 h3" stroke-width="0.7"/>
+<path d="M191.60000000000002 178.4 h8 v-30 M199.60000000000002 148.4 h-6" stroke-width="0.7"/>
+<rect x="48.8" y="100.4" width="76.8" height="55.04" stroke-width="1.3"/>
+<rect x="51.36" y="103.4" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="51.36" y="121.32000000000001" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="51.36" y="139.24" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="76.32" y="103.4" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="76.32" y="121.32000000000001" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="76.32" y="139.24" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="101.28" y="103.4" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="101.28" y="121.32000000000001" width="22.4" height="16.0" stroke-width="0.5"/>
+<rect x="101.28" y="139.24" width="22.4" height="16.0" stroke-width="0.5"/>
+<path d="M135.2 106.4 q30 4 60 0" stroke-width="0.6"/>
+<rect x="138.4" y="106.4" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="153.76" y="106.4" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="169.12" y="106.4" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="184.48000000000002" y="106.4" width="10.24" height="11.52" stroke-width="0.5"/>
+<path d="M135.2 124.32000000000001 q30 4 60 0" stroke-width="0.6"/>
+<rect x="138.4" y="124.32000000000001" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="153.76" y="124.32000000000001" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="169.12" y="124.32000000000001" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="184.48000000000002" y="124.32000000000001" width="10.24" height="11.52" stroke-width="0.5"/>
+<path d="M135.2 142.24 q30 4 60 0" stroke-width="0.6"/>
+<rect x="138.4" y="142.24" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="153.76" y="142.24" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="169.12" y="142.24" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="184.48000000000002" y="142.24" width="10.24" height="11.52" stroke-width="0.5"/>
+<rect x="202.4" y="99.6" width="28.8" height="86.4" stroke-width="1"/>
+<rect x="204.32" y="101.52000000000001" width="24.96" height="25.6" stroke-width="0.5"/>
+<rect x="204.32" y="130.32000000000002" width="24.96" height="25.6" stroke-width="0.5"/>
+<rect x="204.32" y="159.12" width="24.96" height="25.6" stroke-width="0.5"/>
+<rect x="234.4" y="99.6" width="28.8" height="86.4" stroke-width="0.6" stroke-dasharray="3 3"/>
+<path d="M218.0 250 v-46 h20 v46 M218.0 230 h20" stroke-width="1"/>
+<circle cx="228.0" cy="154" r="6" stroke-width="1.2"/><path d="M228.0 160 V190 M228.0 166 l-14 8 l-10 -4 M228.0 166 l10 10 M228.0 190 l-8 16 M228.0 190 l8 16" stroke-width="1.2"/>
   </g>
-  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0205</text>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0205</text>
+<text x="166.0" y="144.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">0205 生态鱼缸 · 台面上</text>
+<text x="112.8" y="214.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">0107 吧台矮柜 · 900 高</text>
+<text x="87.2" y="90.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0103</text>
+<text x="167.2" y="90.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0104</text>
+<text x="217.12" y="90.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0102</text>
+<text x="292.0" y="90.0" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">梁底 2400</text>
+<text x="200" y="292" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">木屋北墙西段：缸在吧台上，人坐着看</text>
 </svg>
 
-    <figcaption><span class="hand">速写 · 地下客厅一点透视，沙发对面墙里嵌着一口带旧木窗框的长鱼缸，水草沉木和小鱼，缸前一张小凳</span></figcaption>
+    <figcaption><span class="hand">速写 · 木屋北墙吧台一点透视：900 高矮柜台面东段放一口带旧木窗框的生态缸，左边是咖啡机等小电器，上方照片墙，缸前一张高脚凳</span></figcaption>
   </figure>
 
-  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">你从楼梯下来，第一眼看到的不是灯，是墙上那块发着绿光的长方形。1.2 米的缸嵌在沙发对面的墙里，边框做成老式窗框，水草在缸里像被风吹过的草地一样慢慢摆，一群宝莲灯从莫斯石后面钻出来又钻回去。缸底的过滤在“呼吸”，气泡一串串往上冒，声音比任何白噪音都好听。晚上关掉大灯，只剩缸里那盏水草灯，整个地堡的墙都是淡绿的波纹。你坐在沙发上看了半小时，什么也没想。</p></section>
+  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>缸体不在地堡：它坐在隔墙木屋一侧的北墙吧台台面上（吧台矮柜 900 高，缸在台面东段、照片墙正下方，≈80cm 宽），过滤桶和补水泵藏在台面下的矮柜里；只有探头数据线穿过隔墙接进地堡的 0211 大屏。</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
+
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">你从地堡的暗门钻进木屋，第一眼看到的不是柴火炉，是吧台东头那块发着绿光的长方形。80 公分的缸坐在 900 高的吧台台面上，上方是照片墙，左边挨着咖啡机，边框做成老式窗框，水草在缸里像被风吹过的草地一样慢慢摆，一群宝莲灯从莫斯石后面钻出来又钻回去。台面下矮柜里的过滤在“呼吸”，气泡一串串往上冒，声音比任何白噪音都好听。晚上关掉木屋大灯，只剩缸里那盏水草灯，整面北墙都是淡绿的波纹。你坐在吧台凳上看了半小时，什么也没想。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>1200×450×500mm 超白缸嵌进沙发对面的墙，背面留 60cm 检修通道，前面做旧木窗框</span></li><li><span class="box"></span><span>水陆缸布景：左边沉木上长苔藓和蕨类，水里铺莫斯石和矮珍珠，做一小片“水下草原”</span></li><li><span class="box"></span><span>养 30 条宝莲灯 + 几只黑壳虾 + 一条清道夫，鱼小密度低，生态自己转</span></li><li><span class="box"></span><span>底滤 + 外置过滤双保险，自动补水接 0603 雨水系统过滤后的软水</span></li><li><span class="box"></span><span>水草灯用 ESPHome 控制日出日落曲线，跟 0201 模拟阳光同一份时间表</span></li><li><span class="box"></span><span>缸外装温度 / pH / TDS 三探头，数据汇到 0211 大屏，异常推送</span></li><li><span class="box"></span><span>缸前放一张单人小凳，专门用来“发呆”</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>800×400×500mm 超白缸坐在木屋北墙吧台台面东段（隔墙木屋侧，0008 给的位置），前面做旧木窗框收边</span></li><li><span class="box"></span><span>水陆缸布景：左边沉木上长苔藓和蕨类，水里铺莫斯石和矮珍珠，做一小片“水下草原”</span></li><li><span class="box"></span><span>养 20 条宝莲灯 + 几只黑壳虾 + 一条小清道夫，鱼小密度低，生态自己转</span></li><li><span class="box"></span><span>过滤桶和补水泵藏在台面下 900 高的吧台矮柜里，自动补水接 0603 雨水系统过滤后的软水</span></li><li><span class="box"></span><span>水草灯用 ESPHome 控制日出日落曲线，跟隔壁地堡的 0201 模拟阳光同一份时间表</span></li><li><span class="box"></span><span>缸角装温度 / pH / TDS 三探头，数据线穿隔墙汇到地堡的 0211 大屏，异常推送</span></li><li><span class="box"></span><span>吧台前放一张高脚凳，专门用来“发呆”</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
     <div class="td-list">
       <a class="td-item" href="../teardown/0205.html#p1">
         <span class="kind kind-hw">产品模块</span>
-        <b>1. 嵌墙缸体与过滤总成</b>
-        <span class="td-brief">把一口 1.2 米的超白缸嵌进墙里，靠的不是墙，而是缸下面一只独立承重的钢木底柜：满水近 300 公斤，…</span>
+        <b>1. 吧台缸体与过滤总成</b>
+        <span class="td-brief">把一口 80 公分的超白缸放上木屋北墙的吧台台面（隔墙木屋侧），靠的不是台面本身，而是台面下那段 900…</span>
       </a>
       <a class="td-item" href="../teardown/0205.html#p2">
         <span class="kind kind-hw">产品模块</span>
@@ -156,7 +147,7 @@
       <a class="td-item" href="../teardown/0205.html#p3">
         <span class="kind kind-logic">联动逻辑</span>
         <b>3. 鱼缸日程器</b>
-        <span class="td-brief">把鱼缸每天要做的事写成一张表，由一块 ESP32 按分钟执行。表里有三类事件：灯光曲线（时刻直接取自 0…</span>
+        <span class="td-brief">把鱼缸每天要做的事写成一张表，由一块 ESP32 按分钟执行。表里有三类事件：灯光曲线（时刻直接取自隔壁…</span>
       </a>
       <a class="td-item" href="../teardown/0205.html#p4">
         <span class="kind kind-logic">联动逻辑</span>
@@ -168,11 +159,11 @@
   </section>
 
   <div class="two">
-    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“嵌墙鱼缸当电视”：小红书上很多人把缸嵌在沙发对面，比电视更耐看</li><li>“水陆缸/雨林缸”热潮：缸上半截养苔藓和小蕨，地堡的湿度反而是加分项</li><li>“精神角落”：缸前一张小凳一盏灯，这是地堡里最不“生存”的角落</li></ul></section>
-    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>1.2 米缸满水近 300kg，嵌墙前一定加固底座，别信“墙挺结实”</li><li>地下换水麻烦，自动补水和溢流一定做，不然每周提水桶会想放弃</li><li>水草灯太亮长绿藻，前两个月别贪亮，慢慢往上调</li></ul></section>
+    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“吧台鱼缸当风景”：小红书上很多人把小缸放在吧台或书桌一角，比手机更耐看</li><li>“水陆缸/雨林缸”热潮：缸上半截养苔藓和小蕨，木屋吧台边的湿度反而是加分项</li><li>“精神角落”：缸前一张高脚凳一盏灯，这是木屋里最不“生存”的角落</li></ul></section>
+    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>80 公分缸满水也有 160kg 上下，吧台矮柜的台面和柜体先加固，别信“台面挺结实”</li><li>手提水桶换水麻烦，自动补水和溢流一定做，不然每周提水桶会想放弃</li><li>水草灯太亮长绿藻，前两个月别贪亮，慢慢往上调</li></ul></section>
   </div>
 
-  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥5,000～9,000（缸、灯、过滤、造景、鱼虾）；年度电费和耗材 ¥500 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥5,000～9,000（缸、灯、过滤、造景、鱼虾）；年度电费和耗材 ¥400 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
     <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>

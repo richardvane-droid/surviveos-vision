@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -145,13 +146,15 @@
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0211</text>
 </svg>
 
-    <figcaption><span class="hand">速写 · 地下墙面一点透视，一块竖向大屏显示等距小房子和曲线，两侧小屏，屏下一排实体开关，小人端杯子看</span></figcaption>
+    <figcaption><span class="hand">速写 · 地堡储藏室隔墙一点透视，一块竖向大屏显示等距小房子和曲线，两侧小屏，屏下一排实体开关，小人端杯子看</span></figcaption>
   </figure>
 
-  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">楼梯下来正对的那面墙，是一块 65 寸的竖屏加两块 27 寸小屏。中间是整栋房子的等距地图：木屋的柴火炉在闪红点，草地的滴灌刚开了 3 分钟，雨水罐 1,380L，鱼缸 25.3℃，地堡湿度 54%。左屏滚着一天的光照曲线，右屏是过去 7 天的用电和用水。你端着杯子站在屏幕前看了一分钟，什么都没动——它自己就在运转。屏幕角落有一行小字：“今天所有模块正常。”你有一种奇怪的踏实感，像看着一艘船的仪表盘，而这艘船是你自己造的。</p></section>
+  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>地堡东侧储藏室的西隔墙（≈2.45m 长）上，面朝中央地毯和沙发：65 寸竖屏居中，两块 27 寸横屏分列，屏下一排实体开关；从东南门进来右手就是它，小主机和 UPS 藏在隔墙背后的储藏室里。（0008 未定位，设想落位）</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
+
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">东南角进门右手、储藏室隔墙那面墙，是一块 65 寸的竖屏加两块 27 寸小屏。中间是整栋房子的等距地图：木屋的柴火炉在闪红点，草地的滴灌刚开了 3 分钟，雨水罐 1,380L，鱼缸 25.3℃，地堡湿度 54%。左屏滚着一天的光照曲线，右屏是过去 7 天的用电和用水。你端着杯子站在屏幕前看了一分钟，什么都没动——它自己就在运转。屏幕角落有一行小字：“今天所有模块正常。”你有一种奇怪的踏实感，像看着一艘船的仪表盘，而这艘船是你自己造的。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>楼梯正对墙装 65 寸竖屏 + 两块 27 寸横屏，全部用 HomeAssistant 仪表盘驱动</span></li><li><span class="box"></span><span>中屏做整栋房子的等距地图，每个模块一个动态图标，状态异常就变色闪</span></li><li><span class="box"></span><span>左屏：光照 / 温湿度曲线（0201、0203、0306）；右屏：水电（0304、0603、0602）</span></li><li><span class="box"></span><span>屏幕下方一排实体开关：模拟阳光四场景、观影模式、全屋关灯，按下去有咔哒声</span></li><li><span class="box"></span><span>小主机（N100）跑 HA + ESPHome + 数字孪生数据库，UPS 保 30 分钟</span></li><li><span class="box"></span><span>手机端同一份仪表盘，出门也能看，但大屏只在地堡有——这是回家的理由</span></li><li><span class="box"></span><span>每天 22:00 屏幕自动切“夜航模式”，只剩黑底上几个红色数字</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>储藏室隔墙（面朝地毯）装 65 寸竖屏 + 两块 27 寸横屏，全部用 HomeAssistant 仪表盘驱动</span></li><li><span class="box"></span><span>中屏做整栋房子的等距地图，每个模块一个动态图标，状态异常就变色闪</span></li><li><span class="box"></span><span>左屏：光照 / 温湿度曲线（0201、0203、0306）；右屏：水电（0304、0603、0602）</span></li><li><span class="box"></span><span>屏幕下方一排实体开关：模拟阳光四场景、观影模式、全屋关灯，按下去有咔哒声</span></li><li><span class="box"></span><span>小主机（N100）跑 HA + ESPHome + 数字孪生数据库，UPS 保 30 分钟</span></li><li><span class="box"></span><span>手机端同一份仪表盘，出门也能看，但大屏只在地堡有——这是回家的理由</span></li><li><span class="box"></span><span>每天 22:00 屏幕自动切“夜航模式”，只剩黑底上几个红色数字</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
@@ -159,7 +162,7 @@
       <a class="td-item" href="../teardown/0211.html#p1">
         <span class="kind kind-hw">产品模块</span>
         <b>1. 指挥室屏墙总成</b>
-        <span class="td-brief">全屋中枢的硬件是一面屏墙加一台小主机。65 寸竖屏居中，两块 27 寸横屏分列左右，三块屏都用薄型壁挂支…</span>
+        <span class="td-brief">全屋中枢的硬件是储藏室隔墙上的一面屏墙加一台小主机。65 寸竖屏居中，两块 27 寸横屏分列左右，三块屏…</span>
       </a>
       <a class="td-item" href="../teardown/0211.html#p2">
         <span class="kind kind-logic">联动逻辑</span>
@@ -182,7 +185,7 @@
 
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“家的仪表盘”：小红书上晒 HomeAssistant 大屏的帖子流量都很高，等距地图是加分项</li><li>“指挥室 / 舰桥感”：实体开关 + 竖屏，做出一点太空舱氛围</li><li>“数据可视化当装饰”：曲线本身就好看，白天当壁画，晚上当夜灯</li></ul></section>
-    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>屏太多会变“看板疲劳”，先只放真正会看的 10 个数据，其余藏在二级页</li><li>所有模块都接进来后，一个断网就全灰，本地跑 + UPS 是底线</li><li>屏幕在地下 24 小时开，发热要算进 0203 的负荷</li></ul></section>
+    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>屏太多会变“看板疲劳”，先只放真正会看的 10 个数据，其余藏在二级页</li><li>所有模块都接进来后，一个断网就全灰，本地跑 + UPS 是底线</li><li>屏幕在无窗地堡 24 小时开，发热要算进 0203 的负荷</li></ul></section>
   </div>
 
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥6,000～10,000（三块屏、小主机、UPS、实体开关）；年度电费 ¥300 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>

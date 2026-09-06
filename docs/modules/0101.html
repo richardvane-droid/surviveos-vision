@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>0101 PSK 主产品展示 · SurviveOs 设想版</title>
-<meta name="description" content="谁懂啊！在自家木屋里给生存盒开了一个博物馆级的 C 位展台——一进门就是它：一只打开的 PSK 生存盒躺在原木展台上，像一枚被拆开的宝石。">
+<meta name="description" content="谁懂啊！在自家木屋北墙给生存盒开了一个博物馆级的挂墙展台——一抬眼就是它：一只打开的 PSK 生存盒躺在挂墙的原木展台上，像一枚被拆开的宝石。">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" class="on"><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -27,8 +28,8 @@
 <article class="mod">
   <header class="mod-head">
     <p class="kicker">暖村木屋 · 模块 0101 · PSK 主产品展示</p>
-    <h1>谁懂啊！在自家木屋里给生存盒开了一个博物馆级的 C 位展台</h1>
-    <p class="lede">一进门就是它：一只打开的 PSK 生存盒躺在原木展台上，像一枚被拆开的宝石。</p>
+    <h1>谁懂啊！在自家木屋北墙给生存盒开了一个博物馆级的挂墙展台</h1>
+    <p class="lede">一抬眼就是它：一只打开的 PSK 生存盒躺在挂墙的原木展台上，像一枚被拆开的宝石。</p>
     <p class="meta">
       <span class="st st-⬜">⬜ 真实项目待设计</span>
       <span class="tag">#痛屋</span><span class="tag">#精神领地</span><span class="tag">#原木风</span><span class="tag">#PSK</span><span class="tag">#展示间</span>
@@ -48,127 +49,179 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0101-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
   </defs>
   <g filter="url(#m0101-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- ground line + rope ring on floor -->
-    <path d="M14 262 Q120 258 200 260 T388 258" stroke-width="1.2"/>
-    <path d="M90 258 Q220 280 360 254" stroke-width="1.1" stroke-dasharray="6 3"/>
-
-    <!-- backdrop plank (old pine board) behind, left of pedestal -->
-    <path d="M88 96 H142 V248" stroke-width="1.7"/>
-    <path d="M90 98 H140 V246" stroke-width="0.9"/>
-    <path d="M100 110 q6 40 -2 80 M116 104 q-4 50 4 110 M130 120 q3 30 -2 70" stroke-width="0.8"/>
-    <circle cx="115" cy="150" r="10" stroke-width="1.3"/>
-    <path d="M108 150 h14 M115 143 v14" stroke-width="1"/>
-    <path d="M104 130 h22 M104 172 h22" stroke-width="0.8"/>
-
-    <!-- spotlight fixture hanging from ceiling -->
-    <path d="M226 6 V30" stroke-width="1.1"/>
-    <path d="M214 30 H238 V48 H214 Z" stroke-width="1.6"/>
-    <path d="M216 32 H236" stroke-width="0.9"/>
-    <path d="M214 48 H238" stroke-width="1"/>
-    <!-- light cone -->
-    <path d="M216 50 L168 178 M236 50 L296 170" stroke-width="0.8" stroke-dasharray="4 3"/>
-    <path d="M226 54 L228 120 M221 56 L200 130 M231 56 L258 126" stroke-width="0.6" stroke-dasharray="2 4"/>
-
-    <!-- pedestal top surface (tilted) -->
-    <path d="M144 196 L262 196 L304 176 L188 176 Z" stroke-width="1.9"/>
-    <path d="M146 198 L262 198 L302 178" stroke-width="1"/>
-    <!-- pedestal front face -->
-    <path d="M144 196 V254 H262 V196" stroke-width="1.9"/>
-    <path d="M146 198 V252 H260" stroke-width="1"/>
-    <!-- pedestal side face (shadow) -->
-    <path d="M262 196 L304 176 V236 L262 254" stroke-width="1.7"/>
-    <path d="M264 198 L302 179 V234 L264 252 Z" fill="url(#m0101-hatch)" stroke="none"/>
-    <!-- drawer line on front -->
-    <path d="M150 232 H256 M150 236 H256" stroke-width="0.9"/>
-    <path d="M196 234 h14" stroke-width="1.4"/>
-    <!-- wood grain on front -->
-    <path d="M156 206 q30 -3 60 0 q20 2 40 -1 M158 220 q40 4 90 -2" stroke-width="0.7"/>
-
-    <!-- PSK box body on top -->
-    <path d="M178 176 V194 H256 V176" stroke-width="1.8"/>
-    <path d="M180 178 V192 H254" stroke-width="0.9"/>
-    <path d="M256 194 L280 182 V166 L256 176" stroke-width="1.6"/>
-    <path d="M258 194 L280 183 V168 L258 178 Z" fill="url(#m0101-hatch)" stroke="none"/>
-    <!-- box open top face with compartments -->
-    <path d="M178 176 L202 164 H280 L256 176 Z" stroke="none" fill="#fff"/>
-    <path d="M178 176 L202 164 H280 L256 176 Z" stroke-width="1.6"/>
-    <path d="M190 170 L268 170 M184 173 L262 173 M196 167 L274 167" stroke-width="0.7"/>
-    <path d="M214 176 L224 164 M232 176 L242 164 M250 176 L260 164" stroke-width="0.7"/>
-    <!-- small items in slots -->
-    <circle cx="206" cy="171" r="1.6" stroke-width="0.9"/>
-    <path d="M226 168 l6 0 M244 170 l5 -2 M262 168 l4 2" stroke-width="1.1"/>
-    <circle cx="240" cy="173" r="1.4" stroke-width="0.9"/>
-    <!-- lid open ~110 degrees -->
-    <path d="M202 164 L212 104 L292 104 L280 166 Z" fill="#fff" stroke="none"/>
-    <path d="M202 164 L212 104 L292 104 L280 166" stroke-width="1.8"/>
-    <path d="M204 166 L214 106 L290 106" stroke-width="0.9"/>
-    <path d="M206 160 L215 110 L286 110 L276 160 Z" fill="url(#m0101-hatch2)" stroke="none"/>
-    <path d="M210 108 L200 100 M292 104 L296 98" stroke-width="0.8"/>
-
-    <!-- small brass plaque on stand at right of box -->
-    <path d="M292 192 L318 182 L320 176 L294 186 Z" stroke-width="1.3"/>
-    <path d="M297 189 l14 -5 M298 186 l12 -5" stroke-width="0.6"/>
-    <path d="M296 192 v-4 M316 184 v-4" stroke-width="0.9"/>
-
-    <!-- seven-inch side screen on front face -->
-    <path d="M160 204 H200 V226 H160 Z" stroke-width="1.3"/>
-    <path d="M162 206 H198 V224 H162 Z" fill="url(#m0101-hatch)" stroke="none"/>
-
-    <!-- visitor on the left reaching toward the box -->
-    <circle cx="56" cy="150" r="8" stroke-width="1.5"/>
-    <path d="M56 158 V208 M56 170 L80 186 L98 180 M56 172 L38 196 M56 208 L46 256 M56 208 L70 256" stroke-width="1.5"/>
-    <path d="M46 256 h-8 M70 256 h8" stroke-width="1.1"/>
-
-    <!-- tiny rope ring posts -->
-    <path d="M92 258 v-10 M358 254 v-10" stroke-width="1.1"/>
-    <path d="M330 264 q14 -4 30 0" stroke-width="0.8"/>
+    <path d="M12 272 Q200 269 388 272" stroke-width="1.2"/>
+    <path d="M14 20 H386" stroke-width="0.45"/>
+    <path d="M14 42 H386" stroke-width="0.45"/>
+    <path d="M14 64 H386" stroke-width="0.45"/>
+    <path d="M14 86 H386" stroke-width="0.45"/>
+    <path d="M14 108 H386" stroke-width="0.45"/>
+    <path d="M14 130 H386" stroke-width="0.45"/>
+    <path d="M14 152 H386" stroke-width="0.45"/>
+    <path d="M14 174 H386" stroke-width="0.45"/>
+    <path d="M14 196 H386" stroke-width="0.45"/>
+    <path d="M14 218 H386" stroke-width="0.45"/>
+    <path d="M12.0 134.0 H68.0 V272.0 H12.0 Z" stroke-width="1.6"/>
+    <path d="M8.0 128.0 H71.0 q-2 3 0 6 H8.0 Z" stroke-width="1.8"/>
+    <path d="M16.0 142.0 H62.0 V260.0 H16.0 Z" stroke-width="1.0"/>
+    <path d="M18.0 144.0 H60.0 V258.0 H18.0 Z" fill="url(#m0101-hatchl)" stroke="none"/>
+    <path d="M12.0 32.0 H52.0 V128.0 H12.0 Z" stroke-width="1.5"/>
+    <path d="M14.0 42.0 q12 -3 24 0" stroke-width="0.8"/>
+    <path d="M22.0 112.0 q3 -16 1 -30 M30.0 112.0 q4 -10 2 -24" stroke-width="0.9"/>
+    <path d="M36.0 72.0 q5 -4 10 0 q-5 4 -10 0 M46.0 72.0 l3 -2 v4 z" stroke-width="0.8"/>
+    <path d="M14.0 112.0 H50.0 V118.0 H14.0 Z" fill="url(#m0101-hatch2)" stroke="none"/>
+    <path d="M84.0 8 V112.0 H300.0 V8" stroke-width="1.8"/>
+    <path d="M84.0 40.0 H300.0 M84.0 -32.0 H300.0" stroke-width="1.4"/>
+    <path d="M156.0 8 V112.0 M228.0 8 V112.0" stroke-width="1.4"/>
+    <path d="M90.0 30.0 H150.0" stroke-width="0.9"/>
+    <path d="M94.0 16.0 H118.0 V28.0 H94.0 Z" stroke-width="1.2"/>
+    <path d="M96.0 18.0 H116.0 M96.0 21.0 H116.0" stroke-width="0.6"/>
+    <path d="M94.0 16.0 L92.0 2.0 H116.0 L118.0 16.0" stroke-width="1.1"/>
+    <path d="M93.0 3.0 H115.0 V15.0 H93.0 Z" fill="url(#m0101-hatch2)" stroke="none"/>
+    <path d="M124.0 18.0 H144.0 V28.0 H124.0 Z" stroke-width="1.2"/>
+    <path d="M126.0 20.0 H142.0 M126.0 23.0 H142.0" stroke-width="0.6"/>
+    <path d="M100.0 34.0 h10 v8 h-10 z" stroke-width="0.6"/>
+    <path d="M162.0 30.0 H222.0" stroke-width="0.9"/>
+    <path d="M166.0 16.0 H190.0 V28.0 H166.0 Z" stroke-width="1.2"/>
+    <path d="M168.0 18.0 H188.0 M168.0 21.0 H188.0" stroke-width="0.6"/>
+    <path d="M166.0 16.0 L164.0 2.0 H188.0 L190.0 16.0" stroke-width="1.1"/>
+    <path d="M165.0 3.0 H187.0 V15.0 H165.0 Z" fill="url(#m0101-hatch2)" stroke="none"/>
+    <path d="M196.0 18.0 H216.0 V28.0 H196.0 Z" stroke-width="1.2"/>
+    <path d="M198.0 20.0 H214.0 M198.0 23.0 H214.0" stroke-width="0.6"/>
+    <path d="M172.0 34.0 h10 v8 h-10 z" stroke-width="0.6"/>
+    <path d="M234.0 30.0 H294.0" stroke-width="0.9"/>
+    <path d="M238.0 16.0 H262.0 V28.0 H238.0 Z" stroke-width="1.2"/>
+    <path d="M240.0 18.0 H260.0 M240.0 21.0 H260.0" stroke-width="0.6"/>
+    <path d="M238.0 16.0 L236.0 2.0 H260.0 L262.0 16.0" stroke-width="1.1"/>
+    <path d="M237.0 3.0 H259.0 V15.0 H237.0 Z" fill="url(#m0101-hatch2)" stroke="none"/>
+    <path d="M268.0 18.0 H288.0 V28.0 H268.0 Z" stroke-width="1.2"/>
+    <path d="M270.0 20.0 H286.0 M270.0 23.0 H286.0" stroke-width="0.6"/>
+    <path d="M244.0 34.0 h10 v8 h-10 z" stroke-width="0.6"/>
+    <path d="M90.0 102.0 H150.0" stroke-width="0.9"/>
+    <path d="M94.0 88.0 H118.0 V100.0 H94.0 Z" stroke-width="1.2"/>
+    <path d="M96.0 90.0 H116.0 M96.0 93.0 H116.0" stroke-width="0.6"/>
+    <path d="M94.0 88.0 L92.0 74.0 H116.0 L118.0 88.0" stroke-width="1.1"/>
+    <path d="M93.0 75.0 H115.0 V87.0 H93.0 Z" fill="url(#m0101-hatch2)" stroke="none"/>
+    <path d="M124.0 90.0 H144.0 V100.0 H124.0 Z" stroke-width="1.2"/>
+    <path d="M126.0 92.0 H142.0 M126.0 95.0 H142.0" stroke-width="0.6"/>
+    <path d="M100.0 106.0 h10 v8 h-10 z" stroke-width="0.6"/>
+    <path d="M162.0 102.0 H222.0" stroke-width="0.9"/>
+    <path d="M166.0 88.0 H190.0 V100.0 H166.0 Z" stroke-width="1.2"/>
+    <path d="M168.0 90.0 H188.0 M168.0 93.0 H188.0" stroke-width="0.6"/>
+    <path d="M166.0 88.0 L164.0 74.0 H188.0 L190.0 88.0" stroke-width="1.1"/>
+    <path d="M165.0 75.0 H187.0 V87.0 H165.0 Z" fill="url(#m0101-hatch2)" stroke="none"/>
+    <path d="M196.0 90.0 H216.0 V100.0 H196.0 Z" stroke-width="1.2"/>
+    <path d="M198.0 92.0 H214.0 M198.0 95.0 H214.0" stroke-width="0.6"/>
+    <path d="M172.0 106.0 h10 v8 h-10 z" stroke-width="0.6"/>
+    <path d="M234.0 102.0 H294.0" stroke-width="0.9"/>
+    <path d="M238.0 88.0 H262.0 V100.0 H238.0 Z" stroke-width="1.2"/>
+    <path d="M240.0 90.0 H260.0 M240.0 93.0 H260.0" stroke-width="0.6"/>
+    <path d="M238.0 88.0 L236.0 74.0 H260.0 L262.0 88.0" stroke-width="1.1"/>
+    <path d="M237.0 75.0 H259.0 V87.0 H237.0 Z" fill="url(#m0101-hatch2)" stroke="none"/>
+    <path d="M268.0 90.0 H288.0 V100.0 H268.0 Z" stroke-width="1.2"/>
+    <path d="M270.0 92.0 H286.0 M270.0 95.0 H286.0" stroke-width="0.6"/>
+    <path d="M244.0 106.0 h10 v8 h-10 z" stroke-width="0.6"/>
+    <path d="M178.0 8 V16 H206.0 V8" stroke-width="1.2"/>
+    <path d="M180.0 16 L122.0 120.0 M204.0 16 L262.0 120.0" stroke-width="0.7" stroke-dasharray="3 3"/>
+    <path d="M84.0 112.0 L300.0 112.0 L306.0 130.0 L78.0 130.0 Z" stroke-width="1.9"/>
+    <path d="M85.0 113.5 L299.0 113.5" stroke-width="0.8"/>
+    <path d="M78.0 130.0 V168.0 H306.0 V130.0" stroke-width="1.7"/>
+    <path d="M98.0 138.0 H146.0 V160.0 H98.0 Z" stroke-width="1.1"/>
+    <path d="M102.0 142.0 h40 v14 h-40 z" stroke-width="0.7"/>
+    <path d="M106.0 150.0 l6 -4 l5 3 l6 -5" stroke-width="0.7"/>
+    <path d="M164.0 136.0 H290.0 V162.0 H164.0 Z" stroke-width="1.0"/>
+    <path d="M222.0 148.0 h18" stroke-width="1.6"/>
+    <path d="M166.0 138.0 H288.0 V160.0 H166.0 Z" fill="url(#m0101-hatchl)" stroke="none"/>
+    <path d="M94.0 168.0 L94.0 190.0 L124.0 168.0 M290.0 168.0 L290.0 190.0 L260.0 168.0" stroke-width="1.3"/>
+    <path d="M78.0 162.0 H306.0 V167.0 H78.0 Z" fill="url(#m0101-hatch)" stroke="none"/>
+    <path d="M152.0 106.0 H232.0 V122.0 H152.0 Z" stroke-width="1.6"/>
+    <path d="M154.0 108.0 H230.0 V120.0 H154.0 Z" stroke-width="0.8"/>
+    <path d="M158.0 111.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M158.0 116.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M170.0 111.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M170.0 116.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M182.0 111.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M182.0 116.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M194.0 111.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M194.0 116.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M206.0 111.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M206.0 116.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M218.0 111.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M218.0 116.0 h8 v3 h-8 z" stroke-width="0.6"/>
+    <path d="M202.0 110.0 l4 5 M216.0 117.0 q3 -3 6 0" stroke-width="0.8"/>
+    <path d="M152.0 106.0 L142.0 50.0 L224.0 46.0 L232.0 106.0" stroke-width="1.6"/>
+    <path d="M144.0 54.0 L222.0 50.0" stroke-width="0.8"/>
+    <path d="M146.0 56.0 H220.0 V102.0 H146.0 Z" fill="url(#m0101-hatch2)" stroke="none"/>
+    <path d="M158.0 60.0 h60 M158.0 76.0 h60 M160.0 92.0 h56" stroke-width="0.5"/>
+    <path d="M290.0 110.0 h22 v10 h-22 z" stroke-width="1.0"/>
+    <path d="M293.0 114.0 h16 M293.0 117.0 h10" stroke-width="0.6"/>
+    <path d="M122.0 118.0 l14 -8 l3 3 l-12 7 z" stroke-width="0.9"/>
+    <path d="M316.0 6 V272" stroke-width="1.8"/>
+    <path d="M318.0 8 V272" stroke-width="0.8"/>
+    <path d="M320.0 -24.0 H396 V-16.0 H320.0 Z" stroke-width="1.6"/>
+    <path d="M322.0 -23.0 H394.0 V-17.0 H322.0 Z" fill="url(#m0101-hatch)" stroke="none"/>
+    <path d="M346.0 -16.0 V272 M374.0 -16.0 V272" stroke-width="1.4"/>
+    <path d="M346.0 6.0 H374.0" stroke-width="1.2"/>
+    <path d="M346.0 38.0 H374.0" stroke-width="1.2"/>
+    <path d="M346.0 70.0 H374.0" stroke-width="1.2"/>
+    <path d="M346.0 102.0 H374.0" stroke-width="1.2"/>
+    <path d="M346.0 134.0 H374.0" stroke-width="1.2"/>
+    <path d="M346.0 166.0 H374.0" stroke-width="1.2"/>
+    <path d="M324.0 -4.0 V272 M406.0 -4.0 V272" stroke-width="0.7" stroke-dasharray="4 3"/>
+    <path d="M192.0 4 V14" stroke-width="1.2"/>
+    <path d="M184.0 14 H200.0" stroke-width="1.4"/>
+    <path d="M186.0 16 L150.0 104.0 M198.0 16 L234.0 104.0" stroke-width="0.6" stroke-dasharray="2 3"/>
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0101</text>
 </svg>
 
-    <figcaption><span class="hand">速写 · 原木展台上一只掀盖的生存盒，顶上一盏射灯打下光锥，盒内小物件排列，旁边小铜牌</span></figcaption>
+    <figcaption><span class="hand">速写 · 北墙挂墙的原木展台上一只掀盖的生存盒，上方九宫格作品墙的下沿，射灯打下光锥，左边露出吧台台面</span></figcaption>
   </figure>
 
-  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">推开木屋的门，先闻到松木和机油混在一起的味道。正中间一张胡桃木展台，四条腿是我自己刨的，台面上只放一只 PSK 生存盒，盖子掀开 110 度，里面 27 件小物件一件一件嵌在毛毡卡槽里，火石、鱼钩、铝箔毯、微型指南针，头顶一盏 3000K 的射灯只打在盒子上，其他地方都留在暗处。你走近，脚下的旧木地板咯吱一声，展台旁边的小铜牌被灯照得发亮：PSK No.1，2026。窗外柴火炉在噼啪，你伸手想摸一下那把折叠小刀，我说：随便摸，这是展示间，不是玻璃柜。</p></section>
+  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>在木屋北墙中段偏东、0102 作品展示墙正下方，一块 ≈135×35cm 的挂墙展台，台面高 900 和西侧吧台齐平，离地 200 以上是薄抽屉；左手挨着吧台设备带，右手是梯子床。</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
+
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">推开木屋的门，先闻到松木和机油混在一起的味道。北墙上、九宫格作品墙正下方，一块胡桃木挂墙展台从墙里悬挑出来，两块托架是我自己刨的，台面上只放一只 PSK 生存盒，盖子掀开 110 度，里面 27 件小物件一件一件嵌在毛毡卡槽里，火石、鱼钩、铝箔毯、微型指南针，梁底一盏 3000K 的射灯只打在盒子上，其他地方都留在暗处。你走近，脚下的旧木地板咯吱一声，展台旁边的小铜牌被灯照得发亮：PSK No.1，2026。西南角柴火炉在噼啪，你伸手摸那把折叠小刀，这是自己的展示间，不是玻璃柜，想摸就摸。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>胡桃木独立展台 60×60×95cm，台面倾斜 12 度，前低后高，站着看刚好</span></li><li><span class="box"></span><span>盒子里 27 件物件用 3mm 深灰毛毡激光切卡槽固定，每件旁边刻一个小编号</span></li><li><span class="box"></span><span>顶灯用一盏 3000K 可调角射灯，只照展台，接 HomeAssistant 做人靠近自动亮</span></li><li><span class="box"></span><span>展台侧面嵌一块 7 寸小屏，滚动播放这只盒子的用途和野外实测视频</span></li><li><span class="box"></span><span>台面下方留一层抽屉，放 5 只全新未开封的同款，客人喜欢当场就能带走</span></li><li><span class="box"></span><span>展台背后立一块 1.2m 高的老松木板做背景，烙印 PSK 的 logo 和口号</span></li><li><span class="box"></span><span>地上用旧麻绳围一个小圈，不是拦人，是告诉客人这里是 C 位</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>胡桃木挂墙展台 135×35cm，悬挑固定在北墙、作品墙正下方，台面高 90cm 和吧台齐平，前低后高倾斜 12 度</span></li><li><span class="box"></span><span>盒子里 27 件物件用 3mm 深灰毛毡激光切卡槽固定，每件旁边刻一个小编号</span></li><li><span class="box"></span><span>梁底装一盏 3000K 可调角射灯，只照展台，接 HomeAssistant 做人靠近自动亮</span></li><li><span class="box"></span><span>展台前脸嵌一块 7 寸小屏，滚动播放这只盒子的用途和野外实测视频</span></li><li><span class="box"></span><span>台面下方留一层薄抽屉，放 3 只全新未开封的同款，自己看腻了就换一只上台</span></li><li><span class="box"></span><span>展台背后那段北墙钉一块 1.35m 宽的老松木板做背景，烙印 PSK 的 logo 和口号</span></li><li><span class="box"></span><span>展台前缘刻一道细线，不是拦人，是提醒自己这里是木屋的 C 位</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
     <div class="td-list">
       <a class="td-item" href="../teardown/0101.html#p1">
         <span class="kind kind-hw">产品模块</span>
-        <b>1. 胡桃木倾斜展台总成</b>
-        <span class="td-brief">展台是整间木屋的“祭坛”，只放一只打开的 PSK 生存盒。它由四条手刨胡桃木腿、一层放备用盒的抽屉和一块…</span>
+        <b>1. 胡桃木挂墙展台总成</b>
+        <span class="td-brief">展台是整间木屋的“祭坛”，只放一只打开的 PSK 生存盒。它不落地，而是悬挑在北墙、作品九宫格正下方：两…</span>
       </a>
       <a class="td-item" href="../teardown/0101.html#p2">
         <span class="kind kind-hw">产品模块</span>
         <b>2. 展台射灯与感应灯头</b>
-        <span class="td-brief">一盏只照展台的 3000K 射灯从顶梁垂下，是展示间唯一的主光。它按博物馆布光的做法拆成六层：可旋转的顶…</span>
+        <span class="td-brief">一盏只照展台的 3000K 射灯装在北墙上方那道梁的梁底（2400），是展示间唯一的主光。它按博物馆布光…</span>
       </a>
       <a class="td-item" href="../teardown/0101.html#p3">
         <span class="kind kind-logic">联动逻辑</span>
-        <b>3. 来客感应亮灯</b>
-        <span class="td-brief">解决的问题是：展台的光只在有人看时亮，其余时间留黑，既省电也保留“走近才亮”的仪式感。输入是毫米波传感器…</span>
+        <b>3. 人近感应亮灯</b>
+        <span class="td-brief">解决的问题是：展台的光只在自己站到它面前时亮，其余时间留黑，既省电也保留“走近才亮”的仪式感。输入是毫米…</span>
       </a>
       <a class="td-item" href="../teardown/0101.html#p4">
         <span class="kind kind-logic">联动逻辑</span>
         <b>4. 侧屏轮播调度</b>
-        <span class="td-brief">展台侧面的 7 寸小屏要做到“插电就放，没人管也不会停”。输入是 U 盘或网络共享目录里的视频和图片，输…</span>
+        <span class="td-brief">展台前脸的 7 寸小屏要做到“插电就放，没人管也不会停”。输入是 U 盘或网络共享目录里的视频和图片，输…</span>
       </a>
     </div>
     <p class="td-cta"><a class="btn" href="../teardown/0101.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
   </section>
 
   <div class="two">
-    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>痛屋思路：整个木屋就是我的生存盒痛屋，展台是痛屋的祭坛，一进门就要有仪式感</li><li>小红书博物馆打卡风：单件展品加一束顶光加一张小铜牌，低成本高质感</li><li>动手主义：展台自己刨、自己上蜡，木料的刨痕故意留着，客人一摸就知道是手作</li></ul></section>
-    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>射灯别买冷白光，5000K 一打，生存盒立马变成五金店样品</li><li>展台别做太高，超过 1 米客人看不到盒子内部，只能看到盖子</li><li>毛毡卡槽先用硬纸板试一版再切，我第一版把火石槽切小了 2mm 塞不进去</li></ul></section>
+    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>痛屋思路：整个木屋就是我的生存盒痛屋，北墙这块展台是痛屋的祭坛，一进门就要有仪式感</li><li>小红书博物馆打卡风：单件展品加一束顶光加一张小铜牌，低成本高质感</li><li>动手主义：展台自己刨、自己上蜡，木料的刨痕故意留着，一摸就知道是手作</li></ul></section>
+    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>射灯别买冷白光，5000K 一打，生存盒立马变成五金店样品</li><li>展台别做太深，木屋只有 2 米进深，悬挑超过 40cm 走路就撞胯</li><li>毛毡卡槽先用硬纸板试一版再切，我第一版把火石槽切小了 2mm 塞不进去</li></ul></section>
   </div>
 
-  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,500～3,000（胡桃木料和小屏占大头）；年度电费忽略不计</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,200～2,500（胡桃木料和小屏占大头）；年度电费忽略不计</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
     <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
@@ -208,106 +261,182 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0102-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
   </defs>
   <g filter="url(#m0102-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- floor line -->
-    <path d="M14 256 Q120 252 200 254 T388 252" stroke-width="1.2"/>
-    <!-- pine plank wall: vertical boards -->
-    <path d="M30 34 H370 V254" stroke-width="1.6"/>
-    <path d="M30 34 V254" stroke-width="1.6"/>
-    <path d="M72 36 V252 M114 36 V252 M156 36 V252 M198 36 V252 M240 36 V252 M282 36 V252 M324 36 V252" stroke-width="0.9"/>
-    <path d="M50 60 q3 30 -2 60 M92 140 q-3 40 2 70 M176 50 q4 30 0 60 M260 180 q-3 30 2 50 M346 70 q3 40 -2 90" stroke-width="0.6"/>
-    <path d="M60 220 l3 -3 l3 3 M300 70 l3 -3 l3 3" stroke-width="0.6"/>
-
-    <!-- light strips above each shelf -->
-    <path d="M60 70 H292 M60 130 H292 M60 190 H292" stroke-width="0.7" stroke-dasharray="3 3"/>
-
-    <!-- shelf 1 -->
-    <path d="M56 100 H296" stroke-width="1.9"/>
-    <path d="M56 100 V106 H296 V100" stroke-width="1.2"/>
-    <path d="M57 101 H295" stroke-width="0.8"/>
-    <path d="M70 106 l-6 10 M280 106 l6 10" stroke-width="0.9"/>
-    <!-- boxes shelf 1 (oldest: tin box, then boxes) -->
-    <path d="M66 100 V84 H98 V100" stroke-width="1.5"/>
-    <path d="M66 84 q16 -6 32 0" stroke-width="1.1"/>
-    <path d="M68 86 H96 V98 H68 Z" fill="url(#m0102-hatch)" stroke="none"/>
-    <path d="M112 100 V82 H144 V100" stroke-width="1.5"/>
-    <path d="M114 84 H142 M114 91 H142" stroke-width="0.8"/>
-    <path d="M158 100 V80 H192 V100" stroke-width="1.5"/>
-    <path d="M160 82 H190 V98 H160 Z" fill="url(#m0102-hatch)" stroke="none"/>
-    <path d="M158 88 H192" stroke-width="1"/>
-    <!-- two empty slots with tags only -->
-    <path d="M214 92 h20 M258 92 h20" stroke-width="0.7" stroke-dasharray="2 2"/>
-    <!-- tags shelf 1 -->
-    <path d="M78 108 V114 H88 V122 H72 V114 Z M124 108 V114 H134 V122 H118 V114 Z M170 108 V114 H180 V122 H164 V114 Z M220 108 V114 H230 V122 H214 V114 Z M264 108 V114 H274 V122 H258 V114 Z" stroke-width="0.9"/>
-    <path d="M75 118 h10 M121 118 h10 M167 118 h10 M217 118 h10 M261 118 h10" stroke-width="0.6"/>
-
-    <!-- shelf 2 -->
-    <path d="M56 160 H296" stroke-width="1.9"/>
-    <path d="M56 160 V166 H296 V160" stroke-width="1.2"/>
-    <path d="M57 161 H295" stroke-width="0.8"/>
-    <path d="M70 166 l-6 10 M280 166 l6 10" stroke-width="0.9"/>
-    <path d="M66 160 V142 H100 V160" stroke-width="1.5"/>
-    <path d="M68 144 H98 V158 H68 Z" fill="url(#m0102-hatch)" stroke="none"/>
-    <path d="M66 150 H100" stroke-width="1"/>
-    <path d="M114 160 V140 H146 V160" stroke-width="1.5"/>
-    <path d="M116 142 H144 M116 149 H144 M130 142 V160" stroke-width="0.8"/>
-    <path d="M160 160 V141 H196 V160" stroke-width="1.5"/>
-    <path d="M162 143 H194 V158 H162 Z" fill="url(#m0102-hatch)" stroke="none"/>
-    <path d="M160 150 H196" stroke-width="1"/>
-    <path d="M210 160 V139 H244 V160" stroke-width="1.5"/>
-    <path d="M212 141 H242 M212 148 H242 M228 141 V160" stroke-width="0.8"/>
-    <path d="M256 160 V142 H290 V160" stroke-width="1.5"/>
-    <path d="M258 144 H288 V158 H258 Z" fill="url(#m0102-hatch)" stroke="none"/>
-    <path d="M78 168 V174 H88 V182 H72 V174 Z M126 168 V174 H136 V182 H120 V174 Z M174 168 V174 H184 V182 H168 V174 Z M222 168 V174 H232 V182 H216 V174 Z M270 168 V174 H280 V182 H264 V174 Z" stroke-width="0.9"/>
-    <path d="M75 178 h10 M123 178 h10 M171 178 h10 M219 178 h10 M267 178 h10" stroke-width="0.6"/>
-
-    <!-- shelf 3 -->
-    <path d="M56 220 H296" stroke-width="1.9"/>
-    <path d="M56 220 V226 H296 V220" stroke-width="1.2"/>
-    <path d="M57 221 H295" stroke-width="0.8"/>
-    <path d="M70 226 l-6 10 M280 226 l6 10" stroke-width="0.9"/>
-    <path d="M66 220 V200 H102 V220" stroke-width="1.5"/>
-    <path d="M68 202 H100 M68 209 H100" stroke-width="0.8"/>
-    <path d="M116 220 V202 H150 V220" stroke-width="1.5"/>
-    <path d="M118 204 H148 V218 H118 Z" fill="url(#m0102-hatch)" stroke="none"/>
-    <path d="M116 210 H150" stroke-width="1"/>
-    <path d="M164 220 V200 H200 V220" stroke-width="1.5"/>
-    <path d="M166 202 H198 M166 209 H198 M182 202 V220" stroke-width="0.8"/>
-    <path d="M214 220 V202 H248 V220" stroke-width="1.5"/>
-    <path d="M216 204 H246 V218 H216 Z" fill="url(#m0102-hatch)" stroke="none"/>
-    <path d="M214 211 H248" stroke-width="1"/>
-    <path d="M260 220 V198 H294 V220" stroke-width="1.5"/>
-    <path d="M262 200 H292 M262 207 H292 M262 214 H292" stroke-width="0.8"/>
-    <circle cx="285" cy="209" r="2" stroke-width="0.9"/>
-    <path d="M78 228 V234 H88 V242 H72 V234 Z M128 228 V234 H138 V242 H122 V234 Z M178 228 V234 H188 V242 H172 V234 Z M226 228 V234 H236 V242 H220 V234 Z M272 228 V234 H282 V242 H266 V234 Z" stroke-width="0.9"/>
-    <path d="M75 238 h10 M125 238 h10 M175 238 h10 M223 238 h10 M269 238 h10" stroke-width="0.6"/>
-
-    <!-- old wooden ladder leaning in the corner (drawn over wall) -->
-    <path d="M312 254 L334 46" stroke-width="2"/>
-    <path d="M314 254 L336 48" stroke-width="0.9"/>
-    <path d="M350 254 L372 46" stroke-width="2"/>
-    <path d="M352 254 L374 48" stroke-width="0.9"/>
-    <path d="M317 220 H355 M321 186 H359 M325 152 H363 M329 118 H367 M332 84 H370" stroke-width="1.5"/>
-    <path d="M318 222 H354 M322 188 H358" stroke-width="0.7"/>
-    <!-- box on top rung + on 2nd rung -->
-    <path d="M338 84 V68 H364 V84" stroke-width="1.4"/>
-    <path d="M340 70 H362 V82 H340 Z" fill="url(#m0102-hatch)" stroke="none"/>
-    <path d="M334 118 V104 H360 V118" stroke-width="1.4"/>
-    <path d="M334 111 H360" stroke-width="0.9"/>
-
-    <!-- floor shadow under ladder feet -->
-    <path d="M304 258 q28 -4 56 0" stroke-width="0.9"/>
-    <path d="M36 260 q20 -3 40 0" stroke-width="0.8"/>
+    <path d="M14 75.0 H386" stroke-width="1.8"/>
+    <path d="M14 78.0 H386" stroke-width="0.8"/>
+    <path d="M14 8 H386 V75.0 H14 Z" fill="url(#m0102-hatchl)" stroke="none"/>
+    <path d="M16 89 H384" stroke-width="0.45"/>
+    <path d="M16 109 H384" stroke-width="0.45"/>
+    <path d="M16 129 H384" stroke-width="0.45"/>
+    <path d="M16 149 H384" stroke-width="0.45"/>
+    <path d="M16 169 H384" stroke-width="0.45"/>
+    <path d="M16 189 H384" stroke-width="0.45"/>
+    <path d="M16 209 H384" stroke-width="0.45"/>
+    <path d="M16 229 H384" stroke-width="0.45"/>
+    <path d="M16 249 H384" stroke-width="0.45"/>
+    <path d="M16 269 H384" stroke-width="0.45"/>
+    <path d="M16 289 H384" stroke-width="0.45"/>
+    <path d="M4 92.6 Q16 95.6 25.9 90.6" stroke-width="1.0"/>
+    <path d="M25.9 87.6 v6" stroke-width="1.2"/>
+    <path d="M8 94.6 v4 M2 98.6 h13 v20 h-13 z" stroke-width="0.9"/>
+    <path d="M4 126.4 Q16 129.4 25.9 124.4" stroke-width="1.0"/>
+    <path d="M25.9 121.4 v6" stroke-width="1.2"/>
+    <path d="M8 128.4 v4 M2 132.4 h13 v20 h-13 z" stroke-width="0.9"/>
+    <path d="M4 160.2 Q16 163.2 25.9 158.2" stroke-width="1.0"/>
+    <path d="M25.9 155.2 v6" stroke-width="1.2"/>
+    <path d="M8 162.2 v4 M2 166.2 h13 v20 h-13 z" stroke-width="0.9"/>
+    <path d="M37.5 77.5 H221.0 V261.0 H37.5 Z" fill="#fff" stroke-width="1.9"/>
+    <path d="M38.5 78.5 H220.0 V260.0 H38.5 Z" stroke-width="0.8"/>
+    <path d="M57.45454545454545 81.5 V257.0" stroke-width="0.4"/>
+    <path d="M73.4090909090909 81.5 V257.0" stroke-width="0.4"/>
+    <path d="M89.36363636363637 81.5 V257.0" stroke-width="0.4"/>
+    <path d="M105.31818181818181 81.5 V257.0" stroke-width="0.4"/>
+    <path d="M121.27272727272727 81.5 V257.0" stroke-width="0.4"/>
+    <path d="M137.22727272727275 81.5 V257.0" stroke-width="0.4"/>
+    <path d="M153.1818181818182 81.5 V257.0" stroke-width="0.4"/>
+    <path d="M169.13636363636363 81.5 V257.0" stroke-width="0.4"/>
+    <path d="M185.0909090909091 81.5 V257.0" stroke-width="0.4"/>
+    <path d="M201.04545454545453 81.5 V257.0" stroke-width="0.4"/>
+    <path d="M100.0 81.5 V257.0 M41.5 140.0 H217.0" stroke-width="1.5"/>
+    <path d="M102.0 83.5 V255.0 M43.5 142.0 H215.0" stroke-width="0.7"/>
+    <path d="M158.5 81.5 V257.0 M41.5 198.5 H217.0" stroke-width="1.5"/>
+    <path d="M160.5 83.5 V255.0 M43.5 200.5 H215.0" stroke-width="0.7"/>
+    <path d="M45.5 132.0 H96.0 v3 H45.5 Z" stroke-width="1.0"/>
+    <path d="M45.5 133.0 H96.0 V135.0 H45.5 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M49.5 86.5 H92.0" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M49.5 120.0 H71.5 V131.0 H49.5 Z" stroke-width="1.2"/>
+    <path d="M51.5 122.0 H69.5 M51.5 125.0 H69.5" stroke-width="0.6"/>
+    <path d="M49.5 120.0 L47.5 107.0 H69.5 L71.5 120.0" stroke-width="1.1"/>
+    <path d="M48.5 108.0 H68.5 V119.0 H48.5 Z" fill="url(#m0102-hatch2)" stroke="none"/>
+    <path d="M77.5 122.0 H95.5 V131.0 H77.5 Z" stroke-width="1.2"/>
+    <path d="M79.5 124.0 H93.5 M79.5 127.0 H93.5" stroke-width="0.6"/>
+    <path d="M53.5 136.0 h12 v9 h-12 z M56.5 140.0 h6" stroke-width="0.6"/>
+    <path d="M81.5 136.0 h12 v9 h-12 z M84.5 140.0 h6" stroke-width="0.6"/>
+    <path d="M104.0 132.0 H154.5 v3 H104.0 Z" stroke-width="1.0"/>
+    <path d="M104.0 133.0 H154.5 V135.0 H104.0 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M108.0 86.5 H150.5" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M108.0 120.0 H130.0 V131.0 H108.0 Z" stroke-width="1.2"/>
+    <path d="M110.0 122.0 H128.0 M110.0 125.0 H128.0" stroke-width="0.6"/>
+    <path d="M108.0 120.0 L106.0 107.0 H128.0 L130.0 120.0" stroke-width="1.1"/>
+    <path d="M107.0 108.0 H127.0 V119.0 H107.0 Z" fill="url(#m0102-hatch2)" stroke="none"/>
+    <path d="M136.0 122.0 H154.0 V131.0 H136.0 Z" stroke-width="1.2"/>
+    <path d="M138.0 124.0 H152.0 M138.0 127.0 H152.0" stroke-width="0.6"/>
+    <path d="M112.0 136.0 h12 v9 h-12 z M115.0 140.0 h6" stroke-width="0.6"/>
+    <path d="M140.0 136.0 h12 v9 h-12 z M143.0 140.0 h6" stroke-width="0.6"/>
+    <path d="M162.5 132.0 H213.0 v3 H162.5 Z" stroke-width="1.0"/>
+    <path d="M162.5 133.0 H213.0 V135.0 H162.5 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M166.5 86.5 H209.0" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M166.5 120.0 H188.5 V131.0 H166.5 Z" stroke-width="1.2"/>
+    <path d="M168.5 122.0 H186.5 M168.5 125.0 H186.5" stroke-width="0.6"/>
+    <path d="M166.5 120.0 L164.5 107.0 H186.5 L188.5 120.0" stroke-width="1.1"/>
+    <path d="M165.5 108.0 H185.5 V119.0 H165.5 Z" fill="url(#m0102-hatch2)" stroke="none"/>
+    <path d="M194.5 122.0 H212.5 V131.0 H194.5 Z" stroke-width="1.2"/>
+    <path d="M196.5 124.0 H210.5 M196.5 127.0 H210.5" stroke-width="0.6"/>
+    <path d="M170.5 136.0 h12 v9 h-12 z M173.5 140.0 h6" stroke-width="0.6"/>
+    <path d="M198.5 136.0 h12 v9 h-12 z M201.5 140.0 h6" stroke-width="0.6"/>
+    <path d="M45.5 190.5 H96.0 v3 H45.5 Z" stroke-width="1.0"/>
+    <path d="M45.5 191.5 H96.0 V193.5 H45.5 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M49.5 145.0 H92.0" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M49.5 178.5 H71.5 V189.5 H49.5 Z" stroke-width="1.2"/>
+    <path d="M51.5 180.5 H69.5 M51.5 183.5 H69.5" stroke-width="0.6"/>
+    <path d="M49.5 178.5 L47.5 165.5 H69.5 L71.5 178.5" stroke-width="1.1"/>
+    <path d="M48.5 166.5 H68.5 V177.5 H48.5 Z" fill="url(#m0102-hatch2)" stroke="none"/>
+    <path d="M77.5 180.5 H95.5 V189.5 H77.5 Z" stroke-width="1.2"/>
+    <path d="M79.5 182.5 H93.5 M79.5 185.5 H93.5" stroke-width="0.6"/>
+    <path d="M53.5 194.5 h12 v9 h-12 z M56.5 198.5 h6" stroke-width="0.6"/>
+    <path d="M81.5 194.5 h12 v9 h-12 z M84.5 198.5 h6" stroke-width="0.6"/>
+    <path d="M104.0 190.5 H154.5 v3 H104.0 Z" stroke-width="1.0"/>
+    <path d="M104.0 191.5 H154.5 V193.5 H104.0 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M108.0 145.0 H150.5" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M108.0 178.5 H130.0 V189.5 H108.0 Z" stroke-width="1.2"/>
+    <path d="M110.0 180.5 H128.0 M110.0 183.5 H128.0" stroke-width="0.6"/>
+    <path d="M108.0 178.5 L106.0 165.5 H128.0 L130.0 178.5" stroke-width="1.1"/>
+    <path d="M107.0 166.5 H127.0 V177.5 H107.0 Z" fill="url(#m0102-hatch2)" stroke="none"/>
+    <path d="M136.0 180.5 H154.0 V189.5 H136.0 Z" stroke-width="1.2"/>
+    <path d="M138.0 182.5 H152.0 M138.0 185.5 H152.0" stroke-width="0.6"/>
+    <path d="M112.0 194.5 h12 v9 h-12 z M115.0 198.5 h6" stroke-width="0.6"/>
+    <path d="M140.0 194.5 h12 v9 h-12 z M143.0 198.5 h6" stroke-width="0.6"/>
+    <path d="M162.5 190.5 H213.0 v3 H162.5 Z" stroke-width="1.0"/>
+    <path d="M162.5 191.5 H213.0 V193.5 H162.5 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M166.5 145.0 H209.0" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M166.5 178.5 H188.5 V189.5 H166.5 Z" stroke-width="1.2"/>
+    <path d="M168.5 180.5 H186.5 M168.5 183.5 H186.5" stroke-width="0.6"/>
+    <path d="M166.5 178.5 L164.5 165.5 H186.5 L188.5 178.5" stroke-width="1.1"/>
+    <path d="M165.5 166.5 H185.5 V177.5 H165.5 Z" fill="url(#m0102-hatch2)" stroke="none"/>
+    <path d="M194.5 180.5 H212.5 V189.5 H194.5 Z" stroke-width="1.2"/>
+    <path d="M196.5 182.5 H210.5 M196.5 185.5 H210.5" stroke-width="0.6"/>
+    <path d="M170.5 194.5 h12 v9 h-12 z M173.5 198.5 h6" stroke-width="0.6"/>
+    <path d="M198.5 194.5 h12 v9 h-12 z M201.5 198.5 h6" stroke-width="0.6"/>
+    <path d="M45.5 249.0 H96.0 v3 H45.5 Z" stroke-width="1.0"/>
+    <path d="M45.5 250.0 H96.0 V252.0 H45.5 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M49.5 203.5 H92.0" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M49.5 237.0 H71.5 V248.0 H49.5 Z" stroke-width="1.2"/>
+    <path d="M51.5 239.0 H69.5 M51.5 242.0 H69.5" stroke-width="0.6"/>
+    <path d="M49.5 237.0 L47.5 224.0 H69.5 L71.5 237.0" stroke-width="1.1"/>
+    <path d="M48.5 225.0 H68.5 V236.0 H48.5 Z" fill="url(#m0102-hatch2)" stroke="none"/>
+    <path d="M77.5 239.0 H95.5 V248.0 H77.5 Z" stroke-width="1.2"/>
+    <path d="M79.5 241.0 H93.5 M79.5 244.0 H93.5" stroke-width="0.6"/>
+    <path d="M53.5 253.0 h12 v9 h-12 z M56.5 257.0 h6" stroke-width="0.6"/>
+    <path d="M81.5 253.0 h12 v9 h-12 z M84.5 257.0 h6" stroke-width="0.6"/>
+    <path d="M104.0 249.0 H154.5 v3 H104.0 Z" stroke-width="1.0"/>
+    <path d="M104.0 250.0 H154.5 V252.0 H104.0 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M108.0 203.5 H150.5" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M108.0 237.0 H130.0 V248.0 H108.0 Z" stroke-width="1.2"/>
+    <path d="M110.0 239.0 H128.0 M110.0 242.0 H128.0" stroke-width="0.6"/>
+    <path d="M108.0 237.0 L106.0 224.0 H128.0 L130.0 237.0" stroke-width="1.1"/>
+    <path d="M107.0 225.0 H127.0 V236.0 H107.0 Z" fill="url(#m0102-hatch2)" stroke="none"/>
+    <path d="M136.0 239.0 H154.0 V248.0 H136.0 Z" stroke-width="1.2"/>
+    <path d="M138.0 241.0 H152.0 M138.0 244.0 H152.0" stroke-width="0.6"/>
+    <path d="M112.0 253.0 h12 v9 h-12 z M115.0 257.0 h6" stroke-width="0.6"/>
+    <path d="M140.0 253.0 h12 v9 h-12 z M143.0 257.0 h6" stroke-width="0.6"/>
+    <path d="M162.5 249.0 H213.0 v3 H162.5 Z" stroke-width="1.0"/>
+    <path d="M162.5 250.0 H213.0 V252.0 H162.5 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M166.5 203.5 H209.0" stroke-width="0.7" stroke-dasharray="2 2"/>
+    <path d="M172.5 227.0 h28 v16 h-28 z" stroke-width="0.9"/>
+    <path d="M176.5 233.0 h20 M176.5 238.0 h14" stroke-width="0.6"/>
+    <path d="M66.75 82.5 h8 v6 h-8 z" stroke-width="1.0"/>
+    <path d="M67.75 88.5 l-8 14 M73.75 88.5 l8 14" stroke-width="0.6" stroke-dasharray="2 3"/>
+    <path d="M125.25 141.0 h8 v6 h-8 z" stroke-width="1.0"/>
+    <path d="M126.25 147.0 l-8 14 M132.25 147.0 l8 14" stroke-width="0.6" stroke-dasharray="2 3"/>
+    <path d="M66.75 199.5 h8 v6 h-8 z" stroke-width="1.0"/>
+    <path d="M67.75 205.5 l-8 14 M73.75 205.5 l8 14" stroke-width="0.6" stroke-dasharray="2 3"/>
+    <path d="M39.5 264.0 L219.0 266.0 L223.0 284.0 L35.5 284.0 Z" fill="#fff" stroke-width="1.6"/>
+    <path d="M35.5 284.0 V310.0 H223.0 V284.0" stroke-width="1.5"/>
+    <path d="M37.5 288.0 H221.0 V306.0 H37.5 Z" fill="url(#m0102-hatchl)" stroke="none"/>
+    <path d="M109.25 256.0 H149.25 V265.0 H109.25 Z" stroke-width="1.2"/>
+    <path d="M111.25 258.0 H147.25 M111.25 261.0 H147.25" stroke-width="0.6"/>
+    <path d="M109.25 256.0 L107.25 234.0 H147.25 L149.25 256.0" stroke-width="1.1"/>
+    <path d="M108.25 235.0 H146.25 V255.0 H108.25 Z" fill="url(#m0102-hatch2)" stroke="none"/>
+    <path d="M230.0 8 V293.4" stroke-width="1.8"/>
+    <path d="M232.0 10 V293.4" stroke-width="0.8"/>
+    <path d="M232.0 146.5 H388 V156.5 H232.0 Z" fill="#fff" stroke-width="1.7"/>
+    <path d="M234.0 148.5 H386.0 V155.5 H234.0 Z" fill="url(#m0102-hatch)" stroke="none"/>
+    <path d="M236.0 142.5 h40 M236.0 138.5 h56" stroke-width="0.9"/>
+    <path d="M234.0 116.5 H300.0 V138.5" stroke-width="1.2"/>
+    <path d="M236.0 118.5 H298.0 V136.5 H236.0 Z" fill="url(#m0102-hatchl)" stroke="none"/>
+    <path d="M252.0 156.5 V293.4 M280.0 156.5 V293.4" stroke-width="1.5"/>
+    <path d="M252.0 176.5 H280.0" stroke-width="1.2"/>
+    <path d="M252.0 206.5 H280.0" stroke-width="1.2"/>
+    <path d="M252.0 236.5 H280.0" stroke-width="1.2"/>
+    <path d="M252.0 266.5 H280.0" stroke-width="1.2"/>
+    <path d="M257.0 172.5 H275.0 V180.5 H257.0 Z" stroke-width="1.2"/>
+    <path d="M259.0 174.5 H273.0 M259.0 177.5 H273.0" stroke-width="0.6"/>
+    <path d="M238.0 157.0 H334.0 V293.4" stroke-width="0.7" stroke-dasharray="4 3"/>
+    <path d="M332.0 231.0 h5" stroke-width="1.4"/>
+    <path d="M51.5 61.5 l-20 40 M81.5 57.5 l-22 44" stroke-width="0.5"/>
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0102</text>
 </svg>
-</div><div><i>0102</i><b>PSK 作品展示墙</b><p>一整面松木墙，20 只盒子按年份排开，像看我自己的进化史。</p></div></a>
+</div><div><i>0102</i><b>PSK 作品展示墙</b><p>一面 1.35 米见方的松木九宫格，18 只盒子按年份排开，像看我自己的进化史。</p></div></a>
     
       <a class="link-card" href="../modules/0105.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
     <filter id="m0105-rough" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="21" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="m0105-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -317,113 +446,66 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0105-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
   <g filter="url(#m0105-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- floor line -->
-    <path d="M14 262 Q120 258 200 260 T388 258" stroke-width="1.2"/>
-
-    <!-- overhead light bar with cords -->
-    <path d="M150 6 V28 M270 6 V28" stroke-width="1"/>
-    <path d="M104 28 H316 V40 H104 Z" stroke-width="1.7"/>
-    <path d="M106 30 H314" stroke-width="0.9"/>
-    <path d="M106 34 H314 V38 H106 Z" fill="url(#m0105-hatch)" stroke="none"/>
-    <path d="M120 44 l-6 12 M300 44 l6 12 M160 44 l-2 10 M260 44 l2 10" stroke-width="0.7" stroke-dasharray="3 3"/>
-    <!-- little camera hanging from bar -->
-    <path d="M210 40 V54" stroke-width="1"/>
-    <path d="M202 54 H218 V66 H202 Z" stroke-width="1.3"/>
-    <circle cx="210" cy="60" r="3" stroke-width="1"/>
-
-    <!-- tabletop (thick ash slab): back edge, front edge -->
-    <path d="M40 210 H360 L332 174 H70 Z" fill="#fff" stroke="none"/>
-    <path d="M40 210 H360 L332 174 H70 Z" stroke-width="1.9"/>
-    <path d="M42 212 H358 L331 176" stroke-width="1"/>
-    <!-- slab thickness -->
-    <path d="M40 210 V222 H360 V210" stroke-width="1.8"/>
-    <path d="M42 214 H358" stroke-width="0.8"/>
-    <path d="M60 218 q40 -2 80 0 q60 2 120 -1 q40 0 80 1" stroke-width="0.7"/>
-    <!-- wood grain on top -->
-    <path d="M80 200 q60 -4 120 -2 M250 198 q40 -3 80 -1" stroke-width="0.6"/>
-
-    <!-- steel legs -->
-    <path d="M48 222 V256 M56 222 V256 M344 222 V256 M352 222 V256" stroke-width="1.6"/>
-    <path d="M48 256 H56 M344 256 H352" stroke-width="1.2"/>
-    <!-- drawers under table -->
-    <path d="M70 222 V244 H330 V222" stroke-width="1.2"/>
-    <path d="M70 233 H330" stroke-width="0.9"/>
-    <path d="M192 228 h16 M192 239 h16" stroke-width="1.3"/>
-
-    <!-- parts cabinet at back: 3 rows x 9 cells, standing on the back of the tabletop -->
-    <path d="M130 90 H328 V180 H130 Z" fill="#fff" stroke="none"/>
-    <path d="M130 90 H328 V180 H130 Z" stroke-width="1.8"/>
-    <path d="M132 92 H326 V178" stroke-width="0.9"/>
-    <path d="M130 120 H328 M130 150 H328" stroke-width="1.2"/>
-    <path d="M152 90 V180 M174 90 V180 M196 90 V180 M218 90 V180 M240 90 V180 M262 90 V180 M284 90 V180 M306 90 V180" stroke-width="1"/>
-    <!-- labels on cells (little dashes) -->
-    <path d="M136 98 h10 M158 98 h10 M180 98 h10 M202 98 h10 M224 98 h10 M246 98 h10 M268 98 h10 M290 98 h10 M312 98 h10" stroke-width="0.7"/>
-    <path d="M136 128 h10 M158 128 h10 M180 128 h10 M202 128 h10 M224 128 h10 M246 128 h10 M268 128 h10 M290 128 h10 M312 128 h10" stroke-width="0.7"/>
-    <path d="M136 158 h10 M158 158 h10 M180 158 h10 M202 158 h10 M224 158 h10 M246 158 h10 M268 158 h10 M290 158 h10 M312 158 h10" stroke-width="0.7"/>
-    <!-- some cells with tiny contents -->
-    <path d="M136 112 h12 M160 110 l3 3 l3 -3 l3 3 M206 112 h6 M250 112 h6 M292 110 q4 3 8 0" stroke-width="0.8"/>
-    <circle cx="185" cy="111" r="2" stroke-width="0.8"/>
-    <circle cx="229" cy="141" r="2" stroke-width="0.8"/>
-    <circle cx="317" cy="171" r="2" stroke-width="0.8"/>
-    <path d="M138 140 h8 M182 140 h8 M250 142 h8 M294 142 h8 M136 172 h10 M204 172 h8 M270 170 h10" stroke-width="0.8"/>
-
-    <!-- leather mat in center -->
-    <path d="M150 204 H250 L242 184 H158 Z" stroke-width="1.2"/>
-    <path d="M152 202 H248 L241 186" stroke-width="0.6"/>
-    <!-- open PSK box body on mat -->
-    <path d="M176 200 V190 H222 V200 Z" stroke-width="1.5"/>
-    <path d="M176 190 L184 182 H230 L222 190" stroke-width="1.4"/>
-    <path d="M222 200 L230 192 V182" stroke-width="1.3"/>
-    <path d="M224 198 L228 193 V184 Z" fill="url(#m0105-hatch)" stroke="none"/>
-    <path d="M186 186 H226 M182 188 H220 M190 184 H228" stroke-width="0.6"/>
-    <path d="M194 190 v10 M210 190 v10" stroke-width="0.6"/>
-    <!-- tweezers on mat -->
-    <path d="M232 202 L262 188 M234 204 L264 191" stroke-width="1.1"/>
-    <path d="M262 188 L264 191" stroke-width="1.1"/>
-    <!-- small parts scattered -->
-    <circle cx="164" cy="196" r="1.5" stroke-width="0.8"/>
-    <path d="M160 190 l6 -2 M168 200 l4 -1" stroke-width="0.9"/>
-
-    <!-- small drill press at left end -->
-    <path d="M78 208 V198 H112 V208" stroke-width="1.4"/>
-    <path d="M92 198 V150" stroke-width="1.8"/>
-    <path d="M94 198 V152" stroke-width="0.8"/>
-    <path d="M84 150 H120 V164 H84 Z" stroke-width="1.5"/>
-    <path d="M86 152 H118 V162 H86 Z" fill="url(#m0105-hatch)" stroke="none"/>
-    <path d="M110 164 V180 M107 180 H113 M110 180 V188" stroke-width="1.2"/>
-    <path d="M120 156 l10 -6 M120 158 l10 4 M120 154 l8 -10" stroke-width="1.1"/>
-    <path d="M100 188 H122 V196 H100 Z" stroke-width="1.1"/>
-
-    <!-- hand press at right -->
-    <path d="M290 206 V198 H322 V206" stroke-width="1.4"/>
-    <path d="M306 198 V184 M300 184 H312" stroke-width="1.4"/>
-    <path d="M312 188 L336 176" stroke-width="1.6"/>
-    <circle cx="338" cy="175" r="3" stroke-width="1"/>
-
-    <!-- magnetic tool board on wall right of cabinet -->
-    <path d="M338 64 H392 V150 H338 Z" stroke-width="1.5"/>
-    <path d="M340 66 H390" stroke-width="0.8"/>
-    <path d="M348 72 V100 M352 72 V100 M348 100 l2 6 l2 -6" stroke-width="1.1"/>
-    <path d="M366 72 V92 M370 72 V92 M362 92 q6 8 12 0" stroke-width="1"/>
-    <path d="M384 72 V104" stroke-width="1.4"/>
-    <path d="M382 104 h4 v6 h-4 Z" stroke-width="0.9"/>
-    <path d="M350 116 V142 M358 116 V142 M348 142 h12" stroke-width="1"/>
-    <path d="M372 112 l0 30 M370 142 l4 0" stroke-width="1"/>
-    <path d="M380 118 l4 22 M384 118 l-4 22" stroke-width="0.9"/>
-
-    <!-- tall stool front left -->
-    <path d="M18 196 H62" stroke-width="1.6"/>
-    <path d="M18 196 q22 -8 44 0" stroke-width="1.6"/>
-    <path d="M20 198 q20 6 40 0 Z" fill="url(#m0105-hatch)" stroke="none"/>
-    <path d="M24 200 V258 M56 200 V258" stroke-width="1.4"/>
-    <path d="M24 236 H56 M26 248 H54" stroke-width="1"/>
-
-    <!-- floor detail -->
-    <path d="M110 266 q20 -3 40 0 M260 266 q20 -3 40 0" stroke-width="0.8"/>
+<path d="M134 74 H266 V250 H134 Z" stroke-width="1.8"/>
+<path d="M134 74 L60 30 M266 74 L340 30 M134 250 L60 290 M266 250 L340 290 M60 30 V290 M340 30 V290" stroke-width="1.2"/>
+<path d="M136 90 H264" stroke-width="0.4"/>
+<path d="M136 104 H264" stroke-width="0.4"/>
+<path d="M136 118 H264" stroke-width="0.4"/>
+<path d="M136 132 H264" stroke-width="0.4"/>
+<path d="M136 146 H264" stroke-width="0.4"/>
+<path d="M136 160 H264" stroke-width="0.4"/>
+<path d="M136 174 H264" stroke-width="0.4"/>
+<path d="M136 188 H264" stroke-width="0.4"/>
+<path d="M136 202 H264" stroke-width="0.4"/>
+<path d="M136 216 H264" stroke-width="0.4"/>
+<path d="M136 230 H264" stroke-width="0.4"/>
+<path d="M136 244 H264" stroke-width="0.4"/>
+<path d="M140 128 H260 L318 96 H82 Z" stroke-width="1.6"/><path d="M82 96 v-8 h236 v8" stroke-width="1.1"/>
+<path d="M84 90 h232 v5 h-232 Z" fill="url(#m0105-hatch)" stroke="none"/>
+<path d="M140 128 V250 M260 128 V250 M82 96 V282 M318 96 V282" stroke-width="1.3"/>
+<path d="M296 100 V280 M308 100 V280" stroke-width="1"/>
+<path d="M296 120 h12" stroke-width="0.9"/>
+<path d="M296 144 h12" stroke-width="0.9"/>
+<path d="M296 168 h12" stroke-width="0.9"/>
+<path d="M296 192 h12" stroke-width="0.9"/>
+<path d="M296 216 h12" stroke-width="0.9"/>
+<path d="M296 240 h12" stroke-width="0.9"/>
+<path d="M296 264 h12" stroke-width="0.9"/>
+<path d="M154 132 H246" stroke-width="0.8" stroke-dasharray="3 2"/><path d="M174 134 l-8 20 M214 134 l0 20 M226 134 l8 20" stroke-width="0.4" stroke-dasharray="2 2"/>
+<path d="M138 200 H262 L292 184 H108 Z" stroke-width="1.5"/><path d="M108 184 v6 h184 v-6" stroke-width="1"/>
+<path d="M110 186 h180 v3 h-180 Z" fill="url(#m0105-hatch)" stroke="none"/>
+<path d="M112 190 V250 M288 190 V250 M138 200 V250 M262 200 V250" stroke-width="1.1"/>
+<rect x="150" y="150" width="60" height="48" stroke-width="1.2"/>
+<rect x="153" y="153" width="16" height="12" stroke-width="0.5"/>
+<rect x="153" y="168" width="16" height="12" stroke-width="0.5"/>
+<rect x="153" y="183" width="16" height="12" stroke-width="0.5"/>
+<rect x="172" y="153" width="16" height="12" stroke-width="0.5"/>
+<rect x="172" y="168" width="16" height="12" stroke-width="0.5"/>
+<rect x="172" y="183" width="16" height="12" stroke-width="0.5"/>
+<rect x="191" y="153" width="16" height="12" stroke-width="0.5"/>
+<rect x="191" y="168" width="16" height="12" stroke-width="0.5"/>
+<rect x="191" y="183" width="16" height="12" stroke-width="0.5"/>
+<path d="M236 198 v-30 l-20 -14 M214 154 l-8 6 l8 4" stroke-width="1"/><path d="M208 160 l-6 22 M210 160 l6 22" stroke-width="0.4" stroke-dasharray="2 2"/>
+<path d="M224 196 h22 v-6 h-22 Z M234 190 v-8" stroke-width="0.9"/>
+<path d="M98 250 V150 L134 140 V250" stroke-width="1" stroke-dasharray="4 3"/><circle cx="126" cy="200" r="1.5" stroke-width="0.8"/>
+<path d="M230 250 v-30 h24 v30 M230 236 h24" stroke-width="1"/>
+<circle cx="242" cy="188" r="6" stroke-width="1.2"/><path d="M242 194 V222 M242 200 l-16 -4 l-6 -6 M242 200 l14 6 M242 222 l-10 28 M242 222 l12 28" stroke-width="1.2"/>
+<path d="M119 258 H281" stroke-width="0.5"/>
+<path d="M104 266 H296" stroke-width="0.5"/>
+<path d="M90 274 H310" stroke-width="0.5"/>
+<path d="M75 282 H325" stroke-width="0.5"/>
   </g>
-  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0105</text>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0105</text>
+<text x="200" y="84" font-family="'Long Cang','Kaiti SC',cursive" font-size="8.5" fill="#5a5a5a" text-anchor="middle" filter="none">梯子床 · 床板 1850</text>
+<text x="200" y="146" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">床下 0105 写字台 260×70</text>
+<text x="116" y="140" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">暗门→地堡</text>
+<text x="200" y="292" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">木屋东端：床上睡觉，床下做生存盒</text>
 </svg>
 </div><div><i>0105</i><b>PSK 工作台</b><p>一张台子上摆开 27 个小格子，把一只生存盒从零件变成成品只要 40 分钟。</p></div></a>
     

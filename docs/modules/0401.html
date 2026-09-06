@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>0401 过道工具间 · SurviveOs 设想版</title>
-<meta name="description" content="谁懂啊！一条 6 米过道被我改成了两面会发光的工具墙——洞洞板从头铺到尾，每把工具都有自己的影子和名字，伸手就到。">
+<meta name="description" content="谁懂啊！3.5 米见方的小过道被我改成了一面会发光的工具墙——洞洞板从头铺到尾，每把工具都有自己的影子和名字，伸手就到。">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
     <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" class="on"><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
   </nav>
@@ -27,7 +28,7 @@
 <article class="mod">
   <header class="mod-head">
     <p class="kicker">阁楼仓库 · 模块 0401 · 过道工具间</p>
-    <h1>谁懂啊！一条 6 米过道被我改成了两面会发光的工具墙</h1>
+    <h1>谁懂啊！3.5 米见方的小过道被我改成了一面会发光的工具墙</h1>
     <p class="lede">洞洞板从头铺到尾，每把工具都有自己的影子和名字，伸手就到。</p>
     <p class="meta">
       <span class="st st-⬜">⬜ 真实项目待设计</span>
@@ -38,7 +39,7 @@
     <svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
     <filter id="m0401-rough" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="31" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="m0401-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -48,103 +49,61 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0401-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
   <g filter="url(#m0401-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- corridor edges (one-point perspective, VP 200,150) -->
-    <path d="M160 110 L52 2 M240 110 L348 2" stroke-width="1.4"/>
-    <path d="M160 190 L70 280 M240 190 L330 280" stroke-width="1.8"/>
-    <path d="M162 192 L74 280 M238 192 L326 280" stroke-width="0.9"/>
-    <!-- far wall -->
-    <path d="M160 110 H240 V190 H160 Z" stroke-width="1.7"/>
-    <path d="M162 112 H238 V188" stroke-width="0.9"/>
-    <!-- floor transverse lines -->
-    <path d="M130 220 H270 M100 250 H300" stroke-width="0.8"/>
-    <!-- ceiling LED strip with sensor sections -->
-    <path d="M197 110 V4 M203 110 V4" stroke-width="1"/>
-    <path d="M194 92 H206 M193 56 H207 M192 22 H208" stroke-width="0.8"/>
-
-    <!-- door at the end -->
-    <path d="M182 190 V128 H218 V190" stroke-width="1.6"/>
-    <path d="M184 190 V130 H216" stroke-width="0.9"/>
-    <path d="M188 134 H212 V152 H188 Z" stroke-width="1"/>
-    <path d="M189 135 H211 V151 H189 Z" fill="url(#m0401-hatch2)" stroke="none"/>
-    <circle cx="213" cy="165" r="1.6" stroke-width="1"/>
-    <!-- warning lamp over the door -->
-    <path d="M195 124 a5 5 0 0 1 10 0 Z" stroke-width="1.2"/>
-    <path d="M200 116 v-4 M193 118 l-3 -3 M207 118 l3 -3" stroke-width="0.9"/>
-
-    <!-- LEFT pegboard wall -->
-    <path d="M30 48 L150 120 V175 L30 235 Z" stroke-width="1.9"/>
-    <path d="M32 50 L150 122 M32 233 L150 173" stroke-width="1"/>
-    <path d="M30 85 L150 131 M30 123 L150 142 M30 160 L150 153 M30 198 L150 164" stroke-width="0.7"/>
-    <path d="M45 57 V227 M62 67 V219 M80 78 V210 M98 89 V201 M115 99 V192 M132 109 V184" stroke-width="0.7"/>
-    <!-- level along the top -->
-    <path d="M36 54 L145 121 L145 126 L36 63 Z" fill="#fff" stroke-width="1.3"/>
-    <circle cx="90" cy="88" r="2.6" stroke-width="0.9"/>
-    <!-- hammer + its shadow outline -->
-    <path d="M40 70 H62 V80 H40 Z" fill="#fff" stroke-width="1.4"/>
-    <path d="M49 80 H53 V120 H49 Z" fill="#fff" stroke-width="1.2"/>
-    <path d="M38 68 H64 V82 H55 V122 H47 V82 H38 Z" stroke-width="0.7" stroke-dasharray="2 2"/>
-    <!-- hand saw hanging -->
-    <path d="M68 96 h14 v12 h-14 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M72 100 h6" stroke-width="0.8"/>
-    <path d="M70 108 H82 L80 158 L70 150 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M81 116 l2 2 M81 126 l2 2 M80 136 l2 2 M80 146 l2 2" stroke-width="0.8"/>
-    <!-- wrench -->
-    <path d="M90 92 L94 88 H100 L104 92 L100 97 H94 Z" fill="#fff" stroke-width="1.2"/>
-    <path d="M95 97 H99 V135 H95 Z" fill="#fff" stroke-width="1.2"/>
-    <path d="M88 90 L94 86 H100 L106 90 L102 99 V137 H92 V99 Z" stroke-width="0.7" stroke-dasharray="2 2"/>
-    <!-- pliers -->
-    <path d="M110 100 l6 30 M118 100 l-6 30" stroke-width="1.4"/>
-    <path d="M110 100 q-3 -6 2 -8 M118 100 q3 -6 -2 -8 M116 130 q2 5 -2 6 M112 130 q-2 5 2 6" stroke-width="1"/>
-    <!-- screwdrivers -->
-    <path d="M128 132 v18 M134 130 v18 M140 128 v18" stroke-width="1.2"/>
-    <path d="M126 128 h4 v5 h-4 Z M132 126 h4 v5 h-4 Z M138 124 h4 v5 h-4 Z" fill="#fff" stroke-width="1"/>
-    <!-- hooks along the mid rail -->
-    <path d="M60 165 q0 -3 3 -3 M78 160 q0 -3 3 -3 M96 156 q0 -3 3 -3 M114 153 q0 -3 3 -3" stroke-width="0.9"/>
-
-    <!-- RIGHT pegboard (upper) -->
-    <path d="M370 48 L250 120 V150 H370 Z" stroke-width="1.9"/>
-    <path d="M368 50 L252 122" stroke-width="1"/>
-    <path d="M370 80 L250 130 M370 112 L250 140" stroke-width="0.7"/>
-    <path d="M355 57 V150 M338 67 V150 M320 78 V150 M302 89 V150 M285 99 V150 M268 109 V150" stroke-width="0.7"/>
-    <!-- tape measure -->
-    <circle cx="338" cy="92" r="10" fill="#fff" stroke-width="1.5"/>
-    <circle cx="338" cy="92" r="3" stroke-width="0.9"/>
-    <path d="M348 96 h6 v4 h-6" stroke-width="1"/>
-    <!-- F-clamps -->
-    <path d="M300 84 V132 M296 88 H310 M296 124 H310 M310 86 v4 M310 122 v4" fill="#fff" stroke-width="1.3"/>
-    <path d="M314 82 V128 M310 86 H322 M310 120 H322" stroke-width="1.1"/>
-    <!-- extension cord coil -->
-    <circle cx="272" cy="130" r="8" fill="#fff" stroke-width="1.3"/>
-    <circle cx="272" cy="130" r="4" stroke-width="0.8"/>
-    <path d="M280 134 q4 4 2 8" stroke-width="0.8"/>
-    <!-- RIGHT drawer cabinet (lower) -->
-    <path d="M370 158 L250 152 V175 L370 235 Z" fill="#fff" stroke-width="1.8"/>
-    <path d="M368 160 L252 154" stroke-width="0.9"/>
-    <path d="M370 184 L250 160 M370 209 L250 167" stroke-width="1"/>
-    <path d="M262 153 V181 M276 154 V188 M292 154 V196 M310 155 V205 M330 156 V215 M352 157 V226" stroke-width="0.9"/>
-    <!-- drawer labels -->
-    <path d="M338 170 h8 M338 194 h8 M338 218 h8 M318 165 h7 M318 187 h7 M318 208 h7 M298 162 h6 M298 181 h6 M298 199 h6 M280 160 h5 M280 175 h5 M280 190 h5" stroke-width="1.1"/>
-    <!-- shadow under the cabinet -->
-    <path d="M252 176 L370 237 L370 244 L252 180 Z" fill="url(#m0401-hatch)" stroke="none"/>
-
-    <!-- little person walking out with a plank -->
-    <circle cx="200" cy="157" r="4.5" fill="#fff" stroke-width="1.4"/>
-    <path d="M200 161.5 V178 M200 178 L195 193 M200 178 L205 193" stroke-width="1.4"/>
-    <path d="M200 166 L191 170 M200 166 L209 170" stroke-width="1.3"/>
-    <path d="M184 168 H216 V171 H184 Z" fill="#fff" stroke-width="1.2"/>
+<path d="M30 30 L150 96 M370 30 L250 96 M30 262 L150 190 M370 262 L250 190" stroke-width="1.4"/>
+<path d="M150 96 H250 V190 H150 Z" stroke-width="1.2" stroke-dasharray="4 3"/>
+<path d="M150 190 L120 214 L280 214 L250 190 M150 96 L200 148 L250 96" stroke-width="1"/>
+<path d="M150 96 L200 148 L250 96 Z" fill="url(#m0401-hatchl)" stroke="none"/>
+<path d="M175 152 h50 v22 h-50 Z M182 152 v-8 h36 v8 M200 152 v-14" stroke-width="1"/>
+<path d="M60 46 H340" stroke-width="0.5"/>
+<path d="M90 63 H310" stroke-width="0.5"/>
+<path d="M120 80 H280" stroke-width="0.5"/>
+<path d="M54 248 H346" stroke-width="0.6"/>
+<path d="M78 233 H322" stroke-width="0.6"/>
+<path d="M102 219 H298" stroke-width="0.6"/>
+<path d="M126 204 H274" stroke-width="0.6"/>
+<path d="M40 58 L150 108 V184 L40 236 Z" stroke-width="1.3"/>
+<path d="M42 60 V236" stroke-width="0.35"/>
+<path d="M60 68 V227" stroke-width="0.35"/>
+<path d="M78 77 V219" stroke-width="0.35"/>
+<path d="M96 85 V210" stroke-width="0.35"/>
+<path d="M114 93 V201" stroke-width="0.35"/>
+<path d="M132 102 V193" stroke-width="0.35"/>
+<path d="M42 64 L148 110" stroke-width="0.35"/>
+<path d="M42 71 L148 113" stroke-width="0.35"/>
+<path d="M42 78 L148 116" stroke-width="0.35"/>
+<path d="M42 84 L148 119" stroke-width="0.35"/>
+<path d="M42 91 L148 122" stroke-width="0.35"/>
+<path d="M60 110 l0 30 l14 -6 l0 -30 Z M62 112 h12 M90 120 l0 20 l8 -4 l0 -20 Z M110 130 l0 18 l8 -4 l0 -18 Z" stroke-width="1"/>
+<path d="M60 90 l14 -6 M60 170 l14 -6 M90 100 l8 -4 M110 108 l8 -4" stroke-width="0.9"/>
+<path d="M250 190 L370 262 M250 96 L370 30" stroke-width="0.5"/>
+<path d="M300 200 L330 150 L360 200" stroke-width="1.2"/><path d="M330 150 L330 200" stroke-width="0.6"/><path d="M302 199 L330 152 L330 199 Z" fill="url(#m0401-hatch)" stroke="none"/>
+<circle cx="200" cy="195.15" r="5.75" stroke-width="1.2"/><path d="M200 200.9 V221.6 M200 210.1 L189.65 223.9 M200 210.1 L210.35 223.9 M200 221.6 L191.95 240 M200 221.6 L208.05 240" stroke-width="1.2"/>
+<path d="M212 214 l10 -4 M222 210 l6 2" stroke-width="0.9"/>
+<path d="M290 40 V250" stroke-width="0.5" stroke-dasharray="3 3"/><path d="M286 40 h8 M286 250 h8" stroke-width="0.6"/>
   </g>
-  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0401</text>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0401</text>
+<text x="94" y="52" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">北侧工具墙（背后是 0402 低矮带）</text>
+<text x="200" y="92" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">→ 东：0404 木工间，坡顶落到檐口</text>
+<text x="330" y="146" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">南：0303 帐篷</text>
+<text x="300" y="146" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">2060</text>
+<text x="200" y="292" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0401 过道 3.5×3.2 m：整层唯一全程能站直的十字路口</text>
 </svg>
 
-    <figcaption><span class="hand">速写 · 一点透视看过道：左右两面挂满工具的洞洞板墙，尽头一扇门，地面透视线</span></figcaption>
+    <figcaption><span class="hand">速写 · 从阁楼间口看过道：正对面北隔断挂满工具的洞洞板墙，左边楼梯口与抽屉柜，右边开口通木工间，平顶感应灯</span></figcaption>
   </figure>
 
-  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">晚上九点，你抱着一根松木条从木工间出来，过道感应灯一节一节亮起来。左手边整面洞洞板，锤子、水口钳、六角扳手排成一排，每件工具背后都描了一圈黑色轮廓，少了哪一把一眼就看见。右手边是一排透明抽屉柜，标签机打的白底黑字：M4 螺丝、木螺钉 35、扎带 200。你顺手把手上的卷尺挂回它的影子里，“咔”一声磁吸到位。过道尽头是一扇亮着橙色警示灯的喷漆间门，空气里有一点点松木屑的甜味。这条过道不是走廊，是整个仓库区的目录页。</p></section>
+  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>在阁楼层中部，≈3.5×3.2m，11.2㎡ 全部可站立（2060）：西边是楼梯口，北边隔断后是 0402 材料仓库，南边开口通 03 阁楼间，东边开口通 0404 木工间。</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
+
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">晚上九点，你抱着一根松木条从木工间出来，过道的感应灯一下就亮了。正对面那道北隔断整面洞洞板，锤子、水口钳、六角扳手排成一排，每件工具背后都描了一圈黑色轮廓，少了哪一把一眼就看见。楼梯口旁边是一排透明抽屉柜，标签机打的白底黑字：M4 螺丝、木螺钉 35、扎带 200。你顺手把手上的卷尺挂回它的影子里，“咔”一声磁吸到位。东边木工间那头，喷涂柜的橙色排风灯还亮着，空气里有一点点松木屑的甜味。这块 3.5 米见方的过道不是走廊，是整个仓库区的目录页。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>过道两侧各铺 5 张 60×90cm 洞洞板，白色烤漆钢板，承重比木板稳，磁吸挂钩随便贴</span></li><li><span class="box"></span><span>每件工具挂好后用黑色油性笔沿轮廓描一圈“影子”，缺什么一眼看出，归位零思考</span></li><li><span class="box"></span><span>地面 1.2m 高处装一排透明抽屉柜（48 格），标签机打印统一字体，按螺丝规格分格</span></li><li><span class="box"></span><span>顶部 40cm 留给长物件：铝合金导轨挂锯片、水平尺、延长线盘，标签朝下贴</span></li><li><span class="box"></span><span>过道装 3 段人体感应 LED 灯条，色温 4000K，走到哪亮到哪，晚上找工具不摸黑</span></li><li><span class="box"></span><span>尽头装一块小白板 + 磁吸“借出卡”，谁拿走什么工具写一笔，找不着就看板子</span></li><li><span class="box"></span><span>每张洞洞板角落贴一个 NFC 标签，手机碰一下打开 HomeAssistant 里的工具清单</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>北侧隔断整面铺 5 张 60×90cm 洞洞板（3.5 米刚好排满），白色烤漆钢板，承重比木板稳，磁吸挂钩随便贴</span></li><li><span class="box"></span><span>每件工具挂好后用黑色油性笔沿轮廓描一圈“影子”，缺什么一眼看出，归位零思考</span></li><li><span class="box"></span><span>楼梯口旁 1.2m 高处装一排透明抽屉柜（48 格），标签机打印统一字体，按螺丝规格分格</span></li><li><span class="box"></span><span>顶部 40cm 留给长物件：铝合金导轨挂锯片、水平尺、延长线盘，标签朝下贴</span></li><li><span class="box"></span><span>2060 的平顶上装 2 段人体感应 LED 灯条，色温 4000K，上楼就亮，晚上找工具不摸黑</span></li><li><span class="box"></span><span>洞洞板边上装一块小白板 + 磁吸“去向卡”，工具拿去哪个区写一笔，找不着就看板子</span></li><li><span class="box"></span><span>每张洞洞板角落贴一个 NFC 标签，手机碰一下打开 HomeAssistant 里的工具清单</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
@@ -152,7 +111,7 @@
       <a class="td-item" href="../teardown/0401.html#p1">
         <span class="kind kind-hw">产品模块</span>
         <b>1. 钢制洞洞板影子墙</b>
-        <span class="td-brief">过道两侧整面铺 60×90cm 白色烤漆钢板洞洞板，每件工具挂好后在板面留下一圈黑色“影子”轮廓。原理来…</span>
+        <span class="td-brief">过道北侧隔断整面铺 60×90cm 白色烤漆钢板洞洞板，每件工具挂好后在板面留下一圈黑色“影子”轮廓。原…</span>
       </a>
       <a class="td-item" href="../teardown/0401.html#p2">
         <span class="kind kind-hw">产品模块</span>
@@ -166,8 +125,8 @@
       </a>
       <a class="td-item" href="../teardown/0401.html#p4">
         <span class="kind kind-logic">联动逻辑</span>
-        <b>4. 借还归位提醒</b>
-        <span class="td-brief">解决“工具不知道被谁拿去哪了”。每件常借出的工具贴一枚 NFC 标签，离开过道时手机碰一下，HomeAs…</span>
+        <b>4. 取用归位提醒</b>
+        <span class="td-brief">解决“工具不知道被自己带去哪个区了”。每件常带走的工具贴一枚 NFC 标签，离开过道时手机碰一下，Hom…</span>
       </a>
     </div>
     <p class="td-cta"><a class="btn" href="../teardown/0401.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
@@ -175,7 +134,7 @@
 
   <div class="two">
     <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>小红书上爆火的“工具影子墙”（shadow board）：描轮廓那一刻仪式感拉满，归位变成强迫症的快乐</li><li>去家务化动线思路：把最常用的 20 件工具放在离木工间门 2 步内，其他往过道深处排</li><li>工业风黑白配：白色洞洞板 + 黑色挂钩 + 黑字标签，拍照发帖不用调色直接出片</li></ul></section>
-    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>别买 3mm 薄木洞洞板挂重型工具，撑不住电钻，一晚上就弯成波浪</li><li>标签别手写，字迹一乱整面墙就土；一次买够标签带，中途换字体会强迫症发作</li><li>过道宽度留够 90cm，抱着长木料转身要能过，不然每次都撞掉一排扳手</li></ul></section>
+    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>别买 3mm 薄木洞洞板挂重型工具，撑不住电钻，一晚上就弯成波浪</li><li>标签别手写，字迹一乱整面墙就土；一次买够标签带，中途换字体会强迫症发作</li><li>通往木工间的开口留够 90cm，抱着长木料转身要能过，不然每次都撞掉一排扳手</li></ul></section>
   </div>
 
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥2,500～4,500（钢制洞洞板 + 挂钩 + 抽屉柜占大头）；标签带年耗 ¥100 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
@@ -196,7 +155,7 @@
       <a class="gh" href="https://github.com/chicago-tool-library/circulate" target="_blank" rel="noopener">
         <div class="gh-head"><b>chicago-tool-library/circulate</b><span class="stars">★ 110</span></div>
         <p class="gh-desc">芝加哥工具图书馆开源的借还管理系统，Rails 写的，带库存、借出、催还</p>
-        <p class="gh-why">→ 比小白板更进一步的工具借用登记，想让朋友也能借工具时可以自建一套，功能偏重</p>
+        <p class="gh-why">→ 比小白板更进一步的工具借用登记，以后想做借用登记时可以自建一套，功能偏重</p>
       </a>
       <a class="gh" href="https://github.com/stockholmux/pegmixer" target="_blank" rel="noopener">
         <div class="gh-head"><b>stockholmux/pegmixer</b><span class="stars">★ 34</span></div>
@@ -332,12 +291,12 @@
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0404</text>
 </svg>
-</div><div><i>0404</i><b>木工间</b><p>台锯、工作台、法式挂条墙围成一个 U 形，木屑全部被一根管子吃掉。</p></div></a>
+</div><div><i>0404</i><b>木工间</b><p>台锯放北段，工作台居中，法式挂条墙在西侧隔断，木屑全部被一根管子吃掉。</p></div></a>
     
       <a class="link-card" href="../modules/0402.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
     <filter id="m0402-rough" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="33" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="m0402-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -347,103 +306,66 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0402-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
   <g filter="url(#m0402-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- room corner: walls + floor -->
-    <path d="M200 20 V232" stroke-width="1.6"/>
-    <path d="M200 232 L12 276 M200 232 L388 276" stroke-width="1.8"/>
-    <path d="M202 234 L16 278 M202 234 L384 277" stroke-width="0.9"/>
-    <path d="M200 20 L12 64 M200 20 L385 -23" stroke-width="0.9"/>
-    <path d="M40 282 q20 -4 40 0 M320 284 q25 -4 50 -1" stroke-width="0.8"/>
-
-    <!-- small window on the left wall, slanted light -->
-    <path d="M55 62 L105 50 V82 L55 94 Z" stroke-width="1.5"/>
-    <path d="M57 63 L103 52 V81 L57 92 Z" fill="url(#m0402-hatch2)" stroke="none"/>
-    <path d="M80 56 V88 M55 78 L105 66" stroke-width="1"/>
-    <path d="M100 86 L192 214 M88 92 L178 222" stroke-width="0.7"/>
-
-    <!-- lumber rack: plinth -->
-    <path d="M25 261 L170 227 L198 233.5 L198 245.5 L53 279.5 L25 273 Z" fill="#fff" stroke-width="1.5"/>
-    <path d="M25 261 L53 267.5 L198 233.5 M53 267.5 V279.5" stroke-width="1.1"/>
-    <path d="M27 275 L55 281 L200 247 L200 251 L55 285 L27 279 Z" fill="url(#m0402-hatch)" stroke="none"/>
-    <!-- rack top rail + uprights -->
-    <path d="M30 72 L172 39" stroke-width="1.4"/>
-    <path d="M30 72 V260 M80 60.5 V248 M125 50 V237 M172 39 V226" stroke-width="1.2"/>
-    <!-- standing boards, left to right (each with grain + label) -->
-    <path d="M38 258 L50 255 V108 L38 111 Z" fill="#fff" stroke-width="1.5"/>
-    <path d="M42 130 q2 30 -1 60 M46 150 q-2 30 1 55" stroke-width="0.7"/>
-    <path d="M54 254 L64 252 V99 L54 101 Z" fill="#fff" stroke-width="1.5"/>
-    <path d="M58 120 q2 40 -1 80" stroke-width="0.7"/>
-    <path d="M68 251 L82 248 V108 L68 111 Z" fill="#fff" stroke-width="1.5"/>
-    <path d="M72 130 q2 30 -1 55 M77 140 q-2 40 1 70" stroke-width="0.7"/>
-    <path d="M86 247 L95 245 V95 L86 97 Z" fill="#fff" stroke-width="1.5"/>
-    <path d="M90 120 q2 40 -1 80" stroke-width="0.7"/>
-    <path d="M99 244 L111 241 V86 L99 89 Z" fill="#fff" stroke-width="1.5"/>
-    <path d="M103 110 q2 40 -1 80 M107 130 q-2 30 1 60" stroke-width="0.7"/>
-    <path d="M115 240 L126 237.5 V102 L115 105 Z" fill="#fff" stroke-width="1.5"/>
-    <path d="M120 125 q2 40 -1 75" stroke-width="0.7"/>
-    <path d="M130 236 L143 233 V73 L130 76 Z" fill="#fff" stroke-width="1.5"/>
-    <path d="M134 100 q2 40 -1 80 M139 120 q-2 40 1 70" stroke-width="0.7"/>
-    <path d="M147 232 L156 230 V85 L147 87 Z" fill="#fff" stroke-width="1.5"/>
-    <path d="M151 110 q2 40 -1 80" stroke-width="0.7"/>
-    <path d="M160 229 L171 226.5 V77 L160 79.5 Z" fill="#fff" stroke-width="1.5"/>
-    <path d="M165 100 q2 40 -1 80" stroke-width="0.7"/>
-    <!-- labels on boards -->
-    <path d="M40 236 h8 v6 h-8 Z M56 232 h6 v6 h-6 Z M70 228 h10 v6 h-10 Z M88 224 h5 v6 h-5 Z M101 221 h8 v6 h-8 Z M117 217 h7 v6 h-7 Z M132 213 h9 v6 h-9 Z M149 210 h5 v6 h-5 Z M162 207 h7 v6 h-7 Z" stroke-width="0.9"/>
-
-    <!-- hygrometer dial near the corner -->
-    <circle cx="214" cy="122" r="7" stroke-width="1.2"/>
-    <path d="M214 122 l3 -4" stroke-width="0.9"/>
-
-    <!-- heavy-duty shelving on the right wall -->
-    <path d="M250 80 V244 M380 110 V274" stroke-width="1"/>
-    <path d="M222 85 V250 M352 115 V281" stroke-width="1.8"/>
-    <path d="M224 87 V250 M354 117 V281" stroke-width="0.9"/>
-    <!-- shelves (h = 10, 60, 110, 160 above floor) -->
-    <path d="M222 240 L352 270.5 L380 264 L250 233.5 Z M222 240 V244 L352 274.5 V270.5" stroke-width="1.4"/>
-    <path d="M222 190 L352 220.5 L380 214 L250 183.5 Z M222 190 V194 L352 224.5 V220.5" stroke-width="1.4"/>
-    <path d="M222 140 L352 170.5 L380 164 L250 133.5 Z M222 140 V144 L352 174.5 V170.5" stroke-width="1.4"/>
-    <path d="M222 90 L352 120.5 L380 114 L250 83.5 Z M222 90 V94 L352 124.5 V120.5" stroke-width="1.4"/>
-    <!-- bottom shelf: stacked plywood sheets -->
-    <path d="M228 236 L346 263.5 L346 258 L228 230.5 Z M230 229 L346 256 L346 251 L230 224 Z" fill="#fff" stroke-width="1"/>
-    <!-- shelf 2 bins -->
-    <path d="M226 191 L260 199 V169 L226 161 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M226 161 L248 156 L282 164 L260 169" stroke-width="1"/>
-    <path d="M234 175 h16 v7 h-16 Z" stroke-width="0.8"/>
-    <path d="M264 200 L298 208 V178 L264 170 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M264 170 L286 165 L320 173 L298 178" stroke-width="1"/>
-    <path d="M272 184 h16 v7 h-16 Z" stroke-width="0.8"/>
-    <path d="M302 209 L336 217 V187 L302 179 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M302 179 L324 174 L358 182 L336 187" stroke-width="1"/>
-    <path d="M310 193 h16 v7 h-16 Z" stroke-width="0.8"/>
-    <!-- shelf 3 bins -->
-    <path d="M226 141 L260 149 V119 L226 111 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M226 111 L248 106 L282 114 L260 119" stroke-width="1"/>
-    <path d="M234 125 h16 v7 h-16 Z" stroke-width="0.8"/>
-    <path d="M264 150 L298 158 V128 L264 120 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M264 120 L286 115 L320 123 L298 128" stroke-width="1"/>
-    <path d="M272 134 h16 v7 h-16 Z" stroke-width="0.8"/>
-    <path d="M302 159 L336 167 V137 L302 129 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M302 129 L324 124 L358 132 L336 137" stroke-width="1"/>
-    <path d="M310 143 h16 v7 h-16 Z" stroke-width="0.8"/>
-    <!-- top shelf: two boxes with lids -->
-    <path d="M226 91 L266 100.5 V76 L226 66.5 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M226 66.5 L248 61.5 L288 71 L266 76" stroke-width="1"/>
-    <path d="M236 80 h18 v6 h-18 Z" stroke-width="0.8"/>
-    <path d="M272 102 L312 111.5 V87 L272 77.5 Z" fill="#fff" stroke-width="1.3"/>
-    <path d="M272 77.5 L294 72.5 L334 82 L312 87" stroke-width="1"/>
-    <path d="M282 91 h18 v6 h-18 Z" stroke-width="0.8"/>
-    <!-- shadow under lowest shelf -->
-    <path d="M224 246 L352 276 L352 282 L224 252 Z" fill="url(#m0402-hatch)" stroke="none"/>
-
-    <!-- person pulling a board -->
-    <circle cx="184" cy="222" r="5" fill="#fff" stroke-width="1.4"/>
-    <path d="M184 227 V250 M184 250 L178 270 M184 250 L190 270" stroke-width="1.4"/>
-    <path d="M184 234 L170 226 M184 236 L194 246" stroke-width="1.3"/>
+<path d="M20 240 H360" stroke-width="1.8"/>
+<path d="M360 240 L175.20000000000002 55.20000000000002" stroke-width="1.8"/>
+<path d="M244.64 124.64 V240" stroke-width="0.7" stroke-dasharray="4 3"/>
+<path d="M175.20000000000002 240 V63.20000000000002" stroke-width="0.6" stroke-dasharray="4 3"/>
+<path d="M344 224 l-8 0" stroke-width="0.5"/>
+<path d="M329 209 l-8 0" stroke-width="0.5"/>
+<path d="M313 193 l-8 0" stroke-width="0.5"/>
+<path d="M297 177 l-8 0" stroke-width="0.5"/>
+<path d="M282 162 l-8 0" stroke-width="0.5"/>
+<path d="M266 146 l-8 0" stroke-width="0.5"/>
+<path d="M250 130 l-8 0" stroke-width="0.5"/>
+<path d="M235 115 l-8 0" stroke-width="0.5"/>
+<path d="M219 99 l-8 0" stroke-width="0.5"/>
+<path d="M203 83 l-8 0" stroke-width="0.5"/>
+<path d="M188 68 l-8 0" stroke-width="0.5"/>
+<path d="M304 222 H338 M304 222 V240" stroke-width="1.2"/>
+<path d="M304 225 H336 v3 H304 Z" fill="url(#m0402-hatch)" stroke="none"/>
+<path d="M308 218 h24 v4 h-24 Z" stroke-width="0.7"/>
+<path d="M311 213 h18 v4 h-18 Z" stroke-width="0.7"/>
+<path d="M276 191 H304 M276 191 V240" stroke-width="1.2"/>
+<path d="M276 194 H302 v3 H276 Z" fill="url(#m0402-hatch)" stroke="none"/>
+<path d="M280 187 h18 v4 h-18 Z" stroke-width="0.7"/>
+<path d="M283 182 h12 v4 h-12 Z" stroke-width="0.7"/>
+<path d="M278 223 H302" stroke-width="0.6"/>
+<path d="M278 206 H302" stroke-width="0.6"/>
+<path d="M245 160 H276 M245 160 V240" stroke-width="1.2"/>
+<path d="M245 163 H274 v3 H245 Z" fill="url(#m0402-hatch)" stroke="none"/>
+<path d="M249 156 h21 v4 h-21 Z" stroke-width="0.7"/>
+<path d="M252 151 h15 v4 h-15 Z" stroke-width="0.7"/>
+<path d="M247 223 H274" stroke-width="0.6"/>
+<path d="M247 206 H274" stroke-width="0.6"/>
+<path d="M247 190 H274" stroke-width="0.6"/>
+<path d="M247 173 H274" stroke-width="0.6"/>
+<circle cx="353" cy="236" r="3" stroke-width="0.7"/>
+<circle cx="346" cy="233" r="3" stroke-width="0.7"/>
+<circle cx="339" cy="230" r="3" stroke-width="0.7"/>
+<circle cx="206.0" cy="197.1" r="5.5" stroke-width="1.2"/><path d="M206.0 202.6 V222.4 M206.0 211.4 L196.1 224.6 M206.0 211.4 L215.9 224.6 M206.0 222.4 L198.3 240 M206.0 222.4 L213.7 240" stroke-width="1.2"/>
+<path d="M214 156 l14 -6" stroke-width="0.9"/>
+<path d="M164 234 l14 -89.60000000000001 l14 89.60000000000001 M168 234 h22" stroke-width="1.1"/><circle cx="166" cy="238" r="3" stroke-width="0.8"/><circle cx="190" cy="238" r="3" stroke-width="0.8"/>
+<path d="M170 230 l8 -72.8" stroke-width="0.5"/>
+<path d="M173 230 l8 -64.8" stroke-width="0.5"/>
+<path d="M176 230 l8 -56.8" stroke-width="0.5"/>
+<path d="M179 230 l8 -48.8" stroke-width="0.5"/>
+<path d="M175 252 H245 M245 252 H360" stroke-width="0.6"/><path d="M175 248 v8 M245 248 v8 M360 248 v8" stroke-width="0.6"/>
   </g>
-  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0402</text>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0402</text>
+<text x="302.32" y="266" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">低矮带 2.06 m：只放货架</text>
+<text x="209.92" y="266" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">站立带 1.24 m</text>
+<text x="240.64" y="116.39999999999999" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">净高 2060</text>
+<text x="348.8" y="206.4" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">北墙</text>
+<text x="120" y="60" font-family="'Long Cang','Kaiti SC',cursive" font-size="8.5" fill="#5a5a5a" text-anchor="middle" filter="none">离外墙多少米，天花板就多高</text>
+<text x="200" y="292" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0402 材料仓库：北条 7.5×3.3 m 的剖面，货架贴着坡顶阶梯排</text>
 </svg>
-</div><div><i>0402</i><b>材料仓库</b><p>一面竖立木料架、一面标签收纳箱，每根木头都知道自己是哪年买的。</p></div></a>
+</div><div><i>0402</i><b>材料仓库</b><p>斜顶下一排 7 米长的木料货架、一溜标签收纳箱，每根木头都知道自己是哪年买的。</p></div></a>
     
       <a class="link-card" href="../modules/0206.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
