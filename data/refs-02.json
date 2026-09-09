@@ -1,233 +1,402 @@
 [
-  {
-    "id": "0201",
-    "github": [
-      {"name": "basnijholt/adaptive-lighting", "url": "https://github.com/basnijholt/adaptive-lighting", "stars": "3.4k",
-       "desc": "HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度",
-       "why": "直接拿它做晨光 3200K 到正午 5600K 再到黄昏 2700K 的自动曲线，睡前落日渐暗也自带"},
-      {"name": "claytonjn/hass-circadian_lighting", "url": "https://github.com/claytonjn/hass-circadian_lighting", "stars": "887",
-       "desc": "HomeAssistant 昼夜节律灯光组件，模拟一天中自然光的色温变化",
-       "why": "Adaptive Lighting 的前辈，配置更简单，适合只想让影视灯跟着时间变色温的最小方案"},
-      {"name": "isaac879/Pan-Tilt-Mount", "url": "https://github.com/isaac879/Pan-Tilt-Mount", "stars": "484",
-       "desc": "步进电机驱动、3D 打印的 Arduino 云台，可编程关键帧运动",
-       "why": "天花板滑轨上的云台可以参考它的 3D 件和固件，让灯头一边走一边慢慢转向床和沙发"}
-    ],
-    "xhs": [
-      {"keyword": "地下室 假窗户 自然光", "note": "看木窗框加磨砂膜怎么把灯光伪装成从窗户照进来"},
-      {"keyword": "日出闹钟 灯光 卧室", "note": "看渐亮唤醒灯的实际效果和床头摆放位置"},
-      {"keyword": "影视灯 家用 氛围", "note": "看南光等影视灯当家用主光时的布光和支架方案"}
-    ]
-  },
-  {
-    "id": "0202",
-    "github": [
-      {"name": "Aircoookie/WLED", "url": "https://github.com/Aircoookie/WLED", "stars": "18.6k",
-       "desc": "ESP32 上最流行的灯带控制固件，支持 WiFi 控制和 HomeAssistant 集成",
-       "why": "灯箱四周 5cm 天光缝和镜子暖光灯带直接刷它，三档色温场景在 HA 里一键切"},
-      {"name": "patrickcollins12/esphome-fan-controller", "url": "https://github.com/patrickcollins12/esphome-fan-controller", "stars": "704",
-       "desc": "ESP32 加温度探头做 PID 调速风扇的 ESPHome 方案，配教程和接线图",
-       "why": "把温度探头换成湿度探头，就是湿度 70% 自动开、20 分钟后停的排风控制器"},
-      {"name": "basnijholt/adaptive-lighting", "url": "https://github.com/basnijholt/adaptive-lighting", "stars": "3.4k",
-       "desc": "HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度",
-       "why": "和 0201 共用一份时间表，卫生间灯箱早上 5000K、夜起 2200K 不用再单独写自动化"}
-    ],
-    "xhs": [
-      {"keyword": "无窗卫生间 灯光 改造", "note": "看暗卫怎么靠灯箱和镜面把光补足、显得不压抑"},
-      {"keyword": "卫生间 发光天花 软膜", "note": "看软膜天花和亚克力灯箱的做法、出光均匀度和收边"},
-      {"keyword": "酒店感 洗手台 镜前灯", "note": "看两侧镜面暖光灯带的化妆间光线效果和布置"}
-    ]
-  },
-  {
-    "id": "0203",
-    "github": [
-      {"name": "Chreece/ESPHome-Dehumidifier", "url": "https://github.com/Chreece/ESPHome-Dehumidifier", "stars": "64",
-       "desc": "用 ESPHome 接管美的、Inventor、Comfee 系列除湿机的固件方案",
-       "why": "美的方案除湿机直接改成 HA 设备，湿度阈值、排水报警都能在仪表盘上调"},
-      {"name": "airgradienthq/arduino", "url": "https://github.com/airgradienthq/arduino", "stars": "357",
-       "desc": "AirGradient 开源硬件空气质量监测仪固件，测 CO2、PM2.5、温湿度",
-       "why": "地堡只除湿不换气会闷，照它做一台 CO2 探头，新风就有了开关依据"},
-      {"name": "esphome/esphome", "url": "https://github.com/esphome/esphome", "stars": "11.3k",
-       "desc": "用 YAML 配置 ESP32 传感器和控制器并接入 HomeAssistant 的系统",
-       "why": "四个温湿度探头和风管出口传感器全靠它，是这个模块的核心依赖"}
-    ],
-    "xhs": [
-      {"keyword": "地下室 防潮 除湿机", "note": "看除湿机怎么藏进柜子、冷凝水管怎么直排不倒桶"},
-      {"keyword": "地下室 新风 风管 布置", "note": "看天花板明装风管和出风口的走向和隐藏方式"},
-      {"keyword": "温湿度 表盘 复古", "note": "看指针式温湿度计上墙的 workshop 氛围搭配"}
-    ]
-  },
-  {
-    "id": "0204",
-    "github": [
-      {"name": "FreeCAD/FreeCAD", "url": "https://github.com/FreeCAD/FreeCAD", "stars": "32.2k",
-       "desc": "免费开源的参数化 3D 建模软件，带建筑 BIM 工作台",
-       "why": "画木屋剖面、地堡风管走向和 PSK 零件都用它，一套软件从房子画到打印件"},
-      {"name": "shmuelzon/home-assistant-floor-plan", "url": "https://github.com/shmuelzon/home-assistant-floor-plan", "stars": "1.1k",
-       "desc": "Sweet Home 3D 插件，把 3D 户型直接渲染成 HomeAssistant 平面图面板",
-       "why": "在 Sweet Home 3D 里画完全屋，一键导出带灯光状态的 3D 平面图给 0211 大屏用"},
-      {"name": "bambulab/BambuStudio", "url": "https://github.com/bambulab/BambuStudio", "stars": "4.6k",
-       "desc": "拓竹官方开源切片软件，支持 BambuLab 和其他 3D 打印机",
-       "why": "右屏跑的就是它，PSK 内衬和 0210 的斜滑轨导轨都在这里切片"}
-    ],
-    "xhs": [
-      {"keyword": "工业风 书桌 黑色方管", "note": "看实木整板加方管支架的工作台比例和走线收纳"},
-      {"keyword": "三屏 工作台 布置", "note": "看带鱼屏加竖屏的弧形排列和支架方案"},
-      {"keyword": "灵感墙 软木板 图纸", "note": "看麻绳木夹子挂图纸的调查墙布置和分区方式"}
-    ]
-  },
-  {
-    "id": "0205",
-    "github": [
-      {"name": "TheRealFalseReality/aquapi", "url": "https://github.com/TheRealFalseReality/aquapi", "stars": "97",
-       "desc": "基于 ESPHome 和 HomeAssistant 的开源鱼缸监测与自动化控制器",
-       "why": "温度、pH、TDS 三探头的接法和 ESPHome 配置直接照抄，数据天然进 0211 大屏"},
-      {"name": "reef-pi/reef-pi", "url": "https://github.com/reef-pi/reef-pi", "stars": "435",
-       "desc": "基于树莓派的开源水族箱控制器，管灯光、温控、投喂、自动补水",
-       "why": "自动补水、溢流和水草灯日出日落曲线都有现成模块，地下换水麻烦靠它省事"},
-      {"name": "CelliesProjects/aquacontrol32", "url": "https://github.com/CelliesProjects/aquacontrol32", "stars": "68",
-       "desc": "ESP32 五通道鱼缸 LED 控制器，带网页界面和水温传感，2021 年后少更新",
-       "why": "只想做一盏会日出日落的水草灯时，它是最轻量的参考，和 0201 时间表对齐"}
-    ],
-    "xhs": [
-      {"keyword": "嵌墙鱼缸 客厅 沙发对面", "note": "看嵌墙缸的边框做法、检修通道和沙发前视角效果"},
-      {"keyword": "水陆缸 雨林缸 造景", "note": "看沉木苔藓加水下草原的布景层次和灯光"},
-      {"keyword": "草缸 宝莲灯 群游", "note": "看灯鱼在莫斯石间群游的画面和密度参考"}
-    ]
-  },
-  {
-    "id": "0206",
-    "github": [
-      {"name": "sysadminsmedia/homebox", "url": "https://github.com/sysadminsmedia/homebox", "stars": "7.1k",
-       "desc": "面向家庭用户的自托管物品库存系统，支持位置、标签、二维码打印",
-       "why": "每个收纳箱一个二维码、扫码看箱内照片和清单，它就是照这个需求做的"},
-      {"name": "inventree/InvenTree", "url": "https://github.com/inventree/InvenTree", "stars": "7.3k",
-       "desc": "开源库存管理系统，支持零件、BOM、供应商和采购单",
-       "why": "PSK 生存盒的零件建档和一键生成采购单，用它的 BOM 功能正合适"},
-      {"name": "snipe/snipe-it", "url": "https://github.com/snipe/snipe-it", "stars": "14.9k",
-       "desc": "开源资产管理系统，支持借出归还记录、标签打印和到期提醒",
-       "why": "拿走扫码变外借、放回扫码变在库，超 7 天未还推送，这套借还流程它最成熟"}
-    ],
-    "xhs": [
-      {"keyword": "透明收纳箱 标签 全屋", "note": "看统一款透明箱加手写标签的货架整齐效果"},
-      {"keyword": "全屋 等距 手绘地图", "note": "看把自己家画成游戏地图的插画风格和分区表达"},
-      {"keyword": "标签打印机 收纳 二维码", "note": "看标签机打印二维码贴箱子的实际做法和防水处理"}
-    ]
-  },
-  {
-    "id": "0207",
-    "github": [
-      {"name": "xbmc/xbmc", "url": "https://github.com/xbmc/xbmc", "stars": "20.9k",
-       "desc": "Kodi，老牌开源家庭影院和媒体中心软件",
-       "why": "投影仪后面挂个小主机跑它，本地片库、遥控和 HA 观影场景联动都有现成插件"},
-      {"name": "jellyfin/jellyfin", "url": "https://github.com/jellyfin/jellyfin", "stars": "54k",
-       "desc": "免费开源的媒体服务器，管理和串流自己的影视库，无云端",
-       "why": "片库放在 0211 的 N100 小主机里，Kodi 和手机都从它拉片，排片牌数据也能从它读"},
-      {"name": "hyperion-project/hyperion.ng", "url": "https://github.com/hyperion-project/hyperion.ng", "stars": "3.8k",
-       "desc": "开源氛围灯软件，根据画面颜色实时驱动幕布周围的 LED 灯带",
-       "why": "幕布四周加一圈灯带跟着画面变色，地堡全黑环境下沉浸感翻倍"}
-    ],
-    "xhs": [
-      {"keyword": "家庭影院 地台 懒人沙发", "note": "看地台加懒人沙发的两排座位布置和露营帐篷感"},
-      {"keyword": "影音室 吸音软包 深灰", "note": "看软包墙面、哑光黑天花和幕布的整体配色"},
-      {"keyword": "投影 幕布 120寸 小房间", "note": "看小空间里幕布尺寸和观影距离的实际取舍"}
-    ]
-  },
-  {
-    "id": "0208",
-    "github": [
-      {"name": "HEnquist/camilladsp", "url": "https://github.com/HEnquist/camilladsp", "stars": "1k",
-       "desc": "跨平台 IIR 和 FIR 音频处理引擎，做分频、房间校正和均衡",
-       "why": "大箱在小地下室低频会糊，用它做房间校正，比反复挪音箱省力"},
-      {"name": "moode-player/moode", "url": "https://github.com/moode-player/moode", "stars": "1.4k",
-       "desc": "树莓派上的开源 HiFi 播放器系统，支持本地音乐库和 CamillaDSP",
-       "why": "黑胶之外的数字音源就靠它，一块树莓派接胆机功放，还能被 0201 场景联动"},
-      {"name": "pierreaubert/spinorama", "url": "https://github.com/pierreaubert/spinorama", "stars": "164",
-       "desc": "汇总和对比上千款音箱频响测量数据的开源库和网站",
-       "why": "买二手大箱前先查它的 spinorama 数据，避免花几万买到听感糊的型号"}
-    ],
-    "xhs": [
-      {"keyword": "黑胶 唱片角 单人椅", "note": "看唱盘加单人皮椅的听音角摆位和灯光氛围"},
-      {"keyword": "落地音箱 摆位 听音室", "note": "看大箱离墙距离、正三角形摆位和扩散板做法"},
-      {"keyword": "Kallax 唱片架 改造", "note": "看宜家柜子改木门唱片架和分格标签的做法"}
-    ]
-  },
-  {
-    "id": "0209",
-    "github": [
-      {"name": "esprfid/esp-rfid", "url": "https://github.com/esprfid/esp-rfid", "stars": "1.5k",
-       "desc": "ESP8266 上的 RFID 门禁固件，支持 RC522、PN532，带网页管理和日志",
-       "why": "帐篷门帘或宝箱加一把 RFID 小锁，刷卡才开，秘密基地的仪式感就有了"},
-      {"name": "Aircoookie/WLED", "url": "https://github.com/Aircoookie/WLED", "stars": "18.6k",
-       "desc": "ESP32 上最流行的灯带控制固件，支持 WiFi 控制和 HomeAssistant 集成",
-       "why": "帐篷顶那串 USB 供电小暖灯刷它，2200K 暖光、呼吸渐暗都能手机上调"},
-      {"name": "FastLED/FastLED", "url": "https://github.com/FastLED/FastLED", "stars": "7.4k",
-       "desc": "Arduino 上最常用的 LED 灯光动画库，从 ATtiny 到 ESP32 都支持",
-       "why": "想自己写一段烛光闪烁或星空效果时用它，比 WLED 更自由，间接参考"}
-    ],
-    "xhs": [
-      {"keyword": "室内帐篷 秘密基地 大人", "note": "看成年人的室内帐篷角落怎么布置灯串毯子靠垫"},
-      {"keyword": "痛屋 海报墙 布置", "note": "看海报按类分区贴满整面墙的排版和固定方式"},
-      {"keyword": "高架床 床下空间 利用", "note": "看高架床下净空怎么做成独立小空间和采光"}
-    ]
-  },
-  {
-    "id": "0210",
-    "github": [
-      {"name": "grocy/grocy", "url": "https://github.com/grocy/grocy", "stars": "9.4k",
-       "desc": "自托管的家庭食品和物资管理系统，管库存、到期日和采购清单",
-       "why": "罐头、米砖、水桶都建成 SKU，到期前 30 天自动提醒该吃掉了，先进先出它天生支持"},
-      {"name": "Forceu/barcodebuddy", "url": "https://github.com/Forceu/barcodebuddy", "stars": "604",
-       "desc": "Grocy 的条码扫描配套工具，扫一下就入库或消耗",
-       "why": "补货和取罐头时扫条码就完成出入库，不用每次打开网页手动改数量"},
-      {"name": "TomBursch/kitchenowl", "url": "https://github.com/TomBursch/kitchenowl", "stars": "3.7k",
-       "desc": "自托管的采购清单和食谱管理应用，有手机端",
-       "why": "轮换日缺货清单直接生成采购单，去镇上补货时手机上勾一下"}
-    ],
-    "xhs": [
-      {"keyword": "应急储备 食品 货架", "note": "看家庭防灾储备墙的分层摆放和标签日期写法"},
-      {"keyword": "罐头 收纳架 先进先出", "note": "看斜滑轨罐头架的结构和 3D 打印导轨的做法"},
-      {"keyword": "pantry 储物间 整理", "note": "看储藏间货架加手写标签的工业风出片效果"}
-    ]
-  },
-  {
-    "id": "0211",
-    "github": [
-      {"name": "home-assistant/core", "url": "https://github.com/home-assistant/core", "stars": "88k",
-       "desc": "开源家庭自动化平台，本地控制、注重隐私",
-       "why": "全屋中枢就是它，三块屏、手机端和实体开关全靠它的仪表盘驱动，核心依赖"},
-      {"name": "ExperienceLovelace/ha-floorplan", "url": "https://github.com/ExperienceLovelace/ha-floorplan", "stars": "1.6k",
-       "desc": "HomeAssistant 卡片，把设备状态映射到 SVG 平面图上并可点击控制",
-       "why": "中屏那张整栋房子的等距地图就用它做，模块异常变色闪烁靠 SVG 样式规则"},
-      {"name": "piitaya/lovelace-mushroom", "url": "https://github.com/piitaya/lovelace-mushroom", "stars": "5.1k",
-       "desc": "HomeAssistant 最流行的简洁风格仪表盘卡片集",
-       "why": "左右两块小屏的温湿度、水电卡片用它排版，好看又不用写太多 YAML"},
-      {"name": "grafana/grafana", "url": "https://github.com/grafana/grafana", "stars": "76.6k",
-       "desc": "开源监控和可视化平台，擅长时间序列曲线面板",
-       "why": "7 天用电用水和一天光照曲线用它画，白天当壁画晚上当夜灯的那种曲线感"}
-    ],
-    "xhs": [
-      {"keyword": "HomeAssistant 大屏 仪表盘", "note": "看全屋数据大屏上墙的布局和等距地图卡片效果"},
-      {"keyword": "智能家居 中控屏 墙面", "note": "看竖屏嵌墙和实体开关面板的指挥室感做法"},
-      {"keyword": "数据可视化 装饰 屏幕", "note": "看把曲线图当装饰画和夜灯的展示方式"}
-    ]
-  },
-  {
-    "id": "0212",
-    "github": [
-      {"name": "wger-project/wger", "url": "https://github.com/wger-project/wger", "stars": "6.8k",
-       "desc": "自托管的开源健身、营养和体重记录系统，有网页和 App",
-       "why": "周计划和训练记录跑在 0211 的小主机上，本地无云，和大屏一个数据库"},
-      {"name": "oliexdev/openScale", "url": "https://github.com/oliexdev/openScale", "stars": "2.4k",
-       "desc": "开源体重和身体数据追踪 App，支持蓝牙体脂秤",
-       "why": "健身角放一台蓝牙秤，数据不走厂商云，直接同步到手机和 wger"},
-      {"name": "brandonp2412/Flexify", "url": "https://github.com/brandonp2412/Flexify", "stars": "393",
-       "desc": "轻量的开源力量训练记录 App，纯本地存储，记组数重量和进步曲线",
-       "why": "只想记哑铃组数和重量时它最省事，打完卡再回墙上小白板画钩"}
-    ],
-    "xhs": [
-      {"keyword": "家庭健身角 2平米 布置", "note": "看小空间地垫加镜子加哑铃架的标配布局"},
-      {"keyword": "墙上单杠 安装 层高", "note": "看墙装单杠的高度选择和承重固定方式"},
-      {"keyword": "可调哑铃 收纳架 自制", "note": "看方管焊接哑铃架和壶铃架的动手过程"}
-    ]
-  }
+ {
+  "id": "0201",
+  "github": [
+   {
+    "name": "basnijholt/adaptive-lighting",
+    "url": "https://github.com/basnijholt/adaptive-lighting",
+    "stars": "3.4k",
+    "desc": "HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度",
+    "why": "直接拿它做晨光 3200K 到正午 5600K 再到黄昏 2700K 的自动曲线，睡前落日渐暗也自带"
+   },
+   {
+    "name": "claytonjn/hass-circadian_lighting",
+    "url": "https://github.com/claytonjn/hass-circadian_lighting",
+    "stars": "887",
+    "desc": "HomeAssistant 昼夜节律灯光组件，模拟一天中自然光的色温变化",
+    "why": "Adaptive Lighting 的前辈，配置更简单，适合只想让影视灯跟着时间变色温的最小方案"
+   },
+   {
+    "name": "isaac879/Pan-Tilt-Mount",
+    "url": "https://github.com/isaac879/Pan-Tilt-Mount",
+    "stars": "484",
+    "desc": "步进电机驱动、3D 打印的 Arduino 云台，可编程关键帧运动",
+    "why": "天花板滑轨上的云台可以参考它的 3D 件和固件，让灯头一边走一边慢慢转向床和沙发"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "地下室 假窗户 自然光",
+    "note": "看木窗框加磨砂膜怎么把灯光伪装成从窗户照进来"
+   },
+   {
+    "keyword": "日出闹钟 灯光 卧室",
+    "note": "看渐亮唤醒灯的实际效果和床头摆放位置"
+   },
+   {
+    "keyword": "影视灯 家用 氛围",
+    "note": "看南光等影视灯当家用主光时的布光和支架方案"
+   }
+  ]
+ },
+ {
+  "id": "0202",
+  "github": [
+   {
+    "name": "Aircoookie/WLED",
+    "url": "https://github.com/Aircoookie/WLED",
+    "stars": "18.6k",
+    "desc": "ESP32 上最流行的灯带控制固件，支持 WiFi 控制和 HomeAssistant 集成",
+    "why": "灯箱四周 5cm 天光缝和镜子暖光灯带直接刷它，三档色温场景在 HA 里一键切"
+   },
+   {
+    "name": "patrickcollins12/esphome-fan-controller",
+    "url": "https://github.com/patrickcollins12/esphome-fan-controller",
+    "stars": "704",
+    "desc": "ESP32 加温度探头做 PID 调速风扇的 ESPHome 方案，配教程和接线图",
+    "why": "把温度探头换成湿度探头，就是湿度 70% 自动开、20 分钟后停的排风控制器"
+   },
+   {
+    "name": "basnijholt/adaptive-lighting",
+    "url": "https://github.com/basnijholt/adaptive-lighting",
+    "stars": "3.4k",
+    "desc": "HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度",
+    "why": "和 0201 共用一份时间表，卫生间灯箱早上 5000K、夜起 2200K 不用再单独写自动化"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "无窗卫生间 灯光 改造",
+    "note": "看暗卫怎么靠灯箱和镜面把光补足、显得不压抑"
+   },
+   {
+    "keyword": "卫生间 发光天花 软膜",
+    "note": "看软膜天花和亚克力灯箱的做法、出光均匀度和收边"
+   },
+   {
+    "keyword": "酒店感 洗手台 镜前灯",
+    "note": "看两侧镜面暖光灯带的化妆间光线效果和布置"
+   }
+  ]
+ },
+ {
+  "id": "0203",
+  "github": [
+   {
+    "name": "Chreece/ESPHome-Dehumidifier",
+    "url": "https://github.com/Chreece/ESPHome-Dehumidifier",
+    "stars": "64",
+    "desc": "用 ESPHome 接管美的、Inventor、Comfee 系列除湿机的固件方案",
+    "why": "美的方案除湿机直接改成 HA 设备，湿度阈值、排水报警都能在仪表盘上调"
+   },
+   {
+    "name": "airgradienthq/arduino",
+    "url": "https://github.com/airgradienthq/arduino",
+    "stars": "357",
+    "desc": "AirGradient 开源硬件空气质量监测仪固件，测 CO2、PM2.5、温湿度",
+    "why": "地堡只除湿不换气会闷，照它做一台 CO2 探头，新风就有了开关依据"
+   },
+   {
+    "name": "esphome/esphome",
+    "url": "https://github.com/esphome/esphome",
+    "stars": "11.3k",
+    "desc": "用 YAML 配置 ESP32 传感器和控制器并接入 HomeAssistant 的系统",
+    "why": "四个温湿度探头和风管出口传感器全靠它，是这个模块的核心依赖"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "地下室 防潮 除湿机",
+    "note": "看除湿机怎么藏进柜子、冷凝水管怎么直排不倒桶"
+   },
+   {
+    "keyword": "地下室 新风 风管 布置",
+    "note": "看天花板明装风管和出风口的走向和隐藏方式"
+   },
+   {
+    "keyword": "温湿度 表盘 复古",
+    "note": "看指针式温湿度计上墙的 workshop 氛围搭配"
+   }
+  ]
+ },
+ {
+  "id": "0204",
+  "github": [
+   {
+    "name": "FreeCAD/FreeCAD",
+    "url": "https://github.com/FreeCAD/FreeCAD",
+    "stars": "32.2k",
+    "desc": "免费开源的参数化 3D 建模软件，带建筑 BIM 工作台",
+    "why": "画木屋剖面、地堡风管走向和 PSK 零件都用它，一套软件从房子画到打印件"
+   },
+   {
+    "name": "shmuelzon/home-assistant-floor-plan",
+    "url": "https://github.com/shmuelzon/home-assistant-floor-plan",
+    "stars": "1.1k",
+    "desc": "Sweet Home 3D 插件，把 3D 户型直接渲染成 HomeAssistant 平面图面板",
+    "why": "在 Sweet Home 3D 里画完全屋，一键导出带灯光状态的 3D 平面图给 0802 大屏用"
+   },
+   {
+    "name": "bambulab/BambuStudio",
+    "url": "https://github.com/bambulab/BambuStudio",
+    "stars": "4.6k",
+    "desc": "拓竹官方开源切片软件，支持 BambuLab 和其他 3D 打印机",
+    "why": "右屏跑的就是它，PSK 内衬和 0210 的斜滑轨导轨都在这里切片"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "工业风 书桌 黑色方管",
+    "note": "看实木整板加方管支架的工作台比例和走线收纳"
+   },
+   {
+    "keyword": "三屏 工作台 布置",
+    "note": "看带鱼屏加竖屏的弧形排列和支架方案"
+   },
+   {
+    "keyword": "灵感墙 软木板 图纸",
+    "note": "看麻绳木夹子挂图纸的调查墙布置和分区方式"
+   }
+  ]
+ },
+ {
+  "id": "0205",
+  "github": [
+   {
+    "name": "TheRealFalseReality/aquapi",
+    "url": "https://github.com/TheRealFalseReality/aquapi",
+    "stars": "97",
+    "desc": "基于 ESPHome 和 HomeAssistant 的开源鱼缸监测与自动化控制器",
+    "why": "温度、pH、TDS 三探头的接法和 ESPHome 配置直接照抄，数据天然进 0802 大屏"
+   },
+   {
+    "name": "reef-pi/reef-pi",
+    "url": "https://github.com/reef-pi/reef-pi",
+    "stars": "435",
+    "desc": "基于树莓派的开源水族箱控制器，管灯光、温控、投喂、自动补水",
+    "why": "自动补水、溢流和水草灯日出日落曲线都有现成模块，地下换水麻烦靠它省事"
+   },
+   {
+    "name": "CelliesProjects/aquacontrol32",
+    "url": "https://github.com/CelliesProjects/aquacontrol32",
+    "stars": "68",
+    "desc": "ESP32 五通道鱼缸 LED 控制器，带网页界面和水温传感，2021 年后少更新",
+    "why": "只想做一盏会日出日落的水草灯时，它是最轻量的参考，和 0201 时间表对齐"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "嵌墙鱼缸 客厅 沙发对面",
+    "note": "看嵌墙缸的边框做法、检修通道和沙发前视角效果"
+   },
+   {
+    "keyword": "水陆缸 雨林缸 造景",
+    "note": "看沉木苔藓加水下草原的布景层次和灯光"
+   },
+   {
+    "keyword": "草缸 宝莲灯 群游",
+    "note": "看灯鱼在莫斯石间群游的画面和密度参考"
+   }
+  ]
+ },
+ {
+  "id": "0207",
+  "github": [
+   {
+    "name": "xbmc/xbmc",
+    "url": "https://github.com/xbmc/xbmc",
+    "stars": "20.9k",
+    "desc": "Kodi，老牌开源家庭影院和媒体中心软件",
+    "why": "投影仪后面挂个小主机跑它，本地片库、遥控和 HA 观影场景联动都有现成插件"
+   },
+   {
+    "name": "jellyfin/jellyfin",
+    "url": "https://github.com/jellyfin/jellyfin",
+    "stars": "54k",
+    "desc": "免费开源的媒体服务器，管理和串流自己的影视库，无云端",
+    "why": "片库放在 0802 的 N100 小主机里，Kodi 和手机都从它拉片，排片牌数据也能从它读"
+   },
+   {
+    "name": "hyperion-project/hyperion.ng",
+    "url": "https://github.com/hyperion-project/hyperion.ng",
+    "stars": "3.8k",
+    "desc": "开源氛围灯软件，根据画面颜色实时驱动幕布周围的 LED 灯带",
+    "why": "幕布四周加一圈灯带跟着画面变色，地堡全黑环境下沉浸感翻倍"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "家庭影院 地台 懒人沙发",
+    "note": "看地台加懒人沙发的两排座位布置和露营帐篷感"
+   },
+   {
+    "keyword": "影音室 吸音软包 深灰",
+    "note": "看软包墙面、哑光黑天花和幕布的整体配色"
+   },
+   {
+    "keyword": "投影 幕布 120寸 小房间",
+    "note": "看小空间里幕布尺寸和观影距离的实际取舍"
+   }
+  ]
+ },
+ {
+  "id": "0208",
+  "github": [
+   {
+    "name": "HEnquist/camilladsp",
+    "url": "https://github.com/HEnquist/camilladsp",
+    "stars": "1k",
+    "desc": "跨平台 IIR 和 FIR 音频处理引擎，做分频、房间校正和均衡",
+    "why": "大箱在小地下室低频会糊，用它做房间校正，比反复挪音箱省力"
+   },
+   {
+    "name": "moode-player/moode",
+    "url": "https://github.com/moode-player/moode",
+    "stars": "1.4k",
+    "desc": "树莓派上的开源 HiFi 播放器系统，支持本地音乐库和 CamillaDSP",
+    "why": "黑胶之外的数字音源就靠它，一块树莓派接胆机功放，还能被 0201 场景联动"
+   },
+   {
+    "name": "pierreaubert/spinorama",
+    "url": "https://github.com/pierreaubert/spinorama",
+    "stars": "164",
+    "desc": "汇总和对比上千款音箱频响测量数据的开源库和网站",
+    "why": "买二手大箱前先查它的 spinorama 数据，避免花几万买到听感糊的型号"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "黑胶 唱片角 单人椅",
+    "note": "看唱盘加单人皮椅的听音角摆位和灯光氛围"
+   },
+   {
+    "keyword": "落地音箱 摆位 听音室",
+    "note": "看大箱离墙距离、正三角形摆位和扩散板做法"
+   },
+   {
+    "keyword": "Kallax 唱片架 改造",
+    "note": "看宜家柜子改木门唱片架和分格标签的做法"
+   }
+  ]
+ },
+ {
+  "id": "0209",
+  "github": [
+   {
+    "name": "esprfid/esp-rfid",
+    "url": "https://github.com/esprfid/esp-rfid",
+    "stars": "1.5k",
+    "desc": "ESP8266 上的 RFID 门禁固件，支持 RC522、PN532，带网页管理和日志",
+    "why": "帐篷门帘或宝箱加一把 RFID 小锁，刷卡才开，秘密基地的仪式感就有了"
+   },
+   {
+    "name": "Aircoookie/WLED",
+    "url": "https://github.com/Aircoookie/WLED",
+    "stars": "18.6k",
+    "desc": "ESP32 上最流行的灯带控制固件，支持 WiFi 控制和 HomeAssistant 集成",
+    "why": "帐篷顶那串 USB 供电小暖灯刷它，2200K 暖光、呼吸渐暗都能手机上调"
+   },
+   {
+    "name": "FastLED/FastLED",
+    "url": "https://github.com/FastLED/FastLED",
+    "stars": "7.4k",
+    "desc": "Arduino 上最常用的 LED 灯光动画库，从 ATtiny 到 ESP32 都支持",
+    "why": "想自己写一段烛光闪烁或星空效果时用它，比 WLED 更自由，间接参考"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "室内帐篷 秘密基地 大人",
+    "note": "看成年人的室内帐篷角落怎么布置灯串毯子靠垫"
+   },
+   {
+    "keyword": "痛屋 海报墙 布置",
+    "note": "看海报按类分区贴满整面墙的排版和固定方式"
+   },
+   {
+    "keyword": "高架床 床下空间 利用",
+    "note": "看高架床下净空怎么做成独立小空间和采光"
+   }
+  ]
+ },
+ {
+  "id": "0210",
+  "github": [
+   {
+    "name": "grocy/grocy",
+    "url": "https://github.com/grocy/grocy",
+    "stars": "9.4k",
+    "desc": "自托管的家庭食品和物资管理系统，管库存、到期日和采购清单",
+    "why": "罐头、米砖、水桶都建成 SKU，到期前 30 天自动提醒该吃掉了，先进先出它天生支持"
+   },
+   {
+    "name": "Forceu/barcodebuddy",
+    "url": "https://github.com/Forceu/barcodebuddy",
+    "stars": "604",
+    "desc": "Grocy 的条码扫描配套工具，扫一下就入库或消耗",
+    "why": "补货和取罐头时扫条码就完成出入库，不用每次打开网页手动改数量"
+   },
+   {
+    "name": "TomBursch/kitchenowl",
+    "url": "https://github.com/TomBursch/kitchenowl",
+    "stars": "3.7k",
+    "desc": "自托管的采购清单和食谱管理应用，有手机端",
+    "why": "轮换日缺货清单直接生成采购单，去镇上补货时手机上勾一下"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "应急储备 食品 货架",
+    "note": "看家庭防灾储备墙的分层摆放和标签日期写法"
+   },
+   {
+    "keyword": "罐头 收纳架 先进先出",
+    "note": "看斜滑轨罐头架的结构和 3D 打印导轨的做法"
+   },
+   {
+    "keyword": "pantry 储物间 整理",
+    "note": "看储藏间货架加手写标签的工业风出片效果"
+   }
+  ]
+ },
+ {
+  "id": "0212",
+  "github": [
+   {
+    "name": "wger-project/wger",
+    "url": "https://github.com/wger-project/wger",
+    "stars": "6.8k",
+    "desc": "自托管的开源健身、营养和体重记录系统，有网页和 App",
+    "why": "周计划和训练记录跑在 0802 的小主机上，本地无云，和大屏一个数据库"
+   },
+   {
+    "name": "oliexdev/openScale",
+    "url": "https://github.com/oliexdev/openScale",
+    "stars": "2.4k",
+    "desc": "开源体重和身体数据追踪 App，支持蓝牙体脂秤",
+    "why": "健身角放一台蓝牙秤，数据不走厂商云，直接同步到手机和 wger"
+   },
+   {
+    "name": "brandonp2412/Flexify",
+    "url": "https://github.com/brandonp2412/Flexify",
+    "stars": "393",
+    "desc": "轻量的开源力量训练记录 App，纯本地存储，记组数重量和进步曲线",
+    "why": "只想记哑铃组数和重量时它最省事，打完卡再回墙上小白板画钩"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "家庭健身角 2平米 布置",
+    "note": "看小空间地垫加镜子加哑铃架的标配布局"
+   },
+   {
+    "keyword": "墙上单杠 安装 层高",
+    "note": "看墙装单杠的高度选择和承重固定方式"
+   },
+   {
+    "keyword": "可调哑铃 收纳架 自制",
+    "note": "看方管焊接哑铃架和壶铃架的动手过程"
+   }
+  ]
+ }
 ]

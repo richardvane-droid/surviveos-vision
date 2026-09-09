@@ -61,7 +61,7 @@
        "why": "木架子上那两块备用磷酸铁锂配 JK 保护板，一块 ESP32 就把电压温度送进 HA，过热立刻推送"},
       {"name": "tolwi/hassio-ecoflow-cloud", "url": "https://github.com/tolwi/hassio-ecoflow-cloud", "stars": "882",
        "desc": "正浩 EcoFlow 户外储能电源的 Home Assistant 集成，读电量、输入输出功率并控制输出口",
-       "why": "买正浩这类储能电源的话直接装它，每天发电量和剩余电量进 HA，再推到 0211 中枢大屏"},
+       "why": "买正浩这类储能电源的话直接装它，每天发电量和剩余电量进 HA，再推到 0802 中枢大屏"},
       {"name": "fl4p/batmon-ha", "url": "https://github.com/fl4p/batmon-ha", "stars": "489",
        "desc": "HA 加载项，通过蓝牙同时连接 JK、JBD、Daly 等多种 BMS，还能算电量和累计能量",
        "why": "备用电池保护板不是 JK 也没关系，它一个加载项通吃 Daly、JBD，不用额外焊 ESP32"}

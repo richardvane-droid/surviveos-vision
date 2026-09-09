@@ -1,0 +1,136 @@
+[
+ {
+  "id": "0801",
+  "github": [
+   {
+    "name": "sysadminsmedia/homebox",
+    "url": "https://github.com/sysadminsmedia/homebox",
+    "stars": "7.1k",
+    "desc": "面向家庭用户的自托管物品库存系统，支持位置、标签、二维码打印",
+    "why": "每个收纳箱一个二维码、扫码看箱内照片和清单，它就是照这个需求做的"
+   },
+   {
+    "name": "inventree/InvenTree",
+    "url": "https://github.com/inventree/InvenTree",
+    "stars": "7.3k",
+    "desc": "开源库存管理系统，支持零件、BOM、供应商和采购单",
+    "why": "PSK 生存盒的零件建档和一键生成采购单，用它的 BOM 功能正合适"
+   },
+   {
+    "name": "snipe/snipe-it",
+    "url": "https://github.com/snipe/snipe-it",
+    "stars": "14.9k",
+    "desc": "开源资产管理系统，支持借出归还记录、标签打印和到期提醒",
+    "why": "拿走扫码变外借、放回扫码变在库，超 7 天未还推送，这套借还流程它最成熟"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "透明收纳箱 标签 全屋",
+    "note": "看统一款透明箱加手写标签的货架整齐效果"
+   },
+   {
+    "keyword": "全屋 等距 手绘地图",
+    "note": "看把自己家画成游戏地图的插画风格和分区表达"
+   },
+   {
+    "keyword": "标签打印机 收纳 二维码",
+    "note": "看标签机打印二维码贴箱子的实际做法和防水处理"
+   }
+  ]
+ },
+ {
+  "id": "0802",
+  "github": [
+   {
+    "name": "home-assistant/core",
+    "url": "https://github.com/home-assistant/core",
+    "stars": "88k",
+    "desc": "开源家庭自动化平台，本地控制、注重隐私",
+    "why": "全屋中枢就是它，三块屏、手机端和实体开关全靠它的仪表盘驱动，核心依赖"
+   },
+   {
+    "name": "ExperienceLovelace/ha-floorplan",
+    "url": "https://github.com/ExperienceLovelace/ha-floorplan",
+    "stars": "1.6k",
+    "desc": "HomeAssistant 卡片，把设备状态映射到 SVG 平面图上并可点击控制",
+    "why": "中屏那张整栋房子的等距地图就用它做，模块异常变色闪烁靠 SVG 样式规则"
+   },
+   {
+    "name": "piitaya/lovelace-mushroom",
+    "url": "https://github.com/piitaya/lovelace-mushroom",
+    "stars": "5.1k",
+    "desc": "HomeAssistant 最流行的简洁风格仪表盘卡片集",
+    "why": "左右两块小屏的温湿度、水电卡片用它排版，好看又不用写太多 YAML"
+   },
+   {
+    "name": "grafana/grafana",
+    "url": "https://github.com/grafana/grafana",
+    "stars": "76.6k",
+    "desc": "开源监控和可视化平台，擅长时间序列曲线面板",
+    "why": "7 天用电用水和一天光照曲线用它画，白天当壁画晚上当夜灯的那种曲线感"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "HomeAssistant 大屏 仪表盘",
+    "note": "看全屋数据大屏上墙的布局和等距地图卡片效果"
+   },
+   {
+    "keyword": "智能家居 中控屏 墙面",
+    "note": "看竖屏嵌墙和实体开关面板的指挥室感做法"
+   },
+   {
+    "keyword": "数据可视化 装饰 屏幕",
+    "note": "看把曲线图当装饰画和夜灯的展示方式"
+   }
+  ]
+ },
+ {
+  "id": "0803",
+  "github": [
+   {
+    "name": "pollen-robotics/microduck",
+    "url": "https://github.com/pollen-robotics/microduck",
+    "stars": "7.6k",
+    "desc": "Pollen Robotics / Hugging Face 的开源双足小鸭机器人：RK3566 主控、15 个舵机、50Hz 控制环，走路靠 MuJoCo + PPO 训练出的 ONNX 步态策略",
+    "why": "就是市面上那只“AI 电子鸭”的开源本体，机械、电控、步态策略全开源，$399 套件可以直接买或自己打印"
+   },
+   {
+    "name": "pollen-robotics/microduck_rl",
+    "url": "https://github.com/pollen-robotics/microduck_rl",
+    "stars": "1.9k",
+    "desc": "Microduck 的强化学习训练环境（MuJoCo Warp + PPO + 域随机化）",
+    "why": "想让它学会上阁楼那段小坡道和地堡门下的通道，得在这里加环境重新训一遍步态"
+   },
+   {
+    "name": "apirrone/Open_Duck_Mini",
+    "url": "https://github.com/apirrone/Open_Duck_Mini",
+    "stars": "3.9k",
+    "desc": "Microduck 的前身：仿迪士尼 BDX 机器人的迷你双足鸭，约 42cm 高、$400 以内",
+    "why": "更大更便宜的替代路线，社区打印件和舵机选型都有现成清单"
+   },
+   {
+    "name": "78/xiaozhi-esp32",
+    "url": "https://github.com/78/xiaozhi-esp32",
+    "stars": "29.6k",
+    "desc": "小智：ESP32 上的 MCP 语音聊天机器人，接 Qwen / DeepSeek 等大模型，能通过 MCP 控制多终端设备",
+    "why": "鸭子的嘴和耳朵直接用它：本地唤醒 + 大模型对话，MCP 那层正好接 HomeAssistant 去查全屋数据"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "桌面 AI 宠物 机器人",
+    "note": "看真实用户拍的小动作和眼神反馈，哪些细节最“上头”"
+   },
+   {
+    "keyword": "双足机器人 3D 打印 舵机",
+    "note": "看自制双足小机器人的打印外壳和舵机走线"
+   },
+   {
+    "keyword": "电子宠物 充电窝 设计",
+    "note": "看回窝充电的造型，怎么做成家里的一个小摆件"
+   }
+  ]
+ }
+]

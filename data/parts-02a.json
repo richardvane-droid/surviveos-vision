@@ -328,10 +328,10 @@
     "points": [
      "输入：FreeCAD 剖面 / Sweet Home 3D 户型 / 灯具实体表",
      "校验：每盏灯必须匹配到一个 HA entity_id，缺一不导出",
-     "输出：渲染图 + picture-elements YAML，推到 0211 大屏",
+     "输出：渲染图 + picture-elements YAML，推到 0802 大屏",
      "版本：每次导出打日期标签，旧图保留可回滚"
     ],
-    "impl": "Sweet Home 3D 户型经 shmuelzon/home-assistant-floor-plan 导出分灯渲染图和 picture-elements YAML，推到 0211 大屏；打印件由 BambuStudio 切片",
+    "impl": "Sweet Home 3D 户型经 shmuelzon/home-assistant-floor-plan 导出分灯渲染图和 picture-elements YAML，推到 0802 大屏；打印件由 BambuStudio 切片",
     "github": [
      {
       "name": "shmuelzon/home-assistant-floor-plan",

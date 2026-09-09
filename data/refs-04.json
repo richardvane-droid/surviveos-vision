@@ -26,7 +26,7 @@
     "github": [
       {"name": "sysadminsmedia/homebox", "url": "https://github.com/sysadminsmedia/homebox", "stars": "7.1k",
        "desc": "面向家庭用户的自托管物品库存系统，按位置、标签分类，带图片和维护记录",
-       "why": "每个周转箱在里面建一个位置，打印二维码贴箱口，扫码就跳到箱内清单，和 0206 数字孪生打通"},
+       "why": "每个周转箱在里面建一个位置，打印二维码贴箱口，扫码就跳到箱内清单，和 0801 数字孪生打通"},
       {"name": "inventree/InvenTree", "url": "https://github.com/inventree/InvenTree", "stars": "7.3k",
        "desc": "开源零件库存管理系统，Django 后端，支持条码、库位、BOM 和手机 App",
        "why": "黄铜配件、螺丝五金这种按数量管的小零件用它更合适，出入库有条码扫描"},
