@@ -19,7 +19,7 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .top{max-width:var(--w);margin:0 auto;padding:18px 20px 8px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:baseline;justify-content:space-between;border-bottom:1.6px solid var(--line)}
 .wordmark .mark{font-family:"Noto Serif SC",serif;font-weight:900;font-size:1.5rem;letter-spacing:.02em}
 .wordmark .sub{margin-left:10px;font-family:"Long Cang",cursive;font-size:1.15rem;color:var(--red)}
-.areas-nav{display:flex;flex-wrap:wrap;gap:2px 14px;font-size:.92rem}
+.areas-nav{display:flex;flex-wrap:wrap;gap:2px 11px;font-size:.88rem}
 .areas-nav a{padding:2px 2px;border-bottom:2px solid transparent}
 .areas-nav a i{margin-right:3px}
 .areas-nav a.on,.areas-nav a:hover{border-bottom-color:var(--red)}
