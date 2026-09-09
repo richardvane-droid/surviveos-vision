@@ -16,7 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
-    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" class="on"><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" class="on"><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a><a href="../areas/08.html" ><i>08</i>虚拟空间</a>
     <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
@@ -125,7 +125,7 @@
   <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">凌晨四点二十，你在木屋里睡得正香，草地中段东墙下那根一米高的木杆顶上，翻斗雨量计刚刚归零，土壤探针回报根区含水率 21%，比阈值低了 4 个点，雨水罐水位 62%。杆子里那块 ESP32 不到一秒算完：“浇，中段草原 8 分钟，北段疏林 12 分钟。”电磁阀“咔”一声，草根下的滴管开始渗水，整片草地没有一滴水飞起来。早上七点你端着咖啡看手机，HomeAssistant 卡片上一根曲线平稳抬高，底下一行小字：今晨已浇灌，雨水 96L，自来水 0L。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>三传感器：电容式土壤湿度探针埋 15cm 深各区一根，翻斗雨量计装杆顶，雨水罐内超声波水位计</span></li><li><span class="box"></span><span>ESP32 跑 ESPHome，本地判断不依赖云：含水率低于阈值 + 未来 6 小时无雨 + 罐里有水才开阀</span></li><li><span class="box"></span><span>三路 12V 电磁阀装在东墙雨水罐旁，分别控北段疏林/中段草原/南段野花，干管沿长边分段铺，各区阈值不同，芒草 18%、朴树 25%、野花 22%</span></li><li><span class="box"></span><span>浇灌时段锁死在凌晨四到六点，蒸发最少，白天绝不浇，除非手动按木杆上那颗大红按钮</span></li><li><span class="box"></span><span>传感器杆用 8cm 方料桧木，顶上做小斜屋顶防雨，控制盒藏在杆内，只露一颗指示灯</span></li><li><span class="box"></span><span>HomeAssistant 做“草地体检”卡片：三区含水率曲线 + 本周用水量 + 雨水占比，接入 0211 大屏</span></li><li><span class="box"></span><span>每区留一个手动快接口，冬天排空管路防冻</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>三传感器：电容式土壤湿度探针埋 15cm 深各区一根，翻斗雨量计装杆顶，雨水罐内超声波水位计</span></li><li><span class="box"></span><span>ESP32 跑 ESPHome，本地判断不依赖云：含水率低于阈值 + 未来 6 小时无雨 + 罐里有水才开阀</span></li><li><span class="box"></span><span>三路 12V 电磁阀装在东墙雨水罐旁，分别控北段疏林/中段草原/南段野花，干管沿长边分段铺，各区阈值不同，芒草 18%、朴树 25%、野花 22%</span></li><li><span class="box"></span><span>浇灌时段锁死在凌晨四到六点，蒸发最少，白天绝不浇，除非手动按木杆上那颗大红按钮</span></li><li><span class="box"></span><span>传感器杆用 8cm 方料桧木，顶上做小斜屋顶防雨，控制盒藏在杆内，只露一颗指示灯</span></li><li><span class="box"></span><span>HomeAssistant 做“草地体检”卡片：三区含水率曲线 + 本周用水量 + 雨水占比，接入 0802 大屏</span></li><li><span class="box"></span><span>每区留一个手动快接口，冬天排空管路防冻</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
@@ -356,29 +356,29 @@
 </svg>
 </div><div><i>0603</i><b>雨水存储过滤</b><p>一只藏在木格栅后面的大水罐，接住屋顶每一滴雨，脏的先扔掉，干净的留下来。</p></div></a>
     
-      <a class="link-card" href="../modules/0211.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+      <a class="link-card" href="../modules/0802.html"><div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
-    <filter id="m0211-rough" x="-5%" y="-5%" width="110%" height="110%">
+    <filter id="m0802-rough" x="-5%" y="-5%" width="110%" height="110%">
       <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
-    <pattern id="m0211-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="m0802-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
     </pattern>
-    <pattern id="m0211-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <pattern id="m0802-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
   </defs>
-  <g filter="url(#m0211-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g filter="url(#m0802-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <!-- room shell -->
     <path d="M70 44 H330 V212 H70 Z" stroke-width="1.8"/>
     <path d="M72 46 H328 V210" stroke-width="0.9"/>
     <path d="M70 44 L18 12 M330 44 L382 12" stroke-width="1.5"/>
     <path d="M70 212 L18 262 M330 212 L382 262" stroke-width="1.5"/>
     <path d="M18 262 Q200 258 382 262" stroke-width="1.2"/>
-    <path d="M20 14 L68 46 V210 L20 260 Z" fill="url(#m0211-hatch)" stroke="none"/>
-    <path d="M332 46 L380 14 V260 L332 210 Z" fill="url(#m0211-hatch)" stroke="none"/>
+    <path d="M20 14 L68 46 V210 L20 260 Z" fill="url(#m0802-hatch)" stroke="none"/>
+    <path d="M332 46 L380 14 V260 L332 210 Z" fill="url(#m0802-hatch)" stroke="none"/>
 
     <!-- centre: tall portrait screen -->
     <path d="M156 52 H244 V196 H156 Z" fill="#fff" stroke="none"/>
@@ -418,7 +418,7 @@
     <path d="M258 128 H278 M258 128 V98" stroke-width="0.6"/>
     <path d="M260 128 v-12 h4 v12 M266 128 v-20 h4 v20 M272 128 v-8 h4 v8" stroke-width="0.7"/>
     <path d="M288 100 h16 v28 h-16 Z" stroke-width="0.9"/>
-    <path d="M289 112 h14 v15 h-14 Z" fill="url(#m0211-hatch)" stroke="none"/>
+    <path d="M289 112 h14 v15 h-14 Z" fill="url(#m0802-hatch)" stroke="none"/>
     <path d="M286 110 q10 -3 20 0" stroke-width="0.6"/>
     <path d="M282 136 v6 M272 142 h20" stroke-width="1.2"/>
 
@@ -463,9 +463,9 @@
     <!-- floor shadow under the person -->
     <path d="M86 272 q26 -4 54 0" stroke-width="0.7"/>
   </g>
-  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0211</text>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0802</text>
 </svg>
-</div><div><i>0211</i><b>全屋中枢</b><p>一整面数据墙，七个区域的温度、水位、光照、鱼缸都在上面跳动。</p></div></a>
+</div><div><i>0802</i><b>全屋中枢 / 全屋数据可视化屏</b><p>一整面数据墙加手机上的同一份仪表盘，八个区域的温度、水位、光照、鱼缸都在上面跳动。</p></div></a>
     </div></section>
 
   <nav class="pager">
@@ -478,7 +478,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>
