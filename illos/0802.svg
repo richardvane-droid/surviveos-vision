@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0802-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0802-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0802-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <g filter="url(#m0802-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- room shell -->
+    <path d="M70 44 H330 V212 H70 Z" stroke-width="1.8"/>
+    <path d="M72 46 H328 V210" stroke-width="0.9"/>
+    <path d="M70 44 L18 12 M330 44 L382 12" stroke-width="1.5"/>
+    <path d="M70 212 L18 262 M330 212 L382 262" stroke-width="1.5"/>
+    <path d="M18 262 Q200 258 382 262" stroke-width="1.2"/>
+    <path d="M20 14 L68 46 V210 L20 260 Z" fill="url(#m0802-hatch)" stroke="none"/>
+    <path d="M332 46 L380 14 V260 L332 210 Z" fill="url(#m0802-hatch)" stroke="none"/>
+
+    <!-- centre: tall portrait screen -->
+    <path d="M156 52 H244 V196 H156 Z" fill="#fff" stroke="none"/>
+    <path d="M156 52 H244 V196 H156 Z" stroke-width="2.2"/>
+    <path d="M158 54 H242 V194" stroke-width="1"/>
+    <path d="M162 58 H238 V190 H162 Z" stroke-width="0.8"/>
+    <!-- isometric house on screen: cabin + bunker below + a few module dots -->
+    <path d="M200 74 l24 12 l-24 12 l-24 -12 Z" stroke-width="1"/>
+    <path d="M176 86 v14 l24 12 v-14 M224 86 v14 l-24 12 v-14" stroke-width="1"/>
+    <path d="M186 72 l14 -10 l14 10 M200 62 v12" stroke-width="0.9"/>
+    <path d="M200 112 v6 M180 124 l20 -10 l20 10 l-20 10 Z M180 124 v10 l20 10 v-10 M220 124 v10 l-20 10 v-10" stroke-width="0.9"/>
+    <path d="M232 100 q8 -6 4 -14 M234 116 q6 6 2 14" stroke-width="0.7"/>
+    <circle cx="192" cy="82" r="1.8" stroke-width="0.8"/>
+    <circle cx="210" cy="92" r="1.8" stroke-width="0.8"/>
+    <circle cx="200" cy="128" r="1.8" stroke-width="0.8"/>
+    <circle cx="200" cy="128" r="4" stroke-width="0.5"/>
+    <path d="M168 86 h6 M168 96 h6 M168 106 h6" stroke-width="0.7"/>
+    <!-- curves below the map -->
+    <path d="M166 150 H234 M166 150 V136" stroke-width="0.7"/>
+    <path d="M168 148 q10 -12 20 -6 t18 -4 t20 6 t8 -8" stroke-width="1"/>
+    <path d="M166 184 H234 M166 184 V162" stroke-width="0.7"/>
+    <path d="M170 184 v-10 h4 v10 M178 184 v-16 h4 v16 M186 184 v-8 h4 v8 M194 184 v-14 h4 v14 M202 184 v-18 h4 v18 M210 184 v-6 h4 v6 M218 184 v-12 h4 v12 M226 184 v-9 h4 v9" stroke-width="0.7"/>
+    <path d="M166 158 h30" stroke-width="0.6"/>
+
+    <!-- left small screen: light / temperature curves -->
+    <path d="M88 92 H148 V136 H88 Z" fill="#fff" stroke="none"/>
+    <path d="M88 92 H148 V136 H88 Z" stroke-width="1.7"/>
+    <path d="M90 94 H146 V134" stroke-width="0.8"/>
+    <path d="M94 128 H142 M94 128 V98" stroke-width="0.6"/>
+    <path d="M94 124 q10 -22 24 -20 q14 2 22 14" stroke-width="1"/>
+    <path d="M94 116 q12 6 24 0 q12 -6 22 2" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <path d="M118 136 v6 M108 142 h20" stroke-width="1.2"/>
+    <!-- right small screen: water / power bars + tank gauge -->
+    <path d="M252 92 H312 V136 H252 Z" fill="#fff" stroke="none"/>
+    <path d="M252 92 H312 V136 H252 Z" stroke-width="1.7"/>
+    <path d="M254 94 H310 V134" stroke-width="0.8"/>
+    <path d="M258 128 H278 M258 128 V98" stroke-width="0.6"/>
+    <path d="M260 128 v-12 h4 v12 M266 128 v-20 h4 v20 M272 128 v-8 h4 v8" stroke-width="0.7"/>
+    <path d="M288 100 h16 v28 h-16 Z" stroke-width="0.9"/>
+    <path d="M289 112 h14 v15 h-14 Z" fill="url(#m0802-hatch)" stroke="none"/>
+    <path d="M286 110 q10 -3 20 0" stroke-width="0.6"/>
+    <path d="M282 136 v6 M272 142 h20" stroke-width="1.2"/>
+
+    <!-- panel with physical toggle switches under the screens -->
+    <path d="M140 202 H260 V212 H140 Z" stroke-width="1.5"/>
+    <path d="M142 204 H258" stroke-width="0.7"/>
+    <path d="M140 202 V190 H260 V202" stroke-width="1.3"/>
+    <circle cx="154" cy="196" r="3" stroke-width="1"/>
+    <path d="M154 196 l0 -6" stroke-width="1.3"/>
+    <circle cx="172" cy="196" r="3" stroke-width="1"/>
+    <path d="M172 196 l2 -6" stroke-width="1.3"/>
+    <circle cx="190" cy="196" r="3" stroke-width="1"/>
+    <path d="M190 196 l-2 -6" stroke-width="1.3"/>
+    <circle cx="208" cy="196" r="3" stroke-width="1"/>
+    <path d="M208 196 l0 -6" stroke-width="1.3"/>
+    <circle cx="226" cy="196" r="3" stroke-width="1"/>
+    <path d="M226 196 l2 -6" stroke-width="1.3"/>
+    <circle cx="246" cy="196" r="4" stroke-width="1.2"/>
+    <circle cx="246" cy="196" r="1.5" stroke-width="0.8"/>
+    <path d="M148 208 h8 M166 208 h8 M184 208 h8 M202 208 h8 M220 208 h8" stroke-width="0.5"/>
+    <!-- small host + UPS on the floor under the panel -->
+    <path d="M232 212 v-0" stroke-width="0.6"/>
+    <path d="M268 212 V232 H304 V212" stroke-width="1.3"/>
+    <path d="M272 218 h20 M272 224 h14" stroke-width="0.7"/>
+    <circle cx="298" cy="218" r="1.5" stroke-width="0.8"/>
+    <path d="M300 96 v-0" stroke-width="0.6"/>
+    <!-- cable duct up the wall -->
+    <path d="M250 212 q0 -14 -6 -16" stroke-width="0.7"/>
+
+    <!-- person standing with a mug, seen from behind -->
+    <circle cx="112" cy="160" r="10" stroke-width="1.6"/>
+    <path d="M112 170 V178" stroke-width="1.6"/>
+    <path d="M94 258 V196 q0 -18 18 -18 q18 0 18 18 V258" fill="#fff" stroke="none"/>
+    <path d="M94 258 V196 q0 -18 18 -18 q18 0 18 18 V258" stroke-width="1.6"/>
+    <path d="M96 256 V198 q0 -14 16 -16" stroke-width="0.8"/>
+    <path d="M94 200 L84 222 L92 222 M130 200 L138 214 L134 220" stroke-width="1.5"/>
+    <path d="M130 220 q4 -4 8 -2" stroke-width="1.2"/>
+    <path d="M134 210 v-8 h9 v8 Z M143 204 q5 0 3 4" stroke-width="1.1"/>
+    <path d="M136 200 q-2 -6 2 -8 M140 200 q-2 -6 2 -8" stroke-width="0.6"/>
+    <path d="M100 258 v10 M124 258 v10 M96 268 h10 M120 268 h10" stroke-width="1.5"/>
+    <path d="M96 236 H128" stroke-width="0.6"/>
+    <!-- floor shadow under the person -->
+    <path d="M86 272 q26 -4 54 0" stroke-width="0.7"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0802</text>
+</svg>

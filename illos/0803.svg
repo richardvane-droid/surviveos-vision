@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0803-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="63" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0803-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0803-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="m0803-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
+  </defs>
+  <g filter="url(#m0803-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 244 H386" stroke-width="1.6"/>
+<path d="M40 244 l-6 20" stroke-width="0.4"/>
+<path d="M60 244 l-6 20" stroke-width="0.4"/>
+<path d="M80 244 l-6 20" stroke-width="0.4"/>
+<path d="M100 244 l-6 20" stroke-width="0.4"/>
+<path d="M40 60 H360" stroke-width="0.4"/>
+<path d="M40 74 H360" stroke-width="0.4"/>
+<path d="M40 88 H360" stroke-width="0.4"/>
+<path d="M40 102 H360" stroke-width="0.4"/>
+<path d="M40 116 H360" stroke-width="0.4"/>
+<path d="M40 130 H360" stroke-width="0.4"/>
+<path d="M40 144 H360" stroke-width="0.4"/>
+<path d="M40 158 H360" stroke-width="0.4"/>
+<path d="M40 172 H360" stroke-width="0.4"/>
+<path d="M40 186 H360" stroke-width="0.4"/>
+<path d="M40 200 H360" stroke-width="0.4"/>
+<path d="M40 214 H360" stroke-width="0.4"/>
+<path d="M40 228 H360" stroke-width="0.4"/>
+<path d="M40 96 H124 M40 90 H124 M44 96 V244 M120 96 V244" stroke-width="1.4"/><path d="M42 90 h80 v5 h-80 Z" fill="url(#m0803-hatch)" stroke="none"/>
+<path d="M104 96 V244 M114 96 V244 M104 120 h10 M104 150 h10 M104 180 h10 M104 210 h10" stroke-width="0.9"/>
+<path d="M50 244 V124 H98 V244" stroke-width="1" stroke-dasharray="4 3"/><circle cx="93" cy="186" r="1.5" stroke-width="0.8"/>
+<path d="M54 244 v-14 h42 v14" stroke-width="1.2"/><path d="M56 242 h38 v-10 h-38 Z" fill="url(#m0803-hatchl)" stroke="none"/>
+<path d="M46 186 H100 M46 186 V244 M50 190 h46 v10 h-46 Z" stroke-width="1"/>
+<path d="M230 244 V190 H386 M230 190 l-6 3 v51" stroke-width="1.6"/><path d="M226 194 v48 l4 -2 v-48 Z" fill="url(#m0803-hatch)" stroke="none"/>
+<path d="M270 194 V240 M310 194 V240 M350 194 V240 M280 218 h6 M320 218 h6 M360 218 h6" stroke-width="0.8"/>
+<path d="M240 190 v-22 h18 v22 M262 190 v-16 h22 v16 M290 190 v-26 h40 v26 M296 170 q10 -4 20 0 M300 182 l6 -3 l-6 -3 Z" stroke-width="1"/>
+<path d="M340 190 v-8 h10 v8 M350 185 q5 0 5 4" stroke-width="0.9"/>
+<path d="M198 244 v-46 h20 v46 M198 224 h20" stroke-width="1"/>
+<circle cx="208" cy="152" r="6" stroke-width="1.2"/><path d="M208 158 V190 M208 166 l-14 14 M208 166 l14 8 M208 190 l-8 18 M208 190 l10 18" stroke-width="1.2"/>
+<path d="M194 180 l-6 6" stroke-width="0.9"/>
+<ellipse cx="150.0" cy="218.8" rx="16.8" ry="12.6" stroke-width="1.5"/>
+<path d="M159.4 210.4 Q162.6 202.0 163.7 197.8" stroke-width="1.5"/>
+<circle cx="164.7" cy="191.5" r="7.4" stroke-width="1.5"/>
+<path d="M172.1 191.5 l8.4 1.5 l-8.4 2.5" stroke-width="1.5"/>
+<circle cx="166.8" cy="189.4" r="1.5" stroke-width="1.2000000000000002"/>
+<circle cx="158.4" cy="220.9" r="3.7" stroke-width="1.2000000000000002"/>
+<path d="M145.8 230.3 L144.8 244 M155.2 230.3 L156.3 244 M138.4 244 h9.5 M151.1 244 h9.5" stroke-width="1.5"/>
+<path d="M139.5 216.7 q5.2 5 11.6 1" stroke-width="1.0499999999999998"/>
+<path d="M176 178 l3 -5 M182 182 l4 -4" stroke-width="0.7"/>
+<path d="M132 130 q0 -10 10 -10 h52 q10 0 10 10 v18 q0 10 -10 10 h-24 l-8 10 v-10 h-20 q-10 0 -10 -10 Z" stroke-width="1"/>
+<path d="M330 244 a16 8 0 0 1 32 0 Z" stroke-width="1"/><path d="M334 244 a12 5 0 0 1 24 0" stroke-width="0.6"/><path d="M346 232 l-3 6 h6 l-3 6" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0803</text>
+<text x="168" y="142" font-family="'Long Cang','Kaiti SC',cursive" font-size="9" fill="#5a5a5a" text-anchor="middle" filter="none">+310L</text>
+<text x="168" y="154" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">够草地喝一星期</text>
+<text x="74" y="116" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">暗门 · 12cm 通道</text>
+<text x="82" y="82" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">梯子床</text>
+<text x="308" y="254" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">0107 吧台</text>
+<text x="346" y="224" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">充电窝</text>
+<text x="200" y="278" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0803 miniduck：从暗门底下钻过来，仰头汇报一句</text>
+</svg>
