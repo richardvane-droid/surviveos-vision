@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0803 miniduck · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="miniduck 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../preface.html" class="pref ">序</a>
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a><a href="../areas/08.html" class="on"><i>08</i>虚拟空间</a>
+    <a href="../space.html" class="about ">户型图</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/08.html">08 虚拟空间</a> › <a href="../modules/0803.html">0803 miniduck</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">虚拟空间 · 模块 0803 · 核心拆解</p>
+    <h1>miniduck：4 个核心模块与逻辑</h1>
+    <p class="lede">一只 25 厘米高的双足电子鸭，在木屋、地堡和阁楼之间自己走，是全屋系统长出来的那张脸。</p>
+    <p class="meta"><span class="st st-⬜">⬜ 真实项目待设计</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>双足鸭身总成</a><a href="#p2"><i>2</i>头部感知与表情模组</a><a href="#p3"><i>3</i>跨房间巡游与回窝</a><a href="#p4"><i>4</i>问答与全屋数据播报</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 双足鸭身总成</h2>
+    <p class="scene">鸭子的身体是一台 25cm 高、约 800g 的双足机器人：主控板（RK3566 或同级）跑步态策略，15 个总线舵机分布在两条腿、颈部和头部，50Hz 控制环里每一拍都在读 IMU 姿态、算下一步舵机角度。腿的外壳是自己 3D 打印的，脚底贴一层 TPU 防滑垫。胸腔里是电池、主控和一块无线充电接收线圈，所有重物尽量压低，重心低了才站得稳。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0803-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="65" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0803-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0803-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0803-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+<path d="M64.0 300.0 h26 l6 -6 h-26 Z M124.0 296.0 h26 l6 -6 h-26 Z" stroke-width="1.3"/><path d="M66.0 299.0 h22 l4 -4 h-22 Z M126.0 295.0 h22 l4 -4 h-22 Z" fill="url(#p0803-1-shade)" stroke="none"/>
+<path d="M80.0 294.0 v-26 M140.0 290.0 v-26 M76.0 268.0 h8 v-8 h-8 Z M136.0 264.0 h8 v-8 h-8 Z" stroke-width="1.2"/>
+<path d="M147.5 230.0 h18 v22 h-18 Z M165.5 230.0 l6 -4 v22 l-6 4" stroke-width="1.2"/><path d="M166.5 231.0 l4 -3 v20 l-4 3 Z" fill="url(#p0803-1-shade)" stroke="none"/><circle cx="156.5" cy="241.0" r="4" stroke-width="0.8"/><path d="M156.5 226.0 v4" stroke-width="0.8"/>
+<path d="M201.5 230.0 h18 v22 h-18 Z M219.5 230.0 l6 -4 v22 l-6 4" stroke-width="1.2"/><path d="M220.5 231.0 l4 -3 v20 l-4 3 Z" fill="url(#p0803-1-shade)" stroke="none"/><circle cx="210.5" cy="241.0" r="4" stroke-width="0.8"/><path d="M210.5 226.0 v4" stroke-width="0.8"/>
+<path d="M165.5 241.0 h36" stroke-width="0.6" stroke-dasharray="2 2"/>
+<path d="M209.0 166.0 h60 v30 h-60 Z M269.0 166.0 l10 -6 v30 l-10 6" stroke-width="1.4"/><path d="M270.0 167.0 l8 -5 v28 l-8 5 Z" fill="url(#p0803-1-shade)" stroke="none"/>
+<path d="M215.0 172.0 h20 v10 h-20 Z M219.0 176.0 h4 M225.0 176.0 h4 M241.0 172.0 h22 v14 h-22 Z M243.0 178.0 h18 M243.0 182.0 h18" stroke-width="0.8"/>
+<circle cx="239.0" cy="202.0" r="7" stroke-width="0.8"/><circle cx="239.0" cy="202.0" r="4" stroke-width="0.6"/>
+<path d="M298.5 126.0 h12 v14 h-12 Z M304.5 126.0 v-10 M298.5 104.0 h12 v6 h-12 Z M304.5 104.0 v-8 M300.5 90.0 h8 v6 h-8 Z" stroke-width="1.1"/>
+<path d="M322.5 114.0 h14 v12 h-14 Z M342.5 118.0 h12 v10 h-12 Z" stroke-width="1.1"/><circle cx="329.5" cy="120.0" r="3" stroke-width="0.7"/><circle cx="348.5" cy="123.0" r="2.5" stroke-width="0.7"/>
+<path d="M356.0 66.0 a24 20 0 1 0 48 0 a24 20 0 1 0 -48 0" stroke-width="1.4"/><path d="M358.0 66.0 a22 18 0 0 0 44 0" stroke-width="0.5"/><path d="M370.0 82.0 a10 5 0 0 0 20 0 v-4 a10 5 0 0 1 -20 0 Z" fill="url(#p0803-1-shade)" stroke="none"/>
+<circle cx="420.0" cy="50.0" r="12" stroke-width="1.3"/><path d="M432.0 50.0 l10 3 l-10 3" stroke-width="1"/><circle cx="423.0" cy="47.0" r="1.5" stroke-width="0.7"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
+<path d="M60.0 292.0 L28.0 286.0"/>
+<path d="M143.5 226.0 L111.5 220.0"/>
+<path d="M205.0 162.0 L173.0 156.0"/>
+<path d="M294.5 96.0 L262.5 90.0"/>
+<path d="M352.0 56.0 L320.0 50.0"/>
+  </g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">双足鸭身总成 · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 脚板 + 小腿 · 脚底 TPU 防滑垫</text><text x="16" y="59">2 髋/膝总线舵机组 ×2×5，一根串行线</text><text x="16" y="72">3 胸腔：RK3566 主控 + IMU + 3S 2,000mAh + 无线充电线圈</text><text x="16" y="85">4 颈舵机 ×3 + 头舵机 ×2</text><text x="16" y="98">5 拓竹打印 PETG 外壳（换季换羽）</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0803-1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="28.0" cy="286.0" r="7"/></g><text x="28.0" y="289.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="111.5" cy="220.0" r="7"/></g><text x="111.5" y="223.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="173.0" cy="156.0" r="7"/></g><text x="173.0" y="159.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="262.5" cy="90.0" r="7"/></g><text x="262.5" y="93.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="320.0" cy="50.0" r="7"/></g><text x="320.0" y="53.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<text x="16" y="117" font-size="8" fill="#888" font-style="italic">25cm 高 · 约 800g · 重物压低才站得稳</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>总线舵机 ×15：腿 2×5、颈 3、头 2，串行一根线</li><li>RK3566 主控 + IMU，50Hz 控制环跑 ONNX 步态策略</li><li>3S 锂电 2,000mAh，续航约 90 分钟，胸腔无线充电线圈</li><li>外壳拓竹打印 PETG，脚底 TPU 防滑垫，摔不坏优先于好看</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener">pollen-robotics/microduck</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 头部感知与表情模组</h2>
+    <p class="scene">头是鸭子和人打交道的地方：顶部一圈 4 麦阵列负责听（离舵机远，垫泡棉隔震），额头一颗广角摄像头负责认路和认人，两只眼睛是可寻址 RGB LED，胸口那块 1.28 寸圆屏兼做表情和数据窗。麦阵和摄像头的信号回到主控，语音那一路交给一块独立的 ESP32-S3（小智固件），主控只管走路和表情，两边各司其职，语音卡顿不会影响平衡。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0803-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="67" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0803-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0803-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0803-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+<path d="M80.0 292.0 a30 10 0 1 0 60 0 a30 10 0 1 0 -60 0" stroke-width="1.3"/><path d="M80.0 292.0 v10 a30 10 0 0 0 60 0 v-10" stroke-width="1"/><path d="M84.0 302.0 a26 8 0 0 0 52 0 v-3 a26 8 0 0 1 -52 0 Z" fill="url(#p0803-2-shade)" stroke="none"/><path d="M86.0 292.0 q6 -4 12 0 t12 0 t12 0 t12 0" stroke-width="0.6"/>
+<path d="M149.5 230.0 h44 v24 h-44 Z" stroke-width="1.2"/><path d="M155.5 236.0 h14 v10 h-14 Z M175.5 234.0 h12 M175.5 238.0 h12 M175.5 242.0 h12 M175.5 246.0 h12" stroke-width="0.7"/><path d="M149.5 238.0 h-6 M149.5 244.0 h-6 M193.5 238.0 h6 M193.5 244.0 h6" stroke-width="0.6"/>
+<circle cx="235.0" cy="180.0" r="14" stroke-width="1.3"/><circle cx="235.0" cy="180.0" r="11" stroke-width="0.6"/><path d="M228.0 182.0 l4 -4 l4 3 l5 -6" stroke-width="0.8"/>
+<circle cx="267.0" cy="172.0" r="5" stroke-width="1.1"/><circle cx="283.0" cy="172.0" r="5" stroke-width="1.1"/><circle cx="267.0" cy="172.0" r="2" stroke-width="0.6"/><circle cx="283.0" cy="172.0" r="2" stroke-width="0.6"/><path d="M267.0 177.0 v6 M283.0 177.0 v6" stroke-width="0.6"/>
+<path d="M296.5 108.0 h28 v22 h-28 Z" stroke-width="1.2"/><circle cx="310.5" cy="119.0" r="7" stroke-width="1"/><circle cx="310.5" cy="119.0" r="3.5" stroke-width="0.7"/><path d="M310.5 112.0 v-4 M324.5 119.0 h6" stroke-width="0.6"/><path d="M318.5 119.0 l30 -14 M318.5 119.0 l30 14" stroke-width="0.4" stroke-dasharray="2 2"/>
+<path d="M356.0 60.0 a24 9 0 1 0 48 0 a24 9 0 1 0 -48 0" stroke-width="1.3"/>
+<circle cx="362.0" cy="57.0" r="2.5" stroke-width="0.8"/>
+<circle cx="398.0" cy="57.0" r="2.5" stroke-width="0.8"/>
+<circle cx="372.0" cy="66.0" r="2.5" stroke-width="0.8"/>
+<circle cx="388.0" cy="66.0" r="2.5" stroke-width="0.8"/>
+<path d="M380.0 51.0 v-8 M377.0 46.0 l3 -3 l3 3" stroke-width="0.7"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
+<path d="M76.0 288.0 L44.0 282.0"/>
+<path d="M145.5 226.0 L113.5 220.0"/>
+<path d="M217.0 164.0 L185.0 158.0"/>
+<path d="M292.5 104.0 L260.5 98.0"/>
+<path d="M352.0 54.0 L320.0 48.0"/>
+  </g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">头部感知与表情模组 · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 头壳底座 + 泡棉隔震圈（隔开舵机噪音）</text><text x="16" y="59">2 ESP32-S3 语音协处理器（xiaozhi 固件）</text><text x="16" y="72">3 胸口 1.28 寸圆屏 + 眼睛 RGB LED ×2</text><text x="16" y="85">4 广角摄像头 120°：认标记、认一个人</text><text x="16" y="98">5 4 麦环形阵列，本地唤醒词</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0803-2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="44.0" cy="282.0" r="7"/></g><text x="44.0" y="285.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="113.5" cy="220.0" r="7"/></g><text x="113.5" y="223.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="185.0" cy="158.0" r="7"/></g><text x="185.0" y="161.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="260.5" cy="98.0" r="7"/></g><text x="260.5" y="101.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="320.0" cy="48.0" r="7"/></g><text x="320.0" y="51.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<text x="16" y="117" font-size="8" fill="#888" font-style="italic">听、看、表情各一套，语音卡了不影响走路</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>4 麦环形阵列 + 泡棉隔震，唤醒词本地识别</li><li>广角摄像头 120°，识别充电窝反光标记与人脸（只认一个人）</li><li>眼睛 RGB LED ×2，胸口 1.28 寸圆屏显示表情 / 数据</li><li>ESP32-S3 语音协处理器跑 xiaozhi 固件，通过串口与主控通信</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/78/xiaozhi-esp32" target="_blank" rel="noopener">78/xiaozhi-esp32</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 跨房间巡游与回窝</h2>
+    <p class="scene">鸭子怎么在三个房间之间自己走：它没有激光雷达，靠一张手绘的“房间图”——每个房间几个反光标记（充电窝、门下通道口、坡道顶）和它们的相对方位。摄像头认出一个标记就知道自己大概在哪，然后按图里的顺序往下一个标记走；走通道口时切成低头慢步态，上坡道时切成前倾步态。电量低于 20%、或者主人 30 分钟没出现，就去最近的窝。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0803-3p-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="73" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="p0803-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+  </defs>
+  <g filter="url(#p0803-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/><rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+<path d="M40 200 h70 v50 h-70 Z M150 180 h70 v70 h-70 Z M260 200 h60 v50 h-60 Z" stroke-width="1.3"/>
+<path d="M110 240 h40 M220 240 h40" stroke-width="1"/>
+<path d="M75 236 Q130 210 185 230 T290 236" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="75" cy="236" r="3" stroke-width="1"/><circle cx="185" cy="230" r="3" stroke-width="1"/><circle cx="290" cy="236" r="3" stroke-width="1"/>
+<ellipse cx="185.0" cy="234.8" rx="8.8" ry="6.6" stroke-width="1.2"/>
+<path d="M189.9 230.4 Q191.6 226.0 192.2 223.8" stroke-width="1.2"/>
+<circle cx="192.7" cy="220.5" r="3.9" stroke-width="1.2"/>
+<path d="M196.6 220.5 l4.4 1.5 l-4.4 2.5" stroke-width="1.2"/>
+<circle cx="193.8" cy="219.4" r="0.8" stroke-width="0.96"/>
+<circle cx="189.4" cy="235.9" r="1.9" stroke-width="0.96"/>
+<path d="M182.8 240.8 L182.2 248 M187.8 240.8 L188.3 248 M178.9 248 h5.0 M185.6 248 h5.0" stroke-width="1.2"/>
+<path d="M179.5 233.7 q2.8 5 6.1 1" stroke-width="0.84"/>
+<path d="M60 250 a10 5 0 0 1 20 0 Z M300 250 a10 5 0 0 1 20 0 Z" stroke-width="1"/>
+<path d="M40 120 h60 v40 h-60 Z M48 130 l8 -6 l10 8 M80 128 a4 4 0 1 0 0.1 0 M60 150 h20" stroke-width="1"/>
+<path d="M100 140 Q140 150 180 200" stroke-width="0.8" stroke-dasharray="3 3"/>
+<path d="M250 120 h60 v40 h-60 Z M256 150 l12 -20 l8 12 l10 -16 l14 24" stroke-width="1"/>
+<path d="M240 150 Q220 180 200 200" stroke-width="0.8" stroke-dasharray="3 3"/>
+<path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0803 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">巡游回窝器</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">一张手绘房间图，三个房间自己走</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">触发 → 找反光标记 → 走向下一路点 → 电量低回最近的窝</text>
+  <g font-size="11" fill="#2a2a2a"><text x="64" y="336">路点就是充电窝、通道口、坡道顶的反光标记</text><text x="64" y="366">通道口低头慢走，坡道前倾，摔了自己起身</text><text x="64" y="396">连找 3 次没找到就蹲下，推送手机</text></g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：鸭身 RK3566 robotd · 数据出口：HA 位置实体（在哪个房间）</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：pollen-robotics/microduck</text>
+  <g transform="rotate(-8 296 108)"><rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/><text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text></g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0803-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="69" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="p0803-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="p0803-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">跨房间巡游与回窝 · 流程图</text>
+  <g filter="url(#p0803-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+<rect x="30" y="52" width="110" height="34" rx="17.0"/>
+<path d="M196 56 a34.0 6 0 0 1 68 0 v32 a34.0 6 0 0 1 -68 0 Z"/><ellipse cx="230.0" cy="56" rx="34.0" ry="6"/>
+<rect x="30" y="130" width="110" height="40" rx="6"/><rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M34 172 h106 v3 h-106 Z" fill="url(#p0803-3-shade)" stroke="none"/>
+<path d="M230.0 128 l58.0 24.0 l-58.0 24.0 l-58.0 -24.0 Z"/><path d="M232.0 176 l56.0 -24.0 l4 2 l-58.0 26.0 Z" fill="url(#p0803-3-shade)" stroke="none"/>
+<rect x="330" y="130" width="120" height="40" rx="6"/><rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 172 h116 v3 h-116 Z" fill="url(#p0803-3-shade)" stroke="none"/>
+<rect x="30" y="230" width="110" height="40" rx="6"/><rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M34 272 h106 v3 h-106 Z" fill="url(#p0803-3-shade)" stroke="none"/>
+<rect x="175" y="230" width="110" height="40" rx="6"/><rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M179 272 h106 v3 h-106 Z" fill="url(#p0803-3-shade)" stroke="none"/>
+<rect x="330" y="230" width="120" height="40" rx="6"/><rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 272 h116 v3 h-116 Z" fill="url(#p0803-3-shade)" stroke="none"/>
+<rect x="175" y="312" width="130" height="30" rx="15.0"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0803-3-arrow)" stroke-linecap="round"><path d="M85 86 V128"/><path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/><path d="M140 150 H170"/><path d="M288 152 H328"/><path d="M230 176 V228"/><path d="M390 170 V228"/><path d="M85 170 V228"/><path d="M140 250 H173"/><path d="M230 270 V310"/><path d="M330 250 H287"/><path d="M30 250 Q10 250 10 150 Q10 130 28 130" stroke-dasharray="3 3"/></g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle"><text x="85" y="73">整点 / 呼唤 / 低电</text><text x="230" y="74">房间图</text><text x="230" y="87" font-size="8.5" fill="#666">反光标记 + 方位</text><text x="85" y="147">摄像头找标记</text><text x="85" y="161">IMU 推算航向</text><text x="230" y="149">看到标记？</text><text x="230" y="162" font-size="8.5" fill="#666">是 / 否</text><text x="390" y="147">是 → 走向下一路点</text><text x="390" y="161">通道口低头 · 坡道前倾</text><text x="85" y="247">否 → 原地转一圈</text><text x="85" y="261">3 次仍无 → 蹲下推送</text><text x="230" y="247">到窝：对准线圈</text><text x="230" y="261">开始充电</text><text x="390" y="247">摔倒 → stand-up 策略</text><text x="390" y="261">起身后重找标记</text><text x="240" y="331">停在窝里 / 停在主人脚边</text><text x="305" y="146" font-size="8.5" fill="#666">是</text><text x="216" y="200" font-size="8.5" fill="#666">到达</text><text x="70" y="200" font-size="8.5" fill="#666">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0803-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>触发：整点巡游 / 主人呼唤 / 电量 &lt;20%</li><li>路点=反光标记，摄像头识别 + IMU 航向推算</li><li>通道口切“低头慢步”策略，坡道切“前倾”策略，摔倒自动起身</li><li>兜底：连续 3 次找不到标记就原地蹲下并推送手机</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 pollen-robotics/microduck 的 robotd 技能切换（walk / crouch / stand-up 等 ONNX 策略），路点导航自写一个小状态机，标记识别用 OpenCV ArUco</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener">pollen-robotics/microduck</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 问答与全屋数据播报</h2>
+    <p class="scene">鸭子是 0802 全屋中枢的移动分身：你对它说一句“雨水罐还有多少”，ESP32 上的小智固件本地识别唤醒词后把语音送到大模型，大模型通过 MCP 调 HomeAssistant 的实体读数，把答案生成一句人话，鸭子用嘴说出来，同时胸口圆屏显示数字，眼睛按数据好坏变色。随口说的“记得买 M3 螺丝”会被识别成待办，写进 0801 的清单。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0803-4p-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="75" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="p0803-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+  </defs>
+  <g filter="url(#p0803-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/><rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+<ellipse cx="90.0" cy="228.4" rx="14.4" ry="10.8" stroke-width="1.4"/>
+<path d="M98.1 221.2 Q100.8 214.0 101.7 210.4" stroke-width="1.4"/>
+<circle cx="102.6" cy="205.0" r="6.3" stroke-width="1.4"/>
+<path d="M108.9 205.0 l7.2 1.5 l-7.2 2.5" stroke-width="1.4"/>
+<circle cx="104.4" cy="203.2" r="1.3" stroke-width="1.1199999999999999"/>
+<circle cx="97.2" cy="230.2" r="3.1" stroke-width="1.1199999999999999"/>
+<path d="M86.4 238.3 L85.5 250 M94.5 238.3 L95.4 250 M80.1 250 h8.1 M90.9 250 h8.1" stroke-width="1.4"/>
+<path d="M81.0 226.6 q4.5 5 9.9 1" stroke-width="0.9799999999999999"/>
+<path d="M120 150 q0 -12 12 -12 h80 q12 0 12 12 v30 q0 12 -12 12 h-60 l-14 10 v-10 h-6 q-12 0 -12 -12 Z" stroke-width="1.3"/>
+<path d="M136 160 h60 M136 172 h40" stroke-width="0.7"/>
+<path d="M250 130 h60 v50 h-60 Z M256 140 h48 M256 150 h48 M256 160 h30" stroke-width="1.1"/>
+<path d="M224 162 H248" stroke-width="1" stroke-dasharray="3 3"/><path d="M244 158 l4 4 l-4 4" stroke-width="1"/>
+<circle cx="106" cy="228" r="6" stroke-width="1"/><path d="M103 228 l2 2 l4 -4" stroke-width="0.8"/>
+<path d="M160 230 l40 -10 M160 236 l40 10" stroke-width="0.6" stroke-dasharray="2 2"/>
+<path d="M210 210 h30 v30 h-30 Z M214 218 l6 -4 l5 5 l7 -8 l8 8" stroke-width="1"/>
+<path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0803 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">会说话的仪表盘</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">问它一句，它去大屏那边查了用嘴说</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">唤醒词 → 大模型 → MCP 读 HA 实体 → ≤20 字回答 + 圆屏数字</text>
+  <g font-size="11" fill="#2a2a2a"><text x="64" y="336">只认一个人的声音，物理静音拨杆一拨就聋</text><text x="64" y="366">随口一句“记得买螺丝”写进 0801 待办</text><text x="64" y="396">3 秒没结果就说“我去问问大屏”并推送手机</text></g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESP32-S3 xiaozhi + HA MCP Server · 数据出口：HA todo 实体</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：78/xiaozhi-esp32</text>
+  <g transform="rotate(-8 296 108)"><rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/><text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text></g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0803-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="71" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="p0803-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="p0803-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">问答与全屋数据播报 · 流程图</text>
+  <g filter="url(#p0803-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+<rect x="30" y="52" width="110" height="34" rx="17.0"/>
+<path d="M196 56 a34.0 6 0 0 1 68 0 v32 a34.0 6 0 0 1 -68 0 Z"/><ellipse cx="230.0" cy="56" rx="34.0" ry="6"/>
+<rect x="30" y="130" width="110" height="40" rx="6"/><rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M34 172 h106 v3 h-106 Z" fill="url(#p0803-4-shade)" stroke="none"/>
+<path d="M230.0 128 l58.0 24.0 l-58.0 24.0 l-58.0 -24.0 Z"/><path d="M232.0 176 l56.0 -24.0 l4 2 l-58.0 26.0 Z" fill="url(#p0803-4-shade)" stroke="none"/>
+<rect x="330" y="130" width="120" height="40" rx="6"/><rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 172 h116 v3 h-116 Z" fill="url(#p0803-4-shade)" stroke="none"/>
+<rect x="30" y="230" width="110" height="40" rx="6"/><rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M34 272 h106 v3 h-106 Z" fill="url(#p0803-4-shade)" stroke="none"/>
+<rect x="175" y="230" width="110" height="40" rx="6"/><rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M179 272 h106 v3 h-106 Z" fill="url(#p0803-4-shade)" stroke="none"/>
+<rect x="330" y="230" width="120" height="40" rx="6"/><rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 272 h116 v3 h-116 Z" fill="url(#p0803-4-shade)" stroke="none"/>
+<rect x="175" y="312" width="130" height="30" rx="15.0"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0803-4-arrow)" stroke-linecap="round"><path d="M85 86 V128"/><path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/><path d="M140 150 H170"/><path d="M288 152 H328"/><path d="M230 176 V228"/><path d="M390 170 V228"/><path d="M85 170 V228"/><path d="M140 250 H173"/><path d="M230 270 V310"/><path d="M330 250 H287"/></g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle"><text x="85" y="73">唤醒词（本地）</text><text x="230" y="74">HA 实体</text><text x="230" y="87" font-size="8.5" fill="#666">MCP 白名单</text><text x="85" y="147">录音 → 大模型</text><text x="85" y="161">静音拨杆先查</text><text x="230" y="149">是问数据？</text><text x="230" y="162" font-size="8.5" fill="#666">数据 / 待办 / 闲聊</text><text x="390" y="147">MCP 读实体</text><text x="390" y="161">雨水罐 / 温度 / 电量…</text><text x="85" y="247">待办 → 写 todo</text><text x="85" y="261">同步到 0801 清单</text><text x="230" y="247">生成 ≤20 字回答</text><text x="230" y="261">圆屏显示数字</text><text x="390" y="247">3 秒无结果</text><text x="390" y="261">“我去问问大屏”+推送</text><text x="240" y="331">说出来 · 眼睛按好坏变色</text><text x="305" y="146" font-size="8.5" fill="#666">是</text><text x="216" y="200" font-size="8.5" fill="#666">闲聊</text><text x="70" y="200" font-size="8.5" fill="#666">待办</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0803-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>唤醒词本地识别，之后才联网，物理静音拨杆一拨就聋</li><li>MCP 工具：读 HA 实体 / 写待办 / 触发场景，只开放白名单</li><li>答案 ≤ 20 字，数据同时上圆屏，异常值眼睛变红</li><li>失败兜底：3 秒没结果就说“我去问问大屏”并推送手机</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">78/xiaozhi-esp32 的 MCP 客户端接 HomeAssistant 的 MCP Server，待办写入 HA 的 todo 实体，再由 0801 同步</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/78/xiaozhi-esp32" target="_blank" rel="noopener">78/xiaozhi-esp32</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0802.html">← 0802 全屋中枢 / 全屋数据可视化屏 拆解</a>
+    <a class="up" href="../modules/0803.html">回到 miniduck 专题页</a>
+    
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>

@@ -16,7 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
-    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a><a href="../areas/08.html" ><i>08</i>虚拟空间</a>
     <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
@@ -297,7 +297,7 @@
     <text x="64" y="366">每天两次定量投喂，出门一周鱼也不饿</text>
     <text x="64" y="396">断网时 ESP32 靠本地时钟继续按表执行</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：HA 日志 / 0211 大屏</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：HA 日志 / 0802 大屏</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：reef-pi/reef-pi</text>
   <g transform="rotate(-8 296 108)">
     <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
@@ -387,7 +387,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 补水与告警</h2>
-    <p class="scene">缸里的事最好在人发现之前就被处理掉，这段逻辑做两件事：自动补水和水质告警。每 60 秒采样一次水位开关和三探头数值。水位低于低位就开补水阀，单次最长 120 秒，若 120 秒内没回到高位，就判定为疑似卡阀，关阀并报警，避免把木屋吧台淹了。水质判断不只看阈值，还看变化率：pH 一小时内变动超过 0.3、温度骤变，都算异常，因为鱼往往是被“变化太快”而不是“绝对值”害死的。异常同时推送手机和 0211 大屏，日志保留 90 天供回看。</p>
+    <p class="scene">缸里的事最好在人发现之前就被处理掉，这段逻辑做两件事：自动补水和水质告警。每 60 秒采样一次水位开关和三探头数值。水位低于低位就开补水阀，单次最长 120 秒，若 120 秒内没回到高位，就判定为疑似卡阀，关阀并报警，避免把木屋吧台淹了。水质判断不只看阈值，还看变化率：pH 一小时内变动超过 0.3、温度骤变，都算异常，因为鱼往往是被“变化太快”而不是“绝对值”害死的。异常同时推送手机和 0802 大屏，日志保留 90 天供回看。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -436,9 +436,9 @@
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">补水单次最长 120 秒，24 小时不超过 5 次</text>
     <text x="64" y="366">pH 一小时内变动超过 0.3 就报警，不等出事</text>
-    <text x="64" y="396">异常同时推到手机和 0211 大屏，日志留 90 天</text>
+    <text x="64" y="396">异常同时推到手机和 0802 大屏，日志留 90 天</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：HA 通知 / 0211 大屏</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：HA 通知 / 0802 大屏</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：TheRealFalseReality/aquapi</text>
   <g transform="rotate(-8 296 108)">
     <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
@@ -502,7 +502,7 @@
     <text x="390" y="261">回到高位？</text>
     <text x="230" y="247">水质越阈值</text>
     <text x="230" y="261">或变化过快？</text>
-    <text x="240" y="331">推送手机 + 0211 红点，记日志</text>
+    <text x="240" y="331">推送手机 + 0802 红点，记日志</text>
   </g>
   <g font-size="8.5" fill="#666"><text x="300" y="146">是</text><text x="238" y="198">否</text><text x="298" y="244">是·关阀</text><text x="400" y="296">否·疑似卡阀</text><text x="238" y="296">是</text><text x="120" y="244">否·正常</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0205-4</text>
@@ -512,7 +512,7 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>补水单次最长 120 秒，24 小时内不超过 5 次</li><li>pH 一小时变动 &gt; 0.3 或温度变动 &gt; 2℃ 即告警</li><li>疑似卡阀时强制关阀，改为人工确认</li><li>推送手机 + 0211 大屏红点，日志保留 90 天</li></ul></div>
+        <ul class="inspo"><li>补水单次最长 120 秒，24 小时内不超过 5 次</li><li>pH 一小时变动 &gt; 0.3 或温度变动 &gt; 2℃ 即告警</li><li>疑似卡阀时强制关阀，改为人工确认</li><li>推送手机 + 0802 大屏红点，日志保留 90 天</li></ul></div>
       <div><h3>主要实现路径</h3><p class="impl">探头接法和 ESPHome 配置照 TheRealFalseReality/aquapi，补水阀与阈值判断放在 ESPHome 本地，变化率告警用 HomeAssistant 的 statistics 传感器</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/TheRealFalseReality/aquapi" target="_blank" rel="noopener">TheRealFalseReality/aquapi</a></p></div>
     </div>
@@ -522,14 +522,14 @@
   <nav class="pager">
     <a href="../teardown/0204.html">← 0204 系统设计工作台 拆解</a>
     <a class="up" href="../modules/0205.html">回到 生态鱼缸 专题页</a>
-    <a href="../teardown/0206.html">0206 物品数字孪生 拆解 →</a>
+    <a href="../teardown/0207.html">0207 影音室 拆解 →</a>
   </nav>
 </article>
 
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

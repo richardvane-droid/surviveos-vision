@@ -16,7 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
-    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" class="on"><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" class="on"><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a><a href="../areas/08.html" ><i>08</i>虚拟空间</a>
     <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
@@ -186,7 +186,7 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-logic">联动逻辑</span> 3. 扫码库存与标签流</h2>
-    <p class="scene">每个周转箱在库存系统里是一个“位置”，箱内每样材料是一个“物品”。入库时手机录入名称、数量和箱号，系统生成该箱二维码，脚本驱动标签机打出统一字体的“箱名 + 二维码”标签贴在箱口。取用时扫码打开箱内清单改数量；用光时标记为空，系统建议补货。输出是一份可搜索的全仓清单，同步到 0206 数字孪生库，任何地方问“黄铜配件在哪”都能答。</p>
+    <p class="scene">每个周转箱在库存系统里是一个“位置”，箱内每样材料是一个“物品”。入库时手机录入名称、数量和箱号，系统生成该箱二维码，脚本驱动标签机打出统一字体的“箱名 + 二维码”标签贴在箱口。取用时扫码打开箱内清单改数量；用光时标记为空，系统建议补货。输出是一份可搜索的全仓清单，同步到 0801 数字孪生库，任何地方问“黄铜配件在哪”都能答。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -259,11 +259,11 @@
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0402 · L3</text>
   <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">扫码库存流</text>
   <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">每个箱子都记得自己装了什么</text>
-  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">入库录入 → 生成箱码 → 标签机打印 → 扫码取用 → 同步 0206</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">入库录入 → 生成箱码 → 标签机打印 → 扫码取用 → 同步 0801</text>
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">入库即生成二维码，标签字体永远一致</text>
     <text x="64" y="366">扫码看箱内清单，用光自动建议补货</text>
-    <text x="64" y="396">全仓可搜，同步 0206 数字孪生库</text>
+    <text x="64" y="396">全仓可搜，同步 0801 数字孪生库</text>
   </g>
   <text x="30" y="440" font-size="9" fill="#666">跑在：Homebox（自托管）· 数据出口：全仓清单 + 二维码标签</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：sysadminsmedia/homebox</text>
@@ -335,7 +335,7 @@
     <text x="230" y="253.5">数量归零？</text>
     <text x="390" y="247.5">是 → 标记空箱</text>
     <text x="390" y="261">建议补货</text>
-    <text x="260" y="330.5">全仓可搜清单 → 同步 0206 数字孪生 · 箱口手写备用标签</text>
+    <text x="260" y="330.5">全仓可搜清单 → 同步 0801 数字孪生 · 箱口手写备用标签</text>
   </g>
   <g font-size="8.5" fill="#666"><text x="305" y="146">否</text><text x="238" y="196">是</text><text x="300" y="246">是</text><text x="238" y="296">否</text><text x="300" y="68">写入</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0402-3</text>
@@ -345,7 +345,7 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>触发：入库录入 / 扫码取用 / 标记用光</li><li>出口：全仓可搜清单，同步 0206 数字孪生</li><li>标签：Python 脚本批量打印，字体永远一致</li><li>兜底：箱口手写备用标签，系统挂了也能找</li></ul></div>
+        <ul class="inspo"><li>触发：入库录入 / 扫码取用 / 标记用光</li><li>出口：全仓可搜清单，同步 0801 数字孪生</li><li>标签：Python 脚本批量打印，字体永远一致</li><li>兜底：箱口手写备用标签，系统挂了也能找</li></ul></div>
       <div><h3>主要实现路径</h3><p class="impl">用 sysadminsmedia/homebox 管位置与物品并生成箱码，pklaus/brother_ql 脚本批量打印二维码标签</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/sysadminsmedia/homebox" target="_blank" rel="noopener">sysadminsmedia/homebox</a><a href="https://github.com/pklaus/brother_ql" target="_blank" rel="noopener">pklaus/brother_ql</a></p></div>
     </div>
@@ -527,7 +527,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

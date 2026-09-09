@@ -16,7 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
-    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a><a href="../areas/08.html" ><i>08</i>虚拟空间</a>
     <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
@@ -127,7 +127,7 @@
   
   <section class="blk part" id="p2">
     <h2><span class="kind kind-hw">产品模块</span> 2. 墙装单杠与折叠仰卧板</h2>
-    <p class="scene">地上没有多余的地方，所以把上肢和核心训练都挂在墙上。单杠装在东南角 90×90 门框上方的东墙，离地 2.1 米（净高 2660 够引体），用两片三角支架固定在墙上的四颗 M12 膨胀螺栓上，杆是 32mm 钢管，杆面滚花防滑；安装前先量清楚，确保引体时头顶还有 30cm。仰卧板用铰链挂在南墙镜子旁，不用时折起只有 10cm 厚，放下来用一根撑杆支住脚端。镜子 60 宽 1.8 米高贴南墙电视东侧、朝北，与朝西的 0211 屏墙成 90° 不互相反光，镜顶一条灯带跟 0201 的场景联动。木凳、水壶架、毛巾钩挤在墙角，练完不用走开。</p>
+    <p class="scene">地上没有多余的地方，所以把上肢和核心训练都挂在墙上。单杠装在东南角 90×90 门框上方的东墙，离地 2.1 米（净高 2660 够引体），用两片三角支架固定在墙上的四颗 M12 膨胀螺栓上，杆是 32mm 钢管，杆面滚花防滑；安装前先量清楚，确保引体时头顶还有 30cm。仰卧板用铰链挂在南墙镜子旁，不用时折起只有 10cm 厚，放下来用一根撑杆支住脚端。镜子 60 宽 1.8 米高贴南墙电视东侧、朝北，与朝西的 0802 屏墙成 90° 不互相反光，镜顶一条灯带跟 0201 的场景联动。木凳、水壶架、毛巾钩挤在墙角，练完不用走开。</p>
     
     <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
@@ -226,7 +226,7 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-logic">联动逻辑</span> 3. 训练模式心率上屏</h2>
-    <p class="scene">训练开始后，0211 的大屏应该只显示两样东西：心率和计时。输入是手环的蓝牙心率广播，主机旁的 ESP32 用 BLE 接收，把每秒心率转发成 HA 实体。逻辑的触发条件是“人在健身角 + 心率超过 100”：健身角的 PIR 有动作并且心率持续 30 秒高于 100，大屏自动切到训练模式，黑底、超大数字、按心率区间变色（绿 &lt; 120、黄 120~150、红 &gt; 150），旁边一个计时器从切换那一刻开始跑。心率回落到 100 以下持续 5 分钟，或人离开，就切回普通仪表盘，并把这次训练的时长和平均心率写进记录。</p>
+    <p class="scene">训练开始后，0802 的大屏应该只显示两样东西：心率和计时。输入是手环的蓝牙心率广播，主机旁的 ESP32 用 BLE 接收，把每秒心率转发成 HA 实体。逻辑的触发条件是“人在健身角 + 心率超过 100”：健身角的 PIR 有动作并且心率持续 30 秒高于 100，大屏自动切到训练模式，黑底、超大数字、按心率区间变色（绿 &lt; 120、黄 120~150、红 &gt; 150），旁边一个计时器从切换那一刻开始跑。心率回落到 100 以下持续 5 分钟，或人离开，就切回普通仪表盘，并把这次训练的时长和平均心率写进记录。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -534,7 +534,7 @@
   
 
   <nav class="pager">
-    <a href="../teardown/0211.html">← 0211 全屋中枢 拆解</a>
+    <a href="../teardown/0210.html">← 0210 防灾食品 拆解</a>
     <a class="up" href="../modules/0212.html">回到 哑铃 专题页</a>
     <a href="../teardown/0301.html">0301 小制作工具台 拆解 →</a>
   </nav>
@@ -543,7 +543,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

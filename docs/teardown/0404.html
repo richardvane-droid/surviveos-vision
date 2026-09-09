@@ -16,7 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
-    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" class="on"><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" class="on"><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a><a href="../areas/08.html" ><i>08</i>虚拟空间</a>
     <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
@@ -384,7 +384,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 粉尘监测与新风调速</h2>
-    <p class="scene">集尘器抓走的是大颗粒，真正伤肺的是悬浮在空气里的细粉。天花那台空气过滤箱平时低速转，一颗激光颗粒物传感器每 10 秒把 PM2.5 / PM10 上报 HomeAssistant：PM10 超过 100µg/m³ 切到高速，回落到 50 以下持续 10 分钟再降回低速；人踩进黄线安全区（地垫压力开关）也自动高速。数值同步显示在 0211 中枢屏，收工时 PM10 仍偏高就提醒再开 20 分钟。</p>
+    <p class="scene">集尘器抓走的是大颗粒，真正伤肺的是悬浮在空气里的细粉。天花那台空气过滤箱平时低速转，一颗激光颗粒物传感器每 10 秒把 PM2.5 / PM10 上报 HomeAssistant：PM10 超过 100µg/m³ 切到高速，回落到 50 以下持续 10 分钟再降回低速；人踩进黄线安全区（地垫压力开关）也自动高速。数值同步显示在 0802 中枢屏，收工时 PM10 仍偏高就提醒再开 20 分钟。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -452,18 +452,18 @@
     <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
     <path d="M30 420 H330" stroke-width="0.8"/>
   </g>
-  <text x="44" y="206" font-size="8" fill="#666">PMS5003 · 地垫开关</text><text x="256" y="166" font-size="8" fill="#666">天花过滤箱</text><text x="262" y="228" font-size="8" fill="#666">0211 中枢屏</text>
+  <text x="44" y="206" font-size="8" fill="#666">PMS5003 · 地垫开关</text><text x="256" y="166" font-size="8" fill="#666">天花过滤箱</text><text x="262" y="228" font-size="8" fill="#666">0802 中枢屏</text>
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0404 · L4</text>
   <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">粉尘监测调速</text>
   <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">看不见的木粉，也得有人管</text>
-  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">PMS5003 颗粒物 → ESPHome → HA 迟滞分档 → 过滤箱高 / 低速 + 0211 屏</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">PMS5003 颗粒物 → ESPHome → HA 迟滞分档 → 过滤箱高 / 低速 + 0802 屏</text>
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">PM10 >100 切高速，&lt;50 持续 10 分钟降速</text>
     <text x="64" y="366">踩进黄线安全区，过滤箱自动高速</text>
     <text x="64" y="396">收工偏高提醒再开 20 分钟别急着关</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：0211 中枢屏 + 每日曲线</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：0802 中枢屏 + 每日曲线</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome</text>
   <g transform="rotate(-8 296 108)">
     <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
@@ -523,7 +523,7 @@
     <text x="230" y="70">PMS5003</text>
     <text x="230" y="83" font-size="8.5" fill="#666">PM2.5 / PM10</text>
     <text x="85" y="147.5">ESPHome 上报 HA</text>
-    <text x="85" y="161">显示到 0211 中枢屏</text>
+    <text x="85" y="161">显示到 0802 中枢屏</text>
     <text x="230" y="155.5">PM10 >100？</text>
     <text x="230" y="168.5" font-size="8.5" fill="#666">或有人进区</text>
     <text x="390" y="147.5">是 → 过滤箱切高速</text>
@@ -544,7 +544,7 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>输入：PMS5003 颗粒物传感器，每 10 秒一次</li><li>阈值：PM10 &gt;100 高速，&lt;50 持续 10 分钟降速</li><li>地垫压力开关进人即高速，出口 0211 中枢屏</li><li>兜底：传感器掉线保持低速常转</li></ul></div>
+        <ul class="inspo"><li>输入：PMS5003 颗粒物传感器，每 10 秒一次</li><li>阈值：PM10 &gt;100 高速，&lt;50 持续 10 分钟降速</li><li>地垫压力开关进人即高速，出口 0802 中枢屏</li><li>兜底：传感器掉线保持低速常转</li></ul></div>
       <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 pmsx003 组件上报 PM2.5 / PM10，HomeAssistant 自动化做带迟滞的风速分档</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a><a href="https://github.com/MallocArray/airgradient_esphome" target="_blank" rel="noopener">MallocArray/airgradient_esphome</a></p></div>
     </div>
@@ -561,7 +561,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

@@ -16,7 +16,7 @@
   <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
   <nav class="areas-nav">
     <a href="../preface.html" class="pref ">序</a>
-    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a>
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" class="on"><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a><a href="../areas/08.html" ><i>08</i>虚拟空间</a>
     <a href="../space.html" class="about ">户型图</a>
     <a href="../refs.html" class="about ">参考索引</a>
     <a href="../about.html" class="about ">关于</a>
@@ -332,7 +332,7 @@
     <text x="64" y="366">胆机先静音预热 60 秒，保护灯管和喇叭</text>
     <text x="64" y="396">再按一次倒放，音箱交还 0207 影音室</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 场景 + moOde · 数据出口：播放状态 / 0211 大屏</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 场景 + moOde · 数据出口：播放状态 / 0802 大屏</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：moode-player/moode</text>
   <!-- 印章 -->
   <g transform="rotate(-8 296 108)">
@@ -491,7 +491,7 @@
     <text x="64" y="366">每个摆位一套滤波器，换位置一键切换</text>
     <text x="64" y="396">黑胶可选直通留模拟味，数字源必经 DSP</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：CamillaDSP（moOde 树莓派）· 数据出口：频响曲线 / 0211 大屏</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：CamillaDSP（moOde 树莓派）· 数据出口：频响曲线 / 0802 大屏</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：HEnquist/camilladsp · moode-player/moode</text>
   <!-- 印章 -->
   <g transform="rotate(-8 296 108)">
@@ -570,7 +570,7 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>REW 扫频测量，每个摆位一套滤波器，每季度重测</li><li>只校 20~200Hz 房间模式，中高频不动</li><li>黑胶可选直通，数字源必经 DSP</li><li>削波监测超限自动降 3dB，频响曲线上 0211 大屏</li></ul></div>
+        <ul class="inspo"><li>REW 扫频测量，每个摆位一套滤波器，每季度重测</li><li>只校 20~200Hz 房间模式，中高频不动</li><li>黑胶可选直通，数字源必经 DSP</li><li>削波监测超限自动降 3dB，频响曲线上 0802 大屏</li></ul></div>
       <div><h3>主要实现路径</h3><p class="impl">滤波器用 HEnquist/camilladsp 的 FIR / IIR 管线套用，跑在 moode-player/moode 的树莓派上，配置切换走 CamillaDSP 的 websocket 接口</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/HEnquist/camilladsp" target="_blank" rel="noopener">HEnquist/camilladsp</a><a href="https://github.com/moode-player/moode" target="_blank" rel="noopener">moode-player/moode</a></p></div>
     </div>
@@ -587,7 +587,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">7 区域 · 42 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>
