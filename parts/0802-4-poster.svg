@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0802-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0802-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0802-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0802-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：曲线越过阈值线 -->
+    <rect x="40" y="130" width="84" height="70" rx="3" stroke-width="1.4"/>
+    <path d="M46 160 H118" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <path d="M46 188 q10 -6 18 -10 q10 -6 16 -12 q8 -8 14 -16 q6 -6 12 -12" stroke-width="1.3"/>
+    <circle cx="96" cy="152" r="2.5" stroke-width="1"/><circle cx="106" cy="140" r="2.5" stroke-width="1"/>
+    <path d="M42 132 h80 v6 h-80 Z" fill="url(#p0802-4p-dots)" stroke="none"/>
+    <!-- 中：警告三角 -->
+    <path d="M180 118 l38 66 h-76 Z" stroke-width="1.8"/>
+    <path d="M180 126 l31 54 h-62 Z" stroke-width="0.6"/>
+    <path d="M180 142 v22 M180 170 v4" stroke-width="2.2"/>
+    <path d="M150 178 h60 v6 h-60 Z" fill="url(#p0802-4p-shade)" stroke="none"/>
+    <!-- 右：三级出口（大屏 / 手机 / 日志本） -->
+    <rect x="256" y="112" width="58" height="34" rx="3" stroke-width="1.4"/>
+    <path d="M262 118 l46 22 M262 140 l46 -22" stroke-width="0.6"/>
+    <path d="M250 106 l-4 -4 M320 106 l4 -4 M250 152 l-4 4 M320 152 l4 4" stroke-width="1"/>
+    <rect x="272" y="160" width="26" height="40" rx="4" stroke-width="1.4"/>
+    <path d="M280 165 h10 M278 194 h14" stroke-width="0.8"/>
+    <rect x="276" y="170" width="18" height="10" rx="1" stroke-width="0.7"/>
+    <rect x="258" y="212" width="54" height="30" rx="2" stroke-width="1.3"/>
+    <path d="M264 220 h42 M264 227 h30 M264 234 h36" stroke-width="0.7"/>
+    <path d="M258 236 h54 v6 h-54 Z" fill="url(#p0802-4p-shade)" stroke="none"/>
+    <!-- 箭头 -->
+    <path d="M128 164 Q140 160 150 156" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M214 140 Q236 130 252 128" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M216 170 Q244 176 268 180" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M206 186 Q230 220 254 226" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <path d="M56 276 q30 -3 60 0 M244 276 q30 -3 60 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0802 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">分级告警器</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">先确认再吵，该吵的时候一定吵到你</text>
+  <text x="46" y="157" font-size="6.5" fill="#666">阈值</text>
+  <text x="232" y="118" font-size="7" fill="#b5372b" font-weight="700">一级</text>
+  <text x="304" y="184" font-size="7" fill="#666">二级</text>
+  <text x="318" y="230" font-size="7" fill="#666">三级</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">连续两次越界 → 判等级 → 闪红推送 / 图标闪 / 只记日志</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">一级：漏水、烟感、鱼缸断电，全屏闪红立刻推</text>
+    <text x="64" y="366">二级：湿度、水位，图标闪、屏角计数、每小时推</text>
+    <text x="64" y="396">24 小时没人处理，自动升一级</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA alert 集成 · 数据出口：通知 + 日志页 + 手机推送</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：home-assistant/core · ExperienceLovelace/ha-floorplan</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

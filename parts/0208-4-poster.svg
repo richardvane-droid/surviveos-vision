@@ -65,7 +65,7 @@
     <text x="64" y="366">每个摆位一套滤波器，换位置一键切换</text>
     <text x="64" y="396">黑胶可选直通留模拟味，数字源必经 DSP</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：CamillaDSP（moOde 树莓派）· 数据出口：频响曲线 / 0211 大屏</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：CamillaDSP（moOde 树莓派）· 数据出口：频响曲线 / 0802 大屏</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：HEnquist/camilladsp · moode-player/moode</text>
   <!-- 印章 -->
   <g transform="rotate(-8 296 108)">

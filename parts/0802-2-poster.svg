@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0802-2p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0802-2p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0802-2p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0802-2p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 左：三个传感器小圆（温度计 / 水滴 / 太阳） -->
+    <circle cx="60" cy="130" r="16" stroke-width="1.4"/>
+    <path d="M60 120 v14 a4 4 0 1 0 0 0" stroke-width="1.2"/><circle cx="60" cy="138" r="3.5" stroke-width="1.2"/>
+    <circle cx="60" cy="176" r="16" stroke-width="1.4"/>
+    <path d="M60 165 q-8 10 -6 15 a6 6 0 0 0 12 0 q2 -5 -6 -15 Z" stroke-width="1.2"/>
+    <circle cx="60" cy="222" r="16" stroke-width="1.4"/>
+    <circle cx="60" cy="222" r="5" stroke-width="1.2"/>
+    <path d="M60 212 v-3 M60 232 v3 M50 222 h-3 M70 222 h3 M53 215 l-2 -2 M67 229 l2 2 M67 215 l2 -2 M53 229 l-2 2" stroke-width="1"/>
+    <!-- 中：漏斗（汇聚） -->
+    <path d="M134 118 h92 l-34 44 v40 l-24 10 v-50 Z" stroke-width="1.6"/>
+    <path d="M138 122 h84" stroke-width="0.6"/>
+    <path d="M170 166 h20 v38 l-20 8 Z" fill="url(#p0802-2p-shade)" stroke="none"/>
+    <path d="M148 134 h64 M158 146 h44" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <!-- 右：数据库圆柱 + 小屏 -->
+    <path d="M262 124 a24 6 0 0 1 48 0 v34 a24 6 0 0 1 -48 0 Z" stroke-width="1.5"/>
+    <ellipse cx="286" cy="124" rx="24" ry="6" stroke-width="1.5"/>
+    <path d="M262 136 a24 6 0 0 0 48 0 M262 148 a24 6 0 0 0 48 0" stroke-width="0.6"/>
+    <path d="M264 152 a24 6 0 0 0 44 0 v6 a24 6 0 0 1 -44 0 Z" fill="url(#p0802-2p-shade)" stroke="none"/>
+    <rect x="258" y="184" width="56" height="38" rx="3" stroke-width="1.5"/>
+    <path d="M264 212 q8 -16 14 -6 q8 12 14 -8 q6 -10 12 -2" stroke-width="1"/>
+    <path d="M280 222 v6 h12 v-6" stroke-width="1"/>
+    <path d="M260 186 h52 v6 h-52 Z" fill="url(#p0802-2p-dots)" stroke="none"/>
+    <!-- 箭头 -->
+    <path d="M80 130 Q110 130 130 132" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M80 176 Q120 176 150 168" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M80 222 Q120 222 166 196" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M196 180 Q230 170 256 148" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M196 196 Q230 200 254 202" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M40 254 Q180 246 320 254" stroke-width="1.2"/>
+    <path d="M56 260 q30 -3 60 0 M244 260 q30 -3 60 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0802 · L2</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">数据汇聚总线</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">七个区域几十种嘴，进了这里只说一种话</text>
+  <text x="180" y="138" text-anchor="middle" font-size="10" fill="#2a2a2a" font-weight="700">HA</text>
+  <text x="180" y="284" text-anchor="middle" font-size="9.5" fill="#666">ESPHome / Zigbee / MQTT → HA 统一实体 → InfluxDB 曲线 · 状态机</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">每个实体都带区域和最后更新时间两个属性</text>
+    <text x="64" y="366">曲线类数据进 InfluxDB 留 90 天，状态类留 HA</text>
+    <text x="64" y="396">只在 N100 上流转，断外网一切照常</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：N100 · HA + InfluxDB · 数据出口：HA 实体 + Grafana 曲线</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：home-assistant/core · esphome/esphome</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

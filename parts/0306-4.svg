@@ -54,7 +54,7 @@
     <text x="85" y="247">否 → 掉线告警</text><text x="85" y="261">推送检查线路</text>
     <text x="230" y="247">按天聚合</text><text x="230" y="261">最高低温·雨量·风向</text>
     <text x="390" y="247">雨量筒一周没翻斗？</text><text x="390" y="261">提醒清落叶</text>
-    <text x="240" y="331">年底生成年度气候图 → 0211 大屏</text>
+    <text x="240" y="331">年底生成年度气候图 → 0802 大屏</text>
   </g>
   <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="195">否</text><text x="300" y="68">写入</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0306-4</text>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0803-4p-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="75" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="p0803-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+  </defs>
+  <g filter="url(#p0803-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/><rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+<ellipse cx="90.0" cy="228.4" rx="14.4" ry="10.8" stroke-width="1.4"/>
+<path d="M98.1 221.2 Q100.8 214.0 101.7 210.4" stroke-width="1.4"/>
+<circle cx="102.6" cy="205.0" r="6.3" stroke-width="1.4"/>
+<path d="M108.9 205.0 l7.2 1.5 l-7.2 2.5" stroke-width="1.4"/>
+<circle cx="104.4" cy="203.2" r="1.3" stroke-width="1.1199999999999999"/>
+<circle cx="97.2" cy="230.2" r="3.1" stroke-width="1.1199999999999999"/>
+<path d="M86.4 238.3 L85.5 250 M94.5 238.3 L95.4 250 M80.1 250 h8.1 M90.9 250 h8.1" stroke-width="1.4"/>
+<path d="M81.0 226.6 q4.5 5 9.9 1" stroke-width="0.9799999999999999"/>
+<path d="M120 150 q0 -12 12 -12 h80 q12 0 12 12 v30 q0 12 -12 12 h-60 l-14 10 v-10 h-6 q-12 0 -12 -12 Z" stroke-width="1.3"/>
+<path d="M136 160 h60 M136 172 h40" stroke-width="0.7"/>
+<path d="M250 130 h60 v50 h-60 Z M256 140 h48 M256 150 h48 M256 160 h30" stroke-width="1.1"/>
+<path d="M224 162 H248" stroke-width="1" stroke-dasharray="3 3"/><path d="M244 158 l4 4 l-4 4" stroke-width="1"/>
+<circle cx="106" cy="228" r="6" stroke-width="1"/><path d="M103 228 l2 2 l4 -4" stroke-width="0.8"/>
+<path d="M160 230 l40 -10 M160 236 l40 10" stroke-width="0.6" stroke-dasharray="2 2"/>
+<path d="M210 210 h30 v30 h-30 Z M214 218 l6 -4 l5 5 l7 -8 l8 8" stroke-width="1"/>
+<path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0803 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">会说话的仪表盘</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">问它一句，它去大屏那边查了用嘴说</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">唤醒词 → 大模型 → MCP 读 HA 实体 → ≤20 字回答 + 圆屏数字</text>
+  <g font-size="11" fill="#2a2a2a"><text x="64" y="336">只认一个人的声音，物理静音拨杆一拨就聋</text><text x="64" y="366">随口一句“记得买螺丝”写进 0801 待办</text><text x="64" y="396">3 秒没结果就说“我去问问大屏”并推送手机</text></g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESP32-S3 xiaozhi + HA MCP Server · 数据出口：HA todo 实体</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：78/xiaozhi-esp32</text>
+  <g transform="rotate(-8 296 108)"><rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/><text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text></g>
+</svg>

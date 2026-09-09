@@ -54,7 +54,7 @@
     <text x="390" y="261">回到高位？</text>
     <text x="230" y="247">水质越阈值</text>
     <text x="230" y="261">或变化过快？</text>
-    <text x="240" y="331">推送手机 + 0211 红点，记日志</text>
+    <text x="240" y="331">推送手机 + 0802 红点，记日志</text>
   </g>
   <g font-size="8.5" fill="#666"><text x="300" y="146">是</text><text x="238" y="198">否</text><text x="298" y="244">是·关阀</text><text x="400" y="296">否·疑似卡阀</text><text x="238" y="296">是</text><text x="120" y="244">否·正常</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0205-4</text>

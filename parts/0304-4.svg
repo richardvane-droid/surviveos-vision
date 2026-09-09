@@ -56,7 +56,7 @@
     <text x="85" y="247">回升 10% 再恢复</text><text x="85" y="261">避免反复开关</text>
     <text x="230" y="247">否 → 光伏 &gt; 负载时</text><text x="230" y="261">逐级恢复输出口</text>
     <text x="390" y="247">&lt;20% 只留串灯气象站</text><text x="390" y="261">推送“今晚省着用”</text>
-    <text x="240" y="331">每日发电量推送 0211 大屏</text>
+    <text x="240" y="331">每日发电量推送 0802 大屏</text>
   </g>
   <g font-size="8.5" fill="#666"><text x="305" y="146">是</text><text x="240" y="200">否</text><text x="158" y="242">滞回</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0304-4</text>

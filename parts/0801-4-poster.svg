@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0801-4p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0801-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0801-4p-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+    <pattern id="p0801-4p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0801-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <path d="M40 176 h64 a6 6 0 0 1 6 6 v34 a6 6 0 0 1 -6 6 h-40 l-10 10 v-10 h-14 a6 6 0 0 1 -6 -6 v-34 a6 6 0 0 1 6 -6 Z" stroke-width="1.5"/>
+    <rect x="66" y="184" width="10" height="18" rx="5" stroke-width="1.2"/><path d="M62 196 a9 9 0 0 0 18 0 M71 205 v6 M66 211 h10" stroke-width="1"/>
+    <path d="M50 190 q2 -3 4 0 t4 0 M88 190 q2 -3 4 0 t4 0" stroke-width="0.6"/>
+    <path d="M150 168 a26 5 0 0 1 52 0 v40 a26 5 0 0 1 -52 0 Z" stroke-width="1.5"/><ellipse cx="176" cy="168" rx="26" ry="5" stroke-width="1.2"/><path d="M150 182 a26 5 0 0 0 52 0 M150 196 a26 5 0 0 0 52 0" stroke-width="0.6"/>
+    <circle cx="196" cy="206" r="14" stroke-width="1.6"/><circle cx="196" cy="206" r="10" stroke-width="0.6"/><path d="M206 216 l14 14" stroke-width="2.2"/>
+    <path d="M252 210 l34 -20 l34 20 l-34 20 Z" stroke-width="1.4"/><path d="M262 210 l24 -14 l24 14 l-24 14 Z" stroke-width="0.7"/>
+    <path d="M270 200 l6 -4 l6 4 l-6 4 Z M292 214 l6 -4 l6 4 l-6 4 Z M266 214 l6 -4 l6 4 l-6 4 Z" stroke-width="0.7"/><path d="M270 200 v5 l6 4 v-5 M292 214 v5 l6 4 v-5 M266 214 v5 l6 4 v-5" stroke-width="0.5"/>
+    <path d="M286 206 q-8 -12 0 -20 q8 8 0 20 Z" stroke-width="1.5"/><circle cx="286" cy="192" r="3" stroke-width="0.9"/>
+    <path d="M286 178 l-3 -3 M289 176 l3 -3 M280 182 l-4 0" stroke-width="0.8"/>
+    <path d="M114 200 Q130 196 146 194" stroke-width="1" stroke-dasharray="3 3"/><path d="M212 196 Q232 196 250 204" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M40 262 Q180 254 320 262" stroke-width="1.2"/><path d="M44 266 q40 -3 80 0 M236 266 q40 -3 80 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0801 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">找东西</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">说一声，地图上就亮一个点</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">语音 / 键盘 → 模糊匹配物品库 → 箱号 → 格位 → 地图亮点 + 箱内照片</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">容 1～2 个错字，别名也能搜到</text>
+    <text x="64" y="366">一秒内回答，全程本地无云</text>
+    <text x="64" y="396">没找到就给 3 个近似项，确认后自动补别名</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：Homebox API + HA Assist · 数据出口：平板等距地图 / 0802 大屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：sysadminsmedia/homebox</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

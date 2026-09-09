@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0802-3p-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0802-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0802-3p-dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.7" fill="#7a7a7a"/>
+    </pattern>
+  </defs>
+  <g filter="url(#p0802-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/>
+    <rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+    <!-- 输入：HA 实体圆柱（左上） -->
+    <path d="M40 118 a16 4 0 0 1 32 0 v22 a16 4 0 0 1 -32 0 Z" stroke-width="1.3"/>
+    <ellipse cx="56" cy="118" rx="16" ry="4" stroke-width="1.3"/>
+    <path d="M42 136 a16 4 0 0 0 28 0 v4 a16 4 0 0 1 -28 0 Z" fill="url(#p0802-3p-shade)" stroke="none"/>
+    <!-- 中屏（竖） -->
+    <rect x="140" y="112" width="80" height="128" rx="4" stroke-width="1.6"/>
+    <rect x="144" y="116" width="72" height="120" rx="3" stroke-width="0.6"/>
+    <!-- 等距小房子 -->
+    <path d="M180 140 l26 13 v22 l-26 13 l-26 -13 v-22 Z" stroke-width="1.2"/>
+    <path d="M154 153 l26 13 l26 -13 M180 166 v22" stroke-width="1"/>
+    <path d="M154 153 v22 l26 13 v-22 Z" fill="url(#p0802-3p-shade)" stroke="none"/>
+    <path d="M180 132 l8 8 M188 140 l-8 -8 l-8 8" stroke-width="0.9"/>
+    <circle cx="166" cy="172" r="2.5" stroke-width="0.9"/><circle cx="196" cy="170" r="2.5" stroke-width="0.9"/>
+    <circle cx="196" cy="170" r="5" stroke-width="0.6" stroke-dasharray="1.5 1.5"/>
+    <path d="M152 206 h56 M152 214 h40 M152 222 h48" stroke-width="0.8"/>
+    <!-- 左屏（横） -->
+    <rect x="66" y="160" width="62" height="42" rx="3" stroke-width="1.5"/>
+    <path d="M72 194 q10 -22 18 -12 q8 10 14 -14 q6 -12 14 4" stroke-width="1"/>
+    <path d="M68 162 h58 v6 h-58 Z" fill="url(#p0802-3p-dots)" stroke="none"/>
+    <!-- 右屏（横） -->
+    <rect x="232" y="160" width="62" height="42" rx="3" stroke-width="1.5"/>
+    <path d="M240 196 v-12 M250 196 v-20 M260 196 v-8 M270 196 v-24 M280 196 v-16" stroke-width="2"/>
+    <path d="M234 162 h58 v6 h-58 Z" fill="url(#p0802-3p-dots)" stroke="none"/>
+    <!-- 实体开关排 -->
+    <rect x="100" y="250" width="160" height="14" rx="3" stroke-width="1.3"/>
+    <path d="M112 257 l-2 -8 M136 257 l-2 -8 M160 257 l2 -8 M184 257 l-2 -8 M208 257 l2 -8 M232 257 l-2 -8" stroke-width="1.3"/>
+    <path d="M102 258 h156 v4 h-156 Z" fill="url(#p0802-3p-shade)" stroke="none"/>
+    <!-- 夜航：月亮（右上） -->
+    <path d="M296 128 a14 14 0 1 0 12 20 a11 11 0 0 1 -12 -20 Z" stroke-width="1.3"/>
+    <!-- 箭头 -->
+    <path d="M74 128 Q110 130 136 140" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M62 146 Q70 156 84 158" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M296 150 Q290 170 258 174" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M40 278 Q180 270 320 278" stroke-width="1.2"/>
+    <path d="M56 284 q30 -3 60 0 M244 284 q30 -3 60 0" stroke-width="0.6"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0802 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">三屏仪表盘</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">白天是壁画，晚上是夜灯，中间那张是整座房子</text>
+  <text x="56" y="132" text-anchor="middle" font-size="7.5" fill="#2a2a2a">实体</text>
+  <text x="180" y="232" text-anchor="middle" font-size="7" fill="#666">今天所有模块正常</text>
+  <text x="180" y="302" text-anchor="middle" font-size="9.5" fill="#666">HA 实体 → 按屏分流 → 等距地图 / 曲线 / 水电 → 22:00 夜航</text>
+  <g font-size="11" fill="#2a2a2a">
+    <text x="64" y="336">中屏等距地图，模块图标灰 / 亮 / 闪红三态</text>
+    <text x="64" y="366">首页最多 10 个数据，其余藏进二级页</text>
+    <text x="64" y="396">22:00 自动切夜航：黑底、红数字、亮度 10%</text>
+  </g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 仪表盘 · 数据出口：三个视图 + 手机端复用</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：ExperienceLovelace/ha-floorplan · lovelace-mushroom</text>
+  <g transform="rotate(-8 296 108)">
+    <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>
+    <text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text>
+  </g>
+</svg>

@@ -68,19 +68,19 @@
     <text x="78" y="200">Sweet Home 3D 户型</text>
     <text x="163" y="184">亮 / 灭各一张</text>
     <text x="200" y="212">entity_id 校验</text>
-    <text x="284" y="212">0211 大屏 picture-elements</text>
+    <text x="284" y="212">0802 大屏 picture-elements</text>
     <text x="303" y="248">灯一开，图上亮</text>
   </g>
   <g font-size="8" fill="#555" text-anchor="middle">
     <text x="163" y="118">逐灯渲染</text>
   </g>
-  <text x="180" y="298" text-anchor="middle" font-size="9.5" fill="#666">FreeCAD / Sweet Home 3D → 分灯渲染 + YAML → 0211 大屏</text>
+  <text x="180" y="298" text-anchor="middle" font-size="9.5" fill="#666">FreeCAD / Sweet Home 3D → 分灯渲染 + YAML → 0802 大屏</text>
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">每盏灯逐一渲染亮 / 灭两张图，按需叠加</text>
     <text x="64" y="366">灯和 entity_id 缺一不导出，图亮灯不亮就抓到</text>
     <text x="64" y="396">每次导出打日期标签，旧图保留随时回滚</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：Sweet Home 3D 插件 + HA picture-elements · 出口：渲染图 / YAML / 0211</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：Sweet Home 3D 插件 + HA picture-elements · 出口：渲染图 / YAML / 0802</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：shmuelzon/home-assistant-floor-plan · FreeCAD/FreeCAD</text>
   <g transform="rotate(-8 296 108)">
     <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>

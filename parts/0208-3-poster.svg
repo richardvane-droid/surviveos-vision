@@ -72,7 +72,7 @@
     <text x="64" y="366">胆机先静音预热 60 秒，保护灯管和喇叭</text>
     <text x="64" y="396">再按一次倒放，音箱交还 0207 影音室</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 场景 + moOde · 数据出口：播放状态 / 0211 大屏</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA 场景 + moOde · 数据出口：播放状态 / 0802 大屏</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：moode-player/moode</text>
   <!-- 印章 -->
   <g transform="rotate(-8 296 108)">

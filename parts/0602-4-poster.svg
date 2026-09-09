@@ -66,7 +66,7 @@
     <text x="64" y="366">三区含水率曲线 + 本周用水 + 雨水占比一屏看完</text>
     <text x="64" y="396">浇后三天含水率不回升就标黄点，提醒挖滴头</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：HA utility_meter · 数据出口：Lovelace 卡片 → 0211 大屏</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HA utility_meter · 数据出口：Lovelace 卡片 → 0802 大屏</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：petergridge/Irrigation-V5</text>
   <g transform="rotate(-8 296 108)">
     <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>

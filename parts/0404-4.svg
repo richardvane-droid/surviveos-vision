@@ -50,7 +50,7 @@
     <text x="230" y="70">PMS5003</text>
     <text x="230" y="83" font-size="8.5" fill="#666">PM2.5 / PM10</text>
     <text x="85" y="147.5">ESPHome 上报 HA</text>
-    <text x="85" y="161">显示到 0211 中枢屏</text>
+    <text x="85" y="161">显示到 0802 中枢屏</text>
     <text x="230" y="155.5">PM10 >100？</text>
     <text x="230" y="168.5" font-size="8.5" fill="#666">或有人进区</text>
     <text x="390" y="147.5">是 → 过滤箱切高速</text>

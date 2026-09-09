@@ -63,18 +63,18 @@
     <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
     <path d="M30 420 H330" stroke-width="0.8"/>
   </g>
-  <text x="44" y="206" font-size="8" fill="#666">PMS5003 · 地垫开关</text><text x="256" y="166" font-size="8" fill="#666">天花过滤箱</text><text x="262" y="228" font-size="8" fill="#666">0211 中枢屏</text>
+  <text x="44" y="206" font-size="8" fill="#666">PMS5003 · 地垫开关</text><text x="256" y="166" font-size="8" fill="#666">天花过滤箱</text><text x="262" y="228" font-size="8" fill="#666">0802 中枢屏</text>
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0404 · L4</text>
   <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">粉尘监测调速</text>
   <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">看不见的木粉，也得有人管</text>
-  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">PMS5003 颗粒物 → ESPHome → HA 迟滞分档 → 过滤箱高 / 低速 + 0211 屏</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">PMS5003 颗粒物 → ESPHome → HA 迟滞分档 → 过滤箱高 / 低速 + 0802 屏</text>
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">PM10 >100 切高速，&lt;50 持续 10 分钟降速</text>
     <text x="64" y="366">踩进黄线安全区，过滤箱自动高速</text>
     <text x="64" y="396">收工偏高提醒再开 20 分钟别急着关</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：0211 中枢屏 + 每日曲线</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：0802 中枢屏 + 每日曲线</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：esphome/esphome</text>
   <g transform="rotate(-8 296 108)">
     <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>

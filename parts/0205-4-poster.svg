@@ -44,9 +44,9 @@
   <g font-size="11" fill="#2a2a2a">
     <text x="64" y="336">补水单次最长 120 秒，24 小时不超过 5 次</text>
     <text x="64" y="366">pH 一小时内变动超过 0.3 就报警，不等出事</text>
-    <text x="64" y="396">异常同时推到手机和 0211 大屏，日志留 90 天</text>
+    <text x="64" y="396">异常同时推到手机和 0802 大屏，日志留 90 天</text>
   </g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：HA 通知 / 0211 大屏</text>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：HA 通知 / 0802 大屏</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：TheRealFalseReality/aquapi</text>
   <g transform="rotate(-8 296 108)">
     <rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/>

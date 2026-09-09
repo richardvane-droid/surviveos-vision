@@ -52,7 +52,7 @@
     <text x="390" y="147">否 → 停止导出</text><text x="390" y="161">列出缺失的灯</text>
     <text x="85" y="247">打日期标签</text><text x="85" y="261">旧图保留可回滚</text>
     <text x="230" y="247">生成 picture-</text><text x="230" y="261">elements YAML</text>
-    <text x="390" y="247">推到 0211 大屏</text><text x="390" y="261">HA 面板刷新</text>
+    <text x="390" y="247">推到 0802 大屏</text><text x="390" y="261">HA 面板刷新</text>
     <text x="240" y="331">灯一开，平面图对应位置亮起</text>
   </g>
   <g font-size="8.5" fill="#666"><text x="305" y="146">否</text><text x="236" y="200">是</text></g>
