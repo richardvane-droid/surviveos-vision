@@ -37,14 +37,19 @@ AREAS = {
            "intro": "从庭院出来，穿过 2 米过道、走下 6 米缓坡，就是钓台——约 2.5×2.2 米、5.5㎡，在岸上临河的那一端，面前是 10 米宽的河。它不是伸进水里的栈桥平台，尺寸只够一个人、一把椅、一张小桌。真实项目里钓台还没做范围拆解，设想版先替它想好四个模块：平台本体和顶棚、钓具储物、离网照明与电源、水边茶席和小火塘。做完之后，这里应该是整套系统里最“什么都不干”的地方。",
            "space": "≈2.5 × 2.2m · ≈5.5㎡ · 露天 · 缓坡临河端（按庭院四分之一预估）", "plans": ["site"],
            "plan_note": "场地总图。钓台在庭院以南、缓坡临河的那一端，钓台尺寸按庭院四分之一面积预估。"},
+    "08": {"name": "虚拟空间", "en": "Virtual", "line": "不属于任何一间屋：全屋物品的数字孪生、汇聚一切的中枢大屏，和一只自己走门串户的 AI 小鸭",
+           "intro": "2026-09-09 真实项目新设的区域，收纳“不专属于任何单一物理区域”的东西：一层跨区域的基础信息层（0801 物品数字孪生、0802 全屋中枢，原地堡的 0206 / 0211 迁到这里重编号），和一台在空间里移动的实体设备（0803 miniduck）。它们的硬件仍然落在某个房间，但服务的是整座园子——七个物理区域的传感器和箱子都往这里汇，再从这里长出一张脸、一块屏、一个搜索框。",
+           "space": "跨区域 · 数据层跑在地堡储藏室的小主机上 · 实体设备在木屋 / 地堡 / 阁楼之间移动", "plans": ["site"],
+           "plan_note": "场地总图。虚拟空间没有自己的一块地：数字孪生和中枢覆盖图上所有区域，miniduck 靠木屋暗门下、地堡门下的通道和阁楼坡道在三个空间之间走动。"},
 }
 
 STATUS = {
     "✅": {"0201", "0202", "0601", "0602", "0603"},
-    "🚧": {"0103", "0209"},
+    "🚧": {"0103", "0209", "0801"},
 }
 def real_status(mid):
     if mid.startswith("07"): return ("设想", "真实项目尚未拆解此区域")
+    if mid == "0801": return ("🚧", "真实项目需求收集中")
     for k, s in STATUS.items():
         if mid in s: return (k, {"✅": "真实三阶段已完成", "🚧": "真实设计进行中"}[k])
     return ("⬜", "真实项目待设计")
@@ -138,7 +143,7 @@ BASE = r"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{% endblock %} · SurviveOs 设想版</title>
-<meta name="description" content="{% block desc %}SurviveOs 乡野生存系统的完整形态设想：7 个区域、{{ stats.modules }} 个模块专题，黑白钢笔速写插图。{% endblock %}">
+<meta name="description" content="{% block desc %}SurviveOs 乡野生存系统的完整形态设想：{{ stats.areas }} 个区域、{{ stats.modules }} 个模块专题，黑白钢笔速写插图。{% endblock %}">
 <link rel="icon" href="{{ root }}favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -174,7 +179,7 @@ INDEX = r"""{% extends "base" %}{% block title %}一座乡野生存系统，做�
   <div class="hero-text">
     <p class="kicker">SurviveOs · 完整形态设想</p>
     <h1>一座乡野生存系统，<br>做完之后的样子。</h1>
-    <p class="lede">杭州乡下的一栋木屋、一个地堡、一层阁楼、一片草地和一座钓台。真实项目还在一个模块一个模块地做；这个站先把 <b>{{ stats.modules }} 个模块全部想完</b>——每个模块一页专题，小红书式的放飞文案，配一张黑白钢笔速写；再往下拆成 {{ parts_stats.total }} 个核心产品模块与联动逻辑，每个都有铅笔画的爆炸图或流程图。</p>
+    <p class="lede">杭州乡下的一栋木屋、一个地堡、一层阁楼、一片草地、一座钓台，再加一层看不见的虚拟空间。真实项目还在一个模块一个模块地做；这个站先把 <b>{{ stats.modules }} 个模块全部想完</b>——每个模块一页专题，小红书式的放飞文案，配一张黑白钢笔速写；再往下拆成 {{ parts_stats.total }} 个核心产品模块与联动逻辑，每个都有铅笔画的爆炸图或流程图。</p>
     <div class="stats">
       <div><b>{{ stats.areas }}</b><span>个区域</span></div>
       <div><b>{{ stats.modules }}</b><span>个模块专题</span></div>
@@ -189,7 +194,7 @@ INDEX = r"""{% extends "base" %}{% block title %}一座乡野生存系统，做�
 </section>
 
 <section class="sec">
-  <h2 class="sec-title"><span>七个区域</span><small>从屋里到水边，按编号走一圈</small></h2>
+  <h2 class="sec-title"><span>{{ stats.areas }} 个区域</span><small>从屋里到水边，再到看不见的那一层，按编号走一圈</small></h2>
   <div class="area-grid">
   {% for a in areas.values() %}
     <a class="area-card" href="areas/{{ a.id }}.html">
@@ -387,11 +392,11 @@ ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endbloc
     <p class="lede">真实的 SurviveOs 项目是一个模块一个模块严谨地做——方案原理推演、设备电商选型、施工。0901 反过来：不严谨、不算账、不等进度，先把 {{ stats.modules }} 个模块"做完之后的样子"一口气想完，给真实设计当参照物，也给自己一个随时能逛一圈的地方。</p>
   </header>
   <section class="blk"><h2><em>①</em> 框架是真的，内容是想的</h2>
-    <p class="scene">7 个区域和模块编号完全沿用真实项目的《0002 区域与子模块清单》。5 个真实已完成的模块（0201 模拟阳光、0202 卫生间灯箱、0601～0603 草地三件套）和 2 个进行中的模块（0103 电子画框墙、0209 藏宝阁），设想内容在真实方案基础上放飞；其余模块是纯幻想。钓台区真实项目还没拆解，这里先替它想了 0701～0704 四个模块。每页右上角的状态章（⬜ / 🚧 / ✅ / 设想）标的是<b>真实进度</b>，不是设想进度。</p></section>
+    <p class="scene">{{ stats.areas }} 个区域和模块编号完全沿用真实项目的《0002 区域与子模块清单》（2026-09-09 新设 08 虚拟空间：0206 → 0801、0211 → 0802，新增 0803 miniduck）。5 个真实已完成的模块（0201 模拟阳光、0202 卫生间灯箱、0601～0603 草地三件套）和 3 个进行中的模块（0103 电子画框墙、0209 藏宝阁、0801 物品数字孪生），设想内容在真实方案基础上放飞；其余模块是纯幻想。钓台区真实项目还没拆解，这里先替它想了 0701～0704 四个模块。每页右上角的状态章（⬜ / 🚧 / ✅ / 设想）标的是<b>真实进度</b>，不是设想进度。</p></section>
   <section class="blk"><h2><em>②</em> 文案参考了小红书的热门写法</h2>
     <p class="scene">标题带钩子、短句、口语、适量 emoji；正文固定五段：沉浸式想象 → 设想方案清单 → 小红书灵感点 → 避坑提醒 → 预算幻想。灵感点里反复出现的"适我主义""精神角落 / 精神领地 / 逃避间""痛屋""家的丰容计划""去家务化 / 动线""动手主义""和植物一起住""观鸟"等，来自小红书 2026 年度居住趋势和热门话题。</p></section>
   <section class="blk"><h2><em>③</em> 插图是统一风格的黑白钢笔速写</h2>
-    <p class="scene">全站 {{ stats.modules }} 张模块速写 + 7 张区域全景都是原创的 inline SVG：只有一种墨色，阴影全部用 45° 排线，轮廓"描两遍"，线条经过轻微的扰动滤镜制造手绘感，右下角是编号签名。没有任何外部图片，页面在离线状态也能完整显示。</p></section>
+    <p class="scene">全站 {{ stats.modules }} 张模块速写 + {{ stats.areas }} 张区域全景都是原创的 inline SVG：只有一种墨色，阴影全部用 45° 排线，轮廓"描两遍"，线条经过轻微的扰动滤镜制造手绘感，右下角是编号签名。没有任何外部图片，页面在离线状态也能完整显示。</p></section>
   <section class="blk"><h2><em>④</em> 每页附了真实的参考链接</h2>
     <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 2～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），每个都在 2026-09 打开核实过、星数取自当时页面；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见<a href="{{ root }}refs.html">参考索引</a>。</p></section>
   <section class="blk"><h2><em>⑤</em> 每个模块再往下拆一层</h2>
@@ -520,7 +525,7 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .top{max-width:var(--w);margin:0 auto;padding:18px 20px 8px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:baseline;justify-content:space-between;border-bottom:1.6px solid var(--line)}
 .wordmark .mark{font-family:"Noto Serif SC",serif;font-weight:900;font-size:1.5rem;letter-spacing:.02em}
 .wordmark .sub{margin-left:10px;font-family:"Long Cang",cursive;font-size:1.15rem;color:var(--red)}
-.areas-nav{display:flex;flex-wrap:wrap;gap:2px 14px;font-size:.92rem}
+.areas-nav{display:flex;flex-wrap:wrap;gap:2px 11px;font-size:.88rem}
 .areas-nav a{padding:2px 2px;border-bottom:2px solid transparent}
 .areas-nav a i{margin-right:3px}
 .areas-nav a.on,.areas-nav a:hover{border-bottom-color:var(--red)}
