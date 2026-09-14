@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0804-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="101" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0804-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0804-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0804-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+<path d="M70.0 296.0 h30 v10 h-30 Z M70.0 296.0 l6 -5 h30 l-6 5 M100.0 296.0 l6 -5 v10 l-6 5" stroke-width="1.1"/><circle cx="94.0" cy="301.0" r="1.5" stroke-width="0.5"/><path d="M108.0 296.0 h30 v10 h-30 Z M108.0 296.0 l6 -5 h30 l-6 5 M138.0 296.0 l6 -5 v10 l-6 5" stroke-width="1.1"/><circle cx="132.0" cy="301.0" r="1.5" stroke-width="0.5"/><path d="M85.0 290.0 q20 -14 44 0" stroke-width="0.6" stroke-dasharray="2 2"/><path d="M96.0 284.0 l4 -2 l-1 4" stroke-width="0.6"/>
+<path d="M137.5 236.0 h30 v10 h-30 Z M137.5 236.0 l6 -5 h30 l-6 5 M167.5 236.0 l6 -5 v10 l-6 5" stroke-width="1.1"/><circle cx="161.5" cy="241.0" r="1.5" stroke-width="0.5"/><path d="M175.5 236.0 h30 v10 h-30 Z M175.5 236.0 l6 -5 h30 l-6 5 M205.5 236.0 l6 -5 v10 l-6 5" stroke-width="1.1"/><circle cx="199.5" cy="241.0" r="1.5" stroke-width="0.5"/><path d="M147.5 254.0 h10 M152.5 250.0 v8" stroke-width="0.6"/>
+<path d="M221.0 172.0 h40 v16 h-40 Z M261.0 172.0 l6 -4 v16 l-6 4" stroke-width="1.2"/><path d="M225.0 180.0 h30" stroke-width="0.5"/><path d="M275.0 180.0 h14 M285.0 176.0 h6 v8 h-6 Z" stroke-width="0.9"/><path d="M205.0 194.0 l-8 -12 h96 l-8 12 Z" stroke-width="0.9" stroke-dasharray="3 2"/>
+<path d="M282.5 106.0 h60 v28 h-60 Z" stroke-width="1.1"/><path d="M286.5 130.0 v-6" stroke-width="0.8"/><path d="M294.5 130.0 v-11" stroke-width="0.8"/><path d="M302.5 130.0 v-16" stroke-width="0.8"/><path d="M310.5 130.0 v-21" stroke-width="0.8"/><path d="M318.5 130.0 v-10" stroke-width="0.8"/><path d="M326.5 130.0 v-15" stroke-width="0.8"/><path d="M334.5 130.0 v-20" stroke-width="0.8"/><path d="M286.5 130.0 h52" stroke-width="0.6"/>
+<path d="M350.0 54.0 h24 v12 h-24 Z M374.0 60.0 h16 M390.0 52.0 h24 v16 h-24 Z" stroke-width="1"/><path d="M394.0 58.0 h16 M394.0 62.0 h10" stroke-width="0.5"/><path d="M378.0 46.0 l6 6 l6 -6" stroke-width="0.7"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
+<path d="M66.0 290.0 L34.0 284.0"/>
+<path d="M133.5 230.0 L101.5 224.0"/>
+<path d="M209.0 166.0 L177.0 160.0"/>
+<path d="M278.5 102.0 L246.5 96.0"/>
+<path d="M346.0 50.0 L314.0 44.0"/>
+  </g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">存储与冷备盘组 · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 镜像池 2×8TB：照片 / 数据库快照 / 文档</text><text x="16" y="59">2 单盘池 2×4TB：影音库（可再生）</text><text x="16" y="72">3 USB 冷备 4TB，每周一次 → 阁楼保险箱</text><text x="16" y="85">4 快照策略：日保留 30、月保留 12</text><text x="16" y="98">5 2.5GbE 直连 0802 小主机与 Mac mini</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0804-2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="34.0" cy="284.0" r="7"/></g><text x="34.0" y="287.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="101.5" cy="224.0" r="7"/></g><text x="101.5" y="227.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="177.0" cy="160.0" r="7"/></g><text x="177.0" y="163.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="246.5" cy="96.0" r="7"/></g><text x="246.5" y="99.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="314.0" cy="44.0" r="7"/></g><text x="314.0" y="47.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<text x="16" y="117" font-size="8" fill="#888" font-style="italic">镜像防坏盘 · 快照防误删 · 冷盘防火水</text>
+</svg>

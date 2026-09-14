@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0307-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="87" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0307-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0307-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0307-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+<path d="M50.0 290.0 h120 v16 h-120 Z M50.0 290.0 l14 -8.4 h120 l-14 8.4 M170.0 290.0 l14 -8.4 v16 l-14 8.4" stroke-width="1.3"/><path d="M171.0 291.0 l12 -7.4 v14 l-12 7.4 Z" fill="url(#p0307-1-shade)" stroke="none"/><path d="M108.0 292.0 v12 M52.0 298.0 h116 M106.0 292.0 h4 M106.0 304.0 h4" stroke-width="0.6"/><path d="M50.0 260.0 h16 v30 h-16 Z M50.0 260.0 l14 -8.4 h16 l-14 8.4 M66.0 260.0 l14 -8.4 v30 l-14 8.4" stroke-width="1.3"/><path d="M67.0 261.0 l12 -7.4 v28 l-12 7.4 Z" fill="url(#p0307-1-shade)" stroke="none"/><path d="M56.0 262.0 v26 M52.0 275.0 h12 M54.0 262.0 h4 M54.0 288.0 h4" stroke-width="0.6"/><path d="M154.0 260.0 h16 v30 h-16 Z M154.0 260.0 l14 -8.4 h16 l-14 8.4 M170.0 260.0 l14 -8.4 v30 l-14 8.4" stroke-width="1.3"/><path d="M171.0 261.0 l12 -7.4 v28 l-12 7.4 Z" fill="url(#p0307-1-shade)" stroke="none"/><path d="M160.0 262.0 v26 M156.0 275.0 h12 M158.0 262.0 h4 M158.0 288.0 h4" stroke-width="0.6"/>
+<path d="M137.5 210.0 h10 v60 h-10 Z M137.5 210.0 l10 -6.0 h10 l-10 6.0 M147.5 210.0 l10 -6.0 v60 l-10 6.0" stroke-width="1.3"/><path d="M148.5 211.0 l8 -5.0 v58 l-8 5.0 Z" fill="url(#p0307-1-shade)" stroke="none"/><path d="M140.5 212.0 v56 M139.5 240.0 h6 M138.5 212.0 h4 M138.5 268.0 h4" stroke-width="0.6"/><path d="M207.5 210.0 h10 v60 h-10 Z M207.5 210.0 l10 -6.0 h10 l-10 6.0 M217.5 210.0 l10 -6.0 v60 l-10 6.0" stroke-width="1.3"/><path d="M218.5 211.0 l8 -5.0 v58 l-8 5.0 Z" fill="url(#p0307-1-shade)" stroke="none"/><path d="M210.5 212.0 v56 M209.5 240.0 h6 M208.5 212.0 h4 M208.5 268.0 h4" stroke-width="0.6"/><path d="M137.5 200.0 h80 v10 h-80 Z M137.5 200.0 l10 -6.0 h80 l-10 6.0 M217.5 200.0 l10 -6.0 v10 l-10 6.0" stroke-width="1.3"/><path d="M218.5 201.0 l8 -5.0 v8 l-8 5.0 Z" fill="url(#p0307-1-shade)" stroke="none"/><path d="M175.5 202.0 v6 M139.5 205.0 h76 M173.5 202.0 h4 M173.5 208.0 h4" stroke-width="0.6"/>
+<path d="M199.0 180.0 h92 v6 h-92 Z M199.0 156.0 h92 v6 h-92 Z" stroke-width="1.2"/><path d="M215.0 162.0 h20 v18 h-20 Z M255.0 162.0 h20 v18 h-20 Z" stroke-width="1"/><path d="M201.0 182.0 h88 v2 h-88 Z" fill="url(#p0307-1-shade)" stroke="none"/>
+<circle cx="282.5" cy="120.0" r="8" stroke-width="1.2"/><path d="M290.5 120.0 h50 M290.5 118.0 h50 M290.5 122.0 h50" stroke-width="0.8"/><path d="M302.5 112.0 h14 v16 h-14 Z" stroke-width="1"/><path d="M342.5 110.0 h16 v20 h-16 Z M350.5 110.0 v-6 M346.5 104.0 h8" stroke-width="1.1"/>
+<path d="M340.0 54.0 h80 v12 h-80 Z" stroke-width="1.3"/><path d="M344.0 58.0 h72 M344.0 62.0 h72" stroke-width="0.5"/><path d="M350.0 54.0 v12 M370.0 54.0 v12 M390.0 54.0 v12 M410.0 54.0 v12" stroke-width="0.5"/><path d="M340.0 54.0 l10 -8 h80 l-10 8" stroke-width="1"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
+<path d="M46.0 284.0 L14.0 278.0"/>
+<path d="M133.5 206.0 L101.5 200.0"/>
+<path d="M195.0 172.0 L163.0 166.0"/>
+<path d="M270.5 110.0 L238.5 104.0"/>
+<path d="M336.0 46.0 L304.0 40.0"/>
+  </g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">铝型材龙门机架 · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 底座框 4040 喷砂黑欧标（0805 规格）</text><text x="16" y="59">2 立柱 + 横梁 3030，内置角槽件 + 角码双锁</text><text x="16" y="72">3 HGR15 直线导轨 ×2 + 滑块，压在型材面上</text><text x="16" y="85">4 1605 滚珠丝杠 + 42 闭环步进（丢步报警）</text><text x="16" y="98">5 300×300 铝 T 槽板台面</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0307-1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="14.0" cy="278.0" r="7"/></g><text x="14.0" y="281.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="101.5" cy="200.0" r="7"/></g><text x="101.5" y="203.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="163.0" cy="166.0" r="7"/></g><text x="163.0" y="169.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="238.5" cy="104.0" r="7"/></g><text x="238.5" y="107.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="304.0" cy="40.0" r="7"/></g><text x="304.0" y="43.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<text x="16" y="117" font-size="8" fill="#888" font-style="italic">行程 300×300×120 · 整机 ≤60kg（阁楼承重待核）</text>
+</svg>

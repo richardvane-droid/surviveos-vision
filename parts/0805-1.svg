@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0805-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="111" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0805-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0805-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0805-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+<path d="M50.0 292.0 h120 v16 h-120 Z M50.0 292.0 l14 -8.4 h120 l-14 8.4 M170.0 292.0 l14 -8.4 v16 l-14 8.4" stroke-width="1.3"/><path d="M171.0 293.0 l12 -7.4 v14 l-12 7.4 Z" fill="url(#p0805-1-shade)" stroke="none"/><path d="M108.0 294.0 v12 M52.0 300.0 h116 M106.0 294.0 h4 M106.0 306.0 h4" stroke-width="0.6"/>
+<path d="M137.5 234.0 h14 v10 h-14 Z M144.5 234.0 v-4 M141.5 230.0 h6" stroke-width="1.2"/><path d="M163.5 232.0 h22 v12 h-22 Z M167.5 236.0 h14 M167.5 240.0 h14" stroke-width="1.1"/><path d="M193.5 238.0 h20 M193.5 238.0 l-4 -4 M193.5 238.0 l-4 4 M207.5 234.0 h8 v8 h-8 Z" stroke-width="1"/>
+<path d="M205.0 186.0 v-24 h6 v18 h18 v6 Z" stroke-width="1.3"/><path d="M207.0 184.0 v-20 h2 v18 h16 v2 Z" fill="url(#p0805-1-shade)" stroke="none"/><circle cx="208.0" cy="166.0" r="1.5" stroke-width="0.6"/><circle cx="221.0" cy="183.0" r="1.5" stroke-width="0.6"/><path d="M249.0 178.0 h26 v8 h-26 Z M253.0 182.0 h4 M267.0 182.0 h4" stroke-width="1.1"/><path d="M275.0 178.0 l6 -6 M275.0 186.0 l6 -6" stroke-width="0.6"/>
+<path d="M282.5 114.0 h16 v16 h-16 Z M284.5 116.0 h12 v12 h-12 Z" stroke-width="1"/><path d="M314.5 118.0 h30 v6 h-30 Z M314.5 118.0 l6 -5 h30 l-6 5" stroke-width="1"/><path d="M320.5 124.0 v6 M338.5 124.0 v6" stroke-width="0.6"/>
+<path d="M340.0 50.0 h34 v20 h-34 Z M344.0 54.0 h10 M344.0 60.0 h10 M344.0 66.0 h10 M360.0 54.0 h10" stroke-width="1"/><path d="M382.0 50.0 h34 v20 h-34 Z M386.0 54.0 h10 M386.0 60.0 h10 M386.0 66.0 h10 M402.0 54.0 h10" stroke-width="1"/><path d="M384.0 52.0 h30 v16 h-30 Z" fill="url(#p0805-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
+<path d="M46.0 288.0 L14.0 282.0"/>
+<path d="M133.5 230.0 L101.5 224.0"/>
+<path d="M201.0 154.0 L169.0 148.0"/>
+<path d="M278.5 110.0 L246.5 104.0"/>
+<path d="M336.0 46.0 L304.0 40.0"/>
+  </g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">欧标 2020 型材配件套 · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 欧标 2020 喷砂黑，槽宽 6mm，壁厚 1.8mm</text><text x="16" y="59">2 M5 T 型螺母 / 滑块螺母 + M5 内六角</text><text x="16" y="72">3 L 角码（外露）与内置角槽件（藏在槽里）</text><text x="16" y="85">4 端盖 + 层板托（MakerWorld 欧标 STL 可打印）</text><text x="16" y="98">5 配件分箱：20 系列（6mm）与 30/40 系列（8mm）不混</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0805-1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="14.0" cy="282.0" r="7"/></g><text x="14.0" y="285.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="101.5" cy="224.0" r="7"/></g><text x="101.5" y="227.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="169.0" cy="148.0" r="7"/></g><text x="169.0" y="151.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="246.5" cy="104.0" r="7"/></g><text x="246.5" y="107.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="304.0" cy="40.0" r="7"/></g><text x="304.0" y="43.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<text x="16" y="117" font-size="8" fill="#888" font-style="italic">D3 定标 · 与国标完全不通用，不得混采</text>
+</svg>

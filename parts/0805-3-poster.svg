@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0805-3p-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="117" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="p0805-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+  </defs>
+  <g filter="url(#p0805-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/><rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+<path d="M46 140 h56 v50 h-56 Z M52 150 h44 M52 160 h44 M52 170 h30 M52 180 h20" stroke-width="1.2"/>
+<path d="M110 165 H146" stroke-width="1" stroke-dasharray="3 3"/><path d="M142 161 l4 4 l-4 4" stroke-width="1"/>
+<path d="M156 136 h56 v58 h-56 Z" stroke-width="1.4"/><path d="M164 150 h12 v10 h-12 Z M164 166 h12 v10 h-12 Z M164 182 h12 v6 h-12 Z M182 155 h24 M182 171 h24 M182 186 h16" stroke-width="0.8"/><path d="M166 154 l3 3 l6 -6 M166 170 l3 3 l6 -6" stroke-width="1"/>
+<path d="M220 165 H256" stroke-width="1" stroke-dasharray="3 3"/><path d="M252 161 l4 4 l-4 4" stroke-width="1"/>
+<path d="M266 150 h50 v30 h-50 Z" stroke-width="1.2"/><path d="M274 165 l6 6 l14 -14" stroke-width="1.4"/><path d="M300 158 h10 M300 166 h10 M300 174 h6" stroke-width="0.6"/>
+<path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0805 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">材质守门员</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">选型之前，先过一遍三种材料的语法</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">方案清单 → 三类主材？→ 型材规格 → 接地 / 磨损面 → 通过或登记例外</text>
+  <g font-size="11" fill="#2a2a2a"><text x="64" y="336">不是木 / 铝型材 / 皮草的，改方案或写明例外</text><text x="64" y="366">型材只认欧标 2020/3030 喷砂黑，壁厚 1.8</text><text x="64" y="396">强电模块独立接地，磨损面一律木料覆盖</text></g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：设计对话（人肉 + FreeCAD 参数库）· 数据出口：各模块文档的材质结论</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：FreeCAD/FreeCAD · adgaudio/OpenSCAD_connectors</text>
+  <g transform="rotate(-8 296 108)"><rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/><text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text></g>
+</svg>
