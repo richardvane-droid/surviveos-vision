@@ -180,23 +180,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,000～2,500（陶盆、花架木料、苗）；每年补苗 ¥200 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/rbaron/b-parasite" target="_blank" rel="noopener">
-        <div class="gh-head"><b>rbaron/b-parasite</b><span class="stars">★ 2.4k</span></div>
-        <p class="gh-desc">开源 DIY 电容式土壤湿度传感器，纽扣电池供电，带温湿度和光照，蓝牙直连 HomeAssistant</p>
-        <p class="gh-why">→ 每个陶盆插一根，手机上看谁该浇水了，纽扣电池能撑一年，梅雨季判断盆土会不会烂根</p>
-      </a>
-      <a class="gh" href="https://github.com/Olen/homeassistant-plant" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Olen/homeassistant-plant</b><span class="stars">★ 848</span></div>
-        <p class="gh-desc">HomeAssistant 增强版植物组件，每盆植物一个设备，自动拉取物种养护阈值并报警</p>
-        <p class="gh-why">→ 把二十盆花每盆建成一个实体，湿度光照低于阈值就推通知，等于给每盆发了身份证</p>
-      </a>
-      <a class="gh" href="https://github.com/MDeLuise/plant-it" target="_blank" rel="noopener">
-        <div class="gh-head"><b>MDeLuise/plant-it</b><span class="stars">★ 1.3k</span></div>
-        <p class="gh-desc">开源自托管的植物养护记录 App，记浇水施肥、拍照打卡、提醒到期</p>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/rbaron/b-parasite" target="_blank" rel="noopener">rbaron/b-parasite</a>
+          <span class="stars">★ 2.4k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">开源 DIY 电容式土壤湿度传感器，纽扣电池供电，带温湿度和光照，蓝牙 BTHome 或 Zigbee 直连 HomeAssistant</p>
+        <p class="gh-why">→ 每个陶盆插一根，手机上看谁该浇水了，纽扣电池能撑两年，梅雨季判断盆土会不会烂根</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0503-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0503-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0503-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">b-parasite · 插进陶盆的开源探针</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0503-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0503-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0503-1-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0503-1-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0503-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0503-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">电容铜箔</text><text x="78" y="149" text-anchor="middle" font-size="10.5">+ 温湿光</text><text x="78" y="174" text-anchor="middle" font-size="10.5">CR2032</text><text x="78" y="187" text-anchor="middle" font-size="10.5">两年续航</text><text x="200" y="94" text-anchor="middle" font-size="10.5">nRF52 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">BTHome 广播</text><text x="322" y="100" text-anchor="middle" font-size="10.5">ESP32 蓝牙代理</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA 植物组件</text><text x="322" y="187" text-anchor="middle" font-size="10.5">比阈值</text><text x="430" y="138" text-anchor="middle" font-size="10.5">该浇水了</text><text x="430" y="151" text-anchor="middle" font-size="10.5">推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0503：十盆各插一根 → 广播 → 代理 → HA 植物组件 → 浇水提醒</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">rbaron/b-parasite</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>b-parasite 是巴西开发者 rbaron 设计的开源土壤湿度传感器，GitHub 上 2.4k 星，是 DIY 圈子里最出名的花盆探针。市面上的探针要么绑 App，要么电池只撑几个月，它是一根插进土里两年不用管、数据直接进 HomeAssistant 的开源探针。</p><p>它的原理是电容式测湿：PCB 板身两条铜箔就是电容的两个极板，土壤含水量变化会改变电容，主控 nRF52840 用一个 RC 振荡电路读出这个变化，再配 SHTC3 温湿度和 ALS-PT19 光照传感器，把四个数每隔几分钟打包广播出去。供电是一颗 CR2032 纽扣电池，只广播不连接，续航两年以上。固件基于 Zephyr，有蓝牙 BTHome 版和 Zigbee 版，前者 HomeAssistant 开箱即认，后者接 ZHA 或 Zigbee2MQTT。</p><p>仓库里有完整的 KiCad 电路图、Gerber、外壳模型和固件，可以自己找嘉立创打板。没有中文文档，B 站有介绍。</p><p>在 0503 里它是浇水提醒器的眼睛：花架上挑十盆最挑水的，绣球、金桔、薄荷各插一根，探针插到盆深三分之二处，铜箔区域要全部埋进土里；读数广播给木屋南窗的 ESP32 蓝牙代理，HomeAssistant 收到后交给植物组件比阈值。要注意陶盆边缘一圈的土最先干，探针不要贴着盆壁插；梅雨季重点看湿度上限，长期超过 70% 的多肉就得撤去养病区。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/MDeLuise/plant-it" target="_blank" rel="noopener">MDeLuise/plant-it</a>
+          <span class="stars">★ 1.4k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">开源自托管的植物养护记录应用，有安卓 App 和网页，记浇水施肥、拍照日记、设提醒</p>
         <p class="gh-why">→ 给每盆起名字、记入院日期和第 38 天的照片，就用它，不用自己写小程序</p>
-      </a>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0503-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0503-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0503-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Plant-it · 给每盆花建档的养护日记</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0503-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0503-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0503-2-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0503-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0503-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M279.3 148.0 C261.0 148.0 261.0 124.0 242.7 124.0" stroke-dasharray="3 3"/><path d="M266.0 96.0 L134.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">巡视拍照</text><text x="78" y="151" text-anchor="middle" font-size="10.5">记浇水</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Plant-it 后端</text><text x="200" y="107" text-anchor="middle" font-size="9.5">植物 / 事件 / 提醒</text><text x="200" y="174" text-anchor="middle" font-size="10.5">MySQL</text><text x="200" y="187" text-anchor="middle" font-size="10.5">日记与照片</text><text x="322" y="94" text-anchor="middle" font-size="9.5">安卓 App / 网页</text><text x="322" y="107" text-anchor="middle" font-size="10.5">时间线</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA 调 API</text><text x="322" y="187" text-anchor="middle" font-size="10.5">自动记浇水</text><text x="200.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">到期提醒</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0503：每盆建档记入院日期 → 巡视拍照 → 第 N 天时间线 + 换季事件</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">MDeLuise/plant-it</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Plant-it 是意大利开发者 MDeLuise 做的开源植物养护应用，GitHub 上 1.4k 星，自托管后端加安卓 App 和网页前端，是自建服务器圈子里最常被推荐的养花记录工具。市面上的养花 App 要么订阅要么把数据放在别人云上，它把每一盆的档案留在自己手里。</p><p>它的结构是 Java Spring 后端加 MySQL，前端是 Flutter 写的 App 和网页，一个 docker compose 就能起来。核心概念是植物和事件：每株植物有名字、物种、入手日期、位置和照片集，事件是浇水、施肥、换盆、修剪这些动作，每记一次就是日记一条；提醒按每株植物的动作和周期设置，到期推送通知。物种信息可以自己建，也能接外部植物数据库自动填学名和养护建议。</p><p>它没有直接和 HomeAssistant 打通，但有 REST API，可以让 HomeAssistant 在探针触发时调用它记一条浇水事件；社区在 GitHub 和 Reddit 的自托管板块比较活跃，没有中文文档。</p><p>在 0503 里它就是给每盆花发身份证的电子档案：二十来盆每盆建一株，名字用竹签上刻的，入手日期就是竹签背面的入院日期；每周巡视时拍一张照片，它自动按天数排成时间线，第 38 天的绣球一翻就有；换季挪盆、去养病区避暑也记成事件。建议把提醒周期设得比实际略长，真正的浇水触发交给探针，它只负责记账和看历史，两套逻辑不打架。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Olen/homeassistant-plant" target="_blank" rel="noopener">Olen/homeassistant-plant</a>
+          <span class="stars">★ 848</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">HomeAssistant 增强版植物组件，每盆植物一个设备，从 OpenPlantbook 自动拉物种养护阈值并报警</p>
+        <p class="gh-why">→ 把二十盆花每盆建成一个实体，湿度光照低于阈值就推通知，等于给每盆发了身份证</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0503-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0503-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0503-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">HA 植物组件 · 每盆一个设备加阈值</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0503-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0503-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0503-3-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0503-3-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0503-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0503-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">探针实体</text><text x="78" y="149" text-anchor="middle" font-size="10.5">湿度 / 光照</text><text x="78" y="174" text-anchor="middle" font-size="9.5">OpenPlantbook</text><text x="78" y="187" text-anchor="middle" font-size="10.5">物种阈值</text><text x="200" y="94" text-anchor="middle" font-size="10.5">植物设备</text><text x="200" y="107" text-anchor="middle" font-size="10.5">阈值实体 / 状态</text><text x="200" y="174" text-anchor="middle" font-size="10.5">DLI / VPD</text><text x="200" y="187" text-anchor="middle" font-size="10.5">计算</text><text x="322" y="94" text-anchor="middle" font-size="10.5">植物卡片</text><text x="322" y="107" text-anchor="middle" font-size="10.5">0802 大屏</text><text x="322" y="174" text-anchor="middle" font-size="10.5">植物触发器</text><text x="322" y="187" text-anchor="middle" font-size="10.5">自动化</text><text x="430" y="138" text-anchor="middle" font-size="10.5">浇水 / 挪盆</text><text x="430" y="151" text-anchor="middle" font-size="10.5">提醒</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">预填</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0503：探针 → 每盆植物设备比阈值 → 卡片上屏 + 越界推送</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Olen/homeassistant-plant</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>homeassistant-plant 是挪威开发者 Olen 维护的 HomeAssistant 自定义集成，GitHub 上 848 星，是官方植物组件的增强替代品，在 HomeAssistant 里认真养花的人几乎都在用。它把每盆植物变成一个完整设备，阈值本身也是可调实体，还能自动从物种数据库拉养护参数。</p><p>它的工作方式是：新建植物时输入物种名，它去 OpenPlantbook 查这个物种的湿度、温度、光照、电导率上下限并预填，再把你指定的探针实体绑上去，每项一个传感器，各配上限下限两个阈值实体；任何一项越界，植物状态就变成有问题并标出是哪一项。它还会算日光积分 DLI 和饱和水汽压差 VPD，判断光照够不够、会不会闷根，比原始读数直观得多。</p><p>它自带一张 Lovelace 植物卡片，新版本加了专门的植物触发器和条件，写自动化不用再拼实体名。没有中文文档，HomeAssistant 中文社区有零散教程。</p><p>在 0503 里它是浇水提醒器的大脑：十根探针各绑一盆，物种填绣球、金桔、罗汉松、薄荷、多肉，阈值自动拉下来后按杭州气候微调，比如多肉湿度上限拉低到 50%；自动化用它的植物触发器，湿度低于下限连续两小时就推送，夏天光照越界就提醒挪去养病区。要注意 OpenPlantbook 需要免费注册取 API 密钥，中文名查不到时用拉丁学名。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -596,7 +665,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

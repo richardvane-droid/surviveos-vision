@@ -143,18 +143,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥800～1,500（杉木柱、旧瓦、碎石）；柴火自己捡基本 ¥0</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/pvvx/ATC_MiThermometer" target="_blank" rel="noopener">
-        <div class="gh-head"><b>pvvx/ATC_MiThermometer</b><span class="stars">★ 4.1k</span></div>
-        <p class="gh-desc">小米/青萍蓝牙温湿度计的开源替换固件，省电且直连 HomeAssistant</p>
-        <p class="gh-why">→ 间接参考：十几块钱的小米温湿度计刷这个固件塞进柴堆缝里，就是最省事的回潮监测探头</p>
-      </a>
-      <a class="gh" href="https://github.com/blaineventurine/simple_inventory" target="_blank" rel="noopener">
-        <div class="gh-head"><b>blaineventurine/simple_inventory</b><span class="stars">★ 42</span></div>
-        <p class="gh-desc">HomeAssistant 家庭库存管理集成，支持分区、到期日和低库存提醒</p>
-        <p class="gh-why">→ 间接参考：把每格柴火当库存条目，记入库月份和到期日，晒满 8 个月自动提醒可以烧了</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/pvvx/ATC_MiThermometer" target="_blank" rel="noopener">pvvx/ATC_MiThermometer</a>
+          <span class="stars">★ 4.1k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">小米、青萍等 Telink 芯片蓝牙温湿度计的开源替换固件，省电、纯本地广播、直连 HomeAssistant</p>
+        <p class="gh-why">→ 十几块钱的小米温湿度计刷这个固件塞进柴堆缝里，就是最省事、最便宜的柴火回潮探头</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0501-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0501-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0501-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ATC 固件 · 十几块的温湿度计变本地探头</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0501-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0501-1-shade)" stroke="none"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0501-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0501-1-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0501-1-shade)" stroke="none"/><rect x="378.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M416 114.0 h28 M422 114.0 v6 h16 v-6" stroke-width="1"/><path d="M381.0 75.0 h98 v4 h-98 Z" fill="url(#g0501-1-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0501-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0501-1-arrow)" stroke-linecap="round"><path d="M78.0 148.0 L78.0 124.0" stroke-dasharray="3 3"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">小米 LYWSD03MMC</text><text x="78" y="107" text-anchor="middle" font-size="10.5">（柴缝里）</text><text x="78" y="174" text-anchor="middle" font-size="10.5">浏览器 OTA</text><text x="78" y="187" text-anchor="middle" font-size="10.5">刷固件</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ATC 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">BTHome 广播</text><text x="322" y="94" text-anchor="middle" font-size="10.5">ESP32 蓝牙代理</text><text x="322" y="107" text-anchor="middle" font-size="10.5">（木屋南窗）</text><text x="430" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="430" y="107" text-anchor="middle" font-size="10.5">七日均值 / 告警</text><text x="322" y="174" text-anchor="middle" font-size="9.5">ble_monitor</text><text x="322" y="187" text-anchor="middle" font-size="10.5">或原生 BTHome</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">每分钟</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0501：柴缝探头 → 蓝牙广播 → 南窗代理 → HA 回潮告警与可烧判断</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">pvvx/ATC_MiThermometer</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ATC_MiThermometer 是俄罗斯开发者 pvvx 维护的开源替换固件，专门刷进小米、青萍、MHO 等使用 Telink 芯片的蓝牙温湿度计里。原厂固件要绑米家 App、走云端、广播又稀又慢，刷了它以后设备变成一颗纯本地的蓝牙广播探头，一颗纽扣电池能撑一年以上，还多了历史记录和屏幕自定义。pvvx 这个分支功能最全、更新最勤，GitHub 上 4.1k 星。</p><p>工作原理很简单：固件通过浏览器网页就能 OTA 刷入，不用拆机也不用烧录器；刷好后设备每隔设定的秒数广播一条 BTHome 或 ATC 格式的数据包，带温度、湿度、电量；HomeAssistant 的蓝牙适配器、ESPHome 蓝牙代理、手机都能收到并解析，无需配对。</p><p>它支持 LYWSD03MMC 的六种硬件版本、青萍 CGG1、CGDK2 等十几款设备。README 只有英文，但设备是国产的，B 站和小红书上刷机教程非常多，五分钟搞定。</p><p>放进 0501 里，它就是塞在柴堆缝里的回潮探头：买两只十几块的 LYWSD03MMC，刷好固件装进打了透气孔的小塑料盒，一只塞进中层柴缝，一只放架顶对照外界空气；广播间隔调到一分钟，HomeAssistant 做七日均值和 85% 回潮告警。要注意蓝牙可能穿不透木屋砖墙，最好在南窗放一个 ESP32 蓝牙代理接力。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/grocy/grocy" target="_blank" rel="noopener">grocy/grocy</a>
+          <span class="stars">★ 9.5k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">自托管的家庭物资与库存管理系统，自称冰箱之外的 ERP，支持库存、到期日、家务任务和条码</p>
+        <p class="gh-why">→ 把四格柴火当四种库存，入库时记日期、到期日设成 8 个月后，晒够了它自动提醒可以烧，家务功能还能排翻晒</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0501-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0501-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0501-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">grocy · 带到期日的家庭库存账本</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0501-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0501-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0501-2-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0501-2-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0501-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M322.0 148.0 L322.0 124.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">劈柴入库</text><text x="78" y="151" text-anchor="middle" font-size="10.5">手机扫码</text><text x="200" y="94" text-anchor="middle" font-size="10.5">grocy</text><text x="200" y="107" text-anchor="middle" font-size="9.5">产品 / 库位 / 到期</text><text x="200" y="174" text-anchor="middle" font-size="10.5">SQLite</text><text x="200" y="187" text-anchor="middle" font-size="10.5">库存条目</text><text x="322" y="174" text-anchor="middle" font-size="10.5">家务模块</text><text x="322" y="187" text-anchor="middle" font-size="10.5">每月翻晒</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">grocy 集成</text><text x="430" y="138" text-anchor="middle" font-size="10.5">可烧 / 翻晒</text><text x="430" y="151" text-anchor="middle" font-size="10.5">推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0501：四格柴当四种库存，到期日=入库后 8 个月，HA 读实体做可烧判断</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">grocy/grocy</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>grocy 是德国开发者 Bernd Bestel 做的自托管家庭物资管理系统，自称冰箱之外的 ERP，GitHub 上 9.5k 星，是家庭库存这个品类里最出名的开源项目。它最初解决厨房问题：家里有什么、快过期了没有、该买什么；后来长出了家务排班、电池、设备维护等模块，本质是一个带到期日概念的通用库存账本。</p><p>它的核心模型是产品、库位和库存条目：每次入库记数量、入库日期和到期日，消耗时扣减，界面按到期时间排序，快到期变黄、过期变红，还能设最低库存触发采购清单。家务模块按固定周期或上次完成时间排期，到点在首页提醒。整个系统是 PHP 加 SQLite，一个 Docker 容器就跑起来，有 REST API 和条码扫描，手机浏览器当 PWA 用。</p><p>它通过 Transifex 做多语言，界面有简体中文翻译；HomeAssistant 有社区集成能把库存和家务读成实体；NAS 圈子的中文安装教程很多，2025 年后仍在发版。</p><p>在 0501 里，它就是柴架侧面那块小黑板的数字版：建四个产品，香樟、栎木、竹子、松枝，库位就是四个格子；每劈一批柴入库时记日期，到期日填入库后八个月，到期意味着可以烧而不是坏了，语义反过来用；家务模块建一条每月翻晒检查。再让 HomeAssistant 读它的库存实体，和柴缝探头的湿度做双条件判断。要注意 grocy 的单位是数量，柴火按捆或格计最省事，不要去称重。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/custom-components/ble_monitor" target="_blank" rel="noopener">custom-components/ble_monitor</a>
+          <span class="stars">★ 2.2k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">HomeAssistant 的被动蓝牙传感器集成，不配对只听广播，支持小米、青萍、ATC 固件等上百种设备</p>
+        <p class="gh-why">→ 柴堆里的 ATC 探头广播出来的数据由它接进 HomeAssistant，顺便把电量、信号强度也变成实体，离线一眼看出</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0501-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0501-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0501-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ble_monitor · 只听广播不配对的蓝牙集成</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0501-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0501-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0501-3-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0501-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0501-3-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">ATC 探头广播</text><text x="78" y="180" text-anchor="middle" font-size="10.5">ESP32 蓝牙代理</text><text x="200" y="94" text-anchor="middle" font-size="9.5">ble_monitor</text><text x="200" y="107" text-anchor="middle" font-size="10.5">解析 / 滤波</text><text x="322" y="94" text-anchor="middle" font-size="10.5">湿度 / 温度</text><text x="322" y="107" text-anchor="middle" font-size="10.5">电量 / 信号实体</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="322" y="187" text-anchor="middle" font-size="10.5">七日均值</text><text x="430" y="138" text-anchor="middle" font-size="10.5">手机推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0501：探头广播 → 代理 → ble_monitor 实体 → 回潮告警 / 可…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">custom-components/ble_monitor</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ble_monitor 是 HomeAssistant 社区最早也最完整的被动蓝牙传感器集成，由 custom-components 组织维护，GitHub 上 2.2k 星，2026 年 6 月还在发新版。它解决的问题是：小米、青萍、Govee 这些便宜的蓝牙温湿度计、门磁、体重秤，原本各要各的 App，而它们其实都在不停往空气里广播数据，只要听得懂格式就能直接用。</p><p>它的工作方式是被动监听：不配对、不连接，HomeAssistant 主机的蓝牙适配器或 ESPHome 蓝牙代理把收到的广播包转给它，它按厂商格式解析出温度、湿度、电量、信号强度，生成实体，还会做平均和滤波。因为不连接，一个适配器能同时听几十个设备。ATC 和 pvvx 固件的自定义广播格式它原生支持，包括加密广播。</p><p>它支持一百多种设备，文档有每种设备的配置示例。没有中文文档，小米设备的中文教程基本都会提到它。</p><p>在 0501 里它是探头和中枢之间那一层：柴缝里的 ATC 探头广播，南窗的 ESP32 代理转发，ble_monitor 解析成柴缝湿度、温度、探头电量三个实体，再喂给自动化做七日均值。建议把 period 设成 60 秒和探头广播周期一致，信号强度实体也留着，探头被柴压偏了、信号掉了能第一时间发现。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -596,7 +670,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

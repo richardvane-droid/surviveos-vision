@@ -181,23 +181,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥3,000～6,000（钢架、首批储备、水桶、真空机）；年度轮换 ¥800 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/grocy/grocy" target="_blank" rel="noopener">
-        <div class="gh-head"><b>grocy/grocy</b><span class="stars">★ 9.4k</span></div>
-        <p class="gh-desc">自托管的家庭食品和物资管理系统，管库存、到期日和采购清单</p>
-        <p class="gh-why">→ 罐头、米砖、水桶都建成 SKU，到期前 30 天自动提醒该吃掉了，先进先出它天生支持</p>
-      </a>
-      <a class="gh" href="https://github.com/Forceu/barcodebuddy" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Forceu/barcodebuddy</b><span class="stars">★ 604</span></div>
-        <p class="gh-desc">Grocy 的条码扫描配套工具，扫一下就入库或消耗</p>
-        <p class="gh-why">→ 补货和取罐头时扫条码就完成出入库，不用每次打开网页手动改数量</p>
-      </a>
-      <a class="gh" href="https://github.com/TomBursch/kitchenowl" target="_blank" rel="noopener">
-        <div class="gh-head"><b>TomBursch/kitchenowl</b><span class="stars">★ 3.7k</span></div>
-        <p class="gh-desc">自托管的采购清单和食谱管理应用，有手机端</p>
-        <p class="gh-why">→ 轮换日缺货清单直接生成采购单，去镇上补货时手机上勾一下</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/grocy/grocy" target="_blank" rel="noopener">grocy/grocy</a>
+          <span class="stars">★ 9.5k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">自托管的家庭食品和物资管理系统，管库存、保质期、最小库存、采购清单和条码，带 REST API</p>
+        <p class="gh-why">→ 罐头、米砖、水桶都建成 SKU，到期前 30 天自动提醒该吃掉了，先进先出它天生支持，库存天数也从它算</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0210-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0210-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0210-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">grocy · 家庭版的 SKU、批次和保质期</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0210-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0210-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M288.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0210-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0210-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">扫码枪 / NFC</text><text x="78" y="149" text-anchor="middle" font-size="10.5">入库 / 消耗</text><text x="78" y="218" text-anchor="middle" font-size="10.5">网页 / 手机</text><text x="78" y="231" text-anchor="middle" font-size="10.5">建档 SKU</text><text x="200" y="94" text-anchor="middle" font-size="10.5">grocy 服务</text><text x="200" y="107" text-anchor="middle" font-size="10.5">先进先出扣批次</text><text x="200" y="174" text-anchor="middle" font-size="10.5">产品 / 库存条目</text><text x="200" y="187" text-anchor="middle" font-size="10.5">位置 / 保质期</text><text x="322" y="94" text-anchor="middle" font-size="10.5">REST API</text><text x="322" y="107" text-anchor="middle" font-size="10.5">→ HA 传感器</text><text x="322" y="174" text-anchor="middle" font-size="10.5">采购清单</text><text x="322" y="187" text-anchor="middle" font-size="10.5">到期提醒</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">条码</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">数量</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0210：每种罐头米水建 SKU，先进先出扣批次，HA 算库存天数</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">grocy/grocy</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>grocy 是德国开发者 Bernd Bestel 从 2017 年开始写的自托管家庭物资管理系统，9.5k 星，口号是“超越冰箱的 ERP”。家里囤的东西哪罐先过期、米还剩几袋，靠脑子记一定会漏，它把仓库软件那套 SKU、批次、保质期、最小库存搬进了家庭。</p><p>它是一个 PHP 写的网页应用，SQLite 存数据，一个 Docker 容器就能跑。核心是产品、库存条目和位置三张表：每次入库记数量和保质期，消耗时按最早到期的批次先扣，天生就是先进先出；每个产品可设最小库存，低于就自动进采购清单；到期前几天在首页高亮。支持条码，还管食谱、家务、设备保养。它有完整的 REST API，Home Assistant 的社区集成能把“即将过期数”“缺货数”做成传感器。界面有简体中文，NAS 圈中文教程很多。</p><p>在 0210 里它就是那面时间墙的账本：每种罐头、米砖、面、水桶建一个产品，位置按货架层填，保质期照罐身写；入库时扫条码或用手机 NFC 碰米桶盖直接打开该产品的入库页；取一罐吃掉就消耗一个，它自动扣最早到期的那批。0801 数字孪生里的“库存 92 天”由 HA 从它的 API 读各产品数量乘每日用量求和得出，到期前 30 天推送“该吃掉了”，缺货项进采购清单。坑是初次建档几十个 SKU 很枯燥，一次只建常吃的二十种，水桶和米砖用“开封 / 换水”当消耗事件记就行。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/TomBursch/kitchenowl" target="_blank" rel="noopener">TomBursch/kitchenowl</a>
+          <span class="stars">★ 3.7k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">自托管的采购清单和食谱管理应用，Flask 后端 + Flutter 客户端，有安卓 / iOS / 网页端，多人实时同步，可部分离线</p>
+        <p class="gh-why">→ 轮换日缺货清单直接生成采购单，去镇上补货时手机上勾一下，有原生 App 比 grocy 的网页顺手得多</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0210-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0210-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0210-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">KitchenOwl · 一家人共享的采购清单</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0210-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0210-2-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0210-2-shade)" stroke="none"/><circle cx="322" cy="76.0" r="6" stroke-width="1.2"/><path d="M322 82.0 V100.0 M322 86.0 l-9 8 M322 86.0 l9 8 M322 100.0 l-7 14 M322 100.0 l7 14" stroke-width="1.2"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0210-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0210-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">grocy 缺货项</text><text x="78" y="107" text-anchor="middle" font-size="10.5">（HA 每轮换日拉）</text><text x="78" y="180" text-anchor="middle" font-size="10.5">食谱 / 餐单</text><text x="200" y="94" text-anchor="middle" font-size="9.5">KitchenOwl 后端</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Flask API</text><text x="200" y="174" text-anchor="middle" font-size="9.5">Flutter 手机 App</text><text x="200" y="187" text-anchor="middle" font-size="10.5">按商店分类</text><text x="322" y="138" text-anchor="middle" font-size="10.5">镇上补货</text><text x="322" y="151" text-anchor="middle" font-size="10.5">买一样勾一样</text><text x="322" y="174" text-anchor="middle" font-size="10.5">回家扫码入库</text><text x="322" y="187" text-anchor="middle" font-size="10.5">→ grocy 销账</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">写清单</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">同步</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0210：grocy 缺货项写进采购清单，去镇上手机勾，回来扫码入库</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">TomBursch/kitchenowl</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>KitchenOwl 是德国开发者 Tom Bursch 从 2020 年开始写的自托管采购清单应用，3.7k 星。购物清单要么写在冰箱贴上要么散在聊天记录里，它给一个家庭一份共享清单，谁加了什么、谁买了什么，所有人手机上实时同步，去超市勾一下就划掉。</p><p>架构是 Python Flask 写的后端加 Flutter 写的客户端，所以安卓、iOS、网页、桌面端都是同一套代码，App 在应用商店和 F-Droid 都能装。清单按超市分类排序；食谱模块一键把食材加进清单；还有每周餐单和开支分摊。部分离线可用。它有 REST API，Home Assistant 的集成能把清单当 todo 实体读写。界面有简体中文（Weblate 社区翻译），文档英文，更新很勤。</p><p>在 0210 里它是 grocy 的“出门那一半”：grocy 管货架上的账本，KitchenOwl 管补货那趟路。每次轮换日，HA 从 grocy 的 API 拉出缺货项，通过 KitchenOwl 的 API 写进“镇上采购”清单并按商店分好类；去镇上时手机开 App，买一样勾一样，回来扫码入库时 grocy 再销账。坑是两套系统各有一份产品名，HA 自动化用 grocy 的产品名做主键，KitchenOwl 只当纯文本清单，别指望它俩自动对齐库存。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Forceu/barcodebuddy" target="_blank" rel="noopener">Forceu/barcodebuddy</a>
+          <span class="stars">★ 604</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">grocy 的条码扫描配套工具，扫一下就入库、消耗或开封，不认识的条码自动去 OpenFoodFacts 查名字</p>
+        <p class="gh-why">→ 补货和取罐头时扫条码就完成出入库，不用每次打开网页手动改数量；有 HA 插件版，直接装在同一台小主机上</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0210-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0210-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0210-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Barcode Buddy · 扫一下就完成出入库</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0210-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0210-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0210-3-shade)" stroke="none"/><path d="M166.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0210-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0210-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">蓝牙扫码枪</text><text x="78" y="149" text-anchor="middle" font-size="10.5">罐头 / 米砖条码</text><text x="78" y="174" text-anchor="middle" font-size="10.5">模式卡</text><text x="78" y="187" text-anchor="middle" font-size="9.5">入库 / 消耗 / 开封</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Barcode Buddy</text><text x="200" y="107" text-anchor="middle" font-size="10.5">条码 → 操作</text><text x="200" y="174" text-anchor="middle" font-size="9.5">OpenFoodFacts</text><text x="200" y="187" text-anchor="middle" font-size="10.5">查未知条码</text><text x="322" y="94" text-anchor="middle" font-size="10.5">grocy API</text><text x="322" y="107" text-anchor="middle" font-size="10.5">扣最早到期批次</text><text x="322" y="174" text-anchor="middle" font-size="10.5">网页实时结果</text><text x="322" y="187" text-anchor="middle" font-size="10.5">对新产品</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">扫码</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">切模式</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">执行</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0210：门内挂扫码枪，先扫模式卡再扫罐头，grocy 自动记账</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Forceu/barcodebuddy</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Barcode Buddy 是德国开发者 Marc Ole Bulling 写的 grocy 配套工具，604 星，一句话说明是“grocy 的条码系统”。grocy 自带的条码流程太啰嗦，每次都要打开网页、选产品、选操作、填数量；而在储藏室里你只想“扫一下，东西就进账了”。</p><p>它是一个 PHP 小服务，需要 grocy 的 API 密钥，可以 Docker 部署，也有 Home Assistant 插件版。工作方式是先设一个模式——入库、消耗、开封、加进采购清单——然后不停扫：扫到 grocy 里已有的条码就直接执行；扫到没见过的条码，它去 OpenFoodFacts 或 UPCitemdb 查商品名，列出来让你在网页里对到某个 grocy 产品，下次就认识了。模式本身也是条码，打印一张“模式卡”贴在架子上，扫“消耗”再扫罐头就完成一次出库，全程不碰手机。支持 USB 和蓝牙扫码枪、安卓 App 相机。文档英文。</p><p>在 0210 里它把货架变成“扫码即记账”：储藏室门内挂一支蓝牙扫码枪，架子侧面贴四张模式卡（入库 / 消耗 / 开封 / 缺货）；补货回来先扫“入库”再逐个扫罐头，做饭取罐头时扫“消耗”再扫罐身，grocy 自动扣最早到期那批。国产罐头有些条码查不到，第一次要手动对产品；没条码的水桶自己打印一张 grocy 条码贴上。坑是模式会保持到下次切换，扫完记得扫回“消耗”。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -485,7 +554,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

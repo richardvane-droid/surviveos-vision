@@ -269,23 +269,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥4,000～9,000（小铸铁炉、双层烟囱和穿墙工费占大头）；每年柴火 ¥600 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">
-        <div class="gh-head"><b>patrickcollins12/esphome-fan-controller</b><span class="stars">★ 704</span></div>
-        <p class="gh-desc">ESP32 加温度传感器的 PID 温控风扇方案，纯 YAML 配置，接 HomeAssistant</p>
-        <p class="gh-why">→ 间接参考：炉子对面那个温度传感器就照它接，再顺手带一个循环风扇</p>
-      </a>
-      <a class="gh" href="https://github.com/mbuhidar/WoodStoveRegulator" target="_blank" rel="noopener">
-        <div class="gh-head"><b>mbuhidar/WoodStoveRegulator</b><span class="stars">★ 4</span></div>
-        <p class="gh-desc">Arduino 柴火炉自动风门调节器，K 型热电偶测烟管温度，舵机拉线控风门</p>
-        <p class="gh-why">→ 烟管温度超标自动关风门的思路和硬件清单直接抄，缺柴还会蜂鸣提醒</p>
-      </a>
-      <a class="gh" href="https://github.com/lenne0815/hafireplaceautomation" target="_blank" rel="noopener">
-        <div class="gh-head"><b>lenne0815/hafireplaceautomation</b><span class="stars">★ 1</span></div>
-        <p class="gh-desc">ESP8266 加 MAX6675 热电偶加舵机风门的壁炉自动化整套方案，含 HA 面板</p>
-        <p class="gh-why">→ 整套 HomeAssistant 仪表盘和 Node-RED 流程现成，超 26 度提醒改几行就行</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
+          <span class="stars">★ 11.7k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+        </header>
+        <p class="gh-desc">用一份 YAML 给 ESP32 / ESP8266 生成固件，传感器、热电偶、蜂鸣器、PID 都是自带组件，原生接 HomeAssistant</p>
+        <p class="gh-why">→ 炉子对面北墙的室温探头和烟管上的 K 型热电偶都用它：max31855 组件读烟温，阈值在节点本地判断，蜂鸣器断网照样叫，HA 只画曲线推手机</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0106-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0106-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0106-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ESPHome · 一份 YAML 变成烟温室温节点</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0106-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0106-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0106-1-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0106-1-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0106-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0106-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">K 型热电偶</text><text x="78" y="149" text-anchor="middle" font-size="9.5">烟管 MAX31855</text><text x="78" y="216" text-anchor="middle" font-size="10.5">DS18B20</text><text x="78" y="229" text-anchor="middle" font-size="10.5">北墙室温</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ESPHome 节点</text><text x="200" y="107" text-anchor="middle" font-size="10.5">ESP32-C3</text><text x="200" y="174" text-anchor="middle" font-size="10.5">本地阈值</text><text x="200" y="187" text-anchor="middle" font-size="9.5">120 / 350 / 26℃</text><text x="322" y="174" text-anchor="middle" font-size="10.5">蜂鸣器</text><text x="322" y="187" text-anchor="middle" font-size="10.5">断网照响</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 烟温曲线</text><text x="322" y="107" text-anchor="middle" font-size="10.5">手机通知</text><text x="430" y="138" text-anchor="middle" font-size="10.5">添柴 / 关风门</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">10 秒</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">超阈值</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">原生 API</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">提醒</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0106：热电偶 + 室温 → ESP32 本地判断 → 蜂鸣器 / HA 提醒添柴或关风门</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">esphome/esphome</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ESPHome 是 Nabu Casa（HomeAssistant 背后的公司）维护的开源固件生成器，11.7k 星，每月都有新版本。它解决的问题是：想让一块十几块钱的 ESP32 变成能上报温度、能控风扇的联网节点，不用写一行 C++，把传感器型号、引脚、上报间隔写进一份 YAML，它就把固件编译好刷进去。</p><p>工作原理是配置即代码：YAML 里每个 sensor、switch、climate 段对应一个 C++ 组件；上电后节点通过原生 API 和 HomeAssistant 直连，实体自动出现。组件库有几百个，热电偶芯片 MAX31855、DS18B20 温度探头、PWM 输出、蜂鸣器、PID 温控都是自带的。</p><p>生态上它是 HA 官方附件，一键装好仪表盘。文档只有英文，但中文社区教程非常多。</p><p>放进 0106 里它管两颗探头：烟管上夹一支 K 型热电偶接 MAX31855，每 10 秒读一次烟温；炉子对面北墙一颗 DS18B20 读室温。阈值写在 YAML 的 on_value 里：烟温低于 120℃ 提醒添柴、高于 350℃ 提醒关风门、室温超 26℃ 同样提醒，本地蜂鸣器直接响，HA 只负责画曲线和推手机。坑是 MAX31855 板子别贴在烟管壁上，冷端补偿会被烤偏。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">patrickcollins12/esphome-fan-controller</a>
+          <span class="stars">★ 741</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">ESP32 加温度传感器的 PID 温控风扇方案，纯 YAML 配置，风扇几乎无声，接 HomeAssistant</p>
+        <p class="gh-why">→ 炉热循环风扇的现成蓝本：它的 PID climate 段直接抄，目标值改成炉边和东头床下的温差，夜里在 YAML 里限速 40%</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0106-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0106-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0106-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Fan Controller · PID 把炉热平滑推到东头</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0106-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0106-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0106-2-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0106-2-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0106-2-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0106-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M266.0 96.0 L256.0 96.0" stroke-dasharray="3 3"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">炉对面北墙</text><text x="78" y="149" text-anchor="middle" font-size="10.5">温度探头</text><text x="78" y="216" text-anchor="middle" font-size="10.5">东头床下</text><text x="78" y="229" text-anchor="middle" font-size="10.5">温度探头</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ESPHome</text><text x="200" y="107" text-anchor="middle" font-size="9.5">PID climate</text><text x="200" y="174" text-anchor="middle" font-size="9.5">炉温 &gt; 40℃ 才转</text><text x="200" y="187" text-anchor="middle" font-size="10.5">夜间上限 40%</text><text x="322" y="174" text-anchor="middle" font-size="10.5">12V PWM</text><text x="322" y="187" text-anchor="middle" font-size="10.5">循环风扇</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA climate</text><text x="322" y="107" text-anchor="middle" font-size="10.5">拖目标温差</text><text x="430" y="218" text-anchor="middle" font-size="10.5">东头写字台</text><text x="430" y="231" text-anchor="middle" font-size="10.5">不再 16 度</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">ΔT 输入</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">占空比</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">设定值</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">推热</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0106：两颗探头温差 → PID 占空比 → 梁下循环风扇把炉热推…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a">patrickcollins12/esphome-fan-controller</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>esphome-fan-controller 是澳大利亚开发者 Patrick Collins 写的一份 ESPHome 配置加教程，741 星。它最初解决的是电视柜、机柜里设备过热的问题：一块 ESP32、一颗温度传感器、一只 12V 四线 PWM 风扇，风扇随温度平滑变速，而不是像温控开关那样忽开忽关。</p><p>工作原理是把 ESPHome 自带的 PID climate 组件用在风扇上：温度是输入，风扇的 PWM 占空比是输出，目标温度就是设定值。比例项决定温差越大转得越快，积分项慢慢消掉长期偏差，微分项预判变化提前加减速；作者给了一组 KP、KI、KD 起点值，占空比钳在 13% 到 80% 之间，因为再低风扇会停转。HA 里出现一个 climate 实体。</p><p>硬件只有六样：ESP32、温度探头、四线 PWM 风扇、降压模块、12V 电源、跳线，成本几十块。README 只有英文。</p><p>放进 0106 里它就是炉热循环风扇的蓝本：把输入换成炉对面北墙和东头床下两颗探头的差值，目标温差设 2℃，炉温超 40℃ 才允许启动，夜里 23 点到 7 点在 YAML 里加一个上限 40% 的 lambda。坑是 DHT11 太慢太糙，直接换 DS18B20；PID 调参要在炉子真正烧起来时做，冷炉调出来的参数没用。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/ApolloAutomation/AIR-1" target="_blank" rel="noopener">ApolloAutomation/AIR-1</a>
+          <span class="stars">★ 172</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">Apollo Automation 的开源空气质量多合一传感器：SEN55 颗粒物、SCD40 二氧化碳、MiCS-4514 一氧化碳，跑 ESPHome，HA 自动发现</p>
+        <p class="gh-why">→ 炉子对面北墙那只一氧化碳报警器的联网版：CO、PM2.5、CO2 一次到位，HA 里做超标推送和大屏炉区变红，硬件图纸和固件全开源</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0106-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0106-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0106-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">AIR-1 · 一只小盒子看 CO / PM / CO2</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0106-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0106-3-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0106-3-shade)" stroke="none"/><path d="M152.0 162.0 h96 v36 h-96 Z M152.0 162.0 l8 -8 h96 l-8 8 M248.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M249.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0106-3-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0106-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0106-3-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">柴火炉</text><text x="78" y="107" text-anchor="middle" font-size="10.5">烟 / CO / 灰</text><text x="78" y="216" text-anchor="middle" font-size="9.5">SEN55 / SCD40</text><text x="78" y="229" text-anchor="middle" font-size="10.5">MiCS-4514</text><text x="200" y="94" text-anchor="middle" font-size="9.5">AIR-1 ESP32</text><text x="200" y="107" text-anchor="middle" font-size="10.5">ESPHome 固件</text><text x="200" y="174" text-anchor="middle" font-size="10.5">三颗 RGB 灯</text><text x="200" y="187" text-anchor="middle" font-size="10.5">超标闪红</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="322" y="107" text-anchor="middle" font-size="10.5">CO &gt; 30ppm</text><text x="430" y="138" text-anchor="middle" font-size="10.5">手机推送</text><text x="430" y="151" text-anchor="middle" font-size="10.5">大屏炉区红</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">扩散</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">I2C</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">自动发现</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0106：AIR-1 贴北墙下方接 HA 做 CO / PM 超标推送，认证 CO 报警器仍…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">ApolloAutomation/AIR-1</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>AIR-1 是美国 Apollo Automation 做的开源空气质量多合一传感器，172 星，硬件图纸、外壳 3D 文件和 ESPHome 固件全部公开，也可以直接买成品，六十多美元。它解决的问题是家里的空气到底怎么样：一只 61 毫米见方的小盒子同时看颗粒物、二氧化碳、一氧化碳和挥发性有机物。</p><p>工作原理很直白：ESP32 主控上挂三颗传感器，SEN55 测颗粒物、VOC、NOx 和温湿度，SCD40 测二氧化碳，DFRobot 的 MiCS-4514 测一氧化碳、氢气、二氧化氮、氨气和甲烷；固件是一份 ESPHome YAML，上电连它的热点填 WiFi，HA 就自动发现，十几个实体一次出现。盒子上还有三颗 RGB 指示灯。</p><p>生态上它是 ESPHome 官方设备库里的条目，Discord 社区活跃。文档只有英文，国内买要转运。</p><p>放进 0106 里它挂在炉子对面北墙下方、报警器规定的位置：炉子刚点着或风门开错时，CO 和 PM2.5 会先抬头，HA 自动化设 CO 超 30ppm 推送手机、大屏地图上炉区变红。但 MiCS-4514 是半导体气敏元件，不是认证级 CO 报警器，旁边那只电化学一氧化碳报警器照样要装。烧炉季每周擦炉灰，颗粒物传感器进灰会误报。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -682,7 +751,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

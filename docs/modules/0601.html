@@ -149,23 +149,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥7,000～12,000（真实 BOM ¥7,135 打底，树苗和青石看缘分）；年度维护 ¥300 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/cofade/open-garden-planner" target="_blank" rel="noopener">
-        <div class="gh-head"><b>cofade/open-garden-planner</b><span class="stars">★ 8</span></div>
-        <p class="gh-desc">开源桌面版庭院规划工具，按米制精确画布局，给每棵植物挂元数据并导出标准格式</p>
-        <p class="gh-why">→ 间接参考：把 50 平米三分区和滴灌走线按实际尺寸画进去，树间距 4 米一眼看出够不够</p>
-      </a>
-      <a class="gh" href="https://github.com/Ecohackerfarm/powerplant" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Ecohackerfarm/powerplant</b><span class="stars">★ 94</span></div>
-        <p class="gh-desc">基于朴门永续原则的种植规划应用，给出植物搭配建议和种植时间表</p>
-        <p class="gh-why">→ 间接参考：草原带混播和野花点缀带选种时，用它查哪些植物搭在一起互相不打架</p>
-      </a>
-      <a class="gh" href="https://github.com/openfarmcc/OpenFarm" target="_blank" rel="noopener">
-        <div class="gh-head"><b>openfarmcc/OpenFarm</b><span class="stars">★ 1.7k</span></div>
-        <p class="gh-desc">曾经的开放种植知识库，收录大量植物的间距、需水、土壤和伴生信息，2025 年已归档</p>
-        <p class="gh-why">→ 间接参考：网站已关但代码和数据还在，能扒出芒草、松果菊这类植物的间距和需水资料</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/danielbrendel/hortusfox-web" target="_blank" rel="noopener">danielbrendel/hortusfox-web</a>
+          <span class="stars">★ 1.7k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">自托管的植物管理与追踪系统，按位置分组建植物档案，带任务、日历、库存、天气和二维码，Docker 一条命令跑起来</p>
+        <p class="gh-why">→ 把疏林带、草原带、野花带建成三个位置，每棵朴树、每片芒草建档，二月割草、补播野花的养护任务进日历按月提醒</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0601-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0601-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0601-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">HortusFox · 按位置建档的植物管家</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0601-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0601-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0601-1-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0601-1-shade)" stroke="none"/><path d="M382.0 162.0 h96 v36 h-96 Z M382.0 162.0 l8 -8 h96 l-8 8 M478.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M479.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0601-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0601-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="78" y="151" text-anchor="middle" font-size="10.5">拍照 / 记操作</text><text x="78" y="180" text-anchor="middle" font-size="10.5">桧木牌二维码</text><text x="200" y="94" text-anchor="middle" font-size="10.5">HortusFox</text><text x="200" y="107" text-anchor="middle" font-size="9.5">PHP + MariaDB</text><text x="200" y="174" text-anchor="middle" font-size="10.5">任务 / 日历</text><text x="200" y="187" text-anchor="middle" font-size="10.5">年度养护事项</text><text x="322" y="94" text-anchor="middle" font-size="10.5">三个位置</text><text x="322" y="107" text-anchor="middle" font-size="9.5">疏林 / 草原 / 野花</text><text x="322" y="174" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="187" text-anchor="middle" font-size="10.5">每周拉到期任务</text><text x="430" y="180" text-anchor="middle" font-size="10.5">手机提醒</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">建档</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">扫码查历史</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">REST API</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0601：三区植物档案 + 年度养护日历，二月割草、秋补野花按月提醒</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">danielbrendel/hortusfox-web</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>HortusFox 是德国开发者 Daniel Brendel 做的开源植物管理系统，GitHub 上 1.7k 星，是自托管圈子里目前最活跃的植物档案工具。它解决的问题是：家里、院子里几十上百株植物，谁在哪、上次浇水施肥是什么时候、什么季节该做什么。</p><p>它是 PHP 加 MariaDB 的网页应用，官方 Docker 镜像一条 compose 命令就起来，多人协作。核心结构是位置和植物：先建位置，再把植物挂进去，每株有名字、学名、照片、光照需水等属性和一条完整的操作历史；任务系统给植物或位置挂待办，日历系统按日期排养护事项并发提醒；还有库存管理、天气接入、群聊、二维码标签、REST API 和外部植物识别。暂无中文包，但结构简单。</p><p>在 0601 里它是分区养护日历：建疏林带、草原带、野花带三个位置，三棵朴树和一棵乌桕各建一株，芒草、狼尾草、蓝羊茅按片建档，金光菊、松果菊、马鞭草记种植日期和自播情况；日历里写死几条年度任务，二月底整片贴地割草、割下的草秆垫到疏林带、梅雨前检查地埋滴灌出土口、秋天补播野花。桧木牌上的植物名和它里面的名字保持一致，手机扫二维码就能看这棵树的历史。要注意它没有 HomeAssistant 集成，提醒靠邮件或它自己的通知，可以用 REST API 让 HomeAssistant 每周拉一次到期任务推到手机。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/openfarmcc/OpenFarm" target="_blank" rel="noopener">openfarmcc/OpenFarm</a>
+          <span class="stars">★ 1.7k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">曾经的开放种植知识库，收录大量植物的间距、需水、光照、土壤和伴生信息，2025 年 4 月已归档，代码和数据仍可下载</p>
+        <p class="gh-why">→ 网站已关但数据还在，选种时查芒草、松果菊、朴树这类植物的株距、需水量和耐旱性，按它的数字定每平米株数和滴头间距</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0601-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0601-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0601-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OpenFarm · 已归档的开放种植数据库</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0601-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0601-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0601-2-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0601-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0" stroke-dasharray="3 3"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">众包种植指南</text><text x="78" y="107" text-anchor="middle" font-size="10.5">2014-2025</text><text x="78" y="174" text-anchor="middle" font-size="10.5">数据导出</text><text x="78" y="187" text-anchor="middle" font-size="10.5">JSON / 仓库</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OpenFarm</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Rails + MongoDB</text><text x="200" y="174" text-anchor="middle" font-size="10.5">作物条目</text><text x="200" y="187" text-anchor="middle" font-size="9.5">株距 / 需水 / 光照</text><text x="322" y="94" text-anchor="middle" font-size="10.5">0601 排布表</text><text x="322" y="107" text-anchor="middle" font-size="10.5">株数 / 滴头间距</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="430" y="151" text-anchor="middle" font-size="10.5">对照本地苗圃</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">历史数据</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">本地跑</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">查数字</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0601：选种时查八种植物的株距和需水量，定每平米株数与滴头间距</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">openfarmcc/OpenFarm</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>OpenFarm 是 2014 年由 FarmBot 创始人 Rory Aronson 众筹发起的开放种植知识库，口号是你可以种任何东西，GitHub 上 1.7k 星。它想解决的问题是：植物怎么种的知识散落在各种书和论坛里，格式不统一也不开放，于是做了一个人人可编辑的种植指南数据库，像种植版的维基百科。项目在 2025 年 4 月归档，网站已关，但仓库是只读状态，代码和数据导出仍然能拿到。</p><p>它是 Ruby on Rails 加 MongoDB 的网页应用，核心数据是两层：作物条目记录每种植物的学名、株距、行距、播种深度、需水、光照、土壤酸碱和成熟天数；种植指南由用户按气候和方法写步骤，可以有多份。所有数据 CC 协议开放，有 JSON API，别人做的种植 App 很多都从它拉数据。README 只有英文，没有中文资料，但字段都是数字，看得懂。</p><p>在 0601 里它是选种和排布时的资料库：细叶芒、狼尾草、蓝羊茅、金光菊、松果菊、马鞭草、朴树、乌桕，每种查一遍株距和需水量，草原带混播的每平米株数、野花带每平米 6 株、朴树 4 米以上间距，都能对着它的数字校一遍，再决定地埋滴灌每米放几个滴头。用法是把仓库克隆下来跑一个本地实例，或者直接读数据导出文件。要注意它以北美和欧洲的作物为主，本地乡土种如朴树、乌桕可能没有条目，用同属植物的数据代替，再结合杭州本地苗圃的经验。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Ecohackerfarm/powerplant" target="_blank" rel="noopener">Ecohackerfarm/powerplant</a>
+          <span class="stars">★ 94</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">基于朴门永续原则的种植规划应用，内置植物伴生关系数据，给出哪些植物搭在一起互利、哪些相克，并排种植时间表</p>
+        <p class="gh-why">→ 小众但没有更好的替代：草原带混播和野花带选种时查伴生关系，避免把互相压制的种混在一起，是朴门伴生规划的少数现成工具</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0601-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="22" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0601-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0601-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">powerplant · 朴门伴生关系规划</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0601-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0601-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0601-3-shade)" stroke="none"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0601-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0601-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M322.0 124.0 L322.0 148.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="78" y="151" text-anchor="middle" font-size="10.5">录入候选植物</text><text x="78" y="174" text-anchor="middle" font-size="10.5">伴生关系数据</text><text x="78" y="187" text-anchor="middle" font-size="10.5">朴门社区整理</text><text x="200" y="94" text-anchor="middle" font-size="10.5">powerplant</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Node + React</text><text x="200" y="174" text-anchor="middle" font-size="10.5">关系矩阵</text><text x="200" y="187" text-anchor="middle" font-size="10.5">互利 / 相克</text><text x="322" y="100" text-anchor="middle" font-size="10.5">播种时间表</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0601 混播比例</text><text x="322" y="187" text-anchor="middle" font-size="10.5">草原带 / 野花带</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">建地块</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">打分</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">定组合</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">定时间</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0601：草原带三种草 + 野花带三种花，先查相克再定混播比例和播期</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Ecohackerfarm/powerplant</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>powerplant 是德国 Ecohackerfarm 朴门农场做的开源种植规划工具，GitHub 上 94 星，社区小，但它是少数把朴门永续里的植物伴生关系做成可查可算的软件，而不是一张纸质对照表。它解决的问题是：一块地里种多种植物，哪些搭在一起互利、哪些互相压制、哪些吸引害虫的天敌，这些知识分散在书里，规划时很难一次看全。</p><p>它是 Node.js 后端加 React 前端的网页应用，核心是一份植物数据库和一张伴生关系矩阵，数据来自朴门社区整理的开放资料。用法是先建一块地，往里加想种的植物，它会给每对植物打分，绿的互利、红的相克，并按你的气候区排出播种和移栽的时间表；也能反过来问它，已经种了 A，还能配哪些 B。数据可导出，没有 HomeAssistant 接口，也没有中文资料，界面是英文但操作只有拖拽和勾选。</p><p>在 0601 里它用在选种阶段：草原带的细叶芒、狼尾草、蓝羊茅三种混播，野花带的金光菊、松果菊、马鞭草，加上疏林带的朴树和乌桕，全部录进去看一遍关系矩阵，确认没有明显相克的组合，再决定混播比例；朴树树下的碎树皮护根圈里以后想加点地被，也先在它里面配一下。要注意它的数据库以蔬菜和果树为主，观赏草和乡土乔木条目少，查不到就按同科同属替代，把它当一个提醒工具而不是最终裁判。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -457,7 +526,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

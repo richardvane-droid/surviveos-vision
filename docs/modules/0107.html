@@ -279,23 +279,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥3,500～7,000（榆木板、矮柜和小电器占大头）；年度咖啡豆和酒 ¥1,200 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/karlomikus/bar-assistant" target="_blank" rel="noopener">
-        <div class="gh-head"><b>karlomikus/bar-assistant</b><span class="stars">★ 1.0k</span></div>
-        <p class="gh-desc">自托管家庭吧台管理系统，管酒水库存、500 多个鸡尾酒配方和购物清单</p>
-        <p class="gh-why">→ 台面下那几瓶黄酒和玻璃罐里的料都登记进去，想喝的时候直接翻能做什么</p>
-      </a>
-      <a class="gh" href="https://github.com/alex9849/CocktailPi" target="_blank" rel="noopener">
-        <div class="gh-head"><b>alex9849/CocktailPi</b><span class="stars">★ 194</span></div>
-        <p class="gh-desc">树莓派 DIY 自动调酒机的网页界面和控制软件，多泵配料、自动出杯</p>
-        <p class="gh-why">→ 想把热红酒之外再加一台自动调酒机，泵和网页点单都是现成的</p>
-      </a>
-      <a class="gh" href="https://github.com/AndreWohnsland/CocktailBerry" target="_blank" rel="noopener">
-        <div class="gh-head"><b>AndreWohnsland/CocktailBerry</b><span class="stars">★ 89</span></div>
-        <p class="gh-desc">树莓派调酒机开源软件，带触屏界面、配方管理和 WS281x 灯光联动</p>
-        <p class="gh-why">→ 另一套调酒机方案，官方还有硬件仓库，灯光能跟出酒一起亮</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/grocy/grocy" target="_blank" rel="noopener">grocy/grocy</a>
+          <span class="stars">★ 9.5k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">自称“冰箱之外的 ERP”：自托管的家庭食材与日用品管理，管库存、保质期、购物清单和消耗记录</p>
+        <p class="gh-why">→ 小冰箱和矮柜的账本：咖啡豆开袋日期、黄酒还剩几瓶、桂花陈皮什么时候过期，罐上扫码入库消耗，过期前推提醒</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0107-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0107-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0107-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Grocy · 罐子扫一下，到期和缺货自己算</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0107-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0107-1-shade)" stroke="none"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0107-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0107-1-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0107-1-arrow)" stroke-linecap="round"><path d="M78.0 148.0 L78.0 124.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">罐上小二维码</text><text x="78" y="107" text-anchor="middle" font-size="10.5">手机扫一下</text><text x="78" y="218" text-anchor="middle" font-size="10.5">补料 / 用掉</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Grocy</text><text x="200" y="107" text-anchor="middle" font-size="10.5">进销存 + 到期</text><text x="200" y="174" text-anchor="middle" font-size="10.5">SQLite</text><text x="200" y="187" text-anchor="middle" font-size="10.5">每批到期日</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 集成</text><text x="322" y="107" text-anchor="middle" font-size="10.5">快过期 / 缺货</text><text x="322" y="180" text-anchor="middle" font-size="10.5">购物清单</text><text x="430" y="138" text-anchor="middle" font-size="10.5">周末出门前</text><text x="430" y="151" text-anchor="middle" font-size="10.5">一条推送</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">入库 / 消耗</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">低于最低量</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0107：罐子扫码入库消耗 → 到期与缺货 → HA 周末推一次购物清单</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">grocy/grocy</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Grocy 是德国开发者 Bernd Bestel 从 2017 年起维护的自托管家庭管理系统，9.5k 星。它解决的问题被它自己一句话概括为“冰箱之外的 ERP”：家里买的吃的用的，什么时候买的、放在哪、还剩多少、什么时候过期，靠脑子记总会重复买或放坏。</p><p>工作原理是一套小型进销存：每样东西建一个产品，定义单位、默认保质期和存放位置，买回来就入库，用掉就消耗，可以扫商品条码或自己打的二维码，手机在柜前扫一下就完成。系统按先进先出记每一批的到期日，快过期的自动进首页提醒，低于最低库存自动进购物清单。后端是 PHP 加 SQLite，Docker 一条命令起来。</p><p>生态上它有官方的 HomeAssistant 集成和条码前端 Barcode Buddy，社区很大。翻译走 Transifex，简体中文界面是完整的。</p><p>放进 0107 里它管矮柜和小冰箱这一层：咖啡豆按袋建产品记开袋日期，桂花、陈皮、干柠檬片按罐记到期，黄酒按瓶数记，每只玻璃罐的牛皮纸标签角上加一个小二维码，补料和用掉都是扫一下。HA 集成把快过期和需要购买两条读出来，周末出门前推一次。它和 Bar Assistant 的分工是：Grocy 管东西还在不在、坏没坏，Bar Assistant 管今晚拿它们做什么。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/karlomikus/bar-assistant" target="_blank" rel="noopener">karlomikus/bar-assistant</a>
+          <span class="stars">★ 1.0k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">自托管家庭吧台管理系统，管酒水库存、500 多个鸡尾酒配方和购物清单，带 REST API</p>
+        <p class="gh-why">→ 柜里 8 只玻璃罐和几瓶黄酒都登记进去，坐下翻平板按库存反查今晚能做什么，缺料自动进购物清单推手机</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0107-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0107-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0107-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Bar Assistant · 按库存反查今晚能做什么</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0107-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0107-2-shade)" stroke="none"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0107-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0107-2-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0107-2-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0107-2-shade)" stroke="none"/><path d="M392.0 72.0 h66 l10 10 v38 h-76 Z M458.0 72.0 v10 h10" stroke-width="1.3"/><path d="M400.0 88.0 h54 M400.0 96.0 h44 M400.0 104.0 h48" stroke-width="0.5"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0107-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M279.3 148.0 C261.0 148.0 261.0 124.0 242.7 124.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">8 只玻璃罐</text><text x="78" y="107" text-anchor="middle" font-size="10.5">几瓶黄酒</text><text x="78" y="218" text-anchor="middle" font-size="10.5">坐下翻平板</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Bar Assistant</text><text x="200" y="107" text-anchor="middle" font-size="10.5">PHP API</text><text x="200" y="174" text-anchor="middle" font-size="9.5">Meilisearch</text><text x="200" y="187" text-anchor="middle" font-size="10.5">按库存筛配方</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Salt Rim</text><text x="322" y="187" text-anchor="middle" font-size="10.5">今晚能做的</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 读 REST</text><text x="322" y="107" text-anchor="middle" font-size="10.5">缺料推手机</text><text x="430" y="100" text-anchor="middle" font-size="10.5">购物清单</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">建原料</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">选一杯</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">扣减</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">API</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0107：罐子黄酒建原料 → 按库存筛可做配方 → 扣减 → 缺料进购物清单…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">karlomikus/bar-assistant</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Bar Assistant 是克罗地亚开发者 Karlo Mikuš 从 2022 年起做的自托管家庭吧台管理系统，1.0k 星。它解决的问题很具体：家里的酒、糖浆、干料到底还剩多少，用手头这些东西今晚能调出什么，缺什么该买什么。</p><p>架构是前后端分离：后端 bar-assistant 是 PHP 写的 API 服务，负责配方、原料、库存、购物清单和用户权限；前端 Salt Rim 是一个 Vue 单页应用，手机上可以装成 PWA。数据流是先把原料建档、勾上在库，配方库里 500 多款鸡尾酒会按库存自动分成现在能做和还差一样；做了一杯就按配方扣减，任何原料低于设定量自动进购物清单。配方可以从网址、JSON、YAML 导入，也能算成本、按人数放大。</p><p>生态上它 Docker 一条命令起来，Discord 社区活跃，翻译走 Crowdin 但没有中文界面。</p><p>放进 0107 里它就是吧台点单账本：柜里 8 只玻璃罐的咖啡豆、桂花、陈皮、干柠檬片和几瓶本地黄酒各建一条原料，热红酒、桂花黄酒、陈皮茶写成自定义配方，坐下翻平板按库存筛可做的那几款。HA 用它的 REST API 每晚读一次库存，低于 1 份用量就推手机。坑是它默认是鸡尾酒思维，原料单位要自己改成 g 和 ml，别按盎司算。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/beeb/coffee-scale-app" target="_blank" rel="noopener">beeb/coffee-scale-app</a>
+          <span class="stars">★ 146</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">DIY 蓝牙咖啡秤：ESP32 + HX711 称重传感器跑 Rust 固件，配一个手机 PWA 显示重量、计时和萃取曲线</p>
+        <p class="gh-why">→ 手冲架下那台秤自己做：磨豆注水计时、流速曲线全在手机网页上，每天一杯的种草环节多了一条能对比的曲线</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0107-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0107-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0107-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Coffee Scale · 一百块做一台蓝牙曲线秤</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0107-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0107-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0107-3-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0107-3-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0107-3-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0107-3-arrow)" stroke-linecap="round"><path d="M78.0 148.0 L78.0 124.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="218" text-anchor="middle" font-size="10.5">手冲注水</text><text x="78" y="94" text-anchor="middle" font-size="10.5">HX711 模块</text><text x="78" y="107" text-anchor="middle" font-size="10.5">称重传感器</text><text x="200" y="94" text-anchor="middle" font-size="9.5">ESP32 Rust 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">卡尔曼滤波</text><text x="200" y="174" text-anchor="middle" font-size="10.5">OLED</text><text x="200" y="187" text-anchor="middle" font-size="10.5">重量 / 电量</text><text x="322" y="94" text-anchor="middle" font-size="10.5">手机 PWA</text><text x="322" y="107" text-anchor="middle" font-size="10.5">计时 + 曲线</text><text x="322" y="174" text-anchor="middle" font-size="10.5">今天这杯</text><text x="322" y="187" text-anchor="middle" font-size="10.5">粉水比记录</text><text x="430" y="138" text-anchor="middle" font-size="10.5">每天一杯</text><text x="430" y="151" text-anchor="middle" font-size="10.5">对比曲线</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">高频采样</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">BLE</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0107：手冲架下 DIY 秤 → 蓝牙 → 台面上手机看注水曲线</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">beeb/coffee-scale-app</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>coffee-scale-app 是瑞士开发者 beeb 做的开源 DIY 咖啡秤，146 星，从 2021 年做到现在，2026 年 9 月还在发新版。它解决的问题是：市面上带蓝牙、能画曲线的咖啡秤要一千多块，而一块 ESP32、一颗 HX711 称重模块、一个小 OLED 加一节锂电池，成本不到一百块就能做出同样的事。</p><p>工作原理分两半：秤本身跑 Rust 写的固件，用 esp-rs 生态，HX711 高频采样后经卡尔曼滤波去抖，128×32 的 OLED 上显示重量，通过低功耗蓝牙广播出去；另一半是一个网页 PWA，手机浏览器打开 coffee.beeb.li 或自己部署的一份，连上秤后实时显示重量、计时、预浸时间，并把这次注水的重量曲线和一条参考萃取曲线叠在一起。外壳有 3D 打印件，去 Printables 下载。</p><p>生态上它是 ESP32 咖啡秤里最完整的一个，README 详细但只有英文，好在接线就四根。</p><p>放进 0107 里它就是手冲架下那台秤：磨完豆按一下归零，注水时手机放在榆木台面上看曲线，粉水比和流速有了记录。用 ESP32-C3 把体积再缩小一圈，外壳改成一只小胡桃木盒，秤盘留着防水。坑是 HX711 受温度影响，台面离炉子只有两米，每次开始前先归零，别把秤放在电陶炉旁边。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -678,7 +747,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

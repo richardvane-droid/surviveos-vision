@@ -145,23 +145,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥2,000～4,000（铸铁火盆和榆木矮桌占大头）；柴火来自庭院柴火堆墙，年度约 ¥0</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/WLANThermo-nano/WLANThermo_ESP32_Software" target="_blank" rel="noopener">
-        <div class="gh-head"><b>WLANThermo-nano/WLANThermo_ESP32_Software</b><span class="stars">★ 40</span></div>
-        <p class="gh-desc">德国开源 ESP32 烧烤温度计固件，多路探针、手机推送、能控风扇调火，有网页和 App</p>
-        <p class="gh-why">→ 烤鱼和茶壶各插一根探针，温度到了手机提醒，不用一直盯着火塘，也能控风扇补火</p>
-      </a>
-      <a class="gh" href="https://github.com/Bjk8kds/esphome-winsen-co-sensor" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Bjk8kds/esphome-winsen-co-sensor</b><span class="stars">★ 4</span></div>
-        <p class="gh-desc">ESPHome 外部组件，接炜盛 ZE07/ZE15 电化学一氧化碳传感器，输出 ppm 并检测故障</p>
-        <p class="gh-why">→ 顶棚透气口不够时 CO 会积，用这颗国产电化学传感器做报警比 MQ-7 准，直接接 HomeAssistant</p>
-      </a>
-      <a class="gh" href="https://github.com/MarcFinns/AtmoScan" target="_blank" rel="noopener">
-        <div class="gh-head"><b>MarcFinns/AtmoScan</b><span class="stars">★ 47</span></div>
-        <p class="gh-desc">ESP8266 手持多合一空气传感器，CO、CO2、VOC、PM2.5 一起测，带彩屏和 MQTT</p>
-        <p class="gh-why">→ 想做一个能拿在手里的火塘旁空气检测仪，它的传感器组合和外壳方案可以照抄</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
+          <span class="stars">★ 11.7k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+        </header>
+        <p class="gh-desc">用 YAML 配置 ESP32 固件的系统，一氧化碳、温度探针、脉冲风速、本地定时器都是现成组件，本地跑不上云，原生接 HomeAssistant</p>
+        <p class="gh-why">→ 火塘空气看护和煮茶烤鱼计时器合成一块 ESP32：读 CO 传感器和热电偶，本地阈值报警和倒计时，不靠 Wi-Fi 也能响蜂鸣器</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0704-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="26" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0704-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0704-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ESPHome · 火塘小板本地看空气和计时</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0704-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 236.0 h96 v36 h-96 Z M30.0 236.0 l8 -8 h96 l-8 8 M126.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0704-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0704-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0704-1-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0704-1-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0704-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0704-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M100.2 222.0 C139.0 222.0 139.0 124.0 177.8 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M256.0 96.0 L266.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">ZE07 一氧化碳</text><text x="78" y="149" text-anchor="middle" font-size="10.5">透气口下</text><text x="78" y="216" text-anchor="middle" font-size="9.5">K 型热电偶 / DS18B20</text><text x="78" y="229" text-anchor="middle" font-size="10.5">炭层 / 茶壶</text><text x="78" y="254" text-anchor="middle" font-size="10.5">泡茶按钮</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ESPHome 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">火塘 ESP32</text><text x="200" y="174" text-anchor="middle" font-size="10.5">本地阈值 / 倒计时</text><text x="200" y="187" text-anchor="middle" font-size="9.5">50ppm / 三分钟</text><text x="322" y="174" text-anchor="middle" font-size="10.5">蜂鸣器</text><text x="322" y="187" text-anchor="middle" font-size="10.5">不同的调</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">手机推送 + 墨水屏</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">ppm</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">温度</text><text x="139.0" y="168.0" text-anchor="middle" font-size="8" fill="#666">计时</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">本地响</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">实体</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0704：CO 超标本地蜂鸣并推手机，炭温茶温到了各响一声，按钮三分钟泡茶倒计时</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">esphome/esphome</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ESPHome 是 Nabu Casa 维护的 ESP32 固件生成系统，和 HomeAssistant 同一个团队，GitHub 上 11.7k 星。想让 ESP32 读传感器、控蜂鸣器、跑一点判断逻辑，以前得写 Arduino 代码，而它只要一份 YAML 写清接了什么、往哪报，编译、烧录、OTA 全自动，HomeAssistant 自动发现。</p><p>它的工作方式是 YAML 到 C++ 的编译器：声明传感器型号、引脚、采样周期，它生成固件；固件在设备本地运行，原生 API 推给 HomeAssistant，断网时本地逻辑照常。和火塘相关的组件都有：max31855 读 K 型热电偶，dallas 读防水温度探头，uart 加外部组件读炜盛 ZE07 一氧化碳传感器，script 做本地倒计时，rtttl 让无源蜂鸣器唱几个音。没有官方中文，但中文社区极大，B 站教程数不清。</p><p>在 0704 里它做一块塞在矮桌抽屉后面的火塘小板：一颗 ZE07 一氧化碳传感器装在顶棚透气口下方，读数超过 50ppm 持续五分钟蜂鸣器响并推手机，超过 100ppm 立刻响，逻辑全在本地不看 Wi-Fi；一根 K 型热电偶插进烤鱼的炭层、一根 DS18B20 贴茶壶，温度到了各响一声不同的调；再加一个按钮启动三分钟泡茶倒计时。所有实体进 HomeAssistant，矮桌下的墨水屏顺手显示炭温和茶温。CO 传感器要预热且怕烟熏，装在烟不直冲的位置；热电偶线加陶瓷套管。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/CapnBry/HeaterMeter" target="_blank" rel="noopener">CapnBry/HeaterMeter</a>
+          <span class="stars">★ 556</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">开源烧烤温控器，Arduino 板加树莓派跑 LinkMeter，四路探针，PID 控鼓风机和风门保持炭火温度，网页看曲线和报警</p>
+        <p class="gh-why">→ 火塘要烤鱼又要煮茶，靠它的 PID 鼓风把炭温稳在 200 度左右，四路探针一根测炭一根插鱼，网页曲线比盯着火看准</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0704-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="27" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0704-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0704-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">HeaterMeter · PID 鼓风把炭火当烤箱</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0704-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0704-2-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0704-2-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0704-2-shade)" stroke="none"/><path d="M382.0 82.0 h96 v36 h-96 Z M382.0 82.0 l8 -8 h96 l-8 8 M478.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M479.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0704-2-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0704-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0704-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M374.0 96.0 L134.0 96.0" stroke-dasharray="3 3"/><path d="M256.0 176.0 L266.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">四路探针</text><text x="78" y="149" text-anchor="middle" font-size="9.5">炭层 / 鱼 / 茶壶</text><text x="78" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="78" y="231" text-anchor="middle" font-size="10.5">设目标 200 度</text><text x="200" y="94" text-anchor="middle" font-size="9.5">HeaterMeter 主板</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Arduino PID</text><text x="200" y="174" text-anchor="middle" font-size="10.5">LinkMeter</text><text x="200" y="187" text-anchor="middle" font-size="10.5">树莓派网页</text><text x="322" y="94" text-anchor="middle" font-size="10.5">鼓风机 / 风门</text><text x="322" y="107" text-anchor="middle" font-size="10.5">PWM</text><text x="430" y="100" text-anchor="middle" font-size="10.5">铸铁火盆炭层</text><text x="322" y="174" text-anchor="middle" font-size="10.5">手机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">鱼到 65 度</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">温度</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">设定</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">PID</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">补氧</text><text x="254.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">实测</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">报警</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0704：探针测炭和鱼，PID 鼓风稳住炭温，鱼熟了手机响</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">CapnBry/HeaterMeter</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>HeaterMeter 是美国开发者 Bryan Mayland 从 2010 年起做的开源烧烤温控器，GitHub 上 556 星，硬件电路、Arduino 固件和树莓派端软件全部开源，是 DIY 烧烤圈子里最经典的项目。它解决的问题是：用炭火烧烤最难的是把温度稳住，人要不停调风门，而它用一个小鼓风机和 PID 算法自动补氧减氧，让炭火像烤箱一样恒温。</p><p>它的结构是两块板：一块 Arduino 兼容的主板插四路热敏探针，跑 PID 算法，按目标温度和实测温度输出 PWM 给鼓风机和舵机风门，脱机也能独立工作，板上有小屏和旋钮；主板插在一块树莓派上，树莓派跑名为 LinkMeter 的 OpenWrt 固件，提供网页界面，实时画四路温度曲线、设目标温度、设报警，报警通过邮件、推送和脚本发出，也有 MQTT 转发的社区方案。硬件可以按仓库的 Gerber 自己打板，也能买套件。没有中文资料，但烧烤论坛上讨论极多。</p><p>在 0704 里它管火塘的炭温：铸铁火盆侧面开一个小口接鼓风机的软管，主板和树莓派装在矮桌下的抽屉隔间里，四路探针一根插在炭层测火塘温度，一根插进烤鱼最厚处，另外两根留给煮茶壶和第二条鱼；网页上设炭温目标 200 度，它自动鼓风，鱼内部到 65 度手机响。烤完关鼓风机让炭自然熄，走之前照规矩浇水。要注意开放火塘不像封闭烤炉那样好控，鼓风只能提温不能降温，风大的晚上把目标设低一点；探针线耐温有限，别直接搭在炭上。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/WLANThermo-nano/WLANThermo_ESP32_Software" target="_blank" rel="noopener">WLANThermo-nano/WLANThermo_ESP32_Software</a>
+          <span class="stars">★ 40</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">德国开源 ESP32 烧烤温度计固件，最多八路探针、网页和手机 App、推送通知、Pitmaster 功能控风扇或舵机、MQTT</p>
+        <p class="gh-why">→ 比 HeaterMeter 轻：一块 ESP32 就够，烤鱼和茶壶各插一根探针，温度到了手机提醒，MQTT 进 HomeAssistant，德国社区维护十年</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0704-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="28" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0704-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0704-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">WLANThermo · 一块 ESP32 的烧烤温度计</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0704-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0704-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0704-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0704-3-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0704-3-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0704-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0704-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M157.3 124.0 C139.0 124.0 139.0 148.0 120.7 148.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">NTC 探针</text><text x="78" y="149" text-anchor="middle" font-size="10.5">鱼 / 茶壶</text><text x="78" y="174" text-anchor="middle" font-size="10.5">小风扇</text><text x="78" y="187" text-anchor="middle" font-size="9.5">Pitmaster 可选</text><text x="200" y="94" text-anchor="middle" font-size="9.5">WLANThermo 固件</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Nano V3 ESP32</text><text x="200" y="174" text-anchor="middle" font-size="10.5">每路上下限</text><text x="200" y="187" text-anchor="middle" font-size="9.5">65 度 / 95 度</text><text x="322" y="94" text-anchor="middle" font-size="10.5">网页 / App</text><text x="322" y="107" text-anchor="middle" font-size="10.5">推送通知</text><text x="322" y="174" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="187" text-anchor="middle" font-size="10.5">MQTT</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="430" y="151" text-anchor="middle" font-size="10.5">蒲团上看手机</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">温度</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">PID</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">越界推送</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">MQTT</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0704：两根探针各设上限，越界手机推送，MQTT 进 HA，风扇…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a">WLANThermo-nano/WLANThermo_ESP32_Software</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>WLANThermo 是德国一个开源社区从 2014 年起做的烧烤温度计项目，这个仓库是它 ESP32 一代的固件，GitHub 上 40 星，README 是德文。它解决的问题和 HeaterMeter 一样，把烤肉时的温度监控和炭火控制交给机器，但路线更轻：不用树莓派，一块 ESP32 加一块探针板就是完整设备，网页、App、通知都在这颗芯片上。</p><p>它的结构是 ESP32 固件加两代硬件，Nano V3 有八路探针口，Mini V3 有四路，探针是标准的 NTC 热敏电阻，支持多种品牌的探针型号，也能接蓝牙探针。固件提供本地网页界面和手机 App，每路设上下限，越界通过 Telegram 等推送；Pitmaster 功能是它的温控部分，一路探针做反馈，用 PID 输出给风扇或舵机风门；数据可以走 MQTT 发出去。硬件设计和外壳文件在同一组织的其他仓库里，可以自己打板或买套件。没有中文资料，德文文档靠翻译软件能看懂。</p><p>在 0704 里它是比 HeaterMeter 更省事的选择：一块 Nano V3 装在矮桌抽屉里，两根探针分别插进烤鱼和贴在茶壶上，各设一个上限，鱼 65 度、茶壶 95 度，到了 App 推一条；MQTT 接进 HomeAssistant 后，温度显示在 0703 那块能源卡片旁边。想控火再接一个小风扇到火盆进风口，用 Pitmaster 稳炭温，不行就当纯温度计用。NTC 探针型号要在设置里选对，否则读数偏几十度；进炭层的那根探针要用耐高温款。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -636,7 +705,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

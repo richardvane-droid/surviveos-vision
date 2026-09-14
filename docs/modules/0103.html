@@ -185,23 +185,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥3,000～6,000（9 台二手 iPad 占大头）；年度电费 ¥100 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/damongolding/immich-kiosk" target="_blank" rel="noopener">
-        <div class="gh-head"><b>damongolding/immich-kiosk</b><span class="stars">★ 1.5k</span></div>
-        <p class="gh-desc">把 Immich 相册变成浏览器轮播画框的方案，老平板打开网页就能用</p>
-        <p class="gh-why">→ 9 台老 iPad 各开一个网页，每台配不同相册和淡入节奏，就是九幅画</p>
-      </a>
-      <a class="gh" href="https://github.com/mikf/gallery-dl" target="_blank" rel="noopener">
-        <div class="gh-head"><b>mikf/gallery-dl</b><span class="stars">★ 19.2k</span></div>
-        <p class="gh-desc">命令行批量下载图站图集的工具，支持 Pinterest 画板、板块和搜索结果</p>
-        <p class="gh-why">→ 凌晨四点定时跑一遍，把 Pinterest 画板里的新图拉下来喂给画框</p>
-      </a>
-      <a class="gh" href="https://github.com/MagicMirrorOrg/MagicMirror" target="_blank" rel="noopener">
-        <div class="gh-head"><b>MagicMirrorOrg/MagicMirror</b><span class="stars">★ 23.8k</span></div>
-        <p class="gh-desc">模块化智能镜子平台，用网页模块拼接屏幕内容，社区壁纸轮播模块很多</p>
-        <p class="gh-why">→ 想在某一格画里叠时间天气或今日主题名，用它的模块比自己写网页省事</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/MagicMirrorOrg/MagicMirror" target="_blank" rel="noopener">MagicMirrorOrg/MagicMirror</a>
+          <span class="stars">★ 23.8k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">模块化智能镜子平台，用网页模块拼接屏幕内容，社区壁纸轮播、天气、日历模块上千个</p>
+        <p class="gh-why">→ 备选画框方案：九屏里想留一屏显示时间、天气和今日主题名，就用它的壁纸模块加两个信息模块拼</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0103-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0103-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0103-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">MagicMirror² · 模块拼屏，服务器模式给 iPad</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0103-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0103-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0103-1-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0103-1-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0103-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0103-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M279.3 148.0 C261.0 148.0 261.0 124.0 242.7 124.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">config.js</text><text x="78" y="107" text-anchor="middle" font-size="10.5">模块布局</text><text x="78" y="174" text-anchor="middle" font-size="10.5">每日画作文件夹</text><text x="78" y="187" text-anchor="middle" font-size="9.5">（gallery-dl）</text><text x="200" y="94" text-anchor="middle" font-size="9.5">MagicMirror²</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Node.js 服务器</text><text x="200" y="174" text-anchor="middle" font-size="10.5">壁纸模块</text><text x="200" y="187" text-anchor="middle" font-size="10.5">时钟 / 主题名</text><text x="322" y="94" text-anchor="middle" font-size="10.5">iPad 浏览器</text><text x="322" y="107" text-anchor="middle" font-size="10.5">全屏锁定</text><text x="322" y="174" text-anchor="middle" font-size="9.5">HA → Remote</text><text x="322" y="187" text-anchor="middle" font-size="10.5">Control 接口</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">声明</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">轮播</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">网页</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">开关 / 换图</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0103：九屏里留一屏跑它，画作 + 小时钟 + 今日主题名</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">MagicMirrorOrg/MagicMirror</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>MagicMirror² 是荷兰开发者 Michael Teeuw 在 2014 年发起的开源智能镜平台，如今由 MagicMirrorOrg 社区维护，23.8k 星，每季度发版，是树莓派做信息屏和智能镜的默认选择。它让你在一块常亮的屏上组合显示时间、天气、照片，而不必从零写网页。</p><p>架构是 Node.js 后端加 Electron 全屏浏览器：核心只管布局和模块生命周期，屏幕分成几个区域，每个模块是一个网页组件，在 config.js 里声明放哪、传什么参数即可。模块的 node_helper 能访问文件系统和网络，所以能做本地图库轮播、接 MQTT。它也支持服务器模式，把页面开给局域网里任何浏览器，正好适合 iPad。</p><p>社区有上千个第三方模块，MMM-BackgroundSlideshow 支持本地文件夹定时换图，MMM-Remote-Control 给 Home Assistant 提供 REST 接口。文档是英文，B 站有不少树莓派魔镜教程。</p><p>放进 0103，它不是主方案，而是九屏里那一屏的备选：用服务器模式跑在 NAS 上，iPad 浏览器全屏打开，壁纸模块指向 gallery-dl 每天同步下来的画作文件夹，角落叠一个小字号的时钟和今日主题名；其余八屏仍走 immich-kiosk。注意 iPad 要用引导式访问锁住浏览器，否则一碰就退出全屏。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/mikf/gallery-dl" target="_blank" rel="noopener">mikf/gallery-dl</a>
+          <span class="stars">★ 19.2k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">命令行批量下载图站图集的工具，支持 Pinterest 画板、板块和搜索结果，配置一次定时跑</p>
+        <p class="gh-why">→ 每天凌晨四点从 Pinterest 的四个主题画板拉新图进 Immich，靠它一条命令，配好 cookie 就不用管</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0103-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="8" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0103-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0103-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">gallery-dl · 一条命令把画板整体拉回本地</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0103-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0103-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0103-2-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0103-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">Pinterest 画板</text><text x="78" y="107" text-anchor="middle" font-size="10.5">四套主题</text><text x="78" y="174" text-anchor="middle" font-size="10.5">配置 JSON</text><text x="78" y="187" text-anchor="middle" font-size="9.5">cookie / 过滤</text><text x="200" y="94" text-anchor="middle" font-size="10.5">gallery-dl</text><text x="200" y="107" text-anchor="middle" font-size="10.5">站点提取器</text><text x="200" y="174" text-anchor="middle" font-size="10.5">归档数据库</text><text x="200" y="187" text-anchor="middle" font-size="10.5">只拉新增</text><text x="322" y="94" text-anchor="middle" font-size="10.5">按主题分文件夹</text><text x="322" y="107" text-anchor="middle" font-size="10.5">≥1500px</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Immich 外部库</text><text x="322" y="187" text-anchor="middle" font-size="10.5">扫描进相册</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">列表接口</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">去重</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">落盘</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">凌晨四点</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">七点淡入</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0103：NAS 定时任务凌晨四点拉四个画板，过滤小图后进 Immich</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">mikf/gallery-dl</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>gallery-dl 是德国开发者 Mike Fährmann 从 2014 年起维护的命令行图集下载工具，19.2k 星，几乎每两周发一个版本，支持三百多个图站，是 youtube-dl 在图片领域的对应物。它解决的是：想把某个画板或搜索结果整体保存下来，还要能定时增量更新。</p><p>工作原理是每个站点一个提取器：你给它一个网址，它识别站点、模拟浏览器请求列表接口、翻页、解析出每张原图地址和元数据，再按你定义的目录和文件名模板落盘，并用归档数据库记住已下载的条目，下次只拉新增。配置是一个 JSON 文件，每个站点可单独设 cookie、后处理器、尺寸过滤；Pinterest 支持画板、板块、搜索结果和相关图，需要登录 cookie。纯 Python，pip 装完就能用。</p><p>社区活跃，站点改版几天内就有修复；文档只有英文，但因为是命令行工具，国内博客和 B 站介绍也不少。</p><p>放进 0103，它跑在 NAS 的定时任务里：四个 Pinterest 画板对应北欧木屋、生存手册插画、旧地图、雪地动物四套主题，凌晨四点各拉一次，输出目录按主题分文件夹，后处理器把小于 1500 像素的图丢掉，再交给 Immich 的外部库扫描进相册。坑在 Pinterest 的 cookie 会过期，每两个月要从浏览器重新导一次，最好加个失败通知到 HA。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/damongolding/immich-kiosk" target="_blank" rel="noopener">damongolding/immich-kiosk</a>
+          <span class="stars">★ 1.7k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">把 Immich 相册变成浏览器轮播画框的方案，老平板打开网页就能用，转场、时长、相册全靠 URL 参数</p>
+        <p class="gh-why">→ 九台 iPad 各开一个它的网址就是九幅画，相册、换图间隔、淡入淡出全用 URL 参数定，HA 还能远程控制</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0103-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0103-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0103-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Immich Kiosk · 相册变画框，参数定每一屏</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0103-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M38.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0103-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0103-3-shade)" stroke="none"/><path d="M162.0 152.0 h66 l10 10 v38 h-76 Z M228.0 152.0 v10 h10" stroke-width="1.3"/><path d="M170.0 168.0 h54 M170.0 176.0 h44 M170.0 184.0 h48" stroke-width="0.5"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0103-3-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0103-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0103-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 148.0 L322.0 124.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">Immich 相册</text><text x="78" y="107" text-anchor="middle" font-size="10.5">四套主题</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 集成</text><text x="78" y="187" text-anchor="middle" font-size="10.5">七点淡入 / 黑屏</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Immich Kiosk</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Go 服务</text><text x="200" y="174" text-anchor="middle" font-size="9.5">YAML + URL 参数</text><text x="200" y="187" text-anchor="middle" font-size="10.5">转场 / 间隔</text><text x="322" y="94" text-anchor="middle" font-size="10.5">9 台 iPad</text><text x="322" y="107" text-anchor="middle" font-size="10.5">各一条网址</text><text x="322" y="174" text-anchor="middle" font-size="10.5">亮度跟随</text><text x="322" y="187" text-anchor="middle" font-size="10.5">ESPHome 照度</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">API 取图</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">控制</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">缩放后送图</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">调亮度</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0103：九台 iPad 各开一条带参数网址，HA 七点同时淡入</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">damongolding/immich-kiosk</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Immich Kiosk 是英国开发者 Damon Golding 从 2024 年起维护的画框软件，1.7k 星，更新非常勤，专门把自托管相册 Immich 里的照片变成浏览器里的轮播画框。它解决的是：闲置平板想当电子画框，又不想把照片交给商业云。</p><p>架构是一个 Go 写的小服务，Docker 一个容器，配置一个 YAML。它自己不存图，而是通过 API 向 Immich 要图：按相册、按人物、按日期或随机抽取，经过服务端缩放和裁剪后送给浏览器，浏览器端只是一个轻量网页，靠 HTMX 定时请求下一张。转场方式、停留时间、是否显示日期地点、多图拼接都可以在 YAML 里定，也可以直接写在网址参数里，所以同一个服务能给不同的屏发不同内容。它还有 Home Assistant 集成，能远程切相册、暂停、下一张。</p><p>文档站是英文，没有中文版，但配置项都是直白的英文单词。</p><p>放进 0103，NAS 上起一个容器，九台 iPad 的浏览器各打开一条带参数的网址：相册指向当天主题、换图间隔 40 秒、转场用淡入淡出、九台的随机种子错开让画面不重复；早上七点 HA 调用集成让九屏同时从黑屏淡入，人离开 30 分钟后暂停并黑屏。坑在 iPad 一代的 Safari 较老，网页动画要关掉模糊背景效果才流畅。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -628,7 +697,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

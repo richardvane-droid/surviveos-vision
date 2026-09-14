@@ -188,23 +188,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥10,000～20,000（98 寸电视、功放、软包、减震座）；年度电费 ¥200 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/xbmc/xbmc" target="_blank" rel="noopener">
-        <div class="gh-head"><b>xbmc/xbmc</b><span class="stars">★ 20.9k</span></div>
-        <p class="gh-desc">Kodi，老牌开源家庭影院和媒体中心软件</p>
-        <p class="gh-why">→ 投影仪后面挂个小主机跑它，本地片库、遥控和 HA 观影场景联动都有现成插件</p>
-      </a>
-      <a class="gh" href="https://github.com/jellyfin/jellyfin" target="_blank" rel="noopener">
-        <div class="gh-head"><b>jellyfin/jellyfin</b><span class="stars">★ 54k</span></div>
-        <p class="gh-desc">免费开源的媒体服务器，管理和串流自己的影视库，无云端</p>
-        <p class="gh-why">→ 片库放在 0802 的 N100 小主机里，Kodi 和手机都从它拉片，排片牌数据也能从它读</p>
-      </a>
-      <a class="gh" href="https://github.com/hyperion-project/hyperion.ng" target="_blank" rel="noopener">
-        <div class="gh-head"><b>hyperion-project/hyperion.ng</b><span class="stars">★ 3.8k</span></div>
-        <p class="gh-desc">开源氛围灯软件，根据画面颜色实时驱动幕布周围的 LED 灯带</p>
-        <p class="gh-why">→ 幕布四周加一圈灯带跟着画面变色，地堡全黑环境下沉浸感翻倍</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/jellyfin/jellyfin" target="_blank" rel="noopener">jellyfin/jellyfin</a>
+          <span class="stars">★ 54k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">免费开源的媒体服务器，管理和串流自己的影视库，无账号无云端，2026 年 6 月 10.11.11 版仍在更新</p>
+        <p class="gh-why">→ 片库放在 0802 的 N100 小主机里，电视、Kodi 和手机都从它拉片，排片牌数据和观影场景的播放状态也从它读</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0207-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0207-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0207-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Jellyfin · 自己的片库自己串流</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0207-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M38.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0207-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0207-1-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0207-1-shade)" stroke="none"/><path d="M288.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0207-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">N100 硬盘</text><text x="78" y="107" text-anchor="middle" font-size="10.5">电影 / 剧集目录</text><text x="78" y="174" text-anchor="middle" font-size="10.5">公开影片数据库</text><text x="78" y="187" text-anchor="middle" font-size="10.5">海报 / 字幕</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Jellyfin 服务器</text><text x="200" y="107" text-anchor="middle" font-size="9.5">扫描 / 转码 / 推流</text><text x="200" y="174" text-anchor="middle" font-size="10.5">REST API</text><text x="200" y="187" text-anchor="middle" font-size="10.5">播放状态</text><text x="322" y="94" text-anchor="middle" font-size="10.5">98 寸电视</text><text x="322" y="107" text-anchor="middle" font-size="9.5">Jellyfin 应用</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA 观影场景</text><text x="322" y="187" text-anchor="middle" font-size="10.5">排片牌</text><text x="430" y="138" text-anchor="middle" font-size="10.5">沙发上的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">扫描</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">推流</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">状态</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0207：N100 跑片库，电视直播 4K，HA 读状态联动灯和功放</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">jellyfin/jellyfin</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Jellyfin 是 2018 年从 Emby 闭源后分叉出来的开源媒体服务器，54k 星，是自托管影视库这个品类里星最多的项目。硬盘里攒了几百部电影和剧，想像 Netflix 一样带海报、进度、多设备续播地看，又不想把片库交给任何云，就是它。</p><p>它的架构是一台服务器加一堆客户端：服务器用 C# 写，跑在任何 Linux 小主机或 Docker 里，扫描你指定的目录，从公开数据库抓取海报、演员和字幕信息，按需转码或直接推流；客户端有网页、安卓、iOS、电视端和 Kodi 插件，播放进度在所有设备间同步。开放的 REST API 让家庭自动化能查“正在播什么”。界面有简体中文，NAS 圈教程遍地都是；仍每月发版，2026 年 6 月到 10.11.11。</p><p>在 0207 里它是片库本体：装在 0802 那台 N100 小主机上，硬盘挂在同一台机器，98 寸电视用自带的 Jellyfin 应用直接播 4K 原盘不转码；HA 的 Jellyfin 集成把它变成 media_player 实体，观影场景一按，电视开机、功放上电、灯光落日，暂停时灯自动回到 20%。门口那块“今晚放映”小黑板的数据也可以从它的 API 读，做成 0802 大屏上的排片牌。坑是 N100 核显解码 HEVC 要打开 QSV 硬解并给容器挂载 /dev/dri，否则一转码就卡。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/xbmc/xbmc" target="_blank" rel="noopener">xbmc/xbmc</a>
+          <span class="stars">★ 21.2k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">Kodi，2002 年起步的老牌开源家庭影院和媒体中心软件，十英尺界面、遥控器操作、插件生态庞大</p>
+        <p class="gh-why">→ 电视自带应用不够用时，投影或电视后面挂个小盒子跑它，本地片库、遥控和 HA 观影场景联动都有现成插件</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0207-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0207-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0207-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Kodi · 沙发上用遥控器操作的媒体中心</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0207-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0207-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0207-2-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0207-2-shade)" stroke="none"/><path d="M288.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0207-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">Jellyfin 插件</text><text x="78" y="107" text-anchor="middle" font-size="10.5">片库 + 进度同步</text><text x="78" y="218" text-anchor="middle" font-size="10.5">CEC / 红外遥控</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Kodi 十英尺界面</text><text x="200" y="107" text-anchor="middle" font-size="10.5">解码 + 硬件加速</text><text x="200" y="180" text-anchor="middle" font-size="9.5">JSON-RPC 接口</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HDMI → 功放</text><text x="322" y="107" text-anchor="middle" font-size="10.5">→ 98 寸电视</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA Kodi 集成</text><text x="322" y="187" text-anchor="middle" font-size="10.5">观影场景</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">拉片</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">直通</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">状态</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0207：小盒子跑 Kodi 从 Jellyfin 拉片，HA 读播放状态控灯</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">xbmc/xbmc</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Kodi 的前身是 2002 年给初代 Xbox 写的媒体中心 XBMC，21.2k 星，是开源家庭影院软件里资格最老、生态最大的一个。它把一台电脑或电视盒变成“坐在沙发上用遥控器操作”的媒体中心：十英尺界面、海报墙、按遥控上下左右就能看完一部电影。</p><p>它是一个本地播放器加插件平台：核心用 C++ 写，内置解码和硬件加速，能直接播本地硬盘、NAS 共享和网络流；插件扩展内容，Jellyfin、字幕站、直播源都有插件；界面有简体中文。它跑在 Linux、安卓、树莓派和 LibreELEC 上，红外、CEC 和手机遥控都支持。对家庭自动化它开放 JSON-RPC 接口，Home Assistant 有官方 Kodi 集成，能读播放状态、暂停、切片、发通知到屏幕上。维护二十多年，每年一个大版本，中文教程很多。</p><p>在 0207 里它是电视自带应用的升级方案：98 寸电视内置的 Jellyfin 应用足够时不需要它；想要更好的字幕、音轨切换和杜比全景声直通，就在电视后面挂一台 N100 或树莓派 5 跑 LibreELEC 加 Kodi，用 Jellyfin 插件同步片库和进度，HDMI 直连功放。HA 的 Kodi 集成把它变成 media_player，观影场景从它读“播放 / 暂停”控制 0201 灯光和幕布跟色灯。坑是 CEC 遥控三方抢控制权，只让 Kodi 盒子当 CEC 主设备。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/hyperion-project/hyperion.ng" target="_blank" rel="noopener">hyperion-project/hyperion.ng</a>
+          <span class="stars">★ 3.8k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">开源氛围灯软件，抓取画面边缘颜色实时驱动屏幕四周的 LED 灯带，支持 HDMI 采集卡和 WLED 等几十种灯</p>
+        <p class="gh-why">→ 98 寸电视背后加一圈灯带跟着画面变色，地堡全黑环境下沉浸感翻倍，输出直接走 WLED 协议</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0207-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0207-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0207-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Hyperion · 抓画面边缘颜色驱动灯带</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0207-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0207-3-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0207-3-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0207-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0207-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">HDMI 采集卡</text><text x="78" y="149" text-anchor="middle" font-size="10.5">功放分出一路</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 观影场景</text><text x="78" y="187" text-anchor="middle" font-size="10.5">开关抓屏</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Hyperion 处理器</text><text x="200" y="107" text-anchor="middle" font-size="10.5">分区算色 / 平滑</text><text x="200" y="174" text-anchor="middle" font-size="10.5">网页配置</text><text x="200" y="187" text-anchor="middle" font-size="10.5">灯珠位置</text><text x="322" y="94" text-anchor="middle" font-size="10.5">WLED 控制器</text><text x="322" y="107" text-anchor="middle" font-size="10.5">电视背后灯带</text><text x="430" y="138" text-anchor="middle" font-size="10.5">全黑屋里的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">画面</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">UDP</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">溢彩</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0207：N100 上抓 HDMI 算色，WLED 协议驱动电视背后灯带</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">hyperion-project/hyperion.ng</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Hyperion 是 2013 年从树莓派社区长出来的开源氛围灯项目，hyperion.ng 是它的新一代重写版，3.8k 星。它做的事就是飞利浦电视 Ambilight 那套“流光溢彩”：实时分析画面边缘的颜色，让屏幕背后的 LED 灯带同步发光，画面里的火焰会把整面墙染红，深空场景则只剩一点蓝。在全黑的房间里，这圈光让 98 寸屏显得更大，眼睛也不累。</p><p>它的流水线分三段：输入端用 HDMI 采集卡（USB 采集棒即可）抓电视信号，或者直接抓 Kodi 和树莓派自身的画面；中间的处理器把画面按灯珠位置切成几十个区域算平均色，做黑边检测、平滑和亮度补偿；输出端支持几十种设备，WLED、Adalight、WS281x 直驱、Hue 都行。全部通过网页配置，灯珠位置在示意图上用鼠标画，网页界面有中文翻译；项目持续维护。</p><p>在 0207 里它跑在 0802 那台 N100 上：电视 HDMI 信号经功放分出一路进 USB 采集卡，Hyperion 算色后用 WLED 协议驱动电视背后那圈 WS2814 灯带（正好复用 0202 那种 WLED 控制器），观影场景开始时由 HA 打开 Hyperion 的抓屏，暂停或结束时关掉恢复 0201 灯光。坑是采集卡要选 4K 输入降 1080p 输出的，HDR 片源要在 Hyperion 里开色调映射，否则颜色发灰。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -534,7 +603,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

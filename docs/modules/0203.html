@@ -182,23 +182,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥4,000～8,000（除湿机、风管、传感器、防潮施工）；年度电费 ¥600 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/Chreece/ESPHome-Dehumidifier" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Chreece/ESPHome-Dehumidifier</b><span class="stars">★ 64</span></div>
-        <p class="gh-desc">用 ESPHome 接管美的、Inventor、Comfee 系列除湿机的固件方案</p>
-        <p class="gh-why">→ 美的方案除湿机直接改成 HA 设备，湿度阈值、排水报警都能在仪表盘上调</p>
-      </a>
-      <a class="gh" href="https://github.com/airgradienthq/arduino" target="_blank" rel="noopener">
-        <div class="gh-head"><b>airgradienthq/arduino</b><span class="stars">★ 357</span></div>
-        <p class="gh-desc">AirGradient 开源硬件空气质量监测仪固件，测 CO2、PM2.5、温湿度</p>
-        <p class="gh-why">→ 地堡只除湿不换气会闷，照它做一台 CO2 探头，新风就有了开关依据</p>
-      </a>
-      <a class="gh" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">
-        <div class="gh-head"><b>esphome/esphome</b><span class="stars">★ 11.3k</span></div>
-        <p class="gh-desc">用 YAML 配置 ESP32 传感器和控制器并接入 HomeAssistant 的系统</p>
-        <p class="gh-why">→ 四个温湿度探头和风管出口传感器全靠它，是这个模块的核心依赖</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
+          <span class="stars">★ 11.7k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+        </header>
+        <p class="gh-desc">用 YAML 配置 ESP32 / ESP8266 传感器和控制器并接入 HomeAssistant 的系统，Nabu Casa 官方维护</p>
+        <p class="gh-why">→ 四个温湿度探头、风管出口传感器、墙上小表盘和新风机调速全靠它，是这个模块的核心依赖</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0203-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0203-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0203-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ESPHome · 一份 YAML 变成一块传感器板</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0203-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0203-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0203-1-shade)" stroke="none"/><path d="M288.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0203-1-shade)" stroke="none"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0203-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0203-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M246.2 204.0 C261.0 204.0 261.0 222.0 275.8 222.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">四颗 SHT31</text><text x="78" y="149" text-anchor="middle" font-size="10.5">温湿度探头</text><text x="78" y="216" text-anchor="middle" font-size="10.5">CO2 探头（自制）</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ESPHome 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">YAML 生成</text><text x="200" y="174" text-anchor="middle" font-size="10.5">本地逻辑</text><text x="200" y="187" text-anchor="middle" font-size="9.5">滤波 / 阈值 / PWM</text><text x="322" y="94" text-anchor="middle" font-size="9.5">Home Assistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">原生 API 实体</text><text x="322" y="180" text-anchor="middle" font-size="10.5">墙上圆屏表盘</text><text x="322" y="254" text-anchor="middle" font-size="10.5">新风机 PWM</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">I2C</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">实体</text><text x="261.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">分档</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0203：四块探头板 + 表盘板 + 新风板全是 ESPHome，HA 只做调度和推送</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">esphome/esphome</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ESPHome 是 2018 年由 Otto Winter 发起、现在归 Home Assistant 母公司 Nabu Casa 维护的开源项目，11.7k 星。想让一块 ESP32 读传感器、控继电器并接进家庭自动化，以前得写 Arduino 代码，现在只要一份 YAML 声明“接了一颗 SHT31、一个继电器、一块屏”，它就自动生成固件并无线刷写。</p><p>流程是在 HA 的 ESPHome 插件里写 YAML，编译，推到板子；板子用原生 API 和 HA 直连，每个传感器、开关自动变成实体。它内置了上千个组件：温湿度、CO2、PM2.5 各种传感器，PWM 风扇、步进电机、显示屏、蓝牙代理，还有 PID、阈值、定时这类本地自动化，断网时逻辑照跑。生态是 ESP 圈最大的，每月一版；官方文档英文，中文教程极多。</p><p>在 0203 里它是整套控温控湿的神经末梢：床头、墙角、柜内、风管出口四颗 SHT31 各接一块 ESP32-C3，用 YAML 里的 filters 做滑动平均再报给 HA；储藏室隔墙外那块小表盘也是一块 ESPHome 板带一块圆屏，直接画指针；新风机的 PWM 用它的 fan 组件按 CO2 分档。坑是探头要远离出风口正对处，否则读的是风管温度不是房间温度。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/wuwentao/midea_ac_lan" target="_blank" rel="noopener">wuwentao/midea_ac_lan</a>
+          <span class="stars">★ 1.9k</span>
+          <span class="zh ">官方中文 README</span>
+        </header>
+        <p class="gh-desc">美的 M-Smart 家电的 HomeAssistant 本地局域网集成，支持空调、除湿机、风扇等 35 类设备，中文社区维护</p>
+        <p class="gh-why">→ 美的系工业除湿机不拆机、不走云，直接在局域网里被 HA 接管，档位、目标湿度、水箱满报警都成实体</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0203-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0203-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0203-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">midea_ac_lan · 局域网直连美的家电</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0203-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0203-2-shade)" stroke="none"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0203-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0203-2-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0203-2-shade)" stroke="none"/><circle cx="322" cy="176" r="22.0" stroke-width="1.4"/><circle cx="322" cy="176" r="17.0" stroke-width="0.5"/><circle cx="322" cy="176" r="3" stroke-width="1"/><path d="M316 150.0 q6 -6 12 0 M312 146.0 q10 -10 20 0" stroke-width="0.8"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0203-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M266.0 176.0 L256.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">美的 50L 除湿机</text><text x="78" y="107" text-anchor="middle" font-size="10.5">WiFi 模块</text><text x="78" y="174" text-anchor="middle" font-size="10.5">美的云</text><text x="78" y="187" text-anchor="middle" font-size="10.5">（仅首次取密钥）</text><text x="200" y="94" text-anchor="middle" font-size="9.5">midea_ac_lan</text><text x="200" y="107" text-anchor="middle" font-size="10.5">协议解析器 A1</text><text x="200" y="174" text-anchor="middle" font-size="9.5">generic_hygrostat</text><text x="200" y="187" text-anchor="middle" font-size="10.5">45%～65%</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HA humidifier</text><text x="322" y="107" text-anchor="middle" font-size="10.5">实体 + 推送</text><text x="322" y="216" text-anchor="middle" font-size="10.5">ESPHome</text><text x="322" y="229" text-anchor="middle" font-size="10.5">湿度探头</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">局域网</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">状态</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">档位</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">湿度</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0203：除湿机不拆机进 HA，hygrostat 按探头湿度切档位，水满即推送</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">wuwentao/midea_ac_lan</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>midea_ac_lan 最早由中国开发者 georgezhao2010 写成，2023 年后由 wuwentao 接手维护，1.9k 星，是 Home Assistant 里控制美的系家电用得最广的集成，README 有简体中文，还有 QQ 群。美的及其贴牌的空调、除湿机原本都得靠美居 App 走云端，云一抽风就失联；这个集成让 HA 直接在局域网里和设备的 WiFi 模块对话，本地控制。</p><p>原理是逆向了美的 M-Smart 局域网协议：UDP 广播发现设备，用首次从美的云取到的密钥建立加密连接，之后指令和状态都在局域网内往返。它按设备类型写了几十个解析器，除湿机（A1）能读当前湿度、水箱满、滤网提醒，能设目标湿度、风速、模式和定时。</p><p>它走 HACS 安装，支持 35 种以上设备类型，2025 年后仍频繁更新，issue 区中英文混杂。</p><p>在 0203 里它接管储藏室柜子里那台 50L 工业除湿机：只要买美的或其贴牌型号且带 WiFi，不用拆机就能变成 HA 里的 humidifier 实体，再用 HA 自带的 generic_hygrostat 做 45%～65% 区间调度，超 65% 强力档并推送，低于 45% 停机护木器；排水量按提升泵启动次数换算。坑是首次配置要用美的账号取一次密钥；工业型号若不是 M-Smart 协议就不支持，买前先查支持列表。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/airgradienthq/arduino" target="_blank" rel="noopener">airgradienthq/arduino</a>
+          <span class="stars">★ 377</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">AirGradient 开源硬件空气质量监测仪的固件与库，测 CO2、PM2.5、温湿度、TVOC，ESP8266 / ESP32-C3</p>
+        <p class="gh-why">→ 地堡只除湿不换气会闷，照它的选型做一台 CO2 探头，新风什么时候开就有了依据</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0203-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0203-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0203-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">AirGradient · 靠谱传感器组合的空气监测仪</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0203-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0203-3-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0203-3-shade)" stroke="none"/><path d="M288.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0203-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0203-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="9.5">SenseAir S8</text><text x="78" y="149" text-anchor="middle" font-size="10.5">CO2</text><text x="78" y="216" text-anchor="middle" font-size="9.5">PMS5003 / SHT40</text><text x="200" y="94" text-anchor="middle" font-size="9.5">AirGradient 固件</text><text x="200" y="107" text-anchor="middle" font-size="9.5">读数 / 校准 / 平均</text><text x="200" y="180" text-anchor="middle" font-size="10.5">自带 OLED</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 新风自动化</text><text x="322" y="107" text-anchor="middle" font-size="10.5">按 ppm 分档</text><text x="322" y="174" text-anchor="middle" font-size="10.5">东墙新风机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">HEPA + 活性炭</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">ppm</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">本地 API</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">PWM</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0203：照它的选型做 CO2 探头，HA 按 ppm 三档驱动新风机</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">airgradienthq/arduino</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>airgradienthq/arduino 是泰国公司 AirGradient 开源的空气质量监测仪固件，377 星。AirGradient 把整套监测仪的 PCB、外壳和固件全部开源，可以买套件也可以照 BOM 自己焊，这个仓库是那台机器的大脑，也是一份“空气监测怎么选传感器”的参考。</p><p>固件跑在 ESP8266 或 ESP32-C3 上，围绕几颗公认靠谱的传感器：SenseAir S8 测 CO2，Plantower PMS5003 测 PM2.5，Sensirion SHT40 测温湿度，SGP41 测 TVOC 和 NOx。固件定周期读数、校准、滑动平均，显示在自带 OLED 上，再经本地 API 或 MQTT 交给 Home Assistant，HA 有官方集成。仓库持续更新，文档英文，ESPHome 社区也有对应 YAML。</p><p>在 0203 里它解决“闷”的问题：地堡没窗，只除湿不换气 CO2 会涨到两三千 ppm，人只觉得困。照它做一颗 SenseAir S8 探头，用 ESPHome 的 senseair 组件接到 HA，装在沙发旁墙上；HA 按 ppm 分三档驱动东墙高处那台新风机的 PWM：800 以下停、1000 以上低速、1500 以上全速并推送。坑是 S8 的自动校准假定每周有一次 400ppm 的新鲜空气，地堡里没有，得关掉自动校准，定期拿到户外手动校。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -536,7 +605,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

@@ -205,23 +205,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,500～3,000（矮柜 + 排风 + 耗材架，打印机已有）；耗材每年 ¥800 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/greghesp/ha-bambulab" target="_blank" rel="noopener">
-        <div class="gh-head"><b>greghesp/ha-bambulab</b><span class="stars">★ 2.3k</span></div>
-        <p class="gh-desc">拓竹打印机的 Home Assistant 集成，读进度、层数、温度、AMS 耗材，还能看摄像头</p>
-        <p class="gh-why">→ P1S 接上它，开始、结束、失败自动推手机，躺帐篷里在 HA 上看第 47 层的摄像头画面</p>
-      </a>
-      <a class="gh" href="https://github.com/OrcaSlicer/OrcaSlicer" target="_blank" rel="noopener">
-        <div class="gh-head"><b>OrcaSlicer/OrcaSlicer</b><span class="stars">★ 15.6k</span></div>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/OrcaSlicer/OrcaSlicer" target="_blank" rel="noopener">OrcaSlicer/OrcaSlicer</a>
+          <span class="stars">★ 15.7k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
         <p class="gh-desc">基于拓竹 Bambu Studio 二次开发的开源切片软件，自带校准流程，支持局域网直发</p>
         <p class="gh-why">→ 地堡 0204 工作台装它切片，局域网直接推到阁楼的 P1S，不用来回跑，挂钩标牌批量打</p>
-      </a>
-      <a class="gh" href="https://github.com/Donkie/Spoolman" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Donkie/Spoolman</b><span class="stars">★ 2.5k</span></div>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0305-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0305-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0305-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OrcaSlicer · 模型切成 G 代码直发打印机</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0305-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M160.0 234.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="234.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0" stroke-dasharray="3 3"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M200.0 204.0 L200.0 222.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">STL / 3MF 模型</text><text x="78" y="107" text-anchor="middle" font-size="10.5">（0204 设计台）</text><text x="78" y="174" text-anchor="middle" font-size="10.5">校准流程</text><text x="78" y="187" text-anchor="middle" font-size="10.5">温度塔 / 流量</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OrcaSlicer</text><text x="200" y="107" text-anchor="middle" font-size="10.5">切片引擎</text><text x="200" y="180" text-anchor="middle" font-size="10.5">机型 / 耗材预设</text><text x="200" y="254" text-anchor="middle" font-size="9.5">Spoolman 卷号</text><text x="322" y="94" text-anchor="middle" font-size="10.5">G 代码</text><text x="322" y="107" text-anchor="middle" font-size="10.5">局域网直发</text><text x="322" y="174" text-anchor="middle" font-size="10.5">P1S 打印机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">（阁楼）</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">导入</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">存预设</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">切片</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">LAN 模式</text><text x="200.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">对应</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">看设备页</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0305：地堡切片 → 局域网直发阁楼 P1S，耗材预设与 Spoolman 卷号对应</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">OrcaSlicer/OrcaSlicer</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>OrcaSlicer 是由 SoftFever 发起、社区维护的开源切片软件，从拓竹 Bambu Studio 分叉而来，如今独立成组织，15.7k 星是切片软件里最活跃的开源项目之一。它解决的问题是：拓竹官方软件功能被绑定在自家生态里，而社区想要更细的参数控制和更多机型支持。</p><p>切片软件的工作原理是把 STL 或 3MF 模型按层高切成一层层轮廓，再规划每层的墙线、填充、支撑路径，最后输出打印机能执行的 G 代码。OrcaSlicer 在这条流水线上加了很多实用件：内置温度塔、流量、压力提前、最大体积速度的校准流程，精确墙距和接缝控制，悬垂减速与树状支撑，以及拓竹、Prusa、Voron、创想三维等品牌的机型预设库。</p><p>它支持局域网直连打印机，拓竹机型走本机 LAN 模式或云模式，Klipper、PrusaLink、OctoPrint 也能直发；界面自带简体中文，B 站和拓竹社区有大量中文教程，几乎每月一版。</p><p>放进 0305 的流程里，它装在地堡 0204 的设计工作台上：把 P1S 设成 LAN 模式并填入访问码，切好挂钩、标牌、PSK 内衬后直接发送到阁楼打印机，同时在设备页看摄像头。要注意先用它的校准流程把每卷耗材的流量和温度跑一遍并存成耗材预设，和 Spoolman 里的卷号对上，否则木色 PLA 和白色 PLA 的参数混着用会拉丝。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Donkie/Spoolman" target="_blank" rel="noopener">Donkie/Spoolman</a>
+          <span class="stars">★ 2.8k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
         <p class="gh-desc">自托管的 3D 打印耗材库存管理，记录每卷剩余克数、颜色、材质，带打印机集成</p>
         <p class="gh-why">→ 8 格耗材架每卷登记进去，标签上的剩余克数不用手写，快用完自动提醒，防止囤太多</p>
-      </a>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0305-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0305-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0305-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Spoolman · 每卷线材的克数账本</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0305-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-2-shade)" stroke="none"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-2-shade)" stroke="none"/><path d="M160.0 234.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="234.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0305-2-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0" stroke-dasharray="3 3"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">P1S / AMS</text><text x="78" y="107" text-anchor="middle" font-size="10.5">每次打印用量</text><text x="78" y="218" text-anchor="middle" font-size="10.5">手动称重校正</text><text x="200" y="94" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="200" y="107" text-anchor="middle" font-size="9.5">（ha-bambulab）</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Spoolman</text><text x="200" y="187" text-anchor="middle" font-size="10.5">REST API</text><text x="200" y="248" text-anchor="middle" font-size="9.5">厂商 / 线材 / 线卷</text><text x="200" y="261" text-anchor="middle" font-size="10.5">剩余克数</text><text x="322" y="94" text-anchor="middle" font-size="10.5">二维码标签</text><text x="322" y="107" text-anchor="middle" font-size="10.5">贴 8 格耗材架</text><text x="322" y="180" text-anchor="middle" font-size="10.5">快用完提醒</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">用量</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">API 扣减</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">校正</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">生成</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">低于阈值</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0305：ha-bambulab 读用量 → HA 调 API 扣减 → 耗材架标签与低量提醒</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Donkie/Spoolman</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Spoolman 是瑞典开发者 Donkie 写的自托管 3D 打印耗材库存管理服务，2.8k 星，是 Klipper 圈里管理线材的事实标准。它解决的痛点很具体：家里十几卷线材，每卷还剩多少克、什么材质颜色，靠贴纸和记忆迟早乱掉。</p><p>它的架构是一个 Python 后端加内置网页前端，用 Docker 一条命令跑起来，数据库可以用 SQLite 或 PostgreSQL。数据模型分三层：厂商、线材（材质、颜色、直径、密度、推荐温度）、线卷（初始重量、已用克数、所在位置、批号）。打印机每打完一个任务，通过 REST API 或 WebSocket 把消耗的克数回写，剩余量自动扣减；也支持手动称重校正。它还内置二维码标签设计器，扫码就能定位到那一卷；社区维护了一份公共线材数据库，常见品牌直接选。</p><p>生态上 Moonraker、Fluidd、Mainsail 原生支持，Home Assistant 有集成，界面通过 Weblate 翻译，简体中文已完成九成以上。</p><p>在 0305 里它跑在 0802 中枢的树莓派上，八格耗材架每卷登记一条，架子上的标签就打它生成的二维码；拓竹 P1S 不是 Klipper，扣减要绕一下：用 ha-bambulab 读到的每次打印耗材用量，在 HA 自动化里调 Spoolman 的 API 写回。坑是 AMS 里线卷切换时用量归属会串，最好每卷固定槽位。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/greghesp/ha-bambulab" target="_blank" rel="noopener">greghesp/ha-bambulab</a>
+          <span class="stars">★ 2.3k</span>
+          <span class="zh ">组件自带简体中文翻译</span>
+        </header>
+        <p class="gh-desc">拓竹打印机的 Home Assistant 集成，读进度、层数、温度、AMS 耗材，还能看摄像头</p>
+        <p class="gh-why">→ P1S 接上它，开始、结束、失败自动推手机，躺帐篷里在 HA 上看第 47 层的摄像头画面</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0305-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0305-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0305-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ha-bambulab · 打印机状态进 HA</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0305-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-3-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-3-shade)" stroke="none"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M246.2 204.0 C261.0 204.0 261.0 222.0 275.8 222.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">P1S 打印机</text><text x="78" y="107" text-anchor="middle" font-size="10.5">MQTT 状态报文</text><text x="78" y="180" text-anchor="middle" font-size="10.5">机内摄像头</text><text x="200" y="94" text-anchor="middle" font-size="9.5">ha-bambulab</text><text x="200" y="107" text-anchor="middle" font-size="10.5">解析成实体</text><text x="200" y="180" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="322" y="94" text-anchor="middle" font-size="10.5">手机推送</text><text x="322" y="107" text-anchor="middle" font-size="9.5">开始 / 结束 / 失败</text><text x="322" y="174" text-anchor="middle" font-size="10.5">柜顶排风扇</text><text x="322" y="187" text-anchor="middle" font-size="10.5">延时 10 分钟</text><text x="322" y="248" text-anchor="middle" font-size="10.5">0802 大屏</text><text x="322" y="261" text-anchor="middle" font-size="10.5">摄像头画面</text><text x="430" y="138" text-anchor="middle" font-size="10.5">帐篷里的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">LAN 模式</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">画面</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">层数 / 状态</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">跟打印启停</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0305：P1S 状态 → HA 实体 → 手机推送、排风扇联动、AMS 用量回写 Spoolm…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">greghesp/ha-bambulab</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ha-bambulab 是 greghesp 发起、社区维护的拓竹打印机 Home Assistant 集成，2.3k 星，通过 HACS 安装，是把 X1、P1、A1 系列接进 HA 的事实方案。拓竹官方只给了自家 App 和 Bambu Studio，想让打印机和家里其他设备联动，就得靠它。</p><p>它的工作原理是走拓竹打印机的 MQTT 通道：局域网模式下直接连打印机的本机 MQTT 端口，云模式下连拓竹云。打印机会不断推送一份包含当前层数、进度、剩余时间、喷头与热床温度、AMS 各槽耗材信息、风扇转速、错误码的状态报文，集成把它们解析成几十个 HA 实体；反向可以下发暂停、继续、停止、调温、开关灯的命令。摄像头也接进来了，P1 系列走它自带的低帧率流，X1 走 RTSP。</p><p>社区非常活跃，Discord 有专门频道，几乎每月更新，翻译文件里自带简体中文，B 站上也有不少中文安装教程。</p><p>在 0305 里它是打印机和这套系统之间的桥：开始、结束、失败推送到手机，摄像头画面贴到 0802 中枢大屏上，AMS 槽位的耗材用量回写给 Spoolman 扣减，柜顶排风扇跟着打印状态自动启停，打完再延时十分钟。要注意 P1S 用局域网模式需要在打印机上开启并填入访问码，固件大版本更新后偶尔会断连，更新集成即可。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -543,7 +612,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

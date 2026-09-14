@@ -175,28 +175,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,200～2,500（两只摄像头 + 墙面横臂 + 一台小主机跑 Frigate）；年度电费 ¥60 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/blakeblackshear/frigate" target="_blank" rel="noopener">
-        <div class="gh-head"><b>blakeblackshear/frigate</b><span class="stars">★ 35.1k</span></div>
-        <p class="gh-desc">本地 AI 目标检测的开源 NVR，配 HomeAssistant 用，支持 Coral 和 GPU 加速</p>
-        <p class="gh-why">→ 长焦机的移动侦测和鸟、猫、人识别全靠它，本地跑不上云，通知直接推到手机</p>
-      </a>
-      <a class="gh" href="https://github.com/Nachtzuster/BirdNET-Pi" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Nachtzuster/BirdNET-Pi</b><span class="stars">★ 1.1k</span></div>
-        <p class="gh-desc">树莓派上的实时鸟类声纹识别系统，BirdNET-Pi 的活跃维护分支</p>
-        <p class="gh-why">→ 杆子上挂一个麦克风，靠叫声认鸟，和摄像头图像识别互相印证，戴胜叫一声就知道</p>
-      </a>
-      <a class="gh" href="https://github.com/mmcc-xx/WhosAtMyFeeder" target="_blank" rel="noopener">
-        <div class="gh-head"><b>mmcc-xx/WhosAtMyFeeder</b><span class="stars">★ 456</span></div>
-        <p class="gh-desc">Frigate 的伴侣程序，用 TensorFlow 鸟类分类模型识别 Frigate 抓到的鸟是什么种</p>
-        <p class="gh-why">→ Frigate 抓到鸟之后交给它分种，自动生成来访者名单，新物种推通知就靠这一步</p>
-      </a>
-      <a class="gh" href="https://github.com/Jellman86/YetAnother-WhosAtMyFeeder" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Jellman86/YetAnother-WhosAtMyFeeder</b><span class="stars">★ 43</span></div>
-        <p class="gh-desc">WhosAtMyFeeder 的重写版，更新活跃，带实时仪表盘、硬件加速和 HomeAssistant 集成</p>
-        <p class="gh-why">→ 原版更新慢，想要更好看的仪表盘和多传感器交叉验证就用这个新版</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/blakeblackshear/frigate" target="_blank" rel="noopener">blakeblackshear/frigate</a>
+          <span class="stars">★ 35.1k</span>
+          <span class="zh ">官方中文 README</span>
+        </header>
+        <p class="gh-desc">本地 AI 目标检测的开源 NVR，Coral 或 GPU 加速，区域和物体过滤，和 HomeAssistant 深度集成，有 README_CN 和中文界面</p>
+        <p class="gh-why">→ 长焦机的移动侦测和鸟、猫、人的实时检测全靠它，本地跑不上云，检出鸟就通过 MQTT 交给分种程序，通知直接推手机</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0604-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="23" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0604-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0604-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Frigate · 本地 AI 只在有东西时报警</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0604-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-1-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0604-1-shade)" stroke="none"/><rect x="378.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M416 114.0 h28 M422 114.0 v6 h16 v-6" stroke-width="1"/><path d="M381.0 75.0 h98 v4 h-98 Z" fill="url(#g0604-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0604-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">长焦机</text><text x="78" y="149" text-anchor="middle" font-size="10.5">水盆 / 喂鸟器区域</text><text x="78" y="216" text-anchor="middle" font-size="10.5">广角全景机</text><text x="78" y="229" text-anchor="middle" font-size="10.5">整点快照</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Frigate</text><text x="200" y="107" text-anchor="middle" font-size="9.5">go2rtc + 检测器</text><text x="200" y="180" text-anchor="middle" font-size="10.5">事件 / 快照库</text><text x="322" y="94" text-anchor="middle" font-size="10.5">MQTT 事件</text><text x="322" y="107" text-anchor="middle" font-size="10.5">鸟 / 猫 / 人</text><text x="322" y="174" text-anchor="middle" font-size="9.5">WhosAtMyFeeder</text><text x="322" y="187" text-anchor="middle" font-size="10.5">分种</text><text x="430" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="430" y="107" text-anchor="middle" font-size="10.5">通知 + 延时</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">RTSP</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">只抓图</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">检出</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">鸟</text><text x="376.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">子标签</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0604：长焦机区域检鸟猫人，MQTT 事件交分种程序，广角机借它整点抓图</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">blakeblackshear/frigate</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Frigate 是美国开发者 Blake Blackshear 从 2019 年做起的开源网络录像机，GitHub 上 35.1k 星。普通 NVR 靠像素变化做移动侦测，风吹草动就误报，而它用神经网络实时判断画面里是人、车、猫还是鸟，只在真有东西时录像和通知，全部本地跑。</p><p>它的架构是 Docker 里的一组进程：go2rtc 负责拉摄像头的 RTSP 流并转发，ffmpeg 解码，检测器在运动区域上跑目标检测模型，可用 Coral USB 加速棒、Intel OpenVINO、Nvidia GPU 或纯 CPU；每路摄像头可以画区域、设物体类型过滤；事件带快照和剪辑存本地。和 HomeAssistant 有官方集成，事件通过 MQTT 广播。仓库有官方中文 README，界面已经翻译成中文。</p><p>在 0604 里它管东墙横臂上的长焦机：只框出水盆和喂鸟器周围一小块区域，检测类型只留鸟、猫、狗、人，鸟的最小面积调小；广角机也接进来但关掉检测，只借它整点抓图做延时。检出鸟后它发一条 MQTT 事件带快照，WhosAtMyFeeder 订阅后分种再写回子标签，HomeAssistant 收到新物种就推通知。夜里的刺猬和黄鼬模型认不准，用运动事件录下来人工看。要注意默认模型的鸟类只是一个大类，分种要靠下游程序；没有 Coral 加速棒，用 Intel 迷你主机的 OpenVINO 也够。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Nachtzuster/BirdNET-Pi" target="_blank" rel="noopener">Nachtzuster/BirdNET-Pi</a>
+          <span class="stars">★ 1.1k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">树莓派上的实时鸟类声纹识别系统，BirdNET-Pi 的活跃维护分支，USB 麦克风 24 小时听，网页看物种统计，通知和 MQTT 都有</p>
+        <p class="gh-why">→ 横臂下挂一只麦克风，靠叫声认鸟，和摄像头图像识别互相印证，看不见的林间鸟和夜里的猫头鹰也进来访者名单，戴胜叫一声就知道</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0604-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="24" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0604-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0604-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">BirdNET-Pi · 一只麦克风 24 小时认鸟</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0604-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0604-2-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-2-shade)" stroke="none"/><rect x="378.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M416 114.0 h28 M422 114.0 v6 h16 v-6" stroke-width="1"/><path d="M381.0 75.0 h98 v4 h-98 Z" fill="url(#g0604-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0604-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">USB 麦克风</text><text x="78" y="149" text-anchor="middle" font-size="10.5">横臂下朝草地</text><text x="78" y="174" text-anchor="middle" font-size="10.5">经纬度 + 日期</text><text x="78" y="187" text-anchor="middle" font-size="10.5">当季筛选</text><text x="200" y="94" text-anchor="middle" font-size="10.5">BirdNET-Pi</text><text x="200" y="107" text-anchor="middle" font-size="10.5">树莓派 TFLite</text><text x="200" y="174" text-anchor="middle" font-size="10.5">识别记录</text><text x="200" y="187" text-anchor="middle" font-size="10.5">音频 + 频谱图</text><text x="322" y="174" text-anchor="middle" font-size="10.5">网页统计</text><text x="322" y="187" text-anchor="middle" font-size="10.5">今日物种</text><text x="322" y="100" text-anchor="middle" font-size="9.5">MQTT / Apprise</text><text x="430" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="430" y="107" text-anchor="middle" font-size="10.5">与图像识别合并</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">15 秒一段</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">降权</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">≥0.7</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">同小时印证</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0604：声纹识别进 HA，与 Frigate 图像识别同小时互相印证，只闻其声的…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Nachtzuster/BirdNET-Pi</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>BirdNET-Pi 最早由美国开发者 Patrick McGuire 基于康奈尔大学鸟类学实验室的 BirdNET 模型做出来，原仓库停更后，荷兰开发者 Nachtzuster 的分支成了社区默认的活跃版本，GitHub 上 1.1k 星。想知道院子里来过什么鸟，靠眼睛守不住，一只麦克风加一个模型就能 24 小时替你听。</p><p>它的工作方式是把树莓派变成一台声纹识别机：USB 麦克风连续录音，每 15 秒切一段，用 BirdNET 的 TFLite 模型对照六千多种鸟的叫声打分，超过置信度阈值就存一条记录带那段音频和频谱图；网页界面看今日物种、每种的出现时段和历史统计。识别范围按你填的经纬度和日期筛选，当地当季不该出现的种自动降权。通知支持 Apprise 的几十种渠道和 MQTT。鸟名显示语言可以切，BirdNET 的标签文件里有中文名。没有中文文档，但安装是一条脚本。</p><p>在 0604 里它挂在东墙横臂下：一只防风毛套的 USB 麦克风朝草地，树莓派 4 放在墙内侧的防水盒里，经纬度填杭州，置信度设 0.7；每条识别通过 MQTT 进 HomeAssistant，和 Frigate 那边的图像识别在同一张来访者名单里合并，同一小时内两边都认出白头鹎就标成确认，只有声音的标成疑似。要注意河边和过道的人声车声会触发误识别，把常见误报种加进排除列表；麦克风离墙远一点避免回声。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/mmcc-xx/WhosAtMyFeeder" target="_blank" rel="noopener">mmcc-xx/WhosAtMyFeeder</a>
+          <span class="stars">★ 456</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">Frigate 的伴侣程序，订阅鸟类事件取快照，用 TensorFlow 鸟类分类模型判断是什么种，结果写回 Frigate 子标签并存库出网页</p>
+        <p class="gh-why">→ Frigate 只知道是鸟，它负责说是哪种鸟：白头鹎、珠颈斑鸠、乌鸫自动分种，新物种推通知和每月来访者名单就靠这一步</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0604-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="25" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0604-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0604-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">WhosAtMyFeeder · 从有鸟到是哪种鸟</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0604-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-3-shade)" stroke="none"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-3-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-3-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0604-3-shade)" stroke="none"/><rect x="378.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M416 114.0 h28 M422 114.0 v6 h16 v-6" stroke-width="1"/><path d="M381.0 75.0 h98 v4 h-98 Z" fill="url(#g0604-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0604-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">Frigate</text><text x="78" y="107" text-anchor="middle" font-size="10.5">鸟事件 MQTT</text><text x="78" y="174" text-anchor="middle" font-size="10.5">事件快照</text><text x="78" y="187" text-anchor="middle" font-size="10.5">裁出检测框</text><text x="200" y="94" text-anchor="middle" font-size="9.5">WhosAtMyFeeder</text><text x="200" y="107" text-anchor="middle" font-size="10.5">TFLite 分类</text><text x="200" y="174" text-anchor="middle" font-size="10.5">SQLite</text><text x="200" y="187" text-anchor="middle" font-size="9.5">物种 / 次数 / 照片</text><text x="322" y="94" text-anchor="middle" font-size="10.5">写回 Frigate</text><text x="322" y="107" text-anchor="middle" font-size="10.5">子标签 = 物种</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Flask 网页</text><text x="322" y="187" text-anchor="middle" font-size="10.5">按天看到访</text><text x="430" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="430" y="107" text-anchor="middle" font-size="10.5">新物种通知</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">订阅</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">≥阈值</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">按物种自动化</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0604：Frigate 检出鸟 → 分种 → 子标签回写 → HA 新物种推通知、月度名…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">mmcc-xx/WhosAtMyFeeder</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>WhosAtMyFeeder 是美国开发者 mmcc-xx 做的 Frigate 配套程序，GitHub 上 456 星，名字直译是谁在我的喂鸟器上。Frigate 只能说画面里有一只鸟，它接在后面专门说是哪一种。</p><p>它的工作方式是一条流水线：订阅 Frigate 的 MQTT 事件，遇到标签为鸟的事件就按事件 ID 去 Frigate 拉那一帧快照，裁出检测框，送进 Google 发布的 TFLite 鸟类分类模型，这个模型在 iNaturalist 的数据上训练，认得九百多种北美和常见鸟；输出物种名和置信度，超过阈值就把物种写回 Frigate 事件的子标签，同时存进本地 SQLite，自带一个 Flask 网页按天看到访物种、次数和照片。整个程序是一个 Python 容器，配置只有一份 YAML。没有中文资料，代码不到一千行。</p><p>在 0604 里它接在 Frigate 后面：只订阅长焦机那一路，分种结果写回子标签后 HomeAssistant 就能按物种名做自动化，第一次出现的种推通知带照片，每月把 SQLite 里的数据汇总成来访者名单卡片上 0802 大屏。要注意默认模型是北美鸟为主，白头鹎、珠颈斑鸠这类华东常见鸟有的能认有的会张冠李戴，先跑一个月人工核对，把误认多的种在配置里映射成正确中文名；喂鸟器画面里鸟太小会影响精度，长焦机对准时让鸟占画面十分之一以上。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -506,7 +570,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

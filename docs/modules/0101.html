@@ -224,18 +224,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,200～2,500（胡桃木料和小屏占大头）；年度电费忽略不计</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/EverythingSmartHome/everything-presence-lite" target="_blank" rel="noopener">
-        <div class="gh-head"><b>EverythingSmartHome/everything-presence-lite</b><span class="stars">★ 293</span></div>
-        <p class="gh-desc">基于 ESPHome 的毫米波人体存在传感器，带光照传感，直接接入 HomeAssistant</p>
-        <p class="gh-why">→ 展台射灯人靠近自动亮就靠它，毫米波比红外灵敏，站着不动也不会灭灯</p>
-      </a>
-      <a class="gh" href="https://github.com/adafruit/pi_video_looper" target="_blank" rel="noopener">
-        <div class="gh-head"><b>adafruit/pi_video_looper</b><span class="stars">★ 532</span></div>
-        <p class="gh-desc">树莓派开机自动循环播放视频和图片的方案，专为艺术装置和展示屏设计</p>
-        <p class="gh-why">→ 展台侧面那块 7 寸小屏滚动播野外实测视频，插电即放，不用人管</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Screenly/Anthias" target="_blank" rel="noopener">Screenly/Anthias</a>
+          <span class="stars">★ 3.7k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">树莓派数字标牌系统，网页后台排播放表，循环播视频、图片和网页，专为无人值守的展示屏设计</p>
+        <p class="gh-why">→ 展台前脸那块 7 寸小屏跑它：网页后台传视频、排播放表，插电即放不用人管，HA 还能调 API 切内容</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0101-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="5" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0101-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0101-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Anthias · 树莓派上的无人值守播放表</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0101-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0101-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0101-1-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0101-1-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0101-1-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0101-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">实测视频 / 图文</text><text x="78" y="107" text-anchor="middle" font-size="10.5">（预压 720p）</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="78" y="187" text-anchor="middle" font-size="9.5">rest_command</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Anthias 后台</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Django 排程</text><text x="322" y="94" text-anchor="middle" font-size="10.5">Viewer 播放器</text><text x="322" y="107" text-anchor="middle" font-size="10.5">硬件解码</text><text x="322" y="174" text-anchor="middle" font-size="10.5">展台前脸</text><text x="322" y="187" text-anchor="middle" font-size="10.5">7 寸小屏</text><text x="430" y="218" text-anchor="middle" font-size="10.5">走近的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">上传</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">切播放表</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">播放表</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">全屏</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0101：树莓派藏抽屉后，HA 按人在不在切实测视频 / 待机画面</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Screenly/Anthias</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Anthias 是 Screenly 公司维护的开源数字标牌系统，前身叫 Screenly OSE，从 2012 年起就是树莓派做展示屏的标配，3.7k 星，2025 年重启活跃开发，2026 年 5 月又发了新版。它解决的问题很朴素：一块屏、一台小电脑，插电就循环播放你排好的内容，不需要人守着。</p><p>架构分两层。管理端是跑在树莓派上的 Django 网页后台，你在手机或电脑浏览器里上传视频、图片或填一个网址，设定每条素材的播放时长、生效时段和顺序，形成一张播放表；播放端叫 Viewer，用 WebView 加硬件解码把素材全屏铺满，断电重启后自动接着播。整套用 Docker 打包，树莓派 3 到 5 和 x86 小主机都支持，7 寸官方屏免驱。</p><p>生态上它有 REST API，可以从外部改播放表、切资源，Home Assistant 用 rest_command 就能调。文档是英文，没有中文版，但 B 站有旧版 Screenly OSE 的搭建教程，思路一样。</p><p>放进 0101，它就是展台前脸那块 7 寸屏的全部软件：树莓派藏在展台抽屉后，屏排三条素材，盒子用途图文、野外实测视频、PSK 的 logo 待机画面。人靠近时 HA 调 API 切到实测视频，离开五分钟回到待机，晚上十一点后黑屏省电。坑在树莓派软解 1080p 会掉帧，视频预先压成 720p 的 H.264 就顺了。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/EverythingSmartHome/everything-presence-lite" target="_blank" rel="noopener">EverythingSmartHome/everything-presence-lite</a>
+          <span class="stars">★ 293</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">基于 ESPHome 的毫米波人体存在传感器，LD2450 雷达带目标坐标与照度，直接接入 HomeAssistant</p>
+        <p class="gh-why">→ 展台射灯人靠近自动亮就靠它，毫米波比红外灵敏，站着不动也不会灭灯，还能画一个只覆盖展台前的检测区</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0101-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0101-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0101-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">EP Lite · 毫米波画区，站到展台前才亮</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0101-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0101-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0101-2-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0101-2-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0101-2-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0101-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">LD2450 雷达</text><text x="78" y="216" text-anchor="middle" font-size="10.5">环境照度传感器</text><text x="200" y="94" text-anchor="middle" font-size="10.5">EP Lite 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">ESPHome</text><text x="200" y="174" text-anchor="middle" font-size="10.5">网页画区工具</text><text x="200" y="187" text-anchor="middle" font-size="10.5">检测 / 排除区</text><text x="322" y="94" text-anchor="middle" font-size="9.5">Home Assistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">自动化</text><text x="322" y="174" text-anchor="middle" font-size="10.5">3000K 射灯</text><text x="322" y="187" text-anchor="middle" font-size="10.5">10% → 100%</text><text x="430" y="218" text-anchor="middle" font-size="10.5">展台前的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">目标坐标</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">照度</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写入区域</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">原生 API</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">亮 / 暗</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">照亮</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0101：梁底装一颗，画好检测区 → HA → 射灯亮、切视频</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a">EverythingSmartHome/everything-presence-lite</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Everything Presence Lite 是英国智能家居博主 Everything Smart Home 设计的开源人体存在传感器，293 星，硬件在自家商店卖，固件与 ESPHome 配置全部开源，是 HA 圈子里最出名的毫米波存在传感器之一，2025 年后仍在更新。它解决的是红外传感器的老毛病：人坐着不动就当没人，灯一会儿就灭。</p><p>核心是一块 ESP32 模组外加海凌科 LD2450 24GHz 毫米波雷达和一颗照度传感器。雷达测的是微动，呼吸的细微位移都能捕捉，最多同时跟踪三个目标的坐标；固件把目标位置、照度以及最多四个自定义检测区原生上报给 HA，仓库附带一个网页工具，拖框画出检测区和排除区再写回设备。</p><p>它就是标准 ESPHome 设备，HA 里自动发现；社区还有 CO2 版和无蓝牙版的配置分支。文档和视频都是英文，B 站有搬运讲解。</p><p>放进 0101，它贴在展台上方的梁底，正对北墙前一米的那块地板，画一个 1.5 米乘 1 米的检测区，只要有人站到展台前，HA 自动化就把 3000K 射灯从 10% 拉到 100%，并让侧屏切到实测视频；人离开 30 秒后灯缓缓回落。照度传感器顺便当白天判据，南窗光够时不亮灯。坑在雷达会穿透薄木板，检测区要画准，否则你在吧台坐着它也会亮。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
+          <span class="stars">★ 11.7k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+        </header>
+        <p class="gh-desc">用 YAML 配置把 ESP32 / ESP8266 变成 Home Assistant 原生设备的固件生成器，几百种传感器与执行器现成组件</p>
+        <p class="gh-why">→ 射灯的 PWM 调光节点和照度传感器都用它写几十行 YAML 生成固件，BH1750、MOSFET 调光、LD2410 都是自带组件</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0101-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0101-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0101-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ESPHome · 几十行 YAML 变成射灯调光节点</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0101-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0101-3-shade)" stroke="none"/><path d="M152.0 162.0 h96 v36 h-96 Z M152.0 162.0 l8 -8 h96 l-8 8 M248.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M249.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0101-3-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0101-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0101-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0101-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">YAML 配置</text><text x="78" y="107" text-anchor="middle" font-size="10.5">（几十行）</text><text x="78" y="216" text-anchor="middle" font-size="10.5">BH1750 照度</text><text x="200" y="94" text-anchor="middle" font-size="9.5">ESPHome 编译器</text><text x="200" y="107" text-anchor="middle" font-size="10.5">生成固件</text><text x="200" y="174" text-anchor="middle" font-size="9.5">ESP32-C3 节点</text><text x="200" y="187" text-anchor="middle" font-size="10.5">PWM 调光</text><text x="322" y="94" text-anchor="middle" font-size="9.5">Home Assistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">原生 API</text><text x="322" y="174" text-anchor="middle" font-size="10.5">24V 射灯</text><text x="322" y="187" text-anchor="middle" font-size="10.5">MOSFET 驱动</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">声明</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">OTA 刷写</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">I2C</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">实体</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">PWM</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">手机面板</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0101：ESP32-C3 调光射灯 + 读照度 → HA 判断白天不亮、人近渐亮</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">esphome/esphome</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ESPHome 是 Home Assistant 官方团队 Nabu Casa 维护的固件生成工具，11.7k 星，2018 年由 Otto Winter 创建，每月发版，是 HA 生态里做自制传感器和执行器的默认答案。想让一块 ESP32 上报温度或调光，不必写 C++，写几十行 YAML 声明引脚和组件，它就编译出固件并无线刷写。</p><p>原理是把声明式配置转成 C++：你在 YAML 里写 sensor、light 等块，ESPHome 拼装组件源码交给 PlatformIO 编译，设备开机后通过原生 API 与 HA 加密直连，实体自动出现，断网时本地自动化照样跑。它支持 ESP32 全系、ESP8266、RP2040，内置几百个组件，从 BH1750 照度、MAX6675 热电偶到 LD2410 雷达、PWM 调光都有现成写法。</p><p>社区极大；官方文档只有英文，但 B 站、CSDN 的中文教程很多，参数名一看就懂。</p><p>放进 0101，它负责两件小事：一块 ESP32-C3 通过 MOSFET 对 24V 的 3000K 射灯做 PWM 调光，暴露成 HA 里的一个可调光灯；同一块板再挂一颗 BH1750 读展台环境照度，作为白天不亮灯的判据。注意 PWM 频率设到 1kHz 以上，手机拍视频才不出条纹。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -622,7 +696,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

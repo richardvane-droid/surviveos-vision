@@ -177,23 +177,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥3,000～5,000（可调哑铃、地垫、镜子、单杠）；年度 ¥0</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/wger-project/wger" target="_blank" rel="noopener">
-        <div class="gh-head"><b>wger-project/wger</b><span class="stars">★ 6.8k</span></div>
-        <p class="gh-desc">自托管的开源健身、营养和体重记录系统，有网页和 App</p>
-        <p class="gh-why">→ 周计划和训练记录跑在 0802 的小主机上，本地无云，和大屏一个数据库</p>
-      </a>
-      <a class="gh" href="https://github.com/oliexdev/openScale" target="_blank" rel="noopener">
-        <div class="gh-head"><b>oliexdev/openScale</b><span class="stars">★ 2.4k</span></div>
-        <p class="gh-desc">开源体重和身体数据追踪 App，支持蓝牙体脂秤</p>
-        <p class="gh-why">→ 健身角放一台蓝牙秤，数据不走厂商云，直接同步到手机和 wger</p>
-      </a>
-      <a class="gh" href="https://github.com/brandonp2412/Flexify" target="_blank" rel="noopener">
-        <div class="gh-head"><b>brandonp2412/Flexify</b><span class="stars">★ 393</span></div>
-        <p class="gh-desc">轻量的开源力量训练记录 App，纯本地存储，记组数重量和进步曲线</p>
-        <p class="gh-why">→ 只想记哑铃组数和重量时它最省事，打完卡再回墙上小白板画钩</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/wger-project/wger" target="_blank" rel="noopener">wger-project/wger</a>
+          <span class="stars">★ 6.8k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">自托管的开源健身、营养和体重记录系统，Django 后端，有网页和安卓 / iOS App，带 REST API 和动作库</p>
+        <p class="gh-why">→ 周计划和训练记录跑在 0802 的小主机上，本地无云，和大屏一个数据库；训练日志通过 API 由 HA 自动写入</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0212-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0212-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0212-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">wger · 自己主机上的训练计划和日志</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0212-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0212-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M288.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0212-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0212-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L266.0 96.0"/><path d="M266.0 96.0 L256.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="9.5">ESPHome 按键板</text><text x="78" y="149" text-anchor="middle" font-size="10.5">每按一下记一组</text><text x="78" y="218" text-anchor="middle" font-size="10.5">手机 App</text><text x="78" y="231" text-anchor="middle" font-size="10.5">看曲线 / 排计划</text><text x="200" y="94" text-anchor="middle" font-size="9.5">wger Django</text><text x="200" y="107" text-anchor="middle" font-size="9.5">计划 / 日志 / 进阶</text><text x="200" y="174" text-anchor="middle" font-size="10.5">PostgreSQL</text><text x="200" y="187" text-anchor="middle" font-size="10.5">动作库 / 体重</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="322" y="107" text-anchor="middle" font-size="10.5">日终写 API</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0802 大屏</text><text x="322" y="187" text-anchor="middle" font-size="10.5">剩几组 / 周完成率</text><text x="200.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">组数</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">REST</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">汇总</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0212：按键板记组数，HA 日终写进 wger，大屏读周完成率</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">wger-project/wger</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>wger 是瑞士开发者 Roland Geider 从 2012 年开始写的自托管健身管理系统，6.8k 星，是开源健身软件里星最多、维护最久的一个。健身 App 要么订阅制要么把数据放在别人服务器上，它让你在自己的小主机上跑一套完整的训练计划、营养和体重记录。</p><p>它用 Python Django 写后端，PostgreSQL 存数据，一个 Docker Compose 就起来；前端有网页版和 Flutter 写的安卓、iOS App。核心是训练计划：按天排动作、组数和重量，支持自动加重进阶；逐组打卡后画出每个动作的重量曲线。附带几百个动作的公开动作库；营养模块接 Open Food Facts 算热量；体重可手动记或导入。它有完整的 REST API，界面有简体中文（Weblate 翻译），文档英文，持续更新。</p><p>在 0212 里它跑在 0802 那台 N100 上，是墙上手写周计划背后的数据库：周计划先在 wger 里建成一个训练计划，哑铃划船、壶铃摆荡、引体各有目标组数；练的时候不用打开 App，桌下 ESPHome 按键板每按一下记一组，HA 攒到当天结束通过 wger 的 API 写成一条训练日志；大屏训练模式显示心率的同时也显示今天还剩几组。周末读本周完成率，决定小白板画几个钩。坑是 API 写日志要先拿到动作 ID 和计划日 ID，先用它的 API 浏览器抄下来。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/oliexdev/openScale" target="_blank" rel="noopener">oliexdev/openScale</a>
+          <span class="stars">★ 2.5k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">开源体重和身体数据追踪安卓 App，支持 25 种以上蓝牙体脂秤，无账号、无联网权限，可导出 CSV 和同步到 wger</p>
+        <p class="gh-why">→ 健身角放一台蓝牙秤，数据不走厂商云，直接进手机再同步到 wger，体重曲线和训练记录在同一个地方</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0212-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0212-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0212-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">openScale · 逆向蓝牙协议，秤的数据留在手机</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0212-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0212-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0212-2-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0212-2-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0212-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">蓝牙体脂秤</text><text x="78" y="149" text-anchor="middle" font-size="10.5">小米 / 云麦</text><text x="200" y="94" text-anchor="middle" font-size="9.5">openScale App</text><text x="200" y="107" text-anchor="middle" font-size="10.5">协议解析</text><text x="200" y="174" text-anchor="middle" font-size="10.5">本地数据库</text><text x="200" y="187" text-anchor="middle" font-size="10.5">体重 / 体脂曲线</text><text x="322" y="94" text-anchor="middle" font-size="9.5">openScale sync</text><text x="322" y="107" text-anchor="middle" font-size="10.5">→ wger</text><text x="322" y="180" text-anchor="middle" font-size="10.5">CSV 导出</text><text x="430" y="138" text-anchor="middle" font-size="10.5">练完称一下的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">广播包</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">同步</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">曲线</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0212：秤的数据不走厂商云，进手机再同步到 0802 的 wger</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">oliexdev/openScale</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>openScale 是德国开发者 Oliver Ladner 从 2014 年开始写的开源安卓 App，2.5k 星，专门做一件事：把蓝牙体脂秤的数据从厂商 App 里解放出来。几乎所有智能秤都要装厂商 App、注册账号、把体重上传到云，而它逆向了二十多款秤的蓝牙协议，数据直接进你手机本地，App 连联网权限都不申请。</p><p>工作方式很直接：手机蓝牙开着，站上秤，App 收到秤广播的原始数据包，按对应型号的协议解析出体重、体脂、水分、肌肉量，存进本地数据库，画成曲线，还能设目标线和评估区间。支持的秤包括小米体脂秤一代二代、云麦、Beurer、Medisana 等，不支持的秤可以手动录入。数据能导出 CSV；配套的 openScale sync 工具能同步到 wger、Health Connect 等。App 在 F-Droid 和 Google Play 上，界面有简体中文，文档英文，仍在维护。</p><p>在 0212 里它是那台放在镜子旁角落的蓝牙秤的“翻译官”：买一台它支持列表里的秤（小米体脂秤 2 最便宜也最好买），每次练完站一下，数据进 openScale，再通过 sync 工具推到 0802 上的 wger，体重曲线和训练日志就在同一个数据库里，大屏训练模式的角落顺便显示本周体重。坑是新款秤的协议常变，买之前在仓库的支持列表里确认型号和固件版本；秤放在地毯上会不准，放在门口硬地上。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/brandonp2412/Flexify" target="_blank" rel="noopener">brandonp2412/Flexify</a>
+          <span class="stars">★ 424</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">轻量的开源力量训练记录 App，离线优先、纯本地存储，记组数重量、休息计时和进步曲线，Flutter 写的安卓 / iOS 端</p>
+        <p class="gh-why">→ 只想记哑铃组数和重量时它最省事，不用联网不用服务器，打完卡再回墙上小白板画钩；离线时给 wger 补记</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0212-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0212-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0212-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Flexify · 不要服务器的训练记录本</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0212-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0212-3-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0212-3-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0212-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0212-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">练哑铃的人</text><text x="78" y="151" text-anchor="middle" font-size="10.5">填重量次数</text><text x="78" y="174" text-anchor="middle" font-size="10.5">周计划表</text><text x="78" y="187" text-anchor="middle" font-size="10.5">按周几排</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Flexify App</text><text x="200" y="107" text-anchor="middle" font-size="10.5">记组 + 休息计时</text><text x="200" y="180" text-anchor="middle" font-size="9.5">手机本地 SQLite</text><text x="322" y="100" text-anchor="middle" font-size="10.5">重量 / 总量曲线</text><text x="322" y="174" text-anchor="middle" font-size="10.5">CSV 导出</text><text x="322" y="187" text-anchor="middle" font-size="10.5">→ 补进 wger</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">记一组</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">备份</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0212：离线时的备用记录本和组间计时，回来补进 wger</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">brandonp2412/Flexify</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Flexify 是新西兰开发者 Brandon Presley 写的开源训练记录 App，424 星，定位是“离线优先的力量和有氧训练记录本”。它解决的问题和 wger 相反：不要服务器、不要账号、不要同步，打开就记，一个人一部手机足够。</p><p>它用 Flutter 写，安卓和 iOS 都有，数据全部存在手机本地的 SQLite 里。主界面是一张训练计划表，点一个动作就进入记录页，填重量和次数，按一下就记一组，自动开始休息倒计时并在时间到时响铃提醒；每个动作的历史都画成重量和总量曲线，能看一个月来哑铃划船加了多少。计划支持按周几安排，有一个简单的进阶提醒；有氧可以记时间和距离；主题和单位可自定义。数据可以导出成 CSV 备份或导入。App 在 F-Droid 和 Google Play 上，界面英文，没有中文，但操作简单到不需要翻译；作者更新很勤。</p><p>在 0212 里它是 wger 的“备用记录本”：0802 那台小主机偶尔关机维护、或者人在地面木屋里练壶铃、在草地上跑步时，手机上用 Flexify 记，回来再手动补进 wger；它的休息计时器也是地堡里最顺手的组间计时，比看大屏方便。它也可以干脆当成整个模块的唯一记录工具——如果觉得 wger 太重，就只用它加墙上的小白板，周计划画在白板上，组数记在它里面。坑是它没有任何同步，换手机前记得导出 CSV。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -523,7 +592,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

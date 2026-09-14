@@ -191,23 +191,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥20,000～50,000（一对大箱 + 功放 + 唱盘，看二手运气）；年度电费 ¥100 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/HEnquist/camilladsp" target="_blank" rel="noopener">
-        <div class="gh-head"><b>HEnquist/camilladsp</b><span class="stars">★ 1k</span></div>
-        <p class="gh-desc">跨平台 IIR 和 FIR 音频处理引擎，做分频、房间校正和均衡</p>
-        <p class="gh-why">→ 大箱在小地下室低频会糊，用它做房间校正，比反复挪音箱省力</p>
-      </a>
-      <a class="gh" href="https://github.com/moode-player/moode" target="_blank" rel="noopener">
-        <div class="gh-head"><b>moode-player/moode</b><span class="stars">★ 1.4k</span></div>
-        <p class="gh-desc">树莓派上的开源 HiFi 播放器系统，支持本地音乐库和 CamillaDSP</p>
-        <p class="gh-why">→ 黑胶之外的数字音源就靠它，一块树莓派接胆机功放，还能被 0201 场景联动</p>
-      </a>
-      <a class="gh" href="https://github.com/pierreaubert/spinorama" target="_blank" rel="noopener">
-        <div class="gh-head"><b>pierreaubert/spinorama</b><span class="stars">★ 164</span></div>
-        <p class="gh-desc">汇总和对比上千款音箱频响测量数据的开源库和网站</p>
-        <p class="gh-why">→ 买二手大箱前先查它的 spinorama 数据，避免花几万买到听感糊的型号</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/moode-player/moode" target="_blank" rel="noopener">moode-player/moode</a>
+          <span class="stars">★ 1.4k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">树莓派上的开源 HiFi 播放器系统，MPD 内核，支持本地音乐库、AirPlay、蓝牙、UPnP 和内置 CamillaDSP，2026 年 7 月 10.3 版</p>
+        <p class="gh-why">→ 黑胶之外的数字音源就靠它，一块树莓派接胆机功放，CamillaDSP 房间校正也跑在同一块板上，还能被 0201 场景联动</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0208-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0208-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0208-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">moOde · 树莓派上的 MPD 播放器</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0208-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M38.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0208-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0208-1-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0208-1-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0208-1-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0208-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">N100 共享音乐库</text><text x="78" y="107" text-anchor="middle" font-size="9.5">AirPlay / 电台</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 听音场景</text><text x="78" y="187" text-anchor="middle" font-size="10.5">MPD 集成</text><text x="200" y="94" text-anchor="middle" font-size="9.5">moOde 网页 + MPD</text><text x="200" y="107" text-anchor="middle" font-size="10.5">解码播放</text><text x="200" y="174" text-anchor="middle" font-size="10.5">CamillaDSP</text><text x="200" y="187" text-anchor="middle" font-size="10.5">房间校正</text><text x="322" y="94" text-anchor="middle" font-size="10.5">I2S 解码板</text><text x="322" y="107" text-anchor="middle" font-size="10.5">RCA 出</text><text x="322" y="174" text-anchor="middle" font-size="10.5">胆机功放</text><text x="322" y="187" text-anchor="middle" font-size="10.5">大柏林</text><text x="430" y="218" text-anchor="middle" font-size="10.5">沙发上的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">读取</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">播放</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">PCM</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0208：矮机柜里的数字唱盘，HA 场景控播放，DSP 在同一块板</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">moode-player/moode</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>moOde 是 2014 年从 Volumio 前身 RuneAudio 分出来的树莓派音频播放器系统，1.4k 星，作者 Tim Curtis 十多年一直在更新，2026 年 7 月发了 10.3 版。想要一台安静、无风扇、不联网也能放高解析音乐的数字音源，一块树莓派加一块 I2S 解码板，刷上它就是。</p><p>它是一个完整的系统镜像：底层 Linux，中间是 MPD 音乐守护进程负责解码和播放，上层是 PHP 写的网页界面，手机浏览器打开就是遥控器。音源支持本地硬盘、NAS、网络电台、AirPlay、蓝牙和 UPnP；输出走 I2S 或 USB 比特完美直出，也能把 CamillaDSP 插进播放链路做房间校正，网页里切换滤波器配置。文档英文，B 站有搭建视频。</p><p>在 0208 里它是矮机柜里唱盘旁边那台“数字唱盘”：树莓派 4 加一块 I2S 解码板装进一个小木盒，RCA 线接胆机功放的另一路输入，音乐放在 0802 N100 的共享目录里由它读。MPD 的接口让 HA 的 MPD 集成把它变成 media_player，听音场景一按，灯光只打沙发和唱盘，它开始播上次没听完的专辑。坑是树莓派 3.5mm 口噪声大，一定走解码板；供电用线性电源，否则胆机会把纹波放大成哼声。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/HEnquist/camilladsp" target="_blank" rel="noopener">HEnquist/camilladsp</a>
+          <span class="stars">★ 1.1k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">Rust 写的跨平台 IIR 和 FIR 音频处理引擎，做分频、房间校正和均衡，带 websocket 接口，4.1 版</p>
+        <p class="gh-why">→ 大箱在小地下室低频会糊，用它做房间校正，比反复挪音箱省力；跑在 moOde 的树莓派上，不多一台机器</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0208-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0208-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0208-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">CamillaDSP · 一条 YAML 描述的滤波管线</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0208-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0208-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0208-2-shade)" stroke="none"/><path d="M288.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0208-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0" stroke-dasharray="3 3"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M266.0 176.0 L256.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">测量麦 + REW</text><text x="78" y="149" text-anchor="middle" font-size="10.5">听音位测频响</text><text x="78" y="180" text-anchor="middle" font-size="10.5">moOde 数字源</text><text x="200" y="94" text-anchor="middle" font-size="10.5">CamillaDSP</text><text x="200" y="107" text-anchor="middle" font-size="9.5">IIR + FIR 管线</text><text x="200" y="174" text-anchor="middle" font-size="10.5">两套配置</text><text x="200" y="187" text-anchor="middle" font-size="10.5">听音 / 看片</text><text x="322" y="94" text-anchor="middle" font-size="10.5">解码板 → 功放</text><text x="322" y="107" text-anchor="middle" font-size="10.5">→ 大柏林</text><text x="322" y="174" text-anchor="middle" font-size="9.5">HA websocket</text><text x="322" y="187" text-anchor="middle" font-size="10.5">切配置</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">校正</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">采集</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">回放</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">切换</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0208：REW 测一次听音位，校正滤波器跑在 moOde 树莓派上</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">HEnquist/camilladsp</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>CamillaDSP 是瑞典工程师 Henrik Enquist 用 Rust 写的开源音频 DSP 引擎，1.1k 星，2019 年发布，是 DIY 音响圈做房间校正和主动分频的事实标准，moOde 等播放器系统都内置了它。音箱再好，放进具体的房间，低频驻波和反射都会把声音搞糊，与其反复挪音箱，不如在数字域里把房间的问题反过来修掉。</p><p>它是一条可配置的处理管线：从声卡或播放器的音频流里“采集”，经过一串滤波器——IIR 的参量均衡、高低通，FIR 的卷积（可以加载 REW 这类测量软件生成的校正脉冲），再做增益、延时、混音和通道路由，最后“回放”到输出声卡。整条管线用一份 YAML 描述，支持 ALSA、PipeWire、CoreAudio、WASAPI 等主流后端，一块树莓派能跑多路 FIR。它开放 websocket 接口，网页 GUI 能在线换配置、看电平，也能被脚本切换。文档英文。</p><p>在 0208 里它藏在 moOde 的树莓派里：先用测量麦和 REW 在沙发听音位测一次两只大箱的频响，导出校正滤波器加载进管线，再用参量均衡把 40～80Hz 的驻波峰压掉几个分贝。做两套配置——“听音”用完整校正，“看片”只做低切保护——HA 通过 websocket 切换。坑是只能修数字源，黑胶那条模拟链路不经过它；FIR 会带来几十毫秒延时，看片时要在电视上补口型延时。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/pierreaubert/spinorama" target="_blank" rel="noopener">pierreaubert/spinorama</a>
+          <span class="stars">★ 164</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">汇总和对比上千款音箱频响测量数据的开源库和网站 spinorama.org，还能按测量数据自动生成均衡曲线</p>
+        <p class="gh-why">→ 买二手大箱前先查它的数据，避免花几万买到听感糊的型号；它生成的均衡曲线还能直接喂给 CamillaDSP</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0208-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0208-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0208-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">spinorama · 上千款音箱的标准化测量图库</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0208-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0208-3-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0208-3-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0208-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0208-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0208-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M144.0 176.0 L134.0 176.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">ASR / 厂商白皮书</text><text x="78" y="107" text-anchor="middle" font-size="10.5">公开测量数据</text><text x="78" y="218" text-anchor="middle" font-size="10.5">选箱子的人</text><text x="200" y="94" text-anchor="middle" font-size="9.5">spinorama 解析</text><text x="200" y="107" text-anchor="middle" font-size="10.5">评分 / 指向性</text><text x="200" y="174" text-anchor="middle" font-size="9.5">spinorama.org</text><text x="200" y="187" text-anchor="middle" font-size="10.5">对比图库</text><text x="322" y="94" text-anchor="middle" font-size="10.5">自动生成</text><text x="322" y="107" text-anchor="middle" font-size="10.5">参量均衡</text><text x="322" y="174" text-anchor="middle" font-size="10.5">CamillaDSP</text><text x="322" y="187" text-anchor="middle" font-size="10.5">出厂修正层</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">解析</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">看图</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">导出</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0208：买大箱前查测量图，买定后把它的均衡曲线喂给 CamillaDSP</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">pierreaubert/spinorama</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>spinorama 是法国工程师 Pierre Aubert 维护的开源项目，164 星，配套网站 spinorama.org 收录了一千多款音箱的客观测量数据，是 DIY 和二手音响圈选箱子时最常翻的参考。音箱评测里“通透”“宽松”这些词没法比较，而 Spinorama 是一套标准化测量图（哈曼的 CEA-2034 标准），把一只音箱各方向的频响、指向性画成同一种图，不同型号能放在一起比。</p><p>它把各处公开的测量数据——ASR 论坛、厂商白皮书等——用 Python 统一解析成同一格式，算出音调平衡、指向性指数和一个综合偏好评分，再用网页把上千只箱子做成可搜索、可对比的图库。更实用的一步是它能按测量数据自动生成一组参量均衡，把音箱本身的频响缺陷修平，导出成 CamillaDSP 或其他 DSP 能直接加载的格式。项目持续更新；网站英文，但图表本身不需要翻译。</p><p>在 0208 里它是花大钱前的功课：想收一对大柏林级别的落地箱，先在 spinorama.org 上查同型号或同系列的测量图，看低频延伸、指向性是否平滑，评分 6 以上再去听；地堡只有 2.5 米听音距离、墙硬，指向性宽的箱子反射会多，优先选指向性均匀的。买定之后把它给这对箱子生成的均衡曲线加载进 CamillaDSP，作为房间校正之前的“出厂修正”。坑是二手老箱子往往没有测量数据，只能找同厂同代的近似型号参考。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -534,7 +603,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

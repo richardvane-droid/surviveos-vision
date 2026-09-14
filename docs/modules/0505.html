@@ -163,28 +163,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥600～1,200（杉木柱、防水插座、卷线盘、感应灯、青石板）；年度电费 ¥150 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/evcc-io/evcc" target="_blank" rel="noopener">
-        <div class="gh-head"><b>evcc-io/evcc</b><span class="stars">★ 6.8k</span></div>
-        <p class="gh-desc">开源光伏优先充电与家庭能源管理系统，支持大量充电桩、电表和智能插座，本地运行</p>
-        <p class="gh-why">→ 它支持把智能插座当电动两轮的充电器，白天光伏有余电才充，手机上看太阳能占比</p>
-      </a>
-      <a class="gh" href="https://github.com/jmcollin78/solar_optimizer" target="_blank" rel="noopener">
-        <div class="gh-head"><b>jmcollin78/solar_optimizer</b><span class="stars">★ 227</span></div>
-        <p class="gh-desc">HomeAssistant 集成，按光伏净发电量自动启停用电设备，支持优先级</p>
-        <p class="gh-why">→ 只用 HomeAssistant 的话装这个，把电摩插座设成储能高于 30% 才通电的优先级设备</p>
-      </a>
-      <a class="gh" href="https://github.com/KaufHA/PLF10" target="_blank" rel="noopener">
-        <div class="gh-head"><b>KaufHA/PLF10</b><span class="stars">★ 29</span></div>
-        <p class="gh-desc">带功率计量的 ESPHome 智能插座的开源配置包，可自定义功率阈值和按钮行为</p>
-        <p class="gh-why">→ 照它的 YAML 做计量插座，功率降到几瓦就判定充满自动断电，避免电池鼓包</p>
-      </a>
-      <a class="gh" href="https://github.com/OpenEVSE/openevse_esp32_firmware" target="_blank" rel="noopener">
-        <div class="gh-head"><b>OpenEVSE/openevse_esp32_firmware</b><span class="stars">★ 228</span></div>
-        <p class="gh-desc">OpenEVSE 开源充电桩的 ESP32 联网固件，带网页界面、光伏分流、MQTT 接入</p>
-        <p class="gh-why">→ 以后换成电动汽车再看它，木柱里塞一套 OpenEVSE 就是一根真正的充电桩</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/evcc-io/evcc" target="_blank" rel="noopener">evcc-io/evcc</a>
+          <span class="stars">★ 7.2k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">开源光伏优先充电与家庭能源管理系统，支持上百种充电桩、电表、逆变器，智能插座也能当充电器，本地运行</p>
+        <p class="gh-why">→ 它能把一只计量智能插座当电动两轮的充电器管，白天光伏有余电才充，手机上直接看这次充电的太阳能占比</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0505-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0505-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0505-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">evcc · 光伏盈余决定充不充</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0505-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0505-1-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0505-1-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0505-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0505-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">光伏 / 储能</text><text x="78" y="149" text-anchor="middle" font-size="10.5">电表读数</text><text x="78" y="180" text-anchor="middle" font-size="10.5">电网表</text><text x="200" y="94" text-anchor="middle" font-size="10.5">evcc</text><text x="200" y="107" text-anchor="middle" font-size="9.5">pv / now 模式</text><text x="322" y="94" text-anchor="middle" font-size="10.5">计量插座</text><text x="322" y="107" text-anchor="middle" font-size="10.5">（开关型充电器）</text><text x="322" y="174" text-anchor="middle" font-size="10.5">网页 / HA</text><text x="322" y="187" text-anchor="middle" font-size="10.5">太阳能占比</text><text x="430" y="138" text-anchor="middle" font-size="10.5">电摩</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">盈余够</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0505：读光伏盈余 → pv 模式开关插座 → 通知里的太阳能占比</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">evcc-io/evcc</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>evcc 是德国团队做的开源电动车充电与家庭能源管理系统，名字是 electric vehicle charge controller 的缩写，GitHub 上 7.2k 星。它协调光伏、储能和充电桩，让车尽量吃太阳能。</p><p>它的架构是一个 Go 写的单文件服务，配置里声明四类东西：电表（电网、光伏、电池）、充电器、车辆、站点。运行时它每隔几秒读电表算出当前光伏盈余，按模式决定充电功率：pv 模式只用盈余充，minpv 保证最低功率，now 全速充，off 不充；只能开关的设备就按盈余超过阈值开、低于阈值关。它支持一百多个品牌的桩和几十种电表逆变器，也明确支持 Tasmota 等智能插座当充电器。</p><p>界面是网页加手机端，有实时功率流图和每次充电的太阳能占比统计；REST 和 MQTT 接口能把数据推给 HomeAssistant。文档只有英文和德文，Docker 一条命令就跑起来。</p><p>在 0505 里它是光伏优先充电的调度员：电摩插座是一只刷了 Tasmota 的计量插座，在 evcc 里配成开关型充电器；光伏和储能数据从阁楼的逆变器或 MPPT 读；模式设成 pv，白天储能高于 30% 且有盈余就通电，不够就等；晚上十一点后切成 now 模式用谷电兜底。充完它给出这次的太阳能占比，正好是手机通知里的 70%。要注意电摩充电器功率只有一两百瓦，盈余阈值要调小，否则永远等不到开机。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/arendst/Tasmota" target="_blank" rel="noopener">arendst/Tasmota</a>
+          <span class="stars">★ 24.8k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">ESP8266 / ESP32 设备的替换固件，网页配置、计量、规则引擎、MQTT，本地控制不上云，几百种设备模板</p>
+        <p class="gh-why">→ 十几块的国产计量插座刷上它，功率降到几瓦就本地断电防鼓包，同时把功率、电量推给 HomeAssistant 和 evcc</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0505-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="22" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0505-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0505-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Tasmota · 计量插座本地断电</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0505-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0505-2-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0505-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0505-2-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0505-2-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0505-2-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0505-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M157.3 148.0 C139.0 148.0 139.0 124.0 120.7 124.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">国产 ESP</text><text x="78" y="107" text-anchor="middle" font-size="10.5">计量插座</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Tasmota 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">计量 + 规则</text><text x="200" y="174" text-anchor="middle" font-size="10.5">规则：&lt;5W</text><text x="200" y="187" text-anchor="middle" font-size="10.5">十分钟即断电</text><text x="322" y="94" text-anchor="middle" font-size="10.5">MQTT →</text><text x="322" y="107" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="174" text-anchor="middle" font-size="10.5">evcc</text><text x="322" y="187" text-anchor="middle" font-size="10.5">开关型充电器</text><text x="430" y="138" text-anchor="middle" font-size="10.5">充满通知</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0505：插座本地判满断电，功率电量上报 HA，evcc 按光伏调度它</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">arendst/Tasmota</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Tasmota 是荷兰开发者 Theo Arends 从 2016 年维护至今的 ESP 设备替换固件，GitHub 上 24.8k 星，是智能插座刷机圈子里最出名的项目。便宜的 Wi-Fi 智能插座内部就是一颗 ESP8266 或 ESP32，原厂固件绑云，刷上 Tasmota 后变成纯本地设备，MQTT 通信，什么平台都能接。</p><p>它的结构是一套通用固件加设备模板：模板描述这块板子哪个引脚接继电器、哪个接计量芯片，社区收录了几百种设备的模板。计量功能支持 BL0937、HLW8012 等常见计量芯片，实时报电压、电流、功率和累计电量；规则引擎能写本地逻辑，比如功率低于某值持续多久就断电；MQTT、HomeAssistant 自动发现全都内置。</p><p>正式发布包含多个语言版本，其中有简体中文界面版；国内刷机教程极多。</p><p>在 0505 里它就是木柱上那只计量插座的灵魂：买一只 16A 的国产 ESP 计量插座刷上它，写一条规则，功率低于 5 瓦持续十分钟就判定电摩充满并断电，这一步在插座本地完成不依赖任何服务器；同时功率和电量通过 MQTT 报给 HomeAssistant 做通知，也让 evcc 把它当开关型充电器调度。到家自动充电的逻辑写在 HomeAssistant 里，用手机定位加时间表决定要不要上电。要注意选插座时确认是 ESP 方案，很多新款换了芯片刷不了；16A 继电器要留余量。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/OpenEVSE/openevse_esp32_firmware" target="_blank" rel="noopener">OpenEVSE/openevse_esp32_firmware</a>
+          <span class="stars">★ 229</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">OpenEVSE 开源充电桩的 ESP32 联网固件，网页界面、光伏分流、MQTT、HomeAssistant 集成和 OCPP</p>
+        <p class="gh-why">→ 以后从电摩换成电动汽车再看它，木柱里塞一套 OpenEVSE 就是一根真正的开源充电桩</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0505-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="23" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0505-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0505-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OpenEVSE · 自己组一根开源充电桩</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0505-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0505-3-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0505-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0505-3-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0505-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0505-3-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">电动汽车</text><text x="78" y="107" text-anchor="middle" font-size="9.5">J1772 / GB/T 枪</text><text x="78" y="216" text-anchor="middle" font-size="10.5">光伏电表</text><text x="78" y="229" text-anchor="middle" font-size="10.5">MQTT 盈余</text><text x="200" y="174" text-anchor="middle" font-size="9.5">OpenEVSE 控制板</text><text x="200" y="187" text-anchor="middle" font-size="10.5">继电器 / 导引</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ESP32 网关固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">网页 / 分流</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="9.5">MQTT / OCPP</text><text x="430" y="138" text-anchor="middle" font-size="10.5">杉木柱里的桩</text><text x="430" y="151" text-anchor="middle" font-size="10.5">（未来）</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">串口</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0505：换电动汽车后，木柱内装 OpenEVSE，光伏分流 + evcc…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">OpenEVSE/openevse_esp32_firmware</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>OpenEVSE 是美国的开源电动汽车充电桩项目，从 2011 年做起，硬件、控制固件和这个 ESP32 联网固件全部开源，这个仓库 GitHub 上 229 星，是 DIY 充电桩这个小众领域的事实标准。家用交流充电桩的核心就是继电器、控制导引信号和漏电保护，OpenEVSE 让人可以自己组一根、自己控制。</p><p>它的结构分两层：底层是 OpenEVSE 控制板，负责和车辆按 J1772 协议握手、控制继电器和安全保护，用串口对外说话；这个仓库是插在控制板上的 ESP32 网关固件，通过串口读充电状态、设电流，并提供网页界面、MQTT、HomeAssistant 集成和 OCPP 1.6 对接。最有价值的是光伏分流模式：读一个光伏或电网电表的 MQTT 数据，按盈余动态调整充电电流，自己就能做太阳能优先充电。</p><p>界面有英西法匈四种语言，没有中文；硬件可以买官方套件也可以照原理图自制。</p><p>在 0505 里它是给未来留的位置：现在的电摩只是一只插座，等哪天换成电动汽车，1.6 米杉木柱和 16A 线路就是照家用桩留的，到时把 OpenEVSE 控制板和 ESP32 网关塞进柱身的防水箱，充电枪挂在卷线盘位置，光伏分流模式直接接阁楼的光伏电表，evcc 也原生支持它。要注意国标充电枪是 GB/T 接口，导引信号兼容但物理接头不同，要换枪线；漏电保护按国内规范要加带直流检测的模块。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -547,7 +611,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

@@ -194,18 +194,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,500～3,000（老木箱和防腐板占大头）；年度清漆补刷 ¥100 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/cohenadair/anglers-log" target="_blank" rel="noopener">
-        <div class="gh-head"><b>cohenadair/anglers-log</b><span class="stars">★ 34</span></div>
-        <p class="gh-desc">Flutter 写的钓鱼日志 App，记录渔获、饵、天气和地点，能出统计，iOS 和安卓都有</p>
-        <p class="gh-why">→ 小黑板上的渔获记录写满拍照后，用它做数字版，哪种饵在哪个月最好用一查就知道</p>
-      </a>
-      <a class="gh" href="https://github.com/m1ndgames/OpenFishing" target="_blank" rel="noopener">
-        <div class="gh-head"><b>m1ndgames/OpenFishing</b><span class="stars">★ 2</span></div>
-        <p class="gh-desc">自托管钓具管理网页：假饵库带二维码标签、钓点地图、渔获记录和统计，一个 Docker 跑起来</p>
-        <p class="gh-why">→ 刚起步但正好对上“钓具数字孪生”：每根竿每盒饵贴二维码，扫一下知道上次钓了什么</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/sysadminsmedia/homebox" target="_blank" rel="noopener">sysadminsmedia/homebox</a>
+          <span class="stars">★ 7.1k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">面向家庭的自托管物品库存系统，位置嵌套、标签、照片、自定义字段、可打印的二维码标签和维护记录，Go 写的单容器，界面有简体中文</p>
+        <p class="gh-why">→ 洞洞板、樟木箱六格、亚克力饵盒各建成位置，每根竿每盒饵一条记录贴二维码，扫一下知道在哪、上次换线是什么时候，PSK 组件也在里面</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0702-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="24" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0702-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0702-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">HomeBox · 每盒饵一个二维码</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0702-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0702-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0702-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0702-1-shade)" stroke="none"/><path d="M392.0 152.0 h66 l10 10 v38 h-76 Z M458.0 152.0 v10 h10" stroke-width="1.3"/><path d="M400.0 168.0 h54 M400.0 176.0 h44 M400.0 184.0 h48" stroke-width="0.5"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0702-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M256.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="78" y="151" text-anchor="middle" font-size="10.5">拍照建物品</text><text x="78" y="174" text-anchor="middle" font-size="10.5">扫码</text><text x="78" y="187" text-anchor="middle" font-size="10.5">竿托 / 饵盒背面</text><text x="200" y="94" text-anchor="middle" font-size="10.5">HomeBox</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Go + SQLite</text><text x="200" y="174" text-anchor="middle" font-size="10.5">位置树</text><text x="200" y="187" text-anchor="middle" font-size="9.5">洞洞板 / 樟木箱六格</text><text x="322" y="94" text-anchor="middle" font-size="10.5">二维码标签纸</text><text x="322" y="107" text-anchor="middle" font-size="10.5">防水合成纸</text><text x="322" y="174" text-anchor="middle" font-size="10.5">维护日志</text><text x="322" y="187" text-anchor="middle" font-size="10.5">换线 / 上油</text><text x="430" y="180" text-anchor="middle" font-size="10.5">PSK 组件清单</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">建档</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">打开页面</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">批量打印</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0702：钓具全部建档贴二维码，扫一下知道在哪格、上次换线是什么时候</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">sysadminsmedia/homebox</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>HomeBox 最早由开发者 hay-kot 做，2024 年后由 sysadminsmedia 团队接手继续维护，GitHub 上 7.1k 星，是自托管圈子里最流行的家庭物品库存系统。它解决的问题是：家里的东西越来越多，放在哪、什么时候买的、保修到几时、多久没维护，靠记忆管不住，而企业级资产管理软件又太重。</p><p>它是 Go 后端加 Vue 前端的单容器应用，默认 SQLite，一条 Docker 命令起来。核心结构是位置、标签、物品三层：位置可以无限嵌套，比如钓台、洞洞板、樟木箱第三格；物品有名字、数量、照片、购买信息、序列号、自定义字段和附件，还有维护日志记录每次保养；标签横向分类。最实用的是二维码标签生成器，按物品或位置批量出可打印的标签纸，手机扫码直接打开那件东西的页面；还有 CSV 导入导出、多用户和通知。界面通过 Weblate 翻译，有简体中文。</p><p>在 0702 里它是钓具的电子账本：位置树建成钓台、洞洞板、樟木箱六格和磁吸饵盒，三根鱼竿、每个线轮、每盒假饵各建一条，照片就用手机拍，自定义字段记线号和上次换线日期；打印二维码贴在竿托、饵盒背面和樟木箱格子里，取用时一扫就知道这盒饵上次用在哪天。PSK 生存盒的钓鱼组件也建成一个位置，兼做产品清单。要注意它是库存不是渔获日志，鱼获和天气交给专门的钓鱼 App；二维码标签要用防水的合成纸贴纸，普通纸在河边一个夏天就糊了。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/kennetek/gridfinity-rebuilt-openscad" target="_blank" rel="noopener">kennetek/gridfinity-rebuilt-openscad</a>
+          <span class="stars">★ 2.2k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">Gridfinity 模块化收纳系统的 OpenSCAD 重写版，参数化生成 42mm 网格的分格盒和底板，底部自带磁铁孔，改几个数字就出 STL</p>
+        <p class="gh-why">→ 樟木箱六格和磁吸饵盒不用手工分板：按格子内尺寸生成 Gridfinity 分格盒打印出来，底部磁铁孔正好吸在洞洞板下的铁板上</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0702-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="25" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0702-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0702-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Gridfinity · 改几个数字就出分格盒</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0702-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0702-2-shade)" stroke="none"/><path d="M162.0 152.0 h66 l10 10 v38 h-76 Z M228.0 152.0 v10 h10" stroke-width="1.3"/><path d="M170.0 168.0 h54 M170.0 176.0 h44 M170.0 184.0 h48" stroke-width="0.5"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0702-2-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0702-2-shade)" stroke="none"/><path d="M382.0 162.0 h96 v36 h-96 Z M382.0 162.0 l8 -8 h96 l-8 8 M478.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M479.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0702-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0702-2-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="78" y="151" text-anchor="middle" font-size="10.5">量箱内尺寸</text><text x="78" y="174" text-anchor="middle" font-size="10.5">参数</text><text x="78" y="187" text-anchor="middle" font-size="9.5">格数 / 高度 / 分格</text><text x="200" y="94" text-anchor="middle" font-size="9.5">OpenSCAD 生成库</text><text x="200" y="107" text-anchor="middle" font-size="10.5">42mm 网格</text><text x="200" y="174" text-anchor="middle" font-size="10.5">STL 模型</text><text x="200" y="187" text-anchor="middle" font-size="10.5">盒 + 底板</text><text x="322" y="100" text-anchor="middle" font-size="10.5">PETG 打印</text><text x="322" y="174" text-anchor="middle" font-size="10.5">樟木箱六格</text><text x="322" y="187" text-anchor="middle" font-size="10.5">+ 磁吸饵盒</text><text x="430" y="174" text-anchor="middle" font-size="10.5">洞洞板下铁板</text><text x="430" y="187" text-anchor="middle" font-size="10.5">磁吸</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">填</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">6×2 磁铁</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0702：按箱内尺寸生成分格盒和磁吸饵盒，PETG 打印，…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">kennetek/gridfinity-rebuilt-openscad</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>gridfinity-rebuilt-openscad 是开发者 kennetek 用 OpenSCAD 重写的 Gridfinity 生成库，GitHub 上 2.2k 星。Gridfinity 是 Zack Freedman 在 2022 年提出的开源模块化收纳标准：所有盒子都按 42 毫米网格和 7 毫米高度单位来做，放在同样网格的底板上就自动对齐。原始设计是 Fusion 文件，这个仓库把它变成纯代码，改几个参数就能生成自己的盒子。</p><p>用法是在 OpenSCAD 里打开 bins 文件，用定制面板填长几格、宽几格、高几单位、内部分几格、要不要取物斜面和标签槽、底部要不要磁铁孔，点一下就出模型，导出 STL 去打印；另一个文件生成底板。底部磁铁孔按 6×2 毫米磁铁设计，压进去就是磁吸底。仓库有详细参数文档，社区围绕 Gridfinity 有上万个衍生模型。没有中文资料，但参数名直白。</p><p>在 0702 里它做两件事：樟木箱内部不用薄木板分格，而是量出箱内尺寸，生成一块底板和六个不同分格的盒子，线轮盒深一点、钩和铅坠盒分小格带斜面方便手指挑；磁吸饵盒就是带磁铁孔的浅盒加透明盖，吸在洞洞板下方那块铁板上随手取放。打印用 PETG 而不是 PLA，晒过的钓台温度能让 PLA 变形。箱内尺寸未必是 42 的整数倍，空隙用半格模块或垫条补；磁铁选镀镍防锈。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/cohenadair/anglers-log" target="_blank" rel="noopener">cohenadair/anglers-log</a>
+          <span class="stars">★ 34</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">Flutter 写的开源钓鱼日志 App，iOS 和安卓都有，记渔获照片、鱼种、饵、钓点、天气潮汐，出统计报表，两千多次提交长期维护</p>
+        <p class="gh-why">→ 小黑板写满拍照后的数字版：每条鱼记鱼种、饵、天气，一查就知道哪种饵在哪个月最好用，代码开源但成品 App 直接装最省事</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0702-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="26" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0702-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0702-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Anglers' Log · 黑板渔获变成可查报表</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0702-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0702-3-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M288.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0702-3-shade)" stroke="none"/><rect x="378.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M382.0 200.0 h98 v3 h-98 Z" fill="url(#g0702-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0702-3-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M266.0 96.0 L256.0 96.0" stroke-dasharray="3 3"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">小黑板</text><text x="78" y="107" text-anchor="middle" font-size="10.5">粉笔记录 + 拍照</text><text x="78" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="78" y="231" text-anchor="middle" font-size="10.5">收竿后录入</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Anglers' Log</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Flutter App</text><text x="200" y="174" text-anchor="middle" font-size="10.5">渔获 / 出钓</text><text x="200" y="187" text-anchor="middle" font-size="10.5">本地数据库</text><text x="322" y="94" text-anchor="middle" font-size="10.5">天气 / 气压</text><text x="322" y="107" text-anchor="middle" font-size="10.5">月相自动抓</text><text x="322" y="174" text-anchor="middle" font-size="10.5">报表</text><text x="322" y="187" text-anchor="middle" font-size="9.5">鱼种 × 饵 × 月份</text><text x="430" y="180" text-anchor="middle" font-size="10.5">洞洞板饵位调整</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">录入</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">补全</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">交叉统计</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">哪盒饵最顺手</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0702：黑板写满拍照后录进 App，半年出报表，决定哪盒饵挂在最顺手的位置</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">cohenadair/anglers-log</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Anglers Log 是加拿大开发者 Cohen Adair 从 2014 年起维护的钓鱼日志 App，最初是 iOS 和安卓两套代码，2020 年后用 Flutter 重写成一套，GitHub 上 34 星，两千多次提交，应用商店里有成品。它解决的问题是：钓鱼的人都想知道自己在什么天气、什么饵、什么时段最容易上鱼，这需要长期、结构化的记录，本子上记的东西没法统计。</p><p>它的结构是本地数据库加可选云备份：核心对象是渔获，每条记录鱼种、长度重量、照片、用的饵和钓法、钓点坐标、时间，以及自动抓取的天气、气压、潮汐和月相；渔获归到一次出钓里，出钓再记同行的人。报表按鱼种、饵、钓点、月份交叉统计，画出上鱼最多的组合；鱼种、饵、钓点都是可自定义的字典。没有中文界面，但字段少，用起来不需要看字。</p><p>在 0702 里它是小黑板的数字版：黑板上用粉笔写今天几条鲫鱼、什么饵、什么天气，拍照存档后再把每条录进它，鱼种字典预先建好鲫鱼、昂刺、鲤鱼、翘嘴，饵字典建好洞洞板上那几盒假饵和常用的蚯蚓玉米；钓点就一个，河边钓台。半年后看报表，黄色软虫在九月傍晚上鱼最多这种结论就出来了，反过来决定哪盒饵挂在最顺手的位置。它的天气数据来自国外气象服务，乡下精度一般，气压和月相更可信；备份定期导出，别只存手机。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -593,7 +667,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

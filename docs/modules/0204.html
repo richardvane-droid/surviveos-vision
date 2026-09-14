@@ -183,23 +183,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥8,000～15,000（三屏、整板桌、人体工学椅）；年度电费 ¥200 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">
-        <div class="gh-head"><b>FreeCAD/FreeCAD</b><span class="stars">★ 32.2k</span></div>
-        <p class="gh-desc">免费开源的参数化 3D 建模软件，带建筑 BIM 工作台</p>
-        <p class="gh-why">→ 画木屋剖面、地堡风管走向和 PSK 零件都用它，一套软件从房子画到打印件</p>
-      </a>
-      <a class="gh" href="https://github.com/shmuelzon/home-assistant-floor-plan" target="_blank" rel="noopener">
-        <div class="gh-head"><b>shmuelzon/home-assistant-floor-plan</b><span class="stars">★ 1.1k</span></div>
-        <p class="gh-desc">Sweet Home 3D 插件，把 3D 户型直接渲染成 HomeAssistant 平面图面板</p>
-        <p class="gh-why">→ 在 Sweet Home 3D 里画完全屋，一键导出带灯光状态的 3D 平面图给 0802 大屏用</p>
-      </a>
-      <a class="gh" href="https://github.com/bambulab/BambuStudio" target="_blank" rel="noopener">
-        <div class="gh-head"><b>bambulab/BambuStudio</b><span class="stars">★ 4.6k</span></div>
-        <p class="gh-desc">拓竹官方开源切片软件，支持 BambuLab 和其他 3D 打印机</p>
-        <p class="gh-why">→ 右屏跑的就是它，PSK 内衬和 0210 的斜滑轨导轨都在这里切片</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">FreeCAD/FreeCAD</a>
+          <span class="stars">★ 32.2k</span>
+          <span class="zh ">有中文文档站</span>
+        </header>
+        <p class="gh-desc">免费开源的参数化 3D 建模软件，2026 年已到 1.1 版，带建筑 BIM、零件、装配和图纸工作台，界面和 wiki 都有中文</p>
+        <p class="gh-why">→ 画木屋剖面、地堡风管走向和 PSK 零件都用它，一套软件从房子画到打印件，图纸墙上的 A3 图也从它出</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0204-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0204-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0204-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">FreeCAD · 参数化的一棵历史树</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0204-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0204-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0204-1-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0204-1-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0204-1-shade)" stroke="none"/><path d="M282.0 234.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="234.0" rx="40.0" ry="6" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0204-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M246.2 204.0 C261.0 204.0 261.0 222.0 275.8 222.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">画图的人</text><text x="78" y="151" text-anchor="middle" font-size="10.5">草图 + 尺寸</text><text x="78" y="180" text-anchor="middle" font-size="10.5">0008 实测尺寸</text><text x="200" y="94" text-anchor="middle" font-size="10.5">FreeCAD</text><text x="200" y="107" text-anchor="middle" font-size="10.5">参数化历史树</text><text x="200" y="174" text-anchor="middle" font-size="9.5">BIM / Part Design</text><text x="200" y="187" text-anchor="middle" font-size="9.5">TechDraw 工作台</text><text x="322" y="100" text-anchor="middle" font-size="10.5">STL 打印件</text><text x="322" y="174" text-anchor="middle" font-size="10.5">A3 图纸</text><text x="322" y="187" text-anchor="middle" font-size="10.5">图纸墙</text><text x="322" y="248" text-anchor="middle" font-size="10.5">总模型</text><text x="322" y="261" text-anchor="middle" font-size="10.5">STEP / IFC</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">建模</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">导出</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">出图</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0204：中屏建总模型，打印件导 STL 给右屏切片，A3 图纸挂上西墙</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">FreeCAD/FreeCAD</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>FreeCAD 是 2002 年起步的开源参数化 3D 建模软件，32.2k 星，2024 年底发布 1.0 版后彻底甩掉了“能用但难用”的名声，2026 年已到 1.1.1。想认真画一栋房子、一根风管、一个打印件，商业 CAD 要么贵要么绑云，它免费、本地、格式开放。</p><p>它的核心是参数化建模：你画的每一步都存成一棵有历史的树，改早期一个尺寸，后面所有特征跟着重算。功能按工作台划分——Part Design 画零件，Sketcher 画带约束的草图，BIM 工作台画墙、门窗、楼板和管线，TechDraw 从模型生成带尺寸标注的二维图纸，还能导出 STEP、DXF、IFC 和 STL。1.0 版解决了困扰多年的拓扑命名问题。</p><p>生态上有大量插件，社区论坛活跃；界面有简体中文，官方 wiki 有中文翻译，B 站教程很多。</p><p>在 0204 里它是中屏的主角，也是这面图纸墙的源头：木屋和地堡先在 BIM 工作台按 0008 的实测尺寸建一个总模型，各模块的风管、滑轨、货架都作为子对象往里加；要打印的 PSK 内衬和 0210 的斜滑轨导轨用 Part Design 画完直接导 STL 给右屏的切片软件；每个模块画好后用 TechDraw 出一张 A3 图纸打印挂上墙。坑是学习曲线仍陡，先用 Part Design 画几个小零件再上 BIM，模型按区域拆文件用链接引用。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/bambulab/BambuStudio" target="_blank" rel="noopener">bambulab/BambuStudio</a>
+          <span class="stars">★ 5k</span>
+          <span class="zh ">有中文文档站</span>
+        </header>
+        <p class="gh-desc">拓竹官方开源切片软件，基于 PrusaSlicer 分支，支持 BambuLab 和其他 3D 打印机，界面和 wiki 都有中文</p>
+        <p class="gh-why">→ 右屏跑的就是它，PSK 内衬和 0210 的斜滑轨导轨都在这里切片，切完直接推给 P1S 并看打印进度</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0204-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0204-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0204-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Bambu Studio · 从 STL 到打印机的一键切片</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0204-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0204-2-shade)" stroke="none"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0204-2-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0204-2-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0204-2-shade)" stroke="none"/><path d="M288.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0204-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">FreeCAD 导出</text><text x="78" y="107" text-anchor="middle" font-size="10.5">STL / STEP</text><text x="78" y="180" text-anchor="middle" font-size="10.5">线材 / 机型预设</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Bambu Studio</text><text x="200" y="107" text-anchor="middle" font-size="10.5">切片引擎</text><text x="200" y="174" text-anchor="middle" font-size="10.5">逐层预览</text><text x="200" y="187" text-anchor="middle" font-size="10.5">时间估算</text><text x="322" y="94" text-anchor="middle" font-size="10.5">拓竹 P1S</text><text x="322" y="107" text-anchor="middle" font-size="10.5">局域网模式</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA 拓竹集成</text><text x="322" y="187" text-anchor="middle" font-size="10.5">左屏看进度</text><text x="430" y="138" text-anchor="middle" font-size="10.5">摸样件的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">导入</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">G-code</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">状态</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">样件</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0204：右屏切片，局域网直推 P1S，进度回到左屏 HA</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">bambulab/BambuStudio</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Bambu Studio 是深圳拓竹科技的官方切片软件，5k 星，2022 年随 X1 打印机一起发布，代码基于 PrusaSlicer 分支，底子是开源社区打磨十几年的切片引擎。它把 3D 模型变成打印机能执行的 G-code，并把多色、联网打印做成一键。</p><p>工作流程是：导入 STL 或 STEP，放到打印床上，选打印机、材料和层高质量预设，点切片，软件把模型切成层、算出路径、生成支撑和填充，预览每一层的走线和时间估算；然后通过局域网或云直接发给拓竹打印机，软件里能看摄像头画面和进度。特色是预设极细：每种官方线材都有调好的参数，多色靠 AMS 自动换料。也能给非拓竹机器出 G-code。</p><p>代码持续更新，界面有简体中文，官方 wiki 有中文站，B 站教程海量；社区还有更开放的分支 OrcaSlicer。</p><p>在 0204 里它常驻右屏：FreeCAD 导出的 STL 拖进来，PSK 内衬用 PETG 预设、0210 的斜滑轨导轨用 PLA 高强度预设切片，发给放在储藏室的 P1S，打印状态通过 HA 的拓竹集成显示在左屏。坑是它默认走拓竹云，隐私和断网考虑可以在打印机上切到局域网模式，软件里改成 LAN 直连；工作台南端那 30cm 就是放刚打出来的样件的。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/shmuelzon/home-assistant-floor-plan" target="_blank" rel="noopener">shmuelzon/home-assistant-floor-plan</a>
+          <span class="stars">★ 1.1k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">Sweet Home 3D 插件，把 3D 户型按每盏灯分别渲染，再生成 HomeAssistant 的 picture-elements 平面图面板</p>
+        <p class="gh-why">→ 在 Sweet Home 3D 里画完全屋，一键导出带灯光状态的 3D 平面图给 0802 大屏和左屏用，不用手工抠图</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0204-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0204-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0204-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">HA Floor Plan · 每盏灯渲染一张图再叠起来</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0204-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0204-3-shade)" stroke="none"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0204-3-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0204-3-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0204-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0204-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">Sweet Home 3D</text><text x="78" y="107" text-anchor="middle" font-size="9.5">户型 + 家具 + 灯</text><text x="78" y="174" text-anchor="middle" font-size="10.5">灯与 HA 实体</text><text x="78" y="187" text-anchor="middle" font-size="10.5">对应表</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Floor Plan 插件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">逐灯渲染</text><text x="200" y="174" text-anchor="middle" font-size="9.5">picture-elements</text><text x="200" y="187" text-anchor="middle" font-size="10.5">YAML + 图片</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 仪表盘</text><text x="322" y="107" text-anchor="middle" font-size="10.5">按状态叠图</text><text x="322" y="180" text-anchor="middle" font-size="9.5">0802 大屏 / 左屏</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">模型</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">导入</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">显示</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0204：画全屋，插件出会亮灯的平面图给左屏和 0802</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">shmuelzon/home-assistant-floor-plan</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>home-assistant-floor-plan 是以色列开发者 shmuelzon 写的 Sweet Home 3D 插件，1.1k 星。它解决 HA 玩家的老痛点：都想要一张“会亮灯的 3D 户型图”当仪表盘，但传统做法要给每盏灯单独渲染，再手写几十行 YAML 叠图，一改户型就全部重来。</p><p>它的原理是把这件事自动化：你在免费开源的 Sweet Home 3D 里画好房子、放好家具和灯，把每盏灯和 HA 的实体名对上；插件就逐一渲染“只开这盏灯”的图，加上全暗的底图，最后生成一份 YAML，用 CSS 混合、房间遮罩或整图替换三种模式之一，让 HA 按实体状态把对应的亮灯图叠上去。传感器、开关也能放上去变成可点图标。渲染用 Sweet Home 3D 自带的光追引擎。</p><p>项目持续更新，文档英文，但 Sweet Home 3D 本身有中文界面。</p><p>在 0204 里它是“图纸到大屏”的最后一步：木屋和地堡先在 Sweet Home 3D 里按 0008 尺寸画一遍（比 FreeCAD 快得多，只求像不求准），把 0201 南光灯、0202 灯箱、0207 电视、0209 帐篷小灯都对上 HA 实体，导出后放进左屏的 HA 仪表盘和 0802 大屏。坑是灯多了渲染组合会爆炸，用 CSS 混合模式并把同场景的灯合并成一个实体；地堡无窗，环境光要调到零。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -556,7 +625,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

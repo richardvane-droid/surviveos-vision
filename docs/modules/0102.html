@@ -265,18 +265,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,200～2,500（松木拼板和灯带）；年度电费 ¥40 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/Aircoookie/WLED" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Aircoookie/WLED</b><span class="stars">★ 18.6k</span></div>
-        <p class="gh-desc">ESP32 控制灯带的开源固件，手机网页调色调亮度，可接 HomeAssistant</p>
-        <p class="gh-why">→ 三排托架上方的 2700K 灯带用它统一控制，傍晚自动开、深夜自动关</p>
-      </a>
-      <a class="gh" href="https://github.com/benjaminjonard/koillection" target="_blank" rel="noopener">
-        <div class="gh-head"><b>benjaminjonard/koillection</b><span class="stars">★ 1.3k</span></div>
-        <p class="gh-desc">自托管的个人收藏管理系统，任意物件都能建档、配图、写字段</p>
-        <p class="gh-why">→ 给 20 只历代生存盒建电子档案，型号年份去过哪座山，标签内容从这里出</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/wled/WLED" target="_blank" rel="noopener">wled/WLED</a>
+          <span class="stars">★ 18.7k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">ESP32 控制可寻址灯带的开源固件，手机网页调色调亮度、存预设、本地定时，可接 HomeAssistant</p>
+        <p class="gh-why">→ 九宫格每排上沿那条 2700K 藏光灯带就刷它，一块 ESP32 管三段，预设与定时本地跑，HA 只负责按太阳高度切</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0102-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0102-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0102-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">WLED · ESP32 上自带网页的灯带控制器</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0102-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M64 114.0 h28 M70 114.0 v6 h16 v-6" stroke-width="1"/><path d="M29.0 75.0 h98 v4 h-98 Z" fill="url(#g0102-1-shade)" stroke="none"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0102-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0102-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0102-1-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0102-1-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0102-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机网页</text><text x="78" y="107" text-anchor="middle" font-size="10.5">调色 / 存预设</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA sun.sun</text><text x="78" y="187" text-anchor="middle" font-size="10.5">傍晚触发</text><text x="200" y="94" text-anchor="middle" font-size="10.5">WLED 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">ESP32</text><text x="200" y="174" text-anchor="middle" font-size="10.5">预设 / 定时器</text><text x="200" y="187" text-anchor="middle" font-size="10.5">本地保存</text><text x="322" y="94" text-anchor="middle" font-size="9.5">3 段 2700K 灯带</text><text x="322" y="107" text-anchor="middle" font-size="10.5">九宫格上沿</text><text x="322" y="174" text-anchor="middle" font-size="10.5">九宫格里的</text><text x="322" y="187" text-anchor="middle" font-size="10.5">七代盒子</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">网页</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">JSON API</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">GPIO 数据</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">斜打阴影</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0102：三段藏光灯带分三个 segment，HA 按太阳高度切预设</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">wled/WLED</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>WLED 是德国开发者 Aircoookie 在 2016 年发起的灯带固件，现在由 wled 组织维护，18.6k 星，2026 年 5 月发布了 v16，是 ESP32 控制可寻址 LED 的事实标准。它让一段 WS2812 灯带不写代码就能在手机上调色、调亮度、存预设、定时开关，还能被智能家居当成一盏灯。</p><p>工作原理是把 ESP32 变成一个自带网页的灯控器：固件刷进去后设备开热点，填好 Wi-Fi 用浏览器打开它的地址，页面上是调色盘、一百八十多种特效、分段控制和预设槽位。灯带数据从 GPIO 直接驱动，支持 WS281x、SK6812、APA102，也支持 PWM 白光和双色温灯带，一块板可以分多个段各自控制。对外提供 JSON API、MQTT 和 DDP、E1.31 实时协议，Home Assistant 有官方集成，插电即自动发现。</p><p>生态极大，成品控制器多围绕它转。官方文档只有英文，但 B 站和小红书上的教程非常多。</p><p>放进 0102，一块 ESP32 接三段 2700K 暖白灯带，藏在九宫格每排格子上沿，斜向下打；三段分别设成三个 segment，预设一是傍晚 40% 暖光，预设二是夜里 15%，本地定时器兜底；HA 用 sun.sun 的高度角触发切预设，同时单独控三只小射灯。坑在灯带要选高显色的暖白型号而不是 RGB 拼白，否则老松木会发绿。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/benjaminjonard/koillection" target="_blank" rel="noopener">benjaminjonard/koillection</a>
+          <span class="stars">★ 1.3k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">自托管的个人收藏管理系统，任意物件都能建档、配图、写自定义字段，按收藏、条目、标签三层组织</p>
+        <p class="gh-why">→ 七代 PSK 盒子的档案库：每只盒子一条记录，字段记型号、年份、去过哪座山、格位号，导出来直接印牛皮纸标签</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0102-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0102-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0102-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Koillection · 每只盒子一条档案，标签从字段导出</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0102-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0102-2-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0102-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0102-2-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0102-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">新一代盒子</text><text x="78" y="107" text-anchor="middle" font-size="10.5">拍照 + 字段</text><text x="78" y="174" text-anchor="middle" font-size="10.5">字段模板</text><text x="78" y="187" text-anchor="middle" font-size="9.5">型号 / 年份 / 山</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Koillection</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Symfony 网页</text><text x="200" y="174" text-anchor="middle" font-size="10.5">PostgreSQL</text><text x="200" y="187" text-anchor="middle" font-size="10.5">条目 + 图片</text><text x="322" y="94" text-anchor="middle" font-size="10.5">6×9 牛皮纸标签</text><text x="322" y="107" text-anchor="middle" font-size="10.5">模板打印</text><text x="322" y="174" text-anchor="middle" font-size="10.5">公开分享页</text><text x="322" y="187" text-anchor="middle" font-size="10.5">（可选）</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">录入</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">套模板</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">REST 导出</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">挂到格下</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0102：PSK 收藏建七条，字段导出印标签，格位号跟着墙走</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">benjaminjonard/koillection</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Koillection 是法国开发者 Benjamin Jonard 从 2017 年起维护的自托管收藏管理系统，1.3k 星，2026 年仍在发版，专为收藏党而不是仓库管理设计：书、邮票、模型、任何你想摆出来的东西都能建档。它解决的问题是：藏品越攒越多，哪只是哪年做的、去过哪里、现在摆在哪个格子，靠脑子记不住。</p><p>它是 Symfony 写的网页应用，Docker 起一个容器加 PostgreSQL 就能跑。数据分三层：收藏、条目、数据点，每个条目可以挂多张图片、任意数量的自定义字段，字段类型包括文本、日期、数字、评分、链接、文件，还能定义模板让同一收藏里的条目字段一致。自带标签、愿望清单、相册和统计页，可以做公开分享页给别人看。</p><p>界面有简体中文，通过 Crowdin 社区翻译已经百分之百，README 里直接列出，装完选语言就是中文；文档是英文。API 是标准 REST，能用脚本批量导出。</p><p>放进 0102，建一个 PSK 收藏，用模板定好字段：型号、年份、盒身材质、去过哪座山、格位号、在墙上还是在抽屉里。每次做出新一代盒子就拍照录一条；牛皮纸标签的文字从条目字段导出，套一个模板打印；右下角那两个空位也各建一条，字段写待定，催自己进度。注意图片上传要在 Docker 里设好持久卷，否则更新容器时照片会丢。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a>
+          <span class="stars">★ 88k</span>
+          <span class="zh ">有中文文档站</span>
+        </header>
+        <p class="gh-desc">本地优先、隐私优先的开源家庭自动化中枢，几千个集成，自动化引擎、仪表盘和手机 App 一体</p>
+        <p class="gh-why">→ 九宫格灯带和三只关键作品射灯的傍晚亮灯调度全在它里做：sun.sun 高度角触发，切 WLED 预设，再顺手拉低射灯</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0102-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="8" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0102-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0102-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Home Assistant · 本地事件总线上的调度大脑</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0102-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0102-3-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0102-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0102-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0102-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">sun.sun</text><text x="78" y="149" text-anchor="middle" font-size="10.5">太阳高度角</text><text x="78" y="216" text-anchor="middle" font-size="10.5">木屋照度</text><text x="78" y="229" text-anchor="middle" font-size="10.5">ESPHome</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Home Assistant</text><text x="200" y="107" text-anchor="middle" font-size="10.5">自动化引擎</text><text x="200" y="180" text-anchor="middle" font-size="10.5">本地历史库</text><text x="322" y="94" text-anchor="middle" font-size="10.5">WLED 灯带</text><text x="322" y="107" text-anchor="middle" font-size="10.5">切傍晚预设</text><text x="322" y="174" text-anchor="middle" font-size="10.5">3 只作品射灯</text><text x="322" y="187" text-anchor="middle" font-size="10.5">60%</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">触发</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">条件</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">WLED 集成</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">调光</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">傍晚亮起</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0102：太阳高度角 &lt; 3° 且照度低 → 灯带切预设、三只射灯 60%</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">home-assistant/core</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Home Assistant 是 Paulus Schoutsen 在 2013 年发起、如今由 Nabu Casa 与 Open Home 基金会维护的开源家庭自动化中枢，88k 星，是 GitHub 上最活跃的项目之一，每月发一个大版本。它解决的问题是：家里各种品牌的灯、传感器、插座各自为政，需要一个本地跑、不依赖云、能把它们串起来写规则的大脑。</p><p>架构是 Python 写的事件总线：每个集成把设备抽象成实体，状态变化都变成事件进总线，自动化引擎监听触发条件、判断条件、执行动作，历史数据存在本地数据库。它有两千多个官方集成，ESPHome、WLED、MQTT、Zigbee、Matter 都原生支持；仪表盘用 Lovelace 卡片拼，手机 App 能推送和定位，还带 Assist 本地语音助手。</p><p>社区规模全球第一，中文文档站 home-assistant.io 有官方翻译，界面本身也有简体中文，B 站教程数不胜数，国内玩家常和小米、华为设备一起用。</p><p>放进 0102，它负责调度而不是驱动：一条自动化以 sun.sun 的高度角低于 3 度为触发，动作是调用 WLED 集成把灯带切到傍晚预设，再把第一版、第四版、第七版那三只小射灯调到 60%；晚上十一点另一条自动化全部关掉；周末下午两点如果有人在木屋，再亮一次给拍照用。坑在太阳高度角在冬天下降得早，条件里加一个当前照度判断更稳。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -740,7 +814,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

@@ -198,18 +198,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,500～3,000（挂板、格子柜、收纳箱）；装备本身另算</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/galenmaly/lighterpack" target="_blank" rel="noopener">
-        <div class="gh-head"><b>galenmaly/lighterpack</b><span class="stars">★ 800</span></div>
-        <p class="gh-desc">户外圈最常用的装备清单网站 LighterPack 的源码，可自部署，按重量分类统计</p>
-        <p class="gh-why">→ 把墙上那张手写出发清单搬进去，日徒步、两日露营、钓鱼三条线各存一份，背包重量自动算</p>
-      </a>
-      <a class="gh" href="https://github.com/sysadminsmedia/homebox" target="_blank" rel="noopener">
-        <div class="gh-head"><b>sysadminsmedia/homebox</b><span class="stars">★ 7.1k</span></div>
-        <p class="gh-desc">面向家庭用户的自托管物品库存系统，支持位置、标签、二维码标签打印</p>
-        <p class="gh-why">→ 每个木格子和收纳箱都是一个位置，贴上它打印的二维码，扫一下就知道气罐还剩几罐</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
+          <span class="stars">★ 11.7k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+        </header>
+        <p class="gh-desc">用 YAML 配置文件给 ESP32 / ESP8266 生成固件的开源系统，传感器、继电器、屏幕原生接入 Home Assistant</p>
+        <p class="gh-why">→ 装备区那只温湿度传感器加除湿盒插座就是一段二十行的 YAML，湿度超 70% 推送、超 75% 自动开除湿，不用写一行 C</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0302-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0302-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0302-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ESPHome · 写 YAML 就能出固件</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0302-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0302-1-shade)" stroke="none"/><path d="M152.0 162.0 h96 v36 h-96 Z M152.0 162.0 l8 -8 h96 l-8 8 M248.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M249.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0302-1-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0302-1-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0302-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0302-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">YAML 配置</text><text x="78" y="107" text-anchor="middle" font-size="10.5">板子 + 传感器</text><text x="78" y="216" text-anchor="middle" font-size="10.5">SHT30 温湿度</text><text x="78" y="229" text-anchor="middle" font-size="10.5">格子柜内</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ESPHome</text><text x="200" y="107" text-anchor="middle" font-size="10.5">编译 + OTA</text><text x="200" y="174" text-anchor="middle" font-size="10.5">ESP32-C3</text><text x="200" y="187" text-anchor="middle" font-size="10.5">跑固件</text><text x="322" y="94" text-anchor="middle" font-size="9.5">Home Assistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">阈值自动化</text><text x="322" y="180" text-anchor="middle" font-size="10.5">除湿盒插座</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">声明</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">刷写</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">I2C</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">原生 API</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">超 75%</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">超 70% 推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0302：SHT30 → ESP32 → HA 两级阈值 → 推送 / 开除湿盒插座</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">esphome/esphome</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ESPHome 是 Otto Winter 在 2018 年创立、现在由 Home Assistant 背后的 Nabu Casa 维护的开源固件生成系统，11.7k 星，几乎每两周发一版。它解决的问题是：想把几十块钱的 ESP32 变成家庭自动化平台看得见的传感器或开关，以前要写 Arduino、MQTT、OTA，现在只要写一份 YAML。</p><p>YAML 里声明用哪块板子、接了哪个传感器、哪个引脚、多久上报，ESPHome 就把它翻译成 C++、编译成固件，通过 USB 或 Wi-Fi 刷进板子。板子跑起来后用原生 API 和 HA 直连，HA 里自动出现实体，也能走 MQTT。它内置三百多种组件：温湿度、气压、颗粒物、CO2、电流互感器、继电器、步进电机、墨水屏、蓝牙代理，还能在 YAML 里写小段 lambda 做本地逻辑，断网照跑。</p><p>它和 HA 是一家人，HA 加载项里点一下就装好编辑器和编译环境；官方文档只有英文，但国内教程、B 站视频和现成 YAML 极多。</p><p>在 0302 里它承担“装备湿度看护”：一块 ESP32-C3 加 SHT30 挂在格子柜内侧，YAML 里加 sht3xd 组件每 60 秒上报，HA 自动化做两级阈值——湿度过 70% 推送手机提醒，过 75% 打开除湿盒的智能插座，回落到 60% 再关，带迟滞避免反复开关。注意斜顶下夏天闷热，板子别贴着瓦面装。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/sysadminsmedia/homebox" target="_blank" rel="noopener">sysadminsmedia/homebox</a>
+          <span class="stars">★ 7.1k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">面向家庭用户的自托管物品库存系统，支持位置树、标签、附件、维护记录和二维码标签打印</p>
+        <p class="gh-why">→ 每个木格子和收纳箱都是一个位置，贴上它打印的二维码，扫一下就知道气罐还剩几罐、头灯上次换电池是什么时候</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0302-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0302-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0302-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">HomeBox · 每个格子一个二维码</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0302-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0302-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0302-2-shade)" stroke="none"/><path d="M288.0 266 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0302-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M322.0 204.0 L322.0 222.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">回来整备</text><text x="78" y="180" text-anchor="middle" font-size="10.5">手机扫码</text><text x="200" y="94" text-anchor="middle" font-size="10.5">HomeBox</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Go + SQLite</text><text x="200" y="174" text-anchor="middle" font-size="10.5">位置树</text><text x="200" y="187" text-anchor="middle" font-size="10.5">格子 / 箱</text><text x="322" y="94" text-anchor="middle" font-size="10.5">二维码贴纸</text><text x="322" y="107" text-anchor="middle" font-size="10.5">PDF</text><text x="322" y="174" text-anchor="middle" font-size="10.5">箱内清单</text><text x="322" y="187" text-anchor="middle" font-size="10.5">气罐剩 3 罐</text><text x="322" y="248" text-anchor="middle" font-size="9.5">LighterPack</text><text x="322" y="261" text-anchor="middle" font-size="10.5">出发清单</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">录入 / 扣数</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">扫码</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">打印</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">显示</text><text x="322.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">对照</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0302：格子建位置，扫码看剩几罐，和 LighterPack 出发清单对照</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">sysadminsmedia/homebox</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>HomeBox 最初由 Hayden 在 2022 年用 Go 和 Nuxt 写成，2024 年作者停更后由 sysadminsmedia 社区接手维护，现在 7.1k 星，是自托管家庭物品库存里最轻量、最好上手的一个。它解决的问题很朴素：家里的东西在哪、有几个、什么时候买的、保修到哪天，而不是企业 ERP。</p><p>它的结构是三层：位置（Location）可以嵌套，比如阁楼间 → 装备区 → 格子柜第三格；物品（Item）挂在位置下，记数量、购买价、序列号、图片、说明书附件，还能写维护日志；标签（Label）横向分类，比如露营、钓鱼、消耗品。每个位置和物品都有一个二维码，网页里可以按 Avery 标签纸批量生成 PDF 贴纸，手机扫码直接跳到那一页。后端是单个二进制加 SQLite，一条 Docker 命令起服务。</p><p>它有官方镜像、HA 社区加载项、Weblate 维护的多语言界面，简体中文翻译完整；文档是英文，但界面全中文，国内 NAS 玩家用得不少。</p><p>在 0302 里它是“出发清单核对器”的库存底座：格子柜每一格、带盖收纳箱各建一个位置，气罐、速食按数量记，头灯电池、炉头清洗写进维护记录；标签打出来贴格子口。LighterPack 负责“带什么、多重”，HomeBox 负责“在哪、剩几个”。注意它没有“借出”状态，装备拿走要靠 0401 的去向卡或 HA 的 NFC 事件补。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/galenmaly/lighterpack" target="_blank" rel="noopener">galenmaly/lighterpack</a>
+          <span class="stars">★ 800</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">户外圈最常用的装备清单网站 LighterPack 的源码，可自部署，按分类算总重和背负重量</p>
+        <p class="gh-why">→ 把墙上那张手写出发清单搬进去，日徒步、两日露营、钓鱼三条线各存一份，背包重量自动算，出门前一格格核对</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0302-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0302-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0302-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">LighterPack · 三条线各一张装备表</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0302-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0302-3-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0302-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0302-3-shade)" stroke="none"/><path d="M288.0 266 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0302-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M78.0 148.0 L78.0 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M246.2 204.0 C261.0 204.0 261.0 222.0 275.8 222.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">录装备与重量</text><text x="78" y="180" text-anchor="middle" font-size="10.5">厨房秤</text><text x="200" y="94" text-anchor="middle" font-size="9.5">LighterPack</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Node + Mongo</text><text x="200" y="174" text-anchor="middle" font-size="10.5">日徒步 / 露营</text><text x="200" y="187" text-anchor="middle" font-size="10.5">/ 钓鱼清单</text><text x="322" y="94" text-anchor="middle" font-size="10.5">总重饼图</text><text x="322" y="107" text-anchor="middle" font-size="10.5">分享链接</text><text x="322" y="174" text-anchor="middle" font-size="10.5">格子柜</text><text x="322" y="187" text-anchor="middle" font-size="10.5">逐格核对</text><text x="322" y="248" text-anchor="middle" font-size="10.5">HomeBox</text><text x="322" y="261" text-anchor="middle" font-size="10.5">库存数量</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">录入</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">称重</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">实时算</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">出门前</text><text x="261.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">同名对照</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0302：三条线各一份清单，出门前对格子打钩，回来称重校正</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">galenmaly/lighterpack</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>LighterPack 是美国开发者 Galen Maly 从 2013 年起做的装备清单网站，全世界轻量化徒步玩家都用它晒装备表，源码开源，800 星，Node.js 加 MongoDB，可以自己部署一份不依赖官网。它解决的问题是：一次出行到底带了什么、多重、哪些穿在身上、哪些是消耗品，以及怎么把清单变成一眼看懂的图。</p><p>它的数据模型是“清单 → 分类 → 物品”：一份清单叫一个 list，里面按睡眠、炊事、穿着、电子等分类，每件物品记名称、重量、数量、价格，可以标记为穿戴或消耗品。系统实时算出基础重量、穿戴重量、消耗品重量和总重，右侧画一个饼图，导出成分享链接或 CSV。同一件物品可以拖进多份清单，所以“日徒步”“两日露营”“钓鱼”三条线各存一份、共用一个装备库很自然。</p><p>它没有中文界面，但物品名随便写中文，国内户外论坛也常见用它晒表；更新不频繁，功能早已够用。</p><p>在 0302 里它接管墙上的“出发清单”：三条线各一份 list，出门前打开手机对着格子逐项打钩，空格子就是没带的东西；每次回来称一次实际重量校正数据。它只管“带什么”，库存数量交给 HomeBox；两边都用同一套物品名，扫码能对得上。注意自部署要跑 MongoDB，放在 0801 的小主机上就行。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -528,7 +602,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

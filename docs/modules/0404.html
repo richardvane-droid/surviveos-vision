@@ -199,23 +199,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥8,000～15,000（台锯 + 旋风集尘器 + 台面，楼板承重核算前只选型不下单）；年度耗材与电费 ¥500 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/FoxDotBuild/DustCollection" target="_blank" rel="noopener">
-        <div class="gh-head"><b>FoxDotBuild/DustCollection</b><span class="stars">★ 5</span></div>
-        <p class="gh-desc">木工房自动集尘方案：ESP32 控制集尘器继电器，电流传感器检测机器开机并联动舵机阀门</p>
-        <p class="gh-why">→ 哪台机器开机就开哪路阀门的思路和它一样，电流检测加舵机球阀的代码可以直接参考</p>
-      </a>
-      <a class="gh" href="https://github.com/MaslowCNC/Maslow_4" target="_blank" rel="noopener">
-        <div class="gh-head"><b>MaslowCNC/Maslow_4</b><span class="stars">★ 94</span></div>
-        <p class="gh-desc">Maslow 4 开源大幅面 CNC 雕刻机固件，ESP32 跑 FluidNC，皮带牵引切整张板</p>
-        <p class="gh-why">→ 以后想在木工间加一台能切整张多层板的 CNC，这是最省空间也最便宜的开源方案</p>
-      </a>
-      <a class="gh" href="https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension" target="_blank" rel="noopener">
-        <div class="gh-head"><b>lairdubois/lairdubois-opencutlist-sketchup-extension</b><span class="stars">★ 583</span></div>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
+          <span class="stars">★ 11.7k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+        </header>
+        <p class="gh-desc">用 YAML 配置文件给 ESP32 生成固件的开源系统，电流互感器、舵机、继电器、颗粒物传感器组件全是现成的</p>
+        <p class="gh-why">→ 哪台机器开机就开哪路阀门、粉尘超标调新风，都是一块 ESP32 上的 ct_clamp + servo + pmsx003 三个组件；本模块唯一的通用平台</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0404-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0404-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0404-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ESPHome · 电流一跳，阀门就开</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0404-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="250" r="22.0" stroke-width="1.4"/><circle cx="78" cy="250" r="17.0" stroke-width="0.5"/><circle cx="78" cy="250" r="3" stroke-width="1"/><path d="M72 224.0 q6 -6 12 0 M68 220.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0404-1-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0404-1-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0404-1-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0404-1-shade)" stroke="none"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0404-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0404-1-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0"/><path d="M124.2 222.0 C139.0 222.0 139.0 204.0 153.8 204.0"/><path d="M200.0 222.0 L200.0 204.0" stroke-dasharray="3 3"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M246.2 204.0 C261.0 204.0 261.0 222.0 275.8 222.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="9.5">SCT-013 互感器 ×3</text><text x="78" y="254" text-anchor="middle" font-size="10.5">PM 传感器</text><text x="200" y="174" text-anchor="middle" font-size="9.5">ESP32 + ESPHome</text><text x="200" y="187" text-anchor="middle" font-size="9.5">ct_clamp / servo</text><text x="200" y="248" text-anchor="middle" font-size="10.5">延时 15 秒停</text><text x="200" y="261" text-anchor="middle" font-size="10.5">（本地脚本）</text><text x="322" y="94" text-anchor="middle" font-size="10.5">舵机阀门 ×3</text><text x="322" y="107" text-anchor="middle" font-size="10.5">+ 集尘器接触器</text><text x="322" y="174" text-anchor="middle" font-size="10.5">空气过滤箱</text><text x="322" y="187" text-anchor="middle" font-size="10.5">fan 调速</text><text x="322" y="248" text-anchor="middle" font-size="10.5">0802 中枢屏</text><text x="322" y="261" text-anchor="middle" font-size="10.5">PM10 数值</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">超阈值 = 开机</text><text x="139.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">UART</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">开对应路</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">超标高速</text><text x="261.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">原生 API</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0404：互感器判开机 → 开对应阀门 + 集尘器；PM10 → 新风调速 + 中枢屏</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">esphome/esphome</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ESPHome 是 Home Assistant 官方团队维护的 ESP32 固件生成系统，11.7k 星，写一份 YAML 就能编译出会读传感器、控继电器、驱动舵机并直连 Home Assistant 的固件。木工间的三件联动——开机开集尘、哪台开机开哪路阀门、粉尘超标调新风——都是几个输入触发几个输出，正是它擅长的事。</p><p>YAML 里声明板子、Wi‑Fi 和组件，编译后 USB 刷一次，以后 OTA 更新；设备通过原生 API 和 HA 直连，每个组件自动变成实体，本地逻辑在 Wi‑Fi 断掉时也照常执行。木工间用得上的组件都是现成的：ct_clamp 配 SCT-013 电流互感器读每台机器的电流，servo 组件驱动阀门舵机，switch 接集尘器的继电器或接触器，pmsx003 读 PMS5003 的 PM2.5 和 PM10，fan 组件调新风机转速。中文社区活跃，B 站教程多。</p><p>在 0404 里，一块 ESP32 放在东北角集尘器旁的配电箱里：台锯、带锯、砂光机的电源线各穿一只互感器，电流超过阈值即判定开机，打开对应舵机阀门并启动集尘器，全部关机后延时 15 秒再停；天花的 PMS5003 读数进 HA，超过阈值把过滤箱调到高速，并显示到 0802 中枢屏。坑是舵机阀门要用金属阀体和大扭矩舵机；互感器接 ADC 要加偏置电阻和采样电容，否则读数乱跳。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension" target="_blank" rel="noopener">lairdubois/lairdubois-opencutlist-sketchup-extension</a>
+          <span class="stars">★ 583</span>
+          <span class="zh ">界面有中文</span>
+        </header>
         <p class="gh-desc">SketchUp 木工插件，从 3D 模型自动生成零件清单、下料图、标签和成本估算</p>
         <p class="gh-why">→ 画完木盒模型直接出切割清单和板材排料图，切之前就知道要多少料和怎么切</p>
-      </a>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0404-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0404-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0404-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OpenCutList · 模型一键变下料图</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0404-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0404-2-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0404-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0404-2-shade)" stroke="none"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0404-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">SketchUp 模型</text><text x="78" y="107" text-anchor="middle" font-size="10.5">（0204 设计台）</text><text x="78" y="174" text-anchor="middle" font-size="9.5">材质 = 板材 / 方料</text><text x="78" y="187" text-anchor="middle" font-size="10.5">组件化</text><text x="200" y="94" text-anchor="middle" font-size="9.5">OpenCutList</text><text x="200" y="107" text-anchor="middle" font-size="10.5">遍历组件取包围盒</text><text x="200" y="174" text-anchor="middle" font-size="10.5">装箱排料</text><text x="200" y="187" text-anchor="middle" font-size="10.5">锯缝 + 纹理方向</text><text x="322" y="94" text-anchor="middle" font-size="10.5">零件清单 + 下料图</text><text x="322" y="107" text-anchor="middle" font-size="10.5">PDF 贴台锯旁</text><text x="322" y="174" text-anchor="middle" font-size="10.5">零件标签</text><text x="322" y="187" text-anchor="middle" font-size="10.5">贴半成品</text><text x="430" y="138" text-anchor="middle" font-size="10.5">推台锯的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">归类</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">尺寸</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">排料</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">切一块划一块</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0404：画好模型 → 排料图 → 按图切</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a">lairdubois/lairdubois-opencutlist-sketchup-extension</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>OpenCutList 是法国木工社区网站 Lairdubois 开发的 SketchUp 免费插件，583 星，在 SketchUp 扩展仓库里是木工类下载量最高的插件之一。它解决的问题是：在 SketchUp 里画好一件家具后，怎么自动知道要买多少板、每块零件多大、在一整张板上怎么排才省料。</p><p>它的原理是遍历模型里的组件，按材质自动归类成板材、方料、五金三类，读取每个组件的包围盒得到长宽厚，合并同尺寸零件生成零件清单；接着用装箱算法在设定的标准板材尺寸上做排料，考虑锯缝宽度和纹理方向，输出下料图；还能打印零件标签、估算成本和重量、生成爆炸图，把结果导出成 PDF 或表格。界面支持十三种语言且可以独立于 SketchUp 语言切换，有简体中文；社区有中文教程，项目仍在持续更新。SketchUp 免费网页版不能装插件，需要桌面版。</p><p>在 0404 里，它是切木头之前的最后一步：木盒、货架、A 字架先在 0204 设计工作台的 SketchUp 里画好，跑一遍 OpenCutList 得到零件清单和 18 毫米桦木多层板的排料图，打印出来贴在台锯旁，切一块划一块；零件标签也顺手打出来贴在半成品上，和 0402 的半成品暂存区对上。坑是模型里的每块板必须做成组件而不是散面，材质名要统一，否则清单会把同一种板算成两种。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/FoxDotBuild/DustCollection" target="_blank" rel="noopener">FoxDotBuild/DustCollection</a>
+          <span class="stars">★ 5</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">木工房自动集尘方案：ESP32 控制集尘器继电器，电流传感器检测机器开机并联动舵机阀门</p>
+        <p class="gh-why">→ 只有 5 星，但 GitHub 上没有更知名的“机器开机 → 开对应阀门 → 启动集尘器”完整方案，电流检测加舵机球阀的思路和代码可以直接参考</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0404-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0404-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0404-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">DustCollection · 开机即开阀的三块板</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0404-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0404-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0404-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0404-3-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0404-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0404-3-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0404-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0404-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M200.0 204.0 L200.0 222.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">霍尔电流传感器</text><text x="78" y="149" text-anchor="middle" font-size="10.5">贴机器电源线</text><text x="78" y="174" text-anchor="middle" font-size="10.5">手持遥控</text><text x="78" y="187" text-anchor="middle" font-size="10.5">（ESP8266）</text><text x="200" y="94" text-anchor="middle" font-size="9.5">传感器端 ESP8266</text><text x="200" y="107" text-anchor="middle" font-size="10.5">判开机 + 拉舵机</text><text x="200" y="174" text-anchor="middle" font-size="9.5">继电器主板 ESP32</text><text x="200" y="187" text-anchor="middle" font-size="9.5">Wi‑Fi 热点 + Telnet</text><text x="322" y="94" text-anchor="middle" font-size="10.5">舵机阀门</text><text x="322" y="107" text-anchor="middle" font-size="10.5">只开这一路</text><text x="322" y="174" text-anchor="middle" font-size="10.5">集尘器接触器</text><text x="322" y="187" text-anchor="middle" font-size="10.5">延时后关</text><text x="200" y="248" text-anchor="middle" font-size="10.5">0404：合并成一块</text><text x="200" y="261" text-anchor="middle" font-size="9.5">ESPHome ESP32</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">通电</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">舵机</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">开机命令</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">手动</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">继电器</text><text x="200.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">改写</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0404：照搬“开机 → 开阀 → 开集尘”思路，改成一块 ESPHome ESP32</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">FoxDotBuild/DustCollection</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>DustCollection 是 FoxDotBuild 发布的木工房自动集尘小项目，只有 5 星，但它把这件事需要的三个部件——检测机器开机、打开对应阀门、启动集尘器——用最少的零件和几百行 Arduino 代码完整做了一遍，GitHub 上没有更知名的专门项目，所以它是最直接的现成参考。</p><p>它的架构分三块：一块 ESP32 做继电器主板，开一个 Wi‑Fi 热点，接收 Telnet 命令控制集尘器的接触器；若干块 ESP8266 做传感器端，每块贴在一台机器的电源线上，用霍尔电流传感器检测机器是否通电，一旦通电就向主板发开机命令并驱动一只舵机拉开自己这路的阀门，机器关闭后延时几秒再发关机命令，让管道里的木屑先吸干净；还有一块 ESP8266 做手持遥控，两个按钮手动开关集尘器。代码是 Arduino 风格，接线图和舵机阀门支架都在仓库里，没有中文资料。</p><p>在 0404 里，思路照搬，实现换成 ESPHome：主板和传感器端合并成一块 ESP32 放在集尘器旁的配电箱里，台锯、带锯、砂光机各走一只 SCT-013 互感器接 ct_clamp，舵机阀门用它的支架思路改成金属阀体，Telnet 换成 HA 原生 API，手持遥控换成 HA 面板和一只 Zigbee 按钮。坑是它的传感器端各自独立供电，用 ESPHome 合并后所有阀门舵机的线都要拉回一处，管路布置时先把线槽留出来。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -472,7 +541,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

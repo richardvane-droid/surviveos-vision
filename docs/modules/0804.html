@@ -159,28 +159,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥6,000～9,000（NAS + 硬盘占大头，笔记本和 Mac 都是现有的）；年度电费约 ¥400</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/home-assistant/core" target="_blank" rel="noopener">
-        <div class="gh-head"><b>home-assistant/core</b><span class="stars">★ 88k</span></div>
-        <p class="gh-desc">本地优先的开源家庭自动化平台，全屋所有模块的数据都汇到这里</p>
-        <p class="gh-why">→ 三台机器里的 x86 笔记本就是它的家：Docker 跑 HA，所有模块的“最后上报时间”都是现成实体</p>
-      </a>
-      <a class="gh" href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener">
-        <div class="gh-head"><b>louislam/uptime-kuma</b><span class="stars">★ 90.1k</span></div>
-        <p class="gh-desc">自托管的服务监控面板，支持 HTTP / TCP / DNS / 推送等 90 多种通知</p>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener">louislam/uptime-kuma</a>
+          <span class="stars">★ 90.1k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">自托管的服务监控面板：HTTP / TCP / DNS / Docker / 推送等监控类型，90 多种通知渠道和状态页</p>
         <p class="gh-why">→ 盯全屋服务：HA、Jellyfin、NAS、每个 ESPHome 节点的心跳，掉线就推手机</p>
-      </a>
-      <a class="gh" href="https://github.com/henrygd/beszel" target="_blank" rel="noopener">
-        <div class="gh-head"><b>henrygd/beszel</b><span class="stars">★ 24.3k</span></div>
-        <p class="gh-desc">轻量服务器监控：历史数据、Docker 容器状态、温度和告警</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0804-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="29" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0804-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0804-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Uptime Kuma · 探测服务，心跳超时就红</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0804-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0804-1-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0804-1-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0804-1-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0804-1-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0804-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">HA / Jellyfin</text><text x="78" y="107" text-anchor="middle" font-size="10.5">NAS SMB</text><text x="78" y="216" text-anchor="middle" font-size="10.5">ESPHome 节点</text><text x="78" y="229" text-anchor="middle" font-size="10.5">5 分钟心跳</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Uptime Kuma</text><text x="200" y="107" text-anchor="middle" font-size="10.5">监控器</text><text x="200" y="174" text-anchor="middle" font-size="10.5">推送监控</text><text x="200" y="187" text-anchor="middle" font-size="10.5">40 分钟超时</text><text x="322" y="94" text-anchor="middle" font-size="10.5">状态页</text><text x="322" y="107" text-anchor="middle" font-size="10.5">延迟曲线</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Webhook</text><text x="322" y="187" text-anchor="middle" font-size="10.5">→ HA 分级</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">探测</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">报到</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">掉线</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">推手机</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0804：服务走探测、ESPHome 节点走推送心跳，告警经 HA 转手机</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">louislam/uptime-kuma</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Uptime Kuma 是自托管服务监控面板里最受欢迎的一个，由 Louis Lam 开发，90.1k 星。它解决的问题很单纯：我的服务还活着吗，挂了赶紧告诉我。</p><p>它的工作方式是：为每个目标建一个监控器，类型有 HTTP(s)、关键字、JSON 查询、TCP 端口、Ping、DNS 记录、Docker 容器，以及反过来的推送型：目标定时向它报到，超时没来就算掉线；最短 20 秒探测一次，连续失败达到阈值就通过 90 多种通知渠道推出去（邮件、Webhook、Bark、钉钉都有）；还能生成对外的状态页、看证书到期、画延迟曲线。界面通过 Weblate 有完整简体中文，README 是英文。</p><p>在 0804 里它跑在那台常年在线的 Windows 笔记本的 Docker 里，盯全屋服务：HA、Jellyfin、Immich、NAS 的 SMB、Beszel 本身都是 HTTP 或 TCP 监控器；每个 ESPHome 节点建一个推送监控器，节点每 5 分钟往它打一次心跳，40 分钟没上报就红；通知走 Webhook 推到 HA 的 webhook 触发器，由 HA 统一分级再转手机。注意它自己也可能挂，所以让 HA 的一条自动化反过来每小时探它一次，两边互相盯着。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/henrygd/beszel" target="_blank" rel="noopener">henrygd/beszel</a>
+          <span class="stars">★ 24.3k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">轻量服务器监控：Hub + Agent 架构，历史曲线、Docker 容器状态、温度、S.M.A.R.T. 和告警</p>
         <p class="gh-why">→ 盯三台机器本身：NAS 盘温、笔记本 CPU、Mac mini 内存，一个面板看完</p>
-      </a>
-      <a class="gh" href="https://github.com/jellyfin/jellyfin" target="_blank" rel="noopener">
-        <div class="gh-head"><b>jellyfin/jellyfin</b><span class="stars">★ 54k</span></div>
-        <p class="gh-desc">自由软件媒体系统，服务端 + API，Plex / Emby 的开源替代</p>
-        <p class="gh-why">→ NAS 上的影音库靠它推到地堡 0207 的 98 寸电视，本地转码走 Mac mini</p>
-      </a>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0804-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="30" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0804-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0804-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Beszel · Hub 收三台机器的曲线</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0804-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0804-2-shade)" stroke="none"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0804-2-shade)" stroke="none"/><path d="M30.0 236.0 h96 v36 h-96 Z M30.0 236.0 l8 -8 h96 l-8 8 M126.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0804-2-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-2-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0804-2-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0804-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M100.2 222.0 C139.0 222.0 139.0 124.0 177.8 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">NAS Agent</text><text x="78" y="107" text-anchor="middle" font-size="10.5">盘温 SMART</text><text x="78" y="174" text-anchor="middle" font-size="10.5">笔记本 Agent</text><text x="78" y="187" text-anchor="middle" font-size="10.5">CPU / 容器</text><text x="78" y="248" text-anchor="middle" font-size="9.5">Mac mini Agent</text><text x="78" y="261" text-anchor="middle" font-size="10.5">launchd 自启</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Beszel Hub</text><text x="200" y="107" text-anchor="middle" font-size="10.5">PocketBase</text><text x="200" y="174" text-anchor="middle" font-size="10.5">历史曲线</text><text x="200" y="187" text-anchor="middle" font-size="10.5">自动备份</text><text x="322" y="94" text-anchor="middle" font-size="10.5">阈值告警</text><text x="322" y="107" text-anchor="middle" font-size="10.5">Webhook</text><text x="322" y="174" text-anchor="middle" font-size="10.5">一个面板</text><text x="322" y="187" text-anchor="middle" font-size="10.5">三台机器</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="168.0" text-anchor="middle" font-size="8" fill="#666">上报</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">进 HA 汇总</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0804：三台机器各装 Agent，Hub 在笔记本，盘温超阈值告警进 HA 并联动除湿</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">henrygd/beszel</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Beszel 是一个轻量的服务器监控系统，Go 写成，24.3k 星，只做三件事：历史数据、Docker 容器状态、告警。它解决的问题是家庭机房那几台机器到底健不健康。</p><p>它的架构是 Hub 加 Agent：Hub 是基于 PocketBase 的 Web 应用，自带数据库和用户系统；Agent 是一个小二进制，装在每台被监控的机器上，向 Hub 上报 CPU、内存、磁盘用量与 I/O、网络带宽、温度传感器、S.M.A.R.T. 健康，以及每个 Docker 或 Podman 容器的资源；Hub 画曲线、存历史，超过阈值就发通知，支持 OAuth 登录和自动备份。Agent 有 Linux、macOS、Windows 版本。界面通过 Crowdin 有简体中文，README 英文。</p><p>在 0804 里它管三台机器本身：Hub 跑在笔记本 Docker 里，Agent 分别装到 NAS（Docker 版）、笔记本和 M1 Mac mini（Homebrew 版），一个面板看 NAS 盘温和 S.M.A.R.T.、笔记本 CPU、Mac 的容器负载；盘温超 45℃ 先推告警，再联动 0203 除湿。告警同样走 Webhook 进 HA。注意 Mac mini 无头运行时 Agent 要用 launchd 开机自启，否则停电重启后就没数据了。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/jellyfin/jellyfin" target="_blank" rel="noopener">jellyfin/jellyfin</a>
+          <span class="stars">★ 54k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">自由软件媒体系统，服务端 + 各平台客户端，ffmpeg 硬件转码，Plex / Emby 的开源替代</p>
+        <p class="gh-why">→ NAS 上的影音库靠它推到地堡 0207 的 98 寸电视，硬件转码走 Mac mini 的 VideoToolbox</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0804-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="31" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0804-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0804-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Jellyfin · NAS 影音库推到 98 寸电视</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0804-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M38.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0804-3-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0804-3-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0804-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0804-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M279.3 148.0 C261.0 148.0 261.0 124.0 242.7 124.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">NAS 影音库</text><text x="78" y="107" text-anchor="middle" font-size="10.5">2×8TB 镜像</text><text x="78" y="180" text-anchor="middle" font-size="10.5">TMDB 元数据</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Jellyfin 服务端</text><text x="200" y="107" text-anchor="middle" font-size="9.5">M1 Mac mini</text><text x="200" y="174" text-anchor="middle" font-size="10.5">ffmpeg 转码</text><text x="200" y="187" text-anchor="middle" font-size="9.5">VideoToolbox</text><text x="322" y="94" text-anchor="middle" font-size="10.5">98 寸电视</text><text x="322" y="107" text-anchor="middle" font-size="9.5">Android TV 端</text><text x="322" y="174" text-anchor="middle" font-size="9.5">HA media_player</text><text x="322" y="187" text-anchor="middle" font-size="10.5">观影场景</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">SMB 挂载</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">抓海报</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">按码率协商</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">播放 / 暂停</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0804：服务端在 Mac mini，媒体挂 NAS，转码推 0207 电视</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">jellyfin/jellyfin</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Jellyfin 是自由软件媒体系统，2018 年从 Emby 闭源时分叉出来，.NET 写成，54k 星，没有付费层、没有云账号，是 Plex 和 Emby 的开源替代。它解决的问题是：把 NAS 上的电影、剧集、音乐和照片整理成有海报有元数据的库，推到家里任何一块屏幕上。</p><p>它的架构是服务端加客户端：服务端扫描媒体目录、从 TMDB 等抓取元数据、管理用户和播放进度，通过 ffmpeg 做转码，支持 QSV、NVENC、VideoToolbox 等硬件加速，编码格式和码率按客户端能力实时协商；客户端有网页、Android / iOS、Android TV、Apple TV等，还有 REST API 和插件系统。2026 年 6 月发布 10.11.11，Weblate 有完整简体中文界面，官方文档英文。</p><p>在 0804 里它的服务端直接装在 M1 Mac mini 上，媒体目录经 SMB 挂 NAS 那 2×8TB 镜像盘的影音库，转码用 VideoToolbox，NAS 的弱 CPU 不用碰转码。地堡 0207 的 98 寸电视上装 Android TV 客户端，HA 的 media_player 集成接它，按下观影场景就自动调暗灯、接着上次进度播。注意用户账号只开一个，2FA 靠反向代理补上；Mac 要设自动登录和断电自启。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>

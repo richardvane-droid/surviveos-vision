@@ -274,23 +274,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥300～700（冲印和拍立得相纸占大头）；每年补相纸约 ¥200</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/pibooth/pibooth" target="_blank" rel="noopener">
-        <div class="gh-head"><b>pibooth/pibooth</b><span class="stars">★ 823</span></div>
-        <p class="gh-desc">树莓派开箱即用的拍照亭软件，按键拍照、加边框、接打印机直接出片</p>
-        <p class="gh-why">→ 拍立得相纸贵，用它接一台小照片打印机，按一下就出一张挂上去</p>
-      </a>
-      <a class="gh" href="https://github.com/PhotoboothProject/photobooth" target="_blank" rel="noopener">
-        <div class="gh-head"><b>PhotoboothProject/photobooth</b><span class="stars">★ 649</span></div>
-        <p class="gh-desc">自托管拍照亭网页应用，带实时预览、拼图、宝丽来滤镜和自动打印</p>
-        <p class="gh-why">→ 宝丽来滤镜加自动打印，自拍那一排照片的风格能和拍立得统一</p>
-      </a>
-      <a class="gh" href="https://github.com/immich-app/immich" target="_blank" rel="noopener">
-        <div class="gh-head"><b>immich-app/immich</b><span class="stars">★ 110k</span></div>
-        <p class="gh-desc">高性能自托管照片视频管理系统，手机自动备份、人脸识别、共享相册</p>
-        <p class="gh-why">→ 80 张照片的原片和背面那句话都存进去，换下来的照片也不会丢</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/immich-app/immich" target="_blank" rel="noopener">immich-app/immich</a>
+          <span class="stars">★ 110k</span>
+          <span class="zh ">官方中文 README</span>
+        </header>
+        <p class="gh-desc">高性能自托管照片视频管理系统，手机自动备份、人脸识别、共享相册，界面和 README 都有简体中文</p>
+        <p class="gh-why">→ 照片墙的底库：拍立得原片和手机照片全进它，用相册分在墙上和已归档两组，月初换展时挑片就在它里面翻</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0104-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="8" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0104-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0104-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Immich · 自家硬盘上的照片时间轴</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0104-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0104-1-shade)" stroke="none"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0104-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0104-1-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0104-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机 App</text><text x="78" y="107" text-anchor="middle" font-size="10.5">后台自动备份</text><text x="78" y="174" text-anchor="middle" font-size="10.5">拍立得翻拍</text><text x="78" y="187" text-anchor="middle" font-size="10.5">制作过程照</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Immich 服务端</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Node.js API</text><text x="200" y="174" text-anchor="middle" font-size="10.5">机器学习容器</text><text x="200" y="187" text-anchor="middle" font-size="10.5">人脸 / 语义搜索</text><text x="322" y="94" text-anchor="middle" font-size="10.5">相册：在墙上</text><text x="322" y="107" text-anchor="middle" font-size="10.5">/ 已归档</text><text x="322" y="174" text-anchor="middle" font-size="10.5">月初挑 20 张</text><text x="322" y="187" text-anchor="middle" font-size="10.5">导出冲印</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">上传</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">外部库</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">分组 + 描述</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">打标签</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">夹上绳</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0104：所有原片进 Immich，两个相册管在墙上 / 已归档，月初挑片冲印</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">immich-app/immich</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Immich 是开发者 Alex Tran 在 2022 年发起的自托管照片管理系统，110k 星，2025 年进入稳定版并被 FUTO 资助，团队全职维护，几乎每周发版。它解决的是：想要 Google 相册那样的自动备份、按人按地点搜索，但照片得存在自己家的硬盘上。</p><p>架构是 Docker Compose 一组容器：Node.js 写的服务端负责 API 和上传，机器学习容器跑人脸识别、CLIP 语义搜索和场景分类，PostgreSQL 存元数据，Redis 排队列，照片原文件放在你指定的目录。手机 App 支持 iOS 和安卓，在后台自动上传新照片；网页端有时间轴、地图、相册、共享链接，还能挂外部库把已有文件夹直接扫进来。API 完整，第三方画框和同步工具很多。</p><p>README 有官方简体和繁体中文版，界面翻译完整，国内 NAS 玩家把它当群晖相册的替代品。</p><p>放进 0104，它是照片墙背后的底库：拍立得拍完扫描或手机翻拍的照片、车床边随手拍的制作过程都自动备份进来，建在墙上和已归档两个相册，每张照片的描述字段写背面那句铅笔字和日期；每月初 HA 发提醒，你在手机上翻一遍最近的照片，挑出下个月要冲印的二十张打上标签，冲印店的订单就从这个相册导出。坑在机器学习容器吃内存，NAS 至少留 4GB 给它。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/pibooth/pibooth" target="_blank" rel="noopener">pibooth/pibooth</a>
+          <span class="stars">★ 823</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">树莓派开箱即用的拍照亭软件，按键拍照、倒计时、加边框文字，接打印机直接出片，插件可扩展</p>
+        <p class="gh-why">→ 吧台上那台自拍小机的软件：一个实体按钮按下倒计时拍照，自动套牛皮纸色边框，热敏或照片打印机直接出片夹上绳</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0104-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0104-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0104-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">pibooth · 按一下按钮，倒计时出片</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0104-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0104-2-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0104-2-shade)" stroke="none"/><path d="M162.0 152.0 h66 l10 10 v38 h-76 Z M228.0 152.0 v10 h10" stroke-width="1.3"/><path d="M170.0 168.0 h54 M170.0 176.0 h44 M170.0 184.0 h48" stroke-width="0.5"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0104-2-shade)" stroke="none"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0104-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">黄铜按钮</text><text x="78" y="107" text-anchor="middle" font-size="10.5">GPIO</text><text x="78" y="216" text-anchor="middle" font-size="9.5">Camera Module 3</text><text x="200" y="94" text-anchor="middle" font-size="9.5">pibooth 状态机</text><text x="200" y="107" text-anchor="middle" font-size="10.5">pygame 界面</text><text x="200" y="174" text-anchor="middle" font-size="10.5">版式 / 边框</text><text x="200" y="187" text-anchor="middle" font-size="10.5">INI 配置</text><text x="322" y="94" text-anchor="middle" font-size="10.5">Selphy 打印机</text><text x="322" y="107" text-anchor="middle" font-size="10.5">CUPS 队列</text><text x="322" y="174" text-anchor="middle" font-size="10.5">原片上传</text><text x="322" y="187" text-anchor="middle" font-size="10.5">Immich</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">倒计时</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">连拍</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">拼图后打印</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">插件</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">夹上绳</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0104：吧台矮柜里的树莓派，按钮 → 拍 → 套边框 → 打印 → 夹上麻绳</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">pibooth/pibooth</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>pibooth 是法国开发者 Antoine Rousseaux 与 Vincent Verdeil 从 2017 年起维护的树莓派拍照亭软件，823 星，用 Python 和 pygame 写成，专门给婚礼派对上那种按一下就出片的自助拍照机用。它让一台树莓派、一个相机、一个按钮和一台打印机不写代码就变成拍照亭。</p><p>工作原理是一个状态机：待机时屏幕轮播之前拍的照片，按下 GPIO 按钮或触屏后开始倒计时，调用相机连拍一到四张，按你选的版式拼成一张最终图，叠上背景、文字和边框，然后存盘并送去 CUPS 打印队列，屏幕上还会显示打印队列的状态。相机支持树莓派官方摄像头、gPhoto2 单反和 OpenCV 网络摄像头；每个环节都有钩子，社区插件有二维码分享、上传云盘、LED 灯效等。配置在一个 INI 文件里，界面有十种语言但没有中文。</p><p>最后一次发版是 2023 年，功能已经稳定，中文资料只有零散博客。</p><p>放进 0104，它跑在吧台矮柜里一台树莓派上，相机是一颗官方 Camera Module 3 装在照片墙对面的小木盒里，按钮是一个黄铜复古按键；版式设成单张 4 乘 6，背景用牛皮纸色，底部叠一行小字写日期；打印机走佳能 Selphy 照片打印机，出片直接夹到绳上，原片同时上传到 Immich。坑在树莓派预览分辨率别设太高，否则倒计时会卡。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/PhotoboothProject/photobooth" target="_blank" rel="noopener">PhotoboothProject/photobooth</a>
+          <span class="stars">★ 649</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">自托管拍照亭网页应用，带实时预览、拼图、宝丽来滤镜、二维码分享和自动打印，浏览器就是界面</p>
+        <p class="gh-why">→ pibooth 之外的另一条路：它的宝丽来边框和相纸滤镜模板更像样，界面在浏览器里，触屏平板也能当拍照机</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0104-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0104-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0104-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Photobooth · 浏览器就是拍照机的脸</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0104-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M64 114.0 h28 M70 114.0 v6 h16 v-6" stroke-width="1"/><path d="M29.0 75.0 h98 v4 h-98 Z" fill="url(#g0104-3-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0104-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0104-3-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0104-3-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0104-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0104-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">旧 iPad 触屏</text><text x="78" y="107" text-anchor="middle" font-size="10.5">操作面</text><text x="78" y="216" text-anchor="middle" font-size="9.5">相机 / gPhoto2</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Photobooth</text><text x="200" y="107" text-anchor="middle" font-size="10.5">PHP 服务</text><text x="200" y="174" text-anchor="middle" font-size="10.5">GD 后期</text><text x="200" y="187" text-anchor="middle" font-size="10.5">宝丽来白边</text><text x="322" y="100" text-anchor="middle" font-size="10.5">打印机 + 二维码</text><text x="322" y="174" text-anchor="middle" font-size="10.5">幻灯片页</text><text x="322" y="187" text-anchor="middle" font-size="10.5">投到画框墙</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">倒计时</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">预览 / 拍</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">出片</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">画廊</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">夹上绳</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0104：备选软件，主要借宝丽来滤镜，幻灯片页投到 0103 一屏</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">PhotoboothProject/photobooth</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Photobooth 是德国开发者 Andreas Blaesius 等人从 2017 年起维护的自托管拍照亭网页应用，649 星，2025 年仍在发大版本，用 PHP 加 JavaScript 写成，跑在树莓派或任何 Linux 小主机上，浏览器就是它的全部界面。它和 pibooth 解决同一件事，但思路是网页化：任何有浏览器的屏都能当操作面板。</p><p>工作原理是一个 PHP 服务：前端页面用摄像头或 gPhoto2 做实时预览，点击或按硬件按钮后倒计时拍照，服务端用 GD 库做后期，拼贴版式、宝丽来白边、抠像换背景、文字水印都在这一步叠上去，然后存进相册、生成下载二维码、送打印机。它自带画廊和独立的幻灯片页面，可以把最近拍的照片投到另一块屏上；管理后台有几百个可调项，多语言由 Crowdin 维护，目前没有中文。硬件上支持 GPIO 按钮、旋转编码器和遥控器。</p><p>文档在英文站上，德语社区活跃，中文资料几乎没有，但界面操作直观。</p><p>放进 0104，它是自拍小机的备选软件，主要借它的宝丽来滤镜：拍出来自带下宽上窄的白边和轻微褪色，比 pibooth 的边框更像真拍立得；吧台上放一台旧 iPad 当触屏操作面，树莓派在柜子里跑服务，照片一边打印一边把幻灯片页投到画框墙的一屏上。坑在实时预览走 MJPEG 比较吃 CPU，树莓派 4 以上才顺。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -783,7 +852,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

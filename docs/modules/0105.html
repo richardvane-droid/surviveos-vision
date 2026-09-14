@@ -156,23 +156,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥4,000～8,000（白蜡木台面和台钻占大头）；年度耗材 ¥500 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/kennetek/gridfinity-rebuilt-openscad" target="_blank" rel="noopener">
-        <div class="gh-head"><b>kennetek/gridfinity-rebuilt-openscad</b><span class="stars">★ 2.2k</span></div>
-        <p class="gh-desc">Gridfinity 模块化收纳盒的 OpenSCAD 参数化重制版，尺寸分格随便改</p>
-        <p class="gh-why">→ 27 格零件柜不想全木工的话，直接用它生成每种物件的专属小格子打印</p>
-      </a>
-      <a class="gh" href="https://github.com/andymai/gridfinity-layout-tool" target="_blank" rel="noopener">
-        <div class="gh-head"><b>andymai/gridfinity-layout-tool</b><span class="stars">★ 266</span></div>
-        <p class="gh-desc">网页版 Gridfinity 抽屉布局规划工具，拖拽排格子、3D 预览、导出 STL</p>
-        <p class="gh-why">→ 台面下两层抽屉先在网页里把空盒身和成品的格子排好，再打印</p>
-      </a>
-      <a class="gh" href="https://github.com/timmmmmmmmm/halagen" target="_blank" rel="noopener">
-        <div class="gh-head"><b>timmmmmmmmm/halagen</b><span class="stars">★ 60</span></div>
-        <p class="gh-desc">浏览器里生成五金零件标签的工具，带图标库、YAML 批量出图、PNG 导出</p>
-        <p class="gh-why">→ 27 个格口的物件名和数量标签用它批量生成，风格统一再拿去激光刻</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/blakeblackshear/frigate" target="_blank" rel="noopener">blakeblackshear/frigate</a>
+          <span class="stars">★ 35.1k</span>
+          <span class="zh ">官方中文 README</span>
+        </header>
+        <p class="gh-desc">本地实时目标检测的开源 NVR，IP 摄像头 24 小时录像、按事件保留，和 HomeAssistant 深度集成，有中文 README</p>
+        <p class="gh-why">→ 工作台头顶那颗摄像头接它：HA 一键触发手动事件开始录组装过程，录完落 NAS，视频直接拿去剪</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0105-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0105-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0105-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Frigate · 本地检测的录像机，HA 一键开录</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0105-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0105-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0105-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0105-1-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0105-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">头顶 PoE 摄像头</text><text x="78" y="174" text-anchor="middle" font-size="10.5">台边按钮</text><text x="78" y="187" text-anchor="middle" font-size="10.5">→ HA</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Frigate</text><text x="200" y="107" text-anchor="middle" font-size="10.5">运动 + 目标检测</text><text x="200" y="174" text-anchor="middle" font-size="10.5">NAS 录像</text><text x="200" y="187" text-anchor="middle" font-size="10.5">按事件保留</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 集成</text><text x="322" y="107" text-anchor="middle" font-size="10.5">事件 / 直播</text><text x="322" y="174" text-anchor="middle" font-size="10.5">组装片段</text><text x="322" y="187" text-anchor="middle" font-size="10.5">拿去剪视频</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">go2rtc 拉流</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">手动事件 API</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">录像</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">MQTT</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">30 天内</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0105：按钮 → HA → Frigate 手动事件开录，组装视频落 NAS</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">blakeblackshear/frigate</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Frigate 是美国开发者 Blake Blackshear 从 2019 年起维护的开源网络录像机，35.1k 星，几乎每月发版。它解决的是：家里的 IP 摄像头想本地录像和识别目标，不把画面传到云上，还要能和 Home Assistant 联动。</p><p>架构是一个 Docker 容器：用 go2rtc 从摄像头拉 RTSP 流，先做低成本的运动检测，只把有动静的区域送进 OpenCV 加 TensorFlow 的目标检测，识别出人、车、猫狗等对象后生成事件，录像按事件或全天保留在本地硬盘。检测可以跑在 Coral TPU、核显或 CPU 上；对外有 MQTT、REST API 和 WebRTC 直播，HA 集成把每路摄像头、每类对象、录像片段都变成实体，还能用 API 手动创建一个事件强制录像。</p><p>README 有官方简体中文版，文档站也有中文翻译，B 站教程很多。</p><p>放进 0105，头顶那台摄像头走 PoE 接木屋交换机，Frigate 跑在 NAS 上；写字台边一个实体按钮接 HA，按下后 HA 调 Frigate 的手动事件 API 开始录制并标记为组装，再按一下结束，片段自动保留 30 天并在 HA 面板里列出；平时它也顺便当木屋监控。坑在 4000K 长条灯直射时画面会过曝，摄像头曝光要锁定，别用自动。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/inventree/InvenTree" target="_blank" rel="noopener">inventree/InvenTree</a>
+          <span class="stars">★ 7.3k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">开源库存与零件管理系统，BOM、库存、供应商、标签打印、REST API 和插件一应俱全，界面有简体中文</p>
+        <p class="gh-why">→ 27 格零件柜的账本：一只 PSK 就是一张 27 行的 BOM，每做一只自动扣库存，低于阈值 HA 点亮那一格的提醒灯</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0105-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0105-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0105-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">InvenTree · 一张 27 行 BOM 管一整柜零件</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0105-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0105-2-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0105-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0105-2-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0105-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0" stroke-dasharray="3 3"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">PSK 的 BOM</text><text x="78" y="107" text-anchor="middle" font-size="10.5">27 行</text><text x="78" y="174" text-anchor="middle" font-size="10.5">做完一只</text><text x="78" y="187" text-anchor="middle" font-size="10.5">完成工单</text><text x="200" y="94" text-anchor="middle" font-size="10.5">InvenTree</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Django + API</text><text x="200" y="174" text-anchor="middle" font-size="10.5">27 个存放位置</text><text x="200" y="187" text-anchor="middle" font-size="10.5">库存数量</text><text x="322" y="94" text-anchor="middle" font-size="10.5">格口标签</text><text x="322" y="107" text-anchor="middle" font-size="10.5">二维码激光刻</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA 轮询低库存</text><text x="322" y="187" text-anchor="middle" font-size="10.5">点亮格口灯</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">扣库存</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">模板打印</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">&lt; 20 件</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">补货提醒</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0105：BOM 扣减 27 格库存，低于阈值 HA 点亮那一格的提醒灯</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">inventree/InvenTree</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>InvenTree 是澳大利亚开发者 Oliver Walters 从 2017 年起维护的开源库存管理系统，7.3k 星，2026 年 7 月发布 1.4 版，本来是给电子爱好者管元件抽屉的，后来长成了小工厂也在用的物料系统。它解决的是：几百种小零件分格存放，哪格快用完、做一批要备多少料，靠眼睛看不过来。</p><p>架构是 Django 后端加 React 前端，Docker 一行命令装好，数据库可以用 SQLite 到 PostgreSQL。核心对象是零件、库存项、存放位置和 BOM：零件定义参数和供应商，库存项挂在某个位置上有数量，BOM 描述一件产品由哪些零件按多少数量组成；建一个生产工单时它会核对库存够不够、完成时自动扣减。它自带标签模板，能给每个格子打印带二维码的标签，扫码直接进那格的库存页；REST API 完整，还有 Python 客户端和插件系统。</p><p>界面通过 Crowdin 翻译，简体中文完整，文档是英文。</p><p>放进 0105，把 PSK 建成一个装配零件，BOM 就是 27 行，27 个小木格各建一个存放位置，格口标签由它生成后激光刻；每做完一只盒子就完成一张工单扣一次库存，某格数量低于 20 时它的低库存接口被 HA 每小时轮询一次，HA 点亮那一格上方的小灯提醒补货。坑在初始盘点最累，一定要一次把 27 格数准，之后才轻松。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/kennetek/gridfinity-rebuilt-openscad" target="_blank" rel="noopener">kennetek/gridfinity-rebuilt-openscad</a>
+          <span class="stars">★ 2.2k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">Gridfinity 模块化收纳盒的 OpenSCAD 参数化重制版，尺寸分格随便改，导出 STL 直接打印</p>
+        <p class="gh-why">→ 27 格零件柜的内胆：格子先按 42mm 网格打印内盒试尺寸，定稿后再照着做木格，两层抽屉里的空盒身托盘也用它</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0105-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0105-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0105-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Gridfinity Rebuilt · 改几个参数出一只分格盒</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0105-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0105-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0105-3-shade)" stroke="none"/><path d="M152.0 162.0 h96 v36 h-96 Z M152.0 162.0 l8 -8 h96 l-8 8 M248.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M249.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0105-3-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0105-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0105-3-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0105-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M78.0 148.0 L78.0 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">参数：格数</text><text x="78" y="107" text-anchor="middle" font-size="10.5">高度 / 分格</text><text x="78" y="174" text-anchor="middle" font-size="10.5">27 种物件</text><text x="78" y="187" text-anchor="middle" font-size="10.5">实测尺寸</text><text x="200" y="94" text-anchor="middle" font-size="9.5">OpenSCAD 脚本</text><text x="200" y="107" text-anchor="middle" font-size="9.5">参数化 Gridfinity</text><text x="200" y="174" text-anchor="middle" font-size="9.5">STL 小盒 / 底板</text><text x="200" y="187" text-anchor="middle" font-size="10.5">免支撑打印</text><text x="322" y="94" text-anchor="middle" font-size="10.5">试装两周</text><text x="322" y="107" text-anchor="middle" font-size="10.5">定稿尺寸</text><text x="322" y="174" text-anchor="middle" font-size="10.5">8×8 木格</text><text x="322" y="187" text-anchor="middle" font-size="10.5">+ 抽屉托盘</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">定参数</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">渲染</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">打印</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">照尺寸做</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0105：先打印 27 只小盒试装，定稿后照尺寸做木格，抽…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">kennetek/gridfinity-rebuilt-openscad</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Gridfinity Rebuilt 是开发者 kennetek 在 2022 年用 OpenSCAD 重写的 Gridfinity 参数化库，2.2k 星，2025 年仍在合并贡献。Gridfinity 是 YouTuber Zack Freedman 提出的 42 毫米网格收纳标准，底板和小盒按网格咬合，这个仓库把原本要在 Fusion 里改的模型变成几行参数就能生成的代码，想要尺寸正好的分格盒不必从零建模。</p><p>工作原理是 OpenSCAD 脚本：你在顶部改几个数字，几格宽、几格长、多高、内部沿 X 和 Y 各分几格，要不要挖手指槽、标签翻边、磁铁孔和堆叠唇边，点渲染就得到一个 STL。底部网格脚是标准的，能扣进任何 Gridfinity 底板；仓库还提供底板、花瓶模式薄壁盒等变体，打印不需要支撑，也能命令行批量出图。</p><p>Printables 上按它生成的盒子成千上万；文档是英文，B 站有不少 Gridfinity 收纳的中文视频。</p><p>放进 0105，27 格零件柜先用它出 27 只 1 乘 1 或 1 乘 2 的小盒，每格按物件大小试装两周，确认哪格该更宽、哪格该加手指槽，再照着最终尺寸做 8 乘 8 厘米的木格；台面下两层抽屉铺一块 Gridfinity 底板，空盒身和成品各用一个定制托盘固定，拉抽屉不晃。坑在 OpenSCAD 渲染慢，装开发版快得多。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -564,7 +633,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

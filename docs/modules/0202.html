@@ -182,23 +182,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥5,000～9,000（灯箱、镜面、提升泵）；年度电费 ¥400 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/Aircoookie/WLED" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Aircoookie/WLED</b><span class="stars">★ 18.6k</span></div>
-        <p class="gh-desc">ESP32 上最流行的灯带控制固件，支持 WiFi 控制和 HomeAssistant 集成</p>
-        <p class="gh-why">→ 灯箱四周 5cm 天光缝和镜子暖光灯带直接刷它，三档色温场景在 HA 里一键切</p>
-      </a>
-      <a class="gh" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">
-        <div class="gh-head"><b>patrickcollins12/esphome-fan-controller</b><span class="stars">★ 704</span></div>
-        <p class="gh-desc">ESP32 加温度探头做 PID 调速风扇的 ESPHome 方案，配教程和接线图</p>
-        <p class="gh-why">→ 把温度探头换成湿度探头，就是湿度 70% 自动开、20 分钟后停的排风控制器</p>
-      </a>
-      <a class="gh" href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">
-        <div class="gh-head"><b>basnijholt/adaptive-lighting</b><span class="stars">★ 3.4k</span></div>
-        <p class="gh-desc">HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度</p>
-        <p class="gh-why">→ 和 0201 共用一份时间表，卫生间灯箱早上 5000K、夜起 2200K 不用再单独写自动化</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/wled/WLED" target="_blank" rel="noopener">wled/WLED</a>
+          <span class="stars">★ 18.7k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">ESP32 上最流行的灯带控制固件，网页和 App 直接控，支持 RGB+CCT 灯带、250 个预设、定时和 HomeAssistant 自动发现</p>
+        <p class="gh-why">→ 灯箱四周 5cm 天光缝和镜子暖光灯带直接刷它，晨浴 / 日常 / 夜起三档存成预设，HA 里一键切</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0202-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0202-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0202-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">WLED · 一块 ESP32 把灯带变成智能灯</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0202-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0202-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0202-1-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0202-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0202-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">手机网页 / App</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="78" y="187" text-anchor="middle" font-size="10.5">人体感应 + 时段</text><text x="200" y="94" text-anchor="middle" font-size="10.5">WLED 固件</text><text x="200" y="107" text-anchor="middle" font-size="9.5">网页服务 + 效果引擎</text><text x="200" y="174" text-anchor="middle" font-size="10.5">250 个预设</text><text x="200" y="187" text-anchor="middle" font-size="10.5">定时器</text><text x="322" y="100" text-anchor="middle" font-size="10.5">天光缝 CCT 灯带</text><text x="322" y="180" text-anchor="middle" font-size="10.5">镜光箱暖光灯带</text><text x="430" y="138" text-anchor="middle" font-size="10.5">刷牙的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">存预设</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">切预设</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">PWM</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">软光</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0202：三档光存成 WLED 预设，HA 按感应和时段切，晨浴档联动除雾膜</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">wled/WLED</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>WLED 是奥地利开发者 Aircoookie 在 2016 年开始写的 ESP32 / ESP8266 灯带固件，18.7k 星，是 GitHub 上最流行的灯光固件，没有之一。它解决的问题是：一根几十块钱的灯带接一块 ESP32，刷完固件就是一盏能手机调、能被家庭自动化接管的智能灯，不用写代码。</p><p>固件内置网页服务器：手机打开网页就能选颜色、调亮度、挑一百多种效果，把状态存成预设，最多 250 个；内置定时器按时间或日出日落调预设。对外它同时开放 JSON 和 MQTT 接口，Home Assistant 有官方集成，自动发现后每个 WLED 设备就是一个灯实体，预设也能当选项切换。支持单色、CCT 双色温、RGB、RGBW 各种灯带，可分段控制，还能收 DDP、E1.31 协议做同步。</p><p>社区极大；文档站只有英文，但中文教程和 B 站视频非常多，淘宝能买到预刷固件的控制器。</p><p>在 0202 里它管两处灯：灯箱四周那圈 5cm 天光缝里的 CCT 灯带，以及六面镜光箱边缘的暖光灯带。把晨浴 5000K 全亮、日常 4000K 六成、夜起 2200K 5% 存成三个预设，HA 收到人体感应后按时段切预设，晨浴档同时拉起除雾膜的继电器。坑在于浴室潮湿，控制器要装在灯箱上方干燥腔体里，灯带选 IP65 硅胶套管的，电源按每米功率留三成余量。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">basnijholt/adaptive-lighting</a>
+          <span class="stars">★ 3.4k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度，自带睡眠模式和手动接管检测</p>
+        <p class="gh-why">→ 和 0201 共用一份时间表，卫生间灯箱早上 5000K、夜起 2200K 不用再单独写自动化，夜里靠 sleep mode 一律最暗最暖</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0202-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0202-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0202-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Adaptive Lighting · 全屋灯共用一条日光曲线</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0202-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0202-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0202-2-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0202-2-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0202-2-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0202-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">经纬度 / 时间</text><text x="78" y="149" text-anchor="middle" font-size="10.5">太阳高度角</text><text x="78" y="174" text-anchor="middle" font-size="10.5">0201 落日场景</text><text x="78" y="187" text-anchor="middle" font-size="10.5">sleep mode</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Adaptive Lighting</text><text x="200" y="107" text-anchor="middle" font-size="10.5">色温亮度曲线</text><text x="200" y="174" text-anchor="middle" font-size="10.5">卫生间灯组</text><text x="200" y="187" text-anchor="middle" font-size="10.5">开关实体</text><text x="322" y="100" text-anchor="middle" font-size="10.5">1m 灯箱主灯</text><text x="322" y="180" text-anchor="middle" font-size="10.5">WLED 灯带</text><text x="430" y="218" text-anchor="middle" font-size="10.5">夜起的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">算曲线</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">最暗最暖</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写值</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">夜起档</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0202：灯箱和灯带同一开关组，与 0201 同步，夜起靠 sleep mode</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">basnijholt/adaptive-lighting</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Adaptive Lighting 是荷兰开发者 Bas Nijholt 写的 Home Assistant 自定义组件，3.4k 星，HA 社区里做“灯光跟着太阳走”最常用的方案。它让每一盏能调色温的灯按当地日出日落曲线自动变化，早上暖、中午白、傍晚回暖，晚上降到最暗最暖，让室内作息跟着太阳走。</p><p>它不控制硬件，只算值：读取 HA 的经纬度和时间，求出太阳高度角，映射成色温和亮度百分比，再定时调用灯的开灯服务写进去。手动改了灯，它会识别出“不是 HA 做的改动”并暂停接管，直到灯关掉再开；sleep mode 开关一打开，所有灯降到设定的最低亮度和最暖色温。色温上下限、过渡秒数都能按灯组单独配。</p><p>它走 HACS 安装，兼容 HA 里所有灯实体，包括 WLED 和 ESPHome 的 CCT 灯；文档英文，HA 中文社区配置分享很多。</p><p>在 0202 里它是把卫生间和地堡主空间“调成同一个时区”的那根线：灯箱的主灯和 WLED 灯带都挂进同一个 Adaptive Lighting 开关组，早上的 5000K 晨浴和傍晚的暖光自动跟 0201 的模拟阳光同步，而不是各写各的时间表。夜起 2200K 5% 直接用它的 sleep mode，睡前 0201 进入落日时同步打开，半夜进卫生间就只有一点暖光。注意感应开灯要给两秒过渡，否则会先闪白光再变暖；不能调色温的浴霸灯就只让它管亮度。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">patrickcollins12/esphome-fan-controller</a>
+          <span class="stars">★ 741</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">ESP32 加温度探头做 PID 调速风扇的 ESPHome 方案，配完整教程、接线图和 HA 仪表盘上在线调参</p>
+        <p class="gh-why">→ 把温度探头换成湿度探头，就是湿度 70% 自动开、20 分钟后自动停的排风控制器，阈值和计时全在 ESP32 本地跑</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0202-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0202-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0202-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">esphome-fan-controller · 传感器进 PID 出 PWM</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0202-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0202-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0202-3-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0202-3-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0202-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0202-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">SHT31 湿度探头</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 仪表盘</text><text x="78" y="187" text-anchor="middle" font-size="10.5">改阈值看曲线</text><text x="200" y="94" text-anchor="middle" font-size="9.5">ESP32 ESPHome</text><text x="200" y="107" text-anchor="middle" font-size="9.5">阈值 + 20 分钟计时</text><text x="200" y="174" text-anchor="middle" font-size="10.5">PID 组件</text><text x="200" y="187" text-anchor="middle" font-size="10.5">（原方案调速）</text><text x="322" y="94" text-anchor="middle" font-size="10.5">管道排风机</text><text x="322" y="107" text-anchor="middle" font-size="10.5">继电器 / PWM</text><text x="322" y="180" text-anchor="middle" font-size="10.5">超时推送提醒</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">湿度</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">参数</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">开 / 停</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0202：70% 开、20 分钟停在 ESP32 本地，HA 兜底</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a">patrickcollins12/esphome-fan-controller</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>esphome-fan-controller 是澳大利亚开发者 Patrick Collins 开源的一个 ESPHome 项目，741 星，原本是为了给电视柜里发热的机顶盒做一个“会自己调速的静音风扇”。它的价值在于把一个小硬件项目讲透了：一块 ESP32、一颗 DHT11 探头、一只 12V 四线 PWM 风扇和降压模块，接线图、YAML、PID 调参全写成教程，很多人的第一个 ESPHome 硬件就是照它做的。</p><p>原理是把传感器读数喂给 ESPHome 内置的 PID 组件：设一个目标温度，PID 算出风扇该转多快，输出成 PWM 占空比；转速、目标值、PID 参数都暴露成 HA 实体，仪表盘上边看曲线边调，也能手动接管。逻辑全在 ESP32 本地，断网照样工作。</p><p>项目是英文的，但全是 ESPHome 标准组件，中文 ESPHome 教程都能对上；更新不勤，也没什么要更新的。</p><p>在 0202 里它变成排风扇控制器：把 DHT11 换成更准的 SHT31 湿度探头，风扇换成管道排风机（用继电器或调速模块），控制逻辑不用 PID，改成 ESPHome 的阈值加计时器——湿度超过 70% 开机，跌回 60% 以下或满 20 分钟停机，探头和 ESP32 装在灯箱上方的干燥腔里，只把探头伸进浴室。坑是水汽会让探头读数飘，探头别贴淋浴角顶；HA 里加一条兜底：连续开机超过一小时就推送提醒。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -528,7 +597,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

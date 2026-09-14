@@ -195,23 +195,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥8,000～15,000（4 块光伏板 + 2kWh 储能 + 支架线材）；之后每年省电费 ¥500～800</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">
-        <div class="gh-head"><b>syssi/esphome-jk-bms</b><span class="stars">★ 963</span></div>
-        <p class="gh-desc">用 ESP32 通过串口或蓝牙读取 JK 电池保护板的 ESPHome 组件，能看每节电压和温度</p>
-        <p class="gh-why">→ 木架子上那两块备用磷酸铁锂配 JK 保护板，一块 ESP32 就把电压温度送进 HA，过热立刻推送</p>
-      </a>
-      <a class="gh" href="https://github.com/tolwi/hassio-ecoflow-cloud" target="_blank" rel="noopener">
-        <div class="gh-head"><b>tolwi/hassio-ecoflow-cloud</b><span class="stars">★ 882</span></div>
-        <p class="gh-desc">正浩 EcoFlow 户外储能电源的 Home Assistant 集成，读电量、输入输出功率并控制输出口</p>
-        <p class="gh-why">→ 买正浩这类储能电源的话直接装它，每天发电量和剩余电量进 HA，再推到 0802 中枢大屏</p>
-      </a>
-      <a class="gh" href="https://github.com/fl4p/batmon-ha" target="_blank" rel="noopener">
-        <div class="gh-head"><b>fl4p/batmon-ha</b><span class="stars">★ 489</span></div>
-        <p class="gh-desc">HA 加载项，通过蓝牙同时连接 JK、JBD、Daly 等多种 BMS，还能算电量和累计能量</p>
-        <p class="gh-why">→ 备用电池保护板不是 JK 也没关系，它一个加载项通吃 Daly、JBD，不用额外焊 ESP32</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">syssi/esphome-jk-bms</a>
+          <span class="stars">★ 1.0k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">用 ESP32 通过串口或蓝牙读取和控制极空 JK 电池保护板的 ESPHome 组件，能看每节电压、温度和均衡状态</p>
+        <p class="gh-why">→ 木架子上那两块备用磷酸铁锂配 JK 保护板，一块 ESP32 就把电压温度送进 HA，过热立刻推送，还能远程关充放电</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0304-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0304-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0304-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">esphome-jk-bms · 保护板数据进 HA</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0304-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0304-1-shade)" stroke="none"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0304-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0304-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0304-1-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0304-1-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0304-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0304-1-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M266.0 176.0 L134.0 176.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">磷酸铁锂</text><text x="78" y="107" text-anchor="middle" font-size="10.5">备用电池 ×2</text><text x="78" y="174" text-anchor="middle" font-size="10.5">JK 保护板</text><text x="78" y="187" text-anchor="middle" font-size="10.5">均衡 + MOS</text><text x="200" y="94" text-anchor="middle" font-size="9.5">esphome-jk-bms</text><text x="200" y="107" text-anchor="middle" font-size="10.5">ESP32-C3</text><text x="200" y="174" text-anchor="middle" font-size="10.5">JK 私有协议</text><text x="200" y="187" text-anchor="middle" font-size="10.5">UART / 蓝牙</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 实体</text><text x="322" y="107" text-anchor="middle" font-size="10.5">每节电压 / 温度</text><text x="322" y="174" text-anchor="middle" font-size="10.5">自动化</text><text x="322" y="187" text-anchor="middle" font-size="10.5">超温推送 / 关放电</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">每几秒一帧</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">sensor</text><text x="200.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">切 MOS</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0304：JK 保护板 → ESP32 解协议 → HA 看每节电芯，超温推送、远程关放电</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">syssi/esphome-jk-bms</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>esphome-jk-bms 是德国开发者 syssi 从 2021 年维护的 ESPHome 外部组件，1.0k 星，专门对接深圳极空（JK）的电池保护板。JK BMS 是 DIY 磷酸铁锂电池组里最常见的国产保护板，带主动均衡和蓝牙，但原厂只给一个手机 App，看不到历史、也接不进家庭自动化，这个组件就是把它翻译成 HA 实体的桥。</p><p>原理是让 ESP32 冒充原厂 App：用 UART 线接保护板的 GPS 口，或直接用 ESP32 蓝牙连上去，按 JK 私有协议每隔几秒请求一帧，解出每节电芯电压、压差、总电压、电流、剩余容量、MOS 温度、均衡是否在跑，全部作为 sensor 上报；同时暴露充电、放电、均衡三个开关和几十个可写参数，能从 HA 远程切断充电。仓库里有新旧几代 JK 板的现成 YAML，改几个引脚就能用。</p><p>用户集中在欧洲和国内 DIY 储能圈，2025 年还在跟进新固件协议；文档是英文，但 B 站上 JK 板接 HA 的教程基本都是它。</p><p>在 0304 里它盯着木架上那两块备用电池：每块配一片 JK 保护板，一块 ESP32-C3 走蓝牙同时连两块，HA 里做三条自动化——任一电芯超 3.6V 或温度超 45 度推送手机，压差超 50mV 提醒手动均衡，夜里 SOC 低于 20% 关放电 MOS。注意蓝牙同时连多板时刷新变慢，稳妥起见用有线 UART。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/tolwi/hassio-ecoflow-cloud" target="_blank" rel="noopener">tolwi/hassio-ecoflow-cloud</a>
+          <span class="stars">★ 882</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">正浩 EcoFlow 户外储能电源的 Home Assistant 集成，读电量、输入输出功率并控制交流直流输出口</p>
+        <p class="gh-why">→ 买正浩这类储能电源的话直接装它，每天发电量和剩余电量进 HA，再推到 0802 中枢大屏，四级用电优先级靠它切输出口</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0304-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0304-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0304-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">EcoFlow 集成 · 储能电源数字进 HA</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0304-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0304-2-shade)" stroke="none"/><path d="M166.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0304-2-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0304-2-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0304-2-shade)" stroke="none"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0304-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0304-2-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M266.0 176.0 L134.0 176.0" stroke-dasharray="3 3"/><path d="M134.0 193.0 C200.0 193.0 200.0 233.0 266.0 233.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">4×400W 光伏</text><text x="78" y="149" text-anchor="middle" font-size="10.5">MPPT 输入</text><text x="78" y="174" text-anchor="middle" font-size="10.5">正浩储能电源</text><text x="78" y="187" text-anchor="middle" font-size="10.5">2kWh</text><text x="200" y="94" text-anchor="middle" font-size="10.5">正浩 MQTT</text><text x="200" y="107" text-anchor="middle" font-size="10.5">云 / 局域网</text><text x="200" y="174" text-anchor="middle" font-size="9.5">ecoflow-cloud</text><text x="200" y="187" text-anchor="middle" font-size="10.5">HA 集成</text><text x="322" y="94" text-anchor="middle" font-size="10.5">0802 大屏</text><text x="322" y="107" text-anchor="middle" font-size="10.5">今日发电 3.2 度</text><text x="322" y="174" text-anchor="middle" font-size="10.5">四级优先级</text><text x="322" y="187" text-anchor="middle" font-size="10.5">切输出口</text><text x="322" y="248" text-anchor="middle" font-size="10.5">串灯 &gt; 气象站</text><text x="322" y="261" text-anchor="middle" font-size="10.5">&gt; 打印机</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">上报</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">订阅</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">SOC / 功率</text><text x="200.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">开关 AC / DC</text><text x="200.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">供电</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0304：储能上报 → HA 集成 → 大屏发电量，SOC 分四级切输出口</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">tolwi/hassio-ecoflow-cloud</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>hassio-ecoflow-cloud 是开发者 tolwi 在 2022 年发布的 HA 自定义集成，882 星，对接正浩（EcoFlow）的 DELTA、RIVER、PowerStream 整条产品线。正浩是国内出货量最大的户外储能品牌，但官方只有手机 App，这个集成让 HA 能看到电源的每个数字并开关它的输出口。</p><p>原理是复用正浩 App 和电源之间的 MQTT 通道：在集成里填开发者平台申请的密钥，它就用你的身份连上正浩 MQTT 服务器，订阅设备报文，解出 SOC、剩余分钟、太阳能输入、交直流输出功率、电芯温度、循环次数等一百多个实体；反向也能下发指令，比如开关 AC 输出、设最大充电功率和 SOC 上下限。近两年加入了局域网本地模式，断网时基本功能不受影响；装好后 HA 能源面板直接把它当电池和太阳能源统计。</p><p>2025 年持续跟进新机型；文档是英文，但国内正浩配 HA 的教程多半是它。</p><p>在 0304 里它是“充放电与负载调度器”的接口：储能电源接 4 块 400W 光伏板的 MPPT 后，HA 每天把输入功率积分成“今日发电量”推到 0802 大屏和手机；用电优先级用四条自动化实现——SOC 低于 50% 先断楼下木屋充电口，低于 30% 断 3D 打印机待机，低于 20% 只留帐篷串灯和气象站。注意要先在正浩开发者平台申请密钥，且只支持部分机型的本地模式。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/fl4p/batmon-ha" target="_blank" rel="noopener">fl4p/batmon-ha</a>
+          <span class="stars">★ 489</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">HA 加载项，通过蓝牙同时连接 JK、JBD、Daly、ANT 等多种电池保护板，还能算电量和累计能量</p>
+        <p class="gh-why">→ 备用电池保护板不是 JK 也没关系，它一个加载项通吃 Daly、JBD，不用额外焊 ESP32，树莓派自带蓝牙就行</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0304-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0304-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0304-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">batmon-ha · 树莓派蓝牙直连保护板</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0304-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0304-3-shade)" stroke="none"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0304-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0304-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0304-3-shade)" stroke="none"/><path d="M160.0 234.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="234.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0304-3-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0304-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0304-3-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">JK 保护板</text><text x="78" y="174" text-anchor="middle" font-size="10.5">Daly / JBD</text><text x="78" y="187" text-anchor="middle" font-size="10.5">保护板</text><text x="200" y="94" text-anchor="middle" font-size="10.5">batmon-ha</text><text x="200" y="107" text-anchor="middle" font-size="10.5">HA 加载项</text><text x="200" y="174" text-anchor="middle" font-size="10.5">树莓派蓝牙</text><text x="200" y="187" text-anchor="middle" font-size="10.5">轮询各协议</text><text x="200" y="248" text-anchor="middle" font-size="10.5">虚拟电池</text><text x="200" y="261" text-anchor="middle" font-size="10.5">库仑计</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 实体</text><text x="322" y="107" text-anchor="middle" font-size="10.5">MQTT 发现</text><text x="322" y="174" text-anchor="middle" font-size="10.5">总 SOC / 压差</text><text x="322" y="187" text-anchor="middle" font-size="10.5">告警</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">BLE</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">BLE</text><text x="200.0" y="168.0" text-anchor="middle" font-size="8" fill="#666">积分</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0304：保护板不是 JK 时，HA 主机蓝牙直连，两块组成虚拟电池告警</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">fl4p/batmon-ha</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>batmon-ha 是德国开发者 fl4p 在 2022 年发布的 HA 加载项，489 星，名字是 Battery Monitor 的缩写。它解决的问题和 esphome-jk-bms 类似——把 DIY 电池组的保护板数据接进 HA——但思路不同：不需要额外单片机，直接用跑 HA 的树莓派或小主机自带的蓝牙去连保护板，而且一次支持 JK、JBD、Daly、ANT、SOK 等一大串品牌。</p><p>它是一个 Python 服务，装在 HA 加载项商店里，配置里列出每块保护板的蓝牙 MAC 和类型，启动后轮流连上每一块、按各家协议读电压、电流、SOC、温度和电芯数据，通过 MQTT 自动发现推进 HA。它还自带几样保护板不给的功能：用电流积分算库仑计和累计充放电度数，把多块电池组合成一个“虚拟电池”看总量，蓝牙断连自动重试。</p><p>项目 2025 年仍在维护，支持型号一直在加；文档是英文，国内用得不如 ESPHome 方案多，但对不想焊板子的人是最省事的路。</p><p>在 0304 里它是“电池健康看护”的备选路线：如果备用电池的保护板买成了 Daly 或 JBD，或者不想在木架上再多一块 ESP32，就用它——HA 主机放在 0802，蓝牙隔一层木楼板一般够；两块电池组合成虚拟电池，HA 自动化按总 SOC 和单节压差告警。注意蓝牙距离超过十米就不稳，必要时给 HA 主机加一个 USB 蓝牙棒拉近。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -543,7 +612,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

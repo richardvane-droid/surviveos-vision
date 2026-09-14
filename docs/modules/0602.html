@@ -162,28 +162,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥800～1,500（传感器 + ESP32 + 三路电磁阀 + 桧木杆）；年度电费忽略不计</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/OpenSprinkler/OpenSprinkler-Firmware" target="_blank" rel="noopener">
-        <div class="gh-head"><b>OpenSprinkler/OpenSprinkler-Firmware</b><span class="stars">★ 543</span></div>
-        <p class="gh-desc">OpenSprinkler 开源灌溉控制器统一固件，支持树莓派和 ESP 硬件，带网页、MQTT 和天气调节</p>
-        <p class="gh-why">→ 三路电磁阀最成熟的现成方案，接雨量和土壤传感器就能按湿度和天气决定浇不浇</p>
-      </a>
-      <a class="gh" href="https://github.com/altmenorg/HAsmartirrigation" target="_blank" rel="noopener">
-        <div class="gh-head"><b>altmenorg/HAsmartirrigation</b><span class="stars">★ 548</span></div>
-        <p class="gh-desc">HomeAssistant 智能灌溉组件，按蒸散量和降雨计算每个分区该浇多久</p>
-        <p class="gh-why">→ 草原区、疏林区各建一个分区，它算出该浇几分钟，再交给 ESP32 开阀</p>
-      </a>
-      <a class="gh" href="https://github.com/petergridge/Irrigation-V5" target="_blank" rel="noopener">
-        <div class="gh-head"><b>petergridge/Irrigation-V5</b><span class="stars">★ 115</span></div>
-        <p class="gh-desc">HomeAssistant 灌溉排程集成，多区、按天气调节、自带 Lovelace 卡片</p>
-        <p class="gh-why">→ 凌晨四到六点的时段锁定、三区不同阈值和草地体检卡片，用它配起来最快</p>
-      </a>
-      <a class="gh" href="https://github.com/lrswss/esp32-irrigation-automation" target="_blank" rel="noopener">
-        <div class="gh-head"><b>lrswss/esp32-irrigation-automation</b><span class="stars">★ 36</span></div>
-        <p class="gh-desc">ESP32 自动灌溉的固件和硬件设计，四路电磁阀加水泵，带土壤湿度和水位监测，MQTT 接 HomeAssistant</p>
-        <p class="gh-why">→ 桧木杆里那块控制板可以直接照它的电路做，电磁阀、水位、湿度探针一块板全包了</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
+          <span class="stars">★ 11.7k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+        </header>
+        <p class="gh-desc">用 YAML 配置 ESP32 固件的系统，土壤湿度、翻斗雨量、超声波水位、电磁阀都是现成组件，本地跑逻辑，原生接 HomeAssistant</p>
+        <p class="gh-why">→ 桧木杆里那块 ESP32 就靠它：三传感器读数、三条件本地判断、三路阀门用 sprinkler 组件轮浇，断网照常，大红按钮也是它一行配置</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0602-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0602-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0602-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ESPHome · YAML 生成本地灌溉固件</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0602-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 236.0 h96 v36 h-96 Z M30.0 236.0 l8 -8 h96 l-8 8 M126.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0602-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0602-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0602-1-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0602-1-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0602-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0602-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M100.2 222.0 C139.0 222.0 139.0 124.0 177.8 124.0"/><path d="M266.0 96.0 L256.0 96.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M256.0 96.0 L266.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">三根湿度探针</text><text x="78" y="216" text-anchor="middle" font-size="10.5">雨量计 / 水位计</text><text x="78" y="254" text-anchor="middle" font-size="10.5">木杆大红按钮</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ESPHome 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">ESP32 本地判断</text><text x="200" y="174" text-anchor="middle" font-size="9.5">sprinkler 组件</text><text x="200" y="187" text-anchor="middle" font-size="10.5">三路轮浇</text><text x="322" y="180" text-anchor="middle" font-size="10.5">三路 12V 电磁阀</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">降雨预测 / 曲线</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">含水率</text><text x="139.0" y="168.0" text-anchor="middle" font-size="8" fill="#666">手动一轮</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">6h 无雨</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">三条件</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">开阀</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">实体</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0602：三传感器进 ESP32，本地三条件判断，sprinkler 组件凌晨四点轮浇三区</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">esphome/esphome</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ESPHome 是 Nabu Casa 维护的 ESP32 固件生成系统，和 HomeAssistant 同一个团队，GitHub 上 11.7k 星。想让 ESP32 读传感器、开关继电器、跑一点判断逻辑，以前得写 Arduino 代码，而它只要一份 YAML 写清接了什么、往哪报，编译、烧录、OTA 全自动。</p><p>它的工作方式是 YAML 到 C++ 的编译器：你声明传感器型号、引脚、采样周期，它生成固件；固件在设备本地运行，原生 API 推给 HomeAssistant，断网照常。和灌溉相关的组件很全：adc 读电容湿度探针，pulse_counter 数翻斗雨量计的脉冲，ultrasonic 读罐内水位，switch 控继电器，专门的 sprinkler 组件内置多路阀门排队轮浇和主阀联动。没有官方中文，但中文社区极大。</p><p>在 0602 里它就是桧木杆里的大脑：一块 ESP32 接三根湿度探针、雨量计和水位计，三路电磁阀经继电器接 sprinkler 组件；凌晨四点检查每区含水率低于阈值、罐里有水、HomeAssistant 传来的六小时降雨预测为零，三条都满足才把该区加入本轮；木杆上的大红按钮接一个 GPIO，按下就手动跑一轮。要注意电容探针要在干土和饱和土各标定一次，ADC 用 11dB 衰减并取五分钟中位数；三路阀门共用 12V 电源时加续流二极管。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/altmenorg/HAsmartirrigation" target="_blank" rel="noopener">altmenorg/HAsmartirrigation</a>
+          <span class="stars">★ 550</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">HomeAssistant 智能灌溉组件，按蒸散量和降雨算每个分区的水桶余额，给出该浇多少秒，界面自带 19 种语言含简体中文</p>
+        <p class="gh-why">→ 三区各建一个分区，它按天气算出疏林、草原、野花各要浇几分钟，替代拍脑袋的固定时长，再把秒数交给桧木杆里的 ESP32 执行</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0602-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="22" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0602-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0602-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Smart Irrigation · 蒸散量算该浇几秒</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0602-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0602-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0602-2-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0602-2-shade)" stroke="none"/><path d="M382.0 162.0 h96 v36 h-96 Z M382.0 162.0 l8 -8 h96 l-8 8 M478.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M479.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0602-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0602-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">本地温湿风</text><text x="78" y="149" text-anchor="middle" font-size="10.5">杆顶雨量计</text><text x="78" y="180" text-anchor="middle" font-size="9.5">OpenWeatherMap</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Smart Irrigation</text><text x="200" y="107" text-anchor="middle" font-size="10.5">HA 集成</text><text x="200" y="174" text-anchor="middle" font-size="10.5">三区水桶</text><text x="200" y="187" text-anchor="middle" font-size="10.5">FAO-56 蒸散</text><text x="322" y="100" text-anchor="middle" font-size="10.5">三个秒数实体</text><text x="322" y="174" text-anchor="middle" font-size="10.5">桧木杆 ESP32</text><text x="322" y="187" text-anchor="middle" font-size="9.5">sprinkler 时长</text><text x="430" y="180" text-anchor="middle" font-size="10.5">三路电磁阀</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">实测</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">替代</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">每天算</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">缺水毫米</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写时长</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">四点执行</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0602：三区分别算蒸散缺水量，秒数写进 ESP32，凌晨四点结合探针…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">altmenorg/HAsmartirrigation</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Smart Irrigation 是荷兰开发者 altmenorg 维护的 HomeAssistant 自定义集成，GitHub 上 550 星。固定时长的浇水要么浪费要么不够，科学的做法是算蒸散量，缺多少补多少，而这套农业公式普通人算不动。</p><p>它的工作方式是水桶模型：每个分区有一个虚拟水桶，每天用 FAO-56 的 Penman-Monteith 公式，按温度、湿度、风速、日照算出蒸散量从桶里扣掉，降雨往桶里加，桶低于零就表示缺水，缺的毫米数除以你填的滴灌流量就是该浇多少秒。天气数据可以来自 OpenWeatherMap，也可以完全用你自己的传感器；每个分区可设土壤类型、植物系数、面积和流量。它只负责算，秒数放在实体里由你的自动化去执行。界面有 19 种语言，含简体中文，更新频繁。</p><p>在 0602 里它是算账的那一层：疏林带、草原带、野花带各建一个分区，面积填 35、40、25 平米，植物系数按乔木、观赏草、宿根花分别取；雨量计的日累计和本地温湿度接进去替代网络天气。每天凌晨三点它算完，HomeAssistant 把三个秒数通过原生 API 写进桧木杆 ESP32 的 sprinkler 时长，四点由 ESP32 结合含水率和水位做最后判断。要注意地埋滴灌的湿润范围小，蒸散公式假设整面浇透，前两周对照探针实测把植物系数调低，别按默认值浇。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/OpenSprinkler/OpenSprinkler-Firmware" target="_blank" rel="noopener">OpenSprinkler/OpenSprinkler-Firmware</a>
+          <span class="stars">★ 543</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">OpenSprinkler 开源灌溉控制器的统一固件，跑在 ESP8266 或树莓派上，多站点排程、天气调节、雨和土壤传感器输入、MQTT</p>
+        <p class="gh-why">→ 不想自己写 YAML 的备选路线：三路阀接一块 OpenSprinkler 板，站点排程和传感器跳过是十年打磨过的成熟逻辑，手机 App 直接管</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0602-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="23" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0602-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0602-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OpenSprinkler · 十年打磨的站点排程</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0602-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="26.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M64 268.0 h28 M70 268.0 v6 h16 v-6" stroke-width="1"/><path d="M29.0 229.0 h98 v4 h-98 Z" fill="url(#g0602-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0602-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0602-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0602-3-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0602-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0602-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M100.2 222.0 C139.0 222.0 139.0 124.0 177.8 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M256.0 96.0 L266.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">雨传感器输入</text><text x="78" y="216" text-anchor="middle" font-size="10.5">ESP32 干接点</text><text x="78" y="229" text-anchor="middle" font-size="10.5">土壤太湿</text><text x="78" y="254" text-anchor="middle" font-size="9.5">手机 App / 网页</text><text x="200" y="94" text-anchor="middle" font-size="9.5">OpenSprinkler 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">ESP8266</text><text x="200" y="174" text-anchor="middle" font-size="10.5">程序 / 站点</text><text x="200" y="187" text-anchor="middle" font-size="10.5">凌晨四点一轮</text><text x="322" y="174" text-anchor="middle" font-size="10.5">三路电磁阀</text><text x="322" y="187" text-anchor="middle" font-size="9.5">12 / 8 / 6 分钟</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">MQTT 体检卡片</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">跳过</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">跳过</text><text x="139.0" y="168.0" text-anchor="middle" font-size="8" fill="#666">改程序</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">开阀</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">MQTT</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0602：三区三站点按程序浇，雨和土壤开关量跳过，MQTT…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">OpenSprinkler/OpenSprinkler-Firmware</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>OpenSprinkler 是美国 Rayshobby 公司从 2011 年做起的开源灌溉控制器，硬件和固件都开源，这个仓库是它的统一固件，GitHub 上 543 星，2025 年 11 月还在发新版。它把多路电磁阀灌溉做成一个能联网、按天气自动调、有手机 App 的控制器，是 DIY 灌溉领域里资格最老的项目。</p><p>同一套 C++ 代码可以编译给 ESP8266 版的 OpenSprinkler 3.x、树莓派版的 OSPi 和任何 Linux 机器。核心概念是站点和程序：每个站点对应一路电磁阀，程序定义哪些站点在什么时间浇多久；天气调节模块按气象数据算一个百分比缩放浇水时长；传感器输入支持雨传感器、土壤湿度开关和流量计，触发就跳过或暂停；网页和 App 通用，有 MQTT 和 HTTP API。硬件可买成品也可照原理图自制。没有中文资料。</p><p>在 0602 里它是不写代码的备选路线：三路 12V 电磁阀接三个站点，程序设成凌晨四点一轮，疏林 12 分钟、草原 8 分钟、野花 6 分钟；雨量计接它的雨传感器输入，下雨自动跳过，土壤探针经 ESP32 比较阈值后给它一个干接点当土壤传感器，太湿也跳过；雨水罐水位低时用 API 把它整体禁用。要注意它的传感器输入只认开关量，三区不同阈值得在 ESP32 那边分别比较；天气单位默认英制，改成公制。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -478,7 +542,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

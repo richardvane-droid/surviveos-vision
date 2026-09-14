@@ -146,23 +146,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥3,000～5,000（光伏板和电池占大头）；年度维护接近 ¥0</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/KinDR007/VictronMPPT-ESPHOME" target="_blank" rel="noopener">
-        <div class="gh-head"><b>KinDR007/VictronMPPT-ESPHOME</b><span class="stars">★ 409</span></div>
-        <p class="gh-desc">ESPHome 组件，通过 VE.Direct 串口读 Victron MPPT、SmartShunt 的电压、电流、发电量</p>
-        <p class="gh-why">→ 电池箱里的 ESPHome 节点直接用它，光伏发电量和电池电量推到 HomeAssistant 做卡片</p>
-      </a>
-      <a class="gh" href="https://github.com/Bettapro/Solar-Tracer-Blynk-V3" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Bettapro/Solar-Tracer-Blynk-V3</b><span class="stars">★ 61</span></div>
-        <p class="gh-desc">ESP32 通过 RS485 Modbus 读 EPEver Tracer 系列 MPPT 控制器，支持 MQTT 和 HomeAssistant</p>
-        <p class="gh-why">→ 国内买的 MPPT 多是 EPEver 这类，不想上 Victron 就用它接，电量低于 20% 报警照样能做</p>
-      </a>
-      <a class="gh" href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">
-        <div class="gh-head"><b>syssi/esphome-jk-bms</b><span class="stars">★ 963</span></div>
-        <p class="gh-desc">ESPHome 组件，用串口或蓝牙读 JK BMS 的每节电芯电压、温度和剩余容量</p>
-        <p class="gh-why">→ 磷酸铁锂电池组若配 JK 保护板，用它把单体电压和温度也读出来，冬天低温充电有数</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">syssi/esphome-jk-bms</a>
+          <span class="stars">★ 1.0k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">ESPHome 外部组件，通过 UART-TTL 或蓝牙读极空 JK BMS 的每节电芯电压、温度、剩余容量，还能远程开关充放电和均衡</p>
+        <p class="gh-why">→ 磷酸铁锂电池组配 JK 保护板，用它把单体电压和温度读进 HomeAssistant，冬天低温禁充、电量低于 20% 报警都有数据可依</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0703-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="25" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0703-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0703-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">JK BMS 组件 · 每节电芯都进中枢</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0703-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0703-1-shade)" stroke="none"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0703-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0703-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0703-1-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0703-1-shade)" stroke="none"/><path d="M382.0 82.0 h96 v36 h-96 Z M382.0 82.0 l8 -8 h96 l-8 8 M478.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M479.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0703-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0703-1-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M266.0 157.6 C200.0 157.6 200.0 114.4 134.0 114.4" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">JK 保护板</text><text x="78" y="107" text-anchor="middle" font-size="10.5">4 串磷酸铁锂</text><text x="78" y="174" text-anchor="middle" font-size="10.5">UART-TTL</text><text x="78" y="187" text-anchor="middle" font-size="10.5">或蓝牙</text><text x="200" y="94" text-anchor="middle" font-size="9.5">esphome-jk-bms</text><text x="200" y="107" text-anchor="middle" font-size="10.5">箱内 ESP32</text><text x="200" y="174" text-anchor="middle" font-size="10.5">电芯电压 / 温度</text><text x="200" y="187" text-anchor="middle" font-size="10.5">容量 / 压差</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">卡片 + 报警</text><text x="322" y="174" text-anchor="middle" font-size="10.5">充电开关</text><text x="322" y="187" text-anchor="middle" font-size="10.5">0 度禁充</text><text x="430" y="94" text-anchor="middle" font-size="10.5">手机</text><text x="430" y="107" text-anchor="middle" font-size="10.5">&lt;20% 报警</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">解析</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">原生 API</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">推送</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">自动化</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">关充电</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0703：读单体电压温度进 HA，低于 20% 报警，0 度以下自动禁充</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">syssi/esphome-jk-bms</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>esphome-jk-bms 是德国开发者 syssi 维护的 ESPHome 外部组件，GitHub 上 1.0k 星，专门读深圳极空 JK 系列电池管理系统的数据。JK BMS 是 DIY 磷酸铁锂电池圈子里最常用的国产带均衡保护板，自带蓝牙和串口，但原厂只有手机 App，数据进不了家庭中枢，这个组件补上了这一段。</p><p>它的工作方式是一块 ESP32 通过两种途径之一和 BMS 通信：UART-TTL 接保护板的串口排针，或者用 ESP32 自带的蓝牙直接连，后者不用接线但要独占连接。解析出的实体非常细：总电压、电流、功率、剩余容量、每一节电芯电压、最高最低压差、均衡电流、两路温度、充放电次数和各类保护状态，还有几个开关能远程打开或关闭充电、放电和均衡。仓库按型号分了几份示例 YAML。没有中文文档，但极空保护板是国产的，参数名和 App 一一对应。</p><p>在 0703 里它装在杉木柱脚的防水电池箱里：12V 100Ah 磷酸铁锂四串配一块 JK 保护板，箱内的 ESP32 用 UART 接它，和读 MPPT 的那块合成一块板子；HomeAssistant 收到剩余容量低于 20% 就推手机报警，电芯温度低于 0 度就通过充电开关禁止充电，这是磷酸铁锂冬天最要紧的保护；单体压差超过 50 毫伏提醒做一次均衡。蓝牙方式会和手机 App 抢连接，用串口更稳；串口线别和 12V 输出线并排走，干扰会让读数乱跳。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/KinDR007/VictronMPPT-ESPHOME" target="_blank" rel="noopener">KinDR007/VictronMPPT-ESPHOME</a>
+          <span class="stars">★ 409</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">ESPHome 外部组件，通过 VE.Direct 串口读 Victron MPPT 和 SmartShunt 的电池电压、光伏功率、今日发电量和充电状态</p>
+        <p class="gh-why">→ 电池箱里的 ESPHome 节点直接用它，今日光伏发电 0.6 度、电池电压这些数就是手机通知里那行字的来源，几根线加一份 YAML</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0703-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="26" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0703-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0703-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">VE.Direct 组件 · 两根线读 MPPT</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0703-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0703-2-shade)" stroke="none"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0703-2-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0703-2-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0703-2-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0703-2-shade)" stroke="none"/><path d="M382.0 82.0 h96 v36 h-96 Z M382.0 82.0 l8 -8 h96 l-8 8 M478.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M479.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0703-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0703-2-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">200W 光伏板</text><text x="78" y="174" text-anchor="middle" font-size="9.5">Victron MPPT</text><text x="78" y="187" text-anchor="middle" font-size="9.5">VE.Direct 口</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ESPHome 组件</text><text x="200" y="107" text-anchor="middle" font-size="9.5">箱内 ESP32 UART</text><text x="200" y="174" text-anchor="middle" font-size="10.5">电压 / 功率</text><text x="200" y="187" text-anchor="middle" font-size="10.5">今日发电量</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">钓台能源卡片</text><text x="322" y="174" text-anchor="middle" font-size="10.5">马灯 / 地脚灯</text><text x="322" y="187" text-anchor="middle" font-size="10.5">天黑后亮</text><text x="430" y="94" text-anchor="middle" font-size="10.5">手机</text><text x="430" y="107" text-anchor="middle" font-size="10.5">电池 82% 通知</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">19200 文本</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">解析</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">原生 API</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">九点推送</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">sun 实体</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0703：VE.Direct 两根线进 ESP32，发电量和电压进 HA 做卡片和…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">KinDR007/VictronMPPT-ESPHOME</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>VictronMPPT-ESPHOME 是捷克开发者 KinDR007 做的 ESPHome 外部组件，GitHub 上 409 星，用来读荷兰 Victron 公司 MPPT 太阳能控制器和 SmartShunt 电量计的数据。Victron 设备有一个叫 VE.Direct 的串口协议，每秒把电压电流等文本发一遍，文档公开，这个组件把它接进 ESPHome，不用买官方的联网网关。</p><p>接法极简：MPPT 侧面的 VE.Direct 口有四根线，接地和数据发送两根接到 ESP32 的一个 UART 引脚上就行，19200 波特纯文本，一行一个字段。组件解析出电池电压电流、光伏电压功率、今日和昨日发电量、充电阶段、错误码、负载输出状态等几十个实体。仓库提供完整示例 YAML。没有中文资料，但 Victron 在国内船用和房车圈有中文经销商和产品文档。</p><p>在 0703 里它是光伏电量看护的眼睛：顶棚那块 200W 板接一台 Victron 75/15 这类小 MPPT，电池箱里的 ESP32 用一个 UART 读它，和 JK BMS 那路合在同一块板上；HomeAssistant 做一张钓台能源卡片，显示电池电压、今日发电量、光伏功率和充电阶段，晚上九点那条电池 82%、今日发电 0.6 度的通知就从这里来；用 sun 实体判断天黑后再亮马灯和地脚灯。VE.Direct 的电平有些型号是 5V，接 ESP32 前加分压；串口线用屏蔽线，别超过一米。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Bettapro/Solar-Tracer-Blynk-V3" target="_blank" rel="noopener">Bettapro/Solar-Tracer-Blynk-V3</a>
+          <span class="stars">★ 61</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">ESP32 或 ESP8266 通过 RS485 Modbus 读 EPEver Tracer 系列 MPPT 控制器，支持 Blynk、MQTT 和 HomeAssistant 自动发现，带网页配置</p>
+        <p class="gh-why">→ 国内买的 MPPT 多是 EPEver 这类国产 Modbus 机型，不想上 Victron 就用它接，几十块的控制器也能把发电量和电池电压推进 HomeAssistant</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0703-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="27" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0703-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0703-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Solar-Tracer · Modbus 读国产 MPPT</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0703-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0703-3-shade)" stroke="none"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0703-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0703-3-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0703-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0703-3-shade)" stroke="none"/><path d="M382.0 82.0 h96 v36 h-96 Z M382.0 82.0 l8 -8 h96 l-8 8 M478.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M479.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0703-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0703-3-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M266.0 96.0 L256.0 96.0" stroke-dasharray="3 3"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">200W 光伏板</text><text x="78" y="174" text-anchor="middle" font-size="9.5">EPEver Tracer</text><text x="78" y="187" text-anchor="middle" font-size="9.5">RJ45 Modbus</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Solar-Tracer 固件</text><text x="200" y="107" text-anchor="middle" font-size="9.5">ESP32 + MAX485</text><text x="200" y="174" text-anchor="middle" font-size="10.5">寄存器</text><text x="200" y="187" text-anchor="middle" font-size="9.5">发电量 / 电池 / 故障</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">MQTT 自动发现</text><text x="322" y="174" text-anchor="middle" font-size="10.5">负载口</text><text x="322" y="187" text-anchor="middle" font-size="10.5">马灯 / 地脚灯</text><text x="430" y="94" text-anchor="middle" font-size="10.5">手机报警</text><text x="430" y="107" text-anchor="middle" font-size="10.5">&lt;20%</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">RS485 轮询</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">MQTT</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">推送</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">开关负载</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写寄存器</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0703：国产 EPEver 走 RS485 进 ESP32，MQTT 自动发现进 HA…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Bettapro/Solar-Tracer-Blynk-V3</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Solar-Tracer-Blynk-V3 是意大利开发者 Bettapro 做的固件，GitHub 上 61 星，用一块 ESP32 加一个 RS485 模块去读 EPEver Tracer 系列太阳能控制器。EPEver 是北京生产的 MPPT 品牌，Tracer AN 系列便宜好买，但原厂只给一个 RJ45 口的 Modbus 协议，这个固件把它变成一台能进家庭中枢的联网设备。</p><p>它的工作方式是主控通过 MAX485 芯片以 Modbus RTU 轮询控制器的寄存器，读出光伏电压电流功率、电池电压电流温度、负载状态、今日和累计发电量、充电阶段、故障位，还能写寄存器改负载开关。上报有三条路：Blynk 手机 App、MQTT 主题和 HomeAssistant 的 MQTT 自动发现，接上就自动出现几十个实体。没有中文资料，但 EPEver 的寄存器表有中文版可对照。</p><p>在 0703 里它是不用 Victron 时的替代路线：顶棚 200W 板接一台 EPEver Tracer 2210AN，电池箱里的 ESP32 通过 RS485 模块接控制器的 RJ45 口，自动发现后 HomeAssistant 的能源卡片、低电量报警和天黑亮灯的自动化都不用改；控制器自带的负载输出正好接马灯和地脚灯。RJ45 口的引脚要照它的接线图，接错会烧 RS485 模块；负载口有电流上限，逆变器走电池直出。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -489,7 +558,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

@@ -152,28 +152,120 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥3,500～6,000（舵机 + 主控 + 电池占大头，Microduck 官方套件约 $399）；年度电费和换舵机 ¥300 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener">
-        <div class="gh-head"><b>pollen-robotics/microduck</b><span class="stars">★ 7.6k</span></div>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener">pollen-robotics/microduck</a>
+          <span class="stars">★ 7.6k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
         <p class="gh-desc">Pollen Robotics / Hugging Face 的开源双足小鸭机器人：RK3566 主控、15 个舵机、50Hz 控制环，走路靠 MuJoCo + PPO 训练出的 ONNX 步态策略</p>
         <p class="gh-why">→ 就是市面上那只“AI 电子鸭”的开源本体，机械、电控、步态策略全开源，$399 套件可以直接买或自己打印</p>
-      </a>
-      <a class="gh" href="https://github.com/pollen-robotics/microduck_rl" target="_blank" rel="noopener">
-        <div class="gh-head"><b>pollen-robotics/microduck_rl</b><span class="stars">★ 1.9k</span></div>
-        <p class="gh-desc">Microduck 的强化学习训练环境（MuJoCo Warp + PPO + 域随机化）</p>
-        <p class="gh-why">→ 想让它学会上阁楼那段小坡道和地堡门下的通道，得在这里加环境重新训一遍步态</p>
-      </a>
-      <a class="gh" href="https://github.com/apirrone/Open_Duck_Mini" target="_blank" rel="noopener">
-        <div class="gh-head"><b>apirrone/Open_Duck_Mini</b><span class="stars">★ 3.9k</span></div>
-        <p class="gh-desc">Microduck 的前身：仿迪士尼 BDX 机器人的迷你双足鸭，约 42cm 高、$400 以内</p>
-        <p class="gh-why">→ 更大更便宜的替代路线，社区打印件和舵机选型都有现成清单</p>
-      </a>
-      <a class="gh" href="https://github.com/78/xiaozhi-esp32" target="_blank" rel="noopener">
-        <div class="gh-head"><b>78/xiaozhi-esp32</b><span class="stars">★ 29.6k</span></div>
-        <p class="gh-desc">小智：ESP32 上的 MCP 语音聊天机器人，接 Qwen / DeepSeek 等大模型，能通过 MCP 控制多终端设备</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0803-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="28" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0803-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0803-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Microduck · 仿真学步态，真机跑策略</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0803-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0803-1-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0803-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0803-1-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0" stroke-dasharray="3 3"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M279.3 148.0 C261.0 148.0 261.0 124.0 242.7 124.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">MuJoCo 仿真</text><text x="78" y="107" text-anchor="middle" font-size="10.5">PPO 训练</text><text x="78" y="216" text-anchor="middle" font-size="10.5">IMU / 摄像头</text><text x="200" y="94" text-anchor="middle" font-size="9.5">RK3566 robotd</text><text x="200" y="107" text-anchor="middle" font-size="10.5">50Hz 控制环</text><text x="200" y="174" text-anchor="middle" font-size="10.5">ONNX 策略库</text><text x="200" y="187" text-anchor="middle" font-size="10.5">走 / 蹲 / 起身</text><text x="322" y="100" text-anchor="middle" font-size="10.5">15 个总线舵机</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0803 巡游状态机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">（自写）</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">导出</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">姿态</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">目标角</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">切技能</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">走到脚边</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0803：套件做身体，自训通道/坡道步态，自写巡游状态机调它的技能</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">pollen-robotics/microduck</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Microduck 是法国 Pollen Robotics 与 Hugging Face 联合推出的开源双足小鸭机器人，2026 年上半年发布，$399 的套件价和 7.6k 星让它成了“AI 电子鸭”这个品类的开源本体。它要解决的问题很直接：把一台会走路、会表达情绪的桌面机器人做到普通人买得起、打印得出、改得动，硬件图纸、电控代码和步态策略全部开源。</p><p>工作原理是“仿真里学走路，真机上跑策略”：先在 MuJoCo 里用 PPO 强化学习训练步态，用域随机化让策略容忍真实世界的摩擦和惯量差异，再把网络导出成 ONNX 放进机身的 RK3566 主控。主控以 50Hz 读 IMU 姿态、算出十五个总线舵机下一拍的目标角度；走路、蹲下、起身、抓握是一条条独立策略，由 robotd 守护进程切换。整机约 800 克、25 厘米高。</p><p>仓库自带九条已训练技能、摄像头守护进程和 Python SDK，配套 microduck_rl 开放训练环境，社区还有用大模型串技能的 quackd。文档只有英文，但 B 站和小红书上已有不少中文复刻笔记。</p><p>放进 0803 里它就是鸭子的身体：机械电控照套件来，自己要做三件事——在 microduck_rl 里加上暗门下 12cm 通道和阁楼坡道的地形重训低头慢步与前倾步态、换一个带四麦阵列和 ESP32-S3 语音板的自制头壳、写一个按反光标记巡游回窝的小状态机去调它的技能。最大的坑是摔：前三个月只在地毯区训练，舵机多备两个。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/pollen-robotics/microduck_rl" target="_blank" rel="noopener">pollen-robotics/microduck_rl</a>
+          <span class="stars">★ 2k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">Microduck 的官方强化学习训练环境：mjlab（MuJoCo Warp）+ PPO + 域随机化，导出 ONNX 步态策略</p>
+        <p class="gh-why">→ 想让它学会上阁楼那段小坡道和地堡门下的通道，得在这里加地形重新训一遍步态</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0803-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="29" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0803-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0803-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">microduck_rl · GPU 仿真训步态出 ONNX</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0803-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-2-shade)" stroke="none"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0803-2-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0803-2-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0803-2-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0803-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">任务定义</text><text x="78" y="107" text-anchor="middle" font-size="10.5">通道 / 坡道地形</text><text x="78" y="174" text-anchor="middle" font-size="10.5">CUDA 显卡</text><text x="78" y="187" text-anchor="middle" font-size="10.5">4096 并行环境</text><text x="200" y="94" text-anchor="middle" font-size="9.5">microduck_rl</text><text x="200" y="107" text-anchor="middle" font-size="9.5">mjlab + PPO</text><text x="200" y="174" text-anchor="middle" font-size="10.5">域随机化</text><text x="200" y="187" text-anchor="middle" font-size="10.5">BAM 舵机模型</text><text x="322" y="94" text-anchor="middle" font-size="10.5">ONNX 策略</text><text x="322" y="107" text-anchor="middle" font-size="10.5">归一化已烤入</text><text x="322" y="174" text-anchor="middle" font-size="10.5">真机 robotd</text><text x="322" y="187" text-anchor="middle" font-size="10.5">50Hz 加载</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">1~2 小时</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">导出</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">拷入</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">地毯试走</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0803：加通道 / 坡道地形重训步态，云 GPU 出 ONNX</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">pollen-robotics/microduck_rl</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>microduck_rl 是 Microduck 的官方强化学习训练仓库，由 Pollen Robotics 维护，2k 星，基于 mjlab（MuJoCo Warp 的 GPU 并行仿真）加 PPO 算法，定位很明确：主仓库负责机器人的身体和运行时，这里负责教它怎么动。它解决的是双足机器人最难的一环：仿真里训出来的步态放到真机上就摔。</p><p>它的流程是：定义任务（走路、起身、踢腿、轮滑等十几种）→ 在 4096 个并行环境里用 PPO 训练，50Hz 控制频率与真机一致 → 域随机化把摩擦、质量、舵机电压、齿隙（每关节 ±1°）等参数打散，再用 BAM 舵机模型把真实电机特性搬进仿真 → 导出 ONNX，观测归一化直接烤进计算图，机身上的 robotd 加载即用。要一块 CUDA 显卡，基础步态一两个小时能训出能用的版本。代码 Apache 2.0。README 只有英文，中文只有零散的复现笔记。</p><p>在 0803 里它是鸭子学新路的地方：地堡门下 12cm 通道要一条低头慢步策略，阁楼楼梯口 15° 坡道要一条前倾爬坡策略，都得在这里新建地形、改奖励函数重训。训完先在地毯上试，摔两次再上木地板。坑是显卡：Mac mini 训不了，要么借一台带 4090 的机器，要么租几小时云 GPU 把 ONNX 拿回来。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/apirrone/Open_Duck_Mini" target="_blank" rel="noopener">apirrone/Open_Duck_Mini</a>
+          <span class="stars">★ 3.9k</span>
+          <span class="zh ">有中文文档站</span>
+        </header>
+        <p class="gh-desc">Microduck 的前身：仿迪士尼 BDX 机器人的迷你双足鸭，约 42cm 高、BOM 400 美元以内，STL 与 BOM 全开源</p>
+        <p class="gh-why">→ 更大更便宜的替代路线，打印件、BOM 表和舵机选型都有现成清单，还有中文文档</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0803-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="30" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0803-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0803-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Open Duck Mini · 自己打印的 BDX 小鸭</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0803-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-3-shade)" stroke="none"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0803-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0803-3-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0803-3-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0803-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0803-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M279.3 148.0 C261.0 148.0 261.0 124.0 242.7 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">STL 打印件</text><text x="78" y="107" text-anchor="middle" font-size="10.5">拓竹打印</text><text x="78" y="174" text-anchor="middle" font-size="10.5">BOM 表格</text><text x="78" y="187" text-anchor="middle" font-size="10.5">400 美元以内</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Open Duck Mini</text><text x="200" y="107" text-anchor="middle" font-size="9.5">树莓派 Zero 2W</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Playground</text><text x="200" y="187" text-anchor="middle" font-size="10.5">MuJoCo 训练</text><text x="322" y="94" text-anchor="middle" font-size="10.5">总线舵机</text><text x="322" y="107" text-anchor="middle" font-size="10.5">42cm 双足</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Runtime</text><text x="322" y="187" text-anchor="middle" font-size="10.5">跑 ONNX 步态</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">自己打印</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">照单采购</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">ONNX</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">驱动</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0803：套件缺货时的自造路线，抄分件外壳与舵机选型</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">apirrone/Open_Duck_Mini</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Open Duck Mini 是 Antoine Pirrone 发起的开源项目，目标是做一只迷你版的迪士尼 BDX 机器人，整机 BOM 控制在 400 美元以内，3.9k 星，也是 Microduck 的直接前身。它解决的问题是一个人在家能不能从零造一只会走的双足鸭，答案是能。</p><p>它的路线和 Microduck 一致但更开放：v2 版约 42cm 高，主控是树莓派 Zero 2W，舵机是 Feetech 总线舵机，仿真在 MuJoCo，训练和运行时各有配套仓库，两份训好的 ONNX 步态直接给了。所有打印件的 STL、BOM 表格、打印指南和装配说明都在仓库里，Discord 社区很活跃，近 500 个 fork。中文方面，README 链了一份社区维护的飞书中文文档，B 站有完整复刻系列。</p><p>在 0803 里它是备用路线和参考书：如果 399 美元的 Microduck 套件缺货或想要更大一只，就照它的清单自己打印和采购；更重要的是它的打印件和舵机选型经验：外壳怎么分件才好换季换羽毛、哪些舵机耐摔，都可以直接抄。注意它比 Microduck 高 17cm，钻不过 12cm 的鸭子通道，要走这条路线就得把门下净空改成 45cm 以上。</p></div>
+      </article>
+      <article class="gh-card" id="gh4">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/78/xiaozhi-esp32" target="_blank" rel="noopener">78/xiaozhi-esp32</a>
+          <span class="stars">★ 29.6k</span>
+          <span class="zh ">官方中文 README</span>
+        </header>
+        <p class="gh-desc">小智：ESP32-S3 上的 MCP 语音聊天机器人，离线唤醒、接 Qwen / DeepSeek 等大模型，能通过 MCP 控制设备</p>
         <p class="gh-why">→ 鸭子的嘴和耳朵直接用它：本地唤醒 + 大模型对话，MCP 那层正好接 HomeAssistant 去查全屋数据</p>
-      </a>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0803-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="31" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0803-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0803-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">小智 · 离线唤醒，MCP 接全屋</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0803-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0803-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-4-shade)" stroke="none"/><path d="M166.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0803-4-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0803-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0803-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">头顶的四麦阵列</text><text x="78" y="180" text-anchor="middle" font-size="10.5">物理静音拨杆</text><text x="200" y="94" text-anchor="middle" font-size="9.5">小智 ESP32-S3</text><text x="200" y="107" text-anchor="middle" font-size="9.5">唤醒 + 设备 MCP</text><text x="200" y="174" text-anchor="middle" font-size="10.5">自建服务端</text><text x="200" y="187" text-anchor="middle" font-size="10.5">识别 + 大模型</text><text x="322" y="94" text-anchor="middle" font-size="9.5">圆屏 + 喇叭 + 眼睛</text><text x="322" y="107" text-anchor="middle" font-size="10.5">表情 / 说话</text><text x="322" y="174" text-anchor="middle" font-size="9.5">HA MCP Server</text><text x="322" y="187" text-anchor="middle" font-size="10.5">查实体 / 写待办</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">唤醒词</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">WebSocket</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">MCP 调用</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">回放</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">回答</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0803：头壳里的 ESP32-S3 听与说，自建服务端经 MCP 查 HA 实体、写待办</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">78/xiaozhi-esp32</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>小智（xiaozhi-esp32）是虾哥（78）发起的开源语音聊天机器人固件，跑在 ESP32-S3 上，29.6k 星，是国内最火的 AI 硬件开源项目，README 本身就是中英双语，支持 138 种开发板。它解决的问题是：用几十块钱的板子做一个能听、能说、有表情的 AI 伙伴，而且能控制真实设备。</p><p>它的链路是：麦克风阵列采音 → ESP-SR 离线唤醒词和回声消除 → 音频经 WebSocket 或 MQTT+UDP 送到服务端 → 服务端做语音识别、接 Qwen / DeepSeek 等大模型、合成语音 → 语音回到板子播放。关键是 MCP：设备端 MCP 把喇叭、LED、舵机、GPIO 暴露成工具让大模型调用，云端 MCP 又能接外部服务。默认连 xiaozhi.me，也可以自建服务端，中文教程遍地都是。</p><p>在 0803 里它是鸭子的嘴和耳朵：头壳里塞一块 ESP32-S3 加四麦板，胸口 1.28 寸圆屏就是它的表情屏，两颗 RGB 眼睛用设备端 MCP 暴露给大模型控制情绪。全屋数据问答走自建服务端上的 MCP 客户端接 HomeAssistant 的 MCP Server，问雨水罐就去查实体；随口一句记得买 M3 螺丝写进 HA 的待办实体再同步到 0801。注意麦阵放头顶、舵机放身子、中间垫泡棉，否则电机噪音会把识别率打穿；再加一个物理静音拨杆。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>

@@ -122,23 +122,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>本模块不产生独立预算，型材、木料、皮草成本计入各引用模块的 BOM；三块样板约 ¥200</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">
-        <div class="gh-head"><b>FreeCAD/FreeCAD</b><span class="stars">★ 32.2k</span></div>
-        <p class="gh-desc">开源参数化 3D 建模软件，型材框架和木作都能画</p>
-        <p class="gh-why">→ 每个模块画型材机架前先在它里面按 0805 的规格建模，2020 / 3030 两档尺寸做成参数</p>
-      </a>
-      <a class="gh" href="https://github.com/adgaudio/OpenSCAD_connectors" target="_blank" rel="noopener">
-        <div class="gh-head"><b>adgaudio/OpenSCAD_connectors</b><span class="stars">★ 46</span></div>
-        <p class="gh-desc">面向 2020 铝型材的参数化连接件库：角码、T 型接头、端盖，可直接出 STL 打印</p>
-        <p class="gh-why">→ 黑色角码缺货时自己打印的连接件就从这里改，槽宽参数改成 6mm 欧标</p>
-      </a>
-      <a class="gh" href="https://github.com/xiterion/openscad-extrusions" target="_blank" rel="noopener">
-        <div class="gh-head"><b>xiterion/openscad-extrusions</b><span class="stars">★ 1</span></div>
-        <p class="gh-desc">OpenSCAD 里描述各厂商铝型材截面的小库</p>
-        <p class="gh-why">→ 把欧标 2020 / 3030 的真实截面放进模型里，检查配件和壁厚是否对得上</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">FreeCAD/FreeCAD</a>
+          <span class="stars">★ 32.2k</span>
+          <span class="zh ">有中文文档站</span>
+        </header>
+        <p class="gh-desc">开源参数化 3D 建模软件，草图约束、零件设计、电子表格驱动尺寸、出加工图，型材框架和木作都能画</p>
+        <p class="gh-why">→ 每个模块画型材机架前先在它里面按 0805 的规格建模，2020 / 3030 两档尺寸做成参数化零件库</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0805-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="30" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0805-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0805-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">FreeCAD · 参数化零件库把规则写进模型</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0805-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-1-shade)" stroke="none"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0805-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-1-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0805-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0805-1-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">D3 规格</text><text x="78" y="107" text-anchor="middle" font-size="9.5">2020 槽 6 壁 1.8</text><text x="78" y="174" text-anchor="middle" font-size="9.5">Spreadsheet</text><text x="78" y="187" text-anchor="middle" font-size="10.5">参数变量</text><text x="200" y="94" text-anchor="middle" font-size="10.5">FreeCAD</text><text x="200" y="107" text-anchor="middle" font-size="10.5">草图 + 零件设计</text><text x="200" y="174" text-anchor="middle" font-size="10.5">参数化零件库</text><text x="200" y="187" text-anchor="middle" font-size="9.5">型材 / 角码 / 螺母</text><text x="322" y="94" text-anchor="middle" font-size="10.5">各模块机架装配</text><text x="322" y="107" text-anchor="middle" font-size="9.5">0301 / 0401 / 0404</text><text x="322" y="174" text-anchor="middle" font-size="10.5">TechDraw</text><text x="322" y="187" text-anchor="middle" font-size="10.5">切割清单图</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">驱动尺寸</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">两档规格</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">拖入</text><text x="376.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">下料</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0805：2020 / 3030 两档型材与配件做成参数化零件库，各模块机架从库里拖</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">FreeCAD/FreeCAD</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>FreeCAD 是最成熟的开源参数化 3D 建模软件，2002 年发起，几何内核是 OpenCASCADE，32.2k 星，2026 年 4 月发布 1.1.1。它解决的问题是：不花钱、不上云，也能像商业 CAD 那样画出可修改、可出图、可打印的机械件和木作。</p><p>它的核心是参数化建模：在 Sketcher 里画带几何约束的二维草图，在 Part Design 里拉伸、旋转、打孔成实体，每一步都记在模型树里，回头改一个尺寸整件跟着变；Spreadsheet 工作台能把型材长度、槽宽这类数字做成表格变量驱动整个装配；TechDraw 出带尺寸的加工图，再加上几百个社区工作台。界面有完整简体中文，官方 wiki 有大量中文页面，是三个方案里中文资料最好的一个。</p><p>在 0805 里它是材质总纲的数字样板间：把欧标 2020（槽宽 6mm、壁厚 1.8）和 3030 / 4040（槽宽 8mm）做成两个参数化零件，角码、T 型螺母、端盖各一个，再做一套白蜡木板、植鞣皮面的外观库；以后 0301 工具台、0401 过道工具间、0404 木工间画机架时直接从这个库里拖，选错槽宽的配件就装不上，等于把材质规则写进了模型。零件库放 NAS 上统一版本，别各存各的。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/openscad/openscad" target="_blank" rel="noopener">openscad/openscad</a>
+          <span class="stars">★ 9.6k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">程序员的 3D CAD：用脚本描述几何体，参数一改整件重生，Thingiverse 和 MakerWorld 上可自定义的型材配件多半用它写</p>
+        <p class="gh-why">→ 黑色角码缺货时自己打印的角码、端盖、槽盖条都用它写成参数化脚本，槽宽 6 / 8mm 一个变量切换</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0805-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="31" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0805-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0805-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OpenSCAD · 脚本出参数化打印配件</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0805-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-2-shade)" stroke="none"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0805-2-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0805-2-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-2-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0805-2-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0805-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">参数文件</text><text x="78" y="107" text-anchor="middle" font-size="9.5">slot = 6 / 8</text><text x="78" y="174" text-anchor="middle" font-size="10.5">DXF 轮廓</text><text x="78" y="187" text-anchor="middle" font-size="10.5">型材截面</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OpenSCAD</text><text x="200" y="107" text-anchor="middle" font-size="10.5">CSG 脚本</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Customizer</text><text x="200" y="187" text-anchor="middle" font-size="10.5">拖滑块改尺寸</text><text x="322" y="94" text-anchor="middle" font-size="10.5">3MF / STL</text><text x="322" y="107" text-anchor="middle" font-size="10.5">角码 端盖 脚垫</text><text x="322" y="174" text-anchor="middle" font-size="10.5">拓竹打印机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">阁楼</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">导入</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">导出</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">装到机架</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0805：角码 / 端盖写成参数脚本，槽宽一变量切两档，出 3MF</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">openscad/openscad</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>OpenSCAD 是程序员的 3D CAD：不用鼠标画，而是用一种小脚本语言描述几何体，9.6k 星，稳定版还是 2021.01，但开发版快照一直在更新。它解决的问题是：需要成批量、按参数变化的零件，同一个角码要出 2020 和 3030 两个版本，改一个数字就行。</p><p>它的模型是构造实体几何：立方体、圆柱、球这些基本体经过并、差、交和平移旋转拼成复杂件，二维轮廓可以拉伸成体，STL 和 3MF 直接导出去打印。所有尺寸都是变量，顶部定义 slot = 6 之类的参数，Customizer 面板里拖滑块就能改；正因如此，Thingiverse 和 MakerWorld 上绝大多数可自定义的型材配件都是它写的，围绕它长出了 NopSCADlib 等大型零件库。界面有中文语言包，README 英文。</p><p>在 0805 里它是配件打印的生产线：黑色角码缺货时，用它写一个参数化角码，槽宽、螺孔间距、壁厚都是变量，欧标 2020 出一版、3030 出一版，再加端盖、槽盖条、脚垫这几个常用件，导出 3MF 发给阁楼的拓竹打印。注意 OpenSCAD 只管形状不管装配关系，装配还是回 FreeCAD 看，两边靠同一份参数文件保持一致；打印件用黑色 PETG，别用 PLA。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/nophead/NopSCADlib" target="_blank" rel="noopener">nophead/NopSCADlib</a>
+          <span class="stars">★ 1.6k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">OpenSCAD 零件库和项目框架：自带 E2020 / E3030 / E4040 铝型材、角码、滑入式 T 型螺母等标准件，能生成 BOM 和装配图</p>
+        <p class="gh-why">→ 0804 三机机架和各模块型材框架直接用它的型材与角码模型拼，跑脚本就出切割清单和螺丝数量</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0805-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="32" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0805-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0805-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">NopSCADlib · 标准件库拼机架出 BOM</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0805-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M38.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0805-3-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-3-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0805-3-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0805-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M279.3 124.0 C261.0 124.0 261.0 148.0 242.7 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">vitamins</text><text x="78" y="107" text-anchor="middle" font-size="9.5">E2020 / E3030</text><text x="78" y="174" text-anchor="middle" font-size="10.5">printed</text><text x="78" y="187" text-anchor="middle" font-size="9.5">盒 / 铰链 / 脚垫</text><text x="200" y="94" text-anchor="middle" font-size="10.5">NopSCADlib</text><text x="200" y="107" text-anchor="middle" font-size="10.5">项目框架</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Python 脚本</text><text x="200" y="187" text-anchor="middle" font-size="10.5">扫注释</text><text x="322" y="94" text-anchor="middle" font-size="10.5">机架模型</text><text x="322" y="107" text-anchor="middle" font-size="10.5">0804 三机架</text><text x="322" y="174" text-anchor="middle" font-size="10.5">BOM + 装配图</text><text x="322" y="187" text-anchor="middle" font-size="10.5">readme</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">拼框架</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">生成</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">照单采购</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0805：E2020 + 角码 + T 型螺母拼 0804 机架，脚本出切割清单和螺丝数量</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">nophead/NopSCADlib</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>NopSCADlib 是 Chris Palmer（nophead）维护的 OpenSCAD 零件库和项目框架，1.6k 星，GPL v3，持续更新十几年。它解决的问题是：做一台机器要用的标准件，每次都自己画一遍太浪费，不如有一个尺寸准确的库，顺手把 BOM 和装配图也生成了。</p><p>它的内容分两大块。vitamins（外购件）里直接有 E2020、E3030、E4040 等一整套铝型材模型，带真实槽形截面，配套 extrusion_corner_bracket、extrusion_inner_corner_bracket 角码和 sliding_t_nut 滑入式 T 型螺母；printed（打印件）里有盒子、铰链、线夹、脚垫等结构件。框架部分是一套 Python 脚本：在 OpenSCAD 注释里写 Markdown，脚本就能扫出 BOM 清单和分步装配图。README 和文档只有英文，看示例就会。</p><p>在 0805 里它是型材机架的标准件字典：0804 那个 60×40cm 三机机架，直接用 E2020 拼框架、角码做角、T 型螺母挂托板，跑一次脚本就得到型材切割清单和螺丝数量。要注意它的 2020 截面是 6mm 槽，正好对上 D3 定标；但它默认角码是银色通用件，喷砂黑那几件要在 printed 里自己加颜色参数；3030 是 8mm 槽，配件要分别传参。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>

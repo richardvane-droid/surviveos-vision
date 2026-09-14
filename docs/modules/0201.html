@@ -173,23 +173,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥6,000～12,000（影视灯、透镜、电动滑轨云台占大头）；年度电费 ¥300 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">
-        <div class="gh-head"><b>basnijholt/adaptive-lighting</b><span class="stars">★ 3.4k</span></div>
-        <p class="gh-desc">HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度</p>
-        <p class="gh-why">→ 直接拿它做晨光 3200K 到正午 5600K 再到黄昏 2700K 的自动曲线，睡前落日渐暗也自带</p>
-      </a>
-      <a class="gh" href="https://github.com/claytonjn/hass-circadian_lighting" target="_blank" rel="noopener">
-        <div class="gh-head"><b>claytonjn/hass-circadian_lighting</b><span class="stars">★ 887</span></div>
-        <p class="gh-desc">HomeAssistant 昼夜节律灯光组件，模拟一天中自然光的色温变化</p>
-        <p class="gh-why">→ Adaptive Lighting 的前辈，配置更简单，适合只想让影视灯跟着时间变色温的最小方案</p>
-      </a>
-      <a class="gh" href="https://github.com/isaac879/Pan-Tilt-Mount" target="_blank" rel="noopener">
-        <div class="gh-head"><b>isaac879/Pan-Tilt-Mount</b><span class="stars">★ 484</span></div>
-        <p class="gh-desc">步进电机驱动、3D 打印的 Arduino 云台，可编程关键帧运动</p>
-        <p class="gh-why">→ 天花板滑轨上的云台可以参考它的 3D 件和固件，让灯头一边走一边慢慢转向床和沙发</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">basnijholt/adaptive-lighting</a>
+          <span class="stars">★ 3.4k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度，自带睡眠模式和手动接管检测</p>
+        <p class="gh-why">→ 直接拿它做晨光 3200K 到正午 5600K 再到黄昏 2700K 的自动曲线，睡前落日渐暗用它的 sleep mode 开关就有</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0201-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="8" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0201-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0201-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Adaptive Lighting · 太阳高度角算出色温亮度</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0201-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0201-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0201-1-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-1-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0201-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M200.0 148.0 L200.0 124.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">经纬度 / 时间</text><text x="78" y="149" text-anchor="middle" font-size="10.5">太阳高度角</text><text x="78" y="218" text-anchor="middle" font-size="10.5">睡前开关</text><text x="78" y="231" text-anchor="middle" font-size="10.5">sleep mode</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Adaptive Lighting</text><text x="200" y="107" text-anchor="middle" font-size="10.5">色温亮度曲线</text><text x="200" y="174" text-anchor="middle" font-size="10.5">手动改动检测</text><text x="200" y="187" text-anchor="middle" font-size="10.5">暂停接管</text><text x="322" y="94" text-anchor="middle" font-size="10.5">南光灯 CCT</text><text x="322" y="107" text-anchor="middle" font-size="10.5">ESPHome 实体</text><text x="322" y="180" text-anchor="middle" font-size="10.5">柔光箱 / 夜灯</text><text x="430" y="138" text-anchor="middle" font-size="10.5">床上的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">算曲线</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">turn_on</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">晒醒</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0201：曲线给色温亮度，滑轨走位另写自动化按时刻换算步数</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">basnijholt/adaptive-lighting</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Adaptive Lighting 是荷兰开发者 Bas Nijholt 写的 Home Assistant 自定义组件，3.4k 星，是 HA 社区里做“灯光跟着太阳走”最常用的方案。它解决的问题很单纯：人整天待在室内，灯却是死的，昼夜节律就乱了；它让每盏可调色温的灯按当地日出日落曲线，从清晨暖光过渡到正午冷白，再回到黄昏的橙光。</p><p>原理上它不碰硬件，只算曲线：读取 HA 的经纬度和时间，算出太阳高度角，映射成一个色温值和亮度百分比，再定时调用灯的开灯服务把值写进去。你手动改了灯，它会识别出“不是 HA 做的改动”并暂停接管，直到灯关掉再开。自带 sleep mode 开关，打开后所有灯降到最暖最暗，正好做睡前渐暗；日出日落时刻、色温上下限、过渡秒数、亮度曲线形状全部可调。</p><p>它走 HACS 安装、UI 配置，兼容 HA 里任何灯实体，包括 WLED、ESPHome 的 CCT 灯和各家智能灯泡，至今持续更新。文档只有英文，HA 中文社区里配置分享不少。</p><p>放进 0201，它就是那盏南光灯的“大脑”：南光 FS-300B 用 ESPHome 做成一个 CCT 灯实体交给它管，晨光、正午、黄昏三档色温由曲线自动给出，四场景里只剩阴天模式要单独写；睡前 30 分钟打开 sleep mode 做落日渐暗，最后交给床头夜灯。要注意它只管色温和亮度，滑轨走位得另写一条自动化按时刻换算步数。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/claytonjn/hass-circadian_lighting" target="_blank" rel="noopener">claytonjn/hass-circadian_lighting</a>
+          <span class="stars">★ 887</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">HomeAssistant 昼夜节律灯光组件，把一天里自然光的色温变化算成一个传感器值，再按开关分组套到灯上</p>
+        <p class="gh-why">→ Adaptive Lighting 的前辈，配置更简单，还会把当前色温百分比暴露成传感器，滑轨换算走位时正好拿来当输入</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0201-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0201-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0201-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Circadian Lighting · 一个传感器加一组开关</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0201-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0201-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0201-2-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-2-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0201-2-shade)" stroke="none"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-2-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0201-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M322.0 204.0 L322.0 222.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">太阳高度角</text><text x="78" y="149" text-anchor="middle" font-size="10.5">（HA 时间）</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Circadian</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Lighting 传感器</text><text x="200" y="174" text-anchor="middle" font-size="10.5">分组开关</text><text x="200" y="187" text-anchor="middle" font-size="10.5">南光灯组</text><text x="322" y="100" text-anchor="middle" font-size="10.5">南光灯 CCT</text><text x="322" y="174" text-anchor="middle" font-size="10.5">滑轨走位自动化</text><text x="322" y="187" text-anchor="middle" font-size="10.5">（自写）</text><text x="322" y="248" text-anchor="middle" font-size="10.5">ESPHome 步进</text><text x="322" y="261" text-anchor="middle" font-size="10.5">3m 滑轨</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">算色温</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">色温值</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写入</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">百分比</text><text x="322.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">步数</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0201：备选的最简色温方案；它的百分比传感器给滑轨换算…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">claytonjn/hass-circadian_lighting</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Circadian Lighting 是美国开发者 claytonjn 在 2018 年发布的 Home Assistant 自定义组件，887 星，可以说是 Adaptive Lighting 的前辈，后者就是从它的思路上重写出来的。目标一样：让室内灯光模拟一天中自然光的色温变化，早上暖、中午白、傍晚再回暖。2025 年 9 月发了 2.1.6 版，仍在维护。</p><p>它的结构比 Adaptive Lighting 更简单，分成两层：一个传感器实体，按太阳高度角持续算出“当前应该是什么色温”和一个百分比；再加若干开关实体，每个开关绑一组灯，打开就把传感器的值写进这组灯，关掉就还给你手动控制。没有手动改动检测，也没有睡眠模式，换来的是配置只有十几行 YAML，出问题一眼能看懂。</p><p>它同样走 HACS 安装，兼容所有能调色温的灯；文档是英文，但配置极简，照抄示例就能跑。</p><p>在 0201 里它有两个位置。一是备选：如果 Adaptive Lighting 的接管逻辑和你的手动场景打架，就换它做最小方案，只让南光灯跟着时间变色温。二是更巧的用法——它那个传感器不控灯也能单独存在，滑轨走位的自动化直接读这个“一天走到几成”的百分比，换算成 3 米滑轨上的步数，灯的位置和色温就天然对齐了。注意两个组件别同时管同一盏灯，否则会互相覆盖。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/isaac879/Pan-Tilt-Mount" target="_blank" rel="noopener">isaac879/Pan-Tilt-Mount</a>
+          <span class="stars">★ 504</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">步进电机驱动、3D 打印的 Arduino 三轴摄影运动控制器：滑轨 + 云台，带蓝牙 App 和关键帧运动</p>
+        <p class="gh-why">→ 天花板滑轨上的云台可以照它的 3D 件、V 槽型材皮带结构和固件来做，灯头一边沿梁走一边慢慢转向床和沙发</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0201-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0201-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0201-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Pan-Tilt-Mount · 皮带滑轨加云台的运动控制</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0201-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0201-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0201-3-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-3-shade)" stroke="none"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0201-3-arrow)" stroke-linecap="round"><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M322.0 204.0 L322.0 222.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 走位自动化</text><text x="78" y="187" text-anchor="middle" font-size="10.5">按时刻下发</text><text x="78" y="100" text-anchor="middle" font-size="10.5">霍尔回零</text><text x="200" y="174" text-anchor="middle" font-size="9.5">ESP32 ESPHome</text><text x="200" y="187" text-anchor="middle" font-size="10.5">串口转发</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Arduino Nano</text><text x="200" y="107" text-anchor="middle" font-size="10.5">关键帧运动固件</text><text x="322" y="94" text-anchor="middle" font-size="10.5">TMC2208 驱动</text><text x="322" y="107" text-anchor="middle" font-size="9.5">NEMA17 减速电机</text><text x="322" y="174" text-anchor="middle" font-size="10.5">3m 滑轨滑车</text><text x="322" y="187" text-anchor="middle" font-size="10.5">带转轴灯座</text><text x="322" y="254" text-anchor="middle" font-size="10.5">南光灯 + 透镜</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">位置指令</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">串口</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">回零</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">步进脉冲</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">皮带</text><text x="322.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">东走到西</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0201：照它的 STL 和固件做 3m 滑轨滑车，ESPHome 串口接 HA</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">isaac879/Pan-Tilt-Mount</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Pan-Tilt-Mount 是创客 isaac879 开源的三轴摄影运动控制器，504 星，是自制电动滑轨里最常被复刻的一个。它原本给相机做延时和平移镜头：一根 2040 V 槽铝型材做滑轨，同步带拉着一个 3D 打印的滑车，滑车上再叠一个云台，做出滑动、水平转、俯仰三个轴。</p><p>控制核心是一块 Arduino Nano 和三颗 TMC2208 静音驱动，带三只 NEMA17 步进电机，霍尔传感器负责回零。固件通过串口收简单的字母指令：设速度、走到某位置、记关键帧、按关键帧序列平滑运动；板上接一颗 JDY-31 蓝牙串口模块，手机 App 就能遥控。定位精度滑轨 0.0225 毫米、转轴 0.0133 度，对灯来说远远够用，12V 供电。</p><p>仓库里有全套 STL、BOM、接线图和固件，文档英文，B 站有复刻视频。近年更新不多，胜在零件全是标准件。</p><p>在 0201 里，它就是梁下那根 3 米滑轨的骨架：型材接长到 3 米、皮带同样接长，滑车照 STL 放大加固，保留滑动和水平转两个轴，俯仰轴改成固定角度。固件不用蓝牙，串口接一块跑 ESPHome 的 ESP32 转成 HA 实体，走位指令由 HA 按时刻下发。最大的坑是负载：南光灯加透镜有两三公斤，皮带 3 米会松、NEMA17 直驱会丢步，建议换带 1:5 减速箱的电机，并把回零霍尔装在两端各一个。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -532,7 +601,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

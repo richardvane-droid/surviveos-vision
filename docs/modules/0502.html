@@ -131,23 +131,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥300～800（苗、地灯、竹竿）；后续几乎零成本</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/pageauc/pi-timolo" target="_blank" rel="noopener">
-        <div class="gh-head"><b>pageauc/pi-timolo</b><span class="stars">★ 580</span></div>
-        <p class="gh-desc">树莓派延时摄影加移动侦测加低光拍摄一体的 Python 工具，支持自动同步到网盘</p>
-        <p class="gh-why">→ 固定机位每天定时拍一张爬山虎墙，自带日出日落自动调曝光，一年剪成四季延时</p>
-      </a>
-      <a class="gh" href="https://github.com/kernelkaribou/chronosnap" target="_blank" rel="noopener">
-        <div class="gh-head"><b>kernelkaribou/chronosnap</b><span class="stars">★ 3</span></div>
-        <p class="gh-desc">自托管延时摄影管理器，支持 RTSP/HTTP/USB 摄像头定时抓拍并自动合成视频</p>
-        <p class="gh-why">→ 如果墙前已经有网络摄像头，直接用它按计划抓图并合成 30 秒延时，不用再装树莓派</p>
-      </a>
-      <a class="gh" href="https://github.com/Lumics/Plantwatery" target="_blank" rel="noopener">
-        <div class="gh-head"><b>Lumics/Plantwatery</b><span class="stars">★ 101</span></div>
-        <p class="gh-desc">ESP32 加太阳能板加电容土壤传感器加水泵的全自动浇水装置，含 3D 打印外壳</p>
-        <p class="gh-why">→ 墙脚种植带前两年需要稳定补水，照它做一套太阳能小泵，不用从屋里拉电和水管</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/motioneye-project/motioneye" target="_blank" rel="noopener">motioneye-project/motioneye</a>
+          <span class="stars">★ 4.7k</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">motion 守护进程的网页前端，网页里管多路摄像头、移动侦测、定时快照和延时视频合成</p>
+        <p class="gh-why">→ 墙前放一只网络摄像头，它按整点抓图、自动拼延时视频，网页里就能看四季变红的一整年</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0502-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0502-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0502-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">motionEye · 网页管理的定时快照与延时</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0502-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0502-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0502-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0502-1-shade)" stroke="none"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0502-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0502-1-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M322.0 148.0 L322.0 124.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">网络摄像头</text><text x="78" y="107" text-anchor="middle" font-size="10.5">朝北对绿墙</text><text x="200" y="174" text-anchor="middle" font-size="9.5">motion 守护进程</text><text x="200" y="187" text-anchor="middle" font-size="10.5">取流 / 快照</text><text x="200" y="94" text-anchor="middle" font-size="10.5">motionEye</text><text x="200" y="107" text-anchor="middle" font-size="10.5">网页配置与归档</text><text x="322" y="174" text-anchor="middle" font-size="10.5">NAS / 硬盘</text><text x="322" y="187" text-anchor="middle" font-size="10.5">按日期存图</text><text x="322" y="94" text-anchor="middle" font-size="10.5">延时合成</text><text x="322" y="107" text-anchor="middle" font-size="10.5">月片段 → 年片</text><text x="430" y="138" text-anchor="middle" font-size="10.5">网页 / HA 回看</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0502：每天定点抓一张绿墙 → 月底合成片段 → 年末拼 30 秒四季延时</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">motioneye-project/motioneye</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>motionEye 是开源视频监控软件 motion 的网页前端，由 motioneye-project 组织维护，GitHub 上 4.7k 星。motion 是跑了二十多年的 Linux 守护进程，负责取流、比较相邻帧、发现变化就录像；motionEye 把它难记的配置项变成浏览器里的开关和滑块，树莓派上十分钟搭一套本地监控。</p><p>它的架构是三层：底下是 motion 负责取流和侦测，中间是 Python 写的服务负责配置、文件管理和网页接口，上面是浏览器界面。摄像头可以是树莓派相机、USB 或任何 RTSP 网络摄像头。每路摄像头能单独设移动侦测、按计划录像、定时快照，快照可以按秒到小时的间隔自动拍，再由它合成延时视频。</p><p>它已完成 Python 3 移植，通过 Weblate 做界面多语言，Docker 镜像和树莓派安装脚本都是现成的，HomeAssistant 有官方集成。中文资料以树莓派玩家的博客为主，没有官方中文文档。</p><p>在 0502 里它负责四季延时：把一只朝北对着爬山虎墙的网络摄像头加进来，关掉移动侦测，只开定时快照，每天固定几个时间点各拍一张，同一角度同一曝光；月底用延时合成功能把当月照片拼成短片，年末再拼成 30 秒。要注意帧率和分辨率要在设置里锁死，否则每月片段不一致；快照存到 NAS，一年几千张不要占树莓派的 SD 卡。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/pageauc/pi-timolo" target="_blank" rel="noopener">pageauc/pi-timolo</a>
+          <span class="stars">★ 580</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">树莓派延时摄影加移动侦测加低光拍摄一体的 Python 工具，自带日出日落自动曝光和 rclone 网盘同步</p>
+        <p class="gh-why">→ 不用网络摄像头的话，一只树莓派相机固定机位每天拍一张，它自带黄昏夜晚长曝光过渡，最适合一年不动的延时</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0502-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0502-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0502-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">pi-timolo · 树莓派固定机位长期延时</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0502-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0502-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0502-2-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0502-2-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0502-2-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0502-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 148.0 L200.0 124.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">树莓派相机</text><text x="78" y="107" text-anchor="middle" font-size="10.5">（防水盒，朝北）</text><text x="200" y="174" text-anchor="middle" font-size="10.5">日出日落</text><text x="200" y="187" text-anchor="middle" font-size="10.5">曝光过渡</text><text x="200" y="94" text-anchor="middle" font-size="10.5">pi-timolo</text><text x="200" y="107" text-anchor="middle" font-size="10.5">定时拍照守护</text><text x="322" y="94" text-anchor="middle" font-size="10.5">按日期归档</text><text x="322" y="107" text-anchor="middle" font-size="9.5">rclone 同步 NAS</text><text x="322" y="174" text-anchor="middle" font-size="10.5">makevideo</text><text x="322" y="187" text-anchor="middle" font-size="10.5">ffmpeg 合成</text><text x="430" y="138" text-anchor="middle" font-size="10.5">30 秒四季片</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0502：每天早晚各拍一张绿墙 → 同步 NAS → 年末拼 30 秒延时</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">pageauc/pi-timolo</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>pi-timolo 是加拿大开发者 Claude Pageau 写的树莓派相机工具，名字是延时、移动侦测、低光三个词的缩写，GitHub 上 580 星，从 2015 年维护到现在，是树莓派圈子里做长期延时摄影的经典脚本。户外固定一个机位拍一年，市售延时相机要么贵要么电池撑不住，而一只树莓派 Zero 加相机模组几十块就够。</p><p>它的核心是一个 Python 守护进程：按设定间隔拍照，白天自动曝光，接近黄昏时自动切到长曝光的夜间模式，天亮再切回来，这段过渡算法是它最有价值的部分，避免了普通脚本傍晚一片黑早晨一片白。移动侦测用 OpenCV 比较帧差；文件按日期命名归档，配套的 makevideo 脚本用 ffmpeg 把一个目录的照片拼成视频，rclone 模块能把照片自动同步到任意网盘。</p><p>它支持树莓派全系相机模组，兼容 Python 3 和新的 libcamera；文档很长很细但只有英文，中文资料只有零星博客。</p><p>在 0502 里它是最省钱的四季延时机：一只树莓派 Zero 2 W 加广角相机装进防水盒，固定在院子中央朝北看绿墙，只开延时模式，每天早八点和傍晚六点各拍一张，夜间模式关掉以免长曝光把叶子拍糊；照片同步到 NAS，年末用 makevideo 拼 30 秒。要注意相机白平衡在大面积绿色场景下会漂，配置里锁定；防水盒玻璃要定期擦，梅雨季一周就蒙一层水汽。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Lumics/Plantwatery" target="_blank" rel="noopener">Lumics/Plantwatery</a>
+          <span class="stars">★ 114</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">ESP32 加太阳能板加电容土壤传感器加水泵的全自动浇水装置，含 3D 打印外壳和 PlatformIO 固件</p>
+        <p class="gh-why">→ 墙脚种植带前两年要稳定补水，它是少数把太阳能、电池、泵、探头做成完整开源硬件的项目，照抄就能装</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0502-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0502-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0502-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Plantwatery · 太阳能自动浇水小盒</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0502-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0502-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0502-3-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0502-3-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0502-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0502-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">电容土壤探头</text><text x="78" y="174" text-anchor="middle" font-size="10.5">5V 太阳能板</text><text x="78" y="187" text-anchor="middle" font-size="10.5">18650 电池</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ESP32 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">阈值判断 / 深睡</text><text x="322" y="94" text-anchor="middle" font-size="10.5">无刷小水泵</text><text x="322" y="107" text-anchor="middle" font-size="10.5">墙脚滴管</text><text x="322" y="174" text-anchor="middle" font-size="10.5">MQTT →</text><text x="322" y="187" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="430" y="138" text-anchor="middle" font-size="10.5">爬山虎种植带</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">供电</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">低于阈值</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0502：墙脚探头 → ESP32 判断 → 小泵滴灌种植带，湿度曲线上报 HA</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Lumics/Plantwatery</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Plantwatery 是德国开发者 Lumics 做的开源自动浇水装置，GitHub 上 114 星，星数不多，但它是少数把太阳能供电、锂电池、电容土壤湿度探头、小水泵和 3D 打印外壳一整套做完整的开源硬件项目，而不是只给一段代码。它针对的是花园里离电源和水龙头都远的一小块地。</p><p>它的架构是一块 ESP32 开发板做大脑，电容式土壤湿度探头插在土里读含水量，一块 5V 太阳能板通过 TP4056 给 18650 电池充电，一颗小水泵从旁边的水桶抽水到滴管。固件用 PlatformIO 写，逻辑是定时醒来读湿度，低于阈值就让泵工作固定秒数，然后深度睡眠省电，测量结果通过 MQTT 发出去。外壳 STL、接线图和元件清单都在仓库里。</p><p>它没有用 ESPHome，也没做 HomeAssistant 自动发现，但走 MQTT，接进 HomeAssistant 只是几行配置的事；社区不大，没有中文资料，好在电路简单，照图接线即可。</p><p>在 0502 里它是墙脚那条 40cm 种植带的滴灌器：三叶地锦头两年根系没扎稳，旱季要补水，而木屋南墙外拉电拉水都麻烦。照它做一套，太阳能板贴在毛竹横杆上，水桶藏在种植带东头，泵出口接一条打孔的 8mm 滴管沿墙脚铺开。建议固件换成 ESPHome 重写，接 HomeAssistant 更顺；探头要买带防水涂层的电容式，电阻式两个月就锈；水桶加盖防蚊。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -454,7 +523,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

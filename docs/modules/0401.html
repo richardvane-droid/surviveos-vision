@@ -140,28 +140,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥2,500～4,500（钢制洞洞板 + 挂钩 + 抽屉柜占大头）；标签带年耗 ¥100 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/kennetek/gridfinity-rebuilt-openscad" target="_blank" rel="noopener">
-        <div class="gh-head"><b>kennetek/gridfinity-rebuilt-openscad</b><span class="stars">★ 2.2k</span></div>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/kennetek/gridfinity-rebuilt-openscad" target="_blank" rel="noopener">kennetek/gridfinity-rebuilt-openscad</a>
+          <span class="stars">★ 2.2k</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
         <p class="gh-desc">OpenSCAD 重写的 Gridfinity 参数化收纳格生成器，尺寸、分格、磁吸孔随便调</p>
         <p class="gh-why">→ 抽屉柜里的螺丝分格、洞洞板下方的小零件托盘直接用它生成后 3D 打印，全站统一模数</p>
-      </a>
-      <a class="gh" href="https://github.com/tkubic/GridfinityShadowMaker" target="_blank" rel="noopener">
-        <div class="gh-head"><b>tkubic/GridfinityShadowMaker</b><span class="stars">★ 116</span></div>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0401-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0401-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0401-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Gridfinity Rebuilt · 参数变成抽屉分格盒</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0401-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0401-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0401-1-shade)" stroke="none"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0401-1-shade)" stroke="none"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0401-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0401-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M78.0 148.0 L78.0 124.0" stroke-dasharray="3 3"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M322.0 204.0 L322.0 222.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">抽屉内空尺寸</text><text x="78" y="107" text-anchor="middle" font-size="10.5">螺丝规格清单</text><text x="78" y="218" text-anchor="middle" font-size="10.5">量尺寸的人</text><text x="200" y="94" text-anchor="middle" font-size="9.5">OpenSCAD 生成器</text><text x="200" y="107" text-anchor="middle" font-size="9.5">gridx / gridy / 分格</text><text x="200" y="174" text-anchor="middle" font-size="10.5">底板模块</text><text x="200" y="187" text-anchor="middle" font-size="10.5">磁铁 / 拼接</text><text x="322" y="94" text-anchor="middle" font-size="10.5">分格盒 + 底板</text><text x="322" y="107" text-anchor="middle" font-size="10.5">STL</text><text x="322" y="180" text-anchor="middle" font-size="9.5">0305 P1S 打印</text><text x="322" y="248" text-anchor="middle" font-size="10.5">48 格抽屉柜</text><text x="322" y="261" text-anchor="middle" font-size="10.5">贴标签</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">改参数</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">导出</text><text x="322.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">装进去</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0401：量抽屉内空 → 改参数出 STL → 0305 打印 → 装…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">kennetek/gridfinity-rebuilt-openscad</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Gridfinity 是 YouTube 创作者 Zack Freedman 在 2022 年提出的开放收纳标准：所有盒子都落在 42 毫米见方的底板网格上，高度按 7 毫米一级递增，底部可以嵌磁铁。kennetek 的 gridfinity-rebuilt-openscad 用 OpenSCAD 把这套标准从零重写成参数化代码，2.2k 星，是各种 Gridfinity 生成器里最规范、被引用最多的一个。</p><p>它的原理是把每个盒子拆成几个可组合的模块：底座（含磁铁孔、螺丝孔、防滑倒角）、外壁、内部分格、抬手用的唇边和标签位；用户只需要改几行参数——几格宽、几格深、几个单位高、内部横竖各分几格、要不要圆底方便倒小零件——就能生成 STL。同一个仓库还能生成底板：普通、带磁铁、带螺丝孔、可拼接的都有，尺寸按抽屉内空自动排满。OpenSCAD 的 customizer 面板里能图形化调参，不用读代码。</p><p>文档是英文网站，但 Gridfinity 在国内打印圈很流行，Makerworld 上成品件极多。</p><p>在 0401 里，它管楼梯口那排透明抽屉柜的内部：先量每个抽屉的内空，生成一块贴合的底板，再按螺丝规格生成分格盒，M4 一格、木螺钉 35 一格，盒沿的标签位正好贴标签机打出的条；洞洞板下方的小零件托盘也用同一模数。坑是打印机尺寸：拓竹 P1S 一次最多打 6×6 格底板，大抽屉要分块拼。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/MultiMote/niimblue" target="_blank" rel="noopener">MultiMote/niimblue</a>
+          <span class="stars">★ 740</span>
+          <span class="zh ">界面有中文</span>
+        </header>
+        <p class="gh-desc">精臣（NIIMBOT）标签机的第三方网页客户端，浏览器里直接蓝牙打印，不用官方 App 和账号</p>
+        <p class="gh-why">→ 48 格抽屉柜和洞洞板的标签全用它打：一套模板一种字体，离线批量出，白底黑字永远一致</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0401-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0401-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0401-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">NiimBlue · 浏览器直连精臣标签机</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0401-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0401-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0401-2-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0401-2-shade)" stroke="none"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0401-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M322.0 148.0 L322.0 124.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">螺丝规格清单</text><text x="78" y="107" text-anchor="middle" font-size="10.5">工具名称</text><text x="78" y="174" text-anchor="middle" font-size="10.5">统一模板</text><text x="78" y="187" text-anchor="middle" font-size="10.5">一种字体字号</text><text x="200" y="94" text-anchor="middle" font-size="9.5">NiimBlue 网页</text><text x="200" y="107" text-anchor="middle" font-size="10.5">标签编辑器</text><text x="200" y="174" text-anchor="middle" font-size="9.5">Web Bluetooth</text><text x="200" y="187" text-anchor="middle" font-size="10.5">点阵数据</text><text x="322" y="174" text-anchor="middle" font-size="10.5">精臣标签机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">D / B 系列</text><text x="322" y="94" text-anchor="middle" font-size="10.5">白底黑字标签</text><text x="322" y="107" text-anchor="middle" font-size="10.5">抽屉 / 洞洞板</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">逐条输入</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">转点阵</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">蓝牙</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">打出</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">贴上去</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0401：清单 + 模板 → 浏览器蓝牙直打 → 抽屉与洞洞板标签</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">MultiMote/niimblue</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>NiimBlue 是开发者 MultiMote 做的精臣（NIIMBOT）标签机第三方网页客户端，740 星。精臣是国内最常见的家用蓝牙标签机品牌，几十块到两百块一台，但官方 App 必须登录账号、模板依赖云端、字体和排版又受限，很多人只想安安静静打一排字体一致的抽屉标签。NiimBlue 逆向了精臣的蓝牙和 USB 协议，做成一个浏览器就能用的离线工具。</p><p>它的原理是：网页用 Web Bluetooth 或 Web Serial 直接和打印机通信，内置一个画布式标签编辑器，可以放文本、二维码、条码、图片和线框，选好标签纸尺寸后把画面转成打印机的点阵格式发过去，打印前有预览和几种抖动算法可选。模板能保存、导入导出；支持的机型很多，常见的 D 系列和 B 系列都有人测过，也有 Android 和 Windows 的独立安装版。项目更新频繁，翻译交给 Weblate 社区。</p><p>中文资料少，但机器本身是中文品牌，标签纸在国内随手可买。</p><p>在 0401 里它负责 48 格抽屉柜和洞洞板上的全部标签：在 0802 中枢的浏览器里开一个页面，统一用一款字体、一种字号做模板，把螺丝规格列表一格一格打完，每张洞洞板角落的 NFC 标签旁也贴一张同款名牌。坑是 Web Bluetooth 只在 Chrome 系浏览器上能用，Safari 不行；蓝牙配对前要先在官方 App 里把机器固件升到最新。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/tkubic/GridfinityShadowMaker" target="_blank" rel="noopener">tkubic/GridfinityShadowMaker</a>
+          <span class="stars">★ 119</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
         <p class="gh-desc">把工具拍照转成 DXF 轮廓，再生成可 3D 打印的工具影子板，兼容 Gridfinity</p>
-        <p class="gh-why">→ 工具“影子”不用手描，拍一张照片就能出轮廓，打印出来贴在洞洞板或抽屉里</p>
-      </a>
-      <a class="gh" href="https://github.com/chicago-tool-library/circulate" target="_blank" rel="noopener">
-        <div class="gh-head"><b>chicago-tool-library/circulate</b><span class="stars">★ 110</span></div>
-        <p class="gh-desc">芝加哥工具图书馆开源的借还管理系统，Rails 写的，带库存、借出、催还</p>
-        <p class="gh-why">→ 比小白板更进一步的工具借用登记，以后想做借用登记时可以自建一套，功能偏重</p>
-      </a>
-      <a class="gh" href="https://github.com/stockholmux/pegmixer" target="_blank" rel="noopener">
-        <div class="gh-head"><b>stockholmux/pegmixer</b><span class="stars">★ 34</span></div>
-        <p class="gh-desc">OpenSCAD 洞洞板配件库，输入物件尺寸自动算出挂钩、托盒和插销位置</p>
-        <p class="gh-why">→ 标准挂钩挂不了的异形工具，用它按尺寸生成专属挂座打印，孔距按自家钢板改</p>
-      </a>
+        <p class="gh-why">→ 工具“影子”不用手描，拍一张照片就能出轮廓，打印出来贴在洞洞板或抽屉里；照片转影子板这件事上它是 GitHub 上少有的一键流程</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0401-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0401-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0401-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ShadowMaker · 拍一张照片出影子板</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0401-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0401-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0401-3-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0401-3-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0401-3-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0401-3-arrow)" stroke-linecap="round"><path d="M78.0 148.0 L78.0 124.0" stroke-dasharray="3 3"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M275.8 204.0 C261.0 204.0 261.0 222.0 246.2 222.0" stroke-dasharray="3 3"/><path d="M256.0 250.0 L266.0 250.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">工具俯视照片</text><text x="78" y="107" text-anchor="middle" font-size="10.5">灯板 + 硬币参照</text><text x="78" y="218" text-anchor="middle" font-size="10.5">拍照的人</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OpenCV 找轮廓</text><text x="200" y="107" text-anchor="middle" font-size="10.5">→ DXF</text><text x="200" y="174" text-anchor="middle" font-size="10.5">OpenSCAD</text><text x="200" y="187" text-anchor="middle" font-size="9.5">Gridfinity 底座挖坑</text><text x="200" y="248" text-anchor="middle" font-size="10.5">OrcaSlicer</text><text x="200" y="261" text-anchor="middle" font-size="10.5">换色 + 名字浮雕</text><text x="322" y="180" text-anchor="middle" font-size="10.5">影子板 STL</text><text x="322" y="248" text-anchor="middle" font-size="10.5">抽屉 / 台面</text><text x="322" y="261" text-anchor="middle" font-size="10.5">影子板</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">调阈值</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">DXF</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">STL</text><text x="261.0" y="245.0" text-anchor="middle" font-size="8" fill="#666">0305 打印</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0401：照片 → DXF → Gridfinity 影子板 STL → 0305 打印贴进…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">tkubic/GridfinityShadowMaker</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>GridfinityShadowMaker 是 tkubic 做的一条工具影子板生成流水线，119 星，专门解决一件麻烦事：想给每把工具做一个严丝合缝的凹槽，手工在 CAD 里描轮廓一把要半小时，几十把工具没人描得下去。它是 GitHub 上少数把这件事做成一键流程的项目。</p><p>它的流程分三步。第一步照片转 DXF：把工具平放在一块灯板或白纸上，手机拍一张俯视照片，Python 脚本用 OpenCV 找轮廓、按参照物换算比例、平滑毛刺，输出 DXF 轮廓文件，脚本带一个 PyQt 小窗口可以调阈值和偏移量。第二步 DXF 转 STL：OpenSCAD 读入轮廓，在一块 Gridfinity 规格的底座上挖出带指槽的凹坑，几格宽几格深由参数决定，需要 OpenSCAD 的 Manifold 后端，否则布尔运算很慢。第三步进切片软件：用 OrcaSlicer 或 Bambu Studio 给凹坑换色、加上工具名字的浮雕，打印。仓库配有示例照片和参数说明，有 2.0 版分支在开发，没有中文资料。</p><p>在 0401 里，它是影子墙的升级版：洞洞板上的影子先用油性笔描，抽屉里和工作台上常用的一组工具则用它出打印影子板，凹坑底用黑色、盘面用白色，少了哪把一眼看见。坑是拍照：手机要正对工具、镜头别用广角，照片里放一枚硬币或一段尺子作比例参照，否则轮廓会整体偏大偏小。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>

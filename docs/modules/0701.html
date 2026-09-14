@@ -152,18 +152,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥4,000～7,000（防腐木和预制墩占大头）；每年木蜡油和竹瓦补换 ¥300 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/wikihouseproject/Skylark" target="_blank" rel="noopener">
-        <div class="gh-head"><b>wikihouseproject/Skylark</b><span class="stars">★ 243</span></div>
-        <p class="gh-desc">WikiHouse 开源木结构建造系统，标准化木块 CNC 切割后手工拼装，可建 1～3 层</p>
-        <p class="gh-why">→ 间接参考：学它把木结构拆成标准件的思路，顶棚的柱、梁、檩可以按同样方法画图下料</p>
-      </a>
-      <a class="gh" href="https://github.com/xuminic/woodshed" target="_blank" rel="noopener">
-        <div class="gh-head"><b>xuminic/woodshed</b><span class="stars">★ 10</span></div>
-        <p class="gh-desc">一个人从零建木结构花园小屋的全记录，带 CAD 图纸、结构方案、材料清单和分阶段施工</p>
-        <p class="gh-why">→ 间接参考：钓台顶棚就是缩小版的柱梁屋架，它的地基、立柱、屋面分阶段做法可以照搬</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">FreeCAD/FreeCAD</a>
+          <span class="stars">★ 32.2k</span>
+          <span class="zh ">有中文文档站</span>
+        </header>
+        <p class="gh-desc">开源参数化三维建模软件，2026 年 4 月发 1.1.1 版，草图、零件、BIM、工程图、电子表格工作台齐全，界面和 wiki 都有简体中文</p>
+        <p class="gh-why">→ 钓台的墩位、龙骨、顶棚柱梁全在它里面画成参数化模型，改一个尺寸整套联动，工程图出下料单，电子表格自动算木料和螺栓数量</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0701-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="23" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0701-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0701-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">FreeCAD · 参数驱动的钓台图纸本</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0701-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0701-1-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0701-1-shade)" stroke="none"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M382.0 82.0 h96 v36 h-96 Z M382.0 82.0 l8 -8 h96 l-8 8 M478.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M479.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0701-1-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0701-1-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="78" y="151" text-anchor="middle" font-size="10.5">量地 / 定尺寸</text><text x="78" y="174" text-anchor="middle" font-size="9.5">Spreadsheet</text><text x="78" y="187" text-anchor="middle" font-size="9.5">台面 / 墩位 / 坡度</text><text x="200" y="94" text-anchor="middle" font-size="10.5">FreeCAD</text><text x="200" y="107" text-anchor="middle" font-size="9.5">PartDesign / BIM</text><text x="200" y="174" text-anchor="middle" font-size="10.5">柱梁檩板</text><text x="200" y="187" text-anchor="middle" font-size="10.5">参数化模型</text><text x="322" y="94" text-anchor="middle" font-size="10.5">TechDraw</text><text x="322" y="107" text-anchor="middle" font-size="10.5">墩位放样 / 下料图</text><text x="322" y="174" text-anchor="middle" font-size="10.5">材料清单</text><text x="322" y="187" text-anchor="middle" font-size="10.5">木料长度 / 螺栓</text><text x="430" y="100" text-anchor="middle" font-size="10.5">坡脚工地</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写参数</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">驱动</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">统计</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">照图放样</text><text x="376.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">采购</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0701：参数表驱动整套木构模型，改一处联动，出放样图和木料清单</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">FreeCAD/FreeCAD</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>FreeCAD 是 2002 年发起、由全球志愿者维护的开源参数化三维建模软件，GitHub 上 32.2k 星，2026 年 4 月发布了 1.1.1 版，是开源世界里最接近商业 CAD 的通用工具。它解决的问题是：自己盖一个小木构，脑子里的尺寸和纸上的草图对不上，改一根柱子高度就要重画全部，而参数化建模让每个尺寸都是变量，改一处整套联动。</p><p>它的结构是工作台制：Sketcher 画带约束的二维草图，PartDesign 把草图拉伸切削成实体，BIM 工作台自带墙、梁、柱、屋顶这类建筑对象，TechDraw 从模型出带尺寸的工程图，Spreadsheet 工作台把尺寸放进表格驱动模型，反过来也能从模型统计体积和数量。文件是开放的 XML 格式，能导出 STEP、DXF、STL。界面有简体中文，官方 wiki 有中文页面，B 站教程很多。</p><p>在 0701 里它是钓台的图纸本：先用 Spreadsheet 写下台面 2.5×2.2 米、六个墩位、龙骨截面、顶棚 2.2×2 米单坡这些参数，BIM 工作台里立柱、梁、檩、板一一建成对象，坡度按临河一侧低来定，竹瓦和雨链位置画进去看檐口滴水落在台外哪里；TechDraw 出一张墩位放样图和一张龙骨下料图，材料清单从模型里自动算出防腐松木总长和地脚螺栓数量。缓坡踏步和竹扶手也一起建，站在模型里看视线有没有被柱子挡住。要注意 BIM 工作台上手比 PartDesign 陡，小结构直接用 PartDesign 拉伸木方更快；单位一开始就设成毫米。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/wikihouseproject/Skylark" target="_blank" rel="noopener">wikihouseproject/Skylark</a>
+          <span class="stars">★ 243</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">WikiHouse 的开源木结构建造系统，标准化木块由 CNC 从板材切出后手工拼装，不用重型机械，可建 1 到 3 层，图纸开放授权</p>
+        <p class="gh-why">→ 学它把木结构拆成标准件的思路：钓台的柱、梁、檩按同样方法编号画图下料，一个人在坡脚就能拼起来，以后加宽也是加一组件</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0701-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="24" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0701-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0701-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Skylark · 把木结构拆成可编号的标准件</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0701-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0701-2-shade)" stroke="none"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0701-2-shade)" stroke="none"/><path d="M162.0 152.0 h66 l10 10 v38 h-76 Z M228.0 152.0 v10 h10" stroke-width="1.3"/><path d="M170.0 168.0 h54 M170.0 176.0 h44 M170.0 184.0 h48" stroke-width="0.5"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0701-2-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0701-2-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0701-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0" stroke-dasharray="3 3"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">工程木板材</text><text x="78" y="107" text-anchor="middle" font-size="10.5">1.2m 模数</text><text x="78" y="180" text-anchor="middle" font-size="10.5">CNC 切割文件</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Skylark 木块系统</text><text x="200" y="107" text-anchor="middle" font-size="9.5">片 → 块 → 墙 / 顶</text><text x="200" y="174" text-anchor="middle" font-size="10.5">装配手册</text><text x="200" y="187" text-anchor="middle" font-size="10.5">木销 + 螺栓</text><text x="322" y="94" text-anchor="middle" font-size="10.5">钓台构件编号</text><text x="322" y="107" text-anchor="middle" font-size="9.5">柱 / 梁 / 檩 / 龙骨</text><text x="322" y="180" text-anchor="middle" font-size="10.5">院子里下料编号</text><text x="430" y="218" text-anchor="middle" font-size="10.5">坡脚按号拼装</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">精度</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">学方法</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">出料单</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">两个周末</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0701：借它的编号模数思路，柱梁檩龙骨先在院子下好料再到坡脚拼装</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">wikihouseproject/Skylark</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Skylark 是英国 WikiHouse 项目的最新一代开源木结构建造系统，GitHub 上 243 星，图纸以开放授权发布。WikiHouse 从 2011 年起想解决的问题是：盖房子的知识和图纸被专业圈子锁着，普通人想自建只能从零摸索，于是他们把建筑拆成可以数字化下料、手工拼装的标准件，像乐高一样谁都能搭。</p><p>它的原理是把整栋建筑分解成一套标准木块：每种木块由 18 毫米左右的工程木板材经 CNC 切成带榫卯的片，片与片插接成一个空心盒子块，块里填保温，块与块用木销和螺栓连成墙、楼板和屋顶，全程不用起重机，两三个人几天就能立起来。仓库里是全部块的三维模型、切割文件、装配手册和结构说明，尺寸按 1.2 米板材模数走，能建一到三层。它没有中文资料，装配手册以图为主，看图能懂。</p><p>在 0701 里它不是直接拿来用，而是学方法：钓台顶棚的两根杉木柱、一根脊梁、几根檩条和台面龙骨，都按它的做法先在图上编号，每根木料标长度、截面和榫口位置，一次在院子里下好料、编好号，再搬到坡脚按号拼装；柱脚和墩座的连接件也参考它的螺栓加木销做法，不用现场凿榫。这样一个人也能在两个周末把台面和顶棚立起来，三年后换竹瓦或加宽台面时按同样的模数加一组件即可。要注意它的板材榫卯靠 CNC 精度，家里手锯做不到，钓台还是用杉木方料加金属连接件，只借它的编号和模数思路。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/xuminic/woodshed" target="_blank" rel="noopener">xuminic/woodshed</a>
+          <span class="stars">★ 10</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">一个人从零建木框架花园小屋的全记录，DXF 三视图、材料清单表、分基础/框架/屋顶/围护/内装五阶段的施工说明和照片</p>
+        <p class="gh-why">→ 只有 10 星但没有更贴的：钓台就是缩小版的柱梁屋架，它的独立墩基础、立柱、单坡屋面分阶段做法和清单可以照搬，是一人施工的完整样本</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0701-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="25" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0701-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0701-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">woodshed · 一人自建木构的完整档案</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0701-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0701-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0701-3-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0701-3-shade)" stroke="none"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0701-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M256.0 156.5 C315.0 156.5 315.0 115.5 374.0 115.5"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">DXF 三视图</text><text x="78" y="180" text-anchor="middle" font-size="10.5">ODS 材料清单</text><text x="200" y="94" text-anchor="middle" font-size="9.5">woodshed 施工档案</text><text x="200" y="107" text-anchor="middle" font-size="10.5">五阶段做法</text><text x="200" y="174" text-anchor="middle" font-size="10.5">基础 / 框架</text><text x="200" y="187" text-anchor="middle" font-size="10.5">屋顶 / 围护</text><text x="322" y="94" text-anchor="middle" font-size="10.5">改成钓台</text><text x="322" y="107" text-anchor="middle" font-size="10.5">去墙 + 竹瓦雨链</text><text x="322" y="174" text-anchor="middle" font-size="10.5">钓台料单</text><text x="322" y="187" text-anchor="middle" font-size="10.5">4 米原长优化</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="430" y="151" text-anchor="middle" font-size="10.5">坡脚施工</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">顺序</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">照搬</text><text x="315.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">按阶段</text><text x="376.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">采购</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0701：把小屋五阶段改成钓台四阶段，清单改尺寸，一人两个周末立起来</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">xuminic/woodshed</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>woodshed 是开发者 xuminic 记录自己从零建一座木框架花园小屋的仓库，GitHub 上只有 10 星，不是软件，而是一份完整的一人自建木构的工程档案。它的价值在于市面上的木屋教程要么是厂家的成品说明，要么是零散视频，而它把设计、清单、施工顺序和踩过的坑用工程师的方式整理成了可以复用的文件。</p><p>仓库里有三样东西：DXF 格式的正立面、侧立面和平面图，能直接在 FreeCAD 或任何 CAD 里打开改尺寸；一张 ODS 电子表格的材料清单，木料按规格和长度列出、五金按数量列出；按基础、框架、屋顶、围护、内装五个阶段写的施工说明，每一阶段有做法、顺序和完工照片。基础是独立墩加木梁，框架是方木立柱和梁，屋顶是单坡檩条加板，全部是一个人用手工具和电钻能完成的做法。没有中文，但文字不多，图和表看得懂。</p><p>在 0701 里它是钓台的施工样本：钓台 2.5×2.2 米的平台和 2.2×2 米的单坡顶棚，结构上就是它的小屋去掉墙，所以把它的五阶段改成四阶段，六个预制混凝土墩加地脚螺栓对应它的基础，防腐松木框龙骨对应它的地梁，杉木柱和檩对应它的框架和屋顶，围护改成竹瓦和雨链；材料清单表复制一份改成钓台的尺寸，木料按 4 米原长优化裁切减少浪费。要注意它的小屋在平地，钓台在坡脚岸上，六个墩的顶面标高要用水管找平后再定龙骨；临河一侧受潮更重，底部龙骨多刷一遍木蜡油。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -466,7 +540,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

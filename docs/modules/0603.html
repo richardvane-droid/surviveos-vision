@@ -171,23 +171,92 @@
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,500～2,800（1500L 罐占大头，格栅和滤网几百）；年度几乎零成本，还省水费</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">
-      <a class="gh" href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">
-        <div class="gh-head"><b>kane5432/ESP32-Water-Level-Sensor</b><span class="stars">★ 55</span></div>
-        <p class="gh-desc">ESP32-C3 加超声波测水罐水位并上报 HomeAssistant，支持深度睡眠省电和 OTA 升级</p>
-        <p class="gh-why">→ 雨水罐顶开口装一颗超声波探头，直接照它做，水位低于 20% 就触发自来水补水阀</p>
-      </a>
-      <a class="gh" href="https://github.com/tomsbasement/esp32-water-tank-sensor" target="_blank" rel="noopener">
-        <div class="gh-head"><b>tomsbasement/esp32-water-tank-sensor</b><span class="stars">★ 19</span></div>
-        <p class="gh-desc">用现成模块做的 ESPHome 水罐水位传感器，带太阳能充电，接 HomeAssistant</p>
-        <p class="gh-why">→ 罐子在屋后没电源的话看这个，太阳能小板供电，ESPHome 配置可以直接抄</p>
-      </a>
-      <a class="gh" href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">
-        <div class="gh-head"><b>hugokernel/esphome-weather-station</b><span class="stars">★ 338</span></div>
-        <p class="gh-desc">ESPHome 版 Elektor 气象站，含翻斗雨量计脉冲计数、风速风向和温湿度</p>
-        <p class="gh-why">→ 它的翻斗雨量计 YAML 拿来算每场雨接了多少升，配合水位就能统计雨水占比</p>
-      </a>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">
+      <article class="gh-card" id="gh1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a>
+          <span class="stars">★ 88k</span>
+          <span class="zh ">有中文文档站</span>
+        </header>
+        <p class="gh-desc">本地优先的开源家庭自动化中枢，几千个集成，自带统计、utility_meter 计量和自动化引擎，官方界面和文档都有简体中文</p>
+        <p class="gh-why">→ 雨水罐的水位曲线、自来水补位阀的自动化、雨水占比统计全在它里面：水位低于 20% 开阀补到 40%，补水量记进 utility_meter 算占比</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0603-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="22" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0603-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0603-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Home Assistant · 雨水罐的账房</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0603-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0603-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0603-1-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0603-1-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0603-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">超声波水位计</text><text x="78" y="149" text-anchor="middle" font-size="10.5">ESPHome</text><text x="78" y="180" text-anchor="middle" font-size="10.5">雨量计脉冲</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Home Assistant</text><text x="200" y="107" text-anchor="middle" font-size="10.5">自动化引擎</text><text x="200" y="174" text-anchor="middle" font-size="9.5">utility_meter</text><text x="200" y="187" text-anchor="middle" font-size="10.5">雨水 / 自来水</text><text x="322" y="94" text-anchor="middle" font-size="10.5">自来水补位阀</text><text x="322" y="107" text-anchor="middle" font-size="9.5">20% 开 40% 关</text><text x="322" y="174" text-anchor="middle" font-size="10.5">雨水占比卡片</text><text x="322" y="187" text-anchor="middle" font-size="10.5">0802 大屏</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">水位</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">集水升数</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">补位</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">累计</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">占比</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0603：水位低于 20% 自动补自来水到 40%，补水和集水各计量，月度算雨水占比</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">home-assistant/core</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Home Assistant 是目前最大的开源家庭自动化平台，GitHub 上 88k 星，由 Nabu Casa 支撑的开源基金会维护，核心理念是本地优先、隐私优先。它把几千种设备接进同一个本地中枢，用统一的实体、自动化、仪表盘来管，不依赖厂商服务器。</p><p>它是 Python 写的服务，跑在树莓派、迷你主机或 NAS 上，通过集成把设备变成实体：ESPHome 节点原生 API 自动发现，MQTT、Zigbee、蓝牙都有官方集成。实体的历史数据存进本地数据库，长期统计单独归档；自动化引擎由触发、条件、动作三段组成，可以用界面点出来也可以写 YAML；utility_meter 组件能把任何累计量按日、周、月切成账单，template 能把几个实体算成新实体。界面和文档都有简体中文。</p><p>在 0603 里它是雨水罐的账房：罐顶超声波水位计和自来水补位电磁阀都是 ESPHome 实体，一条自动化在水位低于 20% 时开补位阀、到 40% 关，补水时长乘流量记成补水升数；雨量计的翻斗脉冲折算成屋面集水升数，两者各建一个 utility_meter 按月累计，再用 template 算出雨水占比，做成一张卡片放到 0802 大屏，梅雨季能看到占比接近百分之百。要注意补位阀要加一个最长开启时间的保护条件，否则水位计故障会一直放自来水；水位实体加滤波，罐里进水时液面晃动会让超声波读数跳。</p></div>
+      </article>
+      <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">hugokernel/esphome-weather-station</a>
+          <span class="stars">★ 338</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">ESPHome 版的 Elektor 气象站，翻斗雨量计脉冲计数、风速风向、温湿度气压一整套 YAML，含硬件接线和 3D 打印件</p>
+        <p class="gh-why">→ 它的翻斗雨量计 YAML 直接抄：每一翻斗多少毫米、脉冲怎么滤、日累计怎么归零都写好了，配合屋面面积就是每场雨接了多少升</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0603-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="23" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0603-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0603-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">气象站 YAML · 翻斗脉冲变成升数</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0603-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0603-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0603-2-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0603-2-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0603-2-shade)" stroke="none"/><path d="M390.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="430" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0603-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">翻斗雨量计</text><text x="78" y="149" text-anchor="middle" font-size="10.5">干簧管脉冲</text><text x="78" y="216" text-anchor="middle" font-size="10.5">风杯 / 风向标</text><text x="200" y="94" text-anchor="middle" font-size="9.5">ESPHome 气象站</text><text x="200" y="107" text-anchor="middle" font-size="10.5">杆内 ESP32</text><text x="200" y="174" text-anchor="middle" font-size="9.5">pulse_counter</text><text x="200" y="187" text-anchor="middle" font-size="10.5">×每斗毫米</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">日降雨毫米</text><text x="322" y="174" text-anchor="middle" font-size="10.5">×屋面面积×0.8</text><text x="322" y="187" text-anchor="middle" font-size="10.5">理论进罐升数</text><text x="430" y="180" text-anchor="middle" font-size="10.5">对照水位上升</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">脉冲</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">计数</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">日累计</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">对照</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0603：雨量计脉冲 → 日降雨 → 乘屋面面积得理论集水，和…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">hugokernel/esphome-weather-station</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>esphome-weather-station 是法国开发者 hugokernel 把 Elektor 杂志的气象站套件用 ESPHome 重做的项目，GitHub 上 338 星，有英文和法文 README。市面上带翻斗雨量计、风杯和风向标的气象站配件很便宜，它用一块 ESP32 和一份 YAML 把这套传感器全部接进 HomeAssistant。</p><p>它的架构是一块 ESP32 接三类传感器：翻斗雨量计每翻一次给一个干簧管脉冲，用 pulse_counter 组件计数，乘以每斗的毫米数就是降雨量，再用积分组件做日累计和午夜归零；风杯同样是脉冲计数换算风速，风向标是电阻分压接 ADC，查表得方位；温湿度气压用 BME280。仓库里有完整的 YAML、接线图和 3D 打印安装件。没有中文资料，但 YAML 每一行都有注释，照抄能用。</p><p>在 0603 里它负责算每场雨接了多少水：在 0602 桧木杆顶那颗翻斗雨量计就按它的接法接进杆内的 ESP32，YAML 里的每斗毫米数按买到的雨量计标定，通常是 0.2794 或 0.3 毫米；HomeAssistant 收到日降雨毫米数后乘以东坡屋面的集水面积再乘 0.8 的径流系数，就是理论进罐升数，和水位计的实际上升量对照，能看出弃流桶和滤篮吃掉了多少。要注意干簧管脉冲会抖，YAML 里的去抖时间设 50 毫秒以上；雨量计要装水平并定期清落叶。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">kane5432/ESP32-Water-Level-Sensor</a>
+          <span class="stars">★ 55</span>
+          <span class="zh zh-no">无中文</span>
+        </header>
+        <p class="gh-desc">ESP32-C3 加防水超声波探头测水罐水位，ESPHome 原生接 HomeAssistant，太阳能加锂电供电，深度睡眠 1.5 小时醒一次，带 OTA 窗口</p>
+        <p class="gh-why">→ 小众但恰好就是这个需求的完整答案：罐顶 DN50 快开口装一颗 AJ-SR04M，照它的接线和 YAML 做，水位实体直接触发补位阀</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0603-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="24" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0603-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0603-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">水位探头 · 太阳能 + 超声波 + 深睡</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0603-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0603-3-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0603-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0603-3-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0603-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0603-3-shade)" stroke="none"/><path d="M392.0 72.0 h66 l10 10 v38 h-76 Z M458.0 72.0 v10 h10" stroke-width="1.3"/><path d="M400.0 88.0 h54 M400.0 96.0 h44 M400.0 104.0 h48" stroke-width="0.5"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0603-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">AJ-SR04M</text><text x="78" y="149" text-anchor="middle" font-size="10.5">罐顶朝下</text><text x="78" y="174" text-anchor="middle" font-size="10.5">太阳能板</text><text x="78" y="187" text-anchor="middle" font-size="9.5">TP4056 + 锂电</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ESP32-C3</text><text x="200" y="107" text-anchor="middle" font-size="9.5">ESPHome 深睡 1.5h</text><text x="200" y="174" text-anchor="middle" font-size="10.5">空 / 满两点标定</text><text x="200" y="187" text-anchor="middle" font-size="10.5">圆截面换算升</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">水位实体</text><text x="322" y="174" text-anchor="middle" font-size="9.5">补位阀 / 0602 开阀</text><text x="322" y="187" text-anchor="middle" font-size="10.5">前置条件</text><text x="430" y="94" text-anchor="middle" font-size="10.5">透明水位管</text><text x="430" y="107" text-anchor="middle" font-size="10.5">手写刻度对照</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">距离</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">供电</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">原生 API</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">触发</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">对照</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0603：罐顶超声波测水位，太阳能供电深睡，水位实体给补位…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">kane5432/ESP32-Water-Level-Sensor</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ESP32-Water-Level-Sensor 是开发者 kane5432 做的水罐水位监测小项目，GitHub 上 55 星，星数不多，但它把一个户外无电源水罐的水位监测从硬件到 YAML 完整做了一遍，正好是雨水罐这种场景的现成答案。</p><p>它的硬件是一块 ESP32-C3 Super Mini 加一颗 AJ-SR04M 防水超声波探头，探头装在罐顶朝下测到水面的距离，罐深减去距离就是水位；供电是一块 6V 1W 太阳能板经 TP4056 给锂电池充电，再经 5V 升压给主控和探头。固件用 ESPHome 写，通过原生 API 报给 HomeAssistant，每次读完进入 1.5 小时深度睡眠，读数失败一分钟后重试；每次启动开两分钟 OTA 窗口。标定只需量两个数，空罐时探头到罐底的距离和满罐时到水面的距离，填进 YAML 即可。没有中文资料。</p><p>在 0603 里它就装在 1500L 卧式罐顶那个 DN50 快开口上：探头用一段 PVC 管座固定，太阳能板贴在桧木格栅顶上朝南；YAML 里把 1500L 罐的空满两个距离标定好，再用 template 把百分比换算成升。水位实体就是 0603 补位阀和 0602 开阀前置条件的数据源。要注意卧式罐截面是圆的，距离和升数不是线性关系，要按圆截面公式换算；进水时液面晃动和罐壁回波会让读数跳，加中位数滤波。</p></div>
+      </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -425,7 +494,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>
