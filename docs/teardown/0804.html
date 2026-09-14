@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0804 全屋存储 + 全屋智能 · 核心拆解 · SurviveOs 设想版</title>
+<meta name="description" content="全屋存储 + 全屋智能 的 4 个核心产品模块与联动逻辑：科普介绍 + 铅笔画爆炸图 / 流程图 / 海报。">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="../index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="../preface.html" class="pref ">序</a>
+    <a href="../areas/01.html" ><i>01</i>暖村木屋</a><a href="../areas/02.html" ><i>02</i>地堡</a><a href="../areas/03.html" ><i>03</i>阁楼间</a><a href="../areas/04.html" ><i>04</i>阁楼仓库</a><a href="../areas/05.html" ><i>05</i>庭院</a><a href="../areas/06.html" ><i>06</i>草地</a><a href="../areas/07.html" ><i>07</i>钓台</a><a href="../areas/08.html" class="on"><i>08</i>虚拟空间</a>
+    <a href="../space.html" class="about ">户型图</a>
+    <a href="../refs.html" class="about ">参考索引</a>
+    <a href="../about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../areas/08.html">08 虚拟空间</a> › <a href="../modules/0804.html">0804 全屋存储 + 全屋智能</a> › <span>核心拆解</span></nav>
+<article class="mod td">
+  <header class="mod-head">
+    <p class="kicker">虚拟空间 · 模块 0804 · 核心拆解</p>
+    <h1>全屋存储 + 全屋智能：4 个核心模块与逻辑</h1>
+    <p class="lede">三台机器组成的“地下机房”：存全屋影音和照片，跑 HomeAssistant，顺便盯着每个模块有没有掉线。</p>
+    <p class="meta"><span class="st st-🚧">🚧 真实项目需求收集中</span>
+      <span class="tag">产品模块 2</span>
+      <span class="tag">联动逻辑 2</span></p>
+    <div class="td-nav"><a href="#p1"><i>1</i>三机型材机架</a><a href="#p2"><i>2</i>存储与冷备盘组</a><a href="#p3"><i>3</i>全屋模块健康监测</a><a href="#p4"><i>4</i>影音与识别任务分工</a></div>
+  </header>
+
+  
+  <section class="blk part" id="p1">
+    <h2><span class="kind kind-hw">产品模块</span> 1. 三机型材机架</h2>
+    <p class="scene">储藏室隔墙背后一个 60×40cm、1.2m 高的 2020 喷砂黑型材机架（按 0805 规格），从下到上四层：最底层离地 10cm 放四盘位 NAS，第二层放合上盖子的 Windows 笔记本，第三层是 M1 Mac mini 和 2.5GbE 交换机，顶层是光猫和一块理线板。机架三面用打孔铝板围住防灰，正面敞开留风道；所有电源接在同一条带浪涌保护的 PDU 上，PDU 再接笔记本电池之外的一只小 UPS 给 NAS 和交换机兜底。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0804-1-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="99" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0804-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0804-1-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0804-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+<path d="M80.0 260.0 h8 v60 h-8 Z M80.0 260.0 l8 -4.8 h8 l-8 4.8 M88.0 260.0 l8 -4.8 v60 l-8 4.8" stroke-width="1.3"/><path d="M89.0 261.0 l6 -3.8 v58 l-6 3.8 Z" fill="url(#p0804-1-shade)" stroke="none"/><path d="M82.0 262.0 v56 M82.0 290.0 h4 M80.0 262.0 h4 M80.0 318.0 h4" stroke-width="0.6"/><path d="M132.0 260.0 h8 v60 h-8 Z M132.0 260.0 l8 -4.8 h8 l-8 4.8 M140.0 260.0 l8 -4.8 v60 l-8 4.8" stroke-width="1.3"/><path d="M141.0 261.0 l6 -3.8 v58 l-6 3.8 Z" fill="url(#p0804-1-shade)" stroke="none"/><path d="M134.0 262.0 v56 M134.0 290.0 h4 M132.0 262.0 h4 M132.0 318.0 h4" stroke-width="0.6"/><path d="M80.0 254.0 h60 v6 h-60 Z M80.0 254.0 l8 -4.8 h60 l-8 4.8 M140.0 254.0 l8 -4.8 v6 l-8 4.8" stroke-width="1.3"/><path d="M141.0 255.0 l6 -3.8 v4 l-6 3.8 Z" fill="url(#p0804-1-shade)" stroke="none"/><path d="M108.0 256.0 v2 M82.0 257.0 h56 M106.0 256.0 h4 M106.0 258.0 h4" stroke-width="0.6"/><path d="M80.0 314.0 h60 v6 h-60 Z M80.0 314.0 l8 -4.8 h60 l-8 4.8 M140.0 314.0 l8 -4.8 v6 l-8 4.8" stroke-width="1.3"/><path d="M141.0 315.0 l6 -3.8 v4 l-6 3.8 Z" fill="url(#p0804-1-shade)" stroke="none"/><path d="M108.0 316.0 v2 M82.0 317.0 h56 M106.0 316.0 h4 M106.0 318.0 h4" stroke-width="0.6"/>
+<path d="M137.5 232.0 h80 v18 h-80 Z" stroke-width="1.3"/><path d="M141.5 235.0 h15 v12 h-15 Z" stroke-width="0.7"/><path d="M160.5 235.0 h15 v12 h-15 Z" stroke-width="0.7"/><path d="M179.5 235.0 h15 v12 h-15 Z" stroke-width="0.7"/><path d="M198.5 235.0 h15 v12 h-15 Z" stroke-width="0.7"/><path d="M137.5 232.0 l8 -6 h80 l-8 6" stroke-width="1"/>
+<path d="M201.0 180.0 h88 v6 h-88 Z M201.0 180.0 l10 -8 h88 l-10 8" stroke-width="1.2"/><path d="M203.0 181.0 h84 v4 h-84 Z" fill="url(#p0804-1-shade)" stroke="none"/><circle cx="285.0" cy="183.0" r="1.2" stroke-width="0.6"/>
+<rect x="266.5" y="112.0" width="34" height="14" rx="4" stroke-width="1.2"/><path d="M272.5 116.0 h6" stroke-width="0.5"/><path d="M308.5 114.0 h50 v10 h-50 Z" stroke-width="1.1"/><path d="M312.5 117.0 v4 h5 v-4 Z" stroke-width="0.5"/><path d="M320.5 117.0 v4 h5 v-4 Z" stroke-width="0.5"/><path d="M328.5 117.0 v4 h5 v-4 Z" stroke-width="0.5"/><path d="M336.5 117.0 v4 h5 v-4 Z" stroke-width="0.5"/><path d="M344.5 117.0 v4 h5 v-4 Z" stroke-width="0.5"/><path d="M352.5 117.0 v4 h5 v-4 Z" stroke-width="0.5"/>
+<path d="M340.0 56.0 h40 v10 h-40 Z M344.0 60.0 h4 M350.0 60.0 h4 M356.0 60.0 h4" stroke-width="1"/><path d="M388.0 50.0 h32 v18 h-32 Z M392.0 58.0 h6 M400.0 58.0 h6 M408.0 58.0 h6" stroke-width="1"/><path d="M392.0 64.0 h24" stroke-width="0.5"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
+<path d="M74.0 252.0 L42.0 246.0"/>
+<path d="M133.5 228.0 L101.5 222.0"/>
+<path d="M197.0 170.0 L165.0 164.0"/>
+<path d="M262.5 108.0 L230.5 102.0"/>
+<path d="M336.0 52.0 L304.0 46.0"/>
+  </g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">三机型材机架 · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 2020 喷砂黑型材机架 60×40×120，离地 10cm</text><text x="16" y="59">2 四盘位 NAS：2×8TB 镜像 + 2×4TB</text><text x="16" y="72">3 Windows 笔记本（合盖常年在线，自带电池）</text><text x="16" y="85">4 M1 Mac mini（无头）+ 2.5GbE 交换机</text><text x="16" y="98">5 光猫 + 浪涌 PDU + 小 UPS</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0804-1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="42.0" cy="246.0" r="7"/></g><text x="42.0" y="249.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="101.5" cy="222.0" r="7"/></g><text x="101.5" y="225.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="165.0" cy="164.0" r="7"/></g><text x="165.0" y="167.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="230.5" cy="102.0" r="7"/></g><text x="230.5" y="105.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="304.0" cy="46.0" r="7"/></g><text x="304.0" y="49.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<text x="16" y="117" font-size="8" fill="#888" font-style="italic">储藏室隔墙背后 · 三面打孔铝板围 · 正面风道</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>2020 喷砂黑欧标型材，60×40×120cm，离地 10cm 防潮</li><li>层 1 NAS（2×8TB 镜像 + 2×4TB）· 层 2 Windows 笔记本 · 层 3 M1 Mac mini + 2.5GbE 交换机 · 层 4 光猫</li><li>打孔铝板三面围，正面敞开，风道自下而上</li><li>PDU 浪涌保护 + 小 UPS 给 NAS/交换机 20 分钟</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/adgaudio/OpenSCAD_connectors" target="_blank" rel="noopener">adgaudio/OpenSCAD_connectors</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p2">
+    <h2><span class="kind kind-hw">产品模块</span> 2. 存储与冷备盘组</h2>
+    <p class="scene">存储分三层：NAS 里两块 8TB 做镜像放照片库、每个模块的数据库快照和文档；两块 4TB 放影音库（丢了能再下）；一块 4TB 的 USB 冷备盘每周从 NAS 拷一次快照，然后拿到阁楼保险箱，和 NAS 不在同一个房间、不在同一路电上。快照是防误删和勒索的，镜像是防单盘坏的，冷盘是防火防水淹的，三层各管一件事，缺一层就有一种事故救不回来。</p>
+    
+    <figure class="part-art"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0804-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="101" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="p0804-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/>
+    </pattern>
+    <pattern id="p0804-2-shade2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
+      <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
+    </pattern>
+  </defs>
+  <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <g filter="url(#p0804-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+<path d="M70.0 296.0 h30 v10 h-30 Z M70.0 296.0 l6 -5 h30 l-6 5 M100.0 296.0 l6 -5 v10 l-6 5" stroke-width="1.1"/><circle cx="94.0" cy="301.0" r="1.5" stroke-width="0.5"/><path d="M108.0 296.0 h30 v10 h-30 Z M108.0 296.0 l6 -5 h30 l-6 5 M138.0 296.0 l6 -5 v10 l-6 5" stroke-width="1.1"/><circle cx="132.0" cy="301.0" r="1.5" stroke-width="0.5"/><path d="M85.0 290.0 q20 -14 44 0" stroke-width="0.6" stroke-dasharray="2 2"/><path d="M96.0 284.0 l4 -2 l-1 4" stroke-width="0.6"/>
+<path d="M137.5 236.0 h30 v10 h-30 Z M137.5 236.0 l6 -5 h30 l-6 5 M167.5 236.0 l6 -5 v10 l-6 5" stroke-width="1.1"/><circle cx="161.5" cy="241.0" r="1.5" stroke-width="0.5"/><path d="M175.5 236.0 h30 v10 h-30 Z M175.5 236.0 l6 -5 h30 l-6 5 M205.5 236.0 l6 -5 v10 l-6 5" stroke-width="1.1"/><circle cx="199.5" cy="241.0" r="1.5" stroke-width="0.5"/><path d="M147.5 254.0 h10 M152.5 250.0 v8" stroke-width="0.6"/>
+<path d="M221.0 172.0 h40 v16 h-40 Z M261.0 172.0 l6 -4 v16 l-6 4" stroke-width="1.2"/><path d="M225.0 180.0 h30" stroke-width="0.5"/><path d="M275.0 180.0 h14 M285.0 176.0 h6 v8 h-6 Z" stroke-width="0.9"/><path d="M205.0 194.0 l-8 -12 h96 l-8 12 Z" stroke-width="0.9" stroke-dasharray="3 2"/>
+<path d="M282.5 106.0 h60 v28 h-60 Z" stroke-width="1.1"/><path d="M286.5 130.0 v-6" stroke-width="0.8"/><path d="M294.5 130.0 v-11" stroke-width="0.8"/><path d="M302.5 130.0 v-16" stroke-width="0.8"/><path d="M310.5 130.0 v-21" stroke-width="0.8"/><path d="M318.5 130.0 v-10" stroke-width="0.8"/><path d="M326.5 130.0 v-15" stroke-width="0.8"/><path d="M334.5 130.0 v-20" stroke-width="0.8"/><path d="M286.5 130.0 h52" stroke-width="0.6"/>
+<path d="M350.0 54.0 h24 v12 h-24 Z M374.0 60.0 h16 M390.0 52.0 h24 v16 h-24 Z" stroke-width="1"/><path d="M394.0 58.0 h16 M394.0 62.0 h10" stroke-width="0.5"/><path d="M378.0 46.0 l6 6 l6 -6" stroke-width="0.7"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
+<path d="M66.0 290.0 L34.0 284.0"/>
+<path d="M133.5 230.0 L101.5 224.0"/>
+<path d="M209.0 166.0 L177.0 160.0"/>
+<path d="M278.5 102.0 L246.5 96.0"/>
+<path d="M346.0 50.0 L314.0 44.0"/>
+  </g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">存储与冷备盘组 · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 镜像池 2×8TB：照片 / 数据库快照 / 文档</text><text x="16" y="59">2 单盘池 2×4TB：影音库（可再生）</text><text x="16" y="72">3 USB 冷备 4TB，每周一次 → 阁楼保险箱</text><text x="16" y="85">4 快照策略：日保留 30、月保留 12</text><text x="16" y="98">5 2.5GbE 直连 0802 小主机与 Mac mini</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0804-2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="34.0" cy="284.0" r="7"/></g><text x="34.0" y="287.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="101.5" cy="224.0" r="7"/></g><text x="101.5" y="227.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="177.0" cy="160.0" r="7"/></g><text x="177.0" y="163.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="246.5" cy="96.0" r="7"/></g><text x="246.5" y="99.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="314.0" cy="44.0" r="7"/></g><text x="314.0" y="47.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<text x="16" y="117" font-size="8" fill="#888" font-style="italic">镜像防坏盘 · 快照防误删 · 冷盘防火水</text>
+</svg>
+</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    
+    <div class="two">
+      <div><h3>关键参数 / 组成</h3>
+        <ul class="inspo"><li>镜像池 2×8TB：照片 / 数据库快照 / 文档</li><li>单盘池 2×4TB：影音库，可再生数据</li><li>USB 冷备 4TB，每周一次，存阁楼保险箱</li><li>每日快照保留 30 天，每月快照保留 12 个</li></ul></div>
+      <div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/jellyfin/jellyfin" target="_blank" rel="noopener">jellyfin/jellyfin</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p3">
+    <h2><span class="kind kind-logic">联动逻辑</span> 3. 全屋模块健康监测</h2>
+    <p class="scene">这套逻辑回答一个问题：整座园子里几十个传感器和设备，哪一个悄悄死了？做法是两层：设备层，HA 里每个实体都有 last_seen，超过它自己的上报周期三倍就判“失联”（雨水罐水位是 10 分钟一报，气象站是 1 分钟一报，阈值各不相同）；服务层，Uptime Kuma 每 60 秒探一次 HA、Jellyfin、NAS、ESPHome 各节点的端口。两层都失联才推手机，只有一层失联先在 0802 大屏亮黄，避免半夜被一个电池快没了的传感器吵醒。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0804-3p-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="107" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="p0804-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+  </defs>
+  <g filter="url(#p0804-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/><rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+<path d="M50 130 h60 v70 h-60 Z" stroke-width="1.2"/><path d="M56 142 h48 M56 156 h48 M56 170 h48 M56 184 h30" stroke-width="0.9"/><circle cx="56" cy="142" r="2" stroke-width="0.6"/><circle cx="56" cy="156" r="2" stroke-width="0.6"/><circle cx="56" cy="170" r="2" stroke-width="0.6"/><circle cx="56" cy="184" r="2" stroke-width="0.6"/>
+<path d="M120 165 H156" stroke-width="1" stroke-dasharray="3 3"/><path d="M152 161 l4 4 l-4 4" stroke-width="1"/>
+<path d="M166 140 h60 v50 h-60 Z" stroke-width="1.3"/><path d="M172 176 l10 -14 l8 8 l10 -20 l8 12 l12 -16" stroke-width="1"/><path d="M172 148 h48" stroke-width="0.5"/>
+<path d="M236 165 H272" stroke-width="1" stroke-dasharray="3 3"/><path d="M268 161 l4 4 l-4 4" stroke-width="1"/>
+<path d="M284 132 h30 v56 h-30 Z M290 138 h18 v40 h-18 Z" stroke-width="1.2"/><path d="M294 150 h10 M294 158 h10 M294 166 h6" stroke-width="0.6"/><path d="M300 126 l-4 -6 h8 Z" stroke-width="0.8"/>
+<path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0804 · L3</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">谁悄悄死了</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">几十个传感器，哪一个 40 分钟没说话</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">设备层 last_seen + 服务层端口探测 → 双失联才推手机</text>
+  <g font-size="11" fill="#2a2a2a"><text x="64" y="336">每个设备用自己的上报周期算超时，不一刀切</text><text x="64" y="366">单层失联只在大屏亮黄，双层失联才吵人</text><text x="64" y="396">每周一封汇总：失联最多的 5 个</text></g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：HomeAssistant + Uptime Kuma + Beszel · 数据出口：HA webhook / 0802 大屏</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：louislam/uptime-kuma · henrygd/beszel</text>
+  <g transform="rotate(-8 296 108)"><rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/><text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text></g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0804-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="103" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="p0804-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="p0804-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">全屋模块健康监测 · 流程图</text>
+  <g filter="url(#p0804-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+<rect x="30" y="52" width="110" height="34" rx="17.0"/>
+<path d="M196 56 a34.0 6 0 0 1 68 0 v32 a34.0 6 0 0 1 -68 0 Z"/><ellipse cx="230.0" cy="56" rx="34.0" ry="6"/>
+<rect x="30" y="130" width="110" height="40" rx="6"/><rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M34 172 h106 v3 h-106 Z" fill="url(#p0804-3-shade)" stroke="none"/>
+<path d="M230.0 128 l58.0 24.0 l-58.0 24.0 l-58.0 -24.0 Z"/><path d="M232.0 176 l56.0 -24.0 l4 2 l-58.0 26.0 Z" fill="url(#p0804-3-shade)" stroke="none"/>
+<rect x="330" y="130" width="120" height="40" rx="6"/><rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 172 h116 v3 h-116 Z" fill="url(#p0804-3-shade)" stroke="none"/>
+<rect x="30" y="230" width="110" height="40" rx="6"/><rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M34 272 h106 v3 h-106 Z" fill="url(#p0804-3-shade)" stroke="none"/>
+<rect x="175" y="230" width="110" height="40" rx="6"/><rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M179 272 h106 v3 h-106 Z" fill="url(#p0804-3-shade)" stroke="none"/>
+<rect x="330" y="230" width="120" height="40" rx="6"/><rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 272 h116 v3 h-116 Z" fill="url(#p0804-3-shade)" stroke="none"/>
+<rect x="175" y="312" width="130" height="30" rx="15.0"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0804-3-arrow)" stroke-linecap="round"><path d="M85 86 V128"/><path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/><path d="M140 150 H170"/><path d="M288 152 H328"/><path d="M230 176 V228"/><path d="M390 170 V228"/><path d="M85 170 V228"/><path d="M140 250 H173"/><path d="M230 270 V310"/><path d="M330 250 H287"/><path d="M30 250 Q10 250 10 150 Q10 130 28 130" stroke-dasharray="3 3"/></g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle"><text x="85" y="73">每 60 秒扫一遍</text><text x="230" y="74">实体表</text><text x="230" y="87" font-size="8.5" fill="#666">各自上报周期</text><text x="85" y="147">设备层：last_seen</text><text x="85" y="161">> 3× 周期 → 黄</text><text x="230" y="149">服务层也失联？</text><text x="230" y="162" font-size="8.5" fill="#666">Uptime Kuma 探端口</text><text x="390" y="147">是 → 红 + 推手机</text><text x="390" y="161">写失联记录</text><text x="85" y="247">否 → 只在大屏亮黄</text><text x="85" y="261" font-size="8.5" fill="#666">不吵人</text><text x="230" y="247">恢复 → 自动清除</text><text x="230" y="261">记恢复时长</text><text x="390" y="247">每周汇总</text><text x="390" y="261">失联最多的 5 个</text><text x="240" y="331">0802 大屏 + 手机同步</text><text x="305" y="146" font-size="8.5" fill="#666">是</text><text x="216" y="200" font-size="8.5" fill="#666">恢复</text><text x="70" y="200" font-size="8.5" fill="#666">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0804-3</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>设备层：last_seen &gt; 3× 上报周期 → 黄；服务层：端口探测失败 → 黄</li><li>两层同时失联 → 红并推送手机；单层 → 只在大屏显示</li><li>每周一封汇总：失联次数最多的 5 个设备</li><li>失败兜底：监测本身挂了，Uptime Kuma 的心跳 URL 由 Mac mini 反向探测</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">HA 模板传感器算 last_seen 超时，louislam/uptime-kuma 做服务探测并推 HA webhook，henrygd/beszel 出三台机器的温度与磁盘曲线</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener">louislam/uptime-kuma</a><a href="https://github.com/henrygd/beszel" target="_blank" rel="noopener">henrygd/beszel</a></p></div>
+    </div>
+  </section>
+  
+  <section class="blk part" id="p4">
+    <h2><span class="kind kind-logic">联动逻辑</span> 4. 影音与识别任务分工</h2>
+    <p class="scene">三台机器各干各的：NAS 只存不算；Windows 笔记本常年跑 HA 和 ESPHome 编译，稳定优先；M1 Mac mini 干重活——夜里跑 0604 摄像头的鸟类识别、0801 的物品识别和 Immich 的人脸/场景模型，白天空闲时给 Jellyfin 做转码。任务用一个简单的队列：谁提交任务谁写一条记录进 NAS 上的队列目录，Mac mini 每 5 分钟扫一次，按优先级取；晚上 23 点后优先跑批量识别，白天优先响应转码。</p>
+    
+    <div class="logic-art">
+      <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0804-4p-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="109" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="p0804-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+  </defs>
+  <g filter="url(#p0804-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/><rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
+    <path d="M30 44 H330" stroke-width="0.8"/>
+<path d="M46 150 h50 v30 h-50 Z M52 158 h38 M52 166 h38 M52 174 h20" stroke-width="1.2"/>
+<path d="M106 165 H140" stroke-width="1" stroke-dasharray="3 3"/><path d="M136 161 l4 4 l-4 4" stroke-width="1"/>
+<rect x="150" y="146" width="60" height="36" rx="8" stroke-width="1.4"/><path d="M160 156 h40 M160 164 h30 M160 172 h36" stroke-width="0.6"/>
+<path d="M220 156 Q250 130 280 140" stroke-width="1" stroke-dasharray="3 3"/><path d="M276 136 l4 4 l-5 2" stroke-width="1"/>
+<path d="M220 174 Q250 200 280 190" stroke-width="1" stroke-dasharray="3 3"/><path d="M276 194 l4 -4 l-5 -2" stroke-width="1"/>
+<path d="M284 124 h40 v28 h-40 Z M290 132 l10 6 l-10 6 Z" stroke-width="1.1"/>
+<path d="M284 178 h40 v28 h-40 Z" stroke-width="1.1"/><path d="M290 198 q6 -14 12 -4 q4 -12 10 0 q4 -6 8 4" stroke-width="0.8"/>
+<path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
+    <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
+    <circle cx="48" cy="392" r="7" stroke-width="1.2"/><path d="M45 392 l2 2 l4 -5" stroke-width="1.2"/>
+    <path d="M30 420 H330" stroke-width="0.8"/>
+  </g>
+  <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
+  <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0804 · L4</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">三台机器分工表</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">NAS 只存，笔记本只稳，Mac 干重活</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">NAS 队列目录 → Mac mini 每 5 分钟取 → 转码优先 · 识别夜跑</text>
+  <g font-size="11" fill="#2a2a2a"><text x="64" y="336">有人在看的转码永远排第一</text><text x="64" y="366">23:00～6:00 批量跑鸟类 / 物品识别</text><text x="64" y="396">失败重试 3 次，仍失败进周汇总</text></g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：M1 Mac mini launchd + Jellyfin · 数据出口：/queue/done 与 HA 任务实体</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：jellyfin/jellyfin</text>
+  <g transform="rotate(-8 296 108)"><rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/><text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text></g>
+</svg>
+</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
+      <figure class="part-art flow"><div class="pc-frame"><svg class="pc-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="p0804-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="105" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="p0804-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="p0804-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">影音与识别任务分工 · 流程图</text>
+  <g filter="url(#p0804-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" stroke-opacity="0.92">
+<rect x="30" y="52" width="110" height="34" rx="17.0"/>
+<path d="M196 56 a34.0 6 0 0 1 68 0 v32 a34.0 6 0 0 1 -68 0 Z"/><ellipse cx="230.0" cy="56" rx="34.0" ry="6"/>
+<rect x="30" y="130" width="110" height="40" rx="6"/><rect x="32" y="132" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M34 172 h106 v3 h-106 Z" fill="url(#p0804-4-shade)" stroke="none"/>
+<path d="M230.0 128 l58.0 24.0 l-58.0 24.0 l-58.0 -24.0 Z"/><path d="M232.0 176 l56.0 -24.0 l4 2 l-58.0 26.0 Z" fill="url(#p0804-4-shade)" stroke="none"/>
+<rect x="330" y="130" width="120" height="40" rx="6"/><rect x="332" y="132" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 172 h116 v3 h-116 Z" fill="url(#p0804-4-shade)" stroke="none"/>
+<rect x="30" y="230" width="110" height="40" rx="6"/><rect x="32" y="232" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M34 272 h106 v3 h-106 Z" fill="url(#p0804-4-shade)" stroke="none"/>
+<rect x="175" y="230" width="110" height="40" rx="6"/><rect x="177" y="232" width="106" height="36" rx="5" stroke-width="0.5"/><path d="M179 272 h106 v3 h-106 Z" fill="url(#p0804-4-shade)" stroke="none"/>
+<rect x="330" y="230" width="120" height="40" rx="6"/><rect x="332" y="232" width="116" height="36" rx="5" stroke-width="0.5"/><path d="M334 272 h116 v3 h-116 Z" fill="url(#p0804-4-shade)" stroke="none"/>
+<rect x="175" y="312" width="130" height="30" rx="15.0"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#p0804-4-arrow)" stroke-linecap="round"><path d="M85 86 V128"/><path d="M196 72 Q160 72 140 72" stroke-dasharray="3 3"/><path d="M140 150 H170"/><path d="M288 152 H328"/><path d="M230 176 V228"/><path d="M390 170 V228"/><path d="M85 170 V228"/><path d="M140 250 H173"/><path d="M230 270 V310"/><path d="M330 250 H287"/></g>
+  <g font-size="10.5" fill="#2a2a2a" text-anchor="middle"><text x="85" y="73">任务写入 /queue/pending</text><text x="230" y="74">NAS 队列</text><text x="230" y="87" font-size="8.5" fill="#666">pending / running / done</text><text x="85" y="147">Mac mini 每 5 分钟扫</text><text x="85" y="161">按优先级取一条</text><text x="230" y="149">是转码任务？</text><text x="230" y="162" font-size="8.5" fill="#666">有人在看 > 识别 > 校验</text><text x="390" y="147">是 → 立即硬件转码</text><text x="390" y="161">推给 Jellyfin</text><text x="85" y="247">否 → 等夜间窗口</text><text x="85" y="261">23:00～6:00 批量识别</text><text x="230" y="247">跑识别 / 校验</text><text x="230" y="261">结果写 done</text><text x="390" y="247">失败重试 3 次</text><text x="390" y="261">仍失败 → failed + 汇总</text><text x="240" y="331">NAS 只存不算 · 笔记本只稳不重</text><text x="305" y="146" font-size="8.5" fill="#666">是</text><text x="216" y="200" font-size="8.5" fill="#666">完成</text><text x="70" y="200" font-size="8.5" fill="#666">否</text></g>
+  <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0804-4</text>
+</svg>
+</div><figcaption><span class="hand">逻辑流程图 · 铅笔稿（类比爆炸图）</span></figcaption></figure>
+    </div>
+    
+    <div class="two">
+      <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
+        <ul class="inspo"><li>队列目录在 NAS：/queue/{pending,running,done}</li><li>优先级：转码（有人在看）&gt; 识别 &gt; 备份校验</li><li>23:00～6:00 批量识别窗口；白天只跑即时任务</li><li>失败重试 3 次，仍失败写 failed 并推汇总</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">jellyfin/jellyfin 的硬件转码指向 Mac mini；识别任务用 immich 的机器学习容器 + 自写的目录队列脚本（launchd 定时）</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/jellyfin/jellyfin" target="_blank" rel="noopener">jellyfin/jellyfin</a></p></div>
+    </div>
+  </section>
+  
+
+  <nav class="pager">
+    <a href="../teardown/0803.html">← 0803 miniduck 拆解</a>
+    <a class="up" href="../modules/0804.html">回到 全屋存储 + 全屋智能 专题页</a>
+    <a href="../teardown/0805.html">0805 全套方案材质总设计 拆解 →</a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>
