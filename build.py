@@ -140,7 +140,18 @@ for m in modules:
         e = repo_index.setdefault(g["name"], {**g, "used_by": []})
         e["used_by"].append(m)
 repo_list = sorted(repo_index.values(), key=lambda e: -float(e["stars"].lower().replace("k", "e3").replace(",", "")) if e["stars"][:1].isdigit() else 0)
-refs_stats = {"repos": len(repo_index), "links": sum(len(m["github"]) for m in modules), "xhs": sum(len(m["xhs"]) for m in modules)}
+refs_stats = {"repos": len(repo_index), "links": sum(len(m["github"]) for m in modules), "xhs": sum(len(m["xhs"]) for m in modules),
+              "zh": sum(1 for e in repo_list if "无" not in (e.get("zh") or "无")),
+              "multi": sum(1 for e in repo_list if len(e["used_by"]) > 1)}
+def _starsn(e):
+    s = e["stars"].lower().replace(",", "")
+    return float(s.replace("k", "e3")) if s[:1].isdigit() else 0
+for e in repo_list: e["area_ids"] = sorted({m["id"][:2] for m in e["used_by"]})
+repo_tiers = [
+    {"key": "t1", "name": "万星以上", "note": "成熟平台级项目，社区大、文档全，出问题一搜就有答案", "repos": [e for e in repo_list if _starsn(e) >= 10000]},
+    {"key": "t2", "name": "1k ～ 10k 星", "note": "细分领域里的主流方案，大多有活跃维护者和现成的接入示例", "repos": [e for e in repo_list if 1000 <= _starsn(e) < 10000]},
+    {"key": "t3", "name": "1k 星以下", "note": "小而专的项目：恰好是这个需求的现成答案，用之前先看最近一次提交", "repos": [e for e in repo_list if _starsn(e) < 1000]},
+]
 all_tags = {}
 for m in modules:
     for t in m["tags"]: all_tags[t] = all_tags.get(t, 0) + 1
@@ -507,18 +518,33 @@ REFS = r"""{% extends "base" %}{% block title %}参考索引{% endblock %}
   <header class="mod-head">
     <p class="kicker">全站引用</p>
     <h1>{{ refs_stats.repos }} 个开源项目，{{ refs_stats.xhs }} 组小红书关键词</h1>
-    <p class="lede">{{ stats.modules }} 个模块专题页里引用的 GitHub 项目汇总（按星数排序，去重；标签标出是否有中文版），每个都在 2026-09 打开核实过存在，各模块页里有 500 字介绍和一张铅笔示意图。点模块编号回到对应专题页看“为什么用它”。小红书关键词在各模块页里。</p>
+    <p class="lede">{{ stats.modules }} 个模块专题页里引用的 GitHub 项目汇总，去重后按星数分三档。每个仓库都在 2026-09 打开核实过存在，星数取当时页面显示值；绿色标签表示有中文（官方中文 README / 中文文档站 / 界面有中文）。项目怎么工作、在模块里怎么接，各模块页里有 500 字介绍和一张铅笔示意图——点右侧模块编号过去看。小红书关键词也在各模块页里。</p>
   </header>
-  <section class="blk">
-    <div class="repo-table">{% for e in repo_list %}
+  <section class="blk refs-sum">
+    <div class="rs"><b>{{ refs_stats.repos }}</b><span>个项目</span></div>
+    <div class="rs"><b>{{ refs_stats.zh }}</b><span>个有中文</span></div>
+    <div class="rs"><b>{{ refs_stats.multi }}</b><span>个被多个模块共用</span></div>
+    <div class="rs"><b>{{ refs_stats.links }}</b><span>处引用</span></div>
+    <nav class="rs-jump">{% for t in repo_tiers %}<a href="#{{ t.key }}">{{ t.name }} <i>{{ t.repos|length }}</i></a>{% endfor %}</nav>
+  </section>
+  {% for t in repo_tiers %}
+  <section class="blk repo-tier" id="{{ t.key }}">
+    <h2><em>★</em> {{ t.name }} <small>{{ t.repos|length }} 个</small></h2>
+    <p class="tier-note">{{ t.note }}</p>
+    <div class="repo-table">{% for e in t.repos %}
       <div class="repo-row">
-        <a class="rname" href="{{ e.url }}" target="_blank" rel="noopener">{{ e.name }}</a>
-        <span class="stars">★ {{ e.stars }}</span>{% if e.zh %}<span class="zh {% if '无' in e.zh %}zh-no{% endif %}">{{ e.zh }}</span>{% endif %}
-        <span class="rdesc">{{ e.desc }}</span>
-        <span class="rused">{% for m in e.used_by %}<a href="{{ root }}modules/{{ m.id }}.html" title="{{ m.name }}">{{ m.id }}</a>{% endfor %}</span>
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="{{ e.url }}" target="_blank" rel="noopener">{{ e.name }}</a>
+            <span class="stars">★ {{ e.stars }}</span>
+            {% if e.zh %}<span class="zh {% if '无' in e.zh %}zh-no{% endif %}">{{ e.zh }}</span>{% endif %}
+          </div>
+          <p class="rdesc">{{ e.desc }}</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span>{% for m in e.used_by %}<a href="{{ root }}modules/{{ m.id }}.html" title="{{ m.name }}"><i>{{ m.id }}</i>{{ m.name }}</a>{% endfor %}</div>
       </div>{% endfor %}
     </div>
-  </section>
+  </section>{% endfor %}
   <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><span></span></nav>
 </article>
 {% endblock %}"""
@@ -664,14 +690,31 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .xhs .kw{font-weight:700;color:var(--red);white-space:nowrap}
 .xhs .xnote{color:var(--ink2);font-size:.9rem}
 .xhs:hover .kw{border-bottom:1.5px solid var(--red)}
+.refs-sum{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 28px;padding:14px 0 6px;border-top:1.5px solid var(--line);border-bottom:1px dotted rgba(28,28,28,.35)}
+.refs-sum .rs b{font-family:"Noto Serif SC","Songti SC",serif;font-size:1.7rem;font-weight:700;margin-right:6px;line-height:1}
+.refs-sum .rs span{font-size:.82rem;color:var(--ink3)}
+.refs-sum .rs-jump{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.refs-sum .rs-jump a{font-size:.8rem;padding:3px 12px;border:1.3px solid var(--ink);border-radius:200px 10px 180px 10px/10px 180px 10px 200px}
+.refs-sum .rs-jump a i{margin-left:4px}
+.refs-sum .rs-jump a:hover{background:var(--ink);color:var(--paper)}
+.repo-tier h2 small{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.72rem;font-weight:400;color:var(--ink3);margin-left:8px;letter-spacing:.04em}
+.repo-tier .tier-note{margin:2px 0 8px;font-size:.86rem;color:var(--ink3)}
 .repo-table{display:flex;flex-direction:column}
-.repo-row{display:grid;grid-template-columns:230px 60px 1fr 150px;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px dotted rgba(28,28,28,.3);font-size:.88rem}
-.repo-row .rname{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.82rem;word-break:break-all;border-bottom:1px solid transparent}
+.repo-row{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:8px 28px;align-items:start;padding:14px 0;border-bottom:1px dotted rgba(28,28,28,.35)}
+.repo-row:last-child{border-bottom:none}
+.repo-row .rhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.repo-row .rname{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9rem;font-weight:600;word-break:break-all;border-bottom:1.3px solid transparent}
 .repo-row .rname:hover{border-bottom-color:var(--red)}
-.repo-row .rdesc{color:var(--ink2)}
-.repo-row .rused a{font-family:ui-monospace,monospace;font-size:.78rem;color:var(--ink3);margin-right:6px}
+.repo-row .stars{color:var(--red);font-size:.82rem;white-space:nowrap}
+.repo-row .zh{font-size:.68rem}
+.repo-row .rdesc{margin:5px 0 0;color:var(--ink2);font-size:.9rem;line-height:1.7}
+.repo-row .rused{display:flex;flex-direction:column;gap:3px;padding-top:2px;border-left:1px dotted rgba(28,28,28,.35);padding-left:14px}
+.repo-row .rused-l{font-size:.7rem;color:var(--ink3);letter-spacing:.1em}
+.repo-row .rused a{font-size:.8rem;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.repo-row .rused a i{color:var(--ink3);margin-right:6px}
 .repo-row .rused a:hover{color:var(--red)}
-@media (max-width:820px){.repo-row{grid-template-columns:1fr 60px;}.repo-row .rdesc,.repo-row .rused{grid-column:1/-1}}
+.repo-row .rused a:hover i{color:var(--red)}
+@media (max-width:820px){.repo-row{grid-template-columns:1fr;gap:6px}.repo-row .rused{border-left:none;padding-left:0;flex-direction:row;flex-wrap:wrap;gap:4px 14px}.refs-sum .rs-jump{margin-left:0}}
 .td-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
 .td-item{display:flex;flex-direction:column;gap:4px;border:1.6px solid var(--line);border-radius:12px 200px 12px 180px/180px 12px 200px 12px;padding:10px 14px;background:rgba(255,255,255,.4);font-size:.9rem}
 .td-item:hover{box-shadow:3px 3px 0 var(--ink)}
@@ -776,7 +819,7 @@ for m in modules:
     for p in m["parts"]:
         p["img_inline"] = inline_svg(p["img"], "pc-art")
         p["poster_inline"] = inline_svg(p["poster"], "pc-poster") if p["poster"] else None
-ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface, plans=plans, size_table=SIZE_TABLE, blocks=BLOCKS)
+ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, repo_tiers=repo_tiers, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface, plans=plans, size_table=SIZE_TABLE, blocks=BLOCKS)
 
 (DIST / "index.html").write_text(env.get_template("index").render(root="", **ctx), encoding="utf-8")
 (DIST / "about.html").write_text(env.get_template("about").render(root="", **{**ctx, "page": "about"}), encoding="utf-8")
