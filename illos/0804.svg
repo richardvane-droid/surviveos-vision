@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0804-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="83" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0804-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0804-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="m0804-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
+  </defs>
+  <g filter="url(#m0804-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 250 H386" stroke-width="1.6"/><path d="M60 250 V40" stroke-width="1.4"/>
+<path d="M62 52 h-46" stroke-width="0.35"/>
+<path d="M62 64 h-46" stroke-width="0.35"/>
+<path d="M62 76 h-46" stroke-width="0.35"/>
+<path d="M62 88 h-46" stroke-width="0.35"/>
+<path d="M62 100 h-46" stroke-width="0.35"/>
+<path d="M62 112 h-46" stroke-width="0.35"/>
+<path d="M62 124 h-46" stroke-width="0.35"/>
+<path d="M62 136 h-46" stroke-width="0.35"/>
+<path d="M62 148 h-46" stroke-width="0.35"/>
+<path d="M62 160 h-46" stroke-width="0.35"/>
+<path d="M62 172 h-46" stroke-width="0.35"/>
+<path d="M62 184 h-46" stroke-width="0.35"/>
+<path d="M62 196 h-46" stroke-width="0.35"/>
+<path d="M62 208 h-46" stroke-width="0.35"/>
+<path d="M62 220 h-46" stroke-width="0.35"/>
+<path d="M62 232 h-46" stroke-width="0.35"/>
+<path d="M62 244 h-46" stroke-width="0.35"/>
+<path d="M110 250 V62 M240 250 V62 M110 62 H240" stroke-width="1.6"/><path d="M114 250 V62 M236 250 V62" stroke-width="0.5"/>
+<path d="M110 232 H240 M110 236 H240" stroke-width="1.1"/><path d="M112 233 h126 v2 h-126 Z" fill="url(#m0804-hatch)" stroke="none"/>
+<path d="M110 190 H240 M110 194 H240" stroke-width="1.1"/><path d="M112 191 h126 v2 h-126 Z" fill="url(#m0804-hatch)" stroke="none"/>
+<path d="M110 148 H240 M110 152 H240" stroke-width="1.1"/><path d="M112 149 h126 v2 h-126 Z" fill="url(#m0804-hatch)" stroke="none"/>
+<path d="M110 106 H240 M110 110 H240" stroke-width="1.1"/><path d="M112 107 h126 v2 h-126 Z" fill="url(#m0804-hatch)" stroke="none"/>
+<path d="M110 250 v-10 M240 250 v-10 M100 250 h20 M230 250 h20" stroke-width="1"/>
+<path d="M122 230 v-30 h78 v30 Z" stroke-width="1.2"/>
+<path d="M126 204 v22 h15 v-22 Z" stroke-width="0.7"/><circle cx="133" cy="222" r="1.2" stroke-width="0.6"/>
+<path d="M145 204 v22 h15 v-22 Z" stroke-width="0.7"/><circle cx="152" cy="222" r="1.2" stroke-width="0.6"/>
+<path d="M164 204 v22 h15 v-22 Z" stroke-width="0.7"/><circle cx="171" cy="222" r="1.2" stroke-width="0.6"/>
+<path d="M183 204 v22 h15 v-22 Z" stroke-width="0.7"/><circle cx="190" cy="222" r="1.2" stroke-width="0.6"/>
+<path d="M120 188 v-8 h100 v8 Z" stroke-width="1.2"/><path d="M122 182 h96" stroke-width="0.5"/><circle cx="214" cy="184" r="1.2" stroke-width="0.6"/>
+<rect x="122" y="126" width="40" height="18" rx="4" stroke-width="1.2"/><path d="M128 131 h6" stroke-width="0.5"/><path d="M174 146 v-12 h56 v12 Z" stroke-width="1.1"/>
+<path d="M178 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M187 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M196 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M205 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M214 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M223 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M122 104 v-16 h46 v16 Z M126 92 h6 M136 92 h6 M146 92 h6" stroke-width="1"/><path d="M182 88 v16 M190 88 v16 M198 88 v16 M206 88 v16 M214 88 v16" stroke-width="0.6"/>
+<path d="M232 96 q6 0 6 6 V236 M234 100 q4 0 4 4 V236" stroke-width="0.6"/><path d="M110 140 H60 M110 144 H60" stroke-width="0.8"/><path d="M52 142 l-8 0 l3 -3 M44 142 l3 3" stroke-width="0.7"/>
+<path d="M258 250 v-16 h36 v16 M262 240 h4 M270 240 h4 M278 240 h4 M286 240 h4" stroke-width="1"/>
+<rect x="300" y="90" width="66" height="44" rx="2" stroke-width="1.2"/><path d="M306 100 h54 M306 112 h40 M306 124 h48" stroke-width="1"/><circle cx="306" cy="100" r="1.5" stroke-width="0.6"/><circle cx="306" cy="112" r="1.5" stroke-width="0.6"/><circle cx="306" cy="124" r="1.5" stroke-width="0.6"/>
+<path d="M340 112 l6 -3 l4 3 l3 -6 l5 3" stroke-width="0.6"/>
+<path d="M204 222 l6 0 M204 226 l4 0" stroke-width="0.5" stroke-dasharray="1 2"/>
+<circle cx="330" cy="212.95" r="4.75" stroke-width="1.2"/><path d="M330 217.7 V234.8 M330 225.29999999999998 L321.45 236.7 M330 225.29999999999998 L338.55 236.7 M330 234.8 L323.35 250 M330 234.8 L336.65 250" stroke-width="1.2"/>
+<path d="M322 222 l-4 -6 h8 l-3 6" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0804</text>
+<text x="175" y="56" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">2020 型材机架 · 60×40×120</text>
+<text x="161" y="236" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">NAS 4 盘</text>
+<text x="170" y="178" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">Windows 笔记本</text>
+<text x="142" y="122" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">M1 Mac mini</text>
+<text x="202" y="130" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">2.5GbE</text>
+<text x="145" y="84" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">光猫</text>
+<text x="84" y="136" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">→ 0802 屏墙</text>
+<text x="276" y="262" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">PDU + UPS</text>
+<text x="333" y="84" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">三条心跳</text>
+<text x="200" y="282" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0804：储藏室隔墙背后的“地下机房”，三台机器替掉全屋树莓派</text>
+</svg>

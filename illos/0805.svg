@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="m0805-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="85" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0805-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0805-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="m0805-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
+  </defs>
+  <g filter="url(#m0805-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M20 232 L380 232 L340 150 L60 150 Z" stroke-width="1.6"/><path d="M20 232 v10 h360 v-10" stroke-width="1"/><path d="M22 234 h356 v6 h-356 Z" fill="url(#m0805-hatch)" stroke="none"/>
+<path d="M106 150 L80 232" stroke-width="0.35"/>
+<path d="M152 150 L140 232" stroke-width="0.35"/>
+<path d="M198 150 L200 232" stroke-width="0.35"/>
+<path d="M244 150 L260 232" stroke-width="0.35"/>
+<path d="M290 150 L320 232" stroke-width="0.35"/>
+<path d="M70 210 l60 -30 v-22 l-60 30 Z M70 210 l-16 -8 v-22 l16 8 M54 180 l60 -30 l16 8" stroke-width="1.4"/>
+<path d="M72 208 l56 -28 v-18 l-56 28 Z" fill="url(#m0805-hatch)" stroke="none"/>
+<path d="M56 182 l14 7 v20 M62 176 v14 M56 190 h8 M62 184 l6 3 M58 178 l4 -2" stroke-width="0.9"/>
+<path d="M60 196 h8 v6 h-8 Z M64 190 v-4" stroke-width="0.7"/>
+<path d="M150 214 l70 -34 l30 12 l-70 34 Z M150 214 v6 l30 12 v-6 M180 226 l70 -34 v6 l-70 34" stroke-width="1.4"/>
+<path d="M158 208 q30 -12 60 -28 M164 214 q30 -12 60 -28 M172 220 q30 -12 56 -26 M156 200 q20 -8 40 -18" stroke-width="0.5"/>
+<path d="M270 216 q30 -20 60 -30 q16 4 30 12 q-30 14 -62 30 q-14 -6 -28 -12 Z" stroke-width="1.4"/><path d="M328 190 q6 -8 14 -4 q-4 8 -10 8" stroke-width="0.9"/>
+<path d="M274 214 q28 -18 56 -28 q14 4 26 10 q-28 14 -58 28 q-12 -5 -24 -10 Z" fill="url(#m0805-hatchl)" stroke="none"/>
+<path d="M280 208 q4 2 8 0 M300 200 q4 2 8 0 M320 194 q4 2 8 0" stroke-width="0.5"/>
+<path d="M228 150 v-56 h96 v56" stroke-width="1.1"/><path d="M236 104 h60 M236 114 h80 M236 124 h50 M236 134 h70 M236 144 h40" stroke-width="0.6"/><path d="M230 96 h92 v10 h-92 Z" fill="url(#m0805-hatch)" stroke="none"/>
+<circle cx="120" cy="92" r="7" stroke-width="1.2"/><path d="M120 99 V136 M120 108 l-22 22 l-14 12 M120 108 l16 14 M120 136 l-10 20 M120 136 l10 20" stroke-width="1.2"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0805</text>
+<text x="92" y="254" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">欧标 2020 · 喷砂黑</text>
+<text x="200" y="254" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">白蜡木 · 油蜡</text>
+<text x="316" y="254" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">植鞣皮</text>
+<text x="276" y="88" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">D3 · 欧标 · 2020 · 槽 6 · 黑 · 壁厚 1.8</text>
+<text x="300" y="160" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">木料 / 皮草：待定标</text>
+<text x="200" y="278" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0805：三块样板就是全屋手工件的语法——铝做骨、木做面、皮做触感</text>
+</svg>
