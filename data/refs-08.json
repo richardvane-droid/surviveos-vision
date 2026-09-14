@@ -132,5 +132,92 @@
     "note": "看回窝充电的造型，怎么做成家里的一个小摆件"
    }
   ]
+ },
+ {
+  "id": "0804",
+  "github": [
+   {
+    "name": "home-assistant/core",
+    "url": "https://github.com/home-assistant/core",
+    "stars": "88k",
+    "desc": "本地优先的开源家庭自动化平台，全屋所有模块的数据都汇到这里",
+    "why": "三台机器里的 x86 笔记本就是它的家：Docker 跑 HA，所有模块的“最后上报时间”都是现成实体"
+   },
+   {
+    "name": "louislam/uptime-kuma",
+    "url": "https://github.com/louislam/uptime-kuma",
+    "stars": "90.1k",
+    "desc": "自托管的服务监控面板，支持 HTTP / TCP / DNS / 推送等 90 多种通知",
+    "why": "盯全屋服务：HA、Jellyfin、NAS、每个 ESPHome 节点的心跳，掉线就推手机"
+   },
+   {
+    "name": "henrygd/beszel",
+    "url": "https://github.com/henrygd/beszel",
+    "stars": "24.3k",
+    "desc": "轻量服务器监控：历史数据、Docker 容器状态、温度和告警",
+    "why": "盯三台机器本身：NAS 盘温、笔记本 CPU、Mac mini 内存，一个面板看完"
+   },
+   {
+    "name": "jellyfin/jellyfin",
+    "url": "https://github.com/jellyfin/jellyfin",
+    "stars": "54k",
+    "desc": "自由软件媒体系统，服务端 + API，Plex / Emby 的开源替代",
+    "why": "NAS 上的影音库靠它推到地堡 0207 的 98 寸电视，本地转码走 Mac mini"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "家庭机房 NAS 机架 走线",
+    "note": "看黑色小机架的走线和灯光，照着做储藏室那一格"
+   },
+   {
+    "keyword": "Mac mini 无头 服务器",
+    "note": "看别人把 M1 Mac 当常驻服务器的设置和散热"
+   },
+   {
+    "keyword": "HomeAssistant 仪表盘 全屋监控",
+    "note": "看“最后上报时间”类监控卡片怎么排版"
+   }
+  ]
+ },
+ {
+  "id": "0805",
+  "github": [
+   {
+    "name": "FreeCAD/FreeCAD",
+    "url": "https://github.com/FreeCAD/FreeCAD",
+    "stars": "32.2k",
+    "desc": "开源参数化 3D 建模软件，型材框架和木作都能画",
+    "why": "每个模块画型材机架前先在它里面按 0805 的规格建模，2020 / 3030 两档尺寸做成参数"
+   },
+   {
+    "name": "adgaudio/OpenSCAD_connectors",
+    "url": "https://github.com/adgaudio/OpenSCAD_connectors",
+    "stars": "46",
+    "desc": "面向 2020 铝型材的参数化连接件库：角码、T 型接头、端盖，可直接出 STL 打印",
+    "why": "黑色角码缺货时自己打印的连接件就从这里改，槽宽参数改成 6mm 欧标"
+   },
+   {
+    "name": "xiterion/openscad-extrusions",
+    "url": "https://github.com/xiterion/openscad-extrusions",
+    "stars": "1",
+    "desc": "OpenSCAD 里描述各厂商铝型材截面的小库",
+    "why": "把欧标 2020 / 3030 的真实截面放进模型里，检查配件和壁厚是否对得上"
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "黑色铝型材 原木 家具",
+    "note": "看黑型材 + 木面的成品质感，验证三材搭配"
+   },
+   {
+    "keyword": "欧标 2020 铝型材 配件 角码",
+    "note": "看欧标配件的实物和内置角槽件的隐藏装法"
+   },
+   {
+    "keyword": "植鞣皮 木 把手 家具",
+    "note": "看皮草只用在手接触面的做法"
+   }
+  ]
  }
 ]
