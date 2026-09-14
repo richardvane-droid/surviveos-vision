@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>08 虚拟空间 · SurviveOs 设想版</title>
-<meta name="description" content="虚拟空间：不属于任何一间屋：全屋物品的数字孪生、汇聚一切的中枢大屏，和一只自己走门串户的 AI 小鸭。3 个模块专题。">
+<meta name="description" content="虚拟空间：不属于任何一间屋：数字孪生、中枢大屏、一只到处走的 AI 小鸭、一个地下机房，和一份全屋材质总纲。5 个模块专题。">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,9 +108,9 @@
   <div class="area-head">
     <p class="kicker">区域 08 · Virtual</p>
     <h1>虚拟空间</h1>
-    <p class="lede">不属于任何一间屋：全屋物品的数字孪生、汇聚一切的中枢大屏，和一只自己走门串户的 AI 小鸭</p>
-    <p class="intro">2026-09-09 真实项目新设的区域，收纳“不专属于任何单一物理区域”的东西：一层跨区域的基础信息层（0801 物品数字孪生、0802 全屋中枢，原地堡的 0206 / 0211 迁到这里重编号），和一台在空间里移动的实体设备（0803 miniduck）。它们的硬件仍然落在某个房间，但服务的是整座园子——七个物理区域的传感器和箱子都往这里汇，再从这里长出一张脸、一块屏、一个搜索框。</p>
-    <p class="space-line"><em>📐</em> 跨区域 · 数据层跑在地堡储藏室的小主机上 · 实体设备在木屋 / 地堡 / 阁楼之间移动 <a href="../space.html">· 看户型图 →</a></p>
+    <p class="lede">不属于任何一间屋：数字孪生、中枢大屏、一只到处走的 AI 小鸭、一个地下机房，和一份全屋材质总纲</p>
+    <p class="intro">2026-09-09 真实项目新设的区域，收纳“不专属于任何单一物理区域”的东西：一层跨区域的基础信息层（0801 物品数字孪生、0802 全屋中枢，原地堡的 0206 / 0211 迁到这里重编号），一台在空间里移动的实体设备（0803 miniduck）、一个替掉全屋树莓派的三机小机房（0804 全屋存储 + 全屋智能），以及一份所有手工模块都要继承的材质总纲（0805：木料 / 铝型材 / 皮草，铝型材已定标欧标 2020 喷砂黑）。它们的硬件仍然落在某个房间，但服务的是整座园子——七个物理区域的传感器和箱子都往这里汇，再从这里长出一张脸、一块屏、一个搜索框。</p>
+    <p class="space-line"><em>📐</em> 跨区域 · 数据层跑在地堡储藏室的三机机架上 · 实体设备在木屋 / 地堡 / 阁楼之间移动 · 材质规则覆盖全屋 <a href="../space.html">· 看户型图 →</a></p>
   </div>
 </section>
 <section class="sec plan-sec">
@@ -202,7 +202,7 @@
   <p class="tiny">场地总图。虚拟空间没有自己的一块地：数字孪生和中枢覆盖图上所有区域，miniduck 靠木屋暗门下、地堡门下的通道和阁楼坡道在三个空间之间走动。</p>
 </section>
 <section class="sec">
-  <h2 class="sec-title"><span>3 个模块专题</span><small>按编号排列，编号不代表优先级</small></h2>
+  <h2 class="sec-title"><span>5 个模块专题</span><small>按编号排列，编号不代表优先级</small></h2>
   <div class="mod-list">
   
     <a class="mod-row" href="../modules/0801.html">
@@ -514,6 +514,148 @@
       </div>
     </a>
   
+    <a class="mod-row" href="../modules/0804.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0804-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="83" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0804-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0804-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="m0804-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
+  </defs>
+  <g filter="url(#m0804-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 250 H386" stroke-width="1.6"/><path d="M60 250 V40" stroke-width="1.4"/>
+<path d="M62 52 h-46" stroke-width="0.35"/>
+<path d="M62 64 h-46" stroke-width="0.35"/>
+<path d="M62 76 h-46" stroke-width="0.35"/>
+<path d="M62 88 h-46" stroke-width="0.35"/>
+<path d="M62 100 h-46" stroke-width="0.35"/>
+<path d="M62 112 h-46" stroke-width="0.35"/>
+<path d="M62 124 h-46" stroke-width="0.35"/>
+<path d="M62 136 h-46" stroke-width="0.35"/>
+<path d="M62 148 h-46" stroke-width="0.35"/>
+<path d="M62 160 h-46" stroke-width="0.35"/>
+<path d="M62 172 h-46" stroke-width="0.35"/>
+<path d="M62 184 h-46" stroke-width="0.35"/>
+<path d="M62 196 h-46" stroke-width="0.35"/>
+<path d="M62 208 h-46" stroke-width="0.35"/>
+<path d="M62 220 h-46" stroke-width="0.35"/>
+<path d="M62 232 h-46" stroke-width="0.35"/>
+<path d="M62 244 h-46" stroke-width="0.35"/>
+<path d="M110 250 V62 M240 250 V62 M110 62 H240" stroke-width="1.6"/><path d="M114 250 V62 M236 250 V62" stroke-width="0.5"/>
+<path d="M110 232 H240 M110 236 H240" stroke-width="1.1"/><path d="M112 233 h126 v2 h-126 Z" fill="url(#m0804-hatch)" stroke="none"/>
+<path d="M110 190 H240 M110 194 H240" stroke-width="1.1"/><path d="M112 191 h126 v2 h-126 Z" fill="url(#m0804-hatch)" stroke="none"/>
+<path d="M110 148 H240 M110 152 H240" stroke-width="1.1"/><path d="M112 149 h126 v2 h-126 Z" fill="url(#m0804-hatch)" stroke="none"/>
+<path d="M110 106 H240 M110 110 H240" stroke-width="1.1"/><path d="M112 107 h126 v2 h-126 Z" fill="url(#m0804-hatch)" stroke="none"/>
+<path d="M110 250 v-10 M240 250 v-10 M100 250 h20 M230 250 h20" stroke-width="1"/>
+<path d="M122 230 v-30 h78 v30 Z" stroke-width="1.2"/>
+<path d="M126 204 v22 h15 v-22 Z" stroke-width="0.7"/><circle cx="133" cy="222" r="1.2" stroke-width="0.6"/>
+<path d="M145 204 v22 h15 v-22 Z" stroke-width="0.7"/><circle cx="152" cy="222" r="1.2" stroke-width="0.6"/>
+<path d="M164 204 v22 h15 v-22 Z" stroke-width="0.7"/><circle cx="171" cy="222" r="1.2" stroke-width="0.6"/>
+<path d="M183 204 v22 h15 v-22 Z" stroke-width="0.7"/><circle cx="190" cy="222" r="1.2" stroke-width="0.6"/>
+<path d="M120 188 v-8 h100 v8 Z" stroke-width="1.2"/><path d="M122 182 h96" stroke-width="0.5"/><circle cx="214" cy="184" r="1.2" stroke-width="0.6"/>
+<rect x="122" y="126" width="40" height="18" rx="4" stroke-width="1.2"/><path d="M128 131 h6" stroke-width="0.5"/><path d="M174 146 v-12 h56 v12 Z" stroke-width="1.1"/>
+<path d="M178 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M187 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M196 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M205 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M214 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M223 137 v5 h6 v-5 Z" stroke-width="0.5"/>
+<path d="M122 104 v-16 h46 v16 Z M126 92 h6 M136 92 h6 M146 92 h6" stroke-width="1"/><path d="M182 88 v16 M190 88 v16 M198 88 v16 M206 88 v16 M214 88 v16" stroke-width="0.6"/>
+<path d="M232 96 q6 0 6 6 V236 M234 100 q4 0 4 4 V236" stroke-width="0.6"/><path d="M110 140 H60 M110 144 H60" stroke-width="0.8"/><path d="M52 142 l-8 0 l3 -3 M44 142 l3 3" stroke-width="0.7"/>
+<path d="M258 250 v-16 h36 v16 M262 240 h4 M270 240 h4 M278 240 h4 M286 240 h4" stroke-width="1"/>
+<rect x="300" y="90" width="66" height="44" rx="2" stroke-width="1.2"/><path d="M306 100 h54 M306 112 h40 M306 124 h48" stroke-width="1"/><circle cx="306" cy="100" r="1.5" stroke-width="0.6"/><circle cx="306" cy="112" r="1.5" stroke-width="0.6"/><circle cx="306" cy="124" r="1.5" stroke-width="0.6"/>
+<path d="M340 112 l6 -3 l4 3 l3 -6 l5 3" stroke-width="0.6"/>
+<path d="M204 222 l6 0 M204 226 l4 0" stroke-width="0.5" stroke-dasharray="1 2"/>
+<circle cx="330" cy="212.95" r="4.75" stroke-width="1.2"/><path d="M330 217.7 V234.8 M330 225.29999999999998 L321.45 236.7 M330 225.29999999999998 L338.55 236.7 M330 234.8 L323.35 250 M330 234.8 L336.65 250" stroke-width="1.2"/>
+<path d="M322 222 l-4 -6 h8 l-3 6" stroke-width="0.8"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0804</text>
+<text x="175" y="56" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">2020 型材机架 · 60×40×120</text>
+<text x="161" y="236" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">NAS 4 盘</text>
+<text x="170" y="178" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">Windows 笔记本</text>
+<text x="142" y="122" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">M1 Mac mini</text>
+<text x="202" y="130" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">2.5GbE</text>
+<text x="145" y="84" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">光猫</text>
+<text x="84" y="136" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">→ 0802 屏墙</text>
+<text x="276" y="262" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">PDU + UPS</text>
+<text x="333" y="84" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">三条心跳</text>
+<text x="200" y="282" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0804：储藏室隔墙背后的“地下机房”，三台机器替掉全屋树莓派</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0804</i><b>全屋存储 + 全屋智能</b><span class="st st-🚧" title="真实项目需求收集中">🚧 真实项目需求收集中</span></div>
+        <h3>码住！一台 NAS、一台旧笔记本、一台无头 M1 Mac，替掉了全屋所有树莓派</h3>
+        <p>三台机器组成的“地下机房”：存全屋影音和照片，跑 HomeAssistant，顺便盯着每个模块有没有掉线。</p>
+        <p class="tags"><span>#NAS</span><span>#HomeAssistant</span><span>#家庭机房</span><span>#去家务化</span><span>#虚拟空间</span></p>
+      </div>
+    </a>
+  
+    <a class="mod-row" href="../modules/0805.html">
+      <div class="thumb"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="m0805-rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="85" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="m0805-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="m0805-hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="m0805-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
+  </defs>
+  <g filter="url(#m0805-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M20 232 L380 232 L340 150 L60 150 Z" stroke-width="1.6"/><path d="M20 232 v10 h360 v-10" stroke-width="1"/><path d="M22 234 h356 v6 h-356 Z" fill="url(#m0805-hatch)" stroke="none"/>
+<path d="M106 150 L80 232" stroke-width="0.35"/>
+<path d="M152 150 L140 232" stroke-width="0.35"/>
+<path d="M198 150 L200 232" stroke-width="0.35"/>
+<path d="M244 150 L260 232" stroke-width="0.35"/>
+<path d="M290 150 L320 232" stroke-width="0.35"/>
+<path d="M70 210 l60 -30 v-22 l-60 30 Z M70 210 l-16 -8 v-22 l16 8 M54 180 l60 -30 l16 8" stroke-width="1.4"/>
+<path d="M72 208 l56 -28 v-18 l-56 28 Z" fill="url(#m0805-hatch)" stroke="none"/>
+<path d="M56 182 l14 7 v20 M62 176 v14 M56 190 h8 M62 184 l6 3 M58 178 l4 -2" stroke-width="0.9"/>
+<path d="M60 196 h8 v6 h-8 Z M64 190 v-4" stroke-width="0.7"/>
+<path d="M150 214 l70 -34 l30 12 l-70 34 Z M150 214 v6 l30 12 v-6 M180 226 l70 -34 v6 l-70 34" stroke-width="1.4"/>
+<path d="M158 208 q30 -12 60 -28 M164 214 q30 -12 60 -28 M172 220 q30 -12 56 -26 M156 200 q20 -8 40 -18" stroke-width="0.5"/>
+<path d="M270 216 q30 -20 60 -30 q16 4 30 12 q-30 14 -62 30 q-14 -6 -28 -12 Z" stroke-width="1.4"/><path d="M328 190 q6 -8 14 -4 q-4 8 -10 8" stroke-width="0.9"/>
+<path d="M274 214 q28 -18 56 -28 q14 4 26 10 q-28 14 -58 28 q-12 -5 -24 -10 Z" fill="url(#m0805-hatchl)" stroke="none"/>
+<path d="M280 208 q4 2 8 0 M300 200 q4 2 8 0 M320 194 q4 2 8 0" stroke-width="0.5"/>
+<path d="M228 150 v-56 h96 v56" stroke-width="1.1"/><path d="M236 104 h60 M236 114 h80 M236 124 h50 M236 134 h70 M236 144 h40" stroke-width="0.6"/><path d="M230 96 h92 v10 h-92 Z" fill="url(#m0805-hatch)" stroke="none"/>
+<circle cx="120" cy="92" r="7" stroke-width="1.2"/><path d="M120 99 V136 M120 108 l-22 22 l-14 12 M120 108 l16 14 M120 136 l-10 20 M120 136 l10 20" stroke-width="1.2"/>
+  </g>
+  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0805</text>
+<text x="92" y="254" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">欧标 2020 · 喷砂黑</text>
+<text x="200" y="254" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">白蜡木 · 油蜡</text>
+<text x="316" y="254" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">植鞣皮</text>
+<text x="276" y="88" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">D3 · 欧标 · 2020 · 槽 6 · 黑 · 壁厚 1.8</text>
+<text x="300" y="160" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">木料 / 皮草：待定标</text>
+<text x="200" y="278" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0805：三块样板就是全屋手工件的语法——铝做骨、木做面、皮做触感</text>
+</svg>
+</div>
+      <div class="body">
+        <div class="row"><i>0805</i><b>全套方案材质总设计</b><span class="st st-🚧" title="真实方案推演中：铝型材已定标">🚧 真实方案推演中：铝型材已定标</span></div>
+        <h3>谁懂啊！全屋只准用三种材料：木、铝型材、皮草，一整个统一</h3>
+        <p>一份所有模块都要继承的材质总纲：铝做骨、木做面、皮草做触感，铝型材已定标欧标 20 系列喷砂黑。</p>
+        <p class="tags"><span>#材质</span><span>#铝型材</span><span>#原木风</span><span>#跨模块规则</span><span>#虚拟空间</span></p>
+      </div>
+    </a>
+  
   </div>
 </section>
 <nav class="pager">
@@ -524,7 +666,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>
