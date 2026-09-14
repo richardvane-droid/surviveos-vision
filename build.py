@@ -55,6 +55,12 @@ def real_status(mid):
         if mid in s: return (k, {"✅": "真实三阶段已完成", "🚧": "真实设计进行中"}[k])
     return ("⬜", "真实项目待设计")
 
+def inline_svg(svg, cls=""):
+    """strip xml header, force responsive sizing"""
+    svg = re.sub(r"<\?xml[^>]*\?>", "", svg)
+    svg = re.sub(r'\swidth="\d+"\sheight="\d+"', "", svg, count=1)
+    return svg.replace("<svg ", f'<svg class="{cls}" role="img" ', 1)
+
 # ---------- load ----------
 modules, by_id = [], {}
 for f in sorted(glob.glob(str(ROOT / "data" / "0?.json"))):
@@ -99,9 +105,21 @@ from urllib.parse import quote
 refs_by_id = {}
 for f in sorted(glob.glob(str(ROOT / "data" / "refs-*.json"))):
     for r in json.load(open(f, encoding="utf-8")): refs_by_id[r["id"]] = r
+from ghdiag import render as _gh_render
+def _paras(t):
+    t = (t or "").strip()
+    if "\n" in t: return [x.strip() for x in t.split("\n") if x.strip()]
+    # 没有换行时按句号粗分成 3 段
+    sents = [x for x in re.split(r"(?<=[。！？])", t) if x.strip()]
+    if len(sents) < 4: return [t]
+    k = (len(sents) + 2) // 3
+    return ["".join(sents[i:i+k]) for i in range(0, len(sents), k)]
 for m in modules:
     r = refs_by_id.get(m["id"], {"github": [], "xhs": []})
     m["github"] = r["github"]
+    for k, g in enumerate(m["github"], 1):
+        g["intro_paras"] = _paras(g.get("intro", ""))
+        g["diagram_inline"] = inline_svg(_gh_render(f"g{m['id']}-{k}", g["diagram"], g["name"], seed=(int(m["id"]) + k) % 97), "pc-art gh-diag") if g.get("diagram") else None
     m["xhs"] = [{**x, "url": "https://www.xiaohongshu.com/search_result?keyword=" + quote(x["keyword"]) + "&source=web_explore_feed"} for x in r["xhs"]]
 preface = json.load(open(ROOT / "data" / "preface.json", encoding="utf-8"))
 preface["svg"] = (ROOT / "illos" / "preface-doors.svg").read_text(encoding="utf-8")
@@ -130,12 +148,6 @@ top_tags = [t for t, c in sorted(all_tags.items(), key=lambda x: -x[1]) if c >= 
 stats = {"areas": len(AREAS), "modules": len(modules),
          "done": sum(1 for m in modules if m["status"] == "✅"),
          "wip": sum(1 for m in modules if m["status"] == "🚧")}
-
-def inline_svg(svg, cls=""):
-    """strip xml header, force responsive sizing"""
-    svg = re.sub(r"<\?xml[^>]*\?>", "", svg)
-    svg = re.sub(r'\swidth="\d+"\sheight="\d+"', "", svg, count=1)
-    return svg.replace("<svg ", f'<svg class="{cls}" role="img" ', 1)
 
 # ---------- templates ----------
 BASE = r"""<!doctype html>
@@ -325,13 +337,19 @@ MODULE = r"""{% extends "base" %}{% block title %}{{ m.id }} {{ m.name }}{% endb
   <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>{{ m.budget }}</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   {% if m.github %}<section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
-    <p class="tiny">真实存在、可直接拿来用或改的开源项目（星数为 2026-09 抓取时页面显示值）。</p>
-    <div class="gh-list">{% for g in m.github %}
-      <a class="gh" href="{{ g.url }}" target="_blank" rel="noopener">
-        <div class="gh-head"><b>{{ g.name }}</b><span class="stars">★ {{ g.stars }}</span></div>
+    <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
+    <div class="gh-cards">{% for g in m.github %}
+      <article class="gh-card" id="gh{{ loop.index }}">
+        <header class="gh-head">
+          <a class="gh-name" href="{{ g.url }}" target="_blank" rel="noopener">{{ g.name }}</a>
+          <span class="stars">★ {{ g.stars }}</span>
+          {% if g.zh %}<span class="zh {% if '无' in g.zh %}zh-no{% endif %}">{{ g.zh }}</span>{% endif %}
+        </header>
         <p class="gh-desc">{{ g.desc }}</p>
         <p class="gh-why">→ {{ g.why }}</p>
-      </a>{% endfor %}
+        {% if g.diagram_inline %}<figure class="gh-art"><div class="pc-frame">{{ g.diagram_inline|safe }}</div></figure>{% endif %}
+        {% if g.intro %}<div class="gh-intro">{% for para in g.intro_paras %}<p>{{ para }}</p>{% endfor %}</div>{% endif %}
+      </article>{% endfor %}
     </div></section>{% endif %}
 
   {% if m.xhs %}<section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
@@ -399,7 +417,7 @@ ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endbloc
   <section class="blk"><h2><em>③</em> 插图是统一风格的黑白钢笔速写</h2>
     <p class="scene">全站 {{ stats.modules }} 张模块速写 + {{ stats.areas }} 张区域全景都是原创的 inline SVG：只有一种墨色，阴影全部用 45° 排线，轮廓"描两遍"，线条经过轻微的扰动滤镜制造手绘感，右下角是编号签名。没有任何外部图片，页面在离线状态也能完整显示。</p></section>
   <section class="blk"><h2><em>④</em> 每页附了真实的参考链接</h2>
-    <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 2～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），每个都在 2026-09 打开核实过、星数取自当时页面；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见<a href="{{ root }}refs.html">参考索引</a>。</p></section>
+    <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 3～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），选择时先看知名度（星数），同档次里有中文 README / 中文文档站 / 中文界面的优先，每个都在 2026-09 打开核实过、星数取自当时页面；每个项目配一段约 500 字的科普介绍（是什么、怎么工作、生态如何、在本模块里怎么接）和一张铅笔风的项目介绍图（由 ghdiag.py 从结构化描述自动画出，画的是这个项目的数据与控制走向以及和本模块的接法）；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见<a href="{{ root }}refs.html">参考索引</a>。</p></section>
   <section class="blk"><h2><em>⑤</em> 每个模块再往下拆一层</h2>
     <p class="scene">每个模块页的“核心拆解”把它拆成 3～5 个最核心的东西，一共 {{ parts_stats.total }} 个：{{ parts_stats.hw }} 个<b>产品模块</b>（物理的总成——灯头、除湿柜、雨水罐组、洞洞板系统……）给科普式介绍和一张铅笔画<b>爆炸拆解图</b>；{{ parts_stats.logic }} 个<b>联动逻辑</b>（自动化 / 算法 / 数据流）当成“逻辑产品”做一张<b>海报</b>，再配一张与爆炸图对应的铅笔画<b>流程图</b>，并写明主要实现路径参考的是哪个 GitHub 项目，让逻辑可以顺着推演下去。</p></section>
   <section class="blk"><h2><em>⑥</em> 位置和尺寸以 0008 户型图为准</h2>
@@ -489,13 +507,13 @@ REFS = r"""{% extends "base" %}{% block title %}参考索引{% endblock %}
   <header class="mod-head">
     <p class="kicker">全站引用</p>
     <h1>{{ refs_stats.repos }} 个开源项目，{{ refs_stats.xhs }} 组小红书关键词</h1>
-    <p class="lede">{{ stats.modules }} 个模块专题页里引用的 GitHub 项目汇总（按星数排序，去重），每个都在 2026-09 打开核实过存在。点模块编号回到对应专题页看“为什么用它”。小红书关键词在各模块页里。</p>
+    <p class="lede">{{ stats.modules }} 个模块专题页里引用的 GitHub 项目汇总（按星数排序，去重；标签标出是否有中文版），每个都在 2026-09 打开核实过存在，各模块页里有 500 字介绍和一张铅笔示意图。点模块编号回到对应专题页看“为什么用它”。小红书关键词在各模块页里。</p>
   </header>
   <section class="blk">
     <div class="repo-table">{% for e in repo_list %}
       <div class="repo-row">
         <a class="rname" href="{{ e.url }}" target="_blank" rel="noopener">{{ e.name }}</a>
-        <span class="stars">★ {{ e.stars }}</span>
+        <span class="stars">★ {{ e.stars }}</span>{% if e.zh %}<span class="zh {% if '无' in e.zh %}zh-no{% endif %}">{{ e.zh }}</span>{% endif %}
         <span class="rdesc">{{ e.desc }}</span>
         <span class="rused">{% for m in e.used_by %}<a href="{{ root }}modules/{{ m.id }}.html" title="{{ m.name }}">{{ m.id }}</a>{% endfor %}</span>
       </div>{% endfor %}
@@ -621,6 +639,18 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .link-card:hover{box-shadow:3px 3px 0 var(--ink)}
 .link-card b{display:block;font-family:"Noto Serif SC",serif}
 .link-card p{margin:2px 0 0;color:var(--ink3);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gh-cards{display:grid;grid-template-columns:1fr;gap:18px}
+.gh-card{border:1.6px solid var(--line);border-radius:200px 12px 180px 12px/12px 180px 12px 200px;padding:14px 18px 12px;background:rgba(255,255,255,.4);font-size:.9rem}
+.gh-card .gh-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.gh-name{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:.98rem;border-bottom:1.5px solid transparent}
+.gh-name:hover{border-bottom-color:var(--red)}
+.zh{display:inline-block;font-size:.72rem;padding:1px 8px;border:1.3px solid #2f6b3a;color:#2f6b3a;border-radius:200px 8px 180px 8px/8px 180px 8px 200px;letter-spacing:.04em}
+.zh.zh-no{border-color:var(--ink3);color:var(--ink3)}
+.gh-art{margin:12px 0 6px}
+.gh-art .pc-frame{padding:8px 10px 4px}
+.gh-art svg{width:100%;height:auto;display:block;max-width:560px;margin:0 auto}
+.gh-intro p{margin:0 0 .7em;line-height:1.75;color:var(--ink);text-indent:2em}
+.gh-intro p:last-child{margin-bottom:0}
 .gh-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
 .gh{display:block;border:1.6px solid var(--line);border-radius:200px 12px 180px 12px/12px 180px 12px 200px;padding:10px 14px;background:rgba(255,255,255,.4);font-size:.88rem}
 .gh:hover{box-shadow:3px 3px 0 var(--ink)}
