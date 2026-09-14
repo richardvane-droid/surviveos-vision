@@ -370,8 +370,8 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>阈值：CO &gt;50ppm 黄灯提醒，&gt;150ppm 蜂鸣离台</li><li>风速 &gt;6m/s 提醒不生明火，防火星入芦苇</li><li>全部本地判断，断网也能响</li><li>兜底：传感器自检失败即报故障，不静默</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">用 Bjk8kds/esphome-winsen-co-sensor 读 ZE07 的 CO 浓度做本地阈值，esphome pulse_counter 读风速，HA 推送</p>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/Bjk8kds/esphome-winsen-co-sensor" target="_blank" rel="noopener">Bjk8kds/esphome-winsen-co-sensor</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 uart 外部组件读 ZE07 的 CO 浓度做本地阈值，esphome pulse_counter 读风速，HA 推送</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
   </section>
   
@@ -540,7 +540,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>
