@@ -137,8 +137,18 @@ parts_stats = {"total": sum(len(m["parts"]) for m in modules),
 repo_index = {}
 for m in modules:
     for g in m["github"]:
-        e = repo_index.setdefault(g["name"], {**g, "used_by": []})
+        e = repo_index.setdefault(g["name"], {**g, "used_by": [], "entries": []})
         e["used_by"].append(m)
+        e["entries"].append((m, g))
+for e in repo_index.values():
+    # 索引页的 500 字介绍：通用段落取第一条（最长的那条），“在本模块里怎么用”一段按模块各列一条
+    base = max(e["entries"], key=lambda t: len(t[1].get("intro", "")))[1]
+    paras = _paras(base.get("intro", ""))
+    if len(e["entries"]) == 1 or len(paras) < 2:
+        e["intro_generic"], e["intro_by_module"] = paras, []
+    else:
+        e["intro_generic"] = paras[:-1]
+        e["intro_by_module"] = [(m, _paras(g.get("intro", ""))[-1]) for m, g in e["entries"] if g.get("intro")]
 repo_list = sorted(repo_index.values(), key=lambda e: -float(e["stars"].lower().replace("k", "e3").replace(",", "")) if e["stars"][:1].isdigit() else 0)
 refs_stats = {"repos": len(repo_index), "links": sum(len(m["github"]) for m in modules), "xhs": sum(len(m["xhs"]) for m in modules),
               "zh": sum(1 for e in repo_list if "无" not in (e.get("zh") or "无")),
@@ -518,7 +528,7 @@ REFS = r"""{% extends "base" %}{% block title %}参考索引{% endblock %}
   <header class="mod-head">
     <p class="kicker">全站引用</p>
     <h1>{{ refs_stats.repos }} 个开源项目，{{ refs_stats.xhs }} 组小红书关键词</h1>
-    <p class="lede">{{ stats.modules }} 个模块专题页里引用的 GitHub 项目汇总，去重后按星数分三档。每个仓库都在 2026-09 打开核实过存在，星数取当时页面显示值；绿色标签表示有中文（官方中文 README / 中文文档站 / 界面有中文）。项目怎么工作、在模块里怎么接，各模块页里有 500 字介绍和一张铅笔示意图——点右侧模块编号过去看。小红书关键词也在各模块页里。</p>
+    <p class="lede">{{ stats.modules }} 个模块专题页里引用的 GitHub 项目汇总，去重后按星数分三档。每个仓库都在 2026-09 打开核实过存在，星数取当时页面显示值；绿色标签表示有中文（官方中文 README / 中文文档站 / 界面有中文）。项目怎么工作、在模块里怎么接，每个项目下面是约 500 字的介绍（是什么、怎么工作、生态如何），被多个模块共用的项目会按模块各列一段“在这里怎么用”；铅笔示意图在各模块页——点右侧模块编号过去看。小红书关键词也在各模块页里。</p>
   </header>
   <section class="blk refs-sum">
     <div class="rs"><b>{{ refs_stats.repos }}</b><span>个项目</span></div>
@@ -540,6 +550,7 @@ REFS = r"""{% extends "base" %}{% block title %}参考索引{% endblock %}
             {% if e.zh %}<span class="zh {% if '无' in e.zh %}zh-no{% endif %}">{{ e.zh }}</span>{% endif %}
           </div>
           <p class="rdesc">{{ e.desc }}</p>
+          <div class="rintro">{% for para in e.intro_generic %}<p>{{ para }}</p>{% endfor %}{% for m, para in e.intro_by_module %}<p class="rmod"><a href="{{ root }}modules/{{ m.id }}.html"><i>{{ m.id }}</i>{{ m.name }}</a>{{ para }}</p>{% endfor %}</div>
         </div>
         <div class="rused"><span class="rused-l">用在</span>{% for m in e.used_by %}<a href="{{ root }}modules/{{ m.id }}.html" title="{{ m.name }}"><i>{{ m.id }}</i>{{ m.name }}</a>{% endfor %}</div>
       </div>{% endfor %}
@@ -700,15 +711,22 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .repo-tier h2 small{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.72rem;font-weight:400;color:var(--ink3);margin-left:8px;letter-spacing:.04em}
 .repo-tier .tier-note{margin:2px 0 8px;font-size:.86rem;color:var(--ink3)}
 .repo-table{display:flex;flex-direction:column}
-.repo-row{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:8px 28px;align-items:start;padding:14px 0;border-bottom:1px dotted rgba(28,28,28,.35)}
+.repo-row{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:8px 28px;align-items:start;padding:18px 0;border-bottom:1px dotted rgba(28,28,28,.35)}
 .repo-row:last-child{border-bottom:none}
 .repo-row .rhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
 .repo-row .rname{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9rem;font-weight:600;word-break:break-all;border-bottom:1.3px solid transparent}
 .repo-row .rname:hover{border-bottom-color:var(--red)}
 .repo-row .stars{color:var(--red);font-size:.82rem;white-space:nowrap}
 .repo-row .zh{font-size:.68rem}
-.repo-row .rdesc{margin:5px 0 0;color:var(--ink2);font-size:.9rem;line-height:1.7}
-.repo-row .rused{display:flex;flex-direction:column;gap:3px;padding-top:2px;border-left:1px dotted rgba(28,28,28,.35);padding-left:14px}
+.repo-row .rdesc{margin:5px 0 0;color:var(--ink);font-size:.92rem;line-height:1.7;font-weight:500}
+.repo-row .rintro{margin-top:6px;font-size:.86rem;line-height:1.75;color:var(--ink2)}
+.repo-row .rintro p{margin:0 0 .45em;text-indent:2em}
+.repo-row .rintro p:last-child{margin-bottom:0}
+.repo-row .rintro p.rmod{text-indent:0;padding-left:2em;position:relative}
+.repo-row .rintro p.rmod a{display:inline-block;margin-right:8px;font-size:.78rem;color:var(--ink);border:1.2px solid var(--ink3);border-radius:200px 8px 180px 8px/8px 180px 8px 200px;padding:0 8px;line-height:1.5;vertical-align:1px}
+.repo-row .rintro p.rmod a i{margin-right:4px}
+.repo-row .rintro p.rmod a:hover{border-color:var(--red);color:var(--red)}
+.repo-row .rused{display:flex;flex-direction:column;gap:3px;padding-top:2px;position:sticky;top:12px;border-left:1px dotted rgba(28,28,28,.35);padding-left:14px}
 .repo-row .rused-l{font-size:.7rem;color:var(--ink3);letter-spacing:.1em}
 .repo-row .rused a{font-size:.8rem;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .repo-row .rused a i{color:var(--ink3);margin-right:6px}
