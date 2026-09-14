@@ -6,22 +6,279 @@
     "name": "basnijholt/adaptive-lighting",
     "url": "https://github.com/basnijholt/adaptive-lighting",
     "stars": "3.4k",
-    "desc": "HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度",
-    "why": "直接拿它做晨光 3200K 到正午 5600K 再到黄昏 2700K 的自动曲线，睡前落日渐暗也自带"
+    "zh": "无中文",
+    "desc": "HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度，自带睡眠模式和手动接管检测",
+    "why": "直接拿它做晨光 3200K 到正午 5600K 再到黄昏 2700K 的自动曲线，睡前落日渐暗用它的 sleep mode 开关就有",
+    "intro": "Adaptive Lighting 是荷兰开发者 Bas Nijholt 写的 Home Assistant 自定义组件，3.4k 星，是 HA 社区里做“灯光跟着太阳走”最常用的方案。它解决的问题很单纯：人整天待在室内，灯却是死的，昼夜节律就乱了；它让每盏可调色温的灯按当地日出日落曲线，从清晨暖光过渡到正午冷白，再回到黄昏的橙光。\n原理上它不碰硬件，只算曲线：读取 HA 的经纬度和时间，算出太阳高度角，映射成一个色温值和亮度百分比，再定时调用灯的开灯服务把值写进去。你手动改了灯，它会识别出“不是 HA 做的改动”并暂停接管，直到灯关掉再开。自带 sleep mode 开关，打开后所有灯降到最暖最暗，正好做睡前渐暗；日出日落时刻、色温上下限、过渡秒数、亮度曲线形状全部可调。\n它走 HACS 安装、UI 配置，兼容 HA 里任何灯实体，包括 WLED、ESPHome 的 CCT 灯和各家智能灯泡，至今持续更新。文档只有英文，HA 中文社区里配置分享不少。\n放进 0201，它就是那盏南光灯的“大脑”：南光 FS-300B 用 ESPHome 做成一个 CCT 灯实体交给它管，晨光、正午、黄昏三档色温由曲线自动给出，四场景里只剩阴天模式要单独写；睡前 30 分钟打开 sleep mode 做落日渐暗，最后交给床头夜灯。要注意它只管色温和亮度，滑轨走位得另写一条自动化按时刻换算步数。",
+    "diagram": {
+     "title": "Adaptive Lighting · 太阳高度角算出色温亮度",
+     "nodes": [
+      {
+       "id": "sun",
+       "label": "经纬度 / 时间\n太阳高度角",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sleep",
+       "label": "睡前开关\nsleep mode",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Adaptive Lighting\n色温亮度曲线",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "det",
+       "label": "手动改动检测\n暂停接管",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "lamp",
+       "label": "南光灯 CCT\nESPHome 实体",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "soft",
+       "label": "柔光箱 / 夜灯",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "床上的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "sun",
+       "core",
+       "算曲线"
+      ],
+      [
+       "sleep",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "lamp",
+       "turn_on"
+      ],
+      [
+       "core",
+       "soft",
+       ""
+      ],
+      [
+       "det",
+       "core",
+       "",
+       "dash"
+      ],
+      [
+       "lamp",
+       "me",
+       "晒醒"
+      ]
+     ],
+     "usage": "0201：曲线给色温亮度，滑轨走位另写自动化按时刻换算步数"
+    }
    },
    {
     "name": "claytonjn/hass-circadian_lighting",
     "url": "https://github.com/claytonjn/hass-circadian_lighting",
     "stars": "887",
-    "desc": "HomeAssistant 昼夜节律灯光组件，模拟一天中自然光的色温变化",
-    "why": "Adaptive Lighting 的前辈，配置更简单，适合只想让影视灯跟着时间变色温的最小方案"
+    "zh": "无中文",
+    "desc": "HomeAssistant 昼夜节律灯光组件，把一天里自然光的色温变化算成一个传感器值，再按开关分组套到灯上",
+    "why": "Adaptive Lighting 的前辈，配置更简单，还会把当前色温百分比暴露成传感器，滑轨换算走位时正好拿来当输入",
+    "intro": "Circadian Lighting 是美国开发者 claytonjn 在 2018 年发布的 Home Assistant 自定义组件，887 星，可以说是 Adaptive Lighting 的前辈，后者就是从它的思路上重写出来的。目标一样：让室内灯光模拟一天中自然光的色温变化，早上暖、中午白、傍晚再回暖。2025 年 9 月发了 2.1.6 版，仍在维护。\n它的结构比 Adaptive Lighting 更简单，分成两层：一个传感器实体，按太阳高度角持续算出“当前应该是什么色温”和一个百分比；再加若干开关实体，每个开关绑一组灯，打开就把传感器的值写进这组灯，关掉就还给你手动控制。没有手动改动检测，也没有睡眠模式，换来的是配置只有十几行 YAML，出问题一眼能看懂。\n它同样走 HACS 安装，兼容所有能调色温的灯；文档是英文，但配置极简，照抄示例就能跑。\n在 0201 里它有两个位置。一是备选：如果 Adaptive Lighting 的接管逻辑和你的手动场景打架，就换它做最小方案，只让南光灯跟着时间变色温。二是更巧的用法——它那个传感器不控灯也能单独存在，滑轨走位的自动化直接读这个“一天走到几成”的百分比，换算成 3 米滑轨上的步数，灯的位置和色温就天然对齐了。注意两个组件别同时管同一盏灯，否则会互相覆盖。",
+    "diagram": {
+     "title": "Circadian Lighting · 一个传感器加一组开关",
+     "nodes": [
+      {
+       "id": "sun",
+       "label": "太阳高度角\n（HA 时间）",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Circadian\nLighting 传感器",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "sw",
+       "label": "分组开关\n南光灯组",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "lamp",
+       "label": "南光灯 CCT",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "rail",
+       "label": "滑轨走位自动化\n（自写）",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "stp",
+       "label": "ESPHome 步进\n3m 滑轨",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "sun",
+       "core",
+       "算色温"
+      ],
+      [
+       "core",
+       "sw",
+       "色温值"
+      ],
+      [
+       "sw",
+       "lamp",
+       "写入"
+      ],
+      [
+       "core",
+       "rail",
+       "百分比",
+       "dash"
+      ],
+      [
+       "rail",
+       "stp",
+       "步数"
+      ]
+     ],
+     "usage": "0201：备选的最简色温方案；它的百分比传感器给滑轨换算位置"
+    }
    },
    {
     "name": "isaac879/Pan-Tilt-Mount",
     "url": "https://github.com/isaac879/Pan-Tilt-Mount",
-    "stars": "484",
-    "desc": "步进电机驱动、3D 打印的 Arduino 云台，可编程关键帧运动",
-    "why": "天花板滑轨上的云台可以参考它的 3D 件和固件，让灯头一边走一边慢慢转向床和沙发"
+    "stars": "504",
+    "zh": "无中文",
+    "desc": "步进电机驱动、3D 打印的 Arduino 三轴摄影运动控制器：滑轨 + 云台，带蓝牙 App 和关键帧运动",
+    "why": "天花板滑轨上的云台可以照它的 3D 件、V 槽型材皮带结构和固件来做，灯头一边沿梁走一边慢慢转向床和沙发",
+    "intro": "Pan-Tilt-Mount 是创客 isaac879 开源的三轴摄影运动控制器，504 星，是自制电动滑轨里最常被复刻的一个。它原本给相机做延时和平移镜头：一根 2040 V 槽铝型材做滑轨，同步带拉着一个 3D 打印的滑车，滑车上再叠一个云台，做出滑动、水平转、俯仰三个轴。\n控制核心是一块 Arduino Nano 和三颗 TMC2208 静音驱动，带三只 NEMA17 步进电机，霍尔传感器负责回零。固件通过串口收简单的字母指令：设速度、走到某位置、记关键帧、按关键帧序列平滑运动；板上接一颗 JDY-31 蓝牙串口模块，手机 App 就能遥控。定位精度滑轨 0.0225 毫米、转轴 0.0133 度，对灯来说远远够用，12V 供电。\n仓库里有全套 STL、BOM、接线图和固件，文档英文，B 站有复刻视频。近年更新不多，胜在零件全是标准件。\n在 0201 里，它就是梁下那根 3 米滑轨的骨架：型材接长到 3 米、皮带同样接长，滑车照 STL 放大加固，保留滑动和水平转两个轴，俯仰轴改成固定角度。固件不用蓝牙，串口接一块跑 ESPHome 的 ESP32 转成 HA 实体，走位指令由 HA 按时刻下发。最大的坑是负载：南光灯加透镜有两三公斤，皮带 3 米会松、NEMA17 直驱会丢步，建议换带 1:5 减速箱的电机，并把回零霍尔装在两端各一个。",
+    "diagram": {
+     "title": "Pan-Tilt-Mount · 皮带滑轨加云台的运动控制",
+     "nodes": [
+      {
+       "id": "ha",
+       "label": "HA 走位自动化\n按时刻下发",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "hall",
+       "label": "霍尔回零",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "esp",
+       "label": "ESP32 ESPHome\n串口转发",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Arduino Nano\n关键帧运动固件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "mot",
+       "label": "TMC2208 驱动\nNEMA17 减速电机",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "car",
+       "label": "3m 滑轨滑车\n带转轴灯座",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "lamp",
+       "label": "南光灯 + 透镜",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "ha",
+       "esp",
+       "位置指令"
+      ],
+      [
+       "esp",
+       "core",
+       "串口"
+      ],
+      [
+       "hall",
+       "core",
+       "回零"
+      ],
+      [
+       "core",
+       "mot",
+       "步进脉冲"
+      ],
+      [
+       "mot",
+       "car",
+       "皮带"
+      ],
+      [
+       "car",
+       "lamp",
+       "东走到西"
+      ]
+     ],
+     "usage": "0201：照它的 STL 和固件做 3m 滑轨滑车，ESPHome 串口接 HA"
+    }
    }
   ],
   "xhs": [
@@ -43,25 +300,282 @@
   "id": "0202",
   "github": [
    {
-    "name": "Aircoookie/WLED",
-    "url": "https://github.com/Aircoookie/WLED",
-    "stars": "18.6k",
-    "desc": "ESP32 上最流行的灯带控制固件，支持 WiFi 控制和 HomeAssistant 集成",
-    "why": "灯箱四周 5cm 天光缝和镜子暖光灯带直接刷它，三档色温场景在 HA 里一键切"
-   },
-   {
-    "name": "patrickcollins12/esphome-fan-controller",
-    "url": "https://github.com/patrickcollins12/esphome-fan-controller",
-    "stars": "704",
-    "desc": "ESP32 加温度探头做 PID 调速风扇的 ESPHome 方案，配教程和接线图",
-    "why": "把温度探头换成湿度探头，就是湿度 70% 自动开、20 分钟后停的排风控制器"
+    "name": "wled/WLED",
+    "url": "https://github.com/wled/WLED",
+    "stars": "18.7k",
+    "zh": "无中文",
+    "desc": "ESP32 上最流行的灯带控制固件，网页和 App 直接控，支持 RGB+CCT 灯带、250 个预设、定时和 HomeAssistant 自动发现",
+    "why": "灯箱四周 5cm 天光缝和镜子暖光灯带直接刷它，晨浴 / 日常 / 夜起三档存成预设，HA 里一键切",
+    "intro": "WLED 是奥地利开发者 Aircoookie 在 2016 年开始写的 ESP32 / ESP8266 灯带固件，18.7k 星，是 GitHub 上最流行的灯光固件，没有之一。它解决的问题是：一根几十块钱的灯带接一块 ESP32，刷完固件就是一盏能手机调、能被家庭自动化接管的智能灯，不用写代码。\n固件内置网页服务器：手机打开网页就能选颜色、调亮度、挑一百多种效果，把状态存成预设，最多 250 个；内置定时器按时间或日出日落调预设。对外它同时开放 JSON 和 MQTT 接口，Home Assistant 有官方集成，自动发现后每个 WLED 设备就是一个灯实体，预设也能当选项切换。支持单色、CCT 双色温、RGB、RGBW 各种灯带，可分段控制，还能收 DDP、E1.31 协议做同步。\n社区极大；文档站只有英文，但中文教程和 B 站视频非常多，淘宝能买到预刷固件的控制器。\n在 0202 里它管两处灯：灯箱四周那圈 5cm 天光缝里的 CCT 灯带，以及六面镜光箱边缘的暖光灯带。把晨浴 5000K 全亮、日常 4000K 六成、夜起 2200K 5% 存成三个预设，HA 收到人体感应后按时段切预设，晨浴档同时拉起除雾膜的继电器。坑在于浴室潮湿，控制器要装在灯箱上方干燥腔体里，灯带选 IP65 硅胶套管的，电源按每米功率留三成余量。",
+    "diagram": {
+     "title": "WLED · 一块 ESP32 把灯带变成智能灯",
+     "nodes": [
+      {
+       "id": "app",
+       "label": "手机网页 / App",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 自动化\n人体感应 + 时段",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "WLED 固件\n网页服务 + 效果引擎",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "pre",
+       "label": "250 个预设\n定时器",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "led",
+       "label": "天光缝 CCT 灯带",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "mir",
+       "label": "镜光箱暖光灯带",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "刷牙的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "app",
+       "core",
+       "存预设"
+      ],
+      [
+       "ha",
+       "pre",
+       "切预设"
+      ],
+      [
+       "pre",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "led",
+       "PWM"
+      ],
+      [
+       "core",
+       "mir",
+       ""
+      ],
+      [
+       "led",
+       "me",
+       "软光"
+      ]
+     ],
+     "usage": "0202：三档光存成 WLED 预设，HA 按感应和时段切，晨浴档联动除雾膜"
+    }
    },
    {
     "name": "basnijholt/adaptive-lighting",
     "url": "https://github.com/basnijholt/adaptive-lighting",
     "stars": "3.4k",
-    "desc": "HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度",
-    "why": "和 0201 共用一份时间表，卫生间灯箱早上 5000K、夜起 2200K 不用再单独写自动化"
+    "zh": "无中文",
+    "desc": "HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度，自带睡眠模式和手动接管检测",
+    "why": "和 0201 共用一份时间表，卫生间灯箱早上 5000K、夜起 2200K 不用再单独写自动化，夜里靠 sleep mode 一律最暗最暖",
+    "intro": "Adaptive Lighting 是荷兰开发者 Bas Nijholt 写的 Home Assistant 自定义组件，3.4k 星，HA 社区里做“灯光跟着太阳走”最常用的方案。它让每一盏能调色温的灯按当地日出日落曲线自动变化，早上暖、中午白、傍晚回暖，晚上降到最暗最暖，让室内作息跟着太阳走。\n它不控制硬件，只算值：读取 HA 的经纬度和时间，求出太阳高度角，映射成色温和亮度百分比，再定时调用灯的开灯服务写进去。手动改了灯，它会识别出“不是 HA 做的改动”并暂停接管，直到灯关掉再开；sleep mode 开关一打开，所有灯降到设定的最低亮度和最暖色温。色温上下限、过渡秒数都能按灯组单独配。\n它走 HACS 安装，兼容 HA 里所有灯实体，包括 WLED 和 ESPHome 的 CCT 灯；文档英文，HA 中文社区配置分享很多。\n在 0202 里它是把卫生间和地堡主空间“调成同一个时区”的那根线：灯箱的主灯和 WLED 灯带都挂进同一个 Adaptive Lighting 开关组，早上的 5000K 晨浴和傍晚的暖光自动跟 0201 的模拟阳光同步，而不是各写各的时间表。夜起 2200K 5% 直接用它的 sleep mode，睡前 0201 进入落日时同步打开，半夜进卫生间就只有一点暖光。注意感应开灯要给两秒过渡，否则会先闪白光再变暖；不能调色温的浴霸灯就只让它管亮度。",
+    "diagram": {
+     "title": "Adaptive Lighting · 全屋灯共用一条日光曲线",
+     "nodes": [
+      {
+       "id": "sun",
+       "label": "经纬度 / 时间\n太阳高度角",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sleep",
+       "label": "0201 落日场景\nsleep mode",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Adaptive Lighting\n色温亮度曲线",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "grp",
+       "label": "卫生间灯组\n开关实体",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "box",
+       "label": "1m 灯箱主灯",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "wled",
+       "label": "WLED 灯带",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "夜起的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "sun",
+       "core",
+       "算曲线"
+      ],
+      [
+       "sleep",
+       "grp",
+       "最暗最暖"
+      ],
+      [
+       "core",
+       "grp",
+       "写值"
+      ],
+      [
+       "grp",
+       "box",
+       ""
+      ],
+      [
+       "grp",
+       "wled",
+       "夜起档"
+      ],
+      [
+       "wled",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0202：灯箱和灯带同一开关组，与 0201 同步，夜起靠 sleep mode"
+    }
+   },
+   {
+    "name": "patrickcollins12/esphome-fan-controller",
+    "url": "https://github.com/patrickcollins12/esphome-fan-controller",
+    "stars": "741",
+    "zh": "无中文",
+    "desc": "ESP32 加温度探头做 PID 调速风扇的 ESPHome 方案，配完整教程、接线图和 HA 仪表盘上在线调参",
+    "why": "把温度探头换成湿度探头，就是湿度 70% 自动开、20 分钟后自动停的排风控制器，阈值和计时全在 ESP32 本地跑",
+    "intro": "esphome-fan-controller 是澳大利亚开发者 Patrick Collins 开源的一个 ESPHome 项目，741 星，原本是为了给电视柜里发热的机顶盒做一个“会自己调速的静音风扇”。它的价值在于把一个小硬件项目讲透了：一块 ESP32、一颗 DHT11 探头、一只 12V 四线 PWM 风扇和降压模块，接线图、YAML、PID 调参全写成教程，很多人的第一个 ESPHome 硬件就是照它做的。\n原理是把传感器读数喂给 ESPHome 内置的 PID 组件：设一个目标温度，PID 算出风扇该转多快，输出成 PWM 占空比；转速、目标值、PID 参数都暴露成 HA 实体，仪表盘上边看曲线边调，也能手动接管。逻辑全在 ESP32 本地，断网照样工作。\n项目是英文的，但全是 ESPHome 标准组件，中文 ESPHome 教程都能对上；更新不勤，也没什么要更新的。\n在 0202 里它变成排风扇控制器：把 DHT11 换成更准的 SHT31 湿度探头，风扇换成管道排风机（用继电器或调速模块），控制逻辑不用 PID，改成 ESPHome 的阈值加计时器——湿度超过 70% 开机，跌回 60% 以下或满 20 分钟停机，探头和 ESP32 装在灯箱上方的干燥腔里，只把探头伸进浴室。坑是水汽会让探头读数飘，探头别贴淋浴角顶；HA 里加一条兜底：连续开机超过一小时就推送提醒。",
+    "diagram": {
+     "title": "esphome-fan-controller · 传感器进 PID 出 PWM",
+     "nodes": [
+      {
+       "id": "sht",
+       "label": "SHT31 湿度探头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 仪表盘\n改阈值看曲线",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ESP32 ESPHome\n阈值 + 20 分钟计时",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "pid",
+       "label": "PID 组件\n（原方案调速）",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "fan",
+       "label": "管道排风机\n继电器 / PWM",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "push",
+       "label": "超时推送提醒",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "sht",
+       "core",
+       "湿度"
+      ],
+      [
+       "ha",
+       "core",
+       "参数"
+      ],
+      [
+       "pid",
+       "core",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "fan",
+       "开 / 停"
+      ],
+      [
+       "core",
+       "push",
+       "",
+       "dash"
+      ]
+     ],
+     "usage": "0202：70% 开、20 分钟停在 ESP32 本地，HA 兜底"
+    }
    }
   ],
   "xhs": [
@@ -83,25 +597,269 @@
   "id": "0203",
   "github": [
    {
-    "name": "Chreece/ESPHome-Dehumidifier",
-    "url": "https://github.com/Chreece/ESPHome-Dehumidifier",
-    "stars": "64",
-    "desc": "用 ESPHome 接管美的、Inventor、Comfee 系列除湿机的固件方案",
-    "why": "美的方案除湿机直接改成 HA 设备，湿度阈值、排水报警都能在仪表盘上调"
+    "name": "esphome/esphome",
+    "url": "https://github.com/esphome/esphome",
+    "stars": "11.7k",
+    "zh": "无中文（社区教程多）",
+    "desc": "用 YAML 配置 ESP32 / ESP8266 传感器和控制器并接入 HomeAssistant 的系统，Nabu Casa 官方维护",
+    "why": "四个温湿度探头、风管出口传感器、墙上小表盘和新风机调速全靠它，是这个模块的核心依赖",
+    "intro": "ESPHome 是 2018 年由 Otto Winter 发起、现在归 Home Assistant 母公司 Nabu Casa 维护的开源项目，11.7k 星。想让一块 ESP32 读传感器、控继电器并接进家庭自动化，以前得写 Arduino 代码，现在只要一份 YAML 声明“接了一颗 SHT31、一个继电器、一块屏”，它就自动生成固件并无线刷写。\n流程是在 HA 的 ESPHome 插件里写 YAML，编译，推到板子；板子用原生 API 和 HA 直连，每个传感器、开关自动变成实体。它内置了上千个组件：温湿度、CO2、PM2.5 各种传感器，PWM 风扇、步进电机、显示屏、蓝牙代理，还有 PID、阈值、定时这类本地自动化，断网时逻辑照跑。生态是 ESP 圈最大的，每月一版；官方文档英文，中文教程极多。\n在 0203 里它是整套控温控湿的神经末梢：床头、墙角、柜内、风管出口四颗 SHT31 各接一块 ESP32-C3，用 YAML 里的 filters 做滑动平均再报给 HA；储藏室隔墙外那块小表盘也是一块 ESPHome 板带一块圆屏，直接画指针；新风机的 PWM 用它的 fan 组件按 CO2 分档。坑是探头要远离出风口正对处，否则读的是风管温度不是房间温度。",
+    "diagram": {
+     "title": "ESPHome · 一份 YAML 变成一块传感器板",
+     "nodes": [
+      {
+       "id": "s1",
+       "label": "四颗 SHT31\n温湿度探头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "co2",
+       "label": "CO2 探头（自制）",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ESPHome 固件\nYAML 生成",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "loc",
+       "label": "本地逻辑\n滤波 / 阈值 / PWM",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "Home Assistant\n原生 API 实体",
+       "kind": "cloud",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "dial",
+       "label": "墙上圆屏表盘",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "fan",
+       "label": "新风机 PWM",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "s1",
+       "core",
+       "I2C"
+      ],
+      [
+       "co2",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "loc",
+       ""
+      ],
+      [
+       "core",
+       "ha",
+       "实体"
+      ],
+      [
+       "core",
+       "dial",
+       ""
+      ],
+      [
+       "loc",
+       "fan",
+       "分档"
+      ]
+     ],
+     "usage": "0203：四块探头板 + 表盘板 + 新风板全是 ESPHome，HA 只做调度和推送"
+    }
+   },
+   {
+    "name": "wuwentao/midea_ac_lan",
+    "url": "https://github.com/wuwentao/midea_ac_lan",
+    "stars": "1.9k",
+    "zh": "官方中文 README",
+    "desc": "美的 M-Smart 家电的 HomeAssistant 本地局域网集成，支持空调、除湿机、风扇等 35 类设备，中文社区维护",
+    "why": "美的系工业除湿机不拆机、不走云，直接在局域网里被 HA 接管，档位、目标湿度、水箱满报警都成实体",
+    "intro": "midea_ac_lan 最早由中国开发者 georgezhao2010 写成，2023 年后由 wuwentao 接手维护，1.9k 星，是 Home Assistant 里控制美的系家电用得最广的集成，README 有简体中文，还有 QQ 群。美的及其贴牌的空调、除湿机原本都得靠美居 App 走云端，云一抽风就失联；这个集成让 HA 直接在局域网里和设备的 WiFi 模块对话，本地控制。\n原理是逆向了美的 M-Smart 局域网协议：UDP 广播发现设备，用首次从美的云取到的密钥建立加密连接，之后指令和状态都在局域网内往返。它按设备类型写了几十个解析器，除湿机（A1）能读当前湿度、水箱满、滤网提醒，能设目标湿度、风速、模式和定时。\n它走 HACS 安装，支持 35 种以上设备类型，2025 年后仍频繁更新，issue 区中英文混杂。\n在 0203 里它接管储藏室柜子里那台 50L 工业除湿机：只要买美的或其贴牌型号且带 WiFi，不用拆机就能变成 HA 里的 humidifier 实体，再用 HA 自带的 generic_hygrostat 做 45%～65% 区间调度，超 65% 强力档并推送，低于 45% 停机护木器；排水量按提升泵启动次数换算。坑是首次配置要用美的账号取一次密钥；工业型号若不是 M-Smart 协议就不支持，买前先查支持列表。",
+    "diagram": {
+     "title": "midea_ac_lan · 局域网直连美的家电",
+     "nodes": [
+      {
+       "id": "dh",
+       "label": "美的 50L 除湿机\nWiFi 模块",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cloud",
+       "label": "美的云\n（仅首次取密钥）",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "midea_ac_lan\n协议解析器 A1",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "hyg",
+       "label": "generic_hygrostat\n45%～65%",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA humidifier\n实体 + 推送",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "sens",
+       "label": "ESPHome\n湿度探头",
+       "kind": "sensor",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "dh",
+       "core",
+       "局域网"
+      ],
+      [
+       "cloud",
+       "core",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "ha",
+       "状态"
+      ],
+      [
+       "hyg",
+       "core",
+       "档位"
+      ],
+      [
+       "sens",
+       "hyg",
+       "湿度"
+      ]
+     ],
+     "usage": "0203：除湿机不拆机进 HA，hygrostat 按探头湿度切档位，水满即推送"
+    }
    },
    {
     "name": "airgradienthq/arduino",
     "url": "https://github.com/airgradienthq/arduino",
-    "stars": "357",
-    "desc": "AirGradient 开源硬件空气质量监测仪固件，测 CO2、PM2.5、温湿度",
-    "why": "地堡只除湿不换气会闷，照它做一台 CO2 探头，新风就有了开关依据"
-   },
-   {
-    "name": "esphome/esphome",
-    "url": "https://github.com/esphome/esphome",
-    "stars": "11.3k",
-    "desc": "用 YAML 配置 ESP32 传感器和控制器并接入 HomeAssistant 的系统",
-    "why": "四个温湿度探头和风管出口传感器全靠它，是这个模块的核心依赖"
+    "stars": "377",
+    "zh": "无中文",
+    "desc": "AirGradient 开源硬件空气质量监测仪的固件与库，测 CO2、PM2.5、温湿度、TVOC，ESP8266 / ESP32-C3",
+    "why": "地堡只除湿不换气会闷，照它的选型做一台 CO2 探头，新风什么时候开就有了依据",
+    "intro": "airgradienthq/arduino 是泰国公司 AirGradient 开源的空气质量监测仪固件，377 星。AirGradient 把整套监测仪的 PCB、外壳和固件全部开源，可以买套件也可以照 BOM 自己焊，这个仓库是那台机器的大脑，也是一份“空气监测怎么选传感器”的参考。\n固件跑在 ESP8266 或 ESP32-C3 上，围绕几颗公认靠谱的传感器：SenseAir S8 测 CO2，Plantower PMS5003 测 PM2.5，Sensirion SHT40 测温湿度，SGP41 测 TVOC 和 NOx。固件定周期读数、校准、滑动平均，显示在自带 OLED 上，再经本地 API 或 MQTT 交给 Home Assistant，HA 有官方集成。仓库持续更新，文档英文，ESPHome 社区也有对应 YAML。\n在 0203 里它解决“闷”的问题：地堡没窗，只除湿不换气 CO2 会涨到两三千 ppm，人只觉得困。照它做一颗 SenseAir S8 探头，用 ESPHome 的 senseair 组件接到 HA，装在沙发旁墙上；HA 按 ppm 分三档驱动东墙高处那台新风机的 PWM：800 以下停、1000 以上低速、1500 以上全速并推送。坑是 S8 的自动校准假定每周有一次 400ppm 的新鲜空气，地堡里没有，得关掉自动校准，定期拿到户外手动校。",
+    "diagram": {
+     "title": "AirGradient · 靠谱传感器组合的空气监测仪",
+     "nodes": [
+      {
+       "id": "s8",
+       "label": "SenseAir S8\nCO2",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "pm",
+       "label": "PMS5003 / SHT40",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "AirGradient 固件\n读数 / 校准 / 平均",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "oled",
+       "label": "自带 OLED",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 新风自动化\n按 ppm 分档",
+       "kind": "cloud",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "fan",
+       "label": "东墙新风机\nHEPA + 活性炭",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "s8",
+       "core",
+       "ppm"
+      ],
+      [
+       "pm",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "oled",
+       ""
+      ],
+      [
+       "core",
+       "ha",
+       "本地 API"
+      ],
+      [
+       "ha",
+       "fan",
+       "PWM"
+      ]
+     ],
+     "usage": "0203：照它的选型做 CO2 探头，HA 按 ppm 三档驱动新风机"
+    }
    }
   ],
   "xhs": [
@@ -126,22 +884,277 @@
     "name": "FreeCAD/FreeCAD",
     "url": "https://github.com/FreeCAD/FreeCAD",
     "stars": "32.2k",
-    "desc": "免费开源的参数化 3D 建模软件，带建筑 BIM 工作台",
-    "why": "画木屋剖面、地堡风管走向和 PSK 零件都用它，一套软件从房子画到打印件"
+    "zh": "有中文文档站",
+    "desc": "免费开源的参数化 3D 建模软件，2026 年已到 1.1 版，带建筑 BIM、零件、装配和图纸工作台，界面和 wiki 都有中文",
+    "why": "画木屋剖面、地堡风管走向和 PSK 零件都用它，一套软件从房子画到打印件，图纸墙上的 A3 图也从它出",
+    "intro": "FreeCAD 是 2002 年起步的开源参数化 3D 建模软件，32.2k 星，2024 年底发布 1.0 版后彻底甩掉了“能用但难用”的名声，2026 年已到 1.1.1。想认真画一栋房子、一根风管、一个打印件，商业 CAD 要么贵要么绑云，它免费、本地、格式开放。\n它的核心是参数化建模：你画的每一步都存成一棵有历史的树，改早期一个尺寸，后面所有特征跟着重算。功能按工作台划分——Part Design 画零件，Sketcher 画带约束的草图，BIM 工作台画墙、门窗、楼板和管线，TechDraw 从模型生成带尺寸标注的二维图纸，还能导出 STEP、DXF、IFC 和 STL。1.0 版解决了困扰多年的拓扑命名问题。\n生态上有大量插件，社区论坛活跃；界面有简体中文，官方 wiki 有中文翻译，B 站教程很多。\n在 0204 里它是中屏的主角，也是这面图纸墙的源头：木屋和地堡先在 BIM 工作台按 0008 的实测尺寸建一个总模型，各模块的风管、滑轨、货架都作为子对象往里加；要打印的 PSK 内衬和 0210 的斜滑轨导轨用 Part Design 画完直接导 STL 给右屏的切片软件；每个模块画好后用 TechDraw 出一张 A3 图纸打印挂上墙。坑是学习曲线仍陡，先用 Part Design 画几个小零件再上 BIM，模型按区域拆文件用链接引用。",
+    "diagram": {
+     "title": "FreeCAD · 参数化的一棵历史树",
+     "nodes": [
+      {
+       "id": "me",
+       "label": "画图的人\n草图 + 尺寸",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "meas",
+       "label": "0008 实测尺寸",
+       "kind": "db",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "FreeCAD\n参数化历史树",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "wb",
+       "label": "BIM / Part Design\nTechDraw 工作台",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "stl",
+       "label": "STL 打印件",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "a3",
+       "label": "A3 图纸\n图纸墙",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ifc",
+       "label": "总模型\nSTEP / IFC",
+       "kind": "db",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "me",
+       "core",
+       "建模"
+      ],
+      [
+       "meas",
+       "wb",
+       ""
+      ],
+      [
+       "core",
+       "wb",
+       ""
+      ],
+      [
+       "core",
+       "stl",
+       "导出"
+      ],
+      [
+       "wb",
+       "a3",
+       "出图"
+      ],
+      [
+       "wb",
+       "ifc",
+       ""
+      ]
+     ],
+     "usage": "0204：中屏建总模型，打印件导 STL 给右屏切片，A3 图纸挂上西墙"
+    }
+   },
+   {
+    "name": "bambulab/BambuStudio",
+    "url": "https://github.com/bambulab/BambuStudio",
+    "stars": "5k",
+    "zh": "有中文文档站",
+    "desc": "拓竹官方开源切片软件，基于 PrusaSlicer 分支，支持 BambuLab 和其他 3D 打印机，界面和 wiki 都有中文",
+    "why": "右屏跑的就是它，PSK 内衬和 0210 的斜滑轨导轨都在这里切片，切完直接推给 P1S 并看打印进度",
+    "intro": "Bambu Studio 是深圳拓竹科技的官方切片软件，5k 星，2022 年随 X1 打印机一起发布，代码基于 PrusaSlicer 分支，底子是开源社区打磨十几年的切片引擎。它把 3D 模型变成打印机能执行的 G-code，并把多色、联网打印做成一键。\n工作流程是：导入 STL 或 STEP，放到打印床上，选打印机、材料和层高质量预设，点切片，软件把模型切成层、算出路径、生成支撑和填充，预览每一层的走线和时间估算；然后通过局域网或云直接发给拓竹打印机，软件里能看摄像头画面和进度。特色是预设极细：每种官方线材都有调好的参数，多色靠 AMS 自动换料。也能给非拓竹机器出 G-code。\n代码持续更新，界面有简体中文，官方 wiki 有中文站，B 站教程海量；社区还有更开放的分支 OrcaSlicer。\n在 0204 里它常驻右屏：FreeCAD 导出的 STL 拖进来，PSK 内衬用 PETG 预设、0210 的斜滑轨导轨用 PLA 高强度预设切片，发给放在储藏室的 P1S，打印状态通过 HA 的拓竹集成显示在左屏。坑是它默认走拓竹云，隐私和断网考虑可以在打印机上切到局域网模式，软件里改成 LAN 直连；工作台南端那 30cm 就是放刚打出来的样件的。",
+    "diagram": {
+     "title": "Bambu Studio · 从 STL 到打印机的一键切片",
+     "nodes": [
+      {
+       "id": "stl",
+       "label": "FreeCAD 导出\nSTL / STEP",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "pre",
+       "label": "线材 / 机型预设",
+       "kind": "db",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Bambu Studio\n切片引擎",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "prev",
+       "label": "逐层预览\n时间估算",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "p1s",
+       "label": "拓竹 P1S\n局域网模式",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 拓竹集成\n左屏看进度",
+       "kind": "cloud",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "摸样件的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "stl",
+       "core",
+       "导入"
+      ],
+      [
+       "pre",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "prev",
+       ""
+      ],
+      [
+       "core",
+       "p1s",
+       "G-code"
+      ],
+      [
+       "p1s",
+       "ha",
+       "状态"
+      ],
+      [
+       "p1s",
+       "me",
+       "样件"
+      ]
+     ],
+     "usage": "0204：右屏切片，局域网直推 P1S，进度回到左屏 HA"
+    }
    },
    {
     "name": "shmuelzon/home-assistant-floor-plan",
     "url": "https://github.com/shmuelzon/home-assistant-floor-plan",
     "stars": "1.1k",
-    "desc": "Sweet Home 3D 插件，把 3D 户型直接渲染成 HomeAssistant 平面图面板",
-    "why": "在 Sweet Home 3D 里画完全屋，一键导出带灯光状态的 3D 平面图给 0802 大屏用"
-   },
-   {
-    "name": "bambulab/BambuStudio",
-    "url": "https://github.com/bambulab/BambuStudio",
-    "stars": "4.6k",
-    "desc": "拓竹官方开源切片软件，支持 BambuLab 和其他 3D 打印机",
-    "why": "右屏跑的就是它，PSK 内衬和 0210 的斜滑轨导轨都在这里切片"
+    "zh": "无中文",
+    "desc": "Sweet Home 3D 插件，把 3D 户型按每盏灯分别渲染，再生成 HomeAssistant 的 picture-elements 平面图面板",
+    "why": "在 Sweet Home 3D 里画完全屋，一键导出带灯光状态的 3D 平面图给 0802 大屏和左屏用，不用手工抠图",
+    "intro": "home-assistant-floor-plan 是以色列开发者 shmuelzon 写的 Sweet Home 3D 插件，1.1k 星。它解决 HA 玩家的老痛点：都想要一张“会亮灯的 3D 户型图”当仪表盘，但传统做法要给每盏灯单独渲染，再手写几十行 YAML 叠图，一改户型就全部重来。\n它的原理是把这件事自动化：你在免费开源的 Sweet Home 3D 里画好房子、放好家具和灯，把每盏灯和 HA 的实体名对上；插件就逐一渲染“只开这盏灯”的图，加上全暗的底图，最后生成一份 YAML，用 CSS 混合、房间遮罩或整图替换三种模式之一，让 HA 按实体状态把对应的亮灯图叠上去。传感器、开关也能放上去变成可点图标。渲染用 Sweet Home 3D 自带的光追引擎。\n项目持续更新，文档英文，但 Sweet Home 3D 本身有中文界面。\n在 0204 里它是“图纸到大屏”的最后一步：木屋和地堡先在 Sweet Home 3D 里按 0008 尺寸画一遍（比 FreeCAD 快得多，只求像不求准），把 0201 南光灯、0202 灯箱、0207 电视、0209 帐篷小灯都对上 HA 实体，导出后放进左屏的 HA 仪表盘和 0802 大屏。坑是灯多了渲染组合会爆炸，用 CSS 混合模式并把同场景的灯合并成一个实体；地堡无窗，环境光要调到零。",
+    "diagram": {
+     "title": "HA Floor Plan · 每盏灯渲染一张图再叠起来",
+     "nodes": [
+      {
+       "id": "sh",
+       "label": "Sweet Home 3D\n户型 + 家具 + 灯",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "map",
+       "label": "灯与 HA 实体\n对应表",
+       "kind": "db",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Floor Plan 插件\n逐灯渲染",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "yaml",
+       "label": "picture-elements\nYAML + 图片",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 仪表盘\n按状态叠图",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "big",
+       "label": "0802 大屏 / 左屏",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "sh",
+       "core",
+       "模型"
+      ],
+      [
+       "map",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "yaml",
+       ""
+      ],
+      [
+       "yaml",
+       "ha",
+       "导入"
+      ],
+      [
+       "ha",
+       "big",
+       "显示"
+      ]
+     ],
+     "usage": "0204：画全屋，插件出会亮灯的平面图给左屏和 0802"
+    }
    }
   ],
   "xhs": [
@@ -163,25 +1176,280 @@
   "id": "0205",
   "github": [
    {
-    "name": "TheRealFalseReality/aquapi",
-    "url": "https://github.com/TheRealFalseReality/aquapi",
-    "stars": "97",
-    "desc": "基于 ESPHome 和 HomeAssistant 的开源鱼缸监测与自动化控制器",
-    "why": "温度、pH、TDS 三探头的接法和 ESPHome 配置直接照抄，数据天然进 0802 大屏"
+    "name": "esphome/esphome",
+    "url": "https://github.com/esphome/esphome",
+    "stars": "11.7k",
+    "zh": "无中文（社区教程多）",
+    "desc": "用 YAML 配置 ESP32 / ESP8266 传感器和控制器并接入 HomeAssistant 的系统，Nabu Casa 官方维护",
+    "why": "水草灯的日出日落 PWM 曲线、补水阀、探头盒全跑在一块 ESPHome 板上，数据线穿隔墙进 0802 大屏",
+    "intro": "ESPHome 是 2018 年由 Otto Winter 发起、现由 Home Assistant 母公司 Nabu Casa 维护的开源项目，11.7k 星。它让一块 ESP32 读传感器、控继电器并接进家庭自动化这件事不再需要写代码：一份 YAML 声明“接了一颗温度探头、一路 PWM 灯、一个继电器”，它就自动生成固件、编译并无线刷写。\n流程是在 HA 的 ESPHome 插件里写 YAML，编译推到板子，板子用原生 API 和 HA 直连，每个传感器、开关、灯自动变成实体。内置上千个组件，从 DS18B20 水温探头、ADC 模拟量、PWM 输出，到 time 定时触发、阈值判断、滑动平均滤波，都是本地逻辑，断网照跑。生态是 ESP 圈最大的，每月一版；官方文档只有英文，中文教程和视频极多。\n在 0205 里它是鱼缸的整个控制层，一块 ESP32 就够：水草灯接 PWM 输出，用 time 触发器每天按时间表跑一条日出日落曲线，时间表直接引用 0201 模拟阳光那份，缸和地堡同一个太阳；补水阀用继电器，液位浮子低了就开、满了就关，阈值在板上本地判断；温度、pH、TDS 三探头的读数每分钟报给 HA，数据线穿隔墙进 0802 大屏。坑是 pH 和 TDS 探头都怕互相干扰，两颗探头不能共地，要用隔离模块或分时供电；板子放在吧台矮柜里要防潮，探头线走缸角一根 PVC 管进水。",
+    "diagram": {
+     "title": "ESPHome · 一块板管完鱼缸的灯、阀和探头",
+     "nodes": [
+      {
+       "id": "prb",
+       "label": "温度 / pH / TDS\n三探头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "flt",
+       "label": "液位浮子",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ESP32 ESPHome\n本地逻辑",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "tm",
+       "label": "时间表\n（0201 同一份）",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "lamp",
+       "label": "水草灯 PWM\n日出日落",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "valve",
+       "label": "补水阀继电器",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA / 0802 大屏",
+       "kind": "screen",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "prb",
+       "core",
+       "每分钟"
+      ],
+      [
+       "flt",
+       "core",
+       ""
+      ],
+      [
+       "tm",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "lamp",
+       "曲线"
+      ],
+      [
+       "core",
+       "valve",
+       "开 / 关"
+      ],
+      [
+       "core",
+       "ha",
+       "穿隔墙"
+      ]
+     ],
+     "usage": "0205：灯曲线、补水、探头全在板上本地跑，HA 只看数据和推送异常"
+    }
    },
    {
     "name": "reef-pi/reef-pi",
     "url": "https://github.com/reef-pi/reef-pi",
     "stars": "435",
-    "desc": "基于树莓派的开源水族箱控制器，管灯光、温控、投喂、自动补水",
-    "why": "自动补水、溢流和水草灯日出日落曲线都有现成模块，地下换水麻烦靠它省事"
+    "zh": "无中文",
+    "desc": "基于树莓派的开源水族箱控制器，管灯光日出日落、温控、pH、滴定、自动补水和定时器，带网页仪表盘",
+    "why": "自动补水、溢流保护和水草灯日出日落曲线都有现成模块，它的事件表设计直接拿来当 ESPHome 时间表的蓝本",
+    "intro": "reef-pi 是印度裔工程师 Ranjib Dey 从 2017 年开始写的开源水族箱控制器，435 星，是 GitHub 上最完整、维护最久的 DIY 鱼缸控制器，原本面向海水珊瑚缸，淡水草缸同样适用。商业鱼缸控制器动辄几千块还绑 App，它用一块树莓派加几块扩展板做出同样的东西。\n它用 Go 语言写后端、React 写网页前端，跑在树莓派上，把功能拆成一个个模块：温度模块读 DS18B20 并控加热棒和风扇；灯光模块给 PWM 驱动板输出一条 24 小时曲线，做日出日落；ATO 自动补水模块读浮子开关控补水泵，带超时保护防止泵空转；pH 模块读探头做记录和报警；滴定模块控蠕动泵；定时器模块按 cron 开关任何设备；还有摄像头拍照和邮件推送。所有模块共用一套“输入 / 输出 / 任务”抽象。2022 年 6.0 版加了 ESP32 作为远程 IO 的支持。文档英文，中文资料少。\n在 0205 里，它有两种用法。轻量用法是当蓝本：照它的灯光曲线、ATO 超时保护和定时器设计，用 ESPHome 在一块 ESP32 上复刻，省掉一台树莓派。重量用法是直接跑一台：吧台矮柜里放一块树莓派 Zero 2 和它的 PWM 板，缸的所有东西归它管，再通过 MQTT 把状态交给 HA。坑是它的 ATO 一定要设最大补水时长，浮子卡住时不至于把 0603 的雨水全抽进缸里。",
+    "diagram": {
+     "title": "reef-pi · 输入 / 输出 / 任务的模块化控制器",
+     "nodes": [
+      {
+       "id": "t",
+       "label": "DS18B20 / pH\n浮子开关",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cam",
+       "label": "摄像头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "reef-pi 树莓派\n模块化控制核",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "mod",
+       "label": "灯光 / ATO\n温控 / 定时器",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "pwm",
+       "label": "PWM 板 → 水草灯",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "pump",
+       "label": "补水泵 / 加热棒",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "web",
+       "label": "网页仪表盘\nMQTT → HA",
+       "kind": "screen",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "t",
+       "core",
+       "读数"
+      ],
+      [
+       "cam",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "mod",
+       ""
+      ],
+      [
+       "mod",
+       "pwm",
+       "曲线"
+      ],
+      [
+       "mod",
+       "pump",
+       "带超时"
+      ],
+      [
+       "core",
+       "web",
+       ""
+      ]
+     ],
+     "usage": "0205：当蓝本用 ESPHome 复刻，或直接跑一台树莓派管整缸"
+    }
    },
    {
-    "name": "CelliesProjects/aquacontrol32",
-    "url": "https://github.com/CelliesProjects/aquacontrol32",
-    "stars": "68",
-    "desc": "ESP32 五通道鱼缸 LED 控制器，带网页界面和水温传感，2021 年后少更新",
-    "why": "只想做一盏会日出日落的水草灯时，它是最轻量的参考，和 0201 时间表对齐"
+    "name": "TheRealFalseReality/aquapi",
+    "url": "https://github.com/TheRealFalseReality/aquapi",
+    "stars": "97",
+    "zh": "无中文",
+    "desc": "基于 ESPHome 和 HomeAssistant 的开源鱼缸监测与自动化控制器，用 Atlas Scientific EZO 探头测 pH、EC、温度，2026 年仍在更新",
+    "why": "温度、pH、TDS 三探头的接法和 ESPHome 配置直接照抄，数据天然进 0802 大屏；星少但它就是这个需求的唯一现成答案",
+    "intro": "AquaPi 是美国鱼友 TheRealFalseReality 做的开源鱼缸监测器，97 星，口号是“鱼缸遇上智能家居”。它没有自己写软件，而是把 ESPHome 和 Home Assistant 直接当鱼缸控制器用：一块 ESP32、几颗探头、一份 YAML，鱼缸数据就出现在 HA 里。它是把“ESPHome 做鱼缸”走得最完整的项目，2026 年 6 月还在发新版，鱼友论坛上有人卖它的成品板。\n硬件上它围绕 Atlas Scientific 的 EZO 探头电路：pH、电导率（换算 TDS）、溶氧、ORP、RTD 水温都是 I2C 接口的小模块，ESPHome 有原生的 ezo 组件，YAML 里几行就能读；再加 DS18B20 水温、红外液位传感器和漏水传感器。探头校准做成了 HA 里的按钮。仓库有接线图、外壳打印件和完整 YAML，文档英文。\n在 0205 里它就是缸角那个探头盒：温度、pH、TDS 三颗探头照它的接法接在一块 ESP32 上，YAML 直接抄再删掉用不上的溶氧和 ORP，校准按钮保留；数据线穿隔墙接进 0802 大屏，pH 或 TDS 一小时内变化超过阈值就用 HA 的 statistics 传感器触发推送。坑是 EZO 电路一颗一两百块，想省钱可用国产 pH 模块但校准要自己做；探头 BNC 头怕潮，盒子留在水面以上。",
+    "diagram": {
+     "title": "AquaPi · ESPHome 加 EZO 探头的鱼缸监测",
+     "nodes": [
+      {
+       "id": "ezo",
+       "label": "EZO pH / EC\nI2C 探头电路",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ds",
+       "label": "DS18B20\n液位 / 漏水",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "AquaPi YAML\nESP32 ESPHome",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "cal",
+       "label": "校准按钮\nOTA / 网页",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 实体\nstatistics 变化率",
+       "kind": "cloud",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "big",
+       "label": "0802 大屏\n异常推送",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "ezo",
+       "core",
+       "读数"
+      ],
+      [
+       "ds",
+       "core",
+       ""
+      ],
+      [
+       "cal",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "ha",
+       "原生 API"
+      ],
+      [
+       "ha",
+       "big",
+       "穿隔墙"
+      ]
+     ],
+     "usage": "0205：探头盒照它接线抄 YAML，数据进 0802 大屏"
+    }
    }
   ],
   "xhs": [
@@ -203,25 +1471,269 @@
   "id": "0207",
   "github": [
    {
-    "name": "xbmc/xbmc",
-    "url": "https://github.com/xbmc/xbmc",
-    "stars": "20.9k",
-    "desc": "Kodi，老牌开源家庭影院和媒体中心软件",
-    "why": "投影仪后面挂个小主机跑它，本地片库、遥控和 HA 观影场景联动都有现成插件"
-   },
-   {
     "name": "jellyfin/jellyfin",
     "url": "https://github.com/jellyfin/jellyfin",
     "stars": "54k",
-    "desc": "免费开源的媒体服务器，管理和串流自己的影视库，无云端",
-    "why": "片库放在 0802 的 N100 小主机里，Kodi 和手机都从它拉片，排片牌数据也能从它读"
+    "zh": "界面有中文",
+    "desc": "免费开源的媒体服务器，管理和串流自己的影视库，无账号无云端，2026 年 6 月 10.11.11 版仍在更新",
+    "why": "片库放在 0802 的 N100 小主机里，电视、Kodi 和手机都从它拉片，排片牌数据和观影场景的播放状态也从它读",
+    "intro": "Jellyfin 是 2018 年从 Emby 闭源后分叉出来的开源媒体服务器，54k 星，是自托管影视库这个品类里星最多的项目。硬盘里攒了几百部电影和剧，想像 Netflix 一样带海报、进度、多设备续播地看，又不想把片库交给任何云，就是它。\n它的架构是一台服务器加一堆客户端：服务器用 C# 写，跑在任何 Linux 小主机或 Docker 里，扫描你指定的目录，从公开数据库抓取海报、演员和字幕信息，按需转码或直接推流；客户端有网页、安卓、iOS、电视端和 Kodi 插件，播放进度在所有设备间同步。开放的 REST API 让家庭自动化能查“正在播什么”。界面有简体中文，NAS 圈教程遍地都是；仍每月发版，2026 年 6 月到 10.11.11。\n在 0207 里它是片库本体：装在 0802 那台 N100 小主机上，硬盘挂在同一台机器，98 寸电视用自带的 Jellyfin 应用直接播 4K 原盘不转码；HA 的 Jellyfin 集成把它变成 media_player 实体，观影场景一按，电视开机、功放上电、灯光落日，暂停时灯自动回到 20%。门口那块“今晚放映”小黑板的数据也可以从它的 API 读，做成 0802 大屏上的排片牌。坑是 N100 核显解码 HEVC 要打开 QSV 硬解并给容器挂载 /dev/dri，否则一转码就卡。",
+    "diagram": {
+     "title": "Jellyfin · 自己的片库自己串流",
+     "nodes": [
+      {
+       "id": "disk",
+       "label": "N100 硬盘\n电影 / 剧集目录",
+       "kind": "db",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "meta",
+       "label": "公开影片数据库\n海报 / 字幕",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Jellyfin 服务器\n扫描 / 转码 / 推流",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "api",
+       "label": "REST API\n播放状态",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "tv",
+       "label": "98 寸电视\nJellyfin 应用",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 观影场景\n排片牌",
+       "kind": "cloud",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "沙发上的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "disk",
+       "core",
+       "扫描"
+      ],
+      [
+       "meta",
+       "core",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "api",
+       ""
+      ],
+      [
+       "core",
+       "tv",
+       "推流"
+      ],
+      [
+       "api",
+       "ha",
+       "状态"
+      ],
+      [
+       "tv",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0207：N100 跑片库，电视直播 4K，HA 读状态联动灯和功放"
+    }
+   },
+   {
+    "name": "xbmc/xbmc",
+    "url": "https://github.com/xbmc/xbmc",
+    "stars": "21.2k",
+    "zh": "界面有中文",
+    "desc": "Kodi，2002 年起步的老牌开源家庭影院和媒体中心软件，十英尺界面、遥控器操作、插件生态庞大",
+    "why": "电视自带应用不够用时，投影或电视后面挂个小盒子跑它，本地片库、遥控和 HA 观影场景联动都有现成插件",
+    "intro": "Kodi 的前身是 2002 年给初代 Xbox 写的媒体中心 XBMC，21.2k 星，是开源家庭影院软件里资格最老、生态最大的一个。它把一台电脑或电视盒变成“坐在沙发上用遥控器操作”的媒体中心：十英尺界面、海报墙、按遥控上下左右就能看完一部电影。\n它是一个本地播放器加插件平台：核心用 C++ 写，内置解码和硬件加速，能直接播本地硬盘、NAS 共享和网络流；插件扩展内容，Jellyfin、字幕站、直播源都有插件；界面有简体中文。它跑在 Linux、安卓、树莓派和 LibreELEC 上，红外、CEC 和手机遥控都支持。对家庭自动化它开放 JSON-RPC 接口，Home Assistant 有官方 Kodi 集成，能读播放状态、暂停、切片、发通知到屏幕上。维护二十多年，每年一个大版本，中文教程很多。\n在 0207 里它是电视自带应用的升级方案：98 寸电视内置的 Jellyfin 应用足够时不需要它；想要更好的字幕、音轨切换和杜比全景声直通，就在电视后面挂一台 N100 或树莓派 5 跑 LibreELEC 加 Kodi，用 Jellyfin 插件同步片库和进度，HDMI 直连功放。HA 的 Kodi 集成把它变成 media_player，观影场景从它读“播放 / 暂停”控制 0201 灯光和幕布跟色灯。坑是 CEC 遥控三方抢控制权，只让 Kodi 盒子当 CEC 主设备。",
+    "diagram": {
+     "title": "Kodi · 沙发上用遥控器操作的媒体中心",
+     "nodes": [
+      {
+       "id": "jf",
+       "label": "Jellyfin 插件\n片库 + 进度同步",
+       "kind": "cloud",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "rc",
+       "label": "CEC / 红外遥控",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Kodi 十英尺界面\n解码 + 硬件加速",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "rpc",
+       "label": "JSON-RPC 接口",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "hdmi",
+       "label": "HDMI → 功放\n→ 98 寸电视",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA Kodi 集成\n观影场景",
+       "kind": "cloud",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "jf",
+       "core",
+       "拉片"
+      ],
+      [
+       "rc",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "rpc",
+       ""
+      ],
+      [
+       "core",
+       "hdmi",
+       "直通"
+      ],
+      [
+       "rpc",
+       "ha",
+       "状态"
+      ]
+     ],
+     "usage": "0207：小盒子跑 Kodi 从 Jellyfin 拉片，HA 读播放状态控灯"
+    }
    },
    {
     "name": "hyperion-project/hyperion.ng",
     "url": "https://github.com/hyperion-project/hyperion.ng",
     "stars": "3.8k",
-    "desc": "开源氛围灯软件，根据画面颜色实时驱动幕布周围的 LED 灯带",
-    "why": "幕布四周加一圈灯带跟着画面变色，地堡全黑环境下沉浸感翻倍"
+    "zh": "界面有中文",
+    "desc": "开源氛围灯软件，抓取画面边缘颜色实时驱动屏幕四周的 LED 灯带，支持 HDMI 采集卡和 WLED 等几十种灯",
+    "why": "98 寸电视背后加一圈灯带跟着画面变色，地堡全黑环境下沉浸感翻倍，输出直接走 WLED 协议",
+    "intro": "Hyperion 是 2013 年从树莓派社区长出来的开源氛围灯项目，hyperion.ng 是它的新一代重写版，3.8k 星。它做的事就是飞利浦电视 Ambilight 那套“流光溢彩”：实时分析画面边缘的颜色，让屏幕背后的 LED 灯带同步发光，画面里的火焰会把整面墙染红，深空场景则只剩一点蓝。在全黑的房间里，这圈光让 98 寸屏显得更大，眼睛也不累。\n它的流水线分三段：输入端用 HDMI 采集卡（USB 采集棒即可）抓电视信号，或者直接抓 Kodi 和树莓派自身的画面；中间的处理器把画面按灯珠位置切成几十个区域算平均色，做黑边检测、平滑和亮度补偿；输出端支持几十种设备，WLED、Adalight、WS281x 直驱、Hue 都行。全部通过网页配置，灯珠位置在示意图上用鼠标画，网页界面有中文翻译；项目持续维护。\n在 0207 里它跑在 0802 那台 N100 上：电视 HDMI 信号经功放分出一路进 USB 采集卡，Hyperion 算色后用 WLED 协议驱动电视背后那圈 WS2814 灯带（正好复用 0202 那种 WLED 控制器），观影场景开始时由 HA 打开 Hyperion 的抓屏，暂停或结束时关掉恢复 0201 灯光。坑是采集卡要选 4K 输入降 1080p 输出的，HDR 片源要在 Hyperion 里开色调映射，否则颜色发灰。",
+    "diagram": {
+     "title": "Hyperion · 抓画面边缘颜色驱动灯带",
+     "nodes": [
+      {
+       "id": "cap",
+       "label": "HDMI 采集卡\n功放分出一路",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 观影场景\n开关抓屏",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Hyperion 处理器\n分区算色 / 平滑",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "网页配置\n灯珠位置",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "wled",
+       "label": "WLED 控制器\n电视背后灯带",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "全黑屋里的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "cap",
+       "core",
+       "画面"
+      ],
+      [
+       "ha",
+       "core",
+       ""
+      ],
+      [
+       "web",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "wled",
+       "UDP"
+      ],
+      [
+       "wled",
+       "me",
+       "溢彩"
+      ]
+     ],
+     "usage": "0207：N100 上抓 HDMI 算色，WLED 协议驱动电视背后灯带"
+    }
    }
   ],
   "xhs": [
@@ -243,25 +1755,269 @@
   "id": "0208",
   "github": [
    {
-    "name": "HEnquist/camilladsp",
-    "url": "https://github.com/HEnquist/camilladsp",
-    "stars": "1k",
-    "desc": "跨平台 IIR 和 FIR 音频处理引擎，做分频、房间校正和均衡",
-    "why": "大箱在小地下室低频会糊，用它做房间校正，比反复挪音箱省力"
-   },
-   {
     "name": "moode-player/moode",
     "url": "https://github.com/moode-player/moode",
     "stars": "1.4k",
-    "desc": "树莓派上的开源 HiFi 播放器系统，支持本地音乐库和 CamillaDSP",
-    "why": "黑胶之外的数字音源就靠它，一块树莓派接胆机功放，还能被 0201 场景联动"
+    "zh": "无中文",
+    "desc": "树莓派上的开源 HiFi 播放器系统，MPD 内核，支持本地音乐库、AirPlay、蓝牙、UPnP 和内置 CamillaDSP，2026 年 7 月 10.3 版",
+    "why": "黑胶之外的数字音源就靠它，一块树莓派接胆机功放，CamillaDSP 房间校正也跑在同一块板上，还能被 0201 场景联动",
+    "intro": "moOde 是 2014 年从 Volumio 前身 RuneAudio 分出来的树莓派音频播放器系统，1.4k 星，作者 Tim Curtis 十多年一直在更新，2026 年 7 月发了 10.3 版。想要一台安静、无风扇、不联网也能放高解析音乐的数字音源，一块树莓派加一块 I2S 解码板，刷上它就是。\n它是一个完整的系统镜像：底层 Linux，中间是 MPD 音乐守护进程负责解码和播放，上层是 PHP 写的网页界面，手机浏览器打开就是遥控器。音源支持本地硬盘、NAS、网络电台、AirPlay、蓝牙和 UPnP；输出走 I2S 或 USB 比特完美直出，也能把 CamillaDSP 插进播放链路做房间校正，网页里切换滤波器配置。文档英文，B 站有搭建视频。\n在 0208 里它是矮机柜里唱盘旁边那台“数字唱盘”：树莓派 4 加一块 I2S 解码板装进一个小木盒，RCA 线接胆机功放的另一路输入，音乐放在 0802 N100 的共享目录里由它读。MPD 的接口让 HA 的 MPD 集成把它变成 media_player，听音场景一按，灯光只打沙发和唱盘，它开始播上次没听完的专辑。坑是树莓派 3.5mm 口噪声大，一定走解码板；供电用线性电源，否则胆机会把纹波放大成哼声。",
+    "diagram": {
+     "title": "moOde · 树莓派上的 MPD 播放器",
+     "nodes": [
+      {
+       "id": "lib",
+       "label": "N100 共享音乐库\nAirPlay / 电台",
+       "kind": "db",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 听音场景\nMPD 集成",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "moOde 网页 + MPD\n解码播放",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "dsp",
+       "label": "CamillaDSP\n房间校正",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "dac",
+       "label": "I2S 解码板\nRCA 出",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "amp",
+       "label": "胆机功放\n大柏林",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "沙发上的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "lib",
+       "core",
+       "读取"
+      ],
+      [
+       "ha",
+       "core",
+       "播放"
+      ],
+      [
+       "core",
+       "dsp",
+       ""
+      ],
+      [
+       "dsp",
+       "dac",
+       "PCM"
+      ],
+      [
+       "dac",
+       "amp",
+       ""
+      ],
+      [
+       "amp",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0208：矮机柜里的数字唱盘，HA 场景控播放，DSP 在同一块板"
+    }
+   },
+   {
+    "name": "HEnquist/camilladsp",
+    "url": "https://github.com/HEnquist/camilladsp",
+    "stars": "1.1k",
+    "zh": "无中文",
+    "desc": "Rust 写的跨平台 IIR 和 FIR 音频处理引擎，做分频、房间校正和均衡，带 websocket 接口，4.1 版",
+    "why": "大箱在小地下室低频会糊，用它做房间校正，比反复挪音箱省力；跑在 moOde 的树莓派上，不多一台机器",
+    "intro": "CamillaDSP 是瑞典工程师 Henrik Enquist 用 Rust 写的开源音频 DSP 引擎，1.1k 星，2019 年发布，是 DIY 音响圈做房间校正和主动分频的事实标准，moOde 等播放器系统都内置了它。音箱再好，放进具体的房间，低频驻波和反射都会把声音搞糊，与其反复挪音箱，不如在数字域里把房间的问题反过来修掉。\n它是一条可配置的处理管线：从声卡或播放器的音频流里“采集”，经过一串滤波器——IIR 的参量均衡、高低通，FIR 的卷积（可以加载 REW 这类测量软件生成的校正脉冲），再做增益、延时、混音和通道路由，最后“回放”到输出声卡。整条管线用一份 YAML 描述，支持 ALSA、PipeWire、CoreAudio、WASAPI 等主流后端，一块树莓派能跑多路 FIR。它开放 websocket 接口，网页 GUI 能在线换配置、看电平，也能被脚本切换。文档英文。\n在 0208 里它藏在 moOde 的树莓派里：先用测量麦和 REW 在沙发听音位测一次两只大箱的频响，导出校正滤波器加载进管线，再用参量均衡把 40～80Hz 的驻波峰压掉几个分贝。做两套配置——“听音”用完整校正，“看片”只做低切保护——HA 通过 websocket 切换。坑是只能修数字源，黑胶那条模拟链路不经过它；FIR 会带来几十毫秒延时，看片时要在电视上补口型延时。",
+    "diagram": {
+     "title": "CamillaDSP · 一条 YAML 描述的滤波管线",
+     "nodes": [
+      {
+       "id": "mic",
+       "label": "测量麦 + REW\n听音位测频响",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "src",
+       "label": "moOde 数字源",
+       "kind": "db",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "CamillaDSP\nIIR + FIR 管线",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "cfg",
+       "label": "两套配置\n听音 / 看片",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "out",
+       "label": "解码板 → 功放\n→ 大柏林",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA websocket\n切配置",
+       "kind": "cloud",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "mic",
+       "core",
+       "校正",
+       "dash"
+      ],
+      [
+       "src",
+       "core",
+       "采集"
+      ],
+      [
+       "cfg",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "out",
+       "回放"
+      ],
+      [
+       "ha",
+       "cfg",
+       "切换"
+      ]
+     ],
+     "usage": "0208：REW 测一次听音位，校正滤波器跑在 moOde 树莓派上"
+    }
    },
    {
     "name": "pierreaubert/spinorama",
     "url": "https://github.com/pierreaubert/spinorama",
     "stars": "164",
-    "desc": "汇总和对比上千款音箱频响测量数据的开源库和网站",
-    "why": "买二手大箱前先查它的 spinorama 数据，避免花几万买到听感糊的型号"
+    "zh": "无中文",
+    "desc": "汇总和对比上千款音箱频响测量数据的开源库和网站 spinorama.org，还能按测量数据自动生成均衡曲线",
+    "why": "买二手大箱前先查它的数据，避免花几万买到听感糊的型号；它生成的均衡曲线还能直接喂给 CamillaDSP",
+    "intro": "spinorama 是法国工程师 Pierre Aubert 维护的开源项目，164 星，配套网站 spinorama.org 收录了一千多款音箱的客观测量数据，是 DIY 和二手音响圈选箱子时最常翻的参考。音箱评测里“通透”“宽松”这些词没法比较，而 Spinorama 是一套标准化测量图（哈曼的 CEA-2034 标准），把一只音箱各方向的频响、指向性画成同一种图，不同型号能放在一起比。\n它把各处公开的测量数据——ASR 论坛、厂商白皮书等——用 Python 统一解析成同一格式，算出音调平衡、指向性指数和一个综合偏好评分，再用网页把上千只箱子做成可搜索、可对比的图库。更实用的一步是它能按测量数据自动生成一组参量均衡，把音箱本身的频响缺陷修平，导出成 CamillaDSP 或其他 DSP 能直接加载的格式。项目持续更新；网站英文，但图表本身不需要翻译。\n在 0208 里它是花大钱前的功课：想收一对大柏林级别的落地箱，先在 spinorama.org 上查同型号或同系列的测量图，看低频延伸、指向性是否平滑，评分 6 以上再去听；地堡只有 2.5 米听音距离、墙硬，指向性宽的箱子反射会多，优先选指向性均匀的。买定之后把它给这对箱子生成的均衡曲线加载进 CamillaDSP，作为房间校正之前的“出厂修正”。坑是二手老箱子往往没有测量数据，只能找同厂同代的近似型号参考。",
+    "diagram": {
+     "title": "spinorama · 上千款音箱的标准化测量图库",
+     "nodes": [
+      {
+       "id": "src",
+       "label": "ASR / 厂商白皮书\n公开测量数据",
+       "kind": "cloud",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "选箱子的人",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "spinorama 解析\n评分 / 指向性",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "spinorama.org\n对比图库",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "eq",
+       "label": "自动生成\n参量均衡",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "dsp",
+       "label": "CamillaDSP\n出厂修正层",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "src",
+       "core",
+       "解析"
+      ],
+      [
+       "core",
+       "web",
+       ""
+      ],
+      [
+       "web",
+       "me",
+       "看图"
+      ],
+      [
+       "core",
+       "eq",
+       ""
+      ],
+      [
+       "eq",
+       "dsp",
+       "导出"
+      ]
+     ],
+     "usage": "0208：买大箱前查测量图，买定后把它的均衡曲线喂给 CamillaDSP"
+    }
    }
   ],
   "xhs": [
@@ -283,25 +2039,257 @@
   "id": "0209",
   "github": [
    {
-    "name": "esprfid/esp-rfid",
-    "url": "https://github.com/esprfid/esp-rfid",
-    "stars": "1.5k",
-    "desc": "ESP8266 上的 RFID 门禁固件，支持 RC522、PN532，带网页管理和日志",
-    "why": "帐篷门帘或宝箱加一把 RFID 小锁，刷卡才开，秘密基地的仪式感就有了"
-   },
-   {
-    "name": "Aircoookie/WLED",
-    "url": "https://github.com/Aircoookie/WLED",
-    "stars": "18.6k",
-    "desc": "ESP32 上最流行的灯带控制固件，支持 WiFi 控制和 HomeAssistant 集成",
-    "why": "帐篷顶那串 USB 供电小暖灯刷它，2200K 暖光、呼吸渐暗都能手机上调"
+    "name": "wled/WLED",
+    "url": "https://github.com/wled/WLED",
+    "stars": "18.7k",
+    "zh": "无中文",
+    "desc": "ESP32 上最流行的灯带控制固件，网页和 App 直接控，250 个预设、定时、烛光等上百种效果，HomeAssistant 自动发现",
+    "why": "帐篷顶那串 USB 供电小暖灯刷它，2200K 暖光、烛光闪烁、呼吸渐暗都能手机上调，三个预设对应亮起 / 阅读 / 夜灯",
+    "intro": "WLED 是奥地利开发者 Aircoookie 从 2016 年开始写的 ESP32 / ESP8266 灯带固件，18.7k 星，是 GitHub 上最流行的灯光固件。一根几十块钱的灯带接上一块 ESP32，刷完固件就是一盏能手机调、能被家庭自动化接管的智能灯。\n固件内置网页服务器：手机打开网页就能选颜色、调亮度、从一百多种效果里挑，把状态存成预设，最多 250 个；内置定时器按时间或日出日落切预设。对外它开放 JSON 和 MQTT 接口，Home Assistant 有官方集成，自动发现后每个 WLED 设备是一个灯实体，预设是一个下拉选项。支持 WS2812、SK6812、CCT 等各种灯带，可分段控制。社区极大，文档英文，中文教程和 B 站视频非常多。\n在 0209 里它管帐篷顶那串小暖灯：用一块 ESP32-C3 小板加一米 SK6812 RGBW 或 WWA 暖白灯带，USB 供电，藏在帐篷顶杆上。存三个预设：亮起是 2200K 暖光四成亮度，阅读是六成并把夹灯那一段拉亮，夜灯是 5% 加一点烛光闪烁；HA 根据帘子磁簧和 PIR 的状态切预设，掀帘亮起、坐下十分钟切阅读、半小时没动切夜灯。坑是充电宝供电电压掉得快，灯带别超过一米，亮度上限 60%；床下 WiFi 弱，板子天线朝帘子放。",
+    "diagram": {
+     "title": "WLED · 一块 ESP32 把灯带变成智能灯",
+     "nodes": [
+      {
+       "id": "app",
+       "label": "手机网页 / App",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 自动化\n磁簧 + PIR 状态",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "WLED 固件\n网页服务 + 效果",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "pre",
+       "label": "三个预设\n亮起 / 阅读 / 夜灯",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "led",
+       "label": "帐篷顶暖灯串\nUSB 供电",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "盘腿坐的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "app",
+       "core",
+       "存预设"
+      ],
+      [
+       "ha",
+       "pre",
+       "切预设"
+      ],
+      [
+       "pre",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "led",
+       "数据线"
+      ],
+      [
+       "led",
+       "me",
+       "暖光"
+      ]
+     ],
+     "usage": "0209：三个预设对应亮起 / 阅读 / 夜灯，HA 按帘子和 PIR 切"
+    }
    },
    {
     "name": "FastLED/FastLED",
     "url": "https://github.com/FastLED/FastLED",
     "stars": "7.4k",
-    "desc": "Arduino 上最常用的 LED 灯光动画库，从 ATtiny 到 ESP32 都支持",
-    "why": "想自己写一段烛光闪烁或星空效果时用它，比 WLED 更自由，间接参考"
+    "zh": "无中文",
+    "desc": "Arduino 上最常用的 LED 灯光动画库，支持 50 多种单片机平台和几乎所有可寻址灯珠，3.10 版",
+    "why": "想自己写一段烛光闪烁、星空或流星效果时用它，比 WLED 更自由；也是 WLED 效果引擎的底层参考",
+    "intro": "FastLED 是 2012 年由 Daniel Garcia 和 Mark Kriegsman 创建的 Arduino LED 库，7.4k 星，是可寻址灯珠圈里资格最老、用得最广的动画库，2025 年仍密集更新到 3.10 版。想让一串 WS2812 按自己的想法闪，时序、颜色空间和性能它全包，你只管写“第几颗灯什么颜色”。\n它的核心是一个 CRGB 数组加一个 show 函数：循环里改数组里每颗灯的颜色，调用 show，库按灯珠型号的精确时序把数据推出去。上面叠一层工具：HSV 色彩、调色板、噪声函数、淡入淡出，几行代码就能写出烛光、火焰、星空、流星，示例里都有现成的。支持 50 多种平台，从 ATtiny 到 ESP32 和树莓派 Pico。文档英文，中文 Arduino 教程几乎都会讲到它。\n在 0209 里它是 WLED 不够用时的下一步：帐篷里想要一段“翻票根时忽明忽暗的烛光”或“抬头看床板时的星空”，WLED 内置效果不够细腻，就用 FastLED 在同一块 ESP32-C3 上自己写，磁簧和 PIR 直接触发效果切换，再用 MQTT 接回 HA。坑是 WiFi 会打断灯珠时序造成闪一下，用 RMT 驱动或把灯效放到另一个核心跑。",
+    "diagram": {
+     "title": "FastLED · 改一个数组，灯珠就跟着变",
+     "nodes": [
+      {
+       "id": "code",
+       "label": "自写效果\n烛光 / 星空",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "trig",
+       "label": "磁簧 / PIR 触发",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "FastLED 库\nCRGB 数组 + show",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "tool",
+       "label": "HSV / 调色板\n噪声 / 淡入淡出",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "led",
+       "label": "ESP32-C3 RMT\n→ 灯珠串",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "MQTT 回报 HA",
+       "kind": "cloud",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "code",
+       "core",
+       "改颜色"
+      ],
+      [
+       "trig",
+       "core",
+       ""
+      ],
+      [
+       "tool",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "led",
+       "时序"
+      ],
+      [
+       "core",
+       "ha",
+       "",
+       "dash"
+      ]
+     ],
+     "usage": "0209：WLED 效果不够时在同一块板上自写烛光星空，MQTT 接回 HA"
+    }
+   },
+   {
+    "name": "esprfid/esp-rfid",
+    "url": "https://github.com/esprfid/esp-rfid",
+    "stars": "1.5k",
+    "zh": "无中文",
+    "desc": "ESP8266 / ESP32 上的 RFID 门禁固件，支持 RC522、PN532、Wiegand 读卡器，带网页管理、用户名单、日志和 MQTT，2024 年 2.0 版",
+    "why": "帐篷帘子或宝箱加一把 RFID 小锁，刷卡才开，秘密基地的仪式感就有了；网页里管卡、看日志，MQTT 报给 HA",
+    "intro": "esp-rfid 是 2017 年由土耳其开发者 Ömer Şiar Baysal 发起的开源门禁固件，1.5k 星，2024 年 11 月发了 2.0 版，是 GitHub 上最完整的 DIY RFID 门禁方案。想给一扇门或一个柜子装“刷卡才开”的电子锁，它只需要一块 ESP8266、一个二十块钱的 RC522 或 PN532 读卡模块和一个电磁锁或舵机。\n固件内置网页管理界面：加卡、删卡、给每张卡设有效期和可开的时段，最多一千个用户；每次刷卡记一条带时间戳的日志，NTP 对时；读卡器支持 RC522、PN532、RDM6300 和 Wiegand 接口；输出是继电器，可设开锁时长。对家庭自动化它有 MQTT：每次刷卡把卡号和结果发出去，也能远程开锁、远程加卡。文档英文，硬件图和 PCB 开源。\n在 0209 里它给藏宝阁加一道“仪式”：帐篷帘子内侧装一块 PN532 读卡板，宝箱铁皮盒里塞一个小舵机锁，随身带一张旧公交卡或一枚 NFC 戒指，刷一下帘边的暗处，宝箱咔哒一声弹开。MQTT 把刷卡事件报给 HA，正好当“进入”信号，触发 WLED 的亮起预设并把木牌翻到“不在”。坑是 RC522 读 13.56MHz 卡距离只有两三厘米，藏在布后面要贴着；帐篷里没插座，读卡板和舵机共用那块 USB 充电宝，舵机动作时留 1A 余量。",
+    "diagram": {
+     "title": "esp-rfid · 刷卡、比对名单、开锁、记日志",
+     "nodes": [
+      {
+       "id": "card",
+       "label": "旧公交卡\nNFC 戒指",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "网页管理\n加卡 / 时段",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "esp-rfid 固件\n名单比对",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "log",
+       "label": "刷卡日志\n用户名单",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "lock",
+       "label": "宝箱舵机锁\n继电器",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "MQTT → HA\n触发 WLED 亮起",
+       "kind": "cloud",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "card",
+       "core",
+       "PN532"
+      ],
+      [
+       "web",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "log",
+       ""
+      ],
+      [
+       "core",
+       "lock",
+       "开锁"
+      ],
+      [
+       "core",
+       "ha",
+       "刷卡"
+      ]
+     ],
+     "usage": "0209：帘边暗处刷卡开宝箱，刷卡事件当进入信号联动灯和木牌"
+    }
    }
   ],
   "xhs": [
@@ -325,23 +2313,256 @@
    {
     "name": "grocy/grocy",
     "url": "https://github.com/grocy/grocy",
-    "stars": "9.4k",
-    "desc": "自托管的家庭食品和物资管理系统，管库存、到期日和采购清单",
-    "why": "罐头、米砖、水桶都建成 SKU，到期前 30 天自动提醒该吃掉了，先进先出它天生支持"
-   },
-   {
-    "name": "Forceu/barcodebuddy",
-    "url": "https://github.com/Forceu/barcodebuddy",
-    "stars": "604",
-    "desc": "Grocy 的条码扫描配套工具，扫一下就入库或消耗",
-    "why": "补货和取罐头时扫条码就完成出入库，不用每次打开网页手动改数量"
+    "stars": "9.5k",
+    "zh": "界面有中文",
+    "desc": "自托管的家庭食品和物资管理系统，管库存、保质期、最小库存、采购清单和条码，带 REST API",
+    "why": "罐头、米砖、水桶都建成 SKU，到期前 30 天自动提醒该吃掉了，先进先出它天生支持，库存天数也从它算",
+    "intro": "grocy 是德国开发者 Bernd Bestel 从 2017 年开始写的自托管家庭物资管理系统，9.5k 星，口号是“超越冰箱的 ERP”。家里囤的东西哪罐先过期、米还剩几袋，靠脑子记一定会漏，它把仓库软件那套 SKU、批次、保质期、最小库存搬进了家庭。\n它是一个 PHP 写的网页应用，SQLite 存数据，一个 Docker 容器就能跑。核心是产品、库存条目和位置三张表：每次入库记数量和保质期，消耗时按最早到期的批次先扣，天生就是先进先出；每个产品可设最小库存，低于就自动进采购清单；到期前几天在首页高亮。支持条码，还管食谱、家务、设备保养。它有完整的 REST API，Home Assistant 的社区集成能把“即将过期数”“缺货数”做成传感器。界面有简体中文，NAS 圈中文教程很多。\n在 0210 里它就是那面时间墙的账本：每种罐头、米砖、面、水桶建一个产品，位置按货架层填，保质期照罐身写；入库时扫条码或用手机 NFC 碰米桶盖直接打开该产品的入库页；取一罐吃掉就消耗一个，它自动扣最早到期的那批。0801 数字孪生里的“库存 92 天”由 HA 从它的 API 读各产品数量乘每日用量求和得出，到期前 30 天推送“该吃掉了”，缺货项进采购清单。坑是初次建档几十个 SKU 很枯燥，一次只建常吃的二十种，水桶和米砖用“开封 / 换水”当消耗事件记就行。",
+    "diagram": {
+     "title": "grocy · 家庭版的 SKU、批次和保质期",
+     "nodes": [
+      {
+       "id": "scan",
+       "label": "扫码枪 / NFC\n入库 / 消耗",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "网页 / 手机\n建档 SKU",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "grocy 服务\n先进先出扣批次",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "产品 / 库存条目\n位置 / 保质期",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "api",
+       "label": "REST API\n→ HA 传感器",
+       "kind": "cloud",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "list",
+       "label": "采购清单\n到期提醒",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "scan",
+       "core",
+       "条码"
+      ],
+      [
+       "web",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "db",
+       ""
+      ],
+      [
+       "core",
+       "api",
+       "数量"
+      ],
+      [
+       "core",
+       "list",
+       ""
+      ]
+     ],
+     "usage": "0210：每种罐头米水建 SKU，先进先出扣批次，HA 算库存天数"
+    }
    },
    {
     "name": "TomBursch/kitchenowl",
     "url": "https://github.com/TomBursch/kitchenowl",
     "stars": "3.7k",
-    "desc": "自托管的采购清单和食谱管理应用，有手机端",
-    "why": "轮换日缺货清单直接生成采购单，去镇上补货时手机上勾一下"
+    "zh": "界面有中文",
+    "desc": "自托管的采购清单和食谱管理应用，Flask 后端 + Flutter 客户端，有安卓 / iOS / 网页端，多人实时同步，可部分离线",
+    "why": "轮换日缺货清单直接生成采购单，去镇上补货时手机上勾一下，有原生 App 比 grocy 的网页顺手得多",
+    "intro": "KitchenOwl 是德国开发者 Tom Bursch 从 2020 年开始写的自托管采购清单应用，3.7k 星。购物清单要么写在冰箱贴上要么散在聊天记录里，它给一个家庭一份共享清单，谁加了什么、谁买了什么，所有人手机上实时同步，去超市勾一下就划掉。\n架构是 Python Flask 写的后端加 Flutter 写的客户端，所以安卓、iOS、网页、桌面端都是同一套代码，App 在应用商店和 F-Droid 都能装。清单按超市分类排序；食谱模块一键把食材加进清单；还有每周餐单和开支分摊。部分离线可用。它有 REST API，Home Assistant 的集成能把清单当 todo 实体读写。界面有简体中文（Weblate 社区翻译），文档英文，更新很勤。\n在 0210 里它是 grocy 的“出门那一半”：grocy 管货架上的账本，KitchenOwl 管补货那趟路。每次轮换日，HA 从 grocy 的 API 拉出缺货项，通过 KitchenOwl 的 API 写进“镇上采购”清单并按商店分好类；去镇上时手机开 App，买一样勾一样，回来扫码入库时 grocy 再销账。坑是两套系统各有一份产品名，HA 自动化用 grocy 的产品名做主键，KitchenOwl 只当纯文本清单，别指望它俩自动对齐库存。",
+    "diagram": {
+     "title": "KitchenOwl · 一家人共享的采购清单",
+     "nodes": [
+      {
+       "id": "grocy",
+       "label": "grocy 缺货项\n（HA 每轮换日拉）",
+       "kind": "cloud",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "recipe",
+       "label": "食谱 / 餐单",
+       "kind": "db",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "KitchenOwl 后端\nFlask API",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "app",
+       "label": "Flutter 手机 App\n按商店分类",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "shop",
+       "label": "镇上补货\n买一样勾一样",
+       "kind": "person",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "back",
+       "label": "回家扫码入库\n→ grocy 销账",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "grocy",
+       "core",
+       "写清单"
+      ],
+      [
+       "recipe",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "app",
+       "同步"
+      ],
+      [
+       "app",
+       "shop",
+       ""
+      ],
+      [
+       "shop",
+       "back",
+       "",
+       "dash"
+      ]
+     ],
+     "usage": "0210：grocy 缺货项写进采购清单，去镇上手机勾，回来扫码入库"
+    }
+   },
+   {
+    "name": "Forceu/barcodebuddy",
+    "url": "https://github.com/Forceu/barcodebuddy",
+    "stars": "604",
+    "zh": "无中文",
+    "desc": "grocy 的条码扫描配套工具，扫一下就入库、消耗或开封，不认识的条码自动去 OpenFoodFacts 查名字",
+    "why": "补货和取罐头时扫条码就完成出入库，不用每次打开网页手动改数量；有 HA 插件版，直接装在同一台小主机上",
+    "intro": "Barcode Buddy 是德国开发者 Marc Ole Bulling 写的 grocy 配套工具，604 星，一句话说明是“grocy 的条码系统”。grocy 自带的条码流程太啰嗦，每次都要打开网页、选产品、选操作、填数量；而在储藏室里你只想“扫一下，东西就进账了”。\n它是一个 PHP 小服务，需要 grocy 的 API 密钥，可以 Docker 部署，也有 Home Assistant 插件版。工作方式是先设一个模式——入库、消耗、开封、加进采购清单——然后不停扫：扫到 grocy 里已有的条码就直接执行；扫到没见过的条码，它去 OpenFoodFacts 或 UPCitemdb 查商品名，列出来让你在网页里对到某个 grocy 产品，下次就认识了。模式本身也是条码，打印一张“模式卡”贴在架子上，扫“消耗”再扫罐头就完成一次出库，全程不碰手机。支持 USB 和蓝牙扫码枪、安卓 App 相机。文档英文。\n在 0210 里它把货架变成“扫码即记账”：储藏室门内挂一支蓝牙扫码枪，架子侧面贴四张模式卡（入库 / 消耗 / 开封 / 缺货）；补货回来先扫“入库”再逐个扫罐头，做饭取罐头时扫“消耗”再扫罐身，grocy 自动扣最早到期那批。国产罐头有些条码查不到，第一次要手动对产品；没条码的水桶自己打印一张 grocy 条码贴上。坑是模式会保持到下次切换，扫完记得扫回“消耗”。",
+    "diagram": {
+     "title": "Barcode Buddy · 扫一下就完成出入库",
+     "nodes": [
+      {
+       "id": "gun",
+       "label": "蓝牙扫码枪\n罐头 / 米砖条码",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "mode",
+       "label": "模式卡\n入库 / 消耗 / 开封",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Barcode Buddy\n条码 → 操作",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "look",
+       "label": "OpenFoodFacts\n查未知条码",
+       "kind": "cloud",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "grocy",
+       "label": "grocy API\n扣最早到期批次",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "网页实时结果\n对新产品",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "gun",
+       "core",
+       "扫码"
+      ],
+      [
+       "mode",
+       "core",
+       "切模式"
+      ],
+      [
+       "core",
+       "look",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "grocy",
+       "执行"
+      ],
+      [
+       "core",
+       "web",
+       ""
+      ]
+     ],
+     "usage": "0210：门内挂扫码枪，先扫模式卡再扫罐头，grocy 自动记账"
+    }
    }
   ],
   "xhs": [
@@ -366,22 +2587,253 @@
     "name": "wger-project/wger",
     "url": "https://github.com/wger-project/wger",
     "stars": "6.8k",
-    "desc": "自托管的开源健身、营养和体重记录系统，有网页和 App",
-    "why": "周计划和训练记录跑在 0802 的小主机上，本地无云，和大屏一个数据库"
+    "zh": "界面有中文",
+    "desc": "自托管的开源健身、营养和体重记录系统，Django 后端，有网页和安卓 / iOS App，带 REST API 和动作库",
+    "why": "周计划和训练记录跑在 0802 的小主机上，本地无云，和大屏一个数据库；训练日志通过 API 由 HA 自动写入",
+    "intro": "wger 是瑞士开发者 Roland Geider 从 2012 年开始写的自托管健身管理系统，6.8k 星，是开源健身软件里星最多、维护最久的一个。健身 App 要么订阅制要么把数据放在别人服务器上，它让你在自己的小主机上跑一套完整的训练计划、营养和体重记录。\n它用 Python Django 写后端，PostgreSQL 存数据，一个 Docker Compose 就起来；前端有网页版和 Flutter 写的安卓、iOS App。核心是训练计划：按天排动作、组数和重量，支持自动加重进阶；逐组打卡后画出每个动作的重量曲线。附带几百个动作的公开动作库；营养模块接 Open Food Facts 算热量；体重可手动记或导入。它有完整的 REST API，界面有简体中文（Weblate 翻译），文档英文，持续更新。\n在 0212 里它跑在 0802 那台 N100 上，是墙上手写周计划背后的数据库：周计划先在 wger 里建成一个训练计划，哑铃划船、壶铃摆荡、引体各有目标组数；练的时候不用打开 App，桌下 ESPHome 按键板每按一下记一组，HA 攒到当天结束通过 wger 的 API 写成一条训练日志；大屏训练模式显示心率的同时也显示今天还剩几组。周末读本周完成率，决定小白板画几个钩。坑是 API 写日志要先拿到动作 ID 和计划日 ID，先用它的 API 浏览器抄下来。",
+    "diagram": {
+     "title": "wger · 自己主机上的训练计划和日志",
+     "nodes": [
+      {
+       "id": "btn",
+       "label": "ESPHome 按键板\n每按一下记一组",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "手机 App\n看曲线 / 排计划",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "wger Django\n计划 / 日志 / 进阶",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "PostgreSQL\n动作库 / 体重",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 自动化\n日终写 API",
+       "kind": "cloud",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "big",
+       "label": "0802 大屏\n剩几组 / 周完成率",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "btn",
+       "ha",
+       "组数"
+      ],
+      [
+       "ha",
+       "core",
+       "REST"
+      ],
+      [
+       "me",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "db",
+       ""
+      ],
+      [
+       "core",
+       "big",
+       "汇总"
+      ]
+     ],
+     "usage": "0212：按键板记组数，HA 日终写进 wger，大屏读周完成率"
+    }
    },
    {
     "name": "oliexdev/openScale",
     "url": "https://github.com/oliexdev/openScale",
-    "stars": "2.4k",
-    "desc": "开源体重和身体数据追踪 App，支持蓝牙体脂秤",
-    "why": "健身角放一台蓝牙秤，数据不走厂商云，直接同步到手机和 wger"
+    "stars": "2.5k",
+    "zh": "界面有中文",
+    "desc": "开源体重和身体数据追踪安卓 App，支持 25 种以上蓝牙体脂秤，无账号、无联网权限，可导出 CSV 和同步到 wger",
+    "why": "健身角放一台蓝牙秤，数据不走厂商云，直接进手机再同步到 wger，体重曲线和训练记录在同一个地方",
+    "intro": "openScale 是德国开发者 Oliver Ladner 从 2014 年开始写的开源安卓 App，2.5k 星，专门做一件事：把蓝牙体脂秤的数据从厂商 App 里解放出来。几乎所有智能秤都要装厂商 App、注册账号、把体重上传到云，而它逆向了二十多款秤的蓝牙协议，数据直接进你手机本地，App 连联网权限都不申请。\n工作方式很直接：手机蓝牙开着，站上秤，App 收到秤广播的原始数据包，按对应型号的协议解析出体重、体脂、水分、肌肉量，存进本地数据库，画成曲线，还能设目标线和评估区间。支持的秤包括小米体脂秤一代二代、云麦、Beurer、Medisana 等，不支持的秤可以手动录入。数据能导出 CSV；配套的 openScale sync 工具能同步到 wger、Health Connect 等。App 在 F-Droid 和 Google Play 上，界面有简体中文，文档英文，仍在维护。\n在 0212 里它是那台放在镜子旁角落的蓝牙秤的“翻译官”：买一台它支持列表里的秤（小米体脂秤 2 最便宜也最好买），每次练完站一下，数据进 openScale，再通过 sync 工具推到 0802 上的 wger，体重曲线和训练日志就在同一个数据库里，大屏训练模式的角落顺便显示本周体重。坑是新款秤的协议常变，买之前在仓库的支持列表里确认型号和固件版本；秤放在地毯上会不准，放在门口硬地上。",
+    "diagram": {
+     "title": "openScale · 逆向蓝牙协议，秤的数据留在手机",
+     "nodes": [
+      {
+       "id": "scale",
+       "label": "蓝牙体脂秤\n小米 / 云麦",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "openScale App\n协议解析",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "本地数据库\n体重 / 体脂曲线",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "sync",
+       "label": "openScale sync\n→ wger",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "csv",
+       "label": "CSV 导出",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "练完称一下的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "scale",
+       "core",
+       "广播包"
+      ],
+      [
+       "core",
+       "db",
+       ""
+      ],
+      [
+       "core",
+       "sync",
+       "同步"
+      ],
+      [
+       "db",
+       "csv",
+       ""
+      ],
+      [
+       "sync",
+       "me",
+       "曲线"
+      ]
+     ],
+     "usage": "0212：秤的数据不走厂商云，进手机再同步到 0802 的 wger"
+    }
    },
    {
     "name": "brandonp2412/Flexify",
     "url": "https://github.com/brandonp2412/Flexify",
-    "stars": "393",
-    "desc": "轻量的开源力量训练记录 App，纯本地存储，记组数重量和进步曲线",
-    "why": "只想记哑铃组数和重量时它最省事，打完卡再回墙上小白板画钩"
+    "stars": "424",
+    "zh": "无中文",
+    "desc": "轻量的开源力量训练记录 App，离线优先、纯本地存储，记组数重量、休息计时和进步曲线，Flutter 写的安卓 / iOS 端",
+    "why": "只想记哑铃组数和重量时它最省事，不用联网不用服务器，打完卡再回墙上小白板画钩；离线时给 wger 补记",
+    "intro": "Flexify 是新西兰开发者 Brandon Presley 写的开源训练记录 App，424 星，定位是“离线优先的力量和有氧训练记录本”。它解决的问题和 wger 相反：不要服务器、不要账号、不要同步，打开就记，一个人一部手机足够。\n它用 Flutter 写，安卓和 iOS 都有，数据全部存在手机本地的 SQLite 里。主界面是一张训练计划表，点一个动作就进入记录页，填重量和次数，按一下就记一组，自动开始休息倒计时并在时间到时响铃提醒；每个动作的历史都画成重量和总量曲线，能看一个月来哑铃划船加了多少。计划支持按周几安排，有一个简单的进阶提醒；有氧可以记时间和距离；主题和单位可自定义。数据可以导出成 CSV 备份或导入。App 在 F-Droid 和 Google Play 上，界面英文，没有中文，但操作简单到不需要翻译；作者更新很勤。\n在 0212 里它是 wger 的“备用记录本”：0802 那台小主机偶尔关机维护、或者人在地面木屋里练壶铃、在草地上跑步时，手机上用 Flexify 记，回来再手动补进 wger；它的休息计时器也是地堡里最顺手的组间计时，比看大屏方便。它也可以干脆当成整个模块的唯一记录工具——如果觉得 wger 太重，就只用它加墙上的小白板，周计划画在白板上，组数记在它里面。坑是它没有任何同步，换手机前记得导出 CSV。",
+    "diagram": {
+     "title": "Flexify · 不要服务器的训练记录本",
+     "nodes": [
+      {
+       "id": "me",
+       "label": "练哑铃的人\n填重量次数",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "plan",
+       "label": "周计划表\n按周几排",
+       "kind": "db",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Flexify App\n记组 + 休息计时",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "sql",
+       "label": "手机本地 SQLite",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "chart",
+       "label": "重量 / 总量曲线",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "csv",
+       "label": "CSV 导出\n→ 补进 wger",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "me",
+       "core",
+       "记一组"
+      ],
+      [
+       "plan",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "sql",
+       ""
+      ],
+      [
+       "core",
+       "chart",
+       ""
+      ],
+      [
+       "sql",
+       "csv",
+       "备份"
+      ]
+     ],
+     "usage": "0212：离线时的备用记录本和组间计时，回来补进 wger"
+    }
    }
   ],
   "xhs": [

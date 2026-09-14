@@ -101,8 +101,8 @@
     ],
     "github": [
      {
-      "name": "Aircoookie/WLED",
-      "url": "https://github.com/Aircoookie/WLED"
+      "name": "wled/WLED",
+      "url": "https://github.com/wled/WLED"
      }
     ]
    },
@@ -135,11 +135,11 @@
      "动作：WLED 灯效 + 天窗帘 + moodist 音景",
      "兜底：手动开关优先，30 秒无响应回退默认"
     ],
-    "impl": "HA scene 编排：灯效调 Aircoookie/WLED 的 JSON API，音景开 remvze/moodist 预设，帘走 ESPHome cover",
+    "impl": "HA scene 编排：灯效调 wled/WLED 的 JSON API，音景开 remvze/moodist 预设，帘走 ESPHome cover",
     "github": [
      {
-      "name": "Aircoookie/WLED",
-      "url": "https://github.com/Aircoookie/WLED"
+      "name": "wled/WLED",
+      "url": "https://github.com/wled/WLED"
      },
      {
       "name": "remvze/moodist",

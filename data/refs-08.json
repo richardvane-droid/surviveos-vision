@@ -6,22 +6,301 @@
     "name": "sysadminsmedia/homebox",
     "url": "https://github.com/sysadminsmedia/homebox",
     "stars": "7.1k",
-    "desc": "面向家庭用户的自托管物品库存系统，支持位置、标签、二维码打印",
-    "why": "每个收纳箱一个二维码、扫码看箱内照片和清单，它就是照这个需求做的"
+    "zh": "界面有中文",
+    "desc": "面向家庭用户的自托管物品库存系统，支持嵌套位置、标签、照片附件和二维码标签打印",
+    "why": "每个收纳箱一个二维码、扫码看箱内照片和清单，它就是照这个需求做的，Go 单文件部署，小主机跑得动",
+    "intro": "Homebox 是一套专为家庭用户设计的自托管物品库存系统，由 sysadminsmedia 社区维护，Go 写成，单个二进制加一个 SQLite 文件就能跑，闲置内存不到 50MB。它要解决的问题很朴素：家里几百上千件东西，到底在哪个箱子里。\n它的数据模型只有三层：位置可以嵌套，比如阁楼间→第三个灰箱→B 层；物品挂在位置下，可以传照片、附购买凭证和保修单、记维修记录；标签横向打标。核心功能是标签生成器：给任意位置或物品批量出带二维码的标签纸，扫码直接跳到那一页，附带的照片和清单一眼看完。还有全文搜索、自定义字段、CSV 导入导出、多用户、REST API，Docker 一行部署。\n社区活跃，2025 年后持续发版，界面通过 Weblate 有简体中文翻译，但 README 和文档只有英文。\n在 0801 里它就是那份箱子数据库：全屋七个区域建成顶层位置，每个透明收纳箱一个子位置，标签生成器出防水二维码贴纸，俯视照片传到位置的附件里，扫码看图不开箱。找东西走它的搜索 API，HomeAssistant Assist 把语音转成文字后调 API 拿到位置，再在平板的等距地图上点亮那个点。要注意它本身没有借还状态，得靠自定义字段加 HA 自动化来补；另外照片别传原图，先压到 1MB 以内，不然 SQLite 很快就胖。",
+    "diagram": {
+     "title": "Homebox · 家庭物品库，扫码看箱",
+     "nodes": [
+      {
+       "id": "qr",
+       "label": "箱侧二维码\n平板扫码",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "voice",
+       "label": "HA Assist\n语音转文字",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "photo",
+       "label": "箱子俯视照片",
+       "kind": "step",
+       "col": 0,
+       "row": 2
+      },
+      {
+       "id": "core",
+       "label": "Homebox\nGo + SQLite",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "位置树 / 物品\n区域→箱→层",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "label",
+       "label": "标签生成器\n防水二维码",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "map",
+       "label": "平板等距地图\n点亮小点",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "qr",
+       "core",
+       "扫码跳转"
+      ],
+      [
+       "voice",
+       "core",
+       "搜索 API"
+      ],
+      [
+       "photo",
+       "db",
+       "挂附件"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "core",
+       "label",
+       "批量出标"
+      ],
+      [
+       "db",
+       "map",
+       "位置坐标"
+      ],
+      [
+       "map",
+       "me"
+      ]
+     ],
+     "usage": "0801：箱子建位置树、出二维码贴纸，语音搜索经 API 返回位置点亮地图"
+    }
    },
    {
     "name": "inventree/InvenTree",
     "url": "https://github.com/inventree/InvenTree",
     "stars": "7.3k",
-    "desc": "开源库存管理系统，支持零件、BOM、供应商和采购单",
-    "why": "PSK 生存盒的零件建档和一键生成采购单，用它的 BOM 功能正合适"
+    "zh": "界面有中文",
+    "desc": "开源库存管理系统，零件、库存、BOM、供应商和采购单一条链路，带标签打印和手机端",
+    "why": "PSK 生存盒的零件建档和一键生成采购单，用它的 BOM 和最低库存告警正合适",
+    "intro": "InvenTree 是一套开源的库存管理系统，Python/Django 后端加 React 前端，主要面向电子工作坊和小型制造：零件建档、库存出入、BOM（物料清单）、供应商与采购单，一条链路全包。它解决的是做一件东西要买什么、库里还有多少这个问题，而不是家里的日用品在哪。\n它的核心是零件与库存项分离：零件是 M3×8 内六角螺丝这个概念，库存项是某个抽屉里那一袋 200 颗。给一个成品零件挂一份 BOM，系统就能算出按库存能做几套、缺什么，一键生成采购单发给绑定的供应商。还有条码和二维码标签打印、最低库存告警、插件系统、REST API 和 Android/iOS 手机端。2026 年 7 月发布 1.4.1，累计 157 个版本，社区非常活跃；界面通过 Crowdin 有简体中文，文档站英文为主。\n在 0801 里它只负责一小块：PSK 生存盒和各模块的零件建档。把每个盒子做成一个带 BOM 的成品零件，螺丝、电池、鱼钩这些消耗品设最低库存，做盒子前看一眼缺件清单，直接出采购单。它和 Homebox 分工明确：Homebox 管东西在哪个箱，InvenTree 管零件还剩多少、要买多少，两边用同一个二维码前缀区分。别把家里的日用品也塞进来，那会把它变成一个很重的表格。",
+    "diagram": {
+     "title": "InvenTree · 零件、BOM 与采购单",
+     "nodes": [
+      {
+       "id": "part",
+       "label": "零件建档\n螺丝 / 电池 / 鱼钩",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "stock",
+       "label": "库存出入\n抽屉里那一袋",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "InvenTree\nDjango + React",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "bom",
+       "label": "生存盒 BOM\n算能做几套",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "po",
+       "label": "采购单\n缺件清单",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "alert",
+       "label": "最低库存告警",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "part",
+       "core"
+      ],
+      [
+       "stock",
+       "core",
+       "扫码出入"
+      ],
+      [
+       "core",
+       "bom"
+      ],
+      [
+       "bom",
+       "po",
+       "一键生成"
+      ],
+      [
+       "core",
+       "alert",
+       "低于阈值"
+      ],
+      [
+       "po",
+       "me",
+       "照单买"
+      ],
+      [
+       "alert",
+       "me",
+       "",
+       "dash"
+      ]
+     ],
+     "usage": "0801：生存盒做成带 BOM 的成品零件，消耗品设阈值，做盒前直接出采购单"
+    }
    },
    {
     "name": "snipe/snipe-it",
     "url": "https://github.com/snipe/snipe-it",
     "stars": "14.9k",
-    "desc": "开源资产管理系统，支持借出归还记录、标签打印和到期提醒",
-    "why": "拿走扫码变外借、放回扫码变在库，超 7 天未还推送，这套借还流程它最成熟"
+    "zh": "界面有中文",
+    "desc": "开源 IT 资产管理系统，借出归还记录、资产标签、到期提醒、审计盘点和 REST API",
+    "why": "拿走扫码变外借、放回扫码变在库，超 7 天未还推送，这套 checkout / checkin 流程它最成熟",
+    "intro": "Snipe-IT 是一套开源的 IT 资产管理系统，Laravel 12 写成，14.9k 星，是这个品类里最知名的自托管方案，本来是给公司管笔记本、显示器和软件许可证用的。它解决的核心问题只有一个：这件东西现在在谁手里、什么时候该还。\n它的模型是资产加用户加借出记录：每件资产有资产标签和二维码，扫码打开就是借出和归还两个按钮，借出时可以设预计归还日，到期系统自动发提醒；还有位置、状态标签（在库、外借、维修、报废）、维护记录、审计模式（批量扫码盘点）和一套完整的 JSON REST API，通知支持邮件、Slack 和 Webhook。项目十年不辍，每周都有提交，331 位贡献者；界面通过 Crowdin 有简体中文，文档只有英文。\n在 0801 里它承担借还这条流程：鱼钩钳这类会被带出屋的工具，在它里面登记为资产，拿走扫码借出、放回扫码归还，超过 7 天未还由它的到期提醒经 Webhook 推到 HomeAssistant 再转手机；每季度的盘点日用它的审计模式，平板批量扫码对账。它比 Homebox 重得多（PHP 加 MySQL），所以只把会外借的几十件工具放进来，日常收纳箱不建档，两个系统靠同一套二维码前缀区分，扫码时由 HA 判断该跳哪一边。",
+    "diagram": {
+     "title": "Snipe-IT · 借出归还与到期提醒",
+     "nodes": [
+      {
+       "id": "scan",
+       "label": "扫工具上的二维码",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "audit",
+       "label": "盘点日\n平板批量扫",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Snipe-IT\n借出 / 归还",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "state",
+       "label": "资产状态\n在库 / 外借",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "hook",
+       "label": "到期提醒\nWebhook",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n通知分级",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "scan",
+       "core",
+       "拿走 / 放回"
+      ],
+      [
+       "audit",
+       "core",
+       "对账"
+      ],
+      [
+       "core",
+       "state"
+      ],
+      [
+       "state",
+       "hook",
+       "超 7 天"
+      ],
+      [
+       "hook",
+       "ha"
+      ],
+      [
+       "ha",
+       "me",
+       "推手机"
+      ]
+     ],
+     "usage": "0801：外借工具登记为资产，扫码切状态，到期提醒经 Webhook 进 HA 推手机"
+    }
    }
   ],
   "xhs": [
@@ -46,29 +325,285 @@
     "name": "home-assistant/core",
     "url": "https://github.com/home-assistant/core",
     "stars": "88k",
-    "desc": "开源家庭自动化平台，本地控制、注重隐私",
-    "why": "全屋中枢就是它，三块屏、手机端和实体开关全靠它的仪表盘驱动，核心依赖"
+    "zh": "有中文文档站",
+    "desc": "开源家庭自动化平台，本地控制、注重隐私，三千多个集成把所有设备抽象成实体",
+    "why": "全屋中枢就是它，三块屏、手机端和实体开关全靠它的仪表盘和自动化驱动，核心依赖",
+    "intro": "Home Assistant 是目前最流行的开源家庭自动化平台，2013 年发起，现由 Open Home Foundation 托管，88k 星，每月发一个版本，最新是 2026.6。它的核心主张是本地控制和隐私优先：所有设备状态都在自家主机里，不依赖厂商的云。\n它的架构可以概括为集成→实体→自动化→仪表盘：三千多个集成把 ESPHome 节点、Zigbee 传感器、摄像头、NAS 之类接进来，统一抽象成实体，每个实体带状态和属性并记入历史数据库；自动化引擎用触发器、条件、动作三段式描述规则；仪表盘用 YAML 或可视化编辑器拼卡片，可以按屏幕分不同视图。中文方面，界面有完整简体中文，官方文档站只有英文。\n在 0802 里它就是整个中枢：跑在储藏室的 N100 小主机上（Docker），八个区域的传感器全部经 ESPHome 原生 API 汇进来，三块屏各对应一个仪表盘视图，浏览器全屏就是大屏；屏下那排实体开关是 ESPHome 的二值传感器，按下触发场景自动化；22:00 的夜航模式是一条自动化切换视图和主题。注意历史数据库默认只留 10 天，曲线类实体要开长期统计或另存 InfluxDB；断网时它照常运转，但手机端远程访问要走 Nabu Casa 或自建反向代理。",
+    "diagram": {
+     "title": "Home Assistant · 实体汇聚，仪表盘分屏",
+     "nodes": [
+      {
+       "id": "esp",
+       "label": "八个区域 ESPHome",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sw",
+       "label": "实体开关\n屏下一排",
+       "kind": "device",
+       "col": 0,
+       "row": 2
+      },
+      {
+       "id": "core",
+       "label": "Home Assistant\n实体 + 自动化",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "历史数据库\n长期统计",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "view",
+       "label": "三块屏\n三个视图",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "phone",
+       "label": "手机端\n同一份仪表盘",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "esp",
+       "core",
+       "原生 API"
+      ],
+      [
+       "sw",
+       "core",
+       "触发场景"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "core",
+       "view",
+       "全屏浏览器"
+      ],
+      [
+       "core",
+       "phone",
+       "远程",
+       "dash"
+      ],
+      [
+       "view",
+       "me"
+      ]
+     ],
+     "usage": "0802：N100 跑 HA，传感器经 ESPHome 汇入，三块屏各一个视图，22:00 切夜航"
+    }
    },
    {
     "name": "ExperienceLovelace/ha-floorplan",
     "url": "https://github.com/ExperienceLovelace/ha-floorplan",
     "stars": "1.6k",
-    "desc": "HomeAssistant 卡片，把设备状态映射到 SVG 平面图上并可点击控制",
-    "why": "中屏那张整栋房子的等距地图就用它做，模块异常变色闪烁靠 SVG 样式规则"
+    "zh": "无中文",
+    "desc": "HomeAssistant 卡片，把实体状态映射到 SVG 平面图元素上，规则驱动样式与点击动作",
+    "why": "中屏那张整栋房子的等距地图就用它做，模块异常变色闪烁靠它的 CSS 规则",
+    "intro": "ha-floorplan 是 Home Assistant 生态里做平面图仪表盘的老牌插件，1.6k 星，2026 年 4 月还在发版（v1.1.5）。它解决的问题是：默认的卡片列表看不出空间关系，一张自己家的图，哪里亮了、哪里冒红，一眼就懂。\n它的工作方式是把一张 SVG 图里的元素和 HA 实体绑定：你在 Inkscape 或 Figma 里画好房子，给每个可交互的图形取一个 id，在 YAML 配置里写规则：某个实体状态变化时给这个 id 加什么 CSS 类、改什么样式、显示什么文字，点击或长按时调用什么服务。样式完全用 CSS 写，所以异常变红闪烁就是一个 keyframes 动画。它可以做成卡片也可以做成整页面板，通过 HACS 安装，有独立文档站，只有英文。\n在 0802 里它负责 65 寸竖屏正中那张整栋房子的等距地图：先把 0008 那张全屋草图在 Inkscape 里重画成等距 SVG，每个模块一个图标组，柴火炉、雨水罐、鱼缸各绑一个实体，正常态是灰线稿，异常态由规则加上红色闪烁类；点击图标跳到该模块的二级页。坑有两个：SVG 里的文字要拆成 tspan 才能被规则改内容；图元 id 别用中文，否则规则匹配不稳。",
+    "diagram": {
+     "title": "ha-floorplan · SVG 元素绑实体状态",
+     "nodes": [
+      {
+       "id": "svg",
+       "label": "等距 SVG\nInkscape 画",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ent",
+       "label": "模块实体\n炉 / 罐 / 缸",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ha-floorplan\n规则引擎",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "css",
+       "label": "CSS 类\n红色闪烁",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "screen",
+       "label": "65 寸竖屏\n全屋地图",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "sub",
+       "label": "模块二级页",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "svg",
+       "core",
+       "元素 id"
+      ],
+      [
+       "ent",
+       "core",
+       "状态变化"
+      ],
+      [
+       "core",
+       "css",
+       "匹配规则"
+      ],
+      [
+       "css",
+       "screen",
+       "改样式"
+      ],
+      [
+       "screen",
+       "sub",
+       "点击",
+       "dash"
+      ],
+      [
+       "screen",
+       "me"
+      ]
+     ],
+     "usage": "0802：等距 SVG 每模块一图标绑实体，异常加闪烁类"
+    }
    },
    {
     "name": "piitaya/lovelace-mushroom",
     "url": "https://github.com/piitaya/lovelace-mushroom",
     "stars": "5.1k",
-    "desc": "HomeAssistant 最流行的简洁风格仪表盘卡片集",
-    "why": "左右两块小屏的温湿度、水电卡片用它排版，好看又不用写太多 YAML"
-   },
-   {
-    "name": "grafana/grafana",
-    "url": "https://github.com/grafana/grafana",
-    "stars": "76.6k",
-    "desc": "开源监控和可视化平台，擅长时间序列曲线面板",
-    "why": "7 天用电用水和一天光照曲线用它画，白天当壁画晚上当夜灯的那种曲线感"
+    "zh": "界面有中文",
+    "desc": "HomeAssistant 最流行的简洁风格仪表盘卡片集，17 种卡片、内置编辑器、零依赖",
+    "why": "左右两块小屏的温湿度、水电卡片用它排版，好看又不用写太多 YAML",
+    "intro": "Mushroom 是 Home Assistant 上最流行的仪表盘卡片集，由 Paul Bottein（piitaya）开发，5.1k 星，通过 HACS 安装，目标是不写太多 YAML 也能拼出好看的仪表盘。它解决的是原生卡片信息密度低、风格参差的问题。\n它的做法是提供 17 种针对设备类型设计的卡片：灯、温控、风扇、窗帘、门锁、媒体播放器、人物、选择器、数字、更新，再加一个万能的模板卡和一排小药丸（chips）。每张卡都有内置的可视化编辑器，图标、颜色、布局、副标题点几下就配好，模板卡能用 Jinja 写任意文字和图标颜色，配合 Mushroom Themes 可以整体换风格，零外部依赖，深浅色都适配。项目持续更新，Weblate 有中文翻译，README 只有英文，但小红书上晒 HA 大屏的帖子多半在用它。\n在 0802 里它负责左右两块 27 寸小屏：左屏光照和温湿度、右屏水电，每个数据一张模板卡，副标题写单位和更新时间，用 chips 在顶端排一行今天所有模块正常之类的状态药丸；曲线本身交给 HA 自带的 history-graph 卡，Mushroom 只管数字和标题。要克制：先只放真正会看的 10 个数，其余藏在二级页，不然就是看板疲劳。夜航模式用它的主题变量把背景切纯黑、字切红，配合 HA 的自动化在 22:00 换主题。",
+    "diagram": {
+     "title": "Mushroom · 模板卡与 chips 排小屏",
+     "nodes": [
+      {
+       "id": "ent",
+       "label": "光照 / 温湿度\n水电实体",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "theme",
+       "label": "Mushroom Themes\n夜航黑底红字",
+       "kind": "step",
+       "col": 0,
+       "row": 2
+      },
+      {
+       "id": "core",
+       "label": "Mushroom 卡片\n模板卡 / chips",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "editor",
+       "label": "可视化编辑器\n不写 YAML",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "left",
+       "label": "左屏 27 寸\n光照曲线",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "right",
+       "label": "右屏 27 寸\n用水用电",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ent",
+       "core",
+       "状态"
+      ],
+      [
+       "theme",
+       "core",
+       "22:00 切换",
+       "dash"
+      ],
+      [
+       "editor",
+       "core"
+      ],
+      [
+       "core",
+       "left"
+      ],
+      [
+       "core",
+       "right"
+      ],
+      [
+       "left",
+       "me"
+      ]
+     ],
+     "usage": "0802：左右小屏一数据一张模板卡，顶端 chips 排状态"
+    }
    }
   ],
   "xhs": [
@@ -94,28 +629,381 @@
     "url": "https://github.com/pollen-robotics/microduck",
     "stars": "7.6k",
     "desc": "Pollen Robotics / Hugging Face 的开源双足小鸭机器人：RK3566 主控、15 个舵机、50Hz 控制环，走路靠 MuJoCo + PPO 训练出的 ONNX 步态策略",
-    "why": "就是市面上那只“AI 电子鸭”的开源本体，机械、电控、步态策略全开源，$399 套件可以直接买或自己打印"
+    "why": "就是市面上那只“AI 电子鸭”的开源本体，机械、电控、步态策略全开源，$399 套件可以直接买或自己打印",
+    "zh": "无中文",
+    "intro": "Microduck 是法国 Pollen Robotics 与 Hugging Face 联合推出的开源双足小鸭机器人，2026 年上半年发布，$399 的套件价和 7.6k 星让它成了“AI 电子鸭”这个品类的开源本体。它要解决的问题很直接：把一台会走路、会表达情绪的桌面机器人做到普通人买得起、打印得出、改得动，硬件图纸、电控代码和步态策略全部开源。\n工作原理是“仿真里学走路，真机上跑策略”：先在 MuJoCo 里用 PPO 强化学习训练步态，用域随机化让策略容忍真实世界的摩擦和惯量差异，再把网络导出成 ONNX 放进机身的 RK3566 主控。主控以 50Hz 读 IMU 姿态、算出十五个总线舵机下一拍的目标角度；走路、蹲下、起身、抓握是一条条独立策略，由 robotd 守护进程切换。整机约 800 克、25 厘米高。\n仓库自带九条已训练技能、摄像头守护进程和 Python SDK，配套 microduck_rl 开放训练环境，社区还有用大模型串技能的 quackd。文档只有英文，但 B 站和小红书上已有不少中文复刻笔记。\n放进 0803 里它就是鸭子的身体：机械电控照套件来，自己要做三件事——在 microduck_rl 里加上暗门下 12cm 通道和阁楼坡道的地形重训低头慢步与前倾步态、换一个带四麦阵列和 ESP32-S3 语音板的自制头壳、写一个按反光标记巡游回窝的小状态机去调它的技能。最大的坑是摔：前三个月只在地毯区训练，舵机多备两个。",
+    "diagram": {
+     "title": "Microduck · 仿真学步态，真机跑策略",
+     "nodes": [
+      {
+       "id": "sim",
+       "label": "MuJoCo 仿真\nPPO 训练",
+       "kind": "cloud",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "imu",
+       "label": "IMU / 摄像头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "RK3566 robotd\n50Hz 控制环",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "onnx",
+       "label": "ONNX 策略库\n走 / 蹲 / 起身",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "servo",
+       "label": "15 个总线舵机",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "skill",
+       "label": "0803 巡游状态机\n（自写）",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "sim",
+       "onnx",
+       "导出",
+       "dash"
+      ],
+      [
+       "imu",
+       "core",
+       "姿态"
+      ],
+      [
+       "onnx",
+       "core"
+      ],
+      [
+       "core",
+       "servo",
+       "目标角"
+      ],
+      [
+       "skill",
+       "core",
+       "切技能"
+      ],
+      [
+       "servo",
+       "me",
+       "走到脚边"
+      ]
+     ],
+     "usage": "0803：套件做身体，自训通道/坡道步态，自写巡游状态机调它的技能"
+    }
    },
    {
     "name": "pollen-robotics/microduck_rl",
     "url": "https://github.com/pollen-robotics/microduck_rl",
-    "stars": "1.9k",
-    "desc": "Microduck 的强化学习训练环境（MuJoCo Warp + PPO + 域随机化）",
-    "why": "想让它学会上阁楼那段小坡道和地堡门下的通道，得在这里加环境重新训一遍步态"
+    "stars": "2k",
+    "zh": "无中文",
+    "desc": "Microduck 的官方强化学习训练环境：mjlab（MuJoCo Warp）+ PPO + 域随机化，导出 ONNX 步态策略",
+    "why": "想让它学会上阁楼那段小坡道和地堡门下的通道，得在这里加地形重新训一遍步态",
+    "intro": "microduck_rl 是 Microduck 的官方强化学习训练仓库，由 Pollen Robotics 维护，2k 星，基于 mjlab（MuJoCo Warp 的 GPU 并行仿真）加 PPO 算法，定位很明确：主仓库负责机器人的身体和运行时，这里负责教它怎么动。它解决的是双足机器人最难的一环：仿真里训出来的步态放到真机上就摔。\n它的流程是：定义任务（走路、起身、踢腿、轮滑等十几种）→ 在 4096 个并行环境里用 PPO 训练，50Hz 控制频率与真机一致 → 域随机化把摩擦、质量、舵机电压、齿隙（每关节 ±1°）等参数打散，再用 BAM 舵机模型把真实电机特性搬进仿真 → 导出 ONNX，观测归一化直接烤进计算图，机身上的 robotd 加载即用。要一块 CUDA 显卡，基础步态一两个小时能训出能用的版本。代码 Apache 2.0。README 只有英文，中文只有零散的复现笔记。\n在 0803 里它是鸭子学新路的地方：地堡门下 12cm 通道要一条低头慢步策略，阁楼楼梯口 15° 坡道要一条前倾爬坡策略，都得在这里新建地形、改奖励函数重训。训完先在地毯上试，摔两次再上木地板。坑是显卡：Mac mini 训不了，要么借一台带 4090 的机器，要么租几小时云 GPU 把 ONNX 拿回来。",
+    "diagram": {
+     "title": "microduck_rl · GPU 仿真训步态出 ONNX",
+     "nodes": [
+      {
+       "id": "task",
+       "label": "任务定义\n通道 / 坡道地形",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "gpu",
+       "label": "CUDA 显卡\n4096 并行环境",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "microduck_rl\nmjlab + PPO",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "dr",
+       "label": "域随机化\nBAM 舵机模型",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "onnx",
+       "label": "ONNX 策略\n归一化已烤入",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "robot",
+       "label": "真机 robotd\n50Hz 加载",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "task",
+       "core"
+      ],
+      [
+       "gpu",
+       "core",
+       "1~2 小时"
+      ],
+      [
+       "dr",
+       "core"
+      ],
+      [
+       "core",
+       "onnx",
+       "导出"
+      ],
+      [
+       "onnx",
+       "robot",
+       "拷入"
+      ],
+      [
+       "robot",
+       "me",
+       "地毯试走"
+      ]
+     ],
+     "usage": "0803：加通道 / 坡道地形重训步态，云 GPU 出 ONNX"
+    }
    },
    {
     "name": "apirrone/Open_Duck_Mini",
     "url": "https://github.com/apirrone/Open_Duck_Mini",
     "stars": "3.9k",
-    "desc": "Microduck 的前身：仿迪士尼 BDX 机器人的迷你双足鸭，约 42cm 高、$400 以内",
-    "why": "更大更便宜的替代路线，社区打印件和舵机选型都有现成清单"
+    "zh": "有中文文档站",
+    "desc": "Microduck 的前身：仿迪士尼 BDX 机器人的迷你双足鸭，约 42cm 高、BOM 400 美元以内，STL 与 BOM 全开源",
+    "why": "更大更便宜的替代路线，打印件、BOM 表和舵机选型都有现成清单，还有中文文档",
+    "intro": "Open Duck Mini 是 Antoine Pirrone 发起的开源项目，目标是做一只迷你版的迪士尼 BDX 机器人，整机 BOM 控制在 400 美元以内，3.9k 星，也是 Microduck 的直接前身。它解决的问题是一个人在家能不能从零造一只会走的双足鸭，答案是能。\n它的路线和 Microduck 一致但更开放：v2 版约 42cm 高，主控是树莓派 Zero 2W，舵机是 Feetech 总线舵机，仿真在 MuJoCo，训练和运行时各有配套仓库，两份训好的 ONNX 步态直接给了。所有打印件的 STL、BOM 表格、打印指南和装配说明都在仓库里，Discord 社区很活跃，近 500 个 fork。中文方面，README 链了一份社区维护的飞书中文文档，B 站有完整复刻系列。\n在 0803 里它是备用路线和参考书：如果 399 美元的 Microduck 套件缺货或想要更大一只，就照它的清单自己打印和采购；更重要的是它的打印件和舵机选型经验：外壳怎么分件才好换季换羽毛、哪些舵机耐摔，都可以直接抄。注意它比 Microduck 高 17cm，钻不过 12cm 的鸭子通道，要走这条路线就得把门下净空改成 45cm 以上。",
+    "diagram": {
+     "title": "Open Duck Mini · 自己打印的 BDX 小鸭",
+     "nodes": [
+      {
+       "id": "stl",
+       "label": "STL 打印件\n拓竹打印",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "bom",
+       "label": "BOM 表格\n400 美元以内",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Open Duck Mini\n树莓派 Zero 2W",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "pg",
+       "label": "Playground\nMuJoCo 训练",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "servo",
+       "label": "总线舵机\n42cm 双足",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "rt",
+       "label": "Runtime\n跑 ONNX 步态",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "stl",
+       "core",
+       "自己打印"
+      ],
+      [
+       "bom",
+       "core",
+       "照单采购"
+      ],
+      [
+       "pg",
+       "rt",
+       "ONNX"
+      ],
+      [
+       "rt",
+       "core"
+      ],
+      [
+       "core",
+       "servo",
+       "驱动"
+      ],
+      [
+       "servo",
+       "me"
+      ]
+     ],
+     "usage": "0803：套件缺货时的自造路线，抄分件外壳与舵机选型"
+    }
    },
    {
     "name": "78/xiaozhi-esp32",
     "url": "https://github.com/78/xiaozhi-esp32",
     "stars": "29.6k",
-    "desc": "小智：ESP32 上的 MCP 语音聊天机器人，接 Qwen / DeepSeek 等大模型，能通过 MCP 控制多终端设备",
-    "why": "鸭子的嘴和耳朵直接用它：本地唤醒 + 大模型对话，MCP 那层正好接 HomeAssistant 去查全屋数据"
+    "zh": "官方中文 README",
+    "desc": "小智：ESP32-S3 上的 MCP 语音聊天机器人，离线唤醒、接 Qwen / DeepSeek 等大模型，能通过 MCP 控制设备",
+    "why": "鸭子的嘴和耳朵直接用它：本地唤醒 + 大模型对话，MCP 那层正好接 HomeAssistant 去查全屋数据",
+    "intro": "小智（xiaozhi-esp32）是虾哥（78）发起的开源语音聊天机器人固件，跑在 ESP32-S3 上，29.6k 星，是国内最火的 AI 硬件开源项目，README 本身就是中英双语，支持 138 种开发板。它解决的问题是：用几十块钱的板子做一个能听、能说、有表情的 AI 伙伴，而且能控制真实设备。\n它的链路是：麦克风阵列采音 → ESP-SR 离线唤醒词和回声消除 → 音频经 WebSocket 或 MQTT+UDP 送到服务端 → 服务端做语音识别、接 Qwen / DeepSeek 等大模型、合成语音 → 语音回到板子播放。关键是 MCP：设备端 MCP 把喇叭、LED、舵机、GPIO 暴露成工具让大模型调用，云端 MCP 又能接外部服务。默认连 xiaozhi.me，也可以自建服务端，中文教程遍地都是。\n在 0803 里它是鸭子的嘴和耳朵：头壳里塞一块 ESP32-S3 加四麦板，胸口 1.28 寸圆屏就是它的表情屏，两颗 RGB 眼睛用设备端 MCP 暴露给大模型控制情绪。全屋数据问答走自建服务端上的 MCP 客户端接 HomeAssistant 的 MCP Server，问雨水罐就去查实体；随口一句记得买 M3 螺丝写进 HA 的待办实体再同步到 0801。注意麦阵放头顶、舵机放身子、中间垫泡棉，否则电机噪音会把识别率打穿；再加一个物理静音拨杆。",
+    "diagram": {
+     "title": "小智 · 离线唤醒，MCP 接全屋",
+     "nodes": [
+      {
+       "id": "mic",
+       "label": "头顶的四麦阵列",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "mute",
+       "label": "物理静音拨杆",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "小智 ESP32-S3\n唤醒 + 设备 MCP",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "server",
+       "label": "自建服务端\n识别 + 大模型",
+       "kind": "cloud",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "screen",
+       "label": "圆屏 + 喇叭 + 眼睛\n表情 / 说话",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA MCP Server\n查实体 / 写待办",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "mic",
+       "core",
+       "唤醒词"
+      ],
+      [
+       "mute",
+       "core",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "server",
+       "WebSocket"
+      ],
+      [
+       "server",
+       "ha",
+       "MCP 调用"
+      ],
+      [
+       "core",
+       "screen",
+       "回放"
+      ],
+      [
+       "screen",
+       "me",
+       "回答"
+      ]
+     ],
+     "usage": "0803：头壳里的 ESP32-S3 听与说，自建服务端经 MCP 查 HA 实体、写待办"
+    }
    }
   ],
   "xhs": [
@@ -137,32 +1025,296 @@
   "id": "0804",
   "github": [
    {
-    "name": "home-assistant/core",
-    "url": "https://github.com/home-assistant/core",
-    "stars": "88k",
-    "desc": "本地优先的开源家庭自动化平台，全屋所有模块的数据都汇到这里",
-    "why": "三台机器里的 x86 笔记本就是它的家：Docker 跑 HA，所有模块的“最后上报时间”都是现成实体"
-   },
-   {
     "name": "louislam/uptime-kuma",
     "url": "https://github.com/louislam/uptime-kuma",
     "stars": "90.1k",
-    "desc": "自托管的服务监控面板，支持 HTTP / TCP / DNS / 推送等 90 多种通知",
-    "why": "盯全屋服务：HA、Jellyfin、NAS、每个 ESPHome 节点的心跳，掉线就推手机"
+    "zh": "界面有中文",
+    "desc": "自托管的服务监控面板：HTTP / TCP / DNS / Docker / 推送等监控类型，90 多种通知渠道和状态页",
+    "why": "盯全屋服务：HA、Jellyfin、NAS、每个 ESPHome 节点的心跳，掉线就推手机",
+    "intro": "Uptime Kuma 是自托管服务监控面板里最受欢迎的一个，由 Louis Lam 开发，90.1k 星。它解决的问题很单纯：我的服务还活着吗，挂了赶紧告诉我。\n它的工作方式是：为每个目标建一个监控器，类型有 HTTP(s)、关键字、JSON 查询、TCP 端口、Ping、DNS 记录、Docker 容器，以及反过来的推送型：目标定时向它报到，超时没来就算掉线；最短 20 秒探测一次，连续失败达到阈值就通过 90 多种通知渠道推出去（邮件、Webhook、Bark、钉钉都有）；还能生成对外的状态页、看证书到期、画延迟曲线。界面通过 Weblate 有完整简体中文，README 是英文。\n在 0804 里它跑在那台常年在线的 Windows 笔记本的 Docker 里，盯全屋服务：HA、Jellyfin、Immich、NAS 的 SMB、Beszel 本身都是 HTTP 或 TCP 监控器；每个 ESPHome 节点建一个推送监控器，节点每 5 分钟往它打一次心跳，40 分钟没上报就红；通知走 Webhook 推到 HA 的 webhook 触发器，由 HA 统一分级再转手机。注意它自己也可能挂，所以让 HA 的一条自动化反过来每小时探它一次，两边互相盯着。",
+    "diagram": {
+     "title": "Uptime Kuma · 探测服务，心跳超时就红",
+     "nodes": [
+      {
+       "id": "svc",
+       "label": "HA / Jellyfin\nNAS SMB",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "esp",
+       "label": "ESPHome 节点\n5 分钟心跳",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Uptime Kuma\n监控器",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "push",
+       "label": "推送监控\n40 分钟超时",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "status",
+       "label": "状态页\n延迟曲线",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "hook",
+       "label": "Webhook\n→ HA 分级",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "svc",
+       "core",
+       "探测"
+      ],
+      [
+       "esp",
+       "push",
+       "报到"
+      ],
+      [
+       "push",
+       "core"
+      ],
+      [
+       "core",
+       "status"
+      ],
+      [
+       "core",
+       "hook",
+       "掉线"
+      ],
+      [
+       "hook",
+       "me",
+       "推手机"
+      ]
+     ],
+     "usage": "0804：服务走探测、ESPHome 节点走推送心跳，告警经 HA 转手机"
+    }
    },
    {
     "name": "henrygd/beszel",
     "url": "https://github.com/henrygd/beszel",
     "stars": "24.3k",
-    "desc": "轻量服务器监控：历史数据、Docker 容器状态、温度和告警",
-    "why": "盯三台机器本身：NAS 盘温、笔记本 CPU、Mac mini 内存，一个面板看完"
+    "zh": "界面有中文",
+    "desc": "轻量服务器监控：Hub + Agent 架构，历史曲线、Docker 容器状态、温度、S.M.A.R.T. 和告警",
+    "why": "盯三台机器本身：NAS 盘温、笔记本 CPU、Mac mini 内存，一个面板看完",
+    "intro": "Beszel 是一个轻量的服务器监控系统，Go 写成，24.3k 星，只做三件事：历史数据、Docker 容器状态、告警。它解决的问题是家庭机房那几台机器到底健不健康。\n它的架构是 Hub 加 Agent：Hub 是基于 PocketBase 的 Web 应用，自带数据库和用户系统；Agent 是一个小二进制，装在每台被监控的机器上，向 Hub 上报 CPU、内存、磁盘用量与 I/O、网络带宽、温度传感器、S.M.A.R.T. 健康，以及每个 Docker 或 Podman 容器的资源；Hub 画曲线、存历史，超过阈值就发通知，支持 OAuth 登录和自动备份。Agent 有 Linux、macOS、Windows 版本。界面通过 Crowdin 有简体中文，README 英文。\n在 0804 里它管三台机器本身：Hub 跑在笔记本 Docker 里，Agent 分别装到 NAS（Docker 版）、笔记本和 M1 Mac mini（Homebrew 版），一个面板看 NAS 盘温和 S.M.A.R.T.、笔记本 CPU、Mac 的容器负载；盘温超 45℃ 先推告警，再联动 0203 除湿。告警同样走 Webhook 进 HA。注意 Mac mini 无头运行时 Agent 要用 launchd 开机自启，否则停电重启后就没数据了。",
+    "diagram": {
+     "title": "Beszel · Hub 收三台机器的曲线",
+     "nodes": [
+      {
+       "id": "nas",
+       "label": "NAS Agent\n盘温 SMART",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "lap",
+       "label": "笔记本 Agent\nCPU / 容器",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "mac",
+       "label": "Mac mini Agent\nlaunchd 自启",
+       "kind": "device",
+       "col": 0,
+       "row": 2
+      },
+      {
+       "id": "core",
+       "label": "Beszel Hub\nPocketBase",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "历史曲线\n自动备份",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "alert",
+       "label": "阈值告警\nWebhook",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ui",
+       "label": "一个面板\n三台机器",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "nas",
+       "core"
+      ],
+      [
+       "lap",
+       "core"
+      ],
+      [
+       "mac",
+       "core",
+       "上报"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "core",
+       "alert"
+      ],
+      [
+       "core",
+       "ui"
+      ],
+      [
+       "alert",
+       "me",
+       "进 HA 汇总"
+      ]
+     ],
+     "usage": "0804：三台机器各装 Agent，Hub 在笔记本，盘温超阈值告警进 HA 并联动除湿"
+    }
    },
    {
     "name": "jellyfin/jellyfin",
     "url": "https://github.com/jellyfin/jellyfin",
     "stars": "54k",
-    "desc": "自由软件媒体系统，服务端 + API，Plex / Emby 的开源替代",
-    "why": "NAS 上的影音库靠它推到地堡 0207 的 98 寸电视，本地转码走 Mac mini"
+    "zh": "界面有中文",
+    "desc": "自由软件媒体系统，服务端 + 各平台客户端，ffmpeg 硬件转码，Plex / Emby 的开源替代",
+    "why": "NAS 上的影音库靠它推到地堡 0207 的 98 寸电视，硬件转码走 Mac mini 的 VideoToolbox",
+    "intro": "Jellyfin 是自由软件媒体系统，2018 年从 Emby 闭源时分叉出来，.NET 写成，54k 星，没有付费层、没有云账号，是 Plex 和 Emby 的开源替代。它解决的问题是：把 NAS 上的电影、剧集、音乐和照片整理成有海报有元数据的库，推到家里任何一块屏幕上。\n它的架构是服务端加客户端：服务端扫描媒体目录、从 TMDB 等抓取元数据、管理用户和播放进度，通过 ffmpeg 做转码，支持 QSV、NVENC、VideoToolbox 等硬件加速，编码格式和码率按客户端能力实时协商；客户端有网页、Android / iOS、Android TV、Apple TV等，还有 REST API 和插件系统。2026 年 6 月发布 10.11.11，Weblate 有完整简体中文界面，官方文档英文。\n在 0804 里它的服务端直接装在 M1 Mac mini 上，媒体目录经 SMB 挂 NAS 那 2×8TB 镜像盘的影音库，转码用 VideoToolbox，NAS 的弱 CPU 不用碰转码。地堡 0207 的 98 寸电视上装 Android TV 客户端，HA 的 media_player 集成接它，按下观影场景就自动调暗灯、接着上次进度播。注意用户账号只开一个，2FA 靠反向代理补上；Mac 要设自动登录和断电自启。",
+    "diagram": {
+     "title": "Jellyfin · NAS 影音库推到 98 寸电视",
+     "nodes": [
+      {
+       "id": "nas",
+       "label": "NAS 影音库\n2×8TB 镜像",
+       "kind": "db",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "meta",
+       "label": "TMDB 元数据",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Jellyfin 服务端\nM1 Mac mini",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ffm",
+       "label": "ffmpeg 转码\nVideoToolbox",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "tv",
+       "label": "98 寸电视\nAndroid TV 端",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA media_player\n观影场景",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "nas",
+       "core",
+       "SMB 挂载"
+      ],
+      [
+       "meta",
+       "core",
+       "抓海报",
+       "dash"
+      ],
+      [
+       "core",
+       "ffm"
+      ],
+      [
+       "ffm",
+       "tv",
+       "按码率协商"
+      ],
+      [
+       "ha",
+       "core",
+       "播放 / 暂停"
+      ],
+      [
+       "tv",
+       "me"
+      ]
+     ],
+     "usage": "0804：服务端在 Mac mini，媒体挂 NAS，转码推 0207 电视"
+    }
    }
   ],
   "xhs": [
@@ -187,22 +1339,282 @@
     "name": "FreeCAD/FreeCAD",
     "url": "https://github.com/FreeCAD/FreeCAD",
     "stars": "32.2k",
-    "desc": "开源参数化 3D 建模软件，型材框架和木作都能画",
-    "why": "每个模块画型材机架前先在它里面按 0805 的规格建模，2020 / 3030 两档尺寸做成参数"
+    "zh": "有中文文档站",
+    "desc": "开源参数化 3D 建模软件，草图约束、零件设计、电子表格驱动尺寸、出加工图，型材框架和木作都能画",
+    "why": "每个模块画型材机架前先在它里面按 0805 的规格建模，2020 / 3030 两档尺寸做成参数化零件库",
+    "intro": "FreeCAD 是最成熟的开源参数化 3D 建模软件，2002 年发起，几何内核是 OpenCASCADE，32.2k 星，2026 年 4 月发布 1.1.1。它解决的问题是：不花钱、不上云，也能像商业 CAD 那样画出可修改、可出图、可打印的机械件和木作。\n它的核心是参数化建模：在 Sketcher 里画带几何约束的二维草图，在 Part Design 里拉伸、旋转、打孔成实体，每一步都记在模型树里，回头改一个尺寸整件跟着变；Spreadsheet 工作台能把型材长度、槽宽这类数字做成表格变量驱动整个装配；TechDraw 出带尺寸的加工图，再加上几百个社区工作台。界面有完整简体中文，官方 wiki 有大量中文页面，是三个方案里中文资料最好的一个。\n在 0805 里它是材质总纲的数字样板间：把欧标 2020（槽宽 6mm、壁厚 1.8）和 3030 / 4040（槽宽 8mm）做成两个参数化零件，角码、T 型螺母、端盖各一个，再做一套白蜡木板、植鞣皮面的外观库；以后 0301 工具台、0401 过道工具间、0404 木工间画机架时直接从这个库里拖，选错槽宽的配件就装不上，等于把材质规则写进了模型。零件库放 NAS 上统一版本，别各存各的。",
+    "diagram": {
+     "title": "FreeCAD · 参数化零件库把规则写进模型",
+     "nodes": [
+      {
+       "id": "spec",
+       "label": "D3 规格\n2020 槽 6 壁 1.8",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sheet",
+       "label": "Spreadsheet\n参数变量",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "FreeCAD\n草图 + 零件设计",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "lib",
+       "label": "参数化零件库\n型材 / 角码 / 螺母",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "asm",
+       "label": "各模块机架装配\n0301 / 0401 / 0404",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "draw",
+       "label": "TechDraw\n切割清单图",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "spec",
+       "sheet"
+      ],
+      [
+       "sheet",
+       "core",
+       "驱动尺寸"
+      ],
+      [
+       "core",
+       "lib",
+       "两档规格"
+      ],
+      [
+       "lib",
+       "asm",
+       "拖入"
+      ],
+      [
+       "asm",
+       "draw"
+      ],
+      [
+       "draw",
+       "me",
+       "下料"
+      ]
+     ],
+     "usage": "0805：2020 / 3030 两档型材与配件做成参数化零件库，各模块机架从库里拖"
+    }
    },
    {
-    "name": "adgaudio/OpenSCAD_connectors",
-    "url": "https://github.com/adgaudio/OpenSCAD_connectors",
-    "stars": "46",
-    "desc": "面向 2020 铝型材的参数化连接件库：角码、T 型接头、端盖，可直接出 STL 打印",
-    "why": "黑色角码缺货时自己打印的连接件就从这里改，槽宽参数改成 6mm 欧标"
+    "name": "openscad/openscad",
+    "url": "https://github.com/openscad/openscad",
+    "stars": "9.6k",
+    "zh": "界面有中文",
+    "desc": "程序员的 3D CAD：用脚本描述几何体，参数一改整件重生，Thingiverse 和 MakerWorld 上可自定义的型材配件多半用它写",
+    "why": "黑色角码缺货时自己打印的角码、端盖、槽盖条都用它写成参数化脚本，槽宽 6 / 8mm 一个变量切换",
+    "intro": "OpenSCAD 是程序员的 3D CAD：不用鼠标画，而是用一种小脚本语言描述几何体，9.6k 星，稳定版还是 2021.01，但开发版快照一直在更新。它解决的问题是：需要成批量、按参数变化的零件，同一个角码要出 2020 和 3030 两个版本，改一个数字就行。\n它的模型是构造实体几何：立方体、圆柱、球这些基本体经过并、差、交和平移旋转拼成复杂件，二维轮廓可以拉伸成体，STL 和 3MF 直接导出去打印。所有尺寸都是变量，顶部定义 slot = 6 之类的参数，Customizer 面板里拖滑块就能改；正因如此，Thingiverse 和 MakerWorld 上绝大多数可自定义的型材配件都是它写的，围绕它长出了 NopSCADlib 等大型零件库。界面有中文语言包，README 英文。\n在 0805 里它是配件打印的生产线：黑色角码缺货时，用它写一个参数化角码，槽宽、螺孔间距、壁厚都是变量，欧标 2020 出一版、3030 出一版，再加端盖、槽盖条、脚垫这几个常用件，导出 3MF 发给阁楼的拓竹打印。注意 OpenSCAD 只管形状不管装配关系，装配还是回 FreeCAD 看，两边靠同一份参数文件保持一致；打印件用黑色 PETG，别用 PLA。",
+    "diagram": {
+     "title": "OpenSCAD · 脚本出参数化打印配件",
+     "nodes": [
+      {
+       "id": "param",
+       "label": "参数文件\nslot = 6 / 8",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "dxf",
+       "label": "DXF 轮廓\n型材截面",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "OpenSCAD\nCSG 脚本",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "cust",
+       "label": "Customizer\n拖滑块改尺寸",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "stl",
+       "label": "3MF / STL\n角码 端盖 脚垫",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "printer",
+       "label": "拓竹打印机\n阁楼",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "param",
+       "core"
+      ],
+      [
+       "dxf",
+       "core",
+       "导入",
+       "dash"
+      ],
+      [
+       "cust",
+       "core"
+      ],
+      [
+       "core",
+       "stl",
+       "导出"
+      ],
+      [
+       "stl",
+       "printer"
+      ],
+      [
+       "printer",
+       "me",
+       "装到机架"
+      ]
+     ],
+     "usage": "0805：角码 / 端盖写成参数脚本，槽宽一变量切两档，出 3MF"
+    }
    },
    {
-    "name": "xiterion/openscad-extrusions",
-    "url": "https://github.com/xiterion/openscad-extrusions",
-    "stars": "1",
-    "desc": "OpenSCAD 里描述各厂商铝型材截面的小库",
-    "why": "把欧标 2020 / 3030 的真实截面放进模型里，检查配件和壁厚是否对得上"
+    "name": "nophead/NopSCADlib",
+    "url": "https://github.com/nophead/NopSCADlib",
+    "stars": "1.6k",
+    "zh": "无中文",
+    "desc": "OpenSCAD 零件库和项目框架：自带 E2020 / E3030 / E4040 铝型材、角码、滑入式 T 型螺母等标准件，能生成 BOM 和装配图",
+    "why": "0804 三机机架和各模块型材框架直接用它的型材与角码模型拼，跑脚本就出切割清单和螺丝数量",
+    "intro": "NopSCADlib 是 Chris Palmer（nophead）维护的 OpenSCAD 零件库和项目框架，1.6k 星，GPL v3，持续更新十几年。它解决的问题是：做一台机器要用的标准件，每次都自己画一遍太浪费，不如有一个尺寸准确的库，顺手把 BOM 和装配图也生成了。\n它的内容分两大块。vitamins（外购件）里直接有 E2020、E3030、E4040 等一整套铝型材模型，带真实槽形截面，配套 extrusion_corner_bracket、extrusion_inner_corner_bracket 角码和 sliding_t_nut 滑入式 T 型螺母；printed（打印件）里有盒子、铰链、线夹、脚垫等结构件。框架部分是一套 Python 脚本：在 OpenSCAD 注释里写 Markdown，脚本就能扫出 BOM 清单和分步装配图。README 和文档只有英文，看示例就会。\n在 0805 里它是型材机架的标准件字典：0804 那个 60×40cm 三机机架，直接用 E2020 拼框架、角码做角、T 型螺母挂托板，跑一次脚本就得到型材切割清单和螺丝数量。要注意它的 2020 截面是 6mm 槽，正好对上 D3 定标；但它默认角码是银色通用件，喷砂黑那几件要在 printed 里自己加颜色参数；3030 是 8mm 槽，配件要分别传参。",
+    "diagram": {
+     "title": "NopSCADlib · 标准件库拼机架出 BOM",
+     "nodes": [
+      {
+       "id": "vit",
+       "label": "vitamins\nE2020 / E3030",
+       "kind": "db",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "prt",
+       "label": "printed\n盒 / 铰链 / 脚垫",
+       "kind": "db",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "NopSCADlib\n项目框架",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "script",
+       "label": "Python 脚本\n扫注释",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "model",
+       "label": "机架模型\n0804 三机架",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "bom",
+       "label": "BOM + 装配图\nreadme",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "vit",
+       "core"
+      ],
+      [
+       "prt",
+       "core"
+      ],
+      [
+       "core",
+       "model",
+       "拼框架"
+      ],
+      [
+       "model",
+       "script"
+      ],
+      [
+       "script",
+       "bom",
+       "生成"
+      ],
+      [
+       "bom",
+       "me",
+       "照单采购"
+      ]
+     ],
+     "usage": "0805：E2020 + 角码 + T 型螺母拼 0804 机架，脚本出切割清单和螺丝数量"
+    }
    }
   ],
   "xhs": [

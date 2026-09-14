@@ -1,84 +1,1210 @@
 [
-  {
-    "id": "0601",
-    "github": [
-      {"name": "cofade/open-garden-planner", "url": "https://github.com/cofade/open-garden-planner", "stars": "8",
-       "desc": "开源桌面版庭院规划工具，按米制精确画布局，给每棵植物挂元数据并导出标准格式",
-       "why": "间接参考：把 50 平米三分区和滴灌走线按实际尺寸画进去，树间距 4 米一眼看出够不够"},
-      {"name": "Ecohackerfarm/powerplant", "url": "https://github.com/Ecohackerfarm/powerplant", "stars": "94",
-       "desc": "基于朴门永续原则的种植规划应用，给出植物搭配建议和种植时间表",
-       "why": "间接参考：草原带混播和野花点缀带选种时，用它查哪些植物搭在一起互相不打架"},
-      {"name": "openfarmcc/OpenFarm", "url": "https://github.com/openfarmcc/OpenFarm", "stars": "1.7k",
-       "desc": "曾经的开放种植知识库，收录大量植物的间距、需水、土壤和伴生信息，2025 年已归档",
-       "why": "间接参考：网站已关但代码和数据还在，能扒出芒草、松果菊这类植物的间距和需水资料"}
-    ],
-    "xhs": [
-      {"keyword": "疏林草原 庭院", "note": "看芒草狼尾草配几棵歪脖子树的草原感布局和拍照角度"},
-      {"keyword": "观赏草 花园 设计", "note": "看观赏草混播的品种搭配、密度和秋天穗子的效果"},
-      {"keyword": "碎石 干河道 庭院", "note": "看用碎石干河道分隔草地和庭院的做法，雨天排水效果"}
-    ]
-  },
-  {
-    "id": "0602",
-    "github": [
-      {"name": "OpenSprinkler/OpenSprinkler-Firmware", "url": "https://github.com/OpenSprinkler/OpenSprinkler-Firmware", "stars": "543",
-       "desc": "OpenSprinkler 开源灌溉控制器统一固件，支持树莓派和 ESP 硬件，带网页、MQTT 和天气调节",
-       "why": "三路电磁阀最成熟的现成方案，接雨量和土壤传感器就能按湿度和天气决定浇不浇"},
-      {"name": "altmenorg/HAsmartirrigation", "url": "https://github.com/altmenorg/HAsmartirrigation", "stars": "548",
-       "desc": "HomeAssistant 智能灌溉组件，按蒸散量和降雨计算每个分区该浇多久",
-       "why": "草原区、疏林区各建一个分区，它算出该浇几分钟，再交给 ESP32 开阀"},
-      {"name": "petergridge/Irrigation-V5", "url": "https://github.com/petergridge/Irrigation-V5", "stars": "115",
-       "desc": "HomeAssistant 灌溉排程集成，多区、按天气调节、自带 Lovelace 卡片",
-       "why": "凌晨四到六点的时段锁定、三区不同阈值和草地体检卡片，用它配起来最快"},
-      {"name": "lrswss/esp32-irrigation-automation", "url": "https://github.com/lrswss/esp32-irrigation-automation", "stars": "36",
-       "desc": "ESP32 自动灌溉的固件和硬件设计，四路电磁阀加水泵，带土壤湿度和水位监测，MQTT 接 HomeAssistant",
-       "why": "桧木杆里那块控制板可以直接照它的电路做，电磁阀、水位、湿度探针一块板全包了"}
-    ],
-    "xhs": [
-      {"keyword": "庭院 自动浇水 esphome", "note": "看博主晒的 ESP32 灌溉控制盒和 YAML 配置，传感器怎么接"},
-      {"keyword": "土壤湿度传感器 花园", "note": "看电容式探针埋在草地里的安装深度和防水做法"},
-      {"keyword": "庭院 电磁阀 滴灌 安装", "note": "看多路电磁阀分区接管和滴灌主管走线的实拍"}
-    ]
-  },
-  {
-    "id": "0603",
-    "github": [
-      {"name": "kane5432/ESP32-Water-Level-Sensor", "url": "https://github.com/kane5432/ESP32-Water-Level-Sensor", "stars": "55",
-       "desc": "ESP32-C3 加超声波测水罐水位并上报 HomeAssistant，支持深度睡眠省电和 OTA 升级",
-       "why": "雨水罐顶开口装一颗超声波探头，直接照它做，水位低于 20% 就触发自来水补水阀"},
-      {"name": "tomsbasement/esp32-water-tank-sensor", "url": "https://github.com/tomsbasement/esp32-water-tank-sensor", "stars": "19",
-       "desc": "用现成模块做的 ESPHome 水罐水位传感器，带太阳能充电，接 HomeAssistant",
-       "why": "罐子在屋后没电源的话看这个，太阳能小板供电，ESPHome 配置可以直接抄"},
-      {"name": "hugokernel/esphome-weather-station", "url": "https://github.com/hugokernel/esphome-weather-station", "stars": "338",
-       "desc": "ESPHome 版 Elektor 气象站，含翻斗雨量计脉冲计数、风速风向和温湿度",
-       "why": "它的翻斗雨量计 YAML 拿来算每场雨接了多少升，配合水位就能统计雨水占比"}
-    ],
-    "xhs": [
-      {"keyword": "雨水收集 庭院 水罐", "note": "看落水管接雨水罐的整体布置，罐子怎么用格栅遮丑"},
-      {"keyword": "初期雨水 弃流 diy", "note": "看首雨弃流桶的自制做法和底部慢排小孔"},
-      {"keyword": "雨水花园 溢流 碎石", "note": "看溢流口接碎石干河道的景观处理和暴雨实拍"}
-    ]
-  },
-  {
-    "id": "0604",
-    "github": [
-      {"name": "blakeblackshear/frigate", "url": "https://github.com/blakeblackshear/frigate", "stars": "35.1k",
-       "desc": "本地 AI 目标检测的开源 NVR，配 HomeAssistant 用，支持 Coral 和 GPU 加速",
-       "why": "长焦机的移动侦测和鸟、猫、人识别全靠它，本地跑不上云，通知直接推到手机"},
-      {"name": "Nachtzuster/BirdNET-Pi", "url": "https://github.com/Nachtzuster/BirdNET-Pi", "stars": "1.1k",
-       "desc": "树莓派上的实时鸟类声纹识别系统，BirdNET-Pi 的活跃维护分支",
-       "why": "杆子上挂一个麦克风，靠叫声认鸟，和摄像头图像识别互相印证，戴胜叫一声就知道"},
-      {"name": "mmcc-xx/WhosAtMyFeeder", "url": "https://github.com/mmcc-xx/WhosAtMyFeeder", "stars": "456",
-       "desc": "Frigate 的伴侣程序，用 TensorFlow 鸟类分类模型识别 Frigate 抓到的鸟是什么种",
-       "why": "Frigate 抓到鸟之后交给它分种，自动生成来访者名单，新物种推通知就靠这一步"},
-      {"name": "Jellman86/YetAnother-WhosAtMyFeeder", "url": "https://github.com/Jellman86/YetAnother-WhosAtMyFeeder", "stars": "43",
-       "desc": "WhosAtMyFeeder 的重写版，更新活跃，带实时仪表盘、硬件加速和 HomeAssistant 集成",
-       "why": "原版更新慢，想要更好看的仪表盘和多传感器交叉验证就用这个新版"}
-    ],
-    "xhs": [
-      {"keyword": "院子 观鸟 摄像头", "note": "看博主在院子里架摄像头拍鸟的机位、镜头和水盆喂鸟器布置"},
-      {"keyword": "喂鸟器 diy 木", "note": "看木制喂鸟器的结构和挂法，怎么防松鼠和野猫"},
-      {"keyword": "草地 延时摄影 一年", "note": "看固定机位拍一年草地和植物变化的延时帖，学机位固定方法"}
-    ]
-  }
+ {
+  "id": "0601",
+  "github": [
+   {
+    "name": "danielbrendel/hortusfox-web",
+    "url": "https://github.com/danielbrendel/hortusfox-web",
+    "stars": "1.7k",
+    "zh": "无中文",
+    "desc": "自托管的植物管理与追踪系统，按位置分组建植物档案，带任务、日历、库存、天气和二维码，Docker 一条命令跑起来",
+    "why": "把疏林带、草原带、野花带建成三个位置，每棵朴树、每片芒草建档，二月割草、补播野花的养护任务进日历按月提醒",
+    "intro": "HortusFox 是德国开发者 Daniel Brendel 做的开源植物管理系统，GitHub 上 1.7k 星，是自托管圈子里目前最活跃的植物档案工具。它解决的问题是：家里、院子里几十上百株植物，谁在哪、上次浇水施肥是什么时候、什么季节该做什么。\n它是 PHP 加 MariaDB 的网页应用，官方 Docker 镜像一条 compose 命令就起来，多人协作。核心结构是位置和植物：先建位置，再把植物挂进去，每株有名字、学名、照片、光照需水等属性和一条完整的操作历史；任务系统给植物或位置挂待办，日历系统按日期排养护事项并发提醒；还有库存管理、天气接入、群聊、二维码标签、REST API 和外部植物识别。暂无中文包，但结构简单。\n在 0601 里它是分区养护日历：建疏林带、草原带、野花带三个位置，三棵朴树和一棵乌桕各建一株，芒草、狼尾草、蓝羊茅按片建档，金光菊、松果菊、马鞭草记种植日期和自播情况；日历里写死几条年度任务，二月底整片贴地割草、割下的草秆垫到疏林带、梅雨前检查地埋滴灌出土口、秋天补播野花。桧木牌上的植物名和它里面的名字保持一致，手机扫二维码就能看这棵树的历史。要注意它没有 HomeAssistant 集成，提醒靠邮件或它自己的通知，可以用 REST API 让 HomeAssistant 每周拉一次到期任务推到手机。",
+    "diagram": {
+     "title": "HortusFox · 按位置建档的植物管家",
+     "nodes": [
+      {
+       "id": "me",
+       "label": "一个人\n拍照 / 记操作",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "qr",
+       "label": "桧木牌二维码",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "HortusFox\nPHP + MariaDB",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "cal",
+       "label": "任务 / 日历\n年度养护事项",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "loc",
+       "label": "三个位置\n疏林 / 草原 / 野花",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n每周拉到期任务",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "phone",
+       "label": "手机提醒",
+       "kind": "device",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "me",
+       "core",
+       "建档"
+      ],
+      [
+       "qr",
+       "core",
+       "扫码查历史",
+       "dash"
+      ],
+      [
+       "core",
+       "loc"
+      ],
+      [
+       "cal",
+       "core"
+      ],
+      [
+       "core",
+       "ha",
+       "REST API"
+      ],
+      [
+       "ha",
+       "phone",
+       "推送"
+      ]
+     ],
+     "usage": "0601：三区植物档案 + 年度养护日历，二月割草、秋补野花按月提醒"
+    }
+   },
+   {
+    "name": "openfarmcc/OpenFarm",
+    "url": "https://github.com/openfarmcc/OpenFarm",
+    "stars": "1.7k",
+    "zh": "无中文",
+    "desc": "曾经的开放种植知识库，收录大量植物的间距、需水、光照、土壤和伴生信息，2025 年 4 月已归档，代码和数据仍可下载",
+    "why": "网站已关但数据还在，选种时查芒草、松果菊、朴树这类植物的株距、需水量和耐旱性，按它的数字定每平米株数和滴头间距",
+    "intro": "OpenFarm 是 2014 年由 FarmBot 创始人 Rory Aronson 众筹发起的开放种植知识库，口号是你可以种任何东西，GitHub 上 1.7k 星。它想解决的问题是：植物怎么种的知识散落在各种书和论坛里，格式不统一也不开放，于是做了一个人人可编辑的种植指南数据库，像种植版的维基百科。项目在 2025 年 4 月归档，网站已关，但仓库是只读状态，代码和数据导出仍然能拿到。\n它是 Ruby on Rails 加 MongoDB 的网页应用，核心数据是两层：作物条目记录每种植物的学名、株距、行距、播种深度、需水、光照、土壤酸碱和成熟天数；种植指南由用户按气候和方法写步骤，可以有多份。所有数据 CC 协议开放，有 JSON API，别人做的种植 App 很多都从它拉数据。README 只有英文，没有中文资料，但字段都是数字，看得懂。\n在 0601 里它是选种和排布时的资料库：细叶芒、狼尾草、蓝羊茅、金光菊、松果菊、马鞭草、朴树、乌桕，每种查一遍株距和需水量，草原带混播的每平米株数、野花带每平米 6 株、朴树 4 米以上间距，都能对着它的数字校一遍，再决定地埋滴灌每米放几个滴头。用法是把仓库克隆下来跑一个本地实例，或者直接读数据导出文件。要注意它以北美和欧洲的作物为主，本地乡土种如朴树、乌桕可能没有条目，用同属植物的数据代替，再结合杭州本地苗圃的经验。",
+    "diagram": {
+     "title": "OpenFarm · 已归档的开放种植数据库",
+     "nodes": [
+      {
+       "id": "wiki",
+       "label": "众包种植指南\n2014-2025",
+       "kind": "cloud",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "dump",
+       "label": "数据导出\nJSON / 仓库",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "OpenFarm\nRails + MongoDB",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "crop",
+       "label": "作物条目\n株距 / 需水 / 光照",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "plan",
+       "label": "0601 排布表\n株数 / 滴头间距",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "一个人\n对照本地苗圃",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "wiki",
+       "core",
+       "历史数据",
+       "dash"
+      ],
+      [
+       "dump",
+       "core",
+       "本地跑"
+      ],
+      [
+       "core",
+       "crop"
+      ],
+      [
+       "crop",
+       "plan",
+       "查数字"
+      ],
+      [
+       "plan",
+       "me"
+      ]
+     ],
+     "usage": "0601：选种时查八种植物的株距和需水量，定每平米株数与滴头间距"
+    }
+   },
+   {
+    "name": "Ecohackerfarm/powerplant",
+    "url": "https://github.com/Ecohackerfarm/powerplant",
+    "stars": "94",
+    "zh": "无中文",
+    "desc": "基于朴门永续原则的种植规划应用，内置植物伴生关系数据，给出哪些植物搭在一起互利、哪些相克，并排种植时间表",
+    "why": "小众但没有更好的替代：草原带混播和野花带选种时查伴生关系，避免把互相压制的种混在一起，是朴门伴生规划的少数现成工具",
+    "intro": "powerplant 是德国 Ecohackerfarm 朴门农场做的开源种植规划工具，GitHub 上 94 星，社区小，但它是少数把朴门永续里的植物伴生关系做成可查可算的软件，而不是一张纸质对照表。它解决的问题是：一块地里种多种植物，哪些搭在一起互利、哪些互相压制、哪些吸引害虫的天敌，这些知识分散在书里，规划时很难一次看全。\n它是 Node.js 后端加 React 前端的网页应用，核心是一份植物数据库和一张伴生关系矩阵，数据来自朴门社区整理的开放资料。用法是先建一块地，往里加想种的植物，它会给每对植物打分，绿的互利、红的相克，并按你的气候区排出播种和移栽的时间表；也能反过来问它，已经种了 A，还能配哪些 B。数据可导出，没有 HomeAssistant 接口，也没有中文资料，界面是英文但操作只有拖拽和勾选。\n在 0601 里它用在选种阶段：草原带的细叶芒、狼尾草、蓝羊茅三种混播，野花带的金光菊、松果菊、马鞭草，加上疏林带的朴树和乌桕，全部录进去看一遍关系矩阵，确认没有明显相克的组合，再决定混播比例；朴树树下的碎树皮护根圈里以后想加点地被，也先在它里面配一下。要注意它的数据库以蔬菜和果树为主，观赏草和乡土乔木条目少，查不到就按同科同属替代，把它当一个提醒工具而不是最终裁判。",
+    "diagram": {
+     "title": "powerplant · 朴门伴生关系规划",
+     "nodes": [
+      {
+       "id": "me",
+       "label": "一个人\n录入候选植物",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "伴生关系数据\n朴门社区整理",
+       "kind": "db",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "powerplant\nNode + React",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "mat",
+       "label": "关系矩阵\n互利 / 相克",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "sched",
+       "label": "播种时间表",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "mix",
+       "label": "0601 混播比例\n草原带 / 野花带",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "me",
+       "core",
+       "建地块"
+      ],
+      [
+       "db",
+       "core"
+      ],
+      [
+       "core",
+       "mat",
+       "打分"
+      ],
+      [
+       "core",
+       "sched"
+      ],
+      [
+       "mat",
+       "mix",
+       "定组合"
+      ],
+      [
+       "sched",
+       "mix",
+       "定时间"
+      ]
+     ],
+     "usage": "0601：草原带三种草 + 野花带三种花，先查相克再定混播比例和播期"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "疏林草原 庭院",
+    "note": "看芒草狼尾草配几棵歪脖子树的草原感布局和拍照角度"
+   },
+   {
+    "keyword": "观赏草 花园 设计",
+    "note": "看观赏草混播的品种搭配、密度和秋天穗子的效果"
+   },
+   {
+    "keyword": "碎石 干河道 庭院",
+    "note": "看用碎石干河道分隔草地和庭院的做法，雨天排水效果"
+   }
+  ]
+ },
+ {
+  "id": "0602",
+  "github": [
+   {
+    "name": "esphome/esphome",
+    "url": "https://github.com/esphome/esphome",
+    "stars": "11.7k",
+    "zh": "无中文（社区教程多）",
+    "desc": "用 YAML 配置 ESP32 固件的系统，土壤湿度、翻斗雨量、超声波水位、电磁阀都是现成组件，本地跑逻辑，原生接 HomeAssistant",
+    "why": "桧木杆里那块 ESP32 就靠它：三传感器读数、三条件本地判断、三路阀门用 sprinkler 组件轮浇，断网照常，大红按钮也是它一行配置",
+    "intro": "ESPHome 是 Nabu Casa 维护的 ESP32 固件生成系统，和 HomeAssistant 同一个团队，GitHub 上 11.7k 星。想让 ESP32 读传感器、开关继电器、跑一点判断逻辑，以前得写 Arduino 代码，而它只要一份 YAML 写清接了什么、往哪报，编译、烧录、OTA 全自动。\n它的工作方式是 YAML 到 C++ 的编译器：你声明传感器型号、引脚、采样周期，它生成固件；固件在设备本地运行，原生 API 推给 HomeAssistant，断网照常。和灌溉相关的组件很全：adc 读电容湿度探针，pulse_counter 数翻斗雨量计的脉冲，ultrasonic 读罐内水位，switch 控继电器，专门的 sprinkler 组件内置多路阀门排队轮浇和主阀联动。没有官方中文，但中文社区极大。\n在 0602 里它就是桧木杆里的大脑：一块 ESP32 接三根湿度探针、雨量计和水位计，三路电磁阀经继电器接 sprinkler 组件；凌晨四点检查每区含水率低于阈值、罐里有水、HomeAssistant 传来的六小时降雨预测为零，三条都满足才把该区加入本轮；木杆上的大红按钮接一个 GPIO，按下就手动跑一轮。要注意电容探针要在干土和饱和土各标定一次，ADC 用 11dB 衰减并取五分钟中位数；三路阀门共用 12V 电源时加续流二极管。",
+    "diagram": {
+     "title": "ESPHome · YAML 生成本地灌溉固件",
+     "nodes": [
+      {
+       "id": "soil",
+       "label": "三根湿度探针",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "rain",
+       "label": "雨量计 / 水位计",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "btn",
+       "label": "木杆大红按钮",
+       "kind": "device",
+       "col": 0,
+       "row": 2
+      },
+      {
+       "id": "core",
+       "label": "ESPHome 固件\nESP32 本地判断",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "spr",
+       "label": "sprinkler 组件\n三路轮浇",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "valve",
+       "label": "三路 12V 电磁阀",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n降雨预测 / 曲线",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "soil",
+       "core",
+       "含水率"
+      ],
+      [
+       "rain",
+       "core"
+      ],
+      [
+       "btn",
+       "core",
+       "手动一轮"
+      ],
+      [
+       "ha",
+       "core",
+       "6h 无雨",
+       "dash"
+      ],
+      [
+       "core",
+       "spr",
+       "三条件"
+      ],
+      [
+       "spr",
+       "valve",
+       "开阀"
+      ],
+      [
+       "core",
+       "ha",
+       "实体"
+      ]
+     ],
+     "usage": "0602：三传感器进 ESP32，本地三条件判断，sprinkler 组件凌晨四点轮浇三区"
+    }
+   },
+   {
+    "name": "altmenorg/HAsmartirrigation",
+    "url": "https://github.com/altmenorg/HAsmartirrigation",
+    "stars": "550",
+    "zh": "界面有中文",
+    "desc": "HomeAssistant 智能灌溉组件，按蒸散量和降雨算每个分区的水桶余额，给出该浇多少秒，界面自带 19 种语言含简体中文",
+    "why": "三区各建一个分区，它按天气算出疏林、草原、野花各要浇几分钟，替代拍脑袋的固定时长，再把秒数交给桧木杆里的 ESP32 执行",
+    "intro": "Smart Irrigation 是荷兰开发者 altmenorg 维护的 HomeAssistant 自定义集成，GitHub 上 550 星。固定时长的浇水要么浪费要么不够，科学的做法是算蒸散量，缺多少补多少，而这套农业公式普通人算不动。\n它的工作方式是水桶模型：每个分区有一个虚拟水桶，每天用 FAO-56 的 Penman-Monteith 公式，按温度、湿度、风速、日照算出蒸散量从桶里扣掉，降雨往桶里加，桶低于零就表示缺水，缺的毫米数除以你填的滴灌流量就是该浇多少秒。天气数据可以来自 OpenWeatherMap，也可以完全用你自己的传感器；每个分区可设土壤类型、植物系数、面积和流量。它只负责算，秒数放在实体里由你的自动化去执行。界面有 19 种语言，含简体中文，更新频繁。\n在 0602 里它是算账的那一层：疏林带、草原带、野花带各建一个分区，面积填 35、40、25 平米，植物系数按乔木、观赏草、宿根花分别取；雨量计的日累计和本地温湿度接进去替代网络天气。每天凌晨三点它算完，HomeAssistant 把三个秒数通过原生 API 写进桧木杆 ESP32 的 sprinkler 时长，四点由 ESP32 结合含水率和水位做最后判断。要注意地埋滴灌的湿润范围小，蒸散公式假设整面浇透，前两周对照探针实测把植物系数调低，别按默认值浇。",
+    "diagram": {
+     "title": "Smart Irrigation · 蒸散量算该浇几秒",
+     "nodes": [
+      {
+       "id": "wx",
+       "label": "本地温湿风\n杆顶雨量计",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "owm",
+       "label": "OpenWeatherMap",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Smart Irrigation\nHA 集成",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "bucket",
+       "label": "三区水桶\nFAO-56 蒸散",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "sec",
+       "label": "三个秒数实体",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "esp",
+       "label": "桧木杆 ESP32\nsprinkler 时长",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "valve",
+       "label": "三路电磁阀",
+       "kind": "device",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "wx",
+       "core",
+       "实测"
+      ],
+      [
+       "owm",
+       "core",
+       "替代",
+       "dash"
+      ],
+      [
+       "core",
+       "bucket",
+       "每天算"
+      ],
+      [
+       "bucket",
+       "sec",
+       "缺水毫米"
+      ],
+      [
+       "sec",
+       "esp",
+       "写时长"
+      ],
+      [
+       "esp",
+       "valve",
+       "四点执行"
+      ]
+     ],
+     "usage": "0602：三区分别算蒸散缺水量，秒数写进 ESP32，凌晨四点结合探针最终判断"
+    }
+   },
+   {
+    "name": "OpenSprinkler/OpenSprinkler-Firmware",
+    "url": "https://github.com/OpenSprinkler/OpenSprinkler-Firmware",
+    "stars": "543",
+    "zh": "无中文",
+    "desc": "OpenSprinkler 开源灌溉控制器的统一固件，跑在 ESP8266 或树莓派上，多站点排程、天气调节、雨和土壤传感器输入、MQTT",
+    "why": "不想自己写 YAML 的备选路线：三路阀接一块 OpenSprinkler 板，站点排程和传感器跳过是十年打磨过的成熟逻辑，手机 App 直接管",
+    "intro": "OpenSprinkler 是美国 Rayshobby 公司从 2011 年做起的开源灌溉控制器，硬件和固件都开源，这个仓库是它的统一固件，GitHub 上 543 星，2025 年 11 月还在发新版。它把多路电磁阀灌溉做成一个能联网、按天气自动调、有手机 App 的控制器，是 DIY 灌溉领域里资格最老的项目。\n同一套 C++ 代码可以编译给 ESP8266 版的 OpenSprinkler 3.x、树莓派版的 OSPi 和任何 Linux 机器。核心概念是站点和程序：每个站点对应一路电磁阀，程序定义哪些站点在什么时间浇多久；天气调节模块按气象数据算一个百分比缩放浇水时长；传感器输入支持雨传感器、土壤湿度开关和流量计，触发就跳过或暂停；网页和 App 通用，有 MQTT 和 HTTP API。硬件可买成品也可照原理图自制。没有中文资料。\n在 0602 里它是不写代码的备选路线：三路 12V 电磁阀接三个站点，程序设成凌晨四点一轮，疏林 12 分钟、草原 8 分钟、野花 6 分钟；雨量计接它的雨传感器输入，下雨自动跳过，土壤探针经 ESP32 比较阈值后给它一个干接点当土壤传感器，太湿也跳过；雨水罐水位低时用 API 把它整体禁用。要注意它的传感器输入只认开关量，三区不同阈值得在 ESP32 那边分别比较；天气单位默认英制，改成公制。",
+    "diagram": {
+     "title": "OpenSprinkler · 十年打磨的站点排程",
+     "nodes": [
+      {
+       "id": "rain",
+       "label": "雨传感器输入",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "soil",
+       "label": "ESP32 干接点\n土壤太湿",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "app",
+       "label": "手机 App / 网页",
+       "kind": "screen",
+       "col": 0,
+       "row": 2
+      },
+      {
+       "id": "core",
+       "label": "OpenSprinkler 固件\nESP8266",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "prog",
+       "label": "程序 / 站点\n凌晨四点一轮",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "valve",
+       "label": "三路电磁阀\n12 / 8 / 6 分钟",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\nMQTT 体检卡片",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "rain",
+       "core",
+       "跳过"
+      ],
+      [
+       "soil",
+       "core",
+       "跳过"
+      ],
+      [
+       "app",
+       "core",
+       "改程序",
+       "dash"
+      ],
+      [
+       "core",
+       "prog"
+      ],
+      [
+       "prog",
+       "valve",
+       "开阀"
+      ],
+      [
+       "core",
+       "ha",
+       "MQTT"
+      ]
+     ],
+     "usage": "0602：三区三站点按程序浇，雨和土壤开关量跳过，MQTT 报给 HA"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "庭院 自动浇水 esphome",
+    "note": "看博主晒的 ESP32 灌溉控制盒和 YAML 配置，传感器怎么接"
+   },
+   {
+    "keyword": "土壤湿度传感器 花园",
+    "note": "看电容式探针埋在草地里的安装深度和防水做法"
+   },
+   {
+    "keyword": "庭院 电磁阀 滴灌 安装",
+    "note": "看多路电磁阀分区接管和滴灌主管走线的实拍"
+   }
+  ]
+ },
+ {
+  "id": "0603",
+  "github": [
+   {
+    "name": "home-assistant/core",
+    "url": "https://github.com/home-assistant/core",
+    "stars": "88k",
+    "zh": "有中文文档站",
+    "desc": "本地优先的开源家庭自动化中枢，几千个集成，自带统计、utility_meter 计量和自动化引擎，官方界面和文档都有简体中文",
+    "why": "雨水罐的水位曲线、自来水补位阀的自动化、雨水占比统计全在它里面：水位低于 20% 开阀补到 40%，补水量记进 utility_meter 算占比",
+    "intro": "Home Assistant 是目前最大的开源家庭自动化平台，GitHub 上 88k 星，由 Nabu Casa 支撑的开源基金会维护，核心理念是本地优先、隐私优先。它把几千种设备接进同一个本地中枢，用统一的实体、自动化、仪表盘来管，不依赖厂商服务器。\n它是 Python 写的服务，跑在树莓派、迷你主机或 NAS 上，通过集成把设备变成实体：ESPHome 节点原生 API 自动发现，MQTT、Zigbee、蓝牙都有官方集成。实体的历史数据存进本地数据库，长期统计单独归档；自动化引擎由触发、条件、动作三段组成，可以用界面点出来也可以写 YAML；utility_meter 组件能把任何累计量按日、周、月切成账单，template 能把几个实体算成新实体。界面和文档都有简体中文。\n在 0603 里它是雨水罐的账房：罐顶超声波水位计和自来水补位电磁阀都是 ESPHome 实体，一条自动化在水位低于 20% 时开补位阀、到 40% 关，补水时长乘流量记成补水升数；雨量计的翻斗脉冲折算成屋面集水升数，两者各建一个 utility_meter 按月累计，再用 template 算出雨水占比，做成一张卡片放到 0802 大屏，梅雨季能看到占比接近百分之百。要注意补位阀要加一个最长开启时间的保护条件，否则水位计故障会一直放自来水；水位实体加滤波，罐里进水时液面晃动会让超声波读数跳。",
+    "diagram": {
+     "title": "Home Assistant · 雨水罐的账房",
+     "nodes": [
+      {
+       "id": "lvl",
+       "label": "超声波水位计\nESPHome",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "rain",
+       "label": "雨量计脉冲",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Home Assistant\n自动化引擎",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "meter",
+       "label": "utility_meter\n雨水 / 自来水",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "valve",
+       "label": "自来水补位阀\n20% 开 40% 关",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "card",
+       "label": "雨水占比卡片\n0802 大屏",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "lvl",
+       "core",
+       "水位"
+      ],
+      [
+       "rain",
+       "core",
+       "集水升数"
+      ],
+      [
+       "core",
+       "valve",
+       "补位"
+      ],
+      [
+       "core",
+       "meter",
+       "累计"
+      ],
+      [
+       "meter",
+       "card",
+       "占比"
+      ],
+      [
+       "card",
+       "me"
+      ]
+     ],
+     "usage": "0603：水位低于 20% 自动补自来水到 40%，补水和集水各计量，月度算雨水占比"
+    }
+   },
+   {
+    "name": "hugokernel/esphome-weather-station",
+    "url": "https://github.com/hugokernel/esphome-weather-station",
+    "stars": "338",
+    "zh": "无中文",
+    "desc": "ESPHome 版的 Elektor 气象站，翻斗雨量计脉冲计数、风速风向、温湿度气压一整套 YAML，含硬件接线和 3D 打印件",
+    "why": "它的翻斗雨量计 YAML 直接抄：每一翻斗多少毫米、脉冲怎么滤、日累计怎么归零都写好了，配合屋面面积就是每场雨接了多少升",
+    "intro": "esphome-weather-station 是法国开发者 hugokernel 把 Elektor 杂志的气象站套件用 ESPHome 重做的项目，GitHub 上 338 星，有英文和法文 README。市面上带翻斗雨量计、风杯和风向标的气象站配件很便宜，它用一块 ESP32 和一份 YAML 把这套传感器全部接进 HomeAssistant。\n它的架构是一块 ESP32 接三类传感器：翻斗雨量计每翻一次给一个干簧管脉冲，用 pulse_counter 组件计数，乘以每斗的毫米数就是降雨量，再用积分组件做日累计和午夜归零；风杯同样是脉冲计数换算风速，风向标是电阻分压接 ADC，查表得方位；温湿度气压用 BME280。仓库里有完整的 YAML、接线图和 3D 打印安装件。没有中文资料，但 YAML 每一行都有注释，照抄能用。\n在 0603 里它负责算每场雨接了多少水：在 0602 桧木杆顶那颗翻斗雨量计就按它的接法接进杆内的 ESP32，YAML 里的每斗毫米数按买到的雨量计标定，通常是 0.2794 或 0.3 毫米；HomeAssistant 收到日降雨毫米数后乘以东坡屋面的集水面积再乘 0.8 的径流系数，就是理论进罐升数，和水位计的实际上升量对照，能看出弃流桶和滤篮吃掉了多少。要注意干簧管脉冲会抖，YAML 里的去抖时间设 50 毫秒以上；雨量计要装水平并定期清落叶。",
+    "diagram": {
+     "title": "气象站 YAML · 翻斗脉冲变成升数",
+     "nodes": [
+      {
+       "id": "tip",
+       "label": "翻斗雨量计\n干簧管脉冲",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "wind",
+       "label": "风杯 / 风向标",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ESPHome 气象站\n杆内 ESP32",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "pc",
+       "label": "pulse_counter\n×每斗毫米",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n日降雨毫米",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "calc",
+       "label": "×屋面面积×0.8\n理论进罐升数",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "tank",
+       "label": "对照水位上升",
+       "kind": "db",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "tip",
+       "core",
+       "脉冲"
+      ],
+      [
+       "wind",
+       "core"
+      ],
+      [
+       "core",
+       "pc",
+       "计数"
+      ],
+      [
+       "pc",
+       "ha",
+       "日累计"
+      ],
+      [
+       "ha",
+       "calc"
+      ],
+      [
+       "calc",
+       "tank",
+       "对照"
+      ]
+     ],
+     "usage": "0603：雨量计脉冲 → 日降雨 → 乘屋面面积得理论集水，和罐内实际上升对照"
+    }
+   },
+   {
+    "name": "kane5432/ESP32-Water-Level-Sensor",
+    "url": "https://github.com/kane5432/ESP32-Water-Level-Sensor",
+    "stars": "55",
+    "zh": "无中文",
+    "desc": "ESP32-C3 加防水超声波探头测水罐水位，ESPHome 原生接 HomeAssistant，太阳能加锂电供电，深度睡眠 1.5 小时醒一次，带 OTA 窗口",
+    "why": "小众但恰好就是这个需求的完整答案：罐顶 DN50 快开口装一颗 AJ-SR04M，照它的接线和 YAML 做，水位实体直接触发补位阀",
+    "intro": "ESP32-Water-Level-Sensor 是开发者 kane5432 做的水罐水位监测小项目，GitHub 上 55 星，星数不多，但它把一个户外无电源水罐的水位监测从硬件到 YAML 完整做了一遍，正好是雨水罐这种场景的现成答案。\n它的硬件是一块 ESP32-C3 Super Mini 加一颗 AJ-SR04M 防水超声波探头，探头装在罐顶朝下测到水面的距离，罐深减去距离就是水位；供电是一块 6V 1W 太阳能板经 TP4056 给锂电池充电，再经 5V 升压给主控和探头。固件用 ESPHome 写，通过原生 API 报给 HomeAssistant，每次读完进入 1.5 小时深度睡眠，读数失败一分钟后重试；每次启动开两分钟 OTA 窗口。标定只需量两个数，空罐时探头到罐底的距离和满罐时到水面的距离，填进 YAML 即可。没有中文资料。\n在 0603 里它就装在 1500L 卧式罐顶那个 DN50 快开口上：探头用一段 PVC 管座固定，太阳能板贴在桧木格栅顶上朝南；YAML 里把 1500L 罐的空满两个距离标定好，再用 template 把百分比换算成升。水位实体就是 0603 补位阀和 0602 开阀前置条件的数据源。要注意卧式罐截面是圆的，距离和升数不是线性关系，要按圆截面公式换算；进水时液面晃动和罐壁回波会让读数跳，加中位数滤波。",
+    "diagram": {
+     "title": "水位探头 · 太阳能 + 超声波 + 深睡",
+     "nodes": [
+      {
+       "id": "sr04",
+       "label": "AJ-SR04M\n罐顶朝下",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sun",
+       "label": "太阳能板\nTP4056 + 锂电",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ESP32-C3\nESPHome 深睡 1.5h",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "calib",
+       "label": "空 / 满两点标定\n圆截面换算升",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n水位实体",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "valve",
+       "label": "补位阀 / 0602 开阀\n前置条件",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "tube",
+       "label": "透明水位管\n手写刻度对照",
+       "kind": "file",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "sr04",
+       "core",
+       "距离"
+      ],
+      [
+       "sun",
+       "core",
+       "供电"
+      ],
+      [
+       "core",
+       "calib"
+      ],
+      [
+       "calib",
+       "ha",
+       "原生 API"
+      ],
+      [
+       "ha",
+       "valve",
+       "触发"
+      ],
+      [
+       "ha",
+       "tube",
+       "对照",
+       "dash"
+      ]
+     ],
+     "usage": "0603：罐顶超声波测水位，太阳能供电深睡，水位实体给补位阀和 0602 当前置条件"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "雨水收集 庭院 水罐",
+    "note": "看落水管接雨水罐的整体布置，罐子怎么用格栅遮丑"
+   },
+   {
+    "keyword": "初期雨水 弃流 diy",
+    "note": "看首雨弃流桶的自制做法和底部慢排小孔"
+   },
+   {
+    "keyword": "雨水花园 溢流 碎石",
+    "note": "看溢流口接碎石干河道的景观处理和暴雨实拍"
+   }
+  ]
+ },
+ {
+  "id": "0604",
+  "github": [
+   {
+    "name": "blakeblackshear/frigate",
+    "url": "https://github.com/blakeblackshear/frigate",
+    "stars": "35.1k",
+    "zh": "官方中文 README",
+    "desc": "本地 AI 目标检测的开源 NVR，Coral 或 GPU 加速，区域和物体过滤，和 HomeAssistant 深度集成，有 README_CN 和中文界面",
+    "why": "长焦机的移动侦测和鸟、猫、人的实时检测全靠它，本地跑不上云，检出鸟就通过 MQTT 交给分种程序，通知直接推手机",
+    "intro": "Frigate 是美国开发者 Blake Blackshear 从 2019 年做起的开源网络录像机，GitHub 上 35.1k 星。普通 NVR 靠像素变化做移动侦测，风吹草动就误报，而它用神经网络实时判断画面里是人、车、猫还是鸟，只在真有东西时录像和通知，全部本地跑。\n它的架构是 Docker 里的一组进程：go2rtc 负责拉摄像头的 RTSP 流并转发，ffmpeg 解码，检测器在运动区域上跑目标检测模型，可用 Coral USB 加速棒、Intel OpenVINO、Nvidia GPU 或纯 CPU；每路摄像头可以画区域、设物体类型过滤；事件带快照和剪辑存本地。和 HomeAssistant 有官方集成，事件通过 MQTT 广播。仓库有官方中文 README，界面已经翻译成中文。\n在 0604 里它管东墙横臂上的长焦机：只框出水盆和喂鸟器周围一小块区域，检测类型只留鸟、猫、狗、人，鸟的最小面积调小；广角机也接进来但关掉检测，只借它整点抓图做延时。检出鸟后它发一条 MQTT 事件带快照，WhosAtMyFeeder 订阅后分种再写回子标签，HomeAssistant 收到新物种就推通知。夜里的刺猬和黄鼬模型认不准，用运动事件录下来人工看。要注意默认模型的鸟类只是一个大类，分种要靠下游程序；没有 Coral 加速棒，用 Intel 迷你主机的 OpenVINO 也够。",
+    "diagram": {
+     "title": "Frigate · 本地 AI 只在有东西时报警",
+     "nodes": [
+      {
+       "id": "tele",
+       "label": "长焦机\n水盆 / 喂鸟器区域",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "wide",
+       "label": "广角全景机\n整点快照",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Frigate\ngo2rtc + 检测器",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "clip",
+       "label": "事件 / 快照库",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "mqtt",
+       "label": "MQTT 事件\n鸟 / 猫 / 人",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "wam",
+       "label": "WhosAtMyFeeder\n分种",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n通知 + 延时",
+       "kind": "screen",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "tele",
+       "core",
+       "RTSP"
+      ],
+      [
+       "wide",
+       "core",
+       "只抓图",
+       "dash"
+      ],
+      [
+       "core",
+       "clip"
+      ],
+      [
+       "core",
+       "mqtt",
+       "检出"
+      ],
+      [
+       "mqtt",
+       "wam",
+       "鸟"
+      ],
+      [
+       "mqtt",
+       "ha"
+      ],
+      [
+       "wam",
+       "ha",
+       "子标签"
+      ]
+     ],
+     "usage": "0604：长焦机区域检鸟猫人，MQTT 事件交分种程序，广角机借它整点抓图"
+    }
+   },
+   {
+    "name": "Nachtzuster/BirdNET-Pi",
+    "url": "https://github.com/Nachtzuster/BirdNET-Pi",
+    "stars": "1.1k",
+    "zh": "界面有中文",
+    "desc": "树莓派上的实时鸟类声纹识别系统，BirdNET-Pi 的活跃维护分支，USB 麦克风 24 小时听，网页看物种统计，通知和 MQTT 都有",
+    "why": "横臂下挂一只麦克风，靠叫声认鸟，和摄像头图像识别互相印证，看不见的林间鸟和夜里的猫头鹰也进来访者名单，戴胜叫一声就知道",
+    "intro": "BirdNET-Pi 最早由美国开发者 Patrick McGuire 基于康奈尔大学鸟类学实验室的 BirdNET 模型做出来，原仓库停更后，荷兰开发者 Nachtzuster 的分支成了社区默认的活跃版本，GitHub 上 1.1k 星。想知道院子里来过什么鸟，靠眼睛守不住，一只麦克风加一个模型就能 24 小时替你听。\n它的工作方式是把树莓派变成一台声纹识别机：USB 麦克风连续录音，每 15 秒切一段，用 BirdNET 的 TFLite 模型对照六千多种鸟的叫声打分，超过置信度阈值就存一条记录带那段音频和频谱图；网页界面看今日物种、每种的出现时段和历史统计。识别范围按你填的经纬度和日期筛选，当地当季不该出现的种自动降权。通知支持 Apprise 的几十种渠道和 MQTT。鸟名显示语言可以切，BirdNET 的标签文件里有中文名。没有中文文档，但安装是一条脚本。\n在 0604 里它挂在东墙横臂下：一只防风毛套的 USB 麦克风朝草地，树莓派 4 放在墙内侧的防水盒里，经纬度填杭州，置信度设 0.7；每条识别通过 MQTT 进 HomeAssistant，和 Frigate 那边的图像识别在同一张来访者名单里合并，同一小时内两边都认出白头鹎就标成确认，只有声音的标成疑似。要注意河边和过道的人声车声会触发误识别，把常见误报种加进排除列表；麦克风离墙远一点避免回声。",
+    "diagram": {
+     "title": "BirdNET-Pi · 一只麦克风 24 小时认鸟",
+     "nodes": [
+      {
+       "id": "mic",
+       "label": "USB 麦克风\n横臂下朝草地",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "geo",
+       "label": "经纬度 + 日期\n当季筛选",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "BirdNET-Pi\n树莓派 TFLite",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "rec",
+       "label": "识别记录\n音频 + 频谱图",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "web",
+       "label": "网页统计\n今日物种",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "mqtt",
+       "label": "MQTT / Apprise",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n与图像识别合并",
+       "kind": "screen",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "mic",
+       "core",
+       "15 秒一段"
+      ],
+      [
+       "geo",
+       "core",
+       "降权",
+       "dash"
+      ],
+      [
+       "core",
+       "rec",
+       "≥0.7"
+      ],
+      [
+       "rec",
+       "web"
+      ],
+      [
+       "core",
+       "mqtt"
+      ],
+      [
+       "mqtt",
+       "ha",
+       "同小时印证"
+      ]
+     ],
+     "usage": "0604：声纹识别进 HA，与 Frigate 图像识别同小时互相印证，只闻其声的也上名单"
+    }
+   },
+   {
+    "name": "mmcc-xx/WhosAtMyFeeder",
+    "url": "https://github.com/mmcc-xx/WhosAtMyFeeder",
+    "stars": "456",
+    "zh": "无中文",
+    "desc": "Frigate 的伴侣程序，订阅鸟类事件取快照，用 TensorFlow 鸟类分类模型判断是什么种，结果写回 Frigate 子标签并存库出网页",
+    "why": "Frigate 只知道是鸟，它负责说是哪种鸟：白头鹎、珠颈斑鸠、乌鸫自动分种，新物种推通知和每月来访者名单就靠这一步",
+    "intro": "WhosAtMyFeeder 是美国开发者 mmcc-xx 做的 Frigate 配套程序，GitHub 上 456 星，名字直译是谁在我的喂鸟器上。Frigate 只能说画面里有一只鸟，它接在后面专门说是哪一种。\n它的工作方式是一条流水线：订阅 Frigate 的 MQTT 事件，遇到标签为鸟的事件就按事件 ID 去 Frigate 拉那一帧快照，裁出检测框，送进 Google 发布的 TFLite 鸟类分类模型，这个模型在 iNaturalist 的数据上训练，认得九百多种北美和常见鸟；输出物种名和置信度，超过阈值就把物种写回 Frigate 事件的子标签，同时存进本地 SQLite，自带一个 Flask 网页按天看到访物种、次数和照片。整个程序是一个 Python 容器，配置只有一份 YAML。没有中文资料，代码不到一千行。\n在 0604 里它接在 Frigate 后面：只订阅长焦机那一路，分种结果写回子标签后 HomeAssistant 就能按物种名做自动化，第一次出现的种推通知带照片，每月把 SQLite 里的数据汇总成来访者名单卡片上 0802 大屏。要注意默认模型是北美鸟为主，白头鹎、珠颈斑鸠这类华东常见鸟有的能认有的会张冠李戴，先跑一个月人工核对，把误认多的种在配置里映射成正确中文名；喂鸟器画面里鸟太小会影响精度，长焦机对准时让鸟占画面十分之一以上。",
+    "diagram": {
+     "title": "WhosAtMyFeeder · 从有鸟到是哪种鸟",
+     "nodes": [
+      {
+       "id": "fr",
+       "label": "Frigate\n鸟事件 MQTT",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "snap",
+       "label": "事件快照\n裁出检测框",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "WhosAtMyFeeder\nTFLite 分类",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "SQLite\n物种 / 次数 / 照片",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "sub",
+       "label": "写回 Frigate\n子标签 = 物种",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "Flask 网页\n按天看到访",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n新物种通知",
+       "kind": "screen",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "fr",
+       "core",
+       "订阅"
+      ],
+      [
+       "snap",
+       "core"
+      ],
+      [
+       "core",
+       "sub",
+       "≥阈值"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "db",
+       "web"
+      ],
+      [
+       "sub",
+       "ha",
+       "按物种自动化"
+      ]
+     ],
+     "usage": "0604：Frigate 检出鸟 → 分种 → 子标签回写 → HA 新物种推通知、月度名单上大屏"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "院子 观鸟 摄像头",
+    "note": "看博主在院子里架摄像头拍鸟的机位、镜头和水盆喂鸟器布置"
+   },
+   {
+    "keyword": "喂鸟器 diy 木",
+    "note": "看木制喂鸟器的结构和挂法，怎么防松鼠和野猫"
+   },
+   {
+    "keyword": "草地 延时摄影 一年",
+    "note": "看固定机位拍一年草地和植物变化的延时帖，学机位固定方法"
+   }
+  ]
+ }
 ]

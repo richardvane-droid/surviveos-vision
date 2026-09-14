@@ -15,8 +15,8 @@
     ],
     "github": [
      {
-      "name": "Aircoookie/WLED",
-      "url": "https://github.com/Aircoookie/WLED"
+      "name": "wled/WLED",
+      "url": "https://github.com/wled/WLED"
      }
     ]
    },
@@ -49,11 +49,11 @@
      "兜底：手动调光后 1 小时内自动逻辑挂起",
      "数据出口：HA light.tent_string 实体 + 进入次数计数"
     ],
-    "impl": "灯串刷 Aircoookie/WLED 建三个 preset（亮起/阅读/夜灯），ESPHome 读磁簧和 PIR，HA automation 按状态切 preset",
+    "impl": "灯串刷 wled/WLED 建三个 preset（亮起/阅读/夜灯），ESPHome 读磁簧和 PIR，HA automation 按状态切 preset",
     "github": [
      {
-      "name": "Aircoookie/WLED",
-      "url": "https://github.com/Aircoookie/WLED"
+      "name": "wled/WLED",
+      "url": "https://github.com/wled/WLED"
      },
      {
       "name": "esphome/esphome",

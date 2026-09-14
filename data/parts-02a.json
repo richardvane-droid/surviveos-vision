@@ -97,8 +97,8 @@
     ],
     "github": [
      {
-      "name": "Aircoookie/WLED",
-      "url": "https://github.com/Aircoookie/WLED"
+      "name": "wled/WLED",
+      "url": "https://github.com/wled/WLED"
      }
     ]
    },
@@ -146,8 +146,8 @@
       "url": "https://github.com/esphome/esphome"
      },
      {
-      "name": "Aircoookie/WLED",
-      "url": "https://github.com/Aircoookie/WLED"
+      "name": "wled/WLED",
+      "url": "https://github.com/wled/WLED"
      }
     ]
    },
@@ -192,8 +192,8 @@
     ],
     "github": [
      {
-      "name": "Chreece/ESPHome-Dehumidifier",
-      "url": "https://github.com/Chreece/ESPHome-Dehumidifier"
+      "name": "wuwentao/midea_ac_lan",
+      "url": "https://github.com/wuwentao/midea_ac_lan"
      }
     ]
    },
@@ -226,11 +226,11 @@
      "防抖：切档后最少保持 15 分钟",
      "数据出口：档位、湿度曲线、日排水量写入 HA"
     ],
-    "impl": "Chreece/ESPHome-Dehumidifier 接管除湿机档位，HA 用 generic_hygrostat 做 45~65% 区间控制，排水量按提升泵启动次数换算",
+    "impl": "wuwentao/midea_ac_lan 在局域网接管除湿机档位，HA 用 generic_hygrostat 做 45~65% 区间控制，排水量按提升泵启动次数换算",
     "github": [
      {
-      "name": "Chreece/ESPHome-Dehumidifier",
-      "url": "https://github.com/Chreece/ESPHome-Dehumidifier"
+      "name": "wuwentao/midea_ac_lan",
+      "url": "https://github.com/wuwentao/midea_ac_lan"
      },
      {
       "name": "home-assistant/core",

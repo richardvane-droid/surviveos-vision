@@ -129,11 +129,11 @@
      "带出超 7 天未归位，推送提醒自己去找",
      "兜底：黑板粉笔记录照常，拍照后补录"
     ],
-    "impl": "用 m1ndgames/OpenFishing 的二维码钓具库和渔获记录做出入账本，cohenadair/anglers-log 做手机端统计",
+    "impl": "用 sysadminsmedia/homebox 的二维码标签和位置树做钓具出入账本，cohenadair/anglers-log 做手机端统计",
     "github": [
      {
-      "name": "m1ndgames/OpenFishing",
-      "url": "https://github.com/m1ndgames/OpenFishing"
+      "name": "sysadminsmedia/homebox",
+      "url": "https://github.com/sysadminsmedia/homebox"
      },
      {
       "name": "cohenadair/anglers-log",
@@ -255,12 +255,8 @@
      "全部本地判断，断网也能响",
      "兜底：传感器自检失败即报故障，不静默"
     ],
-    "impl": "用 Bjk8kds/esphome-winsen-co-sensor 读 ZE07 的 CO 浓度做本地阈值，esphome pulse_counter 读风速，HA 推送",
+    "impl": "用 esphome/esphome 的 uart 外部组件读 ZE07 的 CO 浓度做本地阈值，esphome pulse_counter 读风速，HA 推送",
     "github": [
-     {
-      "name": "Bjk8kds/esphome-winsen-co-sensor",
-      "url": "https://github.com/Bjk8kds/esphome-winsen-co-sensor"
-     },
      {
       "name": "esphome/esphome",
       "url": "https://github.com/esphome/esphome"

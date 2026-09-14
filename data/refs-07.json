@@ -1,72 +1,1239 @@
 [
-  {
-    "id": "0701",
-    "github": [
-      {"name": "wikihouseproject/Skylark", "url": "https://github.com/wikihouseproject/Skylark", "stars": "243",
-       "desc": "WikiHouse 开源木结构建造系统，标准化木块 CNC 切割后手工拼装，可建 1～3 层",
-       "why": "间接参考：学它把木结构拆成标准件的思路，顶棚的柱、梁、檩可以按同样方法画图下料"},
-      {"name": "xuminic/woodshed", "url": "https://github.com/xuminic/woodshed", "stars": "10",
-       "desc": "一个人从零建木结构花园小屋的全记录，带 CAD 图纸、结构方案、材料清单和分阶段施工",
-       "why": "间接参考：钓台顶棚就是缩小版的柱梁屋架，它的地基、立柱、屋面分阶段做法可以照搬"}
-    ],
-    "xhs": [
-      {"keyword": "池塘 木平台 钓台", "note": "看伸入水面的木栈道和平台的桩基、栏杆和板缝处理"},
-      {"keyword": "竹瓦 顶棚 凉亭", "note": "看竹瓦单坡顶的檐口、雨链和杉木柱的搭配效果"},
-      {"keyword": "防腐木 栈道 自建", "note": "看乡下自己打桩铺栈道的过程和一年后的木色变化"}
-    ]
-  },
-  {
-    "id": "0702",
-    "github": [
-      {"name": "cohenadair/anglers-log", "url": "https://github.com/cohenadair/anglers-log", "stars": "34",
-       "desc": "Flutter 写的钓鱼日志 App，记录渔获、饵、天气和地点，能出统计，iOS 和安卓都有",
-       "why": "小黑板上的渔获记录写满拍照后，用它做数字版，哪种饵在哪个月最好用一查就知道"},
-      {"name": "m1ndgames/OpenFishing", "url": "https://github.com/m1ndgames/OpenFishing", "stars": "2",
-       "desc": "自托管钓具管理网页：假饵库带二维码标签、钓点地图、渔获记录和统计，一个 Docker 跑起来",
-       "why": "刚起步但正好对上“钓具数字孪生”：每根竿每盒饵贴二维码，扫一下知道上次钓了什么"}
-    ],
-    "xhs": [
-      {"keyword": "鱼竿 收纳墙 洞洞板", "note": "看鱼竿斜挂扇形排列和假饵按颜色摆放的展示效果"},
-      {"keyword": "路亚 假饵 收纳 展示", "note": "看亚克力小盒和磁吸板存放假饵的做法"},
-      {"keyword": "老樟木箱 改造", "note": "看旧木箱内部分格和不打磨保留包浆的样子"}
-    ]
-  },
-  {
-    "id": "0703",
-    "github": [
-      {"name": "KinDR007/VictronMPPT-ESPHOME", "url": "https://github.com/KinDR007/VictronMPPT-ESPHOME", "stars": "409",
-       "desc": "ESPHome 组件，通过 VE.Direct 串口读 Victron MPPT、SmartShunt 的电压、电流、发电量",
-       "why": "电池箱里的 ESPHome 节点直接用它，光伏发电量和电池电量推到 HomeAssistant 做卡片"},
-      {"name": "Bettapro/Solar-Tracer-Blynk-V3", "url": "https://github.com/Bettapro/Solar-Tracer-Blynk-V3", "stars": "61",
-       "desc": "ESP32 通过 RS485 Modbus 读 EPEver Tracer 系列 MPPT 控制器，支持 MQTT 和 HomeAssistant",
-       "why": "国内买的 MPPT 多是 EPEver 这类，不想上 Victron 就用它接，电量低于 20% 报警照样能做"},
-      {"name": "syssi/esphome-jk-bms", "url": "https://github.com/syssi/esphome-jk-bms", "stars": "963",
-       "desc": "ESPHome 组件，用串口或蓝牙读 JK BMS 的每节电芯电压、温度和剩余容量",
-       "why": "磷酸铁锂电池组若配 JK 保护板，用它把单体电压和温度也读出来，冬天低温充电有数"}
-    ],
-    "xhs": [
-      {"keyword": "夜钓 灯光 氛围", "note": "看马灯暖光和蓝光夜钓灯的搭配，以及灯不照水面的布法"},
-      {"keyword": "太阳能 离网 小系统", "note": "看光伏板、控制器、电池箱的接线和防水安装方式"},
-      {"keyword": "庭院 太阳能 地脚灯", "note": "看栈道两侧地脚灯的间距和夜晚亮起来的效果"}
-    ]
-  },
-  {
-    "id": "0704",
-    "github": [
-      {"name": "WLANThermo-nano/WLANThermo_ESP32_Software", "url": "https://github.com/WLANThermo-nano/WLANThermo_ESP32_Software", "stars": "40",
-       "desc": "德国开源 ESP32 烧烤温度计固件，多路探针、手机推送、能控风扇调火，有网页和 App",
-       "why": "烤鱼和茶壶各插一根探针，温度到了手机提醒，不用一直盯着火塘，也能控风扇补火"},
-      {"name": "Bjk8kds/esphome-winsen-co-sensor", "url": "https://github.com/Bjk8kds/esphome-winsen-co-sensor", "stars": "4",
-       "desc": "ESPHome 外部组件，接炜盛 ZE07/ZE15 电化学一氧化碳传感器，输出 ppm 并检测故障",
-       "why": "顶棚透气口不够时 CO 会积，用这颗国产电化学传感器做报警比 MQ-7 准，直接接 HomeAssistant"},
-      {"name": "MarcFinns/AtmoScan", "url": "https://github.com/MarcFinns/AtmoScan", "stars": "47",
-       "desc": "ESP8266 手持多合一空气传感器，CO、CO2、VOC、PM2.5 一起测，带彩屏和 MQTT",
-       "why": "想做一个能拿在手里的火塘旁空气检测仪，它的传感器组合和外壳方案可以照抄"}
-    ],
-    "xhs": [
-      {"keyword": "围炉煮茶 户外 水边", "note": "看火盆、吊架、矮桌和蒲团的围坐布局与器物搭配"},
-      {"keyword": "木平台 火塘 隔热", "note": "看木地板上生火时铁盆、火山岩板和防火垫的做法"},
-      {"keyword": "户外 烤鱼 炭火 吊架", "note": "看三脚吊架挂壶架网的高度调节和烤鱼串的架法"}
-    ]
-  }
+ {
+  "id": "0701",
+  "github": [
+   {
+    "name": "FreeCAD/FreeCAD",
+    "url": "https://github.com/FreeCAD/FreeCAD",
+    "stars": "32.2k",
+    "zh": "有中文文档站",
+    "desc": "开源参数化三维建模软件，2026 年 4 月发 1.1.1 版，草图、零件、BIM、工程图、电子表格工作台齐全，界面和 wiki 都有简体中文",
+    "why": "钓台的墩位、龙骨、顶棚柱梁全在它里面画成参数化模型，改一个尺寸整套联动，工程图出下料单，电子表格自动算木料和螺栓数量",
+    "intro": "FreeCAD 是 2002 年发起、由全球志愿者维护的开源参数化三维建模软件，GitHub 上 32.2k 星，2026 年 4 月发布了 1.1.1 版，是开源世界里最接近商业 CAD 的通用工具。它解决的问题是：自己盖一个小木构，脑子里的尺寸和纸上的草图对不上，改一根柱子高度就要重画全部，而参数化建模让每个尺寸都是变量，改一处整套联动。\n它的结构是工作台制：Sketcher 画带约束的二维草图，PartDesign 把草图拉伸切削成实体，BIM 工作台自带墙、梁、柱、屋顶这类建筑对象，TechDraw 从模型出带尺寸的工程图，Spreadsheet 工作台把尺寸放进表格驱动模型，反过来也能从模型统计体积和数量。文件是开放的 XML 格式，能导出 STEP、DXF、STL。界面有简体中文，官方 wiki 有中文页面，B 站教程很多。\n在 0701 里它是钓台的图纸本：先用 Spreadsheet 写下台面 2.5×2.2 米、六个墩位、龙骨截面、顶棚 2.2×2 米单坡这些参数，BIM 工作台里立柱、梁、檩、板一一建成对象，坡度按临河一侧低来定，竹瓦和雨链位置画进去看檐口滴水落在台外哪里；TechDraw 出一张墩位放样图和一张龙骨下料图，材料清单从模型里自动算出防腐松木总长和地脚螺栓数量。缓坡踏步和竹扶手也一起建，站在模型里看视线有没有被柱子挡住。要注意 BIM 工作台上手比 PartDesign 陡，小结构直接用 PartDesign 拉伸木方更快；单位一开始就设成毫米。",
+    "diagram": {
+     "title": "FreeCAD · 参数驱动的钓台图纸本",
+     "nodes": [
+      {
+       "id": "me",
+       "label": "一个人\n量地 / 定尺寸",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sheet",
+       "label": "Spreadsheet\n台面 / 墩位 / 坡度",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "FreeCAD\nPartDesign / BIM",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "model",
+       "label": "柱梁檩板\n参数化模型",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "draw",
+       "label": "TechDraw\n墩位放样 / 下料图",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "bom",
+       "label": "材料清单\n木料长度 / 螺栓",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "site",
+       "label": "坡脚工地",
+       "kind": "device",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "me",
+       "sheet",
+       "写参数"
+      ],
+      [
+       "sheet",
+       "core",
+       "驱动"
+      ],
+      [
+       "core",
+       "model"
+      ],
+      [
+       "model",
+       "draw"
+      ],
+      [
+       "model",
+       "bom",
+       "统计"
+      ],
+      [
+       "draw",
+       "site",
+       "照图放样"
+      ],
+      [
+       "bom",
+       "site",
+       "采购",
+       "dash"
+      ]
+     ],
+     "usage": "0701：参数表驱动整套木构模型，改一处联动，出放样图和木料清单"
+    }
+   },
+   {
+    "name": "wikihouseproject/Skylark",
+    "url": "https://github.com/wikihouseproject/Skylark",
+    "stars": "243",
+    "zh": "无中文",
+    "desc": "WikiHouse 的开源木结构建造系统，标准化木块由 CNC 从板材切出后手工拼装，不用重型机械，可建 1 到 3 层，图纸开放授权",
+    "why": "学它把木结构拆成标准件的思路：钓台的柱、梁、檩按同样方法编号画图下料，一个人在坡脚就能拼起来，以后加宽也是加一组件",
+    "intro": "Skylark 是英国 WikiHouse 项目的最新一代开源木结构建造系统，GitHub 上 243 星，图纸以开放授权发布。WikiHouse 从 2011 年起想解决的问题是：盖房子的知识和图纸被专业圈子锁着，普通人想自建只能从零摸索，于是他们把建筑拆成可以数字化下料、手工拼装的标准件，像乐高一样谁都能搭。\n它的原理是把整栋建筑分解成一套标准木块：每种木块由 18 毫米左右的工程木板材经 CNC 切成带榫卯的片，片与片插接成一个空心盒子块，块里填保温，块与块用木销和螺栓连成墙、楼板和屋顶，全程不用起重机，两三个人几天就能立起来。仓库里是全部块的三维模型、切割文件、装配手册和结构说明，尺寸按 1.2 米板材模数走，能建一到三层。它没有中文资料，装配手册以图为主，看图能懂。\n在 0701 里它不是直接拿来用，而是学方法：钓台顶棚的两根杉木柱、一根脊梁、几根檩条和台面龙骨，都按它的做法先在图上编号，每根木料标长度、截面和榫口位置，一次在院子里下好料、编好号，再搬到坡脚按号拼装；柱脚和墩座的连接件也参考它的螺栓加木销做法，不用现场凿榫。这样一个人也能在两个周末把台面和顶棚立起来，三年后换竹瓦或加宽台面时按同样的模数加一组件即可。要注意它的板材榫卯靠 CNC 精度，家里手锯做不到，钓台还是用杉木方料加金属连接件，只借它的编号和模数思路。",
+    "diagram": {
+     "title": "Skylark · 把木结构拆成可编号的标准件",
+     "nodes": [
+      {
+       "id": "sheet",
+       "label": "工程木板材\n1.2m 模数",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cnc",
+       "label": "CNC 切割文件",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Skylark 木块系统\n片 → 块 → 墙 / 顶",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "manual",
+       "label": "装配手册\n木销 + 螺栓",
+       "kind": "file",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "plan",
+       "label": "钓台构件编号\n柱 / 梁 / 檩 / 龙骨",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "yard",
+       "label": "院子里下料编号",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "site",
+       "label": "坡脚按号拼装",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "sheet",
+       "core"
+      ],
+      [
+       "cnc",
+       "core",
+       "精度"
+      ],
+      [
+       "core",
+       "manual"
+      ],
+      [
+       "core",
+       "plan",
+       "学方法",
+       "dash"
+      ],
+      [
+       "plan",
+       "yard",
+       "出料单"
+      ],
+      [
+       "yard",
+       "site",
+       "两个周末"
+      ]
+     ],
+     "usage": "0701：借它的编号模数思路，柱梁檩龙骨先在院子下好料再到坡脚拼装"
+    }
+   },
+   {
+    "name": "xuminic/woodshed",
+    "url": "https://github.com/xuminic/woodshed",
+    "stars": "10",
+    "zh": "无中文",
+    "desc": "一个人从零建木框架花园小屋的全记录，DXF 三视图、材料清单表、分基础/框架/屋顶/围护/内装五阶段的施工说明和照片",
+    "why": "只有 10 星但没有更贴的：钓台就是缩小版的柱梁屋架，它的独立墩基础、立柱、单坡屋面分阶段做法和清单可以照搬，是一人施工的完整样本",
+    "intro": "woodshed 是开发者 xuminic 记录自己从零建一座木框架花园小屋的仓库，GitHub 上只有 10 星，不是软件，而是一份完整的一人自建木构的工程档案。它的价值在于市面上的木屋教程要么是厂家的成品说明，要么是零散视频，而它把设计、清单、施工顺序和踩过的坑用工程师的方式整理成了可以复用的文件。\n仓库里有三样东西：DXF 格式的正立面、侧立面和平面图，能直接在 FreeCAD 或任何 CAD 里打开改尺寸；一张 ODS 电子表格的材料清单，木料按规格和长度列出、五金按数量列出；按基础、框架、屋顶、围护、内装五个阶段写的施工说明，每一阶段有做法、顺序和完工照片。基础是独立墩加木梁，框架是方木立柱和梁，屋顶是单坡檩条加板，全部是一个人用手工具和电钻能完成的做法。没有中文，但文字不多，图和表看得懂。\n在 0701 里它是钓台的施工样本：钓台 2.5×2.2 米的平台和 2.2×2 米的单坡顶棚，结构上就是它的小屋去掉墙，所以把它的五阶段改成四阶段，六个预制混凝土墩加地脚螺栓对应它的基础，防腐松木框龙骨对应它的地梁，杉木柱和檩对应它的框架和屋顶，围护改成竹瓦和雨链；材料清单表复制一份改成钓台的尺寸，木料按 4 米原长优化裁切减少浪费。要注意它的小屋在平地，钓台在坡脚岸上，六个墩的顶面标高要用水管找平后再定龙骨；临河一侧受潮更重，底部龙骨多刷一遍木蜡油。",
+    "diagram": {
+     "title": "woodshed · 一人自建木构的完整档案",
+     "nodes": [
+      {
+       "id": "dxf",
+       "label": "DXF 三视图",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "bom",
+       "label": "ODS 材料清单",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "woodshed 施工档案\n五阶段做法",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "stage",
+       "label": "基础 / 框架\n屋顶 / 围护",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "mod",
+       "label": "改成钓台\n去墙 + 竹瓦雨链",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "list",
+       "label": "钓台料单\n4 米原长优化",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人\n坡脚施工",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "dxf",
+       "core"
+      ],
+      [
+       "bom",
+       "core"
+      ],
+      [
+       "core",
+       "stage",
+       "顺序"
+      ],
+      [
+       "core",
+       "mod",
+       "照搬"
+      ],
+      [
+       "mod",
+       "list"
+      ],
+      [
+       "stage",
+       "me",
+       "按阶段"
+      ],
+      [
+       "list",
+       "me",
+       "采购",
+       "dash"
+      ]
+     ],
+     "usage": "0701：把小屋五阶段改成钓台四阶段，清单改尺寸，一人两个周末立起来"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "池塘 木平台 钓台",
+    "note": "看伸入水面的木栈道和平台的桩基、栏杆和板缝处理"
+   },
+   {
+    "keyword": "竹瓦 顶棚 凉亭",
+    "note": "看竹瓦单坡顶的檐口、雨链和杉木柱的搭配效果"
+   },
+   {
+    "keyword": "防腐木 栈道 自建",
+    "note": "看乡下自己打桩铺栈道的过程和一年后的木色变化"
+   }
+  ]
+ },
+ {
+  "id": "0702",
+  "github": [
+   {
+    "name": "sysadminsmedia/homebox",
+    "url": "https://github.com/sysadminsmedia/homebox",
+    "stars": "7.1k",
+    "zh": "界面有中文",
+    "desc": "面向家庭的自托管物品库存系统，位置嵌套、标签、照片、自定义字段、可打印的二维码标签和维护记录，Go 写的单容器，界面有简体中文",
+    "why": "洞洞板、樟木箱六格、亚克力饵盒各建成位置，每根竿每盒饵一条记录贴二维码，扫一下知道在哪、上次换线是什么时候，PSK 组件也在里面",
+    "intro": "HomeBox 最早由开发者 hay-kot 做，2024 年后由 sysadminsmedia 团队接手继续维护，GitHub 上 7.1k 星，是自托管圈子里最流行的家庭物品库存系统。它解决的问题是：家里的东西越来越多，放在哪、什么时候买的、保修到几时、多久没维护，靠记忆管不住，而企业级资产管理软件又太重。\n它是 Go 后端加 Vue 前端的单容器应用，默认 SQLite，一条 Docker 命令起来。核心结构是位置、标签、物品三层：位置可以无限嵌套，比如钓台、洞洞板、樟木箱第三格；物品有名字、数量、照片、购买信息、序列号、自定义字段和附件，还有维护日志记录每次保养；标签横向分类。最实用的是二维码标签生成器，按物品或位置批量出可打印的标签纸，手机扫码直接打开那件东西的页面；还有 CSV 导入导出、多用户和通知。界面通过 Weblate 翻译，有简体中文。\n在 0702 里它是钓具的电子账本：位置树建成钓台、洞洞板、樟木箱六格和磁吸饵盒，三根鱼竿、每个线轮、每盒假饵各建一条，照片就用手机拍，自定义字段记线号和上次换线日期；打印二维码贴在竿托、饵盒背面和樟木箱格子里，取用时一扫就知道这盒饵上次用在哪天。PSK 生存盒的钓鱼组件也建成一个位置，兼做产品清单。要注意它是库存不是渔获日志，鱼获和天气交给专门的钓鱼 App；二维码标签要用防水的合成纸贴纸，普通纸在河边一个夏天就糊了。",
+    "diagram": {
+     "title": "HomeBox · 每盒饵一个二维码",
+     "nodes": [
+      {
+       "id": "me",
+       "label": "一个人\n拍照建物品",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "qr",
+       "label": "扫码\n竿托 / 饵盒背面",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "HomeBox\nGo + SQLite",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "tree",
+       "label": "位置树\n洞洞板 / 樟木箱六格",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "label",
+       "label": "二维码标签纸\n防水合成纸",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "log",
+       "label": "维护日志\n换线 / 上油",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "psk",
+       "label": "PSK 组件清单",
+       "kind": "file",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "me",
+       "core",
+       "建档"
+      ],
+      [
+       "qr",
+       "core",
+       "打开页面",
+       "dash"
+      ],
+      [
+       "core",
+       "tree"
+      ],
+      [
+       "core",
+       "label",
+       "批量打印"
+      ],
+      [
+       "tree",
+       "log"
+      ],
+      [
+       "tree",
+       "psk"
+      ]
+     ],
+     "usage": "0702：钓具全部建档贴二维码，扫一下知道在哪格、上次换线是什么时候"
+    }
+   },
+   {
+    "name": "kennetek/gridfinity-rebuilt-openscad",
+    "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad",
+    "stars": "2.2k",
+    "zh": "无中文",
+    "desc": "Gridfinity 模块化收纳系统的 OpenSCAD 重写版，参数化生成 42mm 网格的分格盒和底板，底部自带磁铁孔，改几个数字就出 STL",
+    "why": "樟木箱六格和磁吸饵盒不用手工分板：按格子内尺寸生成 Gridfinity 分格盒打印出来，底部磁铁孔正好吸在洞洞板下的铁板上",
+    "intro": "gridfinity-rebuilt-openscad 是开发者 kennetek 用 OpenSCAD 重写的 Gridfinity 生成库，GitHub 上 2.2k 星。Gridfinity 是 Zack Freedman 在 2022 年提出的开源模块化收纳标准：所有盒子都按 42 毫米网格和 7 毫米高度单位来做，放在同样网格的底板上就自动对齐。原始设计是 Fusion 文件，这个仓库把它变成纯代码，改几个参数就能生成自己的盒子。\n用法是在 OpenSCAD 里打开 bins 文件，用定制面板填长几格、宽几格、高几单位、内部分几格、要不要取物斜面和标签槽、底部要不要磁铁孔，点一下就出模型，导出 STL 去打印；另一个文件生成底板。底部磁铁孔按 6×2 毫米磁铁设计，压进去就是磁吸底。仓库有详细参数文档，社区围绕 Gridfinity 有上万个衍生模型。没有中文资料，但参数名直白。\n在 0702 里它做两件事：樟木箱内部不用薄木板分格，而是量出箱内尺寸，生成一块底板和六个不同分格的盒子，线轮盒深一点、钩和铅坠盒分小格带斜面方便手指挑；磁吸饵盒就是带磁铁孔的浅盒加透明盖，吸在洞洞板下方那块铁板上随手取放。打印用 PETG 而不是 PLA，晒过的钓台温度能让 PLA 变形。箱内尺寸未必是 42 的整数倍，空隙用半格模块或垫条补；磁铁选镀镍防锈。",
+    "diagram": {
+     "title": "Gridfinity · 改几个数字就出分格盒",
+     "nodes": [
+      {
+       "id": "me",
+       "label": "一个人\n量箱内尺寸",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "param",
+       "label": "参数\n格数 / 高度 / 分格",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "OpenSCAD 生成库\n42mm 网格",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "stl",
+       "label": "STL 模型\n盒 + 底板",
+       "kind": "file",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "print",
+       "label": "PETG 打印",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "box",
+       "label": "樟木箱六格\n+ 磁吸饵盒",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "board",
+       "label": "洞洞板下铁板\n磁吸",
+       "kind": "device",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "me",
+       "param",
+       "填"
+      ],
+      [
+       "param",
+       "core"
+      ],
+      [
+       "core",
+       "stl"
+      ],
+      [
+       "stl",
+       "print"
+      ],
+      [
+       "print",
+       "box"
+      ],
+      [
+       "box",
+       "board",
+       "6×2 磁铁"
+      ]
+     ],
+     "usage": "0702：按箱内尺寸生成分格盒和磁吸饵盒，PETG 打印，磁铁孔压入磁铁吸铁板"
+    }
+   },
+   {
+    "name": "cohenadair/anglers-log",
+    "url": "https://github.com/cohenadair/anglers-log",
+    "stars": "34",
+    "zh": "无中文",
+    "desc": "Flutter 写的开源钓鱼日志 App，iOS 和安卓都有，记渔获照片、鱼种、饵、钓点、天气潮汐，出统计报表，两千多次提交长期维护",
+    "why": "小黑板写满拍照后的数字版：每条鱼记鱼种、饵、天气，一查就知道哪种饵在哪个月最好用，代码开源但成品 App 直接装最省事",
+    "intro": "Anglers Log 是加拿大开发者 Cohen Adair 从 2014 年起维护的钓鱼日志 App，最初是 iOS 和安卓两套代码，2020 年后用 Flutter 重写成一套，GitHub 上 34 星，两千多次提交，应用商店里有成品。它解决的问题是：钓鱼的人都想知道自己在什么天气、什么饵、什么时段最容易上鱼，这需要长期、结构化的记录，本子上记的东西没法统计。\n它的结构是本地数据库加可选云备份：核心对象是渔获，每条记录鱼种、长度重量、照片、用的饵和钓法、钓点坐标、时间，以及自动抓取的天气、气压、潮汐和月相；渔获归到一次出钓里，出钓再记同行的人。报表按鱼种、饵、钓点、月份交叉统计，画出上鱼最多的组合；鱼种、饵、钓点都是可自定义的字典。没有中文界面，但字段少，用起来不需要看字。\n在 0702 里它是小黑板的数字版：黑板上用粉笔写今天几条鲫鱼、什么饵、什么天气，拍照存档后再把每条录进它，鱼种字典预先建好鲫鱼、昂刺、鲤鱼、翘嘴，饵字典建好洞洞板上那几盒假饵和常用的蚯蚓玉米；钓点就一个，河边钓台。半年后看报表，黄色软虫在九月傍晚上鱼最多这种结论就出来了，反过来决定哪盒饵挂在最顺手的位置。它的天气数据来自国外气象服务，乡下精度一般，气压和月相更可信；备份定期导出，别只存手机。",
+    "diagram": {
+     "title": "Anglers' Log · 黑板渔获变成可查报表",
+     "nodes": [
+      {
+       "id": "board",
+       "label": "小黑板\n粉笔记录 + 拍照",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "一个人\n收竿后录入",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Anglers' Log\nFlutter App",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "渔获 / 出钓\n本地数据库",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "wx",
+       "label": "天气 / 气压\n月相自动抓",
+       "kind": "cloud",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "rep",
+       "label": "报表\n鱼种 × 饵 × 月份",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "peg",
+       "label": "洞洞板饵位调整",
+       "kind": "step",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "board",
+       "me"
+      ],
+      [
+       "me",
+       "core",
+       "录入"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "wx",
+       "core",
+       "补全",
+       "dash"
+      ],
+      [
+       "db",
+       "rep",
+       "交叉统计"
+      ],
+      [
+       "rep",
+       "peg",
+       "哪盒饵最顺手"
+      ]
+     ],
+     "usage": "0702：黑板写满拍照后录进 App，半年出报表，决定哪盒饵挂在最顺手的位置"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "鱼竿 收纳墙 洞洞板",
+    "note": "看鱼竿斜挂扇形排列和假饵按颜色摆放的展示效果"
+   },
+   {
+    "keyword": "路亚 假饵 收纳 展示",
+    "note": "看亚克力小盒和磁吸板存放假饵的做法"
+   },
+   {
+    "keyword": "老樟木箱 改造",
+    "note": "看旧木箱内部分格和不打磨保留包浆的样子"
+   }
+  ]
+ },
+ {
+  "id": "0703",
+  "github": [
+   {
+    "name": "syssi/esphome-jk-bms",
+    "url": "https://github.com/syssi/esphome-jk-bms",
+    "stars": "1.0k",
+    "zh": "无中文",
+    "desc": "ESPHome 外部组件，通过 UART-TTL 或蓝牙读极空 JK BMS 的每节电芯电压、温度、剩余容量，还能远程开关充放电和均衡",
+    "why": "磷酸铁锂电池组配 JK 保护板，用它把单体电压和温度读进 HomeAssistant，冬天低温禁充、电量低于 20% 报警都有数据可依",
+    "intro": "esphome-jk-bms 是德国开发者 syssi 维护的 ESPHome 外部组件，GitHub 上 1.0k 星，专门读深圳极空 JK 系列电池管理系统的数据。JK BMS 是 DIY 磷酸铁锂电池圈子里最常用的国产带均衡保护板，自带蓝牙和串口，但原厂只有手机 App，数据进不了家庭中枢，这个组件补上了这一段。\n它的工作方式是一块 ESP32 通过两种途径之一和 BMS 通信：UART-TTL 接保护板的串口排针，或者用 ESP32 自带的蓝牙直接连，后者不用接线但要独占连接。解析出的实体非常细：总电压、电流、功率、剩余容量、每一节电芯电压、最高最低压差、均衡电流、两路温度、充放电次数和各类保护状态，还有几个开关能远程打开或关闭充电、放电和均衡。仓库按型号分了几份示例 YAML。没有中文文档，但极空保护板是国产的，参数名和 App 一一对应。\n在 0703 里它装在杉木柱脚的防水电池箱里：12V 100Ah 磷酸铁锂四串配一块 JK 保护板，箱内的 ESP32 用 UART 接它，和读 MPPT 的那块合成一块板子；HomeAssistant 收到剩余容量低于 20% 就推手机报警，电芯温度低于 0 度就通过充电开关禁止充电，这是磷酸铁锂冬天最要紧的保护；单体压差超过 50 毫伏提醒做一次均衡。蓝牙方式会和手机 App 抢连接，用串口更稳；串口线别和 12V 输出线并排走，干扰会让读数乱跳。",
+    "diagram": {
+     "title": "JK BMS 组件 · 每节电芯都进中枢",
+     "nodes": [
+      {
+       "id": "bms",
+       "label": "JK 保护板\n4 串磷酸铁锂",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "uart",
+       "label": "UART-TTL\n或蓝牙",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "esphome-jk-bms\n箱内 ESP32",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ent",
+       "label": "电芯电压 / 温度\n容量 / 压差",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n卡片 + 报警",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "sw",
+       "label": "充电开关\n0 度禁充",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "phone",
+       "label": "手机\n<20% 报警",
+       "kind": "device",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "bms",
+       "uart"
+      ],
+      [
+       "uart",
+       "core",
+       "解析"
+      ],
+      [
+       "core",
+       "ent"
+      ],
+      [
+       "ent",
+       "ha",
+       "原生 API"
+      ],
+      [
+       "ha",
+       "phone",
+       "推送"
+      ],
+      [
+       "ha",
+       "sw",
+       "自动化"
+      ],
+      [
+       "sw",
+       "bms",
+       "关充电",
+       "dash"
+      ]
+     ],
+     "usage": "0703：读单体电压温度进 HA，低于 20% 报警，0 度以下自动禁充"
+    }
+   },
+   {
+    "name": "KinDR007/VictronMPPT-ESPHOME",
+    "url": "https://github.com/KinDR007/VictronMPPT-ESPHOME",
+    "stars": "409",
+    "zh": "无中文",
+    "desc": "ESPHome 外部组件，通过 VE.Direct 串口读 Victron MPPT 和 SmartShunt 的电池电压、光伏功率、今日发电量和充电状态",
+    "why": "电池箱里的 ESPHome 节点直接用它，今日光伏发电 0.6 度、电池电压这些数就是手机通知里那行字的来源，几根线加一份 YAML",
+    "intro": "VictronMPPT-ESPHOME 是捷克开发者 KinDR007 做的 ESPHome 外部组件，GitHub 上 409 星，用来读荷兰 Victron 公司 MPPT 太阳能控制器和 SmartShunt 电量计的数据。Victron 设备有一个叫 VE.Direct 的串口协议，每秒把电压电流等文本发一遍，文档公开，这个组件把它接进 ESPHome，不用买官方的联网网关。\n接法极简：MPPT 侧面的 VE.Direct 口有四根线，接地和数据发送两根接到 ESP32 的一个 UART 引脚上就行，19200 波特纯文本，一行一个字段。组件解析出电池电压电流、光伏电压功率、今日和昨日发电量、充电阶段、错误码、负载输出状态等几十个实体。仓库提供完整示例 YAML。没有中文资料，但 Victron 在国内船用和房车圈有中文经销商和产品文档。\n在 0703 里它是光伏电量看护的眼睛：顶棚那块 200W 板接一台 Victron 75/15 这类小 MPPT，电池箱里的 ESP32 用一个 UART 读它，和 JK BMS 那路合在同一块板上；HomeAssistant 做一张钓台能源卡片，显示电池电压、今日发电量、光伏功率和充电阶段，晚上九点那条电池 82%、今日发电 0.6 度的通知就从这里来；用 sun 实体判断天黑后再亮马灯和地脚灯。VE.Direct 的电平有些型号是 5V，接 ESP32 前加分压；串口线用屏蔽线，别超过一米。",
+    "diagram": {
+     "title": "VE.Direct 组件 · 两根线读 MPPT",
+     "nodes": [
+      {
+       "id": "pv",
+       "label": "200W 光伏板",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "mppt",
+       "label": "Victron MPPT\nVE.Direct 口",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ESPHome 组件\n箱内 ESP32 UART",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ent",
+       "label": "电压 / 功率\n今日发电量",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n钓台能源卡片",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "lamp",
+       "label": "马灯 / 地脚灯\n天黑后亮",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "phone",
+       "label": "手机\n电池 82% 通知",
+       "kind": "device",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "pv",
+       "mppt"
+      ],
+      [
+       "mppt",
+       "core",
+       "19200 文本"
+      ],
+      [
+       "core",
+       "ent",
+       "解析"
+      ],
+      [
+       "ent",
+       "ha",
+       "原生 API"
+      ],
+      [
+       "ha",
+       "phone",
+       "九点推送"
+      ],
+      [
+       "ha",
+       "lamp",
+       "sun 实体"
+      ]
+     ],
+     "usage": "0703：VE.Direct 两根线进 ESP32，发电量和电压进 HA 做卡片和通知"
+    }
+   },
+   {
+    "name": "Bettapro/Solar-Tracer-Blynk-V3",
+    "url": "https://github.com/Bettapro/Solar-Tracer-Blynk-V3",
+    "stars": "61",
+    "zh": "无中文",
+    "desc": "ESP32 或 ESP8266 通过 RS485 Modbus 读 EPEver Tracer 系列 MPPT 控制器，支持 Blynk、MQTT 和 HomeAssistant 自动发现，带网页配置",
+    "why": "国内买的 MPPT 多是 EPEver 这类国产 Modbus 机型，不想上 Victron 就用它接，几十块的控制器也能把发电量和电池电压推进 HomeAssistant",
+    "intro": "Solar-Tracer-Blynk-V3 是意大利开发者 Bettapro 做的固件，GitHub 上 61 星，用一块 ESP32 加一个 RS485 模块去读 EPEver Tracer 系列太阳能控制器。EPEver 是北京生产的 MPPT 品牌，Tracer AN 系列便宜好买，但原厂只给一个 RJ45 口的 Modbus 协议，这个固件把它变成一台能进家庭中枢的联网设备。\n它的工作方式是主控通过 MAX485 芯片以 Modbus RTU 轮询控制器的寄存器，读出光伏电压电流功率、电池电压电流温度、负载状态、今日和累计发电量、充电阶段、故障位，还能写寄存器改负载开关。上报有三条路：Blynk 手机 App、MQTT 主题和 HomeAssistant 的 MQTT 自动发现，接上就自动出现几十个实体。没有中文资料，但 EPEver 的寄存器表有中文版可对照。\n在 0703 里它是不用 Victron 时的替代路线：顶棚 200W 板接一台 EPEver Tracer 2210AN，电池箱里的 ESP32 通过 RS485 模块接控制器的 RJ45 口，自动发现后 HomeAssistant 的能源卡片、低电量报警和天黑亮灯的自动化都不用改；控制器自带的负载输出正好接马灯和地脚灯。RJ45 口的引脚要照它的接线图，接错会烧 RS485 模块；负载口有电流上限，逆变器走电池直出。",
+    "diagram": {
+     "title": "Solar-Tracer · Modbus 读国产 MPPT",
+     "nodes": [
+      {
+       "id": "pv",
+       "label": "200W 光伏板",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ep",
+       "label": "EPEver Tracer\nRJ45 Modbus",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Solar-Tracer 固件\nESP32 + MAX485",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "reg",
+       "label": "寄存器\n发电量 / 电池 / 故障",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\nMQTT 自动发现",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "load",
+       "label": "负载口\n马灯 / 地脚灯",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "phone",
+       "label": "手机报警\n<20%",
+       "kind": "device",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "pv",
+       "ep"
+      ],
+      [
+       "ep",
+       "core",
+       "RS485 轮询"
+      ],
+      [
+       "core",
+       "reg"
+      ],
+      [
+       "reg",
+       "ha",
+       "MQTT"
+      ],
+      [
+       "ha",
+       "phone",
+       "推送"
+      ],
+      [
+       "ha",
+       "core",
+       "开关负载",
+       "dash"
+      ],
+      [
+       "core",
+       "load",
+       "写寄存器"
+      ]
+     ],
+     "usage": "0703：国产 EPEver 走 RS485 进 ESP32，MQTT 自动发现进 HA，负载口带灯"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "夜钓 灯光 氛围",
+    "note": "看马灯暖光和蓝光夜钓灯的搭配，以及灯不照水面的布法"
+   },
+   {
+    "keyword": "太阳能 离网 小系统",
+    "note": "看光伏板、控制器、电池箱的接线和防水安装方式"
+   },
+   {
+    "keyword": "庭院 太阳能 地脚灯",
+    "note": "看栈道两侧地脚灯的间距和夜晚亮起来的效果"
+   }
+  ]
+ },
+ {
+  "id": "0704",
+  "github": [
+   {
+    "name": "esphome/esphome",
+    "url": "https://github.com/esphome/esphome",
+    "stars": "11.7k",
+    "zh": "无中文（社区教程多）",
+    "desc": "用 YAML 配置 ESP32 固件的系统，一氧化碳、温度探针、脉冲风速、本地定时器都是现成组件，本地跑不上云，原生接 HomeAssistant",
+    "why": "火塘空气看护和煮茶烤鱼计时器合成一块 ESP32：读 CO 传感器和热电偶，本地阈值报警和倒计时，不靠 Wi-Fi 也能响蜂鸣器",
+    "intro": "ESPHome 是 Nabu Casa 维护的 ESP32 固件生成系统，和 HomeAssistant 同一个团队，GitHub 上 11.7k 星。想让 ESP32 读传感器、控蜂鸣器、跑一点判断逻辑，以前得写 Arduino 代码，而它只要一份 YAML 写清接了什么、往哪报，编译、烧录、OTA 全自动，HomeAssistant 自动发现。\n它的工作方式是 YAML 到 C++ 的编译器：声明传感器型号、引脚、采样周期，它生成固件；固件在设备本地运行，原生 API 推给 HomeAssistant，断网时本地逻辑照常。和火塘相关的组件都有：max31855 读 K 型热电偶，dallas 读防水温度探头，uart 加外部组件读炜盛 ZE07 一氧化碳传感器，script 做本地倒计时，rtttl 让无源蜂鸣器唱几个音。没有官方中文，但中文社区极大，B 站教程数不清。\n在 0704 里它做一块塞在矮桌抽屉后面的火塘小板：一颗 ZE07 一氧化碳传感器装在顶棚透气口下方，读数超过 50ppm 持续五分钟蜂鸣器响并推手机，超过 100ppm 立刻响，逻辑全在本地不看 Wi-Fi；一根 K 型热电偶插进烤鱼的炭层、一根 DS18B20 贴茶壶，温度到了各响一声不同的调；再加一个按钮启动三分钟泡茶倒计时。所有实体进 HomeAssistant，矮桌下的墨水屏顺手显示炭温和茶温。CO 传感器要预热且怕烟熏，装在烟不直冲的位置；热电偶线加陶瓷套管。",
+    "diagram": {
+     "title": "ESPHome · 火塘小板本地看空气和计时",
+     "nodes": [
+      {
+       "id": "co",
+       "label": "ZE07 一氧化碳\n透气口下",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "tc",
+       "label": "K 型热电偶 / DS18B20\n炭层 / 茶壶",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "btn",
+       "label": "泡茶按钮",
+       "kind": "device",
+       "col": 0,
+       "row": 2
+      },
+      {
+       "id": "core",
+       "label": "ESPHome 固件\n火塘 ESP32",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "logic",
+       "label": "本地阈值 / 倒计时\n50ppm / 三分钟",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "buz",
+       "label": "蜂鸣器\n不同的调",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n手机推送 + 墨水屏",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "co",
+       "core",
+       "ppm"
+      ],
+      [
+       "tc",
+       "core",
+       "温度"
+      ],
+      [
+       "btn",
+       "core",
+       "计时"
+      ],
+      [
+       "core",
+       "logic"
+      ],
+      [
+       "logic",
+       "buz",
+       "本地响"
+      ],
+      [
+       "core",
+       "ha",
+       "实体"
+      ]
+     ],
+     "usage": "0704：CO 超标本地蜂鸣并推手机，炭温茶温到了各响一声，按钮三分钟泡茶倒计时"
+    }
+   },
+   {
+    "name": "CapnBry/HeaterMeter",
+    "url": "https://github.com/CapnBry/HeaterMeter",
+    "stars": "556",
+    "zh": "无中文",
+    "desc": "开源烧烤温控器，Arduino 板加树莓派跑 LinkMeter，四路探针，PID 控鼓风机和风门保持炭火温度，网页看曲线和报警",
+    "why": "火塘要烤鱼又要煮茶，靠它的 PID 鼓风把炭温稳在 200 度左右，四路探针一根测炭一根插鱼，网页曲线比盯着火看准",
+    "intro": "HeaterMeter 是美国开发者 Bryan Mayland 从 2010 年起做的开源烧烤温控器，GitHub 上 556 星，硬件电路、Arduino 固件和树莓派端软件全部开源，是 DIY 烧烤圈子里最经典的项目。它解决的问题是：用炭火烧烤最难的是把温度稳住，人要不停调风门，而它用一个小鼓风机和 PID 算法自动补氧减氧，让炭火像烤箱一样恒温。\n它的结构是两块板：一块 Arduino 兼容的主板插四路热敏探针，跑 PID 算法，按目标温度和实测温度输出 PWM 给鼓风机和舵机风门，脱机也能独立工作，板上有小屏和旋钮；主板插在一块树莓派上，树莓派跑名为 LinkMeter 的 OpenWrt 固件，提供网页界面，实时画四路温度曲线、设目标温度、设报警，报警通过邮件、推送和脚本发出，也有 MQTT 转发的社区方案。硬件可以按仓库的 Gerber 自己打板，也能买套件。没有中文资料，但烧烤论坛上讨论极多。\n在 0704 里它管火塘的炭温：铸铁火盆侧面开一个小口接鼓风机的软管，主板和树莓派装在矮桌下的抽屉隔间里，四路探针一根插在炭层测火塘温度，一根插进烤鱼最厚处，另外两根留给煮茶壶和第二条鱼；网页上设炭温目标 200 度，它自动鼓风，鱼内部到 65 度手机响。烤完关鼓风机让炭自然熄，走之前照规矩浇水。要注意开放火塘不像封闭烤炉那样好控，鼓风只能提温不能降温，风大的晚上把目标设低一点；探针线耐温有限，别直接搭在炭上。",
+    "diagram": {
+     "title": "HeaterMeter · PID 鼓风把炭火当烤箱",
+     "nodes": [
+      {
+       "id": "probe",
+       "label": "四路探针\n炭层 / 鱼 / 茶壶",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "一个人\n设目标 200 度",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "HeaterMeter 主板\nArduino PID",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "lm",
+       "label": "LinkMeter\n树莓派网页",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "fan",
+       "label": "鼓风机 / 风门\nPWM",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "fire",
+       "label": "铸铁火盆炭层",
+       "kind": "device",
+       "col": 3,
+       "row": 0
+      },
+      {
+       "id": "phone",
+       "label": "手机\n鱼到 65 度",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "probe",
+       "core",
+       "温度"
+      ],
+      [
+       "me",
+       "lm",
+       "设定"
+      ],
+      [
+       "lm",
+       "core"
+      ],
+      [
+       "core",
+       "fan",
+       "PID"
+      ],
+      [
+       "fan",
+       "fire",
+       "补氧"
+      ],
+      [
+       "fire",
+       "probe",
+       "实测",
+       "dash"
+      ],
+      [
+       "lm",
+       "phone",
+       "报警"
+      ]
+     ],
+     "usage": "0704：探针测炭和鱼，PID 鼓风稳住炭温，鱼熟了手机响"
+    }
+   },
+   {
+    "name": "WLANThermo-nano/WLANThermo_ESP32_Software",
+    "url": "https://github.com/WLANThermo-nano/WLANThermo_ESP32_Software",
+    "stars": "40",
+    "zh": "无中文",
+    "desc": "德国开源 ESP32 烧烤温度计固件，最多八路探针、网页和手机 App、推送通知、Pitmaster 功能控风扇或舵机、MQTT",
+    "why": "比 HeaterMeter 轻：一块 ESP32 就够，烤鱼和茶壶各插一根探针，温度到了手机提醒，MQTT 进 HomeAssistant，德国社区维护十年",
+    "intro": "WLANThermo 是德国一个开源社区从 2014 年起做的烧烤温度计项目，这个仓库是它 ESP32 一代的固件，GitHub 上 40 星，README 是德文。它解决的问题和 HeaterMeter 一样，把烤肉时的温度监控和炭火控制交给机器，但路线更轻：不用树莓派，一块 ESP32 加一块探针板就是完整设备，网页、App、通知都在这颗芯片上。\n它的结构是 ESP32 固件加两代硬件，Nano V3 有八路探针口，Mini V3 有四路，探针是标准的 NTC 热敏电阻，支持多种品牌的探针型号，也能接蓝牙探针。固件提供本地网页界面和手机 App，每路设上下限，越界通过 Telegram 等推送；Pitmaster 功能是它的温控部分，一路探针做反馈，用 PID 输出给风扇或舵机风门；数据可以走 MQTT 发出去。硬件设计和外壳文件在同一组织的其他仓库里，可以自己打板或买套件。没有中文资料，德文文档靠翻译软件能看懂。\n在 0704 里它是比 HeaterMeter 更省事的选择：一块 Nano V3 装在矮桌抽屉里，两根探针分别插进烤鱼和贴在茶壶上，各设一个上限，鱼 65 度、茶壶 95 度，到了 App 推一条；MQTT 接进 HomeAssistant 后，温度显示在 0703 那块能源卡片旁边。想控火再接一个小风扇到火盆进风口，用 Pitmaster 稳炭温，不行就当纯温度计用。NTC 探针型号要在设置里选对，否则读数偏几十度；进炭层的那根探针要用耐高温款。",
+    "diagram": {
+     "title": "WLANThermo · 一块 ESP32 的烧烤温度计",
+     "nodes": [
+      {
+       "id": "probe",
+       "label": "NTC 探针\n鱼 / 茶壶",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "fan",
+       "label": "小风扇\nPitmaster 可选",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "WLANThermo 固件\nNano V3 ESP32",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "lim",
+       "label": "每路上下限\n65 度 / 95 度",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "app",
+       "label": "网页 / App\n推送通知",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\nMQTT",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人\n蒲团上看手机",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "probe",
+       "core",
+       "温度"
+      ],
+      [
+       "core",
+       "fan",
+       "PID",
+       "dash"
+      ],
+      [
+       "core",
+       "lim"
+      ],
+      [
+       "lim",
+       "app",
+       "越界推送"
+      ],
+      [
+       "core",
+       "ha",
+       "MQTT"
+      ],
+      [
+       "app",
+       "me"
+      ]
+     ],
+     "usage": "0704：两根探针各设上限，越界手机推送，MQTT 进 HA，风扇控火可选"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "围炉煮茶 户外 水边",
+    "note": "看火盆、吊架、矮桌和蒲团的围坐布局与器物搭配"
+   },
+   {
+    "keyword": "木平台 火塘 隔热",
+    "note": "看木地板上生火时铁盆、火山岩板和防火垫的做法"
+   },
+   {
+    "keyword": "户外 烤鱼 炭火 吊架",
+    "note": "看三脚吊架挂壶架网的高度调节和烤鱼串的架法"
+   }
+  ]
+ }
 ]

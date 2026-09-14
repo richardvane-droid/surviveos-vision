@@ -1,129 +1,2111 @@
 [
-  {
-    "id": "0101",
-    "github": [
-      {"name": "EverythingSmartHome/everything-presence-lite", "url": "https://github.com/EverythingSmartHome/everything-presence-lite", "stars": "293",
-       "desc": "基于 ESPHome 的毫米波人体存在传感器，带光照传感，直接接入 HomeAssistant",
-       "why": "展台射灯人靠近自动亮就靠它，毫米波比红外灵敏，站着不动也不会灭灯"},
-      {"name": "adafruit/pi_video_looper", "url": "https://github.com/adafruit/pi_video_looper", "stars": "532",
-       "desc": "树莓派开机自动循环播放视频和图片的方案，专为艺术装置和展示屏设计",
-       "why": "展台侧面那块 7 寸小屏滚动播野外实测视频，插电即放，不用人管"}
-    ],
-    "xhs": [
-      {"keyword": "博物馆风 展示台 射灯", "note": "看单件展品加一束顶光的布光角度和铜牌位置"},
-      {"keyword": "胡桃木 展示台 手作", "note": "看原木展台的比例、倾斜台面和留刨痕的做法"},
-      {"keyword": "痛屋 展柜 打光", "note": "看收藏党怎么给核心藏品单独做 C 位和氛围灯"}
-    ]
-  },
-  {
-    "id": "0102",
-    "github": [
-      {"name": "Aircoookie/WLED", "url": "https://github.com/Aircoookie/WLED", "stars": "18.6k",
-       "desc": "ESP32 控制灯带的开源固件，手机网页调色调亮度，可接 HomeAssistant",
-       "why": "三排托架上方的 2700K 灯带用它统一控制，傍晚自动开、深夜自动关"},
-      {"name": "benjaminjonard/koillection", "url": "https://github.com/benjaminjonard/koillection", "stars": "1.3k",
-       "desc": "自托管的个人收藏管理系统，任意物件都能建档、配图、写字段",
-       "why": "给 20 只历代生存盒建电子档案，型号年份去过哪座山，标签内容从这里出"}
-    ],
-    "xhs": [
-      {"keyword": "收藏墙 木托架 展示", "note": "看卡带墙香水墙怎么排托架、灯带藏在哪里"},
-      {"keyword": "老松木 墙板 复古", "note": "看不刷漆的松木拼板墙和钉眼虫洞的质感"},
-      {"keyword": "手写 牛皮纸 标签 展品", "note": "看小标签的字体尺寸和铜钉固定方式"}
-    ]
-  },
-  {
-    "id": "0103",
-    "github": [
-      {"name": "damongolding/immich-kiosk", "url": "https://github.com/damongolding/immich-kiosk", "stars": "1.5k",
-       "desc": "把 Immich 相册变成浏览器轮播画框的方案，老平板打开网页就能用",
-       "why": "9 台老 iPad 各开一个网页，每台配不同相册和淡入节奏，就是九幅画"},
-      {"name": "mikf/gallery-dl", "url": "https://github.com/mikf/gallery-dl", "stars": "19.2k",
-       "desc": "命令行批量下载图站图集的工具，支持 Pinterest 画板、板块和搜索结果",
-       "why": "凌晨四点定时跑一遍，把 Pinterest 画板里的新图拉下来喂给画框"},
-      {"name": "MagicMirrorOrg/MagicMirror", "url": "https://github.com/MagicMirrorOrg/MagicMirror", "stars": "23.8k",
-       "desc": "模块化智能镜子平台，用网页模块拼接屏幕内容，社区壁纸轮播模块很多",
-       "why": "想在某一格画里叠时间天气或今日主题名，用它的模块比自己写网页省事"}
-    ],
-    "xhs": [
-      {"keyword": "电子画框 墙 拼接", "note": "看多屏拼画框的间距、外框收边和走线方式"},
-      {"keyword": "旧 iPad 改造 相框", "note": "看老平板嵌木框和拆机常供电的做法"},
-      {"keyword": "Frame 画框电视 氛围", "note": "看画面亮度怎么调得像真画而不是屏幕"}
-    ]
-  },
-  {
-    "id": "0104",
-    "github": [
-      {"name": "pibooth/pibooth", "url": "https://github.com/pibooth/pibooth", "stars": "823",
-       "desc": "树莓派开箱即用的拍照亭软件，按键拍照、加边框、接打印机直接出片",
-       "why": "拍立得相纸贵，用它接一台小照片打印机，按一下就出一张挂上去"},
-      {"name": "PhotoboothProject/photobooth", "url": "https://github.com/PhotoboothProject/photobooth", "stars": "649",
-       "desc": "自托管拍照亭网页应用，带实时预览、拼图、宝丽来滤镜和自动打印",
-       "why": "宝丽来滤镜加自动打印，自拍那一排照片的风格能和拍立得统一"},
-      {"name": "immich-app/immich", "url": "https://github.com/immich-app/immich", "stars": "110k",
-       "desc": "高性能自托管照片视频管理系统，手机自动备份、人脸识别、共享相册",
-       "why": "80 张照片的原片和背面那句话都存进去，换下来的照片也不会丢"}
-    ],
-    "xhs": [
-      {"keyword": "麻绳 木夹子 照片墙", "note": "看绳子下垂弧度、夹子间距和灯带位置"},
-      {"keyword": "拍立得 照片墙 复古", "note": "看不塑封的照片怎么排才有松弛感"},
-      {"keyword": "壁炉旁 照片墙 暖光", "note": "看柴火炉旁边的墙面怎么布置不显乱"}
-    ]
-  },
-  {
-    "id": "0105",
-    "github": [
-      {"name": "kennetek/gridfinity-rebuilt-openscad", "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad", "stars": "2.2k",
-       "desc": "Gridfinity 模块化收纳盒的 OpenSCAD 参数化重制版，尺寸分格随便改",
-       "why": "27 格零件柜不想全木工的话，直接用它生成每种物件的专属小格子打印"},
-      {"name": "andymai/gridfinity-layout-tool", "url": "https://github.com/andymai/gridfinity-layout-tool", "stars": "266",
-       "desc": "网页版 Gridfinity 抽屉布局规划工具，拖拽排格子、3D 预览、导出 STL",
-       "why": "台面下两层抽屉先在网页里把空盒身和成品的格子排好，再打印"},
-      {"name": "timmmmmmmmm/halagen", "url": "https://github.com/timmmmmmmmm/halagen", "stars": "60",
-       "desc": "浏览器里生成五金零件标签的工具，带图标库、YAML 批量出图、PNG 导出",
-       "why": "27 个格口的物件名和数量标签用它批量生成，风格统一再拿去激光刻"}
-    ],
-    "xhs": [
-      {"keyword": "手工桌 收纳 零件柜", "note": "看小格子零件柜和磁吸工具板的组合方式"},
-      {"keyword": "白蜡木 工作台 实木", "note": "看厚实木台面配方钢腿的比例和高度"},
-      {"keyword": "头顶机位 手工 拍摄", "note": "看俯拍摄像头怎么吊、长条灯装在哪不挡手"}
-    ]
-  },
-  {
-    "id": "0106",
-    "github": [
-      {"name": "patrickcollins12/esphome-fan-controller", "url": "https://github.com/patrickcollins12/esphome-fan-controller", "stars": "704",
-       "desc": "ESP32 加温度传感器的 PID 温控风扇方案，纯 YAML 配置，接 HomeAssistant",
-       "why": "间接参考：炉子对面那个温度传感器就照它接，再顺手带一个循环风扇"},
-      {"name": "mbuhidar/WoodStoveRegulator", "url": "https://github.com/mbuhidar/WoodStoveRegulator", "stars": "4",
-       "desc": "Arduino 柴火炉自动风门调节器，K 型热电偶测烟管温度，舵机拉线控风门",
-       "why": "烟管温度超标自动关风门的思路和硬件清单直接抄，缺柴还会蜂鸣提醒"},
-      {"name": "lenne0815/hafireplaceautomation", "url": "https://github.com/lenne0815/hafireplaceautomation", "stars": "1",
-       "desc": "ESP8266 加 MAX6675 热电偶加舵机风门的壁炉自动化整套方案，含 HA 面板",
-       "why": "整套 HomeAssistant 仪表盘和 Node-RED 流程现成，超 26 度提醒改几行就行"}
-    ],
-    "xhs": [
-      {"keyword": "铸铁 柴火炉 木屋", "note": "看玻璃门炉子配青石板和红砖背墙的搭配"},
-      {"keyword": "柴火架 铁艺 收纳", "note": "看 L 形柴火架怎么分粗柴细柴和引火料"},
-      {"keyword": "烟囱 室内 保温管", "note": "看双层不锈钢烟囱室内段露出来的处理方式"}
-    ]
-  },
-  {
-    "id": "0107",
-    "github": [
-      {"name": "karlomikus/bar-assistant", "url": "https://github.com/karlomikus/bar-assistant", "stars": "1.0k",
-       "desc": "自托管家庭吧台管理系统，管酒水库存、500 多个鸡尾酒配方和购物清单",
-       "why": "台面下那几瓶黄酒和玻璃罐里的料都登记进去，想喝的时候直接翻能做什么"},
-      {"name": "alex9849/CocktailPi", "url": "https://github.com/alex9849/CocktailPi", "stars": "194",
-       "desc": "树莓派 DIY 自动调酒机的网页界面和控制软件，多泵配料、自动出杯",
-       "why": "想把热红酒之外再加一台自动调酒机，泵和网页点单都是现成的"},
-      {"name": "AndreWohnsland/CocktailBerry", "url": "https://github.com/AndreWohnsland/CocktailBerry", "stars": "89",
-       "desc": "树莓派调酒机开源软件，带触屏界面、配方管理和 WS281x 灯光联动",
-       "why": "另一套调酒机方案，官方还有硬件仓库，灯光能跟出酒一起亮"}
-    ],
-    "xhs": [
-      {"keyword": "家庭吧台 榆木 自然边", "note": "看自然边木台面配高脚凳和黄铜吊灯的组合"},
-      {"keyword": "小吧台 木架 玻璃罐", "note": "看后墙木架上杯子和手写标签罐子的摆法"},
-      {"keyword": "热红酒 铸铁锅 冬天", "note": "看炉边煨热红酒的器具和一个人的炉边氛围"}
-    ]
-  }
+ {
+  "id": "0101",
+  "github": [
+   {
+    "name": "Screenly/Anthias",
+    "url": "https://github.com/Screenly/Anthias",
+    "stars": "3.7k",
+    "zh": "无中文",
+    "desc": "树莓派数字标牌系统，网页后台排播放表，循环播视频、图片和网页，专为无人值守的展示屏设计",
+    "why": "展台前脸那块 7 寸小屏跑它：网页后台传视频、排播放表，插电即放不用人管，HA 还能调 API 切内容",
+    "intro": "Anthias 是 Screenly 公司维护的开源数字标牌系统，前身叫 Screenly OSE，从 2012 年起就是树莓派做展示屏的标配，3.7k 星，2025 年重启活跃开发，2026 年 5 月又发了新版。它解决的问题很朴素：一块屏、一台小电脑，插电就循环播放你排好的内容，不需要人守着。\n架构分两层。管理端是跑在树莓派上的 Django 网页后台，你在手机或电脑浏览器里上传视频、图片或填一个网址，设定每条素材的播放时长、生效时段和顺序，形成一张播放表；播放端叫 Viewer，用 WebView 加硬件解码把素材全屏铺满，断电重启后自动接着播。整套用 Docker 打包，树莓派 3 到 5 和 x86 小主机都支持，7 寸官方屏免驱。\n生态上它有 REST API，可以从外部改播放表、切资源，Home Assistant 用 rest_command 就能调。文档是英文，没有中文版，但 B 站有旧版 Screenly OSE 的搭建教程，思路一样。\n放进 0101，它就是展台前脸那块 7 寸屏的全部软件：树莓派藏在展台抽屉后，屏排三条素材，盒子用途图文、野外实测视频、PSK 的 logo 待机画面。人靠近时 HA 调 API 切到实测视频，离开五分钟回到待机，晚上十一点后黑屏省电。坑在树莓派软解 1080p 会掉帧，视频预先压成 720p 的 H.264 就顺了。",
+    "diagram": {
+     "title": "Anthias · 树莓派上的无人值守播放表",
+     "nodes": [
+      {
+       "id": "vid",
+       "label": "实测视频 / 图文\n（预压 720p）",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 自动化\nrest_command",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Anthias 后台\nDjango 排程",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "viewer",
+       "label": "Viewer 播放器\n硬件解码",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "scr",
+       "label": "展台前脸\n7 寸小屏",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "走近的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "vid",
+       "core",
+       "上传"
+      ],
+      [
+       "ha",
+       "core",
+       "切播放表"
+      ],
+      [
+       "core",
+       "viewer",
+       "播放表"
+      ],
+      [
+       "viewer",
+       "scr",
+       "全屏"
+      ],
+      [
+       "scr",
+       "me"
+      ]
+     ],
+     "usage": "0101：树莓派藏抽屉后，HA 按人在不在切实测视频 / 待机画面"
+    }
+   },
+   {
+    "name": "EverythingSmartHome/everything-presence-lite",
+    "url": "https://github.com/EverythingSmartHome/everything-presence-lite",
+    "stars": "293",
+    "zh": "无中文",
+    "desc": "基于 ESPHome 的毫米波人体存在传感器，LD2450 雷达带目标坐标与照度，直接接入 HomeAssistant",
+    "why": "展台射灯人靠近自动亮就靠它，毫米波比红外灵敏，站着不动也不会灭灯，还能画一个只覆盖展台前的检测区",
+    "intro": "Everything Presence Lite 是英国智能家居博主 Everything Smart Home 设计的开源人体存在传感器，293 星，硬件在自家商店卖，固件与 ESPHome 配置全部开源，是 HA 圈子里最出名的毫米波存在传感器之一，2025 年后仍在更新。它解决的是红外传感器的老毛病：人坐着不动就当没人，灯一会儿就灭。\n核心是一块 ESP32 模组外加海凌科 LD2450 24GHz 毫米波雷达和一颗照度传感器。雷达测的是微动，呼吸的细微位移都能捕捉，最多同时跟踪三个目标的坐标；固件把目标位置、照度以及最多四个自定义检测区原生上报给 HA，仓库附带一个网页工具，拖框画出检测区和排除区再写回设备。\n它就是标准 ESPHome 设备，HA 里自动发现；社区还有 CO2 版和无蓝牙版的配置分支。文档和视频都是英文，B 站有搬运讲解。\n放进 0101，它贴在展台上方的梁底，正对北墙前一米的那块地板，画一个 1.5 米乘 1 米的检测区，只要有人站到展台前，HA 自动化就把 3000K 射灯从 10% 拉到 100%，并让侧屏切到实测视频；人离开 30 秒后灯缓缓回落。照度传感器顺便当白天判据，南窗光够时不亮灯。坑在雷达会穿透薄木板，检测区要画准，否则你在吧台坐着它也会亮。",
+    "diagram": {
+     "title": "EP Lite · 毫米波画区，站到展台前才亮",
+     "nodes": [
+      {
+       "id": "radar",
+       "label": "LD2450 雷达",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "lux",
+       "label": "环境照度传感器",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "EP Lite 固件\nESPHome",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "tool",
+       "label": "网页画区工具\n检测 / 排除区",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "Home Assistant\n自动化",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "spot",
+       "label": "3000K 射灯\n10% → 100%",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "展台前的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "radar",
+       "core",
+       "目标坐标"
+      ],
+      [
+       "lux",
+       "core",
+       "照度"
+      ],
+      [
+       "tool",
+       "core",
+       "写入区域",
+       "dash"
+      ],
+      [
+       "core",
+       "ha",
+       "原生 API"
+      ],
+      [
+       "ha",
+       "spot",
+       "亮 / 暗"
+      ],
+      [
+       "spot",
+       "me",
+       "照亮"
+      ]
+     ],
+     "usage": "0101：梁底装一颗，画好检测区 → HA → 射灯亮、切视频"
+    }
+   },
+   {
+    "name": "esphome/esphome",
+    "url": "https://github.com/esphome/esphome",
+    "stars": "11.7k",
+    "zh": "无中文（社区教程多）",
+    "desc": "用 YAML 配置把 ESP32 / ESP8266 变成 Home Assistant 原生设备的固件生成器，几百种传感器与执行器现成组件",
+    "why": "射灯的 PWM 调光节点和照度传感器都用它写几十行 YAML 生成固件，BH1750、MOSFET 调光、LD2410 都是自带组件",
+    "intro": "ESPHome 是 Home Assistant 官方团队 Nabu Casa 维护的固件生成工具，11.7k 星，2018 年由 Otto Winter 创建，每月发版，是 HA 生态里做自制传感器和执行器的默认答案。想让一块 ESP32 上报温度或调光，不必写 C++，写几十行 YAML 声明引脚和组件，它就编译出固件并无线刷写。\n原理是把声明式配置转成 C++：你在 YAML 里写 sensor、light 等块，ESPHome 拼装组件源码交给 PlatformIO 编译，设备开机后通过原生 API 与 HA 加密直连，实体自动出现，断网时本地自动化照样跑。它支持 ESP32 全系、ESP8266、RP2040，内置几百个组件，从 BH1750 照度、MAX6675 热电偶到 LD2410 雷达、PWM 调光都有现成写法。\n社区极大；官方文档只有英文，但 B 站、CSDN 的中文教程很多，参数名一看就懂。\n放进 0101，它负责两件小事：一块 ESP32-C3 通过 MOSFET 对 24V 的 3000K 射灯做 PWM 调光，暴露成 HA 里的一个可调光灯；同一块板再挂一颗 BH1750 读展台环境照度，作为白天不亮灯的判据。注意 PWM 频率设到 1kHz 以上，手机拍视频才不出条纹。",
+    "diagram": {
+     "title": "ESPHome · 几十行 YAML 变成射灯调光节点",
+     "nodes": [
+      {
+       "id": "yaml",
+       "label": "YAML 配置\n（几十行）",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "lux",
+       "label": "BH1750 照度",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ESPHome 编译器\n生成固件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "esp",
+       "label": "ESP32-C3 节点\nPWM 调光",
+       "kind": "device",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "Home Assistant\n原生 API",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "spot",
+       "label": "24V 射灯\nMOSFET 驱动",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "yaml",
+       "core",
+       "声明"
+      ],
+      [
+       "core",
+       "esp",
+       "OTA 刷写"
+      ],
+      [
+       "lux",
+       "esp",
+       "I2C"
+      ],
+      [
+       "esp",
+       "ha",
+       "实体"
+      ],
+      [
+       "esp",
+       "spot",
+       "PWM"
+      ],
+      [
+       "ha",
+       "me",
+       "手机面板"
+      ]
+     ],
+     "usage": "0101：ESP32-C3 调光射灯 + 读照度 → HA 判断白天不亮、人近渐亮"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "博物馆风 展示台 射灯",
+    "note": "看单件展品加一束顶光的布光角度和铜牌位置"
+   },
+   {
+    "keyword": "胡桃木 展示台 手作",
+    "note": "看原木展台的比例、倾斜台面和留刨痕的做法"
+   },
+   {
+    "keyword": "痛屋 展柜 打光",
+    "note": "看收藏党怎么给核心藏品单独做 C 位和氛围灯"
+   }
+  ]
+ },
+ {
+  "id": "0102",
+  "github": [
+   {
+    "name": "wled/WLED",
+    "url": "https://github.com/wled/WLED",
+    "stars": "18.7k",
+    "zh": "无中文",
+    "desc": "ESP32 控制可寻址灯带的开源固件，手机网页调色调亮度、存预设、本地定时，可接 HomeAssistant",
+    "why": "九宫格每排上沿那条 2700K 藏光灯带就刷它，一块 ESP32 管三段，预设与定时本地跑，HA 只负责按太阳高度切",
+    "intro": "WLED 是德国开发者 Aircoookie 在 2016 年发起的灯带固件，现在由 wled 组织维护，18.6k 星，2026 年 5 月发布了 v16，是 ESP32 控制可寻址 LED 的事实标准。它让一段 WS2812 灯带不写代码就能在手机上调色、调亮度、存预设、定时开关，还能被智能家居当成一盏灯。\n工作原理是把 ESP32 变成一个自带网页的灯控器：固件刷进去后设备开热点，填好 Wi-Fi 用浏览器打开它的地址，页面上是调色盘、一百八十多种特效、分段控制和预设槽位。灯带数据从 GPIO 直接驱动，支持 WS281x、SK6812、APA102，也支持 PWM 白光和双色温灯带，一块板可以分多个段各自控制。对外提供 JSON API、MQTT 和 DDP、E1.31 实时协议，Home Assistant 有官方集成，插电即自动发现。\n生态极大，成品控制器多围绕它转。官方文档只有英文，但 B 站和小红书上的教程非常多。\n放进 0102，一块 ESP32 接三段 2700K 暖白灯带，藏在九宫格每排格子上沿，斜向下打；三段分别设成三个 segment，预设一是傍晚 40% 暖光，预设二是夜里 15%，本地定时器兜底；HA 用 sun.sun 的高度角触发切预设，同时单独控三只小射灯。坑在灯带要选高显色的暖白型号而不是 RGB 拼白，否则老松木会发绿。",
+    "diagram": {
+     "title": "WLED · ESP32 上自带网页的灯带控制器",
+     "nodes": [
+      {
+       "id": "phone",
+       "label": "手机网页\n调色 / 存预设",
+       "kind": "screen",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA sun.sun\n傍晚触发",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "WLED 固件\nESP32",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "preset",
+       "label": "预设 / 定时器\n本地保存",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "strip",
+       "label": "3 段 2700K 灯带\n九宫格上沿",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "box",
+       "label": "九宫格里的\n七代盒子",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "phone",
+       "core",
+       "网页"
+      ],
+      [
+       "ha",
+       "core",
+       "JSON API"
+      ],
+      [
+       "preset",
+       "core"
+      ],
+      [
+       "core",
+       "strip",
+       "GPIO 数据"
+      ],
+      [
+       "strip",
+       "box",
+       "斜打阴影"
+      ],
+      [
+       "box",
+       "me"
+      ]
+     ],
+     "usage": "0102：三段藏光灯带分三个 segment，HA 按太阳高度切预设"
+    }
+   },
+   {
+    "name": "benjaminjonard/koillection",
+    "url": "https://github.com/benjaminjonard/koillection",
+    "stars": "1.3k",
+    "zh": "界面有中文",
+    "desc": "自托管的个人收藏管理系统，任意物件都能建档、配图、写自定义字段，按收藏、条目、标签三层组织",
+    "why": "七代 PSK 盒子的档案库：每只盒子一条记录，字段记型号、年份、去过哪座山、格位号，导出来直接印牛皮纸标签",
+    "intro": "Koillection 是法国开发者 Benjamin Jonard 从 2017 年起维护的自托管收藏管理系统，1.3k 星，2026 年仍在发版，专为收藏党而不是仓库管理设计：书、邮票、模型、任何你想摆出来的东西都能建档。它解决的问题是：藏品越攒越多，哪只是哪年做的、去过哪里、现在摆在哪个格子，靠脑子记不住。\n它是 Symfony 写的网页应用，Docker 起一个容器加 PostgreSQL 就能跑。数据分三层：收藏、条目、数据点，每个条目可以挂多张图片、任意数量的自定义字段，字段类型包括文本、日期、数字、评分、链接、文件，还能定义模板让同一收藏里的条目字段一致。自带标签、愿望清单、相册和统计页，可以做公开分享页给别人看。\n界面有简体中文，通过 Crowdin 社区翻译已经百分之百，README 里直接列出，装完选语言就是中文；文档是英文。API 是标准 REST，能用脚本批量导出。\n放进 0102，建一个 PSK 收藏，用模板定好字段：型号、年份、盒身材质、去过哪座山、格位号、在墙上还是在抽屉里。每次做出新一代盒子就拍照录一条；牛皮纸标签的文字从条目字段导出，套一个模板打印；右下角那两个空位也各建一条，字段写待定，催自己进度。注意图片上传要在 Docker 里设好持久卷，否则更新容器时照片会丢。",
+    "diagram": {
+     "title": "Koillection · 每只盒子一条档案，标签从字段导出",
+     "nodes": [
+      {
+       "id": "photo",
+       "label": "新一代盒子\n拍照 + 字段",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "tpl",
+       "label": "字段模板\n型号 / 年份 / 山",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Koillection\nSymfony 网页",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "PostgreSQL\n条目 + 图片",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "label",
+       "label": "6×9 牛皮纸标签\n模板打印",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "share",
+       "label": "公开分享页\n（可选）",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "photo",
+       "core",
+       "录入"
+      ],
+      [
+       "tpl",
+       "core",
+       "套模板"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "core",
+       "label",
+       "REST 导出"
+      ],
+      [
+       "core",
+       "share",
+       "",
+       "dash"
+      ],
+      [
+       "label",
+       "me",
+       "挂到格下"
+      ]
+     ],
+     "usage": "0102：PSK 收藏建七条，字段导出印标签，格位号跟着墙走"
+    }
+   },
+   {
+    "name": "home-assistant/core",
+    "url": "https://github.com/home-assistant/core",
+    "stars": "88k",
+    "zh": "有中文文档站",
+    "desc": "本地优先、隐私优先的开源家庭自动化中枢，几千个集成，自动化引擎、仪表盘和手机 App 一体",
+    "why": "九宫格灯带和三只关键作品射灯的傍晚亮灯调度全在它里做：sun.sun 高度角触发，切 WLED 预设，再顺手拉低射灯",
+    "intro": "Home Assistant 是 Paulus Schoutsen 在 2013 年发起、如今由 Nabu Casa 与 Open Home 基金会维护的开源家庭自动化中枢，88k 星，是 GitHub 上最活跃的项目之一，每月发一个大版本。它解决的问题是：家里各种品牌的灯、传感器、插座各自为政，需要一个本地跑、不依赖云、能把它们串起来写规则的大脑。\n架构是 Python 写的事件总线：每个集成把设备抽象成实体，状态变化都变成事件进总线，自动化引擎监听触发条件、判断条件、执行动作，历史数据存在本地数据库。它有两千多个官方集成，ESPHome、WLED、MQTT、Zigbee、Matter 都原生支持；仪表盘用 Lovelace 卡片拼，手机 App 能推送和定位，还带 Assist 本地语音助手。\n社区规模全球第一，中文文档站 home-assistant.io 有官方翻译，界面本身也有简体中文，B 站教程数不胜数，国内玩家常和小米、华为设备一起用。\n放进 0102，它负责调度而不是驱动：一条自动化以 sun.sun 的高度角低于 3 度为触发，动作是调用 WLED 集成把灯带切到傍晚预设，再把第一版、第四版、第七版那三只小射灯调到 60%；晚上十一点另一条自动化全部关掉；周末下午两点如果有人在木屋，再亮一次给拍照用。坑在太阳高度角在冬天下降得早，条件里加一个当前照度判断更稳。",
+    "diagram": {
+     "title": "Home Assistant · 本地事件总线上的调度大脑",
+     "nodes": [
+      {
+       "id": "sun",
+       "label": "sun.sun\n太阳高度角",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "lux",
+       "label": "木屋照度\nESPHome",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Home Assistant\n自动化引擎",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "本地历史库",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "wled",
+       "label": "WLED 灯带\n切傍晚预设",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "spot",
+       "label": "3 只作品射灯\n60%",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "sun",
+       "core",
+       "触发"
+      ],
+      [
+       "lux",
+       "core",
+       "条件"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "core",
+       "wled",
+       "WLED 集成"
+      ],
+      [
+       "core",
+       "spot",
+       "调光"
+      ],
+      [
+       "wled",
+       "me",
+       "傍晚亮起"
+      ]
+     ],
+     "usage": "0102：太阳高度角 < 3° 且照度低 → 灯带切预设、三只射灯 60%"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "收藏墙 木托架 展示",
+    "note": "看卡带墙香水墙怎么排托架、灯带藏在哪里"
+   },
+   {
+    "keyword": "老松木 墙板 复古",
+    "note": "看不刷漆的松木拼板墙和钉眼虫洞的质感"
+   },
+   {
+    "keyword": "手写 牛皮纸 标签 展品",
+    "note": "看小标签的字体尺寸和铜钉固定方式"
+   }
+  ]
+ },
+ {
+  "id": "0103",
+  "github": [
+   {
+    "name": "MagicMirrorOrg/MagicMirror",
+    "url": "https://github.com/MagicMirrorOrg/MagicMirror",
+    "stars": "23.8k",
+    "zh": "无中文",
+    "desc": "模块化智能镜子平台，用网页模块拼接屏幕内容，社区壁纸轮播、天气、日历模块上千个",
+    "why": "备选画框方案：九屏里想留一屏显示时间、天气和今日主题名，就用它的壁纸模块加两个信息模块拼",
+    "intro": "MagicMirror² 是荷兰开发者 Michael Teeuw 在 2014 年发起的开源智能镜平台，如今由 MagicMirrorOrg 社区维护，23.8k 星，每季度发版，是树莓派做信息屏和智能镜的默认选择。它让你在一块常亮的屏上组合显示时间、天气、照片，而不必从零写网页。\n架构是 Node.js 后端加 Electron 全屏浏览器：核心只管布局和模块生命周期，屏幕分成几个区域，每个模块是一个网页组件，在 config.js 里声明放哪、传什么参数即可。模块的 node_helper 能访问文件系统和网络，所以能做本地图库轮播、接 MQTT。它也支持服务器模式，把页面开给局域网里任何浏览器，正好适合 iPad。\n社区有上千个第三方模块，MMM-BackgroundSlideshow 支持本地文件夹定时换图，MMM-Remote-Control 给 Home Assistant 提供 REST 接口。文档是英文，B 站有不少树莓派魔镜教程。\n放进 0103，它不是主方案，而是九屏里那一屏的备选：用服务器模式跑在 NAS 上，iPad 浏览器全屏打开，壁纸模块指向 gallery-dl 每天同步下来的画作文件夹，角落叠一个小字号的时钟和今日主题名；其余八屏仍走 immich-kiosk。注意 iPad 要用引导式访问锁住浏览器，否则一碰就退出全屏。",
+    "diagram": {
+     "title": "MagicMirror² · 模块拼屏，服务器模式给 iPad",
+     "nodes": [
+      {
+       "id": "cfg",
+       "label": "config.js\n模块布局",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "folder",
+       "label": "每日画作文件夹\n（gallery-dl）",
+       "kind": "db",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "MagicMirror²\nNode.js 服务器",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "mods",
+       "label": "壁纸模块\n时钟 / 主题名",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ipad",
+       "label": "iPad 浏览器\n全屏锁定",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA → Remote\nControl 接口",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "cfg",
+       "core",
+       "声明"
+      ],
+      [
+       "folder",
+       "mods",
+       "轮播"
+      ],
+      [
+       "mods",
+       "core"
+      ],
+      [
+       "core",
+       "ipad",
+       "网页"
+      ],
+      [
+       "ha",
+       "core",
+       "开关 / 换图",
+       "dash"
+      ],
+      [
+       "ipad",
+       "me"
+      ]
+     ],
+     "usage": "0103：九屏里留一屏跑它，画作 + 小时钟 + 今日主题名"
+    }
+   },
+   {
+    "name": "mikf/gallery-dl",
+    "url": "https://github.com/mikf/gallery-dl",
+    "stars": "19.2k",
+    "zh": "无中文",
+    "desc": "命令行批量下载图站图集的工具，支持 Pinterest 画板、板块和搜索结果，配置一次定时跑",
+    "why": "每天凌晨四点从 Pinterest 的四个主题画板拉新图进 Immich，靠它一条命令，配好 cookie 就不用管",
+    "intro": "gallery-dl 是德国开发者 Mike Fährmann 从 2014 年起维护的命令行图集下载工具，19.2k 星，几乎每两周发一个版本，支持三百多个图站，是 youtube-dl 在图片领域的对应物。它解决的是：想把某个画板或搜索结果整体保存下来，还要能定时增量更新。\n工作原理是每个站点一个提取器：你给它一个网址，它识别站点、模拟浏览器请求列表接口、翻页、解析出每张原图地址和元数据，再按你定义的目录和文件名模板落盘，并用归档数据库记住已下载的条目，下次只拉新增。配置是一个 JSON 文件，每个站点可单独设 cookie、后处理器、尺寸过滤；Pinterest 支持画板、板块、搜索结果和相关图，需要登录 cookie。纯 Python，pip 装完就能用。\n社区活跃，站点改版几天内就有修复；文档只有英文，但因为是命令行工具，国内博客和 B 站介绍也不少。\n放进 0103，它跑在 NAS 的定时任务里：四个 Pinterest 画板对应北欧木屋、生存手册插画、旧地图、雪地动物四套主题，凌晨四点各拉一次，输出目录按主题分文件夹，后处理器把小于 1500 像素的图丢掉，再交给 Immich 的外部库扫描进相册。坑在 Pinterest 的 cookie 会过期，每两个月要从浏览器重新导一次，最好加个失败通知到 HA。",
+    "diagram": {
+     "title": "gallery-dl · 一条命令把画板整体拉回本地",
+     "nodes": [
+      {
+       "id": "pin",
+       "label": "Pinterest 画板\n四套主题",
+       "kind": "cloud",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cfg",
+       "label": "配置 JSON\ncookie / 过滤",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "gallery-dl\n站点提取器",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "arc",
+       "label": "归档数据库\n只拉新增",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "dir",
+       "label": "按主题分文件夹\n≥1500px",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "immich",
+       "label": "Immich 外部库\n扫描进相册",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "pin",
+       "core",
+       "列表接口"
+      ],
+      [
+       "cfg",
+       "core"
+      ],
+      [
+       "arc",
+       "core",
+       "去重"
+      ],
+      [
+       "core",
+       "dir",
+       "落盘"
+      ],
+      [
+       "dir",
+       "immich",
+       "凌晨四点"
+      ],
+      [
+       "immich",
+       "me",
+       "七点淡入",
+       "dash"
+      ]
+     ],
+     "usage": "0103：NAS 定时任务凌晨四点拉四个画板，过滤小图后进 Immich"
+    }
+   },
+   {
+    "name": "damongolding/immich-kiosk",
+    "url": "https://github.com/damongolding/immich-kiosk",
+    "stars": "1.7k",
+    "zh": "无中文",
+    "desc": "把 Immich 相册变成浏览器轮播画框的方案，老平板打开网页就能用，转场、时长、相册全靠 URL 参数",
+    "why": "九台 iPad 各开一个它的网址就是九幅画，相册、换图间隔、淡入淡出全用 URL 参数定，HA 还能远程控制",
+    "intro": "Immich Kiosk 是英国开发者 Damon Golding 从 2024 年起维护的画框软件，1.7k 星，更新非常勤，专门把自托管相册 Immich 里的照片变成浏览器里的轮播画框。它解决的是：闲置平板想当电子画框，又不想把照片交给商业云。\n架构是一个 Go 写的小服务，Docker 一个容器，配置一个 YAML。它自己不存图，而是通过 API 向 Immich 要图：按相册、按人物、按日期或随机抽取，经过服务端缩放和裁剪后送给浏览器，浏览器端只是一个轻量网页，靠 HTMX 定时请求下一张。转场方式、停留时间、是否显示日期地点、多图拼接都可以在 YAML 里定，也可以直接写在网址参数里，所以同一个服务能给不同的屏发不同内容。它还有 Home Assistant 集成，能远程切相册、暂停、下一张。\n文档站是英文，没有中文版，但配置项都是直白的英文单词。\n放进 0103，NAS 上起一个容器，九台 iPad 的浏览器各打开一条带参数的网址：相册指向当天主题、换图间隔 40 秒、转场用淡入淡出、九台的随机种子错开让画面不重复；早上七点 HA 调用集成让九屏同时从黑屏淡入，人离开 30 分钟后暂停并黑屏。坑在 iPad 一代的 Safari 较老，网页动画要关掉模糊背景效果才流畅。",
+    "diagram": {
+     "title": "Immich Kiosk · 相册变画框，参数定每一屏",
+     "nodes": [
+      {
+       "id": "immich",
+       "label": "Immich 相册\n四套主题",
+       "kind": "db",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 集成\n七点淡入 / 黑屏",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Immich Kiosk\nGo 服务",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "yaml",
+       "label": "YAML + URL 参数\n转场 / 间隔",
+       "kind": "file",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ipad",
+       "label": "9 台 iPad\n各一条网址",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "lux",
+       "label": "亮度跟随\nESPHome 照度",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "immich",
+       "core",
+       "API 取图"
+      ],
+      [
+       "ha",
+       "core",
+       "控制"
+      ],
+      [
+       "yaml",
+       "core"
+      ],
+      [
+       "core",
+       "ipad",
+       "缩放后送图"
+      ],
+      [
+       "lux",
+       "ipad",
+       "调亮度",
+       "dash"
+      ],
+      [
+       "ipad",
+       "me"
+      ]
+     ],
+     "usage": "0103：九台 iPad 各开一条带参数网址，HA 七点同时淡入"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "电子画框 墙 拼接",
+    "note": "看多屏拼画框的间距、外框收边和走线方式"
+   },
+   {
+    "keyword": "旧 iPad 改造 相框",
+    "note": "看老平板嵌木框和拆机常供电的做法"
+   },
+   {
+    "keyword": "Frame 画框电视 氛围",
+    "note": "看画面亮度怎么调得像真画而不是屏幕"
+   }
+  ]
+ },
+ {
+  "id": "0104",
+  "github": [
+   {
+    "name": "immich-app/immich",
+    "url": "https://github.com/immich-app/immich",
+    "stars": "110k",
+    "zh": "官方中文 README",
+    "desc": "高性能自托管照片视频管理系统，手机自动备份、人脸识别、共享相册，界面和 README 都有简体中文",
+    "why": "照片墙的底库：拍立得原片和手机照片全进它，用相册分在墙上和已归档两组，月初换展时挑片就在它里面翻",
+    "intro": "Immich 是开发者 Alex Tran 在 2022 年发起的自托管照片管理系统，110k 星，2025 年进入稳定版并被 FUTO 资助，团队全职维护，几乎每周发版。它解决的是：想要 Google 相册那样的自动备份、按人按地点搜索，但照片得存在自己家的硬盘上。\n架构是 Docker Compose 一组容器：Node.js 写的服务端负责 API 和上传，机器学习容器跑人脸识别、CLIP 语义搜索和场景分类，PostgreSQL 存元数据，Redis 排队列，照片原文件放在你指定的目录。手机 App 支持 iOS 和安卓，在后台自动上传新照片；网页端有时间轴、地图、相册、共享链接，还能挂外部库把已有文件夹直接扫进来。API 完整，第三方画框和同步工具很多。\nREADME 有官方简体和繁体中文版，界面翻译完整，国内 NAS 玩家把它当群晖相册的替代品。\n放进 0104，它是照片墙背后的底库：拍立得拍完扫描或手机翻拍的照片、车床边随手拍的制作过程都自动备份进来，建在墙上和已归档两个相册，每张照片的描述字段写背面那句铅笔字和日期；每月初 HA 发提醒，你在手机上翻一遍最近的照片，挑出下个月要冲印的二十张打上标签，冲印店的订单就从这个相册导出。坑在机器学习容器吃内存，NAS 至少留 4GB 给它。",
+    "diagram": {
+     "title": "Immich · 自家硬盘上的照片时间轴",
+     "nodes": [
+      {
+       "id": "phone",
+       "label": "手机 App\n后台自动备份",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "scan",
+       "label": "拍立得翻拍\n制作过程照",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Immich 服务端\nNode.js API",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ml",
+       "label": "机器学习容器\n人脸 / 语义搜索",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "album",
+       "label": "相册：在墙上\n/ 已归档",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "print",
+       "label": "月初挑 20 张\n导出冲印",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "phone",
+       "core",
+       "上传"
+      ],
+      [
+       "scan",
+       "core",
+       "外部库"
+      ],
+      [
+       "core",
+       "ml",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "album",
+       "分组 + 描述"
+      ],
+      [
+       "album",
+       "print",
+       "打标签"
+      ],
+      [
+       "print",
+       "me",
+       "夹上绳"
+      ]
+     ],
+     "usage": "0104：所有原片进 Immich，两个相册管在墙上 / 已归档，月初挑片冲印"
+    }
+   },
+   {
+    "name": "pibooth/pibooth",
+    "url": "https://github.com/pibooth/pibooth",
+    "stars": "823",
+    "zh": "无中文",
+    "desc": "树莓派开箱即用的拍照亭软件，按键拍照、倒计时、加边框文字，接打印机直接出片，插件可扩展",
+    "why": "吧台上那台自拍小机的软件：一个实体按钮按下倒计时拍照，自动套牛皮纸色边框，热敏或照片打印机直接出片夹上绳",
+    "intro": "pibooth 是法国开发者 Antoine Rousseaux 与 Vincent Verdeil 从 2017 年起维护的树莓派拍照亭软件，823 星，用 Python 和 pygame 写成，专门给婚礼派对上那种按一下就出片的自助拍照机用。它让一台树莓派、一个相机、一个按钮和一台打印机不写代码就变成拍照亭。\n工作原理是一个状态机：待机时屏幕轮播之前拍的照片，按下 GPIO 按钮或触屏后开始倒计时，调用相机连拍一到四张，按你选的版式拼成一张最终图，叠上背景、文字和边框，然后存盘并送去 CUPS 打印队列，屏幕上还会显示打印队列的状态。相机支持树莓派官方摄像头、gPhoto2 单反和 OpenCV 网络摄像头；每个环节都有钩子，社区插件有二维码分享、上传云盘、LED 灯效等。配置在一个 INI 文件里，界面有十种语言但没有中文。\n最后一次发版是 2023 年，功能已经稳定，中文资料只有零散博客。\n放进 0104，它跑在吧台矮柜里一台树莓派上，相机是一颗官方 Camera Module 3 装在照片墙对面的小木盒里，按钮是一个黄铜复古按键；版式设成单张 4 乘 6，背景用牛皮纸色，底部叠一行小字写日期；打印机走佳能 Selphy 照片打印机，出片直接夹到绳上，原片同时上传到 Immich。坑在树莓派预览分辨率别设太高，否则倒计时会卡。",
+    "diagram": {
+     "title": "pibooth · 按一下按钮，倒计时出片",
+     "nodes": [
+      {
+       "id": "btn",
+       "label": "黄铜按钮\nGPIO",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cam",
+       "label": "Camera Module 3",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "pibooth 状态机\npygame 界面",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "tpl",
+       "label": "版式 / 边框\nINI 配置",
+       "kind": "file",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "prt",
+       "label": "Selphy 打印机\nCUPS 队列",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "immich",
+       "label": "原片上传\nImmich",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "btn",
+       "core",
+       "倒计时"
+      ],
+      [
+       "cam",
+       "core",
+       "连拍"
+      ],
+      [
+       "tpl",
+       "core"
+      ],
+      [
+       "core",
+       "prt",
+       "拼图后打印"
+      ],
+      [
+       "core",
+       "immich",
+       "插件",
+       "dash"
+      ],
+      [
+       "prt",
+       "me",
+       "夹上绳"
+      ]
+     ],
+     "usage": "0104：吧台矮柜里的树莓派，按钮 → 拍 → 套边框 → 打印 → 夹上麻绳"
+    }
+   },
+   {
+    "name": "PhotoboothProject/photobooth",
+    "url": "https://github.com/PhotoboothProject/photobooth",
+    "stars": "649",
+    "zh": "无中文",
+    "desc": "自托管拍照亭网页应用，带实时预览、拼图、宝丽来滤镜、二维码分享和自动打印，浏览器就是界面",
+    "why": "pibooth 之外的另一条路：它的宝丽来边框和相纸滤镜模板更像样，界面在浏览器里，触屏平板也能当拍照机",
+    "intro": "Photobooth 是德国开发者 Andreas Blaesius 等人从 2017 年起维护的自托管拍照亭网页应用，649 星，2025 年仍在发大版本，用 PHP 加 JavaScript 写成，跑在树莓派或任何 Linux 小主机上，浏览器就是它的全部界面。它和 pibooth 解决同一件事，但思路是网页化：任何有浏览器的屏都能当操作面板。\n工作原理是一个 PHP 服务：前端页面用摄像头或 gPhoto2 做实时预览，点击或按硬件按钮后倒计时拍照，服务端用 GD 库做后期，拼贴版式、宝丽来白边、抠像换背景、文字水印都在这一步叠上去，然后存进相册、生成下载二维码、送打印机。它自带画廊和独立的幻灯片页面，可以把最近拍的照片投到另一块屏上；管理后台有几百个可调项，多语言由 Crowdin 维护，目前没有中文。硬件上支持 GPIO 按钮、旋转编码器和遥控器。\n文档在英文站上，德语社区活跃，中文资料几乎没有，但界面操作直观。\n放进 0104，它是自拍小机的备选软件，主要借它的宝丽来滤镜：拍出来自带下宽上窄的白边和轻微褪色，比 pibooth 的边框更像真拍立得；吧台上放一台旧 iPad 当触屏操作面，树莓派在柜子里跑服务，照片一边打印一边把幻灯片页投到画框墙的一屏上。坑在实时预览走 MJPEG 比较吃 CPU，树莓派 4 以上才顺。",
+    "diagram": {
+     "title": "Photobooth · 浏览器就是拍照机的脸",
+     "nodes": [
+      {
+       "id": "ipad",
+       "label": "旧 iPad 触屏\n操作面",
+       "kind": "screen",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cam",
+       "label": "相机 / gPhoto2",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Photobooth\nPHP 服务",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "fx",
+       "label": "GD 后期\n宝丽来白边",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "prt",
+       "label": "打印机 + 二维码",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "slide",
+       "label": "幻灯片页\n投到画框墙",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ipad",
+       "core",
+       "倒计时"
+      ],
+      [
+       "cam",
+       "core",
+       "预览 / 拍"
+      ],
+      [
+       "core",
+       "fx"
+      ],
+      [
+       "fx",
+       "prt",
+       "出片"
+      ],
+      [
+       "fx",
+       "slide",
+       "画廊"
+      ],
+      [
+       "prt",
+       "me",
+       "夹上绳"
+      ]
+     ],
+     "usage": "0104：备选软件，主要借宝丽来滤镜，幻灯片页投到 0103 一屏"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "麻绳 木夹子 照片墙",
+    "note": "看绳子下垂弧度、夹子间距和灯带位置"
+   },
+   {
+    "keyword": "拍立得 照片墙 复古",
+    "note": "看不塑封的照片怎么排才有松弛感"
+   },
+   {
+    "keyword": "壁炉旁 照片墙 暖光",
+    "note": "看柴火炉旁边的墙面怎么布置不显乱"
+   }
+  ]
+ },
+ {
+  "id": "0105",
+  "github": [
+   {
+    "name": "blakeblackshear/frigate",
+    "url": "https://github.com/blakeblackshear/frigate",
+    "stars": "35.1k",
+    "zh": "官方中文 README",
+    "desc": "本地实时目标检测的开源 NVR，IP 摄像头 24 小时录像、按事件保留，和 HomeAssistant 深度集成，有中文 README",
+    "why": "工作台头顶那颗摄像头接它：HA 一键触发手动事件开始录组装过程，录完落 NAS，视频直接拿去剪",
+    "intro": "Frigate 是美国开发者 Blake Blackshear 从 2019 年起维护的开源网络录像机，35.1k 星，几乎每月发版。它解决的是：家里的 IP 摄像头想本地录像和识别目标，不把画面传到云上，还要能和 Home Assistant 联动。\n架构是一个 Docker 容器：用 go2rtc 从摄像头拉 RTSP 流，先做低成本的运动检测，只把有动静的区域送进 OpenCV 加 TensorFlow 的目标检测，识别出人、车、猫狗等对象后生成事件，录像按事件或全天保留在本地硬盘。检测可以跑在 Coral TPU、核显或 CPU 上；对外有 MQTT、REST API 和 WebRTC 直播，HA 集成把每路摄像头、每类对象、录像片段都变成实体，还能用 API 手动创建一个事件强制录像。\nREADME 有官方简体中文版，文档站也有中文翻译，B 站教程很多。\n放进 0105，头顶那台摄像头走 PoE 接木屋交换机，Frigate 跑在 NAS 上；写字台边一个实体按钮接 HA，按下后 HA 调 Frigate 的手动事件 API 开始录制并标记为组装，再按一下结束，片段自动保留 30 天并在 HA 面板里列出；平时它也顺便当木屋监控。坑在 4000K 长条灯直射时画面会过曝，摄像头曝光要锁定，别用自动。",
+    "diagram": {
+     "title": "Frigate · 本地检测的录像机，HA 一键开录",
+     "nodes": [
+      {
+       "id": "cam",
+       "label": "头顶 PoE 摄像头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "btn",
+       "label": "台边按钮\n→ HA",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Frigate\n运动 + 目标检测",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "rec",
+       "label": "NAS 录像\n按事件保留",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 集成\n事件 / 直播",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "edit",
+       "label": "组装片段\n拿去剪视频",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "cam",
+       "core",
+       "go2rtc 拉流"
+      ],
+      [
+       "btn",
+       "core",
+       "手动事件 API"
+      ],
+      [
+       "core",
+       "rec",
+       "录像"
+      ],
+      [
+       "core",
+       "ha",
+       "MQTT"
+      ],
+      [
+       "rec",
+       "edit",
+       "30 天内"
+      ],
+      [
+       "edit",
+       "me"
+      ]
+     ],
+     "usage": "0105：按钮 → HA → Frigate 手动事件开录，组装视频落 NAS"
+    }
+   },
+   {
+    "name": "inventree/InvenTree",
+    "url": "https://github.com/inventree/InvenTree",
+    "stars": "7.3k",
+    "zh": "界面有中文",
+    "desc": "开源库存与零件管理系统，BOM、库存、供应商、标签打印、REST API 和插件一应俱全，界面有简体中文",
+    "why": "27 格零件柜的账本：一只 PSK 就是一张 27 行的 BOM，每做一只自动扣库存，低于阈值 HA 点亮那一格的提醒灯",
+    "intro": "InvenTree 是澳大利亚开发者 Oliver Walters 从 2017 年起维护的开源库存管理系统，7.3k 星，2026 年 7 月发布 1.4 版，本来是给电子爱好者管元件抽屉的，后来长成了小工厂也在用的物料系统。它解决的是：几百种小零件分格存放，哪格快用完、做一批要备多少料，靠眼睛看不过来。\n架构是 Django 后端加 React 前端，Docker 一行命令装好，数据库可以用 SQLite 到 PostgreSQL。核心对象是零件、库存项、存放位置和 BOM：零件定义参数和供应商，库存项挂在某个位置上有数量，BOM 描述一件产品由哪些零件按多少数量组成；建一个生产工单时它会核对库存够不够、完成时自动扣减。它自带标签模板，能给每个格子打印带二维码的标签，扫码直接进那格的库存页；REST API 完整，还有 Python 客户端和插件系统。\n界面通过 Crowdin 翻译，简体中文完整，文档是英文。\n放进 0105，把 PSK 建成一个装配零件，BOM 就是 27 行，27 个小木格各建一个存放位置，格口标签由它生成后激光刻；每做完一只盒子就完成一张工单扣一次库存，某格数量低于 20 时它的低库存接口被 HA 每小时轮询一次，HA 点亮那一格上方的小灯提醒补货。坑在初始盘点最累，一定要一次把 27 格数准，之后才轻松。",
+    "diagram": {
+     "title": "InvenTree · 一张 27 行 BOM 管一整柜零件",
+     "nodes": [
+      {
+       "id": "bom",
+       "label": "PSK 的 BOM\n27 行",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "order",
+       "label": "做完一只\n完成工单",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "InvenTree\nDjango + API",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "stock",
+       "label": "27 个存放位置\n库存数量",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "label",
+       "label": "格口标签\n二维码激光刻",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 轮询低库存\n点亮格口灯",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "bom",
+       "core"
+      ],
+      [
+       "order",
+       "core",
+       "扣库存"
+      ],
+      [
+       "core",
+       "stock"
+      ],
+      [
+       "core",
+       "label",
+       "模板打印"
+      ],
+      [
+       "stock",
+       "ha",
+       "< 20 件",
+       "dash"
+      ],
+      [
+       "ha",
+       "me",
+       "补货提醒"
+      ]
+     ],
+     "usage": "0105：BOM 扣减 27 格库存，低于阈值 HA 点亮那一格的提醒灯"
+    }
+   },
+   {
+    "name": "kennetek/gridfinity-rebuilt-openscad",
+    "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad",
+    "stars": "2.2k",
+    "zh": "无中文",
+    "desc": "Gridfinity 模块化收纳盒的 OpenSCAD 参数化重制版，尺寸分格随便改，导出 STL 直接打印",
+    "why": "27 格零件柜的内胆：格子先按 42mm 网格打印内盒试尺寸，定稿后再照着做木格，两层抽屉里的空盒身托盘也用它",
+    "intro": "Gridfinity Rebuilt 是开发者 kennetek 在 2022 年用 OpenSCAD 重写的 Gridfinity 参数化库，2.2k 星，2025 年仍在合并贡献。Gridfinity 是 YouTuber Zack Freedman 提出的 42 毫米网格收纳标准，底板和小盒按网格咬合，这个仓库把原本要在 Fusion 里改的模型变成几行参数就能生成的代码，想要尺寸正好的分格盒不必从零建模。\n工作原理是 OpenSCAD 脚本：你在顶部改几个数字，几格宽、几格长、多高、内部沿 X 和 Y 各分几格，要不要挖手指槽、标签翻边、磁铁孔和堆叠唇边，点渲染就得到一个 STL。底部网格脚是标准的，能扣进任何 Gridfinity 底板；仓库还提供底板、花瓶模式薄壁盒等变体，打印不需要支撑，也能命令行批量出图。\nPrintables 上按它生成的盒子成千上万；文档是英文，B 站有不少 Gridfinity 收纳的中文视频。\n放进 0105，27 格零件柜先用它出 27 只 1 乘 1 或 1 乘 2 的小盒，每格按物件大小试装两周，确认哪格该更宽、哪格该加手指槽，再照着最终尺寸做 8 乘 8 厘米的木格；台面下两层抽屉铺一块 Gridfinity 底板，空盒身和成品各用一个定制托盘固定，拉抽屉不晃。坑在 OpenSCAD 渲染慢，装开发版快得多。",
+    "diagram": {
+     "title": "Gridfinity Rebuilt · 改几个参数出一只分格盒",
+     "nodes": [
+      {
+       "id": "param",
+       "label": "参数：格数\n高度 / 分格",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "item",
+       "label": "27 种物件\n实测尺寸",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "OpenSCAD 脚本\n参数化 Gridfinity",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "stl",
+       "label": "STL 小盒 / 底板\n免支撑打印",
+       "kind": "device",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "test",
+       "label": "试装两周\n定稿尺寸",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "wood",
+       "label": "8×8 木格\n+ 抽屉托盘",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "param",
+       "core"
+      ],
+      [
+       "item",
+       "param",
+       "定参数",
+       "dash"
+      ],
+      [
+       "core",
+       "stl",
+       "渲染"
+      ],
+      [
+       "stl",
+       "test",
+       "打印"
+      ],
+      [
+       "test",
+       "wood",
+       "照尺寸做"
+      ],
+      [
+       "wood",
+       "me"
+      ]
+     ],
+     "usage": "0105：先打印 27 只小盒试装，定稿后照尺寸做木格，抽屉托盘也用它"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "手工桌 收纳 零件柜",
+    "note": "看小格子零件柜和磁吸工具板的组合方式"
+   },
+   {
+    "keyword": "白蜡木 工作台 实木",
+    "note": "看厚实木台面配方钢腿的比例和高度"
+   },
+   {
+    "keyword": "头顶机位 手工 拍摄",
+    "note": "看俯拍摄像头怎么吊、长条灯装在哪不挡手"
+   }
+  ]
+ },
+ {
+  "id": "0106",
+  "github": [
+   {
+    "name": "esphome/esphome",
+    "url": "https://github.com/esphome/esphome",
+    "stars": "11.7k",
+    "zh": "无中文（社区教程多）",
+    "desc": "用一份 YAML 给 ESP32 / ESP8266 生成固件，传感器、热电偶、蜂鸣器、PID 都是自带组件，原生接 HomeAssistant",
+    "why": "炉子对面北墙的室温探头和烟管上的 K 型热电偶都用它：max31855 组件读烟温，阈值在节点本地判断，蜂鸣器断网照样叫，HA 只画曲线推手机",
+    "intro": "ESPHome 是 Nabu Casa（HomeAssistant 背后的公司）维护的开源固件生成器，11.7k 星，每月都有新版本。它解决的问题是：想让一块十几块钱的 ESP32 变成能上报温度、能控风扇的联网节点，不用写一行 C++，把传感器型号、引脚、上报间隔写进一份 YAML，它就把固件编译好刷进去。\n工作原理是配置即代码：YAML 里每个 sensor、switch、climate 段对应一个 C++ 组件；上电后节点通过原生 API 和 HomeAssistant 直连，实体自动出现。组件库有几百个，热电偶芯片 MAX31855、DS18B20 温度探头、PWM 输出、蜂鸣器、PID 温控都是自带的。\n生态上它是 HA 官方附件，一键装好仪表盘。文档只有英文，但中文社区教程非常多。\n放进 0106 里它管两颗探头：烟管上夹一支 K 型热电偶接 MAX31855，每 10 秒读一次烟温；炉子对面北墙一颗 DS18B20 读室温。阈值写在 YAML 的 on_value 里：烟温低于 120℃ 提醒添柴、高于 350℃ 提醒关风门、室温超 26℃ 同样提醒，本地蜂鸣器直接响，HA 只负责画曲线和推手机。坑是 MAX31855 板子别贴在烟管壁上，冷端补偿会被烤偏。",
+    "diagram": {
+     "title": "ESPHome · 一份 YAML 变成烟温室温节点",
+     "nodes": [
+      {
+       "id": "tc",
+       "label": "K 型热电偶\n烟管 MAX31855",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "rt",
+       "label": "DS18B20\n北墙室温",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ESPHome 节点\nESP32-C3",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "th",
+       "label": "本地阈值\n120 / 350 / 26℃",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "buz",
+       "label": "蜂鸣器\n断网照响",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 烟温曲线\n手机通知",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "添柴 / 关风门",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "tc",
+       "core",
+       "10 秒"
+      ],
+      [
+       "rt",
+       "core"
+      ],
+      [
+       "core",
+       "th"
+      ],
+      [
+       "th",
+       "buz",
+       "超阈值"
+      ],
+      [
+       "core",
+       "ha",
+       "原生 API"
+      ],
+      [
+       "ha",
+       "me",
+       "提醒"
+      ]
+     ],
+     "usage": "0106：热电偶 + 室温 → ESP32 本地判断 → 蜂鸣器 / HA 提醒添柴或关风门"
+    }
+   },
+   {
+    "name": "patrickcollins12/esphome-fan-controller",
+    "url": "https://github.com/patrickcollins12/esphome-fan-controller",
+    "stars": "741",
+    "zh": "无中文",
+    "desc": "ESP32 加温度传感器的 PID 温控风扇方案，纯 YAML 配置，风扇几乎无声，接 HomeAssistant",
+    "why": "炉热循环风扇的现成蓝本：它的 PID climate 段直接抄，目标值改成炉边和东头床下的温差，夜里在 YAML 里限速 40%",
+    "intro": "esphome-fan-controller 是澳大利亚开发者 Patrick Collins 写的一份 ESPHome 配置加教程，741 星。它最初解决的是电视柜、机柜里设备过热的问题：一块 ESP32、一颗温度传感器、一只 12V 四线 PWM 风扇，风扇随温度平滑变速，而不是像温控开关那样忽开忽关。\n工作原理是把 ESPHome 自带的 PID climate 组件用在风扇上：温度是输入，风扇的 PWM 占空比是输出，目标温度就是设定值。比例项决定温差越大转得越快，积分项慢慢消掉长期偏差，微分项预判变化提前加减速；作者给了一组 KP、KI、KD 起点值，占空比钳在 13% 到 80% 之间，因为再低风扇会停转。HA 里出现一个 climate 实体。\n硬件只有六样：ESP32、温度探头、四线 PWM 风扇、降压模块、12V 电源、跳线，成本几十块。README 只有英文。\n放进 0106 里它就是炉热循环风扇的蓝本：把输入换成炉对面北墙和东头床下两颗探头的差值，目标温差设 2℃，炉温超 40℃ 才允许启动，夜里 23 点到 7 点在 YAML 里加一个上限 40% 的 lambda。坑是 DHT11 太慢太糙，直接换 DS18B20；PID 调参要在炉子真正烧起来时做，冷炉调出来的参数没用。",
+    "diagram": {
+     "title": "Fan Controller · PID 把炉热平滑推到东头",
+     "nodes": [
+      {
+       "id": "s1",
+       "label": "炉对面北墙\n温度探头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "s2",
+       "label": "东头床下\n温度探头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ESPHome\nPID climate",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "lim",
+       "label": "炉温 > 40℃ 才转\n夜间上限 40%",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "fan",
+       "label": "12V PWM\n循环风扇",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA climate\n拖目标温差",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "desk",
+       "label": "东头写字台\n不再 16 度",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "s1",
+       "core",
+       "ΔT 输入"
+      ],
+      [
+       "s2",
+       "core"
+      ],
+      [
+       "core",
+       "lim"
+      ],
+      [
+       "lim",
+       "fan",
+       "占空比"
+      ],
+      [
+       "ha",
+       "core",
+       "设定值",
+       "dash"
+      ],
+      [
+       "fan",
+       "desk",
+       "推热"
+      ]
+     ],
+     "usage": "0106：两颗探头温差 → PID 占空比 → 梁下循环风扇把炉热推到东头"
+    }
+   },
+   {
+    "name": "ApolloAutomation/AIR-1",
+    "url": "https://github.com/ApolloAutomation/AIR-1",
+    "stars": "172",
+    "zh": "无中文",
+    "desc": "Apollo Automation 的开源空气质量多合一传感器：SEN55 颗粒物、SCD40 二氧化碳、MiCS-4514 一氧化碳，跑 ESPHome，HA 自动发现",
+    "why": "炉子对面北墙那只一氧化碳报警器的联网版：CO、PM2.5、CO2 一次到位，HA 里做超标推送和大屏炉区变红，硬件图纸和固件全开源",
+    "intro": "AIR-1 是美国 Apollo Automation 做的开源空气质量多合一传感器，172 星，硬件图纸、外壳 3D 文件和 ESPHome 固件全部公开，也可以直接买成品，六十多美元。它解决的问题是家里的空气到底怎么样：一只 61 毫米见方的小盒子同时看颗粒物、二氧化碳、一氧化碳和挥发性有机物。\n工作原理很直白：ESP32 主控上挂三颗传感器，SEN55 测颗粒物、VOC、NOx 和温湿度，SCD40 测二氧化碳，DFRobot 的 MiCS-4514 测一氧化碳、氢气、二氧化氮、氨气和甲烷；固件是一份 ESPHome YAML，上电连它的热点填 WiFi，HA 就自动发现，十几个实体一次出现。盒子上还有三颗 RGB 指示灯。\n生态上它是 ESPHome 官方设备库里的条目，Discord 社区活跃。文档只有英文，国内买要转运。\n放进 0106 里它挂在炉子对面北墙下方、报警器规定的位置：炉子刚点着或风门开错时，CO 和 PM2.5 会先抬头，HA 自动化设 CO 超 30ppm 推送手机、大屏地图上炉区变红。但 MiCS-4514 是半导体气敏元件，不是认证级 CO 报警器，旁边那只电化学一氧化碳报警器照样要装。烧炉季每周擦炉灰，颗粒物传感器进灰会误报。",
+    "diagram": {
+     "title": "AIR-1 · 一只小盒子看 CO / PM / CO2",
+     "nodes": [
+      {
+       "id": "st",
+       "label": "柴火炉\n烟 / CO / 灰",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sen",
+       "label": "SEN55 / SCD40\nMiCS-4514",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "AIR-1 ESP32\nESPHome 固件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "led",
+       "label": "三颗 RGB 灯\n超标闪红",
+       "kind": "device",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 自动化\nCO > 30ppm",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "手机推送\n大屏炉区红",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "st",
+       "sen",
+       "扩散"
+      ],
+      [
+       "sen",
+       "core",
+       "I2C"
+      ],
+      [
+       "core",
+       "led"
+      ],
+      [
+       "core",
+       "ha",
+       "自动发现"
+      ],
+      [
+       "ha",
+       "me",
+       "推送"
+      ]
+     ],
+     "usage": "0106：AIR-1 贴北墙下方接 HA 做 CO / PM 超标推送，认证 CO 报警器仍另装"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "铸铁 柴火炉 木屋",
+    "note": "看玻璃门炉子配青石板和红砖背墙的搭配"
+   },
+   {
+    "keyword": "柴火架 铁艺 收纳",
+    "note": "看 L 形柴火架怎么分粗柴细柴和引火料"
+   },
+   {
+    "keyword": "烟囱 室内 保温管",
+    "note": "看双层不锈钢烟囱室内段露出来的处理方式"
+   }
+  ]
+ },
+ {
+  "id": "0107",
+  "github": [
+   {
+    "name": "grocy/grocy",
+    "url": "https://github.com/grocy/grocy",
+    "stars": "9.5k",
+    "zh": "界面有中文",
+    "desc": "自称“冰箱之外的 ERP”：自托管的家庭食材与日用品管理，管库存、保质期、购物清单和消耗记录",
+    "why": "小冰箱和矮柜的账本：咖啡豆开袋日期、黄酒还剩几瓶、桂花陈皮什么时候过期，罐上扫码入库消耗，过期前推提醒",
+    "intro": "Grocy 是德国开发者 Bernd Bestel 从 2017 年起维护的自托管家庭管理系统，9.5k 星。它解决的问题被它自己一句话概括为“冰箱之外的 ERP”：家里买的吃的用的，什么时候买的、放在哪、还剩多少、什么时候过期，靠脑子记总会重复买或放坏。\n工作原理是一套小型进销存：每样东西建一个产品，定义单位、默认保质期和存放位置，买回来就入库，用掉就消耗，可以扫商品条码或自己打的二维码，手机在柜前扫一下就完成。系统按先进先出记每一批的到期日，快过期的自动进首页提醒，低于最低库存自动进购物清单。后端是 PHP 加 SQLite，Docker 一条命令起来。\n生态上它有官方的 HomeAssistant 集成和条码前端 Barcode Buddy，社区很大。翻译走 Transifex，简体中文界面是完整的。\n放进 0107 里它管矮柜和小冰箱这一层：咖啡豆按袋建产品记开袋日期，桂花、陈皮、干柠檬片按罐记到期，黄酒按瓶数记，每只玻璃罐的牛皮纸标签角上加一个小二维码，补料和用掉都是扫一下。HA 集成把快过期和需要购买两条读出来，周末出门前推一次。它和 Bar Assistant 的分工是：Grocy 管东西还在不在、坏没坏，Bar Assistant 管今晚拿它们做什么。",
+    "diagram": {
+     "title": "Grocy · 罐子扫一下，到期和缺货自己算",
+     "nodes": [
+      {
+       "id": "qr",
+       "label": "罐上小二维码\n手机扫一下",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "buy",
+       "label": "补料 / 用掉",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Grocy\n进销存 + 到期",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "SQLite\n每批到期日",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 集成\n快过期 / 缺货",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "list",
+       "label": "购物清单",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "周末出门前\n一条推送",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "buy",
+       "qr"
+      ],
+      [
+       "qr",
+       "core",
+       "入库 / 消耗"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "core",
+       "ha"
+      ],
+      [
+       "core",
+       "list",
+       "低于最低量"
+      ],
+      [
+       "ha",
+       "me",
+       "推送"
+      ]
+     ],
+     "usage": "0107：罐子扫码入库消耗 → 到期与缺货 → HA 周末推一次购物清单"
+    }
+   },
+   {
+    "name": "karlomikus/bar-assistant",
+    "url": "https://github.com/karlomikus/bar-assistant",
+    "stars": "1.0k",
+    "zh": "无中文",
+    "desc": "自托管家庭吧台管理系统，管酒水库存、500 多个鸡尾酒配方和购物清单，带 REST API",
+    "why": "柜里 8 只玻璃罐和几瓶黄酒都登记进去，坐下翻平板按库存反查今晚能做什么，缺料自动进购物清单推手机",
+    "intro": "Bar Assistant 是克罗地亚开发者 Karlo Mikuš 从 2022 年起做的自托管家庭吧台管理系统，1.0k 星。它解决的问题很具体：家里的酒、糖浆、干料到底还剩多少，用手头这些东西今晚能调出什么，缺什么该买什么。\n架构是前后端分离：后端 bar-assistant 是 PHP 写的 API 服务，负责配方、原料、库存、购物清单和用户权限；前端 Salt Rim 是一个 Vue 单页应用，手机上可以装成 PWA。数据流是先把原料建档、勾上在库，配方库里 500 多款鸡尾酒会按库存自动分成现在能做和还差一样；做了一杯就按配方扣减，任何原料低于设定量自动进购物清单。配方可以从网址、JSON、YAML 导入，也能算成本、按人数放大。\n生态上它 Docker 一条命令起来，Discord 社区活跃，翻译走 Crowdin 但没有中文界面。\n放进 0107 里它就是吧台点单账本：柜里 8 只玻璃罐的咖啡豆、桂花、陈皮、干柠檬片和几瓶本地黄酒各建一条原料，热红酒、桂花黄酒、陈皮茶写成自定义配方，坐下翻平板按库存筛可做的那几款。HA 用它的 REST API 每晚读一次库存，低于 1 份用量就推手机。坑是它默认是鸡尾酒思维，原料单位要自己改成 g 和 ml，别按盎司算。",
+    "diagram": {
+     "title": "Bar Assistant · 按库存反查今晚能做什么",
+     "nodes": [
+      {
+       "id": "jars",
+       "label": "8 只玻璃罐\n几瓶黄酒",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "坐下翻平板",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Bar Assistant\nPHP API",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "search",
+       "label": "Meilisearch\n按库存筛配方",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ui",
+       "label": "Salt Rim\n今晚能做的",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 读 REST\n缺料推手机",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "shop",
+       "label": "购物清单",
+       "kind": "file",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "jars",
+       "core",
+       "建原料"
+      ],
+      [
+       "me",
+       "search",
+       "选一杯"
+      ],
+      [
+       "core",
+       "search"
+      ],
+      [
+       "search",
+       "ui"
+      ],
+      [
+       "ui",
+       "core",
+       "扣减",
+       "dash"
+      ],
+      [
+       "core",
+       "ha",
+       "API"
+      ],
+      [
+       "ha",
+       "shop"
+      ]
+     ],
+     "usage": "0107：罐子黄酒建原料 → 按库存筛可做配方 → 扣减 → 缺料进购物清单推手机"
+    }
+   },
+   {
+    "name": "beeb/coffee-scale-app",
+    "url": "https://github.com/beeb/coffee-scale-app",
+    "stars": "146",
+    "zh": "无中文",
+    "desc": "DIY 蓝牙咖啡秤：ESP32 + HX711 称重传感器跑 Rust 固件，配一个手机 PWA 显示重量、计时和萃取曲线",
+    "why": "手冲架下那台秤自己做：磨豆注水计时、流速曲线全在手机网页上，每天一杯的种草环节多了一条能对比的曲线",
+    "intro": "coffee-scale-app 是瑞士开发者 beeb 做的开源 DIY 咖啡秤，146 星，从 2021 年做到现在，2026 年 9 月还在发新版。它解决的问题是：市面上带蓝牙、能画曲线的咖啡秤要一千多块，而一块 ESP32、一颗 HX711 称重模块、一个小 OLED 加一节锂电池，成本不到一百块就能做出同样的事。\n工作原理分两半：秤本身跑 Rust 写的固件，用 esp-rs 生态，HX711 高频采样后经卡尔曼滤波去抖，128×32 的 OLED 上显示重量，通过低功耗蓝牙广播出去；另一半是一个网页 PWA，手机浏览器打开 coffee.beeb.li 或自己部署的一份，连上秤后实时显示重量、计时、预浸时间，并把这次注水的重量曲线和一条参考萃取曲线叠在一起。外壳有 3D 打印件，去 Printables 下载。\n生态上它是 ESP32 咖啡秤里最完整的一个，README 详细但只有英文，好在接线就四根。\n放进 0107 里它就是手冲架下那台秤：磨完豆按一下归零，注水时手机放在榆木台面上看曲线，粉水比和流速有了记录。用 ESP32-C3 把体积再缩小一圈，外壳改成一只小胡桃木盒，秤盘留着防水。坑是 HX711 受温度影响，台面离炉子只有两米，每次开始前先归零，别把秤放在电陶炉旁边。",
+    "diagram": {
+     "title": "Coffee Scale · 一百块做一台蓝牙曲线秤",
+     "nodes": [
+      {
+       "id": "water",
+       "label": "手冲注水",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "cell",
+       "label": "HX711 模块\n称重传感器",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "ESP32 Rust 固件\n卡尔曼滤波",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "oled",
+       "label": "OLED\n重量 / 电量",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "pwa",
+       "label": "手机 PWA\n计时 + 曲线",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "log",
+       "label": "今天这杯\n粉水比记录",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "每天一杯\n对比曲线",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "water",
+       "cell"
+      ],
+      [
+       "cell",
+       "core",
+       "高频采样"
+      ],
+      [
+       "core",
+       "oled"
+      ],
+      [
+       "core",
+       "pwa",
+       "BLE"
+      ],
+      [
+       "pwa",
+       "log"
+      ],
+      [
+       "pwa",
+       "me"
+      ]
+     ],
+     "usage": "0107：手冲架下 DIY 秤 → 蓝牙 → 台面上手机看注水曲线"
+    }
+   }
+  ],
+  "xhs": [
+   {
+    "keyword": "家庭吧台 榆木 自然边",
+    "note": "看自然边木台面配高脚凳和黄铜吊灯的组合"
+   },
+   {
+    "keyword": "小吧台 木架 玻璃罐",
+    "note": "看后墙木架上杯子和手写标签罐子的摆法"
+   },
+   {
+    "keyword": "热红酒 铸铁锅 冬天",
+    "note": "看炉边煨热红酒的器具和一个人的炉边氛围"
+   }
+  ]
+ }
 ]
