@@ -29,639 +29,1186 @@
   <header class="mod-head">
     <p class="kicker">全站引用</p>
     <h1>105 个开源项目，138 组小红书关键词</h1>
-    <p class="lede">46 个模块专题页里引用的 GitHub 项目汇总（按星数排序，去重；标签标出是否有中文版），每个都在 2026-09 打开核实过存在，各模块页里有 500 字介绍和一张铅笔示意图。点模块编号回到对应专题页看“为什么用它”。小红书关键词在各模块页里。</p>
+    <p class="lede">46 个模块专题页里引用的 GitHub 项目汇总，去重后按星数分三档。每个仓库都在 2026-09 打开核实过存在，星数取当时页面显示值；绿色标签表示有中文（官方中文 README / 中文文档站 / 界面有中文）。项目怎么工作、在模块里怎么接，各模块页里有 500 字介绍和一张铅笔示意图——点右侧模块编号过去看。小红书关键词也在各模块页里。</p>
   </header>
-  <section class="blk">
+  <section class="blk refs-sum">
+    <div class="rs"><b>105</b><span>个项目</span></div>
+    <div class="rs"><b>34</b><span>个有中文</span></div>
+    <div class="rs"><b>15</b><span>个被多个模块共用</span></div>
+    <div class="rs"><b>139</b><span>处引用</span></div>
+    <nav class="rs-jump"><a href="#t1">万星以上 <i>16</i></a><a href="#t2">1k ～ 10k 星 <i>46</i></a><a href="#t3">1k 星以下 <i>43</i></a></nav>
+  </section>
+  
+  <section class="blk repo-tier" id="t1">
+    <h2><em>★</em> 万星以上 <small>16 个</small></h2>
+    <p class="tier-note">成熟平台级项目，社区大、文档全，出问题一搜就有答案</p>
     <div class="repo-table">
       <div class="repo-row">
-        <a class="rname" href="https://github.com/immich-app/immich" target="_blank" rel="noopener">immich-app/immich</a>
-        <span class="stars">★ 110k</span><span class="zh ">官方中文 README</span>
-        <span class="rdesc">高性能自托管照片视频管理系统，手机自动备份、人脸识别、共享相册，界面和 README 都有简体中文</span>
-        <span class="rused"><a href="modules/0104.html" title="PSK 照片墙">0104</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener">louislam/uptime-kuma</a>
-        <span class="stars">★ 90.1k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">自托管的服务监控面板：HTTP / TCP / DNS / Docker / 推送等监控类型，90 多种通知渠道和状态页</span>
-        <span class="rused"><a href="modules/0804.html" title="全屋存储 + 全屋智能">0804</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a>
-        <span class="stars">★ 88k</span><span class="zh ">有中文文档站</span>
-        <span class="rdesc">本地优先、隐私优先的开源家庭自动化中枢，几千个集成，自动化引擎、仪表盘和手机 App 一体</span>
-        <span class="rused"><a href="modules/0102.html" title="PSK 作品展示墙">0102</a><a href="modules/0603.html" title="雨水存储过滤">0603</a><a href="modules/0802.html" title="全屋中枢 / 全屋数据可视化屏">0802</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/jellyfin/jellyfin" target="_blank" rel="noopener">jellyfin/jellyfin</a>
-        <span class="stars">★ 54k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">免费开源的媒体服务器，管理和串流自己的影视库，无账号无云端，2026 年 6 月 10.11.11 版仍在更新</span>
-        <span class="rused"><a href="modules/0207.html" title="影音室">0207</a><a href="modules/0804.html" title="全屋存储 + 全屋智能">0804</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/blakeblackshear/frigate" target="_blank" rel="noopener">blakeblackshear/frigate</a>
-        <span class="stars">★ 35.1k</span><span class="zh ">官方中文 README</span>
-        <span class="rdesc">本地实时目标检测的开源 NVR，IP 摄像头 24 小时录像、按事件保留，和 HomeAssistant 深度集成，有中文 README</span>
-        <span class="rused"><a href="modules/0105.html" title="PSK 工作台">0105</a><a href="modules/0604.html" title="摄像头监测微环境">0604</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">FreeCAD/FreeCAD</a>
-        <span class="stars">★ 32.2k</span><span class="zh ">有中文文档站</span>
-        <span class="rdesc">免费开源的参数化 3D 建模软件，2026 年已到 1.1 版，带建筑 BIM、零件、装配和图纸工作台，界面和 wiki 都有中文</span>
-        <span class="rused"><a href="modules/0204.html" title="系统设计工作台">0204</a><a href="modules/0701.html" title="钓台本体与顶棚">0701</a><a href="modules/0805.html" title="全套方案材质总设计">0805</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/78/xiaozhi-esp32" target="_blank" rel="noopener">78/xiaozhi-esp32</a>
-        <span class="stars">★ 29.6k</span><span class="zh ">官方中文 README</span>
-        <span class="rdesc">小智：ESP32-S3 上的 MCP 语音聊天机器人，离线唤醒、接 Qwen / DeepSeek 等大模型，能通过 MCP 控制设备</span>
-        <span class="rused"><a href="modules/0803.html" title="miniduck">0803</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/arendst/Tasmota" target="_blank" rel="noopener">arendst/Tasmota</a>
-        <span class="stars">★ 24.8k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">ESP8266 / ESP32 设备的替换固件，网页配置、计量、规则引擎、MQTT，本地控制不上云，几百种设备模板</span>
-        <span class="rused"><a href="modules/0505.html" title="电摩充电桩">0505</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/henrygd/beszel" target="_blank" rel="noopener">henrygd/beszel</a>
-        <span class="stars">★ 24.3k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">轻量服务器监控：Hub + Agent 架构，历史曲线、Docker 容器状态、温度、S.M.A.R.T. 和告警</span>
-        <span class="rused"><a href="modules/0804.html" title="全屋存储 + 全屋智能">0804</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/MagicMirrorOrg/MagicMirror" target="_blank" rel="noopener">MagicMirrorOrg/MagicMirror</a>
-        <span class="stars">★ 23.8k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">模块化智能镜子平台，用网页模块拼接屏幕内容，社区壁纸轮播、天气、日历模块上千个</span>
-        <span class="rused"><a href="modules/0103.html" title="电子画框墙">0103</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/xbmc/xbmc" target="_blank" rel="noopener">xbmc/xbmc</a>
-        <span class="stars">★ 21.2k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">Kodi，2002 年起步的老牌开源家庭影院和媒体中心软件，十英尺界面、遥控器操作、插件生态庞大</span>
-        <span class="rused"><a href="modules/0207.html" title="影音室">0207</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/mikf/gallery-dl" target="_blank" rel="noopener">mikf/gallery-dl</a>
-        <span class="stars">★ 19.2k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">命令行批量下载图站图集的工具，支持 Pinterest 画板、板块和搜索结果，配置一次定时跑</span>
-        <span class="rused"><a href="modules/0103.html" title="电子画框墙">0103</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/wled/WLED" target="_blank" rel="noopener">wled/WLED</a>
-        <span class="stars">★ 18.7k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">ESP32 控制可寻址灯带的开源固件，手机网页调色调亮度、存预设、本地定时，可接 HomeAssistant</span>
-        <span class="rused"><a href="modules/0102.html" title="PSK 作品展示墙">0102</a><a href="modules/0202.html" title="卫生间灯箱系统">0202</a><a href="modules/0209.html" title="藏宝阁">0209</a><a href="modules/0303.html" title="帐篷区">0303</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/OrcaSlicer/OrcaSlicer" target="_blank" rel="noopener">OrcaSlicer/OrcaSlicer</a>
-        <span class="stars">★ 15.7k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">基于拓竹 Bambu Studio 二次开发的开源切片软件，自带校准流程，支持局域网直发</span>
-        <span class="rused"><a href="modules/0305.html" title="3D 打印">0305</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/snipe/snipe-it" target="_blank" rel="noopener">snipe/snipe-it</a>
-        <span class="stars">★ 14.9k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">开源 IT 资产管理系统，借出归还记录、资产标签、到期提醒、审计盘点和 REST API</span>
-        <span class="rused"><a href="modules/0801.html" title="物品数字孪生">0801</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
-        <span class="stars">★ 11.7k</span><span class="zh zh-no">无中文（社区教程多）</span>
-        <span class="rdesc">用 YAML 配置把 ESP32 / ESP8266 变成 Home Assistant 原生设备的固件生成器，几百种传感器与执行器现成组件</span>
-        <span class="rused"><a href="modules/0101.html" title="PSK 主产品展示">0101</a><a href="modules/0106.html" title="柴火炉系统">0106</a><a href="modules/0203.html" title="控温控湿">0203</a><a href="modules/0205.html" title="生态鱼缸">0205</a><a href="modules/0302.html" title="户外装备区">0302</a><a href="modules/0403.html" title="喷涂柜">0403</a><a href="modules/0404.html" title="木工间">0404</a><a href="modules/0504.html" title="自动种植架">0504</a><a href="modules/0602.html" title="自动浇灌">0602</a><a href="modules/0704.html" title="水边茶席·小火塘">0704</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/openscad/openscad" target="_blank" rel="noopener">openscad/openscad</a>
-        <span class="stars">★ 9.6k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">程序员的 3D CAD：用脚本描述几何体，参数一改整件重生，Thingiverse 和 MakerWorld 上可自定义的型材配件多半用它写</span>
-        <span class="rused"><a href="modules/0805.html" title="全套方案材质总设计">0805</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/grocy/grocy" target="_blank" rel="noopener">grocy/grocy</a>
-        <span class="stars">★ 9.5k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">自称“冰箱之外的 ERP”：自托管的家庭食材与日用品管理，管库存、保质期、购物清单和消耗记录</span>
-        <span class="rused"><a href="modules/0107.html" title="小吧台">0107</a><a href="modules/0210.html" title="防灾食品">0210</a><a href="modules/0501.html" title="柴火堆墙">0501</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Ralim/IronOS" target="_blank" rel="noopener">Ralim/IronOS</a>
-        <span class="stars">★ 8.3k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">Pinecil、TS100 等便携电烙铁的开源固件，带自动休眠、动作唤醒和 USB-PD 供电协商</span>
-        <span class="rused"><a href="modules/0301.html" title="小制作工具台">0301</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener">pollen-robotics/microduck</a>
-        <span class="stars">★ 7.6k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">Pollen Robotics / Hugging Face 的开源双足小鸭机器人：RK3566 主控、15 个舵机、50Hz 控制环，走路靠 MuJoCo + PPO 训练出的 ONNX 步态策略</span>
-        <span class="rused"><a href="modules/0803.html" title="miniduck">0803</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/FastLED/FastLED" target="_blank" rel="noopener">FastLED/FastLED</a>
-        <span class="stars">★ 7.4k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">Arduino 上最常用的 LED 灯光动画库，支持 50 多种单片机平台和几乎所有可寻址灯珠，3.10 版</span>
-        <span class="rused"><a href="modules/0209.html" title="藏宝阁">0209</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/inventree/InvenTree" target="_blank" rel="noopener">inventree/InvenTree</a>
-        <span class="stars">★ 7.3k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">开源库存与零件管理系统，BOM、库存、供应商、标签打印、REST API 和插件一应俱全，界面有简体中文</span>
-        <span class="rused"><a href="modules/0105.html" title="PSK 工作台">0105</a><a href="modules/0402.html" title="材料仓库">0402</a><a href="modules/0801.html" title="物品数字孪生">0801</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/evcc-io/evcc" target="_blank" rel="noopener">evcc-io/evcc</a>
-        <span class="stars">★ 7.2k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">开源光伏优先充电与家庭能源管理系统，支持上百种充电桩、电表、逆变器，智能插座也能当充电器，本地运行</span>
-        <span class="rused"><a href="modules/0505.html" title="电摩充电桩">0505</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/sysadminsmedia/homebox" target="_blank" rel="noopener">sysadminsmedia/homebox</a>
-        <span class="stars">★ 7.1k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">面向家庭用户的自托管物品库存系统，支持位置树、标签、附件、维护记录和二维码标签打印</span>
-        <span class="rused"><a href="modules/0302.html" title="户外装备区">0302</a><a href="modules/0402.html" title="材料仓库">0402</a><a href="modules/0702.html" title="钓具储物与展示">0702</a><a href="modules/0801.html" title="物品数字孪生">0801</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/wger-project/wger" target="_blank" rel="noopener">wger-project/wger</a>
-        <span class="stars">★ 6.8k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">自托管的开源健身、营养和体重记录系统，Django 后端，有网页和安卓 / iOS App，带 REST API 和动作库</span>
-        <span class="rused"><a href="modules/0212.html" title="哑铃">0212</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/piitaya/lovelace-mushroom" target="_blank" rel="noopener">piitaya/lovelace-mushroom</a>
-        <span class="stars">★ 5.1k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">HomeAssistant 最流行的简洁风格仪表盘卡片集，17 种卡片、内置编辑器、零依赖</span>
-        <span class="rused"><a href="modules/0802.html" title="全屋中枢 / 全屋数据可视化屏">0802</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/bambulab/BambuStudio" target="_blank" rel="noopener">bambulab/BambuStudio</a>
-        <span class="stars">★ 5k</span><span class="zh ">有中文文档站</span>
-        <span class="rdesc">拓竹官方开源切片软件，基于 PrusaSlicer 分支，支持 BambuLab 和其他 3D 打印机，界面和 wiki 都有中文</span>
-        <span class="rused"><a href="modules/0204.html" title="系统设计工作台">0204</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/motioneye-project/motioneye" target="_blank" rel="noopener">motioneye-project/motioneye</a>
-        <span class="stars">★ 4.7k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">motion 守护进程的网页前端，网页里管多路摄像头、移动侦测、定时快照和延时视频合成</span>
-        <span class="rused"><a href="modules/0502.html" title="爬山虎墙">0502</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/pvvx/ATC_MiThermometer" target="_blank" rel="noopener">pvvx/ATC_MiThermometer</a>
-        <span class="stars">★ 4.1k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">小米、青萍等 Telink 芯片蓝牙温湿度计的开源替换固件，省电、纯本地广播、直连 HomeAssistant</span>
-        <span class="rused"><a href="modules/0501.html" title="柴火堆墙">0501</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/apirrone/Open_Duck_Mini" target="_blank" rel="noopener">apirrone/Open_Duck_Mini</a>
-        <span class="stars">★ 3.9k</span><span class="zh ">有中文文档站</span>
-        <span class="rdesc">Microduck 的前身：仿迪士尼 BDX 机器人的迷你双足鸭，约 42cm 高、BOM 400 美元以内，STL 与 BOM 全开源</span>
-        <span class="rused"><a href="modules/0803.html" title="miniduck">0803</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/hyperion-project/hyperion.ng" target="_blank" rel="noopener">hyperion-project/hyperion.ng</a>
-        <span class="stars">★ 3.8k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">开源氛围灯软件，抓取画面边缘颜色实时驱动屏幕四周的 LED 灯带，支持 HDMI 采集卡和 WLED 等几十种灯</span>
-        <span class="rused"><a href="modules/0207.html" title="影音室">0207</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Screenly/Anthias" target="_blank" rel="noopener">Screenly/Anthias</a>
-        <span class="stars">★ 3.7k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">树莓派数字标牌系统，网页后台排播放表，循环播视频、图片和网页，专为无人值守的展示屏设计</span>
-        <span class="rused"><a href="modules/0101.html" title="PSK 主产品展示">0101</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/TomBursch/kitchenowl" target="_blank" rel="noopener">TomBursch/kitchenowl</a>
-        <span class="stars">★ 3.7k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">自托管的采购清单和食谱管理应用，Flask 后端 + Flutter 客户端，有安卓 / iOS / 网页端，多人实时同步，可部分离线</span>
-        <span class="rused"><a href="modules/0210.html" title="防灾食品">0210</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/remvze/moodist" target="_blank" rel="noopener">remvze/moodist</a>
-        <span class="stars">★ 3.7k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">开源的环境音播放器，雨声、雷声、篝火、风声等几十种声音可叠加混音，纯前端可自部署</span>
-        <span class="rused"><a href="modules/0303.html" title="帐篷区">0303</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">basnijholt/adaptive-lighting</a>
-        <span class="stars">★ 3.4k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度，自带睡眠模式和手动接管检测</span>
-        <span class="rused"><a href="modules/0201.html" title="模拟阳光">0201</a><a href="modules/0202.html" title="卫生间灯箱系统">0202</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/kizniche/Mycodo" target="_blank" rel="noopener">kizniche/Mycodo</a>
-        <span class="stars">★ 3.3k</span><span class="zh ">有中文文档站</span>
-        <span class="rdesc">树莓派上的环境监控与调节系统，接传感器控水泵灯光风扇，带 PID、条件逻辑和网页仪表盘</span>
-        <span class="rused"><a href="modules/0504.html" title="自动种植架">0504</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Donkie/Spoolman" target="_blank" rel="noopener">Donkie/Spoolman</a>
-        <span class="stars">★ 2.8k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">自托管的 3D 打印耗材库存管理，记录每卷剩余克数、颜色、材质，带打印机集成</span>
-        <span class="rused"><a href="modules/0305.html" title="3D 打印">0305</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/oliexdev/openScale" target="_blank" rel="noopener">oliexdev/openScale</a>
-        <span class="stars">★ 2.5k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">开源体重和身体数据追踪安卓 App，支持 25 种以上蓝牙体脂秤，无账号、无联网权限，可导出 CSV 和同步到 wger</span>
-        <span class="rused"><a href="modules/0212.html" title="哑铃">0212</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/rbaron/b-parasite" target="_blank" rel="noopener">rbaron/b-parasite</a>
-        <span class="stars">★ 2.4k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">开源 DIY 电容式土壤湿度传感器，纽扣电池供电，带温湿度和光照，蓝牙 BTHome 或 Zigbee 直连 HomeAssistant</span>
-        <span class="rused"><a href="modules/0503.html" title="盆栽">0503</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/greghesp/ha-bambulab" target="_blank" rel="noopener">greghesp/ha-bambulab</a>
-        <span class="stars">★ 2.3k</span><span class="zh ">组件自带简体中文翻译</span>
-        <span class="rdesc">拓竹打印机的 Home Assistant 集成，读进度、层数、温度、AMS 耗材，还能看摄像头</span>
-        <span class="rused"><a href="modules/0305.html" title="3D 打印">0305</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/LinuxCNC/linuxcnc" target="_blank" rel="noopener">LinuxCNC/linuxcnc</a>
-        <span class="stars">★ 2.3k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">老牌开源运动控制系统，驱动铣床、车床、机械臂，支持复杂运动学</span>
-        <span class="rused"><a href="modules/0307.html" title="CNC 五轴雕刻机">0307</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/kennetek/gridfinity-rebuilt-openscad" target="_blank" rel="noopener">kennetek/gridfinity-rebuilt-openscad</a>
-        <span class="stars">★ 2.2k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">Gridfinity 模块化收纳盒的 OpenSCAD 参数化重制版，尺寸分格随便改，导出 STL 直接打印</span>
-        <span class="rused"><a href="modules/0105.html" title="PSK 工作台">0105</a><a href="modules/0301.html" title="小制作工具台">0301</a><a href="modules/0401.html" title="过道工具间">0401</a><a href="modules/0702.html" title="钓具储物与展示">0702</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/custom-components/ble_monitor" target="_blank" rel="noopener">custom-components/ble_monitor</a>
-        <span class="stars">★ 2.2k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">HomeAssistant 的被动蓝牙传感器集成，不配对只听广播，支持小米、青萍、ATC 固件等上百种设备</span>
-        <span class="rused"><a href="modules/0501.html" title="柴火堆墙">0501</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/pollen-robotics/microduck_rl" target="_blank" rel="noopener">pollen-robotics/microduck_rl</a>
-        <span class="stars">★ 2k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">Microduck 的官方强化学习训练环境：mjlab（MuJoCo Warp）+ PPO + 域随机化，导出 ONNX 步态策略</span>
-        <span class="rused"><a href="modules/0803.html" title="miniduck">0803</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/wuwentao/midea_ac_lan" target="_blank" rel="noopener">wuwentao/midea_ac_lan</a>
-        <span class="stars">★ 1.9k</span><span class="zh ">官方中文 README</span>
-        <span class="rdesc">美的 M-Smart 家电的 HomeAssistant 本地局域网集成，支持空调、除湿机、风扇等 35 类设备，中文社区维护</span>
-        <span class="rused"><a href="modules/0203.html" title="控温控湿">0203</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/damongolding/immich-kiosk" target="_blank" rel="noopener">damongolding/immich-kiosk</a>
-        <span class="stars">★ 1.7k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">把 Immich 相册变成浏览器轮播画框的方案，老平板打开网页就能用，转场、时长、相册全靠 URL 参数</span>
-        <span class="rused"><a href="modules/0103.html" title="电子画框墙">0103</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Denvi/Candle" target="_blank" rel="noopener">Denvi/Candle</a>
-        <span class="stars">★ 1.7k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">GRBL 桌面 CNC 的开源上位机，Qt 写的，带 G 代码三维可视化和高度图补偿</span>
-        <span class="rused"><a href="modules/0301.html" title="小制作工具台">0301</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/danielbrendel/hortusfox-web" target="_blank" rel="noopener">danielbrendel/hortusfox-web</a>
-        <span class="stars">★ 1.7k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">自托管的植物管理与追踪系统，按位置分组建植物档案，带任务、日历、库存、天气和二维码，Docker 一条命令跑起来</span>
-        <span class="rused"><a href="modules/0601.html" title="稀树草原环境系统">0601</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/openfarmcc/OpenFarm" target="_blank" rel="noopener">openfarmcc/OpenFarm</a>
-        <span class="stars">★ 1.7k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">曾经的开放种植知识库，收录大量植物的间距、需水、光照、土壤和伴生信息，2025 年 4 月已归档，代码和数据仍可下载</span>
-        <span class="rused"><a href="modules/0601.html" title="稀树草原环境系统">0601</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/ExperienceLovelace/ha-floorplan" target="_blank" rel="noopener">ExperienceLovelace/ha-floorplan</a>
-        <span class="stars">★ 1.6k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">HomeAssistant 卡片，把实体状态映射到 SVG 平面图元素上，规则驱动样式与点击动作</span>
-        <span class="rused"><a href="modules/0802.html" title="全屋中枢 / 全屋数据可视化屏">0802</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/nophead/NopSCADlib" target="_blank" rel="noopener">nophead/NopSCADlib</a>
-        <span class="stars">★ 1.6k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">OpenSCAD 零件库和项目框架：自带 E2020 / E3030 / E4040 铝型材、角码、滑入式 T 型螺母等标准件，能生成 BOM 和装配图</span>
-        <span class="rused"><a href="modules/0805.html" title="全套方案材质总设计">0805</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/esprfid/esp-rfid" target="_blank" rel="noopener">esprfid/esp-rfid</a>
-        <span class="stars">★ 1.5k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">ESP8266 / ESP32 上的 RFID 门禁固件，支持 RC522、PN532、Wiegand 读卡器，带网页管理、用户名单、日志和 MQTT，2024 年 2.0 版</span>
-        <span class="rused"><a href="modules/0209.html" title="藏宝阁">0209</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/moode-player/moode" target="_blank" rel="noopener">moode-player/moode</a>
-        <span class="stars">★ 1.4k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">树莓派上的开源 HiFi 播放器系统，MPD 内核，支持本地音乐库、AirPlay、蓝牙、UPnP 和内置 CamillaDSP，2026 年 7 月 10.3 版</span>
-        <span class="rused"><a href="modules/0208.html" title="大柏林音响">0208</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/MDeLuise/plant-it" target="_blank" rel="noopener">MDeLuise/plant-it</a>
-        <span class="stars">★ 1.4k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">开源自托管的植物养护记录应用，有安卓 App 和网页，记浇水施肥、拍照日记、设提醒</span>
-        <span class="rused"><a href="modules/0503.html" title="盆栽">0503</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/benjaminjonard/koillection" target="_blank" rel="noopener">benjaminjonard/koillection</a>
-        <span class="stars">★ 1.3k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">自托管的个人收藏管理系统，任意物件都能建档、配图、写自定义字段，按收藏、条目、标签三层组织</span>
-        <span class="rused"><a href="modules/0102.html" title="PSK 作品展示墙">0102</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Madelena/esphome-weatherman-dashboard" target="_blank" rel="noopener">Madelena/esphome-weatherman-dashboard</a>
-        <span class="stars">★ 1.3k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">用 ESP32 驱动 7.5 寸墨水屏显示天气和预报的 ESPHome 配置，字体图标全打包</span>
-        <span class="rused"><a href="modules/0306.html" title="微型气象站">0306</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/FreddieHong19/Open5x" target="_blank" rel="noopener">FreddieHong19/Open5x</a>
-        <span class="stars">★ 1.2k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">把普通三轴机器改成五轴的开源硬件 + 软件方案（“Democratising 5-axis”）</span>
-        <span class="rused"><a href="modules/0307.html" title="CNC 五轴雕刻机">0307</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/shmuelzon/home-assistant-floor-plan" target="_blank" rel="noopener">shmuelzon/home-assistant-floor-plan</a>
-        <span class="stars">★ 1.1k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">Sweet Home 3D 插件，把 3D 户型按每盏灯分别渲染，再生成 HomeAssistant 的 picture-elements 平面图面板</span>
-        <span class="rused"><a href="modules/0204.html" title="系统设计工作台">0204</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/HEnquist/camilladsp" target="_blank" rel="noopener">HEnquist/camilladsp</a>
-        <span class="stars">★ 1.1k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">Rust 写的跨平台 IIR 和 FIR 音频处理引擎，做分频、房间校正和均衡，带 websocket 接口，4.1 版</span>
-        <span class="rused"><a href="modules/0208.html" title="大柏林音响">0208</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Nachtzuster/BirdNET-Pi" target="_blank" rel="noopener">Nachtzuster/BirdNET-Pi</a>
-        <span class="stars">★ 1.1k</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">树莓派上的实时鸟类声纹识别系统，BirdNET-Pi 的活跃维护分支，USB 麦克风 24 小时听，网页看物种统计，通知和 MQTT 都有</span>
-        <span class="rused"><a href="modules/0604.html" title="摄像头监测微环境">0604</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/karlomikus/bar-assistant" target="_blank" rel="noopener">karlomikus/bar-assistant</a>
-        <span class="stars">★ 1.0k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">自托管家庭吧台管理系统，管酒水库存、500 多个鸡尾酒配方和购物清单，带 REST API</span>
-        <span class="rused"><a href="modules/0107.html" title="小吧台">0107</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">syssi/esphome-jk-bms</a>
-        <span class="stars">★ 1.0k</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">用 ESP32 通过串口或蓝牙读取和控制极空 JK 电池保护板的 ESPHome 组件，能看每节电压、温度和均衡状态</span>
-        <span class="rused"><a href="modules/0304.html" title="光伏储能">0304</a><a href="modules/0703.html" title="钓台照明与电源">0703</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/claytonjn/hass-circadian_lighting" target="_blank" rel="noopener">claytonjn/hass-circadian_lighting</a>
-        <span class="stars">★ 887</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">HomeAssistant 昼夜节律灯光组件，把一天里自然光的色温变化算成一个传感器值，再按开关分组套到灯上</span>
-        <span class="rused"><a href="modules/0201.html" title="模拟阳光">0201</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/tolwi/hassio-ecoflow-cloud" target="_blank" rel="noopener">tolwi/hassio-ecoflow-cloud</a>
-        <span class="stars">★ 882</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">正浩 EcoFlow 户外储能电源的 Home Assistant 集成，读电量、输入输出功率并控制交流直流输出口</span>
-        <span class="rused"><a href="modules/0304.html" title="光伏储能">0304</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Olen/homeassistant-plant" target="_blank" rel="noopener">Olen/homeassistant-plant</a>
-        <span class="stars">★ 848</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">HomeAssistant 增强版植物组件，每盆植物一个设备，从 OpenPlantbook 自动拉物种养护阈值并报警</span>
-        <span class="rused"><a href="modules/0503.html" title="盆栽">0503</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/pibooth/pibooth" target="_blank" rel="noopener">pibooth/pibooth</a>
-        <span class="stars">★ 823</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">树莓派开箱即用的拍照亭软件，按键拍照、倒计时、加边框文字，接打印机直接出片，插件可扩展</span>
-        <span class="rused"><a href="modules/0104.html" title="PSK 照片墙">0104</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/galenmaly/lighterpack" target="_blank" rel="noopener">galenmaly/lighterpack</a>
-        <span class="stars">★ 800</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">户外圈最常用的装备清单网站 LighterPack 的源码，可自部署，按分类算总重和背负重量</span>
-        <span class="rused"><a href="modules/0302.html" title="户外装备区">0302</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">patrickcollins12/esphome-fan-controller</a>
-        <span class="stars">★ 741</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">ESP32 加温度传感器的 PID 温控风扇方案，纯 YAML 配置，风扇几乎无声，接 HomeAssistant</span>
-        <span class="rused"><a href="modules/0106.html" title="柴火炉系统">0106</a><a href="modules/0202.html" title="卫生间灯箱系统">0202</a><a href="modules/0403.html" title="喷涂柜">0403</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/MultiMote/niimblue" target="_blank" rel="noopener">MultiMote/niimblue</a>
-        <span class="stars">★ 740</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">精臣（NIIMBOT）标签机的第三方网页客户端，浏览器里直接蓝牙打印，不用官方 App 和账号</span>
-        <span class="rused"><a href="modules/0401.html" title="过道工具间">0401</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/pklaus/brother_ql" target="_blank" rel="noopener">pklaus/brother_ql</a>
-        <span class="stars">★ 701</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">直接驱动 Brother QL 系列标签机的 Python 库，不用官方驱动，支持 USB 和网络</span>
-        <span class="rused"><a href="modules/0402.html" title="材料仓库">0402</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/PhotoboothProject/photobooth" target="_blank" rel="noopener">PhotoboothProject/photobooth</a>
-        <span class="stars">★ 649</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">自托管拍照亭网页应用，带实时预览、拼图、宝丽来滤镜、二维码分享和自动打印，浏览器就是界面</span>
-        <span class="rused"><a href="modules/0104.html" title="PSK 照片墙">0104</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Forceu/barcodebuddy" target="_blank" rel="noopener">Forceu/barcodebuddy</a>
-        <span class="stars">★ 604</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">grocy 的条码扫描配套工具，扫一下就入库、消耗或开封，不认识的条码自动去 OpenFoodFacts 查名字</span>
-        <span class="rused"><a href="modules/0210.html" title="防灾食品">0210</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension" target="_blank" rel="noopener">lairdubois/lairdubois-opencutlist-sketchup-extension</a>
-        <span class="stars">★ 583</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">SketchUp 木工插件，从 3D 模型自动生成零件清单、下料图、标签和成本估算</span>
-        <span class="rused"><a href="modules/0404.html" title="木工间">0404</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/pageauc/pi-timolo" target="_blank" rel="noopener">pageauc/pi-timolo</a>
-        <span class="stars">★ 580</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">树莓派延时摄影加移动侦测加低光拍摄一体的 Python 工具，自带日出日落自动曝光和 rclone 网盘同步</span>
-        <span class="rused"><a href="modules/0502.html" title="爬山虎墙">0502</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/CapnBry/HeaterMeter" target="_blank" rel="noopener">CapnBry/HeaterMeter</a>
-        <span class="stars">★ 556</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">开源烧烤温控器，Arduino 板加树莓派跑 LinkMeter，四路探针，PID 控鼓风机和风门保持炭火温度，网页看曲线和报警</span>
-        <span class="rused"><a href="modules/0704.html" title="水边茶席·小火塘">0704</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/altmenorg/HAsmartirrigation" target="_blank" rel="noopener">altmenorg/HAsmartirrigation</a>
-        <span class="stars">★ 550</span><span class="zh ">界面有中文</span>
-        <span class="rdesc">HomeAssistant 智能灌溉组件，按蒸散量和降雨算每个分区的水桶余额，给出该浇多少秒，界面自带 19 种语言含简体中文</span>
-        <span class="rused"><a href="modules/0602.html" title="自动浇灌">0602</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/OpenSprinkler/OpenSprinkler-Firmware" target="_blank" rel="noopener">OpenSprinkler/OpenSprinkler-Firmware</a>
-        <span class="stars">★ 543</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">OpenSprinkler 开源灌溉控制器的统一固件，跑在 ESP8266 或树莓派上，带网页、多程序排程、传感器输入和 MQTT</span>
-        <span class="rused"><a href="modules/0504.html" title="自动种植架">0504</a><a href="modules/0602.html" title="自动浇灌">0602</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/isaac879/Pan-Tilt-Mount" target="_blank" rel="noopener">isaac879/Pan-Tilt-Mount</a>
-        <span class="stars">★ 504</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">步进电机驱动、3D 打印的 Arduino 三轴摄影运动控制器：滑轨 + 云台，带蓝牙 App 和关键帧运动</span>
-        <span class="rused"><a href="modules/0201.html" title="模拟阳光">0201</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/fl4p/batmon-ha" target="_blank" rel="noopener">fl4p/batmon-ha</a>
-        <span class="stars">★ 489</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">HA 加载项，通过蓝牙同时连接 JK、JBD、Daly、ANT 等多种电池保护板，还能算电量和累计能量</span>
-        <span class="rused"><a href="modules/0304.html" title="光伏储能">0304</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/grblHAL/core" target="_blank" rel="noopener">grblHAL/core</a>
-        <span class="stars">★ 489</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">grbl 的 32 位重写版核心，支持 A/B/C 附加轴、多种主控板（Teensy、STM32、ESP32）</span>
-        <span class="rused"><a href="modules/0307.html" title="CNC 五轴雕刻机">0307</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/mmcc-xx/WhosAtMyFeeder" target="_blank" rel="noopener">mmcc-xx/WhosAtMyFeeder</a>
-        <span class="stars">★ 456</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">Frigate 的伴侣程序，订阅鸟类事件取快照，用 TensorFlow 鸟类分类模型判断是什么种，结果写回 Frigate 子标签并存库出网页</span>
-        <span class="rused"><a href="modules/0604.html" title="摄像头监测微环境">0604</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/reef-pi/reef-pi" target="_blank" rel="noopener">reef-pi/reef-pi</a>
-        <span class="stars">★ 435</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">基于树莓派的开源水族箱控制器，管灯光日出日落、温控、pH、滴定、自动补水和定时器，带网页仪表盘</span>
-        <span class="rused"><a href="modules/0205.html" title="生态鱼缸">0205</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/brandonp2412/Flexify" target="_blank" rel="noopener">brandonp2412/Flexify</a>
-        <span class="stars">★ 424</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">轻量的开源力量训练记录 App，离线优先、纯本地存储，记组数重量、休息计时和进步曲线，Flutter 写的安卓 / iOS 端</span>
-        <span class="rused"><a href="modules/0212.html" title="哑铃">0212</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/KinDR007/VictronMPPT-ESPHOME" target="_blank" rel="noopener">KinDR007/VictronMPPT-ESPHOME</a>
-        <span class="stars">★ 409</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">ESPHome 外部组件，通过 VE.Direct 串口读 Victron MPPT 和 SmartShunt 的电池电压、光伏功率、今日发电量和充电状态</span>
-        <span class="rused"><a href="modules/0703.html" title="钓台照明与电源">0703</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/airgradienthq/arduino" target="_blank" rel="noopener">airgradienthq/arduino</a>
-        <span class="stars">★ 377</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">AirGradient 开源硬件空气质量监测仪的固件与库，测 CO2、PM2.5、温湿度、TVOC，ESP8266 / ESP32-C3</span>
-        <span class="rused"><a href="modules/0203.html" title="控温控湿">0203</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">hugokernel/esphome-weather-station</a>
-        <span class="stars">★ 338</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">Elektor 气象站的 ESPHome 版本，风速、风向、翻斗雨量、温湿压、光照全套配置</span>
-        <span class="rused"><a href="modules/0306.html" title="微型气象站">0306</a><a href="modules/0603.html" title="雨水存储过滤">0603</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/MallocArray/airgradient_esphome" target="_blank" rel="noopener">MallocArray/airgradient_esphome</a>
-        <span class="stars">★ 332</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">AirGradient 空气质量监测器的 ESPHome 配置，PM2.5、CO2、TVOC 一起上报 HomeAssistant</span>
-        <span class="rused"><a href="modules/0403.html" title="喷涂柜">0403</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/EverythingSmartHome/everything-presence-lite" target="_blank" rel="noopener">EverythingSmartHome/everything-presence-lite</a>
-        <span class="stars">★ 293</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">基于 ESPHome 的毫米波人体存在传感器，LD2450 雷达带目标坐标与照度，直接接入 HomeAssistant</span>
-        <span class="rused"><a href="modules/0101.html" title="PSK 主产品展示">0101</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/wikihouseproject/Skylark" target="_blank" rel="noopener">wikihouseproject/Skylark</a>
-        <span class="stars">★ 243</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">WikiHouse 的开源木结构建造系统，标准化木块由 CNC 从板材切出后手工拼装，不用重型机械，可建 1 到 3 层，图纸开放授权</span>
-        <span class="rused"><a href="modules/0701.html" title="钓台本体与顶棚">0701</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/OpenEVSE/openevse_esp32_firmware" target="_blank" rel="noopener">OpenEVSE/openevse_esp32_firmware</a>
-        <span class="stars">★ 229</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">OpenEVSE 开源充电桩的 ESP32 联网固件，网页界面、光伏分流、MQTT、HomeAssistant 集成和 OCPP</span>
-        <span class="rused"><a href="modules/0505.html" title="电摩充电桩">0505</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/ApolloAutomation/AIR-1" target="_blank" rel="noopener">ApolloAutomation/AIR-1</a>
-        <span class="stars">★ 172</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">Apollo Automation 的开源空气质量多合一传感器：SEN55 颗粒物、SCD40 二氧化碳、MiCS-4514 一氧化碳，跑 ESPHome，HA 自动发现</span>
-        <span class="rused"><a href="modules/0106.html" title="柴火炉系统">0106</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/pierreaubert/spinorama" target="_blank" rel="noopener">pierreaubert/spinorama</a>
-        <span class="stars">★ 164</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">汇总和对比上千款音箱频响测量数据的开源库和网站 spinorama.org，还能按测量数据自动生成均衡曲线</span>
-        <span class="rused"><a href="modules/0208.html" title="大柏林音响">0208</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/RoadkillUK/Motor-on-a-Roller-Blind-for-ESPHOME" target="_blank" rel="noopener">RoadkillUK/Motor-on-a-Roller-Blind-for-ESPHOME</a>
-        <span class="stars">★ 153</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">用 28BYJ-48 步进电机和 3D 打印件改造拉珠卷帘的 ESPHome 配置，自带 3D 模型和接线图</span>
-        <span class="rused"><a href="modules/0303.html" title="帐篷区">0303</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/beeb/coffee-scale-app" target="_blank" rel="noopener">beeb/coffee-scale-app</a>
-        <span class="stars">★ 146</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">DIY 蓝牙咖啡秤：ESP32 + HX711 称重传感器跑 Rust 固件，配一个手机 PWA 显示重量、计时和萃取曲线</span>
-        <span class="rused"><a href="modules/0107.html" title="小吧台">0107</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/tkubic/GridfinityShadowMaker" target="_blank" rel="noopener">tkubic/GridfinityShadowMaker</a>
-        <span class="stars">★ 119</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">把工具拍照转成 DXF 轮廓，再生成可 3D 打印的工具影子板，兼容 Gridfinity</span>
-        <span class="rused"><a href="modules/0401.html" title="过道工具间">0401</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/3KUdelta/Solar_WiFi_Weather_Station" target="_blank" rel="noopener">3KUdelta/Solar_WiFi_Weather_Station</a>
-        <span class="stars">★ 117</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">太阳能供电的 ESP 气象站，用气压变化趋势跑 Zambretti 算法本地预报天气</span>
-        <span class="rused"><a href="modules/0306.html" title="微型气象站">0306</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Lumics/Plantwatery" target="_blank" rel="noopener">Lumics/Plantwatery</a>
-        <span class="stars">★ 114</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">ESP32 加太阳能板加电容土壤传感器加水泵的全自动浇水装置，含 3D 打印外壳和 PlatformIO 固件</span>
-        <span class="rused"><a href="modules/0502.html" title="爬山虎墙">0502</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/TheRealFalseReality/aquapi" target="_blank" rel="noopener">TheRealFalseReality/aquapi</a>
-        <span class="stars">★ 97</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">基于 ESPHome 和 HomeAssistant 的开源鱼缸监测与自动化控制器，用 Atlas Scientific EZO 探头测 pH、EC、温度，2026 年仍在更新</span>
-        <span class="rused"><a href="modules/0205.html" title="生态鱼缸">0205</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Ecohackerfarm/powerplant" target="_blank" rel="noopener">Ecohackerfarm/powerplant</a>
-        <span class="stars">★ 94</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">基于朴门永续原则的种植规划应用，内置植物伴生关系数据，给出哪些植物搭在一起互利、哪些相克，并排种植时间表</span>
-        <span class="rused"><a href="modules/0601.html" title="稀树草原环境系统">0601</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/Bettapro/Solar-Tracer-Blynk-V3" target="_blank" rel="noopener">Bettapro/Solar-Tracer-Blynk-V3</a>
-        <span class="stars">★ 61</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">ESP32 或 ESP8266 通过 RS485 Modbus 读 EPEver Tracer 系列 MPPT 控制器，支持 Blynk、MQTT 和 HomeAssistant 自动发现，带网页配置</span>
-        <span class="rused"><a href="modules/0703.html" title="钓台照明与电源">0703</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">kane5432/ESP32-Water-Level-Sensor</a>
-        <span class="stars">★ 55</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">ESP32-C3 加防水超声波探头测水罐水位，ESPHome 原生接 HomeAssistant，太阳能加锂电供电，深度睡眠 1.5 小时醒一次，带 OTA 窗口</span>
-        <span class="rused"><a href="modules/0603.html" title="雨水存储过滤">0603</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/WLANThermo-nano/WLANThermo_ESP32_Software" target="_blank" rel="noopener">WLANThermo-nano/WLANThermo_ESP32_Software</a>
-        <span class="stars">★ 40</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">德国开源 ESP32 烧烤温度计固件，最多八路探针、网页和手机 App、推送通知、Pitmaster 功能控风扇或舵机、MQTT</span>
-        <span class="rused"><a href="modules/0704.html" title="水边茶席·小火塘">0704</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/cohenadair/anglers-log" target="_blank" rel="noopener">cohenadair/anglers-log</a>
-        <span class="stars">★ 34</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">Flutter 写的开源钓鱼日志 App，iOS 和安卓都有，记渔获照片、鱼种、饵、钓点、天气潮汐，出统计报表，两千多次提交长期维护</span>
-        <span class="rused"><a href="modules/0702.html" title="钓具储物与展示">0702</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/xuminic/woodshed" target="_blank" rel="noopener">xuminic/woodshed</a>
-        <span class="stars">★ 10</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">一个人从零建木框架花园小屋的全记录，DXF 三视图、材料清单表、分基础/框架/屋顶/围护/内装五阶段的施工说明和照片</span>
-        <span class="rused"><a href="modules/0701.html" title="钓台本体与顶棚">0701</a></span>
-      </div>
-      <div class="repo-row">
-        <a class="rname" href="https://github.com/FoxDotBuild/DustCollection" target="_blank" rel="noopener">FoxDotBuild/DustCollection</a>
-        <span class="stars">★ 5</span><span class="zh zh-no">无中文</span>
-        <span class="rdesc">木工房自动集尘方案：ESP32 控制集尘器继电器，电流传感器检测机器开机并联动舵机阀门</span>
-        <span class="rused"><a href="modules/0404.html" title="木工间">0404</a></span>
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/immich-app/immich" target="_blank" rel="noopener">immich-app/immich</a>
+            <span class="stars">★ 110k</span>
+            <span class="zh ">官方中文 README</span>
+          </div>
+          <p class="rdesc">高性能自托管照片视频管理系统，手机自动备份、人脸识别、共享相册，界面和 README 都有简体中文</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0104.html" title="PSK 照片墙"><i>0104</i>PSK 照片墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener">louislam/uptime-kuma</a>
+            <span class="stars">★ 90.1k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自托管的服务监控面板：HTTP / TCP / DNS / Docker / 推送等监控类型，90 多种通知渠道和状态页</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0804.html" title="全屋存储 + 全屋智能"><i>0804</i>全屋存储 + 全屋智能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a>
+            <span class="stars">★ 88k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">本地优先、隐私优先的开源家庭自动化中枢，几千个集成，自动化引擎、仪表盘和手机 App 一体</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0102.html" title="PSK 作品展示墙"><i>0102</i>PSK 作品展示墙</a><a href="modules/0603.html" title="雨水存储过滤"><i>0603</i>雨水存储过滤</a><a href="modules/0802.html" title="全屋中枢 / 全屋数据可视化屏"><i>0802</i>全屋中枢 / 全屋数据可视化屏</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/jellyfin/jellyfin" target="_blank" rel="noopener">jellyfin/jellyfin</a>
+            <span class="stars">★ 54k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">免费开源的媒体服务器，管理和串流自己的影视库，无账号无云端，2026 年 6 月 10.11.11 版仍在更新</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0207.html" title="影音室"><i>0207</i>影音室</a><a href="modules/0804.html" title="全屋存储 + 全屋智能"><i>0804</i>全屋存储 + 全屋智能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/blakeblackshear/frigate" target="_blank" rel="noopener">blakeblackshear/frigate</a>
+            <span class="stars">★ 35.1k</span>
+            <span class="zh ">官方中文 README</span>
+          </div>
+          <p class="rdesc">本地实时目标检测的开源 NVR，IP 摄像头 24 小时录像、按事件保留，和 HomeAssistant 深度集成，有中文 README</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0105.html" title="PSK 工作台"><i>0105</i>PSK 工作台</a><a href="modules/0604.html" title="摄像头监测微环境"><i>0604</i>摄像头监测微环境</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">FreeCAD/FreeCAD</a>
+            <span class="stars">★ 32.2k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">免费开源的参数化 3D 建模软件，2026 年已到 1.1 版，带建筑 BIM、零件、装配和图纸工作台，界面和 wiki 都有中文</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0204.html" title="系统设计工作台"><i>0204</i>系统设计工作台</a><a href="modules/0701.html" title="钓台本体与顶棚"><i>0701</i>钓台本体与顶棚</a><a href="modules/0805.html" title="全套方案材质总设计"><i>0805</i>全套方案材质总设计</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/78/xiaozhi-esp32" target="_blank" rel="noopener">78/xiaozhi-esp32</a>
+            <span class="stars">★ 29.6k</span>
+            <span class="zh ">官方中文 README</span>
+          </div>
+          <p class="rdesc">小智：ESP32-S3 上的 MCP 语音聊天机器人，离线唤醒、接 Qwen / DeepSeek 等大模型，能通过 MCP 控制设备</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0803.html" title="miniduck"><i>0803</i>miniduck</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/arendst/Tasmota" target="_blank" rel="noopener">arendst/Tasmota</a>
+            <span class="stars">★ 24.8k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">ESP8266 / ESP32 设备的替换固件，网页配置、计量、规则引擎、MQTT，本地控制不上云，几百种设备模板</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0505.html" title="电摩充电桩"><i>0505</i>电摩充电桩</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/henrygd/beszel" target="_blank" rel="noopener">henrygd/beszel</a>
+            <span class="stars">★ 24.3k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">轻量服务器监控：Hub + Agent 架构，历史曲线、Docker 容器状态、温度、S.M.A.R.T. 和告警</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0804.html" title="全屋存储 + 全屋智能"><i>0804</i>全屋存储 + 全屋智能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/MagicMirrorOrg/MagicMirror" target="_blank" rel="noopener">MagicMirrorOrg/MagicMirror</a>
+            <span class="stars">★ 23.8k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">模块化智能镜子平台，用网页模块拼接屏幕内容，社区壁纸轮播、天气、日历模块上千个</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0103.html" title="电子画框墙"><i>0103</i>电子画框墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/xbmc/xbmc" target="_blank" rel="noopener">xbmc/xbmc</a>
+            <span class="stars">★ 21.2k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Kodi，2002 年起步的老牌开源家庭影院和媒体中心软件，十英尺界面、遥控器操作、插件生态庞大</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0207.html" title="影音室"><i>0207</i>影音室</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/mikf/gallery-dl" target="_blank" rel="noopener">mikf/gallery-dl</a>
+            <span class="stars">★ 19.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">命令行批量下载图站图集的工具，支持 Pinterest 画板、板块和搜索结果，配置一次定时跑</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0103.html" title="电子画框墙"><i>0103</i>电子画框墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/wled/WLED" target="_blank" rel="noopener">wled/WLED</a>
+            <span class="stars">★ 18.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">ESP32 控制可寻址灯带的开源固件，手机网页调色调亮度、存预设、本地定时，可接 HomeAssistant</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0102.html" title="PSK 作品展示墙"><i>0102</i>PSK 作品展示墙</a><a href="modules/0202.html" title="卫生间灯箱系统"><i>0202</i>卫生间灯箱系统</a><a href="modules/0209.html" title="藏宝阁"><i>0209</i>藏宝阁</a><a href="modules/0303.html" title="帐篷区"><i>0303</i>帐篷区</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/OrcaSlicer/OrcaSlicer" target="_blank" rel="noopener">OrcaSlicer/OrcaSlicer</a>
+            <span class="stars">★ 15.7k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">基于拓竹 Bambu Studio 二次开发的开源切片软件，自带校准流程，支持局域网直发</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0305.html" title="3D 打印"><i>0305</i>3D 打印</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/snipe/snipe-it" target="_blank" rel="noopener">snipe/snipe-it</a>
+            <span class="stars">★ 14.9k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">开源 IT 资产管理系统，借出归还记录、资产标签、到期提醒、审计盘点和 REST API</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0801.html" title="物品数字孪生"><i>0801</i>物品数字孪生</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
+            <span class="stars">★ 11.7k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">用 YAML 配置把 ESP32 / ESP8266 变成 Home Assistant 原生设备的固件生成器，几百种传感器与执行器现成组件</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0101.html" title="PSK 主产品展示"><i>0101</i>PSK 主产品展示</a><a href="modules/0106.html" title="柴火炉系统"><i>0106</i>柴火炉系统</a><a href="modules/0203.html" title="控温控湿"><i>0203</i>控温控湿</a><a href="modules/0205.html" title="生态鱼缸"><i>0205</i>生态鱼缸</a><a href="modules/0302.html" title="户外装备区"><i>0302</i>户外装备区</a><a href="modules/0403.html" title="喷涂柜"><i>0403</i>喷涂柜</a><a href="modules/0404.html" title="木工间"><i>0404</i>木工间</a><a href="modules/0504.html" title="自动种植架"><i>0504</i>自动种植架</a><a href="modules/0602.html" title="自动浇灌"><i>0602</i>自动浇灌</a><a href="modules/0704.html" title="水边茶席·小火塘"><i>0704</i>水边茶席·小火塘</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="blk repo-tier" id="t2">
+    <h2><em>★</em> 1k ～ 10k 星 <small>46 个</small></h2>
+    <p class="tier-note">细分领域里的主流方案，大多有活跃维护者和现成的接入示例</p>
+    <div class="repo-table">
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/openscad/openscad" target="_blank" rel="noopener">openscad/openscad</a>
+            <span class="stars">★ 9.6k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">程序员的 3D CAD：用脚本描述几何体，参数一改整件重生，Thingiverse 和 MakerWorld 上可自定义的型材配件多半用它写</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质总设计"><i>0805</i>全套方案材质总设计</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/grocy/grocy" target="_blank" rel="noopener">grocy/grocy</a>
+            <span class="stars">★ 9.5k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自称“冰箱之外的 ERP”：自托管的家庭食材与日用品管理，管库存、保质期、购物清单和消耗记录</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0107.html" title="小吧台"><i>0107</i>小吧台</a><a href="modules/0210.html" title="防灾食品"><i>0210</i>防灾食品</a><a href="modules/0501.html" title="柴火堆墙"><i>0501</i>柴火堆墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Ralim/IronOS" target="_blank" rel="noopener">Ralim/IronOS</a>
+            <span class="stars">★ 8.3k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Pinecil、TS100 等便携电烙铁的开源固件，带自动休眠、动作唤醒和 USB-PD 供电协商</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0301.html" title="小制作工具台"><i>0301</i>小制作工具台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener">pollen-robotics/microduck</a>
+            <span class="stars">★ 7.6k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Pollen Robotics / Hugging Face 的开源双足小鸭机器人：RK3566 主控、15 个舵机、50Hz 控制环，走路靠 MuJoCo + PPO 训练出的 ONNX 步态策略</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0803.html" title="miniduck"><i>0803</i>miniduck</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/FastLED/FastLED" target="_blank" rel="noopener">FastLED/FastLED</a>
+            <span class="stars">★ 7.4k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Arduino 上最常用的 LED 灯光动画库，支持 50 多种单片机平台和几乎所有可寻址灯珠，3.10 版</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0209.html" title="藏宝阁"><i>0209</i>藏宝阁</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/inventree/InvenTree" target="_blank" rel="noopener">inventree/InvenTree</a>
+            <span class="stars">★ 7.3k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">开源库存与零件管理系统，BOM、库存、供应商、标签打印、REST API 和插件一应俱全，界面有简体中文</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0105.html" title="PSK 工作台"><i>0105</i>PSK 工作台</a><a href="modules/0402.html" title="材料仓库"><i>0402</i>材料仓库</a><a href="modules/0801.html" title="物品数字孪生"><i>0801</i>物品数字孪生</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/evcc-io/evcc" target="_blank" rel="noopener">evcc-io/evcc</a>
+            <span class="stars">★ 7.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">开源光伏优先充电与家庭能源管理系统，支持上百种充电桩、电表、逆变器，智能插座也能当充电器，本地运行</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0505.html" title="电摩充电桩"><i>0505</i>电摩充电桩</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/sysadminsmedia/homebox" target="_blank" rel="noopener">sysadminsmedia/homebox</a>
+            <span class="stars">★ 7.1k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">面向家庭用户的自托管物品库存系统，支持位置树、标签、附件、维护记录和二维码标签打印</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0302.html" title="户外装备区"><i>0302</i>户外装备区</a><a href="modules/0402.html" title="材料仓库"><i>0402</i>材料仓库</a><a href="modules/0702.html" title="钓具储物与展示"><i>0702</i>钓具储物与展示</a><a href="modules/0801.html" title="物品数字孪生"><i>0801</i>物品数字孪生</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/wger-project/wger" target="_blank" rel="noopener">wger-project/wger</a>
+            <span class="stars">★ 6.8k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自托管的开源健身、营养和体重记录系统，Django 后端，有网页和安卓 / iOS App，带 REST API 和动作库</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0212.html" title="哑铃"><i>0212</i>哑铃</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/piitaya/lovelace-mushroom" target="_blank" rel="noopener">piitaya/lovelace-mushroom</a>
+            <span class="stars">★ 5.1k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">HomeAssistant 最流行的简洁风格仪表盘卡片集，17 种卡片、内置编辑器、零依赖</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0802.html" title="全屋中枢 / 全屋数据可视化屏"><i>0802</i>全屋中枢 / 全屋数据可视化屏</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/bambulab/BambuStudio" target="_blank" rel="noopener">bambulab/BambuStudio</a>
+            <span class="stars">★ 5k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">拓竹官方开源切片软件，基于 PrusaSlicer 分支，支持 BambuLab 和其他 3D 打印机，界面和 wiki 都有中文</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0204.html" title="系统设计工作台"><i>0204</i>系统设计工作台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/motioneye-project/motioneye" target="_blank" rel="noopener">motioneye-project/motioneye</a>
+            <span class="stars">★ 4.7k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">motion 守护进程的网页前端，网页里管多路摄像头、移动侦测、定时快照和延时视频合成</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0502.html" title="爬山虎墙"><i>0502</i>爬山虎墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/pvvx/ATC_MiThermometer" target="_blank" rel="noopener">pvvx/ATC_MiThermometer</a>
+            <span class="stars">★ 4.1k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">小米、青萍等 Telink 芯片蓝牙温湿度计的开源替换固件，省电、纯本地广播、直连 HomeAssistant</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0501.html" title="柴火堆墙"><i>0501</i>柴火堆墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/apirrone/Open_Duck_Mini" target="_blank" rel="noopener">apirrone/Open_Duck_Mini</a>
+            <span class="stars">★ 3.9k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">Microduck 的前身：仿迪士尼 BDX 机器人的迷你双足鸭，约 42cm 高、BOM 400 美元以内，STL 与 BOM 全开源</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0803.html" title="miniduck"><i>0803</i>miniduck</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/hyperion-project/hyperion.ng" target="_blank" rel="noopener">hyperion-project/hyperion.ng</a>
+            <span class="stars">★ 3.8k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">开源氛围灯软件，抓取画面边缘颜色实时驱动屏幕四周的 LED 灯带，支持 HDMI 采集卡和 WLED 等几十种灯</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0207.html" title="影音室"><i>0207</i>影音室</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Screenly/Anthias" target="_blank" rel="noopener">Screenly/Anthias</a>
+            <span class="stars">★ 3.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">树莓派数字标牌系统，网页后台排播放表，循环播视频、图片和网页，专为无人值守的展示屏设计</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0101.html" title="PSK 主产品展示"><i>0101</i>PSK 主产品展示</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/TomBursch/kitchenowl" target="_blank" rel="noopener">TomBursch/kitchenowl</a>
+            <span class="stars">★ 3.7k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自托管的采购清单和食谱管理应用，Flask 后端 + Flutter 客户端，有安卓 / iOS / 网页端，多人实时同步，可部分离线</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0210.html" title="防灾食品"><i>0210</i>防灾食品</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/remvze/moodist" target="_blank" rel="noopener">remvze/moodist</a>
+            <span class="stars">★ 3.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">开源的环境音播放器，雨声、雷声、篝火、风声等几十种声音可叠加混音，纯前端可自部署</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0303.html" title="帐篷区"><i>0303</i>帐篷区</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">basnijholt/adaptive-lighting</a>
+            <span class="stars">★ 3.4k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度，自带睡眠模式和手动接管检测</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0201.html" title="模拟阳光"><i>0201</i>模拟阳光</a><a href="modules/0202.html" title="卫生间灯箱系统"><i>0202</i>卫生间灯箱系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/kizniche/Mycodo" target="_blank" rel="noopener">kizniche/Mycodo</a>
+            <span class="stars">★ 3.3k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">树莓派上的环境监控与调节系统，接传感器控水泵灯光风扇，带 PID、条件逻辑和网页仪表盘</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0504.html" title="自动种植架"><i>0504</i>自动种植架</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Donkie/Spoolman" target="_blank" rel="noopener">Donkie/Spoolman</a>
+            <span class="stars">★ 2.8k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自托管的 3D 打印耗材库存管理，记录每卷剩余克数、颜色、材质，带打印机集成</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0305.html" title="3D 打印"><i>0305</i>3D 打印</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/oliexdev/openScale" target="_blank" rel="noopener">oliexdev/openScale</a>
+            <span class="stars">★ 2.5k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">开源体重和身体数据追踪安卓 App，支持 25 种以上蓝牙体脂秤，无账号、无联网权限，可导出 CSV 和同步到 wger</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0212.html" title="哑铃"><i>0212</i>哑铃</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/rbaron/b-parasite" target="_blank" rel="noopener">rbaron/b-parasite</a>
+            <span class="stars">★ 2.4k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">开源 DIY 电容式土壤湿度传感器，纽扣电池供电，带温湿度和光照，蓝牙 BTHome 或 Zigbee 直连 HomeAssistant</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0503.html" title="盆栽"><i>0503</i>盆栽</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/greghesp/ha-bambulab" target="_blank" rel="noopener">greghesp/ha-bambulab</a>
+            <span class="stars">★ 2.3k</span>
+            <span class="zh ">组件自带简体中文翻译</span>
+          </div>
+          <p class="rdesc">拓竹打印机的 Home Assistant 集成，读进度、层数、温度、AMS 耗材，还能看摄像头</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0305.html" title="3D 打印"><i>0305</i>3D 打印</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/LinuxCNC/linuxcnc" target="_blank" rel="noopener">LinuxCNC/linuxcnc</a>
+            <span class="stars">★ 2.3k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">老牌开源运动控制系统，驱动铣床、车床、机械臂，支持复杂运动学</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0307.html" title="CNC 五轴雕刻机"><i>0307</i>CNC 五轴雕刻机</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/kennetek/gridfinity-rebuilt-openscad" target="_blank" rel="noopener">kennetek/gridfinity-rebuilt-openscad</a>
+            <span class="stars">★ 2.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Gridfinity 模块化收纳盒的 OpenSCAD 参数化重制版，尺寸分格随便改，导出 STL 直接打印</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0105.html" title="PSK 工作台"><i>0105</i>PSK 工作台</a><a href="modules/0301.html" title="小制作工具台"><i>0301</i>小制作工具台</a><a href="modules/0401.html" title="过道工具间"><i>0401</i>过道工具间</a><a href="modules/0702.html" title="钓具储物与展示"><i>0702</i>钓具储物与展示</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/custom-components/ble_monitor" target="_blank" rel="noopener">custom-components/ble_monitor</a>
+            <span class="stars">★ 2.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">HomeAssistant 的被动蓝牙传感器集成，不配对只听广播，支持小米、青萍、ATC 固件等上百种设备</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0501.html" title="柴火堆墙"><i>0501</i>柴火堆墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/pollen-robotics/microduck_rl" target="_blank" rel="noopener">pollen-robotics/microduck_rl</a>
+            <span class="stars">★ 2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Microduck 的官方强化学习训练环境：mjlab（MuJoCo Warp）+ PPO + 域随机化，导出 ONNX 步态策略</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0803.html" title="miniduck"><i>0803</i>miniduck</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/wuwentao/midea_ac_lan" target="_blank" rel="noopener">wuwentao/midea_ac_lan</a>
+            <span class="stars">★ 1.9k</span>
+            <span class="zh ">官方中文 README</span>
+          </div>
+          <p class="rdesc">美的 M-Smart 家电的 HomeAssistant 本地局域网集成，支持空调、除湿机、风扇等 35 类设备，中文社区维护</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0203.html" title="控温控湿"><i>0203</i>控温控湿</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/damongolding/immich-kiosk" target="_blank" rel="noopener">damongolding/immich-kiosk</a>
+            <span class="stars">★ 1.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">把 Immich 相册变成浏览器轮播画框的方案，老平板打开网页就能用，转场、时长、相册全靠 URL 参数</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0103.html" title="电子画框墙"><i>0103</i>电子画框墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Denvi/Candle" target="_blank" rel="noopener">Denvi/Candle</a>
+            <span class="stars">★ 1.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">GRBL 桌面 CNC 的开源上位机，Qt 写的，带 G 代码三维可视化和高度图补偿</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0301.html" title="小制作工具台"><i>0301</i>小制作工具台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/danielbrendel/hortusfox-web" target="_blank" rel="noopener">danielbrendel/hortusfox-web</a>
+            <span class="stars">★ 1.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">自托管的植物管理与追踪系统，按位置分组建植物档案，带任务、日历、库存、天气和二维码，Docker 一条命令跑起来</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0601.html" title="稀树草原环境系统"><i>0601</i>稀树草原环境系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/openfarmcc/OpenFarm" target="_blank" rel="noopener">openfarmcc/OpenFarm</a>
+            <span class="stars">★ 1.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">曾经的开放种植知识库，收录大量植物的间距、需水、光照、土壤和伴生信息，2025 年 4 月已归档，代码和数据仍可下载</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0601.html" title="稀树草原环境系统"><i>0601</i>稀树草原环境系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/ExperienceLovelace/ha-floorplan" target="_blank" rel="noopener">ExperienceLovelace/ha-floorplan</a>
+            <span class="stars">★ 1.6k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">HomeAssistant 卡片，把实体状态映射到 SVG 平面图元素上，规则驱动样式与点击动作</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0802.html" title="全屋中枢 / 全屋数据可视化屏"><i>0802</i>全屋中枢 / 全屋数据可视化屏</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/nophead/NopSCADlib" target="_blank" rel="noopener">nophead/NopSCADlib</a>
+            <span class="stars">★ 1.6k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">OpenSCAD 零件库和项目框架：自带 E2020 / E3030 / E4040 铝型材、角码、滑入式 T 型螺母等标准件，能生成 BOM 和装配图</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质总设计"><i>0805</i>全套方案材质总设计</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/esprfid/esp-rfid" target="_blank" rel="noopener">esprfid/esp-rfid</a>
+            <span class="stars">★ 1.5k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">ESP8266 / ESP32 上的 RFID 门禁固件，支持 RC522、PN532、Wiegand 读卡器，带网页管理、用户名单、日志和 MQTT，2024 年 2.0 版</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0209.html" title="藏宝阁"><i>0209</i>藏宝阁</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/moode-player/moode" target="_blank" rel="noopener">moode-player/moode</a>
+            <span class="stars">★ 1.4k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">树莓派上的开源 HiFi 播放器系统，MPD 内核，支持本地音乐库、AirPlay、蓝牙、UPnP 和内置 CamillaDSP，2026 年 7 月 10.3 版</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0208.html" title="大柏林音响"><i>0208</i>大柏林音响</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/MDeLuise/plant-it" target="_blank" rel="noopener">MDeLuise/plant-it</a>
+            <span class="stars">★ 1.4k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">开源自托管的植物养护记录应用，有安卓 App 和网页，记浇水施肥、拍照日记、设提醒</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0503.html" title="盆栽"><i>0503</i>盆栽</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/benjaminjonard/koillection" target="_blank" rel="noopener">benjaminjonard/koillection</a>
+            <span class="stars">★ 1.3k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自托管的个人收藏管理系统，任意物件都能建档、配图、写自定义字段，按收藏、条目、标签三层组织</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0102.html" title="PSK 作品展示墙"><i>0102</i>PSK 作品展示墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Madelena/esphome-weatherman-dashboard" target="_blank" rel="noopener">Madelena/esphome-weatherman-dashboard</a>
+            <span class="stars">★ 1.3k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">用 ESP32 驱动 7.5 寸墨水屏显示天气和预报的 ESPHome 配置，字体图标全打包</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0306.html" title="微型气象站"><i>0306</i>微型气象站</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/FreddieHong19/Open5x" target="_blank" rel="noopener">FreddieHong19/Open5x</a>
+            <span class="stars">★ 1.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">把普通三轴机器改成五轴的开源硬件 + 软件方案（“Democratising 5-axis”）</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0307.html" title="CNC 五轴雕刻机"><i>0307</i>CNC 五轴雕刻机</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/shmuelzon/home-assistant-floor-plan" target="_blank" rel="noopener">shmuelzon/home-assistant-floor-plan</a>
+            <span class="stars">★ 1.1k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Sweet Home 3D 插件，把 3D 户型按每盏灯分别渲染，再生成 HomeAssistant 的 picture-elements 平面图面板</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0204.html" title="系统设计工作台"><i>0204</i>系统设计工作台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/HEnquist/camilladsp" target="_blank" rel="noopener">HEnquist/camilladsp</a>
+            <span class="stars">★ 1.1k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Rust 写的跨平台 IIR 和 FIR 音频处理引擎，做分频、房间校正和均衡，带 websocket 接口，4.1 版</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0208.html" title="大柏林音响"><i>0208</i>大柏林音响</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Nachtzuster/BirdNET-Pi" target="_blank" rel="noopener">Nachtzuster/BirdNET-Pi</a>
+            <span class="stars">★ 1.1k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">树莓派上的实时鸟类声纹识别系统，BirdNET-Pi 的活跃维护分支，USB 麦克风 24 小时听，网页看物种统计，通知和 MQTT 都有</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0604.html" title="摄像头监测微环境"><i>0604</i>摄像头监测微环境</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/karlomikus/bar-assistant" target="_blank" rel="noopener">karlomikus/bar-assistant</a>
+            <span class="stars">★ 1.0k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">自托管家庭吧台管理系统，管酒水库存、500 多个鸡尾酒配方和购物清单，带 REST API</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0107.html" title="小吧台"><i>0107</i>小吧台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">syssi/esphome-jk-bms</a>
+            <span class="stars">★ 1.0k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">用 ESP32 通过串口或蓝牙读取和控制极空 JK 电池保护板的 ESPHome 组件，能看每节电压、温度和均衡状态</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0304.html" title="光伏储能"><i>0304</i>光伏储能</a><a href="modules/0703.html" title="钓台照明与电源"><i>0703</i>钓台照明与电源</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="blk repo-tier" id="t3">
+    <h2><em>★</em> 1k 星以下 <small>43 个</small></h2>
+    <p class="tier-note">小而专的项目：恰好是这个需求的现成答案，用之前先看最近一次提交</p>
+    <div class="repo-table">
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/claytonjn/hass-circadian_lighting" target="_blank" rel="noopener">claytonjn/hass-circadian_lighting</a>
+            <span class="stars">★ 887</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">HomeAssistant 昼夜节律灯光组件，把一天里自然光的色温变化算成一个传感器值，再按开关分组套到灯上</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0201.html" title="模拟阳光"><i>0201</i>模拟阳光</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/tolwi/hassio-ecoflow-cloud" target="_blank" rel="noopener">tolwi/hassio-ecoflow-cloud</a>
+            <span class="stars">★ 882</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">正浩 EcoFlow 户外储能电源的 Home Assistant 集成，读电量、输入输出功率并控制交流直流输出口</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0304.html" title="光伏储能"><i>0304</i>光伏储能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Olen/homeassistant-plant" target="_blank" rel="noopener">Olen/homeassistant-plant</a>
+            <span class="stars">★ 848</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">HomeAssistant 增强版植物组件，每盆植物一个设备，从 OpenPlantbook 自动拉物种养护阈值并报警</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0503.html" title="盆栽"><i>0503</i>盆栽</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/pibooth/pibooth" target="_blank" rel="noopener">pibooth/pibooth</a>
+            <span class="stars">★ 823</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">树莓派开箱即用的拍照亭软件，按键拍照、倒计时、加边框文字，接打印机直接出片，插件可扩展</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0104.html" title="PSK 照片墙"><i>0104</i>PSK 照片墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/galenmaly/lighterpack" target="_blank" rel="noopener">galenmaly/lighterpack</a>
+            <span class="stars">★ 800</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">户外圈最常用的装备清单网站 LighterPack 的源码，可自部署，按分类算总重和背负重量</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0302.html" title="户外装备区"><i>0302</i>户外装备区</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">patrickcollins12/esphome-fan-controller</a>
+            <span class="stars">★ 741</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">ESP32 加温度传感器的 PID 温控风扇方案，纯 YAML 配置，风扇几乎无声，接 HomeAssistant</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0106.html" title="柴火炉系统"><i>0106</i>柴火炉系统</a><a href="modules/0202.html" title="卫生间灯箱系统"><i>0202</i>卫生间灯箱系统</a><a href="modules/0403.html" title="喷涂柜"><i>0403</i>喷涂柜</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/MultiMote/niimblue" target="_blank" rel="noopener">MultiMote/niimblue</a>
+            <span class="stars">★ 740</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">精臣（NIIMBOT）标签机的第三方网页客户端，浏览器里直接蓝牙打印，不用官方 App 和账号</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0401.html" title="过道工具间"><i>0401</i>过道工具间</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/pklaus/brother_ql" target="_blank" rel="noopener">pklaus/brother_ql</a>
+            <span class="stars">★ 701</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">直接驱动 Brother QL 系列标签机的 Python 库，不用官方驱动，支持 USB 和网络</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0402.html" title="材料仓库"><i>0402</i>材料仓库</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/PhotoboothProject/photobooth" target="_blank" rel="noopener">PhotoboothProject/photobooth</a>
+            <span class="stars">★ 649</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">自托管拍照亭网页应用，带实时预览、拼图、宝丽来滤镜、二维码分享和自动打印，浏览器就是界面</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0104.html" title="PSK 照片墙"><i>0104</i>PSK 照片墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Forceu/barcodebuddy" target="_blank" rel="noopener">Forceu/barcodebuddy</a>
+            <span class="stars">★ 604</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">grocy 的条码扫描配套工具，扫一下就入库、消耗或开封，不认识的条码自动去 OpenFoodFacts 查名字</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0210.html" title="防灾食品"><i>0210</i>防灾食品</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension" target="_blank" rel="noopener">lairdubois/lairdubois-opencutlist-sketchup-extension</a>
+            <span class="stars">★ 583</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">SketchUp 木工插件，从 3D 模型自动生成零件清单、下料图、标签和成本估算</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0404.html" title="木工间"><i>0404</i>木工间</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/pageauc/pi-timolo" target="_blank" rel="noopener">pageauc/pi-timolo</a>
+            <span class="stars">★ 580</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">树莓派延时摄影加移动侦测加低光拍摄一体的 Python 工具，自带日出日落自动曝光和 rclone 网盘同步</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0502.html" title="爬山虎墙"><i>0502</i>爬山虎墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/CapnBry/HeaterMeter" target="_blank" rel="noopener">CapnBry/HeaterMeter</a>
+            <span class="stars">★ 556</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">开源烧烤温控器，Arduino 板加树莓派跑 LinkMeter，四路探针，PID 控鼓风机和风门保持炭火温度，网页看曲线和报警</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0704.html" title="水边茶席·小火塘"><i>0704</i>水边茶席·小火塘</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/altmenorg/HAsmartirrigation" target="_blank" rel="noopener">altmenorg/HAsmartirrigation</a>
+            <span class="stars">★ 550</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">HomeAssistant 智能灌溉组件，按蒸散量和降雨算每个分区的水桶余额，给出该浇多少秒，界面自带 19 种语言含简体中文</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0602.html" title="自动浇灌"><i>0602</i>自动浇灌</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/OpenSprinkler/OpenSprinkler-Firmware" target="_blank" rel="noopener">OpenSprinkler/OpenSprinkler-Firmware</a>
+            <span class="stars">★ 543</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">OpenSprinkler 开源灌溉控制器的统一固件，跑在 ESP8266 或树莓派上，带网页、多程序排程、传感器输入和 MQTT</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0504.html" title="自动种植架"><i>0504</i>自动种植架</a><a href="modules/0602.html" title="自动浇灌"><i>0602</i>自动浇灌</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/isaac879/Pan-Tilt-Mount" target="_blank" rel="noopener">isaac879/Pan-Tilt-Mount</a>
+            <span class="stars">★ 504</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">步进电机驱动、3D 打印的 Arduino 三轴摄影运动控制器：滑轨 + 云台，带蓝牙 App 和关键帧运动</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0201.html" title="模拟阳光"><i>0201</i>模拟阳光</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/fl4p/batmon-ha" target="_blank" rel="noopener">fl4p/batmon-ha</a>
+            <span class="stars">★ 489</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">HA 加载项，通过蓝牙同时连接 JK、JBD、Daly、ANT 等多种电池保护板，还能算电量和累计能量</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0304.html" title="光伏储能"><i>0304</i>光伏储能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/grblHAL/core" target="_blank" rel="noopener">grblHAL/core</a>
+            <span class="stars">★ 489</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">grbl 的 32 位重写版核心，支持 A/B/C 附加轴、多种主控板（Teensy、STM32、ESP32）</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0307.html" title="CNC 五轴雕刻机"><i>0307</i>CNC 五轴雕刻机</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/mmcc-xx/WhosAtMyFeeder" target="_blank" rel="noopener">mmcc-xx/WhosAtMyFeeder</a>
+            <span class="stars">★ 456</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Frigate 的伴侣程序，订阅鸟类事件取快照，用 TensorFlow 鸟类分类模型判断是什么种，结果写回 Frigate 子标签并存库出网页</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0604.html" title="摄像头监测微环境"><i>0604</i>摄像头监测微环境</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/reef-pi/reef-pi" target="_blank" rel="noopener">reef-pi/reef-pi</a>
+            <span class="stars">★ 435</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">基于树莓派的开源水族箱控制器，管灯光日出日落、温控、pH、滴定、自动补水和定时器，带网页仪表盘</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0205.html" title="生态鱼缸"><i>0205</i>生态鱼缸</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/brandonp2412/Flexify" target="_blank" rel="noopener">brandonp2412/Flexify</a>
+            <span class="stars">★ 424</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">轻量的开源力量训练记录 App，离线优先、纯本地存储，记组数重量、休息计时和进步曲线，Flutter 写的安卓 / iOS 端</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0212.html" title="哑铃"><i>0212</i>哑铃</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/KinDR007/VictronMPPT-ESPHOME" target="_blank" rel="noopener">KinDR007/VictronMPPT-ESPHOME</a>
+            <span class="stars">★ 409</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">ESPHome 外部组件，通过 VE.Direct 串口读 Victron MPPT 和 SmartShunt 的电池电压、光伏功率、今日发电量和充电状态</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0703.html" title="钓台照明与电源"><i>0703</i>钓台照明与电源</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/airgradienthq/arduino" target="_blank" rel="noopener">airgradienthq/arduino</a>
+            <span class="stars">★ 377</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">AirGradient 开源硬件空气质量监测仪的固件与库，测 CO2、PM2.5、温湿度、TVOC，ESP8266 / ESP32-C3</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0203.html" title="控温控湿"><i>0203</i>控温控湿</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">hugokernel/esphome-weather-station</a>
+            <span class="stars">★ 338</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Elektor 气象站的 ESPHome 版本，风速、风向、翻斗雨量、温湿压、光照全套配置</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0306.html" title="微型气象站"><i>0306</i>微型气象站</a><a href="modules/0603.html" title="雨水存储过滤"><i>0603</i>雨水存储过滤</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/MallocArray/airgradient_esphome" target="_blank" rel="noopener">MallocArray/airgradient_esphome</a>
+            <span class="stars">★ 332</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">AirGradient 空气质量监测器的 ESPHome 配置，PM2.5、CO2、TVOC 一起上报 HomeAssistant</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0403.html" title="喷涂柜"><i>0403</i>喷涂柜</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/EverythingSmartHome/everything-presence-lite" target="_blank" rel="noopener">EverythingSmartHome/everything-presence-lite</a>
+            <span class="stars">★ 293</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">基于 ESPHome 的毫米波人体存在传感器，LD2450 雷达带目标坐标与照度，直接接入 HomeAssistant</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0101.html" title="PSK 主产品展示"><i>0101</i>PSK 主产品展示</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/wikihouseproject/Skylark" target="_blank" rel="noopener">wikihouseproject/Skylark</a>
+            <span class="stars">★ 243</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">WikiHouse 的开源木结构建造系统，标准化木块由 CNC 从板材切出后手工拼装，不用重型机械，可建 1 到 3 层，图纸开放授权</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0701.html" title="钓台本体与顶棚"><i>0701</i>钓台本体与顶棚</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/OpenEVSE/openevse_esp32_firmware" target="_blank" rel="noopener">OpenEVSE/openevse_esp32_firmware</a>
+            <span class="stars">★ 229</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">OpenEVSE 开源充电桩的 ESP32 联网固件，网页界面、光伏分流、MQTT、HomeAssistant 集成和 OCPP</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0505.html" title="电摩充电桩"><i>0505</i>电摩充电桩</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/ApolloAutomation/AIR-1" target="_blank" rel="noopener">ApolloAutomation/AIR-1</a>
+            <span class="stars">★ 172</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Apollo Automation 的开源空气质量多合一传感器：SEN55 颗粒物、SCD40 二氧化碳、MiCS-4514 一氧化碳，跑 ESPHome，HA 自动发现</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0106.html" title="柴火炉系统"><i>0106</i>柴火炉系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/pierreaubert/spinorama" target="_blank" rel="noopener">pierreaubert/spinorama</a>
+            <span class="stars">★ 164</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">汇总和对比上千款音箱频响测量数据的开源库和网站 spinorama.org，还能按测量数据自动生成均衡曲线</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0208.html" title="大柏林音响"><i>0208</i>大柏林音响</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/RoadkillUK/Motor-on-a-Roller-Blind-for-ESPHOME" target="_blank" rel="noopener">RoadkillUK/Motor-on-a-Roller-Blind-for-ESPHOME</a>
+            <span class="stars">★ 153</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">用 28BYJ-48 步进电机和 3D 打印件改造拉珠卷帘的 ESPHome 配置，自带 3D 模型和接线图</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0303.html" title="帐篷区"><i>0303</i>帐篷区</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/beeb/coffee-scale-app" target="_blank" rel="noopener">beeb/coffee-scale-app</a>
+            <span class="stars">★ 146</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">DIY 蓝牙咖啡秤：ESP32 + HX711 称重传感器跑 Rust 固件，配一个手机 PWA 显示重量、计时和萃取曲线</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0107.html" title="小吧台"><i>0107</i>小吧台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/tkubic/GridfinityShadowMaker" target="_blank" rel="noopener">tkubic/GridfinityShadowMaker</a>
+            <span class="stars">★ 119</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">把工具拍照转成 DXF 轮廓，再生成可 3D 打印的工具影子板，兼容 Gridfinity</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0401.html" title="过道工具间"><i>0401</i>过道工具间</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/3KUdelta/Solar_WiFi_Weather_Station" target="_blank" rel="noopener">3KUdelta/Solar_WiFi_Weather_Station</a>
+            <span class="stars">★ 117</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">太阳能供电的 ESP 气象站，用气压变化趋势跑 Zambretti 算法本地预报天气</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0306.html" title="微型气象站"><i>0306</i>微型气象站</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Lumics/Plantwatery" target="_blank" rel="noopener">Lumics/Plantwatery</a>
+            <span class="stars">★ 114</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">ESP32 加太阳能板加电容土壤传感器加水泵的全自动浇水装置，含 3D 打印外壳和 PlatformIO 固件</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0502.html" title="爬山虎墙"><i>0502</i>爬山虎墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/TheRealFalseReality/aquapi" target="_blank" rel="noopener">TheRealFalseReality/aquapi</a>
+            <span class="stars">★ 97</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">基于 ESPHome 和 HomeAssistant 的开源鱼缸监测与自动化控制器，用 Atlas Scientific EZO 探头测 pH、EC、温度，2026 年仍在更新</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0205.html" title="生态鱼缸"><i>0205</i>生态鱼缸</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Ecohackerfarm/powerplant" target="_blank" rel="noopener">Ecohackerfarm/powerplant</a>
+            <span class="stars">★ 94</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">基于朴门永续原则的种植规划应用，内置植物伴生关系数据，给出哪些植物搭在一起互利、哪些相克，并排种植时间表</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0601.html" title="稀树草原环境系统"><i>0601</i>稀树草原环境系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Bettapro/Solar-Tracer-Blynk-V3" target="_blank" rel="noopener">Bettapro/Solar-Tracer-Blynk-V3</a>
+            <span class="stars">★ 61</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">ESP32 或 ESP8266 通过 RS485 Modbus 读 EPEver Tracer 系列 MPPT 控制器，支持 Blynk、MQTT 和 HomeAssistant 自动发现，带网页配置</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0703.html" title="钓台照明与电源"><i>0703</i>钓台照明与电源</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">kane5432/ESP32-Water-Level-Sensor</a>
+            <span class="stars">★ 55</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">ESP32-C3 加防水超声波探头测水罐水位，ESPHome 原生接 HomeAssistant，太阳能加锂电供电，深度睡眠 1.5 小时醒一次，带 OTA 窗口</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0603.html" title="雨水存储过滤"><i>0603</i>雨水存储过滤</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/WLANThermo-nano/WLANThermo_ESP32_Software" target="_blank" rel="noopener">WLANThermo-nano/WLANThermo_ESP32_Software</a>
+            <span class="stars">★ 40</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">德国开源 ESP32 烧烤温度计固件，最多八路探针、网页和手机 App、推送通知、Pitmaster 功能控风扇或舵机、MQTT</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0704.html" title="水边茶席·小火塘"><i>0704</i>水边茶席·小火塘</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/cohenadair/anglers-log" target="_blank" rel="noopener">cohenadair/anglers-log</a>
+            <span class="stars">★ 34</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Flutter 写的开源钓鱼日志 App，iOS 和安卓都有，记渔获照片、鱼种、饵、钓点、天气潮汐，出统计报表，两千多次提交长期维护</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0702.html" title="钓具储物与展示"><i>0702</i>钓具储物与展示</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/xuminic/woodshed" target="_blank" rel="noopener">xuminic/woodshed</a>
+            <span class="stars">★ 10</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">一个人从零建木框架花园小屋的全记录，DXF 三视图、材料清单表、分基础/框架/屋顶/围护/内装五阶段的施工说明和照片</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0701.html" title="钓台本体与顶棚"><i>0701</i>钓台本体与顶棚</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/FoxDotBuild/DustCollection" target="_blank" rel="noopener">FoxDotBuild/DustCollection</a>
+            <span class="stars">★ 5</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">木工房自动集尘方案：ESP32 控制集尘器继电器，电流传感器检测机器开机并联动舵机阀门</p>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0404.html" title="木工间"><i>0404</i>木工间</a></div>
       </div>
     </div>
   </section>
