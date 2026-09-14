@@ -114,6 +114,18 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .link-card:hover{box-shadow:3px 3px 0 var(--ink)}
 .link-card b{display:block;font-family:"Noto Serif SC",serif}
 .link-card p{margin:2px 0 0;color:var(--ink3);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gh-cards{display:grid;grid-template-columns:1fr;gap:18px}
+.gh-card{border:1.6px solid var(--line);border-radius:200px 12px 180px 12px/12px 180px 12px 200px;padding:14px 18px 12px;background:rgba(255,255,255,.4);font-size:.9rem}
+.gh-card .gh-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.gh-name{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:.98rem;border-bottom:1.5px solid transparent}
+.gh-name:hover{border-bottom-color:var(--red)}
+.zh{display:inline-block;font-size:.72rem;padding:1px 8px;border:1.3px solid #2f6b3a;color:#2f6b3a;border-radius:200px 8px 180px 8px/8px 180px 8px 200px;letter-spacing:.04em}
+.zh.zh-no{border-color:var(--ink3);color:var(--ink3)}
+.gh-art{margin:12px 0 6px}
+.gh-art .pc-frame{padding:8px 10px 4px}
+.gh-art svg{width:100%;height:auto;display:block;max-width:560px;margin:0 auto}
+.gh-intro p{margin:0 0 .7em;line-height:1.75;color:var(--ink);text-indent:2em}
+.gh-intro p:last-child{margin-bottom:0}
 .gh-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
 .gh{display:block;border:1.6px solid var(--line);border-radius:200px 12px 180px 12px/12px 180px 12px 200px;padding:10px 14px;background:rgba(255,255,255,.4);font-size:.88rem}
 .gh:hover{box-shadow:3px 3px 0 var(--ink)}
