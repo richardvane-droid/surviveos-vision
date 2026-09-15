@@ -208,7 +208,7 @@
       <div><h3>关键参数 / 组成</h3>
         <ul class="inspo"><li>120 目过滤器，防雨水罐来的泥沙堵滴头</li><li>12V 隔膜泵 4L/min，4 路电磁阀分层</li><li>16mm 主管 + 可调滴头，每箱 2 个</li><li>ESP32 + 8 路继电器板驱动，装防水箱</li></ul></div>
       <div>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/makstech/esphome-irrigation-system" target="_blank" rel="noopener">makstech/esphome-irrigation-system</a></p></div>
     </div>
   </section>
   
@@ -446,8 +446,8 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>触发：每 30 分钟读湿度，&lt;40% 开该层阀 20 秒</li><li>补浇：10 分钟后仍 &lt;55% 再来一轮，最多 3 轮</li><li>高温 &gt;35℃ 先放遮阳网；雨天跳过</li><li>兜底：传感器读数异常（0% 或 100%）回退每日一次定时</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 sprinkler 组件做四路阀本地排程，kizniche/Mycodo 做湿度曲线与阈值面板</p>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a><a href="https://github.com/kizniche/Mycodo" target="_blank" rel="noopener">kizniche/Mycodo</a></p></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 makstech/esphome-irrigation-system 的 ESPHome 8 路阀 YAML 本地排程，kizniche/Mycodo 做湿度曲线与阈值面板</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/makstech/esphome-irrigation-system" target="_blank" rel="noopener">makstech/esphome-irrigation-system</a><a href="https://github.com/kizniche/Mycodo" target="_blank" rel="noopener">kizniche/Mycodo</a></p></div>
     </div>
   </section>
   
