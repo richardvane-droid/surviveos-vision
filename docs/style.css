@@ -121,6 +121,10 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .gh-name:hover{border-bottom-color:var(--red)}
 .zh{display:inline-block;font-size:.72rem;padding:1px 8px;border:1.3px solid #2f6b3a;color:#2f6b3a;border-radius:200px 8px 180px 8px/8px 180px 8px 200px;letter-spacing:.04em}
 .zh.zh-no{border-color:var(--ink3);color:var(--ink3)}
+.ext-tag{display:inline-block;font-size:.7rem;padding:1px 8px;border:1.3px dashed var(--red);color:var(--red);border-radius:200px 8px 180px 8px/8px 180px 8px 200px;letter-spacing:.08em}
+.gh-ext-h{font-family:"Noto Serif SC","Songti SC",serif;font-size:1.05rem;font-weight:900;margin:26px 0 4px;display:flex;align-items:center;gap:10px}
+.gh-ext-h span{font-family:"Long Cang","Kaiti SC",cursive;font-weight:400;font-size:1.3rem;color:var(--red)}
+.gh-card.gh-ext{border-style:dashed;background:rgba(255,255,255,.25)}
 .gh-art{margin:12px 0 6px}
 .gh-art .pc-frame{padding:8px 10px 4px}
 .gh-art svg{width:100%;height:auto;display:block;max-width:560px;margin:0 auto}
