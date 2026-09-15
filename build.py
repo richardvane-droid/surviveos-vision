@@ -161,11 +161,38 @@ def _starsn(e):
     s = e["stars"].lower().replace(",", "")
     return float(s.replace("k", "e3")) if s[:1].isdigit() else 0
 for e in repo_list: e["area_ids"] = sorted({m["id"][:2] for m in e["used_by"]})
-repo_tiers = [
-    {"key": "t1", "name": "万星以上", "note": "成熟平台级项目，社区大、文档全，出问题一搜就有答案", "repos": [e for e in repo_list if _starsn(e) >= 10000]},
-    {"key": "t2", "name": "1k ～ 10k 星", "note": "细分领域里的主流方案，大多有活跃维护者和现成的接入示例", "repos": [e for e in repo_list if 1000 <= _starsn(e) < 10000]},
-    {"key": "t3", "name": "1k 星以下", "note": "小而专的项目：恰好是这个需求的现成答案，用之前先看最近一次提交", "repos": [e for e in repo_list if _starsn(e) < 1000]},
+repo_core = [e for e in repo_list if not e["ext_only"]]
+repo_ext = [e for e in repo_list if e["ext_only"]]
+TIER_NOTES = [
+    ("t1", "万星以上", 10000, 10 ** 9, "成熟平台级项目，社区大、文档全，出问题一搜就有答案"),
+    ("t2", "1k ～ 10k 星", 1000, 10000, "细分领域里的主流方案，大多有活跃维护者和现成的接入示例"),
+    ("t3", "1k 星以下", 0, 1000, "小而专的项目：恰好是这个需求的现成答案，用之前先看最近一次提交"),
 ]
+def _tiers(lst):
+    return [{"key": k, "name": n, "note": note, "repos": [e for e in lst if lo <= _starsn(e) < hi]}
+            for k, n, lo, hi, note in TIER_NOTES]
+def _pstats(lst):
+    return {"repos": len(lst),
+            "zh": sum(1 for e in lst if "无" not in (e.get("zh") or "无")),
+            "multi": sum(1 for e in lst if len(e["used_by"]) > 1),
+            "links": sum(len(e["entries"]) for e in lst),
+            "mods": len({m["id"] for e in lst for m in e["used_by"]})}
+repo_tiers = _tiers(repo_list)
+REFS_PAGES = [
+    {"key": "core", "file": "refs.html", "title": "参考索引 · 专门方案", "tab": "专门方案",
+     "kicker": "全站引用 · 一", "h1": "{n} 个模块专门方案",
+     "lede": "每个模块页“GitHub 上的成熟方案”那一栏引用的项目，去重后按星数分三档：都是直接为这个模块选的方案——硬件设计、固件、HomeAssistant 集成、管理软件。挑选时先看知名度（星数），同档次里有中文的优先；每个仓库都在 2026-09 打开核实过存在，星数取当时页面显示值，绿色标签表示有中文（官方中文 README / 中文文档站 / 界面有中文）。每个项目下面是约 500 字的介绍，被多个模块共用的会按模块各列一段“在这里怎么用”；铅笔示意图在各模块页——点右侧模块编号过去看。和模块关系没那么直接、纯为了学一遍的经典项目在另一页。",
+     "repos": repo_core},
+    {"key": "ext", "file": "refs-ext.html", "title": "参考索引 · 延伸阅读", "tab": "延伸阅读",
+     "kicker": "全站引用 · 二", "h1": "{n} 个延伸阅读项目",
+     "lede": "借这座房子的每个模块当由头，顺手把 GitHub 上的好项目好思路过一遍。这一页的项目和所在模块的关系没有上一页那么直接——有的是同一件事的另一条技术路线，有的是另一个领域里做得最好的那个——但每条介绍的最后一段都写了在那个模块里能怎么用。选择标准和上一页一样：先看知名度，同档次里有中文的优先，每个仓库都在 2026-09 打开核实过存在。它们在模块页里排在“延伸阅读”小节，用虚线卡片和正式方案分开。",
+     "repos": repo_ext},
+]
+for p in REFS_PAGES:
+    p["stats"] = _pstats(p["repos"])
+    p["tiers"] = _tiers(p["repos"])
+    p["h1"] = p["h1"].format(n=p["stats"]["repos"])
+for i, p in enumerate(REFS_PAGES): p["other"] = REFS_PAGES[1 - i]
 all_tags = {}
 for m in modules:
     for t in m["tags"]: all_tags[t] = all_tags.get(t, 0) + 1
@@ -459,7 +486,7 @@ ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endbloc
   <section class="blk"><h2><em>③</em> 插图是统一风格的黑白钢笔速写</h2>
     <p class="scene">全站 {{ stats.modules }} 张模块速写 + {{ stats.areas }} 张区域全景都是原创的 inline SVG：只有一种墨色，阴影全部用 45° 排线，轮廓"描两遍"，线条经过轻微的扰动滤镜制造手绘感，右下角是编号签名。没有任何外部图片，页面在离线状态也能完整显示。</p></section>
   <section class="blk"><h2><em>④</em> 每页附了真实的参考链接</h2>
-    <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 3～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），选择时先看知名度（星数），同档次里有中文 README / 中文文档站 / 中文界面的优先，每个都在 2026-09 打开核实过、星数取自当时页面；下面再跟 2～5 个“延伸阅读”——和本模块关系没那么直接、但值得借这个由头整个学一遍的经典热门项目（全站去重后 200 多个，等于把 GitHub 上好项目好思路顺着这座房子过一遍）；每个项目配一段约 500 字的科普介绍（是什么、怎么工作、生态如何、在本模块里怎么接）和一张铅笔风的项目介绍图（由 ghdiag.py 从结构化描述自动画出，画的是这个项目的数据与控制走向以及和本模块的接法）；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见<a href="{{ root }}refs.html">参考索引</a>。</p></section>
+    <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 3～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），选择时先看知名度（星数），同档次里有中文 README / 中文文档站 / 中文界面的优先，每个都在 2026-09 打开核实过、星数取自当时页面；下面再跟 2～5 个“延伸阅读”——和本模块关系没那么直接、但值得借这个由头整个学一遍的经典热门项目（全站去重后 200 多个，等于把 GitHub 上好项目好思路顺着这座房子过一遍）；每个项目配一段约 500 字的科普介绍（是什么、怎么工作、生态如何、在本模块里怎么接）和一张铅笔风的项目介绍图（由 ghdiag.py 从结构化描述自动画出，画的是这个项目的数据与控制走向以及和本模块的接法）；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见参考索引，分成两页：<a href="{{ root }}refs.html">专门方案</a>与<a href="{{ root }}refs-ext.html">延伸阅读</a>。</p></section>
   <section class="blk"><h2><em>⑤</em> 每个模块再往下拆一层</h2>
     <p class="scene">每个模块页的“核心拆解”把它拆成 3～5 个最核心的东西，一共 {{ parts_stats.total }} 个：{{ parts_stats.hw }} 个<b>产品模块</b>（物理的总成——灯头、除湿柜、雨水罐组、洞洞板系统……）给科普式介绍和一张铅笔画<b>爆炸拆解图</b>；{{ parts_stats.logic }} 个<b>联动逻辑</b>（自动化 / 算法 / 数据流）当成“逻辑产品”做一张<b>海报</b>，再配一张与爆炸图对应的铅笔画<b>流程图</b>，并写明主要实现路径参考的是哪个 GitHub 项目，让逻辑可以顺着推演下去。</p></section>
   <section class="blk"><h2><em>⑥</em> 位置和尺寸以 0008 户型图为准</h2>
@@ -542,24 +569,24 @@ TEARDOWN = r"""{% extends "base" %}{% block title %}{{ m.id }} {{ m.name }} · �
 </article>
 {% endblock %}"""
 
-REFS = r"""{% extends "base" %}{% block title %}参考索引{% endblock %}
+REFS = r"""{% extends "base" %}{% block title %}{{ rp.title }}{% endblock %}
 {% block body %}
-<nav class="crumb"><a href="{{ root }}index.html">首页</a> › <span>参考索引</span></nav>
+<nav class="crumb"><a href="{{ root }}index.html">首页</a> › <a href="{{ root }}refs.html">参考索引</a> › <span>{{ rp.tab }}</span></nav>
 <article class="mod about">
   <header class="mod-head">
-    <p class="kicker">全站引用</p>
-    <h1>{{ refs_stats.repos }} 个开源项目，{{ refs_stats.xhs }} 组小红书关键词</h1>
-    <p class="lede">{{ stats.modules }} 个模块专题页里引用的 GitHub 项目汇总，去重后按星数分三档。其中标“延伸”的是各模块顺手学一遍的经典热门项目——和模块关系没那么直接，但思路值得借；每个仓库都在 2026-09 打开核实过存在，星数取当时页面显示值；绿色标签表示有中文（官方中文 README / 中文文档站 / 界面有中文）。项目怎么工作、在模块里怎么接，每个项目下面是约 500 字的介绍（是什么、怎么工作、生态如何），被多个模块共用的项目会按模块各列一段“在这里怎么用”；铅笔示意图在各模块页——点右侧模块编号过去看。小红书关键词也在各模块页里。</p>
+    <p class="kicker">{{ rp.kicker }}</p>
+    <h1>{{ rp.h1 }}</h1>
+    <nav class="refs-tabs">{% for p in refs_pages %}<a href="{{ root }}{{ p.file }}" class="{% if p.key == rp.key %}on{% endif %}">{{ p.tab }} <i>{{ p.stats.repos }}</i></a>{% endfor %}</nav>
+    <p class="lede">{{ rp.lede }}</p>
   </header>
   <section class="blk refs-sum">
-    <div class="rs"><b>{{ refs_stats.repos }}</b><span>个项目</span></div>
-    <div class="rs"><b>{{ refs_stats.zh }}</b><span>个有中文</span></div>
-    <div class="rs"><b>{{ refs_stats.ext }}</b><span>个延伸阅读</span></div>
-    <div class="rs"><b>{{ refs_stats.multi }}</b><span>个被多个模块共用</span></div>
-    <div class="rs"><b>{{ refs_stats.links }}</b><span>处引用</span></div>
-    <nav class="rs-jump">{% for t in repo_tiers %}<a href="#{{ t.key }}">{{ t.name }} <i>{{ t.repos|length }}</i></a>{% endfor %}</nav>
+    <div class="rs"><b>{{ rp.stats.repos }}</b><span>个项目</span></div>
+    <div class="rs"><b>{{ rp.stats.zh }}</b><span>个有中文</span></div>
+    <div class="rs"><b>{{ rp.stats.mods }}</b><span>个模块引用</span></div>
+    <div class="rs"><b>{{ rp.stats.links }}</b><span>处引用</span></div>
+    <nav class="rs-jump">{% for t in rp.tiers %}<a href="#{{ t.key }}">{{ t.name }} <i>{{ t.repos|length }}</i></a>{% endfor %}</nav>
   </section>
-  {% for t in repo_tiers %}
+  {% for t in rp.tiers %}{% if t.repos %}
   <section class="blk repo-tier" id="{{ t.key }}">
     <h2><em>★</em> {{ t.name }} <small>{{ t.repos|length }} 个</small></h2>
     <p class="tier-note">{{ t.note }}</p>
@@ -570,7 +597,6 @@ REFS = r"""{% extends "base" %}{% block title %}参考索引{% endblock %}
             <a class="rname" href="{{ e.url }}" target="_blank" rel="noopener">{{ e.name }}</a>
             <span class="stars">★ {{ e.stars }}</span>
             {% if e.zh %}<span class="zh {% if '无' in e.zh %}zh-no{% endif %}">{{ e.zh }}</span>{% endif %}
-            {% if e.ext_only %}<span class="ext-tag">延伸</span>{% endif %}
           </div>
           <p class="rdesc">{{ e.desc }}</p>
           <div class="rintro">{% for para in e.intro_generic %}<p>{{ para }}</p>{% endfor %}{% for m, para in e.intro_by_module %}<p class="rmod"><a href="{{ root }}modules/{{ m.id }}.html"><i>{{ m.id }}</i>{{ m.name }}</a>{{ para }}</p>{% endfor %}</div>
@@ -578,8 +604,8 @@ REFS = r"""{% extends "base" %}{% block title %}参考索引{% endblock %}
         <div class="rused"><span class="rused-l">用在</span>{% for m in e.used_by %}<a href="{{ root }}modules/{{ m.id }}.html" title="{{ m.name }}"><i>{{ m.id }}</i>{{ m.name }}</a>{% endfor %}</div>
       </div>{% endfor %}
     </div>
-  </section>{% endfor %}
-  <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><span></span></nav>
+  </section>{% endif %}{% endfor %}
+  <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><a href="{{ root }}{{ rp.other.file }}">{{ rp.other.tab }}（{{ rp.other.stats.repos }} 个）→</a></nav>
 </article>
 {% endblock %}"""
 
@@ -728,6 +754,12 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .xhs .kw{font-weight:700;color:var(--red);white-space:nowrap}
 .xhs .xnote{color:var(--ink2);font-size:.9rem}
 .xhs:hover .kw{border-bottom:1.5px solid var(--red)}
+.refs-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 0}
+.refs-tabs a{font-size:.92rem;padding:5px 18px;border:1.6px solid var(--line);border-radius:200px 12px 180px 12px/12px 180px 12px 200px;background:rgba(255,255,255,.35)}
+.refs-tabs a i{margin-left:5px}
+.refs-tabs a.on{background:var(--ink);color:var(--paper)}
+.refs-tabs a.on i{color:var(--paper2)}
+.refs-tabs a:not(.on):hover{box-shadow:3px 3px 0 var(--ink)}
 .refs-sum{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 28px;padding:14px 0 6px;border-top:1.5px solid var(--line);border-bottom:1px dotted rgba(28,28,28,.35)}
 .refs-sum .rs b{font-family:"Noto Serif SC","Songti SC",serif;font-size:1.7rem;font-weight:700;margin-right:6px;line-height:1}
 .refs-sum .rs span{font-size:.82rem;color:var(--ink3)}
@@ -864,11 +896,12 @@ for m in modules:
     for p in m["parts"]:
         p["img_inline"] = inline_svg(p["img"], "pc-art")
         p["poster_inline"] = inline_svg(p["poster"], "pc-poster") if p["poster"] else None
-ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, repo_tiers=repo_tiers, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface, plans=plans, size_table=SIZE_TABLE, blocks=BLOCKS)
+ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, repo_tiers=repo_tiers, refs_pages=REFS_PAGES, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface, plans=plans, size_table=SIZE_TABLE, blocks=BLOCKS)
 
 (DIST / "index.html").write_text(env.get_template("index").render(root="", **ctx), encoding="utf-8")
 (DIST / "about.html").write_text(env.get_template("about").render(root="", **{**ctx, "page": "about"}), encoding="utf-8")
-(DIST / "refs.html").write_text(env.get_template("refs").render(root="", **{**ctx, "page": "refs"}), encoding="utf-8")
+for _p in REFS_PAGES:
+    (DIST / _p["file"]).write_text(env.get_template("refs").render(root="", **{**ctx, "page": "refs", "rp": _p}), encoding="utf-8")
 (DIST / "preface.html").write_text(env.get_template("preface").render(root="", **{**ctx, "page": "preface"}), encoding="utf-8")
 (DIST / "space.html").write_text(env.get_template("space").render(root="", **{**ctx, "page": "space"}), encoding="utf-8")
 alist = list(AREAS.values())
@@ -890,7 +923,7 @@ for old, new in REDIRECTS.items():
 (DIST / "favicon.svg").write_text(FAVICON, encoding="utf-8")
 (DIST / ".nojekyll").write_text("")
 # sitemap
-urls = ["index.html", "preface.html", "space.html", "about.html", "refs.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
+urls = ["index.html", "preface.html", "space.html", "about.html", "refs.html", "refs-ext.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
 (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     "".join(f"<url><loc>{SITE_URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
 print(f"built {len(urls)} pages -> {DIST}")
