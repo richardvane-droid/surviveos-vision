@@ -210,7 +210,7 @@
       <div><h3>关键参数 / 组成</h3>
         <ul class="inspo"><li>树穴 80cm 见方，底垫 10cm 碎石排水</li><li>三角木桩支撑，麻绳绑扎，两年后拆</li><li>滴灌出土口只露 3cm，环管绕根球一圈</li><li>碎树皮护根圈直径 1m、厚 8cm，每年补一次</li></ul></div>
       <div>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/cofade/open-garden-planner" target="_blank" rel="noopener">cofade/open-garden-planner</a></p></div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/danielbrendel/hortusfox-web" target="_blank" rel="noopener">danielbrendel/hortusfox-web</a></p></div>
     </div>
   </section>
   
@@ -312,7 +312,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 分区养护日历</h2>
-    <p class="scene">草原的麻烦不在活多，在于“什么时候该做哪件事”容易忘。这段逻辑把北中南三段的植物档案（各自的割、补播、覆盖月份）和气候节点合在一起，按月生成养护任务：二月底连续 3 天无雨才贴地割草，梅雨前查干河道排水，六月野花补播，十一月补树皮。任务进 HomeAssistant 日历，到期推送手机，完成打勾，一年就是一本成长日志。</p>
+    <p class="scene">草原的麻烦不在活多，在于“什么时候该做哪件事”容易忘。这段逻辑把北中南三段的植物档案和气候节点合在一起，按月生成养护任务：二月底连续 3 天无雨才贴地割草，梅雨前查干河道排水，六月野花补播，十一月补树皮。叠在上面的是每周一次的四步巡场——手拔、电动打草机、手动修枝剪、大风量吹叶机——工具都来自 0401 那面墙、共用一块 WORX 20V 电池，按季节自动加减。任务进 HomeAssistant 日历，到期推送，完成打勾。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -471,9 +471,9 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>输入：北中南三段植物档案 + 当地气候节点</li><li>关键判断：割草前看未来 3 天无雨且气温 &gt;5℃</li><li>出口：HA 日历 + 手机推送 + 完成打勾</li><li>兜底：桧木名牌背面手写全年月份表</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">用 Ecohackerfarm/powerplant 的种植时间表建三区植物档案，任务写进 HA 本地日历按月推送</p>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/Ecohackerfarm/powerplant" target="_blank" rel="noopener">Ecohackerfarm/powerplant</a><a href="https://github.com/cofade/open-garden-planner" target="_blank" rel="noopener">cofade/open-garden-planner</a></p></div>
+        <ul class="inspo"><li>输入：北中南三段植物档案 + 当地气候节点</li><li>周任务：手拔 → 打草机 → 修枝剪 → 吹叶机，四步一组</li><li>关键判断：割草前看未来 3 天无雨且气温 &gt;5℃</li><li>兜底：桧木名牌背面手写全年月份表与周巡场四步</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 danielbrendel/hortusfox-web 建三区植物档案、年度任务和每周四步巡场清单，Ecohackerfarm/powerplant 查伴生与播期，经 REST API 由 HA 推送</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/danielbrendel/hortusfox-web" target="_blank" rel="noopener">danielbrendel/hortusfox-web</a><a href="https://github.com/Ecohackerfarm/powerplant" target="_blank" rel="noopener">Ecohackerfarm/powerplant</a></p></div>
     </div>
   </section>
   
@@ -488,7 +488,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

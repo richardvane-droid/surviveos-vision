@@ -126,7 +126,7 @@
       <div><h3>关键参数 / 组成</h3>
         <ul class="inspo"><li>工业除湿机 50L/天，压缩机式，柜内工作温度 5~35℃</li><li>隔音棉 30mm 内衬 + 橡胶减震垫，柜外噪音 &lt; 40dB</li><li>冷凝水管 DN25，坡度 ≥ 2%，直排提升泵</li><li>Φ100 风管软接，柜门整面进风格栅</li></ul></div>
       <div>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/Chreece/ESPHome-Dehumidifier" target="_blank" rel="noopener">Chreece/ESPHome-Dehumidifier</a></p></div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/wuwentao/midea_ac_lan" target="_blank" rel="noopener">wuwentao/midea_ac_lan</a></p></div>
     </div>
   </section>
   
@@ -385,8 +385,8 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>输入：4 探头取最高湿度，每分钟一拍</li><li>阈值：&gt; 65% 强力档 + 推送，&lt; 45% 停机保护木制品</li><li>防抖：切档后最少保持 15 分钟</li><li>数据出口：档位、湿度曲线、日排水量写入 HA</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">Chreece/ESPHome-Dehumidifier 接管除湿机档位，HA 用 generic_hygrostat 做 45~65% 区间控制，排水量按提升泵启动次数换算</p>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/Chreece/ESPHome-Dehumidifier" target="_blank" rel="noopener">Chreece/ESPHome-Dehumidifier</a><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a></p></div>
+      <div><h3>主要实现路径</h3><p class="impl">wuwentao/midea_ac_lan 在局域网接管除湿机档位，HA 用 generic_hygrostat 做 45~65% 区间控制，排水量按提升泵启动次数换算</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/wuwentao/midea_ac_lan" target="_blank" rel="noopener">wuwentao/midea_ac_lan</a><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a></p></div>
     </div>
   </section>
   
@@ -566,7 +566,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

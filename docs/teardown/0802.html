@@ -270,7 +270,7 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>触发：传感器上报即写入，每 10 秒批量刷新一次</li><li>规则：曲线类数据进 InfluxDB 留 90 天，状态类留 HA</li><li>兜底：实体超过 10 分钟未更新标记为离线</li><li>数据出口：HA 实体 + InfluxDB + 手机端同一份仪表盘</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">home-assistant/core 做实体统一，esphome/esphome 节点走原生 API，HA 的 influxdb 集成把曲线类实体写入 InfluxDB 供 Grafana 读</p>
+      <div><h3>主要实现路径</h3><p class="impl">home-assistant/core 做实体统一，esphome/esphome 节点走原生 API，HA 的 influxdb 集成把曲线类实体写入 InfluxDB 做长期曲线，HA 长期统计做短期曲线</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
   </section>
@@ -420,7 +420,7 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>中屏：等距地图 SVG，模块图标按状态变色，可点进详情</li><li>左右屏：光照温湿度曲线 / 7 天水电曲线</li><li>阈值：首页最多 10 个数据，22:00~07:00 夜航模式</li><li>数据出口：三个 HA 仪表盘视图，手机端复用同一份</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">ExperienceLovelace/ha-floorplan 把 SVG 地图元素绑定实体状态，piitaya/lovelace-mushroom 排左右屏卡片，Grafana 面板嵌入曲线，HA automation 定时切视图</p>
+      <div><h3>主要实现路径</h3><p class="impl">ExperienceLovelace/ha-floorplan 把 SVG 地图元素绑定实体状态，piitaya/lovelace-mushroom 排左右屏卡片，HA 自带 history-graph 卡画曲线，HA automation 定时切视图</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/ExperienceLovelace/ha-floorplan" target="_blank" rel="noopener">ExperienceLovelace/ha-floorplan</a><a href="https://github.com/piitaya/lovelace-mushroom" target="_blank" rel="noopener">piitaya/lovelace-mushroom</a></p></div>
     </div>
   </section>
@@ -581,7 +581,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

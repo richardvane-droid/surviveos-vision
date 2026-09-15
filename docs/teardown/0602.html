@@ -137,7 +137,7 @@
       <div><h3>关键参数 / 组成</h3>
         <ul class="inspo"><li>桧木方料 8×8cm，高 1m，内部掏空 4cm 走线槽</li><li>翻斗雨量计 0.2mm/翻，离树 3m 以上</li><li>电容式探针埋深 15cm，北中南每段一根，线缆穿波纹管</li><li>ESP32 + 三路 12V 继电器藏在杆内，IP54 盒</li></ul></div>
       <div>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/lrswss/esp32-irrigation-automation" target="_blank" rel="noopener">lrswss/esp32-irrigation-automation</a></p></div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
   </section>
   
@@ -400,8 +400,8 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>触发：每天 04:00，窗口 04:00~06:00</li><li>阈值：芒草 18% · 朴树 25% · 野花 22%</li><li>时长：蒸散量折算，单区 5~15 分钟封顶</li><li>兜底：断网时用昨日时长；红按钮手动 5 分钟</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">altmenorg/HAsmartirrigation 按蒸散量算各区分钟数，ESPHome 本地三条件判断开阀</p>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/altmenorg/HAsmartirrigation" target="_blank" rel="noopener">altmenorg/HAsmartirrigation</a><a href="https://github.com/OpenSprinkler/OpenSprinkler-Firmware" target="_blank" rel="noopener">OpenSprinkler/OpenSprinkler-Firmware</a></p></div>
+      <div><h3>主要实现路径</h3><p class="impl">altmenorg/HAsmartirrigation 按蒸散量算各区秒数，esphome/esphome 在杆内 ESP32 本地做三条件判断并用 sprinkler 组件开阀</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/altmenorg/HAsmartirrigation" target="_blank" rel="noopener">altmenorg/HAsmartirrigation</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
   </section>
   
@@ -564,8 +564,8 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>输入：阀开启时长 × 滴头总流量 + 当前水源</li><li>出口：HA 计量表 → 周用水量、雨水占比</li><li>曲线：三区含水率，7 天 / 30 天两档</li><li>告警：浇后 3 天含水率不回升，疑似堵头</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">petergridge/Irrigation-V5 做多区面板，用水量由阀时长折算写入 HA utility_meter</p>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/petergridge/Irrigation-V5" target="_blank" rel="noopener">petergridge/Irrigation-V5</a></p></div>
+      <div><h3>主要实现路径</h3><p class="impl">altmenorg/HAsmartirrigation 的分区面板看三区水桶余额，用水量由阀时长折算写入 HA utility_meter</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/altmenorg/HAsmartirrigation" target="_blank" rel="noopener">altmenorg/HAsmartirrigation</a></p></div>
     </div>
   </section>
   
@@ -580,7 +580,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

@@ -316,7 +316,7 @@
       <div><h3>关键参数 / 组成</h3>
         <ul class="inspo"><li>JSN-SR04T 防水超声波，量程 0.25~4.5m</li><li>ESP32-C3 深睡眠，10 分钟上报一次</li><li>自来水 12V 常闭电磁阀，DN15</li><li>空气隔断落差 ≥ 2.5 倍管径，防倒灌</li></ul></div>
       <div>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">kane5432/ESP32-Water-Level-Sensor</a><a href="https://github.com/tomsbasement/esp32-water-tank-sensor" target="_blank" rel="noopener">tomsbasement/esp32-water-tank-sensor</a></p></div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">kane5432/ESP32-Water-Level-Sensor</a><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a></p></div>
     </div>
   </section>
   
@@ -485,7 +485,7 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>触发：雨量脉冲 / 每 10 分钟水位巡检</li><li>阈值：&lt;20% 开补水，到 40% 停</li><li>兜底：补水超 30 分钟未达标即关阀报警</li><li>出口：HA 月度雨水占比 + 每场雨进罐升数</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">kane5432/ESP32-Water-Level-Sensor 报水位，ESPHome 数雨量脉冲，HA 控补水阀</p>
+      <div><h3>主要实现路径</h3><p class="impl">kane5432/ESP32-Water-Level-Sensor 报水位，hugokernel/esphome-weather-station 的 YAML 数雨量脉冲，home-assistant/core 自动化控补水阀并计量</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">kane5432/ESP32-Water-Level-Sensor</a><a href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">hugokernel/esphome-weather-station</a></p></div>
     </div>
   </section>
@@ -501,7 +501,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>

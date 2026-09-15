@@ -378,7 +378,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 图纸到大屏</h2>
-    <p class="scene">让今晚画的墙明天一早就出现在全屋大屏上的数据流。木屋剖面、风管走向和打印件在 FreeCAD 里建模，户型和家具在 Sweet Home 3D 里布置；一个插件把 Sweet Home 3D 的 3D 户型按“每盏灯亮/灭”分别渲染成图片，再自动生成 HA 的 picture-elements 卡片配置，灯在 HA 里一开，平面图上对应位置就真的亮起来。流程中最容易出错的是实体映射：图里的灯和 HA 里的 entity_id 名字对不上，就会出现“灯亮了图没亮”，所以导出前有一步校验。打印件由拓竹切片后直接进右屏排队。</p>
+    <p class="scene">让今晚画的墙明天一早就出现在全屋大屏上的数据流。木屋剖面、风管走向和打印件在 FreeCAD 里建模，户型和家具在 Sweet Home 3D 里布置；一个插件把 Sweet Home 3D 的 3D 户型按“每盏灯亮/灭”分别渲染成图片，再自动生成 HA 的 picture-elements 卡片配置，灯在 HA 里一开，平面图上对应位置就真的亮起来。流程中最容易出错的是实体映射：图里的灯和 HA 里的 entity_id 名字对不上，就会出现“灯亮了图没亮”，所以导出前有一步校验。打印件切片后经 Klipper 进右屏排队。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -554,7 +554,7 @@
 </main>
 <footer class="foot">
   <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
-  <p class="tiny">8 区域 · 43 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
 </footer>
 
 </body>
