@@ -1,0 +1,43 @@
+name: 重新生成设想版站点
+
+# 改了 data/ illos/ parts/ build.py 之类之后 push 到 main，就自动重跑 build.py
+# 并把重新生成的 docs/ 提交回 main（Pages 从 main 分支的 /docs 发布）。
+# docs/ 自己的改动不触发，避免自己触发自己。
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-vision
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 装依赖
+        run: pip install jinja2
+      - name: 跑 build.py
+        run: python3 build.py
+      - name: docs/ 有变化就提交回 main
+        run: |
+          if [ -z "$(git status --porcelain docs)" ]; then
+            echo "docs/ 无变化，跳过提交"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "自动重新生成 docs/（build.py，由 $(git rev-parse --short "$GITHUB_SHA") 触发）"
+          git push

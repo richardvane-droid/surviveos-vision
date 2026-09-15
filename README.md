@@ -25,12 +25,22 @@ ref0008/        0008 的五张原图 SVG；plan2pencil.py 把它们转成 illos/
 sk.py / redraw_*.py  按 0008 几何重绘区域速写、模块速写与拆解图的生成脚本
 ```
 
-## 本地重新生成
+## 重新生成站点
+
+**不需要电脑。**改完 `data/`、`illos/`、`parts/` 或 `build.py` 之后 push 到 `main`，GitHub Actions
+（`.github/workflows/build.yml`）会自动跑一遍 `build.py`，把重新生成的 `docs/` 提交回 `main`，
+Pages 随即更新。手动触发：仓库 Actions 页 →「重新生成设想版站点」→ Run workflow（手机也能点）。
+
+`docs/` 自身的改动不会触发构建（避免自我循环），`**.md` 也不触发。
+
+改文案：编辑 `data/0X.json`；改插图：编辑 `illos/NNNN.svg`（保持 STYLE.md 第 2 节的手法）；push 就行，
+**不要手工提交 `docs/`**——让 CI 生成，否则容易出现 `docs/` 与 `data/` 对不上的漂移
+（2026-09-15 接 CI 时就发现有 7 个 teardown 页落后于 data）。
+
+要在本地预览（可选）：
 
 ```bash
 pip install jinja2
 python3 build.py        # 输出到 docs/
 python3 -m http.server -d docs 8000
 ```
-
-改文案：编辑 `data/0X.json`；改插图：编辑 `illos/NNNN.svg`（保持 STYLE.md 第 2 节的手法）；然后重新 `python3 build.py` 并提交。
