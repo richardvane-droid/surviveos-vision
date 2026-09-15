@@ -1,16 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
-    <filter id="p0307-3p-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="95" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <filter id="p0307-3p-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="143" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
     <pattern id="p0307-3p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
   </defs>
   <g filter="url(#p0307-3p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/><rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
     <path d="M30 44 H330" stroke-width="0.8"/>
-<path d="M60 150 h60 v40 h-60 Z M66 158 h48 M66 168 h48 M66 178 h30" stroke-width="1.2"/>
-<path d="M130 170 H160" stroke-width="1" stroke-dasharray="3 3"/><path d="M156 166 l4 4 l-4 4" stroke-width="1"/>
-<circle cx="200" cy="170" r="26" stroke-width="1.4"/><path d="M200 144 v52 M174 170 h52" stroke-width="0.6"/><path d="M186 160 l14 -8 l14 8 l-14 8 Z" stroke-width="1.1"/><path d="M226 150 a30 30 0 0 1 4 26 l-4 -4 M230 176 l4 -2" stroke-width="0.8"/>
-<path d="M236 170 H266" stroke-width="1" stroke-dasharray="3 3"/><path d="M262 166 l4 4 l-4 4" stroke-width="1"/>
-<path d="M276 146 h40 v50 h-40 Z M290 146 v-14 h12 v14 M296 132 v-8" stroke-width="1.2"/><path d="M280 190 h32 M284 184 h24" stroke-width="0.6"/>
+<path d="M40 138 h46 v62 h-46 Z" stroke-width="1.5"/><path d="M44 142 h38 v50 h-38 Z" stroke-width="0.7"/>
+<path d="M50 152 h26 M50 160 h20 M50 168 h26 M50 176 h16" stroke-width="0.6"/>
+<circle cx="63" cy="196" r="1.8" stroke-width="0.7"/>
+<path d="M94 168 H128" stroke-width="1" stroke-dasharray="3 3"/><path d="M124 164 l4 4 l-4 4" stroke-width="1"/>
+<path d="M136 136 h66 v64 h-66 Z" stroke-width="1.5"/>
+<path d="M144 146 h26 v18 h-26 Z" fill="url(#p0307-3p-shade)" stroke="none"/>
+<path d="M144 146 h26 v18 h-26 Z" stroke-width="0.9"/>
+<path d="M178 148 h16 M178 154 h16 M178 160 h10" stroke-width="0.5"/>
+<path d="M144 174 h8 v8 h-8 Z M158 174 h8 v8 h-8 Z M172 174 h8 v8 h-8 Z" stroke-width="0.8"/>
+<path d="M148 190 v10 M162 190 v10 M176 190 v10" stroke-width="0.9"/>
+<path d="M136 156 h-10 M136 166 h-10" stroke-width="0.8"/>
+<path d="M210 168 H244" stroke-width="1" stroke-dasharray="3 3"/><path d="M240 164 l4 4 l-4 4" stroke-width="1"/>
+<path d="M252 194 h72 v10 h-72 Z" stroke-width="1.4"/>
+<path d="M260 194 V146 h8 v48 M308 194 V146 h8 v48 M260 146 h56 v-10 h-56 Z" stroke-width="1.3"/>
+<path d="M280 136 h16 v20 h-16 Z M284 156 h8 v16 h-8 Z M288 172 v8" stroke-width="1.1"/>
+<path d="M266 194 h44 v-8 h-44 Z" stroke-width="0.9"/>
+<path d="M262 128 h52 M262 128 l5 -3 M262 128 l5 3 M314 128 l-5 -3 M314 128 l-5 3" stroke-width="0.8"/>
+<path d="M304 152 v28 M304 152 l-3 5 M304 152 l3 5 M304 180 l-3 -5 M304 180 l3 -5" stroke-width="0.8"/>
 <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
     <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
     <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
@@ -19,11 +32,11 @@
   </g>
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0307 · L3</text>
-  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">翻面加工器</text>
-  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">不追真五轴：转一下，再当三轴切</text>
-  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">CAM 姿态段 → A/C 转位锁定 → 探针重测 → 三轴刀路</text>
-  <g font-size="11" fill="#2a2a2a"><text x="64" y="336">每一段都是能单独看懂的三轴程序</text><text x="64" y="366">换面后探针重测 Z，误差 >0.05mm 就停</text><text x="64" y="396">门开 / 丢步 / 过流任一触发即暂停</text></g>
-  <text x="30" y="440" font-size="9" fill="#666">跑在：grblHAL（Teensy 4.1）· 数据出口：HA cnc_runtime 实体</text>
-  <text x="30" y="454" font-size="9" fill="#666">参考实现：grblHAL/core · LinuxCNC/linuxcnc</text>
+  <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">三轴安全闸</text>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">门一开就停：安全不交给网页</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">cncjs 下发 → 固件解析 → 限位 / 门磁 / 探针三路直连 → 异常即停</text>
+  <g font-size="11" fill="#2a2a2a"><text x="64" y="336">限位定行程，门磁做安全门输入，探针测刀长与 Z 零</text><text x="64" y="366">VFD 主轴走 RS485 / Modbus，由固件调速与启停</text><text x="64" y="396">门开 / 丢步 / 过流任一触发即进给暂停并抬刀</text></g>
+  <text x="30" y="440" font-size="9" fill="#666">跑在：grblHAL（Teensy 4.1）或 FluidNC（ESP32）· 数据出口：cncjs 日志</text>
+  <text x="30" y="454" font-size="9" fill="#666">参考实现：grblHAL/core · bdring/FluidNC</text>
   <g transform="rotate(-8 296 108)"><rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/><text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text></g>
 </svg>

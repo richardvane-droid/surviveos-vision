@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="p0305-3-pencil" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="6" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="125" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="p0305-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
@@ -11,68 +11,32 @@
       <line x1="0" y1="0" x2="0" y2="4" stroke="#4a4a4a" stroke-width="0.8"/>
       <line x1="0" y1="2" x2="4" y2="2" stroke="#4a4a4a" stroke-width="0.5" stroke-opacity="0.6"/>
     </pattern>
-    <pattern id="p0305-3-dots" width="5" height="5" patternUnits="userSpaceOnUse">
-      <circle cx="2.5" cy="2.5" r="0.6" fill="#6b6b6b"/>
-    </pattern>
   </defs>
-  <path d="M96 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+  <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
   <g filter="url(#p0305-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
-    <!-- ① 木架框（八格） -->
-    <path d="M56 274 h112 v56 h-112 Z" stroke-width="1.5"/>
-    <path d="M56 274 l16 -11 h112 l-16 11 M168 274 l16 -11 v56 l-16 11" stroke-width="1.3"/>
-    <path d="M84 274 v56 M112 274 v56 M140 274 v56 M56 302 h112" stroke-width="0.8"/>
-    <path d="M170 276 l12 -8 v50 l-12 8 Z" fill="url(#p0305-3-shade)" stroke="none"/>
-    <path d="M60 280 q8 3 20 0 M60 308 q8 3 20 0" stroke-width="0.4"/>
-    <!-- ② 密封筒身 -->
-    <ellipse cx="200" cy="202" rx="18" ry="7" stroke-width="1.4"/>
-    <path d="M182 202 v44 a18 7 0 0 0 36 0 v-44" stroke-width="1.4"/>
-    <path d="M186 212 v28 M214 212 v28" stroke-width="0.5"/>
-    <path d="M184 244 a18 7 0 0 0 30 2 v3 a18 7 0 0 1 -30 -2 Z" fill="url(#p0305-3-shade)" stroke="none"/>
-    <!-- ③ PLA 料卷 -->
-    <circle cx="252" cy="158" r="20" stroke-width="1" transform="translate(-6 -3)"/>
-    <path d="M232 143 l6 3 M232 168 l6 3" stroke-width="0.8"/>
-    <circle cx="258" cy="160" r="21" stroke-width="1.5"/>
-    <circle cx="258" cy="160" r="6" stroke-width="1"/>
-    <circle cx="258" cy="160" r="15" stroke-width="0.6"/>
-    <circle cx="258" cy="160" r="11" stroke-width="0.6"/>
-    <path d="M243 160 a15 15 0 0 0 15 15" stroke-width="0.6" stroke-dasharray="2 2"/>
-    <path d="M258 160 m-6 0 a6 6 0 0 0 12 0 a6 6 0 0 0 -12 0" fill="url(#p0305-3-shade)" stroke="none"/>
-    <path d="M276 150 q8 -6 4 -14" stroke-width="0.9"/>
-    <!-- ④ 干燥剂包 + 湿度卡 -->
-    <rect x="296" y="106" width="22" height="14" rx="2" stroke-width="1.2"/>
-    <path d="M296 109 h22 M296 117 h22" stroke-width="0.5"/>
-    <rect x="299" y="110" width="16" height="6" fill="url(#p0305-3-dots)" stroke="none"/>
-    <rect x="326" y="96" width="14" height="18" rx="1" stroke-width="1.1"/>
-    <circle cx="333" cy="101" r="2" stroke-width="0.7"/><circle cx="333" cy="106" r="2" stroke-width="0.7"/><circle cx="333" cy="111" r="2" stroke-width="0.7"/>
-    <circle cx="333" cy="111" r="2" fill="url(#p0305-3-shade2)" stroke="none"/>
-    <!-- ⑤ 密封筒盖 + 硅胶圈 -->
-    <ellipse cx="352" cy="72" rx="18" ry="7" stroke-width="1.4"/>
-    <path d="M334 72 v5 a18 7 0 0 0 36 0 v-5" stroke-width="1.2"/>
-    <ellipse cx="352" cy="72" rx="12" ry="4.5" stroke-width="0.8" stroke-dasharray="2 2"/>
-    <path d="M336 74 a18 7 0 0 0 32 0 v3 a18 7 0 0 1 -32 0 Z" fill="url(#p0305-3-shade)" stroke="none"/>
-    <path d="M346 66 q6 -3 12 0" stroke-width="0.7"/>
-    <!-- ⑥ 标签 -->
-    <rect x="384" y="30" width="34" height="18" rx="1.5" stroke-width="1.2" transform="rotate(-19 401 39)"/>
-    <path d="M389 34 h14 M389 38 h22 M389 42 h18" stroke-width="0.6" transform="rotate(-19 401 39)"/>
-    <circle cx="410" cy="34" r="2.2" stroke-width="0.7" transform="rotate(-19 401 39)"/>
+<path d="M68.0 282.0 h84 v34 h-84 Z" stroke-width="1.4"/><path d="M68.0 282.0 l10 -7 h84 l-10 7 M152.0 282.0 l10 -7 v34 l-10 7" stroke-width="0.9"/><circle cx="92.0" cy="299.0" r="11" stroke-width="1.1"/><circle cx="92.0" cy="299.0" r="4" stroke-width="0.7"/><path d="M92.0 299.0 m-11 0 a11 11 0 0 0 22 0 Z" fill="url(#p0305-3-shade)" stroke="none"/><path d="M118.0 288.0 h22 v10 h-22 Z M121.0 294.0 h12 M121.0 304.0 h18 M121.0 309.0 h12" stroke-width="0.7"/><path d="M112.0 282.0 q6 -12 18 -16" stroke-width="0.9"/>
+<path d="M124.0 256.0 h80 v8 h-80 Z" stroke-width="1.3"/><path d="M124.0 256.0 l10 -7 h80 l-10 7" stroke-width="0.9"/><ellipse cx="164.0" cy="248.0" rx="20" ry="7" stroke-width="1.3"/><path d="M144.0 248.0 v8 a20 7 0 0 0 40 0 v-8" stroke-width="1"/><ellipse cx="164.0" cy="248.0" rx="13" ry="4.5" stroke-width="0.7"/><path d="M138.0 254.0 h4 M186.0 254.0 h4" stroke-width="0.8"/>
+<ellipse cx="218.0" cy="204.0" rx="20" ry="7" stroke-width="1.3"/><path d="M198.0 204.0 v6 a20 7 0 0 0 40 0 v-6" stroke-width="1"/><path d="M200.0 208.0 a18 6 0 0 0 36 0 v2 a18 6 0 0 1 -36 0 Z" fill="url(#p0305-3-shade)" stroke="none"/><circle cx="207.0" cy="203.0" r="1.6" stroke-width="0.5"/><circle cx="214.0" cy="206.0" r="1.6" stroke-width="0.5"/><circle cx="221.0" cy="202.0" r="1.6" stroke-width="0.5"/><circle cx="228.0" cy="205.0" r="1.6" stroke-width="0.5"/><circle cx="210.0" cy="207.0" r="1.6" stroke-width="0.5"/><circle cx="225.0" cy="207.0" r="1.6" stroke-width="0.5"/>
+<ellipse cx="272.0" cy="150.0" rx="20" ry="7" stroke-width="1.3"/><path d="M252.0 150.0 v14 a20 7 0 0 0 40 0 v-14" stroke-width="1.2"/><circle cx="272.0" cy="150.0" r="4" stroke-width="0.8"/><path d="M272.0 150.0 q10 -3 16 -2" stroke-width="0.7"/><path d="M272.0 150.0 q2 5 3 4" stroke-width="0.7"/><path d="M272.0 150.0 q-10 -3 -16 -2" stroke-width="0.7"/><path d="M272.0 150.0 q-4 -5 -6 -4" stroke-width="0.7"/><path d="M272.0 150.0 q8 4 13 3" stroke-width="0.7"/><path d="M272.0 150.0 q-8 4 -13 3" stroke-width="0.7"/><path d="M292.0 158.0 h12 M298.0 154.0 v8" stroke-width="0.8"/>
+<path d="M274.0 114.0 q14 -14 30 -6 q16 8 30 -6 q14 -14 28 -4" stroke-width="1.4"/><path d="M274.0 100.0 q14 -14 30 -6 q16 8 30 -6 q14 -14 28 -4" stroke-width="1.4"/><path d="M285.0 113.0 v-14" stroke-width="0.5"/><path d="M296.0 112.0 v-14" stroke-width="0.5"/><path d="M307.0 111.0 v-14" stroke-width="0.5"/><path d="M318.0 110.0 v-14" stroke-width="0.5"/><path d="M329.0 109.0 v-14" stroke-width="0.5"/><path d="M340.0 108.0 v-14" stroke-width="0.5"/><path d="M351.0 107.0 v-14" stroke-width="0.5"/><path d="M362.0 106.0 v-14" stroke-width="0.5"/><path d="M274.0 114.0 v-14 M362.0 110.0 v-14" stroke-width="1"/>
+<path d="M346.0 44.0 h68 v34 h-68 Z" stroke-width="1.4"/><path d="M346.0 44.0 l10 -7 h68 l-10 7 M414.0 44.0 l10 -7 v34 l-10 7" stroke-width="0.9"/><path d="M352.0 50.0 h56 l-4 4 h-56 Z" stroke-width="0.8"/><path d="M352.0 58.0 h56 l-4 4 h-56 Z" stroke-width="0.8"/><path d="M352.0 66.0 h56 l-4 4 h-56 Z" stroke-width="0.8"/><path d="M352.0 74.0 h56 l-4 4 h-56 Z" stroke-width="0.8"/><path d="M340.0 62.0 l-12 0 l4 -4 M328.0 62.0 l4 4" stroke-width="0.9"/>
   </g>
-  <g stroke="#5a5a5a" stroke-width="0.8" fill="none" stroke-dasharray="2 3">
-    <path d="M184 302 H200"/><path d="M182 224 H150"/><path d="M280 160 H310"/><path d="M296 112 H270"/><path d="M370 74 H400"/><path d="M420 38 H440"/>
+  <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
+<path d="M64.0 288.0 L32.0 282.0"/>
+<path d="M118.0 242.0 L86.0 236.0"/>
+<path d="M194.0 196.0 L162.0 190.0"/>
+<path d="M248.0 142.0 L216.0 136.0"/>
+<path d="M270.0 94.0 L238.0 88.0"/>
+<path d="M340.0 38.0 L308.0 32.0"/>
   </g>
-  <g font-size="10" fill="#2a2a2a" text-anchor="middle">
-    <g stroke="#3d3d3d" stroke-width="1" fill="#f7f4ee">
-      <circle cx="210" cy="302" r="8"/><circle cx="140" cy="224" r="8"/><circle cx="320" cy="160" r="8"/><circle cx="260" cy="112" r="8"/><circle cx="410" cy="74" r="8"/><circle cx="450" cy="38" r="8"/>
-    </g>
-    <text x="210" y="305.5">1</text><text x="140" y="227.5">2</text><text x="320" y="163.5">3</text><text x="260" y="115.5">4</text><text x="410" y="77.5">5</text><text x="450" y="41.5">6</text>
-  </g>
-  <g font-size="10.5" fill="#2a2a2a">
-    <text x="16" y="34" font-weight="700" font-size="12">八格耗材架 · 爆炸图</text>
-    <text x="16" y="52">1 实木格架 4×2（八格）</text>
-    <text x="16" y="68">2 透明密封筒（每格一只）</text>
-    <text x="16" y="84">3 1kg PLA 料卷</text>
-    <text x="16" y="100">4 干燥剂包 + 湿度卡</text>
-    <text x="16" y="116">5 密封盖 + 硅胶圈</text>
-    <text x="16" y="132">6 标签：颜色 / 材质 / 剩余克数</text>
-  </g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">腔体排风与耗材干燥 · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 下层加热耗材干燥箱：边烘边打，目标 &lt;15% RH</text><text x="16" y="59">2 腔体顶部 100mm 排风法兰</text><text x="16" y="72">3 活性炭滤棉（3 个月一换）</text><text x="16" y="85">4 12V 静音管道风扇：开打即开，结束延时 10 分钟</text><text x="16" y="98">5 铝箔软管 ≈1.5m，横过天花到天窗边</text><text x="16" y="111">6 天窗边排气口百叶 + 防虫网</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0305-3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="32.0" cy="282.0" r="7"/></g><text x="32.0" y="285.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="86.0" cy="236.0" r="7"/></g><text x="86.0" y="239.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="162.0" cy="190.0" r="7"/></g><text x="162.0" y="193.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="216.0" cy="136.0" r="7"/></g><text x="216.0" y="139.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="238.0" cy="88.0" r="7"/></g><text x="238.0" y="91.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="308.0" cy="32.0" r="7"/></g><text x="308.0" y="35.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">6</text>
+<text x="16" y="130" font-size="8" fill="#888" font-style="italic">排风没装好之前一律不打 ABS，只打 PLA</text>
 </svg>

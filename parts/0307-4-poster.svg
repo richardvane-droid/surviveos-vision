@@ -1,16 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
-    <filter id="p0307-4p-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="97" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <filter id="p0307-4p-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="145" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
     <pattern id="p0307-4p-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
   </defs>
   <g filter="url(#p0307-4p-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <rect x="14" y="14" width="332" height="452" rx="4" stroke-width="1.6"/><rect x="19" y="19" width="322" height="442" rx="3" stroke-width="0.7"/>
     <path d="M30 44 H330" stroke-width="0.8"/>
-<path d="M50 140 h50 v40 h-50 Z M58 150 h34 M58 160 h34 M58 170 h20" stroke-width="1.2"/><path d="M62 132 h26 v8 h-26 Z" stroke-width="0.9"/>
-<path d="M110 160 H150" stroke-width="1" stroke-dasharray="3 3"/><path d="M146 156 l4 4 l-4 4" stroke-width="1"/>
-<path d="M156 130 l24 -14 l24 14 l-24 14 Z M156 130 v34 l24 14 v-34 M204 130 v34 l-24 14" stroke-width="1.3"/><path d="M170 150 l8 -14 l6 4 l-8 14 Z" fill="url(#p0307-4p-shade)" stroke="none"/>
-<path d="M214 150 H250" stroke-width="1" stroke-dasharray="3 3"/><path d="M246 146 l4 4 l-4 4" stroke-width="1"/>
-<path d="M262 132 h44 v44 h-44 Z" stroke-width="1.2"/><circle cx="284" cy="154" r="12" stroke-width="1"/><path d="M284 142 v24 M272 154 h24" stroke-width="0.7"/><path d="M306 150 h20 l-4 -4 M326 150 l-4 4" stroke-width="0.9"/>
+<path d="M44 140 h52 v44 h-52 Z" stroke-width="1.4"/><path d="M56 132 h28 v8 h-28 Z" stroke-width="1"/>
+<path d="M52 150 h36 M52 160 h36 M52 170 h22" stroke-width="0.8"/>
+<path d="M104 162 H138" stroke-width="1" stroke-dasharray="3 3"/><path d="M134 158 l4 4 l-4 4" stroke-width="1"/>
+<path d="M146 186 h66 v10 h-66 Z" stroke-width="1.4"/>
+<path d="M154 186 V146 h8 v40 M196 186 V146 h8 v40 M154 146 h50 v-10 h-50 Z" stroke-width="1.3"/>
+<path d="M170 136 h14 v18 h-14 Z M174 154 h6 v14 h-6 Z M177 168 v6" stroke-width="1.1"/>
+<path d="M160 186 h40 v-8 h-40 Z" stroke-width="0.9"/>
+<path d="M186 176 l6 6 M194 172 l6 6" stroke-width="0.6"/>
+<path d="M220 162 H254" stroke-width="1" stroke-dasharray="3 3"/><path d="M250 158 l4 4 l-4 4" stroke-width="1"/>
+<circle cx="272" cy="150" r="10" stroke-width="1.3"/><path d="M272 140 v20 M262 150 h20" stroke-width="0.7"/>
+<path d="M264 158 L258 176 M280 158 L296 176" stroke-width="1.1"/>
+<path d="M248 178 L252 208 h18 l4 -30 Z" stroke-width="1.3"/><path d="M245 178 H278" stroke-width="1.1"/>
+<path d="M288 178 L292 208 h18 l4 -30 Z" stroke-width="1.3"/><path d="M285 178 H318" stroke-width="1.1"/>
+<path d="M254 192 h14 M256 198 h10" stroke-width="0.5"/>
+<path d="M294 192 l4 4 M302 190 l4 4 M298 200 l4 4" stroke-width="0.5"/>
 <path d="M40 270 Q180 262 320 270" stroke-width="1.2"/>
     <circle cx="48" cy="332" r="7" stroke-width="1.2"/><path d="M45 332 l2 2 l4 -5" stroke-width="1.2"/>
     <circle cx="48" cy="362" r="7" stroke-width="1.2"/><path d="M45 362 l2 2 l4 -5" stroke-width="1.2"/>
@@ -20,9 +30,9 @@
   <text x="30" y="38" font-size="9" fill="#666" letter-spacing="2">SURVIVEOS · LOGIC PRODUCT</text>
   <text x="330" y="38" font-size="9" fill="#666" text-anchor="end">0307 · L4</text>
   <text x="180" y="72" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-weight="900" font-size="22" fill="#2a2a2a">开机前先问电</text>
-  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">电够不够、灰往哪去，机器自己不管</text>
-  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">主轴请求 → 查 0304 SOC → 先开 0404 集尘 → 3 秒后通主轴</text>
-  <g font-size="11" fill="#2a2a2a"><text x="64" y="336">电池低或电摩在充电就只给低功率模式</text><text x="64" y="366">集尘和阁楼分路阀先开，主轴停后延时 30 秒</text><text x="64" y="396">粉尘 / VOC 超标推手机</text></g>
+  <text x="180" y="90" text-anchor="middle" font-family="'Long Cang','Kaiti SC',cursive" font-size="13" fill="#b5372b">电够不够、屑往哪去，机器自己不管</text>
+  <text x="180" y="300" text-anchor="middle" font-size="9.5" fill="#666">主轴请求 → 查 0304 的 SOC → 先开集尘分路阀 → 3 秒后通主轴</text>
+  <g font-size="11" fill="#2a2a2a"><text x="64" y="336">电池低或电摩在充电，就只给低功率模式</text><text x="64" y="366">集尘和阁楼分路阀先开，主轴停后延时 30 秒再关</text><text x="64" y="396">木屑与铝屑分路阀和集尘桶分开，绝不混用</text></g>
   <text x="30" y="440" font-size="9" fill="#666">跑在：ESPHome + HomeAssistant · 数据出口：cnc_power_mode 实体</text>
   <text x="30" y="454" font-size="9" fill="#666">参考实现：home-assistant/core</text>
   <g transform="rotate(-8 296 108)"><rect x="266" y="98" width="60" height="20" rx="3" fill="none" stroke="#b5372b" stroke-width="1.4"/><text x="296" y="112" text-anchor="middle" font-size="9.5" fill="#b5372b" font-weight="700" letter-spacing="1">设想·逻辑</text></g>

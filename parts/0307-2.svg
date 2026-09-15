@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="p0307-2-pencil" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="89" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="137" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="p0307-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
@@ -14,26 +14,27 @@
   </defs>
   <path d="M100 318 L392 40" stroke="#8a8a8a" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
   <g filter="url(#p0307-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
-<path d="M70.0 300.0 h80 v12 h-80 Z M70.0 300.0 l10 -8 h80 l-10 8" stroke-width="1.3"/><path d="M74.0 303.0 h72 v6 h-72 Z" fill="url(#p0307-2-shade)" stroke="none"/><circle cx="80.0" cy="296.0" r="2" stroke-width="0.6"/><circle cx="140.0" cy="296.0" r="2" stroke-width="0.6"/>
-<path d="M147.5 230.0 h24 v22 h-24 Z" stroke-width="1.2"/><circle cx="159.5" cy="241.0" r="6" stroke-width="0.8"/><path d="M171.5 241.0 h20 M191.5 234.0 h14 v14 h-14 Z" stroke-width="1"/><path d="M193.5 236.0 h10 v10 h-10 Z" fill="url(#p0307-2-shade)" stroke="none"/><path d="M198.5 234.0 v-6 M195.5 228.0 h6" stroke-width="0.8"/>
-<path d="M221.0 172.0 a24 8 0 1 0 48 0 a24 8 0 1 0 -48 0" stroke-width="1.3"/><path d="M221.0 172.0 v14 a24 8 0 0 0 48 0 v-14" stroke-width="1"/><path d="M223.0 186.0 a22 7 0 0 0 44 0 v-3 a22 7 0 0 1 -44 0 Z" fill="url(#p0307-2-shade)" stroke="none"/><path d="M271.0 178.0 h12 v10 h-12 Z M277.0 178.0 v-6" stroke-width="0.9"/><path d="M215.0 166.0 a30 12 0 0 1 12 -10 l-3 -3 M227.0 156.0 l-4 2" stroke-width="0.7"/>
-<path d="M292.5 114.0 h40 v12 h-40 Z M292.5 114.0 l6 -6 h40 l-6 6 M332.5 114.0 l6 -6 v12 l-6 6" stroke-width="1.2"/><path d="M298.5 118.0 v4 M308.5 118.0 v4 M318.5 118.0 v4 M328.5 118.0 v4" stroke-width="0.5"/><path d="M342.5 112.0 a8 8 0 1 0 0.1 0" stroke-width="1"/><path d="M342.5 106.0 v-3 M347.5 115.0 l3 2 M337.5 115.0 l-3 2" stroke-width="0.9"/>
-<path d="M364.0 56.0 h10 v8 h-10 Z M374.0 60.0 h8 M382.0 54.0 h6 v12 h-6 Z" stroke-width="1"/><path d="M394.0 50.0 h20 v20 h-20 Z" stroke-width="1"/><path d="M398.0 56.0 h12 M398.0 60.0 h12 M398.0 64.0 h8" stroke-width="0.5"/><path d="M414.0 58.0 h10 M414.0 62.0 h10" stroke-width="0.6"/>
+<path d="M66.0 292.0 h88 v16 h-88 Z" stroke-width="1.4"/><path d="M66.0 292.0 l10 -7 h88 l-10 7 M154.0 292.0 l10 -7 v16 l-10 7" stroke-width="1"/><path d="M96.0 292.0 a14 14 0 0 0 28 0" stroke-width="1.1"/><path d="M86.0 292.0 a24 10 0 0 1 48 0" stroke-width="0.6" stroke-dasharray="3 2"/><path d="M74.0 298.0 h6 M140.0 298.0 h6" stroke-width="0.8"/><path d="M68.0 303.0 h84 v4 h-84 Z" fill="url(#p0307-2-shade)" stroke="none"/>
+<path d="M163.5 210.0 h28 v52 h-28 Z" stroke-width="1.4"/><path d="M163.5 216.0 h28" stroke-width="0.5"/><path d="M163.5 223.0 h28" stroke-width="0.5"/><path d="M163.5 230.0 h28" stroke-width="0.5"/><path d="M163.5 237.0 h28" stroke-width="0.5"/><path d="M163.5 244.0 h28" stroke-width="0.5"/><path d="M163.5 251.0 h28" stroke-width="0.5"/><path d="M169.5 202.0 h16 v8 h-16 Z" stroke-width="1.1"/><path d="M171.5 204.0 q6 -6 12 0" stroke-width="0.6"/><path d="M170.5 262.0 h14 l-3 9 h-8 Z" stroke-width="1.2"/><path d="M176.0 271.0 v9" stroke-width="1.2"/><path d="M157.5 214.0 h-10 M157.5 224.0 h-10" stroke-width="0.6"/>
+<path d="M229.0 146.0 h32 v60 h-32 Z" stroke-width="1.5"/><path d="M255.0 148.0 h5 v56 h-5 Z" fill="url(#p0307-2-shade)" stroke="none"/><path d="M229.0 154.0 h32" stroke-width="0.4"/><path d="M229.0 164.0 h32" stroke-width="0.4"/><path d="M229.0 174.0 h32" stroke-width="0.4"/><path d="M229.0 184.0 h32" stroke-width="0.4"/><path d="M229.0 194.0 h32" stroke-width="0.4"/><path d="M229.0 204.0 h32" stroke-width="0.4"/><path d="M229.0 152.0 q-14 -4 -22 -14 M229.0 162.0 q-16 -2 -26 -10" stroke-width="1"/><path d="M239.0 206.0 h12 l-2 10 h-8 Z" stroke-width="1.2"/><path d="M245.0 216.0 v10" stroke-width="1.2"/>
+<path d="M278.5 108.0 h60 v28 h-60 Z" stroke-width="1.3"/><path d="M280.5 122.0 q14 -5 28 0 q14 5 28 0 v12 h-56 Z" fill="url(#p0307-2-shade)" stroke="none"/><path d="M280.5 122.0 q14 -5 28 0 q14 5 28 0" stroke-width="0.8"/><path d="M342.5 116.0 h14 v14 h-14 Z" stroke-width="1.1"/><circle cx="349.5" cy="123.0" r="4" stroke-width="0.7"/><path d="M338.5 108.0 q10 -10 18 -4" stroke-width="0.9"/>
+<path d="M350.0 38.0 h60 v44 h-60 Z" stroke-width="1.5"/><path d="M356.0 44.0 h32 v12 h-32 Z" stroke-width="0.9"/><path d="M360.0 51.0 h10 M374.0 51.0 h12" stroke-width="0.6"/><circle cx="398.0" cy="50.0" r="6" stroke-width="0.9"/><path d="M398.0 50.0 l4 -4" stroke-width="0.8"/><path d="M356.0 66.0 h7 v10 h-7 Z" stroke-width="0.6"/><path d="M367.0 66.0 h7 v10 h-7 Z" stroke-width="0.6"/><path d="M378.0 66.0 h7 v10 h-7 Z" stroke-width="0.6"/><path d="M389.0 66.0 h7 v10 h-7 Z" stroke-width="0.6"/><path d="M400.0 66.0 h7 v10 h-7 Z" stroke-width="0.6"/><path d="M350.0 70.0 h-12 M350.0 76.0 h-12" stroke-width="0.8"/>
   </g>
   <g stroke="#3d3d3d" stroke-width="0.7" fill="none" stroke-dasharray="3 3">
-<path d="M66.0 294.0 L34.0 288.0"/>
-<path d="M143.5 226.0 L111.5 220.0"/>
-<path d="M215.0 164.0 L183.0 158.0"/>
-<path d="M288.5 108.0 L256.5 102.0"/>
-<path d="M360.0 48.0 L328.0 42.0"/>
+<path d="M60.0 294.0 L28.0 288.0"/>
+<path d="M153.5 204.0 L121.5 198.0"/>
+<path d="M219.0 140.0 L187.0 134.0"/>
+<path d="M272.5 104.0 L240.5 98.0"/>
+<path d="M344.0 34.0 L312.0 28.0"/>
   </g>
-  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">A/C 双旋转分度头 · 爆炸图</text>
-  <g font-size="8.5" fill="#444"><text x="16" y="46">1 分度头底板（T 槽压板固定在台面）</text><text x="16" y="59">2 A 轴蜗轮蜗杆箱 1:50 + 42 步进（±110°）</text><text x="16" y="72">3 C 轴转台 360° 蜗轮自锁 + 步进</text><text x="16" y="85">4 顶部 100mm 小 T 槽板 / 三爪卡盘可换</text><text x="16" y="98">5 光电回零开关 ×2 + 编码器接 grblHAL A/C 口</text></g>
+  <text x="16" y="30" font-weight="700" font-size="12" fill="#2a2a2a">主轴与变频选型（待定） · 爆炸图</text>
+  <g font-size="8.5" fill="#444"><text x="16" y="46">1 主轴夹座 + Z 滑块安装板（Ø52 / Ø80 两种孔径）</text><text x="16" y="59">2 木 / 亚克力路线：500W 风冷主轴 · ER11 · 12000～24000rpm</text><text x="16" y="72">3 铝路线：1.5kW 水冷主轴 · 8000～18000rpm + 进回水管</text><text x="16" y="85">4 水箱 + 水泵（只有水冷路线才需要）</text><text x="16" y="98">5 VFD 变频器：RS485 / Modbus 由固件调速</text></g>
   <text x="464" y="350" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#5a5a5a">0307-2</text>
-<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="34.0" cy="288.0" r="7"/></g><text x="34.0" y="291.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
-<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="111.5" cy="220.0" r="7"/></g><text x="111.5" y="223.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
-<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="183.0" cy="158.0" r="7"/></g><text x="183.0" y="161.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
-<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="256.5" cy="102.0" r="7"/></g><text x="256.5" y="105.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
-<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="328.0" cy="42.0" r="7"/></g><text x="328.0" y="45.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
-<text x="16" y="117" font-size="8" fill="#888" font-style="italic">只定位不联动：回得准比转得快重要</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="28.0" cy="288.0" r="7"/></g><text x="28.0" y="291.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">1</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="121.5" cy="198.0" r="7"/></g><text x="121.5" y="201.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="187.0" cy="134.0" r="7"/></g><text x="187.0" y="137.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">3</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="240.5" cy="98.0" r="7"/></g><text x="240.5" y="101.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">4</text>
+<g stroke="#3d3d3d" stroke-width="1" fill="#f9f6ef"><circle cx="312.0" cy="28.0" r="7"/></g><text x="312.0" y="31.0" text-anchor="middle" font-size="9" fill="#2a2a2a" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">5</text>
+<text x="16" y="117" font-size="8" fill="#888" font-style="italic">主材未定之前只租借试切，不采购主轴与变频器</text>
+<text x="108" y="344" text-anchor="middle" font-size="8" fill="#888" font-style="italic" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">2 和 3 二选一 · 选谁取决于主要切木头还是切铝</text>
 </svg>
