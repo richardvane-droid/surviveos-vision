@@ -173,6 +173,7 @@
           <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
           <span class="stars">★ 11.7k</span>
           <span class="zh zh-no">无中文（社区教程多）</span>
+          
         </header>
         <p class="gh-desc">用 YAML 配置 ESP32 / ESP8266 传感器和控制器并接入 HomeAssistant 的系统，Nabu Casa 官方维护</p>
         <p class="gh-why">→ 水草灯的日出日落 PWM 曲线、补水阀、探头盒全跑在一块 ESPHome 板上，数据线穿隔墙进 0802 大屏</p>
@@ -201,6 +202,7 @@
           <a class="gh-name" href="https://github.com/reef-pi/reef-pi" target="_blank" rel="noopener">reef-pi/reef-pi</a>
           <span class="stars">★ 435</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">基于树莓派的开源水族箱控制器，管灯光日出日落、温控、pH、滴定、自动补水和定时器，带网页仪表盘</p>
         <p class="gh-why">→ 自动补水、溢流保护和水草灯日出日落曲线都有现成模块，它的事件表设计直接拿来当 ESPHome 时间表的蓝本</p>
@@ -229,6 +231,7 @@
           <a class="gh-name" href="https://github.com/TheRealFalseReality/aquapi" target="_blank" rel="noopener">TheRealFalseReality/aquapi</a>
           <span class="stars">★ 97</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">基于 ESPHome 和 HomeAssistant 的开源鱼缸监测与自动化控制器，用 Atlas Scientific EZO 探头测 pH、EC、温度，2026 年仍在更新</p>
         <p class="gh-why">→ 温度、pH、TDS 三探头的接法和 ESPHome 配置直接照抄，数据天然进 0802 大屏；星少但它就是这个需求的唯一现成答案</p>
@@ -251,6 +254,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>AquaPi 是美国鱼友 TheRealFalseReality 做的开源鱼缸监测器，97 星，口号是“鱼缸遇上智能家居”。它没有自己写软件，而是把 ESPHome 和 Home Assistant 直接当鱼缸控制器用：一块 ESP32、几颗探头、一份 YAML，鱼缸数据就出现在 HA 里。它是把“ESPHome 做鱼缸”走得最完整的项目，2026 年 6 月还在发新版，鱼友论坛上有人卖它的成品板。</p><p>硬件上它围绕 Atlas Scientific 的 EZO 探头电路：pH、电导率（换算 TDS）、溶氧、ORP、RTD 水温都是 I2C 接口的小模块，ESPHome 有原生的 ezo 组件，YAML 里几行就能读；再加 DS18B20 水温、红外液位传感器和漏水传感器。探头校准做成了 HA 里的按钮。仓库有接线图、外壳打印件和完整 YAML，文档英文。</p><p>在 0205 里它就是缸角那个探头盒：温度、pH、TDS 三颗探头照它的接法接在一块 ESP32 上，YAML 直接抄再删掉用不上的溶氧和 ORP，校准按钮保留；数据线穿隔墙接进 0802 大屏，pH 或 TDS 一小时内变化超过阈值就用 HA 的 statistics 传感器触发推送。坑是 EZO 电路一颗一两百块，想省钱可用国产 pH 模块但校准要自己做；探头 BNC 头怕潮，盒子留在水面以上。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/opencv/opencv" target="_blank" rel="noopener">opencv/opencv</a>
+          <span class="stars">★ 89.3k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">计算机视觉的标准库：图像处理、特征检测、目标跟踪、相机标定、DNN 推理，C++ 核心带 Python 绑定</p>
+        <p class="gh-why">→ 缸角三探头只知道水好不好，不知道鱼好不好；一个摄像头加 OpenCV 数宝莲灯还剩几条、有没有趴缸，是最直接的鱼况传感器</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0205-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0205-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0205-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OpenCV · 摄像头数鱼，趴缸就提醒</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0205-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0205-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0205-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0205-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0205-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0205-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">缸前小摄像头</text><text x="78" y="149" text-anchor="middle" font-size="10.5">加偏振镜</text><text x="78" y="174" text-anchor="middle" font-size="10.5">水草灯曲线</text><text x="78" y="187" text-anchor="middle" font-size="10.5">定时抓拍</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OpenCV cv2</text><text x="200" y="107" text-anchor="middle" font-size="10.5">树莓派 Python</text><text x="200" y="174" text-anchor="middle" font-size="10.5">背景减除</text><text x="200" y="187" text-anchor="middle" font-size="9.5">HSV 过滤 / 轮廓</text><text x="322" y="94" text-anchor="middle" font-size="10.5">可见鱼数</text><text x="322" y="107" text-anchor="middle" font-size="10.5">不动轮廓</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0802 大屏</text><text x="322" y="187" text-anchor="middle" font-size="10.5">异常推送</text><text x="430" y="218" text-anchor="middle" font-size="10.5">发呆的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">VideoCapture</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">触发</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">计数</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">下降就推</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">去看一眼</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0205：摄像头 + 几十行 cv2 数宝莲灯、发现趴缸，顺手做水草延时摄影</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">opencv/opencv</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>OpenCV 是英特尔在 1999 年发起、现在由 OpenCV 基金会维护的计算机视觉库，89.3k 星，2026 年发布了 5.0，几乎所有做视觉的人都从它开始。它要解决的问题是：把图像当成矩阵来处理的那些基础算法——滤波、阈值、边缘、轮廓、光流、特征点、相机标定——不该每个人重写一遍。</p><p>它的核心用 C++ 写，Python 绑定 cv2 是最常用的入口：读一帧图像成 NumPy 数组，一路函数调用下去，比如高斯模糊去噪、转 HSV 按颜色阈值分割、findContours 找轮廓、按面积过滤得到目标、再用背景减除或光流跟踪运动。DNN 模块能直接加载 ONNX 和 TensorFlow 模型做检测和分类，VideoCapture 读摄像头和 RTSP 流。它跑在树莓派、手机、桌面和 GPU 上，2025 年后每几个月一个版本。</p><p>生态是视觉界最大的，README 是英文，但中文书、教程和课程数量惊人，国内高校课程几乎都用它。</p><p>对 0205 它是延伸里最有意思的一个玩法：缸前上方架一个小摄像头对着缸体，树莓派上跑一段几十行的 Python：背景减除分出游动的鱼，按宝莲灯那条蓝红色带的 HSV 范围过滤，轮廓计数得到当前可见鱼数，连续几分钟计数明显下降或某个轮廓长时间不动就推送到 0802 大屏提醒查看。同一个摄像头还能做延时摄影记录水草长势，配合水草灯的日出日落曲线定时抓拍。注意缸壁反光和水面波纹会干扰，摄像头加偏振镜、抓拍时机避开补水泵工作。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/micropython/micropython" target="_blank" rel="noopener">micropython/micropython</a>
+          <span class="stars">★ 22.1k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">跑在单片机上的精简 Python：ESP32、树莓派 Pico、STM32 都支持，REPL 交互式改代码，机器控制不用编译</p>
+        <p class="gh-why">→ 鱼缸的补水、喂食、灯光曲线这类小逻辑，用 MicroPython 在 ESP32 上边试边改，比每次改 ESPHome YAML 重新刷固件快得多</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0205-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0205-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0205-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">MicroPython · 串口里边敲边改的鱼缸小脑</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0205-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0205-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0205-5-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0205-5-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0205-5-arrow)" stroke-linecap="round"><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="218" text-anchor="middle" font-size="10.5">工作台上的人</text><text x="78" y="136" text-anchor="middle" font-size="9.5">温度 / pH / TDS</text><text x="78" y="149" text-anchor="middle" font-size="10.5">I2C 探头</text><text x="200" y="94" text-anchor="middle" font-size="9.5">MicroPython</text><text x="200" y="107" text-anchor="middle" font-size="10.5">ESP32 解释器</text><text x="200" y="174" text-anchor="middle" font-size="9.5">machine / asyncio</text><text x="200" y="187" text-anchor="middle" font-size="10.5">umqtt</text><text x="322" y="94" text-anchor="middle" font-size="10.5">补水泵 / 喂食舵机</text><text x="322" y="107" text-anchor="middle" font-size="10.5">水草灯 PWM</text><text x="322" y="174" text-anchor="middle" font-size="10.5">参数抄进</text><text x="322" y="187" text-anchor="middle" font-size="9.5">ESPHome YAML</text><text x="430" y="138" text-anchor="middle" font-size="10.5">发呆的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">改一个数</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">立刻生效</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">调顺后</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0205：备一块 ESP32 跑 MicroPython 调参数，调顺再进 ESPHome</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">micropython/micropython</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>MicroPython 是 Damien George 在 2013 年通过 Kickstarter 发起的项目，22.1k 星，把 Python 3 的核心语法和标准库压缩到几百 KB，跑在只有几十 KB 内存的单片机上。它要解决的问题是：单片机开发长期只有 C，改一行要编译、烧录、重启；它让人在串口里直接敲 Python，立刻看到结果。</p><p>它的工作方式是：固件刷进 ESP32、树莓派 Pico 或 STM32 之后，芯片上跑一个 Python 解释器，串口连上就是 REPL，脚本以文件形式存在芯片的小文件系统里，开机自动跑 main.py。machine 模块管 GPIO、PWM、I2C，network 管 Wi-Fi，还有 asyncio 和 umqtt，一次改动几秒钟就生效。</p><p>生态很大，2025 年后仍是每几个月一个版本，README 英文，但中文教程、B 站课程和国产开发板的 MicroPython 文档非常多。</p><p>对 0205 它是延伸的原型工具：鱼缸矮柜里那块管补水泵、喂食器和水草灯 PWM 的 ESP32，正式版走 ESPHome 接 HomeAssistant，但在调试阶段用 MicroPython 更快——补水泵该抽几秒、喂食器舵机转多少度、日出曲线的 gamma 值，在 REPL 里改一个数立刻看效果，调顺了再把参数抄进 ESPHome 的 YAML。注意 MicroPython 和 ESPHome 不能同时在一块芯片上，多备一块 ESP32 专门做实验。</p></div>
       </article>
     </div></section>
 

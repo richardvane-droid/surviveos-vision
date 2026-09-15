@@ -187,6 +187,7 @@
           <a class="gh-name" href="https://github.com/rbaron/b-parasite" target="_blank" rel="noopener">rbaron/b-parasite</a>
           <span class="stars">★ 2.4k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">开源 DIY 电容式土壤湿度传感器，纽扣电池供电，带温湿度和光照，蓝牙 BTHome 或 Zigbee 直连 HomeAssistant</p>
         <p class="gh-why">→ 每个陶盆插一根，手机上看谁该浇水了，纽扣电池能撑两年，梅雨季判断盆土会不会烂根</p>
@@ -215,6 +216,7 @@
           <a class="gh-name" href="https://github.com/MDeLuise/plant-it" target="_blank" rel="noopener">MDeLuise/plant-it</a>
           <span class="stars">★ 1.4k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">开源自托管的植物养护记录应用，有安卓 App 和网页，记浇水施肥、拍照日记、设提醒</p>
         <p class="gh-why">→ 给每盆起名字、记入院日期和第 38 天的照片，就用它，不用自己写小程序</p>
@@ -243,6 +245,7 @@
           <a class="gh-name" href="https://github.com/Olen/homeassistant-plant" target="_blank" rel="noopener">Olen/homeassistant-plant</a>
           <span class="stars">★ 848</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">HomeAssistant 增强版植物组件，每盆植物一个设备，从 OpenPlantbook 自动拉物种养护阈值并报警</p>
         <p class="gh-why">→ 把二十盆花每盆建成一个实体，湿度光照低于阈值就推通知，等于给每盆发了身份证</p>
@@ -265,6 +268,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>homeassistant-plant 是挪威开发者 Olen 维护的 HomeAssistant 自定义集成，GitHub 上 848 星，是官方植物组件的增强替代品，在 HomeAssistant 里认真养花的人几乎都在用。它把每盆植物变成一个完整设备，阈值本身也是可调实体，还能自动从物种数据库拉养护参数。</p><p>它的工作方式是：新建植物时输入物种名，它去 OpenPlantbook 查这个物种的湿度、温度、光照、电导率上下限并预填，再把你指定的探针实体绑上去，每项一个传感器，各配上限下限两个阈值实体；任何一项越界，植物状态就变成有问题并标出是哪一项。它还会算日光积分 DLI 和饱和水汽压差 VPD，判断光照够不够、会不会闷根，比原始读数直观得多。</p><p>它自带一张 Lovelace 植物卡片，新版本加了专门的植物触发器和条件，写自动化不用再拼实体名。没有中文文档，HomeAssistant 中文社区有零散教程。</p><p>在 0503 里它是浇水提醒器的大脑：十根探针各绑一盆，物种填绣球、金桔、罗汉松、薄荷、多肉，阈值自动拉下来后按杭州气候微调，比如多肉湿度上限拉低到 50%；自动化用它的植物触发器，湿度低于下限连续两小时就推送，夏天光照越界就提醒挪去养病区。要注意 OpenPlantbook 需要免费注册取 API 密钥，中文名查不到时用拉丁学名。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/inaturalist/inaturalist" target="_blank" rel="noopener">inaturalist/inaturalist</a>
+          <span class="stars">★ 829</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">全球最大的公民科学自然观察平台 iNaturalist 的 Rails 后端源码：拍照上传、AI 建议物种、社区专家复核、数据进 GBIF</p>
+        <p class="gh-why">→ 花架上的绣球、缸里的菖蒲、叶子上的虫，拍一张就有人告诉你是什么，还顺手给每盆植物留下一条带日期的观察记录</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0503-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="22" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0503-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0503-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">iNaturalist · 拍一张就知道是什么</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0503-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0503-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0503-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0503-4-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0503-4-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0503-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0503-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机拍照</text><text x="78" y="107" text-anchor="middle" font-size="10.5">GPS + 时间</text><text x="200" y="94" text-anchor="middle" font-size="9.5">iNaturalist</text><text x="200" y="107" text-anchor="middle" font-size="10.5">网站 + API</text><text x="200" y="174" text-anchor="middle" font-size="10.5">视觉模型</text><text x="200" y="187" text-anchor="middle" font-size="10.5">候选物种</text><text x="322" y="94" text-anchor="middle" font-size="10.5">社区复核</text><text x="322" y="107" text-anchor="middle" font-size="10.5">研究级</text><text x="322" y="174" text-anchor="middle" font-size="10.5">院子物种名单</text><text x="322" y="187" text-anchor="middle" font-size="10.5">0802 卡片</text><text x="430" y="138" text-anchor="middle" font-size="10.5">给盆栽发身份证</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">上传</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">两人同意</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">API 拉记录</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0503：每盆拍一张定物种名，虫和水草拍上去问社区，API 拉记录做院子物…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">inaturalist/inaturalist</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>iNaturalist 是加州科学院和国家地理学会联合运营的公民科学平台，全球有几百万用户、两亿多条观察记录，GitHub 上这个仓库是它网站的 Ruby on Rails 源码，829 星。它要解决的问题是：普通人在院子里看到一株植物或一只虫，怎么快速知道是什么，并且让这条记录对科学有用。</p><p>它的流程是：手机拍照上传，附带 GPS 和时间，计算机视觉模型给出几个候选物种，用户选一个，社区里的其他人再来认同或纠正，两人以上同意就升级为研究级记录，定期同步到全球生物多样性数据库 GBIF。源码包含整套网站、API 和物种分类树，模型本身不开源，但 API 对个人免费开放，可以查自己的全部观察记录。</p><p>生态方面它有 iOS 和 Android 客户端，界面支持简体中文，物种也有中文名；国内用户不少，观鸟和昆虫圈用得尤其多。姊妹应用 Seek 可以离线识别。</p><p>在 0503 里它是延伸：scene 里说拍一张今天的绣球，小程序记下第 38 天，这个记录本可以直接就是 iNaturalist。给花架上每盆植物拍一张上传，物种名自动有了，竹签上的名字不会写错；缸里冒出的不知名水草、紫苏叶上的毛虫、来喝水的壁虎都可以拍上去问社区。用它的 API 每周拉一次自己的观察记录，写进 0802 服务器，就能生成一份院子物种名单，和 0604 的鸟类识别名单合成一张卡片。注意上传时可以把位置模糊化，不必暴露家的坐标。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/hbldh/bleak" target="_blank" rel="noopener">hbldh/bleak</a>
+          <span class="stars">★ 2.5k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Python 的跨平台低功耗蓝牙客户端库，基于 asyncio，一套代码在 Linux、macOS、Windows 上扫描和读写 BLE 设备</p>
+        <p class="gh-why">→ 花草监测仪和 b-parasite 都是 BLE 广播，想自己写几十行脚本读盆栽湿度、不经过任何 App，bleak 是最省事的库</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0503-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="23" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0503-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0503-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">bleak · 三十行 Python 直接读蓝牙花草传感器</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0503-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0503-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0503-5-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0503-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0503-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">花草监测仪</text><text x="78" y="149" text-anchor="middle" font-size="10.5">b-parasite</text><text x="200" y="94" text-anchor="middle" font-size="9.5">BleakScanner</text><text x="200" y="107" text-anchor="middle" font-size="10.5">监听广播</text><text x="200" y="174" text-anchor="middle" font-size="10.5">解码脚本</text><text x="200" y="187" text-anchor="middle" font-size="10.5">湿度 / 光照</text><text x="322" y="94" text-anchor="middle" font-size="9.5">SQLite / CSV</text><text x="322" y="107" text-anchor="middle" font-size="10.5">每盆一表</text><text x="322" y="174" text-anchor="middle" font-size="10.5">浇水间隔</text><text x="322" y="187" text-anchor="middle" font-size="10.5">统计图</text><text x="430" y="218" text-anchor="middle" font-size="10.5">自己算的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">BLE 广播</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">回调</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写入</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0503：树莓派放窗边跑 bleak 脚本，不经 HA 直接记每盆湿度，按盆径算浇水间隔</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">hbldh/bleak</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>bleak 是瑞典开发者 Henrik Blidh 写的 Python 低功耗蓝牙库，2.5k 星。它解决的是 Python 里操作 BLE 设备长期没有跨平台标准库的问题：Linux 要走 BlueZ，macOS 要走 CoreBluetooth，Windows 要走 WinRT，bleak 把三套接口包成同一个 asyncio API。</p><p>它的用法围绕两个对象：BleakScanner 负责扫描，能拿到每个设备的名字、信号强度和广播数据，也能一直监听广播回调；BleakClient 负责连接，连上之后按 UUID 读写特征值、订阅通知。整个库是异步的，一个脚本可以同时盯着十几个设备。HomeAssistant 的蓝牙集成和很多米家设备的第三方解码脚本底层都用它。</p><p>生态上它是 PyPI 上下载量最大的 BLE 库之一，文档和示例齐全，树莓派上一行 pip 就能装。中文资料不多，但 API 简单，看官方示例就够。</p><p>在 0503 里它是延伸：前面三个方案已经把 b-parasite 和花草监测仪接进了 HomeAssistant，bleak 给的是另一条路，不依赖 HA 和任何 App，自己掌握数据。在 0802 服务器或一块树莓派上写三十行脚本，扫描广播包，解出每盆的土壤湿度和光照，写进 CSV 或 SQLite。好处是想怎么算就怎么算：统计多肉队在养病区避暑那几周的湿度曲线，或者按 20/28/36 三种盆径分别算浇水间隔。缺点是 BLE 穿墙差，接收端要放在窗边。</p></div>
       </article>
     </div></section>
 

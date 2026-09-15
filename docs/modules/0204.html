@@ -190,6 +190,7 @@
           <a class="gh-name" href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">FreeCAD/FreeCAD</a>
           <span class="stars">★ 32.2k</span>
           <span class="zh ">有中文文档站</span>
+          
         </header>
         <p class="gh-desc">免费开源的参数化 3D 建模软件，2026 年已到 1.1 版，带建筑 BIM、零件、装配和图纸工作台，界面和 wiki 都有中文</p>
         <p class="gh-why">→ 画木屋剖面、地堡风管走向和 PSK 零件都用它，一套软件从房子画到打印件，图纸墙上的 A3 图也从它出</p>
@@ -218,6 +219,7 @@
           <a class="gh-name" href="https://github.com/bambulab/BambuStudio" target="_blank" rel="noopener">bambulab/BambuStudio</a>
           <span class="stars">★ 5k</span>
           <span class="zh ">有中文文档站</span>
+          
         </header>
         <p class="gh-desc">拓竹官方开源切片软件，基于 PrusaSlicer 分支，支持 BambuLab 和其他 3D 打印机，界面和 wiki 都有中文</p>
         <p class="gh-why">→ 右屏跑的就是它，PSK 内衬和 0210 的斜滑轨导轨都在这里切片，切完直接推给 P1S 并看打印进度</p>
@@ -246,6 +248,7 @@
           <a class="gh-name" href="https://github.com/shmuelzon/home-assistant-floor-plan" target="_blank" rel="noopener">shmuelzon/home-assistant-floor-plan</a>
           <span class="stars">★ 1.1k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Sweet Home 3D 插件，把 3D 户型按每盏灯分别渲染，再生成 HomeAssistant 的 picture-elements 平面图面板</p>
         <p class="gh-why">→ 在 Sweet Home 3D 里画完全屋，一键导出带灯光状态的 3D 平面图给 0802 大屏和左屏用，不用手工抠图</p>
@@ -268,6 +271,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>home-assistant-floor-plan 是以色列开发者 shmuelzon 写的 Sweet Home 3D 插件，1.1k 星。它解决 HA 玩家的老痛点：都想要一张“会亮灯的 3D 户型图”当仪表盘，但传统做法要给每盏灯单独渲染，再手写几十行 YAML 叠图，一改户型就全部重来。</p><p>它的原理是把这件事自动化：你在免费开源的 Sweet Home 3D 里画好房子、放好家具和灯，把每盏灯和 HA 的实体名对上；插件就逐一渲染“只开这盏灯”的图，加上全暗的底图，最后生成一份 YAML，用 CSS 混合、房间遮罩或整图替换三种模式之一，让 HA 按实体状态把对应的亮灯图叠上去。传感器、开关也能放上去变成可点图标。渲染用 Sweet Home 3D 自带的光追引擎。</p><p>项目持续更新，文档英文，但 Sweet Home 3D 本身有中文界面。</p><p>在 0204 里它是“图纸到大屏”的最后一步：木屋和地堡先在 Sweet Home 3D 里按 0008 尺寸画一遍（比 FreeCAD 快得多，只求像不求准），把 0201 南光灯、0202 灯箱、0207 电视、0209 帐篷小灯都对上 HA 实体，导出后放进左屏的 HA 仪表盘和 0802 大屏。坑是灯多了渲染组合会爆炸，用 CSS 混合模式并把同场景的灯合并成一个实体；地堡无窗，环境光要调到零。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/excalidraw/excalidraw" target="_blank" rel="noopener">excalidraw/excalidraw</a>
+          <span class="stars">★ 131k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">手绘风格的虚拟白板：矩形、箭头、文字、图库，端到端加密协作，可嵌入网页，导出 SVG 和 PNG</p>
+        <p class="gh-why">→ 工作台西墙那面图纸墙需要一张能随手改的全屋系统图，Excalidraw 的手绘风和本站铅笔风一脉相承，画完导出就能钉上墙</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0204-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0204-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0204-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Excalidraw · 手绘风画全屋系统图钉上墙</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0204-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0204-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0204-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0204-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">坐工作台的人</text><text x="78" y="174" text-anchor="middle" font-size="10.5">图库</text><text x="78" y="187" text-anchor="middle" font-size="10.5">传感器 / 屏图标</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Excalidraw</text><text x="200" y="107" text-anchor="middle" font-size="9.5">React + rough.js</text><text x="200" y="174" text-anchor="middle" font-size="10.5">场景 JSON</text><text x="200" y="187" text-anchor="middle" font-size="10.5">嵌进 PNG</text><text x="322" y="94" text-anchor="middle" font-size="10.5">导出 A3</text><text x="322" y="107" text-anchor="middle" font-size="10.5">钉上软木板</text><text x="322" y="174" text-anchor="middle" font-size="10.5">嵌进 0802 大屏</text><text x="322" y="187" text-anchor="middle" font-size="10.5">可编辑系统图</text><text x="430" y="138" text-anchor="middle" font-size="10.5">抬头看图的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">拖入</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">保存</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">导出 SVG</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">嵌入</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">01~07 分栏</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0204：每个区域一张手绘系统图，导出 A3 钉西墙，改了重打旧的收抽屉</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">excalidraw/excalidraw</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Excalidraw 是 Vjeux（Christopher Chedeau）等人在 2020 年做出来的开源白板，131k 星，是 GitHub 上星数最高的画图工具。它要解决的问题是：正经的绘图软件太重、画出来太正式，而白板讨论需要的是几秒钟画出一个看起来像草图的方框和箭头。</p><p>它是纯前端应用，React 加 TypeScript，画布上只有矩形、圆、菱形、箭头、线、文字、自由笔和图片这几种元素，全部用 rough.js 渲染成手绘风格。数据是一个 JSON 场景文件，可以保存到本地、导出 PNG 和 SVG，也可以把场景嵌进 PNG 里下次拖回来继续编辑。协作走端到端加密的房间链接。它有巨大的图库可以拖进现成图标，还能作为 npm 包嵌进自己的网页。</p><p>生态极大，2025 年后仍每周有提交，界面有简体中文，浏览器打开 excalidraw.com 就能用，也可以 Docker 自托管。</p><p>对 0204 它是延伸的画图纸工具：西墙软木板上那些 A3 图纸——木屋剖面、地堡风管走向、钓台顶棚——在正式的 CAD 之前先用 Excalidraw 画草图，每个区域一个文件，01 到 07 分栏和软木板上的分栏一致。特别适合画全屋系统图：传感器、HA、大屏、鸭子的数据流向用箭头一连，导出 A3 打印钉上墙；改了就重打，旧的按日期收进抽屉。它也能嵌进 0802 大屏当一块可编辑的系统图。注意手绘风只是风格，尺寸标注它不擅长，带尺寸的还是去 FreeCAD。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/jgraph/drawio" target="_blank" rel="noopener">jgraph/drawio</a>
+          <span class="stars">★ 7.9k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">diagrams.net 的前端源码：正规的流程图、网络图、平面图工具，图形库巨大，可以离线用、自托管、嵌进 Confluence 和 VS Code</p>
+        <p class="gh-why">→ 风管走向、电路接线、网络拓扑这些需要正规符号和精确对齐的图，Excalidraw 太随意，draw.io 有现成的 HVAC、电气和网络图形库</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0204-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0204-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0204-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">draw.io · 正规符号画风管与接线图</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0204-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0204-5-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0204-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0204-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">图形库</text><text x="78" y="107" text-anchor="middle" font-size="9.5">HVAC / 电气 / 网络</text><text x="78" y="218" text-anchor="middle" font-size="10.5">坐工作台的人</text><text x="78" y="231" text-anchor="middle" font-size="10.5">对齐吸附</text><text x="200" y="94" text-anchor="middle" font-size="9.5">draw.io 桌面版</text><text x="200" y="107" text-anchor="middle" font-size="10.5">mxGraph 引擎</text><text x="200" y="174" text-anchor="middle" font-size="10.5">XML 文件</text><text x="200" y="187" text-anchor="middle" font-size="10.5">Git 版本管理</text><text x="322" y="94" text-anchor="middle" font-size="10.5">导出 PDF A3</text><text x="322" y="107" text-anchor="middle" font-size="10.5">钉分栏</text><text x="322" y="174" text-anchor="middle" font-size="9.5">和 FreeCAD 模型</text><text x="322" y="187" text-anchor="middle" font-size="10.5">同一仓库</text><text x="430" y="138" text-anchor="middle" font-size="10.5">明天测风管的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">拖入</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">保存</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">导出</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">同仓库</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">按图施工</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0204：风管走向 / 接线 / 网络拓扑用它画正规图，草图交给 Excalidraw</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">jgraph/drawio</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>draw.io（现在叫 diagrams.net）是英国 JGraph 公司维护的开源画图工具，7.9k 星，2005 年就有前身，是浏览器里最完整的免费流程图软件。它要解决的问题是：Visio 贵而且只在 Windows 上，工程师需要一个免费、离线可用、图形库齐全的正规画图工具。</p><p>它是纯 JavaScript 客户端应用，画布基于 mxGraph 图形引擎，图形库覆盖流程图、UML、网络拓扑、电气符号、平面图和家具、甚至 HVAC 风管；元素能吸附对齐、自动布局，连线可以走正交折线自动避让。文件是 XML，可以存成 .drawio 或嵌进 PNG 和 SVG，桌面版是 Electron，网页版可以 Docker 自托管，还有 VS Code 插件，Git 里存 .drawio 文件看 diff 也方便。</p><p>生态成熟，2025 年后仍是每月一个版本，界面翻译含简体中文，中文教程和模板很多。</p><p>对 0204 它是延伸中和 Excalidraw 分工的那一个：草图归 Excalidraw，正规图归 draw.io。0203 那圈 Φ100 风管四个出风口的走向、0201 滑轨的接线和限位、全屋 MQTT 和网络拓扑、储藏室钢架的平面布置，都用它的 HVAC、电气和平面图库画，尺寸对齐精确，导出 PDF 打 A3 钉在软木板对应的分栏里。桌面版装在工作台的中屏，文件和 FreeCAD 模型放同一个仓库做版本管理。注意它的平面图库是英制家具尺寸，画地堡平面时先把网格设成 100mm。</p></div>
       </article>
     </div></section>
 

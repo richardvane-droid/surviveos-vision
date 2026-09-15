@@ -281,6 +281,7 @@
           <a class="gh-name" href="https://github.com/immich-app/immich" target="_blank" rel="noopener">immich-app/immich</a>
           <span class="stars">★ 110k</span>
           <span class="zh ">官方中文 README</span>
+          
         </header>
         <p class="gh-desc">高性能自托管照片视频管理系统，手机自动备份、人脸识别、共享相册，界面和 README 都有简体中文</p>
         <p class="gh-why">→ 照片墙的底库：拍立得原片和手机照片全进它，用相册分在墙上和已归档两组，月初换展时挑片就在它里面翻</p>
@@ -309,6 +310,7 @@
           <a class="gh-name" href="https://github.com/pibooth/pibooth" target="_blank" rel="noopener">pibooth/pibooth</a>
           <span class="stars">★ 823</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">树莓派开箱即用的拍照亭软件，按键拍照、倒计时、加边框文字，接打印机直接出片，插件可扩展</p>
         <p class="gh-why">→ 吧台上那台自拍小机的软件：一个实体按钮按下倒计时拍照，自动套牛皮纸色边框，热敏或照片打印机直接出片夹上绳</p>
@@ -337,6 +339,7 @@
           <a class="gh-name" href="https://github.com/PhotoboothProject/photobooth" target="_blank" rel="noopener">PhotoboothProject/photobooth</a>
           <span class="stars">★ 649</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">自托管拍照亭网页应用，带实时预览、拼图、宝丽来滤镜、二维码分享和自动打印，浏览器就是界面</p>
         <p class="gh-why">→ pibooth 之外的另一条路：它的宝丽来边框和相纸滤镜模板更像样，界面在浏览器里，触屏平板也能当拍照机</p>
@@ -359,6 +362,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Photobooth 是德国开发者 Andreas Blaesius 等人从 2017 年起维护的自托管拍照亭网页应用，649 星，2025 年仍在发大版本，用 PHP 加 JavaScript 写成，跑在树莓派或任何 Linux 小主机上，浏览器就是它的全部界面。它和 pibooth 解决同一件事，但思路是网页化：任何有浏览器的屏都能当操作面板。</p><p>工作原理是一个 PHP 服务：前端页面用摄像头或 gPhoto2 做实时预览，点击或按硬件按钮后倒计时拍照，服务端用 GD 库做后期，拼贴版式、宝丽来白边、抠像换背景、文字水印都在这一步叠上去，然后存进相册、生成下载二维码、送打印机。它自带画廊和独立的幻灯片页面，可以把最近拍的照片投到另一块屏上；管理后台有几百个可调项，多语言由 Crowdin 维护，目前没有中文。硬件上支持 GPIO 按钮、旋转编码器和遥控器。</p><p>文档在英文站上，德语社区活跃，中文资料几乎没有，但界面操作直观。</p><p>放进 0104，它是自拍小机的备选软件，主要借它的宝丽来滤镜：拍出来自带下宽上窄的白边和轻微褪色，比 pibooth 的边框更像真拍立得；吧台上放一台旧 iPad 当触屏操作面，树莓派在柜子里跑服务，照片一边打印一边把幻灯片页投到画框墙的一屏上。坑在实时预览走 MJPEG 比较吃 CPU，树莓派 4 以上才顺。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/LibrePhotos/librephotos" target="_blank" rel="noopener">LibrePhotos/librephotos</a>
+          <span class="stars">★ 8k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Python 写的自托管相册：人脸识别、物体检测、语义搜索、自动按事件生成相册，走 AI 整理路线</p>
+        <p class="gh-why">→ 照片墙每月换一批，选照片最费时间，让 AI 先按事件和人物把上千张原片自动分好组，挑起来快得多</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0104-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0104-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0104-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">LibrePhotos · AI 先分组，再挑照片去冲印</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0104-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0104-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0104-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0104-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机 / 相机原片</text><text x="78" y="107" text-anchor="middle" font-size="10.5">上千张</text><text x="78" y="218" text-anchor="middle" font-size="10.5">搜一句话</text><text x="78" y="231" text-anchor="middle" font-size="10.5">雪地里的盒子</text><text x="200" y="94" text-anchor="middle" font-size="9.5">LibrePhotos</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Django 后端</text><text x="200" y="174" text-anchor="middle" font-size="9.5">InsightFace</text><text x="200" y="187" text-anchor="middle" font-size="10.5">CLIP 嵌入</text><text x="322" y="94" text-anchor="middle" font-size="10.5">事件相册</text><text x="322" y="107" text-anchor="middle" font-size="10.5">人脸聚类</text><text x="322" y="174" text-anchor="middle" font-size="10.5">待冲印目录</text><text x="322" y="187" text-anchor="middle" font-size="10.5">二十几张</text><text x="430" y="218" text-anchor="middle" font-size="10.5">夹照片的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">扫描</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">语义搜索</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">自动分组</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">挑选导出</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">冲 4×6</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0104：每月换照片前让它按事件和人脸先分好组，语义搜索出候选再冲印</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">LibrePhotos/librephotos</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>LibrePhotos 是从 ownphotos 项目分叉出来的自托管相册，Django 后端加 React 前端，8k 星，走的是 AI 帮你整理照片这条路线。它要解决的问题是：照片太多没人整理，翻半天找不到那张山顶的照片；把 Google Photos 的自动整理能力搬回自己的服务器。</p><p>它的流程是：扫描挂载进来的照片目录，提取 EXIF，用 InsightFace 做人脸检测与聚类，用 CLIP 做图片语义嵌入，于是可以用一句自然语言搜图，比如雪地里的盒子；还能按时间和地点自动切成事件相册，反查 GPS 得到地名，识别物体和场景打标签。前端是网页，手机也能用，支持多用户。整套用 Docker Compose 部署，后台任务用 Redis 排队，第一次索引会跑很久。</p><p>生态方面它 2025 年后持续出版本，界面翻译里有简体中文，中文安装教程主要在群晖和 Unraid 社区。它比 Immich 小众，但语义搜索和事件自动分组是特色。</p><p>放到 0104 里它是延伸的选照片工具：照片墙每根绳子约 8 张，每月要从手机和相机的上千张里挑二十几张。让 LibrePhotos 先自动跑一遍：按事件分好组，搜车床、雪地、鱼这类词直接出候选，人脸聚类把当月自拍单独列出来。选好的导出到一个待冲印目录，再拿去冲 4×6 富士相纸。注意它和 0104 已有的 Immich 功能重叠，只在想试 CLIP 语义搜索时装它，两个别同时索引同一块盘。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/ente-io/ente" target="_blank" rel="noopener">ente-io/ente</a>
+          <span class="stars">★ 28.9k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">端到端加密的开源相册与备份：手机、桌面、网页全端，服务端可自托管，本机做人脸和语义搜索不上传明文</p>
+        <p class="gh-why">→ 照片墙背面那些手写的话和当月自拍很私人，原片备份要的不是 AI 整理而是加密，ente 是加密路线里最成熟的</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0104-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0104-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0104-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Ente · 本机加密再上传的照片备份</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0104-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0104-5-shade)" stroke="none"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0104-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0104-5-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0104-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0104-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机 / 拍立得翻拍</text><text x="78" y="107" text-anchor="middle" font-size="10.5">自动备份</text><text x="78" y="174" text-anchor="middle" font-size="10.5">本机密钥</text><text x="78" y="187" text-anchor="middle" font-size="10.5">恢复短语</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Ente 客户端</text><text x="200" y="107" text-anchor="middle" font-size="9.5">libsodium 加密</text><text x="200" y="174" text-anchor="middle" font-size="10.5">本地人脸 / 语义</text><text x="200" y="187" text-anchor="middle" font-size="10.5">索引</text><text x="322" y="94" text-anchor="middle" font-size="10.5">自托管 Museum</text><text x="322" y="107" text-anchor="middle" font-size="10.5">只存密文</text><text x="322" y="174" text-anchor="middle" font-size="10.5">按年份相册</text><text x="322" y="187" text-anchor="middle" font-size="10.5">家庭共享</text><text x="430" y="218" text-anchor="middle" font-size="10.5">翻相册的人</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">密文上传</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">多端同步</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0104：原片加密备份一份，按年份相册和矮柜里的牛皮纸相册对应</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">ente-io/ente</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Ente 是印度团队 ente.io 做的端到端加密相册，2024 年把服务端也全部开源，28.9k 星。它要解决的问题是：想要 Google Photos 那样的多端自动备份和搜索，但不愿意让任何服务器看到照片内容。</p><p>它的架构是客户端加密：手机或桌面 App 在本机用 libsodium 把照片加密后再上传，密钥只在设备上，服务端只存密文。人脸识别和语义搜索也在设备本地跑模型，索引结果加密后同步，所以搜索照样能用。服务端叫 Museum，用 Go 写，Docker Compose 自托管一条命令；客户端覆盖 iOS、Android、三大桌面和网页版，支持家庭共享、相册链接、Live Photo 原样保存。同一个仓库还带 Auth 两步验证应用。</p><p>生态方面它 2025 年后更新很密；App 界面有简体中文，中文评测集中在自托管和隐私圈，Google Takeout 导入做得好。</p><p>放到 0104 里它是延伸的备份底座：照片墙的照片没有塑封、会被炉火烤卷，换下来放进牛皮纸相册，原片必须有一个可靠的备份。手机开 Ente 自动备份，拍立得拍的实体照用手机翻拍一张也进去，按年份建相册，和吧台矮柜里的实体相册一一对应。它和 0104 原有的 Immich 不冲突：Immich 管挑选与展示，Ente 管加密备份异地一份。注意密钥丢了谁也救不回来，恢复短语抄在纸上放进 0209 的铁皮宝箱。</p></div>
       </article>
     </div></section>
 

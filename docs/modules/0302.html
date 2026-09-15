@@ -205,6 +205,7 @@
           <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
           <span class="stars">★ 11.7k</span>
           <span class="zh zh-no">无中文（社区教程多）</span>
+          
         </header>
         <p class="gh-desc">用 YAML 配置文件给 ESP32 / ESP8266 生成固件的开源系统，传感器、继电器、屏幕原生接入 Home Assistant</p>
         <p class="gh-why">→ 装备区那只温湿度传感器加除湿盒插座就是一段二十行的 YAML，湿度超 70% 推送、超 75% 自动开除湿，不用写一行 C</p>
@@ -233,6 +234,7 @@
           <a class="gh-name" href="https://github.com/sysadminsmedia/homebox" target="_blank" rel="noopener">sysadminsmedia/homebox</a>
           <span class="stars">★ 7.1k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">面向家庭用户的自托管物品库存系统，支持位置树、标签、附件、维护记录和二维码标签打印</p>
         <p class="gh-why">→ 每个木格子和收纳箱都是一个位置，贴上它打印的二维码，扫一下就知道气罐还剩几罐、头灯上次换电池是什么时候</p>
@@ -261,6 +263,7 @@
           <a class="gh-name" href="https://github.com/galenmaly/lighterpack" target="_blank" rel="noopener">galenmaly/lighterpack</a>
           <span class="stars">★ 800</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">户外圈最常用的装备清单网站 LighterPack 的源码，可自部署，按分类算总重和背负重量</p>
         <p class="gh-why">→ 把墙上那张手写出发清单搬进去，日徒步、两日露营、钓鱼三条线各存一份，背包重量自动算，出门前一格格核对</p>
@@ -283,6 +286,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>LighterPack 是美国开发者 Galen Maly 从 2013 年起做的装备清单网站，全世界轻量化徒步玩家都用它晒装备表，源码开源，800 星，Node.js 加 MongoDB，可以自己部署一份不依赖官网。它解决的问题是：一次出行到底带了什么、多重、哪些穿在身上、哪些是消耗品，以及怎么把清单变成一眼看懂的图。</p><p>它的数据模型是“清单 → 分类 → 物品”：一份清单叫一个 list，里面按睡眠、炊事、穿着、电子等分类，每件物品记名称、重量、数量、价格，可以标记为穿戴或消耗品。系统实时算出基础重量、穿戴重量、消耗品重量和总重，右侧画一个饼图，导出成分享链接或 CSV。同一件物品可以拖进多份清单，所以“日徒步”“两日露营”“钓鱼”三条线各存一份、共用一个装备库很自然。</p><p>它没有中文界面，但物品名随便写中文，国内户外论坛也常见用它晒表；更新不频繁，功能早已够用。</p><p>在 0302 里它接管墙上的“出发清单”：三条线各一份 list，出门前打开手机对着格子逐项打钩，空格子就是没带的东西；每次回来称一次实际重量校正数据。它只管“带什么”，库存数量交给 HomeBox；两边都用同一套物品名，扫码能对得上。注意自部署要跑 MongoDB，放在 0801 的小主机上就行。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/organicmaps/organicmaps" target="_blank" rel="noopener">organicmaps/organicmaps</a>
+          <span class="stars">★ 15.3k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">隐私优先的离线地图与 GPS 导航 App：OSM 数据、等高线、徒步骑行路线规划，全程无网可用、无广告无追踪</p>
+        <p class="gh-why">→ 装备区的出发清单对应的是山里没信号的路线，Organic Maps 把临安一带的离线地图和轨迹记录装进手机，是背包之外的第一件装备</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0302-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0302-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0302-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Organic Maps · 全离线的山路地图与轨迹</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0302-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><path d="M160.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0302-4-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0302-4-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0302-4-shade)" stroke="none"/><path d="M284.0 226.0 h66 l10 10 v38 h-76 Z M350.0 226.0 v10 h10" stroke-width="1.3"/><path d="M292.0 242.0 h54 M292.0 250.0 h44 M292.0 258.0 h48" stroke-width="0.5"/><path d="M390.0 234.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="430" cy="234.0" rx="40.0" ry="6" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0302-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M246.2 222.0 C261.0 222.0 261.0 204.0 275.8 204.0"/><path d="M246.2 204.0 C261.0 204.0 261.0 222.0 275.8 222.0"/><path d="M378.0 250.0 L374.0 250.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">OpenStreetMap</text><text x="78" y="107" text-anchor="middle" font-size="10.5">每月更新</text><text x="78" y="174" text-anchor="middle" font-size="10.5">往年 GPX</text><text x="78" y="187" text-anchor="middle" font-size="10.5">三条常走线</text><text x="200" y="94" text-anchor="middle" font-size="10.5">离线地图包</text><text x="200" y="107" text-anchor="middle" font-size="10.5">临安 / 杭州</text><text x="200" y="174" text-anchor="middle" font-size="9.5">Organic Maps</text><text x="200" y="187" text-anchor="middle" font-size="10.5">本地矢量渲染</text><text x="200" y="248" text-anchor="middle" font-size="10.5">徒步导航</text><text x="200" y="261" text-anchor="middle" font-size="10.5">等高线 / 水源</text><text x="322" y="174" text-anchor="middle" font-size="10.5">手机屏幕</text><text x="322" y="187" text-anchor="middle" font-size="10.5">无信号也能用</text><text x="322" y="248" text-anchor="middle" font-size="10.5">记录的轨迹</text><text x="322" y="261" text-anchor="middle" font-size="10.5">导出 GPX</text><text x="430" y="248" text-anchor="middle" font-size="10.5">0802 服务器</text><text x="430" y="261" text-anchor="middle" font-size="10.5">装备目录</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">预处理</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">导入</text><text x="261.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">记录</text><text x="376.0" y="245.0" text-anchor="middle" font-size="8" fill="#666">回家归档</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0302：出发前下好离线包和线路 GPX，回来把轨迹和装备清单一起归档</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">organicmaps/organicmaps</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Organic Maps 是从 MAPS.ME 分叉出来的社区项目，用 C++ 写核心、原生 Android 和 iOS 客户端，15.3k 星，全球用户超过六百万。它要解决的问题是：徒步进山后手机没信号，商业地图 App 要么下不到离线包，要么满屏广告和追踪。Organic Maps 完全离线、不联网、不收集数据。</p><p>它的工作方式是把 OpenStreetMap 数据按地区预处理成自家的 mwm 格式，一个省一个文件下到手机里；渲染引擎在本地矢量绘图，缩放时不重新下载。徒步模式下会显示等高线、山峰高程、小径难度和水源标注，路线规划支持步行、骑行和驾车，导航时语音提示；点一下就能记录 GPS 轨迹，导出 GPX 或 KML；还能导入别人分享的轨迹文件当参考。</p><p>生态上它上架了 Google Play、F-Droid 和 App Store，界面自带简体中文，社区在 Telegram 和论坛活跃，2025 年后仍频繁发版；数据随 OSM 每月更新，中国地区的山路数据也在稳步变好。</p><p>对 0302 来说它是延伸项目：出发清单手写板旁边可以贴一张二维码，指向常走的三条线的 GPX 文件——日徒步、两日露营、钓鱼。出发前在阁楼里把临安和杭州的离线包下好，把这次的轨迹文件导进 Organic Maps；回来后把记录的轨迹导出 GPX，存到 0802 服务器的装备目录里，和这趟带了哪些装备的清单放在一起。下一次挑背包容量时，看看那条线的爬升和时长就知道该拎 38L 还是 65L。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/tumic0/GPXSee" target="_blank" rel="noopener">tumic0/GPXSee</a>
+          <span class="stars">★ 1.2k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">桌面版 GPS 轨迹查看分析器：支持 GPX、FIT、KML 等十几种格式，在离线地图上叠轨迹，看海拔、速度、心率曲线</p>
+        <p class="gh-why">→ 装备区攒下的每一条徒步轨迹都需要一个能在电脑上快速回看、对比爬升的工具，GPXSee 轻、快、全离线，比网页服务省心</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0302-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0302-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0302-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">GPXSee · 把每条轨迹叠在离线地图上比一比</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0302-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0302-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0302-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0302-5-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0302-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">GPX / FIT 文件</text><text x="78" y="107" text-anchor="middle" font-size="10.5">手机 / 手表</text><text x="78" y="174" text-anchor="middle" font-size="10.5">离线底图</text><text x="78" y="187" text-anchor="middle" font-size="9.5">MBTiles / 等高线</text><text x="200" y="94" text-anchor="middle" font-size="10.5">GPXSee</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Qt 桌面程序</text><text x="200" y="174" text-anchor="middle" font-size="10.5">海拔 / 速度</text><text x="200" y="187" text-anchor="middle" font-size="10.5">曲线联动</text><text x="322" y="94" text-anchor="middle" font-size="10.5">地图叠加</text><text x="322" y="107" text-anchor="middle" font-size="10.5">多条轨迹对比</text><text x="322" y="174" text-anchor="middle" font-size="10.5">导出图片</text><text x="322" y="187" text-anchor="middle" font-size="10.5">贴出发清单</text><text x="430" y="138" text-anchor="middle" font-size="10.5">整备区的人</text><text x="430" y="151" text-anchor="middle" font-size="10.5">定线路和背包</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">拖入</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">底图</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">联动</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">看爬升</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0302：三条常走线叠图比爬升与距离，决定清单上的水量、时长和背包容量</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">tumic0/GPXSee</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>GPXSee 是捷克开发者 tumic0 用 C++ 和 Qt 写的 GPS 日志查看器，1.2k 星，近六千次提交，Windows、macOS、Linux 都有安装包。它要解决的问题是：手表、手机、运动相机记录的轨迹格式各不相同，想在电脑上离线看一眼、比一比，总得先传到某个网站。GPXSee 双击文件就打开，什么都不上传。</p><p>它的工作方式是读文件、画地图、画曲线：支持 GPX、TCX、FIT、KML、IGC、NMEA、GeoJSON 等十几种格式，可以一次拖进几十个文件叠在同一张地图上；地图底图既能用在线瓦片源，也能加载 OziExplorer、MBTiles、GeoTIFF 等离线地图，山里下载好的等高线图也能当底图。下方的图表区画出海拔、速度、心率、踏频、温度和坡度随距离或时间变化的曲线，鼠标在曲线上滑动，地图上的点同步移动；还能给轨迹打点、看统计、导出 PDF 或图片。</p><p>生态上它是很多户外论坛推荐的轻量工具，翻译走 Weblate，界面没有中文，但操作简单到不需要说明书；项目持续维护，几乎每月都有版本。</p><p>对 0302 来说它是延伸项目：Organic Maps 在山上记的轨迹回家导出 GPX 后，放到 0802 服务器的装备目录里，用 GPXSee 一次把三条常走线全部打开，叠在同一张离线地图上比较爬升和距离。出发清单上每条线旁边写的时长、水量和背包容量，就来自这些曲线；如果某条线的海拔图突然多出一段陡坡，说明该把登山杖挂到出发清单里了。</p></div>
       </article>
     </div></section>
 

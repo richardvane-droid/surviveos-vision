@@ -212,6 +212,7 @@
           <a class="gh-name" href="https://github.com/OrcaSlicer/OrcaSlicer" target="_blank" rel="noopener">OrcaSlicer/OrcaSlicer</a>
           <span class="stars">★ 15.7k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">基于拓竹 Bambu Studio 二次开发的开源切片软件，自带校准流程，支持局域网直发</p>
         <p class="gh-why">→ 地堡 0204 工作台装它切片，局域网直接推到阁楼的 P1S，不用来回跑，挂钩标牌批量打</p>
@@ -240,6 +241,7 @@
           <a class="gh-name" href="https://github.com/Donkie/Spoolman" target="_blank" rel="noopener">Donkie/Spoolman</a>
           <span class="stars">★ 2.8k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">自托管的 3D 打印耗材库存管理，记录每卷剩余克数、颜色、材质，带打印机集成</p>
         <p class="gh-why">→ 8 格耗材架每卷登记进去，标签上的剩余克数不用手写，快用完自动提醒，防止囤太多</p>
@@ -267,7 +269,8 @@
         <header class="gh-head">
           <a class="gh-name" href="https://github.com/greghesp/ha-bambulab" target="_blank" rel="noopener">greghesp/ha-bambulab</a>
           <span class="stars">★ 2.3k</span>
-          <span class="zh ">组件自带简体中文翻译</span>
+          <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">拓竹打印机的 Home Assistant 集成，读进度、层数、温度、AMS 耗材，还能看摄像头</p>
         <p class="gh-why">→ P1S 接上它，开始、结束、失败自动推手机，躺帐篷里在 HA 上看第 47 层的摄像头画面</p>
@@ -290,6 +293,97 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>ha-bambulab 是 greghesp 发起、社区维护的拓竹打印机 Home Assistant 集成，2.3k 星，通过 HACS 安装，是把 X1、P1、A1 系列接进 HA 的事实方案。拓竹官方只给了自家 App 和 Bambu Studio，想让打印机和家里其他设备联动，就得靠它。</p><p>它的工作原理是走拓竹打印机的 MQTT 通道：局域网模式下直接连打印机的本机 MQTT 端口，云模式下连拓竹云。打印机会不断推送一份包含当前层数、进度、剩余时间、喷头与热床温度、AMS 各槽耗材信息、风扇转速、错误码的状态报文，集成把它们解析成几十个 HA 实体；反向可以下发暂停、继续、停止、调温、开关灯的命令。摄像头也接进来了，P1 系列走它自带的低帧率流，X1 走 RTSP。</p><p>社区非常活跃，Discord 有专门频道，几乎每月更新，翻译文件里自带简体中文，B 站上也有不少中文安装教程。</p><p>在 0305 里它是打印机和这套系统之间的桥：开始、结束、失败推送到手机，摄像头画面贴到 0802 中枢大屏上，AMS 槽位的耗材用量回写给 Spoolman 扣减，柜顶排风扇跟着打印状态自动启停，打完再延时十分钟。要注意 P1S 用局域网模式需要在打印机上开启并填入访问码，固件大版本更新后偶尔会断连，更新集成即可。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Klipper3d/klipper" target="_blank" rel="noopener">Klipper3d/klipper</a>
+          <span class="stars">★ 11.6k</span>
+          <span class="zh ">有中文文档站</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">把运动规划搬到树莓派上的 3D 打印机固件：单片机只管步进脉冲，支持输入整形、压力提前和多 MCU</p>
+        <p class="gh-why">→ 拓竹 P1S 是封闭固件，但读懂 Klipper 就读懂了现代打印机为什么快；哪天想用 0307 的 CNC 平台改一台大尺寸打印机，固件就选它</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0305-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0305-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0305-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Klipper · 树莓派做大脑，单片机只管脉冲</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0305-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-4-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-4-shade)" stroke="none"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M256.0 250.0 L266.0 250.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">切片 G 代码</text><text x="78" y="107" text-anchor="middle" font-size="10.5">局域网推送</text><text x="78" y="174" text-anchor="middle" font-size="9.5">printer.cfg</text><text x="78" y="187" text-anchor="middle" font-size="10.5">文本配置</text><text x="200" y="94" text-anchor="middle" font-size="10.5">klippy 主程序</text><text x="200" y="107" text-anchor="middle" font-size="10.5">树莓派 / 服务器</text><text x="200" y="174" text-anchor="middle" font-size="10.5">运动规划</text><text x="200" y="187" text-anchor="middle" font-size="9.5">输入整形 / 压力提前</text><text x="200" y="248" text-anchor="middle" font-size="9.5">Moonraker API</text><text x="200" y="261" text-anchor="middle" font-size="9.5">Mainsail 前端</text><text x="322" y="94" text-anchor="middle" font-size="10.5">主板单片机</text><text x="322" y="107" text-anchor="middle" font-size="10.5">带时间戳的步进</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0307 平台改的</text><text x="322" y="187" text-anchor="middle" font-size="10.5">大尺寸打印机</text><text x="322" y="248" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="261" text-anchor="middle" font-size="10.5">开始 / 失败推送</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">读配置</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">串口 / USB</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0305：先读懂 P1S 为什么要振动校准；再把 0307 龙门平台改成大尺寸打印机时…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Klipper3d/klipper</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Klipper 是 Kevin O’Connor 发起的开源 3D 打印机固件，11.6k 星，Voron、Creality K1 等高速打印机的固件都是它或它的改版。它要解决的问题是：传统固件把 G 代码解析和运动规划都塞进一颗小单片机，算力不够就跑不快、加不了高级算法。</p><p>它的工作方式是把大脑和手脚分开：一台树莓派或类似的 Linux 小电脑跑 klippy 主程序，负责解析 G 代码、做运动规划和各种补偿；打印机主板上的单片机只烧一个很小的固件，接收带时间戳的步进指令并执行。因为规划在大电脑上做，输入整形（抵消振纹）、压力提前（改善拐角）、自动床网都是 Python 模块，配置是一个文本文件，改完重启生效。</p><p>生态上它不带界面，配 Mainsail 或 Fluidd 网页前端，再加 Moonraker API 就能接 HomeAssistant；官方文档站有完整简体中文翻译，国内 Voron 社群和 B 站教程非常多，项目持续活跃。</p><p>对 0305 来说它是延伸项目：柜面上的拓竹 P1S 固件封闭，不用改；但读一遍 Klipper 的输入整形和压力提前文档，就能理解 P1S 为什么要做振动校准，切片参数怎么和它对应。更实际的用法是：0307 那套 2020 型材龙门平台哪天想变成一台 300 见方的大尺寸打印机，主板刷 Klipper，klippy 跑在 0802 服务器上，Moonraker 接进 HomeAssistant，推送和现在的 P1S 一样。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/OctoPrint/OctoPrint" target="_blank" rel="noopener">OctoPrint/OctoPrint</a>
+          <span class="stars">★ 9k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">3D 打印机的网页远程控制台：上传文件、看进度、看摄像头、装插件，Python 写的老牌树莓派方案</p>
+        <p class="gh-why">→ P1S 的远程监控靠拓竹自家云，OctoPrint 是开源世界里同一件事的标杆，读懂它的插件体系就知道打印机远程监控该长什么样</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0305-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0305-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0305-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OctoPrint · 一块树莓派远程管打印机</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0305-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-5-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0305-5-shade)" stroke="none"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0305-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M256.0 250.0 L266.0 250.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">G 代码文件</text><text x="78" y="107" text-anchor="middle" font-size="10.5">网页上传</text><text x="78" y="216" text-anchor="middle" font-size="10.5">USB 摄像头</text><text x="78" y="229" text-anchor="middle" font-size="10.5">看层高</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OctoPrint</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Python 服务</text><text x="200" y="174" text-anchor="middle" font-size="10.5">插件仓库</text><text x="200" y="187" text-anchor="middle" font-size="10.5">失败检测 / 延时</text><text x="200" y="248" text-anchor="middle" font-size="10.5">串口发 G 代码</text><text x="200" y="261" text-anchor="middle" font-size="10.5">收温度回报</text><text x="322" y="248" text-anchor="middle" font-size="10.5">串口打印机</text><text x="322" y="261" text-anchor="middle" font-size="10.5">非拓竹机型</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">进度 / 急停</text><text x="430" y="138" text-anchor="middle" font-size="10.5">帐篷里看手机</text><text x="430" y="151" text-anchor="middle" font-size="10.5">的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">视频流</text><text x="261.0" y="245.0" text-anchor="middle" font-size="8" fill="#666">USB</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">集成</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0305：作 P1S 之外第二台串口打印机的远程台，和 ha-bambulab 并排进 HA …</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">OctoPrint/OctoPrint</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>OctoPrint 是德国开发者 Gina Häußge 从 2012 年起维护的开源打印机远程控制软件，用 Python 写成，9k 星，2026 年 6 月还发了 1.11.8 版。它要解决的问题：打印机拴着一台电脑太浪费，树莓派上的一个网页就能远程上传、启动、监看和急停。</p><p>它的工作方式是串口加网页：树莓派通过 USB 连打印机，OctoPrint 把 G 代码逐行发过去，同时解析温度回报，在网页上画温度曲线、显示进度和剩余时间，接一个摄像头就能看实时画面并自动生成延时视频。它最大的特点是插件系统：官方仓库有几百个插件，从床面调平可视化到远程访问和 AI 失败检测都有；HomeAssistant 有官方 OctoPrint 集成，进度、温度和急停按钮直接进仪表盘。</p><p>生态上 OctoPi 镜像烧进树莓派就能用，教程极多，界面有社区中文语言包；项目靠赞助维持，持续更新。</p><p>对 0305 来说它是延伸项目：柜面上的拓竹 P1S 走自家协议，有 ha-bambulab 就够，不需要它；它的价值在两处。一是学习：看一个成熟的打印机监控该有什么——温度曲线、摄像头延时、失败检测、推送，这是设想里那块小屏幕和 HA 通知的参考答案。二是备用：如果耗材架旁再添一台老式串口打印机，或 0307 平台改成的打印机不跑 Klipper，把 OctoPrint 装进 0802 服务器的一个容器，USB 拉一根线过去，HA 集成一加，和 P1S 并排出现在同一个仪表盘上。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/prusa3d/PrusaSlicer" target="_blank" rel="noopener">prusa3d/PrusaSlicer</a>
+          <span class="stars">★ 9.1k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Prusa 维护的开源切片器：OrcaSlicer 和拓竹 Studio 的共同祖先，树状支撑、可变层高、多材料涂色</p>
+        <p class="gh-why">→ 0305 已经选了 OrcaSlicer，但它和拓竹 Studio 都是从 PrusaSlicer 分叉的；读懂上游才明白切片参数的来龙去脉，也多一条备用切片路线</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0305-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0305-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0305-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">PrusaSlicer · 切片器家族的上游</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0305-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-6-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-6-shade)" stroke="none"/><rect x="148.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 268.0 h28 M192 268.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 229.0 h98 v4 h-98 Z" fill="url(#g0305-6-shade)" stroke="none"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-6-shade)" stroke="none"/><rect x="270.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 274.0 h98 v3 h-98 Z" fill="url(#g0305-6-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-6-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M222.2 124.0 C261.0 124.0 261.0 222.0 299.8 222.0" stroke-dasharray="3 3"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M322.0 222.0 L322.0 204.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">STL / STEP</text><text x="78" y="107" text-anchor="middle" font-size="10.5">0204 设计台</text><text x="78" y="174" text-anchor="middle" font-size="10.5">打印机配置</text><text x="78" y="187" text-anchor="middle" font-size="10.5">耗材参数</text><text x="200" y="94" text-anchor="middle" font-size="9.5">PrusaSlicer</text><text x="200" y="107" text-anchor="middle" font-size="10.5">切片引擎</text><text x="200" y="174" text-anchor="middle" font-size="10.5">树状支撑</text><text x="200" y="187" text-anchor="middle" font-size="10.5">可变层高</text><text x="200" y="248" text-anchor="middle" font-size="10.5">逐层预览</text><text x="200" y="261" text-anchor="middle" font-size="10.5">时长 / 耗材</text><text x="322" y="94" text-anchor="middle" font-size="10.5">G 代码 / 3MF</text><text x="322" y="107" text-anchor="middle" font-size="10.5">参数一起存</text><text x="322" y="174" text-anchor="middle" font-size="10.5">拓竹 P1S</text><text x="322" y="187" text-anchor="middle" font-size="10.5">局域网推送</text><text x="322" y="248" text-anchor="middle" font-size="10.5">OrcaSlicer</text><text x="322" y="261" text-anchor="middle" font-size="10.5">下游分支</text><text x="261.0" y="168.0" text-anchor="middle" font-size="8" fill="#666">分叉</text><text x="322.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">日常</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0305：日常用 OrcaSlicer，查参数和做第二意见时用上游 PrusaSlicer 对比…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">prusa3d/PrusaSlicer</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>PrusaSlicer 是捷克 Prusa Research 公司维护的开源切片软件，从 Slic3r 分叉而来，用 C++ 写成，9.1k 星，2026 年 5 月发布 2.9.5 版。它要解决的问题是把 3D 模型变成打印机能执行的 G 代码，并在这一步决定强度、速度、表面质量和耗材用量。</p><p>它的工作方式是模型进、G 代码出：导入 STL、3MF 或 STEP 后，先做摆放、缩放、切割和修复，再按层高把模型切成一层层轮廓，为每层生成外墙、内墙、填充、支撑和顶底面路径，最后按打印机配置输出 G 代码并逐层预览走线和时间。它带来的很多功能后来成了行业标配：有机树状支撑、可变层高、熨烫、涂色分区多材料、按区域改参数的修改器，以及联网直接把任务发给打印机。</p><p>生态上它是 OrcaSlicer、拓竹 Studio、SuperSlicer 的共同上游，几乎所有厂商都提供 PrusaSlicer 配置文件，界面自带简体中文，中文教程很多；Prusa 公司持续投入，版本更新稳定。</p><p>对 0305 来说它是延伸项目：日常切片继续用 OrcaSlicer 给 P1S 推任务，但某个参数看不懂时，去 PrusaSlicer 的官方知识库查同名参数，那里解释最完整，因为参数就是从这里来的。实际用途有二：地堡 0204 设计台装一份当第二意见，同一个 PSK 内衬模型用两个切片器各切一遍，比支撑用量和预计时长，选省耗材的那版；再给全屋小配件建一个 3MF 项目库，连打印参数一起存，下次再打挂钩不用重新调。</p></div>
       </article>
     </div></section>
 

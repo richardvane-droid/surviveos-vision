@@ -193,6 +193,7 @@
           <a class="gh-name" href="https://github.com/Madelena/esphome-weatherman-dashboard" target="_blank" rel="noopener">Madelena/esphome-weatherman-dashboard</a>
           <span class="stars">★ 1.3k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">用 ESP32 驱动 7.5 寸墨水屏显示天气和预报的 ESPHome 配置，字体图标全打包</p>
         <p class="gh-why">→ 阁楼墙上那块 7.5 寸墨水屏照它做，把气象站的温湿压和 24 小时曲线画上去，极简出片</p>
@@ -221,6 +222,7 @@
           <a class="gh-name" href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">hugokernel/esphome-weather-station</a>
           <span class="stars">★ 338</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Elektor 气象站的 ESPHome 版本，风速、风向、翻斗雨量、温湿压、光照全套配置</p>
         <p class="gh-why">→ 风杯、风向标、雨量筒三件套的引脚和换算公式都写好了，抄它的 YAML 改改就能进 HA</p>
@@ -249,6 +251,7 @@
           <a class="gh-name" href="https://github.com/3KUdelta/Solar_WiFi_Weather_Station" target="_blank" rel="noopener">3KUdelta/Solar_WiFi_Weather_Station</a>
           <span class="stars">★ 117</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">太阳能供电的 ESP 气象站，用气压变化趋势跑 Zambretti 算法本地预报天气</p>
         <p class="gh-why">→ “比天气预报早半小时知道下雨”靠的就是气压趋势，把它的 Zambretti 算法搬到 HA 自动化里；GitHub 上这个算法没有更知名的完整实现，所以保留这个小项目</p>
@@ -271,6 +274,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Solar_WiFi_Weather_Station 是德国爱好者 3KUdelta 在 Open Green Energy 项目基础上做的太阳能 WiFi 气象站，117 星，它最有价值的部分不是硬件，而是把老式的 Zambretti 天气预报算法完整搬进了 ESP8266 固件里，是 GitHub 上关于这个算法最常被引用的实现。Zambretti 预报器本是 1915 年的一只黄铜转盘，只用气压值、气压趋势和季节三个输入就能给出二十六种结论，本地气压比网络预报更贴近自家屋顶。</p><p>它的流程是：BME280 每十分钟测一次气压，先按海拔换算成海平面气压，然后和一到三小时前的读数比较得到趋势（上升、稳定、下降），再把当前气压落到 Zambretti 的分段表里，查出预报编号并翻译成一句话；固件顺带按室外温度做了冬夏调整，冷天把雨改成雪。历史读数存在闪存里，结果推到 Blynk 或 Thingspeak。</p><p>项目几年没更新，硬件部分可以不看，README 里的算法说明和翻译表是精华，中文资料只有零散的博客。</p><p>在 0306 里，不刷它的固件，而是把 Zambretti 的查表逻辑用 Home Assistant 的模板传感器重写：输入是气象杆的气压和三小时前的历史值，输出一个预报实体；预报转向雨且湿度上升时暂停 0602 浇灌并推送收衣服。坑是气压必须先换算到海平面，否则山上永远显示暴风。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/weewx/weewx" target="_blank" rel="noopener">weewx/weewx</a>
+          <span class="stars">★ 1.2k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Python 写的开源气象站软件：驱动几十种商用气象站，存数据库、生成网页报表、上传到 Weather Underground 等网络</p>
+        <p class="gh-why">→ 自制气象站的数据除了进 HA，还需要一套按气象行业规矩做日报、月报和年度气候图的软件，weewx 是这方面二十年的标杆</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0306-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0306-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0306-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">WeeWX · 把自制气象站的数据做成正经气象报表</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0306-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0306-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0306-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0306-4-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0306-4-shade)" stroke="none"/><path d="M288.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0306-4-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0306-4-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M256.0 250.0 L266.0 250.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">ESP32 三件套</text><text x="78" y="149" text-anchor="middle" font-size="10.5">温湿压风雨</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA / MQTT</text><text x="78" y="187" text-anchor="middle" font-size="10.5">转发主题</text><text x="200" y="94" text-anchor="middle" font-size="10.5">MQTT 驱动</text><text x="200" y="107" text-anchor="middle" font-size="10.5">收原始数据</text><text x="200" y="174" text-anchor="middle" font-size="10.5">WeeWX 引擎</text><text x="200" y="187" text-anchor="middle" font-size="10.5">归档 + 统计</text><text x="200" y="248" text-anchor="middle" font-size="10.5">报表皮肤</text><text x="200" y="261" text-anchor="middle" font-size="10.5">Cheetah 模板</text><text x="322" y="94" text-anchor="middle" font-size="10.5">Weather</text><text x="322" y="107" text-anchor="middle" font-size="9.5">Underground</text><text x="322" y="174" text-anchor="middle" font-size="10.5">SQLite 归档</text><text x="322" y="187" text-anchor="middle" font-size="10.5">日 / 月 / 年</text><text x="322" y="248" text-anchor="middle" font-size="10.5">静态网页</text><text x="322" y="261" text-anchor="middle" font-size="10.5">年度气候图</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">订阅</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">上传</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0306：HA 管实时联动，WeeWX 管归档和年度气候图，跑在 0802 服务器上</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">weewx/weewx</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>WeeWX 是 Tom Keffer 从 2009 年起维护的开源气象站软件，用 Python 写成，1.2k 星，八千多次提交，2026 年 6 月发布 5.4 版。它要解决的问题是：气象站硬件只会吐原始数据，但一个像样的气象站需要归档、统计、报表、网页和向公共气象网络上传，这些都是它做的。</p><p>它的工作方式是驱动加引擎加报表：驱动层对接几十种商用气象站（Davis、Fine Offset、Ecowitt 等），也能通过 MQTT 驱动接收任意自制站的数据；引擎按固定间隔把数据写进 SQLite 或 MySQL 归档表，同时算出日、周、月、年的最高最低和累计值；报表层用 Cheetah 模板生成静态网页和图表，默认皮肤开箱就能看，也能上传到 Weather Underground、CWOP 等网络。扩展机制允许加驱动、加服务、加皮肤，社区有上百个扩展。</p><p>生态上它的文档非常详尽，用户论坛活跃，树莓派上跑十几年不倒是常态；文档只有英文，中文资料不多，但配置就是一个文本文件，看着示例改并不难。</p><p>对 0306 来说它是延伸项目：铝杆上的三件套和百叶盒数据经 ESPHome 进 HomeAssistant 负责实时和联动，而年度那张我家的一年气候图交给 WeeWX 更专业。在 0802 服务器上跑一份，用 MQTT 驱动订阅 HA 转发的主题收温湿度、气压、风速风向和雨量，按气象站的规矩算日雨量、阵风和露点，自动生成网页报表，年底导出全年温度和降水曲线，比自己在 HA 里拼图表省事得多。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/merbanan/rtl_433" target="_blank" rel="noopener">merbanan/rtl_433</a>
+          <span class="stars">★ 7.6k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">用几十块钱的 RTL-SDR 电视棒解码 433/868/915MHz 无线传感器：温湿度、雨量、风速、TPMS 等两百多种协议，输出 JSON 或 MQTT</p>
+        <p class="gh-why">→ 自制气象站之外，邻居和商用气象站的 433MHz 探头都在空中飞，rtl_433 一根电视棒就能全收进 HA，是气象站的免费外挂探头</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0306-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0306-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0306-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">rtl_433 · 一根电视棒收下空中所有无线探头</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0306-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0306-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0306-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0306-5-shade)" stroke="none"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0306-5-shade)" stroke="none"/><rect x="270.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 274.0 h98 v3 h-98 Z" fill="url(#g0306-5-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0306-5-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M322.0 204.0 L322.0 222.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="9.5">433 / 868MHz</text><text x="78" y="149" text-anchor="middle" font-size="10.5">各家无线探头</text><text x="78" y="174" text-anchor="middle" font-size="9.5">RTL-SDR 电视棒</text><text x="78" y="187" text-anchor="middle" font-size="10.5">天线伸出天窗</text><text x="200" y="94" text-anchor="middle" font-size="10.5">rtl_433</text><text x="200" y="107" text-anchor="middle" font-size="10.5">解调 + 协议匹配</text><text x="200" y="174" text-anchor="middle" font-size="10.5">两百多个解码器</text><text x="200" y="187" text-anchor="middle" font-size="10.5">识别型号字段</text><text x="322" y="94" text-anchor="middle" font-size="9.5">JSON / MQTT</text><text x="322" y="107" text-anchor="middle" font-size="10.5">温湿风雨</text><text x="322" y="174" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="187" text-anchor="middle" font-size="10.5">自动发现实体</text><text x="322" y="248" text-anchor="middle" font-size="10.5">0306 自制站</text><text x="322" y="261" text-anchor="middle" font-size="10.5">对比校准</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">采样</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">MQTT</text><text x="322.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">对比</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0306：电视棒插 0802 服务器，收周边无线探头进 HA，和自制气象站互相校准</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">merbanan/rtl_433</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>rtl_433 是 Benjamin Larsson 发起、社区维护的软件无线电解码工具，用 C 写成，7.6k 星，是 SDR 玩家和智能家居圈里最常用的 433MHz 解码器。它要解决的问题是：无数无线温湿度计、雨量计、风速计、门磁都在 ISM 频段用私有协议广播，买家只能用厂家的显示屏看，rtl_433 把它们统统解出来。</p><p>它的工作方式是接收、解调、匹配：一根二三十块的 RTL-SDR 电视棒接在树莓派或电脑上，rtl_433 把指定频率的射频信号采样下来，做 OOK 或 FSK 解调，再用两百多个内置解码器逐个匹配脉冲模式，识别出是哪家哪个型号，解析出温湿度、风速、雨量、电量等字段，以 JSON 或 MQTT 输出。它有 HomeAssistant 自动发现插件，每个探头自动变成一组实体。</p><p>生态上支持列表还在增长；文档是英文，但国内 SDR 圈和 HA 论坛教程不少，有 Docker 镜像和 HA 附加组件。</p><p>对 0306 来说它是延伸项目：自制气象站建满一套探头很费事，rtl_433 让阁楼多出许多免费探头。在 0802 服务器上插一根电视棒，天线从天窗边伸出去，几十米内所有 433MHz 温湿度计、别人家的雨量筒、甚至隔壁商用气象站的数据都能进 HA，和自制站对比校准；再把几十块的无线温湿度计放进 0402 材料仓库或 0302 装备区，不布线就有了湿度报警。433MHz 是开放的低功率频段，只收不发没有合规问题。</p></div>
       </article>
     </div></section>
 

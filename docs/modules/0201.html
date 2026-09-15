@@ -180,6 +180,7 @@
           <a class="gh-name" href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">basnijholt/adaptive-lighting</a>
           <span class="stars">★ 3.4k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度，自带睡眠模式和手动接管检测</p>
         <p class="gh-why">→ 直接拿它做晨光 3200K 到正午 5600K 再到黄昏 2700K 的自动曲线，睡前落日渐暗用它的 sleep mode 开关就有</p>
@@ -208,6 +209,7 @@
           <a class="gh-name" href="https://github.com/claytonjn/hass-circadian_lighting" target="_blank" rel="noopener">claytonjn/hass-circadian_lighting</a>
           <span class="stars">★ 887</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">HomeAssistant 昼夜节律灯光组件，把一天里自然光的色温变化算成一个传感器值，再按开关分组套到灯上</p>
         <p class="gh-why">→ Adaptive Lighting 的前辈，配置更简单，还会把当前色温百分比暴露成传感器，滑轨换算走位时正好拿来当输入</p>
@@ -236,6 +238,7 @@
           <a class="gh-name" href="https://github.com/isaac879/Pan-Tilt-Mount" target="_blank" rel="noopener">isaac879/Pan-Tilt-Mount</a>
           <span class="stars">★ 504</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">步进电机驱动、3D 打印的 Arduino 三轴摄影运动控制器：滑轨 + 云台，带蓝牙 App 和关键帧运动</p>
         <p class="gh-why">→ 天花板滑轨上的云台可以照它的 3D 件、V 槽型材皮带结构和固件来做，灯头一边沿梁走一边慢慢转向床和沙发</p>
@@ -258,6 +261,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Pan-Tilt-Mount 是创客 isaac879 开源的三轴摄影运动控制器，504 星，是自制电动滑轨里最常被复刻的一个。它原本给相机做延时和平移镜头：一根 2040 V 槽铝型材做滑轨，同步带拉着一个 3D 打印的滑车，滑车上再叠一个云台，做出滑动、水平转、俯仰三个轴。</p><p>控制核心是一块 Arduino Nano 和三颗 TMC2208 静音驱动，带三只 NEMA17 步进电机，霍尔传感器负责回零。固件通过串口收简单的字母指令：设速度、走到某位置、记关键帧、按关键帧序列平滑运动；板上接一颗 JDY-31 蓝牙串口模块，手机 App 就能遥控。定位精度滑轨 0.0225 毫米、转轴 0.0133 度，对灯来说远远够用，12V 供电。</p><p>仓库里有全套 STL、BOM、接线图和固件，文档英文，B 站有复刻视频。近年更新不多，胜在零件全是标准件。</p><p>在 0201 里，它就是梁下那根 3 米滑轨的骨架：型材接长到 3 米、皮带同样接长，滑车照 STL 放大加固，保留滑动和水平转两个轴，俯仰轴改成固定角度。固件不用蓝牙，串口接一块跑 ESPHome 的 ESP32 转成 HA 实体，走位指令由 HA 按时刻下发。最大的坑是负载：南光灯加透镜有两三公斤，皮带 3 米会松、NEMA17 直驱会丢步，建议换带 1:5 减速箱的电机，并把回零霍尔装在两端各一个。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/MarlinFirmware/Marlin" target="_blank" rel="noopener">MarlinFirmware/Marlin</a>
+          <span class="stars">★ 17.5k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">RepRap 3D 打印机的经典固件：G 代码解析、步进电机运动规划、加减速与限位归零，支持几百种主板</p>
+        <p class="gh-why">→ 3 米滑轨上的灯每天从东走到西，本质是一根轴的步进运动控制；Marlin 把归零、加减速、行程限制这套逻辑做得最成熟，可以直接借来用</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0201-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0201-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0201-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Marlin · 把滑轨当成一根 X 轴来走</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0201-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0201-4-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0201-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0201-4-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-4-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0201-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">HA 日轨时间表</text><text x="78" y="107" text-anchor="middle" font-size="10.5">发 G1 坐标</text><text x="78" y="216" text-anchor="middle" font-size="10.5">两端限位开关</text><text x="78" y="229" text-anchor="middle" font-size="10.5">归零</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Marlin 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">打印机主板</text><text x="200" y="174" text-anchor="middle" font-size="10.5">运动规划器</text><text x="200" y="187" text-anchor="middle" font-size="10.5">梯形加减速</text><text x="322" y="94" text-anchor="middle" font-size="10.5">NEMA 23 步进</text><text x="322" y="107" text-anchor="middle" font-size="10.5">同步带 3m</text><text x="322" y="174" text-anchor="middle" font-size="10.5">南光灯 + 云台</text><text x="322" y="187" text-anchor="middle" font-size="10.5">东走到西</text><text x="430" y="218" text-anchor="middle" font-size="10.5">床上被晒醒的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">串口 G 代码</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">脉冲</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">拖动</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">晒醒</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0201：打印机主板 + Marlin 单轴，HA 按时间发 G1 坐标让灯走日轨</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">MarlinFirmware/Marlin</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Marlin 是 2011 年从 Sprinter 和 grbl 演化出来的 3D 打印机固件，17.5k 星，市面上大半消费级打印机的出厂固件都是它或它的分支。它要解决的问题是：把一串 G 代码变成几根步进电机精确、平滑、不丢步的运动，同时管好温度、限位、归零和安全。</p><p>它的工作方式是：主机通过串口发 G 代码，比如 G1 X100 F1200 是以每分钟 1200 毫米走到 X 等于 100 的位置；Marlin 解析后交给运动规划器，按设定的最大速度和加速度把移动切成梯形速度曲线放进缓冲区，再由中断驱动的步进器按微秒级节拍给电机脉冲。归零靠限位开关，软件行程限制防撞。它用 C++ 写，靠两个配置头文件适配几百种主板，PlatformIO 编译。</p><p>生态是 3D 打印圈最大的，2025 年后 2.1.x 仍在更新，README 是英文，但中文编译和配置教程遍地。</p><p>对 0201 它是延伸的取巧路线：南光灯的 3 米电动滑轨就是一根 X 轴，用一块打印机主板加一个步进电机和同步带，把 Marlin 配成单轴机器，两端装限位开关做归零。HomeAssistant 通过串口发一句 G1 X1500 F300 就能让灯慢慢走到滑轨正中，6:30 到 18:30 的日轨就是一张按时间发坐标的表，冬天的晒太阳位是一个固定坐标。注意灯加云台有几公斤重，电机选 NEMA 23、加速度设得很低，走起来才像太阳而不是打印头。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/diyHue/diyHue" target="_blank" rel="noopener">diyHue/diyHue</a>
+          <span class="stars">★ 1.8k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Python 写的飞利浦 Hue 桥模拟器：把 WLED、ESP 灯、Tasmota、MQTT 灯伪装成 Hue 灯，官方 Hue App 和娱乐同步都能用</p>
+        <p class="gh-why">→ 模拟阳光的柔光箱和床头夜灯如果想用 Hue App 的场景和影音同步功能，不用买 Hue 灯，diyHue 把自制灯全部伪装成 Hue</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0201-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0201-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0201-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">diyHue · 自制灯伪装成 Hue 进 Hue 生态</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0201-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M64 114.0 h28 M70 114.0 v6 h16 v-6" stroke-width="1"/><path d="M29.0 75.0 h98 v4 h-98 Z" fill="url(#g0201-5-shade)" stroke="none"/><rect x="26.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M64 194.0 h28 M70 194.0 v6 h16 v-6" stroke-width="1"/><path d="M29.0 155.0 h98 v4 h-98 Z" fill="url(#g0201-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0201-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0201-5-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-5-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0201-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0201-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">Hue App</text><text x="78" y="107" text-anchor="middle" font-size="10.5">日出唤醒 / 场景</text><text x="78" y="174" text-anchor="middle" font-size="10.5">娱乐区同步</text><text x="78" y="187" text-anchor="middle" font-size="10.5">电视画面</text><text x="200" y="94" text-anchor="middle" font-size="10.5">diyHue 服务</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Hue API 模拟</text><text x="200" y="174" text-anchor="middle" font-size="10.5">设备映射</text><text x="200" y="187" text-anchor="middle" font-size="9.5">WLED / MQTT</text><text x="322" y="94" text-anchor="middle" font-size="10.5">柔光箱 WLED</text><text x="322" y="107" text-anchor="middle" font-size="10.5">天光</text><text x="322" y="174" text-anchor="middle" font-size="10.5">床头夜灯</text><text x="322" y="187" text-anchor="middle" font-size="10.5">1% 月光</text><text x="430" y="218" text-anchor="middle" font-size="10.5">躺着的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">REST</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">UDP 流</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">翻译命令</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">渐暗入睡</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0201：柔光箱和夜灯做成 WLED 挂进 diyHue，Hue App 管唤醒曲线和影音同步</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">diyHue/diyHue</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>diyHue 是 Marius Cristian 发起的开源 Hue 桥模拟器，Python 写成，1.8k 星。它要解决的问题是：飞利浦 Hue 的 App、场景、日出模拟和影音娱乐同步做得好，但灯贵；如果自制的灯能装作 Hue 灯，就能白嫖整个 Hue 生态。</p><p>它在局域网里跑一个服务，完整实现 Hue 桥的 REST API 和 mDNS 发现协议，Hue App 搜索桥的时候找到的就是它。后端把各种灯接进来：WLED 和 ESPHome 的灯、Tasmota、MQTT 灯、Yeelight、Shelly，Zigbee 灯也能通过 zigbee2mqtt 挂在下面。App 里对灯做的开关、调色、场景、定时，它翻译成对应设备的命令发出去；娱乐区的低延迟同步走 UDP 流，能让灯跟着电视画面变色。Docker 一行部署。</p><p>社区中等规模，2025 年后仍有更新，README 是英文，中文资料很少。</p><p>对 0201 它是延伸的另一条控制入口：模拟阳光的主灯走 HomeAssistant 和滑轨，但沙发上方那块柔光箱和床头 1% 的月光夜灯如果做成 WLED 灯，挂进 diyHue 之后就能在 Hue App 里用它的日出唤醒和入睡渐暗，手机一拉就是那条从 3200K 到 5600K 的曲线；0207 看片时娱乐区还能让天光跟着电影变色。注意它和 HomeAssistant 同时控制一盏灯会打架，规定好谁是主：HA 管场景，diyHue 只管娱乐同步。</p></div>
       </article>
     </div></section>
 

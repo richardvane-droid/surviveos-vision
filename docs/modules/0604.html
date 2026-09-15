@@ -182,6 +182,7 @@
           <a class="gh-name" href="https://github.com/blakeblackshear/frigate" target="_blank" rel="noopener">blakeblackshear/frigate</a>
           <span class="stars">★ 35.1k</span>
           <span class="zh ">官方中文 README</span>
+          
         </header>
         <p class="gh-desc">本地 AI 目标检测的开源 NVR，Coral 或 GPU 加速，区域和物体过滤，和 HomeAssistant 深度集成，有 README_CN 和中文界面</p>
         <p class="gh-why">→ 长焦机的移动侦测和鸟、猫、人的实时检测全靠它，本地跑不上云，检出鸟就通过 MQTT 交给分种程序，通知直接推手机</p>
@@ -210,6 +211,7 @@
           <a class="gh-name" href="https://github.com/Nachtzuster/BirdNET-Pi" target="_blank" rel="noopener">Nachtzuster/BirdNET-Pi</a>
           <span class="stars">★ 1.1k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">树莓派上的实时鸟类声纹识别系统，BirdNET-Pi 的活跃维护分支，USB 麦克风 24 小时听，网页看物种统计，通知和 MQTT 都有</p>
         <p class="gh-why">→ 横臂下挂一只麦克风，靠叫声认鸟，和摄像头图像识别互相印证，看不见的林间鸟和夜里的猫头鹰也进来访者名单，戴胜叫一声就知道</p>
@@ -238,6 +240,7 @@
           <a class="gh-name" href="https://github.com/mmcc-xx/WhosAtMyFeeder" target="_blank" rel="noopener">mmcc-xx/WhosAtMyFeeder</a>
           <span class="stars">★ 456</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Frigate 的伴侣程序，订阅鸟类事件取快照，用 TensorFlow 鸟类分类模型判断是什么种，结果写回 Frigate 子标签并存库出网页</p>
         <p class="gh-why">→ Frigate 只知道是鸟，它负责说是哪种鸟：白头鹎、珠颈斑鸠、乌鸫自动分种，新物种推通知和每月来访者名单就靠这一步</p>
@@ -260,6 +263,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>WhosAtMyFeeder 是美国开发者 mmcc-xx 做的 Frigate 配套程序，GitHub 上 456 星，名字直译是谁在我的喂鸟器上。Frigate 只能说画面里有一只鸟，它接在后面专门说是哪一种。</p><p>它的工作方式是一条流水线：订阅 Frigate 的 MQTT 事件，遇到标签为鸟的事件就按事件 ID 去 Frigate 拉那一帧快照，裁出检测框，送进 Google 发布的 TFLite 鸟类分类模型，这个模型在 iNaturalist 的数据上训练，认得九百多种北美和常见鸟；输出物种名和置信度，超过阈值就把物种写回 Frigate 事件的子标签，同时存进本地 SQLite，自带一个 Flask 网页按天看到访物种、次数和照片。整个程序是一个 Python 容器，配置只有一份 YAML。没有中文资料，代码不到一千行。</p><p>在 0604 里它接在 Frigate 后面：只订阅长焦机那一路，分种结果写回子标签后 HomeAssistant 就能按物种名做自动化，第一次出现的种推通知带照片，每月把 SQLite 里的数据汇总成来访者名单卡片上 0802 大屏。要注意默认模型是北美鸟为主，白头鹎、珠颈斑鸠这类华东常见鸟有的能认有的会张冠李戴，先跑一个月人工核对，把误认多的种在配置里映射成正确中文名；喂鸟器画面里鸟太小会影响精度，长焦机对准时让鸟占画面十分之一以上。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noopener">ultralytics/ultralytics</a>
+          <span class="stars">★ 59.8k</span>
+          <span class="zh ">官方中文 README</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">YOLO 系列目标检测的官方实现：一行命令训练和推理，检测、分割、姿态、跟踪全包，能导出到树莓派和手机</p>
+        <p class="gh-why">→ Frigate 自带的模型只认人车猫狗，认不出白头鹎和黄鼬；用 YOLO 拿自己拍的草地照片训一个小模型，才能真的数出谁来做客</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0604-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="26" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0604-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0604-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Ultralytics · 用自己的草地照片训一个认鸟模型</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0604-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0604-4-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-4-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0604-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0604-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">Frigate 截图</text><text x="78" y="107" text-anchor="middle" font-size="10.5">几百张标注</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Ultralytics</text><text x="200" y="107" text-anchor="middle" font-size="10.5">YOLO</text><text x="200" y="174" text-anchor="middle" font-size="10.5">train</text><text x="200" y="187" text-anchor="middle" font-size="10.5">几小时出权重</text><text x="322" y="94" text-anchor="middle" font-size="10.5">导出 ONNX</text><text x="322" y="107" text-anchor="middle" font-size="10.5">换进 Frigate</text><text x="322" y="174" text-anchor="middle" font-size="10.5">来访者名单</text><text x="322" y="187" text-anchor="middle" font-size="10.5">按种类计数</text><text x="430" y="218" text-anchor="middle" font-size="10.5">发观鸟群的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">YAML 类别</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">识别推 HA</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0604：攒几个月截图标五个物种，训小模型导出给 Frigate，未知疑似戴胜…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">ultralytics/ultralytics</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Ultralytics 是美国 Ultralytics 公司维护的 YOLO 官方实现，Python 和 PyTorch 写的，59.8k 星，从 YOLOv8 到 YOLO26 都在这个仓库里，2026 年 7 月还在发新版。它把目标检测从论文代码变成一个命令：pip 装完，一行 yolo 命令就能在图片和视频上画框，也能用自己标注的数据集训练新类别。</p><p>它的工作方式是：预训练模型在 COCO 数据集上认得 80 类常见物体；要认新东西就准备几百张标注好框的图片，写一个 YAML 描述类别，跑 train 命令几小时出一个新权重；推理时一张图进去，输出每个框的类别、置信度和坐标，还能做分割、姿态和多目标跟踪。训练好的模型可以导出成 ONNX、TensorRT、TFLite，跑在树莓派、Jetson 甚至 Coral 加速棒上。</p><p>生态是它最大的优势：文档和 README 都有官方简体中文版，标注工具 Roboflow、Label Studio 直接对接，社区教程铺天盖地。注意授权是 AGPL。</p><p>在 0604 里它是延伸，接在 Frigate 后面：Frigate 从长焦机的流里切出有动静的片段，但默认模型只会说有只鸟。把 Frigate 存下来的鸟类截图攒上几个月，按白头鹎、珠颈斑鸠、乌鸫、灰喜鹊、黄鼬标几百张，在 0802 服务器上训一个 YOLO 小模型，导出 ONNX 之后 Frigate 可以直接换用。这样那个未知疑似戴胜就能变成明确的类别，每月来访者名单也不用人工翻。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/AlexxIT/go2rtc" target="_blank" rel="noopener">AlexxIT/go2rtc</a>
+          <span class="stars">★ 14.1k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Go 写的万能视频流中转器：RTSP、WebRTC、HomeKit、ONVIF 等几十种协议互转，一路摄像头流分给多个消费者而不重复拉流</p>
+        <p class="gh-why">→ 两只摄像头同时要给 Frigate 识别、HA 看实时画面、每小时抓一张延时图，go2rtc 把一路流拉一次分给所有人，摄像头和网络都不会累</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0604-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="27" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0604-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0604-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">go2rtc · 摄像头拉一次，分给所有想看的人</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0604-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0604-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-5-shade)" stroke="none"/><path d="M162.0 152.0 h66 l10 10 v38 h-76 Z M228.0 152.0 v10 h10" stroke-width="1.3"/><path d="M170.0 168.0 h54 M170.0 176.0 h44 M170.0 184.0 h48" stroke-width="0.5"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0604-5-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0604-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0604-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">广角 + 长焦</text><text x="78" y="107" text-anchor="middle" font-size="10.5">两路 RTSP</text><text x="200" y="94" text-anchor="middle" font-size="10.5">go2rtc</text><text x="200" y="107" text-anchor="middle" font-size="10.5">流中转</text><text x="200" y="174" text-anchor="middle" font-size="10.5">FFmpeg 截帧</text><text x="200" y="187" text-anchor="middle" font-size="10.5">每小时一张</text><text x="322" y="94" text-anchor="middle" font-size="10.5">Frigate</text><text x="322" y="107" text-anchor="middle" font-size="10.5">侦测识别</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA WebRTC</text><text x="322" y="187" text-anchor="middle" font-size="10.5">手机实时看</text><text x="430" y="218" text-anchor="middle" font-size="10.5">翻身看鸟的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">只连一次</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">RTSP 重播</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">WebRTC</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">RTSP</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0604：两路流进 go2rtc 各拉一次，分给 Frigate 识别、HA 实时看、每小时延时截帧</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">AlexxIT/go2rtc</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>go2rtc 是俄罗斯开发者 Alexey Khit（AlexxIT）写的开源视频流服务器，Go 语言，14.1k 星，Frigate 和 HomeAssistant 的实时画面都靠它。它解决的问题是：一只摄像头的 RTSP 流只允许少数几个连接，而家里想看它的程序有一堆，每个都去拉一次摄像头就撑不住；go2rtc 拉一次，在本地分发给所有消费者。</p><p>它的工作方式是源和消费者：配置文件里给每路流写源（RTSP、ONVIF、HomeKit、USB 摄像头，甚至 ESP32-CAM 的 MJPEG），go2rtc 按需连接源，把流转成 RTSP、WebRTC、HLS、MJPEG 等格式提供给消费者。WebRTC 让手机零延迟看实时画面。它还有一个网页控制台看每路流的状态。</p><p>生态上它是 Frigate 和 HomeAssistant 的标准组件，单文件二进制，树莓派也能跑。文档全英文但示例齐全，国内 Frigate 教程里都会带到它。</p><p>在 0604 里它是延伸，实际上是基础设施：广角机要每小时抓一张全景做延时，长焦机要 24 小时喂给 Frigate，两路流还要能在手机上随时点开看水盆边站着谁。在 go2rtc 里把两只摄像头各配一路源，Frigate 从它的 RTSP 重播口取流做识别，HomeAssistant 通过 WebRTC 卡片看实时，每小时的延时抓图用 FFmpeg 从它的 RTSP 口截一帧。摄像头只承受一个连接，夜里红外补光下的画面也不会因多路拉流而卡顿。</p></div>
       </article>
     </div></section>
 

@@ -231,6 +231,7 @@
           <a class="gh-name" href="https://github.com/Screenly/Anthias" target="_blank" rel="noopener">Screenly/Anthias</a>
           <span class="stars">★ 3.7k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">树莓派数字标牌系统，网页后台排播放表，循环播视频、图片和网页，专为无人值守的展示屏设计</p>
         <p class="gh-why">→ 展台前脸那块 7 寸小屏跑它：网页后台传视频、排播放表，插电即放不用人管，HA 还能调 API 切内容</p>
@@ -259,6 +260,7 @@
           <a class="gh-name" href="https://github.com/EverythingSmartHome/everything-presence-lite" target="_blank" rel="noopener">EverythingSmartHome/everything-presence-lite</a>
           <span class="stars">★ 293</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">基于 ESPHome 的毫米波人体存在传感器，LD2450 雷达带目标坐标与照度，直接接入 HomeAssistant</p>
         <p class="gh-why">→ 展台射灯人靠近自动亮就靠它，毫米波比红外灵敏，站着不动也不会灭灯，还能画一个只覆盖展台前的检测区</p>
@@ -287,6 +289,7 @@
           <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
           <span class="stars">★ 11.7k</span>
           <span class="zh zh-no">无中文（社区教程多）</span>
+          
         </header>
         <p class="gh-desc">用 YAML 配置把 ESP32 / ESP8266 变成 Home Assistant 原生设备的固件生成器，几百种传感器与执行器现成组件</p>
         <p class="gh-why">→ 射灯的 PWM 调光节点和照度传感器都用它写几十行 YAML 生成固件，BH1750、MOSFET 调光、LD2410 都是自带组件</p>
@@ -309,6 +312,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>ESPHome 是 Home Assistant 官方团队 Nabu Casa 维护的固件生成工具，11.7k 星，2018 年由 Otto Winter 创建，每月发版，是 HA 生态里做自制传感器和执行器的默认答案。想让一块 ESP32 上报温度或调光，不必写 C++，写几十行 YAML 声明引脚和组件，它就编译出固件并无线刷写。</p><p>原理是把声明式配置转成 C++：你在 YAML 里写 sensor、light 等块，ESPHome 拼装组件源码交给 PlatformIO 编译，设备开机后通过原生 API 与 HA 加密直连，实体自动出现，断网时本地自动化照样跑。它支持 ESP32 全系、ESP8266、RP2040，内置几百个组件，从 BH1750 照度、MAX6675 热电偶到 LD2410 雷达、PWM 调光都有现成写法。</p><p>社区极大；官方文档只有英文，但 B 站、CSDN 的中文教程很多，参数名一看就懂。</p><p>放进 0101，它负责两件小事：一块 ESP32-C3 通过 MOSFET 对 24V 的 3000K 射灯做 PWM 调光，暴露成 HA 里的一个可调光灯；同一块板再挂一颗 BH1750 读展台环境照度，作为白天不亮灯的判据。注意 PWM 频率设到 1kHz 以上，手机拍视频才不出条纹。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/photoprism/photoprism" target="_blank" rel="noopener">photoprism/photoprism</a>
+          <span class="stars">★ 40.1k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Go 语言写的自托管 AI 相册：TensorFlow 自动打标签、人脸识别、地图、按镜头和相机筛选，一条 Docker 命令就起</p>
+        <p class="gh-why">→ PSK 每一代的产品照、细节照、野外实测照都堆在硬盘里，需要一个能按型号和场景秒找的产品图库给展台小屏和视频剪辑喂素材</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0101-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="8" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0101-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0101-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">PhotoPrism · 只读索引，AI 打标签的产品图库</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0101-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0101-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0101-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0101-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0101-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0101-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">照片目录</text><text x="78" y="107" text-anchor="middle" font-size="10.5">只读挂载</text><text x="78" y="174" text-anchor="middle" font-size="10.5">手机同步</text><text x="78" y="187" text-anchor="middle" font-size="10.5">PhotoSync</text><text x="200" y="94" text-anchor="middle" font-size="10.5">PhotoPrism</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Go 后端</text><text x="200" y="174" text-anchor="middle" font-size="10.5">TensorFlow</text><text x="200" y="187" text-anchor="middle" font-size="10.5">标签 / 人脸</text><text x="322" y="94" text-anchor="middle" font-size="10.5">索引数据库</text><text x="322" y="107" text-anchor="middle" font-size="10.5">缩略图</text><text x="322" y="174" text-anchor="middle" font-size="10.5">网页相册</text><text x="322" y="187" text-anchor="middle" font-size="10.5">按标签搜</text><text x="430" y="218" text-anchor="middle" font-size="10.5">剪视频的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">扫描</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">备份</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写标签</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">秒找素材</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0101：每代 PSK 一个相册，标签分产品/细节/野外，喂展台小屏和视频剪辑</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">photoprism/photoprism</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>PhotoPrism 是德国 PhotoPrism UG 团队做的自托管 AI 相册，用 Go 写后端、Vue 写前端，40.1k 星，是自托管照片圈里最常被推荐的方案之一。它要解决的问题是：照片越来越多，但没人愿意把私人照片交给云相册，也没人愿意手工给几万张图打标签。</p><p>它的工作方式是索引而不是导入：把照片目录只读挂进 Docker 容器，后台扫描一遍就生成缩略图和数据库，原文件一根手指头都不碰。扫描时 TensorFlow 模型给每张图打上物体和场景标签，人脸聚类、GPS 反查地名、相机和镜头型号都进索引，再配合 RAW 转换和视频转码。前端是一个响应式网页，手机、平板、电脑都能用，搜索栏里可以直接写 lens:iphone year:2024 这样的查询。</p><p>生态方面它有官方 Docker Compose、群晖和树莓派安装说明，PhotoSync 之类的手机备份 App 原生支持它；界面自带简体中文，中文安装教程也多。项目靠订阅和赞助维持，2025 年之后依然每月出版本。</p><p>对 0101 来说它是延伸项目：展台小屏要滚动播放这只盒子的用途和实测视频，素材从哪来？把这些年拍的 PSK 产品照、车床加工照、山顶实测照全部索引进 PhotoPrism，给每一代盒子建一个相册，用标签区分产品照、细节照、野外照。剪视频时按标签一搜就出来，展台小屏的待机画面也可以直接指向某个相册的分享链接。注意机器：AI 索引第一次跑很吃 CPU，放在 0802 的家庭服务器上夜里跑就行。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/mrdoob/three.js" target="_blank" rel="noopener">mrdoob/three.js</a>
+          <span class="stars">★ 115k</span>
+          <span class="zh ">有中文文档站</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">浏览器里的 3D 引擎标杆：WebGL/WebGPU 渲染、glTF 加载、轨道控制器，几十行代码就能在网页里转着看一个模型</p>
+        <p class="gh-why">→ PSK 盒身本来就是 3D 建模出来的，把 glTF 放进网页就能在展台小屏和手机上转着看爆炸图，比拍视频更直观</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0101-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0101-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0101-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">three.js · 网页里转着看 PSK 的 3D 模型</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0101-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0101-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0101-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0101-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0101-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">FreeCAD 模型</text><text x="78" y="107" text-anchor="middle" font-size="10.5">导出 glTF</text><text x="78" y="218" text-anchor="middle" font-size="10.5">手指 / 鼠标</text><text x="78" y="231" text-anchor="middle" font-size="10.5">转 / 缩 / 点选</text><text x="200" y="94" text-anchor="middle" font-size="10.5">three.js</text><text x="200" y="107" text-anchor="middle" font-size="9.5">场景 / 相机 / 灯</text><text x="200" y="174" text-anchor="middle" font-size="10.5">HA 人来了</text><text x="200" y="187" text-anchor="middle" font-size="10.5">切到这一页</text><text x="322" y="94" text-anchor="middle" font-size="10.5">展台 7 寸屏</text><text x="322" y="107" text-anchor="middle" font-size="10.5">或手机浏览器</text><text x="430" y="138" text-anchor="middle" font-size="10.5">走近的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">GLTFLoader</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">OrbitControls</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">每帧渲染</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">打开网页</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">转着看</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0101：盒身 glTF 放网页，展台小屏自动旋转 + 点物件看用途，扫码同页</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">mrdoob/three.js</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>three.js 是 Ricardo Cabello（mrdoob）在 2010 年发起的 JavaScript 3D 库，115k 星，几乎是网页 3D 的代名词。它要解决的问题是：浏览器原生的 WebGL 太底层，画一个立方体都要写几百行着色器；three.js 把场景、相机、灯光、材质、几何体封装成对象，像摆积木一样搭 3D 场景。</p><p>它的流程是：创建 Scene，放进 Mesh（几何体加材质）和 Light，用 PerspectiveCamera 看，再由 WebGLRenderer 或新的 WebGPURenderer 每帧渲染到 canvas 上。模型一般用 glTF 格式，GLTFLoader 一行加载，OrbitControls 加上去就能用手指旋转缩放，PBR 材质配一张 HDR 环境贴图，金属和塑料的质感就出来了。</p><p>生态极大：官方文档有简体中文版，示例几百个，中文书和 B 站课程成体系，2025 年后仍是每月一个版本。</p><p>对 0101 它是延伸玩法：PSK 的盒身和 27 件小物件本来就有 CAD 模型，从 FreeCAD 导出 glTF，写一个百来行的网页放在展台前脸那块 7 寸小屏上，人走近时 HomeAssistant 把小屏切到这个页面，盒子缓慢旋转、盖子做开合动画，点一件物件弹出名字和用途；扫铜牌旁的二维码手机上看同一页。注意模型要减面，树莓派跑不动原始 CAD，用 Blender 抽稀到两三万面。</p></div>
       </article>
     </div></section>
 

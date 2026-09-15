@@ -163,6 +163,7 @@
           <a class="gh-name" href="https://github.com/blakeblackshear/frigate" target="_blank" rel="noopener">blakeblackshear/frigate</a>
           <span class="stars">★ 35.1k</span>
           <span class="zh ">官方中文 README</span>
+          
         </header>
         <p class="gh-desc">本地实时目标检测的开源 NVR，IP 摄像头 24 小时录像、按事件保留，和 HomeAssistant 深度集成，有中文 README</p>
         <p class="gh-why">→ 工作台头顶那颗摄像头接它：HA 一键触发手动事件开始录组装过程，录完落 NAS，视频直接拿去剪</p>
@@ -191,6 +192,7 @@
           <a class="gh-name" href="https://github.com/inventree/InvenTree" target="_blank" rel="noopener">inventree/InvenTree</a>
           <span class="stars">★ 7.3k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">开源库存与零件管理系统，BOM、库存、供应商、标签打印、REST API 和插件一应俱全，界面有简体中文</p>
         <p class="gh-why">→ 27 格零件柜的账本：一只 PSK 就是一张 27 行的 BOM，每做一只自动扣库存，低于阈值 HA 点亮那一格的提醒灯</p>
@@ -219,6 +221,7 @@
           <a class="gh-name" href="https://github.com/kennetek/gridfinity-rebuilt-openscad" target="_blank" rel="noopener">kennetek/gridfinity-rebuilt-openscad</a>
           <span class="stars">★ 2.2k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Gridfinity 模块化收纳盒的 OpenSCAD 参数化重制版，尺寸分格随便改，导出 STL 直接打印</p>
         <p class="gh-why">→ 27 格零件柜的内胆：格子先按 42mm 网格打印内盒试尺寸，定稿后再照着做木格，两层抽屉里的空盒身托盘也用它</p>
@@ -241,6 +244,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Gridfinity Rebuilt 是开发者 kennetek 在 2022 年用 OpenSCAD 重写的 Gridfinity 参数化库，2.2k 星，2025 年仍在合并贡献。Gridfinity 是 YouTuber Zack Freedman 提出的 42 毫米网格收纳标准，底板和小盒按网格咬合，这个仓库把原本要在 Fusion 里改的模型变成几行参数就能生成的代码，想要尺寸正好的分格盒不必从零建模。</p><p>工作原理是 OpenSCAD 脚本：你在顶部改几个数字，几格宽、几格长、多高、内部沿 X 和 Y 各分几格，要不要挖手指槽、标签翻边、磁铁孔和堆叠唇边，点渲染就得到一个 STL。底部网格脚是标准的，能扣进任何 Gridfinity 底板；仓库还提供底板、花瓶模式薄壁盒等变体，打印不需要支撑，也能命令行批量出图。</p><p>Printables 上按它生成的盒子成千上万；文档是英文，B 站有不少 Gridfinity 收纳的中文视频。</p><p>放进 0105，27 格零件柜先用它出 27 只 1 乘 1 或 1 乘 2 的小盒，每格按物件大小试装两周，确认哪格该更宽、哪格该加手指槽，再照着最终尺寸做 8 乘 8 厘米的木格；台面下两层抽屉铺一块 Gridfinity 底板，空盒身和成品各用一个定制托盘固定，拉抽屉不晃。坑在 OpenSCAD 渲染慢，装开发版快得多。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/frappe/erpnext" target="_blank" rel="noopener">frappe/erpnext</a>
+          <span class="stars">★ 38.6k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Frappe 框架上的开源 ERP：物料清单 BOM、工单、库存、采购、销售、财务全流程，制造业小厂常用</p>
+        <p class="gh-why">→ PSK 是 27 件物件组成的真产品，做多了就需要 BOM 和工单：一只盒子消耗哪些零件、哪格快空了该补货，ERPNext 是这套逻辑的教科书</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0105-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0105-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0105-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ERPNext · BOM 定义物件，工单扣库存</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0105-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0105-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0105-4-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0105-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0105-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">PSK 物料清单</text><text x="78" y="107" text-anchor="middle" font-size="9.5">27 件 + 毛毡盒身</text><text x="78" y="218" text-anchor="middle" font-size="10.5">组装一只</text><text x="78" y="231" text-anchor="middle" font-size="10.5">下工单</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ERPNext</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Frappe DocType</text><text x="200" y="174" text-anchor="middle" font-size="10.5">库存台账</text><text x="200" y="187" text-anchor="middle" font-size="10.5">27 格数量</text><text x="322" y="94" text-anchor="middle" font-size="10.5">采购建议</text><text x="322" y="107" text-anchor="middle" font-size="10.5">低于 20 补货</text><text x="322" y="174" text-anchor="middle" font-size="10.5">库存报表</text><text x="322" y="187" text-anchor="middle" font-size="10.5">手机看</text><text x="430" y="138" text-anchor="middle" font-size="10.5">周末下单的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">工单</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">按 BOM 扣减</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">低于安全线</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">统一采购</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0105：零件柜 27 格 = BOM，每装一只下工单扣库存，缺料周末统一买</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">frappe/erpnext</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ERPNext 是印度 Frappe 公司做的开源 ERP，Python 后端加 Frappe 框架，38.6k 星，是开源 ERP 里社区最大的一个。它要解决的问题是：小工厂和小品牌需要 SAP 那套物料、生产、库存、财务的逻辑，但付不起也用不了那么重的东西。</p><p>它的核心是 Frappe 框架的 DocType：每种业务对象（物料、BOM、工单、采购单）都是一张有字段、有工作流、有权限的表，界面和报表自动生成。制造模块的流程是：先给成品建物料清单 BOM，列出每一件子物料和数量；下工单时系统按 BOM 算出要领多少料、缺什么；完工后成品入库、原料扣减，库存低于安全线自动生成采购建议。它还带 CRM、项目、人事和会计，一套 Docker 就能跑。</p><p>生态方面它有中文界面翻译，国内有做实施的公司和不少中文文档；2025 年后每年一个大版本，v15 是当前主线。</p><p>放到 0105 里它是延伸的思路来源，不一定全上：工作台那排 27 格零件柜就是一张 BOM 的物理形态，每格贴的数量标签就是库存。在 ERPNext 里给 PSK 建一个 BOM，27 行子物料加毛毡和盒身，每组装一只就下一张工单，库存自动减；把每格的安全库存设成 20，低于就进采购建议，周末统一下单。注意它对一个人的作坊来说太重，只用物料、BOM、库存三个模块，别去碰会计；觉得重的话，0105 原有的 InvenTree 是更轻的选择。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Part-DB/Part-DB-server" target="_blank" rel="noopener">Part-DB/Part-DB-server</a>
+          <span class="stars">★ 1.7k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">给电子元件和小零件做的开源库存系统：存放位置树、参数、供应商价格、条码标签打印，支持从立创和 Mouser 拉数据</p>
+        <p class="gh-why">→ 工作台那 27 格小零件加上抽屉里的电子小件，需要一个知道每样东西在哪一格、还剩几个的轻量库存，Part-DB 就是为这种小格子生的</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0105-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0105-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0105-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Part-DB · 每格一个位置，扫码看余量</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0105-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0105-5-shade)" stroke="none"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0105-5-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0105-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0105-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">27 格零件柜</text><text x="78" y="107" text-anchor="middle" font-size="10.5">位置树</text><text x="78" y="174" text-anchor="middle" font-size="9.5">立创 / Mouser</text><text x="78" y="187" text-anchor="middle" font-size="10.5">参数图片</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Part-DB</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Symfony + Docker</text><text x="200" y="174" text-anchor="middle" font-size="10.5">零件 / 库存</text><text x="200" y="187" text-anchor="middle" font-size="10.5">供应商价格</text><text x="322" y="94" text-anchor="middle" font-size="10.5">二维码标签</text><text x="322" y="107" text-anchor="middle" font-size="10.5">标签机打印</text><text x="322" y="174" text-anchor="middle" font-size="10.5">手机扫码</text><text x="322" y="187" text-anchor="middle" font-size="10.5">减库存</text><text x="430" y="218" text-anchor="middle" font-size="10.5">组装的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">登记</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">拉数据</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">生成</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">贴格口</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0105：每格建位置和最小库存，格口贴二维码，扫一下减一件</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Part-DB/Part-DB-server</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Part-DB 是德国开发者 Jan Böhmer 用 PHP Symfony 重写的开源零件库存系统，1.7k 星，起初是给电子爱好者管电阻电容的，后来变成了通用的小零件库存。它要解决的问题是：抽屉和小格子里几百种零件，谁也记不住哪个在哪、还剩多少、上次从哪买的。</p><p>它的数据模型是零件加存放位置树加类别树：每个零件有名称、参数、图片、附件、最小库存和多个库存条目，每条库存指向一个位置（房间→柜子→抽屉→格子）；供应商信息记录订单号和价格阶梯，信息提供者功能可以直接从立创商城、Mouser、DigiKey 等拉回参数和图片。它能生成带二维码或条码的标签用标签机打印，扫码就跳到那件零件的页面；还有项目 BOM 功能，能算一个项目需要的零件够不够。部署是 Docker 一行，浏览器访问，手机也能用。</p><p>社区方面它是小而稳定的项目，2025 年后仍在更新，界面翻译里有简体中文，中文教程主要在电子 DIY 圈。</p><p>放到 0105 里它是延伸里最贴身的一个：27 格零件柜每格建一个位置，每格一种物件登记数量；格口那张激光刻的标签旁再贴一个 Part-DB 生成的小二维码，手机扫一下就减库存或看供应商链接。工作台抽屉里的电子小件、0106 炉子的传感器备件、0803 鸭子的备用舵机也全部归进来，统一用它的位置树。它比 ERPNext 轻得多，一个人用刚好；和 0105 已有的 InvenTree 是同类，选一个用就行，Part-DB 的优点是标签打印和立创拉数据更顺手。</p></div>
       </article>
     </div></section>
 

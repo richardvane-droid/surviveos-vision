@@ -147,6 +147,7 @@
           <a class="gh-name" href="https://github.com/kennetek/gridfinity-rebuilt-openscad" target="_blank" rel="noopener">kennetek/gridfinity-rebuilt-openscad</a>
           <span class="stars">★ 2.2k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">OpenSCAD 重写的 Gridfinity 参数化收纳格生成器，尺寸、分格、磁吸孔随便调</p>
         <p class="gh-why">→ 抽屉柜里的螺丝分格、洞洞板下方的小零件托盘直接用它生成后 3D 打印，全站统一模数</p>
@@ -175,6 +176,7 @@
           <a class="gh-name" href="https://github.com/MultiMote/niimblue" target="_blank" rel="noopener">MultiMote/niimblue</a>
           <span class="stars">★ 740</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">精臣（NIIMBOT）标签机的第三方网页客户端，浏览器里直接蓝牙打印，不用官方 App 和账号</p>
         <p class="gh-why">→ 48 格抽屉柜和洞洞板的标签全用它打：一套模板一种字体，离线批量出，白底黑字永远一致</p>
@@ -203,6 +205,7 @@
           <a class="gh-name" href="https://github.com/tkubic/GridfinityShadowMaker" target="_blank" rel="noopener">tkubic/GridfinityShadowMaker</a>
           <span class="stars">★ 119</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">把工具拍照转成 DXF 轮廓，再生成可 3D 打印的工具影子板，兼容 Gridfinity</p>
         <p class="gh-why">→ 工具“影子”不用手描，拍一张照片就能出轮廓，打印出来贴在洞洞板或抽屉里；照片转影子板这件事上它是 GitHub 上少有的一键流程</p>
@@ -225,6 +228,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>GridfinityShadowMaker 是 tkubic 做的一条工具影子板生成流水线，119 星，专门解决一件麻烦事：想给每把工具做一个严丝合缝的凹槽，手工在 CAD 里描轮廓一把要半小时，几十把工具没人描得下去。它是 GitHub 上少数把这件事做成一键流程的项目。</p><p>它的流程分三步。第一步照片转 DXF：把工具平放在一块灯板或白纸上，手机拍一张俯视照片，Python 脚本用 OpenCV 找轮廓、按参照物换算比例、平滑毛刺，输出 DXF 轮廓文件，脚本带一个 PyQt 小窗口可以调阈值和偏移量。第二步 DXF 转 STL：OpenSCAD 读入轮廓，在一块 Gridfinity 规格的底座上挖出带指槽的凹坑，几格宽几格深由参数决定，需要 OpenSCAD 的 Manifold 后端，否则布尔运算很慢。第三步进切片软件：用 OrcaSlicer 或 Bambu Studio 给凹坑换色、加上工具名字的浮雕，打印。仓库配有示例照片和参数说明，有 2.0 版分支在开发，没有中文资料。</p><p>在 0401 里，它是影子墙的升级版：洞洞板上的影子先用油性笔描，抽屉里和工作台上常用的一组工具则用它出打印影子板，凹坑底用黑色、盘面用白色，少了哪把一眼看见。坑是拍照：手机要正对工具、镜头别用广角，照片里放一枚硬币或一段尺子作比例参照，否则轮廓会整体偏大偏小。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/paperless-ngx/paperless-ngx" target="_blank" rel="noopener">paperless-ngx/paperless-ngx</a>
+          <span class="stars">★ 44.9k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">社区维护的自托管文档管理系统：扫描件和 PDF 进来自动 OCR、打标签、归类，全文搜索秒出，纸质文件从此可以扔</p>
+        <p class="gh-why">→ 过道工具间几十件工具的说明书、保修卡和发票总要有个地方归档，paperless-ngx 让洞洞板上的 NFC 标签能直接跳到那把工具的全部纸面资料</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0401-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0401-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0401-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">paperless-ngx · 扫描件进来自动 OCR 归档</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0401-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0401-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0401-4-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0401-4-shade)" stroke="none"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0401-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0401-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M246.2 222.0 C261.0 222.0 261.0 204.0 275.8 204.0"/><path d="M322.0 204.0 L322.0 222.0"/><path d="M362.9 222.0 C376.0 222.0 376.0 204.0 389.1 204.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">说明书 / 小票</text><text x="78" y="107" text-anchor="middle" font-size="10.5">手机拍照</text><text x="78" y="174" text-anchor="middle" font-size="10.5">邮件附件</text><text x="78" y="187" text-anchor="middle" font-size="10.5">电子发票</text><text x="200" y="94" text-anchor="middle" font-size="9.5">paperless-ngx</text><text x="200" y="107" text-anchor="middle" font-size="10.5">消费队列</text><text x="200" y="174" text-anchor="middle" font-size="9.5">Tesseract OCR</text><text x="200" y="187" text-anchor="middle" font-size="10.5">中文全文</text><text x="200" y="248" text-anchor="middle" font-size="10.5">自动打标签</text><text x="200" y="261" text-anchor="middle" font-size="10.5">工具名 / 0401</text><text x="322" y="174" text-anchor="middle" font-size="10.5">归档 PDF/A</text><text x="322" y="187" text-anchor="middle" font-size="10.5">全文索引</text><text x="322" y="248" text-anchor="middle" font-size="10.5">网页 / 手机</text><text x="322" y="261" text-anchor="middle" font-size="10.5">全文搜索</text><text x="430" y="218" text-anchor="middle" font-size="10.5">洞洞板 NFC</text><text x="430" y="231" text-anchor="middle" font-size="10.5">碰一下跳转</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">监视目录</text><text x="376.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">链接</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0401：每件工具的说明书和发票扫进去，NFC 标签跳到 HA 清单再跳…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">paperless-ngx/paperless-ngx</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>paperless-ngx 是从 paperless 和 paperless-ng 接力过来的社区项目，用 Python 的 Django 写后端、Angular 写前端，44.9k 星，是自托管圈里文档管理的默认答案。它要解决的问题：说明书、发票、保修卡堆在抽屉里永远找不到，扫进硬盘也只是换个地方堆。</p><p>它的工作方式是消费加索引：把扫描件、PDF 或手机拍的照片扔进一个监视目录或通过邮件、网页上传，后台任务队列用 Tesseract 做 OCR 提取全文，再按预设的匹配规则或机器学习自动分配通讯人、文档类型、标签和存储路径，并把归档后的 PDF/A 存到指定目录。前端提供全文搜索、标签筛选、批量编辑和工作流；REST API 完整，手机有第三方 App，HomeAssistant 也有社区集成。</p><p>生态上它有 Docker Compose 一键部署，翻译通过 Crowdin 维护，界面有简体中文，中文自托管教程很多；项目由多位维护者活跃更新，几乎每月发版。</p><p>对 0401 来说它是延伸项目：洞洞板上每件工具的影子旁边都贴了 NFC 标签，碰一下打开 HomeAssistant 里的工具清单，那份清单里加一个链接，直接跳到 paperless-ngx 里这把工具的说明书和发票。买回一件新工具，先把说明书和小票用手机拍一张扔进监视目录，打上工具名和 0401 的标签，再挂上洞洞板。跑在 0802 服务器上，中文说明书记得把 OCR 语言加上 chi_sim。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/zxing/zxing" target="_blank" rel="noopener">zxing/zxing</a>
+          <span class="stars">★ 34.1k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">斑马线：Java 写的一维码和二维码识别与生成库，几乎所有 Android 扫码功能的祖先，支持 QR、Code 128、EAN 等十几种码制</p>
+        <p class="gh-why">→ 抽屉柜 48 格和洞洞板的每一格都要一个能扫的码，zxing 是条码世界的教科书，读懂它就知道该选哪种码、怎么打印才扫得准</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0401-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0401-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0401-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ZXing · 摄像头读码、文本变码的教科书</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0401-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0401-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0401-5-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0401-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0401-5-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0401-5-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0401-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M322.0 204.0 L322.0 222.0"/><path d="M200.0 124.0 L200.0 222.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">手机摄像头</text><text x="78" y="149" text-anchor="middle" font-size="10.5">或过道摄像头</text><text x="78" y="174" text-anchor="middle" font-size="10.5">格位 ID</text><text x="78" y="187" text-anchor="middle" font-size="10.5">0801 孪生库</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ZXing 核心</text><text x="200" y="107" text-anchor="middle" font-size="10.5">亮度矩阵 + 解码</text><text x="200" y="174" text-anchor="middle" font-size="10.5">编码器</text><text x="200" y="187" text-anchor="middle" font-size="10.5">文本变 QR</text><text x="200" y="248" text-anchor="middle" font-size="9.5">zxing-cpp / js</text><text x="200" y="261" text-anchor="middle" font-size="10.5">各语言移植</text><text x="322" y="94" text-anchor="middle" font-size="10.5">识别结果</text><text x="322" y="107" text-anchor="middle" font-size="10.5">跳到这一格</text><text x="322" y="174" text-anchor="middle" font-size="9.5">niimblue 标签</text><text x="322" y="187" text-anchor="middle" font-size="10.5">15mm 带静区</text><text x="322" y="248" text-anchor="middle" font-size="10.5">48 格抽屉柜</text><text x="322" y="261" text-anchor="middle" font-size="10.5">每格贴码</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">扫码图像</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">文本</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">位图</text><text x="322.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">贴上</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0401：每格抽屉打一个 QR，内容是 0801 库的 ID，手机扫一下就知道里面有什么</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">zxing/zxing</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ZXing 念作斑马线，是 2007 年从 Google 内部开源出来的条码识别与生成库，用 Java 写成，34.1k 星，Android 早期的扫码 App 就是它的作品。它要解决的问题是：用普通摄像头，不要专用扫码枪，就能可靠地读出一维码和二维码。</p><p>它的工作方式是图像进、文本出：把摄像头帧或图片转成亮度矩阵，二值化后交给各码制的解码器逐个尝试——QR 码找三个定位图案再纠错解码，Code 128、EAN、UPC 等一维码沿扫描线找黑白条宽比。反过来它也能把任意文本编码成条码的位图。项目已进入维护模式，只接受补丁，但正因为稳定，它成了参考实现：zxing-cpp、zxing-js 都是它的移植，浏览器、Python、树莓派上都能用。</p><p>生态上它的码制文档非常完整，中文资料以博客和教程为主，没有官方中文；核心库很久没大改，移植版仍在活跃更新。</p><p>对 0401 来说它是延伸项目：楼梯口旁那排 48 格透明抽屉柜和顶部的长物件导轨，标签机打的字之外再加一个小二维码，内容是 0801 数字孪生库里这一格的 ID。生成用 zxing 的编码器批量出图，喂给 niimblue 标签机打印；扫描用手机上任何基于 zxing 的 App，或者在 0802 服务器上用 zxing-cpp 的 Python 绑定给过道的摄像头做识别。码制选 QR 而不是一维码，一格 15 毫米宽的标签也能扫；打印时注意留白边，zxing 对静区很敏感。</p></div>
       </article>
     </div></section>
 

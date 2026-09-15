@@ -191,6 +191,7 @@
           <a class="gh-name" href="https://github.com/wled/WLED" target="_blank" rel="noopener">wled/WLED</a>
           <span class="stars">★ 18.7k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESP32 上最流行的灯带控制固件，网页和 App 直接控，250 个预设、定时、烛光等上百种效果，HomeAssistant 自动发现</p>
         <p class="gh-why">→ 帐篷顶那串 USB 供电小暖灯刷它，2200K 暖光、烛光闪烁、呼吸渐暗都能手机上调，三个预设对应亮起 / 阅读 / 夜灯</p>
@@ -219,6 +220,7 @@
           <a class="gh-name" href="https://github.com/FastLED/FastLED" target="_blank" rel="noopener">FastLED/FastLED</a>
           <span class="stars">★ 7.4k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Arduino 上最常用的 LED 灯光动画库，支持 50 多种单片机平台和几乎所有可寻址灯珠，3.10 版</p>
         <p class="gh-why">→ 想自己写一段烛光闪烁、星空或流星效果时用它，比 WLED 更自由；也是 WLED 效果引擎的底层参考</p>
@@ -247,6 +249,7 @@
           <a class="gh-name" href="https://github.com/esprfid/esp-rfid" target="_blank" rel="noopener">esprfid/esp-rfid</a>
           <span class="stars">★ 1.5k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESP8266 / ESP32 上的 RFID 门禁固件，支持 RC522、PN532、Wiegand 读卡器，带网页管理、用户名单、日志和 MQTT，2024 年 2.0 版</p>
         <p class="gh-why">→ 帐篷帘子或宝箱加一把 RFID 小锁，刷卡才开，秘密基地的仪式感就有了；网页里管卡、看日志，MQTT 报给 HA</p>
@@ -269,6 +272,97 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>esp-rfid 是 2017 年由土耳其开发者 Ömer Şiar Baysal 发起的开源门禁固件，1.5k 星，2024 年 11 月发了 2.0 版，是 GitHub 上最完整的 DIY RFID 门禁方案。想给一扇门或一个柜子装“刷卡才开”的电子锁，它只需要一块 ESP8266、一个二十块钱的 RC522 或 PN532 读卡模块和一个电磁锁或舵机。</p><p>固件内置网页管理界面：加卡、删卡、给每张卡设有效期和可开的时段，最多一千个用户；每次刷卡记一条带时间戳的日志，NTP 对时；读卡器支持 RC522、PN532、RDM6300 和 Wiegand 接口；输出是继电器，可设开锁时长。对家庭自动化它有 MQTT：每次刷卡把卡号和结果发出去，也能远程开锁、远程加卡。文档英文，硬件图和 PCB 开源。</p><p>在 0209 里它给藏宝阁加一道“仪式”：帐篷帘子内侧装一块 PN532 读卡板，宝箱铁皮盒里塞一个小舵机锁，随身带一张旧公交卡或一枚 NFC 戒指，刷一下帘边的暗处，宝箱咔哒一声弹开。MQTT 把刷卡事件报给 HA，正好当“进入”信号，触发 WLED 的亮起预设并把木牌翻到“不在”。坑是 RC522 读 13.56MHz 卡距离只有两三厘米，藏在布后面要贴着；帐篷里没插座，读卡板和舵机共用那块 USB 充电宝，舵机动作时留 1A 余量。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/usememos/memos" target="_blank" rel="noopener">usememos/memos</a>
+          <span class="stars">★ 62.5k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">自托管的轻量笔记流：像发微博一样随手记一条，Markdown、标签、图片，Go 单文件部署，数据全在自己手里</p>
+        <p class="gh-why">→ 帐篷里左边那面墙的名言和右边的聊天截图，先在手机上随手记进 memos，攒够一批再挑出来打印上墙</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0209-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0209-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0209-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">memos · 随手记一条，攒够再上墙</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0209-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0209-4-shade)" stroke="none"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0209-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-4-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0209-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机随手记</text><text x="78" y="107" text-anchor="middle" font-size="10.5">一句话 / 截图</text><text x="78" y="174" text-anchor="middle" font-size="10.5">浏览器插件</text><text x="78" y="187" text-anchor="middle" font-size="9.5">Telegram 机器人</text><text x="200" y="94" text-anchor="middle" font-size="10.5">memos</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Go + SQLite</text><text x="200" y="174" text-anchor="middle" font-size="10.5">标签流</text><text x="200" y="187" text-anchor="middle" font-size="9.5">名言 / 电影 / 对话</text><text x="322" y="94" text-anchor="middle" font-size="10.5">每季度筛选</text><text x="322" y="107" text-anchor="middle" font-size="10.5">打字机字体打印</text><text x="322" y="174" text-anchor="middle" font-size="10.5">三面软木板</text><text x="322" y="187" text-anchor="middle" font-size="10.5">牛皮纸</text><text x="430" y="218" text-anchor="middle" font-size="10.5">盘腿坐着的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">API</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">按标签筛</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">钉上去</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0209：三个标签对应三面墙，手机随手收集，换季挑一批打印上墙</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">usememos/memos</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>memos 是 Steven（boojack）在 2021 年发起的开源笔记项目，Go 后端加 React 前端，62.5k 星，作者来自中文社区。它要解决的问题是：想记的东西大多是一两句话或一张截图，传统笔记软件的文件夹和标题让人懒得打开；它把笔记做成一条条时间流，像发微博一样记，像刷微博一样翻。</p><p>它的工作方式极简：一个二进制或一个 Docker 容器，数据存在 SQLite（也可以 MySQL、PostgreSQL）里，网页界面顶部一个输入框，写 Markdown、加标签、贴图片、按回车就是一条 memo；左侧按标签和日期筛选，热力图显示每天记了几条，memo 可以设公开分享链接，也能置顶和归档。它有完整的 API，社区做了 iOS、安卓、浏览器插件和 Telegram 机器人，Obsidian 也能同步。它刻意不做的事也很明确：没有文件夹、没有富文本、没有协作，专注于快速捕捉。</p><p>社区非常大，2025 年后依然每月一个版本，界面自带简体中文，中文用户和教程占了很大比例。</p><p>对 0209 它是延伸的收集箱：帐篷三面墙的素材——读到的一句话、电影里的一句台词、和朋友聊天时截的一段对话——当场用手机记进 memos，标签分名言、电影、对话三类，正好对应三面软木板。每季度换墙时按标签筛一遍，挑出来的打字机字体打在牛皮纸上钉上去，换下来的海报按日期收进宝箱，memos 里那条也顺手归档。注意它是收集不是展示，帐篷里没有插座也没有信号，最终上墙的必须是纸。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/ankitects/anki" target="_blank" rel="noopener">ankitects/anki</a>
+          <span class="stars">★ 30.4k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">间隔重复记忆卡片软件：算法按遗忘曲线安排复习，桌面、手机、网页同步，卡片模板可自定义，插件生态庞大</p>
+        <p class="gh-why">→ 墙上那些名言看多了就视而不见，把它们做成 Anki 卡片每天在帐篷里翻五分钟，才真的记进脑子</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0209-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0209-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0209-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Anki · 快忘的时候把那句话再拿出来</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0209-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0209-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-5-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0209-5-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0209-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0209-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M279.3 148.0 C261.0 148.0 261.0 124.0 242.7 124.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">名言 / 海报 / 对话</text><text x="78" y="107" text-anchor="middle" font-size="10.5">做成笔记</text><text x="78" y="174" text-anchor="middle" font-size="10.5">卡片模板</text><text x="78" y="187" text-anchor="middle" font-size="10.5">上半句 → 下半句</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Anki 核心</text><text x="200" y="107" text-anchor="middle" font-size="10.5">FSRS 算法</text><text x="200" y="174" text-anchor="middle" font-size="10.5">本地 SQLite</text><text x="200" y="187" text-anchor="middle" font-size="10.5">AnkiWeb 同步</text><text x="322" y="94" text-anchor="middle" font-size="10.5">AnkiDroid</text><text x="322" y="107" text-anchor="middle" font-size="10.5">帐篷里离线翻</text><text x="322" y="174" text-anchor="middle" font-size="10.5">四档打分</text><text x="322" y="187" text-anchor="middle" font-size="10.5">算下次间隔</text><text x="430" y="138" text-anchor="middle" font-size="10.5">盘腿坐着的人</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">同步</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">反馈</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0209：三面墙的内容做成一个牌组，每天进帐篷先翻五分钟，离线可用</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">ankitects/anki</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Anki 是 Damien Elmes 在 2006 年开始写的间隔重复软件，Python 加 Rust 重写核心，30.4k 星，是背单词和医学生记知识点的标准工具。它要解决的问题是：人记东西会遗忘，复习太早浪费时间、太晚就忘光；间隔重复算法在你快要忘的那一刻把卡片再拿出来。</p><p>它的工作方式是：卡片由笔记生成，笔记是字段（正面、背面、来源），模板决定怎么渲染成卡片，可以有图片、音频、公式；每天打开它会给你今天该复习的卡片，看完正面回忆背面，按记不住、困难、良好、简单四个按钮打分，算法（现在默认是 FSRS）据此算下一次出现的间隔，从一天到几年。数据是本地 SQLite，通过 AnkiWeb 同步到手机的 AnkiMobile 和安卓的 AnkiDroid，也可以自托管同步服务器。插件用 Python 写，几千个，从自动配图到统计热力图都有。</p><p>生态极大，2025 年后仍是每两个月一个版本，界面自带简体中文，中文用户群和教程非常多。</p><p>对 0209 它是延伸的记忆环节：左边那面墙的名言、正面海报的电影和导演年份、右边对话里那些当时打动你的话，做成一个叫藏宝阁的牌组，正面是上半句或电影海报缩略图，背面是下半句或出处。每天进帐篷盘腿坐下后先用手机上的 AnkiDroid 翻五分钟，离线可用，没有信号也没关系，出去有网了再同步。注意卡片别做多，一面墙十来张就够，Anki 的价值在坚持不在数量。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/koreader/koreader" target="_blank" rel="noopener">koreader/koreader</a>
+          <span class="stars">★ 29.5k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">电子墨水阅读器上的开源阅读软件：Kindle、Kobo、PocketBook 都能装，支持 EPUB、PDF、DjVu，排版和字典功能远超原厂</p>
+        <p class="gh-why">→ 帐篷里没有信号没有插座，最适合的屏幕是一台刷了 KOReader 的旧 Kindle，一串暖灯下看书，电池撑几周</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0209-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0209-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0209-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">KOReader · 旧 Kindle 在帐篷里撑几周</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0209-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M38.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-6-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0209-6-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0209-6-shade)" stroke="none"/><path d="M288.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0209-6-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">Calibre 库</text><text x="78" y="107" text-anchor="middle" font-size="10.5">OPDS 目录</text><text x="78" y="174" text-anchor="middle" font-size="9.5">StarDict 词典</text><text x="78" y="187" text-anchor="middle" font-size="10.5">维基离线</text><text x="200" y="94" text-anchor="middle" font-size="10.5">KOReader</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Lua 框架</text><text x="200" y="174" text-anchor="middle" font-size="9.5">MuPDF / crengine</text><text x="200" y="187" text-anchor="middle" font-size="10.5">重排 / 竖排</text><text x="322" y="94" text-anchor="middle" font-size="9.5">旧 Kindle 墨水屏</text><text x="322" y="107" text-anchor="middle" font-size="10.5">USB 充电</text><text x="322" y="174" text-anchor="middle" font-size="10.5">进度同步</text><text x="322" y="187" text-anchor="middle" font-size="10.5">出帐篷有 Wi-Fi</text><text x="430" y="138" text-anchor="middle" font-size="10.5">盘腿坐着的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">拉书</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">渲染</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0209：旧 Kindle 刷 KOReader，书从 Calibre 经 OPDS 拉，进度出帐篷再同步</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">koreader/koreader</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>KOReader 是 2011 年从 Kindle 越狱社区长出来的开源阅读软件，Lua 写成，29.5k 星，能装在 Kindle、Kobo、PocketBook、reMarkable 和安卓上。它要解决的问题是：电子墨水阅读器的原厂系统功能少、格式挑、排版不能细调，而这些机器的硬件其实很好。</p><p>它的架构是一个 Lua 框架加两个渲染引擎：MuPDF 负责 PDF 和 DjVu，crengine 负责 EPUB、FB2、MOBI 这类可重排格式。打开一本书后可以调字体、行距、边距和竖排，PDF 能重排和裁边；内置 StarDict 词典、维基百科查询和翻译，阅读统计能画出每天读了多久，书籍和进度可以通过 Calibre、OPDS 和自建的同步服务器同步。安装是把文件拷进设备并接管启动，各机型有详细步骤。</p><p>社区活跃，2025 年后仍是每月一个版本，界面自带简体中文，中文用户很多，繁简竖排支持是它的强项之一。</p><p>对 0209 它是延伸的阅读设备：帐篷里全是 USB 供电、没有插座，一台闲鱼买的旧 Kindle 刷上 KOReader，阅读灯照着看书，电池撑三四周。书从 0303 的 Calibre 库通过 OPDS 拉进去，出帐篷有 Wi-Fi 时同步进度；那些名言的出处——整本书——就在这台机器里。铁皮宝箱里的旧手机也可以装安卓版当备用。注意 Kindle 越狱只对老固件容易，买二手前先查型号和固件版本能不能越狱。</p></div>
       </article>
     </div></section>
 

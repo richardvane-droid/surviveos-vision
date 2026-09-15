@@ -194,6 +194,7 @@
           <a class="gh-name" href="https://github.com/sysadminsmedia/homebox" target="_blank" rel="noopener">sysadminsmedia/homebox</a>
           <span class="stars">★ 7.1k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">面向家庭用户的自托管物品库存系统，支持嵌套位置、标签、照片附件和二维码标签打印</p>
         <p class="gh-why">→ 每个收纳箱一个二维码、扫码看箱内照片和清单，它就是照这个需求做的，Go 单文件部署，小主机跑得动</p>
@@ -222,6 +223,7 @@
           <a class="gh-name" href="https://github.com/inventree/InvenTree" target="_blank" rel="noopener">inventree/InvenTree</a>
           <span class="stars">★ 7.3k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">开源库存管理系统，零件、库存、BOM、供应商和采购单一条链路，带标签打印和手机端</p>
         <p class="gh-why">→ PSK 生存盒的零件建档和一键生成采购单，用它的 BOM 和最低库存告警正合适</p>
@@ -250,6 +252,7 @@
           <a class="gh-name" href="https://github.com/snipe/snipe-it" target="_blank" rel="noopener">snipe/snipe-it</a>
           <span class="stars">★ 14.9k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">开源 IT 资产管理系统，借出归还记录、资产标签、到期提醒、审计盘点和 REST API</p>
         <p class="gh-why">→ 拿走扫码变外借、放回扫码变在库，超 7 天未还推送，这套 checkout / checkin 流程它最成熟</p>
@@ -272,6 +275,97 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Snipe-IT 是一套开源的 IT 资产管理系统，Laravel 12 写成，14.9k 星，是这个品类里最知名的自托管方案，本来是给公司管笔记本、显示器和软件许可证用的。它解决的核心问题只有一个：这件东西现在在谁手里、什么时候该还。</p><p>它的模型是资产加用户加借出记录：每件资产有资产标签和二维码，扫码打开就是借出和归还两个按钮，借出时可以设预计归还日，到期系统自动发提醒；还有位置、状态标签（在库、外借、维修、报废）、维护记录、审计模式（批量扫码盘点）和一套完整的 JSON REST API，通知支持邮件、Slack 和 Webhook。项目十年不辍，每周都有提交，331 位贡献者；界面通过 Crowdin 有简体中文，文档只有英文。</p><p>在 0801 里它承担借还这条流程：鱼钩钳这类会被带出屋的工具，在它里面登记为资产，拿走扫码借出、放回扫码归还，超过 7 天未还由它的到期提醒经 Webhook 推到 HomeAssistant 再转手机；每季度的盘点日用它的审计模式，平板批量扫码对账。它比 Homebox 重得多（PHP 加 MySQL），所以只把会外借的几十件工具放进来，日常收纳箱不建档，两个系统靠同一套二维码前缀区分，扫码时由 HA 判断该跳哪一边。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/teableio/teable" target="_blank" rel="noopener">teableio/teable</a>
+          <span class="stars">★ 21.7k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">开源的多维表格 / AI 电子表格，Airtable 的自托管替代：每张表就是一张真正的 PostgreSQL 表，百万行不卡，带看板、画廊、表单等视图</p>
+        <p class="gh-why">→ 真实项目要记品牌型号、估值、电商订单号，字段随时增减；专门的物品库软件改不动表结构，用多维表格当物品总账最灵活</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0801-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="29" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0801-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0801-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Teable · 一张物品总表，五种视图</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0801-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0801-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0801-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0801-4-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0801-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0801-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">订单 CSV</text><text x="78" y="174" text-anchor="middle" font-size="10.5">扫码后填表</text><text x="78" y="187" text-anchor="middle" font-size="10.5">拿走 / 放回</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Teable</text><text x="200" y="107" text-anchor="middle" font-size="9.5">NestJS + React</text><text x="200" y="174" text-anchor="middle" font-size="10.5">PostgreSQL</text><text x="200" y="187" text-anchor="middle" font-size="10.5">物品总表</text><text x="322" y="94" text-anchor="middle" font-size="10.5">画廊 / 看板</text><text x="322" y="107" text-anchor="middle" font-size="10.5">按房间分列</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0802 平板地图</text><text x="322" y="187" text-anchor="middle" font-size="10.5">直接读库</text><text x="430" y="138" text-anchor="middle" font-size="10.5">盘点的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">导入</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">表单视图</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">SQL</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0801：品牌型号、估值、订单号这些常变字段放 Teable，底层 Postgres 与平板地图…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">teableio/teable</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Teable 是一个中国团队做的开源多维表格，21.7k 星，定位是 Airtable 的自托管替代，最近又加上了 AI 生成字段与自动化。它解决的问题很朴素：想要一张能随时加列、能挂附件、能被程序读写的表，又不想把数据放到别人的云上。</p><p>它的底层就是 PostgreSQL：每张表对应一张真实的 Postgres 表，字段直接映射成列，百万行也能正常筛选排序，任何 SQL 工具都能直接连上去查。上层是 NestJS 服务加 React 前端，提供网格、看板、画廊、日历、表单五种视图，字段支持公式、关联、附件、条码，改动经 WebSocket 实时推送。对外有 REST API、Webhook 和自动化，Docker Compose 一条命令部署。</p><p>它由国内开发者主导，界面自带中文，文档站有中文版，2026 年仍在密集发版；比 NocoDB 视图更完整，对自托管足够。</p><p>在 0801 里它是延伸：Homebox 管箱子和位置树没问题，但真实项目 2026-09 收集的需求里还有品牌型号、估值提取、六个电商平台的订单半自动盘点，这些字段一直在变。做法是在 0804 的笔记本上跑 Teable，建一张物品总表，列是名称、品牌型号、估值、房间、箱号、俯视照片、购买平台、订单号、状态；各平台订单导出 CSV 后导入，画廊视图按照片翻，看板按房间分列，表单视图在扫码后填拿走或放回。底层是 Postgres，0802 的平板地图直接读同一个库，不用再同步。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/zxing-js/library" target="_blank" rel="noopener">zxing-js/library</a>
+          <span class="stars">★ 2.9k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">ZXing 条码库的 TypeScript 移植：浏览器里直接调摄像头解二维码与 EAN、Code128 等一维码，不用装 App</p>
+        <p class="gh-why">→ 平板和手机用的是同一套网页界面，扫码就得在浏览器里完成；它是网页扫码里最老牌、格式最全的库，商品条码也能解</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0801-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="30" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0801-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0801-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">zxing-js · 浏览器里抓帧解码</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0801-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0801-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0801-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0801-5-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0801-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0801-5-arrow)" stroke-linecap="round"><path d="M134.0 176.0 L144.0 176.0"/><path d="M134.0 96.0 L144.0 96.0" stroke-dasharray="3 3"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="216" text-anchor="middle" font-size="10.5">平板 / 手机</text><text x="78" y="229" text-anchor="middle" font-size="10.5">摄像头</text><text x="78" y="100" text-anchor="middle" font-size="10.5">包装照片</text><text x="200" y="94" text-anchor="middle" font-size="10.5">zxing-js</text><text x="200" y="107" text-anchor="middle" font-size="10.5">多格式解码器</text><text x="200" y="174" text-anchor="middle" font-size="10.5">抓帧到 canvas</text><text x="200" y="187" text-anchor="middle" font-size="10.5">灰度位图</text><text x="322" y="94" text-anchor="middle" font-size="9.5">Homebox 箱子页</text><text x="322" y="107" text-anchor="middle" font-size="10.5">切在库 / 外借</text><text x="322" y="174" text-anchor="middle" font-size="10.5">EAN 查品牌型号</text><text x="322" y="187" text-anchor="middle" font-size="10.5">自动填表</text><text x="430" y="138" text-anchor="middle" font-size="10.5">盘点的人</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">取帧</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">二维码</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">条码</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0801：扫码页嵌进 HA 网页卡，二维码跳箱子页、EAN 条码自动填品牌型号</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">zxing-js/library</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>zxing-js/library 是 Google 老牌条码库 ZXing 的 TypeScript 移植，2.9k 星，把一维码和二维码的解码算法搬进了浏览器。它解决的问题是：想在网页里扫码，又不想让用户装 App，也不想把摄像头画面传到服务器上识别。</p><p>它的工作方式是纯前端的：用 getUserMedia 打开摄像头，每隔几十毫秒抓一帧到 canvas，转成灰度位图交给解码器，解出来就回调一段文本。BrowserMultiFormatReader 会同时尝试 QR、Data Matrix、EAN-13、Code128 等十几种格式，也可以指定只解某一种来提速；除了视频流，也能对图片文件解码。</p><p>它的状态要说清楚：README 明确写着项目处于维护模式，只接受补丁，作者在找新维护者。但它的 npm 下载量仍然很高，Vue、React 的扫码组件大多包着它；浏览器原生的 BarcodeDetector 是备选，只是 iOS Safari 支持一直不稳。中文资料主要是博客里的接入教程。</p><p>在 0801 里它是延伸：方案里的扫码目前依赖平板自带相机，扫完再跳网页。用它做一个扫码页嵌进 HA 仪表盘的网页卡，平板和手机打开同一个地址就能扫：扫箱侧二维码跳到 Homebox 的箱子页并切换在库或外借，扫商品包装上的 EAN 条码则查公开商品库自动填品牌型号，盘点日开连续扫码模式对账。注意浏览器只在 HTTPS 下开放摄像头，小主机上得配一个内网证书。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/pmndrs/react-three-fiber" target="_blank" rel="noopener">pmndrs/react-three-fiber</a>
+          <span class="stars">★ 31.9k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">three.js 的 React 渲染器：把 3D 场景写成组件，状态一变画面自动更新；配 drei 工具库几十行就能转着看一个 glTF 模型</p>
+        <p class="gh-why">→ 平板上的等距地图和 PSK 生存盒的零件清单都可以做成能转的 3D 视图，用 React 写比裸写 three.js 省一半代码</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0801-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="31" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0801-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0801-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">react-three-fiber · 状态驱动的 3D 箱子地图</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0801-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0801-6-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0801-6-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0801-6-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0801-6-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0801-6-arrow)" stroke-linecap="round"><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="216" text-anchor="middle" font-size="9.5">HA WebSocket</text><text x="78" y="229" text-anchor="middle" font-size="10.5">在库 / 外借状态</text><text x="78" y="100" text-anchor="middle" font-size="10.5">盒子 glTF</text><text x="200" y="94" text-anchor="middle" font-size="9.5">react-three-fiber</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Canvas + 组件</text><text x="200" y="174" text-anchor="middle" font-size="10.5">drei</text><text x="200" y="187" text-anchor="middle" font-size="10.5">轨道控制 / 标注</text><text x="322" y="94" text-anchor="middle" font-size="10.5">平板 3D 地图</text><text x="322" y="107" text-anchor="middle" font-size="10.5">点箱子看照片</text><text x="322" y="174" text-anchor="middle" font-size="10.5">转着看盒子</text><text x="322" y="187" text-anchor="middle" font-size="10.5">零件对清单</text><text x="430" y="138" text-anchor="middle" font-size="10.5">找东西的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">订阅状态</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">useLoader</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">WebGL</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0801：箱子做成 Box 组件按 HA 状态变色，PSK 盒 glTF 转着看零件…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">pmndrs/react-three-fiber</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>react-three-fiber 是 pmndrs 社区维护的 three.js 的 React 渲染器，31.9k 星。它解决的问题是：three.js 是命令式的，建网格、加场景、每帧更新都要手写；它把每个 three.js 对象变成一个 JSX 组件，状态一变画面跟着变。</p><p>它是一个自定义 React 渲染器：Canvas 组件创建 WebGL 上下文和渲染循环，里面的 mesh、boxGeometry、meshStandardMaterial 这些标签被翻译成对应的 three.js 对象，属性直接映射；useFrame 让组件参与每一帧更新，useLoader 负责加载 glTF 模型和贴图。配套的 drei 库提供轨道控制器、环境光、标注等现成组件，几十行代码就能让模型转起来。</p><p>它是 React 生态里做 3D 的事实标准，2026 年 v9 版跟上了 React 19；没有官方中文文档，但掘金和 B 站教程不少。</p><p>在 0801 里它是延伸：等距地图先用 SVG 做，够用；稳定之后可以做一个 3D 版本，每只透明收纳箱是一个 Box 组件，颜色由 HA 里的实体状态驱动，在库灰色、外借橙色，点一下箱子相机飞过去并弹出俯视照片；PSK 生存盒则把 glTF 模型加载进来，边转边看每个零件对应清单里的哪一行，缺件半透明。数据从 HA 的 WebSocket 订阅，页面仍嵌在 HA 仪表盘里。</p></div>
       </article>
     </div></section>
 

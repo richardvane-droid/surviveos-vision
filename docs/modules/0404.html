@@ -206,6 +206,7 @@
           <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
           <span class="stars">★ 11.7k</span>
           <span class="zh zh-no">无中文（社区教程多）</span>
+          
         </header>
         <p class="gh-desc">用 YAML 配置文件给 ESP32 生成固件的开源系统，电流互感器、舵机、继电器、颗粒物传感器组件全是现成的</p>
         <p class="gh-why">→ 哪台机器开机就开哪路阀门、粉尘超标调新风，都是一块 ESP32 上的 ct_clamp + servo + pmsx003 三个组件；本模块唯一的通用平台</p>
@@ -234,6 +235,7 @@
           <a class="gh-name" href="https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension" target="_blank" rel="noopener">lairdubois/lairdubois-opencutlist-sketchup-extension</a>
           <span class="stars">★ 583</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">SketchUp 木工插件，从 3D 模型自动生成零件清单、下料图、标签和成本估算</p>
         <p class="gh-why">→ 画完木盒模型直接出切割清单和板材排料图，切之前就知道要多少料和怎么切</p>
@@ -262,6 +264,7 @@
           <a class="gh-name" href="https://github.com/FoxDotBuild/DustCollection" target="_blank" rel="noopener">FoxDotBuild/DustCollection</a>
           <span class="stars">★ 5</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">木工房自动集尘方案：ESP32 控制集尘器继电器，电流传感器检测机器开机并联动舵机阀门</p>
         <p class="gh-why">→ 只有 5 星，但 GitHub 上没有更知名的“机器开机 → 开对应阀门 → 启动集尘器”完整方案，电流检测加舵机球阀的思路和代码可以直接参考</p>
@@ -284,6 +287,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>DustCollection 是 FoxDotBuild 发布的木工房自动集尘小项目，只有 5 星，但它把这件事需要的三个部件——检测机器开机、打开对应阀门、启动集尘器——用最少的零件和几百行 Arduino 代码完整做了一遍，GitHub 上没有更知名的专门项目，所以它是最直接的现成参考。</p><p>它的架构分三块：一块 ESP32 做继电器主板，开一个 Wi‑Fi 热点，接收 Telnet 命令控制集尘器的接触器；若干块 ESP8266 做传感器端，每块贴在一台机器的电源线上，用霍尔电流传感器检测机器是否通电，一旦通电就向主板发开机命令并驱动一只舵机拉开自己这路的阀门，机器关闭后延时几秒再发关机命令，让管道里的木屑先吸干净；还有一块 ESP8266 做手持遥控，两个按钮手动开关集尘器。代码是 Arduino 风格，接线图和舵机阀门支架都在仓库里，没有中文资料。</p><p>在 0404 里，思路照搬，实现换成 ESPHome：主板和传感器端合并成一块 ESP32 放在集尘器旁的配电箱里，台锯、带锯、砂光机各走一只 SCT-013 互感器接 ct_clamp，舵机阀门用它的支架思路改成金属阀体，Telnet 换成 HA 原生 API，手持遥控换成 HA 面板和一只 Zigbee 按钮。坑是它的传感器端各自独立供电，用 ESPHome 合并后所有阀门舵机的线都要拉回一处，管路布置时先把线槽留出来。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Jack000/SVGnest" target="_blank" rel="noopener">Jack000/SVGnest</a>
+          <span class="stars">★ 2.6k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">浏览器里跑的开源矢量排料工具：把一堆 SVG 零件用遗传算法塞进一张板子，减少边角料，激光和 CNC 都能用</p>
+        <p class="gh-why">→ 一张 18mm 桦木多层板要切出十几块盒子侧板和隔板，怎么摆最省？SVGnest 是排料算法的经典开源实现，打开网页就能试</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0404-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0404-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0404-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">SVGnest · 遗传算法把零件塞进板子</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0404-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0404-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0404-4-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0404-4-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0404-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0404-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 204.0 L200.0 222.0" stroke-dasharray="3 3"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M322.0 204.0 L322.0 222.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">零件轮廓 SVG</text><text x="78" y="107" text-anchor="middle" font-size="10.5">0204 设计台导出</text><text x="78" y="174" text-anchor="middle" font-size="10.5">板材矩形</text><text x="78" y="187" text-anchor="middle" font-size="10.5">1220×2440</text><text x="200" y="94" text-anchor="middle" font-size="10.5">无碰撞多边形</text><text x="200" y="107" text-anchor="middle" font-size="10.5">可行位置</text><text x="200" y="174" text-anchor="middle" font-size="10.5">SVGnest</text><text x="200" y="187" text-anchor="middle" font-size="10.5">遗传算法迭代</text><text x="200" y="248" text-anchor="middle" font-size="10.5">Web Worker</text><text x="200" y="261" text-anchor="middle" font-size="10.5">浏览器并行</text><text x="322" y="174" text-anchor="middle" font-size="10.5">排料结果 SVG</text><text x="322" y="187" text-anchor="middle" font-size="10.5">利用率</text><text x="322" y="248" text-anchor="middle" font-size="10.5">台锯旁打印稿</text><text x="322" y="261" text-anchor="middle" font-size="10.5">或 0307 铣</text><text x="430" y="218" text-anchor="middle" font-size="10.5">选料的人</text><text x="430" y="231" text-anchor="middle" font-size="10.5">看利用率</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">收敛</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0404：木盒异形件导成 SVG 排到整张多层板上，打印贴台锯旁或送五轴机铣</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Jack000/SVGnest</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>SVGnest 是加拿大开发者 Jack Qiao 写的开源排料工具，纯 JavaScript 跑在浏览器里，2.6k 星，是开源二维排料领域被引用最多的项目。它要解决的问题是：把一堆不规则零件塞进有限的板材里，让浪费最少——这在工业上叫 nesting，商业软件动辄几万块，而它免费且开源了算法。</p><p>它的工作方式是几何加进化：输入一张 SVG，第一个闭合路径当作板材，其余路径当零件；它先算每对零件之间的无碰撞多边形，得到一个零件贴着另一个滑动时所有可行的位置，再用遗传算法反复尝试摆放顺序和旋转角度，每一代选出利用率最高的方案继续变异，几分钟就能收敛到一个不错的布局，支持零件内部的孔洞里再放小零件。全程在浏览器里用 Web Worker 并行计算，不上传任何文件。输出还是 SVG，直接送激光机或转成 CNC 的刀路。</p><p>生态上它有在线版 svgnest.com，作者后来又做了桌面版 Deepnest；项目代码多年没大改，但因为是算法参考实现，各语言的移植和改进版层出不穷，界面只有英文，中文资料以论坛帖子为主。</p><p>对 0404 来说它是延伸项目：木工间做 PSK 木盒时，侧板、底板、隔板全是矩形和带圆角的异形件，OpenCutList 管矩形排料很好，异形件就交给它。从 0204 设计台把零件轮廓导成一张 SVG，板材画成 1220×2440 的矩形，在浏览器里跑几分钟，把结果打印出来贴在台锯旁，或者导给 0307 五轴机直接铣。注意刀具直径要事先在零件轮廓上加偏移，它本身不管刀补。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Jack000/Deepnest" target="_blank" rel="noopener">Jack000/Deepnest</a>
+          <span class="stars">★ 1.1k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">SVGnest 作者做的桌面版排料软件：Electron 打包，支持 DXF 导入、多张板材、零件数量和旋转步进设置，用 C++ 加速</p>
+        <p class="gh-why">→ 真要给一整批木盒排料，网页版 SVGnest 太慢也不认 DXF；Deepnest 是它的桌面进化版，设置零件数量和板材数量后一键排好</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0404-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0404-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0404-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Deepnest · 批量木盒零件排到整张板</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0404-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0404-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0404-5-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0404-5-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0404-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0404-5-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M246.2 222.0 C261.0 222.0 261.0 204.0 275.8 204.0"/><path d="M322.0 204.0 L322.0 222.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">零件 DXF</text><text x="78" y="107" text-anchor="middle" font-size="10.5">每种填数量</text><text x="78" y="174" text-anchor="middle" font-size="10.5">板材张数</text><text x="78" y="187" text-anchor="middle" font-size="9.5">1220×2440×2</text><text x="200" y="94" text-anchor="middle" font-size="10.5">间距 / 旋转步进</text><text x="200" y="107" text-anchor="middle" font-size="10.5">木纹只 0 和 90</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Deepnest</text><text x="200" y="187" text-anchor="middle" font-size="10.5">C++ 加速排料</text><text x="200" y="248" text-anchor="middle" font-size="10.5">遗传算法</text><text x="200" y="261" text-anchor="middle" font-size="10.5">实时显示利用率</text><text x="322" y="174" text-anchor="middle" font-size="9.5">结果 DXF / SVG</text><text x="322" y="187" text-anchor="middle" font-size="10.5">两张板够不够</text><text x="322" y="248" text-anchor="middle" font-size="10.5">0307 五轴机</text><text x="322" y="261" text-anchor="middle" font-size="10.5">或台锯打印稿</text><text x="430" y="218" text-anchor="middle" font-size="10.5">做十只盒子</text><text x="430" y="231" text-anchor="middle" font-size="10.5">的人</text><text x="200.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">迭代</text><text x="261.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">随时停</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">看板数</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0404：十只盒子的板件 DXF 一次排好，锯缝 3mm、木纹同向，结果给五轴机或台锯</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Jack000/Deepnest</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Deepnest 是 SVGnest 作者 Jack Qiao 做的桌面版排料软件，用 Electron 打包，核心几何计算改用 C++ 的 Minkowski 和加速，1.1k 星，Windows、macOS、Linux 都有安装包。它要解决的问题：网页版 SVGnest 不认 DXF、不能设零件数量、大批量跑得慢，Deepnest 把它做成能日常用的工具。</p><p>它的工作方式和 SVGnest 一脉相承：导入 SVG 或 DXF，左边列出识别到的零件，给每个零件填数量，指定哪一个是板材并填板材张数；设置零件间距、旋转步进（只允许 0 和 90 度，木纹就不会乱）；点开始后遗传算法在后台反复迭代，界面实时显示当前最好方案和利用率，觉得够好了随时停，导出成 SVG 或 DXF。C++ 算无碰撞多边形，速度比网页版快一个数量级。</p><p>生态上原仓库更新停滞多年，社区分叉 deepnest-next 在继续修 bug；界面只有英文，中文资料以创客论坛和视频为主。</p><p>对 0404 来说它是延伸项目：做一批十只 PSK 木盒，每只六块板，把 0204 设计台导出的 DXF 拖进来，每种板填数量 10，板材填 1220×2440 填 2 张，旋转只允许 0 和 90 度保证木纹一致，间距填锯缝 3 毫米，跑十分钟就知道两张板够不够。结果导成 DXF 给 0307 五轴机，或打印贴台锯旁按图切。它和 OpenCutList 分工：矩形直切用 OpenCutList，异形件用 Deepnest。</p></div>
       </article>
     </div></section>
 

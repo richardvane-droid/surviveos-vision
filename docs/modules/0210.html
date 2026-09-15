@@ -188,6 +188,7 @@
           <a class="gh-name" href="https://github.com/grocy/grocy" target="_blank" rel="noopener">grocy/grocy</a>
           <span class="stars">★ 9.5k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">自托管的家庭食品和物资管理系统，管库存、保质期、最小库存、采购清单和条码，带 REST API</p>
         <p class="gh-why">→ 罐头、米砖、水桶都建成 SKU，到期前 30 天自动提醒该吃掉了，先进先出它天生支持，库存天数也从它算</p>
@@ -216,6 +217,7 @@
           <a class="gh-name" href="https://github.com/TomBursch/kitchenowl" target="_blank" rel="noopener">TomBursch/kitchenowl</a>
           <span class="stars">★ 3.7k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">自托管的采购清单和食谱管理应用，Flask 后端 + Flutter 客户端，有安卓 / iOS / 网页端，多人实时同步，可部分离线</p>
         <p class="gh-why">→ 轮换日缺货清单直接生成采购单，去镇上补货时手机上勾一下，有原生 App 比 grocy 的网页顺手得多</p>
@@ -244,6 +246,7 @@
           <a class="gh-name" href="https://github.com/Forceu/barcodebuddy" target="_blank" rel="noopener">Forceu/barcodebuddy</a>
           <span class="stars">★ 604</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">grocy 的条码扫描配套工具，扫一下就入库、消耗或开封，不认识的条码自动去 OpenFoodFacts 查名字</p>
         <p class="gh-why">→ 补货和取罐头时扫条码就完成出入库，不用每次打开网页手动改数量；有 HA 插件版，直接装在同一台小主机上</p>
@@ -266,6 +269,97 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Barcode Buddy 是德国开发者 Marc Ole Bulling 写的 grocy 配套工具，604 星，一句话说明是“grocy 的条码系统”。grocy 自带的条码流程太啰嗦，每次都要打开网页、选产品、选操作、填数量；而在储藏室里你只想“扫一下，东西就进账了”。</p><p>它是一个 PHP 小服务，需要 grocy 的 API 密钥，可以 Docker 部署，也有 Home Assistant 插件版。工作方式是先设一个模式——入库、消耗、开封、加进采购清单——然后不停扫：扫到 grocy 里已有的条码就直接执行；扫到没见过的条码，它去 OpenFoodFacts 或 UPCitemdb 查商品名，列出来让你在网页里对到某个 grocy 产品，下次就认识了。模式本身也是条码，打印一张“模式卡”贴在架子上，扫“消耗”再扫罐头就完成一次出库，全程不碰手机。支持 USB 和蓝牙扫码枪、安卓 App 相机。文档英文。</p><p>在 0210 里它把货架变成“扫码即记账”：储藏室门内挂一支蓝牙扫码枪，架子侧面贴四张模式卡（入库 / 消耗 / 开封 / 缺货）；补货回来先扫“入库”再逐个扫罐头，做饭取罐头时扫“消耗”再扫罐身，grocy 自动扣最早到期那批。国产罐头有些条码查不到，第一次要手动对产品；没条码的水桶自己打印一张 grocy 条码贴上。坑是模式会保持到下次切换，扫完记得扫回“消耗”。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/kiwix/kiwix-desktop" target="_blank" rel="noopener">kiwix/kiwix-desktop</a>
+          <span class="stars">★ 1.4k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Kiwix 的桌面端：离线阅读 ZIM 格式的整站压缩包，整部中文维基百科、维基教科书、急救和农业资料都能装进一块硬盘</p>
+        <p class="gh-why">→ 防灾食品架旁边真正该备的还有一份离线知识：断网时整部维基百科和急救手册就在地堡的电脑里，Kiwix 就是干这个的</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0210-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0210-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0210-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Kiwix · 整部维基百科装进地堡硬盘</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0210-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0210-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0210-4-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0210-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0210-4-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M134.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">Kiwix 内容库</text><text x="78" y="107" text-anchor="middle" font-size="10.5">夜里下载</text><text x="78" y="174" text-anchor="middle" font-size="10.5">ZIM 文件</text><text x="78" y="187" text-anchor="middle" font-size="9.5">维基 / 急救 / 农业</text><text x="200" y="94" text-anchor="middle" font-size="9.5">kiwix-desktop</text><text x="200" y="107" text-anchor="middle" font-size="9.5">或 kiwix-serve</text><text x="200" y="174" text-anchor="middle" font-size="10.5">全文索引</text><text x="200" y="187" text-anchor="middle" font-size="10.5">离线搜索</text><text x="322" y="94" text-anchor="middle" font-size="10.5">0204 工作台</text><text x="322" y="107" text-anchor="middle" font-size="10.5">浏览器查</text><text x="322" y="174" text-anchor="middle" font-size="10.5">应急包旧手机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">精简 ZIM</text><text x="430" y="138" text-anchor="middle" font-size="10.5">断网的人</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">半年更新一次</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">局域网</text><text x="200.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">拷一份</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0210：中文维基 + 维基医学 ZIM 跑在服务器上，随水桶轮换一起更新</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">kiwix/kiwix-desktop</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Kiwix 是瑞士非营利组织 Kiwix 从 2007 年维护的离线阅读项目，kiwix-desktop 是它的 Qt 桌面端，1.4k 星，兄弟仓库还有 kiwix-serve 命令行服务器和手机客户端。它要解决的问题是：维基百科这种人类知识总集依赖网络，没有网的地方（船上、山区、灾害中）就看不到；它把整个网站压成一个文件带走。</p><p>它的工作方式是：内容打包成 ZIM 格式，这是专门为离线整站设计的高压缩只读格式，全文索引也在里面，整部中文维基百科带图片大约 20 多 GB；kiwix-desktop 打开 ZIM 后像浏览器一样浏览和搜索，内置目录能直接从 Kiwix 内容库下载新的 ZIM，官方库里有各语言维基百科、维基医学、Stack Exchange 和一批急救与农业资料。kiwix-serve 则把 ZIM 用 HTTP 服务出来，局域网里所有设备用浏览器访问。</p><p>社区稳定，2025 年后仍有版本，界面翻译含简体中文，中文教程主要在离线知识和应急圈。</p><p>对 0210 它是延伸中的那格知识储备：钢架最上层是米砖，地堡电脑硬盘里是一份中文维基百科、维基医学、野外急救和食品保存的 ZIM，用 kiwix-serve 跑在 0802 的服务器上，断网时 0204 工作台和手机都能查。每半年轮换水桶的同时也更新一次 ZIM，写在小白板的轮换日旁边。PSK 应急包里的旧手机装 Kiwix 安卓版和一份精简 ZIM，随时拎走。注意完整维基百科下载很慢，挑一个夜里挂着。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/meshtastic/firmware" target="_blank" rel="noopener">meshtastic/firmware</a>
+          <span class="stars">★ 8.3k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">LoRa 无网通讯的开源固件：几十块钱的 ESP32 或 nRF52 LoRa 板组成自组网，手机蓝牙连上就能几公里外发短信和位置</p>
+        <p class="gh-why">→ 防灾备的不只是吃的，还有断网断电时和山谷另一头说上话的手段；Meshtastic 是最便宜也最成熟的离网通讯</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0210-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0210-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0210-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Meshtastic · 断网时的几公里短信</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0210-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0210-5-shade)" stroke="none"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0210-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0210-5-shade)" stroke="none"/><path d="M152.0 162.0 h96 v36 h-96 Z M152.0 162.0 l8 -8 h96 l-8 8 M248.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M249.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0210-5-shade)" stroke="none"/><path d="M288.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0210-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0210-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机 App</text><text x="78" y="107" text-anchor="middle" font-size="10.5">蓝牙连节点</text><text x="78" y="174" text-anchor="middle" font-size="10.5">应急包节点</text><text x="78" y="187" text-anchor="middle" font-size="10.5">18650 供电</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Meshtastic 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">LoRa 自组网</text><text x="200" y="174" text-anchor="middle" font-size="10.5">屋顶中继</text><text x="200" y="187" text-anchor="middle" font-size="10.5">太阳能板</text><text x="322" y="94" text-anchor="middle" font-size="10.5">山谷另一头</text><text x="322" y="107" text-anchor="middle" font-size="10.5">其他节点</text><text x="322" y="174" text-anchor="middle" font-size="10.5">MQTT 网关</text><text x="322" y="187" text-anchor="middle" font-size="10.5">→ HA</text><text x="430" y="138" text-anchor="middle" font-size="10.5">山谷另一头的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">蓝牙</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">一跳</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">几公里</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">有网时</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0210：一个节点进应急包，一个上屋顶当中继，天线从地堡引到屋顶</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">meshtastic/firmware</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Meshtastic 是 Kevin Hester 在 2020 年发起的开源离网通讯项目，固件仓库 8.3k 星，跑在 Heltec、LilyGO T-Beam、RAK 等几十种 LoRa 开发板上。它要解决的问题是：没有手机信号和 Wi-Fi 的地方（山里、海上、灾后），人和人之间怎么发一条短信和自己的位置。</p><p>它的工作方式是：每块板子是一个节点，用 LoRa 无线电在免许可频段以极低功率发送很小的数据包，节点之间自动转发形成网状网络，一条消息可以经几跳传到几公里甚至几十公里外；手机通过蓝牙连上自己的节点，App 里像发微信一样打字，消息端到端 AES 加密，带 GPS 的节点定期广播位置，地图上能看到所有节点在哪。一块 18650 电池能撑几天，加太阳能板就是永久中继站。它还有 MQTT 网关能把消息桥到互联网，有 Python API 可以写机器人。</p><p>社区非常活跃，2025 年后固件月更，README 英文，中文社区教程和国产开发板的资料很多。</p><p>对 0210 它是延伸的通讯储备：储藏室钢架上除了 72 小时口粮，再放两个 Meshtastic 节点，一个装进 PSK 应急包，一个固定在木屋屋顶接一块太阳能板做中继；地堡里的节点通过 MQTT 网关接进 HomeAssistant，平时当玩具，断网时它就是唯一的电话。和山谷里其他玩这个的人约好频道，就是一张本地应急网。注意地堡的混凝土墙对 LoRa 也是墙，地堡里的节点要把天线引到屋顶，不然只能和木屋里通。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/openfoodfacts/openfoodfacts-server" target="_blank" rel="noopener">openfoodfacts/openfoodfacts-server</a>
+          <span class="stars">★ 1.1k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Open Food Facts 的服务端：全球最大的开放食品数据库，扫条码就有配料、营养、Nutri-Score，API 免费可用</p>
+        <p class="gh-why">→ 罐头和米砖的 NFC 标签要录名字、保质期和营养信息，扫一下条码从 Open Food Facts 拉回来比手打快得多</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0210-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="22" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0210-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0210-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Open Food Facts · 扫条码拉回配料和热量</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0210-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0210-6-shade)" stroke="none"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0210-6-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0210-6-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0210-6-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0210-6-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0210-6-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机扫罐头条码</text><text x="78" y="107" text-anchor="middle" font-size="9.5">Barcode Buddy</text><text x="78" y="174" text-anchor="middle" font-size="10.5">查不到就拍照</text><text x="78" y="187" text-anchor="middle" font-size="10.5">贡献回去</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Open Food Facts</text><text x="200" y="107" text-anchor="middle" font-size="10.5">API 服务端</text><text x="200" y="174" text-anchor="middle" font-size="10.5">四百万种食品</text><text x="200" y="187" text-anchor="middle" font-size="10.5">配料 / 营养</text><text x="322" y="94" text-anchor="middle" font-size="10.5">Grocy 库存</text><text x="322" y="107" text-anchor="middle" font-size="10.5">名称 / 热量</text><text x="322" y="174" text-anchor="middle" font-size="10.5">库存天数</text><text x="322" y="187" text-anchor="middle" font-size="10.5">小白板</text><text x="430" y="218" text-anchor="middle" font-size="10.5">拿午餐肉的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">条码查询</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">OCR</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">JSON</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">按热量算天数</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0210：罐头到货扫码自动补全进 Grocy，热量换算库存天数</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">openfoodfacts/openfoodfacts-server</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Open Food Facts 是法国非营利组织在 2012 年发起的开放食品数据库，服务端仓库 1.1k 星，Perl 写成，数据库里有全球四百多万种食品。它要解决的问题是：食品包装上的配料和营养信息属于所有人，但没有一个开放的、任何人都能查和贡献的数据库，它就像食品界的维基百科。</p><p>它的工作方式是众包：用户用手机 App 扫条码，拍下正面、配料表和营养表，服务端用 OCR 识别配料，算出 Nutri-Score 营养等级和 NOVA 加工程度，数据以开放许可证发布；任何人都能通过 REST API 用条码查一个产品，返回名称、品牌、分量、配料、过敏原、营养成分和图片，也能整库下载。它的生态包括安卓和 iOS App、Python 和 JavaScript SDK，Grocy、KitchenOwl、Barcode Buddy 这些自托管库存工具都用它的 API 补全商品信息。</p><p>社区是全球性的，2025 年后服务端每周发布，网站和 App 有简体中文，中国市场的商品覆盖一般，进口食品和大品牌罐头基本都有。</p><p>对 0210 它是延伸的数据源：0210 已有的 Grocy 和 Barcode Buddy 扫条码时就是从它拉商品名和营养信息，钢架上罐头一到货扫一下，名称、分量、热量自动进库存，再由 0801 数字孪生按每人每天两千大卡算出库存天数写到小白板；国内小厂的罐头查不到就当场拍照贡献上去，下次就有了。注意它是公共数据库，自家的保质期和存放层这些信息不在它那里，存进 Grocy。</p></div>
       </article>
     </div></section>
 

@@ -228,6 +228,7 @@
           <a class="gh-name" href="https://github.com/kizniche/Mycodo" target="_blank" rel="noopener">kizniche/Mycodo</a>
           <span class="stars">★ 3.3k</span>
           <span class="zh ">有中文文档站</span>
+          
         </header>
         <p class="gh-desc">树莓派上的环境监控与调节系统，接传感器控水泵灯光风扇，带 PID、条件逻辑和网页仪表盘</p>
         <p class="gh-why">→ 种植架的湿度判断、滴灌泵、遮阳网电机全接它一台树莓派，网页上看每层数据曲线，文档有中文</p>
@@ -256,6 +257,7 @@
           <a class="gh-name" href="https://github.com/OpenSprinkler/OpenSprinkler-Firmware" target="_blank" rel="noopener">OpenSprinkler/OpenSprinkler-Firmware</a>
           <span class="stars">★ 543</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">OpenSprinkler 开源灌溉控制器的统一固件，跑在 ESP8266 或树莓派上，带网页、多程序排程、传感器输入和 MQTT</p>
         <p class="gh-why">→ 四层架子每层一路电磁阀，它的多站点排程、传感器暂停和手动补浇是十年打磨过的成熟灌溉逻辑，YAML 都不用写</p>
@@ -284,6 +286,7 @@
           <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
           <span class="stars">★ 11.7k</span>
           <span class="zh zh-no">无中文（社区教程多）</span>
+          
         </header>
         <p class="gh-desc">用 YAML 配置 ESP32 / ESP8266 固件的系统，传感器、显示屏、灌溉控制器都是现成组件，原生接 HomeAssistant</p>
         <p class="gh-why">→ 架子侧面那块 2.9 寸墨水屏和每层的电容湿度探头都靠它，还有内置的 sprinkler 组件能直接做四路滴灌</p>
@@ -306,6 +309,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>ESPHome 是 Nabu Casa 维护的 ESP32 固件生成系统，和 HomeAssistant 同一个团队，GitHub 上 11.7k 星。想让 ESP32 读传感器、控继电器、驱动屏幕，以前得写 Arduino 代码，而它只要一份 YAML 写清接了什么、往哪报，编译、烧录、OTA 全自动。</p><p>它的工作方式是 YAML 到 C++ 的编译器：你在 YAML 里声明传感器型号、引脚、采样周期，它生成固件；固件在设备上本地跑，通过原生 API 把实体推给 HomeAssistant，断网时本地逻辑照常工作。组件库有几百个，还有一个专门的 sprinkler 组件，内置多路阀门轮流浇水、主阀联动、暂停恢复的完整逻辑。</p><p>没有官方中文，但中文社区极大，B 站教程数不清。</p><p>在 0504 里它做两件事：一是每层一颗电容土壤湿度探头接 ESP32 的 ADC，用滤波组件取五分钟中位数，再用 sprinkler 组件驱动四路电磁阀，湿度低于 40% 才让对应阀门加入下一轮，本地判断不看时间表；二是架子侧面那块 2.9 寸墨水屏，用 display 组件画四行，每行一层的湿度和上次浇水时间，每十分钟刷一次。要注意 ESP32 的 ADC 非线性，探头要先在干土和水里标定两个点；墨水屏零度以下刷新会残影，冬天把间隔拉长。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/farmOS/farmOS" target="_blank" rel="noopener">farmOS/farmOS</a>
+          <span class="stars">★ 1.3k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">基于 Drupal 的开源农场记录系统：地块、作物、播种收获、投入品、传感器数据全按日志记，有手机 App 和 API</p>
+        <p class="gh-why">→ 四层种植架 24 个箱子换茬轮作，播种日期、收成、上液肥的记录靠脑子记不住，farmOS 是专门干这个的</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0504-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="23" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0504-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0504-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">farmOS · 每个种植箱一条时间线</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0504-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0504-4-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0504-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0504-4-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0504-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0504-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机 App</text><text x="78" y="107" text-anchor="middle" font-size="10.5">记播种收获</text><text x="78" y="216" text-anchor="middle" font-size="10.5">四层湿度</text><text x="78" y="229" text-anchor="middle" font-size="10.5">ESPHome</text><text x="200" y="94" text-anchor="middle" font-size="10.5">farmOS</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Drupal</text><text x="200" y="174" text-anchor="middle" font-size="10.5">资产 + 日志</text><text x="200" y="187" text-anchor="middle" font-size="10.5">24 个箱子</text><text x="322" y="94" text-anchor="middle" font-size="10.5">地块时间线</text><text x="322" y="107" text-anchor="middle" font-size="10.5">收成统计</text><text x="322" y="174" text-anchor="middle" font-size="10.5">JSON:API</text><text x="322" y="187" text-anchor="middle" font-size="10.5">给 HA 读</text><text x="430" y="138" text-anchor="middle" font-size="10.5">排下一季的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">录一条</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">POST 读数</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0504：24 箱各建子地块，播种收获液肥记日志，湿度每小时 POST，一年后排层有依据</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">farmOS/farmOS</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>farmOS 是美国开发者 Michael Stenta 在 2014 年发起的开源农场管理系统，建在 Drupal 上，1.3k 星，被小型有机农场、社区农园和大学农业项目广泛使用。它要解决的问题是农事记录：哪块地什么时候种了什么、施了什么、收了多少，这些信息散在笔记本和脑子里，到了下一季就找不到。</p><p>它的数据模型很干净：资产是地块、植株、设备、动物；日志是发生在资产上的事，播种、移栽、收获、观察、投入品各是一种类型，每条带时间、地点、数量和照片。数据流是手机 App 或网页录入，进 Drupal 数据库，前端给出每块地的时间线、地图和库存。它还有传感器模块，任何设备 POST 一个 JSON 就能把读数存进来，配合 JSON:API 可以被别的程序读走。</p><p>生态上它有官方 Docker 镜像、可离线记录的 Field Kit 手机 App，模块市场里有灌溉、土壤检测等扩展。社区在论坛和 Matrix 上活跃，文档全英文，界面靠 Drupal 多语言机制可以自行汉化。</p><p>在 0504 里它是延伸：把四层架子建成一个地块，24 个种植箱各是一个子地块，每次播种、移栽、摘菜、周日补液肥都在手机上点一条日志；ESPHome 的四层湿度通过 HA 的 REST 命令每小时 POST 一次到它的传感器接口。一年下来能看出哪一层的番茄最早挂果、空心菜几茬之后该换土，第二年排层就有依据。对一个架子来说它偏重，但当草地和盆栽也要记的时候就值了。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/FarmBot/Farmbot-Web-App" target="_blank" rel="noopener">FarmBot/Farmbot-Web-App</a>
+          <span class="stars">★ 969</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">开源龙门架种菜机器人 FarmBot 的网页控制端和 REST API：拖拽排苗、序列编程、按株浇水除草，全部开源硬件</p>
+        <p class="gh-why">→ 种植架的终极形态就是 FarmBot：一个龙门架按坐标给每棵苗单独浇水，它的网页端和序列编程思路直接能借来规划自己的滴灌</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0504-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="24" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0504-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0504-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">FarmBot · 每棵苗一个坐标，浇水是一段序列</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0504-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M64 114.0 h28 M70 114.0 v6 h16 v-6" stroke-width="1"/><path d="M29.0 75.0 h98 v4 h-98 Z" fill="url(#g0504-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0504-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0504-5-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0504-5-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0504-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0504-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M266.0 176.0 L256.0 176.0" stroke-dasharray="3 3"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">网页苗床图</text><text x="78" y="107" text-anchor="middle" font-size="10.5">拖苗定坐标</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Farmbot</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Web App</text><text x="200" y="174" text-anchor="middle" font-size="10.5">序列编辑器</text><text x="200" y="187" text-anchor="middle" font-size="10.5">移动 / 开阀</text><text x="322" y="100" text-anchor="middle" font-size="10.5">MQTT 指令</text><text x="322" y="174" text-anchor="middle" font-size="10.5">龙门架</text><text x="322" y="187" text-anchor="middle" font-size="10.5">树莓派 + 步进</text><text x="430" y="218" text-anchor="middle" font-size="10.5">只负责摘的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">定坐标</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">序列 / 定时</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">湿度回读</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">菜熟了</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0504：借苗床图做 24 箱的 HA 卡片，浇水按湿度触发不按时间；扩第二座…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">FarmBot/Farmbot-Web-App</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>FarmBot 是美国 FarmBot 公司 2016 年众筹起家的开源种菜机器人，一台架在苗床上的 XYZ 龙门架，换头就能播种、浇水、除草、拍照，硬件图纸、固件、网页端全部开源。这个仓库是它的网页控制端和 REST API，TypeScript 和 Ruby 写的，969 星，2026 年 6 月还在发 15.27 版。它把家庭菜园变成可编程的东西：每棵植物有坐标，每个动作是一段可复用的序列。</p><p>它的工作方式是：网页里有一张苗床俯视图，把作物拖到格子上就定了坐标；序列编辑器像积木一样拼动作，移动到某坐标、开水阀几秒、拍照、读湿度探针，再用条件判断组合；定时任务按天安排序列。网页通过 MQTT 把指令发给树莓派上的 FarmBot OS，再由 Arduino 固件驱动步进电机。照片会和坐标对齐，可以做杂草检测。</p><p>生态上 FarmBot 卖整机套件，也有人打印零件复刻，论坛和文档完整；网页端有多语言翻译但没有中文。官方不鼓励自托管，直接用 my.farm.bot 也行。</p><p>在 0504 里它是延伸，架子本身不装龙门架，但它的两个思路值得直接抄：一是每个种植箱有坐标和作物记录，二是浇水序列由湿度读数触发而不是时间表，这正是方案里低于 40% 才浇的逻辑。可以照它的苗床图做一张 HomeAssistant 卡片，24 个箱子按层排开，点开每箱看作物、上次浇水和湿度。等哪天架子扩到第二座，想给番茄和罗勒按株给水，就真的可以在最上层架一根 FarmBot 的 X 轴。</p></div>
       </article>
     </div></section>
 

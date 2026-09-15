@@ -184,6 +184,7 @@
           <a class="gh-name" href="https://github.com/wger-project/wger" target="_blank" rel="noopener">wger-project/wger</a>
           <span class="stars">★ 6.8k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">自托管的开源健身、营养和体重记录系统，Django 后端，有网页和安卓 / iOS App，带 REST API 和动作库</p>
         <p class="gh-why">→ 周计划和训练记录跑在 0802 的小主机上，本地无云，和大屏一个数据库；训练日志通过 API 由 HA 自动写入</p>
@@ -212,6 +213,7 @@
           <a class="gh-name" href="https://github.com/oliexdev/openScale" target="_blank" rel="noopener">oliexdev/openScale</a>
           <span class="stars">★ 2.5k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">开源体重和身体数据追踪安卓 App，支持 25 种以上蓝牙体脂秤，无账号、无联网权限，可导出 CSV 和同步到 wger</p>
         <p class="gh-why">→ 健身角放一台蓝牙秤，数据不走厂商云，直接进手机再同步到 wger，体重曲线和训练记录在同一个地方</p>
@@ -240,6 +242,7 @@
           <a class="gh-name" href="https://github.com/brandonp2412/Flexify" target="_blank" rel="noopener">brandonp2412/Flexify</a>
           <span class="stars">★ 424</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">轻量的开源力量训练记录 App，离线优先、纯本地存储，记组数重量、休息计时和进步曲线，Flutter 写的安卓 / iOS 端</p>
         <p class="gh-why">→ 只想记哑铃组数和重量时它最省事，不用联网不用服务器，打完卡再回墙上小白板画钩；离线时给 wger 补记</p>
@@ -262,6 +265,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Flexify 是新西兰开发者 Brandon Presley 写的开源训练记录 App，424 星，定位是“离线优先的力量和有氧训练记录本”。它解决的问题和 wger 相反：不要服务器、不要账号、不要同步，打开就记，一个人一部手机足够。</p><p>它用 Flutter 写，安卓和 iOS 都有，数据全部存在手机本地的 SQLite 里。主界面是一张训练计划表，点一个动作就进入记录页，填重量和次数，按一下就记一组，自动开始休息倒计时并在时间到时响铃提醒；每个动作的历史都画成重量和总量曲线，能看一个月来哑铃划船加了多少。计划支持按周几安排，有一个简单的进阶提醒；有氧可以记时间和距离；主题和单位可自定义。数据可以导出成 CSV 备份或导入。App 在 F-Droid 和 Google Play 上，界面英文，没有中文，但操作简单到不需要翻译；作者更新很勤。</p><p>在 0212 里它是 wger 的“备用记录本”：0802 那台小主机偶尔关机维护、或者人在地面木屋里练壶铃、在草地上跑步时，手机上用 Flexify 记，回来再手动补进 wger；它的休息计时器也是地堡里最顺手的组间计时，比看大屏方便。它也可以干脆当成整个模块的唯一记录工具——如果觉得 wger 太重，就只用它加墙上的小白板，周计划画在白板上，组数记在它里面。坑是它没有任何同步，换手机前记得导出 CSV。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/google-ai-edge/mediapipe" target="_blank" rel="noopener">google-ai-edge/mediapipe</a>
+          <span class="stars">★ 36.9k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Google 的端侧多媒体机器学习框架：人体姿态、手部、人脸关键点实时检测，手机、浏览器、树莓派都能跑</p>
+        <p class="gh-why">→ 训练时对着镜子的摄像头能数动作、看深蹲够不够低，MediaPipe 的 33 点姿态模型在树莓派上也能实时跑</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0212-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="22" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0212-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0212-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">MediaPipe · 镜顶摄像头数深蹲和引体</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0212-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0212-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0212-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0212-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0212-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0212-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M134.0 176.0 L266.0 176.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">镜顶小摄像头</text><text x="78" y="149" text-anchor="middle" font-size="10.5">对着地毯</text><text x="78" y="174" text-anchor="middle" font-size="10.5">手环心率</text><text x="78" y="187" text-anchor="middle" font-size="10.5">蓝牙</text><text x="200" y="94" text-anchor="middle" font-size="10.5">MediaPipe</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Pose Landmarker</text><text x="200" y="174" text-anchor="middle" font-size="10.5">33 点 → 角度</text><text x="200" y="187" text-anchor="middle" font-size="10.5">自写计数逻辑</text><text x="322" y="94" text-anchor="middle" font-size="10.5">MQTT → HA</text><text x="322" y="107" text-anchor="middle" font-size="10.5">次数</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0802 训练模式</text><text x="322" y="187" text-anchor="middle" font-size="10.5">心率 + 计数</text><text x="430" y="218" text-anchor="middle" font-size="10.5">做划船的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">帧</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">关键点</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">一次 +1</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">看一眼数字</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0212：树莓派跑姿态模型，髋膝角度数深蹲、手腕过杆数引体，计数上大屏</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">google-ai-edge/mediapipe</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>MediaPipe 是 Google 在 2019 年开源的端侧机器学习框架，现在归 Google AI Edge 团队，36.9k 星。它要解决的问题是：在手机和低算力设备上实时跑视觉模型很难，摄像头帧的预处理、推理、后处理要串成一条不掉帧的流水线，它把这条流水线和一批现成模型打包好。</p><p>它的架构是图计算：每个计算器是一个节点，摄像头帧进来后经过缩放、推理、解码、平滑几个节点流出结果。现成任务里最常用的是 Pose Landmarker：一帧图像给出人体 33 个关键点的三维坐标和可见度，手机上 30 帧每秒毫无压力；还有手部、人脸、手势识别和物体检测。API 有 Python、JavaScript、安卓、iOS 和 C++，模型是 TensorFlow Lite 格式，树莓派 5 上 Python 版能跑十几帧。</p><p>生态很大，2025 年后仍在更新，README 英文，但中文教程和 B 站的姿态识别课程非常多。</p><p>对 0212 它是延伸的数动作眼睛：南墙那面窄镜顶上装一个小摄像头对着地毯，树莓派跑 Pose Landmarker，拿到 33 个关键点后自己写几行几何判断：髋和膝的夹角小于 90 度算一个深蹲，手腕高过单杠横杆算一次引体，哑铃划船看肘的角度变化；计数通过 MQTT 发到 HomeAssistant，训练模式下 0802 大屏在心率旁边多一个计数。注意关键点是 2.5D 的，侧身对摄像头角度判断最准，正对镜子时深度不可靠；周计划打钩还是手写，它只负责数。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/SamR1/FitTrackee" target="_blank" rel="noopener">SamR1/FitTrackee</a>
+          <span class="stars">★ 1.2k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">自托管的运动记录服务：导入 GPX 和 FIT 文件，按运动类型统计里程、时长、海拔和心率，画周月年图表，Python + Vue</p>
+        <p class="gh-why">→ 手环的数据不该只活在厂商 App 里，把每次训练和山里徒步的记录集中到自己服务器上，一年后回头看那张周计划才有意义</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0212-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="23" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0212-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0212-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">FitTrackee · 自己服务器上的训练日志</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0212-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0212-5-shade)" stroke="none"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0212-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0212-5-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0212-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0212-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">HA 训练模式结束</text><text x="78" y="107" text-anchor="middle" font-size="9.5">时长 / 心率 / 次数</text><text x="78" y="174" text-anchor="middle" font-size="10.5">手表 GPX</text><text x="78" y="187" text-anchor="middle" font-size="10.5">周末徒步</text><text x="200" y="94" text-anchor="middle" font-size="10.5">FitTrackee</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Flask + Vue</text><text x="200" y="174" text-anchor="middle" font-size="10.5">解析 / 归类</text><text x="200" y="187" text-anchor="middle" font-size="10.5">力量 / 徒步</text><text x="322" y="94" text-anchor="middle" font-size="10.5">按周月年统计</text><text x="322" y="107" text-anchor="middle" font-size="10.5">个人纪录</text><text x="322" y="174" text-anchor="middle" font-size="10.5">仪表盘网页</text><text x="322" y="187" text-anchor="middle" font-size="10.5">地图 + 图表</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一年后回头看的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">API</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">上传</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">练了多少</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0212：训练结束 HA 自动写一条力量记录，徒步 GPX 也丢进去，看年图</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">SamR1/FitTrackee</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>FitTrackee 是法国开发者 SamR1 从 2018 年维护的自托管运动追踪器，Python Flask 后端加 Vue 前端，1.2k 星，主仓库在 Codeberg，GitHub 是镜像。它要解决的问题是：跑步、骑行、徒步的数据被 Strava、Garmin、各家手环 App 分散锁着，想要一个自己掌握、能长期保存和统计的地方。</p><p>它的工作方式是：上传 GPX 或 FIT 文件（或者手动录入没有轨迹的训练，比如哑铃和引体），它解析出距离、时长、配速、海拔升降、心率，在地图上画轨迹，按运动类型（跑步、骑行、徒步、力量等几十种）归档；仪表盘按周、月、年画里程和时长图表，还有个人纪录、装备管理（这双鞋跑了多少公里）和分段。它支持多用户，有 REST API，Docker 部署。</p><p>社区小而稳定，2025 年后仍是每月一个版本，界面翻译走 Weblate，暂无中文，中文资料几乎没有，属于自托管圈的冷门好物。</p><p>对 0212 它是延伸的训练日志：手环的心率同步到 0802 大屏只是当场看，长期数据用 HomeAssistant 的自动化在训练模式结束时把时长、平均心率和 MediaPipe 数出来的次数写成一条记录通过 API 发进 FitTrackee，类型选力量；周末上山徒步的 GPX 从手表导出来也丢进去。门边小白板的周计划还是手写打钩，FitTrackee 负责回答一年后那个问题：这一年到底练了多少。注意它统计的是有氧类为主，力量训练的组数和重量要写进备注。</p></div>
       </article>
     </div></section>
 

@@ -198,6 +198,7 @@
           <a class="gh-name" href="https://github.com/moode-player/moode" target="_blank" rel="noopener">moode-player/moode</a>
           <span class="stars">★ 1.4k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">树莓派上的开源 HiFi 播放器系统，MPD 内核，支持本地音乐库、AirPlay、蓝牙、UPnP 和内置 CamillaDSP，2026 年 7 月 10.3 版</p>
         <p class="gh-why">→ 黑胶之外的数字音源就靠它，一块树莓派接胆机功放，CamillaDSP 房间校正也跑在同一块板上，还能被 0201 场景联动</p>
@@ -226,6 +227,7 @@
           <a class="gh-name" href="https://github.com/HEnquist/camilladsp" target="_blank" rel="noopener">HEnquist/camilladsp</a>
           <span class="stars">★ 1.1k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Rust 写的跨平台 IIR 和 FIR 音频处理引擎，做分频、房间校正和均衡，带 websocket 接口，4.1 版</p>
         <p class="gh-why">→ 大箱在小地下室低频会糊，用它做房间校正，比反复挪音箱省力；跑在 moOde 的树莓派上，不多一台机器</p>
@@ -254,6 +256,7 @@
           <a class="gh-name" href="https://github.com/pierreaubert/spinorama" target="_blank" rel="noopener">pierreaubert/spinorama</a>
           <span class="stars">★ 164</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">汇总和对比上千款音箱频响测量数据的开源库和网站 spinorama.org，还能按测量数据自动生成均衡曲线</p>
         <p class="gh-why">→ 买二手大箱前先查它的数据，避免花几万买到听感糊的型号；它生成的均衡曲线还能直接喂给 CamillaDSP</p>
@@ -276,6 +279,97 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>spinorama 是法国工程师 Pierre Aubert 维护的开源项目，164 星，配套网站 spinorama.org 收录了一千多款音箱的客观测量数据，是 DIY 和二手音响圈选箱子时最常翻的参考。音箱评测里“通透”“宽松”这些词没法比较，而 Spinorama 是一套标准化测量图（哈曼的 CEA-2034 标准），把一只音箱各方向的频响、指向性画成同一种图，不同型号能放在一起比。</p><p>它把各处公开的测量数据——ASR 论坛、厂商白皮书等——用 Python 统一解析成同一格式，算出音调平衡、指向性指数和一个综合偏好评分，再用网页把上千只箱子做成可搜索、可对比的图库。更实用的一步是它能按测量数据自动生成一组参量均衡，把音箱本身的频响缺陷修平，导出成 CamillaDSP 或其他 DSP 能直接加载的格式。项目持续更新；网站英文，但图表本身不需要翻译。</p><p>在 0208 里它是花大钱前的功课：想收一对大柏林级别的落地箱，先在 spinorama.org 上查同型号或同系列的测量图，看低频延伸、指向性是否平滑，评分 6 以上再去听；地堡只有 2.5 米听音距离、墙硬，指向性宽的箱子反射会多，优先选指向性均匀的。买定之后把它给这对箱子生成的均衡曲线加载进 CamillaDSP，作为房间校正之前的“出厂修正”。坑是二手老箱子往往没有测量数据，只能找同厂同代的近似型号参考。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/badaix/snapcast" target="_blank" rel="noopener">badaix/snapcast</a>
+          <span class="stars">★ 7.9k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">多房间同步音频播放：一个服务器把 PCM 流按时间戳分发给多个客户端，各房间毫秒级对齐，客户端从树莓派到手机都有</p>
+        <p class="gh-why">→ 唱盘在地堡放爵士时想让木屋吧台和卫生间跟着响，Snapcast 是开源里做多房间同步最干净的方案</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0208-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0208-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0208-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Snapcast · 一份 PCM 流各房间同一毫秒响</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0208-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0208-4-shade)" stroke="none"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0208-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0208-4-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0208-4-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0208-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0208-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">moOde / MA</text><text x="78" y="107" text-anchor="middle" font-size="10.5">数字音源</text><text x="78" y="174" text-anchor="middle" font-size="9.5">AirPlay / Spotify</text><text x="78" y="187" text-anchor="middle" font-size="9.5">shairport / librespot</text><text x="200" y="94" text-anchor="middle" font-size="10.5">snapserver</text><text x="200" y="107" text-anchor="middle" font-size="10.5">切块 + 时间戳</text><text x="200" y="174" text-anchor="middle" font-size="10.5">客户端校时</text><text x="200" y="187" text-anchor="middle" font-size="10.5">本地缓冲</text><text x="322" y="94" text-anchor="middle" font-size="10.5">木屋吧台</text><text x="322" y="107" text-anchor="middle" font-size="10.5">树莓派 + 小功放</text><text x="322" y="174" text-anchor="middle" font-size="10.5">卫生间</text><text x="322" y="187" text-anchor="middle" font-size="10.5">ESP32 客户端</text><text x="430" y="138" text-anchor="middle" font-size="10.5">打拍子的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">管道</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">TCP</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0208：数字音源经 snapserver 同步到吧台和卫生间，黑胶保持纯模拟不进去</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">badaix/snapcast</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Snapcast 是德国开发者 Johannes Pohl 写的多房间音频系统，C++ 实现，7.9k 星，是 Sonos 那种全屋同步播放的开源替代。它要解决的问题是：同一首歌在不同房间之间差几十毫秒就会听出回声；它要让所有客户端在同一毫秒发出同一个采样。</p><p>它的架构是一个 snapserver 加任意多个 snapclient：服务器从命名管道、ALSA、TCP、AirPlay（通过 shairport-sync）、Spotify Connect 或 Music Assistant 之类的源读进 PCM 音频，切成带时间戳的块推给所有客户端；每个客户端和服务器持续校时，按时间戳在本地缓冲里精确到那一刻再播，Wi-Fi 抖动被缓冲吃掉，各房间偏差在一毫秒内。客户端能跑在树莓派、ESP32 和手机上，HomeAssistant 有原生集成。</p><p>社区中等规模，2025 年后仍在更新，README 是英文，中文资料很少，主要是 HA 玩家的零星笔记。</p><p>对 0208 它是延伸的分发层：大柏林那对箱子接的是唱盘和胆机，纯模拟路线，Snapcast 不碰它；但当 moOde 或 Music Assistant 播放数字音源的时候，snapserver 装在同一台机器上，木屋吧台一个树莓派加小功放、卫生间一个 ESP32 客户端，三处同一首歌。HA 里每个客户端是一个媒体播放器实体，听音场景下自动把其他房间静音。注意黑胶想同步到其他房间就要过一次 ADC，那已经不是这个模块想要的味道了，别强求。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/navidrome/navidrome" target="_blank" rel="noopener">navidrome/navidrome</a>
+          <span class="stars">★ 23.2k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Go 写的自托管音乐流媒体服务器：扫描本地音乐库，网页播放，兼容 Subsonic API 所以几十个手机客户端都能用</p>
+        <p class="gh-why">→ 矮机柜两端的黑胶之外还有几百张 CD 和无损文件，Navidrome 让它们有一个像个人 Spotify 的入口，唱片册翻不到的时候搜一下</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0208-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0208-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0208-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Navidrome · 无损音乐库的个人流媒体入口</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0208-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0208-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0208-5-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0208-5-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0208-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0208-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M78.0 148.0 L78.0 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">CD 抓轨 / 无损</text><text x="78" y="107" text-anchor="middle" font-size="10.5">按年代目录</text><text x="78" y="180" text-anchor="middle" font-size="9.5">Picard 整理标签</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Navidrome</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Go 单文件</text><text x="200" y="174" text-anchor="middle" font-size="10.5">索引 / 播放列表</text><text x="200" y="187" text-anchor="middle" font-size="10.5">实时转码</text><text x="322" y="94" text-anchor="middle" font-size="10.5">moOde / MA</text><text x="322" y="107" text-anchor="middle" font-size="9.5">Subsonic 接入</text><text x="322" y="174" text-anchor="middle" font-size="9.5">手机 Symfonium</text><text x="322" y="187" text-anchor="middle" font-size="10.5">沙发上搜</text><text x="430" y="138" text-anchor="middle" font-size="10.5">打拍子的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">扫描</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">Subsonic API</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0208：无损库按年代分列表对应矮机柜分格，moOde / 手机 App 都从它点歌</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">navidrome/navidrome</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Navidrome 是巴西开发者 Deluan Quitério 用 Go 和 React 写的自托管音乐服务器，23.2k 星，口号是你的个人流媒体服务。它要解决的问题是：自己收藏的无损音乐堆在硬盘里，想像用 Spotify 一样在任何设备上随手听，又不想装重得要命的 Plex。</p><p>它的工作方式是：指向一个音乐目录，它扫描文件标签建索引，支持 FLAC、MP3、OGG、OPUS、DSD 等格式；网页界面按艺人、专辑、流派、播放列表浏览和播放，服务端能按客户端需要实时转码成低码率。它实现了 Subsonic API，所以 Symfonium、Substreamer 这些手机 App 和 Music Assistant、Snapcast 都能接上；整个程序是一个二进制文件，内存占用几十 MB，树莓派上跑很轻松。</p><p>生态成熟，2025 年后仍是每月一个版本，界面翻译含简体中文，中文 NAS 教程很多。</p><p>对 0208 它是延伸的数字音乐库：黑胶是仪式，但矮机柜里放不下所有唱片，抓轨的 CD 和买的无损文件全部放进 Navidrome，按年代建播放列表和矮机柜里的分格对应；moOde 通过 Subsonic 插件读它的库，Music Assistant 也能把它当音源推到 Snapcast，坐在沙发上用手机 App 搜一张唱片册里翻不到的专辑，胆机一样在响。注意它不做多房间同步也不接黑胶，它只是那个库；音乐文件的标签先用 MusicBrainz Picard 整理干净，不然艺人页面会乱。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/mikebrady/shairport-sync" target="_blank" rel="noopener">mikebrady/shairport-sync</a>
+          <span class="stars">★ 8.8k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Linux 上的 AirPlay 和 AirPlay 2 接收端：让树莓派或任何 Linux 盒子在 iPhone 的隔空播放列表里出现，输出到 ALSA 或管道</p>
+        <p class="gh-why">→ 朋友来了想用自己手机放一首，不必碰唱盘和 moOde，胆机前面加一个树莓派跑它，iPhone 隔空播放直接进大柏林</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0208-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0208-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0208-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Shairport Sync · iPhone 隔空播放直进胆机</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0208-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0208-6-shade)" stroke="none"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0208-6-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0208-6-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0208-6-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0208-6-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0208-6-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0" stroke-dasharray="3 3"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">朋友的 iPhone</text><text x="78" y="107" text-anchor="middle" font-size="10.5">隔空播放</text><text x="78" y="174" text-anchor="middle" font-size="9.5">AirPlay 2 分组</text><text x="78" y="187" text-anchor="middle" font-size="10.5">其他房间</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Shairport Sync</text><text x="200" y="107" text-anchor="middle" font-size="10.5">树莓派解码</text><text x="200" y="174" text-anchor="middle" font-size="10.5">元数据</text><text x="200" y="187" text-anchor="middle" font-size="9.5">MQTT → 0802</text><text x="322" y="94" text-anchor="middle" font-size="10.5">USB DAC</text><text x="322" y="107" text-anchor="middle" font-size="10.5">胆机线路输入</text><text x="322" y="174" text-anchor="middle" font-size="10.5">大柏林</text><text x="322" y="187" text-anchor="middle" font-size="10.5">两只落地箱</text><text x="430" y="218" text-anchor="middle" font-size="10.5">打拍子的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">ALAC 流</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">同步</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">ALSA</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">模拟</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0208：胆机留一路给树莓派 + DAC，客人 iPhone 直推</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">mikebrady/shairport-sync</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Shairport Sync 是爱尔兰开发者 Mike Brady 从 2014 年维护至今的 AirPlay 接收端，C 写成，8.8k 星，是 Linux 世界里实现苹果隔空播放最完整的项目。它要解决的问题是：隔空播放只认苹果和授权设备，想让自己攒的音响也出现在那个列表里，得有人把协议实现出来。</p><p>它的工作方式是：在局域网里用 mDNS 广播一个 AirPlay 接收器，iPhone 选中后建立连接，音频流以 ALAC 或 AAC 编码发过来，Shairport Sync 解码后按苹果的时间戳同步输出，和同一个 AirPlay 2 分组里的其他音箱对齐；输出可以走 ALSA 到声卡或 USB DAC，也可以写进管道给 Snapcast 接力。元数据（歌名、封面）能通过 MQTT 发出来，树莓派 Zero 都够跑，moOde 内置的就是它。</p><p>社区稳定，2025 年后仍在更新，README 是英文，中文资料主要是树莓派音频玩家的笔记。</p><p>对 0208 它是延伸的客用入口：胆机的一路线路输入接一个树莓派加 USB DAC，跑 Shairport Sync，名字叫大柏林；自己坐沙发时依旧放黑胶，朋友来了掏出 iPhone 就能把歌推到这对箱子上，元数据走 MQTT 到 0802 大屏显示歌名。注意它输出的是数字信号，DAC 的质量决定了这条路配不配得上大柏林，选一块靠谱的 USB 解码，别用板载 3.5mm 口；moOde 已经内置它，用了 moOde 就不必单独再装。</p></div>
       </article>
     </div></section>
 

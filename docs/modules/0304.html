@@ -202,6 +202,7 @@
           <a class="gh-name" href="https://github.com/syssi/esphome-jk-bms" target="_blank" rel="noopener">syssi/esphome-jk-bms</a>
           <span class="stars">★ 1.0k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">用 ESP32 通过串口或蓝牙读取和控制极空 JK 电池保护板的 ESPHome 组件，能看每节电压、温度和均衡状态</p>
         <p class="gh-why">→ 木架子上那两块备用磷酸铁锂配 JK 保护板，一块 ESP32 就把电压温度送进 HA，过热立刻推送，还能远程关充放电</p>
@@ -230,6 +231,7 @@
           <a class="gh-name" href="https://github.com/tolwi/hassio-ecoflow-cloud" target="_blank" rel="noopener">tolwi/hassio-ecoflow-cloud</a>
           <span class="stars">★ 882</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">正浩 EcoFlow 户外储能电源的 Home Assistant 集成，读电量、输入输出功率并控制交流直流输出口</p>
         <p class="gh-why">→ 买正浩这类储能电源的话直接装它，每天发电量和剩余电量进 HA，再推到 0802 中枢大屏，四级用电优先级靠它切输出口</p>
@@ -258,6 +260,7 @@
           <a class="gh-name" href="https://github.com/fl4p/batmon-ha" target="_blank" rel="noopener">fl4p/batmon-ha</a>
           <span class="stars">★ 489</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">HA 加载项，通过蓝牙同时连接 JK、JBD、Daly、ANT 等多种电池保护板，还能算电量和累计能量</p>
         <p class="gh-why">→ 备用电池保护板不是 JK 也没关系，它一个加载项通吃 Daly、JBD，不用额外焊 ESP32，树莓派自带蓝牙就行</p>
@@ -280,6 +283,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>batmon-ha 是德国开发者 fl4p 在 2022 年发布的 HA 加载项，489 星，名字是 Battery Monitor 的缩写。它解决的问题和 esphome-jk-bms 类似——把 DIY 电池组的保护板数据接进 HA——但思路不同：不需要额外单片机，直接用跑 HA 的树莓派或小主机自带的蓝牙去连保护板，而且一次支持 JK、JBD、Daly、ANT、SOK 等一大串品牌。</p><p>它是一个 Python 服务，装在 HA 加载项商店里，配置里列出每块保护板的蓝牙 MAC 和类型，启动后轮流连上每一块、按各家协议读电压、电流、SOC、温度和电芯数据，通过 MQTT 自动发现推进 HA。它还自带几样保护板不给的功能：用电流积分算库仑计和累计充放电度数，把多块电池组合成一个“虚拟电池”看总量，蓝牙断连自动重试。</p><p>项目 2025 年仍在维护，支持型号一直在加；文档是英文，国内用得不如 ESPHome 方案多，但对不想焊板子的人是最省事的路。</p><p>在 0304 里它是“电池健康看护”的备选路线：如果备用电池的保护板买成了 Daly 或 JBD，或者不想在木架上再多一块 ESP32，就用它——HA 主机放在 0802，蓝牙隔一层木楼板一般够；两块电池组合成虚拟电池，HA 自动化按总 SOC 和单节压差告警。注意蓝牙距离超过十米就不稳，必要时给 HA 主机加一个 USB 蓝牙棒拉近。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/pvlib/pvlib-python" target="_blank" rel="noopener">pvlib/pvlib-python</a>
+          <span class="stars">★ 1.7k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">光伏系统性能仿真的 Python 库：太阳位置、辐照模型、组件和逆变器模型，NumFOCUS 支持的学术标准</p>
+        <p class="gh-why">→ 四块 400W 板子一年到底能发多少电、45° 南坡是不是最优，与其看厂家宣传，不如用 pvlib 自己算一遍，再和实测对比</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0304-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0304-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0304-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">pvlib · 先算一年发电量再和实测对</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0304-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0304-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0304-4-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0304-4-shade)" stroke="none"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M282.0 234.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="234.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0304-4-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M246.2 222.0 C261.0 222.0 261.0 204.0 275.8 204.0"/><path d="M378.0 176.0 L374.0 176.0"/><path d="M362.9 222.0 C376.0 222.0 376.0 204.0 389.1 204.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">经纬度 / 倾角</text><text x="78" y="107" text-anchor="middle" font-size="10.5">组件参数</text><text x="78" y="174" text-anchor="middle" font-size="10.5">气象数据</text><text x="78" y="187" text-anchor="middle" font-size="9.5">PVGIS 或 0306</text><text x="200" y="94" text-anchor="middle" font-size="10.5">太阳位置</text><text x="200" y="107" text-anchor="middle" font-size="10.5">辐照度模型</text><text x="200" y="174" text-anchor="middle" font-size="10.5">pvlib</text><text x="200" y="187" text-anchor="middle" font-size="10.5">ModelChain</text><text x="200" y="248" text-anchor="middle" font-size="10.5">组件 / 逆变器</text><text x="200" y="261" text-anchor="middle" font-size="10.5">温度模型</text><text x="322" y="174" text-anchor="middle" font-size="10.5">逐小时功率</text><text x="322" y="187" text-anchor="middle" font-size="10.5">全年曲线</text><text x="322" y="248" text-anchor="middle" font-size="10.5">HA 实测发电量</text><text x="322" y="261" text-anchor="middle" font-size="10.5">储能电源上报</text><text x="430" y="218" text-anchor="middle" font-size="10.5">看对比图的人</text><text x="430" y="231" text-anchor="middle" font-size="10.5">查遮挡与朝向</text><text x="261.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">输出</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">仿真</text><text x="376.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">实测</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0304：仿真南坡 45° 四块板全年发电量，和 HA 记录的实际发电对比找问题</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">pvlib/pvlib-python</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>pvlib-python 是由美国桑迪亚国家实验室发起、现在由 pvlib 社区维护的光伏仿真 Python 库，1.7k 星，是 NumFOCUS 的附属项目，学术论文里引用最多的光伏建模工具之一。它要解决的问题是：光伏发电量取决于位置、倾角、朝向、温度、天气和组件参数，靠经验估算误差很大，pvlib 把几十年的经验模型做成可以直接调用的函数。</p><p>它的工作方式是一条模型链：输入经纬度和时间，算出太阳高度角和方位角；输入气象数据（PVGIS、NSRDB 等公开数据，或自己气象站的辐照度）算出板面辐照度；再经过组件温度模型、单二极管或 SAPM 组件模型、逆变器效率模型，输出每小时的直流和交流功率。ModelChain 类把这些步骤串起来，几行代码就能跑一年的仿真，结果直接是 pandas 表格，画图方便。</p><p>生态上它的文档和示例画廊很完整，能和 SAM、PVGIS 互相校验；文档只有英文，但国内光伏工程师博客里用它做案例的不少，项目持续发版。</p><p>对 0304 来说它是延伸项目：先用杭州的经纬度、南坡 45° 倾角和四块 400W 组件的参数跑一遍全年仿真，看冬夏发电差多少、2kWh 储能够不够喂串灯和气象站；再把 HomeAssistant 里储能电源报的实际发电量按天导出，和仿真曲线放在一起画，差得多就说明板子脏了、遮挡了或朝向不对。0306 气象站若加一块辐照度传感器，还能用实测替代公开气象源，把仿真做得更准。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/mr-manuel/venus-os_dbus-serialbattery" target="_blank" rel="noopener">mr-manuel/venus-os_dbus-serialbattery</a>
+          <span class="stars">★ 268</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Victron Venus OS 的第三方 BMS 驱动：串口或蓝牙读 JK、Daly、JBD 等国产 BMS，让自组磷酸铁锂电池进 Victron 生态</p>
+        <p class="gh-why">→ 木架上那两块备用磷酸铁锂如果哪天升级成自组电池包，这个驱动能让国产 BMS 被 Victron 逆变器当原厂电池管理，安全充放</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0304-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0304-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0304-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">dbus-serialbattery · 国产 BMS 进 Victron 生态</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0304-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0304-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0304-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0304-5-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0304-5-shade)" stroke="none"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0304-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0304-5-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0304-5-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M256.0 250.0 L266.0 250.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="9.5">JK / Daly BMS</text><text x="78" y="149" text-anchor="middle" font-size="10.5">自组磷酸铁锂</text><text x="78" y="174" text-anchor="middle" font-size="10.5">RS485 / 蓝牙</text><text x="78" y="187" text-anchor="middle" font-size="10.5">读电压电流</text><text x="200" y="94" text-anchor="middle" font-size="9.5">dbus-serialbattery</text><text x="200" y="107" text-anchor="middle" font-size="10.5">翻译成电池设备</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Venus OS</text><text x="200" y="187" text-anchor="middle" font-size="9.5">Cerbo / 树莓派</text><text x="200" y="248" text-anchor="middle" font-size="10.5">充放限制</text><text x="200" y="261" text-anchor="middle" font-size="10.5">CVL / CCL</text><text x="322" y="248" text-anchor="middle" font-size="9.5">Victron MPPT</text><text x="322" y="261" text-anchor="middle" font-size="10.5">逆变器</text><text x="322" y="94" text-anchor="middle" font-size="10.5">0304 木架小屏</text><text x="322" y="107" text-anchor="middle" font-size="10.5">HA 显示单体</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">串口协议</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">D-Bus</text><text x="261.0" y="245.0" text-anchor="middle" font-size="8" fill="#666">控制充放</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">MQTT</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0304：备用电池升级为自组电池包时，让国产 BMS 被 …</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">mr-manuel/venus-os_dbus-serialbattery</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>dbus-serialbattery 最早由 Louisvdw 发起，原仓库已归档，现在由 mr-manuel 接手维护并成为官方延续，268 星，是 Victron 用户自组电池时用得最多的驱动。它要解决的问题是：Victron 的 Venus OS 只认自家和少数品牌的电池，而 DIY 磷酸铁锂电池包用的都是 JK、Daly、JBD 这类国产 BMS，逆变器看不到电池状态就不敢放心充放。</p><p>它的工作方式是做翻译官：驱动跑在 Venus OS 上，通过 RS485、RS232、TTL 串口或蓝牙读取 BMS 的电压、电流、SOC、单体电压、温度和报警，再以 Victron 标准电池设备的形式挂到 D-Bus 上。于是 Venus OS 就像接了原厂电池，按驱动给出的充放电限制控制 MPPT 和逆变器，单体不均衡或温度过低时自动降流。</p><p>生态上它有独立文档站列出支持的 BMS 和接线，Victron 社区讨论很热；文档只有英文，国内 DIY 储能圈用 JK 配 Victron 的教程不少，几乎每月发版。</p><p>对 0304 来说它是延伸项目：现在的 2kWh 户外储能电源是一体机，用不上它；但木架上那两块备用磷酸铁锂如果有一天扩成 48V 自组电池包，走 Victron MPPT 加逆变器的路线，就要靠它把 JK BMS 接进 Venus OS，再经 MQTT 进 HomeAssistant，木架侧板上的小屏幕显示的就是真正的单体电压了。接线按文档来，蓝牙不如有线稳。</p></div>
       </article>
     </div></section>
 

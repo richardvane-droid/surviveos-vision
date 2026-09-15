@@ -276,6 +276,7 @@
           <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
           <span class="stars">★ 11.7k</span>
           <span class="zh zh-no">无中文（社区教程多）</span>
+          
         </header>
         <p class="gh-desc">用一份 YAML 给 ESP32 / ESP8266 生成固件，传感器、热电偶、蜂鸣器、PID 都是自带组件，原生接 HomeAssistant</p>
         <p class="gh-why">→ 炉子对面北墙的室温探头和烟管上的 K 型热电偶都用它：max31855 组件读烟温，阈值在节点本地判断，蜂鸣器断网照样叫，HA 只画曲线推手机</p>
@@ -304,6 +305,7 @@
           <a class="gh-name" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">patrickcollins12/esphome-fan-controller</a>
           <span class="stars">★ 741</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESP32 加温度传感器的 PID 温控风扇方案，纯 YAML 配置，风扇几乎无声，接 HomeAssistant</p>
         <p class="gh-why">→ 炉热循环风扇的现成蓝本：它的 PID climate 段直接抄，目标值改成炉边和东头床下的温差，夜里在 YAML 里限速 40%</p>
@@ -332,6 +334,7 @@
           <a class="gh-name" href="https://github.com/ApolloAutomation/AIR-1" target="_blank" rel="noopener">ApolloAutomation/AIR-1</a>
           <span class="stars">★ 172</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Apollo Automation 的开源空气质量多合一传感器：SEN55 颗粒物、SCD40 二氧化碳、MiCS-4514 一氧化碳，跑 ESPHome，HA 自动发现</p>
         <p class="gh-why">→ 炉子对面北墙那只一氧化碳报警器的联网版：CO、PM2.5、CO2 一次到位，HA 里做超标推送和大屏炉区变红，硬件图纸和固件全开源</p>
@@ -354,6 +357,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>AIR-1 是美国 Apollo Automation 做的开源空气质量多合一传感器，172 星，硬件图纸、外壳 3D 文件和 ESPHome 固件全部公开，也可以直接买成品，六十多美元。它解决的问题是家里的空气到底怎么样：一只 61 毫米见方的小盒子同时看颗粒物、二氧化碳、一氧化碳和挥发性有机物。</p><p>工作原理很直白：ESP32 主控上挂三颗传感器，SEN55 测颗粒物、VOC、NOx 和温湿度，SCD40 测二氧化碳，DFRobot 的 MiCS-4514 测一氧化碳、氢气、二氧化氮、氨气和甲烷；固件是一份 ESPHome YAML，上电连它的热点填 WiFi，HA 就自动发现，十几个实体一次出现。盒子上还有三颗 RGB 指示灯。</p><p>生态上它是 ESPHome 官方设备库里的条目，Discord 社区活跃。文档只有英文，国内买要转运。</p><p>放进 0106 里它挂在炉子对面北墙下方、报警器规定的位置：炉子刚点着或风门开错时，CO 和 PM2.5 会先抬头，HA 自动化设 CO 超 30ppm 推送手机、大屏地图上炉区变红。但 MiCS-4514 是半导体气敏元件，不是认证级 CO 报警器，旁边那只电化学一氧化碳报警器照样要装。烧炉季每周擦炉灰，颗粒物传感器进灰会误报。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/br3ttb/Arduino-PID-Library" target="_blank" rel="noopener">br3ttb/Arduino-PID-Library</a>
+          <span class="stars">★ 2.2k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Brett Beauregard 写的 Arduino PID 库：抗积分饱和、无扰切换、可调采样周期，配套博客是入门 PID 最好的教材</p>
+        <p class="gh-why">→ 炉子的风门要按炉温自动开合，本质是一个 PID 回路；这个库和它的博客把 PID 讲得最清楚，先学它再去 ESPHome 里配 PID 才不糊涂</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0106-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0106-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0106-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Arduino PID · 按炉温自动开合风门</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0106-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0106-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0106-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0106-4-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0106-4-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0106-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0106-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">K 型热电偶</text><text x="78" y="149" text-anchor="middle" font-size="10.5">炉膛温度</text><text x="78" y="174" text-anchor="middle" font-size="10.5">目标温度</text><text x="78" y="187" text-anchor="middle" font-size="10.5">220℃</text><text x="200" y="94" text-anchor="middle" font-size="10.5">PID 库</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Compute 每 10 秒</text><text x="200" y="174" text-anchor="middle" font-size="10.5">抗积分饱和</text><text x="200" y="187" text-anchor="middle" font-size="10.5">无扰切换</text><text x="322" y="94" text-anchor="middle" font-size="10.5">舵机风门</text><text x="322" y="107" text-anchor="middle" font-size="10.5">留最小进风</text><text x="322" y="174" text-anchor="middle" font-size="9.5">ESPHome PID</text><text x="322" y="187" text-anchor="middle" font-size="10.5">→ HA 曲线</text><text x="430" y="138" text-anchor="middle" font-size="10.5">坐炉边的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">输入</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">输出 0~255</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">参数搬过去</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">不用起身拨</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0106：Arduino 上先调通风门 PID，再搬进 ESPHome 看曲线</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">br3ttb/Arduino-PID-Library</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Arduino-PID-Library 是 Brett Beauregard 在 2011 年前后写的 PID 控制库，2.2k 星，代码只有几百行，但配套的博客系列《改进新手的 PID》被翻译成十几种语言，是很多人学 PID 的第一课。它要解决的问题是：教科书里的 PID 公式直接写进单片机会出各种毛病——积分饱和、参数一改就跳、手动自动切换时输出突变，他把这些坑一个一个补掉。</p><p>它的用法是：定义输入（当前温度）、输出（风门开度 0～255）、设定值（目标温度），构造一个 PID 对象给它 Kp、Ki、Kd，主循环里不停调用 Compute，库按设定的采样周期算出新输出。内部对测量值求微分避免设定值突变的冲击、积分项限幅防饱和、改参数时平滑过渡。项目多年没大改，因为它已经完成了，Arduino 库管理器里直接能装。</p><p>中文方面 README 是英文，但博客的中文翻译和 B 站讲解很多；ESPHome 自带的 PID climate 组件和它是一个思路。</p><p>对 0106 它是延伸的学习项目，也可能真的用上：给柴火炉加一个自动风门，就是一个舵机拉着进风口挡板，炉体上一个 K 型热电偶读温度，目标 220 度左右的炉膛温。先用这个库在 Arduino 上做一版，参数调顺了再照搬进 ESPHome 的 PID 组件，让 HomeAssistant 能看曲线。注意柴火热惯性巨大，Ki 要小、采样周期放到 10 秒以上，风门全关也不能真关死，留最小进风保证不产生一氧化碳。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/eclipse-mosquitto/mosquitto" target="_blank" rel="noopener">eclipse-mosquitto/mosquitto</a>
+          <span class="stars">★ 11.2k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Eclipse 基金会的开源 MQTT 代理：轻量 C 实现，支持 MQTT 5、TLS、持久会话和桥接，是 IoT 消息总线的事实标准</p>
+        <p class="gh-why">→ 炉温、一氧化碳、风门、烘鞋架这些节点最终都靠 MQTT 说话，自己搭一个 Mosquitto 才明白 HA 后面那根总线到底怎么转</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0106-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0106-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0106-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Mosquitto · 炉区节点共用的一根消息总线</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0106-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0106-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0106-5-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0106-5-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0106-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0106-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M157.3 124.0 C139.0 124.0 139.0 148.0 120.7 148.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">ESPHome 节点</text><text x="78" y="149" text-anchor="middle" font-size="10.5">温度 / CO</text><text x="78" y="174" text-anchor="middle" font-size="10.5">风门舵机</text><text x="78" y="187" text-anchor="middle" font-size="10.5">烘鞋架温控</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Mosquitto</text><text x="200" y="107" text-anchor="middle" font-size="10.5">发布 / 订阅</text><text x="200" y="174" text-anchor="middle" font-size="10.5">主题树</text><text x="200" y="187" text-anchor="middle" font-size="9.5">house/stove/#</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">MQTT 集成</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0802 大屏</text><text x="322" y="187" text-anchor="middle" font-size="10.5">手机客户端</text><text x="430" y="218" text-anchor="middle" font-size="10.5">看温度的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">发布</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">订阅指令</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">订阅</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">订阅</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">超 26 度提醒</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0106：炉区节点全走 MQTT，HA / 大屏 / 手机各订各的</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">eclipse-mosquitto/mosquitto</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Mosquitto 是 Roger Light 在 2009 年开始写的 MQTT 消息代理，后来进入 Eclipse 基金会，11.2k 星，从树莓派到云服务器几乎所有 IoT 项目背后都有它。它要解决的问题是：几十个传感器和控制器不能两两直连，需要一个中间人，谁有数据就往一个主题发布，谁关心就订阅，双方互相不用认识。</p><p>它的工作方式是发布订阅：客户端连上代理，往像 house/stove/temp 这样的主题发消息，代理转给所有订阅了这个主题（或通配符 house/stove/#）的客户端。三级 QoS 保证送达程度，保留消息让新订阅者立刻拿到最后一个值，遗嘱消息让设备掉线时代理替它发一条离线通知。它用 C 写，内存占用几 MB，支持 TLS 和密码，配套命令行工具调试极方便。</p><p>生态方面 2025 年后 2.x 仍在更新，HomeAssistant 的 Mosquitto 插件就是它；README 是英文，但中文教程和树莓派部署文章非常多。</p><p>对 0106 它是延伸的基础课：炉区那个 ESPHome 温度传感器、一氧化碳报警器的干接点、将来的风门舵机和烘鞋架温控，都可以走 MQTT，主题按 house/stove/temp、co、damper 排。好处是除了 HomeAssistant，0802 大屏、0204 的调试脚本、手机上的 MQTT 客户端都能订阅同一份数据；一氧化碳报警用遗嘱消息，掉线本身就是告警。注意炉边温度高，ESP32 节点放北墙对面，只让热电偶线过去。</p></div>
       </article>
     </div></section>
 

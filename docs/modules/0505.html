@@ -170,6 +170,7 @@
           <a class="gh-name" href="https://github.com/evcc-io/evcc" target="_blank" rel="noopener">evcc-io/evcc</a>
           <span class="stars">★ 7.2k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">开源光伏优先充电与家庭能源管理系统，支持上百种充电桩、电表、逆变器，智能插座也能当充电器，本地运行</p>
         <p class="gh-why">→ 它能把一只计量智能插座当电动两轮的充电器管，白天光伏有余电才充，手机上直接看这次充电的太阳能占比</p>
@@ -198,6 +199,7 @@
           <a class="gh-name" href="https://github.com/arendst/Tasmota" target="_blank" rel="noopener">arendst/Tasmota</a>
           <span class="stars">★ 24.8k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">ESP8266 / ESP32 设备的替换固件，网页配置、计量、规则引擎、MQTT，本地控制不上云，几百种设备模板</p>
         <p class="gh-why">→ 十几块的国产计量插座刷上它，功率降到几瓦就本地断电防鼓包，同时把功率、电量推给 HomeAssistant 和 evcc</p>
@@ -226,6 +228,7 @@
           <a class="gh-name" href="https://github.com/OpenEVSE/openevse_esp32_firmware" target="_blank" rel="noopener">OpenEVSE/openevse_esp32_firmware</a>
           <span class="stars">★ 229</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">OpenEVSE 开源充电桩的 ESP32 联网固件，网页界面、光伏分流、MQTT、HomeAssistant 集成和 OCPP</p>
         <p class="gh-why">→ 以后从电摩换成电动汽车再看它，木柱里塞一套 OpenEVSE 就是一根真正的开源充电桩</p>
@@ -248,6 +251,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>OpenEVSE 是美国的开源电动汽车充电桩项目，从 2011 年做起，硬件、控制固件和这个 ESP32 联网固件全部开源，这个仓库 GitHub 上 229 星，是 DIY 充电桩这个小众领域的事实标准。家用交流充电桩的核心就是继电器、控制导引信号和漏电保护，OpenEVSE 让人可以自己组一根、自己控制。</p><p>它的结构分两层：底层是 OpenEVSE 控制板，负责和车辆按 J1772 协议握手、控制继电器和安全保护，用串口对外说话；这个仓库是插在控制板上的 ESP32 网关固件，通过串口读充电状态、设电流，并提供网页界面、MQTT、HomeAssistant 集成和 OCPP 1.6 对接。最有价值的是光伏分流模式：读一个光伏或电网电表的 MQTT 数据，按盈余动态调整充电电流，自己就能做太阳能优先充电。</p><p>界面有英西法匈四种语言，没有中文；硬件可以买官方套件也可以照原理图自制。</p><p>在 0505 里它是给未来留的位置：现在的电摩只是一只插座，等哪天换成电动汽车，1.6 米杉木柱和 16A 线路就是照家用桩留的，到时把 OpenEVSE 控制板和 ESP32 网关塞进柱身的防水箱，充电枪挂在卷线盘位置，光伏分流模式直接接阁楼的光伏电表，evcc 也原生支持它。要注意国标充电枪是 GB/T 接口，导引信号兼容但物理接头不同，要换枪线；漏电保护按国内规范要加带直流检测的模块。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/steve-community/steve" target="_blank" rel="noopener">steve-community/steve</a>
+          <span class="stars">★ 1.1k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Java 写的开源 OCPP 充电桩管理后台，2013 年起就是欧洲高校和运营商的参考实现，支持 OCPP 1.2 到 1.6</p>
+        <p class="gh-why">→ 了解真正的充电桩后台是怎么跟桩对话的：哪天院子里的杉木桩想换成一根真的 OCPP 交流桩，SteVe 就是它的服务器</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0505-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="24" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0505-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0505-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">SteVe · 充电桩和后台之间说的是 OCPP</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0505-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0505-4-shade)" stroke="none"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0505-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0505-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0505-4-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0505-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0505-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M78.0 148.0 L78.0 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">OCPP 充电桩</text><text x="78" y="107" text-anchor="middle" font-size="10.5">7kW 交流</text><text x="78" y="174" text-anchor="middle" font-size="10.5">RFID 卡</text><text x="78" y="187" text-anchor="middle" font-size="10.5">认证</text><text x="200" y="94" text-anchor="middle" font-size="10.5">SteVe</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Spring 后台</text><text x="200" y="174" text-anchor="middle" font-size="10.5">桩 / 卡 / 交易</text><text x="200" y="187" text-anchor="middle" font-size="10.5">MySQL</text><text x="322" y="94" text-anchor="middle" font-size="10.5">网页后台</text><text x="322" y="107" text-anchor="middle" font-size="10.5">远程启停</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA 读交易</text><text x="322" y="187" text-anchor="middle" font-size="10.5">光伏占比</text><text x="430" y="138" text-anchor="middle" font-size="10.5">将来换真桩的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">WebSocket</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">刷卡</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0505：现在用计量插座就够；将来换 OCPP 桩时服务器跑 SteVe，充电记录留…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">steve-community/steve</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>SteVe 是德国亚琛工业大学 2013 年发起的开源充电站管理系统，Java 和 Spring 写的，1.1k 星，名字来自德语的插座管理。它解决的问题是：公共充电桩都说 OCPP 这门标准协议，运营商需要一个后台来认桩、认卡、启停充电、收账单，SteVe 就是这个后台的开源版本，被很多大学、小运营商和研究项目直接拿去用，也是学习 OCPP 最好的一份活代码。</p><p>它的架构是：充电桩通过 WebSocket 连到 SteVe，按 OCPP 1.2 到 1.6 的消息集交换 BootNotification、StartTransaction、MeterValues 这些消息；SteVe 把桩、RFID 卡、交易记录存进 MySQL，网页后台可以远程启停充电、设置充电曲线、更新固件、看每笔交易的电量，也能当测试服务器验证桩的实现。</p><p>生态上它是 OCPP 社区里最老牌的开源服务器，商业版 Powerfill 由原团队维护；文档全英文，中文只有零散翻译博客。</p><p>对 0505 来说它是纯延伸：方案里的桩只是杉木柱上的一个计量插座，靠 HomeAssistant 断电就够，用不上 OCPP。但电摩之后如果家里添了一辆真正的电动车，就要换一根支持 OCPP 的 7kW 交流桩，那时候 0802 服务器上跑一个 SteVe，桩连过来，充电记录和电量就在自己手里，再把它的数据库读进 HA 就能延续现在那条光伏储能占比的通知。现在能先做的是用它理解 OCPP 的消息流，给将来的桩留一根网线。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/teslamate-org/teslamate" target="_blank" rel="noopener">teslamate-org/teslamate</a>
+          <span class="stars">★ 9k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">自托管的特斯拉数据记录器：Elixir 写的，把每次行程、充电、电池健康记进 PostgreSQL，Grafana 出几十张仪表盘</p>
+        <p class="gh-why">→ 电摩没有 API，但 TeslaMate 的充电记录、每度电成本、电池衰减这套仪表盘设计正是充电桩数据想长成的样子</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0505-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="25" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0505-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0505-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">TeslaMate · 车的每一度电都记下来</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0505-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0505-5-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0505-5-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0505-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0505-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">特斯拉云 API</text><text x="78" y="107" text-anchor="middle" font-size="10.5">或计量插座</text><text x="200" y="94" text-anchor="middle" font-size="10.5">TeslaMate</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Elixir</text><text x="200" y="174" text-anchor="middle" font-size="10.5">PostgreSQL</text><text x="200" y="187" text-anchor="middle" font-size="10.5">行程 / 充电</text><text x="322" y="94" text-anchor="middle" font-size="10.5">MQTT → HA</text><text x="322" y="107" text-anchor="middle" font-size="10.5">光伏占比通知</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Grafana</text><text x="322" y="187" text-anchor="middle" font-size="10.5">充电仪表盘</text><text x="430" y="218" text-anchor="middle" font-size="10.5">看每月电费的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">轮询</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">切成会话</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0505：照它的充电仪表盘，把电摩每次充电的电量与光伏占比记进 Postgre…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">teslamate-org/teslamate</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>TeslaMate 是德国开发者 Adrian Kumpf 发起、现由 Jakob Lichterfeld 维护的自托管特斯拉数据记录器，Elixir 写的，9k 星，是特斯拉车主圈里最流行的自建项目。它解决的问题是：车企 App 只给你看当下，而车主想知道每次行程耗了多少电、每次充电花了多少钱、电池两年衰减了几个百分点，这些数据应该留在自己手里。</p><p>它的工作方式是：用车主的 API 令牌轮询特斯拉云端，把车辆状态按变化写进 PostgreSQL，自动把连续记录切成行程和充电会话，算出能耗、效率和费用；再通过 Grafana 呈现成几十张预置仪表盘：充电统计、行程地图、电池健康、每月里程。它还把所有状态发到 MQTT，HomeAssistant 一接就有实体，官方文档里就有 HA 的配置示例。</p><p>生态上它一条 Docker Compose 就能起，网页界面有简体中文，国内特斯拉车主的中文教程很多；社区还在不断加仪表盘。</p><p>对 0505 来说它是延伸：电摩没有云端 API，TeslaMate 本身用不上，但它给了一套现成的答案，告诉你一根充电桩的数据该记什么、怎么看。方案里的智能计量插座每晚给出一条充电曲线，把每次充电的起止、电量、当时的光伏储能比例写进 0802 服务器的 PostgreSQL，再照着它的充电仪表盘做一张 Grafana 面板：每月充了几度、光伏占比多少、平均每次充多久，通知里那句本次使用光伏储能 70% 就有了来源。哪天家里真添一辆特斯拉，直接把它跑起来就行。</p></div>
       </article>
     </div></section>
 

@@ -198,6 +198,7 @@
           <a class="gh-name" href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a>
           <span class="stars">★ 88k</span>
           <span class="zh ">有中文文档站</span>
+          
         </header>
         <p class="gh-desc">开源家庭自动化平台，本地控制、注重隐私，三千多个集成把所有设备抽象成实体</p>
         <p class="gh-why">→ 全屋中枢就是它，三块屏、手机端和实体开关全靠它的仪表盘和自动化驱动，核心依赖</p>
@@ -226,6 +227,7 @@
           <a class="gh-name" href="https://github.com/ExperienceLovelace/ha-floorplan" target="_blank" rel="noopener">ExperienceLovelace/ha-floorplan</a>
           <span class="stars">★ 1.6k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">HomeAssistant 卡片，把实体状态映射到 SVG 平面图元素上，规则驱动样式与点击动作</p>
         <p class="gh-why">→ 中屏那张整栋房子的等距地图就用它做，模块异常变色闪烁靠它的 CSS 规则</p>
@@ -254,6 +256,7 @@
           <a class="gh-name" href="https://github.com/piitaya/lovelace-mushroom" target="_blank" rel="noopener">piitaya/lovelace-mushroom</a>
           <span class="stars">★ 5.1k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">HomeAssistant 最流行的简洁风格仪表盘卡片集，17 种卡片、内置编辑器、零依赖</p>
         <p class="gh-why">→ 左右两块小屏的温湿度、水电卡片用它排版，好看又不用写太多 YAML</p>
@@ -276,6 +279,97 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Mushroom 是 Home Assistant 上最流行的仪表盘卡片集，由 Paul Bottein（piitaya）开发，5.1k 星，通过 HACS 安装，目标是不写太多 YAML 也能拼出好看的仪表盘。它解决的是原生卡片信息密度低、风格参差的问题。</p><p>它的做法是提供 17 种针对设备类型设计的卡片：灯、温控、风扇、窗帘、门锁、媒体播放器、人物、选择器、数字、更新，再加一个万能的模板卡和一排小药丸（chips）。每张卡都有内置的可视化编辑器，图标、颜色、布局、副标题点几下就配好，模板卡能用 Jinja 写任意文字和图标颜色，配合 Mushroom Themes 可以整体换风格，零外部依赖，深浅色都适配。项目持续更新，Weblate 有中文翻译，README 只有英文，但小红书上晒 HA 大屏的帖子多半在用它。</p><p>在 0802 里它负责左右两块 27 寸小屏：左屏光照和温湿度、右屏水电，每个数据一张模板卡，副标题写单位和更新时间，用 chips 在顶端排一行今天所有模块正常之类的状态药丸；曲线本身交给 HA 自带的 history-graph 卡，Mushroom 只管数字和标题。要克制：先只放真正会看的 10 个数，其余藏在二级页，不然就是看板疲劳。夜航模式用它的主题变量把背景切纯黑、字切红，配合 HA 的自动化在 22:00 换主题。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/gethomepage/homepage" target="_blank" rel="noopener">gethomepage/homepage</a>
+          <span class="stars">★ 32k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">自托管起始页仪表盘：YAML 配置，靠 Docker 标签自动发现容器，一百多种服务集成能把 Jellyfin、Uptime Kuma、NAS 的实时数字摆在一页上</p>
+        <p class="gh-why">→ 屏墙上 HA 管传感器，但 0804 三台机器上的十几个服务谁在跑、跑得怎样，需要一页服务层总览，它是这类起始页里星最多的</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0802-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="30" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0802-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0802-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">homepage · 一页看完全屋服务</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0802-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0802-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0802-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0802-4-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0802-4-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0802-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0802-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M266.0 176.0 L256.0 176.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">YAML 配置</text><text x="78" y="174" text-anchor="middle" font-size="10.5">Docker 标签</text><text x="78" y="187" text-anchor="middle" font-size="10.5">自动发现</text><text x="200" y="94" text-anchor="middle" font-size="10.5">homepage</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Next.js 服务</text><text x="200" y="174" text-anchor="middle" font-size="10.5">服务集成</text><text x="200" y="187" text-anchor="middle" font-size="10.5">代理请求 API</text><text x="322" y="174" text-anchor="middle" font-size="9.5">Jellyfin / Kuma</text><text x="322" y="187" text-anchor="middle" font-size="9.5">NAS / Beszel</text><text x="322" y="94" text-anchor="middle" font-size="10.5">右屏标签页</text><text x="322" y="107" text-anchor="middle" font-size="10.5">手机入口页</text><text x="430" y="138" text-anchor="middle" font-size="10.5">看一眼的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">贴标签</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">实时数字</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0802：右屏一个标签页按机器分组摆服务卡片，服务挂了卡片变灰</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">gethomepage/homepage</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>homepage 是 gethomepage 组织维护的自托管起始页，32k 星，是近几年自托管圈里最流行的仪表盘之一。它解决的问题是：家里跑了十几个服务，每个都有自己的网址和状态页，需要一页把入口和关键数字都摆出来，打开浏览器第一眼就看到。</p><p>它用 Next.js 写成，配置是几个 YAML 文件：services 定义分组和卡片，widgets 定义顶部信息条，bookmarks 定义书签。最特别的是集成能力：一百多种服务有专门的小部件，填上地址和密钥，卡片上直接显示 Jellyfin 正在播放什么、Uptime Kuma 有几个监控在线、NAS 剩多少空间；再加上 Docker 标签自动发现，容器只要贴几行标签就会自动出现在页面上。请求经服务端代理，密钥不暴露到浏览器。</p><p>它更新很勤，2026 年仍是月度发版；界面经 Crowdin 翻译成四十多种语言，中文完整，文档是英文，但国内部署教程非常多。</p><p>在 0802 里它是延伸：三块屏由 HA 驱动，传感器这一层够了，缺的是服务层。做法是在 0804 的笔记本上跑 homepage，右屏的一个标签页嵌它：分组按机器排，NAS 一栏是 Jellyfin、Immich、存储余量，笔记本一栏是 HA、ESPHome、Uptime Kuma、Beszel，Mac mini 一栏是识别任务和 Ollama；哪个服务挂了卡片就变灰。手机上它也是入口页，出门时先看一眼再决定要不要点进 HA。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Lissy93/dashy" target="_blank" rel="noopener">Lissy93/dashy</a>
+          <span class="stars">★ 26.4k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">另一款自托管仪表盘：自带可视化编辑器，不用改 YAML 也能拖卡片，带状态检查、几十套主题、小部件、多页面和登录</p>
+        <p class="gh-why">→ 木屋吧台平板和手机需要一个不那么工程味的入口页，它的主题和编辑器更适合当分身；与 homepage 各有所长，值得一起学</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0802-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="31" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0802-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0802-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Dashy · 拖出来的入口页</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0802-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0802-5-shade)" stroke="none"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0802-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0802-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0802-5-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0802-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0802-5-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">界面编辑模式</text><text x="78" y="107" text-anchor="middle" font-size="10.5">拖卡片改主题</text><text x="78" y="180" text-anchor="middle" font-size="10.5">conf.yml</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Dashy</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Vue 单页</text><text x="200" y="174" text-anchor="middle" font-size="10.5">状态检查</text><text x="200" y="187" text-anchor="middle" font-size="10.5">探测节点网页</text><text x="322" y="94" text-anchor="middle" font-size="10.5">吧台平板 / 手机</text><text x="322" y="107" text-anchor="middle" font-size="9.5">大按钮 + iframe</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA 视图</text><text x="322" y="187" text-anchor="middle" font-size="10.5">Grafana 曲线</text><text x="430" y="138" text-anchor="middle" font-size="10.5">磨豆子的人</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写回</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">跳转 / 嵌入</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0802：分身入口页，大按钮跳 HA 视图，iframe 嵌曲线，夜间主题配夜航</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Lissy93/dashy</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Dashy 是英国开发者 Alicia Sykes 维护的自托管仪表盘，26.4k 星，和 homepage 是同一类东西，但取向不同：homepage 偏运维，靠 YAML 和自动发现；Dashy 偏个人化，主打可视化编辑和主题。它解决的问题同样是给一堆自托管服务做一个入口页。</p><p>它用 Vue 写成，一个 conf.yml 描述页面、分区和条目，但也可以完全不碰文件：界面里有编辑模式，拖拽卡片、改图标、加分区，保存后写回配置。它有状态检查，定时探测每个链接是否在线并在卡片角上亮灯；有几十套内置主题和自定义 CSS；有小部件系统，能嵌天气、系统负载、RSS、iframe；还有多页面、搜索快捷键、登录与按用户显示不同页面。</p><p>社区活跃，2026 年仍在更新，界面翻译含简体和繁体中文，文档是英文但很详尽；国内自托管圈把它和 homepage 并列为两大起始页。</p><p>在 0802 里它是延伸：屏墙归 HA，homepage 管服务层，Dashy 更适合做分身的入口。木屋吧台的平板和手机上放一个 Dashy 页面：第一页是几个大按钮，直接跳 HA 的各个视图；第二页用 iframe 嵌 Grafana 的水电曲线和 0801 的地图；主题用夜间黑底，22:00 之后和屏墙的夜航模式一个调子。它的状态检查还能顺手把各模块 ESPHome 节点的网页探一遍，掉线的卡片亮红灯，和 Uptime Kuma 互为备份。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/ollama/ollama" target="_blank" rel="noopener">ollama/ollama</a>
+          <span class="stars">★ 180.3k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">本地跑大语言模型最省事的方式：一条命令拉取并运行 Qwen、Gemma、DeepSeek 等模型，提供 REST API，HA 有官方集成能把它当对话助手</p>
+        <p class="gh-why">→ 屏幕角落那句今天所有模块正常需要有人把几十个实体的状态读一遍再总结成一行，本地大模型干这个不联网也不花钱</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0802-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="32" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0802-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0802-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Ollama · 本地模型替你读一遍全屋状态</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0802-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0802-6-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0802-6-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0802-6-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0802-6-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0802-6-arrow)" stroke-linecap="round"><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="216" text-anchor="middle" font-size="10.5">七个区域</text><text x="78" y="229" text-anchor="middle" font-size="10.5">暴露的实体</text><text x="78" y="94" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="78" y="107" text-anchor="middle" font-size="10.5">早晚各一次</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Ollama</text><text x="200" y="107" text-anchor="middle" font-size="9.5">M1 Mac mini</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Qwen 8B</text><text x="200" y="187" text-anchor="middle" font-size="10.5">GGUF 模型</text><text x="322" y="94" text-anchor="middle" font-size="10.5">屏幕角落一行</text><text x="322" y="107" text-anchor="middle" font-size="10.5">今天所有模块正常</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0803 小鸭子</text><text x="322" y="187" text-anchor="middle" font-size="10.5">断网后备大脑</text><text x="430" y="138" text-anchor="middle" font-size="10.5">端着杯子的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">暴露实体</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">Metal 推理</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">一句总结</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0802：HA 把实体状态发给本地模型总结成一行小字，Mac mini 上跑不联网</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">ollama/ollama</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Ollama 是 2023 年出现的本地大模型运行工具，180.3k 星，是 GitHub 上星数最高的项目之一。它解决的问题是：想在自己的机器上跑一个大语言模型，但不想折腾编译、量化和显存参数；它把这些包成一条命令，几分钟后就能对话。</p><p>它的核心是一个常驻服务：模型以 GGUF 格式从它的模型库拉取，底层推理引擎来自 llama.cpp，Mac 上走 Metal，有显卡走 CUDA 或 ROCm，没显卡用 CPU；对外开放一个 REST API，兼容 OpenAI 的接口格式，各种客户端和框架都能直接接。模型库里 Qwen、Gemma、DeepSeek 都有多个尺寸，8B 级别在 16GB 内存的 Mac mini 上能流畅跑。</p><p>HomeAssistant 有官方 Ollama 集成，可以把它设为 Assist 的对话代理并允许它读取和控制暴露的实体。文档是英文，中文教程遍地都是。</p><p>在 0802 里它是延伸：三块屏展示数据，但没有人替你读数据。在 0804 的 M1 Mac mini 上跑 Ollama，装一个 Qwen 8B 级别的模型，HA 的 Ollama 集成把七个区域的关键实体暴露给它，再建一条早晚各跑一次的自动化：把所有模块的状态发给模型，让它用一句话总结，写进屏幕角落那行小字，正常时就是今天所有模块正常，异常时会说柴火炉温度偏高、雨水罐传感器四十分钟没上报。同一个模型也是 0803 小鸭子断网时的后备大脑。</p></div>
       </article>
     </div></section>
 

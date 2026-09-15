@@ -272,6 +272,7 @@
           <a class="gh-name" href="https://github.com/wled/WLED" target="_blank" rel="noopener">wled/WLED</a>
           <span class="stars">★ 18.7k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESP32 控制可寻址灯带的开源固件，手机网页调色调亮度、存预设、本地定时，可接 HomeAssistant</p>
         <p class="gh-why">→ 九宫格每排上沿那条 2700K 藏光灯带就刷它，一块 ESP32 管三段，预设与定时本地跑，HA 只负责按太阳高度切</p>
@@ -300,6 +301,7 @@
           <a class="gh-name" href="https://github.com/benjaminjonard/koillection" target="_blank" rel="noopener">benjaminjonard/koillection</a>
           <span class="stars">★ 1.3k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">自托管的个人收藏管理系统，任意物件都能建档、配图、写自定义字段，按收藏、条目、标签三层组织</p>
         <p class="gh-why">→ 七代 PSK 盒子的档案库：每只盒子一条记录，字段记型号、年份、去过哪座山、格位号，导出来直接印牛皮纸标签</p>
@@ -328,6 +330,7 @@
           <a class="gh-name" href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a>
           <span class="stars">★ 88k</span>
           <span class="zh ">有中文文档站</span>
+          
         </header>
         <p class="gh-desc">本地优先、隐私优先的开源家庭自动化中枢，几千个集成，自动化引擎、仪表盘和手机 App 一体</p>
         <p class="gh-why">→ 九宫格灯带和三只关键作品射灯的傍晚亮灯调度全在它里做：sun.sun 高度角触发，切 WLED 预设，再顺手拉低射灯</p>
@@ -350,6 +353,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Home Assistant 是 Paulus Schoutsen 在 2013 年发起、如今由 Nabu Casa 与 Open Home 基金会维护的开源家庭自动化中枢，88k 星，是 GitHub 上最活跃的项目之一，每月发一个大版本。它解决的问题是：家里各种品牌的灯、传感器、插座各自为政，需要一个本地跑、不依赖云、能把它们串起来写规则的大脑。</p><p>架构是 Python 写的事件总线：每个集成把设备抽象成实体，状态变化都变成事件进总线，自动化引擎监听触发条件、判断条件、执行动作，历史数据存在本地数据库。它有两千多个官方集成，ESPHome、WLED、MQTT、Zigbee、Matter 都原生支持；仪表盘用 Lovelace 卡片拼，手机 App 能推送和定位，还带 Assist 本地语音助手。</p><p>社区规模全球第一，中文文档站 home-assistant.io 有官方翻译，界面本身也有简体中文，B 站教程数不胜数，国内玩家常和小米、华为设备一起用。</p><p>放进 0102，它负责调度而不是驱动：一条自动化以 sun.sun 的高度角低于 3 度为触发，动作是调用 WLED 集成把灯带切到傍晚预设，再把第一版、第四版、第七版那三只小射灯调到 60%；晚上十一点另一条自动化全部关掉；周末下午两点如果有人在木屋，再亮一次给拍照用。坑在太阳高度角在冬天下降得早，条件里加一个当前照度判断更稳。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/AppFlowy-IO/AppFlowy" target="_blank" rel="noopener">AppFlowy-IO/AppFlowy</a>
+          <span class="stars">★ 75.4k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Flutter + Rust 写的开源 Notion 替代：文档、数据库表格、看板、日历，数据本地优先，可自托管云同步</p>
+        <p class="gh-why">→ 九宫格里每只盒子都值得一页出生故事：型号、年份、去过哪座山、当时的草图，AppFlowy 的数据库视图正好一行一只盒子</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0102-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0102-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0102-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">AppFlowy · 每只盒子一页出生故事的知识库</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0102-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0102-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M288.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0102-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0102-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0" stroke-dasharray="3 3"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">自己写</text><text x="78" y="151" text-anchor="middle" font-size="9.5">型号 / 年份 / 山</text><text x="78" y="180" text-anchor="middle" font-size="10.5">草图与照片</text><text x="200" y="94" text-anchor="middle" font-size="10.5">AppFlowy</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Flutter + Rust</text><text x="200" y="174" text-anchor="middle" font-size="10.5">作品表 Grid</text><text x="200" y="187" text-anchor="middle" font-size="9.5">表格 / 看板 / 日历</text><text x="322" y="94" text-anchor="middle" font-size="10.5">自托管云</text><text x="322" y="107" text-anchor="middle" font-size="10.5">多端同步</text><text x="322" y="174" text-anchor="middle" font-size="10.5">标签二维码</text><text x="322" y="187" text-anchor="middle" font-size="10.5">手机打开</text><text x="430" y="218" text-anchor="middle" font-size="10.5">看墙的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">录入</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">贴图</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">一页一盒</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">扫码看故事</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0102：一行一只盒子的作品表，牛皮纸标签印二维码指向那一页</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">AppFlowy-IO/AppFlowy</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>AppFlowy 是 AppFlowy-IO 团队做的开源协作工作区，目标很直白：做一个数据归自己管的 Notion。75.4k 星，是同类项目里星数最高的一个。它要解决的问题是：Notion 好用但所有笔记都在别人的云上，断网不能用，还随时可能改价。</p><p>它的架构是 Flutter 写界面、Rust 写核心，一套代码跑 macOS、Windows、Linux、iOS 和 Android。数据默认存在本地 SQLite 里，文档用块编辑器，数据库（Grid）像一张有类型的表格，同一份数据可以切成表格、看板、日历三种视图，属性支持文本、数字、单选、日期、复选框和关联。想多设备同步就自托管 AppFlowy Cloud（Docker Compose 一键起），也可以只用本地。2024 年后加了 AI 助手，可以接本地 Ollama 模型。</p><p>生态和社区：界面自带简体中文，Discord 和 GitHub 讨论区活跃，中文圈的评测和安装教程不少，2025 年后仍是几周一个版本。</p><p>放到 0102 里它是延伸项目：作品墙的每只盒子下面挂的牛皮纸标签只写得下型号和年份，而更完整的出生故事应该在一个数据库里。在 AppFlowy 建一张 PSK 作品表，一行一只盒子，列是版本号、年份、盒身材料、去过的山、当时的草图照片、当时犯的错，用日历视图看就是一条时间线。标签上印一个小二维码指向这一页，自己看到右下角那两个空位时，把下一代的想法也先记进去。注意别开太多字段，能坚持每代填完最重要。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/TriliumNext/Trilium" target="_blank" rel="noopener">TriliumNext/Trilium</a>
+          <span class="stars">★ 37.8k</span>
+          <span class="zh ">官方中文 README</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">层级笔记树式的个人知识库：一条笔记可以挂在多个父节点下，带关系图、脚本能力和自托管服务端同步</p>
+        <p class="gh-why">→ PSK 的知识不是平的：一只盒子挂在年份下也挂在材料下，还连着某座山的日记，Trilium 的多父节点树正对这种交叉关系</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0102-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0102-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0102-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Trilium · 一条笔记挂多棵树的知识网</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0102-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0102-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0102-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0102-5-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0102-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0102-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">每代盒子</text><text x="78" y="151" text-anchor="middle" font-size="10.5">一条笔记</text><text x="78" y="174" text-anchor="middle" font-size="10.5">上山日记</text><text x="78" y="187" text-anchor="middle" font-size="10.5">报价 / 样品照</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Trilium 服务端</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Node.js + Docker</text><text x="200" y="174" text-anchor="middle" font-size="10.5">笔记树</text><text x="200" y="187" text-anchor="middle" font-size="10.5">克隆到年份 / 材料</text><text x="322" y="94" text-anchor="middle" font-size="10.5">关系图</text><text x="322" y="107" text-anchor="middle" font-size="10.5">为什么换钛</text><text x="322" y="174" text-anchor="middle" font-size="10.5">桌面 / 手机端</text><text x="322" y="187" text-anchor="middle" font-size="10.5">加密同步</text><text x="430" y="138" text-anchor="middle" font-size="10.5">看墙的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">写</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">挂旁边</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">自动生成</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">同步</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">顺藤摸瓜</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0102：一代盒子一条笔记，克隆进年份/材料/山三棵树，标签二维码指过来</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">TriliumNext/Trilium</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Trilium Notes 最早由捷克开发者 zadam 做了六年，2024 年他退出维护后社区接手成立 TriliumNext，2025 年 6 月仓库正式改名为 TriliumNext/Trilium 继续开发，37.8k 星。它要解决的问题是：普通笔记软件是文件夹或标签，而真实知识是一张网，一条笔记常常同时属于好几个主题。</p><p>它的核心是一棵可以克隆的笔记树：任何笔记可以出现在多个父节点下，本质上是同一条记录的多个引用；笔记之间还能定义关系和属性，自动生成关系图。编辑器是富文本加代码块、Markdown 导入导出、画布、思维导图和网页剪藏。它内置脚本引擎，可以用 JavaScript 写自动化和小工具，服务端用 Node.js 写，Docker 一行起，桌面端用 Electron，手机用网页版，同步走自己的服务器，全程加密可选。</p><p>社区方面它是少数 README 自带简体中文和繁体中文的知识库项目，中文用户很多，Docker 部署教程遍地。</p><p>放到 0102 里它是延伸的另一条路线：如果说 AppFlowy 适合做一张干净的作品表，Trilium 适合把整个 PSK 七年的东西全塞进去——每一代盒子一条笔记，克隆到年份树、材料树和山的树下；每次上山的日记、供应商报价、失败的样品照都挂在旁边，关系图一拉就看到第四版为什么换钛合金。作品墙标签上的二维码也可以指向这里。注意它是给一个人用的深度工具，学习曲线比 AppFlowy 陡，先只用树和克隆两个功能就够了。</p></div>
       </article>
     </div></section>
 

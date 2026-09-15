@@ -152,6 +152,7 @@
           <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
           <span class="stars">★ 11.7k</span>
           <span class="zh zh-no">无中文（社区教程多）</span>
+          
         </header>
         <p class="gh-desc">用 YAML 配置 ESP32 固件的系统，一氧化碳、温度探针、脉冲风速、本地定时器都是现成组件，本地跑不上云，原生接 HomeAssistant</p>
         <p class="gh-why">→ 火塘空气看护和煮茶烤鱼计时器合成一块 ESP32：读 CO 传感器和热电偶，本地阈值报警和倒计时，不靠 Wi-Fi 也能响蜂鸣器</p>
@@ -180,6 +181,7 @@
           <a class="gh-name" href="https://github.com/CapnBry/HeaterMeter" target="_blank" rel="noopener">CapnBry/HeaterMeter</a>
           <span class="stars">★ 556</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">开源烧烤温控器，Arduino 板加树莓派跑 LinkMeter，四路探针，PID 控鼓风机和风门保持炭火温度，网页看曲线和报警</p>
         <p class="gh-why">→ 火塘要烤鱼又要煮茶，靠它的 PID 鼓风把炭温稳在 200 度左右，四路探针一根测炭一根插鱼，网页曲线比盯着火看准</p>
@@ -208,6 +210,7 @@
           <a class="gh-name" href="https://github.com/WLANThermo-nano/WLANThermo_ESP32_Software" target="_blank" rel="noopener">WLANThermo-nano/WLANThermo_ESP32_Software</a>
           <span class="stars">★ 40</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">德国开源 ESP32 烧烤温度计固件，最多八路探针、网页和手机 App、推送通知、Pitmaster 功能控风扇或舵机、MQTT</p>
         <p class="gh-why">→ 比 HeaterMeter 轻：一块 ESP32 就够，烤鱼和茶壶各插一根探针，温度到了手机提醒，MQTT 进 HomeAssistant，德国社区维护十年</p>
@@ -230,6 +233,97 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>WLANThermo 是德国一个开源社区从 2014 年起做的烧烤温度计项目，这个仓库是它 ESP32 一代的固件，GitHub 上 40 星，README 是德文。它解决的问题和 HeaterMeter 一样，把烤肉时的温度监控和炭火控制交给机器，但路线更轻：不用树莓派，一块 ESP32 加一块探针板就是完整设备，网页、App、通知都在这颗芯片上。</p><p>它的结构是 ESP32 固件加两代硬件，Nano V3 有八路探针口，Mini V3 有四路，探针是标准的 NTC 热敏电阻，支持多种品牌的探针型号，也能接蓝牙探针。固件提供本地网页界面和手机 App，每路设上下限，越界通过 Telegram 等推送；Pitmaster 功能是它的温控部分，一路探针做反馈，用 PID 输出给风扇或舵机风门；数据可以走 MQTT 发出去。硬件设计和外壳文件在同一组织的其他仓库里，可以自己打板或买套件。没有中文资料，德文文档靠翻译软件能看懂。</p><p>在 0704 里它是比 HeaterMeter 更省事的选择：一块 Nano V3 装在矮桌抽屉里，两根探针分别插进烤鱼和贴在茶壶上，各设一个上限，鱼 65 度、茶壶 95 度，到了 App 推一条；MQTT 接进 HomeAssistant 后，温度显示在 0703 那块能源卡片旁边。想控火再接一个小风扇到火盆进风口，用 Pitmaster 稳炭温，不行就当纯温度计用。NTC 探针型号要在设置里选对，否则读数偏几十度；进炭层的那根探针要用耐高温款。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/fishaudio/fish-speech" target="_blank" rel="noopener">fishaudio/fish-speech</a>
+          <span class="stars">★ 31.8k</span>
+          <span class="zh ">官方中文 README</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">开源的顶级文本转语音模型：中英日等多语言，几秒参考音频即可克隆音色，自然语言标签控制情绪，本地 GPU 或 CPU 推理</p>
+        <p class="gh-why">→ 火塘边不想看屏幕，想让一个熟悉的声音念一首诗、报一句火候，本地跑、中文自然、音色可以是自己人</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0704-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="29" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0704-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0704-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Fish Speech · 火塘边一个熟悉的声音念诗</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0704-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0704-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0704-4-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0704-4-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0704-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0704-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L266.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M266.0 96.0 L256.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">名言库</text><text x="78" y="107" text-anchor="middle" font-size="10.5">挑一首诗</text><text x="78" y="174" text-anchor="middle" font-size="10.5">参考音频</text><text x="78" y="187" text-anchor="middle" font-size="10.5">十秒人声</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Fish Speech</text><text x="200" y="107" text-anchor="middle" font-size="10.5">文本转 token</text><text x="200" y="174" text-anchor="middle" font-size="10.5">声码器</text><text x="200" y="187" text-anchor="middle" font-size="10.5">还原波形</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA TTS 集成</text><text x="322" y="107" text-anchor="middle" font-size="10.5">触发朗读</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Snapcast</text><text x="322" y="187" text-anchor="middle" font-size="10.5">顶棚小音箱</text><text x="430" y="218" text-anchor="middle" font-size="10.5">盘腿喝茶的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">克隆音色</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">HTTP</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0704：HA 挑一首诗调用 Fish Speech，家里人的音色从顶棚小音箱念出来</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">fishaudio/fish-speech</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Fish Speech 是国内团队 Fish Audio 2024 年开源的文本转语音模型，31.8k 星，2025 年推出 S2 Pro 版本，仓库自带中文 README，是中文开源 TTS 里最接近商业水准的一个。它解决的问题是：以前的开源 TTS 要么机械要么只有英文，中文语音想自然、想用自己的音色，得靠云服务。</p><p>它的工作方式是两段式：先把文本用大语言模型架构转成语义音频 token，再由声码器把 token 还原成波形。给它几秒钟的参考音频就能零样本克隆音色，不用训练；文本里可以写情绪和语气的自然语言标签，比如慢一点、带笑意。推理支持 NVIDIA 显卡、AMD 显卡和纯 CPU，带命令行、WebUI 和 HTTP API，Docker 一键起。</p><p>生态上它的社区在国内很活跃，B 站教程多，Discord 和 QQ 群都有人答疑。要注意模型采用 Fish Audio 研究许可证，个人和研究用途没问题，商用要另谈。</p><p>在 0704 里它是延伸：火塘边的规矩是不看手机，那就让声音来。在 0802 服务器上跑 Fish Speech 的 HTTP 服务，HomeAssistant 通过一个自定义 TTS 集成调用它，参考音频用家里人念的十秒话。傍晚开火时，0208 的 Snapcast 分一路到钓台顶棚下的小音箱，念一首和季节对上的诗；水壶温度探头到 90 度报一句水快开了；走的时候报一句别忘了浇火。文本从 0209 的名言库里按日期挑，声音是自己人的，比任何音箱助手都合适。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/openai/whisper" target="_blank" rel="noopener">openai/whisper</a>
+          <span class="stars">★ 107.3k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">OpenAI 开源的语音识别模型：68 万小时数据训练，99 种语言含中文，本地推理，自动断句加标点，可翻译成英文</p>
+        <p class="gh-why">→ 火塘边说的话比写的多，鱼获、火候、今天想到的事，对着手机说一段，转成文字才能进 0702 的钓鱼笔记</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0704-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="30" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0704-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0704-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Whisper · 火塘边说一段话就是一条笔记</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0704-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0704-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0704-5-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0704-5-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">手机按住说</text><text x="78" y="149" text-anchor="middle" font-size="10.5">或语音盒</text><text x="200" y="94" text-anchor="middle" font-size="9.5">faster-whisper</text><text x="200" y="107" text-anchor="middle" font-size="10.5">本地识别</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Wyoming 协议</text><text x="200" y="187" text-anchor="middle" font-size="10.5">HA 语音管线</text><text x="322" y="94" text-anchor="middle" font-size="10.5">钓鱼笔记</text><text x="322" y="107" text-anchor="middle" font-size="10.5">有鱼名的进这</text><text x="322" y="174" text-anchor="middle" font-size="10.5">memos</text><text x="322" y="187" text-anchor="middle" font-size="10.5">其他想法</text><text x="430" y="138" text-anchor="middle" font-size="10.5">不想掏笔的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">音频</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">有鱼名</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">其他</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0704：手机说一段，服务器 faster-whisper 转文字，按关键词分进钓鱼笔记或 memos</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">openai/whisper</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Whisper 是 OpenAI 2022 年 9 月开源的语音识别模型，107.3k 星，是 GitHub 上星数最高的语音项目，MIT 许可证，2024 年又加了更快的 turbo 版。它解决的问题是：以前离线语音识别对口音、噪音和中文都很差，Whisper 用 68 万小时网络音频弱监督训练，做到接近商业水平。</p><p>它的工作方式是把音频切成 30 秒的窗口，转成梅尔频谱输入一个编码器解码器 Transformer，解码器一边识别语种一边输出带标点的文本。模型从 tiny 到 large 有六档，tiny 在树莓派上也能跑，large 要显卡。周边最重要的两个衍生项目是 C++ 重写的 whisper.cpp 和更快的 faster-whisper，HomeAssistant 的语音助手管线就是靠 Wyoming 协议接 faster-whisper 做听写。</p><p>生态上中文资料非常多，B 站和知乎教程从装包到微调都有，中文识别效果在 medium 以上模型很稳。</p><p>在 0704 里它是延伸：火塘边坐着的时候，想记的东西很多但不想掏笔。手机上用 HA 伴侣应用按住说一段，比如今天两条鲫鱼一条昂刺、松木炭烤鱼十分钟正好，音频传到 0802 服务器的 faster-whisper 转成文字，自动化按关键词分流：有鱼名的进 0702 的钓鱼笔记，其他的进 0209 的 memos。想更省事就在钓台柱子上装一只 ESP32-S3 语音盒子，唤醒词一喊，灯、音乐和记笔记都能用嘴说。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/OHF-Voice/piper1-gpl" target="_blank" rel="noopener">OHF-Voice/piper1-gpl</a>
+          <span class="stars">★ 5.1k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Piper 的官方续作：Open Home Foundation 维护的轻量本地 TTS，ONNX 模型在树莓派上实时出声，几十种语言含中文普通话</p>
+        <p class="gh-why">→ 念诗交给 Fish Speech，但火快灭了、水开了这种一句话提示不值得开显卡，需要一个几十毫秒就出声的小引擎</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0704-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="31" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0704-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0704-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Piper · 一句话提示几十毫秒就出声</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0704-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0704-6-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0704-6-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0704-6-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0704-6-shade)" stroke="none"/><path d="M288.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0704-6-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">水开 柴少</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="78" y="187" text-anchor="middle" font-size="10.5">生成提示句</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Piper</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Wyoming 服务</text><text x="200" y="174" text-anchor="middle" font-size="9.5">espeak-ng 音素</text><text x="200" y="187" text-anchor="middle" font-size="10.5">ONNX 声学模型</text><text x="322" y="94" text-anchor="middle" font-size="10.5">顶棚小音箱</text><text x="322" y="107" text-anchor="middle" font-size="9.5">Snapcast 一路</text><text x="322" y="174" text-anchor="middle" font-size="10.5">长段落交给</text><text x="322" y="187" text-anchor="middle" font-size="9.5">Fish Speech</text><text x="430" y="138" text-anchor="middle" font-size="10.5">走前浇火的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">Wyoming</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">波形</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">分工</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0704：水开、柴少、走前浇火这类一句话提示走 Piper，HA 语音管线默认 TTS…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">OHF-Voice/piper1-gpl</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Piper 是 Rhasspy 作者 Michael Hansen 2022 年做的轻量神经 TTS，11k 星的老仓库 2025 年 10 月归档，开发转到 Open Home Foundation 名下的 piper1-gpl，5.1k 星，GPL 许可证，是 HomeAssistant 官方语音助手默认的说话引擎。它解决的问题是：大模型 TTS 好听但要显卡、要等几秒，家里的提示音需要在树莓派上几十毫秒出声。</p><p>它的工作方式是把文本先经 espeak-ng 转成音素序列，再送进 VITS 架构的模型，用 ONNX Runtime 一次性生成波形，不需要 GPU。每个语音是一个几十兆的 .onnx 文件加配置，官方提供几十种语言上百个音色，中文有普通话女声 huayan，也能用自己的录音训练。Python 包、命令行和 HTTP 服务都有，HA 通过 Wyoming 协议直接接。</p><p>生态上它在 HA 语音社区里是默认选项，文档英文，中文教程集中在 HA 中文论坛和 B 站，注意中文音色的自然度不如 Fish Speech，但胜在秒出声。</p><p>在 0704 里它是延伸，和 Fish Speech 分工：念诗这种长段落走 Fish Speech，慢一点没关系；水壶探头到温度、柴桶重量传感器提示柴快烧完、离开钓台前提醒浇水灭火，这种一句话的提示走 Piper，HA 语音管线里把它设为默认 TTS，响应快，服务器不用喂显卡。以后装了 ESP32 语音盒，问一句电池还有多少，回答也是它。</p></div>
       </article>
     </div></section>
 

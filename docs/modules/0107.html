@@ -286,6 +286,7 @@
           <a class="gh-name" href="https://github.com/grocy/grocy" target="_blank" rel="noopener">grocy/grocy</a>
           <span class="stars">★ 9.5k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">自称“冰箱之外的 ERP”：自托管的家庭食材与日用品管理，管库存、保质期、购物清单和消耗记录</p>
         <p class="gh-why">→ 小冰箱和矮柜的账本：咖啡豆开袋日期、黄酒还剩几瓶、桂花陈皮什么时候过期，罐上扫码入库消耗，过期前推提醒</p>
@@ -314,6 +315,7 @@
           <a class="gh-name" href="https://github.com/karlomikus/bar-assistant" target="_blank" rel="noopener">karlomikus/bar-assistant</a>
           <span class="stars">★ 1.0k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">自托管家庭吧台管理系统，管酒水库存、500 多个鸡尾酒配方和购物清单，带 REST API</p>
         <p class="gh-why">→ 柜里 8 只玻璃罐和几瓶黄酒都登记进去，坐下翻平板按库存反查今晚能做什么，缺料自动进购物清单推手机</p>
@@ -342,6 +344,7 @@
           <a class="gh-name" href="https://github.com/beeb/coffee-scale-app" target="_blank" rel="noopener">beeb/coffee-scale-app</a>
           <span class="stars">★ 146</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">DIY 蓝牙咖啡秤：ESP32 + HX711 称重传感器跑 Rust 固件，配一个手机 PWA 显示重量、计时和萃取曲线</p>
         <p class="gh-why">→ 手冲架下那台秤自己做：磨豆注水计时、流速曲线全在手机网页上，每天一杯的种草环节多了一条能对比的曲线</p>
@@ -364,6 +367,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>coffee-scale-app 是瑞士开发者 beeb 做的开源 DIY 咖啡秤，146 星，从 2021 年做到现在，2026 年 9 月还在发新版。它解决的问题是：市面上带蓝牙、能画曲线的咖啡秤要一千多块，而一块 ESP32、一颗 HX711 称重模块、一个小 OLED 加一节锂电池，成本不到一百块就能做出同样的事。</p><p>工作原理分两半：秤本身跑 Rust 写的固件，用 esp-rs 生态，HX711 高频采样后经卡尔曼滤波去抖，128×32 的 OLED 上显示重量，通过低功耗蓝牙广播出去；另一半是一个网页 PWA，手机浏览器打开 coffee.beeb.li 或自己部署的一份，连上秤后实时显示重量、计时、预浸时间，并把这次注水的重量曲线和一条参考萃取曲线叠在一起。外壳有 3D 打印件，去 Printables 下载。</p><p>生态上它是 ESP32 咖啡秤里最完整的一个，README 详细但只有英文，好在接线就四根。</p><p>放进 0107 里它就是手冲架下那台秤：磨完豆按一下归零，注水时手机放在榆木台面上看曲线，粉水比和流速有了记录。用 ESP32-C3 把体积再缩小一圈，外壳改成一只小胡桃木盒，秤盘留着防水。坑是 HX711 受温度影响，台面离炉子只有两米，每次开始前先归零，别把秤放在电陶炉旁边。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/mealie-recipes/mealie" target="_blank" rel="noopener">mealie-recipes/mealie</a>
+          <span class="stars">★ 13.1k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">自托管菜谱管理与餐食计划：一键从网址抓菜谱、按份数换算、周计划、购物清单、多用户，FastAPI + Nuxt</p>
+        <p class="gh-why">→ 吧台上手冲、热红酒、桂花陈皮茶这些配方要有个地方记，Mealie 抓网址一键存、按杯数换算最省事，还能连 HomeAssistant</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0107-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0107-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0107-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Mealie · 吧台配方库与补货清单</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0107-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0107-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0107-4-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0107-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0107-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">网址 / 手录</text><text x="78" y="107" text-anchor="middle" font-size="10.5">手冲参数 热红酒</text><text x="78" y="218" text-anchor="middle" font-size="10.5">写配方的人</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Mealie</text><text x="200" y="107" text-anchor="middle" font-size="9.5">FastAPI + Nuxt</text><text x="200" y="174" text-anchor="middle" font-size="10.5">菜谱 / 配料</text><text x="200" y="187" text-anchor="middle" font-size="10.5">按杯数换算</text><text x="322" y="94" text-anchor="middle" font-size="10.5">购物清单</text><text x="322" y="107" text-anchor="middle" font-size="10.5">8 个玻璃罐补货</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA 集成</text><text x="322" y="187" text-anchor="middle" font-size="10.5">0802 大屏推荐</text><text x="430" y="218" text-anchor="middle" font-size="10.5">坐吧台的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">抓取</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">合并配料</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">REST API</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">今天喝什么</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0107：手冲 / 热红酒 / 花茶配方按杯数换算，玻璃罐库存生成镇上补货清单</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">mealie-recipes/mealie</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Mealie 是 Hayden Kotelniski 发起的自托管菜谱管理器，Python FastAPI 后端加 Nuxt 前端，13.1k 星，是自托管菜谱工具里最常被推荐的一个。它要解决的问题是：菜谱散在收藏夹、截图和微信聊天记录里，做的时候找不到，份量也不对。</p><p>它的核心功能是菜谱抓取：把任何食谱网页的网址粘进去，它解析页面里的结构化数据自动填好配料、步骤、时间、图片，抓不到的也能手动录或者传照片让 OpenAI 识别。菜谱可以打标签、分类、按份数自动换算用量，拖进周计划里就生成一周的餐单，再一键生成购物清单，配料自动合并同类项。多用户和家庭组适合一家人用，界面响应式，手机加到主屏幕当 App 用。它有完整的 REST API，HomeAssistant 有社区集成能把今天的餐单显示在仪表盘上。</p><p>生态方面 2025 年后仍是几周一个版本，界面翻译覆盖 35 种以上语言含简体中文，中文部署教程在 NAS 圈很多。</p><p>放到 0107 里它是延伸项目，管的不是饭而是吧台：手冲咖啡按豆子记参数（粉水比、水温、时间），热红酒、桂花陈皮茶、干柠檬片气泡水各一条配方，按一杯或两杯自动换算；柜门里那 8 个玻璃罐的内容物做成配料，购物清单就是下次去镇上补货的清单。HomeAssistant 集成让 0802 大屏在下午三点弹一句今天的推荐饮品。注意它抓中文菜谱网站的成功率一般，吧台这些配方基本要自己录，好在总共也就二十来条。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/TandoorRecipes/recipes" target="_blank" rel="noopener">TandoorRecipes/recipes</a>
+          <span class="stars">★ 8.6k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Django 写的自托管菜谱与餐食计划：菜谱抓取、步骤化编辑、餐食计划、购物清单、空间隔离和食材库存管理</p>
+        <p class="gh-why">→ 和 Mealie 是同一赛道的另一条路线，多了配料库存和保质期管理，正好把吧台玻璃罐和 0106 炉顶那口锅的食材也管起来</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0107-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0107-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0107-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Tandoor · 分步骤的配方与食材库存</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0107-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0107-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0107-5-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0107-5-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0107-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0107-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">配方分步骤</text><text x="78" y="107" text-anchor="middle" font-size="10.5">煮香料 / 加酒</text><text x="78" y="174" text-anchor="middle" font-size="10.5">玻璃罐食材</text><text x="78" y="187" text-anchor="middle" font-size="10.5">装罐日期</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Tandoor</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Django + Vue</text><text x="200" y="174" text-anchor="middle" font-size="10.5">食材库</text><text x="200" y="187" text-anchor="middle" font-size="10.5">别名 / 保质期</text><text x="322" y="94" text-anchor="middle" font-size="10.5">逐步模式</text><text x="322" y="107" text-anchor="middle" font-size="10.5">计时器</text><text x="322" y="174" text-anchor="middle" font-size="10.5">餐食计划</text><text x="322" y="187" text-anchor="middle" font-size="10.5">购物清单</text><text x="430" y="138" text-anchor="middle" font-size="10.5">煮热红酒的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">登记</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">缺什么</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">按步做</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0107：吧台饮品和炉边菜分两个空间，配方逐步计时，玻璃罐记保质期</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">TandoorRecipes/recipes</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Tandoor Recipes 是德国开发者 vabene1111 用 Django 加 Vue 做的自托管菜谱管理器，8.6k 星，和 Mealie 并列自托管菜谱的两大选择。它要解决的问题和 Mealie 一样：菜谱要集中、要能计划、要能变成购物清单，但它的取向更偏结构化和数据。</p><p>它的菜谱模型是分步骤的，每一步有自己的配料和时长，做的时候有一个逐步模式按步走、计时器直接开；配料是一个有层级和别名的食材库，同一种东西不同叫法能合并。餐食计划按周排，购物清单可以按超市货架分类排序，还能多人实时共享勾选。特色是空间的概念：一个实例可以开多个互相隔离的空间给不同家庭。它有食材库存与保质期的实验功能，能从 Nextcloud、Paprika、Mealie 等格式批量导入，REST API 完整，也有 HomeAssistant 社区集成。部署走 Docker Compose，官方给了十几种反向代理组合的示例。</p><p>生态方面 2025 年后仍在活跃开发，界面翻译含简体中文，中文教程主要在 NAS 和自托管社区。</p><p>放到 0107 里它是延伸里和 Mealie 二选一的另一半：如果想把吧台管得更细——热红酒配方分成煮香料和加酒两步各自计时、陈皮桂花按克数进食材库、每个玻璃罐登记装罐日期和保质期——Tandoor 的结构更合适。它还能顺手把 0106 炉顶烤红薯、炖汤这类炉边菜也收进来，用空间把吧台饮品和炉边菜分开。注意两个别都装，都装了配方会分家；先各试一周，留一个。</p></div>
       </article>
     </div></section>
 

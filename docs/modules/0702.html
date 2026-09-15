@@ -201,6 +201,7 @@
           <a class="gh-name" href="https://github.com/sysadminsmedia/homebox" target="_blank" rel="noopener">sysadminsmedia/homebox</a>
           <span class="stars">★ 7.1k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">面向家庭的自托管物品库存系统，位置嵌套、标签、照片、自定义字段、可打印的二维码标签和维护记录，Go 写的单容器，界面有简体中文</p>
         <p class="gh-why">→ 洞洞板、樟木箱六格、亚克力饵盒各建成位置，每根竿每盒饵一条记录贴二维码，扫一下知道在哪、上次换线是什么时候，PSK 组件也在里面</p>
@@ -229,6 +230,7 @@
           <a class="gh-name" href="https://github.com/kennetek/gridfinity-rebuilt-openscad" target="_blank" rel="noopener">kennetek/gridfinity-rebuilt-openscad</a>
           <span class="stars">★ 2.2k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Gridfinity 模块化收纳系统的 OpenSCAD 重写版，参数化生成 42mm 网格的分格盒和底板，底部自带磁铁孔，改几个数字就出 STL</p>
         <p class="gh-why">→ 樟木箱六格和磁吸饵盒不用手工分板：按格子内尺寸生成 Gridfinity 分格盒打印出来，底部磁铁孔正好吸在洞洞板下的铁板上</p>
@@ -257,6 +259,7 @@
           <a class="gh-name" href="https://github.com/cohenadair/anglers-log" target="_blank" rel="noopener">cohenadair/anglers-log</a>
           <span class="stars">★ 34</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Flutter 写的开源钓鱼日志 App，iOS 和安卓都有，记渔获照片、鱼种、饵、钓点、天气潮汐，出统计报表，两千多次提交长期维护</p>
         <p class="gh-why">→ 小黑板写满拍照后的数字版：每条鱼记鱼种、饵、天气，一查就知道哪种饵在哪个月最好用，代码开源但成品 App 直接装最省事</p>
@@ -279,6 +282,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Anglers Log 是加拿大开发者 Cohen Adair 从 2014 年起维护的钓鱼日志 App，最初是 iOS 和安卓两套代码，2020 年后用 Flutter 重写成一套，GitHub 上 34 星，两千多次提交，应用商店里有成品。它解决的问题是：钓鱼的人都想知道自己在什么天气、什么饵、什么时段最容易上鱼，这需要长期、结构化的记录，本子上记的东西没法统计。</p><p>它的结构是本地数据库加可选云备份：核心对象是渔获，每条记录鱼种、长度重量、照片、用的饵和钓法、钓点坐标、时间，以及自动抓取的天气、气压、潮汐和月相；渔获归到一次出钓里，出钓再记同行的人。报表按鱼种、饵、钓点、月份交叉统计，画出上鱼最多的组合；鱼种、饵、钓点都是可自定义的字典。没有中文界面，但字段少，用起来不需要看字。</p><p>在 0702 里它是小黑板的数字版：黑板上用粉笔写今天几条鲫鱼、什么饵、什么天气，拍照存档后再把每条录进它，鱼种字典预先建好鲫鱼、昂刺、鲤鱼、翘嘴，饵字典建好洞洞板上那几盒假饵和常用的蚯蚓玉米；钓点就一个，河边钓台。半年后看报表，黄色软虫在九月傍晚上鱼最多这种结论就出来了，反过来决定哪盒饵挂在最顺手的位置。它的天气数据来自国外气象服务，乡下精度一般，气压和月相更可信；备份定期导出，别只存手机。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/manyfold3d/manyfold" target="_blank" rel="noopener">manyfold3d/manyfold</a>
+          <span class="stars">★ 2.1k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">自托管的 3D 打印文件管理器：扫描硬盘上的 STL/3MF，网页里预览、打标签、记来源和授权，支持联邦分享</p>
+        <p class="gh-why">→ 洞洞板挂钩、竿托、亚克力盒卡座、樟木箱分格件都是打印的，模型文件散在硬盘里，得有一个库让坏了能立刻找到再打一件</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0702-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="27" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0702-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0702-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Manyfold · 钓具打印件的模型库</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0702-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0702-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0702-4-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0702-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0702-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/><path d="M392.2 124.0 C376.0 124.0 376.0 148.0 359.8 148.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">STL 3MF</text><text x="78" y="107" text-anchor="middle" font-size="10.5">模型文件</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Manyfold</text><text x="200" y="107" text-anchor="middle" font-size="10.5">扫描与索引</text><text x="200" y="174" text-anchor="middle" font-size="10.5">标签 来源</text><text x="200" y="187" text-anchor="middle" font-size="10.5">授权 打印参数</text><text x="322" y="94" text-anchor="middle" font-size="10.5">网页三维预览</text><text x="322" y="107" text-anchor="middle" font-size="10.5">手机也能看</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0305 打印机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">再打一个竿托</text><text x="430" y="138" text-anchor="middle" font-size="10.5">竿托断了的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">扫描目录</text><text x="376.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">下载切片</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0702：挂钩、竿托、分格条的模型集中打标签，坏了从手机找到文件直接打印</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">manyfold3d/manyfold</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Manyfold 是英国开发者 James Smith 2022 年开始做的自托管 3D 模型库，2.1k 星，Ruby on Rails 编写，Docker 一条命令部署，2025 年仍在密集更新。它解决的问题是：从各个网站下载的 STL 越攒越多，文件夹里全是 model_final_v3，想再打一件洞洞板挂钩时根本记不起是哪个。</p><p>它的工作方式是扫描你指定的文件夹，把每个子目录识别成一个模型，网页里用 three.js 渲染三维预览，可以加标签、写说明、记录原始来源链接和授权协议；文件重命名和整理可以按模板自动做。它支持 STL、OBJ、3MF 等主流格式，能从 Thingiverse 等网站导入元数据，还实现了 ActivityPub 联邦协议，两台 Manyfold 之间可以互相关注和分享模型，把打印圈的分享做成了去中心化的样子。</p><p>生态上它有活跃的 Discord 和 Mastodon 社区，界面有多语言翻译，简体中文翻译不完整，文档全英文。</p><p>在 0702 里它是延伸：钓具储物角有一堆打印件，通用挂钩、扇形竿托的斜托座、亚克力盒背后的磁铁座、樟木箱的六格分隔条，还有 Gridfinity 小格子。在 0802 服务器上跑一个 Manyfold，把这些模型集中进来，打上 0702 钓具 和 0701 钓台 标签，说明里写清楚用了什么耗材和打印参数。哪天竿托被大鱼拽断了，手机打开 Manyfold 找到文件，扔给 0305 的打印机就行，不用重新翻硬盘。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="noopener">tesseract-ocr/tesseract</a>
+          <span class="stars">★ 75.9k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">最著名的开源 OCR 引擎：谷歌维护多年，LSTM 神经网络识别一百多种文字，命令行和 C++/Python 接口，输出文本或可搜索 PDF</p>
+        <p class="gh-why">→ 小黑板上的鱼获记录写满就拍照擦掉，照片里的字要能变成可搜索的文本，才能真的攒成一本钓鱼笔记</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0702-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="28" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0702-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0702-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Tesseract · 小黑板拍照变成可搜索的钓鱼笔记</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0702-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0702-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0702-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0702-5-shade)" stroke="none"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0702-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">黑板照片</text><text x="78" y="107" text-anchor="middle" font-size="10.5">鱼获天气</text><text x="200" y="94" text-anchor="middle" font-size="10.5">预处理</text><text x="200" y="107" text-anchor="middle" font-size="10.5">反色 加对比</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Tesseract</text><text x="200" y="187" text-anchor="middle" font-size="9.5">LSTM chi_sim</text><text x="322" y="94" text-anchor="middle" font-size="10.5">文本草稿</text><text x="322" y="107" text-anchor="middle" font-size="10.5">手机校对</text><text x="322" y="174" text-anchor="middle" font-size="10.5">钓鱼笔记</text><text x="322" y="187" text-anchor="middle" font-size="9.5">anglers-log</text><text x="430" y="218" text-anchor="middle" font-size="10.5">回看去年的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">监视目录</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">确认</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0702：黑板拍照进监视目录，反色后 OCR 成草稿，校对后写进钓鱼笔记</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">tesseract-ocr/tesseract</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Tesseract 是惠普 1985 年开始研发、2005 年开源、后来由谷歌维护多年的 OCR 引擎，75.9k 星，现在由社区在 GitHub 上继续更新，5.x 版基于 LSTM 神经网络。它解决的问题是把图片里的文字变成可以搜索、复制、统计的文本，是几乎所有开源文档工具背后的那个引擎。</p><p>它的工作方式是先用 Leptonica 库做图像预处理，二值化、去斜、切分行和字，再把每行送进 LSTM 网络识别成字符序列，最后按版面输出纯文本、hOCR、TSV 或带文字层的 PDF。语言包按需下载，简体中文是 chi_sim，还能用自己的样本微调训练。命令行一句话就能跑，Python 有 pytesseract 封装，几乎所有语言都有绑定。</p><p>生态上它是 paperless-ngx、OCRmyPDF 等项目的底层，文档全英文，中文教程极多，装包和调参的坑都被踩遍了。要注意它对印刷体很好，对手写体尤其是粉笔字识别率明显下降，需要靠预处理和事后校对补。</p><p>在 0702 里它是延伸：小黑板写满一板鱼获和天气后拍照存档，照片扔进 0802 服务器上的一个监视目录，脚本先用 ImageMagick 把黑底白字反转成白底黑字并加大对比度，再用 Tesseract 的 chi_sim 识别，结果作为草稿推到手机上校对一遍，确认后写进 anglers-log 或 0209 的 memos。粉笔字写得工整一点、日期用阿拉伯数字，识别率会高很多。</p></div>
       </article>
     </div></section>
 

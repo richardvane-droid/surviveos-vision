@@ -195,6 +195,7 @@
           <a class="gh-name" href="https://github.com/jellyfin/jellyfin" target="_blank" rel="noopener">jellyfin/jellyfin</a>
           <span class="stars">★ 54k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">免费开源的媒体服务器，管理和串流自己的影视库，无账号无云端，2026 年 6 月 10.11.11 版仍在更新</p>
         <p class="gh-why">→ 片库放在 0802 的 N100 小主机里，电视、Kodi 和手机都从它拉片，排片牌数据和观影场景的播放状态也从它读</p>
@@ -223,6 +224,7 @@
           <a class="gh-name" href="https://github.com/xbmc/xbmc" target="_blank" rel="noopener">xbmc/xbmc</a>
           <span class="stars">★ 21.2k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">Kodi，2002 年起步的老牌开源家庭影院和媒体中心软件，十英尺界面、遥控器操作、插件生态庞大</p>
         <p class="gh-why">→ 电视自带应用不够用时，投影或电视后面挂个小盒子跑它，本地片库、遥控和 HA 观影场景联动都有现成插件</p>
@@ -251,6 +253,7 @@
           <a class="gh-name" href="https://github.com/hyperion-project/hyperion.ng" target="_blank" rel="noopener">hyperion-project/hyperion.ng</a>
           <span class="stars">★ 3.8k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">开源氛围灯软件，抓取画面边缘颜色实时驱动屏幕四周的 LED 灯带，支持 HDMI 采集卡和 WLED 等几十种灯</p>
         <p class="gh-why">→ 98 寸电视背后加一圈灯带跟着画面变色，地堡全黑环境下沉浸感翻倍，输出直接走 WLED 协议</p>
@@ -273,6 +276,97 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Hyperion 是 2013 年从树莓派社区长出来的开源氛围灯项目，hyperion.ng 是它的新一代重写版，3.8k 星。它做的事就是飞利浦电视 Ambilight 那套“流光溢彩”：实时分析画面边缘的颜色，让屏幕背后的 LED 灯带同步发光，画面里的火焰会把整面墙染红，深空场景则只剩一点蓝。在全黑的房间里，这圈光让 98 寸屏显得更大，眼睛也不累。</p><p>它的流水线分三段：输入端用 HDMI 采集卡（USB 采集棒即可）抓电视信号，或者直接抓 Kodi 和树莓派自身的画面；中间的处理器把画面按灯珠位置切成几十个区域算平均色，做黑边检测、平滑和亮度补偿；输出端支持几十种设备，WLED、Adalight、WS281x 直驱、Hue 都行。全部通过网页配置，灯珠位置在示意图上用鼠标画，网页界面有中文翻译；项目持续维护。</p><p>在 0207 里它跑在 0802 那台 N100 上：电视 HDMI 信号经功放分出一路进 USB 采集卡，Hyperion 算色后用 WLED 协议驱动电视背后那圈 WS2814 灯带（正好复用 0202 那种 WLED 控制器），观影场景开始时由 HA 打开 Hyperion 的抓屏，暂停或结束时关掉恢复 0201 灯光。坑是采集卡要选 4K 输入降 1080p 输出的，HDR 片源要在 Hyperion 里开色调映射，否则颜色发灰。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Radarr/Radarr" target="_blank" rel="noopener">Radarr/Radarr</a>
+          <span class="stars">★ 14.3k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">电影收藏管理器：维护想看清单，自动从 Usenet 和 BT 索引器找片、下载、重命名、入库，和 Jellyfin 无缝衔接</p>
+        <p class="gh-why">→ 影音室每周两小时的排片要有片源，Radarr 把想看清单变成自动到货的片库，Jellyfin 只管播放</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0207-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0207-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0207-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Radarr · 想看清单自动变成片库</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0207-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0207-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0207-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0207-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0207-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">想看清单</text><text x="78" y="107" text-anchor="middle" font-size="9.5">IMDb / Trakt</text><text x="78" y="174" text-anchor="middle" font-size="10.5">索引器</text><text x="78" y="187" text-anchor="middle" font-size="10.5">Prowlarr</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Radarr</text><text x="200" y="107" text-anchor="middle" font-size="10.5">质量档 / 定时搜</text><text x="200" y="174" text-anchor="middle" font-size="10.5">下载器</text><text x="200" y="187" text-anchor="middle" font-size="9.5">qBittorrent</text><text x="322" y="94" text-anchor="middle" font-size="10.5">媒体库目录</text><text x="322" y="107" text-anchor="middle" font-size="10.5">重命名 / 字幕</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Jellyfin</text><text x="322" y="187" text-anchor="middle" font-size="10.5">刷新库</text><text x="430" y="218" text-anchor="middle" font-size="10.5">窝在沙发的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">搜索</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">推任务</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">入库</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">通知</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">今晚放映</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0207：想看清单自动到货进 Jellyfin，观影模式按下时大屏弹本周新片</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Radarr/Radarr</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Radarr 是从 Sonarr 分叉出来专门管电影的项目，C# 写成，14.3k 星，属于所谓 *arr 家族。它要解决的问题是：想看的电影一部部手动找资源、下载、改名、放进对的文件夹太累，它把整条流水线自动化。</p><p>它的工作方式是：你把想看的电影加进库（可以从 IMDb 榜单或 Trakt 列表批量导入），设定质量档位比如 1080p 蓝光或 4K；Radarr 定时去配置好的索引器（通过 Prowlarr 统一管理）搜索，找到符合要求的就推给下载器（qBittorrent、Transmission、SABnzbd）；下载完成后按命名模板重命名、移到媒体库目录、配合 Bazarr 下字幕、通知 Jellyfin 刷新库。出了更好的版本它还会自动换掉。网页界面响应式，Docker 部署。</p><p>生态成熟，2025 年后持续更新，界面翻译含简体中文，中文 NAS 圈的教程和 Docker 模板极多。</p><p>对 0207 它是延伸的片源管道：东南角小黑板上今晚放映的片名从哪来？在 Radarr 里维护一个想看清单，设 1080p 以上，它自动到货进 Jellyfin 的库；HomeAssistant 通过 Radarr 的 API 拿到最近入库列表，观影模式按钮按下时在 0802 大屏或电视上弹出本周新到的三部让你选。注意版权和索引器合规是你自己的事，另外 98 寸电视看 4K 原盘要有硬解能力，机顶盒选带 HDR 直通的。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Sonarr/Sonarr" target="_blank" rel="noopener">Sonarr/Sonarr</a>
+          <span class="stars">★ 16.1k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">剧集自动化管理器：订阅一部剧后自动追新集、按季整理、重命名、升级画质，Radarr 的亲兄弟</p>
+        <p class="gh-why">→ 追剧和看电影是两种节奏，Sonarr 让订阅的剧每周自动到货，影音室里周五那集永远已经在库里等着</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0207-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0207-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0207-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Sonarr · 订阅一部剧，每周自动到货</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0207-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0207-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0207-5-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0207-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0207-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">订阅的剧</text><text x="78" y="107" text-anchor="middle" font-size="10.5">季 / 质量档</text><text x="78" y="174" text-anchor="middle" font-size="10.5">TheTVDB</text><text x="78" y="187" text-anchor="middle" font-size="10.5">播出时间表</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Sonarr</text><text x="200" y="107" text-anchor="middle" font-size="10.5">日历 / 定时搜</text><text x="200" y="174" text-anchor="middle" font-size="9.5">Prowlarr + 下载器</text><text x="200" y="187" text-anchor="middle" font-size="9.5">与 Radarr 共用</text><text x="322" y="94" text-anchor="middle" font-size="10.5">剧集目录</text><text x="322" y="107" text-anchor="middle" font-size="10.5">S01E05 命名</text><text x="322" y="174" text-anchor="middle" font-size="10.5">日历 → HA</text><text x="322" y="187" text-anchor="middle" font-size="10.5">周五提示</text><text x="430" y="218" text-anchor="middle" font-size="10.5">窝在沙发的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">元数据</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">到点搜</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">入库</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">API</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">今晚更新</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0207：剧走 Sonarr 电影走 Radarr，共用索引器，日历进 HA 周五提示</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Sonarr/Sonarr</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Sonarr 是 2010 年从 NzbDrone 改名而来的剧集管理器，C# 写成，16.1k 星，是整个 *arr 家族的祖宗。它要解决的问题是：追剧要记得每周几更新、去找资源、命名成播放器认得的格式、放进对应的季文件夹，它把这些全接管。</p><p>它的工作方式是：你订阅一部剧，选要哪些季、什么质量档位；Sonarr 从 TheTVDB 拉剧集元数据和播出时间表，到点就去索引器搜新一集，找到符合要求的推给下载器，完成后按剧名 S01E05 这样的模板重命名、移进媒体库、通知 Jellyfin 刷新。它有日历视图看本周哪些剧更新，有质量配置文件决定是否用更好的版本替换旧文件，有多季批量补全和缺集搜索。界面和 Radarr 几乎一样，两者共用 Prowlarr 的索引器和同一个下载器，Docker 部署。</p><p>生态成熟，2025 年后 v4 持续更新，界面翻译含简体中文，中文 NAS 教程一般把它和 Radarr 一起讲。</p><p>对 0207 它是延伸中管剧的那一半：电影走 Radarr，剧走 Sonarr，两个容器共用同一套索引器和下载器，媒体库分成电影和剧集两个目录给 Jellyfin。它的日历 API 可以进 HomeAssistant，每周五早上 0802 大屏提示今晚有哪集更新，观影模式按下时电视直接停在那部剧的最新一集。注意剧集文件多，硬盘要预留空间并设自动删除看过的旧集，别让影音室的存储被追剧撑爆。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/HandBrake/HandBrake" target="_blank" rel="noopener">HandBrake/HandBrake</a>
+          <span class="stars">★ 23.5k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">跨平台开源视频转码器：把任意来源的视频压成 H.264、H.265、AV1 的 MP4 或 MKV，带硬件加速和预设，图形界面加命令行</p>
+        <p class="gh-why">→ 98 寸电视和手机、iPad 需要的不是同一个文件，把原盘转成电视直接硬解的 H.265 和小屏的 720p，HandBrake 是最顺手的批量转码工具</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0207-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0207-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0207-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">HandBrake · 夜里把新片转成电视和手机各一份</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0207-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0207-6-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0207-6-shade)" stroke="none"/><path d="M152.0 162.0 h96 v36 h-96 Z M152.0 162.0 l8 -8 h96 l-8 8 M248.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M249.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0207-6-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0207-6-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0207-6-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0207-6-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">新入库文件</text><text x="78" y="107" text-anchor="middle" font-size="10.5">格式五花八门</text><text x="78" y="174" text-anchor="middle" font-size="10.5">两套预设</text><text x="78" y="187" text-anchor="middle" font-size="9.5">H.265 / 720p</text><text x="200" y="94" text-anchor="middle" font-size="9.5">HandBrakeCLI</text><text x="200" y="107" text-anchor="middle" font-size="10.5">脚本夜里跑</text><text x="200" y="174" text-anchor="middle" font-size="10.5">QSV 硬件加速</text><text x="200" y="187" text-anchor="middle" font-size="10.5">质量值 22</text><text x="322" y="94" text-anchor="middle" font-size="10.5">98 寸电视</text><text x="322" y="107" text-anchor="middle" font-size="10.5">机顶盒硬解</text><text x="322" y="174" text-anchor="middle" font-size="10.5">手机 / iPad</text><text x="322" y="187" text-anchor="middle" font-size="10.5">外面看</text><text x="430" y="138" text-anchor="middle" font-size="10.5">窝在沙发的人</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">MKV</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">MP4</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0207：新片夜里按两套预设各转一份，Jellyfin 免实时转码，服务器不用显卡</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">HandBrake/HandBrake</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>HandBrake 是 2003 年起步的开源视频转码器，23.5k 星，三大桌面平台都有图形界面，2026 年发布了 1.11 版。它要解决的问题是：视频格式和播放设备的组合太多，需要一个工具把任何来源压成指定设备能直接播的文件，并把复杂的编码参数藏在预设后面。</p><p>它的工作方式是：输入一个文件或整张光盘目录，选一个预设（通用 1080p30、Apple 设备、或按质量的 HQ 系列），需要的话再调编码器、恒定质量值、分辨率、裁边、音轨和字幕，点开始就转码。编码器有 x264、x265、SVT-AV1 软件编码，也支持英特尔 QSV、英伟达 NVENC 和苹果 VideoToolbox 硬件加速；能批量排队，命令行版 HandBrakeCLI 适合写脚本，字幕能烧进画面也能保留成软字幕。</p><p>生态成熟，2025 年后仍每几个月一个版本，界面翻译含简体中文，中文教程非常多。</p><p>对 0207 它是延伸中的加工车间：Radarr 和 Sonarr 到货的文件格式五花八门，98 寸电视的机顶盒最省心的是 H.265 MKV 硬解，手机和 iPad 在外面看要一份 720p；写一个脚本用 HandBrakeCLI 在 0802 的服务器上夜里把新入库的文件按两套预设各转一份，Jellyfin 里就不再需要实时转码，服务器也不用配显卡。注意没有硬件加速时一部两小时的片要跑好几个小时，先试英特尔核显的 QSV，质量值 22 左右肉眼看不出差别。</p></div>
       </article>
     </div></section>
 

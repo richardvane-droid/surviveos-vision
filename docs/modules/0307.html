@@ -154,6 +154,7 @@
           <a class="gh-name" href="https://github.com/LinuxCNC/linuxcnc" target="_blank" rel="noopener">LinuxCNC/linuxcnc</a>
           <span class="stars">★ 2.3k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">老牌开源运动控制系统，驱动铣床、车床、机械臂，支持复杂运动学</p>
         <p class="gh-why">→ 哪天真要上五轴联动，只有它有现成的五轴运动学和刀尖跟随（TCP）</p>
@@ -182,6 +183,7 @@
           <a class="gh-name" href="https://github.com/FreddieHong19/Open5x" target="_blank" rel="noopener">FreddieHong19/Open5x</a>
           <span class="stars">★ 1.2k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">把普通三轴机器改成五轴的开源硬件 + 软件方案（“Democratising 5-axis”）</p>
         <p class="gh-why">→ 双旋转轴模块的机械结构和刀路后处理思路可以直接抄，它证明了桌面五轴能做</p>
@@ -210,6 +212,7 @@
           <a class="gh-name" href="https://github.com/grblHAL/core" target="_blank" rel="noopener">grblHAL/core</a>
           <span class="stars">★ 489</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">grbl 的 32 位重写版核心，支持 A/B/C 附加轴、多种主控板（Teensy、STM32、ESP32）</p>
         <p class="gh-why">→ 3+2 定位用它就够：三轴 + A/C 分度轴直接在 G 代码里指定，Teensy 4.1 板子几十块钱</p>
@@ -232,6 +235,97 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>grblHAL 是挪威开发者 Terje Io 把经典的 Arduino 版 grbl 重写到 32 位平台的项目，core 仓库 489 星，加上各板卡驱动仓库是一个不小的家族。原版 grbl 只能跑三轴、只支持 8 位 AVR，而桌面 CNC 早就需要更多轴、更快脉冲和网络连接。</p><p>它的架构是核心加驱动加插件：核心负责 G 代码解析、轨迹规划、加减速与前瞻；驱动层适配 Teensy 4.1、STM32、ESP32、RP2040 等十几种 MCU；插件可以加 SD 卡、以太网、WebUI、主轴 Modbus 控制、探针和自定义 M 代码。最多支持六轴，A、B、C 轴可以是旋转轴，G 代码里直接写 A90 C30 就能让分度头转到位，步进脉冲最高 300kHz。2026 年仍在持续更新，官网勾选板子和功能就能在线编译固件。</p><p>上位机用 ioSender 或 Candle；没有中文文档，但 grbl 系的中文教程基本通用。</p><p>在 0307 里它是控制核心：Teensy 4.1 配它的五轴扩展板，XYZ 加 A、C 一共五路步进，用 Modbus 插件调 VFD 主轴转速，门磁接安全门输入，探针接刀长测量。3+2 流程就是每个姿态先转 A/C 到位、探一次刀长再跑平面刀路。坑是旋转轴的每度步数和软限位要单独设，而且它不做刀尖跟随，姿态之间的坐标偏移得在后处理里算。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/cncjs/cncjs" target="_blank" rel="noopener">cncjs/cncjs</a>
+          <span class="stars">★ 2.6k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">网页版 CNC 控制台：跑在树莓派上，浏览器里发 G 代码、手轮点动、3D 预览刀路，支持 Grbl、grblHAL、Marlin、TinyG</p>
+        <p class="gh-why">→ 五轴机的 grblHAL 需要一个不用守在机器旁的发送器，cncjs 让手机和 0204 设计台的浏览器都能开机、点动、看进度</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0307-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0307-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0307-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">cncjs · 树莓派上的网页 CNC 控制台</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0307-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0307-4-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0307-4-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0307-4-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0307-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0307-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M256.0 176.0 L374.0 176.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">G 代码程序</text><text x="78" y="107" text-anchor="middle" font-size="9.5">0204 设计台 CAM</text><text x="78" y="216" text-anchor="middle" font-size="10.5">USB 摄像头</text><text x="78" y="229" text-anchor="middle" font-size="10.5">加工画面</text><text x="200" y="94" text-anchor="middle" font-size="10.5">cncjs 服务</text><text x="200" y="107" text-anchor="middle" font-size="10.5">树莓派</text><text x="200" y="174" text-anchor="middle" font-size="10.5">网页控制台</text><text x="200" y="187" text-anchor="middle" font-size="10.5">点动 / 3D 刀路</text><text x="322" y="94" text-anchor="middle" font-size="10.5">grblHAL</text><text x="322" y="107" text-anchor="middle" font-size="10.5">Teensy 4.1</text><text x="322" y="174" text-anchor="middle" font-size="10.5">五轴机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">主轴 / 步进</text><text x="430" y="218" text-anchor="middle" font-size="10.5">平板或手机</text><text x="430" y="231" text-anchor="middle" font-size="10.5">远程看进度</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">上传</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">USB 串口</text><text x="315.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">浏览器</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">点动</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0307：树莓派放型材柜里跑 cncjs，USB 连 Teensy，机旁小屏和 0204 浏览器都能控</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">cncjs/cncjs</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>cncjs 是 Cheton Wu 发起、社区维护的网页版 CNC 控制软件，用 Node.js 和 React 写成，2.6k 星，是 Grbl 系控制器最常用的发送器之一。它要解决的问题是：CNC 控制器只有一个串口，传统做法是一台电脑守在机器旁，cncjs 把它换成一块树莓派，操作都在浏览器里完成。</p><p>它的工作方式是服务端加网页：树莓派通过 USB 串口连接控制器，cncjs 服务把 G 代码逐行发送并处理流控和实时状态回报；浏览器端是一组可拖动的部件——坐标、点动、主轴、宏、探针、控制台，以及一个 3D 刀路窗口，能看当前刀在程序的哪一行。它同时兼容 Grbl、grblHAL、Smoothieware、TinyG 和 Marlin，能接摄像头看加工画面。</p><p>生态上有树莓派和 Docker 镜像，界面自带简繁中文，国内 DIY CNC 圈用它的很多；更新节奏变慢但仍在维护。</p><p>对 0307 来说它是延伸项目：Teensy 4.1 上的 grblHAL 需要一个发送器，把 cncjs 装在机器下层型材柜里的一块树莓派上，USB 连 Teensy，机旁挂一块小屏或平板，0204 设计台的浏览器也能远程看。注意它对 A、C 轴的点动支持要看版本，多轴显示不全就用 grblHAL 社区的 ioSender 做对照；门磁急停仍走 grblHAL 硬件输入，不要依赖网页。摄像头画面可以顺手转进 HA，和 3D 打印机监控放同一页。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/vlachoudis/bCNC" target="_blank" rel="noopener">vlachoudis/bCNC</a>
+          <span class="stars">★ 1.7k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Python 写的 Grbl 发送器兼简易 CAM：自动调平、G 代码编辑、摄像头对刀、内置钻孔和轮廓加工，一个程序全包</p>
+        <p class="gh-why">→ 自动调平是雕 PCB 和铣不平整木料时最需要的功能，bCNC 用探针扫出曲面再实时修正 Z，是 grblHAL 上最省事的方案</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0307-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0307-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0307-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">bCNC · 探针扫曲面，Z 值实时修正</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0307-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><path d="M160.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0307-5-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0307-5-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0307-5-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0307-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 222.0 L200.0 204.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M322.0 204.0 L322.0 222.0"/><path d="M157.3 148.0 C139.0 148.0 139.0 124.0 120.7 124.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">主轴探针</text><text x="78" y="149" text-anchor="middle" font-size="10.5">网格扫高度</text><text x="78" y="174" text-anchor="middle" font-size="10.5">原始 G 代码</text><text x="78" y="187" text-anchor="middle" font-size="10.5">平面假设</text><text x="200" y="94" text-anchor="middle" font-size="10.5">工件高度图</text><text x="200" y="107" text-anchor="middle" font-size="10.5">0.1mm 精度</text><text x="200" y="174" text-anchor="middle" font-size="10.5">bCNC</text><text x="200" y="187" text-anchor="middle" font-size="10.5">发送器 + CAM</text><text x="200" y="248" text-anchor="middle" font-size="10.5">内置 CAM</text><text x="200" y="261" text-anchor="middle" font-size="10.5">钻孔 / 轮廓</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Z 修正后的</text><text x="322" y="187" text-anchor="middle" font-size="10.5">G 代码</text><text x="322" y="248" text-anchor="middle" font-size="10.5">grblHAL</text><text x="322" y="261" text-anchor="middle" font-size="10.5">Teensy 4.1</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">扫描</text><text x="200.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">生成</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">按曲面修正</text><text x="322.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">串口发送</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">探针指令</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0307：铣不平的木板或雕单面 PCB 时用它先调平再发送，三轴模式下使用</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">vlachoudis/bCNC</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>bCNC 是欧洲核子研究中心的工程师 Vasilis Vlachoudis 写的 Grbl 发送器，用 Python 和 Tkinter 写成，1.7k 星，两千多次提交，社区持续维护。它要解决的问题是：小型 CNC 玩家不想为发送器、CAM、调平工具装三个软件，bCNC 把这些塞进一个窗口。</p><p>它的工作方式是发送器加工具箱：通过串口连接 Grbl 或 grblHAL，界面上有坐标、点动、主轴控制和 G 代码列表，可以直接在列表里编辑、拖动、镜像和缩放程序段。它最出名的功能是自动调平：用探针在工作台上按网格扫一遍，得到工件表面的高度图，再把 G 代码按这张图实时修正 Z 值，雕 PCB 时 0.1 毫米的隔离槽也能均匀。此外还有摄像头对刀、简单 CAM（钻孔、轮廓、口袋）和刀路 3D 预览。</p><p>生态上它是 Grbl 圈的老牌工具，教程不少，界面只有英文，中文资料以论坛帖子为主；界面偏老但功能扎实，仍在更新。</p><p>对 0307 来说它是延伸项目：五轴机日常发送用 cncjs 或 ioSender，但当工件是一块本身不平的胡桃木板，或者 0301 那边要借这台机器雕单面 PCB 时，切到 bCNC：先用主轴上夹的探针扫一遍工件表面，让它把程序的 Z 值按曲面修正，再开始铣。它跑在 0204 设计台的电脑上，USB 线拉到 Teensy 即可，探针信号接 grblHAL 的探针输入。A、C 轴它不会调平，只在三轴模式下用。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/bdring/FluidNC" target="_blank" rel="noopener">bdring/FluidNC</a>
+          <span class="stars">★ 2.5k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">跑在 ESP32 上的 Grbl 系 CNC 固件：六轴、YAML 配置不用重新编译、自带 Wi-Fi 网页控制和 SD 卡脱机运行</p>
+        <p class="gh-why">→ grblHAL 加 Teensy 之外，FluidNC 是 ESP32 路线的头号选择；一块几十块的板子就有 Wi-Fi 和网页，是给五轴机做备用控制器或做第二台小机器的最佳起点</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0307-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="22" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0307-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0307-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">FluidNC · ESP32 上的六轴 Grbl，改配置不用重编译</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0307-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0307-6-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0307-6-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0307-6-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0307-6-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0307-6-shade)" stroke="none"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0307-6-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0307-6-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 124.0 L200.0 222.0" stroke-dasharray="3 3"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M322.0 124.0 L322.0 222.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">config.yaml</text><text x="78" y="107" text-anchor="middle" font-size="9.5">轴 / 引脚 / 主轴</text><text x="78" y="174" text-anchor="middle" font-size="10.5">G 代码</text><text x="78" y="187" text-anchor="middle" font-size="10.5">SD 卡或网页</text><text x="200" y="94" text-anchor="middle" font-size="10.5">FluidNC</text><text x="200" y="107" text-anchor="middle" font-size="10.5">ESP32 固件</text><text x="200" y="174" text-anchor="middle" font-size="10.5">自带 WebUI</text><text x="200" y="187" text-anchor="middle" font-size="10.5">Wi-Fi 控制</text><text x="200" y="248" text-anchor="middle" font-size="10.5">Grbl 串口协议</text><text x="200" y="261" text-anchor="middle" font-size="9.5">cncjs / bCNC</text><text x="322" y="94" text-anchor="middle" font-size="10.5">步进驱动</text><text x="322" y="107" text-anchor="middle" font-size="10.5">最多六轴</text><text x="322" y="174" text-anchor="middle" font-size="10.5">VFD 主轴</text><text x="322" y="187" text-anchor="middle" font-size="10.5">RS485</text><text x="322" y="248" text-anchor="middle" font-size="9.5">0301 桌面 CNC</text><text x="322" y="261" text-anchor="middle" font-size="10.5">或五轴备用板</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">上传</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">脉冲</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">Modbus</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0307：ESP32 备用控制器与 grblHAL 参数对照；0301 桌面 CNC 升级 Wi-Fi 控制</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">bdring/FluidNC</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>FluidNC 是 Bart Dring 主导的开源 CNC 运动控制固件，从 Grbl_ESP32 演化而来，用 C++ 写成，2.5k 星，2026 年 4 月发布 4.0.3 版。它要解决的问题是：Grbl 只能跑三轴、改引脚要重新编译，而 ESP32 便宜又自带无线，FluidNC 把 Grbl 的成熟运动核心搬到 ESP32 上，并把所有配置改成一个 YAML 文件。</p><p>它的工作方式是固件加配置文件：把编译好的固件烧进 ESP32，再上传一个 config.yaml，写清楚轴数、步进引脚、限位、步距、主轴类型（PWM、RS485 VFD、激光）和探针，重启就按新配置运行，最多六轴。它兼容 Grbl 的串口协议和 G 代码，cncjs、bCNC 都能直接用；自带 Wi-Fi 和 WebUI，浏览器就能上传、运行、点动，G 代码还能放 SD 卡脱机跑。</p><p>生态上有 6-Pack 等配套控制板，Discord 社区活跃，Wiki 完整但只有英文，中文资料零散；更新勤快。</p><p>对 0307 来说它是延伸项目：主控制器已定 grblHAL 加 Teensy 4.1，FluidNC 是它的备胎和对照。一是把一块 ESP32 刷上它，同一份轴参数写成 YAML，在型材柜里备着，Teensy 出问题时换上就能跑三轴加 A 轴；二是 0301 那台桌面 CNC 升级控制器时，它加 Wi-Fi 最省事；三是它的 RS485 VFD 主轴写法可直接借鉴到五轴机的变频器接线。</p></div>
       </article>
     </div></section>
 

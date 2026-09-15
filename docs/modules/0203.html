@@ -189,6 +189,7 @@
           <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
           <span class="stars">★ 11.7k</span>
           <span class="zh zh-no">无中文（社区教程多）</span>
+          
         </header>
         <p class="gh-desc">用 YAML 配置 ESP32 / ESP8266 传感器和控制器并接入 HomeAssistant 的系统，Nabu Casa 官方维护</p>
         <p class="gh-why">→ 四个温湿度探头、风管出口传感器、墙上小表盘和新风机调速全靠它，是这个模块的核心依赖</p>
@@ -217,6 +218,7 @@
           <a class="gh-name" href="https://github.com/wuwentao/midea_ac_lan" target="_blank" rel="noopener">wuwentao/midea_ac_lan</a>
           <span class="stars">★ 1.9k</span>
           <span class="zh ">官方中文 README</span>
+          
         </header>
         <p class="gh-desc">美的 M-Smart 家电的 HomeAssistant 本地局域网集成，支持空调、除湿机、风扇等 35 类设备，中文社区维护</p>
         <p class="gh-why">→ 美的系工业除湿机不拆机、不走云，直接在局域网里被 HA 接管，档位、目标湿度、水箱满报警都成实体</p>
@@ -245,6 +247,7 @@
           <a class="gh-name" href="https://github.com/airgradienthq/arduino" target="_blank" rel="noopener">airgradienthq/arduino</a>
           <span class="stars">★ 377</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">AirGradient 开源硬件空气质量监测仪的固件与库，测 CO2、PM2.5、温湿度、TVOC，ESP8266 / ESP32-C3</p>
         <p class="gh-why">→ 地堡只除湿不换气会闷，照它的选型做一台 CO2 探头，新风什么时候开就有了依据</p>
@@ -267,6 +270,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>airgradienthq/arduino 是泰国公司 AirGradient 开源的空气质量监测仪固件，377 星。AirGradient 把整套监测仪的 PCB、外壳和固件全部开源，可以买套件也可以照 BOM 自己焊，这个仓库是那台机器的大脑，也是一份“空气监测怎么选传感器”的参考。</p><p>固件跑在 ESP8266 或 ESP32-C3 上，围绕几颗公认靠谱的传感器：SenseAir S8 测 CO2，Plantower PMS5003 测 PM2.5，Sensirion SHT40 测温湿度，SGP41 测 TVOC 和 NOx。固件定周期读数、校准、滑动平均，显示在自带 OLED 上，再经本地 API 或 MQTT 交给 Home Assistant，HA 有官方集成。仓库持续更新，文档英文，ESPHome 社区也有对应 YAML。</p><p>在 0203 里它解决“闷”的问题：地堡没窗，只除湿不换气 CO2 会涨到两三千 ppm，人只觉得困。照它做一颗 SenseAir S8 探头，用 ESPHome 的 senseair 组件接到 HA，装在沙发旁墙上；HA 按 ppm 分三档驱动东墙高处那台新风机的 PWM：800 以下停、1000 以上低速、1500 以上全速并推送。坑是 S8 的自动校准假定每周有一次 400ppm 的新鲜空气，地堡里没有，得关掉自动校准，定期拿到户外手动校。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Koenkk/zigbee2mqtt" target="_blank" rel="noopener">Koenkk/zigbee2mqtt</a>
+          <span class="stars">★ 15.2k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">一根 Zigbee 适配器加一个 Node.js 服务，把三千多种 Zigbee 设备直接翻译成 MQTT，不要任何品牌网关</p>
+        <p class="gh-why">→ 地堡里四个温湿度探头、水浸和门窗传感器想用电池款而不是拉线，Zigbee 是最省电最成熟的无线路线，zigbee2mqtt 是它的开源入口</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0203-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0203-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0203-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">zigbee2mqtt · 电池传感器无线进 MQTT</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0203-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0203-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0203-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0203-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0203-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0203-4-arrow)" stroke-linecap="round"><path d="M78.0 148.0 L78.0 124.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="216" text-anchor="middle" font-size="10.5">Zigbee 温湿度</text><text x="78" y="229" text-anchor="middle" font-size="10.5">水浸 / 门磁</text><text x="78" y="94" text-anchor="middle" font-size="10.5">Zigbee 插座</text><text x="78" y="107" text-anchor="middle" font-size="10.5">当路由器</text><text x="200" y="94" text-anchor="middle" font-size="9.5">zigbee2mqtt</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Node.js + 适配器</text><text x="200" y="174" text-anchor="middle" font-size="10.5">设备库翻译</text><text x="200" y="187" text-anchor="middle" font-size="10.5">簇数据 → JSON</text><text x="322" y="94" text-anchor="middle" font-size="10.5">MQTT 主题</text><text x="322" y="107" text-anchor="middle" font-size="10.5">HA 自动发现</text><text x="322" y="174" text-anchor="middle" font-size="10.5">网页前端</text><text x="322" y="187" text-anchor="middle" font-size="10.5">拓扑 / 信号</text><text x="430" y="138" text-anchor="middle" font-size="10.5">光脚踩地板的人</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">绕过厚墙</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">无线到适配器</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">发布</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">21.8℃ / 54%</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0203：床头 / 墙角 / 柜内探头用电池 Zigbee，风管出口留有线，插座当路由器</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Koenkk/zigbee2mqtt</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>zigbee2mqtt 是荷兰开发者 Koen Kanters 在 2018 年发起的项目，15.2k 星，是开源智能家居里接 Zigbee 设备的事实标准。它要解决的问题是：Zigbee 传感器和灯泡便宜又省电，但每个品牌都要自家网关和 App；它用一根通用的 Zigbee USB 适配器把所有品牌的设备接到一起，再统一翻译成 MQTT。</p><p>它的架构是：Zigbee USB 适配器通过串口连到跑着 zigbee2mqtt 的机器，Node.js 服务管理网络的配对、路由和密钥；设备上报的原始 Zigbee 簇数据由庞大的设备库翻译成 JSON 发布到 MQTT 主题，反过来 MQTT 收到的指令翻译回 Zigbee 命令。它自带网页前端，能看拓扑图和信号强度；对 HomeAssistant 有 MQTT 自动发现，设备一配对就自动出现。</p><p>生态是这类项目里最大的，支持设备超过三千种，2025 年后仍是每月一个版本，前端有简体中文，中文教程极多，Aqara、涂鸦的设备基本都在列表里。</p><p>对 0203 它是延伸的无线路线：床头、墙角、柜内三个温湿度探头用电池款 Zigbee 传感器代替拉线的 ESPHome，风管出口那个高温高湿的位置仍用有线；除湿机柜的水浸传感器和门磁也一并上 Zigbee。适配器插在 0802 那台服务器上，再放两个 Zigbee 插座当路由器把信号绕过混凝土墙。注意地堡墙厚，先用拓扑图确认每个电池设备都挂在路由器下，别直连协调器。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/zwave-js/zwave-js-ui" target="_blank" rel="noopener">zwave-js/zwave-js-ui</a>
+          <span class="stars">★ 1.2k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Z-Wave JS 的完整控制面板与 MQTT 网关：设备配对、参数配置、网络健康图、OTA，Vue 前端，Docker 部署</p>
+        <p class="gh-why">→ Zigbee 之外的另一大无线协议，工作在 900MHz 附近，穿混凝土墙比 2.4GHz 强得多，正好对付地堡的厚墙</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0203-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="14" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0203-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0203-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Z-Wave JS UI · 900MHz 穿墙的另一条无线路</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0203-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0203-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0203-5-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0203-5-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0203-5-shade)" stroke="none"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0203-5-arrow)" stroke-linecap="round"><path d="M78.0 148.0 L78.0 124.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="216" text-anchor="middle" font-size="10.5">Z-Wave 温湿度</text><text x="78" y="229" text-anchor="middle" font-size="10.5">水浸传感器</text><text x="78" y="94" text-anchor="middle" font-size="9.5">Z-Wave 800 棒</text><text x="78" y="107" text-anchor="middle" font-size="10.5">Long Range</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Z-Wave JS UI</text><text x="200" y="107" text-anchor="middle" font-size="10.5">驱动 + 面板</text><text x="200" y="174" text-anchor="middle" font-size="10.5">参数配置</text><text x="200" y="187" text-anchor="middle" font-size="10.5">网络健康图</text><text x="322" y="94" text-anchor="middle" font-size="10.5">WebSocket</text><text x="322" y="107" text-anchor="middle" font-size="10.5">HA 集成</text><text x="322" y="174" text-anchor="middle" font-size="10.5">MQTT 网关</text><text x="322" y="187" text-anchor="middle" font-size="10.5">其他系统</text><text x="430" y="138" text-anchor="middle" font-size="10.5">看表盘的人</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">一跳穿墙</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">串口</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">表盘</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0203：Zigbee 穿不过储藏室厚墙就换 Z-Wave 棒，两根棒并存互不干扰</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">zwave-js/zwave-js-ui</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Z-Wave JS UI 前身叫 zwavejs2mqtt，由 Daniel Lando 主导开发，1.2k 星，是 zwave-js 这个 JavaScript Z-Wave 协议栈的官方控制面板。它要解决的问题是：Z-Wave 设备的配对和配置一直要靠厂商软件，它把这一切放进一个网页，并能把设备桥接成 MQTT。</p><p>它的架构是三层：底层 zwave-js 驱动通过串口和 Z-Wave USB 棒通信；中间层提供网页，做设备加入与移除、几百个配置参数的可视化编辑、网络健康图和固件 OTA；上层两条出口，一是 WebSocket 给 HomeAssistant 的 Z-Wave 集成直接用，二是 MQTT 网关给其他系统。Docker 一行部署，也有 HA 加载项。</p><p>Z-Wave 工作在 868/908MHz 频段，抗 Wi-Fi 干扰，穿墙比 Zigbee 好，设备都经过认证互操作性强，但贵且国内货少。社区中等规模，2025 年后仍月度更新，界面无中文，中文资料很少。</p><p>对 0203 它是延伸里对付厚墙的备选：如果 Zigbee 信号在储藏室和卫生间那几堵混凝土墙后面不稳定，就换一根 Z-Wave 800 棒，用 Z-Wave 温湿度探头和水浸传感器，Long Range 模式一跳就能到。它和 zigbee2mqtt 可以并存，两根棒插同一台服务器，HA 里两个集成互不干扰。注意国内买 Z-Wave 设备要认准 CN 频段的版本，美版 908MHz 在这里不合法也配不上对。</p></div>
       </article>
     </div></section>
 

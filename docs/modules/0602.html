@@ -169,6 +169,7 @@
           <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
           <span class="stars">★ 11.7k</span>
           <span class="zh zh-no">无中文（社区教程多）</span>
+          
         </header>
         <p class="gh-desc">用 YAML 配置 ESP32 固件的系统，土壤湿度、翻斗雨量、超声波水位、电磁阀都是现成组件，本地跑逻辑，原生接 HomeAssistant</p>
         <p class="gh-why">→ 桧木杆里那块 ESP32 就靠它：三传感器读数、三条件本地判断、三路阀门用 sprinkler 组件轮浇，断网照常，大红按钮也是它一行配置</p>
@@ -197,6 +198,7 @@
           <a class="gh-name" href="https://github.com/altmenorg/HAsmartirrigation" target="_blank" rel="noopener">altmenorg/HAsmartirrigation</a>
           <span class="stars">★ 550</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">HomeAssistant 智能灌溉组件，按蒸散量和降雨算每个分区的水桶余额，给出该浇多少秒，界面自带 19 种语言含简体中文</p>
         <p class="gh-why">→ 三区各建一个分区，它按天气算出疏林、草原、野花各要浇几分钟，替代拍脑袋的固定时长，再把秒数交给桧木杆里的 ESP32 执行</p>
@@ -225,6 +227,7 @@
           <a class="gh-name" href="https://github.com/OpenSprinkler/OpenSprinkler-Firmware" target="_blank" rel="noopener">OpenSprinkler/OpenSprinkler-Firmware</a>
           <span class="stars">★ 543</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">OpenSprinkler 开源灌溉控制器的统一固件，跑在 ESP8266 或树莓派上，多站点排程、天气调节、雨和土壤传感器输入、MQTT</p>
         <p class="gh-why">→ 不想自己写 YAML 的备选路线：三路阀接一块 OpenSprinkler 板，站点排程和传感器跳过是十年打磨过的成熟逻辑，手机 App 直接管</p>
@@ -247,6 +250,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>OpenSprinkler 是美国 Rayshobby 公司从 2011 年做起的开源灌溉控制器，硬件和固件都开源，这个仓库是它的统一固件，GitHub 上 543 星，2025 年 11 月还在发新版。它把多路电磁阀灌溉做成一个能联网、按天气自动调、有手机 App 的控制器，是 DIY 灌溉领域里资格最老的项目。</p><p>同一套 C++ 代码可以编译给 ESP8266 版的 OpenSprinkler 3.x、树莓派版的 OSPi 和任何 Linux 机器。核心概念是站点和程序：每个站点对应一路电磁阀，程序定义哪些站点在什么时间浇多久；天气调节模块按气象数据算一个百分比缩放浇水时长；传感器输入支持雨传感器、土壤湿度开关和流量计，触发就跳过或暂停；网页和 App 通用，有 MQTT 和 HTTP API。硬件可买成品也可照原理图自制。没有中文资料。</p><p>在 0602 里它是不写代码的备选路线：三路 12V 电磁阀接三个站点，程序设成凌晨四点一轮，疏林 12 分钟、草原 8 分钟、野花 6 分钟；雨量计接它的雨传感器输入，下雨自动跳过，土壤探针经 ESP32 比较阈值后给它一个干接点当土壤传感器，太湿也跳过；雨水罐水位低时用 API 把它整体禁用。要注意它的传感器输入只认开关量，三区不同阈值得在 ESP32 那边分别比较；天气单位默认英制，改成公制。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/node-red/node-red" target="_blank" rel="noopener">node-red/node-red</a>
+          <span class="stars">★ 23.6k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">IBM 起家、OpenJS 基金会维护的低代码流程编排工具：在浏览器里拖节点连线，把 MQTT、HTTP、定时器和逻辑串成流</p>
+        <p class="gh-why">→ 土壤、雨量、水位三个传感器开会这件事，用 Node-RED 画成一张流程图比写 YAML 自动化直观得多，改阈值也是拖一下的事</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0602-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="24" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0602-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0602-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Node-RED · 三个传感器在画布上开会</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0602-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0602-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0602-4-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0602-4-shade)" stroke="none"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0602-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">MQTT 订阅</text><text x="78" y="149" text-anchor="middle" font-size="9.5">土壤 / 雨量 / 水位</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HTTP 节点</text><text x="78" y="187" text-anchor="middle" font-size="10.5">未来 6h 降雨</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Node-RED</text><text x="200" y="107" text-anchor="middle" font-size="10.5">流程画布</text><text x="200" y="174" text-anchor="middle" font-size="10.5">函数节点</text><text x="200" y="187" text-anchor="middle" font-size="10.5">算每区分钟数</text><text x="322" y="94" text-anchor="middle" font-size="10.5">MQTT 发布</text><text x="322" y="107" text-anchor="middle" font-size="10.5">三路电磁阀</text><text x="322" y="174" text-anchor="middle" font-size="10.5">InfluxDB</text><text x="322" y="187" text-anchor="middle" font-size="10.5">浇灌记录</text><text x="430" y="138" text-anchor="middle" font-size="10.5">只看结果的人</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">开阀 N 分钟</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">浇好了</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0602：ESP32 本地兜底，Node-RED 在上面做带天气预报的决策层，改条件靠拖节点</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">node-red/node-red</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Node-RED 是 IBM 新兴技术团队 2013 年做出来的可视化编程工具，2016 年捐给 JS 基金会（现 OpenJS 基金会），Node.js 写的，23.6k 星，是物联网圈里事实上的流程编排标准。它解决的问题是：设备和 API 之间的胶水逻辑用代码写太琐碎，画成图反而清楚。</p><p>它的工作方式是流：浏览器里的编辑器把节点拖到画布上，连线表示消息的流向，每条消息是一个 JavaScript 对象；节点分输入（MQTT 订阅、HTTP 请求、定时器）、处理（函数、开关、延迟、合并）、输出（MQTT 发布、邮件、文件）。点部署，流就跑在 Node.js 运行时里。仪表盘节点能顺手生成一个网页面板。</p><p>生态上它的节点仓库有几千个社区节点，HomeAssistant 有官方插件和专门的节点集，HA 的实体状态和服务调用都能当节点用。编辑器界面有简体中文，中文教程很多。</p><p>在 0602 里它是延伸，正好对应那句三个传感器开会：ESPHome 节点本地判断是主方案，Node-RED 可以做上面那一层更复杂的决策。三个传感器读数通过 MQTT 进来，加一个 open-meteo 的 HTTP 节点拉未来 6 小时降雨概率，函数节点算出每区该浇几分钟，再按芒草 18%、朴树 25%、野花 22% 的阈值分三路发开阀指令，浇灌记录写进 InfluxDB。哪天想加一个条件比如连续三天高温就多浇两分钟，拖一个节点就行。注意 Node-RED 挂了不能让草地断水，ESP32 本地的兜底逻辑要留着。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/open-meteo/open-meteo" target="_blank" rel="noopener">open-meteo/open-meteo</a>
+          <span class="stars">★ 6.2k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">免费开源的天气预报 API：整合全球十几家气象机构的模式数据，不用注册、不用密钥，一条 URL 拿到逐小时预报</p>
+        <p class="gh-why">→ 方案里那条未来 6 小时无雨才开阀的判断需要一个预报源，open-meteo 免费、无密钥、HomeAssistant 原生集成，是最省事的选择</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0602-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="25" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0602-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0602-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Open-Meteo · 一条 URL 拿到逐小时预报</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0602-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M44.0 112 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0602-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0602-5-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0602-5-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0602-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0602-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">ECMWF / DWD</text><text x="78" y="107" text-anchor="middle" font-size="10.5">GFS / CMA</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Open-Meteo</text><text x="200" y="107" text-anchor="middle" font-size="10.5">API 服务</text><text x="200" y="174" text-anchor="middle" font-size="10.5">网格插值</text><text x="200" y="187" text-anchor="middle" font-size="10.5">杭州本地点</text><text x="322" y="94" text-anchor="middle" font-size="10.5">HA 集成</text><text x="322" y="107" text-anchor="middle" font-size="10.5">降水概率传感器</text><text x="322" y="174" text-anchor="middle" font-size="10.5">木杆 ESP32</text><text x="322" y="187" text-anchor="middle" font-size="10.5">6h 无雨条件</text><text x="430" y="138" text-anchor="middle" font-size="10.5">早上看曲线的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">模式数据</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">JSON</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">MQTT</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0602：HA 加 Open-Meteo 集成，未来 6h 降水概率 &gt;50% 就不开阀，蒸散…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">open-meteo/open-meteo</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Open-Meteo 是瑞士开发者 Patrick Zippenfenig 2022 年发起的开源天气 API，Swift 写的，6.2k 星，非商业用途免费。它解决的问题是：各国气象局的数值预报数据是公开的，但格式古怪、体积巨大；Open-Meteo 把它们统一下载、切片、缓存，包成一个干净的 HTTP 接口。</p><p>它的工作方式是：后台持续拉取 ECMWF、德国 DWD、美国 GFS、中国 CMA 等十几家机构的模式输出，转成自己的压缩格式；请求进来时按经纬度找最合适的高分辨率模式，插值出该点逐小时的温度、降水概率、风、辐射、土壤温湿度等上百个变量，返回 JSON。除了预报还有历史气象、空气质量和地理编码接口，整套服务可以自己用 Docker 部署。</p><p>生态上它有官方客户端库，HomeAssistant 内置了 Open-Meteo 天气集成，Node-RED、Grafana 都有现成节点。文档全英文，但接口简单。</p><p>在 0602 里它是延伸，但几乎是刚需：方案里 ESP32 开阀的三个条件之一是未来 6 小时无雨，这需要一个外部预报源。在 HomeAssistant 里加 Open-Meteo 集成，取杭州本地网格逐小时降水概率，做一个模板传感器：未来 6 小时最大降水概率大于 50% 就置为将要下雨，通过 MQTT 推给木杆里的 ESP32 当第二个条件。它还能给出蒸散量预报，可以试着用它修正每区的浇灌分钟数。免费额度每天一万次，每十分钟拉一次绰绰有余。</p></div>
       </article>
     </div></section>
 

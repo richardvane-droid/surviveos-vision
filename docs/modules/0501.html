@@ -150,6 +150,7 @@
           <a class="gh-name" href="https://github.com/pvvx/ATC_MiThermometer" target="_blank" rel="noopener">pvvx/ATC_MiThermometer</a>
           <span class="stars">★ 4.1k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">小米、青萍等 Telink 芯片蓝牙温湿度计的开源替换固件，省电、纯本地广播、直连 HomeAssistant</p>
         <p class="gh-why">→ 十几块钱的小米温湿度计刷这个固件塞进柴堆缝里，就是最省事、最便宜的柴火回潮探头</p>
@@ -178,6 +179,7 @@
           <a class="gh-name" href="https://github.com/grocy/grocy" target="_blank" rel="noopener">grocy/grocy</a>
           <span class="stars">★ 9.5k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">自托管的家庭物资与库存管理系统，自称冰箱之外的 ERP，支持库存、到期日、家务任务和条码</p>
         <p class="gh-why">→ 把四格柴火当四种库存，入库时记日期、到期日设成 8 个月后，晒够了它自动提醒可以烧，家务功能还能排翻晒</p>
@@ -206,6 +208,7 @@
           <a class="gh-name" href="https://github.com/custom-components/ble_monitor" target="_blank" rel="noopener">custom-components/ble_monitor</a>
           <span class="stars">★ 2.2k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">HomeAssistant 的被动蓝牙传感器集成，不配对只听广播，支持小米、青萍、ATC 固件等上百种设备</p>
         <p class="gh-why">→ 柴堆里的 ATC 探头广播出来的数据由它接进 HomeAssistant，顺便把电量、信号强度也变成实体，离线一眼看出</p>
@@ -228,6 +231,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>ble_monitor 是 HomeAssistant 社区最早也最完整的被动蓝牙传感器集成，由 custom-components 组织维护，GitHub 上 2.2k 星，2026 年 6 月还在发新版。它解决的问题是：小米、青萍、Govee 这些便宜的蓝牙温湿度计、门磁、体重秤，原本各要各的 App，而它们其实都在不停往空气里广播数据，只要听得懂格式就能直接用。</p><p>它的工作方式是被动监听：不配对、不连接，HomeAssistant 主机的蓝牙适配器或 ESPHome 蓝牙代理把收到的广播包转给它，它按厂商格式解析出温度、湿度、电量、信号强度，生成实体，还会做平均和滤波。因为不连接，一个适配器能同时听几十个设备。ATC 和 pvvx 固件的自定义广播格式它原生支持，包括加密广播。</p><p>它支持一百多种设备，文档有每种设备的配置示例。没有中文文档，小米设备的中文教程基本都会提到它。</p><p>在 0501 里它是探头和中枢之间那一层：柴缝里的 ATC 探头广播，南窗的 ESP32 代理转发，ble_monitor 解析成柴缝湿度、温度、探头电量三个实体，再喂给自动化做七日均值。建议把 period 设成 60 秒和探头广播周期一致，信号强度实体也留着，探头被柴压偏了、信号掉了能第一时间发现。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/1technophile/OpenMQTTGateway" target="_blank" rel="noopener">1technophile/OpenMQTTGateway</a>
+          <span class="stars">★ 4k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">跑在 ESP32/ESP8266 上的万能网关固件：把 BLE、433MHz、红外、LoRa 收到的东西统统翻译成 MQTT 消息</p>
+        <p class="gh-why">→ 柴火墙离木屋有一段距离，几颗小米蓝牙温湿度计塞进柴堆比拉线方便，OMG 一块 ESP32 就能把它们全收进 HomeAssistant</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0501-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0501-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0501-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OpenMQTTGateway · 无线杂牌军统一翻成 MQTT</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0501-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0501-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0501-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0501-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0501-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">柴堆里的</text><text x="78" y="149" text-anchor="middle" font-size="10.5">BLE 温湿度计</text><text x="78" y="216" text-anchor="middle" font-size="10.5">433MHz</text><text x="78" y="229" text-anchor="middle" font-size="10.5">无线传感器</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OpenMQTT</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Gateway</text><text x="200" y="174" text-anchor="middle" font-size="10.5">内置解码器</text><text x="200" y="187" text-anchor="middle" font-size="10.5">上百种设备</text><text x="322" y="100" text-anchor="middle" font-size="10.5">MQTT 总线</text><text x="322" y="174" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="187" text-anchor="middle" font-size="10.5">自动发现</text><text x="430" y="218" text-anchor="middle" font-size="10.5">看柴干没干</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">广播包</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">无线码</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">JSON</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0501：四格柴堆各塞一颗小米温湿度计，一块 ESP32 网关全收进 HA</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">1technophile/OpenMQTTGateway</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>OpenMQTTGateway 是法国开发者 Florian Robert 发起的开源网关固件，4k 星，专门解决一件事：家里那些说各种方言的无线小设备（BLE 温湿度计、433MHz 门磁和气象传感器、红外遥控、LoRa 节点）怎么统一接进一个 MQTT 总线。它把一块几十块钱的 ESP32 变成翻译官，收到什么就转成 JSON 发到 MQTT，不用自己写解码。</p><p>它的架构是模块化的：每种无线介质是一个 gateway 模块，编译时勾选需要的组合。BLE 模块内置上百种设备的解码器，包括小米 LYWSD03MMC、米家花草监测仪和体重秤，扫到广播包就解出温度、湿度、电量；433MHz 模块解码遥控和无线传感器。输出侧是 MQTT，原生支持 HomeAssistant 自动发现，设备一上线 HA 里就冒出实体。</p><p>生态上它有网页版刷机工具，浏览器插上板子点一下就能刷，官方支持十几种现成开发板。社区在 Discord 和 Discussions 上活跃，2025 年 1 月发布了 1.8.1 版。文档全英文，中文只有零散博客。</p><p>在 0501 里它是延伸玩法：方案里柴架顶只埋一颗 ESPHome 探头，但四个格子的柴干湿并不一样。买四颗二十块的小米温湿度计塞进每格柴堆深处，木屋南墙下放一块跑 OMG 的 ESP32 做 BLE 网关，四格温湿度就全进了 HA，配合前面 ATC_MiThermometer 的固件广播里还带电量。注意柴堆会吸收蓝牙信号，网关别离柴架超过 5 米。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/espressif/esp32-camera" target="_blank" rel="noopener">espressif/esp32-camera</a>
+          <span class="stars">★ 2.8k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">乐鑫官方的 ESP32 摄像头驱动库，支持 OV2640/OV5640 等常见传感器，输出 JPEG 或 RGB 帧，是所有 ESP32-CAM 项目的底层</p>
+        <p class="gh-why">→ 十几块钱的 ESP32-CAM 装在院子对面，每天定点拍一张柴火墙，一年拼成延时看柴怎么被烧空又码满</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0501-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0501-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0501-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">esp32-camera · 十几块钱的板子每天拍一张墙</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0501-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0501-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0501-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0501-5-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0501-5-shade)" stroke="none"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0501-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">OV2640</text><text x="78" y="107" text-anchor="middle" font-size="10.5">图像传感器</text><text x="200" y="94" text-anchor="middle" font-size="9.5">esp32-camera</text><text x="200" y="107" text-anchor="middle" font-size="10.5">驱动库</text><text x="200" y="174" text-anchor="middle" font-size="10.5">帧缓冲</text><text x="200" y="187" text-anchor="middle" font-size="10.5">JPEG 压缩</text><text x="322" y="94" text-anchor="middle" font-size="10.5">ESPHome</text><text x="322" y="107" text-anchor="middle" font-size="10.5">定时抓图</text><text x="322" y="174" text-anchor="middle" font-size="10.5">家庭服务器</text><text x="322" y="187" text-anchor="middle" font-size="10.5">365 张</text><text x="430" y="218" text-anchor="middle" font-size="10.5">拼延时的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">I2S 并口</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">每天一张</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">存图</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">一年延时</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0501：ESP32-CAM 对着柴火墙每天一张，看一年码满与烧空，某格变亮就提…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">espressif/esp32-camera</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>esp32-camera 是乐鑫官方维护的摄像头驱动库，2.8k 星，几乎所有 ESP32-CAM 板子、ESPHome 的 esp32_camera 组件、Arduino 的 CameraWebServer 示例，底层用的都是它。它解决的是最基础的问题：ESP32 没有专门的相机接口，要靠 I2S 并口把 OV2640、OV5640 这些图像传感器的数据搬进内存，再压成 JPEG。</p><p>它的工作流程是：初始化时按板子引脚配置传感器，选分辨率、像素格式和帧缓冲数量；调用一次 fb_get 就拿到一帧，用完 fb_return 还回去。库里附带 BMP 和 JPEG 转换工具，还能调亮度和白平衡。ESP32 内存有限，高分辨率必须靠 PSRAM。</p><p>生态非常庞大：ESPHome 直接把它包成了组件，HomeAssistant 里就能看画面和抓图；Arduino、ESP-IDF 都有绑定。中文资料极多，淘宝的 ESP32-CAM 教程基本都围绕它。</p><p>在 0501 里它是延伸：柴火墙本身不需要摄像头，但那面墙一年的变化本身就是个故事。在院子东侧对着柴架装一块 ESP32-CAM，用 ESPHome 每天中午拍一张存到 0802 家庭服务器；十一月码满、二月烧空、香樟切面从黄变灰，365 张拼成延时。顺手做个小自动化：HA 比较最新一张和上周的亮度差，某格突然变亮就是快空了，提醒该劈柴。注意镜头朝西拍柴墙，下午会逆光，中午拍最稳。</p></div>
       </article>
     </div></section>
 

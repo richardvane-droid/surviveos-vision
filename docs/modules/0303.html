@@ -178,6 +178,7 @@
           <a class="gh-name" href="https://github.com/wled/WLED" target="_blank" rel="noopener">wled/WLED</a>
           <span class="stars">★ 18.7k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESP32 控制 WS2812 等可寻址灯带的开源固件，手机调色、上百种灯效、原生接入 Home Assistant</p>
         <p class="gh-why">→ 帐篷顶那串 5V 串灯换成灯带刷它，暖黄呼吸、星空闪烁随时切，HA 睡前自动调暗，全程吃 0304 储能的 5V 口</p>
@@ -206,6 +207,7 @@
           <a class="gh-name" href="https://github.com/remvze/moodist" target="_blank" rel="noopener">remvze/moodist</a>
           <span class="stars">★ 3.7k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">开源的环境音播放器，雨声、雷声、篝火、风声等几十种声音可叠加混音，纯前端可自部署</p>
         <p class="gh-why">→ 不下雨的晚上也想听雨，在旧手机或小平板上开它，混一段雨打帐篷加篝火当白噪音机，HA 场景一键调预设</p>
@@ -234,6 +236,7 @@
           <a class="gh-name" href="https://github.com/RoadkillUK/Motor-on-a-Roller-Blind-for-ESPHOME" target="_blank" rel="noopener">RoadkillUK/Motor-on-a-Roller-Blind-for-ESPHOME</a>
           <span class="stars">★ 153</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">用 28BYJ-48 步进电机和 3D 打印件改造拉珠卷帘的 ESPHome 配置，自带 3D 模型和接线图</p>
         <p class="gh-why">→ 天窗遮光帘不用买智能款，一个步进电机加打印件改成 HA 里的 cover，早上 7 点自动卷起；这类改造里它是 ESPHome 版本的现成答案</p>
@@ -256,6 +259,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>这是英国玩家 RoadkillUK 在 2019 年发布的卷帘电动化方案，153 星，把 nidayand 那套用 ESP8266 加步进电机改造宜家卷帘的经典做法完整移植到了 ESPHome 上。它解决的问题很具体：一幅几十块钱的手拉卷帘，怎么用最便宜的零件变成 HA 里能开能关、能停在任意位置的窗帘实体。</p><p>硬件只有四样：一块 ESP8266、一个 28BYJ-48 步进电机加 ULN2003 驱动板、一个 5V 电源，以及仓库附带的 3D 打印件——电机支架和咬住拉珠链的齿轮。软件是一份 ESPHome YAML：把步进电机声明成 stepper，再用 template cover 包装成窗帘，记着全开全关的步数；第一次手动走到最上最下各校准一次，位置存进闪存，之后发 open、close、set_position 就能精确到百分比，断网也能用板载按钮。</p><p>文档是英文，但只有接线图和 YAML 两页，照抄就行；同类改造 B 站有不少中文复刻。</p><p>在 0303 里它对应“天窗电动遮光帘”：天窗装一幅拉珠遮光卷帘，齿轮咬住珠链，ESP8266 供电走 0304 的 5V 口。HA 自动化早上 7 点 open 让阳光进帐篷，0306 气象站判断下雨时自动 close。注意 28BYJ-48 力矩小，遮光帘选轻布，超过 1 米宽换 NEMA17，YAML 只改几个数字。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/advplyr/audiobookshelf" target="_blank" rel="noopener">advplyr/audiobookshelf</a>
+          <span class="stars">★ 14.3k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">自托管有声书与播客服务器：扫描目录自动配元数据，网页和手机 App 记住进度，多用户各听各的</p>
+        <p class="gh-why">→ 帐篷区的夜晚要的是闭眼听书而不是刷手机，audiobookshelf 把有声书和播客放在自家服务器上，手机离线缓存后串灯下随听随停</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0303-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0303-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0303-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">audiobookshelf · 自家服务器上的有声书架</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0303-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0303-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0303-4-shade)" stroke="none"/><path d="M160.0 234.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="234.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0303-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0303-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M246.2 222.0 C261.0 222.0 261.0 204.0 275.8 204.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">有声书目录</text><text x="78" y="107" text-anchor="middle" font-size="10.5">按作者 / 书名</text><text x="78" y="174" text-anchor="middle" font-size="10.5">播客 RSS</text><text x="78" y="187" text-anchor="middle" font-size="10.5">户外 / 木工</text><text x="200" y="94" text-anchor="middle" font-size="9.5">audiobookshelf</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Node 服务器</text><text x="200" y="174" text-anchor="middle" font-size="10.5">自动补元数据</text><text x="200" y="187" text-anchor="middle" font-size="10.5">封面 / 章节</text><text x="200" y="248" text-anchor="middle" font-size="10.5">书架 / 进度</text><text x="200" y="261" text-anchor="middle" font-size="10.5">多用户</text><text x="322" y="174" text-anchor="middle" font-size="10.5">手机 App</text><text x="322" y="187" text-anchor="middle" font-size="10.5">离线缓存</text><text x="430" y="218" text-anchor="middle" font-size="10.5">帐篷里的人</text><text x="430" y="231" text-anchor="middle" font-size="10.5">睡眠定时</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">扫描</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">订阅</text><text x="261.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">同步进度</text><text x="376.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">耳机</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0303：0802 服务器上跑一份，雨夜前缓存好几集，串灯调暗后睡眠定时听</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">advplyr/audiobookshelf</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>audiobookshelf 是开发者 advplyr 用 Node.js 和 Vue 做的自托管有声书和播客服务器，14.3k 星，是自托管圈子里有声内容的默认答案。它要解决的问题是：买来或收集的有声书散在硬盘里，播客要靠各家 App 订阅，听到哪儿了换个设备就忘。它把这些集中到一台自己的服务器上。</p><p>它的工作方式是扫描加流式播放：把有声书按作者、书名整理成目录挂进 Docker，服务器扫描后从 Audible、Google Books 等源自动补封面和简介，多文件的书会合并成章节；播客直接填 RSS 就自动下载新集。播放时服务器按需转码，网页端、Android 和 iOS 官方 App 都能听，进度实时同步，支持倍速、睡眠定时和离线下载；多用户各有各的书架和进度，还带电子书阅读器和 Kindle 推送。</p><p>生态上它有 Docker、群晖和各种 NAS 的安装教程，界面通过 Weblate 翻译，简体中文完整，中文自托管社区讨论很多；项目更新频繁，2026 年仍在活跃发版。</p><p>对 0303 来说它是延伸项目：帐篷顶的串灯调到最低后，手边网兜里那副耳机连的就是它。在 0802 家庭服务器上跑一个 audiobookshelf，把有声书和几个户外、木工播客的 RSS 加进去，下雨前用手机把今晚要听的几集缓存好，钻进睡袋后开睡眠定时三十分钟。露营灯和白噪音机归 0303 管，听的内容归这台服务器管，早上七点遮光帘打开时，进度已经记在书架上，明晚接着听。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/kovidgoyal/calibre" target="_blank" rel="noopener">kovidgoyal/calibre</a>
+          <span class="stars">★ 25.7k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">老牌开源电子书管理器：格式转换、元数据整理、自带内容服务器和阅读器，几十种设备一键传书</p>
+        <p class="gh-why">→ 帐篷网兜里那本翻一半的书，纸质之外还得有电子版随手可读；calibre 是电子书库的标杆，配墨水屏阅读器最省心</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0303-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0303-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0303-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">calibre · 一个书库喂饱所有阅读器</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0303-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0303-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0303-5-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0303-5-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0303-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0303-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M246.2 222.0 C261.0 222.0 261.0 204.0 275.8 204.0"/><path d="M256.0 176.0 L266.0 176.0" stroke-dasharray="3 3"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">电子书文件</text><text x="78" y="107" text-anchor="middle" font-size="10.5">EPUB / PDF</text><text x="78" y="174" text-anchor="middle" font-size="10.5">网站文章</text><text x="78" y="187" text-anchor="middle" font-size="10.5">定时抓取</text><text x="200" y="94" text-anchor="middle" font-size="10.5">calibre</text><text x="200" y="107" text-anchor="middle" font-size="10.5">书库 + 转换</text><text x="200" y="174" text-anchor="middle" font-size="10.5">抓元数据</text><text x="200" y="187" text-anchor="middle" font-size="10.5">封面 / 标签</text><text x="200" y="248" text-anchor="middle" font-size="10.5">内容服务器</text><text x="200" y="261" text-anchor="middle" font-size="10.5">局域网网页</text><text x="322" y="174" text-anchor="middle" font-size="10.5">墨水屏阅读器</text><text x="322" y="187" text-anchor="middle" font-size="10.5">自动转格式</text><text x="430" y="218" text-anchor="middle" font-size="10.5">帐篷里的人</text><text x="430" y="231" text-anchor="middle" font-size="10.5">露营灯下读</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">加入</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">做成书</text><text x="261.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">Wi-Fi 下载</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">传书</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0303：书库放 0802 服务器，帐篷里用墨水屏连内容服务器随手挑一本</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">kovidgoyal/calibre</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>calibre 是 Kovid Goyal 从 2006 年起独立维护的开源电子书管理软件，用 Python 和 Qt 写成，25.7k 星，五万多次提交，Windows、macOS、Linux 都有。它要解决的问题是：电子书格式混乱、元数据缺失、不同阅读器互不兼容，买来的书和自己扫的书没有一个统一的家。</p><p>它的工作方式是一个书库加一堆工具：把书加进书库后，calibre 自动抓取书名、作者、封面和简介，按标签、系列、评分整理；内置转换器能在 EPUB、MOBI、AZW3、PDF 等格式之间互转，还能调字体、修目录；连上阅读器就按型号自动转换并传书，Kindle、Kobo、国产墨水屏都认。它自带一个内容服务器，在局域网开一个网页，任何浏览器和阅读器都能直接从书库里下载或在线读；再配上新闻抓取，能把网站文章定时做成电子书推送。</p><p>生态上插件市场有上百个扩展，社区论坛 MobileRead 非常活跃，界面自带简体中文，中文教程遍地都是；作者几乎每周发一个版本，二十年没断更。</p><p>对 0303 来说它是延伸项目：帐篷网兜里除了纸书，放一台墨水屏阅读器；calibre 装在 0802 家庭服务器上，内容服务器常开，晚上钻进帐篷用阅读器连 Wi-Fi 打开书库网页，挑一本下下来，露营灯调到最低就能看。和 audiobookshelf 分工：一个管听，一个管读。木工、户外、电子方面的 PDF 手册也一并塞进书库，帐篷里想起某个尺寸，伸手就能查。</p></div>
       </article>
     </div></section>
 

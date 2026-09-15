@@ -129,6 +129,7 @@
           <a class="gh-name" href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">FreeCAD/FreeCAD</a>
           <span class="stars">★ 32.2k</span>
           <span class="zh ">有中文文档站</span>
+          
         </header>
         <p class="gh-desc">开源参数化 3D 建模软件，草图约束、零件设计、电子表格驱动尺寸、出加工图，型材框架和木作都能画</p>
         <p class="gh-why">→ 每个模块画型材机架前先在它里面按 0805 的规格建模，2020 / 3030 两档尺寸做成参数化零件库</p>
@@ -157,6 +158,7 @@
           <a class="gh-name" href="https://github.com/openscad/openscad" target="_blank" rel="noopener">openscad/openscad</a>
           <span class="stars">★ 9.6k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">程序员的 3D CAD：用脚本描述几何体，参数一改整件重生，Thingiverse 和 MakerWorld 上可自定义的型材配件多半用它写</p>
         <p class="gh-why">→ 黑色角码缺货时自己打印的角码、端盖、槽盖条都用它写成参数化脚本，槽宽 6 / 8mm 一个变量切换</p>
@@ -185,6 +187,7 @@
           <a class="gh-name" href="https://github.com/nophead/NopSCADlib" target="_blank" rel="noopener">nophead/NopSCADlib</a>
           <span class="stars">★ 1.6k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">OpenSCAD 零件库和项目框架：自带 E2020 / E3030 / E4040 铝型材、角码、滑入式 T 型螺母等标准件，能生成 BOM 和装配图</p>
         <p class="gh-why">→ 0804 三机机架和各模块型材框架直接用它的型材与角码模型拼，跑脚本就出切割清单和螺丝数量</p>
@@ -207,6 +210,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>NopSCADlib 是 Chris Palmer（nophead）维护的 OpenSCAD 零件库和项目框架，1.6k 星，GPL v3，持续更新十几年。它解决的问题是：做一台机器要用的标准件，每次都自己画一遍太浪费，不如有一个尺寸准确的库，顺手把 BOM 和装配图也生成了。</p><p>它的内容分两大块。vitamins（外购件）里直接有 E2020、E3030、E4040 等一整套铝型材模型，带真实槽形截面，配套 extrusion_corner_bracket、extrusion_inner_corner_bracket 角码和 sliding_t_nut 滑入式 T 型螺母；printed（打印件）里有盒子、铰链、线夹、脚垫等结构件。框架部分是一套 Python 脚本：在 OpenSCAD 注释里写 Markdown，脚本就能扫出 BOM 清单和分步装配图。README 和文档只有英文，看示例就会。</p><p>在 0805 里它是型材机架的标准件字典：0804 那个 60×40cm 三机机架，直接用 E2020 拼框架、角码做角、T 型螺母挂托板，跑一次脚本就得到型材切割清单和螺丝数量。要注意它的 2020 截面是 6mm 槽，正好对上 D3 定标；但它默认角码是银色通用件，喷砂黑那几件要在 printed 里自己加颜色参数；3030 是 8mm 槽，配件要分别传参。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/blender/blender" target="_blank" rel="noopener">blender/blender</a>
+          <span class="stars">★ 19.3k</span>
+          <span class="zh ">有中文文档站</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">开源 3D 创作套件的官方镜像：建模、PBR 材质节点、Cycles 与 EEVEE 渲染、Python API，把 CAD 模型套上真实材质出效果图</p>
+        <p class="gh-why">→ 型材藏在里面、木头露在外面、皮草只在手停留处，这套材质语法要在采购前看到效果，得有一个能渲染真实材质的工具</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0805-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="33" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0805-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0805-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Blender · 三种材质的数字样板</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0805-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-4-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0805-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0805-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">机架 glTF</text><text x="78" y="180" text-anchor="middle" font-size="10.5">HDRI 环境光</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Blender</text><text x="200" y="107" text-anchor="middle" font-size="10.5">材质节点</text><text x="200" y="174" text-anchor="middle" font-size="10.5">三个节点组</text><text x="200" y="187" text-anchor="middle" font-size="9.5">黑铝 / 白蜡 / 植鞣</text><text x="322" y="94" text-anchor="middle" font-size="10.5">EEVEE 渲染</text><text x="322" y="107" text-anchor="middle" font-size="10.5">几秒一张</text><text x="322" y="174" text-anchor="middle" font-size="10.5">候选并排图</text><text x="322" y="187" text-anchor="middle" font-size="10.5">定标前比一比</text><text x="430" y="218" text-anchor="middle" font-size="10.5">定标的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">按面指派</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0805：材质语法做成节点组，各模块机架下料前渲一张，木料皮草候选并排比</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">blender/blender</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Blender 是荷兰 Blender 基金会维护的开源 3D 创作套件，GitHub 上这个仓库是官方镜像，19.3k 星，主开发在他们自己的 Gitea 上。从建模、材质、灯光到渲染、动画，一套免费软件全包，专业到被电影和游戏工作室正式使用。</p><p>它和 CAD 关心的不同：CAD 关心尺寸和约束，Blender 关心看起来像不像。材质用节点编辑器搭，原理化 BSDF 一个节点就覆盖了 PBR 的全部参数，金属度、粗糙度、法线贴图、透光；灯光用 HDRI 环境图给出真实反射；渲染有两个引擎，Cycles 是路径追踪，慢但准，EEVEE 是实时光栅，快而够看。FreeCAD 导出的 OBJ 或 glTF 直接拖进去；</p><p>4.x 系列 2026 年仍按季度发版；界面自带简体中文，官方手册也有中文翻译，B 站教程数不清。</p><p>在 0805 里它是延伸：这一页定的是材质语法，木屋作品墙下那格样板是实物，Blender 里做它的数字版。先把三种材质各调成一个节点组：喷砂黑阳极氧化铝要低金属度、中高粗糙度加细微颗粒法线；白蜡木油蜡饰面用木纹贴图加轻微清漆层；植鞣皮用高粗糙度加皮纹凹凸。然后把 FreeCAD 里各模块的机架模型导出 glTF 拖进来，按规则给每个面指派材质，型材面黑、覆面木、把手皮，用 EEVEE 几秒出一张。0301 工具台、0404 木工间下料前先渲一张看比例和配色，木料和皮草定标时把两三种候选并排渲出来比。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/CadQuery/cadquery" target="_blank" rel="noopener">CadQuery/cadquery</a>
+          <span class="stars">★ 5.7k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Python 参数化 CAD 脚本框架：基于 OCCT 内核的实体建模，链式 API 几行出一个带倒角的零件，能直接导出 STEP 与 STL</p>
+        <p class="gh-why">→ D3 规格是一行文字，写成一个 Python 库后每个模块的机架脚本 import 一次就继承，比 OpenSCAD 多出真正的 STEP 和圆角</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0805-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="34" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0805-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0805-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">CadQuery · 把 D3 规格写成一个包</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0805-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-5-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0805-5-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0805-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0805-5-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">D3 规格</text><text x="78" y="180" text-anchor="middle" font-size="10.5">木料候选</text><text x="200" y="94" text-anchor="middle" font-size="10.5">CadQuery</text><text x="200" y="107" text-anchor="middle" font-size="10.5">OCCT B-rep</text><text x="200" y="174" text-anchor="middle" font-size="9.5">自建 Python 包</text><text x="200" y="187" text-anchor="middle" font-size="9.5">profile / 角码</text><text x="322" y="94" text-anchor="middle" font-size="9.5">STEP → FreeCAD</text><text x="322" y="107" text-anchor="middle" font-size="10.5">装配图</text><text x="322" y="174" text-anchor="middle" font-size="10.5">STL → 拓竹</text><text x="322" y="187" text-anchor="middle" font-size="10.5">切割清单</text><text x="430" y="218" text-anchor="middle" font-size="10.5">下料的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写成函数</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">import</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0805：规格写进一个 Python 包，各模块机架脚本 import，改一行全部跟着变</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">CadQuery/cadquery</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>CadQuery 是一个用 Python 写参数化 CAD 的开源框架，5.7k 星，最初由 Dave Cowden 在 2013 年发起，现在由社区维护。它和 OpenSCAD 一样用代码建模，但内核不同：OpenSCAD 是网格上的布尔运算，CadQuery 基于 OpenCASCADE 的边界表示，所以能做真正的圆角倒角、能识别面和边、能导出工程软件认的 STEP。</p><p>它的 API 是链式的：从一个工作平面开始，画草图、拉伸、选边、倒角、打孔，每一步返回新对象继续往下写，几行就是一个零件。选择器用字符串描述，改参数后整条链自动重算。装配模块能把多个零件按约束拼起来，导出格式有 STEP、STL、3MF、DXF 和 SVG。配套的 CQ-editor 是带三维预览的桌面编辑器，build123d 是社区在它之上做的新一代 API。</p><p>社区规模中等但稳定，2026 年仍在发版；文档是英文，中文资料只有零星博客。</p><p>在 0805 里它是延伸，用来把规则写成代码。建一个小 Python 包，profile 函数的参数是系列名和长度，2020 就是槽宽 6 毫米壁厚 1.8 毫米，3030 就是槽宽 8 毫米，配件函数有角码、T 型螺母、端盖、脚垫，木料函数按候选树种给出板厚和倒角。各模块的机架脚本 import 这个包，尺寸用变量，一改规格全部跟着变；输出 STEP 给 FreeCAD 做装配图，STL 给拓竹打印配件，顺手让脚本数一遍切割清单和螺母数量。定标改了槽宽，只改包里一行。</p></div>
       </article>
     </div></section>
 

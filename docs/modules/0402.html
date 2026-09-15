@@ -161,6 +161,7 @@
           <a class="gh-name" href="https://github.com/inventree/InvenTree" target="_blank" rel="noopener">inventree/InvenTree</a>
           <span class="stars">★ 7.3k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">开源零件库存管理系统，Django 后端，支持条码、库位、BOM 和手机 App</p>
         <p class="gh-why">→ 黄铜配件、螺丝五金这种按数量管的小零件用它更合适，出入库有条码扫描</p>
@@ -189,6 +190,7 @@
           <a class="gh-name" href="https://github.com/sysadminsmedia/homebox" target="_blank" rel="noopener">sysadminsmedia/homebox</a>
           <span class="stars">★ 7.1k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">面向家庭用户的自托管物品库存系统，按位置、标签分类，带图片和维护记录</p>
         <p class="gh-why">→ 每个周转箱在里面建一个位置，打印二维码贴箱口，扫码就跳到箱内清单，和 0801 数字孪生打通</p>
@@ -217,6 +219,7 @@
           <a class="gh-name" href="https://github.com/pklaus/brother_ql" target="_blank" rel="noopener">pklaus/brother_ql</a>
           <span class="stars">★ 701</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">直接驱动 Brother QL 系列标签机的 Python 库，不用官方驱动，支持 USB 和网络</p>
         <p class="gh-why">→ 写个脚本批量把箱名和二维码打成统一字体的标签，字体永远一致不会强迫症发作</p>
@@ -239,6 +242,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>brother_ql 是德国开发者 Philipp Klaus 写的 Python 库和命令行工具，701 星，直接实现了兄弟 QL 系列标签打印机的光栅打印协议。官方驱动只在 Windows 和 macOS 上好用，有了它，树莓派上不装任何驱动就能把一张图片打成标签。</p><p>它的原理很干净：用户用 Pillow 把标签画成一张位图（文字、二维码、线条随便画），brother_ql 把位图转成打印机认识的光栅指令，再通过 USB（pyusb）、Linux 的 /dev/usb/lp 设备或网络端口发给打印机。命令行一句 brother_ql print -l 62 label.png 就打出来，标签宽度、型号、旋转都是参数。支持 QL-500 到 QL-1110NWB 的十几个型号，包括国内容易买到的 QL-800。仓库本身几年没大更新，但协议稳定，社区有基于它的网页版 brother_ql_web 和 Home Assistant 加载项。</p><p>没有中文资料，好在用法就一条命令。</p><p>在 0402 里，它跑在 0802 中枢的树莓派上：写一个几十行的脚本，从 Homebox 的 API 拉出所有箱子的名称和二维码内容，用同一款思源黑体统一字号排版，一次打完贴在箱口，字体永远一致。坑是标签纸型号要和命令里的宽度参数完全一致，62 毫米连续纸和 29 毫米切片纸不能混，否则打印机会红灯报错。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/odoo/odoo" target="_blank" rel="noopener">odoo/odoo</a>
+          <span class="stars">★ 52.8k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">比利时 Odoo 公司的开源 ERP 套件：库存、采购、制造、销售、会计几十个模块一体，社区版免费自托管，国内中小企业用得很多</p>
+        <p class="gh-why">→ 材料仓库如果哪天要算成本、管采购和 BOM，InvenTree 之外可以看看正经 ERP 的库存模块怎么做，Odoo 是开源里最完整的一套</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0402-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0402-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0402-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Odoo · 库存到成本一条链的开源 ERP</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0402-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0402-4-shade)" stroke="none"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0402-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0402-4-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0402-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0402-4-shade)" stroke="none"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0402-4-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0402-4-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M246.2 222.0 C261.0 222.0 261.0 204.0 275.8 204.0"/><path d="M322.0 204.0 L322.0 222.0"/><path d="M222.2 124.0 C261.0 124.0 261.0 222.0 299.8 222.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">条码扫描</text><text x="78" y="107" text-anchor="middle" font-size="10.5">收货 / 盘点</text><text x="78" y="174" text-anchor="middle" font-size="10.5">采购单</text><text x="78" y="187" text-anchor="middle" font-size="10.5">补货规则</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Odoo 核心</text><text x="200" y="107" text-anchor="middle" font-size="10.5">ORM + 工作流</text><text x="200" y="174" text-anchor="middle" font-size="10.5">库存模块</text><text x="200" y="187" text-anchor="middle" font-size="10.5">库位 / 批次</text><text x="200" y="248" text-anchor="middle" font-size="10.5">制造 / BOM</text><text x="200" y="261" text-anchor="middle" font-size="10.5">领料工单</text><text x="322" y="94" text-anchor="middle" font-size="10.5">PostgreSQL</text><text x="322" y="107" text-anchor="middle" font-size="10.5">统一数据库</text><text x="322" y="174" text-anchor="middle" font-size="10.5">会计模块</text><text x="322" y="187" text-anchor="middle" font-size="10.5">每块板的成本</text><text x="322" y="248" text-anchor="middle" font-size="10.5">网页 / 手机</text><text x="322" y="261" text-anchor="middle" font-size="10.5">中文界面</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">入库</text><text x="261.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">记账</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0402：学它的库位和批次思路；PSK 小批量售卖时用社区版算原料成本</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">odoo/odoo</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Odoo 是比利时 Odoo 公司维护的开源商业应用套件，用 Python 和 PostgreSQL 写成，52.8k 星，当前主线是 19 版，从 2005 年的 TinyERP 一路演化过来。它要解决的问题是：一家企业的库存、采购、销售、制造、会计、CRM 各用一套软件，数据对不上，Odoo 把这些做成同一个数据库上的几十个模块，装哪个用哪个。</p><p>它的工作方式是模块加工作流：核心 ORM 定义模型，每个模块在上面加字段、视图和业务规则；库存模块用仓库、库位、批次和移动单来记每一件物料的去向，支持条码扫描收货和盘点；采购模块按补货规则自动生成采购单；制造模块管 BOM、工单和领料；会计模块把所有单据自动记账。网页界面手机能用，有条码扫描专用页面；社区版开源可自托管。</p><p>生态上它的应用商店有几万个第三方模块，国内有大量实施商和中文社区，界面自带简体中文且本地化很完整；公司每年发一个大版本，非常活跃。</p><p>对 0402 来说它是延伸项目：仓库日常用 InvenTree 和 Homebox 就够，Odoo 太重。它的用法是两条：一是学习——看它的库存模块怎么定义库位、批次和补货规则，把这套思路简化后用到周转箱二维码和 0801 数字孪生库的字段设计上；二是备用——如果 PSK 盒子哪天从自用变成小批量售卖，胡桃木板、黄铜配件、皮革边角就成了要算成本的原料，用 Docker 在 0802 服务器上跑一份 Odoo 社区版，仓库、采购、BOM、销售一起上，每一块板子的成本从此有据可查。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/nocodb/nocodb" target="_blank" rel="noopener">nocodb/nocodb</a>
+          <span class="stars">★ 64.5k</span>
+          <span class="zh ">官方中文 README</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">开源的 Airtable 替代品：把 MySQL、PostgreSQL 或 SQLite 变成带表格、看板、表单和 API 的智能电子表格，自托管一条 Docker 命令</p>
+        <p class="gh-why">→ 材料仓库那张木料清单、周转箱清单和半成品暂存表，用 nocodb 做成可以手机扫码填写的表格，比专门的库存软件更贴近实际习惯</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0402-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0402-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0402-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">NocoDB · 木料清单变成能扫码填的表格</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0402-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0402-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0402-5-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0402-5-shade)" stroke="none"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0402-5-shade)" stroke="none"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0402-5-shade)" stroke="none"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0402-5-arrow)" stroke-linecap="round"><path d="M120.7 124.0 C139.0 124.0 139.0 148.0 157.3 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M256.0 250.0 L266.0 250.0"/><path d="M266.0 157.6 C200.0 157.6 200.0 114.4 134.0 114.4" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">取料的人</text><text x="78" y="151" text-anchor="middle" font-size="10.5">手机扫码填表</text><text x="78" y="174" text-anchor="middle" font-size="10.5">已有数据库</text><text x="78" y="187" text-anchor="middle" font-size="10.5">或自带 SQLite</text><text x="200" y="94" text-anchor="middle" font-size="10.5">NocoDB</text><text x="200" y="107" text-anchor="middle" font-size="10.5">表格 + 视图</text><text x="200" y="174" text-anchor="middle" font-size="10.5">表单 / 看板</text><text x="200" y="187" text-anchor="middle" font-size="10.5">手机页面</text><text x="200" y="248" text-anchor="middle" font-size="10.5">REST API</text><text x="200" y="261" text-anchor="middle" font-size="10.5">Webhook</text><text x="322" y="94" text-anchor="middle" font-size="10.5">二维码列</text><text x="322" y="107" text-anchor="middle" font-size="10.5">每格一张贴纸</text><text x="322" y="174" text-anchor="middle" font-size="10.5">木料架 / 周转箱</text><text x="322" y="187" text-anchor="middle" font-size="10.5">格位号</text><text x="322" y="248" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="261" text-anchor="middle" font-size="10.5">低库存提醒</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">减一块</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">生成</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">贴上</text><text x="261.0" y="245.0" text-anchor="middle" font-size="8" fill="#666">推送</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">扫码</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0402：木料、板材、半成品各一张表，格位贴二维码，取料扫码减数，低库存推 HA</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">nocodb/nocodb</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>NocoDB 是印度团队 NocoDB 公司维护的开源无代码数据库，用 TypeScript 和 Vue 写成，64.5k 星，是 GitHub 上最热门的 Airtable 替代品。它要解决的问题：很多人只想要一张能协作、能加附件、能手机填的表格，Excel 不擅长，Airtable 又按人头收费且数据在别人手里。</p><p>它的工作方式是给数据库套一层电子表格皮：它可以自带 SQLite，也可以连上已有的 MySQL、PostgreSQL，把每张表变成一个网格视图，字段类型包括文本、数字、单选、附件、关联、公式、条码和二维码；同一张表能切成表格、看板、日历、画廊和表单视图，表单可以发成链接让别人填写。每张表自动生成 REST API，Webhook 在新增或修改时通知外部系统。</p><p>生态上有 Docker 和群晖一键部署，README 有官方中文版，界面也有简体中文；发版频繁，2026 年仍很活跃。</p><p>对 0402 来说它是延伸项目：InvenTree 管零件，Homebox 管物品，但斜顶下那排木料架更像一张清单——木种、厚度、长度、剩余块数、进货日期、格位号。在 0802 服务器上跑一份 NocoDB，建一张木料表，字段里加一个二维码列自动生成每格的码，打印贴到木料架上；A 字架上的板材和楼梯口的半成品暂存箱各建一张表，用表单视图做成手机页面，取走一块板顺手扫码减一。API 和 Webhook 接进 HomeAssistant，某种木料低于两块时推送提醒补货。</p></div>
       </article>
     </div></section>
 

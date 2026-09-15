@@ -189,6 +189,7 @@
           <a class="gh-name" href="https://github.com/wled/WLED" target="_blank" rel="noopener">wled/WLED</a>
           <span class="stars">★ 18.7k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESP32 上最流行的灯带控制固件，网页和 App 直接控，支持 RGB+CCT 灯带、250 个预设、定时和 HomeAssistant 自动发现</p>
         <p class="gh-why">→ 灯箱四周 5cm 天光缝和镜子暖光灯带直接刷它，晨浴 / 日常 / 夜起三档存成预设，HA 里一键切</p>
@@ -217,6 +218,7 @@
           <a class="gh-name" href="https://github.com/basnijholt/adaptive-lighting" target="_blank" rel="noopener">basnijholt/adaptive-lighting</a>
           <span class="stars">★ 3.4k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">HomeAssistant 自定义组件，按太阳位置自动调整灯光色温和亮度，自带睡眠模式和手动接管检测</p>
         <p class="gh-why">→ 和 0201 共用一份时间表，卫生间灯箱早上 5000K、夜起 2200K 不用再单独写自动化，夜里靠 sleep mode 一律最暗最暖</p>
@@ -245,6 +247,7 @@
           <a class="gh-name" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">patrickcollins12/esphome-fan-controller</a>
           <span class="stars">★ 741</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESP32 加温度探头做 PID 调速风扇的 ESPHome 方案，配完整教程、接线图和 HA 仪表盘上在线调参</p>
         <p class="gh-why">→ 把温度探头换成湿度探头，就是湿度 70% 自动开、20 分钟后自动停的排风控制器，阈值和计时全在 ESP32 本地跑</p>
@@ -267,6 +270,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>esphome-fan-controller 是澳大利亚开发者 Patrick Collins 开源的一个 ESPHome 项目，741 星，原本是为了给电视柜里发热的机顶盒做一个“会自己调速的静音风扇”。它的价值在于把一个小硬件项目讲透了：一块 ESP32、一颗 DHT11 探头、一只 12V 四线 PWM 风扇和降压模块，接线图、YAML、PID 调参全写成教程，很多人的第一个 ESPHome 硬件就是照它做的。</p><p>原理是把传感器读数喂给 ESPHome 内置的 PID 组件：设一个目标温度，PID 算出风扇该转多快，输出成 PWM 占空比；转速、目标值、PID 参数都暴露成 HA 实体，仪表盘上边看曲线边调，也能手动接管。逻辑全在 ESP32 本地，断网照样工作。</p><p>项目是英文的，但全是 ESPHome 标准组件，中文 ESPHome 教程都能对上；更新不勤，也没什么要更新的。</p><p>在 0202 里它变成排风扇控制器：把 DHT11 换成更准的 SHT31 湿度探头，风扇换成管道排风机（用继电器或调速模块），控制逻辑不用 PID，改成 ESPHome 的阈值加计时器——湿度超过 70% 开机，跌回 60% 以下或满 20 分钟停机，探头和 ESP32 装在灯箱上方的干燥腔里，只把探头伸进浴室。坑是水汽会让探头读数飘，探头别贴淋浴角顶；HA 里加一条兜底：连续开机超过一小时就推送提醒。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/homebridge/homebridge" target="_blank" rel="noopener">homebridge/homebridge</a>
+          <span class="stars">★ 25.5k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Node.js 写的 HomeKit 桥：通过两千多个插件把非 HomeKit 设备接进苹果家庭 App，Siri 和 iPhone 控制中心直接用</p>
+        <p class="gh-why">→ 卫生间灯箱三档和除雾膜想在 iPhone 锁屏和 Siri 上一句话切，Homebridge 是把 HA 和自制设备塞进苹果家庭最省事的桥</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0202-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0202-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0202-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Homebridge · 把自制设备伪装成 HomeKit 配件</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0202-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0202-4-shade)" stroke="none"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0202-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0202-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0202-4-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0202-4-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0202-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0202-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="78" y="107" text-anchor="middle" font-size="10.5">灯箱三档 / 除雾</text><text x="78" y="174" text-anchor="middle" font-size="9.5">MQTT / HTTP</text><text x="78" y="187" text-anchor="middle" font-size="10.5">自制小设备</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Homebridge</text><text x="200" y="107" text-anchor="middle" font-size="10.5">HAP 协议桥</text><text x="200" y="174" text-anchor="middle" font-size="10.5">插件层</text><text x="200" y="187" text-anchor="middle" font-size="10.5">状态映射</text><text x="322" y="94" text-anchor="middle" font-size="10.5">苹果家庭 App</text><text x="322" y="107" text-anchor="middle" font-size="10.5">锁屏按钮</text><text x="322" y="180" text-anchor="middle" font-size="10.5">Siri 一句晨浴</text><text x="430" y="138" text-anchor="middle" font-size="10.5">刷牙的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">插件</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">mDNS 配对</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">一键晨浴</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0202：灯箱 / 除雾膜 / 排风经桥进苹果家庭，Siri 和锁屏一键切晨浴档</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">homebridge/homebridge</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Homebridge 是 Nick Farina 在 2015 年发起的 Node.js 项目，25.5k 星，口号是给等不及的人的 HomeKit 支持。它要解决的问题是：苹果家庭 App 和 Siri 体验好，但认证的 HomeKit 设备少而且贵；Homebridge 用软件模拟一个 HomeKit 配件桥，把任何设备伪装成苹果认识的配件。</p><p>它的架构是核心加插件：核心实现 HAP 协议，在局域网里用 mDNS 广播自己，iPhone 扫一个二维码就把桥加进家庭 App；每个插件对应一种设备或平台，把设备状态映射成 HomeKit 的服务和特征。插件用 npm 装，现在有两千多个，从米家、涂鸦到 MQTT、HTTP 万能插件；官方 UI 是一个网页，装插件、改配置、看日志都在里面。</p><p>生态庞大且活跃，2025 年后核心和 UI 持续更新，UI 有简体中文，中文教程在 NAS 和智能家居社区非常多。</p><p>对 0202 它是延伸的入口：卫生间的灯箱三档、镜子除雾膜、排风扇本来都在 HomeAssistant 里，再通过 Homebridge 的 MQTT 插件暴露成 HomeKit 配件，iPhone 锁屏就多了一个晨浴按钮，Siri 一句晨浴就把灯箱、除雾膜和小灯箱一起打开；人体感应的夜起档留在 HA 自动化里不动。注意一个设备只从一条路进家庭 App，HA 自带的 HomeKit 集成能做的就不重复用 Homebridge，它更适合接 HA 没有的小众设备。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/music-assistant/server" target="_blank" rel="noopener">music-assistant/server</a>
+          <span class="stars">★ 3.1k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Home Assistant 生态的音乐库与播放器管理器：接本地库和流媒体服务，推到 Sonos、AirPlay、Chromecast、Snapcast 等播放器</p>
+        <p class="gh-why">→ 早上进卫生间刷牙那五分钟想有歌，让灯箱切晨浴档的同时把歌推到卫生间的小音箱，Music Assistant 就是 HA 里的那个点播台</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0202-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="13" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0202-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0202-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Music Assistant · HA 里的点歌台</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0202-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M38.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0202-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0202-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0202-5-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0202-5-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0202-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0202-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M134.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">本地库 / 流媒体</text><text x="78" y="107" text-anchor="middle" font-size="10.5">Navidrome</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="78" y="187" text-anchor="middle" font-size="10.5">晨浴档触发</text><text x="200" y="94" text-anchor="middle" font-size="9.5">Music Assistant</text><text x="200" y="107" text-anchor="middle" font-size="10.5">统一库 + 队列</text><text x="200" y="174" text-anchor="middle" font-size="10.5">播放器提供者</text><text x="200" y="187" text-anchor="middle" font-size="9.5">AirPlay / Snapcast</text><text x="322" y="94" text-anchor="middle" font-size="10.5">卫生间小音箱</text><text x="322" y="107" text-anchor="middle" font-size="10.5">IP 等级高</text><text x="322" y="174" text-anchor="middle" font-size="10.5">灯箱晨浴档</text><text x="322" y="187" text-anchor="middle" font-size="10.5">同时亮</text><text x="430" y="138" text-anchor="middle" font-size="10.5">刷牙的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">play_media</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">推歌</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0202：人体感应切晨浴档时顺手推早间歌单到卫生间音箱，排风停就停歌</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">music-assistant/server</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Music Assistant 是 Marcel van der Veldt 发起、现在由 Open Home Foundation 支持的开源音乐服务器，Python 写成，3.1k 星，定位是 Home Assistant 的音乐大脑。它要解决的问题是：音乐在网易云、Spotify、本地 NAS 各处，播放器有 Sonos、AirPlay、小音箱各种牌子，缺一个把音源和播放器统一起来、还能被自动化调用的中间层。</p><p>它的架构是音源提供者加播放器提供者：音源端接本地文件库、Spotify、Tidal、Subsonic 服务器（比如 Navidrome）和网络电台；播放器端接 Sonos、AirPlay、Chromecast、Snapcast 和 HA 的媒体播放器。中间它维护统一的音乐库和播放队列，能把不同音源的曲子混排、在不同播放器之间同步分组。它以 HA 加载项一键装，装好后 HA 里多出一个 mass 域，自动化里一句 play_media 就能点歌。</p><p>社区活跃，2025 年后版本很密，界面翻译含简体中文，中文教程主要在 HA 玩家圈。</p><p>对 0202 它是延伸的小享受：卫生间天花板灯箱旁边塞一只小 AirPlay 或 Snapcast 音箱，人体感应触发晨浴档时，HA 自动化顺手叫 Music Assistant 把早间歌单推到卫生间播放器，洗完澡后排风停的时候把歌停掉；夜起档则永远静音。注意卫生间潮，音箱选 IP 等级高的，别放淋浴角正上方。</p></div>
       </article>
     </div></section>
 

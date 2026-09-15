@@ -178,6 +178,7 @@
           <a class="gh-name" href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a>
           <span class="stars">★ 88k</span>
           <span class="zh ">有中文文档站</span>
+          
         </header>
         <p class="gh-desc">本地优先的开源家庭自动化中枢，几千个集成，自带统计、utility_meter 计量和自动化引擎，官方界面和文档都有简体中文</p>
         <p class="gh-why">→ 雨水罐的水位曲线、自来水补位阀的自动化、雨水占比统计全在它里面：水位低于 20% 开阀补到 40%，补水量记进 utility_meter 算占比</p>
@@ -206,6 +207,7 @@
           <a class="gh-name" href="https://github.com/hugokernel/esphome-weather-station" target="_blank" rel="noopener">hugokernel/esphome-weather-station</a>
           <span class="stars">★ 338</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESPHome 版的 Elektor 气象站，翻斗雨量计脉冲计数、风速风向、温湿度气压一整套 YAML，含硬件接线和 3D 打印件</p>
         <p class="gh-why">→ 它的翻斗雨量计 YAML 直接抄：每一翻斗多少毫米、脉冲怎么滤、日累计怎么归零都写好了，配合屋面面积就是每场雨接了多少升</p>
@@ -234,6 +236,7 @@
           <a class="gh-name" href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">kane5432/ESP32-Water-Level-Sensor</a>
           <span class="stars">★ 55</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESP32-C3 加防水超声波探头测水罐水位，ESPHome 原生接 HomeAssistant，太阳能加锂电供电，深度睡眠 1.5 小时醒一次，带 OTA 窗口</p>
         <p class="gh-why">→ 小众但恰好就是这个需求的完整答案：罐顶 DN50 快开口装一颗 AJ-SR04M，照它的接线和 YAML 做，水位实体直接触发补位阀</p>
@@ -256,6 +259,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>ESP32-Water-Level-Sensor 是开发者 kane5432 做的水罐水位监测小项目，GitHub 上 55 星，星数不多，但它把一个户外无电源水罐的水位监测从硬件到 YAML 完整做了一遍，正好是雨水罐这种场景的现成答案。</p><p>它的硬件是一块 ESP32-C3 Super Mini 加一颗 AJ-SR04M 防水超声波探头，探头装在罐顶朝下测到水面的距离，罐深减去距离就是水位；供电是一块 6V 1W 太阳能板经 TP4056 给锂电池充电，再经 5V 升压给主控和探头。固件用 ESPHome 写，通过原生 API 报给 HomeAssistant，每次读完进入 1.5 小时深度睡眠，读数失败一分钟后重试；每次启动开两分钟 OTA 窗口。标定只需量两个数，空罐时探头到罐底的距离和满罐时到水面的距离，填进 YAML 即可。没有中文资料。</p><p>在 0603 里它就装在 1500L 卧式罐顶那个 DN50 快开口上：探头用一段 PVC 管座固定，太阳能板贴在桧木格栅顶上朝南；YAML 里把 1500L 罐的空满两个距离标定好，再用 template 把百分比换算成升。水位实体就是 0603 补位阀和 0602 开阀前置条件的数据源。要注意卧式罐截面是圆的，距离和升数不是线性关系，要按圆截面公式换算；进水时液面晃动和罐壁回波会让读数跳，加中位数滤波。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/influxdata/influxdb" target="_blank" rel="noopener">influxdata/influxdb</a>
+          <span class="stars">★ 31.6k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">最流行的开源时序数据库：专为传感器读数和指标设计，按时间戳高压缩存储，SQL 或 InfluxQL 查询，3.x 用 Rust 重写</p>
+        <p class="gh-why">→ 水位、补水量、雨水占比这些数据 HA 默认只留十天，想看一整年梅雨和伏旱的罐子曲线，得有一个专门的时序库</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0603-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="25" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0603-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0603-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">InfluxDB · 一年的水位曲线存得下也查得快</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0603-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0603-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0603-4-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0603-4-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0603-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0603-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">超声波水位</text><text x="78" y="149" text-anchor="middle" font-size="10.5">补水阀状态</text><text x="200" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="200" y="107" text-anchor="middle" font-size="9.5">InfluxDB 集成</text><text x="200" y="174" text-anchor="middle" font-size="10.5">InfluxDB</text><text x="200" y="187" text-anchor="middle" font-size="10.5">时序库</text><text x="322" y="94" text-anchor="middle" font-size="10.5">SQL 查询</text><text x="322" y="107" text-anchor="middle" font-size="10.5">按季聚合</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Grafana</text><text x="322" y="187" text-anchor="middle" font-size="10.5">雨水占比曲线</text><text x="430" y="218" text-anchor="middle" font-size="10.5">算够不够用的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">ESPHome</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">行协议</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0603：水位、补水量、溢流次数写进 InfluxDB，一年后看梅雨溢流几次、伏旱补…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">influxdata/influxdb</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>InfluxDB 是美国 InfluxData 公司 2013 年开源的时序数据库，31.6k 星，是物联网圈里最常见的长期存储方案，2026 年 6 月发布了 3.10 版，核心已用 Rust 重写。它解决的问题是：传感器每分钟一条读数，一年就是几十万行，普通关系数据库查得慢、占得多，时序库按时间戳排列、按列压缩，专门为这种数据设计。</p><p>它的数据模型是测量、标签、字段和时间戳：比如测量是 rain_tank，字段是 level_percent 和 volume_l，时间戳精确到纳秒。写入走 HTTP 的行协议，一行文本就是一条数据；查询用 SQL 或 InfluxQL，支持按时间窗口聚合和降采样。3.x 版把存储换成了 Parquet 文件，单机版免费。</p><p>生态上它和 Grafana 是最经典的搭档，HomeAssistant 有官方集成，勾选要记录的实体就自动写入。文档全英文，中文教程多但要注意 1.x、2.x、3.x 的接口差别。</p><p>在 0603 里它是延伸：方案里雨水占比要靠 HomeAssistant 统计，但 HA 的历史库默认只留十天，而雨水罐的故事是按季节讲的。在 0802 服务器上跑一个 InfluxDB，HA 集成里把水位、补水阀状态、自来水补水量、溢流次数这几个实体写进去，一年下来就能回答：梅雨季罐子溢流了几次、伏旱补了多少自来水、1500 升到底够不够。这些数据同时是 0602 浇灌用水的来源账本，两个模块的用水在同一张表里对得上。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/grafana/grafana" target="_blank" rel="noopener">grafana/grafana</a>
+          <span class="stars">★ 76.6k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">最流行的开源可视化平台：连上 InfluxDB、Prometheus、Postgres 等几十种数据源，拖出仪表盘，曲线、仪表、告警一应俱全</p>
+        <p class="gh-why">→ 雨水罐水位、补水量、雨水占比三条曲线放在一张面板上，一眼看出这个月是靠天还是靠自来水，Grafana 是画这张面板的标准工具</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0603-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="26" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0603-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0603-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Grafana · 数据库里的数变成一张能看的面板</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0603-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M38.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M38.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0603-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0603-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0603-5-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0603-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0603-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">InfluxDB</text><text x="78" y="107" text-anchor="middle" font-size="10.5">水位 / 补水</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 历史库</text><text x="78" y="187" text-anchor="middle" font-size="10.5">降雨量</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Grafana</text><text x="200" y="107" text-anchor="middle" font-size="10.5">数据源 + 查询</text><text x="200" y="174" text-anchor="middle" font-size="10.5">面板</text><text x="200" y="187" text-anchor="middle" font-size="10.5">曲线 / 仪表</text><text x="322" y="94" text-anchor="middle" font-size="10.5">雨水罐仪表盘</text><text x="322" y="107" text-anchor="middle" font-size="10.5">0802 大屏</text><text x="322" y="174" text-anchor="middle" font-size="10.5">告警</text><text x="322" y="187" text-anchor="middle" font-size="10.5">三天低于 20%</text><text x="430" y="138" text-anchor="middle" font-size="10.5">冬天在屋里看的人</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">阈值</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0603：水位仪表 + 三十天曲线 + 雨水占比统计一张面板，嵌 0802 大屏，低水位推送</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">grafana/grafana</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Grafana 是瑞典开发者 Torkel Ödegaard 2014 年从 Kibana 分叉出来的可视化平台，现由 Grafana Labs 维护，Go 和 TypeScript 写的，76.6k 星，是运维监控和物联网数据面板的事实标准。它解决的问题是：数据在各种数据库里，但看数据的人需要一张能拖着时间轴看、能设告警的面板，而不是自己写图表代码。</p><p>它的工作方式是数据源加面板：先配一个数据源（InfluxDB、Prometheus、PostgreSQL、HA 历史库等），再在仪表盘里加面板，每个面板写一条查询，选可视化类型：时间序列、仪表、状态图、柱状图、表格、地图。告警规则能把阈值越线推到手机，仪表盘是一个 JSON 文件，可以导入导出。</p><p>生态上它有几千个社区仪表盘和插件，Docker 一条命令就起；开源版功能对家庭完全够用。界面有简体中文，中文教程极多，TeslaMate、HomeAssistant 圈子里都有现成模板。</p><p>在 0603 里它是延伸，和 InfluxDB 配套：数据存进时序库之后，Grafana 负责把它变成一张能看的面板。建一个雨水罐仪表盘：第一行是当前水位的仪表和罐里剩多少升；第二行是三十天水位曲线，叠上降雨量柱和补水阀动作的标记；第三行是本月雨水占比和自来水补水升数的统计。加一条告警：连续三天水位低于 20% 且未来无雨就推送。这张面板嵌进 0802 的大屏，和 0602 的草地体检卡片并排放，梅雨天看红色浮子爬升的心情，冬天在屋里也能看到。</p></div>
       </article>
     </div></section>
 

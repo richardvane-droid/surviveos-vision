@@ -192,6 +192,7 @@
           <a class="gh-name" href="https://github.com/MagicMirrorOrg/MagicMirror" target="_blank" rel="noopener">MagicMirrorOrg/MagicMirror</a>
           <span class="stars">★ 23.8k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">模块化智能镜子平台，用网页模块拼接屏幕内容，社区壁纸轮播、天气、日历模块上千个</p>
         <p class="gh-why">→ 备选画框方案：九屏里想留一屏显示时间、天气和今日主题名，就用它的壁纸模块加两个信息模块拼</p>
@@ -220,6 +221,7 @@
           <a class="gh-name" href="https://github.com/mikf/gallery-dl" target="_blank" rel="noopener">mikf/gallery-dl</a>
           <span class="stars">★ 19.2k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">命令行批量下载图站图集的工具，支持 Pinterest 画板、板块和搜索结果，配置一次定时跑</p>
         <p class="gh-why">→ 每天凌晨四点从 Pinterest 的四个主题画板拉新图进 Immich，靠它一条命令，配好 cookie 就不用管</p>
@@ -248,6 +250,7 @@
           <a class="gh-name" href="https://github.com/damongolding/immich-kiosk" target="_blank" rel="noopener">damongolding/immich-kiosk</a>
           <span class="stars">★ 1.7k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">把 Immich 相册变成浏览器轮播画框的方案，老平板打开网页就能用，转场、时长、相册全靠 URL 参数</p>
         <p class="gh-why">→ 九台 iPad 各开一个它的网址就是九幅画，相册、换图间隔、淡入淡出全用 URL 参数定，HA 还能远程控制</p>
@@ -270,6 +273,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Immich Kiosk 是英国开发者 Damon Golding 从 2024 年起维护的画框软件，1.7k 星，更新非常勤，专门把自托管相册 Immich 里的照片变成浏览器里的轮播画框。它解决的是：闲置平板想当电子画框，又不想把照片交给商业云。</p><p>架构是一个 Go 写的小服务，Docker 一个容器，配置一个 YAML。它自己不存图，而是通过 API 向 Immich 要图：按相册、按人物、按日期或随机抽取，经过服务端缩放和裁剪后送给浏览器，浏览器端只是一个轻量网页，靠 HTMX 定时请求下一张。转场方式、停留时间、是否显示日期地点、多图拼接都可以在 YAML 里定，也可以直接写在网址参数里，所以同一个服务能给不同的屏发不同内容。它还有 Home Assistant 集成，能远程切相册、暂停、下一张。</p><p>文档站是英文，没有中文版，但配置项都是直白的英文单词。</p><p>放进 0103，NAS 上起一个容器，九台 iPad 的浏览器各打开一条带参数的网址：相册指向当天主题、换图间隔 40 秒、转场用淡入淡出、九台的随机种子错开让画面不重复；早上七点 HA 调用集成让九屏同时从黑屏淡入，人离开 30 分钟后暂停并黑屏。坑在 iPad 一代的 Safari 较老，网页动画要关掉模糊背景效果才流畅。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank" rel="noopener">AUTOMATIC1111/stable-diffusion-webui</a>
+          <span class="stars">★ 165k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Stable Diffusion 最流行的本地网页界面：文生图、图生图、局部重绘、放大、LoRA 与 ControlNet 扩展一应俱全</p>
+        <p class="gh-why">→ 画框墙每天要九张新画，抓 Pinterest 总有版权和风格不齐的问题，本地生成一套北欧木屋或生存手册风的画最省心</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0103-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="10" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0103-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0103-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">SD WebUI · 本地显卡批量画今天的九张画</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0103-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0103-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0103-4-shade)" stroke="none"/><path d="M152.0 162.0 h96 v36 h-96 Z M152.0 162.0 l8 -8 h96 l-8 8 M248.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M249.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0103-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0103-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0103-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">四套主题提示词</text><text x="78" y="107" text-anchor="middle" font-size="10.5">+ LoRA</text><text x="78" y="174" text-anchor="middle" font-size="10.5">凌晨四点</text><text x="78" y="187" text-anchor="middle" font-size="10.5">定时任务</text><text x="200" y="94" text-anchor="middle" font-size="10.5">SD WebUI</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Gradio 界面 / API</text><text x="200" y="174" text-anchor="middle" font-size="10.5">显卡扩散过程</text><text x="200" y="187" text-anchor="middle" font-size="10.5">8GB 显存起</text><text x="322" y="94" text-anchor="middle" font-size="10.5">输出目录</text><text x="322" y="107" text-anchor="middle" font-size="10.5">3:4 一百张</text><text x="322" y="174" text-anchor="middle" font-size="10.5">九台 iPad</text><text x="322" y="187" text-anchor="middle" font-size="10.5">七点淡入</text><text x="430" y="218" text-anchor="middle" font-size="10.5">下楼倒咖啡的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">调 API</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写图</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">挑九张同步</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0103：每套主题一个 LoRA，夜里批量生成，和抓取源混放</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">AUTOMATIC1111/stable-diffusion-webui</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>stable-diffusion-webui 是网名 AUTOMATIC1111 的开发者在 2022 年 Stable Diffusion 开源后几周内做出来的网页界面，165k 星，是本地 AI 绘图最出圈的工具。它要解决的问题是：模型本身只是一堆权重和命令行脚本，普通人需要一个能调参数、看结果、反复试的界面。</p><p>它用 Python 和 Gradio 写成，启动后在本机开一个网页：输入正向和反向提示词、采样器、步数、尺寸，点生成后模型在显卡上跑扩散过程，几秒到几十秒出图。除了文生图，还有图生图、局部重绘、外扩画布、放大和批量生成；扩展系统让 ControlNet（用线稿控制构图）、LoRA（几十 MB 的小模型定义画风）一键装上，模型文件放进目录就能切换。</p><p>生态方面它是扩展最多的绘图前端，Civitai 上海量 LoRA 按它的格式发布；README 是英文，但中文教程、整合包和 B 站课程多到数不清。2024 年后更新变慢，Forge 和 ComfyUI 分走了一部分用户，但它仍是最简单的起点。</p><p>对 0103 是延伸玩法：画框墙的四套主题——北欧木屋、生存手册插画、旧地图、雪地动物——每套用一个 LoRA 加一组提示词批量生成，凌晨四点跑一百张，按 3:4 出图，白天挑九张推给九台 iPad；旧的 Pinterest 抓取管线保留，两条来源混着放。注意要一块 8GB 以上显存的显卡，Mac mini 跑 SDXL 会很慢，可以放到白天不用的游戏机上定时跑。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/ImageMagick/ImageMagick" target="_blank" rel="noopener">ImageMagick/ImageMagick</a>
+          <span class="stars">★ 16.8k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">三十多年历史的命令行图像处理套件：裁切、缩放、调色、加边框、拼图、格式转换，一条 magick 命令搞定批量处理</p>
+        <p class="gh-why">→ 九台 iPad 的屏幕是固定的 2048×2732，抓来和生成的画尺寸比例乱七八糟，进画框前必须统一裁切调色，这就是它的活</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0103-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0103-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0103-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ImageMagick · 一条命令把画裁成画框尺寸</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0103-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0103-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0103-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0103-5-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0103-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0103-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">抓取 / 生成的画</text><text x="78" y="107" text-anchor="middle" font-size="10.5">尺寸不一</text><text x="78" y="174" text-anchor="middle" font-size="10.5">当天主题</text><text x="78" y="187" text-anchor="middle" font-size="10.5">色调参数</text><text x="200" y="94" text-anchor="middle" font-size="10.5">magick 命令</text><text x="200" y="107" text-anchor="middle" font-size="9.5">裁切 / 缩放 / 调色</text><text x="200" y="174" text-anchor="middle" font-size="10.5">留白衬纸</text><text x="200" y="187" text-anchor="middle" font-size="10.5">JPEG 85</text><text x="322" y="94" text-anchor="middle" font-size="10.5">2048×2732</text><text x="322" y="107" text-anchor="middle" font-size="10.5">九张成品</text><text x="322" y="174" text-anchor="middle" font-size="10.5">iPad 网页</text><text x="322" y="187" text-anchor="middle" font-size="10.5">七点淡入</text><text x="430" y="218" text-anchor="middle" font-size="10.5">回头看画的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">modulate</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">写文件</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">同步</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0103：同步脚本里的一道工序，统一比例、尺寸、色调和留白再推给 iPad</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">ImageMagick/ImageMagick</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ImageMagick 是 1987 年就开始的开源图像处理套件，由 ImageMagick Studio LLC 维护，16.8k 星，装在几乎每一台 Linux 服务器上。它要解决的问题是：图像处理不该每次都打开 Photoshop，尤其是几百张图做同样的事的时候，一条命令行就该完成。</p><p>它的核心是 magick 这个命令（老版本叫 convert）：输入一张或多张图，按顺序执行一串操作，输出到新文件。操作有两百多种：resize 缩放、crop 裁切、gravity 对齐、modulate 调亮度饱和度、border 加边、montage 拼图、LUT 调色、格式转换，支持 200 多种格式包括 HEIC、RAW 和 PDF。它有 C、Python、Node 等语言绑定，2025 年后仍每周出小版本。</p><p>中文方面 README 是英文，但因为太经典，中文教程和命令速查表多到用不完；它的 Usage 文档是命令行图像处理的教科书。</p><p>对 0103 它是延伸中的基础工具：画框墙的管线里，抓来的画和 SD 生成的画推给 iPad 之前要过一道处理：统一裁成 3:4、缩到 2048×2732、按当天主题给一点暖色或冷色偏移、四周留 3% 留白让画框有衬纸感、最后压成 JPEG 质量 85。写成一个 shell 脚本挂在凌晨四点同步任务里，九张图几秒钟处理完。注意居中裁切可能切掉人物头部，画作类素材可以先用 SD WebUI 外扩画布再交给它。</p></div>
       </article>
     </div></section>
 

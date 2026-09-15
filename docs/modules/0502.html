@@ -138,6 +138,7 @@
           <a class="gh-name" href="https://github.com/motioneye-project/motioneye" target="_blank" rel="noopener">motioneye-project/motioneye</a>
           <span class="stars">★ 4.7k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">motion 守护进程的网页前端，网页里管多路摄像头、移动侦测、定时快照和延时视频合成</p>
         <p class="gh-why">→ 墙前放一只网络摄像头，它按整点抓图、自动拼延时视频，网页里就能看四季变红的一整年</p>
@@ -166,6 +167,7 @@
           <a class="gh-name" href="https://github.com/pageauc/pi-timolo" target="_blank" rel="noopener">pageauc/pi-timolo</a>
           <span class="stars">★ 580</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">树莓派延时摄影加移动侦测加低光拍摄一体的 Python 工具，自带日出日落自动曝光和 rclone 网盘同步</p>
         <p class="gh-why">→ 不用网络摄像头的话，一只树莓派相机固定机位每天拍一张，它自带黄昏夜晚长曝光过渡，最适合一年不动的延时</p>
@@ -194,6 +196,7 @@
           <a class="gh-name" href="https://github.com/Lumics/Plantwatery" target="_blank" rel="noopener">Lumics/Plantwatery</a>
           <span class="stars">★ 114</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESP32 加太阳能板加电容土壤传感器加水泵的全自动浇水装置，含 3D 打印外壳和 PlatformIO 固件</p>
         <p class="gh-why">→ 墙脚种植带前两年要稳定补水，它是少数把太阳能、电池、泵、探头做成完整开源硬件的项目，照抄就能装</p>
@@ -216,6 +219,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Plantwatery 是德国开发者 Lumics 做的开源自动浇水装置，GitHub 上 114 星，星数不多，但它是少数把太阳能供电、锂电池、电容土壤湿度探头、小水泵和 3D 打印外壳一整套做完整的开源硬件项目，而不是只给一段代码。它针对的是花园里离电源和水龙头都远的一小块地。</p><p>它的架构是一块 ESP32 开发板做大脑，电容式土壤湿度探头插在土里读含水量，一块 5V 太阳能板通过 TP4056 给 18650 电池充电，一颗小水泵从旁边的水桶抽水到滴管。固件用 PlatformIO 写，逻辑是定时醒来读湿度，低于阈值就让泵工作固定秒数，然后深度睡眠省电，测量结果通过 MQTT 发出去。外壳 STL、接线图和元件清单都在仓库里。</p><p>它没有用 ESPHome，也没做 HomeAssistant 自动发现，但走 MQTT，接进 HomeAssistant 只是几行配置的事；社区不大，没有中文资料，好在电路简单，照图接线即可。</p><p>在 0502 里它是墙脚那条 40cm 种植带的滴灌器：三叶地锦头两年根系没扎稳，旱季要补水，而木屋南墙外拉电拉水都麻烦。照它做一套，太阳能板贴在毛竹横杆上，水桶藏在种植带东头，泵出口接一条打孔的 8mm 滴管沿墙脚铺开。建议固件换成 ESPHome 重写，接 HomeAssistant 更顺；探头要买带防水涂层的电容式，电阻式两个月就锈；水桶加盖防蚊。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/danforthcenter/plantcv" target="_blank" rel="noopener">danforthcenter/plantcv</a>
+          <span class="stars">★ 804</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">美国丹佛斯植物科学中心做的植物表型图像分析 Python 库：从照片里量叶面积、绿色占比、株高、颜色分布</p>
+        <p class="gh-why">→ 爬山虎每天同一角度拍一张，PlantCV 几行代码就能算出绿叶覆盖率和变红比例，把一面墙的四季变成一根曲线</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0502-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0502-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0502-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">PlantCV · 一张墙的照片变成覆盖率曲线</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0502-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0502-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0502-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0502-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0502-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">每天一张</text><text x="78" y="107" text-anchor="middle" font-size="10.5">墙面照片</text><text x="200" y="94" text-anchor="middle" font-size="10.5">PlantCV</text><text x="200" y="107" text-anchor="middle" font-size="10.5">流水线</text><text x="200" y="174" text-anchor="middle" font-size="10.5">HSV 阈值</text><text x="200" y="187" text-anchor="middle" font-size="10.5">绿 / 红掩膜</text><text x="322" y="94" text-anchor="middle" font-size="10.5">面积 / 颜色</text><text x="322" y="107" text-anchor="middle" font-size="10.5">JSON 结果</text><text x="322" y="174" text-anchor="middle" font-size="10.5">HA 传感器</text><text x="322" y="187" text-anchor="middle" font-size="10.5">覆盖率曲线</text><text x="430" y="218" text-anchor="middle" font-size="10.5">等墙变红的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">裁出墙面</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">算占比</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0502：每日照片 → 绿叶覆盖率 / 变红比例 → HA 曲线，90% 时搬躺椅，过…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">danforthcenter/plantcv</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>PlantCV 是美国 Donald Danforth 植物科学中心开发的植物表型图像分析库，用 Python 写，804 星，2026 年 6 月还在发 4.11 版。它面向的是科研温室里成千上万张植物照片：怎么自动把植物从背景里抠出来，量出面积、高度、颜色，而不是靠人眼一张张看。</p><p>它建在 OpenCV 之上，工作方式是一条可组合的流水线：读图、选颜色通道、阈值分割得到植物掩膜、去噪填洞，然后对掩膜做分析，输出面积、周长、凸包、颜色直方图等几十个指标，结果写成 JSON 和 CSV。它有一套并行工具能把同一条流水线批量跑在上万张图上，还有 Jupyter 里交互式调阈值的辅助函数。</p><p>生态上它是植物表型领域的标准工具之一，论文引用很多，文档和教程完整，官方有 Docker 镜像和 conda 包；社区以科研人员为主，中文资料只有零星的博客翻译。</p><p>在 0502 里它是延伸玩法，正好接住 scene 里那个每天同一角度拍一张的计划：0604 的广角机或一块 ESP32-CAM 每天中午对着砖墙拍一张，服务器上跑一条 PlantCV 流水线，先按门窗位置裁出墙面，再用 HSV 阈值分出绿色和红色像素，算出叶片覆盖率和秋季变红比例，写进 HomeAssistant 的两个传感器。七月覆盖率突破 90% 就是躺椅可以搬到墙根的信号，十月红色占比过半就该开始剪延时视频。注意阈值要按晴天和阴天分别调，最好先用它的交互工具在几张典型照片上试。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/imagej/ImageJ" target="_blank" rel="noopener">imagej/ImageJ</a>
+          <span class="stars">★ 780</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">美国 NIH 出品、公有领域的科学图像处理软件，三十年来生物学实验室的标配，阈值、测量、宏脚本、上千插件</p>
+        <p class="gh-why">→ 不想写代码也能量叶面覆盖率：把照片拖进 ImageJ，颜色阈值一拉、Measure 一点，百分比就出来了</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0502-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="22" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0502-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0502-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ImageJ · 拉一下阈值就量出叶面面积</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0502-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0502-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0502-5-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0502-5-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0502-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 222.0 L200.0 204.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">墙面照片</text><text x="200" y="100" text-anchor="middle" font-size="10.5">ImageJ</text><text x="200" y="174" text-anchor="middle" font-size="10.5">颜色阈值</text><text x="200" y="187" text-anchor="middle" font-size="10.5">选出绿叶</text><text x="200" y="248" text-anchor="middle" font-size="10.5">比例尺标定</text><text x="200" y="261" text-anchor="middle" font-size="10.5">门框宽度</text><text x="322" y="94" text-anchor="middle" font-size="10.5">Measure</text><text x="322" y="107" text-anchor="middle" font-size="10.5">面积 CSV</text><text x="430" y="138" text-anchor="middle" font-size="10.5">不想写代码的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">拖进去</text><text x="200.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">换算成 ㎡</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">批量宏</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0502：照片拖进 ImageJ，阈值选绿叶、门框标定比例尺，一年照片批量算覆盖面积</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">imagej/ImageJ</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ImageJ 是美国国立卫生研究院（NIH）的 Wayne Rasband 从 1997 年开始写的科学图像处理软件，Java 编写，代码放在公有领域，GitHub 上 780 星只是它的镜像，真实的用户量在生物医学实验室里几乎人手一份。它解决的是显微镜照片、凝胶条带、细胞计数这类科研图像的测量问题，后来被扩展到一切需要从图片里量东西的场景。</p><p>它的工作方式非常直白：打开图片，菜单里选颜色空间、拉阈值把目标区域选出来，Analyze 里点 Measure 就得到面积、平均灰度、周长；Set Scale 用一段已知长度标定比例尺之后，结果直接是厘米和平方厘米。所有操作都能录成宏，Batch 模式对整个文件夹跑一遍。它的扩展发行版 Fiji 打包了几百个插件，图像配准、三维重建、机器学习分割都有。</p><p>生态是它最大的资产：三十年的论文方法都写着用 ImageJ，image.sc 论坛非常活跃，插件和宏随手能搜到；中文没有官方文档，但高校课程和博客教程极多。</p><p>对 0502 来说它是 PlantCV 的免代码版本：想知道这面墙到底被爬山虎盖住多少，把 0604 摄像头拍的墙面照片拖进 ImageJ，先用门框宽度标定比例尺，Color Threshold 里把 Hue 限在绿色区间，Measure 一下，叶面覆盖的平方米数就出来了。录成宏之后一年的照片批量跑一遍，导出 CSV 画成曲线，看第一年能不能真的爬到 1.5 米。它也适合量墙脚种植带那 40 厘米里每株的冠幅，判断该不该补种。</p></div>
       </article>
     </div></section>
 

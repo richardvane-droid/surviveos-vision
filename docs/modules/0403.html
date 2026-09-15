@@ -156,6 +156,7 @@
           <a class="gh-name" href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a>
           <span class="stars">★ 11.7k</span>
           <span class="zh zh-no">无中文（社区教程多）</span>
+          
         </header>
         <p class="gh-desc">用 YAML 配置文件给 ESP32 生成固件的开源系统，传感器、继电器、风扇原生接入 Home Assistant</p>
         <p class="gh-why">→ 喷涂柜的枪钩联锁、延时停机、VOC 告警本质上就是一块 ESP32 上的几段 YAML，不用写一行 C；本模块唯一的通用平台</p>
@@ -184,6 +185,7 @@
           <a class="gh-name" href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">patrickcollins12/esphome-fan-controller</a>
           <span class="stars">★ 741</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">ESP32 加 ESPHome 做的 PID 温控风扇控制器，接 HomeAssistant 手动或自动调速</p>
         <p class="gh-why">→ 排风机联动的 ESPHome 逻辑照它改：门开启动、延时 30 分钟停，再加个 VOC 阈值触发</p>
@@ -212,6 +214,7 @@
           <a class="gh-name" href="https://github.com/MallocArray/airgradient_esphome" target="_blank" rel="noopener">MallocArray/airgradient_esphome</a>
           <span class="stars">★ 332</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">AirGradient 空气质量监测器的 ESPHome 配置，PM2.5、CO2、TVOC 一起上报 HomeAssistant</p>
         <p class="gh-why">→ 喷漆间的 VOC 传感器直接抄它的 SGP41 配置，超标推送提醒的传感器部分就搞定了</p>
@@ -234,6 +237,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>airgradient_esphome 是 MallocArray 维护的一套 ESPHome 配置，332 星，2026 年 6 月还在更新，目标是让 AirGradient 这家开源硬件公司的空气监测器不用官方固件也能跑，并保留它们的传感器校准成果。AirGradient 的板子是公开设计的，能自己焊，这套 YAML 把每个传感器的读法和补偿都写好了。</p><p>做法是 ESPHome 的 packages 机制：每种板子一个主 YAML，引用若干功能包，每个包对应一个传感器：PMS5003 的颗粒物，SenseAir S8 的二氧化碳，SGP41 的 VOC 与 NOx 指数（走 Sensirion 的气体指数算法，输出 1 到 500 的相对值），SHT40 的温湿度，再加上 OLED 等包。自己的 YAML 里引用仓库地址和需要的包、改 Wi‑Fi 即可，读数通过原生 API 进 Home Assistant。</p><p>没有中文文档，但传感器在国内都容易买，接线和 ESPHome 中文教程通用。</p><p>在 0403 里，只取它的 SGP41 包：接在喷涂柜的 ESP32 上，VOC 指数是相对基线的数值，喷漆一开始就会冲到 300 以上，这个跳变本身就是告警信号，阈值设 250 左右。坑是 SGP41 需要通电预热并学习基线 12 小时以上，刚装上的头一天数据不能当真。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/comfyanonymous/ComfyUI" target="_blank" rel="noopener">comfyanonymous/ComfyUI</a>
+          <span class="stars">★ 133k</span>
+          <span class="zh zh-no">无中文（社区教程多）</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">节点式的 AI 图像与视频生成引擎：把 Stable Diffusion、Flux 等模型拆成可拖连的节点图，本地显卡跑，工作流可存可分享</p>
+        <p class="gh-why">→ 喷涂之前先看效果：把 PSK 盒子的照片喂进 ComfyUI，用图生图和 ControlNet 生成哑光黑、军绿、做旧铜的几种涂装预览，再决定开枪</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0403-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0403-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0403-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ComfyUI · 节点图生成涂装预览</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0403-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0403-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0403-4-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0403-4-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0403-4-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0403-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M246.2 222.0 C261.0 222.0 261.0 204.0 275.8 204.0"/><path d="M322.0 204.0 L322.0 222.0"/><path d="M362.9 222.0 C376.0 222.0 376.0 204.0 389.1 204.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">PSK 盒子照片</text><text x="78" y="107" text-anchor="middle" font-size="10.5">未喷涂</text><text x="78" y="174" text-anchor="middle" font-size="10.5">提示词</text><text x="78" y="187" text-anchor="middle" font-size="10.5">哑光黑 / 军绿</text><text x="200" y="94" text-anchor="middle" font-size="10.5">ControlNet</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Canny 锁外形</text><text x="200" y="174" text-anchor="middle" font-size="10.5">ComfyUI</text><text x="200" y="187" text-anchor="middle" font-size="10.5">节点工作流</text><text x="200" y="248" text-anchor="middle" font-size="10.5">扩散模型</text><text x="200" y="261" text-anchor="middle" font-size="10.5">0802 显卡</text><text x="322" y="174" text-anchor="middle" font-size="10.5">四张预览图</text><text x="322" y="187" text-anchor="middle" font-size="10.5">嵌工作流 JSON</text><text x="322" y="248" text-anchor="middle" font-size="10.5">0802 中枢屏</text><text x="322" y="261" text-anchor="middle" font-size="10.5">比一比再调漆</text><text x="430" y="218" text-anchor="middle" font-size="10.5">戴半面罩的人</text><text x="430" y="231" text-anchor="middle" font-size="10.5">决定开枪</text><text x="200.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">采样</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0403：喷之前用图生图出几种涂装预览，选定颜色再进喷涂柜，少打磨返工</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">comfyanonymous/ComfyUI</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>ComfyUI 是开发者 comfyanonymous 发起、现在由 Comfy Org 团队维护的开源 AI 生成引擎，用 Python 写成，133k 星，是本地跑扩散模型最主流的界面。它要解决的问题：扩散模型的推理是一串可拆开的步骤，一体化界面把它们藏起来，ComfyUI 把每一步做成节点让用户自己连。</p><p>它的工作方式是节点图：加载模型、编码提示词、采样、解码、保存图片各是一个节点，用连线把它们串成工作流，点一下运行，引擎只重新计算变化了的部分，显存管理做得很精细，8GB 显卡也能跑大模型。图生图、局部重绘、ControlNet 控线稿、IP-Adapter 参考风格，以及后来的视频模型都以节点形式加入，工作流保存成 JSON 或直接嵌在输出图片里，别人拖进去就能复现。</p><p>生态上自定义节点有几千个，模型来自 Hugging Face 和 Civitai；官方 README 只有英文，但国内 B 站、知乎的 ComfyUI 教程数量惊人，还有多个中文汉化插件。项目每周一固定发版。</p><p>对 0403 来说它是延伸项目：喷涂柜是一次性的——喷错颜色就得打磨重来。开枪之前，把 PSK 盒子或木盒的照片放进 ComfyUI，用 ControlNet 的 Canny 或深度节点锁住外形，提示词换成哑光黑、军绿、做旧黄铜、透明清漆，几分钟出四张预览，挂到 0802 中枢屏上比一比再决定调哪罐漆。跑在 0802 服务器的显卡上，工作流存成一个涂装预览的 JSON，下次换个物件只要换一张照片。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/google/filament" target="_blank" rel="noopener">google/filament</a>
+          <span class="stars">★ 20.4k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Google 的实时物理渲染引擎：跨平台 PBR，金属度、粗糙度、清漆层等材质模型一应俱全，附带一份业界公认的 PBR 教科书文档</p>
+        <p class="gh-why">→ 喷涂柜里的哑光、缎光、高光、清漆其实就是 PBR 里的粗糙度和清漆层参数，用 Filament 在网页里实时转着看，比生成图更能表达质感</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0403-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0403-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0403-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Filament · 粗糙度和清漆层里的喷涂效果</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0403-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0403-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0403-5-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0403-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0403-5-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0403-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0403-5-arrow)" stroke-linecap="round"><path d="M100.2 124.0 C139.0 124.0 139.0 222.0 177.8 222.0"/><path d="M124.2 204.0 C139.0 204.0 139.0 222.0 153.8 222.0"/><path d="M200.0 222.0 L200.0 204.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 176.0 L374.0 176.0"/><path d="M359.8 124.0 C376.0 124.0 376.0 148.0 392.2 148.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">PSK 盒子 glTF</text><text x="78" y="107" text-anchor="middle" font-size="10.5">0204 导出</text><text x="78" y="174" text-anchor="middle" font-size="10.5">天窗下的 HDR</text><text x="78" y="187" text-anchor="middle" font-size="10.5">环境光</text><text x="200" y="94" text-anchor="middle" font-size="10.5">材质文件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">粗糙度 / 清漆</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Filament</text><text x="200" y="187" text-anchor="middle" font-size="10.5">PBR 渲染引擎</text><text x="200" y="248" text-anchor="middle" font-size="10.5">工具链</text><text x="200" y="261" text-anchor="middle" font-size="9.5">glTF / 贴图转换</text><text x="322" y="94" text-anchor="middle" font-size="9.5">gltf_viewer</text><text x="322" y="107" text-anchor="middle" font-size="10.5">拖滑块看质感</text><text x="322" y="174" text-anchor="middle" font-size="10.5">网页 WASM</text><text x="322" y="187" text-anchor="middle" font-size="10.5">喷涂柜旁平板</text><text x="430" y="218" text-anchor="middle" font-size="10.5">调漆的人</text><text x="430" y="231" text-anchor="middle" font-size="10.5">对照漆型号</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">参数</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0403：把盒子模型导成 glTF，实时调粗糙度和清漆层，对应哑光 / 缎光 / 清漆的漆…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">google/filament</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Filament 是 Google 维护的开源实时物理渲染引擎，用 C++ 写成，20.4k 星，桌面、手机和浏览器 WebAssembly 都能跑，Android 的场景查看器用的就是它。它要解决的问题：在手机级算力上用符合物理的方式把金属、木头、清漆在任何光照下画对。</p><p>它的工作方式是 PBR 管线：材质文件里写基础色、金属度、粗糙度、反射率，再加清漆层、各向异性等可选模型；灯光支持方向光、点光和基于图像的环境光，引擎按物理光照方程实时算每个像素。工具链把 glTF 模型和 HDR 贴图转成引擎格式，gltf_viewer 拖进模型直接看，JavaScript 绑定能嵌进网页。它的文档《Physically Based Rendering in Filament》被业界当 PBR 教材读。</p><p>生态上它是 Google 官方项目，每月更新；没有中文文档，但那份 PBR 文档有民间中文翻译。</p><p>对 0403 来说它是延伸项目：ComfyUI 出的预览是像素的想象，Filament 出的是参数的推演。把 PSK 盒子的 STEP 模型从 0204 设计台导成 glTF，在 gltf_viewer 里把粗糙度从 0.2 拉到 0.8，看哑光和高光的差别，再打开清漆层看喷完清漆是什么效果；用一张阁楼天窗下拍的 HDR 做环境光，预览就是这只盒子在这间屋里的样子。把网页版嵌进 0802 中枢，喷涂柜旁的平板上转着看，粗糙度对应的漆型号写在旁边。</p></div>
       </article>
     </div></section>
 

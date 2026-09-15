@@ -159,6 +159,7 @@
           <a class="gh-name" href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">FreeCAD/FreeCAD</a>
           <span class="stars">★ 32.2k</span>
           <span class="zh ">有中文文档站</span>
+          
         </header>
         <p class="gh-desc">开源参数化三维建模软件，2026 年 4 月发 1.1.1 版，草图、零件、BIM、工程图、电子表格工作台齐全，界面和 wiki 都有简体中文</p>
         <p class="gh-why">→ 钓台的墩位、龙骨、顶棚柱梁全在它里面画成参数化模型，改一个尺寸整套联动，工程图出下料单，电子表格自动算木料和螺栓数量</p>
@@ -187,6 +188,7 @@
           <a class="gh-name" href="https://github.com/wikihouseproject/Skylark" target="_blank" rel="noopener">wikihouseproject/Skylark</a>
           <span class="stars">★ 243</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">WikiHouse 的开源木结构建造系统，标准化木块由 CNC 从板材切出后手工拼装，不用重型机械，可建 1 到 3 层，图纸开放授权</p>
         <p class="gh-why">→ 学它把木结构拆成标准件的思路：钓台的柱、梁、檩按同样方法编号画图下料，一个人在坡脚就能拼起来，以后加宽也是加一组件</p>
@@ -215,6 +217,7 @@
           <a class="gh-name" href="https://github.com/xuminic/woodshed" target="_blank" rel="noopener">xuminic/woodshed</a>
           <span class="stars">★ 10</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">一个人从零建木框架花园小屋的全记录，DXF 三视图、材料清单表、分基础/框架/屋顶/围护/内装五阶段的施工说明和照片</p>
         <p class="gh-why">→ 只有 10 星但没有更贴的：钓台就是缩小版的柱梁屋架，它的独立墩基础、立柱、单坡屋面分阶段做法和清单可以照搬，是一人施工的完整样本</p>
@@ -237,6 +240,68 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>woodshed 是开发者 xuminic 记录自己从零建一座木框架花园小屋的仓库，GitHub 上只有 10 星，不是软件，而是一份完整的一人自建木构的工程档案。它的价值在于市面上的木屋教程要么是厂家的成品说明，要么是零散视频，而它把设计、清单、施工顺序和踩过的坑用工程师的方式整理成了可以复用的文件。</p><p>仓库里有三样东西：DXF 格式的正立面、侧立面和平面图，能直接在 FreeCAD 或任何 CAD 里打开改尺寸；一张 ODS 电子表格的材料清单，木料按规格和长度列出、五金按数量列出；按基础、框架、屋顶、围护、内装五个阶段写的施工说明，每一阶段有做法、顺序和完工照片。基础是独立墩加木梁，框架是方木立柱和梁，屋顶是单坡檩条加板，全部是一个人用手工具和电钻能完成的做法。没有中文，但文字不多，图和表看得懂。</p><p>在 0701 里它是钓台的施工样本：钓台 2.5×2.2 米的平台和 2.2×2 米的单坡顶棚，结构上就是它的小屋去掉墙，所以把它的五阶段改成四阶段，六个预制混凝土墩加地脚螺栓对应它的基础，防腐松木框龙骨对应它的地梁，杉木柱和檩对应它的框架和屋顶，围护改成竹瓦和雨链；材料清单表复制一份改成钓台的尺寸，木料按 4 米原长优化裁切减少浪费。要注意它的小屋在平地，钓台在坡脚岸上，六个墩的顶面标高要用水管找平后再定龙骨；临河一侧受潮更重，底部龙骨多刷一遍木蜡油。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/IfcOpenShell/IfcOpenShell" target="_blank" rel="noopener">IfcOpenShell/IfcOpenShell</a>
+          <span class="stars">★ 2.7k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">开源 IFC 建筑信息模型库与几何引擎：C++ 内核加 Python 接口，读写 BIM 通用格式 IFC，附带 Blender 插件 Bonsai</p>
+        <p class="gh-why">→ 钓台是庭院里第一个从零盖的小构筑物，用它把 FreeCAD 画的墩、龙骨、柱、瓦存成带属性的 IFC，材料清单和维护记录都挂在模型上</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0701-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="26" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0701-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0701-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">IfcOpenShell · 钓台的构件清单挂在模型上</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0701-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0701-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0701-4-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0701-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0701-4-arrow)" stroke-linecap="round"><path d="M78.0 124.0 L78.0 148.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">FreeCAD</text><text x="78" y="107" text-anchor="middle" font-size="10.5">钓台模型</text><text x="78" y="174" text-anchor="middle" font-size="10.5">IFC 文件</text><text x="78" y="187" text-anchor="middle" font-size="10.5">带属性</text><text x="200" y="94" text-anchor="middle" font-size="9.5">IfcOpenShell</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Python 接口</text><text x="200" y="174" text-anchor="middle" font-size="10.5">几何引擎</text><text x="200" y="187" text-anchor="middle" font-size="10.5">三角网格</text><text x="322" y="94" text-anchor="middle" font-size="10.5">材料清单</text><text x="322" y="107" text-anchor="middle" font-size="10.5">木料 螺栓 瓦</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Bonsai</text><text x="322" y="187" text-anchor="middle" font-size="10.5">Blender 里看</text><text x="430" y="138" text-anchor="middle" font-size="10.5">清明刷油的人</text><text x="78.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">导出</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">脚本</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0701：钓台模型导出 IFC，脚本算木料和螺栓数量，每块板记上次刷油…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">IfcOpenShell/IfcOpenShell</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>IfcOpenShell 是荷兰工程师 Thomas Krijnen 2011 年发起的开源库，2.7k 星，现在由欧洲团队和社区维护，2025 年发布 0.8 版。它解决的问题是：建筑行业的通用交换格式 IFC 写法极其繁琐，商业软件各家读出来还不一样，需要一个中立、免费、能被脚本调用的解析和几何引擎。</p><p>它的架构是 C++ 内核负责解析 IFC 文件和把参数化几何转成三角网格，上面包一层 Python 接口。输入一个 .ifc 文件，Python 里几行就能遍历所有墙、柱、板，读每个构件的材料、尺寸和自定义属性，也能反过来新建构件写回文件。仓库里还带一个 Blender 插件 Bonsai，让 Blender 变成一个能画 BIM 模型的免费工具，还有 IfcConvert 命令行把 IFC 转成 OBJ 或 SVG 平面图。</p><p>生态上它是 FreeCAD 建筑工作台、Bonsai、Speckle 等开源 BIM 工具的底层，文档全英文，中文资料只有零散教程，社区在 OSArch 论坛活跃。</p><p>在 0701 里它是延伸：钓台的六个混凝土墩、松木龙骨、杉木柱和竹瓦顶棚在 FreeCAD 里画完后导出 IFC，用 IfcOpenShell 的 Python 脚本跑一遍材料清单，自动算出防腐木总长度、地脚螺栓数量和竹瓦面积；再给每块台面板加一个属性记录上一次刷木蜡油的日期，清明前跑脚本就知道哪些板该刷了。模型放在 0802 服务器上，以后 0402 的库存也能对着同一份清单核对。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/OpenCPN/OpenCPN" target="_blank" rel="noopener">OpenCPN/OpenCPN</a>
+          <span class="stars">★ 1.5k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">跨平台开源海图导航软件：读 GPS 和 NMEA 数据，显示矢量与栅格海图，叠加 GRIB 气象、潮汐和航迹，插件生态丰富</p>
+        <p class="gh-why">→ 钓台面前是一条 10 米宽的河，用航海软件的思路给这一段河做一张自己的水深图和风向记录，知道鱼藏在哪、风从哪来</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0701-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="27" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0701-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0701-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OpenCPN · 给钓台前的一段河画水深图</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0701-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0701-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0701-5-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0701-5-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0701-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">USB GPS</text><text x="78" y="149" text-anchor="middle" font-size="10.5">鱼探仪 NMEA</text><text x="78" y="174" text-anchor="middle" font-size="10.5">GRIB 气象</text><text x="78" y="187" text-anchor="middle" font-size="10.5">风向预报</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OpenCPN</text><text x="200" y="107" text-anchor="middle" font-size="10.5">海图内核</text><text x="200" y="174" text-anchor="middle" font-size="10.5">插件层</text><text x="200" y="187" text-anchor="middle" font-size="10.5">GRIB 潮汐仪表</text><text x="322" y="94" text-anchor="middle" font-size="10.5">航迹与水深点</text><text x="322" y="107" text-anchor="middle" font-size="10.5">河段小图</text><text x="322" y="174" text-anchor="middle" font-size="10.5">旧笔记本</text><text x="322" y="187" text-anchor="middle" font-size="10.5">海图界面</text><text x="430" y="218" text-anchor="middle" font-size="10.5">找鱼道的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">串口</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0701：皮划艇带鱼探仪划几趟，水深点记成航迹，攒出钓台前这段河的小水深图</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">OpenCPN/OpenCPN</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>OpenCPN 是 2009 年由航海爱好者发起的开源海图导航软件，1.5k 星，C++ 加 wxWidgets 编写，跑在 Windows、macOS、Linux 和安卓上，全球远洋帆船圈的标配。它解决的问题是：商业海图机昂贵封闭，而一台笔记本加一个 USB GPS 就应该能当航海电脑。</p><p>它的工作方式是把 GPS、AIS、测深仪等 NMEA 0183/2000 数据从串口或网络读进来，在海图底图上画出本船位置、航迹、航线和其他船只；海图支持 S57 矢量、BSB 栅格和 CM93 格式，也能直接用 SignalK 服务器当数据源。核心之外靠插件扩展：GRIB 插件叠加风、浪、气压预报，潮汐插件算涨落，Dashboard 插件显示航速航向，还有天气路由、雷达叠加等几十个插件。</p><p>生态上它有活跃的论坛和插件市场，文档全英文，中文资料主要在帆船和钓鱼艇玩家的论坛里，界面语言包含简体中文。</p><p>在 0701 里它是延伸：一条 10 米宽的河不需要海图，但可以借它做两件事。一是拿一只便宜的 NMEA 输出鱼探仪绑在皮划艇上沿河划几趟，OpenCPN 把水深点记成航迹，慢慢攒出钓台前这段河的小水深图，深坑和陡坎就是鱼道；二是用 GRIB 插件看风向预报，和角落竹竿上的小旗子对照，判断哪天是顶风还是顺风。软件跑在 0802 服务器或一台旧笔记本上，水深图导出成图片挂到 0702 的小黑板旁边。</p></div>
       </article>
     </div></section>
 

@@ -159,6 +159,7 @@
           <a class="gh-name" href="https://github.com/pollen-robotics/microduck" target="_blank" rel="noopener">pollen-robotics/microduck</a>
           <span class="stars">★ 7.6k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Pollen Robotics / Hugging Face 的开源双足小鸭机器人：RK3566 主控、15 个舵机、50Hz 控制环，走路靠 MuJoCo + PPO 训练出的 ONNX 步态策略</p>
         <p class="gh-why">→ 就是市面上那只“AI 电子鸭”的开源本体，机械、电控、步态策略全开源，$399 套件可以直接买或自己打印</p>
@@ -187,6 +188,7 @@
           <a class="gh-name" href="https://github.com/pollen-robotics/microduck_rl" target="_blank" rel="noopener">pollen-robotics/microduck_rl</a>
           <span class="stars">★ 2k</span>
           <span class="zh zh-no">无中文</span>
+          
         </header>
         <p class="gh-desc">Microduck 的官方强化学习训练环境：mjlab（MuJoCo Warp）+ PPO + 域随机化，导出 ONNX 步态策略</p>
         <p class="gh-why">→ 想让它学会上阁楼那段小坡道和地堡门下的通道，得在这里加地形重新训一遍步态</p>
@@ -215,6 +217,7 @@
           <a class="gh-name" href="https://github.com/apirrone/Open_Duck_Mini" target="_blank" rel="noopener">apirrone/Open_Duck_Mini</a>
           <span class="stars">★ 3.9k</span>
           <span class="zh ">有中文文档站</span>
+          
         </header>
         <p class="gh-desc">Microduck 的前身：仿迪士尼 BDX 机器人的迷你双足鸭，约 42cm 高、BOM 400 美元以内，STL 与 BOM 全开源</p>
         <p class="gh-why">→ 更大更便宜的替代路线，打印件、BOM 表和舵机选型都有现成清单，还有中文文档</p>
@@ -243,6 +246,7 @@
           <a class="gh-name" href="https://github.com/78/xiaozhi-esp32" target="_blank" rel="noopener">78/xiaozhi-esp32</a>
           <span class="stars">★ 29.6k</span>
           <span class="zh ">官方中文 README</span>
+          
         </header>
         <p class="gh-desc">小智：ESP32-S3 上的 MCP 语音聊天机器人，离线唤醒、接 Qwen / DeepSeek 等大模型，能通过 MCP 控制设备</p>
         <p class="gh-why">→ 鸭子的嘴和耳朵直接用它：本地唤醒 + 大模型对话，MCP 那层正好接 HomeAssistant 去查全屋数据</p>
@@ -265,6 +269,97 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>小智（xiaozhi-esp32）是虾哥（78）发起的开源语音聊天机器人固件，跑在 ESP32-S3 上，29.6k 星，是国内最火的 AI 硬件开源项目，README 本身就是中英双语，支持 138 种开发板。它解决的问题是：用几十块钱的板子做一个能听、能说、有表情的 AI 伙伴，而且能控制真实设备。</p><p>它的链路是：麦克风阵列采音 → ESP-SR 离线唤醒词和回声消除 → 音频经 WebSocket 或 MQTT+UDP 送到服务端 → 服务端做语音识别、接 Qwen / DeepSeek 等大模型、合成语音 → 语音回到板子播放。关键是 MCP：设备端 MCP 把喇叭、LED、舵机、GPIO 暴露成工具让大模型调用，云端 MCP 又能接外部服务。默认连 xiaozhi.me，也可以自建服务端，中文教程遍地都是。</p><p>在 0803 里它是鸭子的嘴和耳朵：头壳里塞一块 ESP32-S3 加四麦板，胸口 1.28 寸圆屏就是它的表情屏，两颗 RGB 眼睛用设备端 MCP 暴露给大模型控制情绪。全屋数据问答走自建服务端上的 MCP 客户端接 HomeAssistant 的 MCP Server，问雨水罐就去查实体；随口一句记得买 M3 螺丝写进 HA 的待办实体再同步到 0801。注意麦阵放头顶、舵机放身子、中间垫泡棉，否则电机噪音会把识别率打穿；再加一个物理静音拨杆。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/huggingface/lerobot" target="_blank" rel="noopener">huggingface/lerobot</a>
+          <span class="stars">★ 27.2k</span>
+          <span class="zh ">有中文文档站</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Hugging Face 的机器人端到端学习库：统一的数据集格式、遥操作录数据、ACT / Diffusion / VLA 等策略训练与真机部署，SO-101 机械臂入门套件几百块</p>
+        <p class="gh-why">→ 鸭子的步态靠强化学习，但看到充电窝就走过去对准这类靠眼睛的技能更适合模仿学习，它是这条路线上最完整的开源工具箱</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0803-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="32" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0803-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0803-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">LeRobot · 录几十次，学会自己回窝</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0803-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0803-5-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-5-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-5-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0803-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0803-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手柄遥控</text><text x="78" y="107" text-anchor="middle" font-size="10.5">走到充电窝</text><text x="78" y="216" text-anchor="middle" font-size="10.5">头部摄像头</text><text x="78" y="229" text-anchor="middle" font-size="10.5">IMU + 舵机状态</text><text x="200" y="94" text-anchor="middle" font-size="10.5">LeRobot</text><text x="200" y="107" text-anchor="middle" font-size="10.5">数据集 + 策略</text><text x="200" y="174" text-anchor="middle" font-size="9.5">LeRobotDataset</text><text x="200" y="187" text-anchor="middle" font-size="9.5">Parquet + 视频</text><text x="322" y="94" text-anchor="middle" font-size="10.5">ACT 策略</text><text x="322" y="107" text-anchor="middle" font-size="10.5">输出关节目标</text><text x="322" y="174" text-anchor="middle" font-size="10.5">robotd 步态层</text><text x="322" y="187" text-anchor="middle" font-size="10.5">接在上面</text><text x="430" y="138" text-anchor="middle" font-size="10.5">遥控的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">录数据</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">同步记录</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">训练</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">部署</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0803：遥控鸭子回窝几十次录数据，训一个视觉策略叠在强化学习步态之上</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">huggingface/lerobot</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>LeRobot 是 Hugging Face 在 2024 年发起的机器人学习库，27.2k 星，目标是把开放数据集加预训练模型的玩法搬到机器人上。它解决的问题是：真机学习的每一步以前都要自己造轮子，录数据、存格式、训策略、部署到硬件，各家互不兼容；它把这些统一成一套 Python 接口。</p><p>它的流程是：先用遥操作录数据，摄像头画面、关节角度、指令按 LeRobotDataset 格式存成 Parquet 加视频，可以直接推到 Hub；然后选一个策略训练，ACT 和 Diffusion Policy 适合单任务，SmolVLA、π0 这类视觉语言动作模型能听指令做多任务；训完的模型在真机上以固定频率跑推理，输入画面和状态，输出关节目标。硬件层有统一的 Robot 和 Motor 抽象，支持 SO-101 机械臂、LeKiwi 底盘等低成本平台。</p><p>Hub 上公开数据集几千个；README 直接链接了同济子豪兄写的 SO-101 中文全流程教程，从组装到部署都有，是国内入门这条路线最省事的材料。</p><p>在 0803 里它是延伸：Microduck 的步态是仿真里强化学习出来的，但回窝对准、看到人停下、把头转向说话的人这些需要眼睛的技能，用模仿学习更直接。做法是把鸭子头部摄像头、IMU 和十五个舵机的状态按 LeRobotDataset 格式录下来，人用手柄遥控它走到充电窝几十次，训一个小策略叠在步态策略之上。想先练手，就在阁楼工具台上装一台 SO-101，照中文教程走一遍再回来改鸭子。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Hypfer/Valetudo" target="_blank" rel="noopener">Hypfer/Valetudo</a>
+          <span class="stars">★ 9.4k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">扫地机器人的去云固件：在机器人自带的 SoC 上跑，替换厂商云，提供本地网页、MQTT 和 HA 自动发现，地图、分区、回充全在局域网内</p>
+        <p class="gh-why">→ 扫地机是家里唯一已经解决了在几个房间之间自主走动并回去充电的机器人，它的地图和回充逻辑是鸭子巡游最好的参考</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0803-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="33" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0803-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0803-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Valetudo · 扫地机怎么自己回充，鸭子照抄</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0803-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0803-6-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-6-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-6-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0803-6-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0803-6-arrow)" stroke-linecap="round"><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="216" text-anchor="middle" font-size="10.5">激光雷达</text><text x="78" y="229" text-anchor="middle" font-size="10.5">SLAM 建图</text><text x="78" y="94" text-anchor="middle" font-size="10.5">机器人底层</text><text x="78" y="107" text-anchor="middle" font-size="10.5">运动固件</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Valetudo</text><text x="200" y="107" text-anchor="middle" font-size="10.5">机器人 SoC 上</text><text x="200" y="174" text-anchor="middle" font-size="10.5">分区 / 禁区</text><text x="200" y="187" text-anchor="middle" font-size="10.5">回充策略</text><text x="322" y="94" text-anchor="middle" font-size="10.5">MQTT 地图数据</text><text x="322" y="107" text-anchor="middle" font-size="10.5">HA 自动发现</text><text x="322" y="174" text-anchor="middle" font-size="10.5">鸭子巡游状态机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">通道 / 坡道标点</text><text x="430" y="138" text-anchor="middle" font-size="10.5">拿底图的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">本地协议</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">房间轮廓</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0803：借扫地机的分区与回充逻辑设计巡游状态机，MQTT 地图给鸭子和 0802 当底图</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Hypfer/Valetudo</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Valetudo 是德国开发者 Hypfer 从 2018 年维护至今的项目，9.4k 星，做的事是把石头、追觅等品牌的扫地机器人从厂商的云上解放出来。它解决的问题是：扫地机的地图、日程、遥控全都经过厂商服务器，断网就变笨，隐私也没有；Valetudo 直接跑在机器人自己的 Linux SoC 上，把云端那一段替换掉。</p><p>它是一个 Node.js 服务，通过机器人内部的本地协议和底层运动控制固件通信，向外提供三样东西：一个网页界面，能看实时地图、划分区、设禁区、点哪去哪；一个 MQTT 接口，把状态、地图数据、命令发布出来，并按 HomeAssistant 的自动发现格式注册，装好就自动出现在 HA 里；还有一套 REST API。地图是它解析激光雷达 SLAM 结果后的自有格式，社区有渲染成图片的配套项目。刷入要按型号走教程，有些型号要拆机接串口。</p><p>项目维持了七年多，2026 年仍在支持新型号，作者态度鲜明，文档很直接；中文资料集中在论坛和 B 站的刷机教程里。</p><p>在 0803 里它是延伸，学的是思路：鸭子要在木屋、地堡、阁楼三个空间之间自己走、低电回最近的窝，这正是扫地机每天在做的事。可以照着它的分区、禁区、回充策略设计鸭子的巡游状态机；更实际的是，如果家里有一台刷了 Valetudo 的扫地机，它扫出来的房间轮廓经 MQTT 拿到后，既是 0802 等距地图的底图来源，也能给鸭子当粗略的定位参考，通道和坡道的位置先在这张图上标出来。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/ggml-org/llama.cpp" target="_blank" rel="noopener">ggml-org/llama.cpp</a>
+          <span class="stars">★ 128k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">C/C++ 写的大模型推理引擎：GGUF 量化格式让 7B 模型在笔记本和 Mac 上跑，llama-server 提供 OpenAI 兼容接口，Ollama 的底层就是它</p>
+        <p class="gh-why">→ 小智的服务端默认连云端大模型，断网鸭子就哑了；把大脑换成 Mac mini 上的本地推理，还能用语法约束让它只吐规定格式的表情指令</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0803-7-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="34" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0803-7-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0803-7-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">llama.cpp · Mac mini 上的本地大脑</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0803-7-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-7-shade)" stroke="none"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0803-7-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0803-7-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0803-7-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0803-7-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0803-7-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">小智服务端</text><text x="78" y="107" text-anchor="middle" font-size="10.5">识别后的文字</text><text x="78" y="180" text-anchor="middle" font-size="10.5">Qwen GGUF</text><text x="200" y="94" text-anchor="middle" font-size="9.5">llama-server</text><text x="200" y="107" text-anchor="middle" font-size="10.5">OpenAI 兼容</text><text x="200" y="174" text-anchor="middle" font-size="10.5">GBNF 语法</text><text x="200" y="187" text-anchor="middle" font-size="10.5">只许输出 JSON</text><text x="322" y="94" text-anchor="middle" font-size="10.5">圆屏表情</text><text x="322" y="107" text-anchor="middle" font-size="10.5">眼睛颜色</text><text x="322" y="180" text-anchor="middle" font-size="10.5">TTS 念出来</text><text x="430" y="138" text-anchor="middle" font-size="10.5">问话的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">改地址</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">Metal 加载</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">JSON 字段</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0803：小智的大模型地址指向本地 llama-server，语法约束让回复自带表情字段</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">ggml-org/llama.cpp</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>llama.cpp 是保加利亚开发者 Georgi Gerganov 在 2023 年 3 月写的大模型推理引擎，128k 星，Llama 开源后一周内它就让 7B 模型在 MacBook 上跑了起来。它解决的问题是：推理不依赖 Python 和显卡驱动栈，一个 C/C++ 程序加一个模型文件就能跑。</p><p>它的核心是 ggml 张量库和 GGUF 模型格式：权重被量化到 4 位或 8 位，体积缩到四分之一，精度损失很小；推理按后端选择 Metal、CUDA、Vulkan 或纯 CPU，llama-server 起一个 HTTP 服务，接口和 OpenAI 兼容，任何客户端改一个地址就能接。它还有对硬件项目很有用的 GBNF 语法约束，能强制模型只输出符合某个语法的文本，比如严格的 JSON。</p><p>它是本地推理生态的地基，Ollama、LM Studio 都基于它，新模型往往几天内就被支持；中文资料很多，Qwen 官方也提供 GGUF 版本。</p><p>在 0803 里它是延伸：小智服务端的大模型可以配成任意 OpenAI 兼容地址，把它指向 0804 的 M1 Mac mini 上的 llama-server，跑一个 Qwen 量化模型，断网时鸭子照样能答话，只是慢一点。比起直接用 Ollama，它多出的价值在语法约束：让模型每次回复都带一段固定格式的 JSON，里面是表情、眼睛颜色和要念出的话，胸口圆屏和 LED 直接按这段 JSON 动，不用再从自然语言里猜情绪。</p></div>
       </article>
     </div></section>
 

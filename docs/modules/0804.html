@@ -166,6 +166,7 @@
           <a class="gh-name" href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener">louislam/uptime-kuma</a>
           <span class="stars">★ 90.1k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">自托管的服务监控面板：HTTP / TCP / DNS / Docker / 推送等监控类型，90 多种通知渠道和状态页</p>
         <p class="gh-why">→ 盯全屋服务：HA、Jellyfin、NAS、每个 ESPHome 节点的心跳，掉线就推手机</p>
@@ -194,6 +195,7 @@
           <a class="gh-name" href="https://github.com/henrygd/beszel" target="_blank" rel="noopener">henrygd/beszel</a>
           <span class="stars">★ 24.3k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">轻量服务器监控：Hub + Agent 架构，历史曲线、Docker 容器状态、温度、S.M.A.R.T. 和告警</p>
         <p class="gh-why">→ 盯三台机器本身：NAS 盘温、笔记本 CPU、Mac mini 内存，一个面板看完</p>
@@ -222,6 +224,7 @@
           <a class="gh-name" href="https://github.com/jellyfin/jellyfin" target="_blank" rel="noopener">jellyfin/jellyfin</a>
           <span class="stars">★ 54k</span>
           <span class="zh ">界面有中文</span>
+          
         </header>
         <p class="gh-desc">自由软件媒体系统，服务端 + 各平台客户端，ffmpeg 硬件转码，Plex / Emby 的开源替代</p>
         <p class="gh-why">→ NAS 上的影音库靠它推到地堡 0207 的 98 寸电视，硬件转码走 Mac mini 的 VideoToolbox</p>
@@ -244,6 +247,155 @@
 </svg>
 </div></figure>
         <div class="gh-intro"><p>Jellyfin 是自由软件媒体系统，2018 年从 Emby 闭源时分叉出来，.NET 写成，54k 星，没有付费层、没有云账号，是 Plex 和 Emby 的开源替代。它解决的问题是：把 NAS 上的电影、剧集、音乐和照片整理成有海报有元数据的库，推到家里任何一块屏幕上。</p><p>它的架构是服务端加客户端：服务端扫描媒体目录、从 TMDB 等抓取元数据、管理用户和播放进度，通过 ffmpeg 做转码，支持 QSV、NVENC、VideoToolbox 等硬件加速，编码格式和码率按客户端能力实时协商；客户端有网页、Android / iOS、Android TV、Apple TV等，还有 REST API 和插件系统。2026 年 6 月发布 10.11.11，Weblate 有完整简体中文界面，官方文档英文。</p><p>在 0804 里它的服务端直接装在 M1 Mac mini 上，媒体目录经 SMB 挂 NAS 那 2×8TB 镜像盘的影音库，转码用 VideoToolbox，NAS 的弱 CPU 不用碰转码。地堡 0207 的 98 寸电视上装 Android TV 客户端，HA 的 media_player 集成接它，按下观影场景就自动调暗灯、接着上次进度播。注意用户账号只开一个，2FA 靠反向代理补上；Mac 要设自动登录和断电自启。</p></div>
+      </article>
+    </div>
+    <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">
+      <article class="gh-card gh-ext" id="ghx1">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" rel="noopener">awesome-selfhosted/awesome-selfhosted</a>
+          <span class="stars">★ 318.1k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">自托管软件的总清单：几百个可以架在自己服务器上的免费软件按类别整理，每条一句话加许可证和语言，配套网站可筛选</p>
+        <p class="gh-why">→ 全屋存储和智能落地后，每个模块都会提出要一个什么什么服务的需求，先来这张地图上找，再决定装哪个</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0804-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="32" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0804-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0804-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">awesome-selfhosted · 选服务先查这张地图</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0804-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-4-shade)" stroke="none"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-4-shade)" stroke="none"/><rect x="148.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 194.0 h28 M192 194.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 155.0 h98 v4 h-98 Z" fill="url(#g0804-4-shade)" stroke="none"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-4-shade)" stroke="none"/><path d="M282.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0804-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">某模块提需求</text><text x="78" y="107" text-anchor="middle" font-size="9.5">菜谱 / 相册 / 笔记</text><text x="78" y="180" text-anchor="middle" font-size="10.5">数据 YAML</text><text x="200" y="94" text-anchor="middle" font-size="9.5">awesome-selfhosted</text><text x="200" y="107" text-anchor="middle" font-size="10.5">分类清单</text><text x="200" y="174" text-anchor="middle" font-size="10.5">网站筛选</text><text x="200" y="187" text-anchor="middle" font-size="10.5">星数 / 最近更新</text><text x="322" y="94" text-anchor="middle" font-size="10.5">挑两三个</text><text x="322" y="107" text-anchor="middle" font-size="10.5">Docker 试跑</text><text x="322" y="174" text-anchor="middle" font-size="10.5">已部署清单</text><text x="322" y="187" text-anchor="middle" font-size="9.5">机器 / 端口 / 备份</text><text x="430" y="138" text-anchor="middle" font-size="10.5">拍板的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">按类别找</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">脚本生成</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">比较</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">选定记录</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0804：每个模块的服务需求先来清单里比，选定后记进…</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">awesome-selfhosted/awesome-selfhosted</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>awesome-selfhosted 是 GitHub 上最著名的清单类仓库之一，318.1k 星，从 2015 年维护至今。它解决的问题是：想用自己的服务器替代某个商业云服务时，不知道有哪些开源选项，也不知道哪些还活着；这份清单把几百个可自托管的软件按类别排好，每条一句话、许可证、实现语言和是否依赖非自由组件。</p><p>它在清单类项目里算严谨的：条目数据放在单独的 awesome-selfhosted-data 仓库里，每个软件一个 YAML 文件，主仓库的 README 和网站 awesome-selfhosted.net 都由脚本生成。收录有门槛，要求项目至少四个月历史、有活跃更新、有可用文档；每年清理一年以上没有提交的项目，所以列表里的东西基本都还能用。网站版可以按类别、许可证、语言筛选，还能看星数和最近更新时间。</p><p>社区靠拉取请求维护，条目变更每周都有；没有官方中文版，但国内有志愿者的转译仓库，以及大量以它为蓝本的自托管推荐文章。</p><p>在 0804 里它是延伸，用法是当作一张采购地图。这套系统里每个模块都会提需求，0107 要菜谱管理、0104 要相册、0209 要笔记、0704 要语音合成，每次先在这张清单对应的类别里找，按活跃度和是否有 Docker 镜像挑两三个试，选定后在 0804 自己的一张已部署清单里记下服务名、跑在哪台机器、端口、备份策略。三台机器能承载的服务有限，这张清单帮你比较，那张清单帮你克制。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/portainer/portainer" target="_blank" rel="noopener">portainer/portainer</a>
+          <span class="stars">★ 38.2k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Docker 与 Kubernetes 的网页管理台：容器、镜像、卷、网络一目了然，Compose 文件当 Stack 部署，Agent 模式把别的机器纳进同一个界面</p>
+        <p class="gh-why">→ 笔记本和 NAS 上加起来十几个容器，靠命令行记不住；一个网页看日志、重启、更新，手机上也能操作</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0804-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="33" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0804-5-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0804-5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Portainer · 十几个容器一个网页管</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0804-5-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0804-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0804-5-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0804-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0804-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0804-5-arrow)" stroke-linecap="round"><path d="M134.0 176.0 L144.0 176.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="180" text-anchor="middle" font-size="10.5">Compose 文件</text><text x="78" y="94" text-anchor="middle" font-size="10.5">笔记本 Docker</text><text x="78" y="107" text-anchor="middle" font-size="10.5">套接字</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Portainer</text><text x="200" y="107" text-anchor="middle" font-size="10.5">笔记本上</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Stacks</text><text x="200" y="187" text-anchor="middle" font-size="9.5">HA / Kuma / Beszel</text><text x="322" y="174" text-anchor="middle" font-size="10.5">NAS Agent</text><text x="322" y="187" text-anchor="middle" font-size="9.5">Jellyfin / Immich</text><text x="322" y="94" text-anchor="middle" font-size="10.5">手机看日志</text><text x="322" y="107" text-anchor="middle" font-size="10.5">点一下重启</text><text x="430" y="138" text-anchor="middle" font-size="10.5">出门在外的人</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">定时拉取</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">部署</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">纳入环境</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0804：笔记本装主程序，NAS 跑 Agent，服务全写成 Stack 从 Git 仓库部署</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">portainer/portainer</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Portainer 是 2016 年开始的 Docker 管理界面，38.2k 星，社区版免费开源，商业版收费。它解决的问题是：Docker 命令行对偶尔维护一次的人不友好，忘了容器名、找不到日志都要查文档；Portainer 把这些变成网页上的按钮。</p><p>它自己也是一个容器，挂上宿主机的 Docker 套接字就能管理本机；要管别的机器，在那台机器上跑一个 Portainer Agent，主界面加一个环境就纳进来。每个容器能看实时日志、进终端、看资源曲线、改配置后重建。最常用的是 Stacks：把 docker-compose.yml 贴进去或指向一个 Git 仓库，一键部署整组服务，Git 模式还能定时拉取自动更新。</p><p>它是家庭服务器圈子里的标配；界面没有官方中文，但社区有汉化版镜像，国内教程极多。轻量替代品有 Dockge，功能不如它全。</p><p>在 0804 里它是延伸：Windows 笔记本上的 Docker 装 Portainer 主程序，HomeAssistant、ESPHome、Uptime Kuma、Beszel Hub、homepage 各写成一个 Stack，Compose 文件放在 NAS 上的一个 Git 仓库里，改了配置推一下就自动重建；NAS 自带的 Docker 跑一个 Agent 纳入同一界面，Jellyfin、Immich 在那边。出门在外收到 Uptime Kuma 的红条，手机打开 Portainer 看一眼日志、点一下重启，多数小故障就解决了。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/syncthing/syncthing" target="_blank" rel="noopener">syncthing/syncthing</a>
+          <span class="stars">★ 88.3k</span>
+          <span class="zh ">界面有中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">点对点的连续文件同步：设备之间直接加密传输，没有中心服务器，改了就同步，带版本保留；手机、电脑、NAS 都有客户端</p>
+        <p class="gh-why">→ 手机照片进 NAS、阁楼电脑的打印文件到 Mac mini、各模块的配置目录到冷备盘，这些日常搬运交给它，人不用再插线拷</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0804-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="34" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0804-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0804-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Syncthing · 三台机器一部手机互相补齐</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0804-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0804-6-shade)" stroke="none"/><path d="M30.0 162.0 h96 v36 h-96 Z M30.0 162.0 l8 -8 h96 l-8 8 M126.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0804-6-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-6-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0804-6-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0804-6-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0804-6-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/><path d="M378.0 96.0 L374.0 96.0" stroke-dasharray="3 3"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机相机目录</text><text x="78" y="107" text-anchor="middle" font-size="10.5">只发送</text><text x="78" y="174" text-anchor="middle" font-size="10.5">阁楼工作站</text><text x="78" y="187" text-anchor="middle" font-size="10.5">打印文件</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Syncthing</text><text x="200" y="107" text-anchor="middle" font-size="10.5">块交换协议</text><text x="200" y="174" text-anchor="middle" font-size="10.5">版本保留</text><text x="200" y="187" text-anchor="middle" font-size="10.5">忽略规则</text><text x="322" y="94" text-anchor="middle" font-size="10.5">NAS 照片库</text><text x="322" y="107" text-anchor="middle" font-size="10.5">配置目录</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Mac mini</text><text x="322" y="187" text-anchor="middle" font-size="10.5">Immich 索引</text><text x="430" y="138" text-anchor="middle" font-size="10.5">不再插线的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">TLS 直连</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">双向</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0804：手机照片、打印文件、HA 配置在局域网内点对点同步，备份另交 restic</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">syncthing/syncthing</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Syncthing 是 2013 年由瑞典开发者 Jakob Borg 发起的开源同步工具，88.3k 星，是自托管圈里替代网盘同步功能的头号选择。它解决的问题是：多台设备之间的文件想保持一致，但不想经过任何一家公司的服务器。</p><p>它的架构是纯点对点的：每台设备有一个由证书派生的设备 ID，两台设备互相添加并共享某个文件夹后，就直接建立 TLS 加密连接，用块交换协议只传变化的块。局域网内靠广播互相发现，跨网络用公共发现服务器交换地址，穿不透 NAT 就走志愿者的中继，中继只转发密文。文件夹可以设成只发送、只接收或双向；版本控制能把被覆盖和删除的文件留几份；忽略规则用类似 gitignore 的语法。它是一个 Go 程序加网页界面，安卓有官方客户端，NAS 系统大多有套件。</p><p>项目十多年持续发版，2026 年仍是月度更新；网页界面翻译完整，含简体中文，中文教程很多。要记住它是同步不是备份，误删会同步到所有设备，所以要配合版本控制或专门的备份工具。</p><p>在 0804 里它是延伸，负责日常搬运：手机相机目录只发送到 NAS 的照片库，Immich 在 Mac mini 上再去索引；阁楼工作站的 3D 打印文件夹和 Mac mini 双向同步；笔记本上 HomeAssistant、ESPHome 的配置目录只发送到 NAS，NAS 快照之后再由 restic 做真正的备份。设备只有三台机器和一部手机，发现和中继都关掉，只在局域网里走。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx4">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/restic/restic" target="_blank" rel="noopener">restic/restic</a>
+          <span class="stars">★ 35.6k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">快、安全、省空间的备份程序：内容去重、全程加密、每次备份一个快照，仓库可以放本地盘、SFTP 或任何 S3 兼容存储</p>
+        <p class="gh-why">→ NAS 快照挡不住整机损坏，每周冷备到阁楼保险箱那块硬盘需要一个真正的备份工具，能去重、能校验、能只恢复一个文件</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0804-7-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="35" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0804-7-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0804-7-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">restic · 去重加密，冷备盘插上就补齐</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0804-7-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M38.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-7-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0804-7-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M288.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0804-7-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">NAS 照片库</text><text x="78" y="107" text-anchor="middle" font-size="10.5">数据库快照</text><text x="78" y="180" text-anchor="middle" font-size="10.5">HA 配置目录</text><text x="200" y="94" text-anchor="middle" font-size="10.5">restic</text><text x="200" y="107" text-anchor="middle" font-size="10.5">笔记本定时跑</text><text x="200" y="174" text-anchor="middle" font-size="10.5">切块去重</text><text x="200" y="187" text-anchor="middle" font-size="10.5">加密</text><text x="322" y="94" text-anchor="middle" font-size="10.5">阁楼保险箱</text><text x="322" y="107" text-anchor="middle" font-size="10.5">冷备硬盘</text><text x="322" y="174" text-anchor="middle" font-size="10.5">S3 对象存储</text><text x="322" y="187" text-anchor="middle" font-size="10.5">最要紧几十 GB</text><text x="430" y="138" text-anchor="middle" font-size="10.5">每月演练的人</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">每周插上</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0804：NAS 快照之后由 restic 做真备份，冷备盘 + 对象存储两个仓库，每月演练恢复</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">restic/restic</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>restic 是德国开发者 Alexander Neumann 在 2014 年发起的备份程序，35.6k 星，用 Go 写成，单个可执行文件。它解决的问题是：备份工具要么复杂得像企业软件，要么只是复制文件；restic 把去重、加密、增量、校验这几件正确的事做全，命令却只有几个。</p><p>它的模型是仓库加快照：初始化仓库时设一个密码，之后所有数据在写入前都加密。每次 backup，文件被切成内容定义的变长块，只有仓库里没有的块才上传，所以第二次备份只传变化的部分，同一份文件在不同路径也只存一次；完成后生成一个快照。恢复可以整份还原，也可以把快照挂载成文件系统去翻某一个文件；prune 按策略清理旧快照，check 校验完整性。后端支持本地目录、SFTP、S3 兼容对象存储和 rclone 支持的一切。</p><p>项目十年稳定，2026 年仍在发版；文档是英文，中文教程主要在自托管社区里。</p><p>在 0804 里它是延伸，接在 NAS 快照后面。方案说每天凌晨 NAS 快照、每周一份冷备到阁楼保险箱的硬盘：快照解决误删和回滚，restic 解决整机损坏和火灾。做法是笔记本上定时跑 restic，源是 NAS 上的照片库、各模块数据库快照和 HA 配置，仓库一是那块每周插一次的冷备硬盘，插上后自动补齐；仓库二是一个便宜的 S3 兼容对象存储，只放最要紧的几十 GB。每月做一次恢复演练，随机挑一个文件从冷备盘里取回来，确认密码没忘、仓库没坏。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx5">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener">n8n-io/n8n</a>
+          <span class="stars">★ 198.3k</span>
+          <span class="zh zh-no">无中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">可自托管的工作流自动化平台：拖节点连线，四百多种集成加代码节点，Webhook 触发，内置 AI 智能体节点；fair-code 许可，自用免费</p>
+        <p class="gh-why">→ 告警分级、周报汇总、订单邮件解析这类跨服务的胶水逻辑，写在 HA 自动化里太别扭，它是做这种事最顺手的工具</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0804-8-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="36" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0804-8-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0804-8-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">n8n · 告警分级与周报的胶水层</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0804-8-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0804-8-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0804-8-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0804-8-shade)" stroke="none"/><path d="M282.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="322" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0804-8-arrow)" stroke-linecap="round"><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="216" text-anchor="middle" font-size="9.5">Uptime Kuma</text><text x="78" y="229" text-anchor="middle" font-size="10.5">Beszel 告警</text><text x="78" y="100" text-anchor="middle" font-size="10.5">电商订单邮件</text><text x="200" y="94" text-anchor="middle" font-size="10.5">n8n</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Webhook 触发</text><text x="200" y="174" text-anchor="middle" font-size="10.5">按严重程度</text><text x="200" y="187" text-anchor="middle" font-size="10.5">分派 + 去抖</text><text x="322" y="174" text-anchor="middle" font-size="9.5">HA 黄点 / 推手机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">周日晚周报</text><text x="322" y="94" text-anchor="middle" font-size="10.5">0801 物品总表</text><text x="322" y="107" text-anchor="middle" font-size="10.5">写品牌与金额</text><text x="430" y="218" text-anchor="middle" font-size="10.5">收周报的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">解析</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">分级</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">写订单</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0804：监控告警经 n8n 分级后进 HA 或推手机，周报与订单解析也在这里跑</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">n8n-io/n8n</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>n8n 是柏林公司 n8n GmbH 从 2019 年做起的工作流自动化平台，198.3k 星，2025 年之后因为 AI 智能体节点的加入星数暴涨。它解决的问题是：把不同服务串起来的胶水逻辑，以前要么写脚本要么用 Zapier 这类云服务；n8n 让你在自己的机器上拖节点完成。</p><p>它的核心是画布上的节点图：触发节点决定何时开始，可以是定时、Webhook、收到邮件或某个服务的事件；后续节点每个做一件事，HTTP 请求、条件判断、数据变换、发通知、写数据库，四百多种集成节点覆盖常见服务，不够就用 Code 节点写 JavaScript。AI 部分把大模型、工具、记忆做成节点，能接 Ollama 这样的本地模型。它是 fair-code 许可，自用免费，Docker 一个容器就跑。</p><p>官方模板库有几千个工作流可以直接导入；文档是英文，中文教程和视频已经很多。</p><p>在 0804 里它是延伸，做服务层的胶水。Uptime Kuma 和 Beszel 的告警都发到 n8n 的一个 Webhook，由它按严重程度分派：传感器掉线只写日志并在 HA 里亮一个黄点，NAS 盘温超阈值立刻推手机，连续三次才推的去抖规则也在这里配。每周日晚上一条定时工作流把 Beszel 的温度曲线、restic 的备份结果、Syncthing 的同步状态汇总成一份周报发到手机。电商平台的订单邮件由它解析出品牌型号和金额，写进 0801 的物品总表。</p></div>
       </article>
     </div></section>
 
