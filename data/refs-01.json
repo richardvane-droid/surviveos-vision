@@ -277,6 +277,186 @@
      ],
      "usage": "0101：ESP32-C3 调光射灯 + 读照度 → HA 判断白天不亮、人近渐亮"
     }
+   },
+   {
+    "name": "photoprism/photoprism",
+    "url": "https://github.com/photoprism/photoprism",
+    "stars": "40.1k",
+    "zh": "界面有中文",
+    "desc": "Go 语言写的自托管 AI 相册：TensorFlow 自动打标签、人脸识别、地图、按镜头和相机筛选，一条 Docker 命令就起",
+    "why": "PSK 每一代的产品照、细节照、野外实测照都堆在硬盘里，需要一个能按型号和场景秒找的产品图库给展台小屏和视频剪辑喂素材",
+    "intro": "PhotoPrism 是德国 PhotoPrism UG 团队做的自托管 AI 相册，用 Go 写后端、Vue 写前端，40.1k 星，是自托管照片圈里最常被推荐的方案之一。它要解决的问题是：照片越来越多，但没人愿意把私人照片交给云相册，也没人愿意手工给几万张图打标签。\n它的工作方式是索引而不是导入：把照片目录只读挂进 Docker 容器，后台扫描一遍就生成缩略图和数据库，原文件一根手指头都不碰。扫描时 TensorFlow 模型给每张图打上物体和场景标签，人脸聚类、GPS 反查地名、相机和镜头型号都进索引，再配合 RAW 转换和视频转码。前端是一个响应式网页，手机、平板、电脑都能用，搜索栏里可以直接写 lens:iphone year:2024 这样的查询。\n生态方面它有官方 Docker Compose、群晖和树莓派安装说明，PhotoSync 之类的手机备份 App 原生支持它；界面自带简体中文，中文安装教程也多。项目靠订阅和赞助维持，2025 年之后依然每月出版本。\n对 0101 来说它是延伸项目：展台小屏要滚动播放这只盒子的用途和实测视频，素材从哪来？把这些年拍的 PSK 产品照、车床加工照、山顶实测照全部索引进 PhotoPrism，给每一代盒子建一个相册，用标签区分产品照、细节照、野外照。剪视频时按标签一搜就出来，展台小屏的待机画面也可以直接指向某个相册的分享链接。注意机器：AI 索引第一次跑很吃 CPU，放在 0802 的家庭服务器上夜里跑就行。",
+    "diagram": {
+     "title": "PhotoPrism · 只读索引，AI 打标签的产品图库",
+     "nodes": [
+      {
+       "id": "dir",
+       "label": "照片目录\n只读挂载",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "phone",
+       "label": "手机同步\nPhotoSync",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "PhotoPrism\nGo 后端",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ai",
+       "label": "TensorFlow\n标签 / 人脸",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "db",
+       "label": "索引数据库\n缩略图",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "网页相册\n按标签搜",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "剪视频的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "dir",
+       "core",
+       "扫描"
+      ],
+      [
+       "phone",
+       "core",
+       "备份"
+      ],
+      [
+       "core",
+       "ai"
+      ],
+      [
+       "ai",
+       "db",
+       "写标签"
+      ],
+      [
+       "db",
+       "web"
+      ],
+      [
+       "web",
+       "me",
+       "秒找素材"
+      ]
+     ],
+     "usage": "0101：每代 PSK 一个相册，标签分产品/细节/野外，喂展台小屏和视频剪辑"
+    },
+    "ext": true
+   },
+   {
+    "name": "mrdoob/three.js",
+    "url": "https://github.com/mrdoob/three.js",
+    "stars": "115k",
+    "zh": "有中文文档站",
+    "desc": "浏览器里的 3D 引擎标杆：WebGL/WebGPU 渲染、glTF 加载、轨道控制器，几十行代码就能在网页里转着看一个模型",
+    "why": "PSK 盒身本来就是 3D 建模出来的，把 glTF 放进网页就能在展台小屏和手机上转着看爆炸图，比拍视频更直观",
+    "intro": "three.js 是 Ricardo Cabello（mrdoob）在 2010 年发起的 JavaScript 3D 库，115k 星，几乎是网页 3D 的代名词。它要解决的问题是：浏览器原生的 WebGL 太底层，画一个立方体都要写几百行着色器；three.js 把场景、相机、灯光、材质、几何体封装成对象，像摆积木一样搭 3D 场景。\n它的流程是：创建 Scene，放进 Mesh（几何体加材质）和 Light，用 PerspectiveCamera 看，再由 WebGLRenderer 或新的 WebGPURenderer 每帧渲染到 canvas 上。模型一般用 glTF 格式，GLTFLoader 一行加载，OrbitControls 加上去就能用手指旋转缩放，PBR 材质配一张 HDR 环境贴图，金属和塑料的质感就出来了。\n生态极大：官方文档有简体中文版，示例几百个，中文书和 B 站课程成体系，2025 年后仍是每月一个版本。\n对 0101 它是延伸玩法：PSK 的盒身和 27 件小物件本来就有 CAD 模型，从 FreeCAD 导出 glTF，写一个百来行的网页放在展台前脸那块 7 寸小屏上，人走近时 HomeAssistant 把小屏切到这个页面，盒子缓慢旋转、盖子做开合动画，点一件物件弹出名字和用途；扫铜牌旁的二维码手机上看同一页。注意模型要减面，树莓派跑不动原始 CAD，用 Blender 抽稀到两三万面。",
+    "diagram": {
+     "title": "three.js · 网页里转着看 PSK 的 3D 模型",
+     "nodes": [
+      {
+       "id": "cad",
+       "label": "FreeCAD 模型\n导出 glTF",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ctl",
+       "label": "手指 / 鼠标\n转 / 缩 / 点选",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "three.js\n场景 / 相机 / 灯",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 人来了\n切到这一页",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "scr",
+       "label": "展台 7 寸屏\n或手机浏览器",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "走近的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "cad",
+       "core",
+       "GLTFLoader"
+      ],
+      [
+       "ctl",
+       "core",
+       "OrbitControls"
+      ],
+      [
+       "core",
+       "scr",
+       "每帧渲染"
+      ],
+      [
+       "ha",
+       "scr",
+       "打开网页"
+      ],
+      [
+       "scr",
+       "me",
+       "转着看"
+      ]
+     ],
+     "usage": "0101：盒身 glTF 放网页，展台小屏自动旋转 + 点物件看用途，扫码同页"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -581,6 +761,199 @@
      ],
      "usage": "0102：太阳高度角 < 3° 且照度低 → 灯带切预设、三只射灯 60%"
     }
+   },
+   {
+    "name": "AppFlowy-IO/AppFlowy",
+    "url": "https://github.com/AppFlowy-IO/AppFlowy",
+    "stars": "75.4k",
+    "zh": "界面有中文",
+    "desc": "Flutter + Rust 写的开源 Notion 替代：文档、数据库表格、看板、日历，数据本地优先，可自托管云同步",
+    "why": "九宫格里每只盒子都值得一页出生故事：型号、年份、去过哪座山、当时的草图，AppFlowy 的数据库视图正好一行一只盒子",
+    "intro": "AppFlowy 是 AppFlowy-IO 团队做的开源协作工作区，目标很直白：做一个数据归自己管的 Notion。75.4k 星，是同类项目里星数最高的一个。它要解决的问题是：Notion 好用但所有笔记都在别人的云上，断网不能用，还随时可能改价。\n它的架构是 Flutter 写界面、Rust 写核心，一套代码跑 macOS、Windows、Linux、iOS 和 Android。数据默认存在本地 SQLite 里，文档用块编辑器，数据库（Grid）像一张有类型的表格，同一份数据可以切成表格、看板、日历三种视图，属性支持文本、数字、单选、日期、复选框和关联。想多设备同步就自托管 AppFlowy Cloud（Docker Compose 一键起），也可以只用本地。2024 年后加了 AI 助手，可以接本地 Ollama 模型。\n生态和社区：界面自带简体中文，Discord 和 GitHub 讨论区活跃，中文圈的评测和安装教程不少，2025 年后仍是几周一个版本。\n放到 0102 里它是延伸项目：作品墙的每只盒子下面挂的牛皮纸标签只写得下型号和年份，而更完整的出生故事应该在一个数据库里。在 AppFlowy 建一张 PSK 作品表，一行一只盒子，列是版本号、年份、盒身材料、去过的山、当时的草图照片、当时犯的错，用日历视图看就是一条时间线。标签上印一个小二维码指向这一页，自己看到右下角那两个空位时，把下一代的想法也先记进去。注意别开太多字段，能坚持每代填完最重要。",
+    "diagram": {
+     "title": "AppFlowy · 每只盒子一页出生故事的知识库",
+     "nodes": [
+      {
+       "id": "me0",
+       "label": "自己写\n型号 / 年份 / 山",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "photo",
+       "label": "草图与照片",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "AppFlowy\nFlutter + Rust",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "grid",
+       "label": "作品表 Grid\n表格 / 看板 / 日历",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "cloud",
+       "label": "自托管云\n多端同步",
+       "kind": "cloud",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "qr",
+       "label": "标签二维码\n手机打开",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "看墙的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "me0",
+       "core",
+       "录入"
+      ],
+      [
+       "photo",
+       "core",
+       "贴图"
+      ],
+      [
+       "core",
+       "grid"
+      ],
+      [
+       "grid",
+       "cloud",
+       "",
+       "dash"
+      ],
+      [
+       "grid",
+       "qr",
+       "一页一盒"
+      ],
+      [
+       "qr",
+       "me",
+       "扫码看故事"
+      ]
+     ],
+     "usage": "0102：一行一只盒子的作品表，牛皮纸标签印二维码指向那一页"
+    },
+    "ext": true
+   },
+   {
+    "name": "TriliumNext/Trilium",
+    "url": "https://github.com/TriliumNext/Trilium",
+    "stars": "37.8k",
+    "zh": "官方中文 README",
+    "desc": "层级笔记树式的个人知识库：一条笔记可以挂在多个父节点下，带关系图、脚本能力和自托管服务端同步",
+    "why": "PSK 的知识不是平的：一只盒子挂在年份下也挂在材料下，还连着某座山的日记，Trilium 的多父节点树正对这种交叉关系",
+    "intro": "Trilium Notes 最早由捷克开发者 zadam 做了六年，2024 年他退出维护后社区接手成立 TriliumNext，2025 年 6 月仓库正式改名为 TriliumNext/Trilium 继续开发，37.8k 星。它要解决的问题是：普通笔记软件是文件夹或标签，而真实知识是一张网，一条笔记常常同时属于好几个主题。\n它的核心是一棵可以克隆的笔记树：任何笔记可以出现在多个父节点下，本质上是同一条记录的多个引用；笔记之间还能定义关系和属性，自动生成关系图。编辑器是富文本加代码块、Markdown 导入导出、画布、思维导图和网页剪藏。它内置脚本引擎，可以用 JavaScript 写自动化和小工具，服务端用 Node.js 写，Docker 一行起，桌面端用 Electron，手机用网页版，同步走自己的服务器，全程加密可选。\n社区方面它是少数 README 自带简体中文和繁体中文的知识库项目，中文用户很多，Docker 部署教程遍地。\n放到 0102 里它是延伸的另一条路线：如果说 AppFlowy 适合做一张干净的作品表，Trilium 适合把整个 PSK 七年的东西全塞进去——每一代盒子一条笔记，克隆到年份树、材料树和山的树下；每次上山的日记、供应商报价、失败的样品照都挂在旁边，关系图一拉就看到第四版为什么换钛合金。作品墙标签上的二维码也可以指向这里。注意它是给一个人用的深度工具，学习曲线比 AppFlowy 陡，先只用树和克隆两个功能就够了。",
+    "diagram": {
+     "title": "Trilium · 一条笔记挂多棵树的知识网",
+     "nodes": [
+      {
+       "id": "me0",
+       "label": "每代盒子\n一条笔记",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "diary",
+       "label": "上山日记\n报价 / 样品照",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Trilium 服务端\nNode.js + Docker",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "tree",
+       "label": "笔记树\n克隆到年份 / 材料",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "graph",
+       "label": "关系图\n为什么换钛",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "app",
+       "label": "桌面 / 手机端\n加密同步",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "看墙的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "me0",
+       "core",
+       "写"
+      ],
+      [
+       "diary",
+       "core",
+       "挂旁边"
+      ],
+      [
+       "core",
+       "tree"
+      ],
+      [
+       "tree",
+       "graph",
+       "自动生成"
+      ],
+      [
+       "core",
+       "app",
+       "同步"
+      ],
+      [
+       "graph",
+       "me",
+       "顺藤摸瓜"
+      ]
+     ],
+     "usage": "0102：一代盒子一条笔记，克隆进年份/材料/山三棵树，标签二维码指过来"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -886,6 +1259,194 @@
      ],
      "usage": "0103：九台 iPad 各开一条带参数网址，HA 七点同时淡入"
     }
+   },
+   {
+    "name": "AUTOMATIC1111/stable-diffusion-webui",
+    "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "stars": "165k",
+    "zh": "无中文（社区教程多）",
+    "desc": "Stable Diffusion 最流行的本地网页界面：文生图、图生图、局部重绘、放大、LoRA 与 ControlNet 扩展一应俱全",
+    "why": "画框墙每天要九张新画，抓 Pinterest 总有版权和风格不齐的问题，本地生成一套北欧木屋或生存手册风的画最省心",
+    "intro": "stable-diffusion-webui 是网名 AUTOMATIC1111 的开发者在 2022 年 Stable Diffusion 开源后几周内做出来的网页界面，165k 星，是本地 AI 绘图最出圈的工具。它要解决的问题是：模型本身只是一堆权重和命令行脚本，普通人需要一个能调参数、看结果、反复试的界面。\n它用 Python 和 Gradio 写成，启动后在本机开一个网页：输入正向和反向提示词、采样器、步数、尺寸，点生成后模型在显卡上跑扩散过程，几秒到几十秒出图。除了文生图，还有图生图、局部重绘、外扩画布、放大和批量生成；扩展系统让 ControlNet（用线稿控制构图）、LoRA（几十 MB 的小模型定义画风）一键装上，模型文件放进目录就能切换。\n生态方面它是扩展最多的绘图前端，Civitai 上海量 LoRA 按它的格式发布；README 是英文，但中文教程、整合包和 B 站课程多到数不清。2024 年后更新变慢，Forge 和 ComfyUI 分走了一部分用户，但它仍是最简单的起点。\n对 0103 是延伸玩法：画框墙的四套主题——北欧木屋、生存手册插画、旧地图、雪地动物——每套用一个 LoRA 加一组提示词批量生成，凌晨四点跑一百张，按 3:4 出图，白天挑九张推给九台 iPad；旧的 Pinterest 抓取管线保留，两条来源混着放。注意要一块 8GB 以上显存的显卡，Mac mini 跑 SDXL 会很慢，可以放到白天不用的游戏机上定时跑。",
+    "diagram": {
+     "title": "SD WebUI · 本地显卡批量画今天的九张画",
+     "nodes": [
+      {
+       "id": "prompt",
+       "label": "四套主题提示词\n+ LoRA",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cron",
+       "label": "凌晨四点\n定时任务",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "SD WebUI\nGradio 界面 / API",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "gpu",
+       "label": "显卡扩散过程\n8GB 显存起",
+       "kind": "device",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "out",
+       "label": "输出目录\n3:4 一百张",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "pad",
+       "label": "九台 iPad\n七点淡入",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "下楼倒咖啡的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "prompt",
+       "core"
+      ],
+      [
+       "cron",
+       "core",
+       "调 API"
+      ],
+      [
+       "core",
+       "gpu"
+      ],
+      [
+       "gpu",
+       "out",
+       "写图"
+      ],
+      [
+       "out",
+       "pad",
+       "挑九张同步"
+      ],
+      [
+       "pad",
+       "me"
+      ]
+     ],
+     "usage": "0103：每套主题一个 LoRA，夜里批量生成，和抓取源混放"
+    },
+    "ext": true
+   },
+   {
+    "name": "ImageMagick/ImageMagick",
+    "url": "https://github.com/ImageMagick/ImageMagick",
+    "stars": "16.8k",
+    "zh": "无中文（社区教程多）",
+    "desc": "三十多年历史的命令行图像处理套件：裁切、缩放、调色、加边框、拼图、格式转换，一条 magick 命令搞定批量处理",
+    "why": "九台 iPad 的屏幕是固定的 2048×2732，抓来和生成的画尺寸比例乱七八糟，进画框前必须统一裁切调色，这就是它的活",
+    "intro": "ImageMagick 是 1987 年就开始的开源图像处理套件，由 ImageMagick Studio LLC 维护，16.8k 星，装在几乎每一台 Linux 服务器上。它要解决的问题是：图像处理不该每次都打开 Photoshop，尤其是几百张图做同样的事的时候，一条命令行就该完成。\n它的核心是 magick 这个命令（老版本叫 convert）：输入一张或多张图，按顺序执行一串操作，输出到新文件。操作有两百多种：resize 缩放、crop 裁切、gravity 对齐、modulate 调亮度饱和度、border 加边、montage 拼图、LUT 调色、格式转换，支持 200 多种格式包括 HEIC、RAW 和 PDF。它有 C、Python、Node 等语言绑定，2025 年后仍每周出小版本。\n中文方面 README 是英文，但因为太经典，中文教程和命令速查表多到用不完；它的 Usage 文档是命令行图像处理的教科书。\n对 0103 它是延伸中的基础工具：画框墙的管线里，抓来的画和 SD 生成的画推给 iPad 之前要过一道处理：统一裁成 3:4、缩到 2048×2732、按当天主题给一点暖色或冷色偏移、四周留 3% 留白让画框有衬纸感、最后压成 JPEG 质量 85。写成一个 shell 脚本挂在凌晨四点同步任务里，九张图几秒钟处理完。注意居中裁切可能切掉人物头部，画作类素材可以先用 SD WebUI 外扩画布再交给它。",
+    "diagram": {
+     "title": "ImageMagick · 一条命令把画裁成画框尺寸",
+     "nodes": [
+      {
+       "id": "src",
+       "label": "抓取 / 生成的画\n尺寸不一",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "theme",
+       "label": "当天主题\n色调参数",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "magick 命令\n裁切 / 缩放 / 调色",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "wm",
+       "label": "留白衬纸\nJPEG 85",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "out",
+       "label": "2048×2732\n九张成品",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "pad",
+       "label": "iPad 网页\n七点淡入",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "回头看画的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "src",
+       "core"
+      ],
+      [
+       "theme",
+       "core",
+       "modulate"
+      ],
+      [
+       "core",
+       "wm"
+      ],
+      [
+       "wm",
+       "out",
+       "写文件"
+      ],
+      [
+       "out",
+       "pad",
+       "同步"
+      ],
+      [
+       "pad",
+       "me"
+      ]
+     ],
+     "usage": "0103：同步脚本里的一道工序，统一比例、尺寸、色调和留白再推给 iPad"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1193,6 +1754,195 @@
      ],
      "usage": "0104：备选软件，主要借宝丽来滤镜，幻灯片页投到 0103 一屏"
     }
+   },
+   {
+    "name": "LibrePhotos/librephotos",
+    "url": "https://github.com/LibrePhotos/librephotos",
+    "stars": "8k",
+    "zh": "界面有中文",
+    "desc": "Python 写的自托管相册：人脸识别、物体检测、语义搜索、自动按事件生成相册，走 AI 整理路线",
+    "why": "照片墙每月换一批，选照片最费时间，让 AI 先按事件和人物把上千张原片自动分好组，挑起来快得多",
+    "intro": "LibrePhotos 是从 ownphotos 项目分叉出来的自托管相册，Django 后端加 React 前端，8k 星，走的是 AI 帮你整理照片这条路线。它要解决的问题是：照片太多没人整理，翻半天找不到那张山顶的照片；把 Google Photos 的自动整理能力搬回自己的服务器。\n它的流程是：扫描挂载进来的照片目录，提取 EXIF，用 InsightFace 做人脸检测与聚类，用 CLIP 做图片语义嵌入，于是可以用一句自然语言搜图，比如雪地里的盒子；还能按时间和地点自动切成事件相册，反查 GPS 得到地名，识别物体和场景打标签。前端是网页，手机也能用，支持多用户。整套用 Docker Compose 部署，后台任务用 Redis 排队，第一次索引会跑很久。\n生态方面它 2025 年后持续出版本，界面翻译里有简体中文，中文安装教程主要在群晖和 Unraid 社区。它比 Immich 小众，但语义搜索和事件自动分组是特色。\n放到 0104 里它是延伸的选照片工具：照片墙每根绳子约 8 张，每月要从手机和相机的上千张里挑二十几张。让 LibrePhotos 先自动跑一遍：按事件分好组，搜车床、雪地、鱼这类词直接出候选，人脸聚类把当月自拍单独列出来。选好的导出到一个待冲印目录，再拿去冲 4×6 富士相纸。注意它和 0104 已有的 Immich 功能重叠，只在想试 CLIP 语义搜索时装它，两个别同时索引同一块盘。",
+    "diagram": {
+     "title": "LibrePhotos · AI 先分组，再挑照片去冲印",
+     "nodes": [
+      {
+       "id": "dir",
+       "label": "手机 / 相机原片\n上千张",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "q",
+       "label": "搜一句话\n雪地里的盒子",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "LibrePhotos\nDjango 后端",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ai",
+       "label": "InsightFace\nCLIP 嵌入",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ev",
+       "label": "事件相册\n人脸聚类",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "out",
+       "label": "待冲印目录\n二十几张",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "夹照片的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "dir",
+       "core",
+       "扫描"
+      ],
+      [
+       "q",
+       "core",
+       "语义搜索"
+      ],
+      [
+       "core",
+       "ai"
+      ],
+      [
+       "ai",
+       "ev",
+       "自动分组"
+      ],
+      [
+       "ev",
+       "out",
+       "挑选导出"
+      ],
+      [
+       "out",
+       "me",
+       "冲 4×6"
+      ]
+     ],
+     "usage": "0104：每月换照片前让它按事件和人脸先分好组，语义搜索出候选再冲印"
+    },
+    "ext": true
+   },
+   {
+    "name": "ente-io/ente",
+    "url": "https://github.com/ente-io/ente",
+    "stars": "28.9k",
+    "zh": "界面有中文",
+    "desc": "端到端加密的开源相册与备份：手机、桌面、网页全端，服务端可自托管，本机做人脸和语义搜索不上传明文",
+    "why": "照片墙背面那些手写的话和当月自拍很私人，原片备份要的不是 AI 整理而是加密，ente 是加密路线里最成熟的",
+    "intro": "Ente 是印度团队 ente.io 做的端到端加密相册，2024 年把服务端也全部开源，28.9k 星。它要解决的问题是：想要 Google Photos 那样的多端自动备份和搜索，但不愿意让任何服务器看到照片内容。\n它的架构是客户端加密：手机或桌面 App 在本机用 libsodium 把照片加密后再上传，密钥只在设备上，服务端只存密文。人脸识别和语义搜索也在设备本地跑模型，索引结果加密后同步，所以搜索照样能用。服务端叫 Museum，用 Go 写，Docker Compose 自托管一条命令；客户端覆盖 iOS、Android、三大桌面和网页版，支持家庭共享、相册链接、Live Photo 原样保存。同一个仓库还带 Auth 两步验证应用。\n生态方面它 2025 年后更新很密；App 界面有简体中文，中文评测集中在自托管和隐私圈，Google Takeout 导入做得好。\n放到 0104 里它是延伸的备份底座：照片墙的照片没有塑封、会被炉火烤卷，换下来放进牛皮纸相册，原片必须有一个可靠的备份。手机开 Ente 自动备份，拍立得拍的实体照用手机翻拍一张也进去，按年份建相册，和吧台矮柜里的实体相册一一对应。它和 0104 原有的 Immich 不冲突：Immich 管挑选与展示，Ente 管加密备份异地一份。注意密钥丢了谁也救不回来，恢复短语抄在纸上放进 0209 的铁皮宝箱。",
+    "diagram": {
+     "title": "Ente · 本机加密再上传的照片备份",
+     "nodes": [
+      {
+       "id": "phone",
+       "label": "手机 / 拍立得翻拍\n自动备份",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "key",
+       "label": "本机密钥\n恢复短语",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Ente 客户端\nlibsodium 加密",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ai",
+       "label": "本地人脸 / 语义\n索引",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "srv",
+       "label": "自托管 Museum\n只存密文",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "album",
+       "label": "按年份相册\n家庭共享",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "翻相册的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "phone",
+       "core"
+      ],
+      [
+       "key",
+       "core"
+      ],
+      [
+       "core",
+       "ai"
+      ],
+      [
+       "core",
+       "srv",
+       "密文上传"
+      ],
+      [
+       "srv",
+       "album",
+       "多端同步"
+      ],
+      [
+       "album",
+       "me"
+      ]
+     ],
+     "usage": "0104：原片加密备份一份，按年份相册和矮柜里的牛皮纸相册对应"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1497,6 +2247,197 @@
      ],
      "usage": "0105：先打印 27 只小盒试装，定稿后照尺寸做木格，抽屉托盘也用它"
     }
+   },
+   {
+    "name": "frappe/erpnext",
+    "url": "https://github.com/frappe/erpnext",
+    "stars": "38.6k",
+    "zh": "界面有中文",
+    "desc": "Frappe 框架上的开源 ERP：物料清单 BOM、工单、库存、采购、销售、财务全流程，制造业小厂常用",
+    "why": "PSK 是 27 件物件组成的真产品，做多了就需要 BOM 和工单：一只盒子消耗哪些零件、哪格快空了该补货，ERPNext 是这套逻辑的教科书",
+    "intro": "ERPNext 是印度 Frappe 公司做的开源 ERP，Python 后端加 Frappe 框架，38.6k 星，是开源 ERP 里社区最大的一个。它要解决的问题是：小工厂和小品牌需要 SAP 那套物料、生产、库存、财务的逻辑，但付不起也用不了那么重的东西。\n它的核心是 Frappe 框架的 DocType：每种业务对象（物料、BOM、工单、采购单）都是一张有字段、有工作流、有权限的表，界面和报表自动生成。制造模块的流程是：先给成品建物料清单 BOM，列出每一件子物料和数量；下工单时系统按 BOM 算出要领多少料、缺什么；完工后成品入库、原料扣减，库存低于安全线自动生成采购建议。它还带 CRM、项目、人事和会计，一套 Docker 就能跑。\n生态方面它有中文界面翻译，国内有做实施的公司和不少中文文档；2025 年后每年一个大版本，v15 是当前主线。\n放到 0105 里它是延伸的思路来源，不一定全上：工作台那排 27 格零件柜就是一张 BOM 的物理形态，每格贴的数量标签就是库存。在 ERPNext 里给 PSK 建一个 BOM，27 行子物料加毛毡和盒身，每组装一只就下一张工单，库存自动减；把每格的安全库存设成 20，低于就进采购建议，周末统一下单。注意它对一个人的作坊来说太重，只用物料、BOM、库存三个模块，别去碰会计；觉得重的话，0105 原有的 InvenTree 是更轻的选择。",
+    "diagram": {
+     "title": "ERPNext · BOM 定义物件，工单扣库存",
+     "nodes": [
+      {
+       "id": "bom",
+       "label": "PSK 物料清单\n27 件 + 毛毡盒身",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "me0",
+       "label": "组装一只\n下工单",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ERPNext\nFrappe DocType",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "stock",
+       "label": "库存台账\n27 格数量",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "buy",
+       "label": "采购建议\n低于 20 补货",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "rep",
+       "label": "库存报表\n手机看",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "周末下单的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "bom",
+       "core"
+      ],
+      [
+       "me0",
+       "core",
+       "工单"
+      ],
+      [
+       "core",
+       "stock",
+       "按 BOM 扣减"
+      ],
+      [
+       "stock",
+       "buy",
+       "低于安全线"
+      ],
+      [
+       "stock",
+       "rep"
+      ],
+      [
+       "buy",
+       "me",
+       "统一采购"
+      ]
+     ],
+     "usage": "0105：零件柜 27 格 = BOM，每装一只下工单扣库存，缺料周末统一买"
+    },
+    "ext": true
+   },
+   {
+    "name": "Part-DB/Part-DB-server",
+    "url": "https://github.com/Part-DB/Part-DB-server",
+    "stars": "1.7k",
+    "zh": "界面有中文",
+    "desc": "给电子元件和小零件做的开源库存系统：存放位置树、参数、供应商价格、条码标签打印，支持从立创和 Mouser 拉数据",
+    "why": "工作台那 27 格小零件加上抽屉里的电子小件，需要一个知道每样东西在哪一格、还剩几个的轻量库存，Part-DB 就是为这种小格子生的",
+    "intro": "Part-DB 是德国开发者 Jan Böhmer 用 PHP Symfony 重写的开源零件库存系统，1.7k 星，起初是给电子爱好者管电阻电容的，后来变成了通用的小零件库存。它要解决的问题是：抽屉和小格子里几百种零件，谁也记不住哪个在哪、还剩多少、上次从哪买的。\n它的数据模型是零件加存放位置树加类别树：每个零件有名称、参数、图片、附件、最小库存和多个库存条目，每条库存指向一个位置（房间→柜子→抽屉→格子）；供应商信息记录订单号和价格阶梯，信息提供者功能可以直接从立创商城、Mouser、DigiKey 等拉回参数和图片。它能生成带二维码或条码的标签用标签机打印，扫码就跳到那件零件的页面；还有项目 BOM 功能，能算一个项目需要的零件够不够。部署是 Docker 一行，浏览器访问，手机也能用。\n社区方面它是小而稳定的项目，2025 年后仍在更新，界面翻译里有简体中文，中文教程主要在电子 DIY 圈。\n放到 0105 里它是延伸里最贴身的一个：27 格零件柜每格建一个位置，每格一种物件登记数量；格口那张激光刻的标签旁再贴一个 Part-DB 生成的小二维码，手机扫一下就减库存或看供应商链接。工作台抽屉里的电子小件、0106 炉子的传感器备件、0803 鸭子的备用舵机也全部归进来，统一用它的位置树。它比 ERPNext 轻得多，一个人用刚好；和 0105 已有的 InvenTree 是同类，选一个用就行，Part-DB 的优点是标签打印和立创拉数据更顺手。",
+    "diagram": {
+     "title": "Part-DB · 每格一个位置，扫码看余量",
+     "nodes": [
+      {
+       "id": "shelf",
+       "label": "27 格零件柜\n位置树",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "lc",
+       "label": "立创 / Mouser\n参数图片",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Part-DB\nSymfony + Docker",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "零件 / 库存\n供应商价格",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "label",
+       "label": "二维码标签\n标签机打印",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "phone",
+       "label": "手机扫码\n减库存",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "组装的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "shelf",
+       "core",
+       "登记"
+      ],
+      [
+       "lc",
+       "core",
+       "拉数据",
+       "dash"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "db",
+       "label",
+       "生成"
+      ],
+      [
+       "label",
+       "phone",
+       "贴格口"
+      ],
+      [
+       "phone",
+       "me"
+      ]
+     ],
+     "usage": "0105：每格建位置和最小库存，格口贴二维码，扫一下减一件"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1788,6 +2729,198 @@
      ],
      "usage": "0106：AIR-1 贴北墙下方接 HA 做 CO / PM 超标推送，认证 CO 报警器仍另装"
     }
+   },
+   {
+    "name": "br3ttb/Arduino-PID-Library",
+    "url": "https://github.com/br3ttb/Arduino-PID-Library",
+    "stars": "2.2k",
+    "zh": "无中文（社区教程多）",
+    "desc": "Brett Beauregard 写的 Arduino PID 库：抗积分饱和、无扰切换、可调采样周期，配套博客是入门 PID 最好的教材",
+    "why": "炉子的风门要按炉温自动开合，本质是一个 PID 回路；这个库和它的博客把 PID 讲得最清楚，先学它再去 ESPHome 里配 PID 才不糊涂",
+    "intro": "Arduino-PID-Library 是 Brett Beauregard 在 2011 年前后写的 PID 控制库，2.2k 星，代码只有几百行，但配套的博客系列《改进新手的 PID》被翻译成十几种语言，是很多人学 PID 的第一课。它要解决的问题是：教科书里的 PID 公式直接写进单片机会出各种毛病——积分饱和、参数一改就跳、手动自动切换时输出突变，他把这些坑一个一个补掉。\n它的用法是：定义输入（当前温度）、输出（风门开度 0～255）、设定值（目标温度），构造一个 PID 对象给它 Kp、Ki、Kd，主循环里不停调用 Compute，库按设定的采样周期算出新输出。内部对测量值求微分避免设定值突变的冲击、积分项限幅防饱和、改参数时平滑过渡。项目多年没大改，因为它已经完成了，Arduino 库管理器里直接能装。\n中文方面 README 是英文，但博客的中文翻译和 B 站讲解很多；ESPHome 自带的 PID climate 组件和它是一个思路。\n对 0106 它是延伸的学习项目，也可能真的用上：给柴火炉加一个自动风门，就是一个舵机拉着进风口挡板，炉体上一个 K 型热电偶读温度，目标 220 度左右的炉膛温。先用这个库在 Arduino 上做一版，参数调顺了再照搬进 ESPHome 的 PID 组件，让 HomeAssistant 能看曲线。注意柴火热惯性巨大，Ki 要小、采样周期放到 10 秒以上，风门全关也不能真关死，留最小进风保证不产生一氧化碳。",
+    "diagram": {
+     "title": "Arduino PID · 按炉温自动开合风门",
+     "nodes": [
+      {
+       "id": "tc",
+       "label": "K 型热电偶\n炉膛温度",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sp",
+       "label": "目标温度\n220℃",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "PID 库\nCompute 每 10 秒",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "aw",
+       "label": "抗积分饱和\n无扰切换",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "servo",
+       "label": "舵机风门\n留最小进风",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "ESPHome PID\n→ HA 曲线",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "坐炉边的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "tc",
+       "core",
+       "输入"
+      ],
+      [
+       "sp",
+       "core"
+      ],
+      [
+       "aw",
+       "core"
+      ],
+      [
+       "core",
+       "servo",
+       "输出 0~255"
+      ],
+      [
+       "core",
+       "ha",
+       "参数搬过去",
+       "dash"
+      ],
+      [
+       "servo",
+       "me",
+       "不用起身拨"
+      ]
+     ],
+     "usage": "0106：Arduino 上先调通风门 PID，再搬进 ESPHome 看曲线"
+    },
+    "ext": true
+   },
+   {
+    "name": "eclipse-mosquitto/mosquitto",
+    "url": "https://github.com/eclipse-mosquitto/mosquitto",
+    "stars": "11.2k",
+    "zh": "无中文（社区教程多）",
+    "desc": "Eclipse 基金会的开源 MQTT 代理：轻量 C 实现，支持 MQTT 5、TLS、持久会话和桥接，是 IoT 消息总线的事实标准",
+    "why": "炉温、一氧化碳、风门、烘鞋架这些节点最终都靠 MQTT 说话，自己搭一个 Mosquitto 才明白 HA 后面那根总线到底怎么转",
+    "intro": "Mosquitto 是 Roger Light 在 2009 年开始写的 MQTT 消息代理，后来进入 Eclipse 基金会，11.2k 星，从树莓派到云服务器几乎所有 IoT 项目背后都有它。它要解决的问题是：几十个传感器和控制器不能两两直连，需要一个中间人，谁有数据就往一个主题发布，谁关心就订阅，双方互相不用认识。\n它的工作方式是发布订阅：客户端连上代理，往像 house/stove/temp 这样的主题发消息，代理转给所有订阅了这个主题（或通配符 house/stove/#）的客户端。三级 QoS 保证送达程度，保留消息让新订阅者立刻拿到最后一个值，遗嘱消息让设备掉线时代理替它发一条离线通知。它用 C 写，内存占用几 MB，支持 TLS 和密码，配套命令行工具调试极方便。\n生态方面 2025 年后 2.x 仍在更新，HomeAssistant 的 Mosquitto 插件就是它；README 是英文，但中文教程和树莓派部署文章非常多。\n对 0106 它是延伸的基础课：炉区那个 ESPHome 温度传感器、一氧化碳报警器的干接点、将来的风门舵机和烘鞋架温控，都可以走 MQTT，主题按 house/stove/temp、co、damper 排。好处是除了 HomeAssistant，0802 大屏、0204 的调试脚本、手机上的 MQTT 客户端都能订阅同一份数据；一氧化碳报警用遗嘱消息，掉线本身就是告警。注意炉边温度高，ESP32 节点放北墙对面，只让热电偶线过去。",
+    "diagram": {
+     "title": "Mosquitto · 炉区节点共用的一根消息总线",
+     "nodes": [
+      {
+       "id": "esp",
+       "label": "ESPHome 节点\n温度 / CO",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "damp",
+       "label": "风门舵机\n烘鞋架温控",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Mosquitto\n发布 / 订阅",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "topic",
+       "label": "主题树\nhouse/stove/#",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\nMQTT 集成",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "scr",
+       "label": "0802 大屏\n手机客户端",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "看温度的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "esp",
+       "core",
+       "发布"
+      ],
+      [
+       "core",
+       "damp",
+       "订阅指令"
+      ],
+      [
+       "core",
+       "topic"
+      ],
+      [
+       "topic",
+       "ha",
+       "订阅"
+      ],
+      [
+       "topic",
+       "scr",
+       "订阅"
+      ],
+      [
+       "scr",
+       "me",
+       "超 26 度提醒"
+      ]
+     ],
+     "usage": "0106：炉区节点全走 MQTT，HA / 大屏 / 手机各订各的"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -2091,6 +3224,195 @@
      ],
      "usage": "0107：手冲架下 DIY 秤 → 蓝牙 → 台面上手机看注水曲线"
     }
+   },
+   {
+    "name": "mealie-recipes/mealie",
+    "url": "https://github.com/mealie-recipes/mealie",
+    "stars": "13.1k",
+    "zh": "界面有中文",
+    "desc": "自托管菜谱管理与餐食计划：一键从网址抓菜谱、按份数换算、周计划、购物清单、多用户，FastAPI + Nuxt",
+    "why": "吧台上手冲、热红酒、桂花陈皮茶这些配方要有个地方记，Mealie 抓网址一键存、按杯数换算最省事，还能连 HomeAssistant",
+    "intro": "Mealie 是 Hayden Kotelniski 发起的自托管菜谱管理器，Python FastAPI 后端加 Nuxt 前端，13.1k 星，是自托管菜谱工具里最常被推荐的一个。它要解决的问题是：菜谱散在收藏夹、截图和微信聊天记录里，做的时候找不到，份量也不对。\n它的核心功能是菜谱抓取：把任何食谱网页的网址粘进去，它解析页面里的结构化数据自动填好配料、步骤、时间、图片，抓不到的也能手动录或者传照片让 OpenAI 识别。菜谱可以打标签、分类、按份数自动换算用量，拖进周计划里就生成一周的餐单，再一键生成购物清单，配料自动合并同类项。多用户和家庭组适合一家人用，界面响应式，手机加到主屏幕当 App 用。它有完整的 REST API，HomeAssistant 有社区集成能把今天的餐单显示在仪表盘上。\n生态方面 2025 年后仍是几周一个版本，界面翻译覆盖 35 种以上语言含简体中文，中文部署教程在 NAS 圈很多。\n放到 0107 里它是延伸项目，管的不是饭而是吧台：手冲咖啡按豆子记参数（粉水比、水温、时间），热红酒、桂花陈皮茶、干柠檬片气泡水各一条配方，按一杯或两杯自动换算；柜门里那 8 个玻璃罐的内容物做成配料，购物清单就是下次去镇上补货的清单。HomeAssistant 集成让 0802 大屏在下午三点弹一句今天的推荐饮品。注意它抓中文菜谱网站的成功率一般，吧台这些配方基本要自己录，好在总共也就二十来条。",
+    "diagram": {
+     "title": "Mealie · 吧台配方库与补货清单",
+     "nodes": [
+      {
+       "id": "url",
+       "label": "网址 / 手录\n手冲参数 热红酒",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "me0",
+       "label": "写配方的人",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Mealie\nFastAPI + Nuxt",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "菜谱 / 配料\n按杯数换算",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "list",
+       "label": "购物清单\n8 个玻璃罐补货",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 集成\n0802 大屏推荐",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "坐吧台的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "url",
+       "core",
+       "抓取"
+      ],
+      [
+       "me0",
+       "core"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "db",
+       "list",
+       "合并配料"
+      ],
+      [
+       "db",
+       "ha",
+       "REST API"
+      ],
+      [
+       "ha",
+       "me",
+       "今天喝什么"
+      ]
+     ],
+     "usage": "0107：手冲 / 热红酒 / 花茶配方按杯数换算，玻璃罐库存生成镇上补货清单"
+    },
+    "ext": true
+   },
+   {
+    "name": "TandoorRecipes/recipes",
+    "url": "https://github.com/TandoorRecipes/recipes",
+    "stars": "8.6k",
+    "zh": "界面有中文",
+    "desc": "Django 写的自托管菜谱与餐食计划：菜谱抓取、步骤化编辑、餐食计划、购物清单、空间隔离和食材库存管理",
+    "why": "和 Mealie 是同一赛道的另一条路线，多了配料库存和保质期管理，正好把吧台玻璃罐和 0106 炉顶那口锅的食材也管起来",
+    "intro": "Tandoor Recipes 是德国开发者 vabene1111 用 Django 加 Vue 做的自托管菜谱管理器，8.6k 星，和 Mealie 并列自托管菜谱的两大选择。它要解决的问题和 Mealie 一样：菜谱要集中、要能计划、要能变成购物清单，但它的取向更偏结构化和数据。\n它的菜谱模型是分步骤的，每一步有自己的配料和时长，做的时候有一个逐步模式按步走、计时器直接开；配料是一个有层级和别名的食材库，同一种东西不同叫法能合并。餐食计划按周排，购物清单可以按超市货架分类排序，还能多人实时共享勾选。特色是空间的概念：一个实例可以开多个互相隔离的空间给不同家庭。它有食材库存与保质期的实验功能，能从 Nextcloud、Paprika、Mealie 等格式批量导入，REST API 完整，也有 HomeAssistant 社区集成。部署走 Docker Compose，官方给了十几种反向代理组合的示例。\n生态方面 2025 年后仍在活跃开发，界面翻译含简体中文，中文教程主要在 NAS 和自托管社区。\n放到 0107 里它是延伸里和 Mealie 二选一的另一半：如果想把吧台管得更细——热红酒配方分成煮香料和加酒两步各自计时、陈皮桂花按克数进食材库、每个玻璃罐登记装罐日期和保质期——Tandoor 的结构更合适。它还能顺手把 0106 炉顶烤红薯、炖汤这类炉边菜也收进来，用空间把吧台饮品和炉边菜分开。注意两个别都装，都装了配方会分家；先各试一周，留一个。",
+    "diagram": {
+     "title": "Tandoor · 分步骤的配方与食材库存",
+     "nodes": [
+      {
+       "id": "rec",
+       "label": "配方分步骤\n煮香料 / 加酒",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "jar",
+       "label": "玻璃罐食材\n装罐日期",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Tandoor\nDjango + Vue",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ing",
+       "label": "食材库\n别名 / 保质期",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "step",
+       "label": "逐步模式\n计时器",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "plan",
+       "label": "餐食计划\n购物清单",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "煮热红酒的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "rec",
+       "core"
+      ],
+      [
+       "jar",
+       "core",
+       "登记"
+      ],
+      [
+       "core",
+       "ing"
+      ],
+      [
+       "core",
+       "step"
+      ],
+      [
+       "ing",
+       "plan",
+       "缺什么"
+      ],
+      [
+       "step",
+       "me",
+       "按步做"
+      ]
+     ],
+     "usage": "0107：吧台饮品和炉边菜分两个空间，配方逐步计时，玻璃罐记保质期"
+    },
+    "ext": true
    }
   ],
   "xhs": [

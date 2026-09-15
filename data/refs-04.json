@@ -291,6 +291,214 @@
      ],
      "usage": "0401：照片 → DXF → Gridfinity 影子板 STL → 0305 打印贴进抽屉"
     }
+   },
+   {
+    "name": "paperless-ngx/paperless-ngx",
+    "url": "https://github.com/paperless-ngx/paperless-ngx",
+    "stars": "44.9k",
+    "zh": "界面有中文",
+    "desc": "社区维护的自托管文档管理系统：扫描件和 PDF 进来自动 OCR、打标签、归类，全文搜索秒出，纸质文件从此可以扔",
+    "why": "过道工具间几十件工具的说明书、保修卡和发票总要有个地方归档，paperless-ngx 让洞洞板上的 NFC 标签能直接跳到那把工具的全部纸面资料",
+    "intro": "paperless-ngx 是从 paperless 和 paperless-ng 接力过来的社区项目，用 Python 的 Django 写后端、Angular 写前端，44.9k 星，是自托管圈里文档管理的默认答案。它要解决的问题：说明书、发票、保修卡堆在抽屉里永远找不到，扫进硬盘也只是换个地方堆。\n它的工作方式是消费加索引：把扫描件、PDF 或手机拍的照片扔进一个监视目录或通过邮件、网页上传，后台任务队列用 Tesseract 做 OCR 提取全文，再按预设的匹配规则或机器学习自动分配通讯人、文档类型、标签和存储路径，并把归档后的 PDF/A 存到指定目录。前端提供全文搜索、标签筛选、批量编辑和工作流；REST API 完整，手机有第三方 App，HomeAssistant 也有社区集成。\n生态上它有 Docker Compose 一键部署，翻译通过 Crowdin 维护，界面有简体中文，中文自托管教程很多；项目由多位维护者活跃更新，几乎每月发版。\n对 0401 来说它是延伸项目：洞洞板上每件工具的影子旁边都贴了 NFC 标签，碰一下打开 HomeAssistant 里的工具清单，那份清单里加一个链接，直接跳到 paperless-ngx 里这把工具的说明书和发票。买回一件新工具，先把说明书和小票用手机拍一张扔进监视目录，打上工具名和 0401 的标签，再挂上洞洞板。跑在 0802 服务器上，中文说明书记得把 OCR 语言加上 chi_sim。",
+    "diagram": {
+     "title": "paperless-ngx · 扫描件进来自动 OCR 归档",
+     "nodes": [
+      {
+       "id": "scan",
+       "label": "说明书 / 小票\n手机拍照",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "mail",
+       "label": "邮件附件\n电子发票",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "paperless-ngx\n消费队列",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ocr",
+       "label": "Tesseract OCR\n中文全文",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "tag",
+       "label": "自动打标签\n工具名 / 0401",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "db",
+       "label": "归档 PDF/A\n全文索引",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "web",
+       "label": "网页 / 手机\n全文搜索",
+       "kind": "screen",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "nfc",
+       "label": "洞洞板 NFC\n碰一下跳转",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "scan",
+       "core",
+       "监视目录"
+      ],
+      [
+       "mail",
+       "core"
+      ],
+      [
+       "core",
+       "ocr"
+      ],
+      [
+       "ocr",
+       "tag"
+      ],
+      [
+       "tag",
+       "db"
+      ],
+      [
+       "db",
+       "web"
+      ],
+      [
+       "web",
+       "nfc",
+       "链接"
+      ]
+     ],
+     "usage": "0401：每件工具的说明书和发票扫进去，NFC 标签跳到 HA 清单再跳到它的资料页"
+    },
+    "ext": true
+   },
+   {
+    "name": "zxing/zxing",
+    "url": "https://github.com/zxing/zxing",
+    "stars": "34.1k",
+    "zh": "无中文",
+    "desc": "斑马线：Java 写的一维码和二维码识别与生成库，几乎所有 Android 扫码功能的祖先，支持 QR、Code 128、EAN 等十几种码制",
+    "why": "抽屉柜 48 格和洞洞板的每一格都要一个能扫的码，zxing 是条码世界的教科书，读懂它就知道该选哪种码、怎么打印才扫得准",
+    "intro": "ZXing 念作斑马线，是 2007 年从 Google 内部开源出来的条码识别与生成库，用 Java 写成，34.1k 星，Android 早期的扫码 App 就是它的作品。它要解决的问题是：用普通摄像头，不要专用扫码枪，就能可靠地读出一维码和二维码。\n它的工作方式是图像进、文本出：把摄像头帧或图片转成亮度矩阵，二值化后交给各码制的解码器逐个尝试——QR 码找三个定位图案再纠错解码，Code 128、EAN、UPC 等一维码沿扫描线找黑白条宽比。反过来它也能把任意文本编码成条码的位图。项目已进入维护模式，只接受补丁，但正因为稳定，它成了参考实现：zxing-cpp、zxing-js 都是它的移植，浏览器、Python、树莓派上都能用。\n生态上它的码制文档非常完整，中文资料以博客和教程为主，没有官方中文；核心库很久没大改，移植版仍在活跃更新。\n对 0401 来说它是延伸项目：楼梯口旁那排 48 格透明抽屉柜和顶部的长物件导轨，标签机打的字之外再加一个小二维码，内容是 0801 数字孪生库里这一格的 ID。生成用 zxing 的编码器批量出图，喂给 niimblue 标签机打印；扫描用手机上任何基于 zxing 的 App，或者在 0802 服务器上用 zxing-cpp 的 Python 绑定给过道的摄像头做识别。码制选 QR 而不是一维码，一格 15 毫米宽的标签也能扫；打印时注意留白边，zxing 对静区很敏感。",
+    "diagram": {
+     "title": "ZXing · 摄像头读码、文本变码的教科书",
+     "nodes": [
+      {
+       "id": "cam",
+       "label": "手机摄像头\n或过道摄像头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "txt",
+       "label": "格位 ID\n0801 孪生库",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "ZXing 核心\n亮度矩阵 + 解码",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "enc",
+       "label": "编码器\n文本变 QR",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "port",
+       "label": "zxing-cpp / js\n各语言移植",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "res",
+       "label": "识别结果\n跳到这一格",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "lbl",
+       "label": "niimblue 标签\n15mm 带静区",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "box",
+       "label": "48 格抽屉柜\n每格贴码",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "cam",
+       "core",
+       "扫码图像"
+      ],
+      [
+       "core",
+       "res",
+       "文本"
+      ],
+      [
+       "txt",
+       "enc"
+      ],
+      [
+       "enc",
+       "lbl",
+       "位图"
+      ],
+      [
+       "lbl",
+       "box",
+       "贴上"
+      ],
+      [
+       "core",
+       "port",
+       "",
+       "dash"
+      ]
+     ],
+     "usage": "0401：每格抽屉打一个 QR，内容是 0801 库的 ID，手机扫一下就知道里面有什么"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -597,6 +805,228 @@
      ],
      "usage": "0402：Homebox 清单 → 脚本排版 → brother_ql 直打箱口标签"
     }
+   },
+   {
+    "name": "odoo/odoo",
+    "url": "https://github.com/odoo/odoo",
+    "stars": "52.8k",
+    "zh": "界面有中文",
+    "desc": "比利时 Odoo 公司的开源 ERP 套件：库存、采购、制造、销售、会计几十个模块一体，社区版免费自托管，国内中小企业用得很多",
+    "why": "材料仓库如果哪天要算成本、管采购和 BOM，InvenTree 之外可以看看正经 ERP 的库存模块怎么做，Odoo 是开源里最完整的一套",
+    "intro": "Odoo 是比利时 Odoo 公司维护的开源商业应用套件，用 Python 和 PostgreSQL 写成，52.8k 星，当前主线是 19 版，从 2005 年的 TinyERP 一路演化过来。它要解决的问题是：一家企业的库存、采购、销售、制造、会计、CRM 各用一套软件，数据对不上，Odoo 把这些做成同一个数据库上的几十个模块，装哪个用哪个。\n它的工作方式是模块加工作流：核心 ORM 定义模型，每个模块在上面加字段、视图和业务规则；库存模块用仓库、库位、批次和移动单来记每一件物料的去向，支持条码扫描收货和盘点；采购模块按补货规则自动生成采购单；制造模块管 BOM、工单和领料；会计模块把所有单据自动记账。网页界面手机能用，有条码扫描专用页面；社区版开源可自托管。\n生态上它的应用商店有几万个第三方模块，国内有大量实施商和中文社区，界面自带简体中文且本地化很完整；公司每年发一个大版本，非常活跃。\n对 0402 来说它是延伸项目：仓库日常用 InvenTree 和 Homebox 就够，Odoo 太重。它的用法是两条：一是学习——看它的库存模块怎么定义库位、批次和补货规则，把这套思路简化后用到周转箱二维码和 0801 数字孪生库的字段设计上；二是备用——如果 PSK 盒子哪天从自用变成小批量售卖，胡桃木板、黄铜配件、皮革边角就成了要算成本的原料，用 Docker 在 0802 服务器上跑一份 Odoo 社区版，仓库、采购、BOM、销售一起上，每一块板子的成本从此有据可查。",
+    "diagram": {
+     "title": "Odoo · 库存到成本一条链的开源 ERP",
+     "nodes": [
+      {
+       "id": "scan",
+       "label": "条码扫描\n收货 / 盘点",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "po",
+       "label": "采购单\n补货规则",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Odoo 核心\nORM + 工作流",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "inv",
+       "label": "库存模块\n库位 / 批次",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "mrp",
+       "label": "制造 / BOM\n领料工单",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "db",
+       "label": "PostgreSQL\n统一数据库",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "acc",
+       "label": "会计模块\n每块板的成本",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "web",
+       "label": "网页 / 手机\n中文界面",
+       "kind": "screen",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "scan",
+       "inv",
+       "入库"
+      ],
+      [
+       "po",
+       "inv"
+      ],
+      [
+       "inv",
+       "core"
+      ],
+      [
+       "core",
+       "mrp"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "mrp",
+       "acc",
+       "记账"
+      ],
+      [
+       "acc",
+       "web"
+      ],
+      [
+       "core",
+       "web",
+       "",
+       "dash"
+      ]
+     ],
+     "usage": "0402：学它的库位和批次思路；PSK 小批量售卖时用社区版算原料成本"
+    },
+    "ext": true
+   },
+   {
+    "name": "nocodb/nocodb",
+    "url": "https://github.com/nocodb/nocodb",
+    "stars": "64.5k",
+    "zh": "官方中文 README",
+    "desc": "开源的 Airtable 替代品：把 MySQL、PostgreSQL 或 SQLite 变成带表格、看板、表单和 API 的智能电子表格，自托管一条 Docker 命令",
+    "why": "材料仓库那张木料清单、周转箱清单和半成品暂存表，用 nocodb 做成可以手机扫码填写的表格，比专门的库存软件更贴近实际习惯",
+    "intro": "NocoDB 是印度团队 NocoDB 公司维护的开源无代码数据库，用 TypeScript 和 Vue 写成，64.5k 星，是 GitHub 上最热门的 Airtable 替代品。它要解决的问题：很多人只想要一张能协作、能加附件、能手机填的表格，Excel 不擅长，Airtable 又按人头收费且数据在别人手里。\n它的工作方式是给数据库套一层电子表格皮：它可以自带 SQLite，也可以连上已有的 MySQL、PostgreSQL，把每张表变成一个网格视图，字段类型包括文本、数字、单选、附件、关联、公式、条码和二维码；同一张表能切成表格、看板、日历、画廊和表单视图，表单可以发成链接让别人填写。每张表自动生成 REST API，Webhook 在新增或修改时通知外部系统。\n生态上有 Docker 和群晖一键部署，README 有官方中文版，界面也有简体中文；发版频繁，2026 年仍很活跃。\n对 0402 来说它是延伸项目：InvenTree 管零件，Homebox 管物品，但斜顶下那排木料架更像一张清单——木种、厚度、长度、剩余块数、进货日期、格位号。在 0802 服务器上跑一份 NocoDB，建一张木料表，字段里加一个二维码列自动生成每格的码，打印贴到木料架上；A 字架上的板材和楼梯口的半成品暂存箱各建一张表，用表单视图做成手机页面，取走一块板顺手扫码减一。API 和 Webhook 接进 HomeAssistant，某种木料低于两块时推送提醒补货。",
+    "diagram": {
+     "title": "NocoDB · 木料清单变成能扫码填的表格",
+     "nodes": [
+      {
+       "id": "me",
+       "label": "取料的人\n手机扫码填表",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sql",
+       "label": "已有数据库\n或自带 SQLite",
+       "kind": "db",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "NocoDB\n表格 + 视图",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "form",
+       "label": "表单 / 看板\n手机页面",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "api",
+       "label": "REST API\nWebhook",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "qr",
+       "label": "二维码列\n每格一张贴纸",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "rack",
+       "label": "木料架 / 周转箱\n格位号",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n低库存提醒",
+       "kind": "screen",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "me",
+       "form",
+       "减一块"
+      ],
+      [
+       "sql",
+       "core"
+      ],
+      [
+       "core",
+       "form"
+      ],
+      [
+       "core",
+       "api"
+      ],
+      [
+       "core",
+       "qr",
+       "生成"
+      ],
+      [
+       "qr",
+       "rack",
+       "贴上"
+      ],
+      [
+       "api",
+       "ha",
+       "推送"
+      ],
+      [
+       "rack",
+       "me",
+       "扫码",
+       "dash"
+      ]
+     ],
+     "usage": "0402：木料、板材、半成品各一张表，格位贴二维码，取料扫码减数，低库存推 HA"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -905,6 +1335,218 @@
      ],
      "usage": "0403：抄它的 SGP41 包进喷涂柜 ESP32，VOC 跳变即告警"
     }
+   },
+   {
+    "name": "comfyanonymous/ComfyUI",
+    "url": "https://github.com/comfyanonymous/ComfyUI",
+    "stars": "133k",
+    "zh": "无中文（社区教程多）",
+    "desc": "节点式的 AI 图像与视频生成引擎：把 Stable Diffusion、Flux 等模型拆成可拖连的节点图，本地显卡跑，工作流可存可分享",
+    "why": "喷涂之前先看效果：把 PSK 盒子的照片喂进 ComfyUI，用图生图和 ControlNet 生成哑光黑、军绿、做旧铜的几种涂装预览，再决定开枪",
+    "intro": "ComfyUI 是开发者 comfyanonymous 发起、现在由 Comfy Org 团队维护的开源 AI 生成引擎，用 Python 写成，133k 星，是本地跑扩散模型最主流的界面。它要解决的问题：扩散模型的推理是一串可拆开的步骤，一体化界面把它们藏起来，ComfyUI 把每一步做成节点让用户自己连。\n它的工作方式是节点图：加载模型、编码提示词、采样、解码、保存图片各是一个节点，用连线把它们串成工作流，点一下运行，引擎只重新计算变化了的部分，显存管理做得很精细，8GB 显卡也能跑大模型。图生图、局部重绘、ControlNet 控线稿、IP-Adapter 参考风格，以及后来的视频模型都以节点形式加入，工作流保存成 JSON 或直接嵌在输出图片里，别人拖进去就能复现。\n生态上自定义节点有几千个，模型来自 Hugging Face 和 Civitai；官方 README 只有英文，但国内 B 站、知乎的 ComfyUI 教程数量惊人，还有多个中文汉化插件。项目每周一固定发版。\n对 0403 来说它是延伸项目：喷涂柜是一次性的——喷错颜色就得打磨重来。开枪之前，把 PSK 盒子或木盒的照片放进 ComfyUI，用 ControlNet 的 Canny 或深度节点锁住外形，提示词换成哑光黑、军绿、做旧黄铜、透明清漆，几分钟出四张预览，挂到 0802 中枢屏上比一比再决定调哪罐漆。跑在 0802 服务器的显卡上，工作流存成一个涂装预览的 JSON，下次换个物件只要换一张照片。",
+    "diagram": {
+     "title": "ComfyUI · 节点图生成涂装预览",
+     "nodes": [
+      {
+       "id": "photo",
+       "label": "PSK 盒子照片\n未喷涂",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "prompt",
+       "label": "提示词\n哑光黑 / 军绿",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "ctrl",
+       "label": "ControlNet\nCanny 锁外形",
+       "kind": "step",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "ComfyUI\n节点工作流",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "model",
+       "label": "扩散模型\n0802 显卡",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "out",
+       "label": "四张预览图\n嵌工作流 JSON",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "scr",
+       "label": "0802 中枢屏\n比一比再调漆",
+       "kind": "screen",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "me",
+       "label": "戴半面罩的人\n决定开枪",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "photo",
+       "ctrl"
+      ],
+      [
+       "ctrl",
+       "core"
+      ],
+      [
+       "prompt",
+       "core"
+      ],
+      [
+       "core",
+       "model",
+       "采样"
+      ],
+      [
+       "model",
+       "out"
+      ],
+      [
+       "out",
+       "scr"
+      ],
+      [
+       "scr",
+       "me"
+      ]
+     ],
+     "usage": "0403：喷之前用图生图出几种涂装预览，选定颜色再进喷涂柜，少打磨返工"
+    },
+    "ext": true
+   },
+   {
+    "name": "google/filament",
+    "url": "https://github.com/google/filament",
+    "stars": "20.4k",
+    "zh": "无中文",
+    "desc": "Google 的实时物理渲染引擎：跨平台 PBR，金属度、粗糙度、清漆层等材质模型一应俱全，附带一份业界公认的 PBR 教科书文档",
+    "why": "喷涂柜里的哑光、缎光、高光、清漆其实就是 PBR 里的粗糙度和清漆层参数，用 Filament 在网页里实时转着看，比生成图更能表达质感",
+    "intro": "Filament 是 Google 维护的开源实时物理渲染引擎，用 C++ 写成，20.4k 星，桌面、手机和浏览器 WebAssembly 都能跑，Android 的场景查看器用的就是它。它要解决的问题：在手机级算力上用符合物理的方式把金属、木头、清漆在任何光照下画对。\n它的工作方式是 PBR 管线：材质文件里写基础色、金属度、粗糙度、反射率，再加清漆层、各向异性等可选模型；灯光支持方向光、点光和基于图像的环境光，引擎按物理光照方程实时算每个像素。工具链把 glTF 模型和 HDR 贴图转成引擎格式，gltf_viewer 拖进模型直接看，JavaScript 绑定能嵌进网页。它的文档《Physically Based Rendering in Filament》被业界当 PBR 教材读。\n生态上它是 Google 官方项目，每月更新；没有中文文档，但那份 PBR 文档有民间中文翻译。\n对 0403 来说它是延伸项目：ComfyUI 出的预览是像素的想象，Filament 出的是参数的推演。把 PSK 盒子的 STEP 模型从 0204 设计台导成 glTF，在 gltf_viewer 里把粗糙度从 0.2 拉到 0.8，看哑光和高光的差别，再打开清漆层看喷完清漆是什么效果；用一张阁楼天窗下拍的 HDR 做环境光，预览就是这只盒子在这间屋里的样子。把网页版嵌进 0802 中枢，喷涂柜旁的平板上转着看，粗糙度对应的漆型号写在旁边。",
+    "diagram": {
+     "title": "Filament · 粗糙度和清漆层里的喷涂效果",
+     "nodes": [
+      {
+       "id": "gltf",
+       "label": "PSK 盒子 glTF\n0204 导出",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "hdr",
+       "label": "天窗下的 HDR\n环境光",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "mat",
+       "label": "材质文件\n粗糙度 / 清漆",
+       "kind": "step",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Filament\nPBR 渲染引擎",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "tools",
+       "label": "工具链\nglTF / 贴图转换",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "view",
+       "label": "gltf_viewer\n拖滑块看质感",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "网页 WASM\n喷涂柜旁平板",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "调漆的人\n对照漆型号",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "gltf",
+       "tools"
+      ],
+      [
+       "hdr",
+       "tools"
+      ],
+      [
+       "tools",
+       "core"
+      ],
+      [
+       "mat",
+       "core",
+       "参数"
+      ],
+      [
+       "core",
+       "view"
+      ],
+      [
+       "core",
+       "web"
+      ],
+      [
+       "web",
+       "me"
+      ],
+      [
+       "view",
+       "me",
+       "",
+       "dash"
+      ]
+     ],
+     "usage": "0403：把盒子模型导成 glTF，实时调粗糙度和清漆层，对应哑光 / 缎光 / 清漆的漆型号"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1216,6 +1858,216 @@
      ],
      "usage": "0404：照搬“开机 → 开阀 → 开集尘”思路，改成一块 ESPHome ESP32"
     }
+   },
+   {
+    "name": "Jack000/SVGnest",
+    "url": "https://github.com/Jack000/SVGnest",
+    "stars": "2.6k",
+    "zh": "无中文",
+    "desc": "浏览器里跑的开源矢量排料工具：把一堆 SVG 零件用遗传算法塞进一张板子，减少边角料，激光和 CNC 都能用",
+    "why": "一张 18mm 桦木多层板要切出十几块盒子侧板和隔板，怎么摆最省？SVGnest 是排料算法的经典开源实现，打开网页就能试",
+    "intro": "SVGnest 是加拿大开发者 Jack Qiao 写的开源排料工具，纯 JavaScript 跑在浏览器里，2.6k 星，是开源二维排料领域被引用最多的项目。它要解决的问题是：把一堆不规则零件塞进有限的板材里，让浪费最少——这在工业上叫 nesting，商业软件动辄几万块，而它免费且开源了算法。\n它的工作方式是几何加进化：输入一张 SVG，第一个闭合路径当作板材，其余路径当零件；它先算每对零件之间的无碰撞多边形，得到一个零件贴着另一个滑动时所有可行的位置，再用遗传算法反复尝试摆放顺序和旋转角度，每一代选出利用率最高的方案继续变异，几分钟就能收敛到一个不错的布局，支持零件内部的孔洞里再放小零件。全程在浏览器里用 Web Worker 并行计算，不上传任何文件。输出还是 SVG，直接送激光机或转成 CNC 的刀路。\n生态上它有在线版 svgnest.com，作者后来又做了桌面版 Deepnest；项目代码多年没大改，但因为是算法参考实现，各语言的移植和改进版层出不穷，界面只有英文，中文资料以论坛帖子为主。\n对 0404 来说它是延伸项目：木工间做 PSK 木盒时，侧板、底板、隔板全是矩形和带圆角的异形件，OpenCutList 管矩形排料很好，异形件就交给它。从 0204 设计台把零件轮廓导成一张 SVG，板材画成 1220×2440 的矩形，在浏览器里跑几分钟，把结果打印出来贴在台锯旁，或者导给 0307 五轴机直接铣。注意刀具直径要事先在零件轮廓上加偏移，它本身不管刀补。",
+    "diagram": {
+     "title": "SVGnest · 遗传算法把零件塞进板子",
+     "nodes": [
+      {
+       "id": "parts",
+       "label": "零件轮廓 SVG\n0204 设计台导出",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sheet",
+       "label": "板材矩形\n1220×2440",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "nfp",
+       "label": "无碰撞多边形\n可行位置",
+       "kind": "step",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "SVGnest\n遗传算法迭代",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "worker",
+       "label": "Web Worker\n浏览器并行",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "out",
+       "label": "排料结果 SVG\n利用率",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "saw",
+       "label": "台锯旁打印稿\n或 0307 铣",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "me",
+       "label": "选料的人\n看利用率",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "parts",
+       "nfp"
+      ],
+      [
+       "sheet",
+       "core"
+      ],
+      [
+       "nfp",
+       "core"
+      ],
+      [
+       "core",
+       "worker",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "out",
+       "收敛"
+      ],
+      [
+       "out",
+       "saw"
+      ],
+      [
+       "out",
+       "me"
+      ]
+     ],
+     "usage": "0404：木盒异形件导成 SVG 排到整张多层板上，打印贴台锯旁或送五轴机铣"
+    },
+    "ext": true
+   },
+   {
+    "name": "Jack000/Deepnest",
+    "url": "https://github.com/Jack000/Deepnest",
+    "stars": "1.1k",
+    "zh": "无中文",
+    "desc": "SVGnest 作者做的桌面版排料软件：Electron 打包，支持 DXF 导入、多张板材、零件数量和旋转步进设置，用 C++ 加速",
+    "why": "真要给一整批木盒排料，网页版 SVGnest 太慢也不认 DXF；Deepnest 是它的桌面进化版，设置零件数量和板材数量后一键排好",
+    "intro": "Deepnest 是 SVGnest 作者 Jack Qiao 做的桌面版排料软件，用 Electron 打包，核心几何计算改用 C++ 的 Minkowski 和加速，1.1k 星，Windows、macOS、Linux 都有安装包。它要解决的问题：网页版 SVGnest 不认 DXF、不能设零件数量、大批量跑得慢，Deepnest 把它做成能日常用的工具。\n它的工作方式和 SVGnest 一脉相承：导入 SVG 或 DXF，左边列出识别到的零件，给每个零件填数量，指定哪一个是板材并填板材张数；设置零件间距、旋转步进（只允许 0 和 90 度，木纹就不会乱）；点开始后遗传算法在后台反复迭代，界面实时显示当前最好方案和利用率，觉得够好了随时停，导出成 SVG 或 DXF。C++ 算无碰撞多边形，速度比网页版快一个数量级。\n生态上原仓库更新停滞多年，社区分叉 deepnest-next 在继续修 bug；界面只有英文，中文资料以创客论坛和视频为主。\n对 0404 来说它是延伸项目：做一批十只 PSK 木盒，每只六块板，把 0204 设计台导出的 DXF 拖进来，每种板填数量 10，板材填 1220×2440 填 2 张，旋转只允许 0 和 90 度保证木纹一致，间距填锯缝 3 毫米，跑十分钟就知道两张板够不够。结果导成 DXF 给 0307 五轴机，或打印贴台锯旁按图切。它和 OpenCutList 分工：矩形直切用 OpenCutList，异形件用 Deepnest。",
+    "diagram": {
+     "title": "Deepnest · 批量木盒零件排到整张板",
+     "nodes": [
+      {
+       "id": "dxf",
+       "label": "零件 DXF\n每种填数量",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sheets",
+       "label": "板材张数\n1220×2440×2",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "set",
+       "label": "间距 / 旋转步进\n木纹只 0 和 90",
+       "kind": "step",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Deepnest\nC++ 加速排料",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ga",
+       "label": "遗传算法\n实时显示利用率",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "out",
+       "label": "结果 DXF / SVG\n两张板够不够",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "cnc",
+       "label": "0307 五轴机\n或台锯打印稿",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "me",
+       "label": "做十只盒子\n的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "dxf",
+       "core"
+      ],
+      [
+       "sheets",
+       "core"
+      ],
+      [
+       "set",
+       "core"
+      ],
+      [
+       "core",
+       "ga",
+       "迭代"
+      ],
+      [
+       "ga",
+       "out",
+       "随时停"
+      ],
+      [
+       "out",
+       "cnc"
+      ],
+      [
+       "out",
+       "me",
+       "看板数"
+      ]
+     ],
+     "usage": "0404：十只盒子的板件 DXF 一次排好，锯缝 3mm、木纹同向，结果给五轴机或台锯"
+    },
+    "ext": true
    }
   ],
   "xhs": [

@@ -249,6 +249,184 @@
      ],
      "usage": "0501：探头广播 → 代理 → ble_monitor 实体 → 回潮告警 / 可烧判断"
     }
+   },
+   {
+    "name": "1technophile/OpenMQTTGateway",
+    "url": "https://github.com/1technophile/OpenMQTTGateway",
+    "stars": "4k",
+    "zh": "无中文",
+    "desc": "跑在 ESP32/ESP8266 上的万能网关固件：把 BLE、433MHz、红外、LoRa 收到的东西统统翻译成 MQTT 消息",
+    "why": "柴火墙离木屋有一段距离，几颗小米蓝牙温湿度计塞进柴堆比拉线方便，OMG 一块 ESP32 就能把它们全收进 HomeAssistant",
+    "intro": "OpenMQTTGateway 是法国开发者 Florian Robert 发起的开源网关固件，4k 星，专门解决一件事：家里那些说各种方言的无线小设备（BLE 温湿度计、433MHz 门磁和气象传感器、红外遥控、LoRa 节点）怎么统一接进一个 MQTT 总线。它把一块几十块钱的 ESP32 变成翻译官，收到什么就转成 JSON 发到 MQTT，不用自己写解码。\n它的架构是模块化的：每种无线介质是一个 gateway 模块，编译时勾选需要的组合。BLE 模块内置上百种设备的解码器，包括小米 LYWSD03MMC、米家花草监测仪和体重秤，扫到广播包就解出温度、湿度、电量；433MHz 模块解码遥控和无线传感器。输出侧是 MQTT，原生支持 HomeAssistant 自动发现，设备一上线 HA 里就冒出实体。\n生态上它有网页版刷机工具，浏览器插上板子点一下就能刷，官方支持十几种现成开发板。社区在 Discord 和 Discussions 上活跃，2025 年 1 月发布了 1.8.1 版。文档全英文，中文只有零散博客。\n在 0501 里它是延伸玩法：方案里柴架顶只埋一颗 ESPHome 探头，但四个格子的柴干湿并不一样。买四颗二十块的小米温湿度计塞进每格柴堆深处，木屋南墙下放一块跑 OMG 的 ESP32 做 BLE 网关，四格温湿度就全进了 HA，配合前面 ATC_MiThermometer 的固件广播里还带电量。注意柴堆会吸收蓝牙信号，网关别离柴架超过 5 米。",
+    "diagram": {
+     "title": "OpenMQTTGateway · 无线杂牌军统一翻成 MQTT",
+     "nodes": [
+      {
+       "id": "ble",
+       "label": "柴堆里的\nBLE 温湿度计",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "rf",
+       "label": "433MHz\n无线传感器",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "omg",
+       "label": "OpenMQTT\nGateway",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "dec",
+       "label": "内置解码器\n上百种设备",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "mq",
+       "label": "MQTT 总线",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n自动发现",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "看柴干没干",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "ble",
+       "omg",
+       "广播包"
+      ],
+      [
+       "rf",
+       "omg",
+       "无线码"
+      ],
+      [
+       "omg",
+       "dec"
+      ],
+      [
+       "dec",
+       "mq",
+       "JSON"
+      ],
+      [
+       "mq",
+       "ha"
+      ],
+      [
+       "ha",
+       "me"
+      ]
+     ],
+     "usage": "0501：四格柴堆各塞一颗小米温湿度计，一块 ESP32 网关全收进 HA"
+    },
+    "ext": true
+   },
+   {
+    "name": "espressif/esp32-camera",
+    "url": "https://github.com/espressif/esp32-camera",
+    "stars": "2.8k",
+    "zh": "无中文",
+    "desc": "乐鑫官方的 ESP32 摄像头驱动库，支持 OV2640/OV5640 等常见传感器，输出 JPEG 或 RGB 帧，是所有 ESP32-CAM 项目的底层",
+    "why": "十几块钱的 ESP32-CAM 装在院子对面，每天定点拍一张柴火墙，一年拼成延时看柴怎么被烧空又码满",
+    "intro": "esp32-camera 是乐鑫官方维护的摄像头驱动库，2.8k 星，几乎所有 ESP32-CAM 板子、ESPHome 的 esp32_camera 组件、Arduino 的 CameraWebServer 示例，底层用的都是它。它解决的是最基础的问题：ESP32 没有专门的相机接口，要靠 I2S 并口把 OV2640、OV5640 这些图像传感器的数据搬进内存，再压成 JPEG。\n它的工作流程是：初始化时按板子引脚配置传感器，选分辨率、像素格式和帧缓冲数量；调用一次 fb_get 就拿到一帧，用完 fb_return 还回去。库里附带 BMP 和 JPEG 转换工具，还能调亮度和白平衡。ESP32 内存有限，高分辨率必须靠 PSRAM。\n生态非常庞大：ESPHome 直接把它包成了组件，HomeAssistant 里就能看画面和抓图；Arduino、ESP-IDF 都有绑定。中文资料极多，淘宝的 ESP32-CAM 教程基本都围绕它。\n在 0501 里它是延伸：柴火墙本身不需要摄像头，但那面墙一年的变化本身就是个故事。在院子东侧对着柴架装一块 ESP32-CAM，用 ESPHome 每天中午拍一张存到 0802 家庭服务器；十一月码满、二月烧空、香樟切面从黄变灰，365 张拼成延时。顺手做个小自动化：HA 比较最新一张和上周的亮度差，某格突然变亮就是快空了，提醒该劈柴。注意镜头朝西拍柴墙，下午会逆光，中午拍最稳。",
+    "diagram": {
+     "title": "esp32-camera · 十几块钱的板子每天拍一张墙",
+     "nodes": [
+      {
+       "id": "cam",
+       "label": "OV2640\n图像传感器",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "drv",
+       "label": "esp32-camera\n驱动库",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "fb",
+       "label": "帧缓冲\nJPEG 压缩",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "esph",
+       "label": "ESPHome\n定时抓图",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "srv",
+       "label": "家庭服务器\n365 张",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "拼延时的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "cam",
+       "drv",
+       "I2S 并口"
+      ],
+      [
+       "drv",
+       "fb"
+      ],
+      [
+       "fb",
+       "esph",
+       "每天一张"
+      ],
+      [
+       "esph",
+       "srv",
+       "存图"
+      ],
+      [
+       "srv",
+       "me",
+       "一年延时"
+      ]
+     ],
+     "usage": "0501：ESP32-CAM 对着柴火墙每天一张，看一年码满与烧空，某格变亮就提醒劈柴"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -517,6 +695,171 @@
      ],
      "usage": "0502：墙脚探头 → ESP32 判断 → 小泵滴灌种植带，湿度曲线上报 HA"
     }
+   },
+   {
+    "name": "danforthcenter/plantcv",
+    "url": "https://github.com/danforthcenter/plantcv",
+    "stars": "804",
+    "zh": "无中文",
+    "desc": "美国丹佛斯植物科学中心做的植物表型图像分析 Python 库：从照片里量叶面积、绿色占比、株高、颜色分布",
+    "why": "爬山虎每天同一角度拍一张，PlantCV 几行代码就能算出绿叶覆盖率和变红比例，把一面墙的四季变成一根曲线",
+    "intro": "PlantCV 是美国 Donald Danforth 植物科学中心开发的植物表型图像分析库，用 Python 写，804 星，2026 年 6 月还在发 4.11 版。它面向的是科研温室里成千上万张植物照片：怎么自动把植物从背景里抠出来，量出面积、高度、颜色，而不是靠人眼一张张看。\n它建在 OpenCV 之上，工作方式是一条可组合的流水线：读图、选颜色通道、阈值分割得到植物掩膜、去噪填洞，然后对掩膜做分析，输出面积、周长、凸包、颜色直方图等几十个指标，结果写成 JSON 和 CSV。它有一套并行工具能把同一条流水线批量跑在上万张图上，还有 Jupyter 里交互式调阈值的辅助函数。\n生态上它是植物表型领域的标准工具之一，论文引用很多，文档和教程完整，官方有 Docker 镜像和 conda 包；社区以科研人员为主，中文资料只有零星的博客翻译。\n在 0502 里它是延伸玩法，正好接住 scene 里那个每天同一角度拍一张的计划：0604 的广角机或一块 ESP32-CAM 每天中午对着砖墙拍一张，服务器上跑一条 PlantCV 流水线，先按门窗位置裁出墙面，再用 HSV 阈值分出绿色和红色像素，算出叶片覆盖率和秋季变红比例，写进 HomeAssistant 的两个传感器。七月覆盖率突破 90% 就是躺椅可以搬到墙根的信号，十月红色占比过半就该开始剪延时视频。注意阈值要按晴天和阴天分别调，最好先用它的交互工具在几张典型照片上试。",
+    "diagram": {
+     "title": "PlantCV · 一张墙的照片变成覆盖率曲线",
+     "nodes": [
+      {
+       "id": "cam",
+       "label": "每天一张\n墙面照片",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cv",
+       "label": "PlantCV\n流水线",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "mask",
+       "label": "HSV 阈值\n绿 / 红掩膜",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "json",
+       "label": "面积 / 颜色\nJSON 结果",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 传感器\n覆盖率曲线",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "等墙变红的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "cam",
+       "cv",
+       "裁出墙面"
+      ],
+      [
+       "cv",
+       "mask"
+      ],
+      [
+       "mask",
+       "json",
+       "算占比"
+      ],
+      [
+       "json",
+       "ha"
+      ],
+      [
+       "ha",
+       "me"
+      ]
+     ],
+     "usage": "0502：每日照片 → 绿叶覆盖率 / 变红比例 → HA 曲线，90% 时搬躺椅，过半红时剪延时"
+    },
+    "ext": true
+   },
+   {
+    "name": "imagej/ImageJ",
+    "url": "https://github.com/imagej/ImageJ",
+    "stars": "780",
+    "zh": "无中文",
+    "desc": "美国 NIH 出品、公有领域的科学图像处理软件，三十年来生物学实验室的标配，阈值、测量、宏脚本、上千插件",
+    "why": "不想写代码也能量叶面覆盖率：把照片拖进 ImageJ，颜色阈值一拉、Measure 一点，百分比就出来了",
+    "intro": "ImageJ 是美国国立卫生研究院（NIH）的 Wayne Rasband 从 1997 年开始写的科学图像处理软件，Java 编写，代码放在公有领域，GitHub 上 780 星只是它的镜像，真实的用户量在生物医学实验室里几乎人手一份。它解决的是显微镜照片、凝胶条带、细胞计数这类科研图像的测量问题，后来被扩展到一切需要从图片里量东西的场景。\n它的工作方式非常直白：打开图片，菜单里选颜色空间、拉阈值把目标区域选出来，Analyze 里点 Measure 就得到面积、平均灰度、周长；Set Scale 用一段已知长度标定比例尺之后，结果直接是厘米和平方厘米。所有操作都能录成宏，Batch 模式对整个文件夹跑一遍。它的扩展发行版 Fiji 打包了几百个插件，图像配准、三维重建、机器学习分割都有。\n生态是它最大的资产：三十年的论文方法都写着用 ImageJ，image.sc 论坛非常活跃，插件和宏随手能搜到；中文没有官方文档，但高校课程和博客教程极多。\n对 0502 来说它是 PlantCV 的免代码版本：想知道这面墙到底被爬山虎盖住多少，把 0604 摄像头拍的墙面照片拖进 ImageJ，先用门框宽度标定比例尺，Color Threshold 里把 Hue 限在绿色区间，Measure 一下，叶面覆盖的平方米数就出来了。录成宏之后一年的照片批量跑一遍，导出 CSV 画成曲线，看第一年能不能真的爬到 1.5 米。它也适合量墙脚种植带那 40 厘米里每株的冠幅，判断该不该补种。",
+    "diagram": {
+     "title": "ImageJ · 拉一下阈值就量出叶面面积",
+     "nodes": [
+      {
+       "id": "img",
+       "label": "墙面照片",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ij",
+       "label": "ImageJ",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "th",
+       "label": "颜色阈值\n选出绿叶",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "sc",
+       "label": "比例尺标定\n门框宽度",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "csv",
+       "label": "Measure\n面积 CSV",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "不想写代码的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "img",
+       "ij",
+       "拖进去"
+      ],
+      [
+       "ij",
+       "th"
+      ],
+      [
+       "sc",
+       "th",
+       "换算成 ㎡"
+      ],
+      [
+       "th",
+       "csv",
+       "批量宏"
+      ],
+      [
+       "csv",
+       "me"
+      ]
+     ],
+     "usage": "0502：照片拖进 ImageJ，阈值选绿叶、门框标定比例尺，一年照片批量算覆盖面积"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -784,6 +1127,172 @@
      ],
      "usage": "0503：探针 → 每盆植物设备比阈值 → 卡片上屏 + 越界推送"
     }
+   },
+   {
+    "name": "inaturalist/inaturalist",
+    "url": "https://github.com/inaturalist/inaturalist",
+    "stars": "829",
+    "zh": "界面有中文",
+    "desc": "全球最大的公民科学自然观察平台 iNaturalist 的 Rails 后端源码：拍照上传、AI 建议物种、社区专家复核、数据进 GBIF",
+    "why": "花架上的绣球、缸里的菖蒲、叶子上的虫，拍一张就有人告诉你是什么，还顺手给每盆植物留下一条带日期的观察记录",
+    "intro": "iNaturalist 是加州科学院和国家地理学会联合运营的公民科学平台，全球有几百万用户、两亿多条观察记录，GitHub 上这个仓库是它网站的 Ruby on Rails 源码，829 星。它要解决的问题是：普通人在院子里看到一株植物或一只虫，怎么快速知道是什么，并且让这条记录对科学有用。\n它的流程是：手机拍照上传，附带 GPS 和时间，计算机视觉模型给出几个候选物种，用户选一个，社区里的其他人再来认同或纠正，两人以上同意就升级为研究级记录，定期同步到全球生物多样性数据库 GBIF。源码包含整套网站、API 和物种分类树，模型本身不开源，但 API 对个人免费开放，可以查自己的全部观察记录。\n生态方面它有 iOS 和 Android 客户端，界面支持简体中文，物种也有中文名；国内用户不少，观鸟和昆虫圈用得尤其多。姊妹应用 Seek 可以离线识别。\n在 0503 里它是延伸：scene 里说拍一张今天的绣球，小程序记下第 38 天，这个记录本可以直接就是 iNaturalist。给花架上每盆植物拍一张上传，物种名自动有了，竹签上的名字不会写错；缸里冒出的不知名水草、紫苏叶上的毛虫、来喝水的壁虎都可以拍上去问社区。用它的 API 每周拉一次自己的观察记录，写进 0802 服务器，就能生成一份院子物种名单，和 0604 的鸟类识别名单合成一张卡片。注意上传时可以把位置模糊化，不必暴露家的坐标。",
+    "diagram": {
+     "title": "iNaturalist · 拍一张就知道是什么",
+     "nodes": [
+      {
+       "id": "ph",
+       "label": "手机拍照\nGPS + 时间",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "inat",
+       "label": "iNaturalist\n网站 + API",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "cv",
+       "label": "视觉模型\n候选物种",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "comm",
+       "label": "社区复核\n研究级",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "list",
+       "label": "院子物种名单\n0802 卡片",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "给盆栽发身份证",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ph",
+       "inat",
+       "上传"
+      ],
+      [
+       "inat",
+       "cv"
+      ],
+      [
+       "cv",
+       "comm",
+       "两人同意"
+      ],
+      [
+       "comm",
+       "list",
+       "API 拉记录"
+      ],
+      [
+       "comm",
+       "me"
+      ]
+     ],
+     "usage": "0503：每盆拍一张定物种名，虫和水草拍上去问社区，API 拉记录做院子物种名单"
+    },
+    "ext": true
+   },
+   {
+    "name": "hbldh/bleak",
+    "url": "https://github.com/hbldh/bleak",
+    "stars": "2.5k",
+    "zh": "无中文",
+    "desc": "Python 的跨平台低功耗蓝牙客户端库，基于 asyncio，一套代码在 Linux、macOS、Windows 上扫描和读写 BLE 设备",
+    "why": "花草监测仪和 b-parasite 都是 BLE 广播，想自己写几十行脚本读盆栽湿度、不经过任何 App，bleak 是最省事的库",
+    "intro": "bleak 是瑞典开发者 Henrik Blidh 写的 Python 低功耗蓝牙库，2.5k 星。它解决的是 Python 里操作 BLE 设备长期没有跨平台标准库的问题：Linux 要走 BlueZ，macOS 要走 CoreBluetooth，Windows 要走 WinRT，bleak 把三套接口包成同一个 asyncio API。\n它的用法围绕两个对象：BleakScanner 负责扫描，能拿到每个设备的名字、信号强度和广播数据，也能一直监听广播回调；BleakClient 负责连接，连上之后按 UUID 读写特征值、订阅通知。整个库是异步的，一个脚本可以同时盯着十几个设备。HomeAssistant 的蓝牙集成和很多米家设备的第三方解码脚本底层都用它。\n生态上它是 PyPI 上下载量最大的 BLE 库之一，文档和示例齐全，树莓派上一行 pip 就能装。中文资料不多，但 API 简单，看官方示例就够。\n在 0503 里它是延伸：前面三个方案已经把 b-parasite 和花草监测仪接进了 HomeAssistant，bleak 给的是另一条路，不依赖 HA 和任何 App，自己掌握数据。在 0802 服务器或一块树莓派上写三十行脚本，扫描广播包，解出每盆的土壤湿度和光照，写进 CSV 或 SQLite。好处是想怎么算就怎么算：统计多肉队在养病区避暑那几周的湿度曲线，或者按 20/28/36 三种盆径分别算浇水间隔。缺点是 BLE 穿墙差，接收端要放在窗边。",
+    "diagram": {
+     "title": "bleak · 三十行 Python 直接读蓝牙花草传感器",
+     "nodes": [
+      {
+       "id": "sen",
+       "label": "花草监测仪\nb-parasite",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "scan",
+       "label": "BleakScanner\n监听广播",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "dec",
+       "label": "解码脚本\n湿度 / 光照",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "db",
+       "label": "SQLite / CSV\n每盆一表",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "chart",
+       "label": "浇水间隔\n统计图",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "自己算的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "sen",
+       "scan",
+       "BLE 广播"
+      ],
+      [
+       "scan",
+       "dec",
+       "回调"
+      ],
+      [
+       "dec",
+       "db",
+       "写入"
+      ],
+      [
+       "db",
+       "chart"
+      ],
+      [
+       "chart",
+       "me"
+      ]
+     ],
+     "usage": "0503：树莓派放窗边跑 bleak 脚本，不经 HA 直接记每盆湿度，按盆径算浇水间隔"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1057,6 +1566,190 @@
      ],
      "usage": "0504：探头 → 本地阈值 → sprinkler 开阀；墨水屏与 HA 同步显示"
     }
+   },
+   {
+    "name": "farmOS/farmOS",
+    "url": "https://github.com/farmOS/farmOS",
+    "stars": "1.3k",
+    "zh": "无中文",
+    "desc": "基于 Drupal 的开源农场记录系统：地块、作物、播种收获、投入品、传感器数据全按日志记，有手机 App 和 API",
+    "why": "四层种植架 24 个箱子换茬轮作，播种日期、收成、上液肥的记录靠脑子记不住，farmOS 是专门干这个的",
+    "intro": "farmOS 是美国开发者 Michael Stenta 在 2014 年发起的开源农场管理系统，建在 Drupal 上，1.3k 星，被小型有机农场、社区农园和大学农业项目广泛使用。它要解决的问题是农事记录：哪块地什么时候种了什么、施了什么、收了多少，这些信息散在笔记本和脑子里，到了下一季就找不到。\n它的数据模型很干净：资产是地块、植株、设备、动物；日志是发生在资产上的事，播种、移栽、收获、观察、投入品各是一种类型，每条带时间、地点、数量和照片。数据流是手机 App 或网页录入，进 Drupal 数据库，前端给出每块地的时间线、地图和库存。它还有传感器模块，任何设备 POST 一个 JSON 就能把读数存进来，配合 JSON:API 可以被别的程序读走。\n生态上它有官方 Docker 镜像、可离线记录的 Field Kit 手机 App，模块市场里有灌溉、土壤检测等扩展。社区在论坛和 Matrix 上活跃，文档全英文，界面靠 Drupal 多语言机制可以自行汉化。\n在 0504 里它是延伸：把四层架子建成一个地块，24 个种植箱各是一个子地块，每次播种、移栽、摘菜、周日补液肥都在手机上点一条日志；ESPHome 的四层湿度通过 HA 的 REST 命令每小时 POST 一次到它的传感器接口。一年下来能看出哪一层的番茄最早挂果、空心菜几茬之后该换土，第二年排层就有依据。对一个架子来说它偏重，但当草地和盆栽也要记的时候就值了。",
+    "diagram": {
+     "title": "farmOS · 每个种植箱一条时间线",
+     "nodes": [
+      {
+       "id": "app",
+       "label": "手机 App\n记播种收获",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sen",
+       "label": "四层湿度\nESPHome",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "fos",
+       "label": "farmOS\nDrupal",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "log",
+       "label": "资产 + 日志\n24 个箱子",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "tl",
+       "label": "地块时间线\n收成统计",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "api",
+       "label": "JSON:API\n给 HA 读",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "排下一季的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "app",
+       "fos",
+       "录一条"
+      ],
+      [
+       "sen",
+       "fos",
+       "POST 读数"
+      ],
+      [
+       "fos",
+       "log"
+      ],
+      [
+       "log",
+       "tl"
+      ],
+      [
+       "log",
+       "api",
+       "",
+       "dash"
+      ],
+      [
+       "tl",
+       "me"
+      ]
+     ],
+     "usage": "0504：24 箱各建子地块，播种收获液肥记日志，湿度每小时 POST，一年后排层有依据"
+    },
+    "ext": true
+   },
+   {
+    "name": "FarmBot/Farmbot-Web-App",
+    "url": "https://github.com/FarmBot/Farmbot-Web-App",
+    "stars": "969",
+    "zh": "无中文",
+    "desc": "开源龙门架种菜机器人 FarmBot 的网页控制端和 REST API：拖拽排苗、序列编程、按株浇水除草，全部开源硬件",
+    "why": "种植架的终极形态就是 FarmBot：一个龙门架按坐标给每棵苗单独浇水，它的网页端和序列编程思路直接能借来规划自己的滴灌",
+    "intro": "FarmBot 是美国 FarmBot 公司 2016 年众筹起家的开源种菜机器人，一台架在苗床上的 XYZ 龙门架，换头就能播种、浇水、除草、拍照，硬件图纸、固件、网页端全部开源。这个仓库是它的网页控制端和 REST API，TypeScript 和 Ruby 写的，969 星，2026 年 6 月还在发 15.27 版。它把家庭菜园变成可编程的东西：每棵植物有坐标，每个动作是一段可复用的序列。\n它的工作方式是：网页里有一张苗床俯视图，把作物拖到格子上就定了坐标；序列编辑器像积木一样拼动作，移动到某坐标、开水阀几秒、拍照、读湿度探针，再用条件判断组合；定时任务按天安排序列。网页通过 MQTT 把指令发给树莓派上的 FarmBot OS，再由 Arduino 固件驱动步进电机。照片会和坐标对齐，可以做杂草检测。\n生态上 FarmBot 卖整机套件，也有人打印零件复刻，论坛和文档完整；网页端有多语言翻译但没有中文。官方不鼓励自托管，直接用 my.farm.bot 也行。\n在 0504 里它是延伸，架子本身不装龙门架，但它的两个思路值得直接抄：一是每个种植箱有坐标和作物记录，二是浇水序列由湿度读数触发而不是时间表，这正是方案里低于 40% 才浇的逻辑。可以照它的苗床图做一张 HomeAssistant 卡片，24 个箱子按层排开，点开每箱看作物、上次浇水和湿度。等哪天架子扩到第二座，想给番茄和罗勒按株给水，就真的可以在最上层架一根 FarmBot 的 X 轴。",
+    "diagram": {
+     "title": "FarmBot · 每棵苗一个坐标，浇水是一段序列",
+     "nodes": [
+      {
+       "id": "web",
+       "label": "网页苗床图\n拖苗定坐标",
+       "kind": "screen",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "app",
+       "label": "Farmbot\nWeb App",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "seq",
+       "label": "序列编辑器\n移动 / 开阀",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "mq",
+       "label": "MQTT 指令",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "bot",
+       "label": "龙门架\n树莓派 + 步进",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "只负责摘的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "web",
+       "app",
+       "定坐标"
+      ],
+      [
+       "seq",
+       "app",
+       "序列 / 定时"
+      ],
+      [
+       "app",
+       "mq"
+      ],
+      [
+       "mq",
+       "bot"
+      ],
+      [
+       "bot",
+       "seq",
+       "湿度回读",
+       "dash"
+      ],
+      [
+       "bot",
+       "me",
+       "菜熟了"
+      ]
+     ],
+     "usage": "0504：借苗床图做 24 箱的 HA 卡片，浇水按湿度触发不按时间；扩第二座架子再上龙门"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1323,6 +2016,183 @@
      ],
      "usage": "0505：换电动汽车后，木柱内装 OpenEVSE，光伏分流 + evcc 调度"
     }
+   },
+   {
+    "name": "steve-community/steve",
+    "url": "https://github.com/steve-community/steve",
+    "stars": "1.1k",
+    "zh": "无中文",
+    "desc": "Java 写的开源 OCPP 充电桩管理后台，2013 年起就是欧洲高校和运营商的参考实现，支持 OCPP 1.2 到 1.6",
+    "why": "了解真正的充电桩后台是怎么跟桩对话的：哪天院子里的杉木桩想换成一根真的 OCPP 交流桩，SteVe 就是它的服务器",
+    "intro": "SteVe 是德国亚琛工业大学 2013 年发起的开源充电站管理系统，Java 和 Spring 写的，1.1k 星，名字来自德语的插座管理。它解决的问题是：公共充电桩都说 OCPP 这门标准协议，运营商需要一个后台来认桩、认卡、启停充电、收账单，SteVe 就是这个后台的开源版本，被很多大学、小运营商和研究项目直接拿去用，也是学习 OCPP 最好的一份活代码。\n它的架构是：充电桩通过 WebSocket 连到 SteVe，按 OCPP 1.2 到 1.6 的消息集交换 BootNotification、StartTransaction、MeterValues 这些消息；SteVe 把桩、RFID 卡、交易记录存进 MySQL，网页后台可以远程启停充电、设置充电曲线、更新固件、看每笔交易的电量，也能当测试服务器验证桩的实现。\n生态上它是 OCPP 社区里最老牌的开源服务器，商业版 Powerfill 由原团队维护；文档全英文，中文只有零散翻译博客。\n对 0505 来说它是纯延伸：方案里的桩只是杉木柱上的一个计量插座，靠 HomeAssistant 断电就够，用不上 OCPP。但电摩之后如果家里添了一辆真正的电动车，就要换一根支持 OCPP 的 7kW 交流桩，那时候 0802 服务器上跑一个 SteVe，桩连过来，充电记录和电量就在自己手里，再把它的数据库读进 HA 就能延续现在那条光伏储能占比的通知。现在能先做的是用它理解 OCPP 的消息流，给将来的桩留一根网线。",
+    "diagram": {
+     "title": "SteVe · 充电桩和后台之间说的是 OCPP",
+     "nodes": [
+      {
+       "id": "cp",
+       "label": "OCPP 充电桩\n7kW 交流",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "card",
+       "label": "RFID 卡\n认证",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "sv",
+       "label": "SteVe\nSpring 后台",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "桩 / 卡 / 交易\nMySQL",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "web",
+       "label": "网页后台\n远程启停",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 读交易\n光伏占比",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "将来换真桩的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "cp",
+       "sv",
+       "WebSocket"
+      ],
+      [
+       "card",
+       "cp",
+       "刷卡"
+      ],
+      [
+       "sv",
+       "db"
+      ],
+      [
+       "db",
+       "web"
+      ],
+      [
+       "db",
+       "ha",
+       "",
+       "dash"
+      ],
+      [
+       "web",
+       "me"
+      ]
+     ],
+     "usage": "0505：现在用计量插座就够；将来换 OCPP 桩时服务器跑 SteVe，充电记录留在自己手里"
+    },
+    "ext": true
+   },
+   {
+    "name": "teslamate-org/teslamate",
+    "url": "https://github.com/teslamate-org/teslamate",
+    "stars": "9k",
+    "zh": "界面有中文",
+    "desc": "自托管的特斯拉数据记录器：Elixir 写的，把每次行程、充电、电池健康记进 PostgreSQL，Grafana 出几十张仪表盘",
+    "why": "电摩没有 API，但 TeslaMate 的充电记录、每度电成本、电池衰减这套仪表盘设计正是充电桩数据想长成的样子",
+    "intro": "TeslaMate 是德国开发者 Adrian Kumpf 发起、现由 Jakob Lichterfeld 维护的自托管特斯拉数据记录器，Elixir 写的，9k 星，是特斯拉车主圈里最流行的自建项目。它解决的问题是：车企 App 只给你看当下，而车主想知道每次行程耗了多少电、每次充电花了多少钱、电池两年衰减了几个百分点，这些数据应该留在自己手里。\n它的工作方式是：用车主的 API 令牌轮询特斯拉云端，把车辆状态按变化写进 PostgreSQL，自动把连续记录切成行程和充电会话，算出能耗、效率和费用；再通过 Grafana 呈现成几十张预置仪表盘：充电统计、行程地图、电池健康、每月里程。它还把所有状态发到 MQTT，HomeAssistant 一接就有实体，官方文档里就有 HA 的配置示例。\n生态上它一条 Docker Compose 就能起，网页界面有简体中文，国内特斯拉车主的中文教程很多；社区还在不断加仪表盘。\n对 0505 来说它是延伸：电摩没有云端 API，TeslaMate 本身用不上，但它给了一套现成的答案，告诉你一根充电桩的数据该记什么、怎么看。方案里的智能计量插座每晚给出一条充电曲线，把每次充电的起止、电量、当时的光伏储能比例写进 0802 服务器的 PostgreSQL，再照着它的充电仪表盘做一张 Grafana 面板：每月充了几度、光伏占比多少、平均每次充多久，通知里那句本次使用光伏储能 70% 就有了来源。哪天家里真添一辆特斯拉，直接把它跑起来就行。",
+    "diagram": {
+     "title": "TeslaMate · 车的每一度电都记下来",
+     "nodes": [
+      {
+       "id": "api",
+       "label": "特斯拉云 API\n或计量插座",
+       "kind": "cloud",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "tm",
+       "label": "TeslaMate\nElixir",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "pg",
+       "label": "PostgreSQL\n行程 / 充电",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "mq",
+       "label": "MQTT → HA\n光伏占比通知",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "gf",
+       "label": "Grafana\n充电仪表盘",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "看每月电费的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "api",
+       "tm",
+       "轮询"
+      ],
+      [
+       "tm",
+       "pg",
+       "切成会话"
+      ],
+      [
+       "tm",
+       "mq"
+      ],
+      [
+       "pg",
+       "gf"
+      ],
+      [
+       "gf",
+       "me"
+      ]
+     ],
+     "usage": "0505：照它的充电仪表盘，把电摩每次充电的电量与光伏占比记进 PostgreSQL 做 Grafana 面板"
+    },
+    "ext": true
    }
   ],
   "xhs": [

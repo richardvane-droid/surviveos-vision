@@ -279,6 +279,196 @@
      ],
      "usage": "0201：照它的 STL 和固件做 3m 滑轨滑车，ESPHome 串口接 HA"
     }
+   },
+   {
+    "name": "MarlinFirmware/Marlin",
+    "url": "https://github.com/MarlinFirmware/Marlin",
+    "stars": "17.5k",
+    "zh": "无中文（社区教程多）",
+    "desc": "RepRap 3D 打印机的经典固件：G 代码解析、步进电机运动规划、加减速与限位归零，支持几百种主板",
+    "why": "3 米滑轨上的灯每天从东走到西，本质是一根轴的步进运动控制；Marlin 把归零、加减速、行程限制这套逻辑做得最成熟，可以直接借来用",
+    "intro": "Marlin 是 2011 年从 Sprinter 和 grbl 演化出来的 3D 打印机固件，17.5k 星，市面上大半消费级打印机的出厂固件都是它或它的分支。它要解决的问题是：把一串 G 代码变成几根步进电机精确、平滑、不丢步的运动，同时管好温度、限位、归零和安全。\n它的工作方式是：主机通过串口发 G 代码，比如 G1 X100 F1200 是以每分钟 1200 毫米走到 X 等于 100 的位置；Marlin 解析后交给运动规划器，按设定的最大速度和加速度把移动切成梯形速度曲线放进缓冲区，再由中断驱动的步进器按微秒级节拍给电机脉冲。归零靠限位开关，软件行程限制防撞。它用 C++ 写，靠两个配置头文件适配几百种主板，PlatformIO 编译。\n生态是 3D 打印圈最大的，2025 年后 2.1.x 仍在更新，README 是英文，但中文编译和配置教程遍地。\n对 0201 它是延伸的取巧路线：南光灯的 3 米电动滑轨就是一根 X 轴，用一块打印机主板加一个步进电机和同步带，把 Marlin 配成单轴机器，两端装限位开关做归零。HomeAssistant 通过串口发一句 G1 X1500 F300 就能让灯慢慢走到滑轨正中，6:30 到 18:30 的日轨就是一张按时间发坐标的表，冬天的晒太阳位是一个固定坐标。注意灯加云台有几公斤重，电机选 NEMA 23、加速度设得很低，走起来才像太阳而不是打印头。",
+    "diagram": {
+     "title": "Marlin · 把滑轨当成一根 X 轴来走",
+     "nodes": [
+      {
+       "id": "ha",
+       "label": "HA 日轨时间表\n发 G1 坐标",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "lim",
+       "label": "两端限位开关\n归零",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Marlin 固件\n打印机主板",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "plan",
+       "label": "运动规划器\n梯形加减速",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "motor",
+       "label": "NEMA 23 步进\n同步带 3m",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "lamp",
+       "label": "南光灯 + 云台\n东走到西",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "床上被晒醒的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "ha",
+       "core",
+       "串口 G 代码"
+      ],
+      [
+       "lim",
+       "core"
+      ],
+      [
+       "core",
+       "plan"
+      ],
+      [
+       "plan",
+       "motor",
+       "脉冲"
+      ],
+      [
+       "motor",
+       "lamp",
+       "拖动"
+      ],
+      [
+       "lamp",
+       "me",
+       "晒醒"
+      ]
+     ],
+     "usage": "0201：打印机主板 + Marlin 单轴，HA 按时间发 G1 坐标让灯走日轨"
+    },
+    "ext": true
+   },
+   {
+    "name": "diyHue/diyHue",
+    "url": "https://github.com/diyHue/diyHue",
+    "stars": "1.8k",
+    "zh": "无中文",
+    "desc": "Python 写的飞利浦 Hue 桥模拟器：把 WLED、ESP 灯、Tasmota、MQTT 灯伪装成 Hue 灯，官方 Hue App 和娱乐同步都能用",
+    "why": "模拟阳光的柔光箱和床头夜灯如果想用 Hue App 的场景和影音同步功能，不用买 Hue 灯，diyHue 把自制灯全部伪装成 Hue",
+    "intro": "diyHue 是 Marius Cristian 发起的开源 Hue 桥模拟器，Python 写成，1.8k 星。它要解决的问题是：飞利浦 Hue 的 App、场景、日出模拟和影音娱乐同步做得好，但灯贵；如果自制的灯能装作 Hue 灯，就能白嫖整个 Hue 生态。\n它在局域网里跑一个服务，完整实现 Hue 桥的 REST API 和 mDNS 发现协议，Hue App 搜索桥的时候找到的就是它。后端把各种灯接进来：WLED 和 ESPHome 的灯、Tasmota、MQTT 灯、Yeelight、Shelly，Zigbee 灯也能通过 zigbee2mqtt 挂在下面。App 里对灯做的开关、调色、场景、定时，它翻译成对应设备的命令发出去；娱乐区的低延迟同步走 UDP 流，能让灯跟着电视画面变色。Docker 一行部署。\n社区中等规模，2025 年后仍有更新，README 是英文，中文资料很少。\n对 0201 它是延伸的另一条控制入口：模拟阳光的主灯走 HomeAssistant 和滑轨，但沙发上方那块柔光箱和床头 1% 的月光夜灯如果做成 WLED 灯，挂进 diyHue 之后就能在 Hue App 里用它的日出唤醒和入睡渐暗，手机一拉就是那条从 3200K 到 5600K 的曲线；0207 看片时娱乐区还能让天光跟着电影变色。注意它和 HomeAssistant 同时控制一盏灯会打架，规定好谁是主：HA 管场景，diyHue 只管娱乐同步。",
+    "diagram": {
+     "title": "diyHue · 自制灯伪装成 Hue 进 Hue 生态",
+     "nodes": [
+      {
+       "id": "app",
+       "label": "Hue App\n日出唤醒 / 场景",
+       "kind": "screen",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sync",
+       "label": "娱乐区同步\n电视画面",
+       "kind": "screen",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "diyHue 服务\nHue API 模拟",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "map",
+       "label": "设备映射\nWLED / MQTT",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "soft",
+       "label": "柔光箱 WLED\n天光",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "night",
+       "label": "床头夜灯\n1% 月光",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "躺着的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "app",
+       "core",
+       "REST"
+      ],
+      [
+       "sync",
+       "core",
+       "UDP 流"
+      ],
+      [
+       "core",
+       "map"
+      ],
+      [
+       "map",
+       "soft",
+       "翻译命令"
+      ],
+      [
+       "map",
+       "night"
+      ],
+      [
+       "night",
+       "me",
+       "渐暗入睡"
+      ]
+     ],
+     "usage": "0201：柔光箱和夜灯做成 WLED 挂进 diyHue，Hue App 管唤醒曲线和影音同步"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -576,6 +766,194 @@
      ],
      "usage": "0202：70% 开、20 分钟停在 ESP32 本地，HA 兜底"
     }
+   },
+   {
+    "name": "homebridge/homebridge",
+    "url": "https://github.com/homebridge/homebridge",
+    "stars": "25.5k",
+    "zh": "界面有中文",
+    "desc": "Node.js 写的 HomeKit 桥：通过两千多个插件把非 HomeKit 设备接进苹果家庭 App，Siri 和 iPhone 控制中心直接用",
+    "why": "卫生间灯箱三档和除雾膜想在 iPhone 锁屏和 Siri 上一句话切，Homebridge 是把 HA 和自制设备塞进苹果家庭最省事的桥",
+    "intro": "Homebridge 是 Nick Farina 在 2015 年发起的 Node.js 项目，25.5k 星，口号是给等不及的人的 HomeKit 支持。它要解决的问题是：苹果家庭 App 和 Siri 体验好，但认证的 HomeKit 设备少而且贵；Homebridge 用软件模拟一个 HomeKit 配件桥，把任何设备伪装成苹果认识的配件。\n它的架构是核心加插件：核心实现 HAP 协议，在局域网里用 mDNS 广播自己，iPhone 扫一个二维码就把桥加进家庭 App；每个插件对应一种设备或平台，把设备状态映射成 HomeKit 的服务和特征。插件用 npm 装，现在有两千多个，从米家、涂鸦到 MQTT、HTTP 万能插件；官方 UI 是一个网页，装插件、改配置、看日志都在里面。\n生态庞大且活跃，2025 年后核心和 UI 持续更新，UI 有简体中文，中文教程在 NAS 和智能家居社区非常多。\n对 0202 它是延伸的入口：卫生间的灯箱三档、镜子除雾膜、排风扇本来都在 HomeAssistant 里，再通过 Homebridge 的 MQTT 插件暴露成 HomeKit 配件，iPhone 锁屏就多了一个晨浴按钮，Siri 一句晨浴就把灯箱、除雾膜和小灯箱一起打开；人体感应的夜起档留在 HA 自动化里不动。注意一个设备只从一条路进家庭 App，HA 自带的 HomeKit 集成能做的就不重复用 Homebridge，它更适合接 HA 没有的小众设备。",
+    "diagram": {
+     "title": "Homebridge · 把自制设备伪装成 HomeKit 配件",
+     "nodes": [
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n灯箱三档 / 除雾",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "mqtt",
+       "label": "MQTT / HTTP\n自制小设备",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Homebridge\nHAP 协议桥",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "plug",
+       "label": "插件层\n状态映射",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "home",
+       "label": "苹果家庭 App\n锁屏按钮",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "siri",
+       "label": "Siri 一句晨浴",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "刷牙的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ha",
+       "core",
+       "插件"
+      ],
+      [
+       "mqtt",
+       "plug"
+      ],
+      [
+       "plug",
+       "core"
+      ],
+      [
+       "core",
+       "home",
+       "mDNS 配对"
+      ],
+      [
+       "core",
+       "siri"
+      ],
+      [
+       "home",
+       "me",
+       "一键晨浴"
+      ]
+     ],
+     "usage": "0202：灯箱 / 除雾膜 / 排风经桥进苹果家庭，Siri 和锁屏一键切晨浴档"
+    },
+    "ext": true
+   },
+   {
+    "name": "music-assistant/server",
+    "url": "https://github.com/music-assistant/server",
+    "stars": "3.1k",
+    "zh": "界面有中文",
+    "desc": "Home Assistant 生态的音乐库与播放器管理器：接本地库和流媒体服务，推到 Sonos、AirPlay、Chromecast、Snapcast 等播放器",
+    "why": "早上进卫生间刷牙那五分钟想有歌，让灯箱切晨浴档的同时把歌推到卫生间的小音箱，Music Assistant 就是 HA 里的那个点播台",
+    "intro": "Music Assistant 是 Marcel van der Veldt 发起、现在由 Open Home Foundation 支持的开源音乐服务器，Python 写成，3.1k 星，定位是 Home Assistant 的音乐大脑。它要解决的问题是：音乐在网易云、Spotify、本地 NAS 各处，播放器有 Sonos、AirPlay、小音箱各种牌子，缺一个把音源和播放器统一起来、还能被自动化调用的中间层。\n它的架构是音源提供者加播放器提供者：音源端接本地文件库、Spotify、Tidal、Subsonic 服务器（比如 Navidrome）和网络电台；播放器端接 Sonos、AirPlay、Chromecast、Snapcast 和 HA 的媒体播放器。中间它维护统一的音乐库和播放队列，能把不同音源的曲子混排、在不同播放器之间同步分组。它以 HA 加载项一键装，装好后 HA 里多出一个 mass 域，自动化里一句 play_media 就能点歌。\n社区活跃，2025 年后版本很密，界面翻译含简体中文，中文教程主要在 HA 玩家圈。\n对 0202 它是延伸的小享受：卫生间天花板灯箱旁边塞一只小 AirPlay 或 Snapcast 音箱，人体感应触发晨浴档时，HA 自动化顺手叫 Music Assistant 把早间歌单推到卫生间播放器，洗完澡后排风停的时候把歌停掉；夜起档则永远静音。注意卫生间潮，音箱选 IP 等级高的，别放淋浴角正上方。",
+    "diagram": {
+     "title": "Music Assistant · HA 里的点歌台",
+     "nodes": [
+      {
+       "id": "lib",
+       "label": "本地库 / 流媒体\nNavidrome",
+       "kind": "db",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "auto",
+       "label": "HA 自动化\n晨浴档触发",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Music Assistant\n统一库 + 队列",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "prov",
+       "label": "播放器提供者\nAirPlay / Snapcast",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "spk",
+       "label": "卫生间小音箱\nIP 等级高",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "mirror",
+       "label": "灯箱晨浴档\n同时亮",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "刷牙的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "lib",
+       "core"
+      ],
+      [
+       "auto",
+       "core",
+       "play_media"
+      ],
+      [
+       "core",
+       "prov"
+      ],
+      [
+       "prov",
+       "spk",
+       "推歌"
+      ],
+      [
+       "auto",
+       "mirror"
+      ],
+      [
+       "spk",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0202：人体感应切晨浴档时顺手推早间歌单到卫生间音箱，排风停就停歌"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -860,6 +1238,195 @@
      ],
      "usage": "0203：照它的选型做 CO2 探头，HA 按 ppm 三档驱动新风机"
     }
+   },
+   {
+    "name": "Koenkk/zigbee2mqtt",
+    "url": "https://github.com/Koenkk/zigbee2mqtt",
+    "stars": "15.2k",
+    "zh": "界面有中文",
+    "desc": "一根 Zigbee 适配器加一个 Node.js 服务，把三千多种 Zigbee 设备直接翻译成 MQTT，不要任何品牌网关",
+    "why": "地堡里四个温湿度探头、水浸和门窗传感器想用电池款而不是拉线，Zigbee 是最省电最成熟的无线路线，zigbee2mqtt 是它的开源入口",
+    "intro": "zigbee2mqtt 是荷兰开发者 Koen Kanters 在 2018 年发起的项目，15.2k 星，是开源智能家居里接 Zigbee 设备的事实标准。它要解决的问题是：Zigbee 传感器和灯泡便宜又省电，但每个品牌都要自家网关和 App；它用一根通用的 Zigbee USB 适配器把所有品牌的设备接到一起，再统一翻译成 MQTT。\n它的架构是：Zigbee USB 适配器通过串口连到跑着 zigbee2mqtt 的机器，Node.js 服务管理网络的配对、路由和密钥；设备上报的原始 Zigbee 簇数据由庞大的设备库翻译成 JSON 发布到 MQTT 主题，反过来 MQTT 收到的指令翻译回 Zigbee 命令。它自带网页前端，能看拓扑图和信号强度；对 HomeAssistant 有 MQTT 自动发现，设备一配对就自动出现。\n生态是这类项目里最大的，支持设备超过三千种，2025 年后仍是每月一个版本，前端有简体中文，中文教程极多，Aqara、涂鸦的设备基本都在列表里。\n对 0203 它是延伸的无线路线：床头、墙角、柜内三个温湿度探头用电池款 Zigbee 传感器代替拉线的 ESPHome，风管出口那个高温高湿的位置仍用有线；除湿机柜的水浸传感器和门磁也一并上 Zigbee。适配器插在 0802 那台服务器上，再放两个 Zigbee 插座当路由器把信号绕过混凝土墙。注意地堡墙厚，先用拓扑图确认每个电池设备都挂在路由器下，别直连协调器。",
+    "diagram": {
+     "title": "zigbee2mqtt · 电池传感器无线进 MQTT",
+     "nodes": [
+      {
+       "id": "sens",
+       "label": "Zigbee 温湿度\n水浸 / 门磁",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "router",
+       "label": "Zigbee 插座\n当路由器",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "zigbee2mqtt\nNode.js + 适配器",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "conv",
+       "label": "设备库翻译\n簇数据 → JSON",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "mqtt",
+       "label": "MQTT 主题\nHA 自动发现",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ui",
+       "label": "网页前端\n拓扑 / 信号",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "光脚踩地板的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "sens",
+       "router",
+       "绕过厚墙"
+      ],
+      [
+       "router",
+       "core",
+       "无线到适配器"
+      ],
+      [
+       "core",
+       "conv"
+      ],
+      [
+       "conv",
+       "mqtt",
+       "发布"
+      ],
+      [
+       "core",
+       "ui"
+      ],
+      [
+       "mqtt",
+       "me",
+       "21.8℃ / 54%"
+      ]
+     ],
+     "usage": "0203：床头 / 墙角 / 柜内探头用电池 Zigbee，风管出口留有线，插座当路由器"
+    },
+    "ext": true
+   },
+   {
+    "name": "zwave-js/zwave-js-ui",
+    "url": "https://github.com/zwave-js/zwave-js-ui",
+    "stars": "1.2k",
+    "zh": "无中文",
+    "desc": "Z-Wave JS 的完整控制面板与 MQTT 网关：设备配对、参数配置、网络健康图、OTA，Vue 前端，Docker 部署",
+    "why": "Zigbee 之外的另一大无线协议，工作在 900MHz 附近，穿混凝土墙比 2.4GHz 强得多，正好对付地堡的厚墙",
+    "intro": "Z-Wave JS UI 前身叫 zwavejs2mqtt，由 Daniel Lando 主导开发，1.2k 星，是 zwave-js 这个 JavaScript Z-Wave 协议栈的官方控制面板。它要解决的问题是：Z-Wave 设备的配对和配置一直要靠厂商软件，它把这一切放进一个网页，并能把设备桥接成 MQTT。\n它的架构是三层：底层 zwave-js 驱动通过串口和 Z-Wave USB 棒通信；中间层提供网页，做设备加入与移除、几百个配置参数的可视化编辑、网络健康图和固件 OTA；上层两条出口，一是 WebSocket 给 HomeAssistant 的 Z-Wave 集成直接用，二是 MQTT 网关给其他系统。Docker 一行部署，也有 HA 加载项。\nZ-Wave 工作在 868/908MHz 频段，抗 Wi-Fi 干扰，穿墙比 Zigbee 好，设备都经过认证互操作性强，但贵且国内货少。社区中等规模，2025 年后仍月度更新，界面无中文，中文资料很少。\n对 0203 它是延伸里对付厚墙的备选：如果 Zigbee 信号在储藏室和卫生间那几堵混凝土墙后面不稳定，就换一根 Z-Wave 800 棒，用 Z-Wave 温湿度探头和水浸传感器，Long Range 模式一跳就能到。它和 zigbee2mqtt 可以并存，两根棒插同一台服务器，HA 里两个集成互不干扰。注意国内买 Z-Wave 设备要认准 CN 频段的版本，美版 908MHz 在这里不合法也配不上对。",
+    "diagram": {
+     "title": "Z-Wave JS UI · 900MHz 穿墙的另一条无线路",
+     "nodes": [
+      {
+       "id": "dev",
+       "label": "Z-Wave 温湿度\n水浸传感器",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "stick",
+       "label": "Z-Wave 800 棒\nLong Range",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Z-Wave JS UI\n驱动 + 面板",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "cfg",
+       "label": "参数配置\n网络健康图",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ws",
+       "label": "WebSocket\nHA 集成",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "mqtt",
+       "label": "MQTT 网关\n其他系统",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "看表盘的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "dev",
+       "stick",
+       "一跳穿墙"
+      ],
+      [
+       "stick",
+       "core",
+       "串口"
+      ],
+      [
+       "core",
+       "cfg"
+      ],
+      [
+       "core",
+       "ws"
+      ],
+      [
+       "core",
+       "mqtt"
+      ],
+      [
+       "ws",
+       "me",
+       "表盘"
+      ]
+     ],
+     "usage": "0203：Zigbee 穿不过储藏室厚墙就换 Z-Wave 棒，两根棒并存互不干扰"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1155,6 +1722,198 @@
      ],
      "usage": "0204：画全屋，插件出会亮灯的平面图给左屏和 0802"
     }
+   },
+   {
+    "name": "excalidraw/excalidraw",
+    "url": "https://github.com/excalidraw/excalidraw",
+    "stars": "131k",
+    "zh": "界面有中文",
+    "desc": "手绘风格的虚拟白板：矩形、箭头、文字、图库，端到端加密协作，可嵌入网页，导出 SVG 和 PNG",
+    "why": "工作台西墙那面图纸墙需要一张能随手改的全屋系统图，Excalidraw 的手绘风和本站铅笔风一脉相承，画完导出就能钉上墙",
+    "intro": "Excalidraw 是 Vjeux（Christopher Chedeau）等人在 2020 年做出来的开源白板，131k 星，是 GitHub 上星数最高的画图工具。它要解决的问题是：正经的绘图软件太重、画出来太正式，而白板讨论需要的是几秒钟画出一个看起来像草图的方框和箭头。\n它是纯前端应用，React 加 TypeScript，画布上只有矩形、圆、菱形、箭头、线、文字、自由笔和图片这几种元素，全部用 rough.js 渲染成手绘风格。数据是一个 JSON 场景文件，可以保存到本地、导出 PNG 和 SVG，也可以把场景嵌进 PNG 里下次拖回来继续编辑。协作走端到端加密的房间链接。它有巨大的图库可以拖进现成图标，还能作为 npm 包嵌进自己的网页。\n生态极大，2025 年后仍每周有提交，界面有简体中文，浏览器打开 excalidraw.com 就能用，也可以 Docker 自托管。\n对 0204 它是延伸的画图纸工具：西墙软木板上那些 A3 图纸——木屋剖面、地堡风管走向、钓台顶棚——在正式的 CAD 之前先用 Excalidraw 画草图，每个区域一个文件，01 到 07 分栏和软木板上的分栏一致。特别适合画全屋系统图：传感器、HA、大屏、鸭子的数据流向用箭头一连，导出 A3 打印钉上墙；改了就重打，旧的按日期收进抽屉。它也能嵌进 0802 大屏当一块可编辑的系统图。注意手绘风只是风格，尺寸标注它不擅长，带尺寸的还是去 FreeCAD。",
+    "diagram": {
+     "title": "Excalidraw · 手绘风画全屋系统图钉上墙",
+     "nodes": [
+      {
+       "id": "me0",
+       "label": "坐工作台的人",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "lib",
+       "label": "图库\n传感器 / 屏图标",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Excalidraw\nReact + rough.js",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "json",
+       "label": "场景 JSON\n嵌进 PNG",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "a3",
+       "label": "导出 A3\n钉上软木板",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "scr",
+       "label": "嵌进 0802 大屏\n可编辑系统图",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "抬头看图的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "me0",
+       "core"
+      ],
+      [
+       "lib",
+       "core",
+       "拖入"
+      ],
+      [
+       "core",
+       "json",
+       "保存"
+      ],
+      [
+       "json",
+       "a3",
+       "导出 SVG"
+      ],
+      [
+       "json",
+       "scr",
+       "嵌入"
+      ],
+      [
+       "a3",
+       "me",
+       "01~07 分栏"
+      ]
+     ],
+     "usage": "0204：每个区域一张手绘系统图，导出 A3 钉西墙，改了重打旧的收抽屉"
+    },
+    "ext": true
+   },
+   {
+    "name": "jgraph/drawio",
+    "url": "https://github.com/jgraph/drawio",
+    "stars": "7.9k",
+    "zh": "界面有中文",
+    "desc": "diagrams.net 的前端源码：正规的流程图、网络图、平面图工具，图形库巨大，可以离线用、自托管、嵌进 Confluence 和 VS Code",
+    "why": "风管走向、电路接线、网络拓扑这些需要正规符号和精确对齐的图，Excalidraw 太随意，draw.io 有现成的 HVAC、电气和网络图形库",
+    "intro": "draw.io（现在叫 diagrams.net）是英国 JGraph 公司维护的开源画图工具，7.9k 星，2005 年就有前身，是浏览器里最完整的免费流程图软件。它要解决的问题是：Visio 贵而且只在 Windows 上，工程师需要一个免费、离线可用、图形库齐全的正规画图工具。\n它是纯 JavaScript 客户端应用，画布基于 mxGraph 图形引擎，图形库覆盖流程图、UML、网络拓扑、电气符号、平面图和家具、甚至 HVAC 风管；元素能吸附对齐、自动布局，连线可以走正交折线自动避让。文件是 XML，可以存成 .drawio 或嵌进 PNG 和 SVG，桌面版是 Electron，网页版可以 Docker 自托管，还有 VS Code 插件，Git 里存 .drawio 文件看 diff 也方便。\n生态成熟，2025 年后仍是每月一个版本，界面翻译含简体中文，中文教程和模板很多。\n对 0204 它是延伸中和 Excalidraw 分工的那一个：草图归 Excalidraw，正规图归 draw.io。0203 那圈 Φ100 风管四个出风口的走向、0201 滑轨的接线和限位、全屋 MQTT 和网络拓扑、储藏室钢架的平面布置，都用它的 HVAC、电气和平面图库画，尺寸对齐精确，导出 PDF 打 A3 钉在软木板对应的分栏里。桌面版装在工作台的中屏，文件和 FreeCAD 模型放同一个仓库做版本管理。注意它的平面图库是英制家具尺寸，画地堡平面时先把网格设成 100mm。",
+    "diagram": {
+     "title": "draw.io · 正规符号画风管与接线图",
+     "nodes": [
+      {
+       "id": "shapes",
+       "label": "图形库\nHVAC / 电气 / 网络",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "me0",
+       "label": "坐工作台的人\n对齐吸附",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "draw.io 桌面版\nmxGraph 引擎",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "xml",
+       "label": "XML 文件\nGit 版本管理",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "pdf",
+       "label": "导出 PDF A3\n钉分栏",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "cad",
+       "label": "和 FreeCAD 模型\n同一仓库",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "明天测风管的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "shapes",
+       "core",
+       "拖入"
+      ],
+      [
+       "me0",
+       "core"
+      ],
+      [
+       "core",
+       "xml",
+       "保存"
+      ],
+      [
+       "xml",
+       "pdf",
+       "导出"
+      ],
+      [
+       "xml",
+       "cad",
+       "同仓库"
+      ],
+      [
+       "pdf",
+       "me",
+       "按图施工"
+      ]
+     ],
+     "usage": "0204：风管走向 / 接线 / 网络拓扑用它画正规图，草图交给 Excalidraw"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1450,6 +2209,197 @@
      ],
      "usage": "0205：探头盒照它接线抄 YAML，数据进 0802 大屏"
     }
+   },
+   {
+    "name": "opencv/opencv",
+    "url": "https://github.com/opencv/opencv",
+    "stars": "89.3k",
+    "zh": "无中文（社区教程多）",
+    "desc": "计算机视觉的标准库：图像处理、特征检测、目标跟踪、相机标定、DNN 推理，C++ 核心带 Python 绑定",
+    "why": "缸角三探头只知道水好不好，不知道鱼好不好；一个摄像头加 OpenCV 数宝莲灯还剩几条、有没有趴缸，是最直接的鱼况传感器",
+    "intro": "OpenCV 是英特尔在 1999 年发起、现在由 OpenCV 基金会维护的计算机视觉库，89.3k 星，2026 年发布了 5.0，几乎所有做视觉的人都从它开始。它要解决的问题是：把图像当成矩阵来处理的那些基础算法——滤波、阈值、边缘、轮廓、光流、特征点、相机标定——不该每个人重写一遍。\n它的核心用 C++ 写，Python 绑定 cv2 是最常用的入口：读一帧图像成 NumPy 数组，一路函数调用下去，比如高斯模糊去噪、转 HSV 按颜色阈值分割、findContours 找轮廓、按面积过滤得到目标、再用背景减除或光流跟踪运动。DNN 模块能直接加载 ONNX 和 TensorFlow 模型做检测和分类，VideoCapture 读摄像头和 RTSP 流。它跑在树莓派、手机、桌面和 GPU 上，2025 年后每几个月一个版本。\n生态是视觉界最大的，README 是英文，但中文书、教程和课程数量惊人，国内高校课程几乎都用它。\n对 0205 它是延伸里最有意思的一个玩法：缸前上方架一个小摄像头对着缸体，树莓派上跑一段几十行的 Python：背景减除分出游动的鱼，按宝莲灯那条蓝红色带的 HSV 范围过滤，轮廓计数得到当前可见鱼数，连续几分钟计数明显下降或某个轮廓长时间不动就推送到 0802 大屏提醒查看。同一个摄像头还能做延时摄影记录水草长势，配合水草灯的日出日落曲线定时抓拍。注意缸壁反光和水面波纹会干扰，摄像头加偏振镜、抓拍时机避开补水泵工作。",
+    "diagram": {
+     "title": "OpenCV · 摄像头数鱼，趴缸就提醒",
+     "nodes": [
+      {
+       "id": "cam",
+       "label": "缸前小摄像头\n加偏振镜",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "light",
+       "label": "水草灯曲线\n定时抓拍",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "OpenCV cv2\n树莓派 Python",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "algo",
+       "label": "背景减除\nHSV 过滤 / 轮廓",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "cnt",
+       "label": "可见鱼数\n不动轮廓",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "scr",
+       "label": "0802 大屏\n异常推送",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "发呆的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "cam",
+       "core",
+       "VideoCapture"
+      ],
+      [
+       "light",
+       "core",
+       "触发"
+      ],
+      [
+       "core",
+       "algo"
+      ],
+      [
+       "algo",
+       "cnt",
+       "计数"
+      ],
+      [
+       "cnt",
+       "scr",
+       "下降就推"
+      ],
+      [
+       "scr",
+       "me",
+       "去看一眼"
+      ]
+     ],
+     "usage": "0205：摄像头 + 几十行 cv2 数宝莲灯、发现趴缸，顺手做水草延时摄影"
+    },
+    "ext": true
+   },
+   {
+    "name": "micropython/micropython",
+    "url": "https://github.com/micropython/micropython",
+    "stars": "22.1k",
+    "zh": "无中文（社区教程多）",
+    "desc": "跑在单片机上的精简 Python：ESP32、树莓派 Pico、STM32 都支持，REPL 交互式改代码，机器控制不用编译",
+    "why": "鱼缸的补水、喂食、灯光曲线这类小逻辑，用 MicroPython 在 ESP32 上边试边改，比每次改 ESPHome YAML 重新刷固件快得多",
+    "intro": "MicroPython 是 Damien George 在 2013 年通过 Kickstarter 发起的项目，22.1k 星，把 Python 3 的核心语法和标准库压缩到几百 KB，跑在只有几十 KB 内存的单片机上。它要解决的问题是：单片机开发长期只有 C，改一行要编译、烧录、重启；它让人在串口里直接敲 Python，立刻看到结果。\n它的工作方式是：固件刷进 ESP32、树莓派 Pico 或 STM32 之后，芯片上跑一个 Python 解释器，串口连上就是 REPL，脚本以文件形式存在芯片的小文件系统里，开机自动跑 main.py。machine 模块管 GPIO、PWM、I2C，network 管 Wi-Fi，还有 asyncio 和 umqtt，一次改动几秒钟就生效。\n生态很大，2025 年后仍是每几个月一个版本，README 英文，但中文教程、B 站课程和国产开发板的 MicroPython 文档非常多。\n对 0205 它是延伸的原型工具：鱼缸矮柜里那块管补水泵、喂食器和水草灯 PWM 的 ESP32，正式版走 ESPHome 接 HomeAssistant，但在调试阶段用 MicroPython 更快——补水泵该抽几秒、喂食器舵机转多少度、日出曲线的 gamma 值，在 REPL 里改一个数立刻看效果，调顺了再把参数抄进 ESPHome 的 YAML。注意 MicroPython 和 ESPHome 不能同时在一块芯片上，多备一块 ESP32 专门做实验。",
+    "diagram": {
+     "title": "MicroPython · 串口里边敲边改的鱼缸小脑",
+     "nodes": [
+      {
+       "id": "me0",
+       "label": "工作台上的人",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "probe",
+       "label": "温度 / pH / TDS\nI2C 探头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "MicroPython\nESP32 解释器",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "mod",
+       "label": "machine / asyncio\numqtt",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "pump",
+       "label": "补水泵 / 喂食舵机\n水草灯 PWM",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "yaml",
+       "label": "参数抄进\nESPHome YAML",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "发呆的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "me0",
+       "core",
+       "改一个数"
+      ],
+      [
+       "probe",
+       "core"
+      ],
+      [
+       "core",
+       "mod"
+      ],
+      [
+       "mod",
+       "pump",
+       "立刻生效"
+      ],
+      [
+       "core",
+       "yaml",
+       "调顺后",
+       "dash"
+      ],
+      [
+       "pump",
+       "me"
+      ]
+     ],
+     "usage": "0205：备一块 ESP32 跑 MicroPython 调参数，调顺再进 ESPHome"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1734,6 +2684,292 @@
      ],
      "usage": "0207：N100 上抓 HDMI 算色，WLED 协议驱动电视背后灯带"
     }
+   },
+   {
+    "name": "Radarr/Radarr",
+    "url": "https://github.com/Radarr/Radarr",
+    "stars": "14.3k",
+    "zh": "界面有中文",
+    "desc": "电影收藏管理器：维护想看清单，自动从 Usenet 和 BT 索引器找片、下载、重命名、入库，和 Jellyfin 无缝衔接",
+    "why": "影音室每周两小时的排片要有片源，Radarr 把想看清单变成自动到货的片库，Jellyfin 只管播放",
+    "intro": "Radarr 是从 Sonarr 分叉出来专门管电影的项目，C# 写成，14.3k 星，属于所谓 *arr 家族。它要解决的问题是：想看的电影一部部手动找资源、下载、改名、放进对的文件夹太累，它把整条流水线自动化。\n它的工作方式是：你把想看的电影加进库（可以从 IMDb 榜单或 Trakt 列表批量导入），设定质量档位比如 1080p 蓝光或 4K；Radarr 定时去配置好的索引器（通过 Prowlarr 统一管理）搜索，找到符合要求的就推给下载器（qBittorrent、Transmission、SABnzbd）；下载完成后按命名模板重命名、移到媒体库目录、配合 Bazarr 下字幕、通知 Jellyfin 刷新库。出了更好的版本它还会自动换掉。网页界面响应式，Docker 部署。\n生态成熟，2025 年后持续更新，界面翻译含简体中文，中文 NAS 圈的教程和 Docker 模板极多。\n对 0207 它是延伸的片源管道：东南角小黑板上今晚放映的片名从哪来？在 Radarr 里维护一个想看清单，设 1080p 以上，它自动到货进 Jellyfin 的库；HomeAssistant 通过 Radarr 的 API 拿到最近入库列表，观影模式按钮按下时在 0802 大屏或电视上弹出本周新到的三部让你选。注意版权和索引器合规是你自己的事，另外 98 寸电视看 4K 原盘要有硬解能力，机顶盒选带 HDR 直通的。",
+    "diagram": {
+     "title": "Radarr · 想看清单自动变成片库",
+     "nodes": [
+      {
+       "id": "want",
+       "label": "想看清单\nIMDb / Trakt",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "idx",
+       "label": "索引器\nProwlarr",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Radarr\n质量档 / 定时搜",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "dl",
+       "label": "下载器\nqBittorrent",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "lib",
+       "label": "媒体库目录\n重命名 / 字幕",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "jf",
+       "label": "Jellyfin\n刷新库",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "窝在沙发的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "want",
+       "core"
+      ],
+      [
+       "idx",
+       "core",
+       "搜索"
+      ],
+      [
+       "core",
+       "dl",
+       "推任务"
+      ],
+      [
+       "dl",
+       "lib",
+       "入库"
+      ],
+      [
+       "lib",
+       "jf",
+       "通知"
+      ],
+      [
+       "jf",
+       "me",
+       "今晚放映"
+      ]
+     ],
+     "usage": "0207：想看清单自动到货进 Jellyfin，观影模式按下时大屏弹本周新片"
+    },
+    "ext": true
+   },
+   {
+    "name": "Sonarr/Sonarr",
+    "url": "https://github.com/Sonarr/Sonarr",
+    "stars": "16.1k",
+    "zh": "界面有中文",
+    "desc": "剧集自动化管理器：订阅一部剧后自动追新集、按季整理、重命名、升级画质，Radarr 的亲兄弟",
+    "why": "追剧和看电影是两种节奏，Sonarr 让订阅的剧每周自动到货，影音室里周五那集永远已经在库里等着",
+    "intro": "Sonarr 是 2010 年从 NzbDrone 改名而来的剧集管理器，C# 写成，16.1k 星，是整个 *arr 家族的祖宗。它要解决的问题是：追剧要记得每周几更新、去找资源、命名成播放器认得的格式、放进对应的季文件夹，它把这些全接管。\n它的工作方式是：你订阅一部剧，选要哪些季、什么质量档位；Sonarr 从 TheTVDB 拉剧集元数据和播出时间表，到点就去索引器搜新一集，找到符合要求的推给下载器，完成后按剧名 S01E05 这样的模板重命名、移进媒体库、通知 Jellyfin 刷新。它有日历视图看本周哪些剧更新，有质量配置文件决定是否用更好的版本替换旧文件，有多季批量补全和缺集搜索。界面和 Radarr 几乎一样，两者共用 Prowlarr 的索引器和同一个下载器，Docker 部署。\n生态成熟，2025 年后 v4 持续更新，界面翻译含简体中文，中文 NAS 教程一般把它和 Radarr 一起讲。\n对 0207 它是延伸中管剧的那一半：电影走 Radarr，剧走 Sonarr，两个容器共用同一套索引器和下载器，媒体库分成电影和剧集两个目录给 Jellyfin。它的日历 API 可以进 HomeAssistant，每周五早上 0802 大屏提示今晚有哪集更新，观影模式按下时电视直接停在那部剧的最新一集。注意剧集文件多，硬盘要预留空间并设自动删除看过的旧集，别让影音室的存储被追剧撑爆。",
+    "diagram": {
+     "title": "Sonarr · 订阅一部剧，每周自动到货",
+     "nodes": [
+      {
+       "id": "sub",
+       "label": "订阅的剧\n季 / 质量档",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "tvdb",
+       "label": "TheTVDB\n播出时间表",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Sonarr\n日历 / 定时搜",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "dl",
+       "label": "Prowlarr + 下载器\n与 Radarr 共用",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "lib",
+       "label": "剧集目录\nS01E05 命名",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "cal",
+       "label": "日历 → HA\n周五提示",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "窝在沙发的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "sub",
+       "core"
+      ],
+      [
+       "tvdb",
+       "core",
+       "元数据"
+      ],
+      [
+       "core",
+       "dl",
+       "到点搜"
+      ],
+      [
+       "dl",
+       "lib",
+       "入库"
+      ],
+      [
+       "core",
+       "cal",
+       "API"
+      ],
+      [
+       "cal",
+       "me",
+       "今晚更新"
+      ]
+     ],
+     "usage": "0207：剧走 Sonarr 电影走 Radarr，共用索引器，日历进 HA 周五提示"
+    },
+    "ext": true
+   },
+   {
+    "name": "HandBrake/HandBrake",
+    "url": "https://github.com/HandBrake/HandBrake",
+    "stars": "23.5k",
+    "zh": "界面有中文",
+    "desc": "跨平台开源视频转码器：把任意来源的视频压成 H.264、H.265、AV1 的 MP4 或 MKV，带硬件加速和预设，图形界面加命令行",
+    "why": "98 寸电视和手机、iPad 需要的不是同一个文件，把原盘转成电视直接硬解的 H.265 和小屏的 720p，HandBrake 是最顺手的批量转码工具",
+    "intro": "HandBrake 是 2003 年起步的开源视频转码器，23.5k 星，三大桌面平台都有图形界面，2026 年发布了 1.11 版。它要解决的问题是：视频格式和播放设备的组合太多，需要一个工具把任何来源压成指定设备能直接播的文件，并把复杂的编码参数藏在预设后面。\n它的工作方式是：输入一个文件或整张光盘目录，选一个预设（通用 1080p30、Apple 设备、或按质量的 HQ 系列），需要的话再调编码器、恒定质量值、分辨率、裁边、音轨和字幕，点开始就转码。编码器有 x264、x265、SVT-AV1 软件编码，也支持英特尔 QSV、英伟达 NVENC 和苹果 VideoToolbox 硬件加速；能批量排队，命令行版 HandBrakeCLI 适合写脚本，字幕能烧进画面也能保留成软字幕。\n生态成熟，2025 年后仍每几个月一个版本，界面翻译含简体中文，中文教程非常多。\n对 0207 它是延伸中的加工车间：Radarr 和 Sonarr 到货的文件格式五花八门，98 寸电视的机顶盒最省心的是 H.265 MKV 硬解，手机和 iPad 在外面看要一份 720p；写一个脚本用 HandBrakeCLI 在 0802 的服务器上夜里把新入库的文件按两套预设各转一份，Jellyfin 里就不再需要实时转码，服务器也不用配显卡。注意没有硬件加速时一部两小时的片要跑好几个小时，先试英特尔核显的 QSV，质量值 22 左右肉眼看不出差别。",
+    "diagram": {
+     "title": "HandBrake · 夜里把新片转成电视和手机各一份",
+     "nodes": [
+      {
+       "id": "src",
+       "label": "新入库文件\n格式五花八门",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "preset",
+       "label": "两套预设\nH.265 / 720p",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "HandBrakeCLI\n脚本夜里跑",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "hw",
+       "label": "QSV 硬件加速\n质量值 22",
+       "kind": "device",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "tv",
+       "label": "98 寸电视\n机顶盒硬解",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "phone",
+       "label": "手机 / iPad\n外面看",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "窝在沙发的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "src",
+       "core"
+      ],
+      [
+       "preset",
+       "core"
+      ],
+      [
+       "core",
+       "hw"
+      ],
+      [
+       "hw",
+       "tv",
+       "MKV"
+      ],
+      [
+       "hw",
+       "phone",
+       "MP4"
+      ],
+      [
+       "tv",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0207：新片夜里按两套预设各转一份，Jellyfin 免实时转码，服务器不用显卡"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -2018,6 +3254,290 @@
      ],
      "usage": "0208：买大箱前查测量图，买定后把它的均衡曲线喂给 CamillaDSP"
     }
+   },
+   {
+    "name": "badaix/snapcast",
+    "url": "https://github.com/badaix/snapcast",
+    "stars": "7.9k",
+    "zh": "无中文",
+    "desc": "多房间同步音频播放：一个服务器把 PCM 流按时间戳分发给多个客户端，各房间毫秒级对齐，客户端从树莓派到手机都有",
+    "why": "唱盘在地堡放爵士时想让木屋吧台和卫生间跟着响，Snapcast 是开源里做多房间同步最干净的方案",
+    "intro": "Snapcast 是德国开发者 Johannes Pohl 写的多房间音频系统，C++ 实现，7.9k 星，是 Sonos 那种全屋同步播放的开源替代。它要解决的问题是：同一首歌在不同房间之间差几十毫秒就会听出回声；它要让所有客户端在同一毫秒发出同一个采样。\n它的架构是一个 snapserver 加任意多个 snapclient：服务器从命名管道、ALSA、TCP、AirPlay（通过 shairport-sync）、Spotify Connect 或 Music Assistant 之类的源读进 PCM 音频，切成带时间戳的块推给所有客户端；每个客户端和服务器持续校时，按时间戳在本地缓冲里精确到那一刻再播，Wi-Fi 抖动被缓冲吃掉，各房间偏差在一毫秒内。客户端能跑在树莓派、ESP32 和手机上，HomeAssistant 有原生集成。\n社区中等规模，2025 年后仍在更新，README 是英文，中文资料很少，主要是 HA 玩家的零星笔记。\n对 0208 它是延伸的分发层：大柏林那对箱子接的是唱盘和胆机，纯模拟路线，Snapcast 不碰它；但当 moOde 或 Music Assistant 播放数字音源的时候，snapserver 装在同一台机器上，木屋吧台一个树莓派加小功放、卫生间一个 ESP32 客户端，三处同一首歌。HA 里每个客户端是一个媒体播放器实体，听音场景下自动把其他房间静音。注意黑胶想同步到其他房间就要过一次 ADC，那已经不是这个模块想要的味道了，别强求。",
+    "diagram": {
+     "title": "Snapcast · 一份 PCM 流各房间同一毫秒响",
+     "nodes": [
+      {
+       "id": "src",
+       "label": "moOde / MA\n数字音源",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "air",
+       "label": "AirPlay / Spotify\nshairport / librespot",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "snapserver\n切块 + 时间戳",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "sync",
+       "label": "客户端校时\n本地缓冲",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "bar",
+       "label": "木屋吧台\n树莓派 + 小功放",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "bath",
+       "label": "卫生间\nESP32 客户端",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "打拍子的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "src",
+       "core",
+       "管道"
+      ],
+      [
+       "air",
+       "core"
+      ],
+      [
+       "core",
+       "sync",
+       "TCP"
+      ],
+      [
+       "sync",
+       "bar"
+      ],
+      [
+       "sync",
+       "bath"
+      ],
+      [
+       "bar",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0208：数字音源经 snapserver 同步到吧台和卫生间，黑胶保持纯模拟不进去"
+    },
+    "ext": true
+   },
+   {
+    "name": "navidrome/navidrome",
+    "url": "https://github.com/navidrome/navidrome",
+    "stars": "23.2k",
+    "zh": "界面有中文",
+    "desc": "Go 写的自托管音乐流媒体服务器：扫描本地音乐库，网页播放，兼容 Subsonic API 所以几十个手机客户端都能用",
+    "why": "矮机柜两端的黑胶之外还有几百张 CD 和无损文件，Navidrome 让它们有一个像个人 Spotify 的入口，唱片册翻不到的时候搜一下",
+    "intro": "Navidrome 是巴西开发者 Deluan Quitério 用 Go 和 React 写的自托管音乐服务器，23.2k 星，口号是你的个人流媒体服务。它要解决的问题是：自己收藏的无损音乐堆在硬盘里，想像用 Spotify 一样在任何设备上随手听，又不想装重得要命的 Plex。\n它的工作方式是：指向一个音乐目录，它扫描文件标签建索引，支持 FLAC、MP3、OGG、OPUS、DSD 等格式；网页界面按艺人、专辑、流派、播放列表浏览和播放，服务端能按客户端需要实时转码成低码率。它实现了 Subsonic API，所以 Symfonium、Substreamer 这些手机 App 和 Music Assistant、Snapcast 都能接上；整个程序是一个二进制文件，内存占用几十 MB，树莓派上跑很轻松。\n生态成熟，2025 年后仍是每月一个版本，界面翻译含简体中文，中文 NAS 教程很多。\n对 0208 它是延伸的数字音乐库：黑胶是仪式，但矮机柜里放不下所有唱片，抓轨的 CD 和买的无损文件全部放进 Navidrome，按年代建播放列表和矮机柜里的分格对应；moOde 通过 Subsonic 插件读它的库，Music Assistant 也能把它当音源推到 Snapcast，坐在沙发上用手机 App 搜一张唱片册里翻不到的专辑，胆机一样在响。注意它不做多房间同步也不接黑胶，它只是那个库；音乐文件的标签先用 MusicBrainz Picard 整理干净，不然艺人页面会乱。",
+    "diagram": {
+     "title": "Navidrome · 无损音乐库的个人流媒体入口",
+     "nodes": [
+      {
+       "id": "files",
+       "label": "CD 抓轨 / 无损\n按年代目录",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "tag",
+       "label": "Picard 整理标签",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Navidrome\nGo 单文件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "idx",
+       "label": "索引 / 播放列表\n实时转码",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "moode",
+       "label": "moOde / MA\nSubsonic 接入",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "app",
+       "label": "手机 Symfonium\n沙发上搜",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "打拍子的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "files",
+       "core",
+       "扫描"
+      ],
+      [
+       "tag",
+       "files"
+      ],
+      [
+       "core",
+       "idx"
+      ],
+      [
+       "idx",
+       "moode",
+       "Subsonic API"
+      ],
+      [
+       "idx",
+       "app"
+      ],
+      [
+       "moode",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0208：无损库按年代分列表对应矮机柜分格，moOde / 手机 App 都从它点歌"
+    },
+    "ext": true
+   },
+   {
+    "name": "mikebrady/shairport-sync",
+    "url": "https://github.com/mikebrady/shairport-sync",
+    "stars": "8.8k",
+    "zh": "无中文",
+    "desc": "Linux 上的 AirPlay 和 AirPlay 2 接收端：让树莓派或任何 Linux 盒子在 iPhone 的隔空播放列表里出现，输出到 ALSA 或管道",
+    "why": "朋友来了想用自己手机放一首，不必碰唱盘和 moOde，胆机前面加一个树莓派跑它，iPhone 隔空播放直接进大柏林",
+    "intro": "Shairport Sync 是爱尔兰开发者 Mike Brady 从 2014 年维护至今的 AirPlay 接收端，C 写成，8.8k 星，是 Linux 世界里实现苹果隔空播放最完整的项目。它要解决的问题是：隔空播放只认苹果和授权设备，想让自己攒的音响也出现在那个列表里，得有人把协议实现出来。\n它的工作方式是：在局域网里用 mDNS 广播一个 AirPlay 接收器，iPhone 选中后建立连接，音频流以 ALAC 或 AAC 编码发过来，Shairport Sync 解码后按苹果的时间戳同步输出，和同一个 AirPlay 2 分组里的其他音箱对齐；输出可以走 ALSA 到声卡或 USB DAC，也可以写进管道给 Snapcast 接力。元数据（歌名、封面）能通过 MQTT 发出来，树莓派 Zero 都够跑，moOde 内置的就是它。\n社区稳定，2025 年后仍在更新，README 是英文，中文资料主要是树莓派音频玩家的笔记。\n对 0208 它是延伸的客用入口：胆机的一路线路输入接一个树莓派加 USB DAC，跑 Shairport Sync，名字叫大柏林；自己坐沙发时依旧放黑胶，朋友来了掏出 iPhone 就能把歌推到这对箱子上，元数据走 MQTT 到 0802 大屏显示歌名。注意它输出的是数字信号，DAC 的质量决定了这条路配不配得上大柏林，选一块靠谱的 USB 解码，别用板载 3.5mm 口；moOde 已经内置它，用了 moOde 就不必单独再装。",
+    "diagram": {
+     "title": "Shairport Sync · iPhone 隔空播放直进胆机",
+     "nodes": [
+      {
+       "id": "iphone",
+       "label": "朋友的 iPhone\n隔空播放",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "group",
+       "label": "AirPlay 2 分组\n其他房间",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Shairport Sync\n树莓派解码",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "meta",
+       "label": "元数据\nMQTT → 0802",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "dac",
+       "label": "USB DAC\n胆机线路输入",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "spk",
+       "label": "大柏林\n两只落地箱",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "打拍子的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "iphone",
+       "core",
+       "ALAC 流"
+      ],
+      [
+       "group",
+       "core",
+       "同步",
+       "dash"
+      ],
+      [
+       "core",
+       "meta"
+      ],
+      [
+       "core",
+       "dac",
+       "ALSA"
+      ],
+      [
+       "dac",
+       "spk",
+       "模拟"
+      ],
+      [
+       "spk",
+       "me"
+      ]
+     ],
+     "usage": "0208：胆机留一路给树莓派 + DAC，客人 iPhone 直推"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -2290,6 +3810,295 @@
      ],
      "usage": "0209：帘边暗处刷卡开宝箱，刷卡事件当进入信号联动灯和木牌"
     }
+   },
+   {
+    "name": "usememos/memos",
+    "url": "https://github.com/usememos/memos",
+    "stars": "62.5k",
+    "zh": "界面有中文",
+    "desc": "自托管的轻量笔记流：像发微博一样随手记一条，Markdown、标签、图片，Go 单文件部署，数据全在自己手里",
+    "why": "帐篷里左边那面墙的名言和右边的聊天截图，先在手机上随手记进 memos，攒够一批再挑出来打印上墙",
+    "intro": "memos 是 Steven（boojack）在 2021 年发起的开源笔记项目，Go 后端加 React 前端，62.5k 星，作者来自中文社区。它要解决的问题是：想记的东西大多是一两句话或一张截图，传统笔记软件的文件夹和标题让人懒得打开；它把笔记做成一条条时间流，像发微博一样记，像刷微博一样翻。\n它的工作方式极简：一个二进制或一个 Docker 容器，数据存在 SQLite（也可以 MySQL、PostgreSQL）里，网页界面顶部一个输入框，写 Markdown、加标签、贴图片、按回车就是一条 memo；左侧按标签和日期筛选，热力图显示每天记了几条，memo 可以设公开分享链接，也能置顶和归档。它有完整的 API，社区做了 iOS、安卓、浏览器插件和 Telegram 机器人，Obsidian 也能同步。它刻意不做的事也很明确：没有文件夹、没有富文本、没有协作，专注于快速捕捉。\n社区非常大，2025 年后依然每月一个版本，界面自带简体中文，中文用户和教程占了很大比例。\n对 0209 它是延伸的收集箱：帐篷三面墙的素材——读到的一句话、电影里的一句台词、和朋友聊天时截的一段对话——当场用手机记进 memos，标签分名言、电影、对话三类，正好对应三面软木板。每季度换墙时按标签筛一遍，挑出来的打字机字体打在牛皮纸上钉上去，换下来的海报按日期收进宝箱，memos 里那条也顺手归档。注意它是收集不是展示，帐篷里没有插座也没有信号，最终上墙的必须是纸。",
+    "diagram": {
+     "title": "memos · 随手记一条，攒够再上墙",
+     "nodes": [
+      {
+       "id": "phone",
+       "label": "手机随手记\n一句话 / 截图",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "tg",
+       "label": "浏览器插件\nTelegram 机器人",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "memos\nGo + SQLite",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "tag",
+       "label": "标签流\n名言 / 电影 / 对话",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "pick",
+       "label": "每季度筛选\n打字机字体打印",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "wall",
+       "label": "三面软木板\n牛皮纸",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "盘腿坐着的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "phone",
+       "core"
+      ],
+      [
+       "tg",
+       "core",
+       "API"
+      ],
+      [
+       "core",
+       "tag"
+      ],
+      [
+       "tag",
+       "pick",
+       "按标签筛"
+      ],
+      [
+       "pick",
+       "wall",
+       "钉上去"
+      ],
+      [
+       "wall",
+       "me"
+      ]
+     ],
+     "usage": "0209：三个标签对应三面墙，手机随手收集，换季挑一批打印上墙"
+    },
+    "ext": true
+   },
+   {
+    "name": "ankitects/anki",
+    "url": "https://github.com/ankitects/anki",
+    "stars": "30.4k",
+    "zh": "界面有中文",
+    "desc": "间隔重复记忆卡片软件：算法按遗忘曲线安排复习，桌面、手机、网页同步，卡片模板可自定义，插件生态庞大",
+    "why": "墙上那些名言看多了就视而不见，把它们做成 Anki 卡片每天在帐篷里翻五分钟，才真的记进脑子",
+    "intro": "Anki 是 Damien Elmes 在 2006 年开始写的间隔重复软件，Python 加 Rust 重写核心，30.4k 星，是背单词和医学生记知识点的标准工具。它要解决的问题是：人记东西会遗忘，复习太早浪费时间、太晚就忘光；间隔重复算法在你快要忘的那一刻把卡片再拿出来。\n它的工作方式是：卡片由笔记生成，笔记是字段（正面、背面、来源），模板决定怎么渲染成卡片，可以有图片、音频、公式；每天打开它会给你今天该复习的卡片，看完正面回忆背面，按记不住、困难、良好、简单四个按钮打分，算法（现在默认是 FSRS）据此算下一次出现的间隔，从一天到几年。数据是本地 SQLite，通过 AnkiWeb 同步到手机的 AnkiMobile 和安卓的 AnkiDroid，也可以自托管同步服务器。插件用 Python 写，几千个，从自动配图到统计热力图都有。\n生态极大，2025 年后仍是每两个月一个版本，界面自带简体中文，中文用户群和教程非常多。\n对 0209 它是延伸的记忆环节：左边那面墙的名言、正面海报的电影和导演年份、右边对话里那些当时打动你的话，做成一个叫藏宝阁的牌组，正面是上半句或电影海报缩略图，背面是下半句或出处。每天进帐篷盘腿坐下后先用手机上的 AnkiDroid 翻五分钟，离线可用，没有信号也没关系，出去有网了再同步。注意卡片别做多，一面墙十来张就够，Anki 的价值在坚持不在数量。",
+    "diagram": {
+     "title": "Anki · 快忘的时候把那句话再拿出来",
+     "nodes": [
+      {
+       "id": "note",
+       "label": "名言 / 海报 / 对话\n做成笔记",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "tpl",
+       "label": "卡片模板\n上半句 → 下半句",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Anki 核心\nFSRS 算法",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "本地 SQLite\nAnkiWeb 同步",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "phone",
+       "label": "AnkiDroid\n帐篷里离线翻",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "grade",
+       "label": "四档打分\n算下次间隔",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "盘腿坐着的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "note",
+       "core"
+      ],
+      [
+       "tpl",
+       "core"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "db",
+       "phone",
+       "同步"
+      ],
+      [
+       "phone",
+       "grade"
+      ],
+      [
+       "grade",
+       "core",
+       "反馈",
+       "dash"
+      ],
+      [
+       "phone",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0209：三面墙的内容做成一个牌组，每天进帐篷先翻五分钟，离线可用"
+    },
+    "ext": true
+   },
+   {
+    "name": "koreader/koreader",
+    "url": "https://github.com/koreader/koreader",
+    "stars": "29.5k",
+    "zh": "界面有中文",
+    "desc": "电子墨水阅读器上的开源阅读软件：Kindle、Kobo、PocketBook 都能装，支持 EPUB、PDF、DjVu，排版和字典功能远超原厂",
+    "why": "帐篷里没有信号没有插座，最适合的屏幕是一台刷了 KOReader 的旧 Kindle，一串暖灯下看书，电池撑几周",
+    "intro": "KOReader 是 2011 年从 Kindle 越狱社区长出来的开源阅读软件，Lua 写成，29.5k 星，能装在 Kindle、Kobo、PocketBook、reMarkable 和安卓上。它要解决的问题是：电子墨水阅读器的原厂系统功能少、格式挑、排版不能细调，而这些机器的硬件其实很好。\n它的架构是一个 Lua 框架加两个渲染引擎：MuPDF 负责 PDF 和 DjVu，crengine 负责 EPUB、FB2、MOBI 这类可重排格式。打开一本书后可以调字体、行距、边距和竖排，PDF 能重排和裁边；内置 StarDict 词典、维基百科查询和翻译，阅读统计能画出每天读了多久，书籍和进度可以通过 Calibre、OPDS 和自建的同步服务器同步。安装是把文件拷进设备并接管启动，各机型有详细步骤。\n社区活跃，2025 年后仍是每月一个版本，界面自带简体中文，中文用户很多，繁简竖排支持是它的强项之一。\n对 0209 它是延伸的阅读设备：帐篷里全是 USB 供电、没有插座，一台闲鱼买的旧 Kindle 刷上 KOReader，阅读灯照着看书，电池撑三四周。书从 0303 的 Calibre 库通过 OPDS 拉进去，出帐篷有 Wi-Fi 时同步进度；那些名言的出处——整本书——就在这台机器里。铁皮宝箱里的旧手机也可以装安卓版当备用。注意 Kindle 越狱只对老固件容易，买二手前先查型号和固件版本能不能越狱。",
+    "diagram": {
+     "title": "KOReader · 旧 Kindle 在帐篷里撑几周",
+     "nodes": [
+      {
+       "id": "cal",
+       "label": "Calibre 库\nOPDS 目录",
+       "kind": "db",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "dict",
+       "label": "StarDict 词典\n维基离线",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "KOReader\nLua 框架",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "eng",
+       "label": "MuPDF / crengine\n重排 / 竖排",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "kindle",
+       "label": "旧 Kindle 墨水屏\nUSB 充电",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "sync",
+       "label": "进度同步\n出帐篷有 Wi-Fi",
+       "kind": "cloud",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "盘腿坐着的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "cal",
+       "core",
+       "拉书"
+      ],
+      [
+       "dict",
+       "core"
+      ],
+      [
+       "core",
+       "eng"
+      ],
+      [
+       "eng",
+       "kindle",
+       "渲染"
+      ],
+      [
+       "core",
+       "sync",
+       "",
+       "dash"
+      ],
+      [
+       "kindle",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0209：旧 Kindle 刷 KOReader，书从 Calibre 经 OPDS 拉，进度出帐篷再同步"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -2563,6 +4372,293 @@
      ],
      "usage": "0210：门内挂扫码枪，先扫模式卡再扫罐头，grocy 自动记账"
     }
+   },
+   {
+    "name": "kiwix/kiwix-desktop",
+    "url": "https://github.com/kiwix/kiwix-desktop",
+    "stars": "1.4k",
+    "zh": "界面有中文",
+    "desc": "Kiwix 的桌面端：离线阅读 ZIM 格式的整站压缩包，整部中文维基百科、维基教科书、急救和农业资料都能装进一块硬盘",
+    "why": "防灾食品架旁边真正该备的还有一份离线知识：断网时整部维基百科和急救手册就在地堡的电脑里，Kiwix 就是干这个的",
+    "intro": "Kiwix 是瑞士非营利组织 Kiwix 从 2007 年维护的离线阅读项目，kiwix-desktop 是它的 Qt 桌面端，1.4k 星，兄弟仓库还有 kiwix-serve 命令行服务器和手机客户端。它要解决的问题是：维基百科这种人类知识总集依赖网络，没有网的地方（船上、山区、灾害中）就看不到；它把整个网站压成一个文件带走。\n它的工作方式是：内容打包成 ZIM 格式，这是专门为离线整站设计的高压缩只读格式，全文索引也在里面，整部中文维基百科带图片大约 20 多 GB；kiwix-desktop 打开 ZIM 后像浏览器一样浏览和搜索，内置目录能直接从 Kiwix 内容库下载新的 ZIM，官方库里有各语言维基百科、维基医学、Stack Exchange 和一批急救与农业资料。kiwix-serve 则把 ZIM 用 HTTP 服务出来，局域网里所有设备用浏览器访问。\n社区稳定，2025 年后仍有版本，界面翻译含简体中文，中文教程主要在离线知识和应急圈。\n对 0210 它是延伸中的那格知识储备：钢架最上层是米砖，地堡电脑硬盘里是一份中文维基百科、维基医学、野外急救和食品保存的 ZIM，用 kiwix-serve 跑在 0802 的服务器上，断网时 0204 工作台和手机都能查。每半年轮换水桶的同时也更新一次 ZIM，写在小白板的轮换日旁边。PSK 应急包里的旧手机装 Kiwix 安卓版和一份精简 ZIM，随时拎走。注意完整维基百科下载很慢，挑一个夜里挂着。",
+    "diagram": {
+     "title": "Kiwix · 整部维基百科装进地堡硬盘",
+     "nodes": [
+      {
+       "id": "lib",
+       "label": "Kiwix 内容库\n夜里下载",
+       "kind": "cloud",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "zim",
+       "label": "ZIM 文件\n维基 / 急救 / 农业",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "kiwix-desktop\n或 kiwix-serve",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "idx",
+       "label": "全文索引\n离线搜索",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "pc",
+       "label": "0204 工作台\n浏览器查",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "bag",
+       "label": "应急包旧手机\n精简 ZIM",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "断网的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "lib",
+       "zim",
+       "半年更新一次"
+      ],
+      [
+       "zim",
+       "core"
+      ],
+      [
+       "core",
+       "idx"
+      ],
+      [
+       "idx",
+       "pc",
+       "局域网"
+      ],
+      [
+       "zim",
+       "bag",
+       "拷一份"
+      ],
+      [
+       "pc",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0210：中文维基 + 维基医学 ZIM 跑在服务器上，随水桶轮换一起更新"
+    },
+    "ext": true
+   },
+   {
+    "name": "meshtastic/firmware",
+    "url": "https://github.com/meshtastic/firmware",
+    "stars": "8.3k",
+    "zh": "无中文（社区教程多）",
+    "desc": "LoRa 无网通讯的开源固件：几十块钱的 ESP32 或 nRF52 LoRa 板组成自组网，手机蓝牙连上就能几公里外发短信和位置",
+    "why": "防灾备的不只是吃的，还有断网断电时和山谷另一头说上话的手段；Meshtastic 是最便宜也最成熟的离网通讯",
+    "intro": "Meshtastic 是 Kevin Hester 在 2020 年发起的开源离网通讯项目，固件仓库 8.3k 星，跑在 Heltec、LilyGO T-Beam、RAK 等几十种 LoRa 开发板上。它要解决的问题是：没有手机信号和 Wi-Fi 的地方（山里、海上、灾后），人和人之间怎么发一条短信和自己的位置。\n它的工作方式是：每块板子是一个节点，用 LoRa 无线电在免许可频段以极低功率发送很小的数据包，节点之间自动转发形成网状网络，一条消息可以经几跳传到几公里甚至几十公里外；手机通过蓝牙连上自己的节点，App 里像发微信一样打字，消息端到端 AES 加密，带 GPS 的节点定期广播位置，地图上能看到所有节点在哪。一块 18650 电池能撑几天，加太阳能板就是永久中继站。它还有 MQTT 网关能把消息桥到互联网，有 Python API 可以写机器人。\n社区非常活跃，2025 年后固件月更，README 英文，中文社区教程和国产开发板的资料很多。\n对 0210 它是延伸的通讯储备：储藏室钢架上除了 72 小时口粮，再放两个 Meshtastic 节点，一个装进 PSK 应急包，一个固定在木屋屋顶接一块太阳能板做中继；地堡里的节点通过 MQTT 网关接进 HomeAssistant，平时当玩具，断网时它就是唯一的电话。和山谷里其他玩这个的人约好频道，就是一张本地应急网。注意地堡的混凝土墙对 LoRa 也是墙，地堡里的节点要把天线引到屋顶，不然只能和木屋里通。",
+    "diagram": {
+     "title": "Meshtastic · 断网时的几公里短信",
+     "nodes": [
+      {
+       "id": "phone",
+       "label": "手机 App\n蓝牙连节点",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "bag",
+       "label": "应急包节点\n18650 供电",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Meshtastic 固件\nLoRa 自组网",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "relay",
+       "label": "屋顶中继\n太阳能板",
+       "kind": "device",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "far",
+       "label": "山谷另一头\n其他节点",
+       "kind": "cloud",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "mqtt",
+       "label": "MQTT 网关\n→ HA",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "山谷另一头的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "phone",
+       "core",
+       "蓝牙"
+      ],
+      [
+       "bag",
+       "core"
+      ],
+      [
+       "core",
+       "relay",
+       "一跳"
+      ],
+      [
+       "relay",
+       "far",
+       "几公里"
+      ],
+      [
+       "core",
+       "mqtt",
+       "有网时",
+       "dash"
+      ],
+      [
+       "far",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0210：一个节点进应急包，一个上屋顶当中继，天线从地堡引到屋顶"
+    },
+    "ext": true
+   },
+   {
+    "name": "openfoodfacts/openfoodfacts-server",
+    "url": "https://github.com/openfoodfacts/openfoodfacts-server",
+    "stars": "1.1k",
+    "zh": "界面有中文",
+    "desc": "Open Food Facts 的服务端：全球最大的开放食品数据库，扫条码就有配料、营养、Nutri-Score，API 免费可用",
+    "why": "罐头和米砖的 NFC 标签要录名字、保质期和营养信息，扫一下条码从 Open Food Facts 拉回来比手打快得多",
+    "intro": "Open Food Facts 是法国非营利组织在 2012 年发起的开放食品数据库，服务端仓库 1.1k 星，Perl 写成，数据库里有全球四百多万种食品。它要解决的问题是：食品包装上的配料和营养信息属于所有人，但没有一个开放的、任何人都能查和贡献的数据库，它就像食品界的维基百科。\n它的工作方式是众包：用户用手机 App 扫条码，拍下正面、配料表和营养表，服务端用 OCR 识别配料，算出 Nutri-Score 营养等级和 NOVA 加工程度，数据以开放许可证发布；任何人都能通过 REST API 用条码查一个产品，返回名称、品牌、分量、配料、过敏原、营养成分和图片，也能整库下载。它的生态包括安卓和 iOS App、Python 和 JavaScript SDK，Grocy、KitchenOwl、Barcode Buddy 这些自托管库存工具都用它的 API 补全商品信息。\n社区是全球性的，2025 年后服务端每周发布，网站和 App 有简体中文，中国市场的商品覆盖一般，进口食品和大品牌罐头基本都有。\n对 0210 它是延伸的数据源：0210 已有的 Grocy 和 Barcode Buddy 扫条码时就是从它拉商品名和营养信息，钢架上罐头一到货扫一下，名称、分量、热量自动进库存，再由 0801 数字孪生按每人每天两千大卡算出库存天数写到小白板；国内小厂的罐头查不到就当场拍照贡献上去，下次就有了。注意它是公共数据库，自家的保质期和存放层这些信息不在它那里，存进 Grocy。",
+    "diagram": {
+     "title": "Open Food Facts · 扫条码拉回配料和热量",
+     "nodes": [
+      {
+       "id": "scan",
+       "label": "手机扫罐头条码\nBarcode Buddy",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "photo",
+       "label": "查不到就拍照\n贡献回去",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Open Food Facts\nAPI 服务端",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "四百万种食品\n配料 / 营养",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "grocy",
+       "label": "Grocy 库存\n名称 / 热量",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "board",
+       "label": "库存天数\n小白板",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "拿午餐肉的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "scan",
+       "core",
+       "条码查询"
+      ],
+      [
+       "photo",
+       "core",
+       "OCR"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "db",
+       "grocy",
+       "JSON"
+      ],
+      [
+       "grocy",
+       "board",
+       "按热量算天数"
+      ],
+      [
+       "board",
+       "me"
+      ]
+     ],
+     "usage": "0210：罐头到货扫码自动补全进 Grocy，热量换算库存天数"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -2834,6 +4930,195 @@
      ],
      "usage": "0212：离线时的备用记录本和组间计时，回来补进 wger"
     }
+   },
+   {
+    "name": "google-ai-edge/mediapipe",
+    "url": "https://github.com/google-ai-edge/mediapipe",
+    "stars": "36.9k",
+    "zh": "无中文（社区教程多）",
+    "desc": "Google 的端侧多媒体机器学习框架：人体姿态、手部、人脸关键点实时检测，手机、浏览器、树莓派都能跑",
+    "why": "训练时对着镜子的摄像头能数动作、看深蹲够不够低，MediaPipe 的 33 点姿态模型在树莓派上也能实时跑",
+    "intro": "MediaPipe 是 Google 在 2019 年开源的端侧机器学习框架，现在归 Google AI Edge 团队，36.9k 星。它要解决的问题是：在手机和低算力设备上实时跑视觉模型很难，摄像头帧的预处理、推理、后处理要串成一条不掉帧的流水线，它把这条流水线和一批现成模型打包好。\n它的架构是图计算：每个计算器是一个节点，摄像头帧进来后经过缩放、推理、解码、平滑几个节点流出结果。现成任务里最常用的是 Pose Landmarker：一帧图像给出人体 33 个关键点的三维坐标和可见度，手机上 30 帧每秒毫无压力；还有手部、人脸、手势识别和物体检测。API 有 Python、JavaScript、安卓、iOS 和 C++，模型是 TensorFlow Lite 格式，树莓派 5 上 Python 版能跑十几帧。\n生态很大，2025 年后仍在更新，README 英文，但中文教程和 B 站的姿态识别课程非常多。\n对 0212 它是延伸的数动作眼睛：南墙那面窄镜顶上装一个小摄像头对着地毯，树莓派跑 Pose Landmarker，拿到 33 个关键点后自己写几行几何判断：髋和膝的夹角小于 90 度算一个深蹲，手腕高过单杠横杆算一次引体，哑铃划船看肘的角度变化；计数通过 MQTT 发到 HomeAssistant，训练模式下 0802 大屏在心率旁边多一个计数。注意关键点是 2.5D 的，侧身对摄像头角度判断最准，正对镜子时深度不可靠；周计划打钩还是手写，它只负责数。",
+    "diagram": {
+     "title": "MediaPipe · 镜顶摄像头数深蹲和引体",
+     "nodes": [
+      {
+       "id": "cam",
+       "label": "镜顶小摄像头\n对着地毯",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "band",
+       "label": "手环心率\n蓝牙",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "MediaPipe\nPose Landmarker",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "geo",
+       "label": "33 点 → 角度\n自写计数逻辑",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "mqtt",
+       "label": "MQTT → HA\n次数",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "scr",
+       "label": "0802 训练模式\n心率 + 计数",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "做划船的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "cam",
+       "core",
+       "帧"
+      ],
+      [
+       "core",
+       "geo",
+       "关键点"
+      ],
+      [
+       "geo",
+       "mqtt",
+       "一次 +1"
+      ],
+      [
+       "band",
+       "scr"
+      ],
+      [
+       "mqtt",
+       "scr"
+      ],
+      [
+       "scr",
+       "me",
+       "看一眼数字"
+      ]
+     ],
+     "usage": "0212：树莓派跑姿态模型，髋膝角度数深蹲、手腕过杆数引体，计数上大屏"
+    },
+    "ext": true
+   },
+   {
+    "name": "SamR1/FitTrackee",
+    "url": "https://github.com/SamR1/FitTrackee",
+    "stars": "1.2k",
+    "zh": "无中文",
+    "desc": "自托管的运动记录服务：导入 GPX 和 FIT 文件，按运动类型统计里程、时长、海拔和心率，画周月年图表，Python + Vue",
+    "why": "手环的数据不该只活在厂商 App 里，把每次训练和山里徒步的记录集中到自己服务器上，一年后回头看那张周计划才有意义",
+    "intro": "FitTrackee 是法国开发者 SamR1 从 2018 年维护的自托管运动追踪器，Python Flask 后端加 Vue 前端，1.2k 星，主仓库在 Codeberg，GitHub 是镜像。它要解决的问题是：跑步、骑行、徒步的数据被 Strava、Garmin、各家手环 App 分散锁着，想要一个自己掌握、能长期保存和统计的地方。\n它的工作方式是：上传 GPX 或 FIT 文件（或者手动录入没有轨迹的训练，比如哑铃和引体），它解析出距离、时长、配速、海拔升降、心率，在地图上画轨迹，按运动类型（跑步、骑行、徒步、力量等几十种）归档；仪表盘按周、月、年画里程和时长图表，还有个人纪录、装备管理（这双鞋跑了多少公里）和分段。它支持多用户，有 REST API，Docker 部署。\n社区小而稳定，2025 年后仍是每月一个版本，界面翻译走 Weblate，暂无中文，中文资料几乎没有，属于自托管圈的冷门好物。\n对 0212 它是延伸的训练日志：手环的心率同步到 0802 大屏只是当场看，长期数据用 HomeAssistant 的自动化在训练模式结束时把时长、平均心率和 MediaPipe 数出来的次数写成一条记录通过 API 发进 FitTrackee，类型选力量；周末上山徒步的 GPX 从手表导出来也丢进去。门边小白板的周计划还是手写打钩，FitTrackee 负责回答一年后那个问题：这一年到底练了多少。注意它统计的是有氧类为主，力量训练的组数和重量要写进备注。",
+    "diagram": {
+     "title": "FitTrackee · 自己服务器上的训练日志",
+     "nodes": [
+      {
+       "id": "ha",
+       "label": "HA 训练模式结束\n时长 / 心率 / 次数",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "gpx",
+       "label": "手表 GPX\n周末徒步",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "FitTrackee\nFlask + Vue",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "parse",
+       "label": "解析 / 归类\n力量 / 徒步",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "db",
+       "label": "按周月年统计\n个人纪录",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "仪表盘网页\n地图 + 图表",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一年后回头看的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "ha",
+       "core",
+       "API"
+      ],
+      [
+       "gpx",
+       "core",
+       "上传"
+      ],
+      [
+       "core",
+       "parse"
+      ],
+      [
+       "parse",
+       "db"
+      ],
+      [
+       "db",
+       "web"
+      ],
+      [
+       "web",
+       "me",
+       "练了多少"
+      ]
+     ],
+     "usage": "0212：训练结束 HA 自动写一条力量记录，徒步 GPX 也丢进去，看年图"
+    },
+    "ext": true
    }
   ],
   "xhs": [

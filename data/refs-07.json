@@ -295,6 +295,191 @@
      ],
      "usage": "0701：把小屋五阶段改成钓台四阶段，清单改尺寸，一人两个周末立起来"
     }
+   },
+   {
+    "name": "IfcOpenShell/IfcOpenShell",
+    "url": "https://github.com/IfcOpenShell/IfcOpenShell",
+    "stars": "2.7k",
+    "zh": "无中文",
+    "desc": "开源 IFC 建筑信息模型库与几何引擎：C++ 内核加 Python 接口，读写 BIM 通用格式 IFC，附带 Blender 插件 Bonsai",
+    "why": "钓台是庭院里第一个从零盖的小构筑物，用它把 FreeCAD 画的墩、龙骨、柱、瓦存成带属性的 IFC，材料清单和维护记录都挂在模型上",
+    "intro": "IfcOpenShell 是荷兰工程师 Thomas Krijnen 2011 年发起的开源库，2.7k 星，现在由欧洲团队和社区维护，2025 年发布 0.8 版。它解决的问题是：建筑行业的通用交换格式 IFC 写法极其繁琐，商业软件各家读出来还不一样，需要一个中立、免费、能被脚本调用的解析和几何引擎。\n它的架构是 C++ 内核负责解析 IFC 文件和把参数化几何转成三角网格，上面包一层 Python 接口。输入一个 .ifc 文件，Python 里几行就能遍历所有墙、柱、板，读每个构件的材料、尺寸和自定义属性，也能反过来新建构件写回文件。仓库里还带一个 Blender 插件 Bonsai，让 Blender 变成一个能画 BIM 模型的免费工具，还有 IfcConvert 命令行把 IFC 转成 OBJ 或 SVG 平面图。\n生态上它是 FreeCAD 建筑工作台、Bonsai、Speckle 等开源 BIM 工具的底层，文档全英文，中文资料只有零散教程，社区在 OSArch 论坛活跃。\n在 0701 里它是延伸：钓台的六个混凝土墩、松木龙骨、杉木柱和竹瓦顶棚在 FreeCAD 里画完后导出 IFC，用 IfcOpenShell 的 Python 脚本跑一遍材料清单，自动算出防腐木总长度、地脚螺栓数量和竹瓦面积；再给每块台面板加一个属性记录上一次刷木蜡油的日期，清明前跑脚本就知道哪些板该刷了。模型放在 0802 服务器上，以后 0402 的库存也能对着同一份清单核对。",
+    "diagram": {
+     "title": "IfcOpenShell · 钓台的构件清单挂在模型上",
+     "nodes": [
+      {
+       "id": "cad",
+       "label": "FreeCAD\n钓台模型",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ifc",
+       "label": "IFC 文件\n带属性",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "IfcOpenShell\nPython 接口",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "geo",
+       "label": "几何引擎\n三角网格",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "bom",
+       "label": "材料清单\n木料 螺栓 瓦",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "bl",
+       "label": "Bonsai\nBlender 里看",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "清明刷油的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "cad",
+       "ifc",
+       "导出"
+      ],
+      [
+       "ifc",
+       "core"
+      ],
+      [
+       "core",
+       "geo"
+      ],
+      [
+       "core",
+       "bom",
+       "脚本"
+      ],
+      [
+       "geo",
+       "bl"
+      ],
+      [
+       "bom",
+       "me"
+      ]
+     ],
+     "usage": "0701：钓台模型导出 IFC，脚本算木料和螺栓数量，每块板记上次刷油日期"
+    },
+    "ext": true
+   },
+   {
+    "name": "OpenCPN/OpenCPN",
+    "url": "https://github.com/OpenCPN/OpenCPN",
+    "stars": "1.5k",
+    "zh": "无中文",
+    "desc": "跨平台开源海图导航软件：读 GPS 和 NMEA 数据，显示矢量与栅格海图，叠加 GRIB 气象、潮汐和航迹，插件生态丰富",
+    "why": "钓台面前是一条 10 米宽的河，用航海软件的思路给这一段河做一张自己的水深图和风向记录，知道鱼藏在哪、风从哪来",
+    "intro": "OpenCPN 是 2009 年由航海爱好者发起的开源海图导航软件，1.5k 星，C++ 加 wxWidgets 编写，跑在 Windows、macOS、Linux 和安卓上，全球远洋帆船圈的标配。它解决的问题是：商业海图机昂贵封闭，而一台笔记本加一个 USB GPS 就应该能当航海电脑。\n它的工作方式是把 GPS、AIS、测深仪等 NMEA 0183/2000 数据从串口或网络读进来，在海图底图上画出本船位置、航迹、航线和其他船只；海图支持 S57 矢量、BSB 栅格和 CM93 格式，也能直接用 SignalK 服务器当数据源。核心之外靠插件扩展：GRIB 插件叠加风、浪、气压预报，潮汐插件算涨落，Dashboard 插件显示航速航向，还有天气路由、雷达叠加等几十个插件。\n生态上它有活跃的论坛和插件市场，文档全英文，中文资料主要在帆船和钓鱼艇玩家的论坛里，界面语言包含简体中文。\n在 0701 里它是延伸：一条 10 米宽的河不需要海图，但可以借它做两件事。一是拿一只便宜的 NMEA 输出鱼探仪绑在皮划艇上沿河划几趟，OpenCPN 把水深点记成航迹，慢慢攒出钓台前这段河的小水深图，深坑和陡坎就是鱼道；二是用 GRIB 插件看风向预报，和角落竹竿上的小旗子对照，判断哪天是顶风还是顺风。软件跑在 0802 服务器或一台旧笔记本上，水深图导出成图片挂到 0702 的小黑板旁边。",
+    "diagram": {
+     "title": "OpenCPN · 给钓台前的一段河画水深图",
+     "nodes": [
+      {
+       "id": "gps",
+       "label": "USB GPS\n鱼探仪 NMEA",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "grib",
+       "label": "GRIB 气象\n风向预报",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "OpenCPN\n海图内核",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "plug",
+       "label": "插件层\nGRIB 潮汐仪表",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "trk",
+       "label": "航迹与水深点\n河段小图",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "scr",
+       "label": "旧笔记本\n海图界面",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "找鱼道的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "gps",
+       "core",
+       "串口"
+      ],
+      [
+       "grib",
+       "plug"
+      ],
+      [
+       "plug",
+       "core"
+      ],
+      [
+       "core",
+       "trk"
+      ],
+      [
+       "core",
+       "scr"
+      ],
+      [
+       "scr",
+       "me"
+      ]
+     ],
+     "usage": "0701：皮划艇带鱼探仪划几趟，水深点记成航迹，攒出钓台前这段河的小水深图"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -595,6 +780,170 @@
      ],
      "usage": "0702：黑板写满拍照后录进 App，半年出报表，决定哪盒饵挂在最顺手的位置"
     }
+   },
+   {
+    "name": "manyfold3d/manyfold",
+    "url": "https://github.com/manyfold3d/manyfold",
+    "stars": "2.1k",
+    "zh": "无中文",
+    "desc": "自托管的 3D 打印文件管理器：扫描硬盘上的 STL/3MF，网页里预览、打标签、记来源和授权，支持联邦分享",
+    "why": "洞洞板挂钩、竿托、亚克力盒卡座、樟木箱分格件都是打印的，模型文件散在硬盘里，得有一个库让坏了能立刻找到再打一件",
+    "intro": "Manyfold 是英国开发者 James Smith 2022 年开始做的自托管 3D 模型库，2.1k 星，Ruby on Rails 编写，Docker 一条命令部署，2025 年仍在密集更新。它解决的问题是：从各个网站下载的 STL 越攒越多，文件夹里全是 model_final_v3，想再打一件洞洞板挂钩时根本记不起是哪个。\n它的工作方式是扫描你指定的文件夹，把每个子目录识别成一个模型，网页里用 three.js 渲染三维预览，可以加标签、写说明、记录原始来源链接和授权协议；文件重命名和整理可以按模板自动做。它支持 STL、OBJ、3MF 等主流格式，能从 Thingiverse 等网站导入元数据，还实现了 ActivityPub 联邦协议，两台 Manyfold 之间可以互相关注和分享模型，把打印圈的分享做成了去中心化的样子。\n生态上它有活跃的 Discord 和 Mastodon 社区，界面有多语言翻译，简体中文翻译不完整，文档全英文。\n在 0702 里它是延伸：钓具储物角有一堆打印件，通用挂钩、扇形竿托的斜托座、亚克力盒背后的磁铁座、樟木箱的六格分隔条，还有 Gridfinity 小格子。在 0802 服务器上跑一个 Manyfold，把这些模型集中进来，打上 0702 钓具 和 0701 钓台 标签，说明里写清楚用了什么耗材和打印参数。哪天竿托被大鱼拽断了，手机打开 Manyfold 找到文件，扔给 0305 的打印机就行，不用重新翻硬盘。",
+    "diagram": {
+     "title": "Manyfold · 钓具打印件的模型库",
+     "nodes": [
+      {
+       "id": "dl",
+       "label": "STL 3MF\n模型文件",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Manyfold\n扫描与索引",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "标签 来源\n授权 打印参数",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "web",
+       "label": "网页三维预览\n手机也能看",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "prn",
+       "label": "0305 打印机\n再打一个竿托",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "竿托断了的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "dl",
+       "core",
+       "扫描目录"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "core",
+       "web"
+      ],
+      [
+       "web",
+       "me"
+      ],
+      [
+       "me",
+       "prn",
+       "下载切片"
+      ]
+     ],
+     "usage": "0702：挂钩、竿托、分格条的模型集中打标签，坏了从手机找到文件直接打印"
+    },
+    "ext": true
+   },
+   {
+    "name": "tesseract-ocr/tesseract",
+    "url": "https://github.com/tesseract-ocr/tesseract",
+    "stars": "75.9k",
+    "zh": "无中文",
+    "desc": "最著名的开源 OCR 引擎：谷歌维护多年，LSTM 神经网络识别一百多种文字，命令行和 C++/Python 接口，输出文本或可搜索 PDF",
+    "why": "小黑板上的鱼获记录写满就拍照擦掉，照片里的字要能变成可搜索的文本，才能真的攒成一本钓鱼笔记",
+    "intro": "Tesseract 是惠普 1985 年开始研发、2005 年开源、后来由谷歌维护多年的 OCR 引擎，75.9k 星，现在由社区在 GitHub 上继续更新，5.x 版基于 LSTM 神经网络。它解决的问题是把图片里的文字变成可以搜索、复制、统计的文本，是几乎所有开源文档工具背后的那个引擎。\n它的工作方式是先用 Leptonica 库做图像预处理，二值化、去斜、切分行和字，再把每行送进 LSTM 网络识别成字符序列，最后按版面输出纯文本、hOCR、TSV 或带文字层的 PDF。语言包按需下载，简体中文是 chi_sim，还能用自己的样本微调训练。命令行一句话就能跑，Python 有 pytesseract 封装，几乎所有语言都有绑定。\n生态上它是 paperless-ngx、OCRmyPDF 等项目的底层，文档全英文，中文教程极多，装包和调参的坑都被踩遍了。要注意它对印刷体很好，对手写体尤其是粉笔字识别率明显下降，需要靠预处理和事后校对补。\n在 0702 里它是延伸：小黑板写满一板鱼获和天气后拍照存档，照片扔进 0802 服务器上的一个监视目录，脚本先用 ImageMagick 把黑底白字反转成白底黑字并加大对比度，再用 Tesseract 的 chi_sim 识别，结果作为草稿推到手机上校对一遍，确认后写进 anglers-log 或 0209 的 memos。粉笔字写得工整一点、日期用阿拉伯数字，识别率会高很多。",
+    "diagram": {
+     "title": "Tesseract · 小黑板拍照变成可搜索的钓鱼笔记",
+     "nodes": [
+      {
+       "id": "bb",
+       "label": "黑板照片\n鱼获天气",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "pre",
+       "label": "预处理\n反色 加对比",
+       "kind": "step",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Tesseract\nLSTM chi_sim",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "txt",
+       "label": "文本草稿\n手机校对",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "log",
+       "label": "钓鱼笔记\nanglers-log",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "回看去年的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "bb",
+       "pre",
+       "监视目录"
+      ],
+      [
+       "pre",
+       "core"
+      ],
+      [
+       "core",
+       "txt"
+      ],
+      [
+       "txt",
+       "log",
+       "确认"
+      ],
+      [
+       "log",
+       "me"
+      ]
+     ],
+     "usage": "0702：黑板拍照进监视目录，反色后 OCR 成草稿，校对后写进钓鱼笔记"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -909,6 +1258,198 @@
      ],
      "usage": "0703：国产 EPEver 走 RS485 进 ESP32，MQTT 自动发现进 HA，负载口带灯"
     }
+   },
+   {
+    "name": "OpenEMS/openems",
+    "url": "https://github.com/OpenEMS/openems",
+    "stars": "1.5k",
+    "zh": "无中文",
+    "desc": "开源能源管理系统：Java OSGi 模块化平台，Edge 端接逆变器电池电表，Backend 汇总多站点，UI 看图表，德国 FENECON 主导",
+    "why": "钓台这套 200W 光伏加 100Ah 电池是院子里第二个独立电源，借它学工业级能源管理的分层架构，以后各处电池统一调度时用得上",
+    "intro": "OpenEMS 是德国储能厂商 FENECON 2016 年开源的能源管理系统，1.5k 星，Java 编写，OSGi 模块化，欧洲不少储能产品的固件底座就是它，2025 年仍每月发版。它解决的问题是：光伏、电池、充电桩、热泵各说各的协议，需要一个统一的控制平面来决定什么时候充、什么时候放、什么时候削峰。\n它分三层：Edge 跑在现场的小电脑上，通过 Modbus TCP/RTU、SunSpec 等驱动读逆变器、电池、电表，内部把设备抽象成通道，控制器按优先级链条决定输出；Backend 在服务器上汇总多个 Edge 的数据到 InfluxDB 或 TimescaleDB；UI 是 Angular 写的网页和手机端，看实时功率流和历史曲线。\n生态上它有 OpenEMS 协会和年度开发者大会，几十家厂商设备有驱动，文档全英文，中文资料几乎没有。\n在 0703 里它是延伸：一块 200W 板加一个 MPPT 用 ESPHome 读一下已经足够，OpenEMS 对钓台是杀鸡用牛刀。但院子里的电池会越来越多，0304 的主光伏系统、0505 的充电桩、钓台这一箱，各自的 MPPT 和 BMS 都有 Modbus 口。哪天想让它们协同，比如钓台电池满了就把富余电量提示去给电动车充，就在 0802 服务器上跑一个 OpenEMS Edge，把几台设备的 Modbus 都接进来，用它的控制器链做调度，HomeAssistant 只负责显示和报警。",
+    "diagram": {
+     "title": "OpenEMS · 院子里几块电池的统一调度",
+     "nodes": [
+      {
+       "id": "mppt",
+       "label": "钓台 MPPT\n与电池 BMS",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "pv",
+       "label": "0304 主光伏\n0505 充电桩",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "edge",
+       "label": "OpenEMS Edge\n驱动与通道",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ctl",
+       "label": "控制器链\n自用优先 削峰",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "db",
+       "label": "InfluxDB\n功率流历史",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ui",
+       "label": "OpenEMS UI\nHA 只做报警",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "管全院电的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "mppt",
+       "edge",
+       "Modbus"
+      ],
+      [
+       "pv",
+       "edge"
+      ],
+      [
+       "edge",
+       "ctl"
+      ],
+      [
+       "ctl",
+       "pv",
+       "指令",
+       "dash"
+      ],
+      [
+       "edge",
+       "db"
+      ],
+      [
+       "db",
+       "ui"
+      ],
+      [
+       "ui",
+       "me"
+      ]
+     ],
+     "usage": "0703：钓台电池、主光伏、充电桩的 Modbus 接进 Edge，控制器链统一调度，HA 只显示报警"
+    },
+    "ext": true
+   },
+   {
+    "name": "davidusb-geek/emhass",
+    "url": "https://github.com/davidusb-geek/emhass",
+    "stars": "668",
+    "zh": "无中文",
+    "desc": "HomeAssistant 的能源优化插件：用线性规划结合光伏预测、负载预测和电价，算出电池充放和可推迟负载的最优时间表",
+    "why": "钓台电池只有 1.2 度电，夜钓灯、电热垫、手机充电得排着来，让它按明天的日照预报算一算今晚能用多少",
+    "intro": "EMHASS 全称 Energy Management for Home Assistant，是澳大利亚工程师 David 2021 年开源的 Python 项目，668 星，作为 HomeAssistant 加载项安装，2025 年仍在活跃更新。它解决的问题是：HomeAssistant 能看能控，但不会算；什么时候充电、什么时候开大功率负载最划算，需要一个真正的优化器。星数不高，但它是 HA 生态里这个位置上最成熟的答案。\n它的工作方式是把一天切成若干时段，输入三样预测：光伏发电（可接 Solcast 或按天气公式估算）、家庭负载（从 HA 历史数据学）、电价或自定义成本，再加上电池容量、充放电功率上限和几个可推迟负载的功率与时长，交给 PuLP 线性规划求解，输出每个时段电池该充还是放、每个可推迟负载该在哪个时段开。结果通过 REST API 发回 HA 变成传感器，自动化按它执行。\n生态上它有详细的英文文档和 HA 社区长帖，用户主要在澳洲和欧洲，中文资料几乎没有。\n在 0703 里它是延伸：钓台电池 12V 100Ah 只有 1.2 度电，冬夜电热垫 40W 开五小时就吃掉两成。把 200W 板按朝向和 15 度倾角配成一个光伏预测，电池参数照实填，电热垫和夜钓灯充电设为可推迟负载，EMHASS 每天傍晚算一次：明天要是阴天，今晚电热垫只批两小时，HA 自动化到点断掉 12V 口并推送一句提示；晴天就随便用。这样电量低于 20% 的报警基本不会响。",
+    "diagram": {
+     "title": "EMHASS · 按明天的日照算今晚能用多少电",
+     "nodes": [
+      {
+       "id": "fc",
+       "label": "光伏与天气预报\n200W 板 15 度",
+       "kind": "cloud",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "bat",
+       "label": "电池状态\nESPHome 节点",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "EMHASS\n线性规划求解",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "plan",
+       "label": "时段计划\n充放 可推迟负载",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 自动化\n定时断 12V 口",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "pad",
+       "label": "电热垫 夜钓灯\n只批两小时",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "冬夜钓鱼的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "fc",
+       "core"
+      ],
+      [
+       "bat",
+       "core",
+       "HA 历史"
+      ],
+      [
+       "core",
+       "plan"
+      ],
+      [
+       "plan",
+       "ha",
+       "REST"
+      ],
+      [
+       "ha",
+       "pad"
+      ],
+      [
+       "ha",
+       "me",
+       "推送"
+      ]
+     ],
+     "usage": "0703：光伏预测加电池参数进 EMHASS，傍晚算出今晚电热垫能开几小时，HA 到点断电"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1219,6 +1760,277 @@
      ],
      "usage": "0704：两根探针各设上限，越界手机推送，MQTT 进 HA，风扇控火可选"
     }
+   },
+   {
+    "name": "fishaudio/fish-speech",
+    "url": "https://github.com/fishaudio/fish-speech",
+    "stars": "31.8k",
+    "zh": "官方中文 README",
+    "desc": "开源的顶级文本转语音模型：中英日等多语言，几秒参考音频即可克隆音色，自然语言标签控制情绪，本地 GPU 或 CPU 推理",
+    "why": "火塘边不想看屏幕，想让一个熟悉的声音念一首诗、报一句火候，本地跑、中文自然、音色可以是自己人",
+    "intro": "Fish Speech 是国内团队 Fish Audio 2024 年开源的文本转语音模型，31.8k 星，2025 年推出 S2 Pro 版本，仓库自带中文 README，是中文开源 TTS 里最接近商业水准的一个。它解决的问题是：以前的开源 TTS 要么机械要么只有英文，中文语音想自然、想用自己的音色，得靠云服务。\n它的工作方式是两段式：先把文本用大语言模型架构转成语义音频 token，再由声码器把 token 还原成波形。给它几秒钟的参考音频就能零样本克隆音色，不用训练；文本里可以写情绪和语气的自然语言标签，比如慢一点、带笑意。推理支持 NVIDIA 显卡、AMD 显卡和纯 CPU，带命令行、WebUI 和 HTTP API，Docker 一键起。\n生态上它的社区在国内很活跃，B 站教程多，Discord 和 QQ 群都有人答疑。要注意模型采用 Fish Audio 研究许可证，个人和研究用途没问题，商用要另谈。\n在 0704 里它是延伸：火塘边的规矩是不看手机，那就让声音来。在 0802 服务器上跑 Fish Speech 的 HTTP 服务，HomeAssistant 通过一个自定义 TTS 集成调用它，参考音频用家里人念的十秒话。傍晚开火时，0208 的 Snapcast 分一路到钓台顶棚下的小音箱，念一首和季节对上的诗；水壶温度探头到 90 度报一句水快开了；走的时候报一句别忘了浇火。文本从 0209 的名言库里按日期挑，声音是自己人的，比任何音箱助手都合适。",
+    "diagram": {
+     "title": "Fish Speech · 火塘边一个熟悉的声音念诗",
+     "nodes": [
+      {
+       "id": "txt",
+       "label": "名言库\n挑一首诗",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ref",
+       "label": "参考音频\n十秒人声",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Fish Speech\n文本转 token",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "voc",
+       "label": "声码器\n还原波形",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA TTS 集成\n触发朗读",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "spk",
+       "label": "Snapcast\n顶棚小音箱",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "盘腿喝茶的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "txt",
+       "ha"
+      ],
+      [
+       "ref",
+       "core",
+       "克隆音色"
+      ],
+      [
+       "ha",
+       "core",
+       "HTTP"
+      ],
+      [
+       "core",
+       "voc"
+      ],
+      [
+       "voc",
+       "spk"
+      ],
+      [
+       "spk",
+       "me"
+      ]
+     ],
+     "usage": "0704：HA 挑一首诗调用 Fish Speech，家里人的音色从顶棚小音箱念出来"
+    },
+    "ext": true
+   },
+   {
+    "name": "openai/whisper",
+    "url": "https://github.com/openai/whisper",
+    "stars": "107.3k",
+    "zh": "无中文",
+    "desc": "OpenAI 开源的语音识别模型：68 万小时数据训练，99 种语言含中文，本地推理，自动断句加标点，可翻译成英文",
+    "why": "火塘边说的话比写的多，鱼获、火候、今天想到的事，对着手机说一段，转成文字才能进 0702 的钓鱼笔记",
+    "intro": "Whisper 是 OpenAI 2022 年 9 月开源的语音识别模型，107.3k 星，是 GitHub 上星数最高的语音项目，MIT 许可证，2024 年又加了更快的 turbo 版。它解决的问题是：以前离线语音识别对口音、噪音和中文都很差，Whisper 用 68 万小时网络音频弱监督训练，做到接近商业水平。\n它的工作方式是把音频切成 30 秒的窗口，转成梅尔频谱输入一个编码器解码器 Transformer，解码器一边识别语种一边输出带标点的文本。模型从 tiny 到 large 有六档，tiny 在树莓派上也能跑，large 要显卡。周边最重要的两个衍生项目是 C++ 重写的 whisper.cpp 和更快的 faster-whisper，HomeAssistant 的语音助手管线就是靠 Wyoming 协议接 faster-whisper 做听写。\n生态上中文资料非常多，B 站和知乎教程从装包到微调都有，中文识别效果在 medium 以上模型很稳。\n在 0704 里它是延伸：火塘边坐着的时候，想记的东西很多但不想掏笔。手机上用 HA 伴侣应用按住说一段，比如今天两条鲫鱼一条昂刺、松木炭烤鱼十分钟正好，音频传到 0802 服务器的 faster-whisper 转成文字，自动化按关键词分流：有鱼名的进 0702 的钓鱼笔记，其他的进 0209 的 memos。想更省事就在钓台柱子上装一只 ESP32-S3 语音盒子，唤醒词一喊，灯、音乐和记笔记都能用嘴说。",
+    "diagram": {
+     "title": "Whisper · 火塘边说一段话就是一条笔记",
+     "nodes": [
+      {
+       "id": "mic",
+       "label": "手机按住说\n或语音盒",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "faster-whisper\n本地识别",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "wy",
+       "label": "Wyoming 协议\nHA 语音管线",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "log",
+       "label": "钓鱼笔记\n有鱼名的进这",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "memo",
+       "label": "memos\n其他想法",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "不想掏笔的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "mic",
+       "wy",
+       "音频"
+      ],
+      [
+       "wy",
+       "core"
+      ],
+      [
+       "core",
+       "log",
+       "有鱼名"
+      ],
+      [
+       "core",
+       "memo",
+       "其他"
+      ],
+      [
+       "log",
+       "me"
+      ]
+     ],
+     "usage": "0704：手机说一段，服务器 faster-whisper 转文字，按关键词分进钓鱼笔记或 memos"
+    },
+    "ext": true
+   },
+   {
+    "name": "OHF-Voice/piper1-gpl",
+    "url": "https://github.com/OHF-Voice/piper1-gpl",
+    "stars": "5.1k",
+    "zh": "无中文",
+    "desc": "Piper 的官方续作：Open Home Foundation 维护的轻量本地 TTS，ONNX 模型在树莓派上实时出声，几十种语言含中文普通话",
+    "why": "念诗交给 Fish Speech，但火快灭了、水开了这种一句话提示不值得开显卡，需要一个几十毫秒就出声的小引擎",
+    "intro": "Piper 是 Rhasspy 作者 Michael Hansen 2022 年做的轻量神经 TTS，11k 星的老仓库 2025 年 10 月归档，开发转到 Open Home Foundation 名下的 piper1-gpl，5.1k 星，GPL 许可证，是 HomeAssistant 官方语音助手默认的说话引擎。它解决的问题是：大模型 TTS 好听但要显卡、要等几秒，家里的提示音需要在树莓派上几十毫秒出声。\n它的工作方式是把文本先经 espeak-ng 转成音素序列，再送进 VITS 架构的模型，用 ONNX Runtime 一次性生成波形，不需要 GPU。每个语音是一个几十兆的 .onnx 文件加配置，官方提供几十种语言上百个音色，中文有普通话女声 huayan，也能用自己的录音训练。Python 包、命令行和 HTTP 服务都有，HA 通过 Wyoming 协议直接接。\n生态上它在 HA 语音社区里是默认选项，文档英文，中文教程集中在 HA 中文论坛和 B 站，注意中文音色的自然度不如 Fish Speech，但胜在秒出声。\n在 0704 里它是延伸，和 Fish Speech 分工：念诗这种长段落走 Fish Speech，慢一点没关系；水壶探头到温度、柴桶重量传感器提示柴快烧完、离开钓台前提醒浇水灭火，这种一句话的提示走 Piper，HA 语音管线里把它设为默认 TTS，响应快，服务器不用喂显卡。以后装了 ESP32 语音盒，问一句电池还有多少，回答也是它。",
+    "diagram": {
+     "title": "Piper · 一句话提示几十毫秒就出声",
+     "nodes": [
+      {
+       "id": "ev",
+       "label": "水开 柴少",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "txt",
+       "label": "HA 自动化\n生成提示句",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Piper\nWyoming 服务",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "onnx",
+       "label": "espeak-ng 音素\nONNX 声学模型",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "spk",
+       "label": "顶棚小音箱\nSnapcast 一路",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "fs",
+       "label": "长段落交给\nFish Speech",
+       "kind": "cloud",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "走前浇火的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ev",
+       "txt"
+      ],
+      [
+       "txt",
+       "core",
+       "Wyoming"
+      ],
+      [
+       "core",
+       "onnx"
+      ],
+      [
+       "onnx",
+       "spk",
+       "波形"
+      ],
+      [
+       "spk",
+       "me"
+      ],
+      [
+       "core",
+       "fs",
+       "分工",
+       "dash"
+      ]
+     ],
+     "usage": "0704：水开、柴少、走前浇火这类一句话提示走 Piper，HA 语音管线默认 TTS，不占显卡"
+    },
+    "ext": true
    }
   ],
   "xhs": [

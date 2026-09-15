@@ -298,6 +298,223 @@
      ],
      "usage": "0301：0204 出刀路 → Candle 探高度图 → GRBL 小 CNC 刻扣件"
     }
+   },
+   {
+    "name": "platformio/platformio-core",
+    "url": "https://github.com/platformio/platformio-core",
+    "stars": "9.3k",
+    "zh": "无中文",
+    "desc": "跨平台的嵌入式开发工具链：一个 platformio.ini 管住板子、框架、库依赖和烧录，VS Code 插件一键编译上传",
+    "why": "工具台上要给 PSK 盒子、标牌灯、烙铁定时器写各种小固件，PlatformIO 让每个小项目都有可复现的工程，而不是一堆散落的 Arduino 草图",
+    "intro": "PlatformIO Core 是 PlatformIO Labs 做的跨平台嵌入式开发工具，用 Python 写成，9.3k 星，是 VS Code 里 PlatformIO IDE 插件背后的命令行内核。它要解决的问题：Arduino IDE 管不住库版本、换板子要重装工具链、项目没法复现，它把这些都收进一个 platformio.ini。\n它的工作方式是声明式工程：ini 里写清楚板子型号、框架（Arduino、ESP-IDF、Zephyr 等）、依赖库和版本号，首次编译自动下载对应的编译器、SDK 和库，之后 pio run 编译、upload 烧录、monitor 看串口，一套命令走完。它支持上千种开发板，AVR、ESP32、STM32、RP2040 都在一个界面里。\n生态上它的库注册中心收录了上万个库，几乎所有 Arduino 库都能按名字直接引用；文档只有英文，但用的人多，中文博客和 B 站教程非常多。项目由公司维护，2026 年仍在持续发版。\n对 0301 来说它是延伸项目：工具台上的小制作大多离不开一块 ESP32 或 RP2040——扣件测试治具、烙铁定时器、标牌背光。把这些固件统一建成 PlatformIO 工程放进一个仓库，每个目录一个 platformio.ini，台面上的电脑插上板子就能烧。配合 0802 服务器上的 Git，哪块板子跑的什么版本一目了然，一年后重做治具也能一键编译出来。",
+    "diagram": {
+     "title": "PlatformIO · 一个 ini 管住整条固件工具链",
+     "nodes": [
+      {
+       "id": "ini",
+       "label": "platformio.ini\n板子 / 库 / 版本",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "src",
+       "label": "固件源码\nsrc 目录",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "PlatformIO\nCore 命令行",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "tc",
+       "label": "自动下载\n工具链 + SDK",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "reg",
+       "label": "库注册中心\n上万个库",
+       "kind": "cloud",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "fw",
+       "label": "编译出\n固件 bin",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "brd",
+       "label": "ESP32 / RP2040\n台面上烧录",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "工具台前的人\n串口监视",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "ini",
+       "core",
+       "读工程"
+      ],
+      [
+       "src",
+       "core"
+      ],
+      [
+       "core",
+       "tc"
+      ],
+      [
+       "reg",
+       "tc",
+       "拉依赖",
+       "dash"
+      ],
+      [
+       "tc",
+       "fw",
+       "编译"
+      ],
+      [
+       "fw",
+       "brd",
+       "upload"
+      ],
+      [
+       "brd",
+       "me",
+       "monitor"
+      ]
+     ],
+     "usage": "0301：扣件治具、烙铁定时器等小固件各建一个工程，插上板子一键烧录"
+    },
+    "ext": true
+   },
+   {
+    "name": "KiCad/kicad-source-mirror",
+    "url": "https://github.com/KiCad/kicad-source-mirror",
+    "stars": "2.9k",
+    "zh": "界面有中文",
+    "desc": "KiCad 开源 EDA 套件的 GitHub 镜像：原理图、PCB 布线、3D 预览、Gerber 输出，专业级免费画板子",
+    "why": "工具台上做的小电路总有一天要从洞洞板走向自己画的 PCB，KiCad 是自由软件里画板子的标杆，且能直接导出给桌面 CNC 雕刻",
+    "intro": "KiCad 是自由开源的电子设计自动化套件，由 KiCad 团队和 CERN 等机构长期维护，主仓库在 GitLab，GitHub 上这个镜像 2.9k 星、五万多次提交，始终和开发分支同步。它要解决的问题是：画一块靠谱的电路板不该被专业软件的授权费挡住，KiCad 从原理图到出厂文件全流程免费，且专业厂商也在用。\n它的工作方式是一条链：先在原理图编辑器里放元件、连线、标号，运行电气规则检查；再把网表同步到 PCB 编辑器，摆件、布线、铺铜，跑设计规则检查；最后导出 Gerber 和钻孔文件送厂，或者导出 SVG、DXF 给雕刻机。内置 3D 查看器能把板子和元件模型立体转着看，8 版之后交互式布线和差分对都很顺手，还带 SPICE 仿真和 Python 脚本接口。\n生态上元件库和封装库随软件发布，社区库和嘉立创的 KiCad 库都能补齐国产元件；界面自带简体中文，中文文档和视频教程极多，国内高校和创客圈都在用。项目每年出一个大版本，2026 年依旧活跃。\n对 0301 来说它是延伸项目：工具台上那台桌面 CNC 除了刻亚克力标牌，还能雕单面 PCB。烙铁定时器、PSK 盒子里的小电源板，先在 KiCad 里画好，把铜层导出成 DXF 或 Gerber，用 FlatCAM 之类的工具转成 G 代码，在 CNC 上把隔离槽铣出来，再用洞洞板旁那台烙铁焊上元件，一下午就能从想法走到实物板。批量做的时候同一份文件直接送厂，省去重画。",
+    "diagram": {
+     "title": "KiCad · 原理图到板子再到 CNC 雕刻",
+     "nodes": [
+      {
+       "id": "idea",
+       "label": "电路想法\n元件清单",
+       "kind": "person",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "lib",
+       "label": "元件库 / 封装\n嘉立创补充",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "sch",
+       "label": "原理图编辑\nERC 检查",
+       "kind": "step",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "KiCad\nPCB 编辑器",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "v3d",
+       "label": "3D 查看器\n立体预览",
+       "kind": "screen",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "gerb",
+       "label": "Gerber\n送厂制板",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "dxf",
+       "label": "DXF / SVG\n导出铜层",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "cnc",
+       "label": "0301 桌面 CNC\n铣单面板",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "idea",
+       "sch"
+      ],
+      [
+       "lib",
+       "core",
+       "封装"
+      ],
+      [
+       "sch",
+       "core",
+       "网表"
+      ],
+      [
+       "core",
+       "v3d",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "gerb",
+       "批量"
+      ],
+      [
+       "core",
+       "dxf",
+       "样板"
+      ],
+      [
+       "dxf",
+       "cnc",
+       "G 代码"
+      ]
+     ],
+     "usage": "0301：小电源板、定时器板在 KiCad 画好，导 DXF 用桌面 CNC 铣隔离槽"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -605,6 +822,211 @@
      ],
      "usage": "0302：三条线各一份清单，出门前对格子打钩，回来称重校正"
     }
+   },
+   {
+    "name": "organicmaps/organicmaps",
+    "url": "https://github.com/organicmaps/organicmaps",
+    "stars": "15.3k",
+    "zh": "界面有中文",
+    "desc": "隐私优先的离线地图与 GPS 导航 App：OSM 数据、等高线、徒步骑行路线规划，全程无网可用、无广告无追踪",
+    "why": "装备区的出发清单对应的是山里没信号的路线，Organic Maps 把临安一带的离线地图和轨迹记录装进手机，是背包之外的第一件装备",
+    "intro": "Organic Maps 是从 MAPS.ME 分叉出来的社区项目，用 C++ 写核心、原生 Android 和 iOS 客户端，15.3k 星，全球用户超过六百万。它要解决的问题是：徒步进山后手机没信号，商业地图 App 要么下不到离线包，要么满屏广告和追踪。Organic Maps 完全离线、不联网、不收集数据。\n它的工作方式是把 OpenStreetMap 数据按地区预处理成自家的 mwm 格式，一个省一个文件下到手机里；渲染引擎在本地矢量绘图，缩放时不重新下载。徒步模式下会显示等高线、山峰高程、小径难度和水源标注，路线规划支持步行、骑行和驾车，导航时语音提示；点一下就能记录 GPS 轨迹，导出 GPX 或 KML；还能导入别人分享的轨迹文件当参考。\n生态上它上架了 Google Play、F-Droid 和 App Store，界面自带简体中文，社区在 Telegram 和论坛活跃，2025 年后仍频繁发版；数据随 OSM 每月更新，中国地区的山路数据也在稳步变好。\n对 0302 来说它是延伸项目：出发清单手写板旁边可以贴一张二维码，指向常走的三条线的 GPX 文件——日徒步、两日露营、钓鱼。出发前在阁楼里把临安和杭州的离线包下好，把这次的轨迹文件导进 Organic Maps；回来后把记录的轨迹导出 GPX，存到 0802 服务器的装备目录里，和这趟带了哪些装备的清单放在一起。下一次挑背包容量时，看看那条线的爬升和时长就知道该拎 38L 还是 65L。",
+    "diagram": {
+     "title": "Organic Maps · 全离线的山路地图与轨迹",
+     "nodes": [
+      {
+       "id": "osm",
+       "label": "OpenStreetMap\n每月更新",
+       "kind": "cloud",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "gpx",
+       "label": "往年 GPX\n三条常走线",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "mwm",
+       "label": "离线地图包\n临安 / 杭州",
+       "kind": "db",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Organic Maps\n本地矢量渲染",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "nav",
+       "label": "徒步导航\n等高线 / 水源",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "phone",
+       "label": "手机屏幕\n无信号也能用",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "track",
+       "label": "记录的轨迹\n导出 GPX",
+       "kind": "file",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "srv",
+       "label": "0802 服务器\n装备目录",
+       "kind": "db",
+       "col": 3,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "osm",
+       "mwm",
+       "预处理"
+      ],
+      [
+       "mwm",
+       "core"
+      ],
+      [
+       "gpx",
+       "core",
+       "导入"
+      ],
+      [
+       "core",
+       "nav"
+      ],
+      [
+       "nav",
+       "phone"
+      ],
+      [
+       "core",
+       "track",
+       "记录"
+      ],
+      [
+       "track",
+       "srv",
+       "回家归档"
+      ]
+     ],
+     "usage": "0302：出发前下好离线包和线路 GPX，回来把轨迹和装备清单一起归档"
+    },
+    "ext": true
+   },
+   {
+    "name": "tumic0/GPXSee",
+    "url": "https://github.com/tumic0/GPXSee",
+    "stars": "1.2k",
+    "zh": "无中文",
+    "desc": "桌面版 GPS 轨迹查看分析器：支持 GPX、FIT、KML 等十几种格式，在离线地图上叠轨迹，看海拔、速度、心率曲线",
+    "why": "装备区攒下的每一条徒步轨迹都需要一个能在电脑上快速回看、对比爬升的工具，GPXSee 轻、快、全离线，比网页服务省心",
+    "intro": "GPXSee 是捷克开发者 tumic0 用 C++ 和 Qt 写的 GPS 日志查看器，1.2k 星，近六千次提交，Windows、macOS、Linux 都有安装包。它要解决的问题是：手表、手机、运动相机记录的轨迹格式各不相同，想在电脑上离线看一眼、比一比，总得先传到某个网站。GPXSee 双击文件就打开，什么都不上传。\n它的工作方式是读文件、画地图、画曲线：支持 GPX、TCX、FIT、KML、IGC、NMEA、GeoJSON 等十几种格式，可以一次拖进几十个文件叠在同一张地图上；地图底图既能用在线瓦片源，也能加载 OziExplorer、MBTiles、GeoTIFF 等离线地图，山里下载好的等高线图也能当底图。下方的图表区画出海拔、速度、心率、踏频、温度和坡度随距离或时间变化的曲线，鼠标在曲线上滑动，地图上的点同步移动；还能给轨迹打点、看统计、导出 PDF 或图片。\n生态上它是很多户外论坛推荐的轻量工具，翻译走 Weblate，界面没有中文，但操作简单到不需要说明书；项目持续维护，几乎每月都有版本。\n对 0302 来说它是延伸项目：Organic Maps 在山上记的轨迹回家导出 GPX 后，放到 0802 服务器的装备目录里，用 GPXSee 一次把三条常走线全部打开，叠在同一张离线地图上比较爬升和距离。出发清单上每条线旁边写的时长、水量和背包容量，就来自这些曲线；如果某条线的海拔图突然多出一段陡坡，说明该把登山杖挂到出发清单里了。",
+    "diagram": {
+     "title": "GPXSee · 把每条轨迹叠在离线地图上比一比",
+     "nodes": [
+      {
+       "id": "gpx",
+       "label": "GPX / FIT 文件\n手机 / 手表",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "map",
+       "label": "离线底图\nMBTiles / 等高线",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "GPXSee\nQt 桌面程序",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "chart",
+       "label": "海拔 / 速度\n曲线联动",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "scr",
+       "label": "地图叠加\n多条轨迹对比",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "pdf",
+       "label": "导出图片\n贴出发清单",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "整备区的人\n定线路和背包",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "gpx",
+       "core",
+       "拖入"
+      ],
+      [
+       "map",
+       "core",
+       "底图"
+      ],
+      [
+       "core",
+       "chart"
+      ],
+      [
+       "core",
+       "scr"
+      ],
+      [
+       "chart",
+       "scr",
+       "联动"
+      ],
+      [
+       "scr",
+       "pdf"
+      ],
+      [
+       "scr",
+       "me",
+       "看爬升"
+      ]
+     ],
+     "usage": "0302：三条常走线叠图比爬升与距离，决定清单上的水量、时长和背包容量"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -907,6 +1329,201 @@
      ],
      "usage": "0303：HA 7 点 open → ESPHome 步进 → 齿轮拉珠链卷起天窗遮光帘"
     }
+   },
+   {
+    "name": "advplyr/audiobookshelf",
+    "url": "https://github.com/advplyr/audiobookshelf",
+    "stars": "14.3k",
+    "zh": "界面有中文",
+    "desc": "自托管有声书与播客服务器：扫描目录自动配元数据，网页和手机 App 记住进度，多用户各听各的",
+    "why": "帐篷区的夜晚要的是闭眼听书而不是刷手机，audiobookshelf 把有声书和播客放在自家服务器上，手机离线缓存后串灯下随听随停",
+    "intro": "audiobookshelf 是开发者 advplyr 用 Node.js 和 Vue 做的自托管有声书和播客服务器，14.3k 星，是自托管圈子里有声内容的默认答案。它要解决的问题是：买来或收集的有声书散在硬盘里，播客要靠各家 App 订阅，听到哪儿了换个设备就忘。它把这些集中到一台自己的服务器上。\n它的工作方式是扫描加流式播放：把有声书按作者、书名整理成目录挂进 Docker，服务器扫描后从 Audible、Google Books 等源自动补封面和简介，多文件的书会合并成章节；播客直接填 RSS 就自动下载新集。播放时服务器按需转码，网页端、Android 和 iOS 官方 App 都能听，进度实时同步，支持倍速、睡眠定时和离线下载；多用户各有各的书架和进度，还带电子书阅读器和 Kindle 推送。\n生态上它有 Docker、群晖和各种 NAS 的安装教程，界面通过 Weblate 翻译，简体中文完整，中文自托管社区讨论很多；项目更新频繁，2026 年仍在活跃发版。\n对 0303 来说它是延伸项目：帐篷顶的串灯调到最低后，手边网兜里那副耳机连的就是它。在 0802 家庭服务器上跑一个 audiobookshelf，把有声书和几个户外、木工播客的 RSS 加进去，下雨前用手机把今晚要听的几集缓存好，钻进睡袋后开睡眠定时三十分钟。露营灯和白噪音机归 0303 管，听的内容归这台服务器管，早上七点遮光帘打开时，进度已经记在书架上，明晚接着听。",
+    "diagram": {
+     "title": "audiobookshelf · 自家服务器上的有声书架",
+     "nodes": [
+      {
+       "id": "dir",
+       "label": "有声书目录\n按作者 / 书名",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "rss",
+       "label": "播客 RSS\n户外 / 木工",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "audiobookshelf\nNode 服务器",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "meta",
+       "label": "自动补元数据\n封面 / 章节",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "db",
+       "label": "书架 / 进度\n多用户",
+       "kind": "db",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "app",
+       "label": "手机 App\n离线缓存",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "tent",
+       "label": "帐篷里的人\n睡眠定时",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "dir",
+       "core",
+       "扫描"
+      ],
+      [
+       "rss",
+       "core",
+       "订阅"
+      ],
+      [
+       "core",
+       "meta"
+      ],
+      [
+       "meta",
+       "db"
+      ],
+      [
+       "db",
+       "app",
+       "同步进度"
+      ],
+      [
+       "app",
+       "tent",
+       "耳机"
+      ]
+     ],
+     "usage": "0303：0802 服务器上跑一份，雨夜前缓存好几集，串灯调暗后睡眠定时听"
+    },
+    "ext": true
+   },
+   {
+    "name": "kovidgoyal/calibre",
+    "url": "https://github.com/kovidgoyal/calibre",
+    "stars": "25.7k",
+    "zh": "界面有中文",
+    "desc": "老牌开源电子书管理器：格式转换、元数据整理、自带内容服务器和阅读器，几十种设备一键传书",
+    "why": "帐篷网兜里那本翻一半的书，纸质之外还得有电子版随手可读；calibre 是电子书库的标杆，配墨水屏阅读器最省心",
+    "intro": "calibre 是 Kovid Goyal 从 2006 年起独立维护的开源电子书管理软件，用 Python 和 Qt 写成，25.7k 星，五万多次提交，Windows、macOS、Linux 都有。它要解决的问题是：电子书格式混乱、元数据缺失、不同阅读器互不兼容，买来的书和自己扫的书没有一个统一的家。\n它的工作方式是一个书库加一堆工具：把书加进书库后，calibre 自动抓取书名、作者、封面和简介，按标签、系列、评分整理；内置转换器能在 EPUB、MOBI、AZW3、PDF 等格式之间互转，还能调字体、修目录；连上阅读器就按型号自动转换并传书，Kindle、Kobo、国产墨水屏都认。它自带一个内容服务器，在局域网开一个网页，任何浏览器和阅读器都能直接从书库里下载或在线读；再配上新闻抓取，能把网站文章定时做成电子书推送。\n生态上插件市场有上百个扩展，社区论坛 MobileRead 非常活跃，界面自带简体中文，中文教程遍地都是；作者几乎每周发一个版本，二十年没断更。\n对 0303 来说它是延伸项目：帐篷网兜里除了纸书，放一台墨水屏阅读器；calibre 装在 0802 家庭服务器上，内容服务器常开，晚上钻进帐篷用阅读器连 Wi-Fi 打开书库网页，挑一本下下来，露营灯调到最低就能看。和 audiobookshelf 分工：一个管听，一个管读。木工、户外、电子方面的 PDF 手册也一并塞进书库，帐篷里想起某个尺寸，伸手就能查。",
+    "diagram": {
+     "title": "calibre · 一个书库喂饱所有阅读器",
+     "nodes": [
+      {
+       "id": "books",
+       "label": "电子书文件\nEPUB / PDF",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "news",
+       "label": "网站文章\n定时抓取",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "calibre\n书库 + 转换",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "meta",
+       "label": "抓元数据\n封面 / 标签",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "srv",
+       "label": "内容服务器\n局域网网页",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "ereader",
+       "label": "墨水屏阅读器\n自动转格式",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "tent",
+       "label": "帐篷里的人\n露营灯下读",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "books",
+       "core",
+       "加入"
+      ],
+      [
+       "news",
+       "core",
+       "做成书"
+      ],
+      [
+       "core",
+       "meta"
+      ],
+      [
+       "core",
+       "srv"
+      ],
+      [
+       "srv",
+       "ereader",
+       "Wi-Fi 下载"
+      ],
+      [
+       "meta",
+       "ereader",
+       "传书",
+       "dash"
+      ],
+      [
+       "ereader",
+       "tent"
+      ]
+     ],
+     "usage": "0303：书库放 0802 服务器，帐篷里用墨水屏连内容服务器随手挑一本"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1230,6 +1847,208 @@
      ],
      "usage": "0304：保护板不是 JK 时，HA 主机蓝牙直连，两块组成虚拟电池告警"
     }
+   },
+   {
+    "name": "pvlib/pvlib-python",
+    "url": "https://github.com/pvlib/pvlib-python",
+    "stars": "1.7k",
+    "zh": "无中文",
+    "desc": "光伏系统性能仿真的 Python 库：太阳位置、辐照模型、组件和逆变器模型，NumFOCUS 支持的学术标准",
+    "why": "四块 400W 板子一年到底能发多少电、45° 南坡是不是最优，与其看厂家宣传，不如用 pvlib 自己算一遍，再和实测对比",
+    "intro": "pvlib-python 是由美国桑迪亚国家实验室发起、现在由 pvlib 社区维护的光伏仿真 Python 库，1.7k 星，是 NumFOCUS 的附属项目，学术论文里引用最多的光伏建模工具之一。它要解决的问题是：光伏发电量取决于位置、倾角、朝向、温度、天气和组件参数，靠经验估算误差很大，pvlib 把几十年的经验模型做成可以直接调用的函数。\n它的工作方式是一条模型链：输入经纬度和时间，算出太阳高度角和方位角；输入气象数据（PVGIS、NSRDB 等公开数据，或自己气象站的辐照度）算出板面辐照度；再经过组件温度模型、单二极管或 SAPM 组件模型、逆变器效率模型，输出每小时的直流和交流功率。ModelChain 类把这些步骤串起来，几行代码就能跑一年的仿真，结果直接是 pandas 表格，画图方便。\n生态上它的文档和示例画廊很完整，能和 SAM、PVGIS 互相校验；文档只有英文，但国内光伏工程师博客里用它做案例的不少，项目持续发版。\n对 0304 来说它是延伸项目：先用杭州的经纬度、南坡 45° 倾角和四块 400W 组件的参数跑一遍全年仿真，看冬夏发电差多少、2kWh 储能够不够喂串灯和气象站；再把 HomeAssistant 里储能电源报的实际发电量按天导出，和仿真曲线放在一起画，差得多就说明板子脏了、遮挡了或朝向不对。0306 气象站若加一块辐照度传感器，还能用实测替代公开气象源，把仿真做得更准。",
+    "diagram": {
+     "title": "pvlib · 先算一年发电量再和实测对",
+     "nodes": [
+      {
+       "id": "geo",
+       "label": "经纬度 / 倾角\n组件参数",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "wx",
+       "label": "气象数据\nPVGIS 或 0306",
+       "kind": "cloud",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "sun",
+       "label": "太阳位置\n辐照度模型",
+       "kind": "step",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "pvlib\nModelChain",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "pv",
+       "label": "组件 / 逆变器\n温度模型",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "sim",
+       "label": "逐小时功率\n全年曲线",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 实测发电量\n储能电源上报",
+       "kind": "db",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "me",
+       "label": "看对比图的人\n查遮挡与朝向",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "geo",
+       "core"
+      ],
+      [
+       "wx",
+       "sun"
+      ],
+      [
+       "sun",
+       "core"
+      ],
+      [
+       "core",
+       "pv"
+      ],
+      [
+       "pv",
+       "sim",
+       "输出"
+      ],
+      [
+       "sim",
+       "me",
+       "仿真"
+      ],
+      [
+       "ha",
+       "me",
+       "实测",
+       "dash"
+      ]
+     ],
+     "usage": "0304：仿真南坡 45° 四块板全年发电量，和 HA 记录的实际发电对比找问题"
+    },
+    "ext": true
+   },
+   {
+    "name": "mr-manuel/venus-os_dbus-serialbattery",
+    "url": "https://github.com/mr-manuel/venus-os_dbus-serialbattery",
+    "stars": "268",
+    "zh": "无中文",
+    "desc": "Victron Venus OS 的第三方 BMS 驱动：串口或蓝牙读 JK、Daly、JBD 等国产 BMS，让自组磷酸铁锂电池进 Victron 生态",
+    "why": "木架上那两块备用磷酸铁锂如果哪天升级成自组电池包，这个驱动能让国产 BMS 被 Victron 逆变器当原厂电池管理，安全充放",
+    "intro": "dbus-serialbattery 最早由 Louisvdw 发起，原仓库已归档，现在由 mr-manuel 接手维护并成为官方延续，268 星，是 Victron 用户自组电池时用得最多的驱动。它要解决的问题是：Victron 的 Venus OS 只认自家和少数品牌的电池，而 DIY 磷酸铁锂电池包用的都是 JK、Daly、JBD 这类国产 BMS，逆变器看不到电池状态就不敢放心充放。\n它的工作方式是做翻译官：驱动跑在 Venus OS 上，通过 RS485、RS232、TTL 串口或蓝牙读取 BMS 的电压、电流、SOC、单体电压、温度和报警，再以 Victron 标准电池设备的形式挂到 D-Bus 上。于是 Venus OS 就像接了原厂电池，按驱动给出的充放电限制控制 MPPT 和逆变器，单体不均衡或温度过低时自动降流。\n生态上它有独立文档站列出支持的 BMS 和接线，Victron 社区讨论很热；文档只有英文，国内 DIY 储能圈用 JK 配 Victron 的教程不少，几乎每月发版。\n对 0304 来说它是延伸项目：现在的 2kWh 户外储能电源是一体机，用不上它；但木架上那两块备用磷酸铁锂如果有一天扩成 48V 自组电池包，走 Victron MPPT 加逆变器的路线，就要靠它把 JK BMS 接进 Venus OS，再经 MQTT 进 HomeAssistant，木架侧板上的小屏幕显示的就是真正的单体电压了。接线按文档来，蓝牙不如有线稳。",
+    "diagram": {
+     "title": "dbus-serialbattery · 国产 BMS 进 Victron 生态",
+     "nodes": [
+      {
+       "id": "bms",
+       "label": "JK / Daly BMS\n自组磷酸铁锂",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "ser",
+       "label": "RS485 / 蓝牙\n读电压电流",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "dbus-serialbattery\n翻译成电池设备",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "venus",
+       "label": "Venus OS\nCerbo / 树莓派",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "lim",
+       "label": "充放限制\nCVL / CCL",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "mppt",
+       "label": "Victron MPPT\n逆变器",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "ha",
+       "label": "0304 木架小屏\nHA 显示单体",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "bms",
+       "ser"
+      ],
+      [
+       "ser",
+       "core",
+       "串口协议"
+      ],
+      [
+       "core",
+       "venus",
+       "D-Bus"
+      ],
+      [
+       "venus",
+       "lim"
+      ],
+      [
+       "lim",
+       "mppt",
+       "控制充放"
+      ],
+      [
+       "venus",
+       "ha",
+       "MQTT",
+       "dash"
+      ]
+     ],
+     "usage": "0304：备用电池升级为自组电池包时，让国产 BMS 被 Victron 认作原厂电池"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1470,7 +2289,7 @@
     "name": "greghesp/ha-bambulab",
     "url": "https://github.com/greghesp/ha-bambulab",
     "stars": "2.3k",
-    "zh": "组件自带简体中文翻译",
+    "zh": "界面有中文",
     "desc": "拓竹打印机的 Home Assistant 集成，读进度、层数、温度、AMS 耗材，还能看摄像头",
     "why": "P1S 接上它，开始、结束、失败自动推手机，躺帐篷里在 HA 上看第 47 层的摄像头画面",
     "intro": "ha-bambulab 是 greghesp 发起、社区维护的拓竹打印机 Home Assistant 集成，2.3k 星，通过 HACS 安装，是把 X1、P1、A1 系列接进 HA 的事实方案。拓竹官方只给了自家 App 和 Bambu Studio，想让打印机和家里其他设备联动，就得靠它。\n它的工作原理是走拓竹打印机的 MQTT 通道：局域网模式下直接连打印机的本机 MQTT 端口，云模式下连拓竹云。打印机会不断推送一份包含当前层数、进度、剩余时间、喷头与热床温度、AMS 各槽耗材信息、风扇转速、错误码的状态报文，集成把它们解析成几十个 HA 实体；反向可以下发暂停、继续、停止、调温、开关灯的命令。摄像头也接进来了，P1 系列走它自带的低帧率流，X1 走 RTSP。\n社区非常活跃，Discord 有专门频道，几乎每月更新，翻译文件里自带简体中文，B 站上也有不少中文安装教程。\n在 0305 里它是打印机和这套系统之间的桥：开始、结束、失败推送到手机，摄像头画面贴到 0802 中枢大屏上，AMS 槽位的耗材用量回写给 Spoolman 扣减，柜顶排风扇跟着打印状态自动启停，打完再延时十分钟。要注意 P1S 用局域网模式需要在打印机上开启并填入访问码，固件大版本更新后偶尔会断连，更新集成即可。",
@@ -1572,6 +2391,327 @@
      ],
      "usage": "0305：P1S 状态 → HA 实体 → 手机推送、排风扇联动、AMS 用量回写 Spoolman"
     }
+   },
+   {
+    "name": "Klipper3d/klipper",
+    "url": "https://github.com/Klipper3d/klipper",
+    "stars": "11.6k",
+    "zh": "有中文文档站",
+    "desc": "把运动规划搬到树莓派上的 3D 打印机固件：单片机只管步进脉冲，支持输入整形、压力提前和多 MCU",
+    "why": "拓竹 P1S 是封闭固件，但读懂 Klipper 就读懂了现代打印机为什么快；哪天想用 0307 的 CNC 平台改一台大尺寸打印机，固件就选它",
+    "intro": "Klipper 是 Kevin O’Connor 发起的开源 3D 打印机固件，11.6k 星，Voron、Creality K1 等高速打印机的固件都是它或它的改版。它要解决的问题是：传统固件把 G 代码解析和运动规划都塞进一颗小单片机，算力不够就跑不快、加不了高级算法。\n它的工作方式是把大脑和手脚分开：一台树莓派或类似的 Linux 小电脑跑 klippy 主程序，负责解析 G 代码、做运动规划和各种补偿；打印机主板上的单片机只烧一个很小的固件，接收带时间戳的步进指令并执行。因为规划在大电脑上做，输入整形（抵消振纹）、压力提前（改善拐角）、自动床网都是 Python 模块，配置是一个文本文件，改完重启生效。\n生态上它不带界面，配 Mainsail 或 Fluidd 网页前端，再加 Moonraker API 就能接 HomeAssistant；官方文档站有完整简体中文翻译，国内 Voron 社群和 B 站教程非常多，项目持续活跃。\n对 0305 来说它是延伸项目：柜面上的拓竹 P1S 固件封闭，不用改；但读一遍 Klipper 的输入整形和压力提前文档，就能理解 P1S 为什么要做振动校准，切片参数怎么和它对应。更实际的用法是：0307 那套 2020 型材龙门平台哪天想变成一台 300 见方的大尺寸打印机，主板刷 Klipper，klippy 跑在 0802 服务器上，Moonraker 接进 HomeAssistant，推送和现在的 P1S 一样。",
+    "diagram": {
+     "title": "Klipper · 树莓派做大脑，单片机只管脉冲",
+     "nodes": [
+      {
+       "id": "gcode",
+       "label": "切片 G 代码\n局域网推送",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cfg",
+       "label": "printer.cfg\n文本配置",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "klippy 主程序\n树莓派 / 服务器",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "plan",
+       "label": "运动规划\n输入整形 / 压力提前",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "moon",
+       "label": "Moonraker API\nMainsail 前端",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "mcu",
+       "label": "主板单片机\n带时间戳的步进",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "prn",
+       "label": "0307 平台改的\n大尺寸打印机",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n开始 / 失败推送",
+       "kind": "screen",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "gcode",
+       "core"
+      ],
+      [
+       "cfg",
+       "core",
+       "读配置"
+      ],
+      [
+       "core",
+       "plan"
+      ],
+      [
+       "plan",
+       "mcu",
+       "串口 / USB"
+      ],
+      [
+       "mcu",
+       "prn"
+      ],
+      [
+       "core",
+       "moon"
+      ],
+      [
+       "moon",
+       "ha",
+       "",
+       "dash"
+      ]
+     ],
+     "usage": "0305：先读懂 P1S 为什么要振动校准；再把 0307 龙门平台改成大尺寸打印机时选它"
+    },
+    "ext": true
+   },
+   {
+    "name": "OctoPrint/OctoPrint",
+    "url": "https://github.com/OctoPrint/OctoPrint",
+    "stars": "9k",
+    "zh": "界面有中文",
+    "desc": "3D 打印机的网页远程控制台：上传文件、看进度、看摄像头、装插件，Python 写的老牌树莓派方案",
+    "why": "P1S 的远程监控靠拓竹自家云，OctoPrint 是开源世界里同一件事的标杆，读懂它的插件体系就知道打印机远程监控该长什么样",
+    "intro": "OctoPrint 是德国开发者 Gina Häußge 从 2012 年起维护的开源打印机远程控制软件，用 Python 写成，9k 星，2026 年 6 月还发了 1.11.8 版。它要解决的问题：打印机拴着一台电脑太浪费，树莓派上的一个网页就能远程上传、启动、监看和急停。\n它的工作方式是串口加网页：树莓派通过 USB 连打印机，OctoPrint 把 G 代码逐行发过去，同时解析温度回报，在网页上画温度曲线、显示进度和剩余时间，接一个摄像头就能看实时画面并自动生成延时视频。它最大的特点是插件系统：官方仓库有几百个插件，从床面调平可视化到远程访问和 AI 失败检测都有；HomeAssistant 有官方 OctoPrint 集成，进度、温度和急停按钮直接进仪表盘。\n生态上 OctoPi 镜像烧进树莓派就能用，教程极多，界面有社区中文语言包；项目靠赞助维持，持续更新。\n对 0305 来说它是延伸项目：柜面上的拓竹 P1S 走自家协议，有 ha-bambulab 就够，不需要它；它的价值在两处。一是学习：看一个成熟的打印机监控该有什么——温度曲线、摄像头延时、失败检测、推送，这是设想里那块小屏幕和 HA 通知的参考答案。二是备用：如果耗材架旁再添一台老式串口打印机，或 0307 平台改成的打印机不跑 Klipper，把 OctoPrint 装进 0802 服务器的一个容器，USB 拉一根线过去，HA 集成一加，和 P1S 并排出现在同一个仪表盘上。",
+    "diagram": {
+     "title": "OctoPrint · 一块树莓派远程管打印机",
+     "nodes": [
+      {
+       "id": "gcode",
+       "label": "G 代码文件\n网页上传",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cam",
+       "label": "USB 摄像头\n看层高",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "OctoPrint\nPython 服务",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "plug",
+       "label": "插件仓库\n失败检测 / 延时",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ser",
+       "label": "串口发 G 代码\n收温度回报",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "prn",
+       "label": "串口打印机\n非拓竹机型",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n进度 / 急停",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "帐篷里看手机\n的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "gcode",
+       "core"
+      ],
+      [
+       "cam",
+       "core",
+       "视频流"
+      ],
+      [
+       "core",
+       "plug"
+      ],
+      [
+       "core",
+       "ser"
+      ],
+      [
+       "ser",
+       "prn",
+       "USB"
+      ],
+      [
+       "core",
+       "ha",
+       "集成"
+      ],
+      [
+       "ha",
+       "me",
+       "推送"
+      ]
+     ],
+     "usage": "0305：作 P1S 之外第二台串口打印机的远程台，和 ha-bambulab 并排进 HA 仪表盘"
+    },
+    "ext": true
+   },
+   {
+    "name": "prusa3d/PrusaSlicer",
+    "url": "https://github.com/prusa3d/PrusaSlicer",
+    "stars": "9.1k",
+    "zh": "界面有中文",
+    "desc": "Prusa 维护的开源切片器：OrcaSlicer 和拓竹 Studio 的共同祖先，树状支撑、可变层高、多材料涂色",
+    "why": "0305 已经选了 OrcaSlicer，但它和拓竹 Studio 都是从 PrusaSlicer 分叉的；读懂上游才明白切片参数的来龙去脉，也多一条备用切片路线",
+    "intro": "PrusaSlicer 是捷克 Prusa Research 公司维护的开源切片软件，从 Slic3r 分叉而来，用 C++ 写成，9.1k 星，2026 年 5 月发布 2.9.5 版。它要解决的问题是把 3D 模型变成打印机能执行的 G 代码，并在这一步决定强度、速度、表面质量和耗材用量。\n它的工作方式是模型进、G 代码出：导入 STL、3MF 或 STEP 后，先做摆放、缩放、切割和修复，再按层高把模型切成一层层轮廓，为每层生成外墙、内墙、填充、支撑和顶底面路径，最后按打印机配置输出 G 代码并逐层预览走线和时间。它带来的很多功能后来成了行业标配：有机树状支撑、可变层高、熨烫、涂色分区多材料、按区域改参数的修改器，以及联网直接把任务发给打印机。\n生态上它是 OrcaSlicer、拓竹 Studio、SuperSlicer 的共同上游，几乎所有厂商都提供 PrusaSlicer 配置文件，界面自带简体中文，中文教程很多；Prusa 公司持续投入，版本更新稳定。\n对 0305 来说它是延伸项目：日常切片继续用 OrcaSlicer 给 P1S 推任务，但某个参数看不懂时，去 PrusaSlicer 的官方知识库查同名参数，那里解释最完整，因为参数就是从这里来的。实际用途有二：地堡 0204 设计台装一份当第二意见，同一个 PSK 内衬模型用两个切片器各切一遍，比支撑用量和预计时长，选省耗材的那版；再给全屋小配件建一个 3MF 项目库，连打印参数一起存，下次再打挂钩不用重新调。",
+    "diagram": {
+     "title": "PrusaSlicer · 切片器家族的上游",
+     "nodes": [
+      {
+       "id": "model",
+       "label": "STL / STEP\n0204 设计台",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "prof",
+       "label": "打印机配置\n耗材参数",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "PrusaSlicer\n切片引擎",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "sup",
+       "label": "树状支撑\n可变层高",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "prev",
+       "label": "逐层预览\n时长 / 耗材",
+       "kind": "screen",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "gcode",
+       "label": "G 代码 / 3MF\n参数一起存",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "p1s",
+       "label": "拓竹 P1S\n局域网推送",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "orca",
+       "label": "OrcaSlicer\n下游分支",
+       "kind": "step",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "model",
+       "core"
+      ],
+      [
+       "prof",
+       "core"
+      ],
+      [
+       "core",
+       "sup"
+      ],
+      [
+       "core",
+       "prev"
+      ],
+      [
+       "core",
+       "gcode"
+      ],
+      [
+       "core",
+       "orca",
+       "分叉",
+       "dash"
+      ],
+      [
+       "gcode",
+       "p1s"
+      ],
+      [
+       "orca",
+       "p1s",
+       "日常"
+      ]
+     ],
+     "usage": "0305：日常用 OrcaSlicer，查参数和做第二意见时用上游 PrusaSlicer 对比切片"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1889,6 +3029,205 @@
      ],
      "usage": "0306：气压 + 趋势 → HA 模板查表 → 浇灌暂停与提醒"
     }
+   },
+   {
+    "name": "weewx/weewx",
+    "url": "https://github.com/weewx/weewx",
+    "stars": "1.2k",
+    "zh": "无中文",
+    "desc": "Python 写的开源气象站软件：驱动几十种商用气象站，存数据库、生成网页报表、上传到 Weather Underground 等网络",
+    "why": "自制气象站的数据除了进 HA，还需要一套按气象行业规矩做日报、月报和年度气候图的软件，weewx 是这方面二十年的标杆",
+    "intro": "WeeWX 是 Tom Keffer 从 2009 年起维护的开源气象站软件，用 Python 写成，1.2k 星，八千多次提交，2026 年 6 月发布 5.4 版。它要解决的问题是：气象站硬件只会吐原始数据，但一个像样的气象站需要归档、统计、报表、网页和向公共气象网络上传，这些都是它做的。\n它的工作方式是驱动加引擎加报表：驱动层对接几十种商用气象站（Davis、Fine Offset、Ecowitt 等），也能通过 MQTT 驱动接收任意自制站的数据；引擎按固定间隔把数据写进 SQLite 或 MySQL 归档表，同时算出日、周、月、年的最高最低和累计值；报表层用 Cheetah 模板生成静态网页和图表，默认皮肤开箱就能看，也能上传到 Weather Underground、CWOP 等网络。扩展机制允许加驱动、加服务、加皮肤，社区有上百个扩展。\n生态上它的文档非常详尽，用户论坛活跃，树莓派上跑十几年不倒是常态；文档只有英文，中文资料不多，但配置就是一个文本文件，看着示例改并不难。\n对 0306 来说它是延伸项目：铝杆上的三件套和百叶盒数据经 ESPHome 进 HomeAssistant 负责实时和联动，而年度那张我家的一年气候图交给 WeeWX 更专业。在 0802 服务器上跑一份，用 MQTT 驱动订阅 HA 转发的主题收温湿度、气压、风速风向和雨量，按气象站的规矩算日雨量、阵风和露点，自动生成网页报表，年底导出全年温度和降水曲线，比自己在 HA 里拼图表省事得多。",
+    "diagram": {
+     "title": "WeeWX · 把自制气象站的数据做成正经气象报表",
+     "nodes": [
+      {
+       "id": "esp",
+       "label": "ESP32 三件套\n温湿压风雨",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "mqtt",
+       "label": "HA / MQTT\n转发主题",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "drv",
+       "label": "MQTT 驱动\n收原始数据",
+       "kind": "step",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "WeeWX 引擎\n归档 + 统计",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "rep",
+       "label": "报表皮肤\nCheetah 模板",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "wu",
+       "label": "Weather\nUnderground",
+       "kind": "cloud",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "SQLite 归档\n日 / 月 / 年",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "web",
+       "label": "静态网页\n年度气候图",
+       "kind": "screen",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "esp",
+       "mqtt"
+      ],
+      [
+       "mqtt",
+       "drv",
+       "订阅"
+      ],
+      [
+       "drv",
+       "core"
+      ],
+      [
+       "core",
+       "db"
+      ],
+      [
+       "core",
+       "rep"
+      ],
+      [
+       "rep",
+       "web"
+      ],
+      [
+       "core",
+       "wu",
+       "上传",
+       "dash"
+      ]
+     ],
+     "usage": "0306：HA 管实时联动，WeeWX 管归档和年度气候图，跑在 0802 服务器上"
+    },
+    "ext": true
+   },
+   {
+    "name": "merbanan/rtl_433",
+    "url": "https://github.com/merbanan/rtl_433",
+    "stars": "7.6k",
+    "zh": "无中文",
+    "desc": "用几十块钱的 RTL-SDR 电视棒解码 433/868/915MHz 无线传感器：温湿度、雨量、风速、TPMS 等两百多种协议，输出 JSON 或 MQTT",
+    "why": "自制气象站之外，邻居和商用气象站的 433MHz 探头都在空中飞，rtl_433 一根电视棒就能全收进 HA，是气象站的免费外挂探头",
+    "intro": "rtl_433 是 Benjamin Larsson 发起、社区维护的软件无线电解码工具，用 C 写成，7.6k 星，是 SDR 玩家和智能家居圈里最常用的 433MHz 解码器。它要解决的问题是：无数无线温湿度计、雨量计、风速计、门磁都在 ISM 频段用私有协议广播，买家只能用厂家的显示屏看，rtl_433 把它们统统解出来。\n它的工作方式是接收、解调、匹配：一根二三十块的 RTL-SDR 电视棒接在树莓派或电脑上，rtl_433 把指定频率的射频信号采样下来，做 OOK 或 FSK 解调，再用两百多个内置解码器逐个匹配脉冲模式，识别出是哪家哪个型号，解析出温湿度、风速、雨量、电量等字段，以 JSON 或 MQTT 输出。它有 HomeAssistant 自动发现插件，每个探头自动变成一组实体。\n生态上支持列表还在增长；文档是英文，但国内 SDR 圈和 HA 论坛教程不少，有 Docker 镜像和 HA 附加组件。\n对 0306 来说它是延伸项目：自制气象站建满一套探头很费事，rtl_433 让阁楼多出许多免费探头。在 0802 服务器上插一根电视棒，天线从天窗边伸出去，几十米内所有 433MHz 温湿度计、别人家的雨量筒、甚至隔壁商用气象站的数据都能进 HA，和自制站对比校准；再把几十块的无线温湿度计放进 0402 材料仓库或 0302 装备区，不布线就有了湿度报警。433MHz 是开放的低功率频段，只收不发没有合规问题。",
+    "diagram": {
+     "title": "rtl_433 · 一根电视棒收下空中所有无线探头",
+     "nodes": [
+      {
+       "id": "rf",
+       "label": "433 / 868MHz\n各家无线探头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sdr",
+       "label": "RTL-SDR 电视棒\n天线伸出天窗",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "rtl_433\n解调 + 协议匹配",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "dec",
+       "label": "两百多个解码器\n识别型号字段",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "json",
+       "label": "JSON / MQTT\n温湿风雨",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n自动发现实体",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "cmp",
+       "label": "0306 自制站\n对比校准",
+       "kind": "step",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "rf",
+       "sdr"
+      ],
+      [
+       "sdr",
+       "core",
+       "采样"
+      ],
+      [
+       "core",
+       "dec"
+      ],
+      [
+       "dec",
+       "json"
+      ],
+      [
+       "json",
+       "ha",
+       "MQTT"
+      ],
+      [
+       "ha",
+       "cmp",
+       "对比"
+      ]
+     ],
+     "usage": "0306：电视棒插 0802 服务器，收周边无线探头进 HA，和自制气象站互相校准"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -2228,6 +3567,314 @@
      ],
      "usage": "0307：Teensy 4.1 跑 grblHAL，五路步进 + Modbus 主轴 + 门磁，先做 3+2 定位"
     }
+   },
+   {
+    "name": "cncjs/cncjs",
+    "url": "https://github.com/cncjs/cncjs",
+    "stars": "2.6k",
+    "zh": "界面有中文",
+    "desc": "网页版 CNC 控制台：跑在树莓派上，浏览器里发 G 代码、手轮点动、3D 预览刀路，支持 Grbl、grblHAL、Marlin、TinyG",
+    "why": "五轴机的 grblHAL 需要一个不用守在机器旁的发送器，cncjs 让手机和 0204 设计台的浏览器都能开机、点动、看进度",
+    "intro": "cncjs 是 Cheton Wu 发起、社区维护的网页版 CNC 控制软件，用 Node.js 和 React 写成，2.6k 星，是 Grbl 系控制器最常用的发送器之一。它要解决的问题是：CNC 控制器只有一个串口，传统做法是一台电脑守在机器旁，cncjs 把它换成一块树莓派，操作都在浏览器里完成。\n它的工作方式是服务端加网页：树莓派通过 USB 串口连接控制器，cncjs 服务把 G 代码逐行发送并处理流控和实时状态回报；浏览器端是一组可拖动的部件——坐标、点动、主轴、宏、探针、控制台，以及一个 3D 刀路窗口，能看当前刀在程序的哪一行。它同时兼容 Grbl、grblHAL、Smoothieware、TinyG 和 Marlin，能接摄像头看加工画面。\n生态上有树莓派和 Docker 镜像，界面自带简繁中文，国内 DIY CNC 圈用它的很多；更新节奏变慢但仍在维护。\n对 0307 来说它是延伸项目：Teensy 4.1 上的 grblHAL 需要一个发送器，把 cncjs 装在机器下层型材柜里的一块树莓派上，USB 连 Teensy，机旁挂一块小屏或平板，0204 设计台的浏览器也能远程看。注意它对 A、C 轴的点动支持要看版本，多轴显示不全就用 grblHAL 社区的 ioSender 做对照；门磁急停仍走 grblHAL 硬件输入，不要依赖网页。摄像头画面可以顺手转进 HA，和 3D 打印机监控放同一页。",
+    "diagram": {
+     "title": "cncjs · 树莓派上的网页 CNC 控制台",
+     "nodes": [
+      {
+       "id": "gcode",
+       "label": "G 代码程序\n0204 设计台 CAM",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cam",
+       "label": "USB 摄像头\n加工画面",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "cncjs 服务\n树莓派",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ui",
+       "label": "网页控制台\n点动 / 3D 刀路",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "hal",
+       "label": "grblHAL\nTeensy 4.1",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "mach",
+       "label": "五轴机\n主轴 / 步进",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "平板或手机\n远程看进度",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "gcode",
+       "core",
+       "上传"
+      ],
+      [
+       "cam",
+       "core"
+      ],
+      [
+       "core",
+       "ui"
+      ],
+      [
+       "core",
+       "hal",
+       "USB 串口"
+      ],
+      [
+       "hal",
+       "mach"
+      ],
+      [
+       "ui",
+       "me",
+       "浏览器"
+      ],
+      [
+       "ui",
+       "hal",
+       "点动",
+       "dash"
+      ]
+     ],
+     "usage": "0307：树莓派放型材柜里跑 cncjs，USB 连 Teensy，机旁小屏和 0204 浏览器都能控"
+    },
+    "ext": true
+   },
+   {
+    "name": "vlachoudis/bCNC",
+    "url": "https://github.com/vlachoudis/bCNC",
+    "stars": "1.7k",
+    "zh": "无中文",
+    "desc": "Python 写的 Grbl 发送器兼简易 CAM：自动调平、G 代码编辑、摄像头对刀、内置钻孔和轮廓加工，一个程序全包",
+    "why": "自动调平是雕 PCB 和铣不平整木料时最需要的功能，bCNC 用探针扫出曲面再实时修正 Z，是 grblHAL 上最省事的方案",
+    "intro": "bCNC 是欧洲核子研究中心的工程师 Vasilis Vlachoudis 写的 Grbl 发送器，用 Python 和 Tkinter 写成，1.7k 星，两千多次提交，社区持续维护。它要解决的问题是：小型 CNC 玩家不想为发送器、CAM、调平工具装三个软件，bCNC 把这些塞进一个窗口。\n它的工作方式是发送器加工具箱：通过串口连接 Grbl 或 grblHAL，界面上有坐标、点动、主轴控制和 G 代码列表，可以直接在列表里编辑、拖动、镜像和缩放程序段。它最出名的功能是自动调平：用探针在工作台上按网格扫一遍，得到工件表面的高度图，再把 G 代码按这张图实时修正 Z 值，雕 PCB 时 0.1 毫米的隔离槽也能均匀。此外还有摄像头对刀、简单 CAM（钻孔、轮廓、口袋）和刀路 3D 预览。\n生态上它是 Grbl 圈的老牌工具，教程不少，界面只有英文，中文资料以论坛帖子为主；界面偏老但功能扎实，仍在更新。\n对 0307 来说它是延伸项目：五轴机日常发送用 cncjs 或 ioSender，但当工件是一块本身不平的胡桃木板，或者 0301 那边要借这台机器雕单面 PCB 时，切到 bCNC：先用主轴上夹的探针扫一遍工件表面，让它把程序的 Z 值按曲面修正，再开始铣。它跑在 0204 设计台的电脑上，USB 线拉到 Teensy 即可，探针信号接 grblHAL 的探针输入。A、C 轴它不会调平，只在三轴模式下用。",
+    "diagram": {
+     "title": "bCNC · 探针扫曲面，Z 值实时修正",
+     "nodes": [
+      {
+       "id": "probe",
+       "label": "主轴探针\n网格扫高度",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "gcode",
+       "label": "原始 G 代码\n平面假设",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "map",
+       "label": "工件高度图\n0.1mm 精度",
+       "kind": "db",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "bCNC\n发送器 + CAM",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "cam",
+       "label": "内置 CAM\n钻孔 / 轮廓",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "fixed",
+       "label": "Z 修正后的\nG 代码",
+       "kind": "file",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "hal",
+       "label": "grblHAL\nTeensy 4.1",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "probe",
+       "map",
+       "扫描"
+      ],
+      [
+       "map",
+       "core"
+      ],
+      [
+       "gcode",
+       "core"
+      ],
+      [
+       "cam",
+       "core",
+       "生成"
+      ],
+      [
+       "core",
+       "fixed",
+       "按曲面修正"
+      ],
+      [
+       "fixed",
+       "hal",
+       "串口发送"
+      ],
+      [
+       "core",
+       "probe",
+       "探针指令",
+       "dash"
+      ]
+     ],
+     "usage": "0307：铣不平的木板或雕单面 PCB 时用它先调平再发送，三轴模式下使用"
+    },
+    "ext": true
+   },
+   {
+    "name": "bdring/FluidNC",
+    "url": "https://github.com/bdring/FluidNC",
+    "stars": "2.5k",
+    "zh": "无中文",
+    "desc": "跑在 ESP32 上的 Grbl 系 CNC 固件：六轴、YAML 配置不用重新编译、自带 Wi-Fi 网页控制和 SD 卡脱机运行",
+    "why": "grblHAL 加 Teensy 之外，FluidNC 是 ESP32 路线的头号选择；一块几十块的板子就有 Wi-Fi 和网页，是给五轴机做备用控制器或做第二台小机器的最佳起点",
+    "intro": "FluidNC 是 Bart Dring 主导的开源 CNC 运动控制固件，从 Grbl_ESP32 演化而来，用 C++ 写成，2.5k 星，2026 年 4 月发布 4.0.3 版。它要解决的问题是：Grbl 只能跑三轴、改引脚要重新编译，而 ESP32 便宜又自带无线，FluidNC 把 Grbl 的成熟运动核心搬到 ESP32 上，并把所有配置改成一个 YAML 文件。\n它的工作方式是固件加配置文件：把编译好的固件烧进 ESP32，再上传一个 config.yaml，写清楚轴数、步进引脚、限位、步距、主轴类型（PWM、RS485 VFD、激光）和探针，重启就按新配置运行，最多六轴。它兼容 Grbl 的串口协议和 G 代码，cncjs、bCNC 都能直接用；自带 Wi-Fi 和 WebUI，浏览器就能上传、运行、点动，G 代码还能放 SD 卡脱机跑。\n生态上有 6-Pack 等配套控制板，Discord 社区活跃，Wiki 完整但只有英文，中文资料零散；更新勤快。\n对 0307 来说它是延伸项目：主控制器已定 grblHAL 加 Teensy 4.1，FluidNC 是它的备胎和对照。一是把一块 ESP32 刷上它，同一份轴参数写成 YAML，在型材柜里备着，Teensy 出问题时换上就能跑三轴加 A 轴；二是 0301 那台桌面 CNC 升级控制器时，它加 Wi-Fi 最省事；三是它的 RS485 VFD 主轴写法可直接借鉴到五轴机的变频器接线。",
+    "diagram": {
+     "title": "FluidNC · ESP32 上的六轴 Grbl，改配置不用重编译",
+     "nodes": [
+      {
+       "id": "yaml",
+       "label": "config.yaml\n轴 / 引脚 / 主轴",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "gcode",
+       "label": "G 代码\nSD 卡或网页",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "FluidNC\nESP32 固件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "自带 WebUI\nWi-Fi 控制",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ser",
+       "label": "Grbl 串口协议\ncncjs / bCNC",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "step",
+       "label": "步进驱动\n最多六轴",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "vfd",
+       "label": "VFD 主轴\nRS485",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "mach",
+       "label": "0301 桌面 CNC\n或五轴备用板",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "yaml",
+       "core",
+       "上传"
+      ],
+      [
+       "gcode",
+       "core"
+      ],
+      [
+       "core",
+       "web"
+      ],
+      [
+       "core",
+       "ser",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "step",
+       "脉冲"
+      ],
+      [
+       "core",
+       "vfd",
+       "Modbus"
+      ],
+      [
+       "step",
+       "mach"
+      ]
+     ],
+     "usage": "0307：ESP32 备用控制器与 grblHAL 参数对照；0301 桌面 CNC 升级 Wi-Fi 控制"
+    },
+    "ext": true
    }
   ],
   "xhs": [

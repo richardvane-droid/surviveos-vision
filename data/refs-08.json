@@ -301,6 +301,290 @@
      ],
      "usage": "0801：外借工具登记为资产，扫码切状态，到期提醒经 Webhook 进 HA 推手机"
     }
+   },
+   {
+    "name": "teableio/teable",
+    "url": "https://github.com/teableio/teable",
+    "stars": "21.7k",
+    "zh": "界面有中文",
+    "desc": "开源的多维表格 / AI 电子表格，Airtable 的自托管替代：每张表就是一张真正的 PostgreSQL 表，百万行不卡，带看板、画廊、表单等视图",
+    "why": "真实项目要记品牌型号、估值、电商订单号，字段随时增减；专门的物品库软件改不动表结构，用多维表格当物品总账最灵活",
+    "intro": "Teable 是一个中国团队做的开源多维表格，21.7k 星，定位是 Airtable 的自托管替代，最近又加上了 AI 生成字段与自动化。它解决的问题很朴素：想要一张能随时加列、能挂附件、能被程序读写的表，又不想把数据放到别人的云上。\n它的底层就是 PostgreSQL：每张表对应一张真实的 Postgres 表，字段直接映射成列，百万行也能正常筛选排序，任何 SQL 工具都能直接连上去查。上层是 NestJS 服务加 React 前端，提供网格、看板、画廊、日历、表单五种视图，字段支持公式、关联、附件、条码，改动经 WebSocket 实时推送。对外有 REST API、Webhook 和自动化，Docker Compose 一条命令部署。\n它由国内开发者主导，界面自带中文，文档站有中文版，2026 年仍在密集发版；比 NocoDB 视图更完整，对自托管足够。\n在 0801 里它是延伸：Homebox 管箱子和位置树没问题，但真实项目 2026-09 收集的需求里还有品牌型号、估值提取、六个电商平台的订单半自动盘点，这些字段一直在变。做法是在 0804 的笔记本上跑 Teable，建一张物品总表，列是名称、品牌型号、估值、房间、箱号、俯视照片、购买平台、订单号、状态；各平台订单导出 CSV 后导入，画廊视图按照片翻，看板按房间分列，表单视图在扫码后填拿走或放回。底层是 Postgres，0802 的平板地图直接读同一个库，不用再同步。",
+    "diagram": {
+     "title": "Teable · 一张物品总表，五种视图",
+     "nodes": [
+      {
+       "id": "csv",
+       "label": "订单 CSV",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "form",
+       "label": "扫码后填表\n拿走 / 放回",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Teable\nNestJS + React",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "pg",
+       "label": "PostgreSQL\n物品总表",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "view",
+       "label": "画廊 / 看板\n按房间分列",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "map",
+       "label": "0802 平板地图\n直接读库",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "盘点的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "csv",
+       "core",
+       "导入"
+      ],
+      [
+       "form",
+       "core",
+       "表单视图"
+      ],
+      [
+       "core",
+       "pg"
+      ],
+      [
+       "core",
+       "view"
+      ],
+      [
+       "pg",
+       "map",
+       "SQL"
+      ],
+      [
+       "view",
+       "me"
+      ]
+     ],
+     "usage": "0801：品牌型号、估值、订单号这些常变字段放 Teable，底层 Postgres 与平板地图共用"
+    },
+    "ext": true
+   },
+   {
+    "name": "zxing-js/library",
+    "url": "https://github.com/zxing-js/library",
+    "stars": "2.9k",
+    "zh": "无中文",
+    "desc": "ZXing 条码库的 TypeScript 移植：浏览器里直接调摄像头解二维码与 EAN、Code128 等一维码，不用装 App",
+    "why": "平板和手机用的是同一套网页界面，扫码就得在浏览器里完成；它是网页扫码里最老牌、格式最全的库，商品条码也能解",
+    "intro": "zxing-js/library 是 Google 老牌条码库 ZXing 的 TypeScript 移植，2.9k 星，把一维码和二维码的解码算法搬进了浏览器。它解决的问题是：想在网页里扫码，又不想让用户装 App，也不想把摄像头画面传到服务器上识别。\n它的工作方式是纯前端的：用 getUserMedia 打开摄像头，每隔几十毫秒抓一帧到 canvas，转成灰度位图交给解码器，解出来就回调一段文本。BrowserMultiFormatReader 会同时尝试 QR、Data Matrix、EAN-13、Code128 等十几种格式，也可以指定只解某一种来提速；除了视频流，也能对图片文件解码。\n它的状态要说清楚：README 明确写着项目处于维护模式，只接受补丁，作者在找新维护者。但它的 npm 下载量仍然很高，Vue、React 的扫码组件大多包着它；浏览器原生的 BarcodeDetector 是备选，只是 iOS Safari 支持一直不稳。中文资料主要是博客里的接入教程。\n在 0801 里它是延伸：方案里的扫码目前依赖平板自带相机，扫完再跳网页。用它做一个扫码页嵌进 HA 仪表盘的网页卡，平板和手机打开同一个地址就能扫：扫箱侧二维码跳到 Homebox 的箱子页并切换在库或外借，扫商品包装上的 EAN 条码则查公开商品库自动填品牌型号，盘点日开连续扫码模式对账。注意浏览器只在 HTTPS 下开放摄像头，小主机上得配一个内网证书。",
+    "diagram": {
+     "title": "zxing-js · 浏览器里抓帧解码",
+     "nodes": [
+      {
+       "id": "cam",
+       "label": "平板 / 手机\n摄像头",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "img",
+       "label": "包装照片",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "zxing-js\n多格式解码器",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "frame",
+       "label": "抓帧到 canvas\n灰度位图",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "box",
+       "label": "Homebox 箱子页\n切在库 / 外借",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ean",
+       "label": "EAN 查品牌型号\n自动填表",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "盘点的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "cam",
+       "frame",
+       "取帧"
+      ],
+      [
+       "img",
+       "core",
+       "",
+       "dash"
+      ],
+      [
+       "frame",
+       "core"
+      ],
+      [
+       "core",
+       "box",
+       "二维码"
+      ],
+      [
+       "core",
+       "ean",
+       "条码"
+      ],
+      [
+       "box",
+       "me"
+      ]
+     ],
+     "usage": "0801：扫码页嵌进 HA 网页卡，二维码跳箱子页、EAN 条码自动填品牌型号"
+    },
+    "ext": true
+   },
+   {
+    "name": "pmndrs/react-three-fiber",
+    "url": "https://github.com/pmndrs/react-three-fiber",
+    "stars": "31.9k",
+    "zh": "无中文",
+    "desc": "three.js 的 React 渲染器：把 3D 场景写成组件，状态一变画面自动更新；配 drei 工具库几十行就能转着看一个 glTF 模型",
+    "why": "平板上的等距地图和 PSK 生存盒的零件清单都可以做成能转的 3D 视图，用 React 写比裸写 three.js 省一半代码",
+    "intro": "react-three-fiber 是 pmndrs 社区维护的 three.js 的 React 渲染器，31.9k 星。它解决的问题是：three.js 是命令式的，建网格、加场景、每帧更新都要手写；它把每个 three.js 对象变成一个 JSX 组件，状态一变画面跟着变。\n它是一个自定义 React 渲染器：Canvas 组件创建 WebGL 上下文和渲染循环，里面的 mesh、boxGeometry、meshStandardMaterial 这些标签被翻译成对应的 three.js 对象，属性直接映射；useFrame 让组件参与每一帧更新，useLoader 负责加载 glTF 模型和贴图。配套的 drei 库提供轨道控制器、环境光、标注等现成组件，几十行代码就能让模型转起来。\n它是 React 生态里做 3D 的事实标准，2026 年 v9 版跟上了 React 19；没有官方中文文档，但掘金和 B 站教程不少。\n在 0801 里它是延伸：等距地图先用 SVG 做，够用；稳定之后可以做一个 3D 版本，每只透明收纳箱是一个 Box 组件，颜色由 HA 里的实体状态驱动，在库灰色、外借橙色，点一下箱子相机飞过去并弹出俯视照片；PSK 生存盒则把 glTF 模型加载进来，边转边看每个零件对应清单里的哪一行，缺件半透明。数据从 HA 的 WebSocket 订阅，页面仍嵌在 HA 仪表盘里。",
+    "diagram": {
+     "title": "react-three-fiber · 状态驱动的 3D 箱子地图",
+     "nodes": [
+      {
+       "id": "ha",
+       "label": "HA WebSocket\n在库 / 外借状态",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "gltf",
+       "label": "盒子 glTF",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "react-three-fiber\nCanvas + 组件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "drei",
+       "label": "drei\n轨道控制 / 标注",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "pad",
+       "label": "平板 3D 地图\n点箱子看照片",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "psk",
+       "label": "转着看盒子\n零件对清单",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "找东西的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ha",
+       "core",
+       "订阅状态"
+      ],
+      [
+       "gltf",
+       "core",
+       "useLoader"
+      ],
+      [
+       "drei",
+       "core"
+      ],
+      [
+       "core",
+       "pad",
+       "WebGL"
+      ],
+      [
+       "core",
+       "psk"
+      ],
+      [
+       "pad",
+       "me"
+      ]
+     ],
+     "usage": "0801：箱子做成 Box 组件按 HA 状态变色，PSK 盒 glTF 转着看零件清单"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -604,6 +888,288 @@
      ],
      "usage": "0802：左右小屏一数据一张模板卡，顶端 chips 排状态"
     }
+   },
+   {
+    "name": "gethomepage/homepage",
+    "url": "https://github.com/gethomepage/homepage",
+    "stars": "32k",
+    "zh": "界面有中文",
+    "desc": "自托管起始页仪表盘：YAML 配置，靠 Docker 标签自动发现容器，一百多种服务集成能把 Jellyfin、Uptime Kuma、NAS 的实时数字摆在一页上",
+    "why": "屏墙上 HA 管传感器，但 0804 三台机器上的十几个服务谁在跑、跑得怎样，需要一页服务层总览，它是这类起始页里星最多的",
+    "intro": "homepage 是 gethomepage 组织维护的自托管起始页，32k 星，是近几年自托管圈里最流行的仪表盘之一。它解决的问题是：家里跑了十几个服务，每个都有自己的网址和状态页，需要一页把入口和关键数字都摆出来，打开浏览器第一眼就看到。\n它用 Next.js 写成，配置是几个 YAML 文件：services 定义分组和卡片，widgets 定义顶部信息条，bookmarks 定义书签。最特别的是集成能力：一百多种服务有专门的小部件，填上地址和密钥，卡片上直接显示 Jellyfin 正在播放什么、Uptime Kuma 有几个监控在线、NAS 剩多少空间；再加上 Docker 标签自动发现，容器只要贴几行标签就会自动出现在页面上。请求经服务端代理，密钥不暴露到浏览器。\n它更新很勤，2026 年仍是月度发版；界面经 Crowdin 翻译成四十多种语言，中文完整，文档是英文，但国内部署教程非常多。\n在 0802 里它是延伸：三块屏由 HA 驱动，传感器这一层够了，缺的是服务层。做法是在 0804 的笔记本上跑 homepage，右屏的一个标签页嵌它：分组按机器排，NAS 一栏是 Jellyfin、Immich、存储余量，笔记本一栏是 HA、ESPHome、Uptime Kuma、Beszel，Mac mini 一栏是识别任务和 Ollama；哪个服务挂了卡片就变灰。手机上它也是入口页，出门时先看一眼再决定要不要点进 HA。",
+    "diagram": {
+     "title": "homepage · 一页看完全屋服务",
+     "nodes": [
+      {
+       "id": "yaml",
+       "label": "YAML 配置",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "docker",
+       "label": "Docker 标签\n自动发现",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "homepage\nNext.js 服务",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "api",
+       "label": "服务集成\n代理请求 API",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "svc",
+       "label": "Jellyfin / Kuma\nNAS / Beszel",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "screen",
+       "label": "右屏标签页\n手机入口页",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "看一眼的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "yaml",
+       "core"
+      ],
+      [
+       "docker",
+       "core",
+       "贴标签"
+      ],
+      [
+       "core",
+       "api"
+      ],
+      [
+       "svc",
+       "api",
+       "实时数字"
+      ],
+      [
+       "core",
+       "screen"
+      ],
+      [
+       "screen",
+       "me"
+      ]
+     ],
+     "usage": "0802：右屏一个标签页按机器分组摆服务卡片，服务挂了卡片变灰"
+    },
+    "ext": true
+   },
+   {
+    "name": "Lissy93/dashy",
+    "url": "https://github.com/Lissy93/dashy",
+    "stars": "26.4k",
+    "zh": "界面有中文",
+    "desc": "另一款自托管仪表盘：自带可视化编辑器，不用改 YAML 也能拖卡片，带状态检查、几十套主题、小部件、多页面和登录",
+    "why": "木屋吧台平板和手机需要一个不那么工程味的入口页，它的主题和编辑器更适合当分身；与 homepage 各有所长，值得一起学",
+    "intro": "Dashy 是英国开发者 Alicia Sykes 维护的自托管仪表盘，26.4k 星，和 homepage 是同一类东西，但取向不同：homepage 偏运维，靠 YAML 和自动发现；Dashy 偏个人化，主打可视化编辑和主题。它解决的问题同样是给一堆自托管服务做一个入口页。\n它用 Vue 写成，一个 conf.yml 描述页面、分区和条目，但也可以完全不碰文件：界面里有编辑模式，拖拽卡片、改图标、加分区，保存后写回配置。它有状态检查，定时探测每个链接是否在线并在卡片角上亮灯；有几十套内置主题和自定义 CSS；有小部件系统，能嵌天气、系统负载、RSS、iframe；还有多页面、搜索快捷键、登录与按用户显示不同页面。\n社区活跃，2026 年仍在更新，界面翻译含简体和繁体中文，文档是英文但很详尽；国内自托管圈把它和 homepage 并列为两大起始页。\n在 0802 里它是延伸：屏墙归 HA，homepage 管服务层，Dashy 更适合做分身的入口。木屋吧台的平板和手机上放一个 Dashy 页面：第一页是几个大按钮，直接跳 HA 的各个视图；第二页用 iframe 嵌 Grafana 的水电曲线和 0801 的地图；主题用夜间黑底，22:00 之后和屏墙的夜航模式一个调子。它的状态检查还能顺手把各模块 ESPHome 节点的网页探一遍，掉线的卡片亮红灯，和 Uptime Kuma 互为备份。",
+    "diagram": {
+     "title": "Dashy · 拖出来的入口页",
+     "nodes": [
+      {
+       "id": "edit",
+       "label": "界面编辑模式\n拖卡片改主题",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "conf",
+       "label": "conf.yml",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Dashy\nVue 单页",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "check",
+       "label": "状态检查\n探测节点网页",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "pad",
+       "label": "吧台平板 / 手机\n大按钮 + iframe",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 视图\nGrafana 曲线",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "磨豆子的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "edit",
+       "conf",
+       "写回"
+      ],
+      [
+       "conf",
+       "core"
+      ],
+      [
+       "core",
+       "check"
+      ],
+      [
+       "core",
+       "pad"
+      ],
+      [
+       "pad",
+       "ha",
+       "跳转 / 嵌入"
+      ],
+      [
+       "pad",
+       "me"
+      ]
+     ],
+     "usage": "0802：分身入口页，大按钮跳 HA 视图，iframe 嵌曲线，夜间主题配夜航"
+    },
+    "ext": true
+   },
+   {
+    "name": "ollama/ollama",
+    "url": "https://github.com/ollama/ollama",
+    "stars": "180.3k",
+    "zh": "无中文",
+    "desc": "本地跑大语言模型最省事的方式：一条命令拉取并运行 Qwen、Gemma、DeepSeek 等模型，提供 REST API，HA 有官方集成能把它当对话助手",
+    "why": "屏幕角落那句今天所有模块正常需要有人把几十个实体的状态读一遍再总结成一行，本地大模型干这个不联网也不花钱",
+    "intro": "Ollama 是 2023 年出现的本地大模型运行工具，180.3k 星，是 GitHub 上星数最高的项目之一。它解决的问题是：想在自己的机器上跑一个大语言模型，但不想折腾编译、量化和显存参数；它把这些包成一条命令，几分钟后就能对话。\n它的核心是一个常驻服务：模型以 GGUF 格式从它的模型库拉取，底层推理引擎来自 llama.cpp，Mac 上走 Metal，有显卡走 CUDA 或 ROCm，没显卡用 CPU；对外开放一个 REST API，兼容 OpenAI 的接口格式，各种客户端和框架都能直接接。模型库里 Qwen、Gemma、DeepSeek 都有多个尺寸，8B 级别在 16GB 内存的 Mac mini 上能流畅跑。\nHomeAssistant 有官方 Ollama 集成，可以把它设为 Assist 的对话代理并允许它读取和控制暴露的实体。文档是英文，中文教程遍地都是。\n在 0802 里它是延伸：三块屏展示数据，但没有人替你读数据。在 0804 的 M1 Mac mini 上跑 Ollama，装一个 Qwen 8B 级别的模型，HA 的 Ollama 集成把七个区域的关键实体暴露给它，再建一条早晚各跑一次的自动化：把所有模块的状态发给模型，让它用一句话总结，写进屏幕角落那行小字，正常时就是今天所有模块正常，异常时会说柴火炉温度偏高、雨水罐传感器四十分钟没上报。同一个模型也是 0803 小鸭子断网时的后备大脑。",
+    "diagram": {
+     "title": "Ollama · 本地模型替你读一遍全屋状态",
+     "nodes": [
+      {
+       "id": "ent",
+       "label": "七个区域\n暴露的实体",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "auto",
+       "label": "HA 自动化\n早晚各一次",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Ollama\nM1 Mac mini",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "model",
+       "label": "Qwen 8B\nGGUF 模型",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "line",
+       "label": "屏幕角落一行\n今天所有模块正常",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "duck",
+       "label": "0803 小鸭子\n断网后备大脑",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "端着杯子的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ent",
+       "core",
+       "暴露实体"
+      ],
+      [
+       "auto",
+       "core"
+      ],
+      [
+       "model",
+       "core",
+       "Metal 推理"
+      ],
+      [
+       "core",
+       "line",
+       "一句总结"
+      ],
+      [
+       "core",
+       "duck",
+       "",
+       "dash"
+      ],
+      [
+       "line",
+       "me"
+      ]
+     ],
+     "usage": "0802：HA 把实体状态发给本地模型总结成一行小字，Mac mini 上跑不联网"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1004,6 +1570,290 @@
      ],
      "usage": "0803：头壳里的 ESP32-S3 听与说，自建服务端经 MCP 查 HA 实体、写待办"
     }
+   },
+   {
+    "name": "huggingface/lerobot",
+    "url": "https://github.com/huggingface/lerobot",
+    "stars": "27.2k",
+    "zh": "有中文文档站",
+    "desc": "Hugging Face 的机器人端到端学习库：统一的数据集格式、遥操作录数据、ACT / Diffusion / VLA 等策略训练与真机部署，SO-101 机械臂入门套件几百块",
+    "why": "鸭子的步态靠强化学习，但看到充电窝就走过去对准这类靠眼睛的技能更适合模仿学习，它是这条路线上最完整的开源工具箱",
+    "intro": "LeRobot 是 Hugging Face 在 2024 年发起的机器人学习库，27.2k 星，目标是把开放数据集加预训练模型的玩法搬到机器人上。它解决的问题是：真机学习的每一步以前都要自己造轮子，录数据、存格式、训策略、部署到硬件，各家互不兼容；它把这些统一成一套 Python 接口。\n它的流程是：先用遥操作录数据，摄像头画面、关节角度、指令按 LeRobotDataset 格式存成 Parquet 加视频，可以直接推到 Hub；然后选一个策略训练，ACT 和 Diffusion Policy 适合单任务，SmolVLA、π0 这类视觉语言动作模型能听指令做多任务；训完的模型在真机上以固定频率跑推理，输入画面和状态，输出关节目标。硬件层有统一的 Robot 和 Motor 抽象，支持 SO-101 机械臂、LeKiwi 底盘等低成本平台。\nHub 上公开数据集几千个；README 直接链接了同济子豪兄写的 SO-101 中文全流程教程，从组装到部署都有，是国内入门这条路线最省事的材料。\n在 0803 里它是延伸：Microduck 的步态是仿真里强化学习出来的，但回窝对准、看到人停下、把头转向说话的人这些需要眼睛的技能，用模仿学习更直接。做法是把鸭子头部摄像头、IMU 和十五个舵机的状态按 LeRobotDataset 格式录下来，人用手柄遥控它走到充电窝几十次，训一个小策略叠在步态策略之上。想先练手，就在阁楼工具台上装一台 SO-101，照中文教程走一遍再回来改鸭子。",
+    "diagram": {
+     "title": "LeRobot · 录几十次，学会自己回窝",
+     "nodes": [
+      {
+       "id": "tele",
+       "label": "手柄遥控\n走到充电窝",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cam",
+       "label": "头部摄像头\nIMU + 舵机状态",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "LeRobot\n数据集 + 策略",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ds",
+       "label": "LeRobotDataset\nParquet + 视频",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "policy",
+       "label": "ACT 策略\n输出关节目标",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "robotd",
+       "label": "robotd 步态层\n接在上面",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "遥控的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "tele",
+       "core",
+       "录数据"
+      ],
+      [
+       "cam",
+       "ds",
+       "同步记录"
+      ],
+      [
+       "core",
+       "ds"
+      ],
+      [
+       "ds",
+       "policy",
+       "训练"
+      ],
+      [
+       "policy",
+       "robotd",
+       "部署"
+      ],
+      [
+       "policy",
+       "me",
+       "",
+       "dash"
+      ]
+     ],
+     "usage": "0803：遥控鸭子回窝几十次录数据，训一个视觉策略叠在强化学习步态之上"
+    },
+    "ext": true
+   },
+   {
+    "name": "Hypfer/Valetudo",
+    "url": "https://github.com/Hypfer/Valetudo",
+    "stars": "9.4k",
+    "zh": "无中文",
+    "desc": "扫地机器人的去云固件：在机器人自带的 SoC 上跑，替换厂商云，提供本地网页、MQTT 和 HA 自动发现，地图、分区、回充全在局域网内",
+    "why": "扫地机是家里唯一已经解决了在几个房间之间自主走动并回去充电的机器人，它的地图和回充逻辑是鸭子巡游最好的参考",
+    "intro": "Valetudo 是德国开发者 Hypfer 从 2018 年维护至今的项目，9.4k 星，做的事是把石头、追觅等品牌的扫地机器人从厂商的云上解放出来。它解决的问题是：扫地机的地图、日程、遥控全都经过厂商服务器，断网就变笨，隐私也没有；Valetudo 直接跑在机器人自己的 Linux SoC 上，把云端那一段替换掉。\n它是一个 Node.js 服务，通过机器人内部的本地协议和底层运动控制固件通信，向外提供三样东西：一个网页界面，能看实时地图、划分区、设禁区、点哪去哪；一个 MQTT 接口，把状态、地图数据、命令发布出来，并按 HomeAssistant 的自动发现格式注册，装好就自动出现在 HA 里；还有一套 REST API。地图是它解析激光雷达 SLAM 结果后的自有格式，社区有渲染成图片的配套项目。刷入要按型号走教程，有些型号要拆机接串口。\n项目维持了七年多，2026 年仍在支持新型号，作者态度鲜明，文档很直接；中文资料集中在论坛和 B 站的刷机教程里。\n在 0803 里它是延伸，学的是思路：鸭子要在木屋、地堡、阁楼三个空间之间自己走、低电回最近的窝，这正是扫地机每天在做的事。可以照着它的分区、禁区、回充策略设计鸭子的巡游状态机；更实际的是，如果家里有一台刷了 Valetudo 的扫地机，它扫出来的房间轮廓经 MQTT 拿到后，既是 0802 等距地图的底图来源，也能给鸭子当粗略的定位参考，通道和坡道的位置先在这张图上标出来。",
+    "diagram": {
+     "title": "Valetudo · 扫地机怎么自己回充，鸭子照抄",
+     "nodes": [
+      {
+       "id": "lidar",
+       "label": "激光雷达\nSLAM 建图",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "fw",
+       "label": "机器人底层\n运动固件",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Valetudo\n机器人 SoC 上",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "map",
+       "label": "分区 / 禁区\n回充策略",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "mqtt",
+       "label": "MQTT 地图数据\nHA 自动发现",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "duck",
+       "label": "鸭子巡游状态机\n通道 / 坡道标点",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "拿底图的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "lidar",
+       "core"
+      ],
+      [
+       "fw",
+       "core",
+       "本地协议"
+      ],
+      [
+       "core",
+       "map"
+      ],
+      [
+       "core",
+       "mqtt"
+      ],
+      [
+       "mqtt",
+       "duck",
+       "房间轮廓"
+      ],
+      [
+       "mqtt",
+       "me"
+      ]
+     ],
+     "usage": "0803：借扫地机的分区与回充逻辑设计巡游状态机，MQTT 地图给鸭子和 0802 当底图"
+    },
+    "ext": true
+   },
+   {
+    "name": "ggml-org/llama.cpp",
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "stars": "128k",
+    "zh": "无中文",
+    "desc": "C/C++ 写的大模型推理引擎：GGUF 量化格式让 7B 模型在笔记本和 Mac 上跑，llama-server 提供 OpenAI 兼容接口，Ollama 的底层就是它",
+    "why": "小智的服务端默认连云端大模型，断网鸭子就哑了；把大脑换成 Mac mini 上的本地推理，还能用语法约束让它只吐规定格式的表情指令",
+    "intro": "llama.cpp 是保加利亚开发者 Georgi Gerganov 在 2023 年 3 月写的大模型推理引擎，128k 星，Llama 开源后一周内它就让 7B 模型在 MacBook 上跑了起来。它解决的问题是：推理不依赖 Python 和显卡驱动栈，一个 C/C++ 程序加一个模型文件就能跑。\n它的核心是 ggml 张量库和 GGUF 模型格式：权重被量化到 4 位或 8 位，体积缩到四分之一，精度损失很小；推理按后端选择 Metal、CUDA、Vulkan 或纯 CPU，llama-server 起一个 HTTP 服务，接口和 OpenAI 兼容，任何客户端改一个地址就能接。它还有对硬件项目很有用的 GBNF 语法约束，能强制模型只输出符合某个语法的文本，比如严格的 JSON。\n它是本地推理生态的地基，Ollama、LM Studio 都基于它，新模型往往几天内就被支持；中文资料很多，Qwen 官方也提供 GGUF 版本。\n在 0803 里它是延伸：小智服务端的大模型可以配成任意 OpenAI 兼容地址，把它指向 0804 的 M1 Mac mini 上的 llama-server，跑一个 Qwen 量化模型，断网时鸭子照样能答话，只是慢一点。比起直接用 Ollama，它多出的价值在语法约束：让模型每次回复都带一段固定格式的 JSON，里面是表情、眼睛颜色和要念出的话，胸口圆屏和 LED 直接按这段 JSON 动，不用再从自然语言里猜情绪。",
+    "diagram": {
+     "title": "llama.cpp · Mac mini 上的本地大脑",
+     "nodes": [
+      {
+       "id": "xz",
+       "label": "小智服务端\n识别后的文字",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "gguf",
+       "label": "Qwen GGUF",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "llama-server\nOpenAI 兼容",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "gbnf",
+       "label": "GBNF 语法\n只许输出 JSON",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "face",
+       "label": "圆屏表情\n眼睛颜色",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "tts",
+       "label": "TTS 念出来",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "问话的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "xz",
+       "core",
+       "改地址"
+      ],
+      [
+       "gguf",
+       "core",
+       "Metal 加载"
+      ],
+      [
+       "gbnf",
+       "core"
+      ],
+      [
+       "core",
+       "face",
+       "JSON 字段"
+      ],
+      [
+       "core",
+       "tts"
+      ],
+      [
+       "face",
+       "me"
+      ]
+     ],
+     "usage": "0803：小智的大模型地址指向本地 llama-server，语法约束让回复自带表情字段"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1315,6 +2165,478 @@
      ],
      "usage": "0804：服务端在 Mac mini，媒体挂 NAS，转码推 0207 电视"
     }
+   },
+   {
+    "name": "awesome-selfhosted/awesome-selfhosted",
+    "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+    "stars": "318.1k",
+    "zh": "无中文",
+    "desc": "自托管软件的总清单：几百个可以架在自己服务器上的免费软件按类别整理，每条一句话加许可证和语言，配套网站可筛选",
+    "why": "全屋存储和智能落地后，每个模块都会提出要一个什么什么服务的需求，先来这张地图上找，再决定装哪个",
+    "intro": "awesome-selfhosted 是 GitHub 上最著名的清单类仓库之一，318.1k 星，从 2015 年维护至今。它解决的问题是：想用自己的服务器替代某个商业云服务时，不知道有哪些开源选项，也不知道哪些还活着；这份清单把几百个可自托管的软件按类别排好，每条一句话、许可证、实现语言和是否依赖非自由组件。\n它在清单类项目里算严谨的：条目数据放在单独的 awesome-selfhosted-data 仓库里，每个软件一个 YAML 文件，主仓库的 README 和网站 awesome-selfhosted.net 都由脚本生成。收录有门槛，要求项目至少四个月历史、有活跃更新、有可用文档；每年清理一年以上没有提交的项目，所以列表里的东西基本都还能用。网站版可以按类别、许可证、语言筛选，还能看星数和最近更新时间。\n社区靠拉取请求维护，条目变更每周都有；没有官方中文版，但国内有志愿者的转译仓库，以及大量以它为蓝本的自托管推荐文章。\n在 0804 里它是延伸，用法是当作一张采购地图。这套系统里每个模块都会提需求，0107 要菜谱管理、0104 要相册、0209 要笔记、0704 要语音合成，每次先在这张清单对应的类别里找，按活跃度和是否有 Docker 镜像挑两三个试，选定后在 0804 自己的一张已部署清单里记下服务名、跑在哪台机器、端口、备份策略。三台机器能承载的服务有限，这张清单帮你比较，那张清单帮你克制。",
+    "diagram": {
+     "title": "awesome-selfhosted · 选服务先查这张地图",
+     "nodes": [
+      {
+       "id": "need",
+       "label": "某模块提需求\n菜谱 / 相册 / 笔记",
+       "kind": "step",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "yaml",
+       "label": "数据 YAML",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "awesome-selfhosted\n分类清单",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "site",
+       "label": "网站筛选\n星数 / 最近更新",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "try",
+       "label": "挑两三个\nDocker 试跑",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "list",
+       "label": "已部署清单\n机器 / 端口 / 备份",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "拍板的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "need",
+       "core",
+       "按类别找"
+      ],
+      [
+       "yaml",
+       "core",
+       "脚本生成"
+      ],
+      [
+       "core",
+       "site"
+      ],
+      [
+       "site",
+       "try",
+       "比较"
+      ],
+      [
+       "try",
+       "list",
+       "选定记录"
+      ],
+      [
+       "try",
+       "me"
+      ]
+     ],
+     "usage": "0804：每个模块的服务需求先来清单里比，选定后记进自己的已部署清单"
+    },
+    "ext": true
+   },
+   {
+    "name": "portainer/portainer",
+    "url": "https://github.com/portainer/portainer",
+    "stars": "38.2k",
+    "zh": "无中文",
+    "desc": "Docker 与 Kubernetes 的网页管理台：容器、镜像、卷、网络一目了然，Compose 文件当 Stack 部署，Agent 模式把别的机器纳进同一个界面",
+    "why": "笔记本和 NAS 上加起来十几个容器，靠命令行记不住；一个网页看日志、重启、更新，手机上也能操作",
+    "intro": "Portainer 是 2016 年开始的 Docker 管理界面，38.2k 星，社区版免费开源，商业版收费。它解决的问题是：Docker 命令行对偶尔维护一次的人不友好，忘了容器名、找不到日志都要查文档；Portainer 把这些变成网页上的按钮。\n它自己也是一个容器，挂上宿主机的 Docker 套接字就能管理本机；要管别的机器，在那台机器上跑一个 Portainer Agent，主界面加一个环境就纳进来。每个容器能看实时日志、进终端、看资源曲线、改配置后重建。最常用的是 Stacks：把 docker-compose.yml 贴进去或指向一个 Git 仓库，一键部署整组服务，Git 模式还能定时拉取自动更新。\n它是家庭服务器圈子里的标配；界面没有官方中文，但社区有汉化版镜像，国内教程极多。轻量替代品有 Dockge，功能不如它全。\n在 0804 里它是延伸：Windows 笔记本上的 Docker 装 Portainer 主程序，HomeAssistant、ESPHome、Uptime Kuma、Beszel Hub、homepage 各写成一个 Stack，Compose 文件放在 NAS 上的一个 Git 仓库里，改了配置推一下就自动重建；NAS 自带的 Docker 跑一个 Agent 纳入同一界面，Jellyfin、Immich 在那边。出门在外收到 Uptime Kuma 的红条，手机打开 Portainer 看一眼日志、点一下重启，多数小故障就解决了。",
+    "diagram": {
+     "title": "Portainer · 十几个容器一个网页管",
+     "nodes": [
+      {
+       "id": "git",
+       "label": "Compose 文件",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "sock",
+       "label": "笔记本 Docker\n套接字",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Portainer\n笔记本上",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "stack",
+       "label": "Stacks\nHA / Kuma / Beszel",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "agent",
+       "label": "NAS Agent\nJellyfin / Immich",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "phone",
+       "label": "手机看日志\n点一下重启",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "出门在外的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "git",
+       "stack",
+       "定时拉取"
+      ],
+      [
+       "sock",
+       "core"
+      ],
+      [
+       "stack",
+       "core",
+       "部署"
+      ],
+      [
+       "core",
+       "agent",
+       "纳入环境"
+      ],
+      [
+       "core",
+       "phone"
+      ],
+      [
+       "phone",
+       "me"
+      ]
+     ],
+     "usage": "0804：笔记本装主程序，NAS 跑 Agent，服务全写成 Stack 从 Git 仓库部署"
+    },
+    "ext": true
+   },
+   {
+    "name": "syncthing/syncthing",
+    "url": "https://github.com/syncthing/syncthing",
+    "stars": "88.3k",
+    "zh": "界面有中文",
+    "desc": "点对点的连续文件同步：设备之间直接加密传输，没有中心服务器，改了就同步，带版本保留；手机、电脑、NAS 都有客户端",
+    "why": "手机照片进 NAS、阁楼电脑的打印文件到 Mac mini、各模块的配置目录到冷备盘，这些日常搬运交给它，人不用再插线拷",
+    "intro": "Syncthing 是 2013 年由瑞典开发者 Jakob Borg 发起的开源同步工具，88.3k 星，是自托管圈里替代网盘同步功能的头号选择。它解决的问题是：多台设备之间的文件想保持一致，但不想经过任何一家公司的服务器。\n它的架构是纯点对点的：每台设备有一个由证书派生的设备 ID，两台设备互相添加并共享某个文件夹后，就直接建立 TLS 加密连接，用块交换协议只传变化的块。局域网内靠广播互相发现，跨网络用公共发现服务器交换地址，穿不透 NAT 就走志愿者的中继，中继只转发密文。文件夹可以设成只发送、只接收或双向；版本控制能把被覆盖和删除的文件留几份；忽略规则用类似 gitignore 的语法。它是一个 Go 程序加网页界面，安卓有官方客户端，NAS 系统大多有套件。\n项目十多年持续发版，2026 年仍是月度更新；网页界面翻译完整，含简体中文，中文教程很多。要记住它是同步不是备份，误删会同步到所有设备，所以要配合版本控制或专门的备份工具。\n在 0804 里它是延伸，负责日常搬运：手机相机目录只发送到 NAS 的照片库，Immich 在 Mac mini 上再去索引；阁楼工作站的 3D 打印文件夹和 Mac mini 双向同步；笔记本上 HomeAssistant、ESPHome 的配置目录只发送到 NAS，NAS 快照之后再由 restic 做真正的备份。设备只有三台机器和一部手机，发现和中继都关掉，只在局域网里走。",
+    "diagram": {
+     "title": "Syncthing · 三台机器一部手机互相补齐",
+     "nodes": [
+      {
+       "id": "phone",
+       "label": "手机相机目录\n只发送",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "attic",
+       "label": "阁楼工作站\n打印文件",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Syncthing\n块交换协议",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ver",
+       "label": "版本保留\n忽略规则",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "nas",
+       "label": "NAS 照片库\n配置目录",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "mac",
+       "label": "Mac mini\nImmich 索引",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "不再插线的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "phone",
+       "core",
+       "TLS 直连"
+      ],
+      [
+       "attic",
+       "core",
+       "双向"
+      ],
+      [
+       "ver",
+       "core"
+      ],
+      [
+       "core",
+       "nas"
+      ],
+      [
+       "core",
+       "mac"
+      ],
+      [
+       "nas",
+       "me",
+       "",
+       "dash"
+      ]
+     ],
+     "usage": "0804：手机照片、打印文件、HA 配置在局域网内点对点同步，备份另交 restic"
+    },
+    "ext": true
+   },
+   {
+    "name": "restic/restic",
+    "url": "https://github.com/restic/restic",
+    "stars": "35.6k",
+    "zh": "无中文",
+    "desc": "快、安全、省空间的备份程序：内容去重、全程加密、每次备份一个快照，仓库可以放本地盘、SFTP 或任何 S3 兼容存储",
+    "why": "NAS 快照挡不住整机损坏，每周冷备到阁楼保险箱那块硬盘需要一个真正的备份工具，能去重、能校验、能只恢复一个文件",
+    "intro": "restic 是德国开发者 Alexander Neumann 在 2014 年发起的备份程序，35.6k 星，用 Go 写成，单个可执行文件。它解决的问题是：备份工具要么复杂得像企业软件，要么只是复制文件；restic 把去重、加密、增量、校验这几件正确的事做全，命令却只有几个。\n它的模型是仓库加快照：初始化仓库时设一个密码，之后所有数据在写入前都加密。每次 backup，文件被切成内容定义的变长块，只有仓库里没有的块才上传，所以第二次备份只传变化的部分，同一份文件在不同路径也只存一次；完成后生成一个快照。恢复可以整份还原，也可以把快照挂载成文件系统去翻某一个文件；prune 按策略清理旧快照，check 校验完整性。后端支持本地目录、SFTP、S3 兼容对象存储和 rclone 支持的一切。\n项目十年稳定，2026 年仍在发版；文档是英文，中文教程主要在自托管社区里。\n在 0804 里它是延伸，接在 NAS 快照后面。方案说每天凌晨 NAS 快照、每周一份冷备到阁楼保险箱的硬盘：快照解决误删和回滚，restic 解决整机损坏和火灾。做法是笔记本上定时跑 restic，源是 NAS 上的照片库、各模块数据库快照和 HA 配置，仓库一是那块每周插一次的冷备硬盘，插上后自动补齐；仓库二是一个便宜的 S3 兼容对象存储，只放最要紧的几十 GB。每月做一次恢复演练，随机挑一个文件从冷备盘里取回来，确认密码没忘、仓库没坏。",
+    "diagram": {
+     "title": "restic · 去重加密，冷备盘插上就补齐",
+     "nodes": [
+      {
+       "id": "src",
+       "label": "NAS 照片库\n数据库快照",
+       "kind": "db",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cfg",
+       "label": "HA 配置目录",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "restic\n笔记本定时跑",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "chunk",
+       "label": "切块去重\n加密",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "cold",
+       "label": "阁楼保险箱\n冷备硬盘",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "s3",
+       "label": "S3 对象存储\n最要紧几十 GB",
+       "kind": "cloud",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "每月演练的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "src",
+       "core"
+      ],
+      [
+       "cfg",
+       "core"
+      ],
+      [
+       "core",
+       "chunk"
+      ],
+      [
+       "chunk",
+       "cold",
+       "每周插上"
+      ],
+      [
+       "chunk",
+       "s3",
+       "",
+       "dash"
+      ],
+      [
+       "cold",
+       "me"
+      ]
+     ],
+     "usage": "0804：NAS 快照之后由 restic 做真备份，冷备盘 + 对象存储两个仓库，每月演练恢复"
+    },
+    "ext": true
+   },
+   {
+    "name": "n8n-io/n8n",
+    "url": "https://github.com/n8n-io/n8n",
+    "stars": "198.3k",
+    "zh": "无中文",
+    "desc": "可自托管的工作流自动化平台：拖节点连线，四百多种集成加代码节点，Webhook 触发，内置 AI 智能体节点；fair-code 许可，自用免费",
+    "why": "告警分级、周报汇总、订单邮件解析这类跨服务的胶水逻辑，写在 HA 自动化里太别扭，它是做这种事最顺手的工具",
+    "intro": "n8n 是柏林公司 n8n GmbH 从 2019 年做起的工作流自动化平台，198.3k 星，2025 年之后因为 AI 智能体节点的加入星数暴涨。它解决的问题是：把不同服务串起来的胶水逻辑，以前要么写脚本要么用 Zapier 这类云服务；n8n 让你在自己的机器上拖节点完成。\n它的核心是画布上的节点图：触发节点决定何时开始，可以是定时、Webhook、收到邮件或某个服务的事件；后续节点每个做一件事，HTTP 请求、条件判断、数据变换、发通知、写数据库，四百多种集成节点覆盖常见服务，不够就用 Code 节点写 JavaScript。AI 部分把大模型、工具、记忆做成节点，能接 Ollama 这样的本地模型。它是 fair-code 许可，自用免费，Docker 一个容器就跑。\n官方模板库有几千个工作流可以直接导入；文档是英文，中文教程和视频已经很多。\n在 0804 里它是延伸，做服务层的胶水。Uptime Kuma 和 Beszel 的告警都发到 n8n 的一个 Webhook，由它按严重程度分派：传感器掉线只写日志并在 HA 里亮一个黄点，NAS 盘温超阈值立刻推手机，连续三次才推的去抖规则也在这里配。每周日晚上一条定时工作流把 Beszel 的温度曲线、restic 的备份结果、Syncthing 的同步状态汇总成一份周报发到手机。电商平台的订单邮件由它解析出品牌型号和金额，写进 0801 的物品总表。",
+    "diagram": {
+     "title": "n8n · 告警分级与周报的胶水层",
+     "nodes": [
+      {
+       "id": "kuma",
+       "label": "Uptime Kuma\nBeszel 告警",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "mail",
+       "label": "电商订单邮件",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "n8n\nWebhook 触发",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "rule",
+       "label": "按严重程度\n分派 + 去抖",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 黄点 / 推手机\n周日晚周报",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "table",
+       "label": "0801 物品总表\n写品牌与金额",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "me",
+       "label": "收周报的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "kuma",
+       "core"
+      ],
+      [
+       "mail",
+       "core",
+       "解析"
+      ],
+      [
+       "core",
+       "rule"
+      ],
+      [
+       "rule",
+       "ha",
+       "分级"
+      ],
+      [
+       "core",
+       "table",
+       "写订单"
+      ],
+      [
+       "ha",
+       "me"
+      ]
+     ],
+     "usage": "0804：监控告警经 n8n 分级后进 HA 或推手机，周报与订单解析也在这里跑"
+    },
+    "ext": true
    }
   ],
   "xhs": [
@@ -1615,6 +2937,191 @@
      ],
      "usage": "0805：E2020 + 角码 + T 型螺母拼 0804 机架，脚本出切割清单和螺丝数量"
     }
+   },
+   {
+    "name": "blender/blender",
+    "url": "https://github.com/blender/blender",
+    "stars": "19.3k",
+    "zh": "有中文文档站",
+    "desc": "开源 3D 创作套件的官方镜像：建模、PBR 材质节点、Cycles 与 EEVEE 渲染、Python API，把 CAD 模型套上真实材质出效果图",
+    "why": "型材藏在里面、木头露在外面、皮草只在手停留处，这套材质语法要在采购前看到效果，得有一个能渲染真实材质的工具",
+    "intro": "Blender 是荷兰 Blender 基金会维护的开源 3D 创作套件，GitHub 上这个仓库是官方镜像，19.3k 星，主开发在他们自己的 Gitea 上。从建模、材质、灯光到渲染、动画，一套免费软件全包，专业到被电影和游戏工作室正式使用。\n它和 CAD 关心的不同：CAD 关心尺寸和约束，Blender 关心看起来像不像。材质用节点编辑器搭，原理化 BSDF 一个节点就覆盖了 PBR 的全部参数，金属度、粗糙度、法线贴图、透光；灯光用 HDRI 环境图给出真实反射；渲染有两个引擎，Cycles 是路径追踪，慢但准，EEVEE 是实时光栅，快而够看。FreeCAD 导出的 OBJ 或 glTF 直接拖进去；\n4.x 系列 2026 年仍按季度发版；界面自带简体中文，官方手册也有中文翻译，B 站教程数不清。\n在 0805 里它是延伸：这一页定的是材质语法，木屋作品墙下那格样板是实物，Blender 里做它的数字版。先把三种材质各调成一个节点组：喷砂黑阳极氧化铝要低金属度、中高粗糙度加细微颗粒法线；白蜡木油蜡饰面用木纹贴图加轻微清漆层；植鞣皮用高粗糙度加皮纹凹凸。然后把 FreeCAD 里各模块的机架模型导出 glTF 拖进来，按规则给每个面指派材质，型材面黑、覆面木、把手皮，用 EEVEE 几秒出一张。0301 工具台、0404 木工间下料前先渲一张看比例和配色，木料和皮草定标时把两三种候选并排渲出来比。",
+    "diagram": {
+     "title": "Blender · 三种材质的数字样板",
+     "nodes": [
+      {
+       "id": "cad",
+       "label": "机架 glTF",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "hdri",
+       "label": "HDRI 环境光",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Blender\n材质节点",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "mat",
+       "label": "三个节点组\n黑铝 / 白蜡 / 植鞣",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "eevee",
+       "label": "EEVEE 渲染\n几秒一张",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "cmp",
+       "label": "候选并排图\n定标前比一比",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "定标的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "cad",
+       "core",
+       "按面指派"
+      ],
+      [
+       "hdri",
+       "core"
+      ],
+      [
+       "mat",
+       "core"
+      ],
+      [
+       "core",
+       "eevee"
+      ],
+      [
+       "eevee",
+       "cmp"
+      ],
+      [
+       "cmp",
+       "me"
+      ]
+     ],
+     "usage": "0805：材质语法做成节点组，各模块机架下料前渲一张，木料皮草候选并排比"
+    },
+    "ext": true
+   },
+   {
+    "name": "CadQuery/cadquery",
+    "url": "https://github.com/CadQuery/cadquery",
+    "stars": "5.7k",
+    "zh": "无中文",
+    "desc": "Python 参数化 CAD 脚本框架：基于 OCCT 内核的实体建模，链式 API 几行出一个带倒角的零件，能直接导出 STEP 与 STL",
+    "why": "D3 规格是一行文字，写成一个 Python 库后每个模块的机架脚本 import 一次就继承，比 OpenSCAD 多出真正的 STEP 和圆角",
+    "intro": "CadQuery 是一个用 Python 写参数化 CAD 的开源框架，5.7k 星，最初由 Dave Cowden 在 2013 年发起，现在由社区维护。它和 OpenSCAD 一样用代码建模，但内核不同：OpenSCAD 是网格上的布尔运算，CadQuery 基于 OpenCASCADE 的边界表示，所以能做真正的圆角倒角、能识别面和边、能导出工程软件认的 STEP。\n它的 API 是链式的：从一个工作平面开始，画草图、拉伸、选边、倒角、打孔，每一步返回新对象继续往下写，几行就是一个零件。选择器用字符串描述，改参数后整条链自动重算。装配模块能把多个零件按约束拼起来，导出格式有 STEP、STL、3MF、DXF 和 SVG。配套的 CQ-editor 是带三维预览的桌面编辑器，build123d 是社区在它之上做的新一代 API。\n社区规模中等但稳定，2026 年仍在发版；文档是英文，中文资料只有零星博客。\n在 0805 里它是延伸，用来把规则写成代码。建一个小 Python 包，profile 函数的参数是系列名和长度，2020 就是槽宽 6 毫米壁厚 1.8 毫米，3030 就是槽宽 8 毫米，配件函数有角码、T 型螺母、端盖、脚垫，木料函数按候选树种给出板厚和倒角。各模块的机架脚本 import 这个包，尺寸用变量，一改规格全部跟着变；输出 STEP 给 FreeCAD 做装配图，STL 给拓竹打印配件，顺手让脚本数一遍切割清单和螺母数量。定标改了槽宽，只改包里一行。",
+    "diagram": {
+     "title": "CadQuery · 把 D3 规格写成一个包",
+     "nodes": [
+      {
+       "id": "spec",
+       "label": "D3 规格",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "wood",
+       "label": "木料候选",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "CadQuery\nOCCT B-rep",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "pkg",
+       "label": "自建 Python 包\nprofile / 角码",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "step",
+       "label": "STEP → FreeCAD\n装配图",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "stl",
+       "label": "STL → 拓竹\n切割清单",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "下料的人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "spec",
+       "pkg",
+       "写成函数"
+      ],
+      [
+       "wood",
+       "pkg"
+      ],
+      [
+       "pkg",
+       "core",
+       "import"
+      ],
+      [
+       "core",
+       "step"
+      ],
+      [
+       "core",
+       "stl"
+      ],
+      [
+       "stl",
+       "me"
+      ]
+     ],
+     "usage": "0805：规格写进一个 Python 包，各模块机架脚本 import，改一行全部跟着变"
+    },
+    "ext": true
    }
   ],
   "xhs": [
