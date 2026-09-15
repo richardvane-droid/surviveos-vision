@@ -1,0 +1,1331 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>参考索引 · 延伸阅读 · SurviveOs 设想版</title>
+<meta name="description" content="SurviveOs 乡野生存系统的完整形态设想：8 个区域、46 个模块专题，黑白钢笔速写插图。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+<header class="top">
+  <a class="wordmark" href="index.html"><span class="mark">SurviveOs</span><span class="sub">设想版 · 0901</span></a>
+  <nav class="areas-nav">
+    <a href="preface.html" class="pref ">序</a>
+    <a href="areas/01.html" ><i>01</i>暖村木屋</a><a href="areas/02.html" ><i>02</i>地堡</a><a href="areas/03.html" ><i>03</i>阁楼间</a><a href="areas/04.html" ><i>04</i>阁楼仓库</a><a href="areas/05.html" ><i>05</i>庭院</a><a href="areas/06.html" ><i>06</i>草地</a><a href="areas/07.html" ><i>07</i>钓台</a><a href="areas/08.html" ><i>08</i>虚拟空间</a>
+    <a href="space.html" class="about ">户型图</a>
+    <a href="refs.html" class="about on">参考索引</a>
+    <a href="about.html" class="about ">关于</a>
+  </nav>
+</header>
+<main>
+
+<nav class="crumb"><a href="index.html">首页</a> › <a href="refs.html">参考索引</a> › <span>延伸阅读</span></nav>
+<article class="mod about">
+  <header class="mod-head">
+    <p class="kicker">全站引用 · 二</p>
+    <h1>105 个延伸阅读项目</h1>
+    <nav class="refs-tabs"><a href="refs.html" class="">专门方案 <i>105</i></a><a href="refs-ext.html" class="on">延伸阅读 <i>105</i></a></nav>
+    <p class="lede">借这座房子的每个模块当由头，顺手把 GitHub 上的好项目好思路过一遍。这一页的项目和所在模块的关系没有上一页那么直接——有的是同一件事的另一条技术路线，有的是另一个领域里做得最好的那个——但每条介绍的最后一段都写了在那个模块里能怎么用。选择标准和上一页一样：先看知名度，同档次里有中文的优先，每个仓库都在 2026-09 打开核实过存在。它们在模块页里排在“延伸阅读”小节，用虚线卡片和正式方案分开。</p>
+  </header>
+  <section class="blk refs-sum">
+    <div class="rs"><b>105</b><span>个项目</span></div>
+    <div class="rs"><b>49</b><span>个有中文</span></div>
+    <div class="rs"><b>46</b><span>个模块引用</span></div>
+    <div class="rs"><b>105</b><span>处引用</span></div>
+    <nav class="rs-jump"><a href="#t1">万星以上 <i>56</i></a><a href="#t2">1k ～ 10k 星 <i>43</i></a><a href="#t3">1k 星以下 <i>6</i></a></nav>
+  </section>
+  
+  <section class="blk repo-tier" id="t1">
+    <h2><em>★</em> 万星以上 <small>56 个</small></h2>
+    <p class="tier-note">成熟平台级项目，社区大、文档全，出问题一搜就有答案</p>
+    <div class="repo-table">
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" rel="noopener">awesome-selfhosted/awesome-selfhosted</a>
+            <span class="stars">★ 318.1k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">自托管软件的总清单：几百个可以架在自己服务器上的免费软件按类别整理，每条一句话加许可证和语言，配套网站可筛选</p>
+          <div class="rintro"><p>awesome-selfhosted 是 GitHub 上最著名的清单类仓库之一，318.1k 星，从 2015 年维护至今。它解决的问题是：想用自己的服务器替代某个商业云服务时，不知道有哪些开源选项，也不知道哪些还活着；这份清单把几百个可自托管的软件按类别排好，每条一句话、许可证、实现语言和是否依赖非自由组件。</p><p>它在清单类项目里算严谨的：条目数据放在单独的 awesome-selfhosted-data 仓库里，每个软件一个 YAML 文件，主仓库的 README 和网站 awesome-selfhosted.net 都由脚本生成。收录有门槛，要求项目至少四个月历史、有活跃更新、有可用文档；每年清理一年以上没有提交的项目，所以列表里的东西基本都还能用。网站版可以按类别、许可证、语言筛选，还能看星数和最近更新时间。</p><p>社区靠拉取请求维护，条目变更每周都有；没有官方中文版，但国内有志愿者的转译仓库，以及大量以它为蓝本的自托管推荐文章。</p><p>在 0804 里它是延伸，用法是当作一张采购地图。这套系统里每个模块都会提需求，0107 要菜谱管理、0104 要相册、0209 要笔记、0704 要语音合成，每次先在这张清单对应的类别里找，按活跃度和是否有 Docker 镜像挑两三个试，选定后在 0804 自己的一张已部署清单里记下服务名、跑在哪台机器、端口、备份策略。三台机器能承载的服务有限，这张清单帮你比较，那张清单帮你克制。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0804.html" title="全屋存储 + 全屋智能"><i>0804</i>全屋存储 + 全屋智能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener">n8n-io/n8n</a>
+            <span class="stars">★ 198.3k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">可自托管的工作流自动化平台：拖节点连线，四百多种集成加代码节点，Webhook 触发，内置 AI 智能体节点；fair-code 许可，自用免费</p>
+          <div class="rintro"><p>n8n 是柏林公司 n8n GmbH 从 2019 年做起的工作流自动化平台，198.3k 星，2025 年之后因为 AI 智能体节点的加入星数暴涨。它解决的问题是：把不同服务串起来的胶水逻辑，以前要么写脚本要么用 Zapier 这类云服务；n8n 让你在自己的机器上拖节点完成。</p><p>它的核心是画布上的节点图：触发节点决定何时开始，可以是定时、Webhook、收到邮件或某个服务的事件；后续节点每个做一件事，HTTP 请求、条件判断、数据变换、发通知、写数据库，四百多种集成节点覆盖常见服务，不够就用 Code 节点写 JavaScript。AI 部分把大模型、工具、记忆做成节点，能接 Ollama 这样的本地模型。它是 fair-code 许可，自用免费，Docker 一个容器就跑。</p><p>官方模板库有几千个工作流可以直接导入；文档是英文，中文教程和视频已经很多。</p><p>在 0804 里它是延伸，做服务层的胶水。Uptime Kuma 和 Beszel 的告警都发到 n8n 的一个 Webhook，由它按严重程度分派：传感器掉线只写日志并在 HA 里亮一个黄点，NAS 盘温超阈值立刻推手机，连续三次才推的去抖规则也在这里配。每周日晚上一条定时工作流把 Beszel 的温度曲线、restic 的备份结果、Syncthing 的同步状态汇总成一份周报发到手机。电商平台的订单邮件由它解析出品牌型号和金额，写进 0801 的物品总表。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0804.html" title="全屋存储 + 全屋智能"><i>0804</i>全屋存储 + 全屋智能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/ollama/ollama" target="_blank" rel="noopener">ollama/ollama</a>
+            <span class="stars">★ 180.3k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">本地跑大语言模型最省事的方式：一条命令拉取并运行 Qwen、Gemma、DeepSeek 等模型，提供 REST API，HA 有官方集成能把它当对话助手</p>
+          <div class="rintro"><p>Ollama 是 2023 年出现的本地大模型运行工具，180.3k 星，是 GitHub 上星数最高的项目之一。它解决的问题是：想在自己的机器上跑一个大语言模型，但不想折腾编译、量化和显存参数；它把这些包成一条命令，几分钟后就能对话。</p><p>它的核心是一个常驻服务：模型以 GGUF 格式从它的模型库拉取，底层推理引擎来自 llama.cpp，Mac 上走 Metal，有显卡走 CUDA 或 ROCm，没显卡用 CPU；对外开放一个 REST API，兼容 OpenAI 的接口格式，各种客户端和框架都能直接接。模型库里 Qwen、Gemma、DeepSeek 都有多个尺寸，8B 级别在 16GB 内存的 Mac mini 上能流畅跑。</p><p>HomeAssistant 有官方 Ollama 集成，可以把它设为 Assist 的对话代理并允许它读取和控制暴露的实体。文档是英文，中文教程遍地都是。</p><p>在 0802 里它是延伸：三块屏展示数据，但没有人替你读数据。在 0804 的 M1 Mac mini 上跑 Ollama，装一个 Qwen 8B 级别的模型，HA 的 Ollama 集成把七个区域的关键实体暴露给它，再建一条早晚各跑一次的自动化：把所有模块的状态发给模型，让它用一句话总结，写进屏幕角落那行小字，正常时就是今天所有模块正常，异常时会说柴火炉温度偏高、雨水罐传感器四十分钟没上报。同一个模型也是 0803 小鸭子断网时的后备大脑。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0802.html" title="全屋中枢 / 全屋数据可视化屏"><i>0802</i>全屋中枢 / 全屋数据可视化屏</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank" rel="noopener">AUTOMATIC1111/stable-diffusion-webui</a>
+            <span class="stars">★ 165k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">Stable Diffusion 最流行的本地网页界面：文生图、图生图、局部重绘、放大、LoRA 与 ControlNet 扩展一应俱全</p>
+          <div class="rintro"><p>stable-diffusion-webui 是网名 AUTOMATIC1111 的开发者在 2022 年 Stable Diffusion 开源后几周内做出来的网页界面，165k 星，是本地 AI 绘图最出圈的工具。它要解决的问题是：模型本身只是一堆权重和命令行脚本，普通人需要一个能调参数、看结果、反复试的界面。</p><p>它用 Python 和 Gradio 写成，启动后在本机开一个网页：输入正向和反向提示词、采样器、步数、尺寸，点生成后模型在显卡上跑扩散过程，几秒到几十秒出图。除了文生图，还有图生图、局部重绘、外扩画布、放大和批量生成；扩展系统让 ControlNet（用线稿控制构图）、LoRA（几十 MB 的小模型定义画风）一键装上，模型文件放进目录就能切换。</p><p>生态方面它是扩展最多的绘图前端，Civitai 上海量 LoRA 按它的格式发布；README 是英文，但中文教程、整合包和 B 站课程多到数不清。2024 年后更新变慢，Forge 和 ComfyUI 分走了一部分用户，但它仍是最简单的起点。</p><p>对 0103 是延伸玩法：画框墙的四套主题——北欧木屋、生存手册插画、旧地图、雪地动物——每套用一个 LoRA 加一组提示词批量生成，凌晨四点跑一百张，按 3:4 出图，白天挑九张推给九台 iPad；旧的 Pinterest 抓取管线保留，两条来源混着放。注意要一块 8GB 以上显存的显卡，Mac mini 跑 SDXL 会很慢，可以放到白天不用的游戏机上定时跑。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0103.html" title="电子画框墙"><i>0103</i>电子画框墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/comfyanonymous/ComfyUI" target="_blank" rel="noopener">comfyanonymous/ComfyUI</a>
+            <span class="stars">★ 133k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">节点式的 AI 图像与视频生成引擎：把 Stable Diffusion、Flux 等模型拆成可拖连的节点图，本地显卡跑，工作流可存可分享</p>
+          <div class="rintro"><p>ComfyUI 是开发者 comfyanonymous 发起、现在由 Comfy Org 团队维护的开源 AI 生成引擎，用 Python 写成，133k 星，是本地跑扩散模型最主流的界面。它要解决的问题：扩散模型的推理是一串可拆开的步骤，一体化界面把它们藏起来，ComfyUI 把每一步做成节点让用户自己连。</p><p>它的工作方式是节点图：加载模型、编码提示词、采样、解码、保存图片各是一个节点，用连线把它们串成工作流，点一下运行，引擎只重新计算变化了的部分，显存管理做得很精细，8GB 显卡也能跑大模型。图生图、局部重绘、ControlNet 控线稿、IP-Adapter 参考风格，以及后来的视频模型都以节点形式加入，工作流保存成 JSON 或直接嵌在输出图片里，别人拖进去就能复现。</p><p>生态上自定义节点有几千个，模型来自 Hugging Face 和 Civitai；官方 README 只有英文，但国内 B 站、知乎的 ComfyUI 教程数量惊人，还有多个中文汉化插件。项目每周一固定发版。</p><p>对 0403 来说它是延伸项目：喷涂柜是一次性的——喷错颜色就得打磨重来。开枪之前，把 PSK 盒子或木盒的照片放进 ComfyUI，用 ControlNet 的 Canny 或深度节点锁住外形，提示词换成哑光黑、军绿、做旧黄铜、透明清漆，几分钟出四张预览，挂到 0802 中枢屏上比一比再决定调哪罐漆。跑在 0802 服务器的显卡上，工作流存成一个涂装预览的 JSON，下次换个物件只要换一张照片。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0403.html" title="喷涂柜"><i>0403</i>喷涂柜</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/excalidraw/excalidraw" target="_blank" rel="noopener">excalidraw/excalidraw</a>
+            <span class="stars">★ 131k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">手绘风格的虚拟白板：矩形、箭头、文字、图库，端到端加密协作，可嵌入网页，导出 SVG 和 PNG</p>
+          <div class="rintro"><p>Excalidraw 是 Vjeux（Christopher Chedeau）等人在 2020 年做出来的开源白板，131k 星，是 GitHub 上星数最高的画图工具。它要解决的问题是：正经的绘图软件太重、画出来太正式，而白板讨论需要的是几秒钟画出一个看起来像草图的方框和箭头。</p><p>它是纯前端应用，React 加 TypeScript，画布上只有矩形、圆、菱形、箭头、线、文字、自由笔和图片这几种元素，全部用 rough.js 渲染成手绘风格。数据是一个 JSON 场景文件，可以保存到本地、导出 PNG 和 SVG，也可以把场景嵌进 PNG 里下次拖回来继续编辑。协作走端到端加密的房间链接。它有巨大的图库可以拖进现成图标，还能作为 npm 包嵌进自己的网页。</p><p>生态极大，2025 年后仍每周有提交，界面有简体中文，浏览器打开 excalidraw.com 就能用，也可以 Docker 自托管。</p><p>对 0204 它是延伸的画图纸工具：西墙软木板上那些 A3 图纸——木屋剖面、地堡风管走向、钓台顶棚——在正式的 CAD 之前先用 Excalidraw 画草图，每个区域一个文件，01 到 07 分栏和软木板上的分栏一致。特别适合画全屋系统图：传感器、HA、大屏、鸭子的数据流向用箭头一连，导出 A3 打印钉上墙；改了就重打，旧的按日期收进抽屉。它也能嵌进 0802 大屏当一块可编辑的系统图。注意手绘风只是风格，尺寸标注它不擅长，带尺寸的还是去 FreeCAD。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0204.html" title="系统设计工作台"><i>0204</i>系统设计工作台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/ggml-org/llama.cpp" target="_blank" rel="noopener">ggml-org/llama.cpp</a>
+            <span class="stars">★ 128k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">C/C++ 写的大模型推理引擎：GGUF 量化格式让 7B 模型在笔记本和 Mac 上跑，llama-server 提供 OpenAI 兼容接口，Ollama 的底层就是它</p>
+          <div class="rintro"><p>llama.cpp 是保加利亚开发者 Georgi Gerganov 在 2023 年 3 月写的大模型推理引擎，128k 星，Llama 开源后一周内它就让 7B 模型在 MacBook 上跑了起来。它解决的问题是：推理不依赖 Python 和显卡驱动栈，一个 C/C++ 程序加一个模型文件就能跑。</p><p>它的核心是 ggml 张量库和 GGUF 模型格式：权重被量化到 4 位或 8 位，体积缩到四分之一，精度损失很小；推理按后端选择 Metal、CUDA、Vulkan 或纯 CPU，llama-server 起一个 HTTP 服务，接口和 OpenAI 兼容，任何客户端改一个地址就能接。它还有对硬件项目很有用的 GBNF 语法约束，能强制模型只输出符合某个语法的文本，比如严格的 JSON。</p><p>它是本地推理生态的地基，Ollama、LM Studio 都基于它，新模型往往几天内就被支持；中文资料很多，Qwen 官方也提供 GGUF 版本。</p><p>在 0803 里它是延伸：小智服务端的大模型可以配成任意 OpenAI 兼容地址，把它指向 0804 的 M1 Mac mini 上的 llama-server，跑一个 Qwen 量化模型，断网时鸭子照样能答话，只是慢一点。比起直接用 Ollama，它多出的价值在语法约束：让模型每次回复都带一段固定格式的 JSON，里面是表情、眼睛颜色和要念出的话，胸口圆屏和 LED 直接按这段 JSON 动，不用再从自然语言里猜情绪。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0803.html" title="miniduck"><i>0803</i>miniduck</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/mrdoob/three.js" target="_blank" rel="noopener">mrdoob/three.js</a>
+            <span class="stars">★ 115k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">浏览器里的 3D 引擎标杆：WebGL/WebGPU 渲染、glTF 加载、轨道控制器，几十行代码就能在网页里转着看一个模型</p>
+          <div class="rintro"><p>three.js 是 Ricardo Cabello（mrdoob）在 2010 年发起的 JavaScript 3D 库，115k 星，几乎是网页 3D 的代名词。它要解决的问题是：浏览器原生的 WebGL 太底层，画一个立方体都要写几百行着色器；three.js 把场景、相机、灯光、材质、几何体封装成对象，像摆积木一样搭 3D 场景。</p><p>它的流程是：创建 Scene，放进 Mesh（几何体加材质）和 Light，用 PerspectiveCamera 看，再由 WebGLRenderer 或新的 WebGPURenderer 每帧渲染到 canvas 上。模型一般用 glTF 格式，GLTFLoader 一行加载，OrbitControls 加上去就能用手指旋转缩放，PBR 材质配一张 HDR 环境贴图，金属和塑料的质感就出来了。</p><p>生态极大：官方文档有简体中文版，示例几百个，中文书和 B 站课程成体系，2025 年后仍是每月一个版本。</p><p>对 0101 它是延伸玩法：PSK 的盒身和 27 件小物件本来就有 CAD 模型，从 FreeCAD 导出 glTF，写一个百来行的网页放在展台前脸那块 7 寸小屏上，人走近时 HomeAssistant 把小屏切到这个页面，盒子缓慢旋转、盖子做开合动画，点一件物件弹出名字和用途；扫铜牌旁的二维码手机上看同一页。注意模型要减面，树莓派跑不动原始 CAD，用 Blender 抽稀到两三万面。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0101.html" title="PSK 主产品展示"><i>0101</i>PSK 主产品展示</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/openai/whisper" target="_blank" rel="noopener">openai/whisper</a>
+            <span class="stars">★ 107.3k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">OpenAI 开源的语音识别模型：68 万小时数据训练，99 种语言含中文，本地推理，自动断句加标点，可翻译成英文</p>
+          <div class="rintro"><p>Whisper 是 OpenAI 2022 年 9 月开源的语音识别模型，107.3k 星，是 GitHub 上星数最高的语音项目，MIT 许可证，2024 年又加了更快的 turbo 版。它解决的问题是：以前离线语音识别对口音、噪音和中文都很差，Whisper 用 68 万小时网络音频弱监督训练，做到接近商业水平。</p><p>它的工作方式是把音频切成 30 秒的窗口，转成梅尔频谱输入一个编码器解码器 Transformer，解码器一边识别语种一边输出带标点的文本。模型从 tiny 到 large 有六档，tiny 在树莓派上也能跑，large 要显卡。周边最重要的两个衍生项目是 C++ 重写的 whisper.cpp 和更快的 faster-whisper，HomeAssistant 的语音助手管线就是靠 Wyoming 协议接 faster-whisper 做听写。</p><p>生态上中文资料非常多，B 站和知乎教程从装包到微调都有，中文识别效果在 medium 以上模型很稳。</p><p>在 0704 里它是延伸：火塘边坐着的时候，想记的东西很多但不想掏笔。手机上用 HA 伴侣应用按住说一段，比如今天两条鲫鱼一条昂刺、松木炭烤鱼十分钟正好，音频传到 0802 服务器的 faster-whisper 转成文字，自动化按关键词分流：有鱼名的进 0702 的钓鱼笔记，其他的进 0209 的 memos。想更省事就在钓台柱子上装一只 ESP32-S3 语音盒子，唤醒词一喊，灯、音乐和记笔记都能用嘴说。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0704.html" title="水边茶席·小火塘"><i>0704</i>水边茶席·小火塘</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/opencv/opencv" target="_blank" rel="noopener">opencv/opencv</a>
+            <span class="stars">★ 89.3k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">计算机视觉的标准库：图像处理、特征检测、目标跟踪、相机标定、DNN 推理，C++ 核心带 Python 绑定</p>
+          <div class="rintro"><p>OpenCV 是英特尔在 1999 年发起、现在由 OpenCV 基金会维护的计算机视觉库，89.3k 星，2026 年发布了 5.0，几乎所有做视觉的人都从它开始。它要解决的问题是：把图像当成矩阵来处理的那些基础算法——滤波、阈值、边缘、轮廓、光流、特征点、相机标定——不该每个人重写一遍。</p><p>它的核心用 C++ 写，Python 绑定 cv2 是最常用的入口：读一帧图像成 NumPy 数组，一路函数调用下去，比如高斯模糊去噪、转 HSV 按颜色阈值分割、findContours 找轮廓、按面积过滤得到目标、再用背景减除或光流跟踪运动。DNN 模块能直接加载 ONNX 和 TensorFlow 模型做检测和分类，VideoCapture 读摄像头和 RTSP 流。它跑在树莓派、手机、桌面和 GPU 上，2025 年后每几个月一个版本。</p><p>生态是视觉界最大的，README 是英文，但中文书、教程和课程数量惊人，国内高校课程几乎都用它。</p><p>对 0205 它是延伸里最有意思的一个玩法：缸前上方架一个小摄像头对着缸体，树莓派上跑一段几十行的 Python：背景减除分出游动的鱼，按宝莲灯那条蓝红色带的 HSV 范围过滤，轮廓计数得到当前可见鱼数，连续几分钟计数明显下降或某个轮廓长时间不动就推送到 0802 大屏提醒查看。同一个摄像头还能做延时摄影记录水草长势，配合水草灯的日出日落曲线定时抓拍。注意缸壁反光和水面波纹会干扰，摄像头加偏振镜、抓拍时机避开补水泵工作。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0205.html" title="生态鱼缸"><i>0205</i>生态鱼缸</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/syncthing/syncthing" target="_blank" rel="noopener">syncthing/syncthing</a>
+            <span class="stars">★ 88.3k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">点对点的连续文件同步：设备之间直接加密传输，没有中心服务器，改了就同步，带版本保留；手机、电脑、NAS 都有客户端</p>
+          <div class="rintro"><p>Syncthing 是 2013 年由瑞典开发者 Jakob Borg 发起的开源同步工具，88.3k 星，是自托管圈里替代网盘同步功能的头号选择。它解决的问题是：多台设备之间的文件想保持一致，但不想经过任何一家公司的服务器。</p><p>它的架构是纯点对点的：每台设备有一个由证书派生的设备 ID，两台设备互相添加并共享某个文件夹后，就直接建立 TLS 加密连接，用块交换协议只传变化的块。局域网内靠广播互相发现，跨网络用公共发现服务器交换地址，穿不透 NAT 就走志愿者的中继，中继只转发密文。文件夹可以设成只发送、只接收或双向；版本控制能把被覆盖和删除的文件留几份；忽略规则用类似 gitignore 的语法。它是一个 Go 程序加网页界面，安卓有官方客户端，NAS 系统大多有套件。</p><p>项目十多年持续发版，2026 年仍是月度更新；网页界面翻译完整，含简体中文，中文教程很多。要记住它是同步不是备份，误删会同步到所有设备，所以要配合版本控制或专门的备份工具。</p><p>在 0804 里它是延伸，负责日常搬运：手机相机目录只发送到 NAS 的照片库，Immich 在 Mac mini 上再去索引；阁楼工作站的 3D 打印文件夹和 Mac mini 双向同步；笔记本上 HomeAssistant、ESPHome 的配置目录只发送到 NAS，NAS 快照之后再由 restic 做真正的备份。设备只有三台机器和一部手机，发现和中继都关掉，只在局域网里走。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0804.html" title="全屋存储 + 全屋智能"><i>0804</i>全屋存储 + 全屋智能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/grafana/grafana" target="_blank" rel="noopener">grafana/grafana</a>
+            <span class="stars">★ 76.6k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">最流行的开源可视化平台：连上 InfluxDB、Prometheus、Postgres 等几十种数据源，拖出仪表盘，曲线、仪表、告警一应俱全</p>
+          <div class="rintro"><p>Grafana 是瑞典开发者 Torkel Ödegaard 2014 年从 Kibana 分叉出来的可视化平台，现由 Grafana Labs 维护，Go 和 TypeScript 写的，76.6k 星，是运维监控和物联网数据面板的事实标准。它解决的问题是：数据在各种数据库里，但看数据的人需要一张能拖着时间轴看、能设告警的面板，而不是自己写图表代码。</p><p>它的工作方式是数据源加面板：先配一个数据源（InfluxDB、Prometheus、PostgreSQL、HA 历史库等），再在仪表盘里加面板，每个面板写一条查询，选可视化类型：时间序列、仪表、状态图、柱状图、表格、地图。告警规则能把阈值越线推到手机，仪表盘是一个 JSON 文件，可以导入导出。</p><p>生态上它有几千个社区仪表盘和插件，Docker 一条命令就起；开源版功能对家庭完全够用。界面有简体中文，中文教程极多，TeslaMate、HomeAssistant 圈子里都有现成模板。</p><p>在 0603 里它是延伸，和 InfluxDB 配套：数据存进时序库之后，Grafana 负责把它变成一张能看的面板。建一个雨水罐仪表盘：第一行是当前水位的仪表和罐里剩多少升；第二行是三十天水位曲线，叠上降雨量柱和补水阀动作的标记；第三行是本月雨水占比和自来水补水升数的统计。加一条告警：连续三天水位低于 20% 且未来无雨就推送。这张面板嵌进 0802 的大屏，和 0602 的草地体检卡片并排放，梅雨天看红色浮子爬升的心情，冬天在屋里也能看到。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0603.html" title="雨水存储过滤"><i>0603</i>雨水存储过滤</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="noopener">tesseract-ocr/tesseract</a>
+            <span class="stars">★ 75.9k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">最著名的开源 OCR 引擎：谷歌维护多年，LSTM 神经网络识别一百多种文字，命令行和 C++/Python 接口，输出文本或可搜索 PDF</p>
+          <div class="rintro"><p>Tesseract 是惠普 1985 年开始研发、2005 年开源、后来由谷歌维护多年的 OCR 引擎，75.9k 星，现在由社区在 GitHub 上继续更新，5.x 版基于 LSTM 神经网络。它解决的问题是把图片里的文字变成可以搜索、复制、统计的文本，是几乎所有开源文档工具背后的那个引擎。</p><p>它的工作方式是先用 Leptonica 库做图像预处理，二值化、去斜、切分行和字，再把每行送进 LSTM 网络识别成字符序列，最后按版面输出纯文本、hOCR、TSV 或带文字层的 PDF。语言包按需下载，简体中文是 chi_sim，还能用自己的样本微调训练。命令行一句话就能跑，Python 有 pytesseract 封装，几乎所有语言都有绑定。</p><p>生态上它是 paperless-ngx、OCRmyPDF 等项目的底层，文档全英文，中文教程极多，装包和调参的坑都被踩遍了。要注意它对印刷体很好，对手写体尤其是粉笔字识别率明显下降，需要靠预处理和事后校对补。</p><p>在 0702 里它是延伸：小黑板写满一板鱼获和天气后拍照存档，照片扔进 0802 服务器上的一个监视目录，脚本先用 ImageMagick 把黑底白字反转成白底黑字并加大对比度，再用 Tesseract 的 chi_sim 识别，结果作为草稿推到手机上校对一遍，确认后写进 anglers-log 或 0209 的 memos。粉笔字写得工整一点、日期用阿拉伯数字，识别率会高很多。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0702.html" title="钓具储物与展示"><i>0702</i>钓具储物与展示</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/AppFlowy-IO/AppFlowy" target="_blank" rel="noopener">AppFlowy-IO/AppFlowy</a>
+            <span class="stars">★ 75.4k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Flutter + Rust 写的开源 Notion 替代：文档、数据库表格、看板、日历，数据本地优先，可自托管云同步</p>
+          <div class="rintro"><p>AppFlowy 是 AppFlowy-IO 团队做的开源协作工作区，目标很直白：做一个数据归自己管的 Notion。75.4k 星，是同类项目里星数最高的一个。它要解决的问题是：Notion 好用但所有笔记都在别人的云上，断网不能用，还随时可能改价。</p><p>它的架构是 Flutter 写界面、Rust 写核心，一套代码跑 macOS、Windows、Linux、iOS 和 Android。数据默认存在本地 SQLite 里，文档用块编辑器，数据库（Grid）像一张有类型的表格，同一份数据可以切成表格、看板、日历三种视图，属性支持文本、数字、单选、日期、复选框和关联。想多设备同步就自托管 AppFlowy Cloud（Docker Compose 一键起），也可以只用本地。2024 年后加了 AI 助手，可以接本地 Ollama 模型。</p><p>生态和社区：界面自带简体中文，Discord 和 GitHub 讨论区活跃，中文圈的评测和安装教程不少，2025 年后仍是几周一个版本。</p><p>放到 0102 里它是延伸项目：作品墙的每只盒子下面挂的牛皮纸标签只写得下型号和年份，而更完整的出生故事应该在一个数据库里。在 AppFlowy 建一张 PSK 作品表，一行一只盒子，列是版本号、年份、盒身材料、去过的山、当时的草图照片、当时犯的错，用日历视图看就是一条时间线。标签上印一个小二维码指向这一页，自己看到右下角那两个空位时，把下一代的想法也先记进去。注意别开太多字段，能坚持每代填完最重要。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0102.html" title="PSK 作品展示墙"><i>0102</i>PSK 作品展示墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/nocodb/nocodb" target="_blank" rel="noopener">nocodb/nocodb</a>
+            <span class="stars">★ 64.5k</span>
+            <span class="zh ">官方中文 README</span>
+          </div>
+          <p class="rdesc">开源的 Airtable 替代品：把 MySQL、PostgreSQL 或 SQLite 变成带表格、看板、表单和 API 的智能电子表格，自托管一条 Docker 命令</p>
+          <div class="rintro"><p>NocoDB 是印度团队 NocoDB 公司维护的开源无代码数据库，用 TypeScript 和 Vue 写成，64.5k 星，是 GitHub 上最热门的 Airtable 替代品。它要解决的问题：很多人只想要一张能协作、能加附件、能手机填的表格，Excel 不擅长，Airtable 又按人头收费且数据在别人手里。</p><p>它的工作方式是给数据库套一层电子表格皮：它可以自带 SQLite，也可以连上已有的 MySQL、PostgreSQL，把每张表变成一个网格视图，字段类型包括文本、数字、单选、附件、关联、公式、条码和二维码；同一张表能切成表格、看板、日历、画廊和表单视图，表单可以发成链接让别人填写。每张表自动生成 REST API，Webhook 在新增或修改时通知外部系统。</p><p>生态上有 Docker 和群晖一键部署，README 有官方中文版，界面也有简体中文；发版频繁，2026 年仍很活跃。</p><p>对 0402 来说它是延伸项目：InvenTree 管零件，Homebox 管物品，但斜顶下那排木料架更像一张清单——木种、厚度、长度、剩余块数、进货日期、格位号。在 0802 服务器上跑一份 NocoDB，建一张木料表，字段里加一个二维码列自动生成每格的码，打印贴到木料架上；A 字架上的板材和楼梯口的半成品暂存箱各建一张表，用表单视图做成手机页面，取走一块板顺手扫码减一。API 和 Webhook 接进 HomeAssistant，某种木料低于两块时推送提醒补货。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0402.html" title="材料仓库"><i>0402</i>材料仓库</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/usememos/memos" target="_blank" rel="noopener">usememos/memos</a>
+            <span class="stars">★ 62.5k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自托管的轻量笔记流：像发微博一样随手记一条，Markdown、标签、图片，Go 单文件部署，数据全在自己手里</p>
+          <div class="rintro"><p>memos 是 Steven（boojack）在 2021 年发起的开源笔记项目，Go 后端加 React 前端，62.5k 星，作者来自中文社区。它要解决的问题是：想记的东西大多是一两句话或一张截图，传统笔记软件的文件夹和标题让人懒得打开；它把笔记做成一条条时间流，像发微博一样记，像刷微博一样翻。</p><p>它的工作方式极简：一个二进制或一个 Docker 容器，数据存在 SQLite（也可以 MySQL、PostgreSQL）里，网页界面顶部一个输入框，写 Markdown、加标签、贴图片、按回车就是一条 memo；左侧按标签和日期筛选，热力图显示每天记了几条，memo 可以设公开分享链接，也能置顶和归档。它有完整的 API，社区做了 iOS、安卓、浏览器插件和 Telegram 机器人，Obsidian 也能同步。它刻意不做的事也很明确：没有文件夹、没有富文本、没有协作，专注于快速捕捉。</p><p>社区非常大，2025 年后依然每月一个版本，界面自带简体中文，中文用户和教程占了很大比例。</p><p>对 0209 它是延伸的收集箱：帐篷三面墙的素材——读到的一句话、电影里的一句台词、和朋友聊天时截的一段对话——当场用手机记进 memos，标签分名言、电影、对话三类，正好对应三面软木板。每季度换墙时按标签筛一遍，挑出来的打字机字体打在牛皮纸上钉上去，换下来的海报按日期收进宝箱，memos 里那条也顺手归档。注意它是收集不是展示，帐篷里没有插座也没有信号，最终上墙的必须是纸。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0209.html" title="藏宝阁"><i>0209</i>藏宝阁</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noopener">ultralytics/ultralytics</a>
+            <span class="stars">★ 59.8k</span>
+            <span class="zh ">官方中文 README</span>
+          </div>
+          <p class="rdesc">YOLO 系列目标检测的官方实现：一行命令训练和推理，检测、分割、姿态、跟踪全包，能导出到树莓派和手机</p>
+          <div class="rintro"><p>Ultralytics 是美国 Ultralytics 公司维护的 YOLO 官方实现，Python 和 PyTorch 写的，59.8k 星，从 YOLOv8 到 YOLO26 都在这个仓库里，2026 年 7 月还在发新版。它把目标检测从论文代码变成一个命令：pip 装完，一行 yolo 命令就能在图片和视频上画框，也能用自己标注的数据集训练新类别。</p><p>它的工作方式是：预训练模型在 COCO 数据集上认得 80 类常见物体；要认新东西就准备几百张标注好框的图片，写一个 YAML 描述类别，跑 train 命令几小时出一个新权重；推理时一张图进去，输出每个框的类别、置信度和坐标，还能做分割、姿态和多目标跟踪。训练好的模型可以导出成 ONNX、TensorRT、TFLite，跑在树莓派、Jetson 甚至 Coral 加速棒上。</p><p>生态是它最大的优势：文档和 README 都有官方简体中文版，标注工具 Roboflow、Label Studio 直接对接，社区教程铺天盖地。注意授权是 AGPL。</p><p>在 0604 里它是延伸，接在 Frigate 后面：Frigate 从长焦机的流里切出有动静的片段，但默认模型只会说有只鸟。把 Frigate 存下来的鸟类截图攒上几个月，按白头鹎、珠颈斑鸠、乌鸫、灰喜鹊、黄鼬标几百张，在 0802 服务器上训一个 YOLO 小模型，导出 ONNX 之后 Frigate 可以直接换用。这样那个未知疑似戴胜就能变成明确的类别，每月来访者名单也不用人工翻。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0604.html" title="摄像头监测微环境"><i>0604</i>摄像头监测微环境</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/odoo/odoo" target="_blank" rel="noopener">odoo/odoo</a>
+            <span class="stars">★ 52.8k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">比利时 Odoo 公司的开源 ERP 套件：库存、采购、制造、销售、会计几十个模块一体，社区版免费自托管，国内中小企业用得很多</p>
+          <div class="rintro"><p>Odoo 是比利时 Odoo 公司维护的开源商业应用套件，用 Python 和 PostgreSQL 写成，52.8k 星，当前主线是 19 版，从 2005 年的 TinyERP 一路演化过来。它要解决的问题是：一家企业的库存、采购、销售、制造、会计、CRM 各用一套软件，数据对不上，Odoo 把这些做成同一个数据库上的几十个模块，装哪个用哪个。</p><p>它的工作方式是模块加工作流：核心 ORM 定义模型，每个模块在上面加字段、视图和业务规则；库存模块用仓库、库位、批次和移动单来记每一件物料的去向，支持条码扫描收货和盘点；采购模块按补货规则自动生成采购单；制造模块管 BOM、工单和领料；会计模块把所有单据自动记账。网页界面手机能用，有条码扫描专用页面；社区版开源可自托管。</p><p>生态上它的应用商店有几万个第三方模块，国内有大量实施商和中文社区，界面自带简体中文且本地化很完整；公司每年发一个大版本，非常活跃。</p><p>对 0402 来说它是延伸项目：仓库日常用 InvenTree 和 Homebox 就够，Odoo 太重。它的用法是两条：一是学习——看它的库存模块怎么定义库位、批次和补货规则，把这套思路简化后用到周转箱二维码和 0801 数字孪生库的字段设计上；二是备用——如果 PSK 盒子哪天从自用变成小批量售卖，胡桃木板、黄铜配件、皮革边角就成了要算成本的原料，用 Docker 在 0802 服务器上跑一份 Odoo 社区版，仓库、采购、BOM、销售一起上，每一块板子的成本从此有据可查。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0402.html" title="材料仓库"><i>0402</i>材料仓库</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/paperless-ngx/paperless-ngx" target="_blank" rel="noopener">paperless-ngx/paperless-ngx</a>
+            <span class="stars">★ 44.9k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">社区维护的自托管文档管理系统：扫描件和 PDF 进来自动 OCR、打标签、归类，全文搜索秒出，纸质文件从此可以扔</p>
+          <div class="rintro"><p>paperless-ngx 是从 paperless 和 paperless-ng 接力过来的社区项目，用 Python 的 Django 写后端、Angular 写前端，44.9k 星，是自托管圈里文档管理的默认答案。它要解决的问题：说明书、发票、保修卡堆在抽屉里永远找不到，扫进硬盘也只是换个地方堆。</p><p>它的工作方式是消费加索引：把扫描件、PDF 或手机拍的照片扔进一个监视目录或通过邮件、网页上传，后台任务队列用 Tesseract 做 OCR 提取全文，再按预设的匹配规则或机器学习自动分配通讯人、文档类型、标签和存储路径，并把归档后的 PDF/A 存到指定目录。前端提供全文搜索、标签筛选、批量编辑和工作流；REST API 完整，手机有第三方 App，HomeAssistant 也有社区集成。</p><p>生态上它有 Docker Compose 一键部署，翻译通过 Crowdin 维护，界面有简体中文，中文自托管教程很多；项目由多位维护者活跃更新，几乎每月发版。</p><p>对 0401 来说它是延伸项目：洞洞板上每件工具的影子旁边都贴了 NFC 标签，碰一下打开 HomeAssistant 里的工具清单，那份清单里加一个链接，直接跳到 paperless-ngx 里这把工具的说明书和发票。买回一件新工具，先把说明书和小票用手机拍一张扔进监视目录，打上工具名和 0401 的标签，再挂上洞洞板。跑在 0802 服务器上，中文说明书记得把 OCR 语言加上 chi_sim。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0401.html" title="过道工具间"><i>0401</i>过道工具间</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/photoprism/photoprism" target="_blank" rel="noopener">photoprism/photoprism</a>
+            <span class="stars">★ 40.1k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Go 语言写的自托管 AI 相册：TensorFlow 自动打标签、人脸识别、地图、按镜头和相机筛选，一条 Docker 命令就起</p>
+          <div class="rintro"><p>PhotoPrism 是德国 PhotoPrism UG 团队做的自托管 AI 相册，用 Go 写后端、Vue 写前端，40.1k 星，是自托管照片圈里最常被推荐的方案之一。它要解决的问题是：照片越来越多，但没人愿意把私人照片交给云相册，也没人愿意手工给几万张图打标签。</p><p>它的工作方式是索引而不是导入：把照片目录只读挂进 Docker 容器，后台扫描一遍就生成缩略图和数据库，原文件一根手指头都不碰。扫描时 TensorFlow 模型给每张图打上物体和场景标签，人脸聚类、GPS 反查地名、相机和镜头型号都进索引，再配合 RAW 转换和视频转码。前端是一个响应式网页，手机、平板、电脑都能用，搜索栏里可以直接写 lens:iphone year:2024 这样的查询。</p><p>生态方面它有官方 Docker Compose、群晖和树莓派安装说明，PhotoSync 之类的手机备份 App 原生支持它；界面自带简体中文，中文安装教程也多。项目靠订阅和赞助维持，2025 年之后依然每月出版本。</p><p>对 0101 来说它是延伸项目：展台小屏要滚动播放这只盒子的用途和实测视频，素材从哪来？把这些年拍的 PSK 产品照、车床加工照、山顶实测照全部索引进 PhotoPrism，给每一代盒子建一个相册，用标签区分产品照、细节照、野外照。剪视频时按标签一搜就出来，展台小屏的待机画面也可以直接指向某个相册的分享链接。注意机器：AI 索引第一次跑很吃 CPU，放在 0802 的家庭服务器上夜里跑就行。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0101.html" title="PSK 主产品展示"><i>0101</i>PSK 主产品展示</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/frappe/erpnext" target="_blank" rel="noopener">frappe/erpnext</a>
+            <span class="stars">★ 38.6k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Frappe 框架上的开源 ERP：物料清单 BOM、工单、库存、采购、销售、财务全流程，制造业小厂常用</p>
+          <div class="rintro"><p>ERPNext 是印度 Frappe 公司做的开源 ERP，Python 后端加 Frappe 框架，38.6k 星，是开源 ERP 里社区最大的一个。它要解决的问题是：小工厂和小品牌需要 SAP 那套物料、生产、库存、财务的逻辑，但付不起也用不了那么重的东西。</p><p>它的核心是 Frappe 框架的 DocType：每种业务对象（物料、BOM、工单、采购单）都是一张有字段、有工作流、有权限的表，界面和报表自动生成。制造模块的流程是：先给成品建物料清单 BOM，列出每一件子物料和数量；下工单时系统按 BOM 算出要领多少料、缺什么；完工后成品入库、原料扣减，库存低于安全线自动生成采购建议。它还带 CRM、项目、人事和会计，一套 Docker 就能跑。</p><p>生态方面它有中文界面翻译，国内有做实施的公司和不少中文文档；2025 年后每年一个大版本，v15 是当前主线。</p><p>放到 0105 里它是延伸的思路来源，不一定全上：工作台那排 27 格零件柜就是一张 BOM 的物理形态，每格贴的数量标签就是库存。在 ERPNext 里给 PSK 建一个 BOM，27 行子物料加毛毡和盒身，每组装一只就下一张工单，库存自动减；把每格的安全库存设成 20，低于就进采购建议，周末统一下单。注意它对一个人的作坊来说太重，只用物料、BOM、库存三个模块，别去碰会计；觉得重的话，0105 原有的 InvenTree 是更轻的选择。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0105.html" title="PSK 工作台"><i>0105</i>PSK 工作台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/portainer/portainer" target="_blank" rel="noopener">portainer/portainer</a>
+            <span class="stars">★ 38.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Docker 与 Kubernetes 的网页管理台：容器、镜像、卷、网络一目了然，Compose 文件当 Stack 部署，Agent 模式把别的机器纳进同一个界面</p>
+          <div class="rintro"><p>Portainer 是 2016 年开始的 Docker 管理界面，38.2k 星，社区版免费开源，商业版收费。它解决的问题是：Docker 命令行对偶尔维护一次的人不友好，忘了容器名、找不到日志都要查文档；Portainer 把这些变成网页上的按钮。</p><p>它自己也是一个容器，挂上宿主机的 Docker 套接字就能管理本机；要管别的机器，在那台机器上跑一个 Portainer Agent，主界面加一个环境就纳进来。每个容器能看实时日志、进终端、看资源曲线、改配置后重建。最常用的是 Stacks：把 docker-compose.yml 贴进去或指向一个 Git 仓库，一键部署整组服务，Git 模式还能定时拉取自动更新。</p><p>它是家庭服务器圈子里的标配；界面没有官方中文，但社区有汉化版镜像，国内教程极多。轻量替代品有 Dockge，功能不如它全。</p><p>在 0804 里它是延伸：Windows 笔记本上的 Docker 装 Portainer 主程序，HomeAssistant、ESPHome、Uptime Kuma、Beszel Hub、homepage 各写成一个 Stack，Compose 文件放在 NAS 上的一个 Git 仓库里，改了配置推一下就自动重建；NAS 自带的 Docker 跑一个 Agent 纳入同一界面，Jellyfin、Immich 在那边。出门在外收到 Uptime Kuma 的红条，手机打开 Portainer 看一眼日志、点一下重启，多数小故障就解决了。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0804.html" title="全屋存储 + 全屋智能"><i>0804</i>全屋存储 + 全屋智能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/TriliumNext/Trilium" target="_blank" rel="noopener">TriliumNext/Trilium</a>
+            <span class="stars">★ 37.8k</span>
+            <span class="zh ">官方中文 README</span>
+          </div>
+          <p class="rdesc">层级笔记树式的个人知识库：一条笔记可以挂在多个父节点下，带关系图、脚本能力和自托管服务端同步</p>
+          <div class="rintro"><p>Trilium Notes 最早由捷克开发者 zadam 做了六年，2024 年他退出维护后社区接手成立 TriliumNext，2025 年 6 月仓库正式改名为 TriliumNext/Trilium 继续开发，37.8k 星。它要解决的问题是：普通笔记软件是文件夹或标签，而真实知识是一张网，一条笔记常常同时属于好几个主题。</p><p>它的核心是一棵可以克隆的笔记树：任何笔记可以出现在多个父节点下，本质上是同一条记录的多个引用；笔记之间还能定义关系和属性，自动生成关系图。编辑器是富文本加代码块、Markdown 导入导出、画布、思维导图和网页剪藏。它内置脚本引擎，可以用 JavaScript 写自动化和小工具，服务端用 Node.js 写，Docker 一行起，桌面端用 Electron，手机用网页版，同步走自己的服务器，全程加密可选。</p><p>社区方面它是少数 README 自带简体中文和繁体中文的知识库项目，中文用户很多，Docker 部署教程遍地。</p><p>放到 0102 里它是延伸的另一条路线：如果说 AppFlowy 适合做一张干净的作品表，Trilium 适合把整个 PSK 七年的东西全塞进去——每一代盒子一条笔记，克隆到年份树、材料树和山的树下；每次上山的日记、供应商报价、失败的样品照都挂在旁边，关系图一拉就看到第四版为什么换钛合金。作品墙标签上的二维码也可以指向这里。注意它是给一个人用的深度工具，学习曲线比 AppFlowy 陡，先只用树和克隆两个功能就够了。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0102.html" title="PSK 作品展示墙"><i>0102</i>PSK 作品展示墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/google-ai-edge/mediapipe" target="_blank" rel="noopener">google-ai-edge/mediapipe</a>
+            <span class="stars">★ 36.9k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">Google 的端侧多媒体机器学习框架：人体姿态、手部、人脸关键点实时检测，手机、浏览器、树莓派都能跑</p>
+          <div class="rintro"><p>MediaPipe 是 Google 在 2019 年开源的端侧机器学习框架，现在归 Google AI Edge 团队，36.9k 星。它要解决的问题是：在手机和低算力设备上实时跑视觉模型很难，摄像头帧的预处理、推理、后处理要串成一条不掉帧的流水线，它把这条流水线和一批现成模型打包好。</p><p>它的架构是图计算：每个计算器是一个节点，摄像头帧进来后经过缩放、推理、解码、平滑几个节点流出结果。现成任务里最常用的是 Pose Landmarker：一帧图像给出人体 33 个关键点的三维坐标和可见度，手机上 30 帧每秒毫无压力；还有手部、人脸、手势识别和物体检测。API 有 Python、JavaScript、安卓、iOS 和 C++，模型是 TensorFlow Lite 格式，树莓派 5 上 Python 版能跑十几帧。</p><p>生态很大，2025 年后仍在更新，README 英文，但中文教程和 B 站的姿态识别课程非常多。</p><p>对 0212 它是延伸的数动作眼睛：南墙那面窄镜顶上装一个小摄像头对着地毯，树莓派跑 Pose Landmarker，拿到 33 个关键点后自己写几行几何判断：髋和膝的夹角小于 90 度算一个深蹲，手腕高过单杠横杆算一次引体，哑铃划船看肘的角度变化；计数通过 MQTT 发到 HomeAssistant，训练模式下 0802 大屏在心率旁边多一个计数。注意关键点是 2.5D 的，侧身对摄像头角度判断最准，正对镜子时深度不可靠；周计划打钩还是手写，它只负责数。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0212.html" title="哑铃"><i>0212</i>哑铃</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/restic/restic" target="_blank" rel="noopener">restic/restic</a>
+            <span class="stars">★ 35.6k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">快、安全、省空间的备份程序：内容去重、全程加密、每次备份一个快照，仓库可以放本地盘、SFTP 或任何 S3 兼容存储</p>
+          <div class="rintro"><p>restic 是德国开发者 Alexander Neumann 在 2014 年发起的备份程序，35.6k 星，用 Go 写成，单个可执行文件。它解决的问题是：备份工具要么复杂得像企业软件，要么只是复制文件；restic 把去重、加密、增量、校验这几件正确的事做全，命令却只有几个。</p><p>它的模型是仓库加快照：初始化仓库时设一个密码，之后所有数据在写入前都加密。每次 backup，文件被切成内容定义的变长块，只有仓库里没有的块才上传，所以第二次备份只传变化的部分，同一份文件在不同路径也只存一次；完成后生成一个快照。恢复可以整份还原，也可以把快照挂载成文件系统去翻某一个文件；prune 按策略清理旧快照，check 校验完整性。后端支持本地目录、SFTP、S3 兼容对象存储和 rclone 支持的一切。</p><p>项目十年稳定，2026 年仍在发版；文档是英文，中文教程主要在自托管社区里。</p><p>在 0804 里它是延伸，接在 NAS 快照后面。方案说每天凌晨 NAS 快照、每周一份冷备到阁楼保险箱的硬盘：快照解决误删和回滚，restic 解决整机损坏和火灾。做法是笔记本上定时跑 restic，源是 NAS 上的照片库、各模块数据库快照和 HA 配置，仓库一是那块每周插一次的冷备硬盘，插上后自动补齐；仓库二是一个便宜的 S3 兼容对象存储，只放最要紧的几十 GB。每月做一次恢复演练，随机挑一个文件从冷备盘里取回来，确认密码没忘、仓库没坏。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0804.html" title="全屋存储 + 全屋智能"><i>0804</i>全屋存储 + 全屋智能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/zxing/zxing" target="_blank" rel="noopener">zxing/zxing</a>
+            <span class="stars">★ 34.1k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">斑马线：Java 写的一维码和二维码识别与生成库，几乎所有 Android 扫码功能的祖先，支持 QR、Code 128、EAN 等十几种码制</p>
+          <div class="rintro"><p>ZXing 念作斑马线，是 2007 年从 Google 内部开源出来的条码识别与生成库，用 Java 写成，34.1k 星，Android 早期的扫码 App 就是它的作品。它要解决的问题是：用普通摄像头，不要专用扫码枪，就能可靠地读出一维码和二维码。</p><p>它的工作方式是图像进、文本出：把摄像头帧或图片转成亮度矩阵，二值化后交给各码制的解码器逐个尝试——QR 码找三个定位图案再纠错解码，Code 128、EAN、UPC 等一维码沿扫描线找黑白条宽比。反过来它也能把任意文本编码成条码的位图。项目已进入维护模式，只接受补丁，但正因为稳定，它成了参考实现：zxing-cpp、zxing-js 都是它的移植，浏览器、Python、树莓派上都能用。</p><p>生态上它的码制文档非常完整，中文资料以博客和教程为主，没有官方中文；核心库很久没大改，移植版仍在活跃更新。</p><p>对 0401 来说它是延伸项目：楼梯口旁那排 48 格透明抽屉柜和顶部的长物件导轨，标签机打的字之外再加一个小二维码，内容是 0801 数字孪生库里这一格的 ID。生成用 zxing 的编码器批量出图，喂给 niimblue 标签机打印；扫描用手机上任何基于 zxing 的 App，或者在 0802 服务器上用 zxing-cpp 的 Python 绑定给过道的摄像头做识别。码制选 QR 而不是一维码，一格 15 毫米宽的标签也能扫；打印时注意留白边，zxing 对静区很敏感。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0401.html" title="过道工具间"><i>0401</i>过道工具间</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/gethomepage/homepage" target="_blank" rel="noopener">gethomepage/homepage</a>
+            <span class="stars">★ 32k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自托管起始页仪表盘：YAML 配置，靠 Docker 标签自动发现容器，一百多种服务集成能把 Jellyfin、Uptime Kuma、NAS 的实时数字摆在一页上</p>
+          <div class="rintro"><p>homepage 是 gethomepage 组织维护的自托管起始页，32k 星，是近几年自托管圈里最流行的仪表盘之一。它解决的问题是：家里跑了十几个服务，每个都有自己的网址和状态页，需要一页把入口和关键数字都摆出来，打开浏览器第一眼就看到。</p><p>它用 Next.js 写成，配置是几个 YAML 文件：services 定义分组和卡片，widgets 定义顶部信息条，bookmarks 定义书签。最特别的是集成能力：一百多种服务有专门的小部件，填上地址和密钥，卡片上直接显示 Jellyfin 正在播放什么、Uptime Kuma 有几个监控在线、NAS 剩多少空间；再加上 Docker 标签自动发现，容器只要贴几行标签就会自动出现在页面上。请求经服务端代理，密钥不暴露到浏览器。</p><p>它更新很勤，2026 年仍是月度发版；界面经 Crowdin 翻译成四十多种语言，中文完整，文档是英文，但国内部署教程非常多。</p><p>在 0802 里它是延伸：三块屏由 HA 驱动，传感器这一层够了，缺的是服务层。做法是在 0804 的笔记本上跑 homepage，右屏的一个标签页嵌它：分组按机器排，NAS 一栏是 Jellyfin、Immich、存储余量，笔记本一栏是 HA、ESPHome、Uptime Kuma、Beszel，Mac mini 一栏是识别任务和 Ollama；哪个服务挂了卡片就变灰。手机上它也是入口页，出门时先看一眼再决定要不要点进 HA。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0802.html" title="全屋中枢 / 全屋数据可视化屏"><i>0802</i>全屋中枢 / 全屋数据可视化屏</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/pmndrs/react-three-fiber" target="_blank" rel="noopener">pmndrs/react-three-fiber</a>
+            <span class="stars">★ 31.9k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">three.js 的 React 渲染器：把 3D 场景写成组件，状态一变画面自动更新；配 drei 工具库几十行就能转着看一个 glTF 模型</p>
+          <div class="rintro"><p>react-three-fiber 是 pmndrs 社区维护的 three.js 的 React 渲染器，31.9k 星。它解决的问题是：three.js 是命令式的，建网格、加场景、每帧更新都要手写；它把每个 three.js 对象变成一个 JSX 组件，状态一变画面跟着变。</p><p>它是一个自定义 React 渲染器：Canvas 组件创建 WebGL 上下文和渲染循环，里面的 mesh、boxGeometry、meshStandardMaterial 这些标签被翻译成对应的 three.js 对象，属性直接映射；useFrame 让组件参与每一帧更新，useLoader 负责加载 glTF 模型和贴图。配套的 drei 库提供轨道控制器、环境光、标注等现成组件，几十行代码就能让模型转起来。</p><p>它是 React 生态里做 3D 的事实标准，2026 年 v9 版跟上了 React 19；没有官方中文文档，但掘金和 B 站教程不少。</p><p>在 0801 里它是延伸：等距地图先用 SVG 做，够用；稳定之后可以做一个 3D 版本，每只透明收纳箱是一个 Box 组件，颜色由 HA 里的实体状态驱动，在库灰色、外借橙色，点一下箱子相机飞过去并弹出俯视照片；PSK 生存盒则把 glTF 模型加载进来，边转边看每个零件对应清单里的哪一行，缺件半透明。数据从 HA 的 WebSocket 订阅，页面仍嵌在 HA 仪表盘里。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0801.html" title="物品数字孪生"><i>0801</i>物品数字孪生</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/fishaudio/fish-speech" target="_blank" rel="noopener">fishaudio/fish-speech</a>
+            <span class="stars">★ 31.8k</span>
+            <span class="zh ">官方中文 README</span>
+          </div>
+          <p class="rdesc">开源的顶级文本转语音模型：中英日等多语言，几秒参考音频即可克隆音色，自然语言标签控制情绪，本地 GPU 或 CPU 推理</p>
+          <div class="rintro"><p>Fish Speech 是国内团队 Fish Audio 2024 年开源的文本转语音模型，31.8k 星，2025 年推出 S2 Pro 版本，仓库自带中文 README，是中文开源 TTS 里最接近商业水准的一个。它解决的问题是：以前的开源 TTS 要么机械要么只有英文，中文语音想自然、想用自己的音色，得靠云服务。</p><p>它的工作方式是两段式：先把文本用大语言模型架构转成语义音频 token，再由声码器把 token 还原成波形。给它几秒钟的参考音频就能零样本克隆音色，不用训练；文本里可以写情绪和语气的自然语言标签，比如慢一点、带笑意。推理支持 NVIDIA 显卡、AMD 显卡和纯 CPU，带命令行、WebUI 和 HTTP API，Docker 一键起。</p><p>生态上它的社区在国内很活跃，B 站教程多，Discord 和 QQ 群都有人答疑。要注意模型采用 Fish Audio 研究许可证，个人和研究用途没问题，商用要另谈。</p><p>在 0704 里它是延伸：火塘边的规矩是不看手机，那就让声音来。在 0802 服务器上跑 Fish Speech 的 HTTP 服务，HomeAssistant 通过一个自定义 TTS 集成调用它，参考音频用家里人念的十秒话。傍晚开火时，0208 的 Snapcast 分一路到钓台顶棚下的小音箱，念一首和季节对上的诗；水壶温度探头到 90 度报一句水快开了；走的时候报一句别忘了浇火。文本从 0209 的名言库里按日期挑，声音是自己人的，比任何音箱助手都合适。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0704.html" title="水边茶席·小火塘"><i>0704</i>水边茶席·小火塘</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/influxdata/influxdb" target="_blank" rel="noopener">influxdata/influxdb</a>
+            <span class="stars">★ 31.6k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">最流行的开源时序数据库：专为传感器读数和指标设计，按时间戳高压缩存储，SQL 或 InfluxQL 查询，3.x 用 Rust 重写</p>
+          <div class="rintro"><p>InfluxDB 是美国 InfluxData 公司 2013 年开源的时序数据库，31.6k 星，是物联网圈里最常见的长期存储方案，2026 年 6 月发布了 3.10 版，核心已用 Rust 重写。它解决的问题是：传感器每分钟一条读数，一年就是几十万行，普通关系数据库查得慢、占得多，时序库按时间戳排列、按列压缩，专门为这种数据设计。</p><p>它的数据模型是测量、标签、字段和时间戳：比如测量是 rain_tank，字段是 level_percent 和 volume_l，时间戳精确到纳秒。写入走 HTTP 的行协议，一行文本就是一条数据；查询用 SQL 或 InfluxQL，支持按时间窗口聚合和降采样。3.x 版把存储换成了 Parquet 文件，单机版免费。</p><p>生态上它和 Grafana 是最经典的搭档，HomeAssistant 有官方集成，勾选要记录的实体就自动写入。文档全英文，中文教程多但要注意 1.x、2.x、3.x 的接口差别。</p><p>在 0603 里它是延伸：方案里雨水占比要靠 HomeAssistant 统计，但 HA 的历史库默认只留十天，而雨水罐的故事是按季节讲的。在 0802 服务器上跑一个 InfluxDB，HA 集成里把水位、补水阀状态、自来水补水量、溢流次数这几个实体写进去，一年下来就能回答：梅雨季罐子溢流了几次、伏旱补了多少自来水、1500 升到底够不够。这些数据同时是 0602 浇灌用水的来源账本，两个模块的用水在同一张表里对得上。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0603.html" title="雨水存储过滤"><i>0603</i>雨水存储过滤</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/ankitects/anki" target="_blank" rel="noopener">ankitects/anki</a>
+            <span class="stars">★ 30.4k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">间隔重复记忆卡片软件：算法按遗忘曲线安排复习，桌面、手机、网页同步，卡片模板可自定义，插件生态庞大</p>
+          <div class="rintro"><p>Anki 是 Damien Elmes 在 2006 年开始写的间隔重复软件，Python 加 Rust 重写核心，30.4k 星，是背单词和医学生记知识点的标准工具。它要解决的问题是：人记东西会遗忘，复习太早浪费时间、太晚就忘光；间隔重复算法在你快要忘的那一刻把卡片再拿出来。</p><p>它的工作方式是：卡片由笔记生成，笔记是字段（正面、背面、来源），模板决定怎么渲染成卡片，可以有图片、音频、公式；每天打开它会给你今天该复习的卡片，看完正面回忆背面，按记不住、困难、良好、简单四个按钮打分，算法（现在默认是 FSRS）据此算下一次出现的间隔，从一天到几年。数据是本地 SQLite，通过 AnkiWeb 同步到手机的 AnkiMobile 和安卓的 AnkiDroid，也可以自托管同步服务器。插件用 Python 写，几千个，从自动配图到统计热力图都有。</p><p>生态极大，2025 年后仍是每两个月一个版本，界面自带简体中文，中文用户群和教程非常多。</p><p>对 0209 它是延伸的记忆环节：左边那面墙的名言、正面海报的电影和导演年份、右边对话里那些当时打动你的话，做成一个叫藏宝阁的牌组，正面是上半句或电影海报缩略图，背面是下半句或出处。每天进帐篷盘腿坐下后先用手机上的 AnkiDroid 翻五分钟，离线可用，没有信号也没关系，出去有网了再同步。注意卡片别做多，一面墙十来张就够，Anki 的价值在坚持不在数量。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0209.html" title="藏宝阁"><i>0209</i>藏宝阁</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/koreader/koreader" target="_blank" rel="noopener">koreader/koreader</a>
+            <span class="stars">★ 29.5k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">电子墨水阅读器上的开源阅读软件：Kindle、Kobo、PocketBook 都能装，支持 EPUB、PDF、DjVu，排版和字典功能远超原厂</p>
+          <div class="rintro"><p>KOReader 是 2011 年从 Kindle 越狱社区长出来的开源阅读软件，Lua 写成，29.5k 星，能装在 Kindle、Kobo、PocketBook、reMarkable 和安卓上。它要解决的问题是：电子墨水阅读器的原厂系统功能少、格式挑、排版不能细调，而这些机器的硬件其实很好。</p><p>它的架构是一个 Lua 框架加两个渲染引擎：MuPDF 负责 PDF 和 DjVu，crengine 负责 EPUB、FB2、MOBI 这类可重排格式。打开一本书后可以调字体、行距、边距和竖排，PDF 能重排和裁边；内置 StarDict 词典、维基百科查询和翻译，阅读统计能画出每天读了多久，书籍和进度可以通过 Calibre、OPDS 和自建的同步服务器同步。安装是把文件拷进设备并接管启动，各机型有详细步骤。</p><p>社区活跃，2025 年后仍是每月一个版本，界面自带简体中文，中文用户很多，繁简竖排支持是它的强项之一。</p><p>对 0209 它是延伸的阅读设备：帐篷里全是 USB 供电、没有插座，一台闲鱼买的旧 Kindle 刷上 KOReader，阅读灯照着看书，电池撑三四周。书从 0303 的 Calibre 库通过 OPDS 拉进去，出帐篷有 Wi-Fi 时同步进度；那些名言的出处——整本书——就在这台机器里。铁皮宝箱里的旧手机也可以装安卓版当备用。注意 Kindle 越狱只对老固件容易，买二手前先查型号和固件版本能不能越狱。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0209.html" title="藏宝阁"><i>0209</i>藏宝阁</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/ente-io/ente" target="_blank" rel="noopener">ente-io/ente</a>
+            <span class="stars">★ 28.9k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">端到端加密的开源相册与备份：手机、桌面、网页全端，服务端可自托管，本机做人脸和语义搜索不上传明文</p>
+          <div class="rintro"><p>Ente 是印度团队 ente.io 做的端到端加密相册，2024 年把服务端也全部开源，28.9k 星。它要解决的问题是：想要 Google Photos 那样的多端自动备份和搜索，但不愿意让任何服务器看到照片内容。</p><p>它的架构是客户端加密：手机或桌面 App 在本机用 libsodium 把照片加密后再上传，密钥只在设备上，服务端只存密文。人脸识别和语义搜索也在设备本地跑模型，索引结果加密后同步，所以搜索照样能用。服务端叫 Museum，用 Go 写，Docker Compose 自托管一条命令；客户端覆盖 iOS、Android、三大桌面和网页版，支持家庭共享、相册链接、Live Photo 原样保存。同一个仓库还带 Auth 两步验证应用。</p><p>生态方面它 2025 年后更新很密；App 界面有简体中文，中文评测集中在自托管和隐私圈，Google Takeout 导入做得好。</p><p>放到 0104 里它是延伸的备份底座：照片墙的照片没有塑封、会被炉火烤卷，换下来放进牛皮纸相册，原片必须有一个可靠的备份。手机开 Ente 自动备份，拍立得拍的实体照用手机翻拍一张也进去，按年份建相册，和吧台矮柜里的实体相册一一对应。它和 0104 原有的 Immich 不冲突：Immich 管挑选与展示，Ente 管加密备份异地一份。注意密钥丢了谁也救不回来，恢复短语抄在纸上放进 0209 的铁皮宝箱。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0104.html" title="PSK 照片墙"><i>0104</i>PSK 照片墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/huggingface/lerobot" target="_blank" rel="noopener">huggingface/lerobot</a>
+            <span class="stars">★ 27.2k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">Hugging Face 的机器人端到端学习库：统一的数据集格式、遥操作录数据、ACT / Diffusion / VLA 等策略训练与真机部署，SO-101 机械臂入门套件几百块</p>
+          <div class="rintro"><p>LeRobot 是 Hugging Face 在 2024 年发起的机器人学习库，27.2k 星，目标是把开放数据集加预训练模型的玩法搬到机器人上。它解决的问题是：真机学习的每一步以前都要自己造轮子，录数据、存格式、训策略、部署到硬件，各家互不兼容；它把这些统一成一套 Python 接口。</p><p>它的流程是：先用遥操作录数据，摄像头画面、关节角度、指令按 LeRobotDataset 格式存成 Parquet 加视频，可以直接推到 Hub；然后选一个策略训练，ACT 和 Diffusion Policy 适合单任务，SmolVLA、π0 这类视觉语言动作模型能听指令做多任务；训完的模型在真机上以固定频率跑推理，输入画面和状态，输出关节目标。硬件层有统一的 Robot 和 Motor 抽象，支持 SO-101 机械臂、LeKiwi 底盘等低成本平台。</p><p>Hub 上公开数据集几千个；README 直接链接了同济子豪兄写的 SO-101 中文全流程教程，从组装到部署都有，是国内入门这条路线最省事的材料。</p><p>在 0803 里它是延伸：Microduck 的步态是仿真里强化学习出来的，但回窝对准、看到人停下、把头转向说话的人这些需要眼睛的技能，用模仿学习更直接。做法是把鸭子头部摄像头、IMU 和十五个舵机的状态按 LeRobotDataset 格式录下来，人用手柄遥控它走到充电窝几十次，训一个小策略叠在步态策略之上。想先练手，就在阁楼工具台上装一台 SO-101，照中文教程走一遍再回来改鸭子。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0803.html" title="miniduck"><i>0803</i>miniduck</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Lissy93/dashy" target="_blank" rel="noopener">Lissy93/dashy</a>
+            <span class="stars">★ 26.4k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">另一款自托管仪表盘：自带可视化编辑器，不用改 YAML 也能拖卡片，带状态检查、几十套主题、小部件、多页面和登录</p>
+          <div class="rintro"><p>Dashy 是英国开发者 Alicia Sykes 维护的自托管仪表盘，26.4k 星，和 homepage 是同一类东西，但取向不同：homepage 偏运维，靠 YAML 和自动发现；Dashy 偏个人化，主打可视化编辑和主题。它解决的问题同样是给一堆自托管服务做一个入口页。</p><p>它用 Vue 写成，一个 conf.yml 描述页面、分区和条目，但也可以完全不碰文件：界面里有编辑模式，拖拽卡片、改图标、加分区，保存后写回配置。它有状态检查，定时探测每个链接是否在线并在卡片角上亮灯；有几十套内置主题和自定义 CSS；有小部件系统，能嵌天气、系统负载、RSS、iframe；还有多页面、搜索快捷键、登录与按用户显示不同页面。</p><p>社区活跃，2026 年仍在更新，界面翻译含简体和繁体中文，文档是英文但很详尽；国内自托管圈把它和 homepage 并列为两大起始页。</p><p>在 0802 里它是延伸：屏墙归 HA，homepage 管服务层，Dashy 更适合做分身的入口。木屋吧台的平板和手机上放一个 Dashy 页面：第一页是几个大按钮，直接跳 HA 的各个视图；第二页用 iframe 嵌 Grafana 的水电曲线和 0801 的地图；主题用夜间黑底，22:00 之后和屏墙的夜航模式一个调子。它的状态检查还能顺手把各模块 ESPHome 节点的网页探一遍，掉线的卡片亮红灯，和 Uptime Kuma 互为备份。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0802.html" title="全屋中枢 / 全屋数据可视化屏"><i>0802</i>全屋中枢 / 全屋数据可视化屏</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/kovidgoyal/calibre" target="_blank" rel="noopener">kovidgoyal/calibre</a>
+            <span class="stars">★ 25.7k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">老牌开源电子书管理器：格式转换、元数据整理、自带内容服务器和阅读器，几十种设备一键传书</p>
+          <div class="rintro"><p>calibre 是 Kovid Goyal 从 2006 年起独立维护的开源电子书管理软件，用 Python 和 Qt 写成，25.7k 星，五万多次提交，Windows、macOS、Linux 都有。它要解决的问题是：电子书格式混乱、元数据缺失、不同阅读器互不兼容，买来的书和自己扫的书没有一个统一的家。</p><p>它的工作方式是一个书库加一堆工具：把书加进书库后，calibre 自动抓取书名、作者、封面和简介，按标签、系列、评分整理；内置转换器能在 EPUB、MOBI、AZW3、PDF 等格式之间互转，还能调字体、修目录；连上阅读器就按型号自动转换并传书，Kindle、Kobo、国产墨水屏都认。它自带一个内容服务器，在局域网开一个网页，任何浏览器和阅读器都能直接从书库里下载或在线读；再配上新闻抓取，能把网站文章定时做成电子书推送。</p><p>生态上插件市场有上百个扩展，社区论坛 MobileRead 非常活跃，界面自带简体中文，中文教程遍地都是；作者几乎每周发一个版本，二十年没断更。</p><p>对 0303 来说它是延伸项目：帐篷网兜里除了纸书，放一台墨水屏阅读器；calibre 装在 0802 家庭服务器上，内容服务器常开，晚上钻进帐篷用阅读器连 Wi-Fi 打开书库网页，挑一本下下来，露营灯调到最低就能看。和 audiobookshelf 分工：一个管听，一个管读。木工、户外、电子方面的 PDF 手册也一并塞进书库，帐篷里想起某个尺寸，伸手就能查。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0303.html" title="帐篷区"><i>0303</i>帐篷区</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/homebridge/homebridge" target="_blank" rel="noopener">homebridge/homebridge</a>
+            <span class="stars">★ 25.5k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Node.js 写的 HomeKit 桥：通过两千多个插件把非 HomeKit 设备接进苹果家庭 App，Siri 和 iPhone 控制中心直接用</p>
+          <div class="rintro"><p>Homebridge 是 Nick Farina 在 2015 年发起的 Node.js 项目，25.5k 星，口号是给等不及的人的 HomeKit 支持。它要解决的问题是：苹果家庭 App 和 Siri 体验好，但认证的 HomeKit 设备少而且贵；Homebridge 用软件模拟一个 HomeKit 配件桥，把任何设备伪装成苹果认识的配件。</p><p>它的架构是核心加插件：核心实现 HAP 协议，在局域网里用 mDNS 广播自己，iPhone 扫一个二维码就把桥加进家庭 App；每个插件对应一种设备或平台，把设备状态映射成 HomeKit 的服务和特征。插件用 npm 装，现在有两千多个，从米家、涂鸦到 MQTT、HTTP 万能插件；官方 UI 是一个网页，装插件、改配置、看日志都在里面。</p><p>生态庞大且活跃，2025 年后核心和 UI 持续更新，UI 有简体中文，中文教程在 NAS 和智能家居社区非常多。</p><p>对 0202 它是延伸的入口：卫生间的灯箱三档、镜子除雾膜、排风扇本来都在 HomeAssistant 里，再通过 Homebridge 的 MQTT 插件暴露成 HomeKit 配件，iPhone 锁屏就多了一个晨浴按钮，Siri 一句晨浴就把灯箱、除雾膜和小灯箱一起打开；人体感应的夜起档留在 HA 自动化里不动。注意一个设备只从一条路进家庭 App，HA 自带的 HomeKit 集成能做的就不重复用 Homebridge，它更适合接 HA 没有的小众设备。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0202.html" title="卫生间灯箱系统"><i>0202</i>卫生间灯箱系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/node-red/node-red" target="_blank" rel="noopener">node-red/node-red</a>
+            <span class="stars">★ 23.6k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">IBM 起家、OpenJS 基金会维护的低代码流程编排工具：在浏览器里拖节点连线，把 MQTT、HTTP、定时器和逻辑串成流</p>
+          <div class="rintro"><p>Node-RED 是 IBM 新兴技术团队 2013 年做出来的可视化编程工具，2016 年捐给 JS 基金会（现 OpenJS 基金会），Node.js 写的，23.6k 星，是物联网圈里事实上的流程编排标准。它解决的问题是：设备和 API 之间的胶水逻辑用代码写太琐碎，画成图反而清楚。</p><p>它的工作方式是流：浏览器里的编辑器把节点拖到画布上，连线表示消息的流向，每条消息是一个 JavaScript 对象；节点分输入（MQTT 订阅、HTTP 请求、定时器）、处理（函数、开关、延迟、合并）、输出（MQTT 发布、邮件、文件）。点部署，流就跑在 Node.js 运行时里。仪表盘节点能顺手生成一个网页面板。</p><p>生态上它的节点仓库有几千个社区节点，HomeAssistant 有官方插件和专门的节点集，HA 的实体状态和服务调用都能当节点用。编辑器界面有简体中文，中文教程很多。</p><p>在 0602 里它是延伸，正好对应那句三个传感器开会：ESPHome 节点本地判断是主方案，Node-RED 可以做上面那一层更复杂的决策。三个传感器读数通过 MQTT 进来，加一个 open-meteo 的 HTTP 节点拉未来 6 小时降雨概率，函数节点算出每区该浇几分钟，再按芒草 18%、朴树 25%、野花 22% 的阈值分三路发开阀指令，浇灌记录写进 InfluxDB。哪天想加一个条件比如连续三天高温就多浇两分钟，拖一个节点就行。注意 Node-RED 挂了不能让草地断水，ESP32 本地的兜底逻辑要留着。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0602.html" title="自动浇灌"><i>0602</i>自动浇灌</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/HandBrake/HandBrake" target="_blank" rel="noopener">HandBrake/HandBrake</a>
+            <span class="stars">★ 23.5k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">跨平台开源视频转码器：把任意来源的视频压成 H.264、H.265、AV1 的 MP4 或 MKV，带硬件加速和预设，图形界面加命令行</p>
+          <div class="rintro"><p>HandBrake 是 2003 年起步的开源视频转码器，23.5k 星，三大桌面平台都有图形界面，2026 年发布了 1.11 版。它要解决的问题是：视频格式和播放设备的组合太多，需要一个工具把任何来源压成指定设备能直接播的文件，并把复杂的编码参数藏在预设后面。</p><p>它的工作方式是：输入一个文件或整张光盘目录，选一个预设（通用 1080p30、Apple 设备、或按质量的 HQ 系列），需要的话再调编码器、恒定质量值、分辨率、裁边、音轨和字幕，点开始就转码。编码器有 x264、x265、SVT-AV1 软件编码，也支持英特尔 QSV、英伟达 NVENC 和苹果 VideoToolbox 硬件加速；能批量排队，命令行版 HandBrakeCLI 适合写脚本，字幕能烧进画面也能保留成软字幕。</p><p>生态成熟，2025 年后仍每几个月一个版本，界面翻译含简体中文，中文教程非常多。</p><p>对 0207 它是延伸中的加工车间：Radarr 和 Sonarr 到货的文件格式五花八门，98 寸电视的机顶盒最省心的是 H.265 MKV 硬解，手机和 iPad 在外面看要一份 720p；写一个脚本用 HandBrakeCLI 在 0802 的服务器上夜里把新入库的文件按两套预设各转一份，Jellyfin 里就不再需要实时转码，服务器也不用配显卡。注意没有硬件加速时一部两小时的片要跑好几个小时，先试英特尔核显的 QSV，质量值 22 左右肉眼看不出差别。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0207.html" title="影音室"><i>0207</i>影音室</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/navidrome/navidrome" target="_blank" rel="noopener">navidrome/navidrome</a>
+            <span class="stars">★ 23.2k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Go 写的自托管音乐流媒体服务器：扫描本地音乐库，网页播放，兼容 Subsonic API 所以几十个手机客户端都能用</p>
+          <div class="rintro"><p>Navidrome 是巴西开发者 Deluan Quitério 用 Go 和 React 写的自托管音乐服务器，23.2k 星，口号是你的个人流媒体服务。它要解决的问题是：自己收藏的无损音乐堆在硬盘里，想像用 Spotify 一样在任何设备上随手听，又不想装重得要命的 Plex。</p><p>它的工作方式是：指向一个音乐目录，它扫描文件标签建索引，支持 FLAC、MP3、OGG、OPUS、DSD 等格式；网页界面按艺人、专辑、流派、播放列表浏览和播放，服务端能按客户端需要实时转码成低码率。它实现了 Subsonic API，所以 Symfonium、Substreamer 这些手机 App 和 Music Assistant、Snapcast 都能接上；整个程序是一个二进制文件，内存占用几十 MB，树莓派上跑很轻松。</p><p>生态成熟，2025 年后仍是每月一个版本，界面翻译含简体中文，中文 NAS 教程很多。</p><p>对 0208 它是延伸的数字音乐库：黑胶是仪式，但矮机柜里放不下所有唱片，抓轨的 CD 和买的无损文件全部放进 Navidrome，按年代建播放列表和矮机柜里的分格对应；moOde 通过 Subsonic 插件读它的库，Music Assistant 也能把它当音源推到 Snapcast，坐在沙发上用手机 App 搜一张唱片册里翻不到的专辑，胆机一样在响。注意它不做多房间同步也不接黑胶，它只是那个库；音乐文件的标签先用 MusicBrainz Picard 整理干净，不然艺人页面会乱。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0208.html" title="大柏林音响"><i>0208</i>大柏林音响</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/micropython/micropython" target="_blank" rel="noopener">micropython/micropython</a>
+            <span class="stars">★ 22.1k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">跑在单片机上的精简 Python：ESP32、树莓派 Pico、STM32 都支持，REPL 交互式改代码，机器控制不用编译</p>
+          <div class="rintro"><p>MicroPython 是 Damien George 在 2013 年通过 Kickstarter 发起的项目，22.1k 星，把 Python 3 的核心语法和标准库压缩到几百 KB，跑在只有几十 KB 内存的单片机上。它要解决的问题是：单片机开发长期只有 C，改一行要编译、烧录、重启；它让人在串口里直接敲 Python，立刻看到结果。</p><p>它的工作方式是：固件刷进 ESP32、树莓派 Pico 或 STM32 之后，芯片上跑一个 Python 解释器，串口连上就是 REPL，脚本以文件形式存在芯片的小文件系统里，开机自动跑 main.py。machine 模块管 GPIO、PWM、I2C，network 管 Wi-Fi，还有 asyncio 和 umqtt，一次改动几秒钟就生效。</p><p>生态很大，2025 年后仍是每几个月一个版本，README 英文，但中文教程、B 站课程和国产开发板的 MicroPython 文档非常多。</p><p>对 0205 它是延伸的原型工具：鱼缸矮柜里那块管补水泵、喂食器和水草灯 PWM 的 ESP32，正式版走 ESPHome 接 HomeAssistant，但在调试阶段用 MicroPython 更快——补水泵该抽几秒、喂食器舵机转多少度、日出曲线的 gamma 值，在 REPL 里改一个数立刻看效果，调顺了再把参数抄进 ESPHome 的 YAML。注意 MicroPython 和 ESPHome 不能同时在一块芯片上，多备一块 ESP32 专门做实验。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0205.html" title="生态鱼缸"><i>0205</i>生态鱼缸</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/teableio/teable" target="_blank" rel="noopener">teableio/teable</a>
+            <span class="stars">★ 21.7k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">开源的多维表格 / AI 电子表格，Airtable 的自托管替代：每张表就是一张真正的 PostgreSQL 表，百万行不卡，带看板、画廊、表单等视图</p>
+          <div class="rintro"><p>Teable 是一个中国团队做的开源多维表格，21.7k 星，定位是 Airtable 的自托管替代，最近又加上了 AI 生成字段与自动化。它解决的问题很朴素：想要一张能随时加列、能挂附件、能被程序读写的表，又不想把数据放到别人的云上。</p><p>它的底层就是 PostgreSQL：每张表对应一张真实的 Postgres 表，字段直接映射成列，百万行也能正常筛选排序，任何 SQL 工具都能直接连上去查。上层是 NestJS 服务加 React 前端，提供网格、看板、画廊、日历、表单五种视图，字段支持公式、关联、附件、条码，改动经 WebSocket 实时推送。对外有 REST API、Webhook 和自动化，Docker Compose 一条命令部署。</p><p>它由国内开发者主导，界面自带中文，文档站有中文版，2026 年仍在密集发版；比 NocoDB 视图更完整，对自托管足够。</p><p>在 0801 里它是延伸：Homebox 管箱子和位置树没问题，但真实项目 2026-09 收集的需求里还有品牌型号、估值提取、六个电商平台的订单半自动盘点，这些字段一直在变。做法是在 0804 的笔记本上跑 Teable，建一张物品总表，列是名称、品牌型号、估值、房间、箱号、俯视照片、购买平台、订单号、状态；各平台订单导出 CSV 后导入，画廊视图按照片翻，看板按房间分列，表单视图在扫码后填拿走或放回。底层是 Postgres，0802 的平板地图直接读同一个库，不用再同步。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0801.html" title="物品数字孪生"><i>0801</i>物品数字孪生</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/google/filament" target="_blank" rel="noopener">google/filament</a>
+            <span class="stars">★ 20.4k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Google 的实时物理渲染引擎：跨平台 PBR，金属度、粗糙度、清漆层等材质模型一应俱全，附带一份业界公认的 PBR 教科书文档</p>
+          <div class="rintro"><p>Filament 是 Google 维护的开源实时物理渲染引擎，用 C++ 写成，20.4k 星，桌面、手机和浏览器 WebAssembly 都能跑，Android 的场景查看器用的就是它。它要解决的问题：在手机级算力上用符合物理的方式把金属、木头、清漆在任何光照下画对。</p><p>它的工作方式是 PBR 管线：材质文件里写基础色、金属度、粗糙度、反射率，再加清漆层、各向异性等可选模型；灯光支持方向光、点光和基于图像的环境光，引擎按物理光照方程实时算每个像素。工具链把 glTF 模型和 HDR 贴图转成引擎格式，gltf_viewer 拖进模型直接看，JavaScript 绑定能嵌进网页。它的文档《Physically Based Rendering in Filament》被业界当 PBR 教材读。</p><p>生态上它是 Google 官方项目，每月更新；没有中文文档，但那份 PBR 文档有民间中文翻译。</p><p>对 0403 来说它是延伸项目：ComfyUI 出的预览是像素的想象，Filament 出的是参数的推演。把 PSK 盒子的 STEP 模型从 0204 设计台导成 glTF，在 gltf_viewer 里把粗糙度从 0.2 拉到 0.8，看哑光和高光的差别，再打开清漆层看喷完清漆是什么效果；用一张阁楼天窗下拍的 HDR 做环境光，预览就是这只盒子在这间屋里的样子。把网页版嵌进 0802 中枢，喷涂柜旁的平板上转着看，粗糙度对应的漆型号写在旁边。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0403.html" title="喷涂柜"><i>0403</i>喷涂柜</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/blender/blender" target="_blank" rel="noopener">blender/blender</a>
+            <span class="stars">★ 19.3k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">开源 3D 创作套件的官方镜像：建模、PBR 材质节点、Cycles 与 EEVEE 渲染、Python API，把 CAD 模型套上真实材质出效果图</p>
+          <div class="rintro"><p>Blender 是荷兰 Blender 基金会维护的开源 3D 创作套件，GitHub 上这个仓库是官方镜像，19.3k 星，主开发在他们自己的 Gitea 上。从建模、材质、灯光到渲染、动画，一套免费软件全包，专业到被电影和游戏工作室正式使用。</p><p>它和 CAD 关心的不同：CAD 关心尺寸和约束，Blender 关心看起来像不像。材质用节点编辑器搭，原理化 BSDF 一个节点就覆盖了 PBR 的全部参数，金属度、粗糙度、法线贴图、透光；灯光用 HDRI 环境图给出真实反射；渲染有两个引擎，Cycles 是路径追踪，慢但准，EEVEE 是实时光栅，快而够看。FreeCAD 导出的 OBJ 或 glTF 直接拖进去；</p><p>4.x 系列 2026 年仍按季度发版；界面自带简体中文，官方手册也有中文翻译，B 站教程数不清。</p><p>在 0805 里它是延伸：这一页定的是材质语法，木屋作品墙下那格样板是实物，Blender 里做它的数字版。先把三种材质各调成一个节点组：喷砂黑阳极氧化铝要低金属度、中高粗糙度加细微颗粒法线；白蜡木油蜡饰面用木纹贴图加轻微清漆层；植鞣皮用高粗糙度加皮纹凹凸。然后把 FreeCAD 里各模块的机架模型导出 glTF 拖进来，按规则给每个面指派材质，型材面黑、覆面木、把手皮，用 EEVEE 几秒出一张。0301 工具台、0404 木工间下料前先渲一张看比例和配色，木料和皮草定标时把两三种候选并排渲出来比。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质总设计"><i>0805</i>全套方案材质总设计</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/MarlinFirmware/Marlin" target="_blank" rel="noopener">MarlinFirmware/Marlin</a>
+            <span class="stars">★ 17.5k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">RepRap 3D 打印机的经典固件：G 代码解析、步进电机运动规划、加减速与限位归零，支持几百种主板</p>
+          <div class="rintro"><p>Marlin 是 2011 年从 Sprinter 和 grbl 演化出来的 3D 打印机固件，17.5k 星，市面上大半消费级打印机的出厂固件都是它或它的分支。它要解决的问题是：把一串 G 代码变成几根步进电机精确、平滑、不丢步的运动，同时管好温度、限位、归零和安全。</p><p>它的工作方式是：主机通过串口发 G 代码，比如 G1 X100 F1200 是以每分钟 1200 毫米走到 X 等于 100 的位置；Marlin 解析后交给运动规划器，按设定的最大速度和加速度把移动切成梯形速度曲线放进缓冲区，再由中断驱动的步进器按微秒级节拍给电机脉冲。归零靠限位开关，软件行程限制防撞。它用 C++ 写，靠两个配置头文件适配几百种主板，PlatformIO 编译。</p><p>生态是 3D 打印圈最大的，2025 年后 2.1.x 仍在更新，README 是英文，但中文编译和配置教程遍地。</p><p>对 0201 它是延伸的取巧路线：南光灯的 3 米电动滑轨就是一根 X 轴，用一块打印机主板加一个步进电机和同步带，把 Marlin 配成单轴机器，两端装限位开关做归零。HomeAssistant 通过串口发一句 G1 X1500 F300 就能让灯慢慢走到滑轨正中，6:30 到 18:30 的日轨就是一张按时间发坐标的表，冬天的晒太阳位是一个固定坐标。注意灯加云台有几公斤重，电机选 NEMA 23、加速度设得很低，走起来才像太阳而不是打印头。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0201.html" title="模拟阳光"><i>0201</i>模拟阳光</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/ImageMagick/ImageMagick" target="_blank" rel="noopener">ImageMagick/ImageMagick</a>
+            <span class="stars">★ 16.8k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">三十多年历史的命令行图像处理套件：裁切、缩放、调色、加边框、拼图、格式转换，一条 magick 命令搞定批量处理</p>
+          <div class="rintro"><p>ImageMagick 是 1987 年就开始的开源图像处理套件，由 ImageMagick Studio LLC 维护，16.8k 星，装在几乎每一台 Linux 服务器上。它要解决的问题是：图像处理不该每次都打开 Photoshop，尤其是几百张图做同样的事的时候，一条命令行就该完成。</p><p>它的核心是 magick 这个命令（老版本叫 convert）：输入一张或多张图，按顺序执行一串操作，输出到新文件。操作有两百多种：resize 缩放、crop 裁切、gravity 对齐、modulate 调亮度饱和度、border 加边、montage 拼图、LUT 调色、格式转换，支持 200 多种格式包括 HEIC、RAW 和 PDF。它有 C、Python、Node 等语言绑定，2025 年后仍每周出小版本。</p><p>中文方面 README 是英文，但因为太经典，中文教程和命令速查表多到用不完；它的 Usage 文档是命令行图像处理的教科书。</p><p>对 0103 它是延伸中的基础工具：画框墙的管线里，抓来的画和 SD 生成的画推给 iPad 之前要过一道处理：统一裁成 3:4、缩到 2048×2732、按当天主题给一点暖色或冷色偏移、四周留 3% 留白让画框有衬纸感、最后压成 JPEG 质量 85。写成一个 shell 脚本挂在凌晨四点同步任务里，九张图几秒钟处理完。注意居中裁切可能切掉人物头部，画作类素材可以先用 SD WebUI 外扩画布再交给它。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0103.html" title="电子画框墙"><i>0103</i>电子画框墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Sonarr/Sonarr" target="_blank" rel="noopener">Sonarr/Sonarr</a>
+            <span class="stars">★ 16.1k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">剧集自动化管理器：订阅一部剧后自动追新集、按季整理、重命名、升级画质，Radarr 的亲兄弟</p>
+          <div class="rintro"><p>Sonarr 是 2010 年从 NzbDrone 改名而来的剧集管理器，C# 写成，16.1k 星，是整个 *arr 家族的祖宗。它要解决的问题是：追剧要记得每周几更新、去找资源、命名成播放器认得的格式、放进对应的季文件夹，它把这些全接管。</p><p>它的工作方式是：你订阅一部剧，选要哪些季、什么质量档位；Sonarr 从 TheTVDB 拉剧集元数据和播出时间表，到点就去索引器搜新一集，找到符合要求的推给下载器，完成后按剧名 S01E05 这样的模板重命名、移进媒体库、通知 Jellyfin 刷新。它有日历视图看本周哪些剧更新，有质量配置文件决定是否用更好的版本替换旧文件，有多季批量补全和缺集搜索。界面和 Radarr 几乎一样，两者共用 Prowlarr 的索引器和同一个下载器，Docker 部署。</p><p>生态成熟，2025 年后 v4 持续更新，界面翻译含简体中文，中文 NAS 教程一般把它和 Radarr 一起讲。</p><p>对 0207 它是延伸中管剧的那一半：电影走 Radarr，剧走 Sonarr，两个容器共用同一套索引器和下载器，媒体库分成电影和剧集两个目录给 Jellyfin。它的日历 API 可以进 HomeAssistant，每周五早上 0802 大屏提示今晚有哪集更新，观影模式按下时电视直接停在那部剧的最新一集。注意剧集文件多，硬盘要预留空间并设自动删除看过的旧集，别让影音室的存储被追剧撑爆。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0207.html" title="影音室"><i>0207</i>影音室</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/organicmaps/organicmaps" target="_blank" rel="noopener">organicmaps/organicmaps</a>
+            <span class="stars">★ 15.3k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">隐私优先的离线地图与 GPS 导航 App：OSM 数据、等高线、徒步骑行路线规划，全程无网可用、无广告无追踪</p>
+          <div class="rintro"><p>Organic Maps 是从 MAPS.ME 分叉出来的社区项目，用 C++ 写核心、原生 Android 和 iOS 客户端，15.3k 星，全球用户超过六百万。它要解决的问题是：徒步进山后手机没信号，商业地图 App 要么下不到离线包，要么满屏广告和追踪。Organic Maps 完全离线、不联网、不收集数据。</p><p>它的工作方式是把 OpenStreetMap 数据按地区预处理成自家的 mwm 格式，一个省一个文件下到手机里；渲染引擎在本地矢量绘图，缩放时不重新下载。徒步模式下会显示等高线、山峰高程、小径难度和水源标注，路线规划支持步行、骑行和驾车，导航时语音提示；点一下就能记录 GPS 轨迹，导出 GPX 或 KML；还能导入别人分享的轨迹文件当参考。</p><p>生态上它上架了 Google Play、F-Droid 和 App Store，界面自带简体中文，社区在 Telegram 和论坛活跃，2025 年后仍频繁发版；数据随 OSM 每月更新，中国地区的山路数据也在稳步变好。</p><p>对 0302 来说它是延伸项目：出发清单手写板旁边可以贴一张二维码，指向常走的三条线的 GPX 文件——日徒步、两日露营、钓鱼。出发前在阁楼里把临安和杭州的离线包下好，把这次的轨迹文件导进 Organic Maps；回来后把记录的轨迹导出 GPX，存到 0802 服务器的装备目录里，和这趟带了哪些装备的清单放在一起。下一次挑背包容量时，看看那条线的爬升和时长就知道该拎 38L 还是 65L。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0302.html" title="户外装备区"><i>0302</i>户外装备区</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Koenkk/zigbee2mqtt" target="_blank" rel="noopener">Koenkk/zigbee2mqtt</a>
+            <span class="stars">★ 15.2k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">一根 Zigbee 适配器加一个 Node.js 服务，把三千多种 Zigbee 设备直接翻译成 MQTT，不要任何品牌网关</p>
+          <div class="rintro"><p>zigbee2mqtt 是荷兰开发者 Koen Kanters 在 2018 年发起的项目，15.2k 星，是开源智能家居里接 Zigbee 设备的事实标准。它要解决的问题是：Zigbee 传感器和灯泡便宜又省电，但每个品牌都要自家网关和 App；它用一根通用的 Zigbee USB 适配器把所有品牌的设备接到一起，再统一翻译成 MQTT。</p><p>它的架构是：Zigbee USB 适配器通过串口连到跑着 zigbee2mqtt 的机器，Node.js 服务管理网络的配对、路由和密钥；设备上报的原始 Zigbee 簇数据由庞大的设备库翻译成 JSON 发布到 MQTT 主题，反过来 MQTT 收到的指令翻译回 Zigbee 命令。它自带网页前端，能看拓扑图和信号强度；对 HomeAssistant 有 MQTT 自动发现，设备一配对就自动出现。</p><p>生态是这类项目里最大的，支持设备超过三千种，2025 年后仍是每月一个版本，前端有简体中文，中文教程极多，Aqara、涂鸦的设备基本都在列表里。</p><p>对 0203 它是延伸的无线路线：床头、墙角、柜内三个温湿度探头用电池款 Zigbee 传感器代替拉线的 ESPHome，风管出口那个高温高湿的位置仍用有线；除湿机柜的水浸传感器和门磁也一并上 Zigbee。适配器插在 0802 那台服务器上，再放两个 Zigbee 插座当路由器把信号绕过混凝土墙。注意地堡墙厚，先用拓扑图确认每个电池设备都挂在路由器下，别直连协调器。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0203.html" title="控温控湿"><i>0203</i>控温控湿</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Radarr/Radarr" target="_blank" rel="noopener">Radarr/Radarr</a>
+            <span class="stars">★ 14.3k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">电影收藏管理器：维护想看清单，自动从 Usenet 和 BT 索引器找片、下载、重命名、入库，和 Jellyfin 无缝衔接</p>
+          <div class="rintro"><p>Radarr 是从 Sonarr 分叉出来专门管电影的项目，C# 写成，14.3k 星，属于所谓 *arr 家族。它要解决的问题是：想看的电影一部部手动找资源、下载、改名、放进对的文件夹太累，它把整条流水线自动化。</p><p>它的工作方式是：你把想看的电影加进库（可以从 IMDb 榜单或 Trakt 列表批量导入），设定质量档位比如 1080p 蓝光或 4K；Radarr 定时去配置好的索引器（通过 Prowlarr 统一管理）搜索，找到符合要求的就推给下载器（qBittorrent、Transmission、SABnzbd）；下载完成后按命名模板重命名、移到媒体库目录、配合 Bazarr 下字幕、通知 Jellyfin 刷新库。出了更好的版本它还会自动换掉。网页界面响应式，Docker 部署。</p><p>生态成熟，2025 年后持续更新，界面翻译含简体中文，中文 NAS 圈的教程和 Docker 模板极多。</p><p>对 0207 它是延伸的片源管道：东南角小黑板上今晚放映的片名从哪来？在 Radarr 里维护一个想看清单，设 1080p 以上，它自动到货进 Jellyfin 的库；HomeAssistant 通过 Radarr 的 API 拿到最近入库列表，观影模式按钮按下时在 0802 大屏或电视上弹出本周新到的三部让你选。注意版权和索引器合规是你自己的事，另外 98 寸电视看 4K 原盘要有硬解能力，机顶盒选带 HDR 直通的。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0207.html" title="影音室"><i>0207</i>影音室</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/advplyr/audiobookshelf" target="_blank" rel="noopener">advplyr/audiobookshelf</a>
+            <span class="stars">★ 14.3k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自托管有声书与播客服务器：扫描目录自动配元数据，网页和手机 App 记住进度，多用户各听各的</p>
+          <div class="rintro"><p>audiobookshelf 是开发者 advplyr 用 Node.js 和 Vue 做的自托管有声书和播客服务器，14.3k 星，是自托管圈子里有声内容的默认答案。它要解决的问题是：买来或收集的有声书散在硬盘里，播客要靠各家 App 订阅，听到哪儿了换个设备就忘。它把这些集中到一台自己的服务器上。</p><p>它的工作方式是扫描加流式播放：把有声书按作者、书名整理成目录挂进 Docker，服务器扫描后从 Audible、Google Books 等源自动补封面和简介，多文件的书会合并成章节；播客直接填 RSS 就自动下载新集。播放时服务器按需转码，网页端、Android 和 iOS 官方 App 都能听，进度实时同步，支持倍速、睡眠定时和离线下载；多用户各有各的书架和进度，还带电子书阅读器和 Kindle 推送。</p><p>生态上它有 Docker、群晖和各种 NAS 的安装教程，界面通过 Weblate 翻译，简体中文完整，中文自托管社区讨论很多；项目更新频繁，2026 年仍在活跃发版。</p><p>对 0303 来说它是延伸项目：帐篷顶的串灯调到最低后，手边网兜里那副耳机连的就是它。在 0802 家庭服务器上跑一个 audiobookshelf，把有声书和几个户外、木工播客的 RSS 加进去，下雨前用手机把今晚要听的几集缓存好，钻进睡袋后开睡眠定时三十分钟。露营灯和白噪音机归 0303 管，听的内容归这台服务器管，早上七点遮光帘打开时，进度已经记在书架上，明晚接着听。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0303.html" title="帐篷区"><i>0303</i>帐篷区</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/qgis/QGIS" target="_blank" rel="noopener">qgis/QGIS</a>
+            <span class="stars">★ 14.3k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">全球最流行的开源桌面 GIS：加载卫星图和无人机正射图，画地块、量面积、做坡度与日照分析，上千插件</p>
+          <div class="rintro"><p>QGIS 是 2002 年起步、由 QGIS.org 基金会维护的开源桌面地理信息系统，C++ 和 Python 写的，14.3k 星，是商业软件 ArcGIS 之外最常用的选择，市政、林业、考古和农业项目都在用它。它解决的问题是：任何带坐标的东西，地块、树、管线、传感器，都能画在同一张图上，量长度和面积，叠上卫星图、地形和年份做分析。</p><p>它的工作方式是图层：底图可以是在线瓦片（天地图、OpenStreetMap、卫星影像）或本地的无人机正射图；矢量图层用来画点线面，每个要素带一张属性表；栅格图层是高程或影像，可以算坡度、坡向、日照和视域。处理工具箱里有几百个算法，还能用 Python 写脚本批量跑。输出是打印布局里排好的地图，或者导出 GeoPackage、KML。</p><p>生态非常大：插件仓库上千个，官方培训手册和用户指南有简体中文翻译，界面也有中文，国内高校和公众号教程极多。项目每四个月发一个版本，长期支持版稳定。</p><p>对 0601 来说它是延伸：草地 5.3 乘 18.9 米、三段分区、三棵朴树和一棵乌桕错开、地埋滴灌管和出土口，这些东西画在纸上迟早对不上。用手机 GPS 或卷尺量几个角点，在 QGIS 里建一个本地坐标的工程，一层画分区、一层画树、一层画滴灌管和 0602 的三路阀门，属性表里记品种和种植日期。年底把 0604 全景机拍的照片配准进去，就能看到草浪的实际范围和图纸差多少；再叠一层 0603 雨水罐的溢流走向，碎石干河道该挖多深也有了依据。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0601.html" title="稀树草原环境系统"><i>0601</i>稀树草原环境系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/AlexxIT/go2rtc" target="_blank" rel="noopener">AlexxIT/go2rtc</a>
+            <span class="stars">★ 14.1k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Go 写的万能视频流中转器：RTSP、WebRTC、HomeKit、ONVIF 等几十种协议互转，一路摄像头流分给多个消费者而不重复拉流</p>
+          <div class="rintro"><p>go2rtc 是俄罗斯开发者 Alexey Khit（AlexxIT）写的开源视频流服务器，Go 语言，14.1k 星，Frigate 和 HomeAssistant 的实时画面都靠它。它解决的问题是：一只摄像头的 RTSP 流只允许少数几个连接，而家里想看它的程序有一堆，每个都去拉一次摄像头就撑不住；go2rtc 拉一次，在本地分发给所有消费者。</p><p>它的工作方式是源和消费者：配置文件里给每路流写源（RTSP、ONVIF、HomeKit、USB 摄像头，甚至 ESP32-CAM 的 MJPEG），go2rtc 按需连接源，把流转成 RTSP、WebRTC、HLS、MJPEG 等格式提供给消费者。WebRTC 让手机零延迟看实时画面。它还有一个网页控制台看每路流的状态。</p><p>生态上它是 Frigate 和 HomeAssistant 的标准组件，单文件二进制，树莓派也能跑。文档全英文但示例齐全，国内 Frigate 教程里都会带到它。</p><p>在 0604 里它是延伸，实际上是基础设施：广角机要每小时抓一张全景做延时，长焦机要 24 小时喂给 Frigate，两路流还要能在手机上随时点开看水盆边站着谁。在 go2rtc 里把两只摄像头各配一路源，Frigate 从它的 RTSP 重播口取流做识别，HomeAssistant 通过 WebRTC 卡片看实时，每小时的延时抓图用 FFmpeg 从它的 RTSP 口截一帧。摄像头只承受一个连接，夜里红外补光下的画面也不会因多路拉流而卡顿。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0604.html" title="摄像头监测微环境"><i>0604</i>摄像头监测微环境</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/mealie-recipes/mealie" target="_blank" rel="noopener">mealie-recipes/mealie</a>
+            <span class="stars">★ 13.1k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自托管菜谱管理与餐食计划：一键从网址抓菜谱、按份数换算、周计划、购物清单、多用户，FastAPI + Nuxt</p>
+          <div class="rintro"><p>Mealie 是 Hayden Kotelniski 发起的自托管菜谱管理器，Python FastAPI 后端加 Nuxt 前端，13.1k 星，是自托管菜谱工具里最常被推荐的一个。它要解决的问题是：菜谱散在收藏夹、截图和微信聊天记录里，做的时候找不到，份量也不对。</p><p>它的核心功能是菜谱抓取：把任何食谱网页的网址粘进去，它解析页面里的结构化数据自动填好配料、步骤、时间、图片，抓不到的也能手动录或者传照片让 OpenAI 识别。菜谱可以打标签、分类、按份数自动换算用量，拖进周计划里就生成一周的餐单，再一键生成购物清单，配料自动合并同类项。多用户和家庭组适合一家人用，界面响应式，手机加到主屏幕当 App 用。它有完整的 REST API，HomeAssistant 有社区集成能把今天的餐单显示在仪表盘上。</p><p>生态方面 2025 年后仍是几周一个版本，界面翻译覆盖 35 种以上语言含简体中文，中文部署教程在 NAS 圈很多。</p><p>放到 0107 里它是延伸项目，管的不是饭而是吧台：手冲咖啡按豆子记参数（粉水比、水温、时间），热红酒、桂花陈皮茶、干柠檬片气泡水各一条配方，按一杯或两杯自动换算；柜门里那 8 个玻璃罐的内容物做成配料，购物清单就是下次去镇上补货的清单。HomeAssistant 集成让 0802 大屏在下午三点弹一句今天的推荐饮品。注意它抓中文菜谱网站的成功率一般，吧台这些配方基本要自己录，好在总共也就二十来条。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0107.html" title="小吧台"><i>0107</i>小吧台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Klipper3d/klipper" target="_blank" rel="noopener">Klipper3d/klipper</a>
+            <span class="stars">★ 11.6k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">把运动规划搬到树莓派上的 3D 打印机固件：单片机只管步进脉冲，支持输入整形、压力提前和多 MCU</p>
+          <div class="rintro"><p>Klipper 是 Kevin O’Connor 发起的开源 3D 打印机固件，11.6k 星，Voron、Creality K1 等高速打印机的固件都是它或它的改版。它要解决的问题是：传统固件把 G 代码解析和运动规划都塞进一颗小单片机，算力不够就跑不快、加不了高级算法。</p><p>它的工作方式是把大脑和手脚分开：一台树莓派或类似的 Linux 小电脑跑 klippy 主程序，负责解析 G 代码、做运动规划和各种补偿；打印机主板上的单片机只烧一个很小的固件，接收带时间戳的步进指令并执行。因为规划在大电脑上做，输入整形（抵消振纹）、压力提前（改善拐角）、自动床网都是 Python 模块，配置是一个文本文件，改完重启生效。</p><p>生态上它不带界面，配 Mainsail 或 Fluidd 网页前端，再加 Moonraker API 就能接 HomeAssistant；官方文档站有完整简体中文翻译，国内 Voron 社群和 B 站教程非常多，项目持续活跃。</p><p>对 0305 来说它是延伸项目：柜面上的拓竹 P1S 固件封闭，不用改；但读一遍 Klipper 的输入整形和压力提前文档，就能理解 P1S 为什么要做振动校准，切片参数怎么和它对应。更实际的用法是：0307 那套 2020 型材龙门平台哪天想变成一台 300 见方的大尺寸打印机，主板刷 Klipper，klippy 跑在 0802 服务器上，Moonraker 接进 HomeAssistant，推送和现在的 P1S 一样。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0305.html" title="3D 打印"><i>0305</i>3D 打印</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/eclipse-mosquitto/mosquitto" target="_blank" rel="noopener">eclipse-mosquitto/mosquitto</a>
+            <span class="stars">★ 11.2k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">Eclipse 基金会的开源 MQTT 代理：轻量 C 实现，支持 MQTT 5、TLS、持久会话和桥接，是 IoT 消息总线的事实标准</p>
+          <div class="rintro"><p>Mosquitto 是 Roger Light 在 2009 年开始写的 MQTT 消息代理，后来进入 Eclipse 基金会，11.2k 星，从树莓派到云服务器几乎所有 IoT 项目背后都有它。它要解决的问题是：几十个传感器和控制器不能两两直连，需要一个中间人，谁有数据就往一个主题发布，谁关心就订阅，双方互相不用认识。</p><p>它的工作方式是发布订阅：客户端连上代理，往像 house/stove/temp 这样的主题发消息，代理转给所有订阅了这个主题（或通配符 house/stove/#）的客户端。三级 QoS 保证送达程度，保留消息让新订阅者立刻拿到最后一个值，遗嘱消息让设备掉线时代理替它发一条离线通知。它用 C 写，内存占用几 MB，支持 TLS 和密码，配套命令行工具调试极方便。</p><p>生态方面 2025 年后 2.x 仍在更新，HomeAssistant 的 Mosquitto 插件就是它；README 是英文，但中文教程和树莓派部署文章非常多。</p><p>对 0106 它是延伸的基础课：炉区那个 ESPHome 温度传感器、一氧化碳报警器的干接点、将来的风门舵机和烘鞋架温控，都可以走 MQTT，主题按 house/stove/temp、co、damper 排。好处是除了 HomeAssistant，0802 大屏、0204 的调试脚本、手机上的 MQTT 客户端都能订阅同一份数据；一氧化碳报警用遗嘱消息，掉线本身就是告警。注意炉边温度高，ESP32 节点放北墙对面，只让热电偶线过去。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0106.html" title="柴火炉系统"><i>0106</i>柴火炉系统</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="blk repo-tier" id="t2">
+    <h2><em>★</em> 1k ～ 10k 星 <small>43 个</small></h2>
+    <p class="tier-note">细分领域里的主流方案，大多有活跃维护者和现成的接入示例</p>
+    <div class="repo-table">
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Hypfer/Valetudo" target="_blank" rel="noopener">Hypfer/Valetudo</a>
+            <span class="stars">★ 9.4k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">扫地机器人的去云固件：在机器人自带的 SoC 上跑，替换厂商云，提供本地网页、MQTT 和 HA 自动发现，地图、分区、回充全在局域网内</p>
+          <div class="rintro"><p>Valetudo 是德国开发者 Hypfer 从 2018 年维护至今的项目，9.4k 星，做的事是把石头、追觅等品牌的扫地机器人从厂商的云上解放出来。它解决的问题是：扫地机的地图、日程、遥控全都经过厂商服务器，断网就变笨，隐私也没有；Valetudo 直接跑在机器人自己的 Linux SoC 上，把云端那一段替换掉。</p><p>它是一个 Node.js 服务，通过机器人内部的本地协议和底层运动控制固件通信，向外提供三样东西：一个网页界面，能看实时地图、划分区、设禁区、点哪去哪；一个 MQTT 接口，把状态、地图数据、命令发布出来，并按 HomeAssistant 的自动发现格式注册，装好就自动出现在 HA 里；还有一套 REST API。地图是它解析激光雷达 SLAM 结果后的自有格式，社区有渲染成图片的配套项目。刷入要按型号走教程，有些型号要拆机接串口。</p><p>项目维持了七年多，2026 年仍在支持新型号，作者态度鲜明，文档很直接；中文资料集中在论坛和 B 站的刷机教程里。</p><p>在 0803 里它是延伸，学的是思路：鸭子要在木屋、地堡、阁楼三个空间之间自己走、低电回最近的窝，这正是扫地机每天在做的事。可以照着它的分区、禁区、回充策略设计鸭子的巡游状态机；更实际的是，如果家里有一台刷了 Valetudo 的扫地机，它扫出来的房间轮廓经 MQTT 拿到后，既是 0802 等距地图的底图来源，也能给鸭子当粗略的定位参考，通道和坡道的位置先在这张图上标出来。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0803.html" title="miniduck"><i>0803</i>miniduck</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/platformio/platformio-core" target="_blank" rel="noopener">platformio/platformio-core</a>
+            <span class="stars">★ 9.3k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">跨平台的嵌入式开发工具链：一个 platformio.ini 管住板子、框架、库依赖和烧录，VS Code 插件一键编译上传</p>
+          <div class="rintro"><p>PlatformIO Core 是 PlatformIO Labs 做的跨平台嵌入式开发工具，用 Python 写成，9.3k 星，是 VS Code 里 PlatformIO IDE 插件背后的命令行内核。它要解决的问题：Arduino IDE 管不住库版本、换板子要重装工具链、项目没法复现，它把这些都收进一个 platformio.ini。</p><p>它的工作方式是声明式工程：ini 里写清楚板子型号、框架（Arduino、ESP-IDF、Zephyr 等）、依赖库和版本号，首次编译自动下载对应的编译器、SDK 和库，之后 pio run 编译、upload 烧录、monitor 看串口，一套命令走完。它支持上千种开发板，AVR、ESP32、STM32、RP2040 都在一个界面里。</p><p>生态上它的库注册中心收录了上万个库，几乎所有 Arduino 库都能按名字直接引用；文档只有英文，但用的人多，中文博客和 B 站教程非常多。项目由公司维护，2026 年仍在持续发版。</p><p>对 0301 来说它是延伸项目：工具台上的小制作大多离不开一块 ESP32 或 RP2040——扣件测试治具、烙铁定时器、标牌背光。把这些固件统一建成 PlatformIO 工程放进一个仓库，每个目录一个 platformio.ini，台面上的电脑插上板子就能烧。配合 0802 服务器上的 Git，哪块板子跑的什么版本一目了然，一年后重做治具也能一键编译出来。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0301.html" title="小制作工具台"><i>0301</i>小制作工具台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/prusa3d/PrusaSlicer" target="_blank" rel="noopener">prusa3d/PrusaSlicer</a>
+            <span class="stars">★ 9.1k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Prusa 维护的开源切片器：OrcaSlicer 和拓竹 Studio 的共同祖先，树状支撑、可变层高、多材料涂色</p>
+          <div class="rintro"><p>PrusaSlicer 是捷克 Prusa Research 公司维护的开源切片软件，从 Slic3r 分叉而来，用 C++ 写成，9.1k 星，2026 年 5 月发布 2.9.5 版。它要解决的问题是把 3D 模型变成打印机能执行的 G 代码，并在这一步决定强度、速度、表面质量和耗材用量。</p><p>它的工作方式是模型进、G 代码出：导入 STL、3MF 或 STEP 后，先做摆放、缩放、切割和修复，再按层高把模型切成一层层轮廓，为每层生成外墙、内墙、填充、支撑和顶底面路径，最后按打印机配置输出 G 代码并逐层预览走线和时间。它带来的很多功能后来成了行业标配：有机树状支撑、可变层高、熨烫、涂色分区多材料、按区域改参数的修改器，以及联网直接把任务发给打印机。</p><p>生态上它是 OrcaSlicer、拓竹 Studio、SuperSlicer 的共同上游，几乎所有厂商都提供 PrusaSlicer 配置文件，界面自带简体中文，中文教程很多；Prusa 公司持续投入，版本更新稳定。</p><p>对 0305 来说它是延伸项目：日常切片继续用 OrcaSlicer 给 P1S 推任务，但某个参数看不懂时，去 PrusaSlicer 的官方知识库查同名参数，那里解释最完整，因为参数就是从这里来的。实际用途有二：地堡 0204 设计台装一份当第二意见，同一个 PSK 内衬模型用两个切片器各切一遍，比支撑用量和预计时长，选省耗材的那版；再给全屋小配件建一个 3MF 项目库，连打印参数一起存，下次再打挂钩不用重新调。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0305.html" title="3D 打印"><i>0305</i>3D 打印</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/OctoPrint/OctoPrint" target="_blank" rel="noopener">OctoPrint/OctoPrint</a>
+            <span class="stars">★ 9k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">3D 打印机的网页远程控制台：上传文件、看进度、看摄像头、装插件，Python 写的老牌树莓派方案</p>
+          <div class="rintro"><p>OctoPrint 是德国开发者 Gina Häußge 从 2012 年起维护的开源打印机远程控制软件，用 Python 写成，9k 星，2026 年 6 月还发了 1.11.8 版。它要解决的问题：打印机拴着一台电脑太浪费，树莓派上的一个网页就能远程上传、启动、监看和急停。</p><p>它的工作方式是串口加网页：树莓派通过 USB 连打印机，OctoPrint 把 G 代码逐行发过去，同时解析温度回报，在网页上画温度曲线、显示进度和剩余时间，接一个摄像头就能看实时画面并自动生成延时视频。它最大的特点是插件系统：官方仓库有几百个插件，从床面调平可视化到远程访问和 AI 失败检测都有；HomeAssistant 有官方 OctoPrint 集成，进度、温度和急停按钮直接进仪表盘。</p><p>生态上 OctoPi 镜像烧进树莓派就能用，教程极多，界面有社区中文语言包；项目靠赞助维持，持续更新。</p><p>对 0305 来说它是延伸项目：柜面上的拓竹 P1S 走自家协议，有 ha-bambulab 就够，不需要它；它的价值在两处。一是学习：看一个成熟的打印机监控该有什么——温度曲线、摄像头延时、失败检测、推送，这是设想里那块小屏幕和 HA 通知的参考答案。二是备用：如果耗材架旁再添一台老式串口打印机，或 0307 平台改成的打印机不跑 Klipper，把 OctoPrint 装进 0802 服务器的一个容器，USB 拉一根线过去，HA 集成一加，和 P1S 并排出现在同一个仪表盘上。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0305.html" title="3D 打印"><i>0305</i>3D 打印</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/teslamate-org/teslamate" target="_blank" rel="noopener">teslamate-org/teslamate</a>
+            <span class="stars">★ 9k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">自托管的特斯拉数据记录器：Elixir 写的，把每次行程、充电、电池健康记进 PostgreSQL，Grafana 出几十张仪表盘</p>
+          <div class="rintro"><p>TeslaMate 是德国开发者 Adrian Kumpf 发起、现由 Jakob Lichterfeld 维护的自托管特斯拉数据记录器，Elixir 写的，9k 星，是特斯拉车主圈里最流行的自建项目。它解决的问题是：车企 App 只给你看当下，而车主想知道每次行程耗了多少电、每次充电花了多少钱、电池两年衰减了几个百分点，这些数据应该留在自己手里。</p><p>它的工作方式是：用车主的 API 令牌轮询特斯拉云端，把车辆状态按变化写进 PostgreSQL，自动把连续记录切成行程和充电会话，算出能耗、效率和费用；再通过 Grafana 呈现成几十张预置仪表盘：充电统计、行程地图、电池健康、每月里程。它还把所有状态发到 MQTT，HomeAssistant 一接就有实体，官方文档里就有 HA 的配置示例。</p><p>生态上它一条 Docker Compose 就能起，网页界面有简体中文，国内特斯拉车主的中文教程很多；社区还在不断加仪表盘。</p><p>对 0505 来说它是延伸：电摩没有云端 API，TeslaMate 本身用不上，但它给了一套现成的答案，告诉你一根充电桩的数据该记什么、怎么看。方案里的智能计量插座每晚给出一条充电曲线，把每次充电的起止、电量、当时的光伏储能比例写进 0802 服务器的 PostgreSQL，再照着它的充电仪表盘做一张 Grafana 面板：每月充了几度、光伏占比多少、平均每次充多久，通知里那句本次使用光伏储能 70% 就有了来源。哪天家里真添一辆特斯拉，直接把它跑起来就行。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0505.html" title="电摩充电桩"><i>0505</i>电摩充电桩</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/mikebrady/shairport-sync" target="_blank" rel="noopener">mikebrady/shairport-sync</a>
+            <span class="stars">★ 8.8k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Linux 上的 AirPlay 和 AirPlay 2 接收端：让树莓派或任何 Linux 盒子在 iPhone 的隔空播放列表里出现，输出到 ALSA 或管道</p>
+          <div class="rintro"><p>Shairport Sync 是爱尔兰开发者 Mike Brady 从 2014 年维护至今的 AirPlay 接收端，C 写成，8.8k 星，是 Linux 世界里实现苹果隔空播放最完整的项目。它要解决的问题是：隔空播放只认苹果和授权设备，想让自己攒的音响也出现在那个列表里，得有人把协议实现出来。</p><p>它的工作方式是：在局域网里用 mDNS 广播一个 AirPlay 接收器，iPhone 选中后建立连接，音频流以 ALAC 或 AAC 编码发过来，Shairport Sync 解码后按苹果的时间戳同步输出，和同一个 AirPlay 2 分组里的其他音箱对齐；输出可以走 ALSA 到声卡或 USB DAC，也可以写进管道给 Snapcast 接力。元数据（歌名、封面）能通过 MQTT 发出来，树莓派 Zero 都够跑，moOde 内置的就是它。</p><p>社区稳定，2025 年后仍在更新，README 是英文，中文资料主要是树莓派音频玩家的笔记。</p><p>对 0208 它是延伸的客用入口：胆机的一路线路输入接一个树莓派加 USB DAC，跑 Shairport Sync，名字叫大柏林；自己坐沙发时依旧放黑胶，朋友来了掏出 iPhone 就能把歌推到这对箱子上，元数据走 MQTT 到 0802 大屏显示歌名。注意它输出的是数字信号，DAC 的质量决定了这条路配不配得上大柏林，选一块靠谱的 USB 解码，别用板载 3.5mm 口；moOde 已经内置它，用了 moOde 就不必单独再装。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0208.html" title="大柏林音响"><i>0208</i>大柏林音响</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/TandoorRecipes/recipes" target="_blank" rel="noopener">TandoorRecipes/recipes</a>
+            <span class="stars">★ 8.6k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Django 写的自托管菜谱与餐食计划：菜谱抓取、步骤化编辑、餐食计划、购物清单、空间隔离和食材库存管理</p>
+          <div class="rintro"><p>Tandoor Recipes 是德国开发者 vabene1111 用 Django 加 Vue 做的自托管菜谱管理器，8.6k 星，和 Mealie 并列自托管菜谱的两大选择。它要解决的问题和 Mealie 一样：菜谱要集中、要能计划、要能变成购物清单，但它的取向更偏结构化和数据。</p><p>它的菜谱模型是分步骤的，每一步有自己的配料和时长，做的时候有一个逐步模式按步走、计时器直接开；配料是一个有层级和别名的食材库，同一种东西不同叫法能合并。餐食计划按周排，购物清单可以按超市货架分类排序，还能多人实时共享勾选。特色是空间的概念：一个实例可以开多个互相隔离的空间给不同家庭。它有食材库存与保质期的实验功能，能从 Nextcloud、Paprika、Mealie 等格式批量导入，REST API 完整，也有 HomeAssistant 社区集成。部署走 Docker Compose，官方给了十几种反向代理组合的示例。</p><p>生态方面 2025 年后仍在活跃开发，界面翻译含简体中文，中文教程主要在 NAS 和自托管社区。</p><p>放到 0107 里它是延伸里和 Mealie 二选一的另一半：如果想把吧台管得更细——热红酒配方分成煮香料和加酒两步各自计时、陈皮桂花按克数进食材库、每个玻璃罐登记装罐日期和保质期——Tandoor 的结构更合适。它还能顺手把 0106 炉顶烤红薯、炖汤这类炉边菜也收进来，用空间把吧台饮品和炉边菜分开。注意两个别都装，都装了配方会分家；先各试一周，留一个。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0107.html" title="小吧台"><i>0107</i>小吧台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/meshtastic/firmware" target="_blank" rel="noopener">meshtastic/firmware</a>
+            <span class="stars">★ 8.3k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">LoRa 无网通讯的开源固件：几十块钱的 ESP32 或 nRF52 LoRa 板组成自组网，手机蓝牙连上就能几公里外发短信和位置</p>
+          <div class="rintro"><p>Meshtastic 是 Kevin Hester 在 2020 年发起的开源离网通讯项目，固件仓库 8.3k 星，跑在 Heltec、LilyGO T-Beam、RAK 等几十种 LoRa 开发板上。它要解决的问题是：没有手机信号和 Wi-Fi 的地方（山里、海上、灾后），人和人之间怎么发一条短信和自己的位置。</p><p>它的工作方式是：每块板子是一个节点，用 LoRa 无线电在免许可频段以极低功率发送很小的数据包，节点之间自动转发形成网状网络，一条消息可以经几跳传到几公里甚至几十公里外；手机通过蓝牙连上自己的节点，App 里像发微信一样打字，消息端到端 AES 加密，带 GPS 的节点定期广播位置，地图上能看到所有节点在哪。一块 18650 电池能撑几天，加太阳能板就是永久中继站。它还有 MQTT 网关能把消息桥到互联网，有 Python API 可以写机器人。</p><p>社区非常活跃，2025 年后固件月更，README 英文，中文社区教程和国产开发板的资料很多。</p><p>对 0210 它是延伸的通讯储备：储藏室钢架上除了 72 小时口粮，再放两个 Meshtastic 节点，一个装进 PSK 应急包，一个固定在木屋屋顶接一块太阳能板做中继；地堡里的节点通过 MQTT 网关接进 HomeAssistant，平时当玩具，断网时它就是唯一的电话。和山谷里其他玩这个的人约好频道，就是一张本地应急网。注意地堡的混凝土墙对 LoRa 也是墙，地堡里的节点要把天线引到屋顶，不然只能和木屋里通。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0210.html" title="防灾食品"><i>0210</i>防灾食品</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/LibrePhotos/librephotos" target="_blank" rel="noopener">LibrePhotos/librephotos</a>
+            <span class="stars">★ 8k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Python 写的自托管相册：人脸识别、物体检测、语义搜索、自动按事件生成相册，走 AI 整理路线</p>
+          <div class="rintro"><p>LibrePhotos 是从 ownphotos 项目分叉出来的自托管相册，Django 后端加 React 前端，8k 星，走的是 AI 帮你整理照片这条路线。它要解决的问题是：照片太多没人整理，翻半天找不到那张山顶的照片；把 Google Photos 的自动整理能力搬回自己的服务器。</p><p>它的流程是：扫描挂载进来的照片目录，提取 EXIF，用 InsightFace 做人脸检测与聚类，用 CLIP 做图片语义嵌入，于是可以用一句自然语言搜图，比如雪地里的盒子；还能按时间和地点自动切成事件相册，反查 GPS 得到地名，识别物体和场景打标签。前端是网页，手机也能用，支持多用户。整套用 Docker Compose 部署，后台任务用 Redis 排队，第一次索引会跑很久。</p><p>生态方面它 2025 年后持续出版本，界面翻译里有简体中文，中文安装教程主要在群晖和 Unraid 社区。它比 Immich 小众，但语义搜索和事件自动分组是特色。</p><p>放到 0104 里它是延伸的选照片工具：照片墙每根绳子约 8 张，每月要从手机和相机的上千张里挑二十几张。让 LibrePhotos 先自动跑一遍：按事件分好组，搜车床、雪地、鱼这类词直接出候选，人脸聚类把当月自拍单独列出来。选好的导出到一个待冲印目录，再拿去冲 4×6 富士相纸。注意它和 0104 已有的 Immich 功能重叠，只在想试 CLIP 语义搜索时装它，两个别同时索引同一块盘。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0104.html" title="PSK 照片墙"><i>0104</i>PSK 照片墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/jgraph/drawio" target="_blank" rel="noopener">jgraph/drawio</a>
+            <span class="stars">★ 7.9k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">diagrams.net 的前端源码：正规的流程图、网络图、平面图工具，图形库巨大，可以离线用、自托管、嵌进 Confluence 和 VS Code</p>
+          <div class="rintro"><p>draw.io（现在叫 diagrams.net）是英国 JGraph 公司维护的开源画图工具，7.9k 星，2005 年就有前身，是浏览器里最完整的免费流程图软件。它要解决的问题是：Visio 贵而且只在 Windows 上，工程师需要一个免费、离线可用、图形库齐全的正规画图工具。</p><p>它是纯 JavaScript 客户端应用，画布基于 mxGraph 图形引擎，图形库覆盖流程图、UML、网络拓扑、电气符号、平面图和家具、甚至 HVAC 风管；元素能吸附对齐、自动布局，连线可以走正交折线自动避让。文件是 XML，可以存成 .drawio 或嵌进 PNG 和 SVG，桌面版是 Electron，网页版可以 Docker 自托管，还有 VS Code 插件，Git 里存 .drawio 文件看 diff 也方便。</p><p>生态成熟，2025 年后仍是每月一个版本，界面翻译含简体中文，中文教程和模板很多。</p><p>对 0204 它是延伸中和 Excalidraw 分工的那一个：草图归 Excalidraw，正规图归 draw.io。0203 那圈 Φ100 风管四个出风口的走向、0201 滑轨的接线和限位、全屋 MQTT 和网络拓扑、储藏室钢架的平面布置，都用它的 HVAC、电气和平面图库画，尺寸对齐精确，导出 PDF 打 A3 钉在软木板对应的分栏里。桌面版装在工作台的中屏，文件和 FreeCAD 模型放同一个仓库做版本管理。注意它的平面图库是英制家具尺寸，画地堡平面时先把网格设成 100mm。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0204.html" title="系统设计工作台"><i>0204</i>系统设计工作台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/badaix/snapcast" target="_blank" rel="noopener">badaix/snapcast</a>
+            <span class="stars">★ 7.9k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">多房间同步音频播放：一个服务器把 PCM 流按时间戳分发给多个客户端，各房间毫秒级对齐，客户端从树莓派到手机都有</p>
+          <div class="rintro"><p>Snapcast 是德国开发者 Johannes Pohl 写的多房间音频系统，C++ 实现，7.9k 星，是 Sonos 那种全屋同步播放的开源替代。它要解决的问题是：同一首歌在不同房间之间差几十毫秒就会听出回声；它要让所有客户端在同一毫秒发出同一个采样。</p><p>它的架构是一个 snapserver 加任意多个 snapclient：服务器从命名管道、ALSA、TCP、AirPlay（通过 shairport-sync）、Spotify Connect 或 Music Assistant 之类的源读进 PCM 音频，切成带时间戳的块推给所有客户端；每个客户端和服务器持续校时，按时间戳在本地缓冲里精确到那一刻再播，Wi-Fi 抖动被缓冲吃掉，各房间偏差在一毫秒内。客户端能跑在树莓派、ESP32 和手机上，HomeAssistant 有原生集成。</p><p>社区中等规模，2025 年后仍在更新，README 是英文，中文资料很少，主要是 HA 玩家的零星笔记。</p><p>对 0208 它是延伸的分发层：大柏林那对箱子接的是唱盘和胆机，纯模拟路线，Snapcast 不碰它；但当 moOde 或 Music Assistant 播放数字音源的时候，snapserver 装在同一台机器上，木屋吧台一个树莓派加小功放、卫生间一个 ESP32 客户端，三处同一首歌。HA 里每个客户端是一个媒体播放器实体，听音场景下自动把其他房间静音。注意黑胶想同步到其他房间就要过一次 ADC，那已经不是这个模块想要的味道了，别强求。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0208.html" title="大柏林音响"><i>0208</i>大柏林音响</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/merbanan/rtl_433" target="_blank" rel="noopener">merbanan/rtl_433</a>
+            <span class="stars">★ 7.6k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">用几十块钱的 RTL-SDR 电视棒解码 433/868/915MHz 无线传感器：温湿度、雨量、风速、TPMS 等两百多种协议，输出 JSON 或 MQTT</p>
+          <div class="rintro"><p>rtl_433 是 Benjamin Larsson 发起、社区维护的软件无线电解码工具，用 C 写成，7.6k 星，是 SDR 玩家和智能家居圈里最常用的 433MHz 解码器。它要解决的问题是：无数无线温湿度计、雨量计、风速计、门磁都在 ISM 频段用私有协议广播，买家只能用厂家的显示屏看，rtl_433 把它们统统解出来。</p><p>它的工作方式是接收、解调、匹配：一根二三十块的 RTL-SDR 电视棒接在树莓派或电脑上，rtl_433 把指定频率的射频信号采样下来，做 OOK 或 FSK 解调，再用两百多个内置解码器逐个匹配脉冲模式，识别出是哪家哪个型号，解析出温湿度、风速、雨量、电量等字段，以 JSON 或 MQTT 输出。它有 HomeAssistant 自动发现插件，每个探头自动变成一组实体。</p><p>生态上支持列表还在增长；文档是英文，但国内 SDR 圈和 HA 论坛教程不少，有 Docker 镜像和 HA 附加组件。</p><p>对 0306 来说它是延伸项目：自制气象站建满一套探头很费事，rtl_433 让阁楼多出许多免费探头。在 0802 服务器上插一根电视棒，天线从天窗边伸出去，几十米内所有 433MHz 温湿度计、别人家的雨量筒、甚至隔壁商用气象站的数据都能进 HA，和自制站对比校准；再把几十块的无线温湿度计放进 0402 材料仓库或 0302 装备区，不布线就有了湿度报警。433MHz 是开放的低功率频段，只收不发没有合规问题。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0306.html" title="微型气象站"><i>0306</i>微型气象站</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/OpenDroneMap/ODM" target="_blank" rel="noopener">OpenDroneMap/ODM</a>
+            <span class="stars">★ 6.5k</span>
+            <span class="zh ">有中文文档站</span>
+          </div>
+          <p class="rdesc">开源的无人机航拍处理工具链：一堆带 GPS 的照片进去，正射影像、点云、数字高程模型和三维网格出来</p>
+          <div class="rintro"><p>OpenDroneMap 是 2014 年发起的开源摄影测量项目，ODM 是它的命令行核心，Python 写的，6.5k 星。它解决的问题是：消费级无人机拍的几百张照片怎么变成一张有坐标的正射影像和一份地形数据，而不用花几万块买 Pix4D 或 Metashape。</p><p>它的流程是典型的运动恢复结构：先从每张照片提取特征点并两两匹配，用 GPS 和相机参数做稀疏重建得到相机位置，再做稠密点云、网格和纹理，最后把纹理正射投影生成正射影像（GeoTIFF）和数字表面模型、数字高程模型。全部步骤跑在 Docker 里，一条命令带上照片目录就开始算，可以选质量档、是否生成三维模型、是否用地面控制点提高精度。</p><p>生态上它有图形界面版 WebODM，可以在浏览器里上传照片、看进度、量面积和体积、做剖面；NodeODM 能把计算分到多台机器；有官方 Docker 镜像，文档站有中文翻译，国内测绘和农业圈教程不少。</p><p>在 0601 里它是延伸：草地不大，但一张正射图能回答很多草图回答不了的问题。用无人机在 30 米高绕草地和庭院飞一圈，拍 80 到 150 张带 GPS 的照片，在 0802 服务器上跑一次 ODM，就得到整块地的厘米级俯视图和高程模型。高程模型能看出草地往哪边低、碎石干河道该开在哪、乌桕树冠到底遮了多少草原带；正射图直接拖进 QGIS 当底图，三段分区和滴灌管画在真实的地面上。每年秋天穗子泛金时飞一次，几年后就是一部草地的地图史。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0601.html" title="稀树草原环境系统"><i>0601</i>稀树草原环境系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/open-meteo/open-meteo" target="_blank" rel="noopener">open-meteo/open-meteo</a>
+            <span class="stars">★ 6.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">免费开源的天气预报 API：整合全球十几家气象机构的模式数据，不用注册、不用密钥，一条 URL 拿到逐小时预报</p>
+          <div class="rintro"><p>Open-Meteo 是瑞士开发者 Patrick Zippenfenig 2022 年发起的开源天气 API，Swift 写的，6.2k 星，非商业用途免费。它解决的问题是：各国气象局的数值预报数据是公开的，但格式古怪、体积巨大；Open-Meteo 把它们统一下载、切片、缓存，包成一个干净的 HTTP 接口。</p><p>它的工作方式是：后台持续拉取 ECMWF、德国 DWD、美国 GFS、中国 CMA 等十几家机构的模式输出，转成自己的压缩格式；请求进来时按经纬度找最合适的高分辨率模式，插值出该点逐小时的温度、降水概率、风、辐射、土壤温湿度等上百个变量，返回 JSON。除了预报还有历史气象、空气质量和地理编码接口，整套服务可以自己用 Docker 部署。</p><p>生态上它有官方客户端库，HomeAssistant 内置了 Open-Meteo 天气集成，Node-RED、Grafana 都有现成节点。文档全英文，但接口简单。</p><p>在 0602 里它是延伸，但几乎是刚需：方案里 ESP32 开阀的三个条件之一是未来 6 小时无雨，这需要一个外部预报源。在 HomeAssistant 里加 Open-Meteo 集成，取杭州本地网格逐小时降水概率，做一个模板传感器：未来 6 小时最大降水概率大于 50% 就置为将要下雨，通过 MQTT 推给木杆里的 ESP32 当第二个条件。它还能给出蒸散量预报，可以试着用它修正每区的浇灌分钟数。免费额度每天一万次，每十分钟拉一次绰绰有余。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0602.html" title="自动浇灌"><i>0602</i>自动浇灌</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/CadQuery/cadquery" target="_blank" rel="noopener">CadQuery/cadquery</a>
+            <span class="stars">★ 5.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Python 参数化 CAD 脚本框架：基于 OCCT 内核的实体建模，链式 API 几行出一个带倒角的零件，能直接导出 STEP 与 STL</p>
+          <div class="rintro"><p>CadQuery 是一个用 Python 写参数化 CAD 的开源框架，5.7k 星，最初由 Dave Cowden 在 2013 年发起，现在由社区维护。它和 OpenSCAD 一样用代码建模，但内核不同：OpenSCAD 是网格上的布尔运算，CadQuery 基于 OpenCASCADE 的边界表示，所以能做真正的圆角倒角、能识别面和边、能导出工程软件认的 STEP。</p><p>它的 API 是链式的：从一个工作平面开始，画草图、拉伸、选边、倒角、打孔，每一步返回新对象继续往下写，几行就是一个零件。选择器用字符串描述，改参数后整条链自动重算。装配模块能把多个零件按约束拼起来，导出格式有 STEP、STL、3MF、DXF 和 SVG。配套的 CQ-editor 是带三维预览的桌面编辑器，build123d 是社区在它之上做的新一代 API。</p><p>社区规模中等但稳定，2026 年仍在发版；文档是英文，中文资料只有零星博客。</p><p>在 0805 里它是延伸，用来把规则写成代码。建一个小 Python 包，profile 函数的参数是系列名和长度，2020 就是槽宽 6 毫米壁厚 1.8 毫米，3030 就是槽宽 8 毫米，配件函数有角码、T 型螺母、端盖、脚垫，木料函数按候选树种给出板厚和倒角。各模块的机架脚本 import 这个包，尺寸用变量，一改规格全部跟着变；输出 STEP 给 FreeCAD 做装配图，STL 给拓竹打印配件，顺手让脚本数一遍切割清单和螺母数量。定标改了槽宽，只改包里一行。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质总设计"><i>0805</i>全套方案材质总设计</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/OHF-Voice/piper1-gpl" target="_blank" rel="noopener">OHF-Voice/piper1-gpl</a>
+            <span class="stars">★ 5.1k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Piper 的官方续作：Open Home Foundation 维护的轻量本地 TTS，ONNX 模型在树莓派上实时出声，几十种语言含中文普通话</p>
+          <div class="rintro"><p>Piper 是 Rhasspy 作者 Michael Hansen 2022 年做的轻量神经 TTS，11k 星的老仓库 2025 年 10 月归档，开发转到 Open Home Foundation 名下的 piper1-gpl，5.1k 星，GPL 许可证，是 HomeAssistant 官方语音助手默认的说话引擎。它解决的问题是：大模型 TTS 好听但要显卡、要等几秒，家里的提示音需要在树莓派上几十毫秒出声。</p><p>它的工作方式是把文本先经 espeak-ng 转成音素序列，再送进 VITS 架构的模型，用 ONNX Runtime 一次性生成波形，不需要 GPU。每个语音是一个几十兆的 .onnx 文件加配置，官方提供几十种语言上百个音色，中文有普通话女声 huayan，也能用自己的录音训练。Python 包、命令行和 HTTP 服务都有，HA 通过 Wyoming 协议直接接。</p><p>生态上它在 HA 语音社区里是默认选项，文档英文，中文教程集中在 HA 中文论坛和 B 站，注意中文音色的自然度不如 Fish Speech，但胜在秒出声。</p><p>在 0704 里它是延伸，和 Fish Speech 分工：念诗这种长段落走 Fish Speech，慢一点没关系；水壶探头到温度、柴桶重量传感器提示柴快烧完、离开钓台前提醒浇水灭火，这种一句话的提示走 Piper，HA 语音管线里把它设为默认 TTS，响应快，服务器不用喂显卡。以后装了 ESP32 语音盒，问一句电池还有多少，回答也是它。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0704.html" title="水边茶席·小火塘"><i>0704</i>水边茶席·小火塘</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/1technophile/OpenMQTTGateway" target="_blank" rel="noopener">1technophile/OpenMQTTGateway</a>
+            <span class="stars">★ 4k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">跑在 ESP32/ESP8266 上的万能网关固件：把 BLE、433MHz、红外、LoRa 收到的东西统统翻译成 MQTT 消息</p>
+          <div class="rintro"><p>OpenMQTTGateway 是法国开发者 Florian Robert 发起的开源网关固件，4k 星，专门解决一件事：家里那些说各种方言的无线小设备（BLE 温湿度计、433MHz 门磁和气象传感器、红外遥控、LoRa 节点）怎么统一接进一个 MQTT 总线。它把一块几十块钱的 ESP32 变成翻译官，收到什么就转成 JSON 发到 MQTT，不用自己写解码。</p><p>它的架构是模块化的：每种无线介质是一个 gateway 模块，编译时勾选需要的组合。BLE 模块内置上百种设备的解码器，包括小米 LYWSD03MMC、米家花草监测仪和体重秤，扫到广播包就解出温度、湿度、电量；433MHz 模块解码遥控和无线传感器。输出侧是 MQTT，原生支持 HomeAssistant 自动发现，设备一上线 HA 里就冒出实体。</p><p>生态上它有网页版刷机工具，浏览器插上板子点一下就能刷，官方支持十几种现成开发板。社区在 Discord 和 Discussions 上活跃，2025 年 1 月发布了 1.8.1 版。文档全英文，中文只有零散博客。</p><p>在 0501 里它是延伸玩法：方案里柴架顶只埋一颗 ESPHome 探头，但四个格子的柴干湿并不一样。买四颗二十块的小米温湿度计塞进每格柴堆深处，木屋南墙下放一块跑 OMG 的 ESP32 做 BLE 网关，四格温湿度就全进了 HA，配合前面 ATC_MiThermometer 的固件广播里还带电量。注意柴堆会吸收蓝牙信号，网关别离柴架超过 5 米。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0501.html" title="柴火堆墙"><i>0501</i>柴火堆墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/music-assistant/server" target="_blank" rel="noopener">music-assistant/server</a>
+            <span class="stars">★ 3.1k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Home Assistant 生态的音乐库与播放器管理器：接本地库和流媒体服务，推到 Sonos、AirPlay、Chromecast、Snapcast 等播放器</p>
+          <div class="rintro"><p>Music Assistant 是 Marcel van der Veldt 发起、现在由 Open Home Foundation 支持的开源音乐服务器，Python 写成，3.1k 星，定位是 Home Assistant 的音乐大脑。它要解决的问题是：音乐在网易云、Spotify、本地 NAS 各处，播放器有 Sonos、AirPlay、小音箱各种牌子，缺一个把音源和播放器统一起来、还能被自动化调用的中间层。</p><p>它的架构是音源提供者加播放器提供者：音源端接本地文件库、Spotify、Tidal、Subsonic 服务器（比如 Navidrome）和网络电台；播放器端接 Sonos、AirPlay、Chromecast、Snapcast 和 HA 的媒体播放器。中间它维护统一的音乐库和播放队列，能把不同音源的曲子混排、在不同播放器之间同步分组。它以 HA 加载项一键装，装好后 HA 里多出一个 mass 域，自动化里一句 play_media 就能点歌。</p><p>社区活跃，2025 年后版本很密，界面翻译含简体中文，中文教程主要在 HA 玩家圈。</p><p>对 0202 它是延伸的小享受：卫生间天花板灯箱旁边塞一只小 AirPlay 或 Snapcast 音箱，人体感应触发晨浴档时，HA 自动化顺手叫 Music Assistant 把早间歌单推到卫生间播放器，洗完澡后排风停的时候把歌停掉；夜起档则永远静音。注意卫生间潮，音箱选 IP 等级高的，别放淋浴角正上方。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0202.html" title="卫生间灯箱系统"><i>0202</i>卫生间灯箱系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/KiCad/kicad-source-mirror" target="_blank" rel="noopener">KiCad/kicad-source-mirror</a>
+            <span class="stars">★ 2.9k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">KiCad 开源 EDA 套件的 GitHub 镜像：原理图、PCB 布线、3D 预览、Gerber 输出，专业级免费画板子</p>
+          <div class="rintro"><p>KiCad 是自由开源的电子设计自动化套件，由 KiCad 团队和 CERN 等机构长期维护，主仓库在 GitLab，GitHub 上这个镜像 2.9k 星、五万多次提交，始终和开发分支同步。它要解决的问题是：画一块靠谱的电路板不该被专业软件的授权费挡住，KiCad 从原理图到出厂文件全流程免费，且专业厂商也在用。</p><p>它的工作方式是一条链：先在原理图编辑器里放元件、连线、标号，运行电气规则检查；再把网表同步到 PCB 编辑器，摆件、布线、铺铜，跑设计规则检查；最后导出 Gerber 和钻孔文件送厂，或者导出 SVG、DXF 给雕刻机。内置 3D 查看器能把板子和元件模型立体转着看，8 版之后交互式布线和差分对都很顺手，还带 SPICE 仿真和 Python 脚本接口。</p><p>生态上元件库和封装库随软件发布，社区库和嘉立创的 KiCad 库都能补齐国产元件；界面自带简体中文，中文文档和视频教程极多，国内高校和创客圈都在用。项目每年出一个大版本，2026 年依旧活跃。</p><p>对 0301 来说它是延伸项目：工具台上那台桌面 CNC 除了刻亚克力标牌，还能雕单面 PCB。烙铁定时器、PSK 盒子里的小电源板，先在 KiCad 里画好，把铜层导出成 DXF 或 Gerber，用 FlatCAM 之类的工具转成 G 代码，在 CNC 上把隔离槽铣出来，再用洞洞板旁那台烙铁焊上元件，一下午就能从想法走到实物板。批量做的时候同一份文件直接送厂，省去重画。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0301.html" title="小制作工具台"><i>0301</i>小制作工具台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/zxing-js/library" target="_blank" rel="noopener">zxing-js/library</a>
+            <span class="stars">★ 2.9k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">ZXing 条码库的 TypeScript 移植：浏览器里直接调摄像头解二维码与 EAN、Code128 等一维码，不用装 App</p>
+          <div class="rintro"><p>zxing-js/library 是 Google 老牌条码库 ZXing 的 TypeScript 移植，2.9k 星，把一维码和二维码的解码算法搬进了浏览器。它解决的问题是：想在网页里扫码，又不想让用户装 App，也不想把摄像头画面传到服务器上识别。</p><p>它的工作方式是纯前端的：用 getUserMedia 打开摄像头，每隔几十毫秒抓一帧到 canvas，转成灰度位图交给解码器，解出来就回调一段文本。BrowserMultiFormatReader 会同时尝试 QR、Data Matrix、EAN-13、Code128 等十几种格式，也可以指定只解某一种来提速；除了视频流，也能对图片文件解码。</p><p>它的状态要说清楚：README 明确写着项目处于维护模式，只接受补丁，作者在找新维护者。但它的 npm 下载量仍然很高，Vue、React 的扫码组件大多包着它；浏览器原生的 BarcodeDetector 是备选，只是 iOS Safari 支持一直不稳。中文资料主要是博客里的接入教程。</p><p>在 0801 里它是延伸：方案里的扫码目前依赖平板自带相机，扫完再跳网页。用它做一个扫码页嵌进 HA 仪表盘的网页卡，平板和手机打开同一个地址就能扫：扫箱侧二维码跳到 Homebox 的箱子页并切换在库或外借，扫商品包装上的 EAN 条码则查公开商品库自动填品牌型号，盘点日开连续扫码模式对账。注意浏览器只在 HTTPS 下开放摄像头，小主机上得配一个内网证书。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0801.html" title="物品数字孪生"><i>0801</i>物品数字孪生</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/espressif/esp32-camera" target="_blank" rel="noopener">espressif/esp32-camera</a>
+            <span class="stars">★ 2.8k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">乐鑫官方的 ESP32 摄像头驱动库，支持 OV2640/OV5640 等常见传感器，输出 JPEG 或 RGB 帧，是所有 ESP32-CAM 项目的底层</p>
+          <div class="rintro"><p>esp32-camera 是乐鑫官方维护的摄像头驱动库，2.8k 星，几乎所有 ESP32-CAM 板子、ESPHome 的 esp32_camera 组件、Arduino 的 CameraWebServer 示例，底层用的都是它。它解决的是最基础的问题：ESP32 没有专门的相机接口，要靠 I2S 并口把 OV2640、OV5640 这些图像传感器的数据搬进内存，再压成 JPEG。</p><p>它的工作流程是：初始化时按板子引脚配置传感器，选分辨率、像素格式和帧缓冲数量；调用一次 fb_get 就拿到一帧，用完 fb_return 还回去。库里附带 BMP 和 JPEG 转换工具，还能调亮度和白平衡。ESP32 内存有限，高分辨率必须靠 PSRAM。</p><p>生态非常庞大：ESPHome 直接把它包成了组件，HomeAssistant 里就能看画面和抓图；Arduino、ESP-IDF 都有绑定。中文资料极多，淘宝的 ESP32-CAM 教程基本都围绕它。</p><p>在 0501 里它是延伸：柴火墙本身不需要摄像头，但那面墙一年的变化本身就是个故事。在院子东侧对着柴架装一块 ESP32-CAM，用 ESPHome 每天中午拍一张存到 0802 家庭服务器；十一月码满、二月烧空、香樟切面从黄变灰，365 张拼成延时。顺手做个小自动化：HA 比较最新一张和上周的亮度差，某格突然变亮就是快空了，提醒该劈柴。注意镜头朝西拍柴墙，下午会逆光，中午拍最稳。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0501.html" title="柴火堆墙"><i>0501</i>柴火堆墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/IfcOpenShell/IfcOpenShell" target="_blank" rel="noopener">IfcOpenShell/IfcOpenShell</a>
+            <span class="stars">★ 2.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">开源 IFC 建筑信息模型库与几何引擎：C++ 内核加 Python 接口，读写 BIM 通用格式 IFC，附带 Blender 插件 Bonsai</p>
+          <div class="rintro"><p>IfcOpenShell 是荷兰工程师 Thomas Krijnen 2011 年发起的开源库，2.7k 星，现在由欧洲团队和社区维护，2025 年发布 0.8 版。它解决的问题是：建筑行业的通用交换格式 IFC 写法极其繁琐，商业软件各家读出来还不一样，需要一个中立、免费、能被脚本调用的解析和几何引擎。</p><p>它的架构是 C++ 内核负责解析 IFC 文件和把参数化几何转成三角网格，上面包一层 Python 接口。输入一个 .ifc 文件，Python 里几行就能遍历所有墙、柱、板，读每个构件的材料、尺寸和自定义属性，也能反过来新建构件写回文件。仓库里还带一个 Blender 插件 Bonsai，让 Blender 变成一个能画 BIM 模型的免费工具，还有 IfcConvert 命令行把 IFC 转成 OBJ 或 SVG 平面图。</p><p>生态上它是 FreeCAD 建筑工作台、Bonsai、Speckle 等开源 BIM 工具的底层，文档全英文，中文资料只有零散教程，社区在 OSArch 论坛活跃。</p><p>在 0701 里它是延伸：钓台的六个混凝土墩、松木龙骨、杉木柱和竹瓦顶棚在 FreeCAD 里画完后导出 IFC，用 IfcOpenShell 的 Python 脚本跑一遍材料清单，自动算出防腐木总长度、地脚螺栓数量和竹瓦面积；再给每块台面板加一个属性记录上一次刷木蜡油的日期，清明前跑脚本就知道哪些板该刷了。模型放在 0802 服务器上，以后 0402 的库存也能对着同一份清单核对。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0701.html" title="钓台本体与顶棚"><i>0701</i>钓台本体与顶棚</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/cncjs/cncjs" target="_blank" rel="noopener">cncjs/cncjs</a>
+            <span class="stars">★ 2.6k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">网页版 CNC 控制台：跑在树莓派上，浏览器里发 G 代码、手轮点动、3D 预览刀路，支持 Grbl、grblHAL、Marlin、TinyG</p>
+          <div class="rintro"><p>cncjs 是 Cheton Wu 发起、社区维护的网页版 CNC 控制软件，用 Node.js 和 React 写成，2.6k 星，是 Grbl 系控制器最常用的发送器之一。它要解决的问题是：CNC 控制器只有一个串口，传统做法是一台电脑守在机器旁，cncjs 把它换成一块树莓派，操作都在浏览器里完成。</p><p>它的工作方式是服务端加网页：树莓派通过 USB 串口连接控制器，cncjs 服务把 G 代码逐行发送并处理流控和实时状态回报；浏览器端是一组可拖动的部件——坐标、点动、主轴、宏、探针、控制台，以及一个 3D 刀路窗口，能看当前刀在程序的哪一行。它同时兼容 Grbl、grblHAL、Smoothieware、TinyG 和 Marlin，能接摄像头看加工画面。</p><p>生态上有树莓派和 Docker 镜像，界面自带简繁中文，国内 DIY CNC 圈用它的很多；更新节奏变慢但仍在维护。</p><p>对 0307 来说它是延伸项目：Teensy 4.1 上的 grblHAL 需要一个发送器，把 cncjs 装在机器下层型材柜里的一块树莓派上，USB 连 Teensy，机旁挂一块小屏或平板，0204 设计台的浏览器也能远程看。注意它对 A、C 轴的点动支持要看版本，多轴显示不全就用 grblHAL 社区的 ioSender 做对照；门磁急停仍走 grblHAL 硬件输入，不要依赖网页。摄像头画面可以顺手转进 HA，和 3D 打印机监控放同一页。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0307.html" title="CNC 五轴雕刻机"><i>0307</i>CNC 五轴雕刻机</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Jack000/SVGnest" target="_blank" rel="noopener">Jack000/SVGnest</a>
+            <span class="stars">★ 2.6k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">浏览器里跑的开源矢量排料工具：把一堆 SVG 零件用遗传算法塞进一张板子，减少边角料，激光和 CNC 都能用</p>
+          <div class="rintro"><p>SVGnest 是加拿大开发者 Jack Qiao 写的开源排料工具，纯 JavaScript 跑在浏览器里，2.6k 星，是开源二维排料领域被引用最多的项目。它要解决的问题是：把一堆不规则零件塞进有限的板材里，让浪费最少——这在工业上叫 nesting，商业软件动辄几万块，而它免费且开源了算法。</p><p>它的工作方式是几何加进化：输入一张 SVG，第一个闭合路径当作板材，其余路径当零件；它先算每对零件之间的无碰撞多边形，得到一个零件贴着另一个滑动时所有可行的位置，再用遗传算法反复尝试摆放顺序和旋转角度，每一代选出利用率最高的方案继续变异，几分钟就能收敛到一个不错的布局，支持零件内部的孔洞里再放小零件。全程在浏览器里用 Web Worker 并行计算，不上传任何文件。输出还是 SVG，直接送激光机或转成 CNC 的刀路。</p><p>生态上它有在线版 svgnest.com，作者后来又做了桌面版 Deepnest；项目代码多年没大改，但因为是算法参考实现，各语言的移植和改进版层出不穷，界面只有英文，中文资料以论坛帖子为主。</p><p>对 0404 来说它是延伸项目：木工间做 PSK 木盒时，侧板、底板、隔板全是矩形和带圆角的异形件，OpenCutList 管矩形排料很好，异形件就交给它。从 0204 设计台把零件轮廓导成一张 SVG，板材画成 1220×2440 的矩形，在浏览器里跑几分钟，把结果打印出来贴在台锯旁，或者导给 0307 五轴机直接铣。注意刀具直径要事先在零件轮廓上加偏移，它本身不管刀补。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0404.html" title="木工间"><i>0404</i>木工间</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/bdring/FluidNC" target="_blank" rel="noopener">bdring/FluidNC</a>
+            <span class="stars">★ 2.5k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">跑在 ESP32 上的 Grbl 系 CNC 固件：六轴、YAML 配置不用重新编译、自带 Wi-Fi 网页控制和 SD 卡脱机运行</p>
+          <div class="rintro"><p>FluidNC 是 Bart Dring 主导的开源 CNC 运动控制固件，从 Grbl_ESP32 演化而来，用 C++ 写成，2.5k 星，2026 年 4 月发布 4.0.3 版。它要解决的问题是：Grbl 只能跑三轴、改引脚要重新编译，而 ESP32 便宜又自带无线，FluidNC 把 Grbl 的成熟运动核心搬到 ESP32 上，并把所有配置改成一个 YAML 文件。</p><p>它的工作方式是固件加配置文件：把编译好的固件烧进 ESP32，再上传一个 config.yaml，写清楚轴数、步进引脚、限位、步距、主轴类型（PWM、RS485 VFD、激光）和探针，重启就按新配置运行，最多六轴。它兼容 Grbl 的串口协议和 G 代码，cncjs、bCNC 都能直接用；自带 Wi-Fi 和 WebUI，浏览器就能上传、运行、点动，G 代码还能放 SD 卡脱机跑。</p><p>生态上有 6-Pack 等配套控制板，Discord 社区活跃，Wiki 完整但只有英文，中文资料零散；更新勤快。</p><p>对 0307 来说它是延伸项目：主控制器已定 grblHAL 加 Teensy 4.1，FluidNC 是它的备胎和对照。一是把一块 ESP32 刷上它，同一份轴参数写成 YAML，在型材柜里备着，Teensy 出问题时换上就能跑三轴加 A 轴；二是 0301 那台桌面 CNC 升级控制器时，它加 Wi-Fi 最省事；三是它的 RS485 VFD 主轴写法可直接借鉴到五轴机的变频器接线。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0307.html" title="CNC 五轴雕刻机"><i>0307</i>CNC 五轴雕刻机</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/hbldh/bleak" target="_blank" rel="noopener">hbldh/bleak</a>
+            <span class="stars">★ 2.5k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Python 的跨平台低功耗蓝牙客户端库，基于 asyncio，一套代码在 Linux、macOS、Windows 上扫描和读写 BLE 设备</p>
+          <div class="rintro"><p>bleak 是瑞典开发者 Henrik Blidh 写的 Python 低功耗蓝牙库，2.5k 星。它解决的是 Python 里操作 BLE 设备长期没有跨平台标准库的问题：Linux 要走 BlueZ，macOS 要走 CoreBluetooth，Windows 要走 WinRT，bleak 把三套接口包成同一个 asyncio API。</p><p>它的用法围绕两个对象：BleakScanner 负责扫描，能拿到每个设备的名字、信号强度和广播数据，也能一直监听广播回调；BleakClient 负责连接，连上之后按 UUID 读写特征值、订阅通知。整个库是异步的，一个脚本可以同时盯着十几个设备。HomeAssistant 的蓝牙集成和很多米家设备的第三方解码脚本底层都用它。</p><p>生态上它是 PyPI 上下载量最大的 BLE 库之一，文档和示例齐全，树莓派上一行 pip 就能装。中文资料不多，但 API 简单，看官方示例就够。</p><p>在 0503 里它是延伸：前面三个方案已经把 b-parasite 和花草监测仪接进了 HomeAssistant，bleak 给的是另一条路，不依赖 HA 和任何 App，自己掌握数据。在 0802 服务器或一块树莓派上写三十行脚本，扫描广播包，解出每盆的土壤湿度和光照，写进 CSV 或 SQLite。好处是想怎么算就怎么算：统计多肉队在养病区避暑那几周的湿度曲线，或者按 20/28/36 三种盆径分别算浇水间隔。缺点是 BLE 穿墙差，接收端要放在窗边。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0503.html" title="盆栽"><i>0503</i>盆栽</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/br3ttb/Arduino-PID-Library" target="_blank" rel="noopener">br3ttb/Arduino-PID-Library</a>
+            <span class="stars">★ 2.2k</span>
+            <span class="zh zh-no">无中文（社区教程多）</span>
+          </div>
+          <p class="rdesc">Brett Beauregard 写的 Arduino PID 库：抗积分饱和、无扰切换、可调采样周期，配套博客是入门 PID 最好的教材</p>
+          <div class="rintro"><p>Arduino-PID-Library 是 Brett Beauregard 在 2011 年前后写的 PID 控制库，2.2k 星，代码只有几百行，但配套的博客系列《改进新手的 PID》被翻译成十几种语言，是很多人学 PID 的第一课。它要解决的问题是：教科书里的 PID 公式直接写进单片机会出各种毛病——积分饱和、参数一改就跳、手动自动切换时输出突变，他把这些坑一个一个补掉。</p><p>它的用法是：定义输入（当前温度）、输出（风门开度 0～255）、设定值（目标温度），构造一个 PID 对象给它 Kp、Ki、Kd，主循环里不停调用 Compute，库按设定的采样周期算出新输出。内部对测量值求微分避免设定值突变的冲击、积分项限幅防饱和、改参数时平滑过渡。项目多年没大改，因为它已经完成了，Arduino 库管理器里直接能装。</p><p>中文方面 README 是英文，但博客的中文翻译和 B 站讲解很多；ESPHome 自带的 PID climate 组件和它是一个思路。</p><p>对 0106 它是延伸的学习项目，也可能真的用上：给柴火炉加一个自动风门，就是一个舵机拉着进风口挡板，炉体上一个 K 型热电偶读温度，目标 220 度左右的炉膛温。先用这个库在 Arduino 上做一版，参数调顺了再照搬进 ESPHome 的 PID 组件，让 HomeAssistant 能看曲线。注意柴火热惯性巨大，Ki 要小、采样周期放到 10 秒以上，风门全关也不能真关死，留最小进风保证不产生一氧化碳。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0106.html" title="柴火炉系统"><i>0106</i>柴火炉系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/manyfold3d/manyfold" target="_blank" rel="noopener">manyfold3d/manyfold</a>
+            <span class="stars">★ 2.1k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">自托管的 3D 打印文件管理器：扫描硬盘上的 STL/3MF，网页里预览、打标签、记来源和授权，支持联邦分享</p>
+          <div class="rintro"><p>Manyfold 是英国开发者 James Smith 2022 年开始做的自托管 3D 模型库，2.1k 星，Ruby on Rails 编写，Docker 一条命令部署，2025 年仍在密集更新。它解决的问题是：从各个网站下载的 STL 越攒越多，文件夹里全是 model_final_v3，想再打一件洞洞板挂钩时根本记不起是哪个。</p><p>它的工作方式是扫描你指定的文件夹，把每个子目录识别成一个模型，网页里用 three.js 渲染三维预览，可以加标签、写说明、记录原始来源链接和授权协议；文件重命名和整理可以按模板自动做。它支持 STL、OBJ、3MF 等主流格式，能从 Thingiverse 等网站导入元数据，还实现了 ActivityPub 联邦协议，两台 Manyfold 之间可以互相关注和分享模型，把打印圈的分享做成了去中心化的样子。</p><p>生态上它有活跃的 Discord 和 Mastodon 社区，界面有多语言翻译，简体中文翻译不完整，文档全英文。</p><p>在 0702 里它是延伸：钓具储物角有一堆打印件，通用挂钩、扇形竿托的斜托座、亚克力盒背后的磁铁座、樟木箱的六格分隔条，还有 Gridfinity 小格子。在 0802 服务器上跑一个 Manyfold，把这些模型集中进来，打上 0702 钓具 和 0701 钓台 标签，说明里写清楚用了什么耗材和打印参数。哪天竿托被大鱼拽断了，手机打开 Manyfold 找到文件，扔给 0305 的打印机就行，不用重新翻硬盘。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0702.html" title="钓具储物与展示"><i>0702</i>钓具储物与展示</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/diyHue/diyHue" target="_blank" rel="noopener">diyHue/diyHue</a>
+            <span class="stars">★ 1.8k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Python 写的飞利浦 Hue 桥模拟器：把 WLED、ESP 灯、Tasmota、MQTT 灯伪装成 Hue 灯，官方 Hue App 和娱乐同步都能用</p>
+          <div class="rintro"><p>diyHue 是 Marius Cristian 发起的开源 Hue 桥模拟器，Python 写成，1.8k 星。它要解决的问题是：飞利浦 Hue 的 App、场景、日出模拟和影音娱乐同步做得好，但灯贵；如果自制的灯能装作 Hue 灯，就能白嫖整个 Hue 生态。</p><p>它在局域网里跑一个服务，完整实现 Hue 桥的 REST API 和 mDNS 发现协议，Hue App 搜索桥的时候找到的就是它。后端把各种灯接进来：WLED 和 ESPHome 的灯、Tasmota、MQTT 灯、Yeelight、Shelly，Zigbee 灯也能通过 zigbee2mqtt 挂在下面。App 里对灯做的开关、调色、场景、定时，它翻译成对应设备的命令发出去；娱乐区的低延迟同步走 UDP 流，能让灯跟着电视画面变色。Docker 一行部署。</p><p>社区中等规模，2025 年后仍有更新，README 是英文，中文资料很少。</p><p>对 0201 它是延伸的另一条控制入口：模拟阳光的主灯走 HomeAssistant 和滑轨，但沙发上方那块柔光箱和床头 1% 的月光夜灯如果做成 WLED 灯，挂进 diyHue 之后就能在 Hue App 里用它的日出唤醒和入睡渐暗，手机一拉就是那条从 3200K 到 5600K 的曲线；0207 看片时娱乐区还能让天光跟着电影变色。注意它和 HomeAssistant 同时控制一盏灯会打架，规定好谁是主：HA 管场景，diyHue 只管娱乐同步。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0201.html" title="模拟阳光"><i>0201</i>模拟阳光</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Part-DB/Part-DB-server" target="_blank" rel="noopener">Part-DB/Part-DB-server</a>
+            <span class="stars">★ 1.7k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">给电子元件和小零件做的开源库存系统：存放位置树、参数、供应商价格、条码标签打印，支持从立创和 Mouser 拉数据</p>
+          <div class="rintro"><p>Part-DB 是德国开发者 Jan Böhmer 用 PHP Symfony 重写的开源零件库存系统，1.7k 星，起初是给电子爱好者管电阻电容的，后来变成了通用的小零件库存。它要解决的问题是：抽屉和小格子里几百种零件，谁也记不住哪个在哪、还剩多少、上次从哪买的。</p><p>它的数据模型是零件加存放位置树加类别树：每个零件有名称、参数、图片、附件、最小库存和多个库存条目，每条库存指向一个位置（房间→柜子→抽屉→格子）；供应商信息记录订单号和价格阶梯，信息提供者功能可以直接从立创商城、Mouser、DigiKey 等拉回参数和图片。它能生成带二维码或条码的标签用标签机打印，扫码就跳到那件零件的页面；还有项目 BOM 功能，能算一个项目需要的零件够不够。部署是 Docker 一行，浏览器访问，手机也能用。</p><p>社区方面它是小而稳定的项目，2025 年后仍在更新，界面翻译里有简体中文，中文教程主要在电子 DIY 圈。</p><p>放到 0105 里它是延伸里最贴身的一个：27 格零件柜每格建一个位置，每格一种物件登记数量；格口那张激光刻的标签旁再贴一个 Part-DB 生成的小二维码，手机扫一下就减库存或看供应商链接。工作台抽屉里的电子小件、0106 炉子的传感器备件、0803 鸭子的备用舵机也全部归进来，统一用它的位置树。它比 ERPNext 轻得多，一个人用刚好；和 0105 已有的 InvenTree 是同类，选一个用就行，Part-DB 的优点是标签打印和立创拉数据更顺手。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0105.html" title="PSK 工作台"><i>0105</i>PSK 工作台</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/pvlib/pvlib-python" target="_blank" rel="noopener">pvlib/pvlib-python</a>
+            <span class="stars">★ 1.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">光伏系统性能仿真的 Python 库：太阳位置、辐照模型、组件和逆变器模型，NumFOCUS 支持的学术标准</p>
+          <div class="rintro"><p>pvlib-python 是由美国桑迪亚国家实验室发起、现在由 pvlib 社区维护的光伏仿真 Python 库，1.7k 星，是 NumFOCUS 的附属项目，学术论文里引用最多的光伏建模工具之一。它要解决的问题是：光伏发电量取决于位置、倾角、朝向、温度、天气和组件参数，靠经验估算误差很大，pvlib 把几十年的经验模型做成可以直接调用的函数。</p><p>它的工作方式是一条模型链：输入经纬度和时间，算出太阳高度角和方位角；输入气象数据（PVGIS、NSRDB 等公开数据，或自己气象站的辐照度）算出板面辐照度；再经过组件温度模型、单二极管或 SAPM 组件模型、逆变器效率模型，输出每小时的直流和交流功率。ModelChain 类把这些步骤串起来，几行代码就能跑一年的仿真，结果直接是 pandas 表格，画图方便。</p><p>生态上它的文档和示例画廊很完整，能和 SAM、PVGIS 互相校验；文档只有英文，但国内光伏工程师博客里用它做案例的不少，项目持续发版。</p><p>对 0304 来说它是延伸项目：先用杭州的经纬度、南坡 45° 倾角和四块 400W 组件的参数跑一遍全年仿真，看冬夏发电差多少、2kWh 储能够不够喂串灯和气象站；再把 HomeAssistant 里储能电源报的实际发电量按天导出，和仿真曲线放在一起画，差得多就说明板子脏了、遮挡了或朝向不对。0306 气象站若加一块辐照度传感器，还能用实测替代公开气象源，把仿真做得更准。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0304.html" title="光伏储能"><i>0304</i>光伏储能</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/vlachoudis/bCNC" target="_blank" rel="noopener">vlachoudis/bCNC</a>
+            <span class="stars">★ 1.7k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Python 写的 Grbl 发送器兼简易 CAM：自动调平、G 代码编辑、摄像头对刀、内置钻孔和轮廓加工，一个程序全包</p>
+          <div class="rintro"><p>bCNC 是欧洲核子研究中心的工程师 Vasilis Vlachoudis 写的 Grbl 发送器，用 Python 和 Tkinter 写成，1.7k 星，两千多次提交，社区持续维护。它要解决的问题是：小型 CNC 玩家不想为发送器、CAM、调平工具装三个软件，bCNC 把这些塞进一个窗口。</p><p>它的工作方式是发送器加工具箱：通过串口连接 Grbl 或 grblHAL，界面上有坐标、点动、主轴控制和 G 代码列表，可以直接在列表里编辑、拖动、镜像和缩放程序段。它最出名的功能是自动调平：用探针在工作台上按网格扫一遍，得到工件表面的高度图，再把 G 代码按这张图实时修正 Z 值，雕 PCB 时 0.1 毫米的隔离槽也能均匀。此外还有摄像头对刀、简单 CAM（钻孔、轮廓、口袋）和刀路 3D 预览。</p><p>生态上它是 Grbl 圈的老牌工具，教程不少，界面只有英文，中文资料以论坛帖子为主；界面偏老但功能扎实，仍在更新。</p><p>对 0307 来说它是延伸项目：五轴机日常发送用 cncjs 或 ioSender，但当工件是一块本身不平的胡桃木板，或者 0301 那边要借这台机器雕单面 PCB 时，切到 bCNC：先用主轴上夹的探针扫一遍工件表面，让它把程序的 Z 值按曲面修正，再开始铣。它跑在 0204 设计台的电脑上，USB 线拉到 Teensy 即可，探针信号接 grblHAL 的探针输入。A、C 轴它不会调平，只在三轴模式下用。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0307.html" title="CNC 五轴雕刻机"><i>0307</i>CNC 五轴雕刻机</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/OpenCPN/OpenCPN" target="_blank" rel="noopener">OpenCPN/OpenCPN</a>
+            <span class="stars">★ 1.5k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">跨平台开源海图导航软件：读 GPS 和 NMEA 数据，显示矢量与栅格海图，叠加 GRIB 气象、潮汐和航迹，插件生态丰富</p>
+          <div class="rintro"><p>OpenCPN 是 2009 年由航海爱好者发起的开源海图导航软件，1.5k 星，C++ 加 wxWidgets 编写，跑在 Windows、macOS、Linux 和安卓上，全球远洋帆船圈的标配。它解决的问题是：商业海图机昂贵封闭，而一台笔记本加一个 USB GPS 就应该能当航海电脑。</p><p>它的工作方式是把 GPS、AIS、测深仪等 NMEA 0183/2000 数据从串口或网络读进来，在海图底图上画出本船位置、航迹、航线和其他船只；海图支持 S57 矢量、BSB 栅格和 CM93 格式，也能直接用 SignalK 服务器当数据源。核心之外靠插件扩展：GRIB 插件叠加风、浪、气压预报，潮汐插件算涨落，Dashboard 插件显示航速航向，还有天气路由、雷达叠加等几十个插件。</p><p>生态上它有活跃的论坛和插件市场，文档全英文，中文资料主要在帆船和钓鱼艇玩家的论坛里，界面语言包含简体中文。</p><p>在 0701 里它是延伸：一条 10 米宽的河不需要海图，但可以借它做两件事。一是拿一只便宜的 NMEA 输出鱼探仪绑在皮划艇上沿河划几趟，OpenCPN 把水深点记成航迹，慢慢攒出钓台前这段河的小水深图，深坑和陡坎就是鱼道；二是用 GRIB 插件看风向预报，和角落竹竿上的小旗子对照，判断哪天是顶风还是顺风。软件跑在 0802 服务器或一台旧笔记本上，水深图导出成图片挂到 0702 的小黑板旁边。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0701.html" title="钓台本体与顶棚"><i>0701</i>钓台本体与顶棚</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/OpenEMS/openems" target="_blank" rel="noopener">OpenEMS/openems</a>
+            <span class="stars">★ 1.5k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">开源能源管理系统：Java OSGi 模块化平台，Edge 端接逆变器电池电表，Backend 汇总多站点，UI 看图表，德国 FENECON 主导</p>
+          <div class="rintro"><p>OpenEMS 是德国储能厂商 FENECON 2016 年开源的能源管理系统，1.5k 星，Java 编写，OSGi 模块化，欧洲不少储能产品的固件底座就是它，2025 年仍每月发版。它解决的问题是：光伏、电池、充电桩、热泵各说各的协议，需要一个统一的控制平面来决定什么时候充、什么时候放、什么时候削峰。</p><p>它分三层：Edge 跑在现场的小电脑上，通过 Modbus TCP/RTU、SunSpec 等驱动读逆变器、电池、电表，内部把设备抽象成通道，控制器按优先级链条决定输出；Backend 在服务器上汇总多个 Edge 的数据到 InfluxDB 或 TimescaleDB；UI 是 Angular 写的网页和手机端，看实时功率流和历史曲线。</p><p>生态上它有 OpenEMS 协会和年度开发者大会，几十家厂商设备有驱动，文档全英文，中文资料几乎没有。</p><p>在 0703 里它是延伸：一块 200W 板加一个 MPPT 用 ESPHome 读一下已经足够，OpenEMS 对钓台是杀鸡用牛刀。但院子里的电池会越来越多，0304 的主光伏系统、0505 的充电桩、钓台这一箱，各自的 MPPT 和 BMS 都有 Modbus 口。哪天想让它们协同，比如钓台电池满了就把富余电量提示去给电动车充，就在 0802 服务器上跑一个 OpenEMS Edge，把几台设备的 Modbus 都接进来，用它的控制器链做调度，HomeAssistant 只负责显示和报警。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0703.html" title="钓台照明与电源"><i>0703</i>钓台照明与电源</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/kiwix/kiwix-desktop" target="_blank" rel="noopener">kiwix/kiwix-desktop</a>
+            <span class="stars">★ 1.4k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Kiwix 的桌面端：离线阅读 ZIM 格式的整站压缩包，整部中文维基百科、维基教科书、急救和农业资料都能装进一块硬盘</p>
+          <div class="rintro"><p>Kiwix 是瑞士非营利组织 Kiwix 从 2007 年维护的离线阅读项目，kiwix-desktop 是它的 Qt 桌面端，1.4k 星，兄弟仓库还有 kiwix-serve 命令行服务器和手机客户端。它要解决的问题是：维基百科这种人类知识总集依赖网络，没有网的地方（船上、山区、灾害中）就看不到；它把整个网站压成一个文件带走。</p><p>它的工作方式是：内容打包成 ZIM 格式，这是专门为离线整站设计的高压缩只读格式，全文索引也在里面，整部中文维基百科带图片大约 20 多 GB；kiwix-desktop 打开 ZIM 后像浏览器一样浏览和搜索，内置目录能直接从 Kiwix 内容库下载新的 ZIM，官方库里有各语言维基百科、维基医学、Stack Exchange 和一批急救与农业资料。kiwix-serve 则把 ZIM 用 HTTP 服务出来，局域网里所有设备用浏览器访问。</p><p>社区稳定，2025 年后仍有版本，界面翻译含简体中文，中文教程主要在离线知识和应急圈。</p><p>对 0210 它是延伸中的那格知识储备：钢架最上层是米砖，地堡电脑硬盘里是一份中文维基百科、维基医学、野外急救和食品保存的 ZIM，用 kiwix-serve 跑在 0802 的服务器上，断网时 0204 工作台和手机都能查。每半年轮换水桶的同时也更新一次 ZIM，写在小白板的轮换日旁边。PSK 应急包里的旧手机装 Kiwix 安卓版和一份精简 ZIM，随时拎走。注意完整维基百科下载很慢，挑一个夜里挂着。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0210.html" title="防灾食品"><i>0210</i>防灾食品</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/farmOS/farmOS" target="_blank" rel="noopener">farmOS/farmOS</a>
+            <span class="stars">★ 1.3k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">基于 Drupal 的开源农场记录系统：地块、作物、播种收获、投入品、传感器数据全按日志记，有手机 App 和 API</p>
+          <div class="rintro"><p>farmOS 是美国开发者 Michael Stenta 在 2014 年发起的开源农场管理系统，建在 Drupal 上，1.3k 星，被小型有机农场、社区农园和大学农业项目广泛使用。它要解决的问题是农事记录：哪块地什么时候种了什么、施了什么、收了多少，这些信息散在笔记本和脑子里，到了下一季就找不到。</p><p>它的数据模型很干净：资产是地块、植株、设备、动物；日志是发生在资产上的事，播种、移栽、收获、观察、投入品各是一种类型，每条带时间、地点、数量和照片。数据流是手机 App 或网页录入，进 Drupal 数据库，前端给出每块地的时间线、地图和库存。它还有传感器模块，任何设备 POST 一个 JSON 就能把读数存进来，配合 JSON:API 可以被别的程序读走。</p><p>生态上它有官方 Docker 镜像、可离线记录的 Field Kit 手机 App，模块市场里有灌溉、土壤检测等扩展。社区在论坛和 Matrix 上活跃，文档全英文，界面靠 Drupal 多语言机制可以自行汉化。</p><p>在 0504 里它是延伸：把四层架子建成一个地块，24 个种植箱各是一个子地块，每次播种、移栽、摘菜、周日补液肥都在手机上点一条日志；ESPHome 的四层湿度通过 HA 的 REST 命令每小时 POST 一次到它的传感器接口。一年下来能看出哪一层的番茄最早挂果、空心菜几茬之后该换土，第二年排层就有依据。对一个架子来说它偏重，但当草地和盆栽也要记的时候就值了。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0504.html" title="自动种植架"><i>0504</i>自动种植架</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/zwave-js/zwave-js-ui" target="_blank" rel="noopener">zwave-js/zwave-js-ui</a>
+            <span class="stars">★ 1.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Z-Wave JS 的完整控制面板与 MQTT 网关：设备配对、参数配置、网络健康图、OTA，Vue 前端，Docker 部署</p>
+          <div class="rintro"><p>Z-Wave JS UI 前身叫 zwavejs2mqtt，由 Daniel Lando 主导开发，1.2k 星，是 zwave-js 这个 JavaScript Z-Wave 协议栈的官方控制面板。它要解决的问题是：Z-Wave 设备的配对和配置一直要靠厂商软件，它把这一切放进一个网页，并能把设备桥接成 MQTT。</p><p>它的架构是三层：底层 zwave-js 驱动通过串口和 Z-Wave USB 棒通信；中间层提供网页，做设备加入与移除、几百个配置参数的可视化编辑、网络健康图和固件 OTA；上层两条出口，一是 WebSocket 给 HomeAssistant 的 Z-Wave 集成直接用，二是 MQTT 网关给其他系统。Docker 一行部署，也有 HA 加载项。</p><p>Z-Wave 工作在 868/908MHz 频段，抗 Wi-Fi 干扰，穿墙比 Zigbee 好，设备都经过认证互操作性强，但贵且国内货少。社区中等规模，2025 年后仍月度更新，界面无中文，中文资料很少。</p><p>对 0203 它是延伸里对付厚墙的备选：如果 Zigbee 信号在储藏室和卫生间那几堵混凝土墙后面不稳定，就换一根 Z-Wave 800 棒，用 Z-Wave 温湿度探头和水浸传感器，Long Range 模式一跳就能到。它和 zigbee2mqtt 可以并存，两根棒插同一台服务器，HA 里两个集成互不干扰。注意国内买 Z-Wave 设备要认准 CN 频段的版本，美版 908MHz 在这里不合法也配不上对。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0203.html" title="控温控湿"><i>0203</i>控温控湿</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/SamR1/FitTrackee" target="_blank" rel="noopener">SamR1/FitTrackee</a>
+            <span class="stars">★ 1.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">自托管的运动记录服务：导入 GPX 和 FIT 文件，按运动类型统计里程、时长、海拔和心率，画周月年图表，Python + Vue</p>
+          <div class="rintro"><p>FitTrackee 是法国开发者 SamR1 从 2018 年维护的自托管运动追踪器，Python Flask 后端加 Vue 前端，1.2k 星，主仓库在 Codeberg，GitHub 是镜像。它要解决的问题是：跑步、骑行、徒步的数据被 Strava、Garmin、各家手环 App 分散锁着，想要一个自己掌握、能长期保存和统计的地方。</p><p>它的工作方式是：上传 GPX 或 FIT 文件（或者手动录入没有轨迹的训练，比如哑铃和引体），它解析出距离、时长、配速、海拔升降、心率，在地图上画轨迹，按运动类型（跑步、骑行、徒步、力量等几十种）归档；仪表盘按周、月、年画里程和时长图表，还有个人纪录、装备管理（这双鞋跑了多少公里）和分段。它支持多用户，有 REST API，Docker 部署。</p><p>社区小而稳定，2025 年后仍是每月一个版本，界面翻译走 Weblate，暂无中文，中文资料几乎没有，属于自托管圈的冷门好物。</p><p>对 0212 它是延伸的训练日志：手环的心率同步到 0802 大屏只是当场看，长期数据用 HomeAssistant 的自动化在训练模式结束时把时长、平均心率和 MediaPipe 数出来的次数写成一条记录通过 API 发进 FitTrackee，类型选力量；周末上山徒步的 GPX 从手表导出来也丢进去。门边小白板的周计划还是手写打钩，FitTrackee 负责回答一年后那个问题：这一年到底练了多少。注意它统计的是有氧类为主，力量训练的组数和重量要写进备注。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0212.html" title="哑铃"><i>0212</i>哑铃</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/tumic0/GPXSee" target="_blank" rel="noopener">tumic0/GPXSee</a>
+            <span class="stars">★ 1.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">桌面版 GPS 轨迹查看分析器：支持 GPX、FIT、KML 等十几种格式，在离线地图上叠轨迹，看海拔、速度、心率曲线</p>
+          <div class="rintro"><p>GPXSee 是捷克开发者 tumic0 用 C++ 和 Qt 写的 GPS 日志查看器，1.2k 星，近六千次提交，Windows、macOS、Linux 都有安装包。它要解决的问题是：手表、手机、运动相机记录的轨迹格式各不相同，想在电脑上离线看一眼、比一比，总得先传到某个网站。GPXSee 双击文件就打开，什么都不上传。</p><p>它的工作方式是读文件、画地图、画曲线：支持 GPX、TCX、FIT、KML、IGC、NMEA、GeoJSON 等十几种格式，可以一次拖进几十个文件叠在同一张地图上；地图底图既能用在线瓦片源，也能加载 OziExplorer、MBTiles、GeoTIFF 等离线地图，山里下载好的等高线图也能当底图。下方的图表区画出海拔、速度、心率、踏频、温度和坡度随距离或时间变化的曲线，鼠标在曲线上滑动，地图上的点同步移动；还能给轨迹打点、看统计、导出 PDF 或图片。</p><p>生态上它是很多户外论坛推荐的轻量工具，翻译走 Weblate，界面没有中文，但操作简单到不需要说明书；项目持续维护，几乎每月都有版本。</p><p>对 0302 来说它是延伸项目：Organic Maps 在山上记的轨迹回家导出 GPX 后，放到 0802 服务器的装备目录里，用 GPXSee 一次把三条常走线全部打开，叠在同一张离线地图上比较爬升和距离。出发清单上每条线旁边写的时长、水量和背包容量，就来自这些曲线；如果某条线的海拔图突然多出一段陡坡，说明该把登山杖挂到出发清单里了。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0302.html" title="户外装备区"><i>0302</i>户外装备区</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/weewx/weewx" target="_blank" rel="noopener">weewx/weewx</a>
+            <span class="stars">★ 1.2k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Python 写的开源气象站软件：驱动几十种商用气象站，存数据库、生成网页报表、上传到 Weather Underground 等网络</p>
+          <div class="rintro"><p>WeeWX 是 Tom Keffer 从 2009 年起维护的开源气象站软件，用 Python 写成，1.2k 星，八千多次提交，2026 年 6 月发布 5.4 版。它要解决的问题是：气象站硬件只会吐原始数据，但一个像样的气象站需要归档、统计、报表、网页和向公共气象网络上传，这些都是它做的。</p><p>它的工作方式是驱动加引擎加报表：驱动层对接几十种商用气象站（Davis、Fine Offset、Ecowitt 等），也能通过 MQTT 驱动接收任意自制站的数据；引擎按固定间隔把数据写进 SQLite 或 MySQL 归档表，同时算出日、周、月、年的最高最低和累计值；报表层用 Cheetah 模板生成静态网页和图表，默认皮肤开箱就能看，也能上传到 Weather Underground、CWOP 等网络。扩展机制允许加驱动、加服务、加皮肤，社区有上百个扩展。</p><p>生态上它的文档非常详尽，用户论坛活跃，树莓派上跑十几年不倒是常态；文档只有英文，中文资料不多，但配置就是一个文本文件，看着示例改并不难。</p><p>对 0306 来说它是延伸项目：铝杆上的三件套和百叶盒数据经 ESPHome 进 HomeAssistant 负责实时和联动，而年度那张我家的一年气候图交给 WeeWX 更专业。在 0802 服务器上跑一份，用 MQTT 驱动订阅 HA 转发的主题收温湿度、气压、风速风向和雨量，按气象站的规矩算日雨量、阵风和露点，自动生成网页报表，年底导出全年温度和降水曲线，比自己在 HA 里拼图表省事得多。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0306.html" title="微型气象站"><i>0306</i>微型气象站</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/openfoodfacts/openfoodfacts-server" target="_blank" rel="noopener">openfoodfacts/openfoodfacts-server</a>
+            <span class="stars">★ 1.1k</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">Open Food Facts 的服务端：全球最大的开放食品数据库，扫条码就有配料、营养、Nutri-Score，API 免费可用</p>
+          <div class="rintro"><p>Open Food Facts 是法国非营利组织在 2012 年发起的开放食品数据库，服务端仓库 1.1k 星，Perl 写成，数据库里有全球四百多万种食品。它要解决的问题是：食品包装上的配料和营养信息属于所有人，但没有一个开放的、任何人都能查和贡献的数据库，它就像食品界的维基百科。</p><p>它的工作方式是众包：用户用手机 App 扫条码，拍下正面、配料表和营养表，服务端用 OCR 识别配料，算出 Nutri-Score 营养等级和 NOVA 加工程度，数据以开放许可证发布；任何人都能通过 REST API 用条码查一个产品，返回名称、品牌、分量、配料、过敏原、营养成分和图片，也能整库下载。它的生态包括安卓和 iOS App、Python 和 JavaScript SDK，Grocy、KitchenOwl、Barcode Buddy 这些自托管库存工具都用它的 API 补全商品信息。</p><p>社区是全球性的，2025 年后服务端每周发布，网站和 App 有简体中文，中国市场的商品覆盖一般，进口食品和大品牌罐头基本都有。</p><p>对 0210 它是延伸的数据源：0210 已有的 Grocy 和 Barcode Buddy 扫条码时就是从它拉商品名和营养信息，钢架上罐头一到货扫一下，名称、分量、热量自动进库存，再由 0801 数字孪生按每人每天两千大卡算出库存天数写到小白板；国内小厂的罐头查不到就当场拍照贡献上去，下次就有了。注意它是公共数据库，自家的保质期和存放层这些信息不在它那里，存进 Grocy。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0210.html" title="防灾食品"><i>0210</i>防灾食品</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Jack000/Deepnest" target="_blank" rel="noopener">Jack000/Deepnest</a>
+            <span class="stars">★ 1.1k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">SVGnest 作者做的桌面版排料软件：Electron 打包，支持 DXF 导入、多张板材、零件数量和旋转步进设置，用 C++ 加速</p>
+          <div class="rintro"><p>Deepnest 是 SVGnest 作者 Jack Qiao 做的桌面版排料软件，用 Electron 打包，核心几何计算改用 C++ 的 Minkowski 和加速，1.1k 星，Windows、macOS、Linux 都有安装包。它要解决的问题：网页版 SVGnest 不认 DXF、不能设零件数量、大批量跑得慢，Deepnest 把它做成能日常用的工具。</p><p>它的工作方式和 SVGnest 一脉相承：导入 SVG 或 DXF，左边列出识别到的零件，给每个零件填数量，指定哪一个是板材并填板材张数；设置零件间距、旋转步进（只允许 0 和 90 度，木纹就不会乱）；点开始后遗传算法在后台反复迭代，界面实时显示当前最好方案和利用率，觉得够好了随时停，导出成 SVG 或 DXF。C++ 算无碰撞多边形，速度比网页版快一个数量级。</p><p>生态上原仓库更新停滞多年，社区分叉 deepnest-next 在继续修 bug；界面只有英文，中文资料以创客论坛和视频为主。</p><p>对 0404 来说它是延伸项目：做一批十只 PSK 木盒，每只六块板，把 0204 设计台导出的 DXF 拖进来，每种板填数量 10，板材填 1220×2440 填 2 张，旋转只允许 0 和 90 度保证木纹一致，间距填锯缝 3 毫米，跑十分钟就知道两张板够不够。结果导成 DXF 给 0307 五轴机，或打印贴台锯旁按图切。它和 OpenCutList 分工：矩形直切用 OpenCutList，异形件用 Deepnest。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0404.html" title="木工间"><i>0404</i>木工间</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/steve-community/steve" target="_blank" rel="noopener">steve-community/steve</a>
+            <span class="stars">★ 1.1k</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Java 写的开源 OCPP 充电桩管理后台，2013 年起就是欧洲高校和运营商的参考实现，支持 OCPP 1.2 到 1.6</p>
+          <div class="rintro"><p>SteVe 是德国亚琛工业大学 2013 年发起的开源充电站管理系统，Java 和 Spring 写的，1.1k 星，名字来自德语的插座管理。它解决的问题是：公共充电桩都说 OCPP 这门标准协议，运营商需要一个后台来认桩、认卡、启停充电、收账单，SteVe 就是这个后台的开源版本，被很多大学、小运营商和研究项目直接拿去用，也是学习 OCPP 最好的一份活代码。</p><p>它的架构是：充电桩通过 WebSocket 连到 SteVe，按 OCPP 1.2 到 1.6 的消息集交换 BootNotification、StartTransaction、MeterValues 这些消息；SteVe 把桩、RFID 卡、交易记录存进 MySQL，网页后台可以远程启停充电、设置充电曲线、更新固件、看每笔交易的电量，也能当测试服务器验证桩的实现。</p><p>生态上它是 OCPP 社区里最老牌的开源服务器，商业版 Powerfill 由原团队维护；文档全英文，中文只有零散翻译博客。</p><p>对 0505 来说它是纯延伸：方案里的桩只是杉木柱上的一个计量插座，靠 HomeAssistant 断电就够，用不上 OCPP。但电摩之后如果家里添了一辆真正的电动车，就要换一根支持 OCPP 的 7kW 交流桩，那时候 0802 服务器上跑一个 SteVe，桩连过来，充电记录和电量就在自己手里，再把它的数据库读进 HA 就能延续现在那条光伏储能占比的通知。现在能先做的是用它理解 OCPP 的消息流，给将来的桩留一根网线。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0505.html" title="电摩充电桩"><i>0505</i>电摩充电桩</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="blk repo-tier" id="t3">
+    <h2><em>★</em> 1k 星以下 <small>6 个</small></h2>
+    <p class="tier-note">小而专的项目：恰好是这个需求的现成答案，用之前先看最近一次提交</p>
+    <div class="repo-table">
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/FarmBot/Farmbot-Web-App" target="_blank" rel="noopener">FarmBot/Farmbot-Web-App</a>
+            <span class="stars">★ 969</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">开源龙门架种菜机器人 FarmBot 的网页控制端和 REST API：拖拽排苗、序列编程、按株浇水除草，全部开源硬件</p>
+          <div class="rintro"><p>FarmBot 是美国 FarmBot 公司 2016 年众筹起家的开源种菜机器人，一台架在苗床上的 XYZ 龙门架，换头就能播种、浇水、除草、拍照，硬件图纸、固件、网页端全部开源。这个仓库是它的网页控制端和 REST API，TypeScript 和 Ruby 写的，969 星，2026 年 6 月还在发 15.27 版。它把家庭菜园变成可编程的东西：每棵植物有坐标，每个动作是一段可复用的序列。</p><p>它的工作方式是：网页里有一张苗床俯视图，把作物拖到格子上就定了坐标；序列编辑器像积木一样拼动作，移动到某坐标、开水阀几秒、拍照、读湿度探针，再用条件判断组合；定时任务按天安排序列。网页通过 MQTT 把指令发给树莓派上的 FarmBot OS，再由 Arduino 固件驱动步进电机。照片会和坐标对齐，可以做杂草检测。</p><p>生态上 FarmBot 卖整机套件，也有人打印零件复刻，论坛和文档完整；网页端有多语言翻译但没有中文。官方不鼓励自托管，直接用 my.farm.bot 也行。</p><p>在 0504 里它是延伸，架子本身不装龙门架，但它的两个思路值得直接抄：一是每个种植箱有坐标和作物记录，二是浇水序列由湿度读数触发而不是时间表，这正是方案里低于 40% 才浇的逻辑。可以照它的苗床图做一张 HomeAssistant 卡片，24 个箱子按层排开，点开每箱看作物、上次浇水和湿度。等哪天架子扩到第二座，想给番茄和罗勒按株给水，就真的可以在最上层架一根 FarmBot 的 X 轴。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0504.html" title="自动种植架"><i>0504</i>自动种植架</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/inaturalist/inaturalist" target="_blank" rel="noopener">inaturalist/inaturalist</a>
+            <span class="stars">★ 829</span>
+            <span class="zh ">界面有中文</span>
+          </div>
+          <p class="rdesc">全球最大的公民科学自然观察平台 iNaturalist 的 Rails 后端源码：拍照上传、AI 建议物种、社区专家复核、数据进 GBIF</p>
+          <div class="rintro"><p>iNaturalist 是加州科学院和国家地理学会联合运营的公民科学平台，全球有几百万用户、两亿多条观察记录，GitHub 上这个仓库是它网站的 Ruby on Rails 源码，829 星。它要解决的问题是：普通人在院子里看到一株植物或一只虫，怎么快速知道是什么，并且让这条记录对科学有用。</p><p>它的流程是：手机拍照上传，附带 GPS 和时间，计算机视觉模型给出几个候选物种，用户选一个，社区里的其他人再来认同或纠正，两人以上同意就升级为研究级记录，定期同步到全球生物多样性数据库 GBIF。源码包含整套网站、API 和物种分类树，模型本身不开源，但 API 对个人免费开放，可以查自己的全部观察记录。</p><p>生态方面它有 iOS 和 Android 客户端，界面支持简体中文，物种也有中文名；国内用户不少，观鸟和昆虫圈用得尤其多。姊妹应用 Seek 可以离线识别。</p><p>在 0503 里它是延伸：scene 里说拍一张今天的绣球，小程序记下第 38 天，这个记录本可以直接就是 iNaturalist。给花架上每盆植物拍一张上传，物种名自动有了，竹签上的名字不会写错；缸里冒出的不知名水草、紫苏叶上的毛虫、来喝水的壁虎都可以拍上去问社区。用它的 API 每周拉一次自己的观察记录，写进 0802 服务器，就能生成一份院子物种名单，和 0604 的鸟类识别名单合成一张卡片。注意上传时可以把位置模糊化，不必暴露家的坐标。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0503.html" title="盆栽"><i>0503</i>盆栽</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/danforthcenter/plantcv" target="_blank" rel="noopener">danforthcenter/plantcv</a>
+            <span class="stars">★ 804</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">美国丹佛斯植物科学中心做的植物表型图像分析 Python 库：从照片里量叶面积、绿色占比、株高、颜色分布</p>
+          <div class="rintro"><p>PlantCV 是美国 Donald Danforth 植物科学中心开发的植物表型图像分析库，用 Python 写，804 星，2026 年 6 月还在发 4.11 版。它面向的是科研温室里成千上万张植物照片：怎么自动把植物从背景里抠出来，量出面积、高度、颜色，而不是靠人眼一张张看。</p><p>它建在 OpenCV 之上，工作方式是一条可组合的流水线：读图、选颜色通道、阈值分割得到植物掩膜、去噪填洞，然后对掩膜做分析，输出面积、周长、凸包、颜色直方图等几十个指标，结果写成 JSON 和 CSV。它有一套并行工具能把同一条流水线批量跑在上万张图上，还有 Jupyter 里交互式调阈值的辅助函数。</p><p>生态上它是植物表型领域的标准工具之一，论文引用很多，文档和教程完整，官方有 Docker 镜像和 conda 包；社区以科研人员为主，中文资料只有零星的博客翻译。</p><p>在 0502 里它是延伸玩法，正好接住 scene 里那个每天同一角度拍一张的计划：0604 的广角机或一块 ESP32-CAM 每天中午对着砖墙拍一张，服务器上跑一条 PlantCV 流水线，先按门窗位置裁出墙面，再用 HSV 阈值分出绿色和红色像素，算出叶片覆盖率和秋季变红比例，写进 HomeAssistant 的两个传感器。七月覆盖率突破 90% 就是躺椅可以搬到墙根的信号，十月红色占比过半就该开始剪延时视频。注意阈值要按晴天和阴天分别调，最好先用它的交互工具在几张典型照片上试。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0502.html" title="爬山虎墙"><i>0502</i>爬山虎墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/imagej/ImageJ" target="_blank" rel="noopener">imagej/ImageJ</a>
+            <span class="stars">★ 780</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">美国 NIH 出品、公有领域的科学图像处理软件，三十年来生物学实验室的标配，阈值、测量、宏脚本、上千插件</p>
+          <div class="rintro"><p>ImageJ 是美国国立卫生研究院（NIH）的 Wayne Rasband 从 1997 年开始写的科学图像处理软件，Java 编写，代码放在公有领域，GitHub 上 780 星只是它的镜像，真实的用户量在生物医学实验室里几乎人手一份。它解决的是显微镜照片、凝胶条带、细胞计数这类科研图像的测量问题，后来被扩展到一切需要从图片里量东西的场景。</p><p>它的工作方式非常直白：打开图片，菜单里选颜色空间、拉阈值把目标区域选出来，Analyze 里点 Measure 就得到面积、平均灰度、周长；Set Scale 用一段已知长度标定比例尺之后，结果直接是厘米和平方厘米。所有操作都能录成宏，Batch 模式对整个文件夹跑一遍。它的扩展发行版 Fiji 打包了几百个插件，图像配准、三维重建、机器学习分割都有。</p><p>生态是它最大的资产：三十年的论文方法都写着用 ImageJ，image.sc 论坛非常活跃，插件和宏随手能搜到；中文没有官方文档，但高校课程和博客教程极多。</p><p>对 0502 来说它是 PlantCV 的免代码版本：想知道这面墙到底被爬山虎盖住多少，把 0604 摄像头拍的墙面照片拖进 ImageJ，先用门框宽度标定比例尺，Color Threshold 里把 Hue 限在绿色区间，Measure 一下，叶面覆盖的平方米数就出来了。录成宏之后一年的照片批量跑一遍，导出 CSV 画成曲线，看第一年能不能真的爬到 1.5 米。它也适合量墙脚种植带那 40 厘米里每株的冠幅，判断该不该补种。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0502.html" title="爬山虎墙"><i>0502</i>爬山虎墙</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/davidusb-geek/emhass" target="_blank" rel="noopener">davidusb-geek/emhass</a>
+            <span class="stars">★ 668</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">HomeAssistant 的能源优化插件：用线性规划结合光伏预测、负载预测和电价，算出电池充放和可推迟负载的最优时间表</p>
+          <div class="rintro"><p>EMHASS 全称 Energy Management for Home Assistant，是澳大利亚工程师 David 2021 年开源的 Python 项目，668 星，作为 HomeAssistant 加载项安装，2025 年仍在活跃更新。它解决的问题是：HomeAssistant 能看能控，但不会算；什么时候充电、什么时候开大功率负载最划算，需要一个真正的优化器。星数不高，但它是 HA 生态里这个位置上最成熟的答案。</p><p>它的工作方式是把一天切成若干时段，输入三样预测：光伏发电（可接 Solcast 或按天气公式估算）、家庭负载（从 HA 历史数据学）、电价或自定义成本，再加上电池容量、充放电功率上限和几个可推迟负载的功率与时长，交给 PuLP 线性规划求解，输出每个时段电池该充还是放、每个可推迟负载该在哪个时段开。结果通过 REST API 发回 HA 变成传感器，自动化按它执行。</p><p>生态上它有详细的英文文档和 HA 社区长帖，用户主要在澳洲和欧洲，中文资料几乎没有。</p><p>在 0703 里它是延伸：钓台电池 12V 100Ah 只有 1.2 度电，冬夜电热垫 40W 开五小时就吃掉两成。把 200W 板按朝向和 15 度倾角配成一个光伏预测，电池参数照实填，电热垫和夜钓灯充电设为可推迟负载，EMHASS 每天傍晚算一次：明天要是阴天，今晚电热垫只批两小时，HA 自动化到点断掉 12V 口并推送一句提示；晴天就随便用。这样电量低于 20% 的报警基本不会响。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0703.html" title="钓台照明与电源"><i>0703</i>钓台照明与电源</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/mr-manuel/venus-os_dbus-serialbattery" target="_blank" rel="noopener">mr-manuel/venus-os_dbus-serialbattery</a>
+            <span class="stars">★ 268</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Victron Venus OS 的第三方 BMS 驱动：串口或蓝牙读 JK、Daly、JBD 等国产 BMS，让自组磷酸铁锂电池进 Victron 生态</p>
+          <div class="rintro"><p>dbus-serialbattery 最早由 Louisvdw 发起，原仓库已归档，现在由 mr-manuel 接手维护并成为官方延续，268 星，是 Victron 用户自组电池时用得最多的驱动。它要解决的问题是：Victron 的 Venus OS 只认自家和少数品牌的电池，而 DIY 磷酸铁锂电池包用的都是 JK、Daly、JBD 这类国产 BMS，逆变器看不到电池状态就不敢放心充放。</p><p>它的工作方式是做翻译官：驱动跑在 Venus OS 上，通过 RS485、RS232、TTL 串口或蓝牙读取 BMS 的电压、电流、SOC、单体电压、温度和报警，再以 Victron 标准电池设备的形式挂到 D-Bus 上。于是 Venus OS 就像接了原厂电池，按驱动给出的充放电限制控制 MPPT 和逆变器，单体不均衡或温度过低时自动降流。</p><p>生态上它有独立文档站列出支持的 BMS 和接线，Victron 社区讨论很热；文档只有英文，国内 DIY 储能圈用 JK 配 Victron 的教程不少，几乎每月发版。</p><p>对 0304 来说它是延伸项目：现在的 2kWh 户外储能电源是一体机，用不上它；但木架上那两块备用磷酸铁锂如果有一天扩成 48V 自组电池包，走 Victron MPPT 加逆变器的路线，就要靠它把 JK BMS 接进 Venus OS，再经 MQTT 进 HomeAssistant，木架侧板上的小屏幕显示的就是真正的单体电压了。接线按文档来，蓝牙不如有线稳。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0304.html" title="光伏储能"><i>0304</i>光伏储能</a></div>
+      </div>
+    </div>
+  </section>
+  <nav class="pager"><span></span><a class="up" href="index.html">回首页</a><a href="refs.html">专门方案（105 个）→</a></nav>
+</article>
+
+</main>
+<footer class="foot">
+  <p><b>SurviveOs · 设想版</b>（模块 0901）——只在真实项目的区域/模块框架里放飞想象，<u>不代表真实进度、不构成施工依据</u>。真实进度以本地仓库 0002 清单为准。</p>
+  <p class="tiny">8 区域 · 46 个模块专题 · 插图为原创黑白钢笔速写（inline SVG）· 由 Claude 生成于 2026-09 · <a href="https://github.com/richardvane-droid/surviveos-vision">源码</a></p>
+</footer>
+
+</body>
+</html>
