@@ -1393,7 +1393,7 @@
      "nodes": [
       {
        "id": "stl",
-       "label": "STL 打印件\n拓竹打印",
+       "label": "STL 打印件\n自建机打印",
        "kind": "step",
        "col": 0,
        "row": 0

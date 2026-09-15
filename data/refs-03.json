@@ -117,7 +117,7 @@
     "zh": "无中文",
     "desc": "用 OpenSCAD 重写的 Gridfinity 收纳盒与底板参数化生成器，尺寸、分格、磁吸孔随便改",
     "why": "台面下两层浅抽屉的螺丝钉分格盒直接用它生成，交给 0305 的打印机打，格子想多大就多大，全屋统一 42mm 模数",
-    "intro": "Gridfinity 是 Zack Freedman 在 2022 年提出的开放收纳标准：42mm 见方的网格底板加上底部带斜角的模块盒，任何盒子都能在任何底板上卡住。kennetek 这个仓库是用 OpenSCAD 从零重写的参数化生成器，2.2k 星，是这个体系里最常被引用的代码实现，解决的是官方模型尺寸固定、而自家抽屉永远是奇怪尺寸的问题。\n工作方式很朴素：在 .scad 文件顶部改几个变量——网格数 gridx、gridy、高度 gridz、分格数、要不要磁铁孔和螺丝孔、标签条样式、底板类型——OpenSCAD 就实时生成实体，导出 STL 交给切片软件。库里分成盒、底板、省料薄壁的 lite 版和单壁花瓶模式几个模块。\n它是 Gridfinity 社区的公共底层，自定义器界面不写代码直接拖滑块，Printables 上成千上万的衍生件多数基于它。文档只有英文，但参数名一目了然，B 站有中文教程。\n在 0301 里它服务台面下那两层浅抽屉：先量抽屉内净尺寸，算出能放几乘几的网格，打一张底板铺进去，再按 M3、M4、木螺钉、扎带各生成一格；砂纸和刀片那层用 lite 版薄壁长盒。所有件送到 0305 的 P1S 打印，和 0401 抽屉柜用同一套模数。注意底板要留 0.5mm 余量，木抽屉冬夏会缩胀。",
+    "intro": "Gridfinity 是 Zack Freedman 在 2022 年提出的开放收纳标准：42mm 见方的网格底板加上底部带斜角的模块盒，任何盒子都能在任何底板上卡住。kennetek 这个仓库是用 OpenSCAD 从零重写的参数化生成器，2.2k 星，是这个体系里最常被引用的代码实现，解决的是官方模型尺寸固定、而自家抽屉永远是奇怪尺寸的问题。\n工作方式很朴素：在 .scad 文件顶部改几个变量——网格数 gridx、gridy、高度 gridz、分格数、要不要磁铁孔和螺丝孔、标签条样式、底板类型——OpenSCAD 就实时生成实体，导出 STL 交给切片软件。库里分成盒、底板、省料薄壁的 lite 版和单壁花瓶模式几个模块。\n它是 Gridfinity 社区的公共底层，自定义器界面不写代码直接拖滑块，Printables 上成千上万的衍生件多数基于它。文档只有英文，但参数名一目了然，B 站有中文教程。\n在 0301 里它服务台面下那两层浅抽屉：先量抽屉内净尺寸，算出能放几乘几的网格，打一张底板铺进去，再按 M3、M4、木螺钉、扎带各生成一格；砂纸和刀片那层用 lite 版薄壁长盒。所有件送到 0305 那台自建的 Voron 打印，和 0401 抽屉柜用同一套模数。注意底板要留 0.5mm 余量，木抽屉冬夏会缩胀。",
     "diagram": {
      "title": "Gridfinity Rebuilt · 参数生成收纳盒",
      "nodes": [
@@ -158,7 +158,7 @@
       },
       {
        "id": "p1s",
-       "label": "0305 P1S\n打印",
+       "label": "0305 Voron\n打印",
        "kind": "device",
        "col": 2,
        "row": 1
@@ -2074,22 +2074,22 @@
     "url": "https://github.com/OrcaSlicer/OrcaSlicer",
     "stars": "15.7k",
     "zh": "界面有中文",
-    "desc": "基于拓竹 Bambu Studio 二次开发的开源切片软件，自带校准流程，支持局域网直发",
-    "why": "地堡 0204 工作台装它切片，局域网直接推到阁楼的 P1S，不用来回跑，挂钩标牌批量打",
-    "intro": "OrcaSlicer 是由 SoftFever 发起、社区维护的开源切片软件，从拓竹 Bambu Studio 分叉而来，如今独立成组织，15.7k 星是切片软件里最活跃的开源项目之一。它解决的问题是：拓竹官方软件功能被绑定在自家生态里，而社区想要更细的参数控制和更多机型支持。\n切片软件的工作原理是把 STL 或 3MF 模型按层高切成一层层轮廓，再规划每层的墙线、填充、支撑路径，最后输出打印机能执行的 G 代码。OrcaSlicer 在这条流水线上加了很多实用件：内置温度塔、流量、压力提前、最大体积速度的校准流程，精确墙距和接缝控制，悬垂减速与树状支撑，以及拓竹、Prusa、Voron、创想三维等品牌的机型预设库。\n它支持局域网直连打印机，拓竹机型走本机 LAN 模式或云模式，Klipper、PrusaLink、OctoPrint 也能直发；界面自带简体中文，B 站和拓竹社区有大量中文教程，几乎每月一版。\n放进 0305 的流程里，它装在地堡 0204 的设计工作台上：把 P1S 设成 LAN 模式并填入访问码，切好挂钩、标牌、PSK 内衬后直接发送到阁楼打印机，同时在设备页看摄像头。要注意先用它的校准流程把每卷耗材的流量和温度跑一遍并存成耗材预设，和 Spoolman 里的卷号对上，否则木色 PLA 和白色 PLA 的参数混着用会拉丝。",
+    "desc": "开源切片软件，自带一整套校准流程，预设库里就有 Voron，支持直发 Klipper、PrusaLink 和 OctoPrint",
+    "why": "地堡 0204 工作台装它切片，拿 Voron 2.4 预设当起点，切完经 Moonraker 直发阁楼那台自建机",
+    "intro": "OrcaSlicer 是由 SoftFever 发起、社区维护的开源切片软件，从拓竹 Bambu Studio 分叉而来，如今独立成组织，15.7k 星，是切片软件里最活跃的开源项目之一。它解决的问题是：各家官方软件都被绑在自家生态里，而社区想要更细的参数控制和更广的机型支持。\n切片软件的工作原理是把 STL 或 3MF 模型按层高切成一层层轮廓，再规划每层的墙线、填充、支撑路径，最后输出打印机能执行的 G 代码。OrcaSlicer 在这条流水线上加了很多实用件：内置温度塔、流量、压力提前、最大体积速度的校准流程，精确墙距和接缝控制，悬垂减速与树状支撑，以及 Voron、Prusa、VzBot、RatRig、创想三维等机型的预设库。\n它支持局域网直连打印机，Klipper 走 Moonraker、Prusa 走 PrusaLink，OctoPrint 也能直发；界面自带简体中文，B 站和国内 DIY 社区有大量中文教程，几乎每月一版。\n放进 0305 的流程里，它装在地堡 0204 的设计工作台上：选 Voron 2.4 的机型预设当起点，按自己那台机的实际行程、喷嘴口径和腔温改一份，切好挂钩、标牌、PSK 内衬后经 Moonraker 直发阁楼，同时在设备页看摄像头。要注意自建机没有出厂预设，第一件事是用它的校准流程把流量、压力提前和最大体积速度逐项跑一遍并存成耗材预设，再和 Spoolman 里的卷号对上，否则木色和白色 PLA 混着用会拉丝。",
     "diagram": {
-     "title": "OrcaSlicer · 模型切成 G 代码直发打印机",
+     "title": "OrcaSlicer · 模型切成 G 代码直发自建机",
      "nodes": [
       {
        "id": "stl",
-       "label": "STL / 3MF 模型\n（0204 设计台）",
+       "label": "STL / 3MF\n模型",
        "kind": "file",
        "col": 0,
        "row": 0
       },
       {
        "id": "cal",
-       "label": "校准流程\n温度塔 / 流量",
+       "label": "校准流程\n流量 / 压力提前",
        "kind": "step",
        "col": 0,
        "row": 1
@@ -2103,7 +2103,7 @@
       },
       {
        "id": "preset",
-       "label": "机型 / 耗材预设",
+       "label": "Voron 机型\n耗材预设",
        "kind": "db",
        "col": 1,
        "row": 1
@@ -2117,14 +2117,14 @@
       },
       {
        "id": "gcode",
-       "label": "G 代码\n局域网直发",
+       "label": "G 代码",
        "kind": "file",
        "col": 2,
        "row": 0
       },
       {
-       "id": "p1s",
-       "label": "P1S 打印机\n（阁楼）",
+       "id": "voron",
+       "label": "Voron 2.4\n（阁楼自建）",
        "kind": "device",
        "col": 2,
        "row": 1
@@ -2160,8 +2160,8 @@
       ],
       [
        "gcode",
-       "p1s",
-       "LAN 模式"
+       "voron",
+       "直发"
       ],
       [
        "preset",
@@ -2172,10 +2172,239 @@
       [
        "gcode",
        "me",
-       "看设备页"
+       "设备页"
       ]
      ],
-     "usage": "0305：地堡切片 → 局域网直发阁楼 P1S，耗材预设与 Spoolman 卷号对应"
+     "usage": "0305：地堡切片 → Moonraker 直发阁楼自建机，耗材预设与 Spoolman 卷号对应"
+    }
+   },
+   {
+    "name": "Klipper3d/klipper",
+    "url": "https://github.com/Klipper3d/klipper",
+    "stars": "11.6k",
+    "zh": "有中文文档站",
+    "desc": "把运动规划搬到一台 Linux 电脑上的 3D 打印机固件：单片机只管步进脉冲，支持输入整形和压力提前",
+    "why": "自建那台 Voron 2.4 的固件就是它，klippy 跑在 0804 那台常驻 M1 Mac 上，全部参数集中在一个文本文件里",
+    "intro": "Klipper 是 Kevin O’Connor 发起的开源 3D 打印机固件，11.6k 星，Voron 全系、创想 K1 这类高速机型用的都是它或它的改版。它要解决的问题是：传统固件把 G 代码解析和运动规划都塞进一颗小单片机，算力不够就跑不快，也加不了复杂算法。\n它的做法是把大脑和手脚分开：一台 Linux 电脑跑 klippy 主程序，负责解析 G 代码、做运动规划和各种补偿，再把带时间戳的步进指令发给主板；主板上的单片机只烧一个很小的固件，按时间戳把脉冲打出去。因为规划放在大电脑上做，输入整形（抵消振纹）、压力提前（改善拐角）、共振测量、四丝杠自动调平都是 Python 模块，配置集中在一个 printer.cfg 文本文件里，改完重启就生效，不用重新编译固件。\n它本身不带界面，配 Mainsail 或 Fluidd 网页前端，中间隔一层 Moonraker API，HomeAssistant 也从这里接。官方文档站有完整的简体中文翻译，国内 Voron 社群和 B 站教程非常多，项目一直很活跃。\n在 0305 里它是自建那台 Voron 2.4 的固件：主板刷 MCU 固件，klippy 和 Moonraker 跑在 0804 那台常驻的 M1 Mac 上，工作站旁边挂一块小屏当面板。装完先跑一遍共振测量生成输入整形参数，再调压力提前，这两步是自建机能不能又快又干净的分水岭。坑是配置文件每一项都要自己填，第一次点火前把限位方向、热敏类型和热保护逐条核对一遍。",
+    "diagram": {
+     "title": "Klipper · M1 Mac 做大脑，单片机只管脉冲",
+     "nodes": [
+      {
+       "id": "gcode",
+       "label": "切片 G 代码",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cfg",
+       "label": "printer.cfg",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "klippy 主程序\n0804 M1 Mac",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "plan",
+       "label": "运动规划\n输入整形 / 压力提前",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "moon",
+       "label": "Moonraker API",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "mcu",
+       "label": "主板单片机\n带时间戳的步进",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "prn",
+       "label": "Voron 2.4\n自建打印机",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n开始 / 失败推送",
+       "kind": "screen",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "gcode",
+       "core"
+      ],
+      [
+       "cfg",
+       "core",
+       "读配置"
+      ],
+      [
+       "core",
+       "plan"
+      ],
+      [
+       "plan",
+       "mcu",
+       "USB"
+      ],
+      [
+       "mcu",
+       "prn"
+      ],
+      [
+       "core",
+       "moon"
+      ],
+      [
+       "moon",
+       "ha",
+       "",
+       "dash"
+      ],
+      [
+       "ha",
+       "me",
+       "推送"
+      ]
+     ],
+     "usage": "0305：klippy 跑在 M1 Mac 上做规划，主板只打脉冲，状态经 Moonraker 出到 HA"
+    }
+   },
+   {
+    "name": "VoronDesign/Voron-2",
+    "url": "https://github.com/VoronDesign/Voron-2",
+    "stars": "4.4k",
+    "zh": "无中文（国内社群有中文搭建长贴）",
+    "desc": "开源 CoreXY 打印机 Voron 2.4 的完整设计仓库：CAD 源文件、DXF 图纸、STL 打印件、装配手册和 BOM",
+    "why": "0305 那台机器就是照它搭的：按官方 BOM 配件、按手册一步步拧，机架尺寸和结构件全部来自这里",
+    "intro": "Voron 是 2015 年起做开源打印机设计的社区组织，Voron-2 仓库 4.4k 星，放的是旗下 Voron 2.4 这台机器的全套设计：CAD 源文件、DXF 图纸、STL 结构件、装配手册、固件配置和切片预设，许可 GPL-3.0。它要解决的不是卖机器，而是把一台高速、全封闭、可维护的打印机彻底摊开，让你自己买件自己拧。\n它的结构是 CoreXY：两条交叉皮带驱动打印头在 X、Y 平面上跑，电机固定在机身上不跟着动，惯量小所以能快；热床由四根丝杠同步升降，开机自动扫描床面并补偿倾斜；机身是铝型材骨架加板材封闭，腔温保得住，才敢打 ABS、ASA 这类会翘边的材料。仓库不卖整机，给的是一份可配置的 BOM，按 250、300、350 三种尺寸选件，其中一两百个结构件要自己打印。\n生态上 Voron 是 Klipper 固件最大的用户群，官方在线手册和 Discord 都很完整；设计本身已经定型，主仓库更新不频繁，但社区的改件仓库层出不穷。没有官方中文，不过矿石论坛、太极派和 B 站有大量中文搭建长贴和长视频，这也是选它而不是选成品机的原因之一。\n在 0305 里它就是主角的图纸来源：按 BOM 配型材和线性件，按手册的顺序装机架、龙门、打印头，再把它的切片预设导进 OrcaSlicer 当起点。要注意结构件必须用 ABS 打印，自己还没有机器时得先找代打或蹭朋友的机器，这是自建路线的第一道坎；另外它的机架尺寸要和工作站的型材截面一起算，别等机器装好才发现台面留窄了。",
+    "diagram": {
+     "title": "Voron 2.4 · 一份图纸变成一台机器",
+     "nodes": [
+      {
+       "id": "bom",
+       "label": "官方 BOM",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "stl",
+       "label": "ABS 结构件",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "Voron 2.4\nCAD + 装配手册",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "cxy",
+       "label": "CoreXY 运动\n四丝杠热床",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "encl",
+       "label": "全封闭腔体\n敢打 ABS",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "mach",
+       "label": "阁楼那台\n自建打印机",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "klip",
+       "label": "Klipper 固件\n配置模板",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "bom",
+       "core",
+       "配件"
+      ],
+      [
+       "stl",
+       "core",
+       "件"
+      ],
+      [
+       "core",
+       "cxy"
+      ],
+      [
+       "cxy",
+       "encl"
+      ],
+      [
+       "cxy",
+       "mach",
+       "装成"
+      ],
+      [
+       "encl",
+       "klip",
+       "",
+       "dash"
+      ],
+      [
+       "klip",
+       "mach",
+       "刷固件"
+      ],
+      [
+       "mach",
+       "me",
+       "开机"
+      ]
+     ],
+     "usage": "0305：按 BOM 和手册自己搭，结构件先代打，装完刷 Klipper"
     }
    },
    {
@@ -2184,14 +2413,14 @@
     "stars": "2.8k",
     "zh": "界面有中文",
     "desc": "自托管的 3D 打印耗材库存管理，记录每卷剩余克数、颜色、材质，带打印机集成",
-    "why": "8 格耗材架每卷登记进去，标签上的剩余克数不用手写，快用完自动提醒，防止囤太多",
-    "intro": "Spoolman 是瑞典开发者 Donkie 写的自托管 3D 打印耗材库存管理服务，2.8k 星，是 Klipper 圈里管理线材的事实标准。它解决的痛点很具体：家里十几卷线材，每卷还剩多少克、什么材质颜色，靠贴纸和记忆迟早乱掉。\n它的架构是一个 Python 后端加内置网页前端，用 Docker 一条命令跑起来，数据库可以用 SQLite 或 PostgreSQL。数据模型分三层：厂商、线材（材质、颜色、直径、密度、推荐温度）、线卷（初始重量、已用克数、所在位置、批号）。打印机每打完一个任务，通过 REST API 或 WebSocket 把消耗的克数回写，剩余量自动扣减；也支持手动称重校正。它还内置二维码标签设计器，扫码就能定位到那一卷；社区维护了一份公共线材数据库，常见品牌直接选。\n生态上 Moonraker、Fluidd、Mainsail 原生支持，Home Assistant 有集成，界面通过 Weblate 翻译，简体中文已完成九成以上。\n在 0305 里它跑在 0802 中枢的树莓派上，八格耗材架每卷登记一条，架子上的标签就打它生成的二维码；拓竹 P1S 不是 Klipper，扣减要绕一下：用 ha-bambulab 读到的每次打印耗材用量，在 HA 自动化里调 Spoolman 的 API 写回。坑是 AMS 里线卷切换时用量归属会串，最好每卷固定槽位。",
+    "why": "八格耗材架每卷登记进去，Moonraker 打完自动扣减，标签上的剩余克数不用手写，快用完自动提醒",
+    "intro": "Spoolman 是瑞典开发者 Donkie 写的自托管 3D 打印耗材库存管理服务，2.8k 星，是 Klipper 圈里管理线材的事实标准。它解决的痛点很具体：家里十几卷线材，每卷还剩多少克、什么材质颜色，靠贴纸和记忆迟早乱掉。\n它的架构是一个 Python 后端加内置网页前端，用 Docker 一条命令跑起来，数据库可以用 SQLite 或 PostgreSQL。数据模型分三层：厂商、线材（材质、颜色、直径、密度、推荐温度）、线卷（初始重量、已用克数、所在位置、批号）。打印机每打完一个任务，通过 REST API 或 WebSocket 把消耗的克数回写，剩余量自动扣减；也支持手动称重校正。它还内置二维码标签设计器，扫码就能定位到那一卷；社区维护了一份公共线材数据库，常见品牌直接选。\n生态上 Moonraker、Fluidd、Mainsail 原生支持，Home Assistant 有集成，界面通过 Weblate 翻译，简体中文已完成九成以上。\n在 0305 里它跑在 0804 那台常驻的 M1 Mac 上，八格耗材架每卷登记一条，架子上的标签就打它生成的二维码；自建的 Voron 2.4 跑 Klipper，Moonraker 自带 spoolman 组件，在 Mainsail 里选好线卷，每打完一单就按切片预估自动扣减，不用再绕一层自动化写回。坑是换料时忘了在界面里切线卷，用量会全记到上一卷头上，最好把切换动作写进换料宏；另外预估和实际总有偏差，每月称重校正一次。",
     "diagram": {
      "title": "Spoolman · 每卷线材的克数账本",
      "nodes": [
       {
-       "id": "ams",
-       "label": "P1S / AMS\n每次打印用量",
+       "id": "prn",
+       "label": "Voron 2.4\n每单预估用量",
        "kind": "device",
        "col": 0,
        "row": 0
@@ -2204,8 +2433,8 @@
        "row": 1
       },
       {
-       "id": "ha",
-       "label": "HA 自动化\n（ha-bambulab）",
+       "id": "moon",
+       "label": "Moonraker\nspoolman 组件",
        "kind": "step",
        "col": 1,
        "row": 0
@@ -2226,7 +2455,7 @@
       },
       {
        "id": "label",
-       "label": "二维码标签\n贴 8 格耗材架",
+       "label": "二维码标签",
        "kind": "file",
        "col": 2,
        "row": 0
@@ -2248,12 +2477,12 @@
      ],
      "edges": [
       [
-       "ams",
-       "ha",
+       "prn",
+       "moon",
        "用量"
       ],
       [
-       "ha",
+       "moon",
        "core",
        "API 扣减"
       ],
@@ -2282,221 +2511,8 @@
        "me"
       ]
      ],
-     "usage": "0305：ha-bambulab 读用量 → HA 调 API 扣减 → 耗材架标签与低量提醒"
+     "usage": "0305：Moonraker 读每单用量 → Spoolman 扣减 → 耗材架标签与低量提醒"
     }
-   },
-   {
-    "name": "greghesp/ha-bambulab",
-    "url": "https://github.com/greghesp/ha-bambulab",
-    "stars": "2.3k",
-    "zh": "界面有中文",
-    "desc": "拓竹打印机的 Home Assistant 集成，读进度、层数、温度、AMS 耗材，还能看摄像头",
-    "why": "P1S 接上它，开始、结束、失败自动推手机，躺帐篷里在 HA 上看第 47 层的摄像头画面",
-    "intro": "ha-bambulab 是 greghesp 发起、社区维护的拓竹打印机 Home Assistant 集成，2.3k 星，通过 HACS 安装，是把 X1、P1、A1 系列接进 HA 的事实方案。拓竹官方只给了自家 App 和 Bambu Studio，想让打印机和家里其他设备联动，就得靠它。\n它的工作原理是走拓竹打印机的 MQTT 通道：局域网模式下直接连打印机的本机 MQTT 端口，云模式下连拓竹云。打印机会不断推送一份包含当前层数、进度、剩余时间、喷头与热床温度、AMS 各槽耗材信息、风扇转速、错误码的状态报文，集成把它们解析成几十个 HA 实体；反向可以下发暂停、继续、停止、调温、开关灯的命令。摄像头也接进来了，P1 系列走它自带的低帧率流，X1 走 RTSP。\n社区非常活跃，Discord 有专门频道，几乎每月更新，翻译文件里自带简体中文，B 站上也有不少中文安装教程。\n在 0305 里它是打印机和这套系统之间的桥：开始、结束、失败推送到手机，摄像头画面贴到 0802 中枢大屏上，AMS 槽位的耗材用量回写给 Spoolman 扣减，柜顶排风扇跟着打印状态自动启停，打完再延时十分钟。要注意 P1S 用局域网模式需要在打印机上开启并填入访问码，固件大版本更新后偶尔会断连，更新集成即可。",
-    "diagram": {
-     "title": "ha-bambulab · 打印机状态进 HA",
-     "nodes": [
-      {
-       "id": "p1s",
-       "label": "P1S 打印机\nMQTT 状态报文",
-       "kind": "device",
-       "col": 0,
-       "row": 0
-      },
-      {
-       "id": "cam",
-       "label": "机内摄像头",
-       "kind": "sensor",
-       "col": 0,
-       "row": 1
-      },
-      {
-       "id": "core",
-       "label": "ha-bambulab\n解析成实体",
-       "kind": "core",
-       "col": 1,
-       "row": 0
-      },
-      {
-       "id": "ha",
-       "label": "HA 自动化",
-       "kind": "step",
-       "col": 1,
-       "row": 1
-      },
-      {
-       "id": "phone",
-       "label": "手机推送\n开始 / 结束 / 失败",
-       "kind": "screen",
-       "col": 2,
-       "row": 0
-      },
-      {
-       "id": "fan",
-       "label": "柜顶排风扇\n延时 10 分钟",
-       "kind": "device",
-       "col": 2,
-       "row": 1
-      },
-      {
-       "id": "big",
-       "label": "0802 大屏\n摄像头画面",
-       "kind": "screen",
-       "col": 2,
-       "row": 2
-      },
-      {
-       "id": "me",
-       "label": "帐篷里的人",
-       "kind": "person",
-       "col": 3,
-       "row": 0
-      }
-     ],
-     "edges": [
-      [
-       "p1s",
-       "core",
-       "LAN 模式"
-      ],
-      [
-       "cam",
-       "core",
-       "画面"
-      ],
-      [
-       "core",
-       "ha",
-       "层数 / 状态"
-      ],
-      [
-       "ha",
-       "phone"
-      ],
-      [
-       "ha",
-       "fan",
-       "跟打印启停"
-      ],
-      [
-       "ha",
-       "big",
-       "",
-       "dash"
-      ],
-      [
-       "phone",
-       "me"
-      ]
-     ],
-     "usage": "0305：P1S 状态 → HA 实体 → 手机推送、排风扇联动、AMS 用量回写 Spoolman"
-    }
-   },
-   {
-    "name": "Klipper3d/klipper",
-    "url": "https://github.com/Klipper3d/klipper",
-    "stars": "11.6k",
-    "zh": "有中文文档站",
-    "desc": "把运动规划搬到树莓派上的 3D 打印机固件：单片机只管步进脉冲，支持输入整形、压力提前和多 MCU",
-    "why": "拓竹 P1S 是封闭固件，但读懂 Klipper 就读懂了现代打印机为什么快；哪天想用 0307 的 CNC 平台改一台大尺寸打印机，固件就选它",
-    "intro": "Klipper 是 Kevin O’Connor 发起的开源 3D 打印机固件，11.6k 星，Voron、Creality K1 等高速打印机的固件都是它或它的改版。它要解决的问题是：传统固件把 G 代码解析和运动规划都塞进一颗小单片机，算力不够就跑不快、加不了高级算法。\n它的工作方式是把大脑和手脚分开：一台树莓派或类似的 Linux 小电脑跑 klippy 主程序，负责解析 G 代码、做运动规划和各种补偿；打印机主板上的单片机只烧一个很小的固件，接收带时间戳的步进指令并执行。因为规划在大电脑上做，输入整形（抵消振纹）、压力提前（改善拐角）、自动床网都是 Python 模块，配置是一个文本文件，改完重启生效。\n生态上它不带界面，配 Mainsail 或 Fluidd 网页前端，再加 Moonraker API 就能接 HomeAssistant；官方文档站有完整简体中文翻译，国内 Voron 社群和 B 站教程非常多，项目持续活跃。\n对 0305 来说它是延伸项目：柜面上的拓竹 P1S 固件封闭，不用改；但读一遍 Klipper 的输入整形和压力提前文档，就能理解 P1S 为什么要做振动校准，切片参数怎么和它对应。更实际的用法是：0307 那套 2020 型材龙门平台哪天想变成一台 300 见方的大尺寸打印机，主板刷 Klipper，klippy 跑在 0802 服务器上，Moonraker 接进 HomeAssistant，推送和现在的 P1S 一样。",
-    "diagram": {
-     "title": "Klipper · 树莓派做大脑，单片机只管脉冲",
-     "nodes": [
-      {
-       "id": "gcode",
-       "label": "切片 G 代码\n局域网推送",
-       "kind": "file",
-       "col": 0,
-       "row": 0
-      },
-      {
-       "id": "cfg",
-       "label": "printer.cfg\n文本配置",
-       "kind": "file",
-       "col": 0,
-       "row": 1
-      },
-      {
-       "id": "core",
-       "label": "klippy 主程序\n树莓派 / 服务器",
-       "kind": "core",
-       "col": 1,
-       "row": 0
-      },
-      {
-       "id": "plan",
-       "label": "运动规划\n输入整形 / 压力提前",
-       "kind": "step",
-       "col": 1,
-       "row": 1
-      },
-      {
-       "id": "moon",
-       "label": "Moonraker API\nMainsail 前端",
-       "kind": "step",
-       "col": 1,
-       "row": 2
-      },
-      {
-       "id": "mcu",
-       "label": "主板单片机\n带时间戳的步进",
-       "kind": "device",
-       "col": 2,
-       "row": 0
-      },
-      {
-       "id": "prn",
-       "label": "0307 平台改的\n大尺寸打印机",
-       "kind": "device",
-       "col": 2,
-       "row": 1
-      },
-      {
-       "id": "ha",
-       "label": "HomeAssistant\n开始 / 失败推送",
-       "kind": "screen",
-       "col": 2,
-       "row": 2
-      }
-     ],
-     "edges": [
-      [
-       "gcode",
-       "core"
-      ],
-      [
-       "cfg",
-       "core",
-       "读配置"
-      ],
-      [
-       "core",
-       "plan"
-      ],
-      [
-       "plan",
-       "mcu",
-       "串口 / USB"
-      ],
-      [
-       "mcu",
-       "prn"
-      ],
-      [
-       "core",
-       "moon"
-      ],
-      [
-       "moon",
-       "ha",
-       "",
-       "dash"
-      ]
-     ],
-     "usage": "0305：先读懂 P1S 为什么要振动校准；再把 0307 龙门平台改成大尺寸打印机时选它"
-    },
-    "ext": true
    },
    {
     "name": "OctoPrint/OctoPrint",
@@ -2504,8 +2520,8 @@
     "stars": "9k",
     "zh": "界面有中文",
     "desc": "3D 打印机的网页远程控制台：上传文件、看进度、看摄像头、装插件，Python 写的老牌树莓派方案",
-    "why": "P1S 的远程监控靠拓竹自家云，OctoPrint 是开源世界里同一件事的标杆，读懂它的插件体系就知道打印机远程监控该长什么样",
-    "intro": "OctoPrint 是德国开发者 Gina Häußge 从 2012 年起维护的开源打印机远程控制软件，用 Python 写成，9k 星，2026 年 6 月还发了 1.11.8 版。它要解决的问题：打印机拴着一台电脑太浪费，树莓派上的一个网页就能远程上传、启动、监看和急停。\n它的工作方式是串口加网页：树莓派通过 USB 连打印机，OctoPrint 把 G 代码逐行发过去，同时解析温度回报，在网页上画温度曲线、显示进度和剩余时间，接一个摄像头就能看实时画面并自动生成延时视频。它最大的特点是插件系统：官方仓库有几百个插件，从床面调平可视化到远程访问和 AI 失败检测都有；HomeAssistant 有官方 OctoPrint 集成，进度、温度和急停按钮直接进仪表盘。\n生态上 OctoPi 镜像烧进树莓派就能用，教程极多，界面有社区中文语言包；项目靠赞助维持，持续更新。\n对 0305 来说它是延伸项目：柜面上的拓竹 P1S 走自家协议，有 ha-bambulab 就够，不需要它；它的价值在两处。一是学习：看一个成熟的打印机监控该有什么——温度曲线、摄像头延时、失败检测、推送，这是设想里那块小屏幕和 HA 通知的参考答案。二是备用：如果耗材架旁再添一台老式串口打印机，或 0307 平台改成的打印机不跑 Klipper，把 OctoPrint 装进 0802 服务器的一个容器，USB 拉一根线过去，HA 集成一加，和 P1S 并排出现在同一个仪表盘上。",
+    "why": "自建机已经有 Klipper 加 Mainsail，用不上它；但它是打印机远程监控这件事的开山标杆，读懂它的插件体系就知道一块监看面板该有什么",
+    "intro": "OctoPrint 是德国开发者 Gina Häußge 从 2012 年起维护的开源打印机远程控制软件，用 Python 写成，9k 星，2026 年 6 月还发了 1.11.8 版。它要解决的问题：打印机拴着一台电脑太浪费，树莓派上的一个网页就能远程上传、启动、监看和急停。\n它的工作方式是串口加网页：树莓派通过 USB 连打印机，OctoPrint 把 G 代码逐行发过去，同时解析温度回报，在网页上画温度曲线、显示进度和剩余时间，接一个摄像头就能看实时画面并自动生成延时视频。它最大的特点是插件系统：官方仓库有几百个插件，从床面调平可视化到远程访问和 AI 失败检测都有；HomeAssistant 有官方 OctoPrint 集成，进度、温度和急停按钮直接进仪表盘。\n生态上 OctoPi 镜像烧进树莓派就能用，教程极多，界面有社区中文语言包；项目靠赞助维持，持续更新。\n对 0305 来说它是延伸项目：自建的 Voron 2.4 跑 Klipper，日常界面是 Mainsail，不需要它；它的价值在两处。一是学习：看一个成熟的打印机监控该有什么——温度曲线、摄像头延时、失败检测、推送，这是工作站那块小屏和 HA 通知的参考答案。二是备用：如果 0301 那边收来一台老式串口打印机，或者代打阶段借来的机器不跑 Klipper，把 OctoPrint 装进 0804 的一个容器，USB 拉一根线过去，HA 集成一加，就和自建机并排出现在同一个仪表盘上。",
     "diagram": {
      "title": "OctoPrint · 一块树莓派远程管打印机",
      "nodes": [
@@ -2546,7 +2562,7 @@
       },
       {
        "id": "prn",
-       "label": "串口打印机\n非拓竹机型",
+       "label": "串口打印机\n非 Klipper 机型",
        "kind": "device",
        "col": 2,
        "row": 2
@@ -2600,7 +2616,7 @@
        "推送"
       ]
      ],
-     "usage": "0305：作 P1S 之外第二台串口打印机的远程台，和 ha-bambulab 并排进 HA 仪表盘"
+     "usage": "0305：作自建机之外第二台串口打印机的远程台，和 Mainsail 并排进 HA"
     },
     "ext": true
    },
@@ -2611,7 +2627,7 @@
     "zh": "界面有中文",
     "desc": "Prusa 维护的开源切片器：OrcaSlicer 和拓竹 Studio 的共同祖先，树状支撑、可变层高、多材料涂色",
     "why": "0305 已经选了 OrcaSlicer，但它和拓竹 Studio 都是从 PrusaSlicer 分叉的；读懂上游才明白切片参数的来龙去脉，也多一条备用切片路线",
-    "intro": "PrusaSlicer 是捷克 Prusa Research 公司维护的开源切片软件，从 Slic3r 分叉而来，用 C++ 写成，9.1k 星，2026 年 5 月发布 2.9.5 版。它要解决的问题是把 3D 模型变成打印机能执行的 G 代码，并在这一步决定强度、速度、表面质量和耗材用量。\n它的工作方式是模型进、G 代码出：导入 STL、3MF 或 STEP 后，先做摆放、缩放、切割和修复，再按层高把模型切成一层层轮廓，为每层生成外墙、内墙、填充、支撑和顶底面路径，最后按打印机配置输出 G 代码并逐层预览走线和时间。它带来的很多功能后来成了行业标配：有机树状支撑、可变层高、熨烫、涂色分区多材料、按区域改参数的修改器，以及联网直接把任务发给打印机。\n生态上它是 OrcaSlicer、拓竹 Studio、SuperSlicer 的共同上游，几乎所有厂商都提供 PrusaSlicer 配置文件，界面自带简体中文，中文教程很多；Prusa 公司持续投入，版本更新稳定。\n对 0305 来说它是延伸项目：日常切片继续用 OrcaSlicer 给 P1S 推任务，但某个参数看不懂时，去 PrusaSlicer 的官方知识库查同名参数，那里解释最完整，因为参数就是从这里来的。实际用途有二：地堡 0204 设计台装一份当第二意见，同一个 PSK 内衬模型用两个切片器各切一遍，比支撑用量和预计时长，选省耗材的那版；再给全屋小配件建一个 3MF 项目库，连打印参数一起存，下次再打挂钩不用重新调。",
+    "intro": "PrusaSlicer 是捷克 Prusa Research 公司维护的开源切片软件，从 Slic3r 分叉而来，用 C++ 写成，9.1k 星，2026 年 5 月发布 2.9.5 版。它要解决的问题是把 3D 模型变成打印机能执行的 G 代码，并在这一步决定强度、速度、表面质量和耗材用量。\n它的工作方式是模型进、G 代码出：导入 STL、3MF 或 STEP 后，先做摆放、缩放、切割和修复，再按层高把模型切成一层层轮廓，为每层生成外墙、内墙、填充、支撑和顶底面路径，最后按打印机配置输出 G 代码并逐层预览走线和时间。它带来的很多功能后来成了行业标配：有机树状支撑、可变层高、熨烫、涂色分区多材料、按区域改参数的修改器，以及联网直接把任务发给打印机。\n生态上它是 OrcaSlicer、拓竹 Studio、SuperSlicer 的共同上游，几乎所有厂商都提供 PrusaSlicer 配置文件，界面自带简体中文，中文教程很多；Prusa 公司持续投入，版本更新稳定。\n对 0305 来说它是延伸项目：日常切片继续用 OrcaSlicer 给自建的 Voron 推任务，但某个参数看不懂时，去 PrusaSlicer 的官方知识库查同名参数，那里解释最完整，因为参数就是从这里来的。实际用途有二：地堡 0204 设计台装一份当第二意见，同一个 PSK 内衬模型用两个切片器各切一遍，比支撑用量和时长，选省耗材的那版；再给全屋小配件建一个 3MF 项目库，连参数一起存，下次再打挂钩不用重调。",
     "diagram": {
      "title": "PrusaSlicer · 切片器家族的上游",
      "nodes": [
@@ -2659,7 +2675,7 @@
       },
       {
        "id": "p1s",
-       "label": "拓竹 P1S\n局域网推送",
+       "label": "Voron 2.4\nMoonraker 推送",
        "kind": "device",
        "col": 2,
        "row": 1
@@ -2712,20 +2728,127 @@
      "usage": "0305：日常用 OrcaSlicer，查参数和做第二意见时用上游 PrusaSlicer 对比切片"
     },
     "ext": true
+   },
+   {
+    "name": "mainsail-crew/mainsail",
+    "url": "https://github.com/mainsail-crew/mainsail",
+    "stars": "2.2k",
+    "zh": "界面有简体中文",
+    "desc": "Klipper 的网页控制台：温度曲线、点动、G 代码 3D 预览、床网热力图、摄像头和宏，全在浏览器里",
+    "why": "Klipper 本身不带界面，自建那台 Voron 的日常操作全靠它；工作站小屏和帐篷里的手机刷的是同一个页面",
+    "ext": true,
+    "intro": "Mainsail 是 mainsail-crew 维护的 Klipper 网页前端，用 Vue 写成，2.2k 星，和 Fluidd 一起是 Klipper 世界里两个主流界面。它解决的问题很直接：Klipper 只给固件和 API，没有任何界面，机器装好之后你需要一个能上传文件、点动、看温度、改配置的地方。\n它的工作方式是纯前端加一层 API：klippy 主程序通过一个本地套接字暴露能力，Moonraker 把它包成 HTTP 和 WebSocket 接口，Mainsail 只是跑在浏览器里的单页应用，连上 Moonraker 就成了机器的仪表盘。界面上有温度曲线与预设、各轴点动、G 代码文件管理、逐层 3D 刀路预览、床网热力图、打印历史统计、宏按钮、多摄像头与延时视频、带语法高亮的配置编辑器，还能管打印队列。\n安装用 KIAUH 脚本或 MainsailOS 镜像一条龙，文档站完整，社区在 Discord；界面通过 Weblate 翻译成十几种语言，简体中文可用，国内 Voron 社群基本人手一份，更新很勤。\n在 0305 里它是这台自建机的日常操作面板：klippy 和 Moonraker 跑在 0804 那台常驻 M1 Mac 上，工作站旁边挂一块小屏常开着它，人在帐篷里也能用手机刷同一个页面看第几层。作为延伸，它的宏按钮最值得利用——把换料、清喷头、抽接屑盘前的归位动作各做成一颗按钮，省得每次翻文档；另外它只是前端，安全兜底还是在固件和硬件上，别指望网页急停。",
+    "diagram": {
+     "title": "Mainsail · 浏览器就是机器的仪表盘",
+     "nodes": [
+      {
+       "id": "klip",
+       "label": "Klipper klippy\n0804 M1 Mac",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cam",
+       "label": "腔内摄像头\n看层数",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "moon",
+       "label": "Moonraker\nHTTP / WebSocket",
+       "kind": "step",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "Mainsail\n单页网页应用",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "macro",
+       "label": "宏按钮\n换料 / 归位",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "scr",
+       "label": "工作站小屏\n常开",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "phone",
+       "label": "手机浏览器\n帐篷里看层数",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "klip",
+       "moon"
+      ],
+      [
+       "cam",
+       "moon",
+       "视频流"
+      ],
+      [
+       "moon",
+       "core",
+       "API"
+      ],
+      [
+       "macro",
+       "core",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "scr"
+      ],
+      [
+       "core",
+       "phone"
+      ],
+      [
+       "phone",
+       "me",
+       "看层数"
+      ]
+     ],
+     "usage": "0305：klippy → Moonraker → Mainsail，工作站小屏和手机看同一块面板"
+    }
    }
   ],
   "xhs": [
    {
-    "keyword": "拓竹 P1S 打印机 桌面",
-    "note": "看封闭式打印机放矮柜的摆法和周边收纳"
+    "keyword": "3D打印机工作台 占地0.5m²",
+    "note": "看铝型材工作站的占地布局和层板分配，侧板和高度两个坑要改掉"
+   },
+   {
+    "keyword": "Voron 2.4 自建 搭建",
+    "note": "看从一堆型材拧成整机的过程记录，判断自己要花多久"
    },
    {
     "keyword": "3D打印 耗材架 收纳",
     "note": "看 PLA 按颜色排开做成装饰墙的效果"
-   },
-   {
-    "keyword": "3D打印机 排风 管道",
-    "note": "看打印机顶部接排风管到窗边的走管做法"
    }
   ]
  },
@@ -3249,19 +3372,232 @@
   "id": "0307",
   "github": [
    {
+    "name": "bdring/FluidNC",
+    "url": "https://github.com/bdring/FluidNC",
+    "stars": "2.5k",
+    "zh": "无中文",
+    "desc": "跑在 ESP32 上的 Grbl 系 CNC 固件：六轴、YAML 配置不用重新编译、自带 Wi-Fi 网页控制和 SD 卡脱机运行",
+    "why": "三轴用一块几十块的 ESP32 板就够；改轴参数只改 YAML 不用重编译，两条待定路线可以各存一份配置随时切",
+    "intro": "FluidNC 是 Bart Dring 主导的开源 CNC 运动控制固件，从 Grbl_ESP32 演化而来，用 C++ 写成，2.5k 星，2026 年 4 月发布 4.0.3 版。它要解决的问题是：Grbl 只能跑三轴、改引脚要重新编译，而 ESP32 便宜又自带无线，FluidNC 把 Grbl 的成熟运动核心搬到 ESP32 上，并把所有配置改成一个 YAML 文件。\n它的工作方式是固件加配置文件：把编译好的固件烧进 ESP32，再上传一个 config.yaml，写清楚轴数、步进引脚、限位、步距、主轴类型和探针，重启就按新配置运行。它兼容 Grbl 的串口协议和 G 代码，cncjs、bCNC 都能直接用；自带 Wi-Fi 和 WebUI，浏览器就能上传、运行、点动，G 代码还能放 SD 卡脱机跑。\n生态上有 6-Pack 等配套控制板，Discord 社区活跃，Wiki 完整但只有英文，中文资料零散；更新勤快。\n对 0307 来说它是两个候选控制器之一：三轴不需要复杂运动学，FluidNC 加一块 ESP32 就能跑完 XYZ、限位、探针和 RS485 主轴。它最贴合本模块现状的地方是配置即文件——木 / 亚克力路线和铝路线的丝杠步距、进给、加速度和主轴类型差别很大，各写一份 config.yaml，试切时换文件重启就换了一台机器的性格，不用等主材拍板才动手。坑是 ESP32 引脚有限，外设一多就不够用；门磁急停必须走硬件输入，别依赖 WebUI 按钮。",
+    "diagram": {
+     "title": "FluidNC · ESP32 上的 Grbl，改配置不用重编译",
+     "nodes": [
+      {
+       "id": "yaml",
+       "label": "config.yaml",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "gcode",
+       "label": "G 代码",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "FluidNC\nESP32 固件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "web",
+       "label": "自带 WebUI\nWi-Fi 控制",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ser",
+       "label": "Grbl 串口协议\ncncjs / bCNC",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "step",
+       "label": "步进驱动\n三轴够用",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "vfd",
+       "label": "VFD 主轴\nRS485",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "mach",
+       "label": "0307 三轴龙门\nXYZ + 主轴",
+       "kind": "device",
+       "col": 2,
+       "row": 2
+      }
+     ],
+     "edges": [
+      [
+       "yaml",
+       "core",
+       "上传"
+      ],
+      [
+       "gcode",
+       "core"
+      ],
+      [
+       "core",
+       "web"
+      ],
+      [
+       "core",
+       "ser",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "step",
+       "脉冲"
+      ],
+      [
+       "core",
+       "vfd",
+       "Modbus"
+      ],
+      [
+       "step",
+       "mach"
+      ]
+     ],
+     "usage": "0307：两条路线各存一份 config.yaml，换文件重启就换一台机器的性格"
+    }
+   },
+   {
+    "name": "grblHAL/core",
+    "url": "https://github.com/grblHAL/core",
+    "stars": "489",
+    "zh": "无中文",
+    "desc": "grbl 的 32 位重写版核心，支持 Teensy、STM32、ESP32 等十几种主控板，靠插件加网口、Modbus 和探针",
+    "why": "另一条控制路线：Teensy 4.1 跑它，脉冲快、插件全，Modbus 调 VFD、探针测刀长、门磁做安全门都是现成的",
+    "intro": "grblHAL 是挪威开发者 Terje Io 把经典的 Arduino 版 grbl 重写到 32 位平台的项目，core 仓库 489 星，加上各板卡驱动仓库是一大家子。原版 grbl 只能跑三轴、只支持 8 位 AVR，而桌面 CNC 早就需要更快的脉冲、更多外设和网口。\n它的架构是核心加驱动加插件：核心负责 G 代码解析、轨迹规划、加减速与前瞻；驱动层适配 Teensy 4.1、STM32、ESP32、RP2040 等十几种 MCU；插件可以加 SD 卡、以太网、WebUI、主轴 Modbus、探针和自定义 M 代码。步进脉冲最高 300kHz，比原版高一个量级，配大导程丝杠和高细分驱动时余量很足；虽然最多能开到六轴，但本模块三轴就够。2026 年仍在更新，官网勾选板子和功能就能在线编译固件。\n上位机用 ioSender、cncjs 或 Candle；没有官方中文文档，但 grbl 系教程基本通用。\n在 0307 里它是两个候选控制器之一，也是更硬核的那个：Teensy 4.1 配一块 grblHAL 扩展板，XYZ 三路闭环步进，Modbus 插件调 VFD 转速，门磁接安全门输入，探针接刀长和 Z 零点测量。选它还是选 FluidNC 取决于主材：走铝路线时脉冲余量和硬件安全输入更要紧，grblHAL 更稳；走木 / 亚克力路线，FluidNC 改 YAML 更省事。坑是每种板子的引脚映射要按对应驱动仓库来，别照抄别人的接线图；软限位和回零方向第一次点火前逐条核对。",
+    "diagram": {
+     "title": "grblHAL · 三轴 + 变频主轴的硬核控制",
+     "nodes": [
+      {
+       "id": "gcode",
+       "label": "三轴 G 代码",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sender",
+       "label": "cncjs / ioSender\n机旁小主机",
+       "kind": "screen",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "door",
+       "label": "门磁 + 刀长探针",
+       "kind": "device",
+       "col": 0,
+       "row": 2
+      },
+      {
+       "id": "core",
+       "label": "grblHAL\nTeensy 4.1",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "plug",
+       "label": "插件：Modbus\n以太网 / 探针",
+       "kind": "step",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "step",
+       "label": "闭环步进 ×3\nX / Y / Z",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "vfd",
+       "label": "VFD 变频主轴",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "gcode",
+       "sender"
+      ],
+      [
+       "sender",
+       "core",
+       "USB"
+      ],
+      [
+       "door",
+       "core",
+       "门开即停"
+      ],
+      [
+       "plug",
+       "core",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "step",
+       "脉冲"
+      ],
+      [
+       "core",
+       "vfd",
+       "调速"
+      ],
+      [
+       "vfd",
+       "me"
+      ]
+     ],
+     "usage": "0307：Teensy 4.1 跑 grblHAL，三路闭环步进 + Modbus 主轴 + 门磁硬件急停"
+    }
+   },
+   {
     "name": "LinuxCNC/linuxcnc",
     "url": "https://github.com/LinuxCNC/linuxcnc",
     "stars": "2.3k",
     "zh": "无中文",
-    "desc": "老牌开源运动控制系统，驱动铣床、车床、机械臂，支持复杂运动学",
-    "why": "哪天真要上五轴联动，只有它有现成的五轴运动学和刀尖跟随（TCP）",
-    "intro": "LinuxCNC 是有二十五年历史的开源运动控制系统，前身是美国 NIST 的 EMC 项目，2.3k 星，2026 年 7 月刚发 2.9.10 版。它解决的是把一台普通 PC 变成真正的工业级数控系统：铣床、车床、等离子、机械臂、六足平台都能驱动，而且运动学可以自己写。\n它的架构分三层：底层是打了实时补丁的 Linux 内核，保证步进脉冲和伺服环以微秒级周期稳定输出；中间是 HAL 硬件抽象层，把并口引脚、Mesa FPGA 卡、以太网伺服都抽象成可以用配置文件互相连线的信号；上层是 G 代码解释器、轨迹规划器和 Axis、Gmoccapy 这些操作界面。多轴联动是它的强项：五轴需要的旋转轴运动学模块和刀尖跟随（TCP）功能已经内置，刀具绕着旋转轴摆动时刀尖在工件上的轨迹仍然准确，这是 grbl 系固件做不到的。\n生态成熟，论坛活跃，文档正在通过 Weblate 做多语言翻译，国内也有不少用它改老铣床的帖子，但完整中文文档还没有。\n在 0307 里它是第二阶段的备选：先用 grblHAL 做 3+2 定位，哪天要铣真正的曲面，就在型材柜里换一台装 LinuxCNC 的小主机加 Mesa 7i96 卡，步进驱动和限位不用动。坑是它对主机实时性要求高，迷你 PC 要先跑延迟测试，并且无线网卡最好禁用。",
+    "desc": "老牌开源运动控制系统，把一台普通 PC 变成工业级数控：实时内核 + HAL 硬件抽象 + 可自定义运动学",
+    "why": "三轴阶段用不上，但它是这台机器的升级终点——哪天换闭环伺服、加光栅尺或要真正的曲面联动，只有它接得住",
+    "intro": "LinuxCNC 是有二十五年历史的开源运动控制系统，前身是美国 NIST 的 EMC 项目，2.3k 星，2026 年 7 月刚发 2.9.10 版。它解决的是把一台普通 PC 变成真正的工业级数控系统：铣床、车床、等离子、机械臂、六足平台都能驱动，而且运动学可以自己写。\n它的架构分三层：底层是打了实时补丁的 Linux 内核，保证步进脉冲和伺服环以微秒级周期稳定输出；中间是 HAL 硬件抽象层，把并口引脚、Mesa FPGA 卡、以太网伺服都抽象成可以用配置文件互相连线的信号；上层是 G 代码解释器、轨迹规划器和 Axis、Gmoccapy 这些操作界面。对一台三轴机来说它的价值是余量：前瞻段数、加加速度控制、刚性攻丝、闭环伺服与光栅尺反馈都是现成的，而这些正是 Grbl 系固件够不着的地方。\n生态成熟，论坛活跃，文档正在通过 Weblate 做多语言翻译，国内也有不少用它改老铣床的帖子，但完整中文文档还没有。\n在 0307 里它是第二阶段的备选：先用 grblHAL 或 FluidNC 把三轴跑起来，等主切材料拍板、机器定型之后，如果走的是铝路线并且想换闭环伺服、上更高的切削参数，就在机旁换一台装 LinuxCNC 的小主机加 Mesa 7i96 卡，导轨、丝杠和限位全都不用动。坑是它对主机实时性要求高，迷你 PC 要先跑延迟测试，无线网卡最好禁用；另外它的配置是一整套文件而不是一个 YAML，第一次搭要花掉几个晚上，别在赶工期时切过去。",
     "diagram": {
-     "title": "LinuxCNC · 实时内核 + HAL 驱动五轴",
+     "title": "LinuxCNC · 实时内核 + HAL 接闭环伺服",
      "nodes": [
       {
        "id": "gcode",
-       "label": "五轴 G 代码\n（CAM 后处理）",
+       "label": "三轴 G 代码",
        "kind": "file",
        "col": 0,
        "row": 0
@@ -3296,17 +3632,17 @@
       },
       {
        "id": "drv",
-       "label": "步进驱动 ×5\nXYZ + A / C",
+       "label": "闭环伺服 / 步进\nX / Y / Z",
        "kind": "device",
        "col": 2,
        "row": 1
       },
       {
-       "id": "tcp",
-       "label": "刀尖跟随 TCP\n曲面联动",
-       "kind": "step",
+       "id": "fb",
+       "label": "光栅尺 / 编码器\n位置反馈",
+       "kind": "device",
        "col": 2,
-       "row": 0
+       "row": 2
       },
       {
        "id": "me",
@@ -3340,232 +3676,23 @@
        "脉冲"
       ],
       [
-       "core",
-       "tcp",
-       "旋转轴运动学"
+       "drv",
+       "fb",
+       "闭环",
+       "dash"
       ],
       [
-       "tcp",
+       "fb",
+       "hal",
+       "回读"
+      ],
+      [
+       "core",
        "me",
        "第二阶段"
       ]
      ],
-     "usage": "0307：3+2 之后想上真五轴联动时，换小主机装它，步进驱动与限位沿用"
-    }
-   },
-   {
-    "name": "FreddieHong19/Open5x",
-    "url": "https://github.com/FreddieHong19/Open5x",
-    "stars": "1.2k",
-    "zh": "无中文",
-    "desc": "把普通三轴机器改成五轴的开源硬件 + 软件方案（“Democratising 5-axis”）",
-    "why": "双旋转轴模块的机械结构和刀路后处理思路可以直接抄，它证明了桌面五轴能做",
-    "intro": "Open5x 是伦敦大学学院 Freddie Hong 等人发起的开源五轴 3D 打印项目，1.2k 星，口号是让五轴平民化：商用五轴设备起步一万美元，而它用现成零件加打印件就把 Prusa i3、Voron 和 E3D 换头系统改成了五轴机器。虽然它做的是打印而不是切削，但双旋转轴的机械结构和五轴刀路的思路对小型 CNC 完全适用。\n它的方案是在原有 XYZ 三轴之外加一个 A/C 摇篮式双旋转工作台：A 轴让工作台绕水平轴翻转，C 轴让工作台绕竖直轴旋转，两个轴各用一只步进电机加同步带减速，结构件全部 3D 打印，安装在原来热床的位置。控制器用 Duet 2 加扩展板，配置文件直接给出；刀路侧用 Rhino 的 Grasshopper 定义文件把曲面分层成非平面路径，再输出带 A、C 角度的 G 代码。仓库里机械 CAD、固件配置、Grasshopper 脚本都齐全，有论文和视频说明。\n项目是学术性质，近两年更新少，没有中文资料，但 B 站上有复刻视频。\n在 0307 里它的用处是抄结构：A/C 分度头照它的摇篮布局做，只是把打印件换成铝件、同步带换成蜗轮蜗杆自锁，因为切削力比打印大得多；它的 Grasshopper 流程在 3+2 阶段用不上，等真上五轴联动再看。坑是摇篮式工作台会吃掉 Z 行程，120 毫米的 Z 要预留三分之一给它。",
-    "diagram": {
-     "title": "Open5x · 三轴机器加一只 A/C 摇篮",
-     "nodes": [
-      {
-       "id": "base",
-       "label": "现成三轴机器\nXYZ",
-       "kind": "device",
-       "col": 0,
-       "row": 0
-      },
-      {
-       "id": "cad",
-       "label": "曲面模型\n（Rhino）",
-       "kind": "file",
-       "col": 0,
-       "row": 1
-      },
-      {
-       "id": "core",
-       "label": "Open5x 摇篮台\nA 翻转 + C 旋转",
-       "kind": "core",
-       "col": 1,
-       "row": 0
-      },
-      {
-       "id": "gh",
-       "label": "Grasshopper 脚本\n非平面刀路",
-       "kind": "step",
-       "col": 1,
-       "row": 1
-      },
-      {
-       "id": "duet",
-       "label": "Duet 2 配置\n5 路步进",
-       "kind": "file",
-       "col": 1,
-       "row": 2
-      },
-      {
-       "id": "ac",
-       "label": "0307 A/C 分度头\n铝件 + 蜗轮蜗杆",
-       "kind": "device",
-       "col": 2,
-       "row": 0
-      },
-      {
-       "id": "g5",
-       "label": "带 A / C 角的\nG 代码",
-       "kind": "file",
-       "col": 2,
-       "row": 1
-      },
-      {
-       "id": "me",
-       "label": "一个人",
-       "kind": "person",
-       "col": 3,
-       "row": 0
-      }
-     ],
-     "edges": [
-      [
-       "base",
-       "core",
-       "装在热床位"
-      ],
-      [
-       "cad",
-       "gh"
-      ],
-      [
-       "gh",
-       "g5",
-       "输出"
-      ],
-      [
-       "duet",
-       "core",
-       "",
-       "dash"
-      ],
-      [
-       "core",
-       "ac",
-       "抄布局"
-      ],
-      [
-       "g5",
-       "ac",
-       "五轴阶段",
-       "dash"
-      ],
-      [
-       "ac",
-       "me"
-      ]
-     ],
-     "usage": "0307：抄它的 A/C 摇篮结构做分度头，打印件换铝件、同步带换蜗轮蜗杆"
-    }
-   },
-   {
-    "name": "grblHAL/core",
-    "url": "https://github.com/grblHAL/core",
-    "stars": "489",
-    "zh": "无中文",
-    "desc": "grbl 的 32 位重写版核心，支持 A/B/C 附加轴、多种主控板（Teensy、STM32、ESP32）",
-    "why": "3+2 定位用它就够：三轴 + A/C 分度轴直接在 G 代码里指定，Teensy 4.1 板子几十块钱",
-    "intro": "grblHAL 是挪威开发者 Terje Io 把经典的 Arduino 版 grbl 重写到 32 位平台的项目，core 仓库 489 星，加上各板卡驱动仓库是一个不小的家族。原版 grbl 只能跑三轴、只支持 8 位 AVR，而桌面 CNC 早就需要更多轴、更快脉冲和网络连接。\n它的架构是核心加驱动加插件：核心负责 G 代码解析、轨迹规划、加减速与前瞻；驱动层适配 Teensy 4.1、STM32、ESP32、RP2040 等十几种 MCU；插件可以加 SD 卡、以太网、WebUI、主轴 Modbus 控制、探针和自定义 M 代码。最多支持六轴，A、B、C 轴可以是旋转轴，G 代码里直接写 A90 C30 就能让分度头转到位，步进脉冲最高 300kHz。2026 年仍在持续更新，官网勾选板子和功能就能在线编译固件。\n上位机用 ioSender 或 Candle；没有中文文档，但 grbl 系的中文教程基本通用。\n在 0307 里它是控制核心：Teensy 4.1 配它的五轴扩展板，XYZ 加 A、C 一共五路步进，用 Modbus 插件调 VFD 主轴转速，门磁接安全门输入，探针接刀长测量。3+2 流程就是每个姿态先转 A/C 到位、探一次刀长再跑平面刀路。坑是旋转轴的每度步数和软限位要单独设，而且它不做刀尖跟随，姿态之间的坐标偏移得在后处理里算。",
-    "diagram": {
-     "title": "grblHAL · 五路步进 + 变频主轴的 3+2",
-     "nodes": [
-      {
-       "id": "gcode",
-       "label": "3+2 G 代码\n（自写后处理）",
-       "kind": "file",
-       "col": 0,
-       "row": 0
-      },
-      {
-       "id": "door",
-       "label": "门磁 + 刀长探针",
-       "kind": "device",
-       "col": 0,
-       "row": 2
-      },
-      {
-       "id": "sender",
-       "label": "ioSender / Candle\n上位机",
-       "kind": "screen",
-       "col": 0,
-       "row": 1
-      },
-      {
-       "id": "core",
-       "label": "grblHAL\nTeensy 4.1",
-       "kind": "core",
-       "col": 1,
-       "row": 1
-      },
-      {
-       "id": "plug",
-       "label": "插件：Modbus\nWebUI / 探针",
-       "kind": "step",
-       "col": 1,
-       "row": 2
-      },
-      {
-       "id": "step",
-       "label": "步进 ×5\nXYZ + A / C",
-       "kind": "device",
-       "col": 2,
-       "row": 0
-      },
-      {
-       "id": "vfd",
-       "label": "VFD 变频主轴",
-       "kind": "device",
-       "col": 2,
-       "row": 1
-      },
-      {
-       "id": "me",
-       "label": "一个人",
-       "kind": "person",
-       "col": 3,
-       "row": 1
-      }
-     ],
-     "edges": [
-      [
-       "gcode",
-       "sender"
-      ],
-      [
-       "sender",
-       "core",
-       "USB / 网口"
-      ],
-      [
-       "door",
-       "core",
-       "门开即停"
-      ],
-      [
-       "plug",
-       "core",
-       "",
-       "dash"
-      ],
-      [
-       "core",
-       "step",
-       "300kHz 脉冲"
-      ],
-      [
-       "core",
-       "vfd",
-       "Modbus 调速"
-      ],
-      [
-       "vfd",
-       "me"
-      ]
-     ],
-     "usage": "0307：Teensy 4.1 跑 grblHAL，五路步进 + Modbus 主轴 + 门磁，先做 3+2 定位"
+     "usage": "0307：三轴跑通之后要上闭环伺服时换它，导轨丝杠与限位沿用"
     }
    },
    {
@@ -3573,15 +3700,15 @@
     "url": "https://github.com/cncjs/cncjs",
     "stars": "2.6k",
     "zh": "界面有中文",
-    "desc": "网页版 CNC 控制台：跑在树莓派上，浏览器里发 G 代码、手轮点动、3D 预览刀路，支持 Grbl、grblHAL、Marlin、TinyG",
-    "why": "五轴机的 grblHAL 需要一个不用守在机器旁的发送器，cncjs 让手机和 0204 设计台的浏览器都能开机、点动、看进度",
-    "intro": "cncjs 是 Cheton Wu 发起、社区维护的网页版 CNC 控制软件，用 Node.js 和 React 写成，2.6k 星，是 Grbl 系控制器最常用的发送器之一。它要解决的问题是：CNC 控制器只有一个串口，传统做法是一台电脑守在机器旁，cncjs 把它换成一块树莓派，操作都在浏览器里完成。\n它的工作方式是服务端加网页：树莓派通过 USB 串口连接控制器，cncjs 服务把 G 代码逐行发送并处理流控和实时状态回报；浏览器端是一组可拖动的部件——坐标、点动、主轴、宏、探针、控制台，以及一个 3D 刀路窗口，能看当前刀在程序的哪一行。它同时兼容 Grbl、grblHAL、Smoothieware、TinyG 和 Marlin，能接摄像头看加工画面。\n生态上有树莓派和 Docker 镜像，界面自带简繁中文，国内 DIY CNC 圈用它的很多；更新节奏变慢但仍在维护。\n对 0307 来说它是延伸项目：Teensy 4.1 上的 grblHAL 需要一个发送器，把 cncjs 装在机器下层型材柜里的一块树莓派上，USB 连 Teensy，机旁挂一块小屏或平板，0204 设计台的浏览器也能远程看。注意它对 A、C 轴的点动支持要看版本，多轴显示不全就用 grblHAL 社区的 ioSender 做对照；门磁急停仍走 grblHAL 硬件输入，不要依赖网页。摄像头画面可以顺手转进 HA，和 3D 打印机监控放同一页。",
+    "desc": "网页版 CNC 控制台：装在机旁一台小主机上，浏览器里发 G 代码、手轮点动、3D 预览刀路，支持 Grbl、grblHAL、FluidNC、Marlin",
+    "why": "机旁不想守一台电脑：cncjs 跑在机器自带的小主机上，机旁平板和 0204 设计台的浏览器都能开机、点动、看刀路",
+    "intro": "cncjs 是 Cheton Wu 发起、社区维护的网页版 CNC 控制软件，用 Node.js 和 React 写成，2.6k 星，是 Grbl 系控制器最常用的发送器之一。它要解决的问题是：CNC 控制器只有一个串口，传统做法是一台电脑守在机器旁，cncjs 把那台电脑换成一台巴掌大的小主机，操作都在浏览器里完成。\n它的工作方式是服务端加网页：小主机通过 USB 串口连接控制器，cncjs 服务把 G 代码逐行发送并处理流控和实时状态回报；浏览器端是一组可拖动的部件——坐标、点动、主轴、宏、探针、控制台，以及一个 3D 刀路窗口，能看当前刀在程序的哪一行。它同时兼容 Grbl、grblHAL、Smoothieware、TinyG 和 Marlin，能接摄像头看加工画面。\n生态上有树莓派和 Docker 镜像，界面自带简繁中文，国内 DIY CNC 圈用它的很多；更新节奏变慢但仍在维护。\n对 0307 来说它是延伸项目：机上的 grblHAL 或 FluidNC 需要一个发送端，把 cncjs 装在机器自带的那台小主机上，机旁挂一块触摸屏或直接放一台平板当面板，0204 设计台的浏览器也能远程看进度。注意不同固件的状态解析随版本略有差异，显示不全就用 ioSender 做对照；门磁急停仍走固件的硬件输入，不要依赖网页按钮。摄像头画面可以顺手转进 HA，和 0305 那台自建打印机的监看放同一页；两条待定路线的进给参数也可以各存一组宏，试切时一键切换。",
     "diagram": {
-     "title": "cncjs · 树莓派上的网页 CNC 控制台",
+     "title": "cncjs · 机旁小主机上的网页 CNC 控制台",
      "nodes": [
       {
        "id": "gcode",
-       "label": "G 代码程序\n0204 设计台 CAM",
+       "label": "G 代码程序",
        "kind": "file",
        "col": 0,
        "row": 0
@@ -3595,7 +3722,7 @@
       },
       {
        "id": "core",
-       "label": "cncjs 服务\n树莓派",
+       "label": "cncjs 服务\n机旁小主机",
        "kind": "core",
        "col": 1,
        "row": 0
@@ -3609,14 +3736,14 @@
       },
       {
        "id": "hal",
-       "label": "grblHAL\nTeensy 4.1",
+       "label": "grblHAL / FluidNC\n控制器",
        "kind": "device",
        "col": 2,
        "row": 0
       },
       {
        "id": "mach",
-       "label": "五轴机\n主轴 / 步进",
+       "label": "三轴机\n主轴 / 步进",
        "kind": "device",
        "col": 2,
        "row": 1
@@ -3664,7 +3791,7 @@
        "dash"
       ]
      ],
-     "usage": "0307：树莓派放型材柜里跑 cncjs，USB 连 Teensy，机旁小屏和 0204 浏览器都能控"
+     "usage": "0307：机旁小主机跑 cncjs，USB 连控制器，机旁平板和 0204 浏览器都能控"
     },
     "ext": true
    },
@@ -3675,7 +3802,7 @@
     "zh": "无中文",
     "desc": "Python 写的 Grbl 发送器兼简易 CAM：自动调平、G 代码编辑、摄像头对刀、内置钻孔和轮廓加工，一个程序全包",
     "why": "自动调平是雕 PCB 和铣不平整木料时最需要的功能，bCNC 用探针扫出曲面再实时修正 Z，是 grblHAL 上最省事的方案",
-    "intro": "bCNC 是欧洲核子研究中心的工程师 Vasilis Vlachoudis 写的 Grbl 发送器，用 Python 和 Tkinter 写成，1.7k 星，两千多次提交，社区持续维护。它要解决的问题是：小型 CNC 玩家不想为发送器、CAM、调平工具装三个软件，bCNC 把这些塞进一个窗口。\n它的工作方式是发送器加工具箱：通过串口连接 Grbl 或 grblHAL，界面上有坐标、点动、主轴控制和 G 代码列表，可以直接在列表里编辑、拖动、镜像和缩放程序段。它最出名的功能是自动调平：用探针在工作台上按网格扫一遍，得到工件表面的高度图，再把 G 代码按这张图实时修正 Z 值，雕 PCB 时 0.1 毫米的隔离槽也能均匀。此外还有摄像头对刀、简单 CAM（钻孔、轮廓、口袋）和刀路 3D 预览。\n生态上它是 Grbl 圈的老牌工具，教程不少，界面只有英文，中文资料以论坛帖子为主；界面偏老但功能扎实，仍在更新。\n对 0307 来说它是延伸项目：五轴机日常发送用 cncjs 或 ioSender，但当工件是一块本身不平的胡桃木板，或者 0301 那边要借这台机器雕单面 PCB 时，切到 bCNC：先用主轴上夹的探针扫一遍工件表面，让它把程序的 Z 值按曲面修正，再开始铣。它跑在 0204 设计台的电脑上，USB 线拉到 Teensy 即可，探针信号接 grblHAL 的探针输入。A、C 轴它不会调平，只在三轴模式下用。",
+    "intro": "bCNC 是欧洲核子研究中心的工程师 Vasilis Vlachoudis 写的 Grbl 发送器，用 Python 和 Tkinter 写成，1.7k 星，两千多次提交，社区持续维护。它要解决的问题是：小型 CNC 玩家不想为发送器、CAM、调平工具装三个软件，bCNC 把这些塞进一个窗口。\n它的工作方式是发送器加工具箱：通过串口连接 Grbl 或 grblHAL，界面上有坐标、点动、主轴控制和 G 代码列表，可以直接在列表里编辑、拖动、镜像和缩放程序段。它最出名的功能是自动调平：用探针在工作台上按网格扫一遍，得到工件表面的高度图，再把 G 代码按这张图实时修正 Z 值，雕 PCB 时 0.1 毫米的隔离槽也能均匀。此外还有摄像头对刀、简单 CAM（钻孔、轮廓、口袋）和刀路 3D 预览。\n生态上它是 Grbl 圈的老牌工具，教程不少，界面只有英文，中文资料以论坛帖子为主；界面偏老但功能扎实，仍在更新。\n对 0307 来说它是延伸项目：这台三轴机日常发送用 cncjs 或 ioSender，但当工件是一块本身不平的胡桃木板，或者 0301 那边要借这台机器雕单面 PCB 时，切到 bCNC：先用主轴上夹的探针扫一遍工件表面，让它把程序的 Z 值按这张高度图修正，再开始铣。它跑在 0204 设计台的电脑上，USB 线拉到控制器即可，探针信号接固件的探针输入。自动调平主要服务木 / 亚克力路线，走铝路线时工件多是平整板材，用处不大；它内置的钻孔和轮廓 CAM 也够应付几个孔位。",
     "diagram": {
      "title": "bCNC · 探针扫曲面，Z 值实时修正",
      "nodes": [
@@ -3688,7 +3815,7 @@
       },
       {
        "id": "gcode",
-       "label": "原始 G 代码\n平面假设",
+       "label": "原始 G 代码",
        "kind": "file",
        "col": 0,
        "row": 1
@@ -3723,7 +3850,7 @@
       },
       {
        "id": "hal",
-       "label": "grblHAL\nTeensy 4.1",
+       "label": "grblHAL / FluidNC\n控制器",
        "kind": "device",
        "col": 2,
        "row": 2
@@ -3768,113 +3895,6 @@
      "usage": "0307：铣不平的木板或雕单面 PCB 时用它先调平再发送，三轴模式下使用"
     },
     "ext": true
-   },
-   {
-    "name": "bdring/FluidNC",
-    "url": "https://github.com/bdring/FluidNC",
-    "stars": "2.5k",
-    "zh": "无中文",
-    "desc": "跑在 ESP32 上的 Grbl 系 CNC 固件：六轴、YAML 配置不用重新编译、自带 Wi-Fi 网页控制和 SD 卡脱机运行",
-    "why": "grblHAL 加 Teensy 之外，FluidNC 是 ESP32 路线的头号选择；一块几十块的板子就有 Wi-Fi 和网页，是给五轴机做备用控制器或做第二台小机器的最佳起点",
-    "intro": "FluidNC 是 Bart Dring 主导的开源 CNC 运动控制固件，从 Grbl_ESP32 演化而来，用 C++ 写成，2.5k 星，2026 年 4 月发布 4.0.3 版。它要解决的问题是：Grbl 只能跑三轴、改引脚要重新编译，而 ESP32 便宜又自带无线，FluidNC 把 Grbl 的成熟运动核心搬到 ESP32 上，并把所有配置改成一个 YAML 文件。\n它的工作方式是固件加配置文件：把编译好的固件烧进 ESP32，再上传一个 config.yaml，写清楚轴数、步进引脚、限位、步距、主轴类型（PWM、RS485 VFD、激光）和探针，重启就按新配置运行，最多六轴。它兼容 Grbl 的串口协议和 G 代码，cncjs、bCNC 都能直接用；自带 Wi-Fi 和 WebUI，浏览器就能上传、运行、点动，G 代码还能放 SD 卡脱机跑。\n生态上有 6-Pack 等配套控制板，Discord 社区活跃，Wiki 完整但只有英文，中文资料零散；更新勤快。\n对 0307 来说它是延伸项目：主控制器已定 grblHAL 加 Teensy 4.1，FluidNC 是它的备胎和对照。一是把一块 ESP32 刷上它，同一份轴参数写成 YAML，在型材柜里备着，Teensy 出问题时换上就能跑三轴加 A 轴；二是 0301 那台桌面 CNC 升级控制器时，它加 Wi-Fi 最省事；三是它的 RS485 VFD 主轴写法可直接借鉴到五轴机的变频器接线。",
-    "diagram": {
-     "title": "FluidNC · ESP32 上的六轴 Grbl，改配置不用重编译",
-     "nodes": [
-      {
-       "id": "yaml",
-       "label": "config.yaml\n轴 / 引脚 / 主轴",
-       "kind": "file",
-       "col": 0,
-       "row": 0
-      },
-      {
-       "id": "gcode",
-       "label": "G 代码\nSD 卡或网页",
-       "kind": "file",
-       "col": 0,
-       "row": 1
-      },
-      {
-       "id": "core",
-       "label": "FluidNC\nESP32 固件",
-       "kind": "core",
-       "col": 1,
-       "row": 0
-      },
-      {
-       "id": "web",
-       "label": "自带 WebUI\nWi-Fi 控制",
-       "kind": "screen",
-       "col": 1,
-       "row": 1
-      },
-      {
-       "id": "ser",
-       "label": "Grbl 串口协议\ncncjs / bCNC",
-       "kind": "step",
-       "col": 1,
-       "row": 2
-      },
-      {
-       "id": "step",
-       "label": "步进驱动\n最多六轴",
-       "kind": "device",
-       "col": 2,
-       "row": 0
-      },
-      {
-       "id": "vfd",
-       "label": "VFD 主轴\nRS485",
-       "kind": "device",
-       "col": 2,
-       "row": 1
-      },
-      {
-       "id": "mach",
-       "label": "0301 桌面 CNC\n或五轴备用板",
-       "kind": "device",
-       "col": 2,
-       "row": 2
-      }
-     ],
-     "edges": [
-      [
-       "yaml",
-       "core",
-       "上传"
-      ],
-      [
-       "gcode",
-       "core"
-      ],
-      [
-       "core",
-       "web"
-      ],
-      [
-       "core",
-       "ser",
-       "",
-       "dash"
-      ],
-      [
-       "core",
-       "step",
-       "脉冲"
-      ],
-      [
-       "core",
-       "vfd",
-       "Modbus"
-      ],
-      [
-       "step",
-       "mach"
-      ]
-     ],
-     "usage": "0307：ESP32 备用控制器与 grblHAL 参数对照；0301 桌面 CNC 升级 Wi-Fi 控制"
-    },
-    "ext": true
    }
   ],
   "xhs": [
@@ -3883,8 +3903,8 @@
     "note": "看自制型材机架的龙门结构和走线，判断刚性够不够"
    },
    {
-    "keyword": "五轴 分度头 木雕",
-    "note": "看 A/C 分度头翻面切木头的实拍，理解 3+2 能做什么"
+    "keyword": "三轴 CNC 铣铝 切木",
+    "note": "看同一类机器切木和切铝的差别，判断该走哪条路线"
    },
    {
     "keyword": "CNC 防护罩 集尘 阁楼",

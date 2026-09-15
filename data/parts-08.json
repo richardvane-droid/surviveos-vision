@@ -137,7 +137,7 @@
      "兜底：实体超过 10 分钟未更新标记为离线",
      "数据出口：HA 实体 + InfluxDB + 手机端同一份仪表盘"
     ],
-    "impl": "home-assistant/core 做实体统一，esphome/esphome 节点走原生 API，HA 的 influxdb 集成把曲线类实体写入 InfluxDB 供 Grafana 读",
+    "impl": "home-assistant/core 做实体统一，esphome/esphome 节点走原生 API，HA 的 influxdb 集成把曲线类实体写入 InfluxDB 做长期曲线，HA 长期统计做短期曲线",
     "github": [
      {
       "name": "home-assistant/core",
@@ -160,7 +160,7 @@
      "阈值：首页最多 10 个数据，22:00~07:00 夜航模式",
      "数据出口：三个 HA 仪表盘视图，手机端复用同一份"
     ],
-    "impl": "ExperienceLovelace/ha-floorplan 把 SVG 地图元素绑定实体状态，piitaya/lovelace-mushroom 排左右屏卡片，Grafana 面板嵌入曲线，HA automation 定时切视图",
+    "impl": "ExperienceLovelace/ha-floorplan 把 SVG 地图元素绑定实体状态，piitaya/lovelace-mushroom 排左右屏卡片，HA 自带 history-graph 卡画曲线，HA automation 定时切视图",
     "github": [
      {
       "name": "ExperienceLovelace/ha-floorplan",
@@ -209,7 +209,7 @@
      "总线舵机 ×15：腿 2×5、颈 3、头 2，串行一根线",
      "RK3566 主控 + IMU，50Hz 控制环跑 ONNX 步态策略",
      "3S 锂电 2,000mAh，续航约 90 分钟，胸腔无线充电线圈",
-     "外壳拓竹打印 PETG，脚底 TPU 防滑垫，摔不坏优先于好看"
+     "外壳用 0305 的 Voron 打印 PETG，脚底 TPU 防滑垫，摔不坏优先于好看"
     ],
     "github": [
      {
@@ -292,8 +292,8 @@
     ],
     "github": [
      {
-      "name": "adgaudio/OpenSCAD_connectors",
-      "url": "https://github.com/adgaudio/OpenSCAD_connectors"
+      "name": "nophead/NopSCADlib",
+      "url": "https://github.com/nophead/NopSCADlib"
      }
     ]
    },
@@ -375,8 +375,8 @@
     ],
     "github": [
      {
-      "name": "adgaudio/OpenSCAD_connectors",
-      "url": "https://github.com/adgaudio/OpenSCAD_connectors"
+      "name": "nophead/NopSCADlib",
+      "url": "https://github.com/nophead/NopSCADlib"
      }
     ]
    },

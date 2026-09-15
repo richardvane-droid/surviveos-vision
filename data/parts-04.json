@@ -5,36 +5,40 @@
    {
     "k": 1,
     "kind": "hw",
-    "name": "钢制洞洞板影子墙",
-    "intro": "过道北侧隔断整面铺 60×90cm 白色烤漆钢板洞洞板，每件工具挂好后在板面留下一圈黑色“影子”轮廓。原理来自工厂 5S 管理的影子板：把“应该在哪”画在墙上，缺件不用清点，视觉一眼报警。钢板承重远高于木板，磁吸挂钩和零件盘随意贴；板后垫 20mm 龙骨留出挂钩勾挂的空腔，角落一枚 NFC 标签把这面墙接进数字清单。",
+    "name": "北墙三区工具墙",
+    "intro": "过道北侧隔断整面做成竖向三区的工具墙：上区留 40cm 吊长杆工具与高枝剪，中区是主墙面的胡桃色洞洞板，下区是 90cm 高的落地功能柜。分区的依据是取用频率和重量——重的、常用的落在肩到腰之间，长的、少用的抬上头顶，带电的、脏的收进柜子。中区每件工具背后描一圈黄铜色影子轮廓，沿用工厂 5S 影子板的思路：把“应该在哪”画在墙上，缺件不用清点。板后垫 20mm 龙骨留出挂钩勾挂的空腔。",
     "points": [
-     "钢板 0.8mm 烤漆，单板承重约 30kg，孔距 25mm",
-     "背板龙骨 20mm 空腔，自攻螺丝固定进隔断龙骨",
-     "影子轮廓用油性笔手描或 3D 打印贴片",
-     "角落 NFC 标签，手机碰一下打开工具清单"
+     "上区吊长杆，中区洞洞板主墙面，下区 90cm 功能柜",
+     "中区洞洞板分四类：敲击紧固、切割修整、测量画线、电动工具",
+     "黄铜影子轮廓外加一圈浅色描边，木色底上才看得清",
+     "底色与布局两个版本未定，先按可拆板试挂再定稿"
     ],
     "github": [
      {
-      "name": "stockholmux/pegmixer",
-      "url": "https://github.com/stockholmux/pegmixer"
+      "name": "tkubic/GridfinityShadowMaker",
+      "url": "https://github.com/tkubic/GridfinityShadowMaker"
      }
     ]
    },
    {
     "k": 2,
     "kind": "hw",
-    "name": "透明分格抽屉柜",
-    "intro": "1.2m 高的一排透明抽屉柜共 48 格，专装螺丝、螺母、扎带这类“看得见才找得到”的小零件。透明抽屉解决的是视觉检索：不抽出来就能看到余量；抽屉里再放 Gridfinity 模数的分格托盘，M4 和 M5 同屉不混。抽屉口统一贴标签机打的白底黑字标签，整面柜子像一张表格。柜体螺栓上墙，抽屉底加止退卡口防抽脱。",
+    "name": "WORX 20V 电池平台与割草四件套",
+    "intro": "全屋电动工具统一到 WORX 威克士 20V 大脚板电池平台：同一规格的电池在打草机、吹叶机之间通用，之后添工具只买裸机。下区功能柜里排一组充电位，电池取下即充，柜面这几格用荧光绿加黑色的标签和木色拉开。首批只落地割草工作流的四件套——手拔、电动打草机、手动修枝剪、大风量吹叶机 WU231.9（8.6～11.6 m³/min），够覆盖 0601 那条 100㎡ 长草地。柜子左半边同时给 0805 的铝型材配件分箱。",
     "points": [
-     "48 格透明 PS 抽屉，柜体 ABS，螺栓上墙",
-     "抽屉内嵌 Gridfinity 42mm 模数分格盒",
-     "标签 12mm 白底黑字，一次买够同款标签带",
-     "抽屉止退卡口，抽到底不脱落"
+     "统一 20V 大脚板电池，裸机通用，柜内一组充电位轮充",
+     "首批四件套：手拔 + 打草机 + 修枝剪 + 吹叶机",
+     "风量 8.6～11.6 m³/min，预算 ¥1,500～1,800",
+     "配件分箱：20 系列槽 6mm、30-40 系列槽 8mm"
     ],
     "github": [
      {
       "name": "kennetek/gridfinity-rebuilt-openscad",
       "url": "https://github.com/kennetek/gridfinity-rebuilt-openscad"
+     },
+     {
+      "name": "MultiMote/niimblue",
+      "url": "https://github.com/MultiMote/niimblue"
      }
     ]
    },
@@ -42,12 +46,12 @@
     "k": 3,
     "kind": "logic",
     "name": "影子板生成流水线",
-    "intro": "手描工具轮廓费时且不准，这条流水线把它变成“拍照即出图”。输入是工具平放在 A4 白纸上的一张照片，程序做透视校正和阈值分割抠出外轮廓，按纸张尺寸换算成真实毫米，导出 DXF；再送进 OpenSCAD 参数化模型，生成凹槽外扩 1mm 的影子板。输出是可直接 3D 打印的 STL。核心判断是轮廓面积与纸面比例是否合理，不合理就提示重拍。",
+    "intro": "手描工具轮廓费时且不准，这条流水线把它变成“拍照即出图”。输入是工具平放在 A4 白纸上的一张照片，程序做透视校正和阈值分割抠出外轮廓，按纸张尺寸换算成真实毫米，导出 DXF；再送进 OpenSCAD 参数化模型，生成凹槽外扩 1mm 的影子板。输出是可直接 3D 打印的 STL，打黄铜色件贴在胡桃板上当轮廓。核心判断是轮廓面积与纸面比例是否合理，不合理就提示重拍。",
     "points": [
      "输入：工具平放 A4 纸上的一张手机照片",
-     "输出：DXF 轮廓 + Gridfinity 兼容的 STL 影子板",
+     "输出：DXF 轮廓 + 可打印的 STL 影子板",
      "阈值：轮廓面积占纸面 5%~80% 之外提示重拍",
-     "打印失败兜底：直接把 DXF 打印成纸样手描"
+     "打印件用黄铜色料，外圈留 2mm 浅色描边才压得住木纹"
     ],
     "impl": "用 tkubic/GridfinityShadowMaker 的照片转 DXF 流程，再用 kennetek/gridfinity-rebuilt-openscad 出可打印底板",
     "github": [
@@ -65,22 +69,18 @@
     "k": 4,
     "kind": "logic",
     "name": "取用归位提醒",
-    "intro": "解决“工具不知道被自己带去哪个区了”。每件常带走的工具贴一枚 NFC 标签，离开过道时手机碰一下，HomeAssistant 收到 tag_scanned 事件，把它标记为“在外”并记下去向和时间；放回影子里再碰一下即清零。每晚十点系统扫一遍在外清单，超过 3 天未归位的推送提醒，超过 7 天在中枢屏亮黄。墙上小白板保留，作为断网时的手写兜底。",
+    "intro": "解决“工具不知道被自己带去哪个区了”。这面墙是全屋工具的总汇聚点，东西流向各个模块，靠 NFC 记账：每件常带走的工具贴一枚标签，离开过道时手机碰一下，HomeAssistant 收到 tag_scanned 事件，把它标记为“在外”并记下去向和时间；放回影子里再碰一下即清零。每晚十点扫一遍在外清单，超过 3 天未归位推送提醒。周末割草那四件套整组出勤，按一个组合登记，回来少一件立刻看得出来。",
     "points": [
      "触发：NFC 碰一下 = 带走，再碰一下 = 归位",
      "阈值：3 天未归位推送提醒，7 天中枢屏亮黄",
-     "出口：在外清单实体 + 每晚汇总通知",
+     "割草四件套按组合登记，整组出勤整组核对",
      "兜底：小白板手写去向卡，断网照常登记"
     ],
-    "impl": "用 home-assistant/core 原生 NFC 的 tag_scanned 事件做带走/归位状态机，去向与逾期规则参考 chicago-tool-library/circulate 的借还模型",
+    "impl": "用 home-assistant/core 原生 NFC 的 tag_scanned 事件做带走/归位状态机，去向写进 input_select，逾期由模板自动化提醒",
     "github": [
      {
       "name": "home-assistant/core",
       "url": "https://github.com/home-assistant/core"
-     },
-     {
-      "name": "chicago-tool-library/circulate",
-      "url": "https://github.com/chicago-tool-library/circulate"
      }
     ]
    }
@@ -229,8 +229,8 @@
       "url": "https://github.com/MallocArray/airgradient_esphome"
      },
      {
-      "name": "airgradienthq/arduino",
-      "url": "https://github.com/airgradienthq/arduino"
+      "name": "esphome/esphome",
+      "url": "https://github.com/esphome/esphome"
      }
     ]
    }

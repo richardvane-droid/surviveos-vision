@@ -33,8 +33,8 @@
     ],
     "github": [
      {
-      "name": "cofade/open-garden-planner",
-      "url": "https://github.com/cofade/open-garden-planner"
+      "name": "danielbrendel/hortusfox-web",
+      "url": "https://github.com/danielbrendel/hortusfox-web"
      }
     ]
    },
@@ -55,22 +55,22 @@
     "k": 4,
     "kind": "logic",
     "name": "分区养护日历",
-    "intro": "草原的麻烦不在活多，在于“什么时候该做哪件事”容易忘。这段逻辑把北中南三段的植物档案（各自的割、补播、覆盖月份）和气候节点合在一起，按月生成养护任务：二月底连续 3 天无雨才贴地割草，梅雨前查干河道排水，六月野花补播，十一月补树皮。任务进 HomeAssistant 日历，到期推送手机，完成打勾，一年就是一本成长日志。",
+    "intro": "草原的麻烦不在活多，在于“什么时候该做哪件事”容易忘。这段逻辑把北中南三段的植物档案和气候节点合在一起，按月生成养护任务：二月底连续 3 天无雨才贴地割草，梅雨前查干河道排水，六月野花补播，十一月补树皮。叠在上面的是每周一次的四步巡场——手拔、电动打草机、手动修枝剪、大风量吹叶机——工具都来自 0401 那面墙、共用一块 WORX 20V 电池，按季节自动加减。任务进 HomeAssistant 日历，到期推送，完成打勾。",
     "points": [
      "输入：北中南三段植物档案 + 当地气候节点",
+     "周任务：手拔 → 打草机 → 修枝剪 → 吹叶机，四步一组",
      "关键判断：割草前看未来 3 天无雨且气温 >5℃",
-     "出口：HA 日历 + 手机推送 + 完成打勾",
-     "兜底：桧木名牌背面手写全年月份表"
+     "兜底：桧木名牌背面手写全年月份表与周巡场四步"
     ],
-    "impl": "用 Ecohackerfarm/powerplant 的种植时间表建三区植物档案，任务写进 HA 本地日历按月推送",
+    "impl": "用 danielbrendel/hortusfox-web 建三区植物档案、年度任务和每周四步巡场清单，Ecohackerfarm/powerplant 查伴生与播期，经 REST API 由 HA 推送",
     "github": [
+     {
+      "name": "danielbrendel/hortusfox-web",
+      "url": "https://github.com/danielbrendel/hortusfox-web"
+     },
      {
       "name": "Ecohackerfarm/powerplant",
       "url": "https://github.com/Ecohackerfarm/powerplant"
-     },
-     {
-      "name": "cofade/open-garden-planner",
-      "url": "https://github.com/cofade/open-garden-planner"
      }
     ]
    }
@@ -92,8 +92,8 @@
     ],
     "github": [
      {
-      "name": "lrswss/esp32-irrigation-automation",
-      "url": "https://github.com/lrswss/esp32-irrigation-automation"
+      "name": "esphome/esphome",
+      "url": "https://github.com/esphome/esphome"
      }
     ]
    },
@@ -126,15 +126,15 @@
      "时长：蒸散量折算，单区 5~15 分钟封顶",
      "兜底：断网时用昨日时长；红按钮手动 5 分钟"
     ],
-    "impl": "altmenorg/HAsmartirrigation 按蒸散量算各区分钟数，ESPHome 本地三条件判断开阀",
+    "impl": "altmenorg/HAsmartirrigation 按蒸散量算各区秒数，esphome/esphome 在杆内 ESP32 本地做三条件判断并用 sprinkler 组件开阀",
     "github": [
      {
       "name": "altmenorg/HAsmartirrigation",
       "url": "https://github.com/altmenorg/HAsmartirrigation"
      },
      {
-      "name": "OpenSprinkler/OpenSprinkler-Firmware",
-      "url": "https://github.com/OpenSprinkler/OpenSprinkler-Firmware"
+      "name": "esphome/esphome",
+      "url": "https://github.com/esphome/esphome"
      }
     ]
    },
@@ -149,11 +149,11 @@
      "曲线：三区含水率，7 天 / 30 天两档",
      "告警：浇后 3 天含水率不回升，疑似堵头"
     ],
-    "impl": "petergridge/Irrigation-V5 做多区面板，用水量由阀时长折算写入 HA utility_meter",
+    "impl": "altmenorg/HAsmartirrigation 的分区面板看三区水桶余额，用水量由阀时长折算写入 HA utility_meter",
     "github": [
      {
-      "name": "petergridge/Irrigation-V5",
-      "url": "https://github.com/petergridge/Irrigation-V5"
+      "name": "altmenorg/HAsmartirrigation",
+      "url": "https://github.com/altmenorg/HAsmartirrigation"
      }
     ]
    }
@@ -205,8 +205,8 @@
       "url": "https://github.com/kane5432/ESP32-Water-Level-Sensor"
      },
      {
-      "name": "tomsbasement/esp32-water-tank-sensor",
-      "url": "https://github.com/tomsbasement/esp32-water-tank-sensor"
+      "name": "home-assistant/core",
+      "url": "https://github.com/home-assistant/core"
      }
     ]
    },
@@ -221,7 +221,7 @@
      "兜底：补水超 30 分钟未达标即关阀报警",
      "出口：HA 月度雨水占比 + 每场雨进罐升数"
     ],
-    "impl": "kane5432/ESP32-Water-Level-Sensor 报水位，ESPHome 数雨量脉冲，HA 控补水阀",
+    "impl": "kane5432/ESP32-Water-Level-Sensor 报水位，hugokernel/esphome-weather-station 的 YAML 数雨量脉冲，home-assistant/core 自动化控补水阀并计量",
     "github": [
      {
       "name": "kane5432/ESP32-Water-Level-Sensor",
