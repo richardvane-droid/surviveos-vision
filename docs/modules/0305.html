@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>0305 3D 打印 · SurviveOs 设想版</title>
-<meta name="description" content="一整个爱住！拓竹 P1S 放阁楼，夜里 3 点打印声像下雨——和地堡共用一台拓竹 P1S，白天设计楼下画图，晚上上楼打印，通宵也不吵人。">
+<meta name="description" content="谁懂啊！不买成品机了，自己拧一台 Voron 2.4 放阁楼——阁楼上用铝型材搭一台开源打印机 Voron 2.4，再围着它搭一张站着就能操作的工作站。">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +28,11 @@
 <article class="mod">
   <header class="mod-head">
     <p class="kicker">阁楼间 · 模块 0305 · 3D 打印</p>
-    <h1>一整个爱住！拓竹 P1S 放阁楼，夜里 3 点打印声像下雨</h1>
-    <p class="lede">和地堡共用一台拓竹 P1S，白天设计楼下画图，晚上上楼打印，通宵也不吵人。</p>
+    <h1>谁懂啊！不买成品机了，自己拧一台 Voron 2.4 放阁楼</h1>
+    <p class="lede">阁楼上用铝型材搭一台开源打印机 Voron 2.4，再围着它搭一张站着就能操作的工作站。</p>
     <p class="meta">
       <span class="st st-⬜">⬜ 真实项目待设计</span>
-      <span class="tag">#家的丰容计划</span><span class="tag">#3D打印</span><span class="tag">#拓竹</span><span class="tag">#动手主义</span><span class="tag">#延时视频</span>
+      <span class="tag">#动手主义</span><span class="tag">#Voron</span><span class="tag">#3D打印</span><span class="tag">#铝型材</span><span class="tag">#开源硬件</span>
     </p>
   </header>
   <figure class="mod-art">
@@ -49,160 +49,159 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0305-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
   <g filter="url(#m0305-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- floor -->
-    <path d="M14 246 Q120 243 200 246 T388 244" stroke-width="1.2"/>
-    <path d="M40 252 q30 -3 60 0" stroke-width="0.8"/>
-
-    <!-- flat ceiling at 2060 (standing core), partition behind -->
-    <path d="M14 44 H386" stroke-width="2"/>
-    <path d="M16 47 H384" stroke-width="0.9"/>
-    <path d="M14 44 V246" stroke-width="1"/>
-    <path d="M14 44 H386 V38 H14 Z" fill="url(#m0305-hatch)" stroke="none"/>
-    <!-- skylight: opening in the ceiling with a short shaft up to the tilted glass -->
-    <path d="M286 44 V22 L358 14 V44" stroke-width="1.7"/>
-    <path d="M289 42 V25 L355 18" stroke-width="0.9"/>
-    <path d="M292 24 L352 18 L352 30 L292 36 Z" fill="url(#m0305-hatch2)" stroke="none"/>
-    <path d="M286 22 L358 14" stroke-width="1.4"/>
-    <path d="M322 20 V40" stroke-width="1"/>
-    <path d="M300 10 l3 8 M330 6 l2 8 M348 4 l2 8" stroke-width="0.8"/>
-    <!-- exhaust vent fan box beside skylight, on the ceiling -->
-    <path d="M254 44 V58 H276 V44" stroke-width="1.3"/>
-    <path d="M258 48 h14 M258 52 h14 M265 46 v10" stroke-width="0.8"/>
-
-    <!-- exhaust duct: from printer top up to the ceiling, then along it to the vent -->
-    <path d="M160 100 V70 Q160 60 170 60 L250 60 V44" stroke-width="1.7"/>
-    <path d="M172 100 V78 Q172 72 178 72 L246 72 Q250 72 250 66" stroke-width="1.7"/>
-    <path d="M160 92 h12 M162 84 h12 M200 60 v12 M220 60 v12 M238 60 v12" stroke-width="0.8"/>
-    <path d="M182 62 H246 V70 H182 Z" fill="url(#m0305-hatch)" stroke="none"/>
-
-    <!-- low cabinet -->
-    <path d="M96 246 V184 H236 V246" stroke-width="1.8"/>
-    <path d="M99 244 V187 H233" stroke-width="0.9"/>
-    <path d="M96 184 q70 -5 140 0" stroke-width="1.2"/>
-    <path d="M110 194 H222 V236 H110 Z" stroke-width="1.1"/>
-    <path d="M166 194 V236 M158 214 h4 M174 214 h4" stroke-width="1"/>
-    <path d="M100 238 H232 V244 H100 Z" fill="url(#m0305-hatch)" stroke="none"/>
-    <!-- anti-vibration pad -->
-    <path d="M104 180 H228 V184 H104 Z" stroke-width="1"/>
-
-    <!-- enclosed 3D printer: cube on the cabinet -->
-    <path d="M110 180 V100 H222 V180 Z" stroke-width="2"/>
-    <path d="M113 178 V103 H219" stroke-width="1"/>
-    <!-- top: slightly 3/4 to show a lid -->
-    <path d="M110 100 L124 90 H236 L222 100" stroke-width="1.5"/>
-    <path d="M222 100 L236 90 V170 L222 180" stroke-width="1.5"/>
-    <path d="M224 102 L234 94 V168 L224 176 Z" fill="url(#m0305-hatch)" stroke="none"/>
-    <!-- glass door frame with X brace of the corners -->
-    <path d="M120 112 H200 V172 H120 Z" stroke-width="1.4"/>
-    <path d="M122 114 H198 V170" stroke-width="0.8"/>
-    <path d="M124 116 l10 10 M196 116 l-10 10 M124 168 l10 -10" stroke-width="0.7"/>
-    <!-- inside: gantry, nozzle, build plate with object -->
-    <path d="M124 128 H196" stroke-width="1.2"/>
-    <path d="M150 124 h14 v10 h-14 Z M156 134 v4 l2 3 M160 134 v4 l-2 3" stroke-width="1.1"/>
-    <path d="M132 160 H188 V164 H132 Z" stroke-width="1.2"/>
-    <path d="M150 160 v-12 h12 v12 M152 156 h8 M152 152 h8" stroke-width="1"/>
-    <path d="M126 150 l4 0 M190 150 l4 0" stroke-width="0.8"/>
-    <!-- side panel with small screen & filament tube -->
-    <path d="M206 116 H216 V132 H206 Z" stroke-width="1.1"/>
-    <path d="M208 120 h6 M208 124 h4" stroke-width="0.8"/>
-    <path d="M206 140 h10 M206 146 h10 M206 152 h10 M206 158 h10" stroke-width="0.8"/>
-    <path d="M222 108 q16 -4 20 10" stroke-width="1"/>
-    <!-- light glow lines inside -->
-    <path d="M128 120 l4 4 M192 120 l-4 4" stroke-width="0.7"/>
-    <!-- extra top cover shading -->
-    <path d="M126 92 H232 V96 H126 Z" fill="url(#m0305-hatch)" stroke="none"/>
-
-    <!-- filament spool rack at right: two shelves, 4 spools each -->
-    <path d="M262 246 V120 M270 246 V120 M370 246 V120 M378 246 V120" stroke-width="1.5"/>
-    <path d="M264 122 V244" stroke-width="0.7"/>
-    <path d="M258 120 H382 M258 182 H382 M258 244 H382" stroke-width="1.6"/>
-    <path d="M260 124 H380 M260 186 H380" stroke-width="0.8"/>
-    <!-- spools row 1 -->
-    <circle cx="285" cy="152" r="13" stroke-width="1.5"/>
-    <circle cx="285" cy="152" r="4" stroke-width="1"/>
-    <circle cx="308" cy="152" r="13" stroke-width="1.5"/>
-    <circle cx="308" cy="152" r="4" stroke-width="1"/>
-    <circle cx="331" cy="152" r="13" stroke-width="1.5"/>
-    <circle cx="331" cy="152" r="4" stroke-width="1"/>
-    <circle cx="354" cy="152" r="13" stroke-width="1.5"/>
-    <circle cx="354" cy="152" r="4" stroke-width="1"/>
-    <path d="M285 152 m-13 0 a13 13 0 0 0 26 0 Z" fill="url(#m0305-hatch)" stroke="none"/>
-    <path d="M331 152 m-13 0 a13 13 0 0 0 26 0 Z" fill="url(#m0305-hatch)" stroke="none"/>
-    <circle cx="308" cy="152" r="8" stroke-width="0.7"/>
-    <circle cx="354" cy="152" r="8" stroke-width="0.7"/>
-    <!-- spools row 2 -->
-    <circle cx="285" cy="214" r="13" stroke-width="1.5"/>
-    <circle cx="285" cy="214" r="4" stroke-width="1"/>
-    <circle cx="308" cy="214" r="13" stroke-width="1.5"/>
-    <circle cx="308" cy="214" r="4" stroke-width="1"/>
-    <circle cx="331" cy="214" r="13" stroke-width="1.5"/>
-    <circle cx="331" cy="214" r="4" stroke-width="1"/>
-    <circle cx="354" cy="214" r="13" stroke-width="1.5"/>
-    <circle cx="354" cy="214" r="4" stroke-width="1"/>
-    <path d="M308 214 m-13 0 a13 13 0 0 0 26 0 Z" fill="url(#m0305-hatch)" stroke="none"/>
-    <path d="M354 214 m-13 0 a13 13 0 0 0 26 0 Z" fill="url(#m0305-hatch)" stroke="none"/>
-    <circle cx="285" cy="214" r="8" stroke-width="0.7"/>
-    <circle cx="331" cy="214" r="8" stroke-width="0.7"/>
-    <!-- labels on shelf edge -->
-    <path d="M276 181 h6 M300 181 h6 M324 181 h6 M348 181 h6" stroke-width="1.6"/>
-
-    <!-- printed hooks on the floor, left -->
-    <path d="M40 246 v-16 q0 -6 6 -6 h6 v6 M60 246 v-12 q0 -6 6 -6 h6" stroke-width="1.2"/>
-    <path d="M28 236 h6 M30 240 h8" stroke-width="0.8"/>
+<path d="M14 270 H386" stroke-width="1.6"/>
+<path d="M30 276 q26 -3 52 0 M206 276 q22 -3 44 0" stroke-width="0.6"/>
+<path d="M296 22 H386" stroke-width="1.4"/>
+<path d="M296 16 H386 V22 H296 Z" fill="url(#m0305-hatch)" stroke="none"/>
+<path d="M314 22 V36 H346 V22" stroke-width="1.3"/>
+<path d="M318 26 H342 M318 30 H342 M330 23 V36" stroke-width="0.7"/>
+<path d="M330 14 V4 M326 9 l4 -5 l4 5" stroke-width="0.8"/>
+<path d="M158 88 V54 Q158 46 166 46 H334 V36" stroke-width="1.6"/>
+<path d="M172 88 V62 Q172 56 180 56 H320 Q328 56 328 48 V36" stroke-width="1.6"/>
+<path d="M158 70 H172 M158 80 H172" stroke-width="0.7"/>
+<path d="M198 46 V56" stroke-width="0.7"/>
+<path d="M228 46 V56" stroke-width="0.7"/>
+<path d="M258 46 V56" stroke-width="0.7"/>
+<path d="M288 46 V56" stroke-width="0.7"/>
+<path d="M314 46 V56" stroke-width="0.7"/>
+<path d="M182 47 H318 V55 H182 Z" fill="url(#m0305-hatch)" stroke="none"/>
+<path d="M96 270 V74 H103 V270" stroke-width="1.6"/>
+<path d="M153 270 V74 H160 V270" stroke-width="1.6"/>
+<path d="M96 74 H160 V82 H96 Z" stroke-width="1.5"/>
+<path d="M96 156 H160 V163 H96 Z" stroke-width="1.5"/>
+<path d="M96 250 H160 V257 H96 Z" stroke-width="1.4"/>
+<path d="M96 74 l18 -10 H178 l-18 10 M160 74 l18 -10 v8 l-18 10" stroke-width="1"/>
+<path d="M178 64 V258 M160 270 l18 -12" stroke-width="0.8"/>
+<path d="M161 75 l16 -9 v7 l-16 9 Z" fill="url(#m0305-hatch)" stroke="none"/>
+<path d="M99 90 V250 M157 90 V250" stroke-width="0.4"/>
+<path d="M100 257 V266 M156 257 V266" stroke-width="1.3"/>
+<path d="M94 266 H110 V270 H94 Z M150 266 H166 V270 H150 Z" stroke-width="1.1"/>
+<path d="M90 150 H166 V156 H90 Z" stroke-width="1.4"/>
+<path d="M90 150 l18 -10 H184 l-18 10" stroke-width="1"/>
+<path d="M96 153 h62 M110 146 q22 -2 44 0" stroke-width="0.4"/>
+<path d="M102 150 V98 H154 V150 Z" stroke-width="2"/>
+<path d="M105 148 V101 H151" stroke-width="0.9"/>
+<path d="M102 98 l18 -10 H172 l-18 10 M154 98 l18 -10 V140 l-18 10" stroke-width="1.3"/>
+<path d="M155 99 l16 -9 v49 l-16 9 Z" fill="url(#m0305-hatch)" stroke="none"/>
+<path d="M108 106 H148 V146 H108 Z" stroke-width="1.4"/>
+<path d="M110 108 H146 V144" stroke-width="0.8"/>
+<path d="M112 110 l9 9 M144 110 l-9 9 M112 142 l9 -9" stroke-width="0.6"/>
+<path d="M112 116 H144" stroke-width="1.2"/>
+<path d="M112 110 H144" stroke-width="0.6"/>
+<path d="M124 112 h12 v10 h-12 Z M128 122 v4 l2 3 M132 122 v4 l-2 3" stroke-width="1.1"/>
+<path d="M114 138 H142 V142 H114 Z" stroke-width="1.2"/>
+<path d="M124 138 v-8 h8 v8 M126 134 h4" stroke-width="1"/>
+<path d="M113 112 V143 M143 112 V143" stroke-width="0.6"/>
+<path d="M111 120 h4 M141 120 h4" stroke-width="0.4"/>
+<path d="M111 126 h4 M141 126 h4" stroke-width="0.4"/>
+<path d="M111 132 h4 M141 132 h4" stroke-width="0.4"/>
+<path d="M111 138 h4 M141 138 h4" stroke-width="0.4"/>
+<path d="M102 98 L80 107 V155 L102 150 Z" fill="#fff" stroke="none"/>
+<path d="M100 100 L84 106 V152 L100 147 Z" fill="url(#m0305-hatchl)" stroke="none"/>
+<path d="M102 98 L80 107 V155 L102 150" stroke-width="1.6"/>
+<circle cx="102" cy="107" r="2.2" stroke-width="0.9"/><circle cx="102" cy="142" r="2.2" stroke-width="0.9"/>
+<path d="M82 126 h5 v5 h-5 Z" stroke-width="0.9"/>
+<path d="M92 96 a16 16 0 0 0 -12 8 M80 104 l1 -5 M80 104 l5 1" stroke-width="0.8"/>
+<path d="M70 166 H160 V178 H70 Z" fill="#fff" stroke="none"/>
+<path d="M70 166 H160 V178 H70 Z" stroke-width="1.5"/>
+<path d="M73 169 H157 V176" stroke-width="0.7"/>
+<path d="M73 174 H157 V177 H73 Z" fill="url(#m0305-hatch)" stroke="none"/>
+<path d="M66 168 V176" stroke-width="1.6"/>
+<path d="M92 173 l3 -3 M106 174 l3 -3 M122 172 l3 -3 M138 174 l3 -3" stroke-width="0.6"/>
+<path d="M98 184 H158 V216 H98 Z" stroke-width="1.4"/>
+<path d="M100 186 H156 V214" stroke-width="0.7"/>
+<circle cx="118" cy="200" r="11" stroke-width="1.2"/><circle cx="118" cy="200" r="4" stroke-width="0.8"/>
+<path d="M118 200 m-11 0 a11 11 0 0 0 22 0 Z" fill="url(#m0305-hatch)" stroke="none"/>
+<path d="M138 190 H152 V199 H138 Z" stroke-width="1"/>
+<path d="M141 194 h8 M141 197 h5" stroke-width="0.6"/>
+<path d="M138 206 h14 M138 210 h9" stroke-width="0.5"/>
+<path d="M98 222 H158 V248 H98 Z" stroke-width="1.4"/>
+<path d="M100 224 H156 V246" stroke-width="0.7"/>
+<path d="M118 236 H138" stroke-width="1.6"/>
+<path d="M100 242 H156 V246 H100 Z" fill="url(#m0305-hatch)" stroke="none"/>
+<circle cx="320" cy="76" r="11" stroke-width="1.5"/>
+<path d="M309 78 l-4 1 l4 2" stroke-width="0.8"/>
+<path d="M320 87 V160 M306 100 H334 M309 160 H331" stroke-width="1.5"/>
+<path d="M307 101 L302 130 L310 150 M333 101 L338 132 L330 152" stroke-width="1.4"/>
+<path d="M311 160 L307 270 M329 160 L333 270 M307 270 H295 M333 270 H345" stroke-width="1.5"/>
+<path d="M307 74 L158 126" stroke-width="0.8" stroke-dasharray="4 3"/>
+<path d="M164 122 l-6 4 l6 3" stroke-width="0.8"/>
+<path d="M354 248 L358 270 H378 L382 248 Z" stroke-width="1.3"/>
+<path d="M352 248 H384" stroke-width="1.2"/>
+<path d="M360 262 H377 L376 269 H361 Z" fill="url(#m0305-hatch)" stroke="none"/>
+<path d="M174 126 H252" stroke-width="0.6" stroke-dasharray="4 3"/>
+<path d="M246 126 V270" stroke-width="0.9"/>
+<path d="M246 126 l-3 7 M246 126 l3 7 M246 270 l-3 -7 M246 270 l3 -7" stroke-width="0.9"/>
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0305</text>
+<text x="76" y="86" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="end" filter="none">Voron 2.4 自建机</text>
+<text x="76" y="96" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="end" filter="none">CoreXY 全封闭腔</text>
+<text x="76" y="120" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="end" filter="none">侧板可翻开 · 清碎屑</text>
+<text x="62" y="192" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="end" filter="none">接屑盘整块抽出</text>
+<text x="66" y="222" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">铝型材工作站</text>
+<text x="66" y="233" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">占地 0.5×0.5m</text>
+<text x="166" y="200" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="start" filter="none">耗材干燥箱</text>
+<text x="166" y="238" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="start" filter="none">工具抽屉</text>
+<text x="240" y="170" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">腔口中心 1100～1200</text>
+<text x="232" y="88" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">站姿平视</text>
+<text x="384" y="50" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="end" filter="none">→ 天窗排气口</text>
+<text x="200" y="290" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0305：从拧第一颗螺丝开始的 Voron 2.4，站着平视就能看进腔里</text>
 </svg>
 
-    <figcaption><span class="hand">速写 · 天窗边矮柜上一台方形封闭式 3D 打印机，旁边耗材卷架，上方排风管通向天窗</span></figcaption>
+    <figcaption><span class="hand">速写 · 铝型材工作站上一台自建 CoreXY 打印机，侧板翻开，下层抽出接屑盘</span></figcaption>
   </figure>
 
-  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>拓竹 P1S 放在 03 阁楼间可站立区的东南角、天窗东侧 ≈0.5m，60×60cm 矮柜靠着与木工间的隔断，排风管 ≈1.5m 直通天窗边的排气口；西北 2m 是 0301 工具台。（0008 未定位，设想落位）</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
+  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>自建的 Voron 2.4 立在 03 阁楼间可站立区的东南角、天窗东侧 ≈0.5m，围着它是一张占地 0.5×0.5m 的铝型材工作站，腔口中心抬到 1100～1200 站着平视；下层是耗材干燥箱、工具抽屉和一块能整块抽出的接屑盘，排风管 ≈1.5m 直通天窗边的排气口；西北 2m 是 0301 工具台。（0008 未定位，设想落位）</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
 
-  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">晚上十一点，你从地堡的设计工作台把文件切好，走上阁楼。拓竹 P1S 放在天窗边一张矮柜上，四面透明，里面的喷头正在一层一层堆一个帐篷区用的挂钩。柜子旁边一排耗材架上，八卷 PLA 按颜色排着：木色、黑色、白色、绿色。打印机上方装了一根排风管，一米多就通到天窗边的排气口，几乎闻不到味道。旁边的小屏幕显示“剩余 2 小时 14 分”。你把台灯调暗，回帐篷区躺着，隔着帐篷布听打印机“滋滋滋”地跑，像细雨。手机上 HomeAssistant 弹出摄像头画面，第 47 层，一切正常。</p></section>
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">晚上十点，阁楼斜顶下只留一盏灯。你站在那张半米见方的铝型材工作站前，不用弯腰——腔口正好在胸口再往上一点，眼睛平着就能看进去。里面是自己一颗一颗拧起来的 Voron 2.4：黑色型材骨架，四根丝杠托着热床同步升降，CoreXY 的皮带在顶上拉出一个对称的口字。喷头正在打一批帐篷区要用的挂钩，ABS，腔温五十度，玻璃门上蒙了一层暖雾。下层的耗材干燥箱的小屏亮着 12% RH。你把侧板往外一翻，抽出接屑盘，昨晚的碎屑哗一声倒进桶里，再推回去。手机上 Mainsail 还开着：第 214 层，剩 1 小时 47 分。三个月前这堆型材还躺在纸箱里，现在它比任何一台开箱即用的机器都更像自己的东西。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>天窗东侧靠隔断放一张 60×60cm 矮柜，拓竹 P1S 放柜面，柜内放工具和备用喷头</span></li><li><span class="box"></span><span>打印机顶部接一根 100mm 排风管，横过天花 1.5 米到天窗边的排气口，装小风扇</span></li><li><span class="box"></span><span>柜旁做一个 8 格耗材架，每卷 PLA 贴颜色标签 + 剩余克数，放一包干燥剂</span></li><li><span class="box"></span><span>打印机接 HomeAssistant，开始/结束/失败推送到手机，摄像头看层高</span></li><li><span class="box"></span><span>地堡 0204 设计工作台切片，局域网直接推到阁楼打印机，不用来回跑</span></li><li><span class="box"></span><span>打印任务优先级：全屋小配件（挂钩、标牌、PSK 内衬）&gt; 玩具 &gt; 试验件</span></li><li><span class="box"></span><span>打印机下面垫一块 2cm 减震垫，阁楼木地板不共振</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>机器选 Voron 2.4 的 250 方案：CoreXY、全封闭腔体、四丝杠自动调平热床，照官方 BOM 和手册自己配件自己拧</span></li><li><span class="box"></span><span>工作站用 0805 定标的欧标喷砂黑型材搭：3030 做立柱横梁、2020 做层板和配件，占地约 0.5×0.5m</span></li><li><span class="box"></span><span>腔口中心抬到 1100～1200，站着平视就能看进打印仓；台面和滑轨接触面铺一层木板，型材划伤露白交给木料挡</span></li><li><span class="box"></span><span>侧板做成可拆可翻的：铰链加磁扣，清碎屑时整块翻开——参考方案固定死侧板这个坑必须改掉</span></li><li><span class="box"></span><span>下层分三格：耗材干燥箱、工具抽屉、一块能整块抽出的接屑盘，碎屑直接端走倒掉</span></li><li><span class="box"></span><span>固件走 Klipper，klippy 跑在 0804 那台常驻的 M1 Mac 上，Mainsail 网页里开打、看摄像头、调参数</span></li><li><span class="box"></span><span>腔体顶部接 100mm 排风管，横过天花 1.5 米到天窗边排气口，排风没做好之前一律不打 ABS</span></li><li><span class="box"></span><span>第一批 ABS 工装打印件找打印服务或朋友的机器代打，机器立起来之后再自己复刻一套备件</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">5 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
     <div class="td-list">
       <a class="td-item" href="../teardown/0305.html#p1">
         <span class="kind kind-hw">产品模块</span>
-        <b>1. 打印机矮柜与减震</b>
-        <span class="td-brief">拓竹 P1S 是一台四面封闭的桌面打印机，放在阁楼间天窗东侧一张 60×60cm 的实木矮柜上。矮柜内放…</span>
+        <b>1. Voron 2.4 机架与运动系统</b>
+        <span class="td-brief">Voron 2.4 是一台开源的 CoreXY 打印机：两条交叉的皮带驱动打印头在 X、Y 平面上跑，电…</span>
       </a>
       <a class="td-item" href="../teardown/0305.html#p2">
         <span class="kind kind-hw">产品模块</span>
-        <b>2. 排风系统</b>
-        <span class="td-brief">打印 PLA 味道不大，但 ABS、PETG 会散发微粒和气味，在阁楼这种小空间会闷一整天。在 P1S …</span>
+        <b>2. 铝型材工作站与人体工学高度</b>
+        <span class="td-brief">围着打印机搭的一张一体工作站，用 0805 定标的欧标喷砂黑型材：3030 做立柱和横梁，2020 做层…</span>
       </a>
       <a class="td-item" href="../teardown/0305.html#p3">
         <span class="kind kind-hw">产品模块</span>
-        <b>3. 八格耗材架</b>
-        <span class="td-brief">柜旁一个八格的耗材架，每格立放一卷 PLA，按颜色排开：木色、黑、白、绿……本身就是装饰。PLA 吸潮后…</span>
+        <b>3. 腔体排风与耗材干燥</b>
+        <span class="td-brief">全封闭腔体打 ABS 时会散发微粒和气味，在阁楼这种斜顶小空间会闷一整天，所以腔体顶部开一个 100mm…</span>
       </a>
       <a class="td-item" href="../teardown/0305.html#p4">
         <span class="kind kind-logic">联动逻辑</span>
-        <b>4. 打印任务队列</b>
-        <span class="td-brief">地堡 0204 工作台用 OrcaSlicer 切好模型，局域网直接推给阁楼的 P1S，不用来回跑。任务…</span>
+        <b>4. Klipper 上位机与打印监看</b>
+        <span class="td-brief">自建机的固件用 Klipper：主板上的单片机只负责按时间戳打步进脉冲，解析 G 代码和运动规划交给一台…</span>
       </a>
       <a class="td-item" href="../teardown/0305.html#p5">
         <span class="kind kind-logic">联动逻辑</span>
-        <b>5. 耗材管理</b>
-        <span class="td-brief">八卷 PLA 每卷登记进自托管的 Spoolman：颜色、材质、初始重量、开封日期。每次打印结束，切片文…</span>
+        <b>5. 耗材账本与接屑清理</b>
+        <span class="td-brief">每卷线材登记进自托管的 Spoolman：厂商、材质、颜色、初始重量、开封日期，打印结束后 Moonra…</span>
       </a>
     </div>
     <p class="td-cta"><a class="btn" href="../teardown/0305.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
   </section>
 
   <div class="two">
-    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“家的丰容计划”：全屋小配件全部自己打印，每个物件都独一无二</li><li>耗材色彩墙：8 卷 PLA 按色排开，本身就是装饰</li><li>“沉浸式打印”延时视频：一晚上的打印压缩成 15 秒，流量密码</li></ul></section>
-    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>阁楼温差大，PLA 一定放密封箱 + 干燥剂，不然打出来全是气泡</li><li>排风一定要做，ABS 味道在阁楼这种小空间会闷一整天</li><li>别贪多囤耗材，八卷够用，用完再买</li></ul></section>
+    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>小红书「3D打印机工作台 占地仅0.5m²」那篇直接抄作业，但它固定侧板和台面太矮两个坑我都改掉了</li><li>「动手主义」：从拧第一颗螺丝到第一张首层，全程拍成长视频，比开箱视频耐看一百倍</li><li>工业风机位：黑型材 + 腔内灯 + 玻璃门，夜里逆光拍一张就是氛围感封面</li></ul></section>
+    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>先有鸡还是先有蛋：Voron 的工装件要 ABS 打印，自己还没机器，第一批只能找代打或蹭朋友的机器</li><li>调试期以周计，别指望即插即用；阁楼温差大对全封闭腔体反而是好事，但排风没装好前别碰 ABS</li><li>型材和线性件别贪便宜杂牌，机架歪一毫米后面调一个月；20 系列槽 6mm、30/40 系列槽 8mm 配件不通用，要分箱</li></ul></section>
   </div>
 
-  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,500～3,000（矮柜 + 排风 + 耗材架，打印机已有）；耗材每年 ¥800 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥7,000～12,000（Voron 2.4 套件/散件 ¥5,000～9,000 + 工作站型材约 ¥1,000）；耗材每年 ¥800 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
     <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
@@ -214,29 +213,87 @@
           <span class="zh ">界面有中文</span>
           
         </header>
-        <p class="gh-desc">基于拓竹 Bambu Studio 二次开发的开源切片软件，自带校准流程，支持局域网直发</p>
-        <p class="gh-why">→ 地堡 0204 工作台装它切片，局域网直接推到阁楼的 P1S，不用来回跑，挂钩标牌批量打</p>
+        <p class="gh-desc">开源切片软件，自带一整套校准流程，预设库里就有 Voron，支持直发 Klipper、PrusaLink 和 OctoPrint</p>
+        <p class="gh-why">→ 地堡 0204 工作台装它切片，拿 Voron 2.4 预设当起点，切完经 Moonraker 直发阁楼那台自建机</p>
         <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="g0305-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="15" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
     <pattern id="g0305-1-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
     <marker id="g0305-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
-  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OrcaSlicer · 模型切成 G 代码直发打印机</text>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">OrcaSlicer · 模型切成 G 代码直发自建机</text>
   <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
   <g filter="url(#g0305-1-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
     <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-1-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M160.0 234.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="234.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
   </g>
   <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0" stroke-dasharray="3 3"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M200.0 204.0 L200.0 222.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
-  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">STL / 3MF 模型</text><text x="78" y="107" text-anchor="middle" font-size="10.5">（0204 设计台）</text><text x="78" y="174" text-anchor="middle" font-size="10.5">校准流程</text><text x="78" y="187" text-anchor="middle" font-size="10.5">温度塔 / 流量</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OrcaSlicer</text><text x="200" y="107" text-anchor="middle" font-size="10.5">切片引擎</text><text x="200" y="180" text-anchor="middle" font-size="10.5">机型 / 耗材预设</text><text x="200" y="254" text-anchor="middle" font-size="9.5">Spoolman 卷号</text><text x="322" y="94" text-anchor="middle" font-size="10.5">G 代码</text><text x="322" y="107" text-anchor="middle" font-size="10.5">局域网直发</text><text x="322" y="174" text-anchor="middle" font-size="10.5">P1S 打印机</text><text x="322" y="187" text-anchor="middle" font-size="10.5">（阁楼）</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">导入</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">存预设</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">切片</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">LAN 模式</text><text x="200.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">对应</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">看设备页</text></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">STL / 3MF</text><text x="78" y="107" text-anchor="middle" font-size="10.5">模型</text><text x="78" y="174" text-anchor="middle" font-size="10.5">校准流程</text><text x="78" y="187" text-anchor="middle" font-size="10.5">流量 / 压力提前</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OrcaSlicer</text><text x="200" y="107" text-anchor="middle" font-size="10.5">切片引擎</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Voron 机型</text><text x="200" y="187" text-anchor="middle" font-size="10.5">耗材预设</text><text x="200" y="254" text-anchor="middle" font-size="9.5">Spoolman 卷号</text><text x="322" y="100" text-anchor="middle" font-size="10.5">G 代码</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Voron 2.4</text><text x="322" y="187" text-anchor="middle" font-size="10.5">（阁楼自建）</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">导入</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">存预设</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">切片</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">直发</text><text x="200.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">对应</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">设备页</text></g>
   <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0305：地堡切片 → 局域网直发阁楼 P1S，耗材预设与 Spoolman 卷号对应</text>
+  <text x="16" y="288" font-size="9" fill="#555">0305：地堡切片 → Moonraker 直发阁楼自建机，耗材预设与 Spoolman 卷号…</text>
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">OrcaSlicer/OrcaSlicer</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>OrcaSlicer 是由 SoftFever 发起、社区维护的开源切片软件，从拓竹 Bambu Studio 分叉而来，如今独立成组织，15.7k 星是切片软件里最活跃的开源项目之一。它解决的问题是：拓竹官方软件功能被绑定在自家生态里，而社区想要更细的参数控制和更多机型支持。</p><p>切片软件的工作原理是把 STL 或 3MF 模型按层高切成一层层轮廓，再规划每层的墙线、填充、支撑路径，最后输出打印机能执行的 G 代码。OrcaSlicer 在这条流水线上加了很多实用件：内置温度塔、流量、压力提前、最大体积速度的校准流程，精确墙距和接缝控制，悬垂减速与树状支撑，以及拓竹、Prusa、Voron、创想三维等品牌的机型预设库。</p><p>它支持局域网直连打印机，拓竹机型走本机 LAN 模式或云模式，Klipper、PrusaLink、OctoPrint 也能直发；界面自带简体中文，B 站和拓竹社区有大量中文教程，几乎每月一版。</p><p>放进 0305 的流程里，它装在地堡 0204 的设计工作台上：把 P1S 设成 LAN 模式并填入访问码，切好挂钩、标牌、PSK 内衬后直接发送到阁楼打印机，同时在设备页看摄像头。要注意先用它的校准流程把每卷耗材的流量和温度跑一遍并存成耗材预设，和 Spoolman 里的卷号对上，否则木色 PLA 和白色 PLA 的参数混着用会拉丝。</p></div>
+        <div class="gh-intro"><p>OrcaSlicer 是由 SoftFever 发起、社区维护的开源切片软件，从拓竹 Bambu Studio 分叉而来，如今独立成组织，15.7k 星，是切片软件里最活跃的开源项目之一。它解决的问题是：各家官方软件都被绑在自家生态里，而社区想要更细的参数控制和更广的机型支持。</p><p>切片软件的工作原理是把 STL 或 3MF 模型按层高切成一层层轮廓，再规划每层的墙线、填充、支撑路径，最后输出打印机能执行的 G 代码。OrcaSlicer 在这条流水线上加了很多实用件：内置温度塔、流量、压力提前、最大体积速度的校准流程，精确墙距和接缝控制，悬垂减速与树状支撑，以及 Voron、Prusa、VzBot、RatRig、创想三维等机型的预设库。</p><p>它支持局域网直连打印机，Klipper 走 Moonraker、Prusa 走 PrusaLink，OctoPrint 也能直发；界面自带简体中文，B 站和国内 DIY 社区有大量中文教程，几乎每月一版。</p><p>放进 0305 的流程里，它装在地堡 0204 的设计工作台上：选 Voron 2.4 的机型预设当起点，按自己那台机的实际行程、喷嘴口径和腔温改一份，切好挂钩、标牌、PSK 内衬后经 Moonraker 直发阁楼，同时在设备页看摄像头。要注意自建机没有出厂预设，第一件事是用它的校准流程把流量、压力提前和最大体积速度逐项跑一遍并存成耗材预设，再和 Spoolman 里的卷号对上，否则木色和白色 PLA 混着用会拉丝。</p></div>
       </article>
       <article class="gh-card" id="gh2">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/Klipper3d/klipper" target="_blank" rel="noopener">Klipper3d/klipper</a>
+          <span class="stars">★ 11.6k</span>
+          <span class="zh ">有中文文档站</span>
+          
+        </header>
+        <p class="gh-desc">把运动规划搬到一台 Linux 电脑上的 3D 打印机固件：单片机只管步进脉冲，支持输入整形和压力提前</p>
+        <p class="gh-why">→ 自建那台 Voron 2.4 的固件就是它，klippy 跑在 0804 那台常驻 M1 Mac 上，全部参数集中在一个文本文件里</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0305-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0305-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0305-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Klipper · M1 Mac 做大脑，单片机只管脉冲</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0305-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-2-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0305-2-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-2-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-2-shade)" stroke="none"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0305-2-shade)" stroke="none"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M256.0 250.0 L266.0 250.0" stroke-dasharray="3 3"/><path d="M362.9 222.0 C376.0 222.0 376.0 204.0 389.1 204.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">切片 G 代码</text><text x="78" y="180" text-anchor="middle" font-size="9.5">printer.cfg</text><text x="200" y="94" text-anchor="middle" font-size="10.5">klippy 主程序</text><text x="200" y="107" text-anchor="middle" font-size="9.5">0804 M1 Mac</text><text x="200" y="174" text-anchor="middle" font-size="10.5">运动规划</text><text x="200" y="187" text-anchor="middle" font-size="9.5">输入整形 / 压力提前</text><text x="200" y="254" text-anchor="middle" font-size="9.5">Moonraker API</text><text x="322" y="94" text-anchor="middle" font-size="10.5">主板单片机</text><text x="322" y="107" text-anchor="middle" font-size="10.5">带时间戳的步进</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Voron 2.4</text><text x="322" y="187" text-anchor="middle" font-size="10.5">自建打印机</text><text x="322" y="248" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="261" text-anchor="middle" font-size="10.5">开始 / 失败推送</text><text x="430" y="218" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">读配置</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">USB</text><text x="376.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">推送</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0305：klippy 跑在 M1 Mac 上做规划，主板只打脉冲，状态经 Moonraker 出到 …</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Klipper3d/klipper</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Klipper 是 Kevin O’Connor 发起的开源 3D 打印机固件，11.6k 星，Voron 全系、创想 K1 这类高速机型用的都是它或它的改版。它要解决的问题是：传统固件把 G 代码解析和运动规划都塞进一颗小单片机，算力不够就跑不快，也加不了复杂算法。</p><p>它的做法是把大脑和手脚分开：一台 Linux 电脑跑 klippy 主程序，负责解析 G 代码、做运动规划和各种补偿，再把带时间戳的步进指令发给主板；主板上的单片机只烧一个很小的固件，按时间戳把脉冲打出去。因为规划放在大电脑上做，输入整形（抵消振纹）、压力提前（改善拐角）、共振测量、四丝杠自动调平都是 Python 模块，配置集中在一个 printer.cfg 文本文件里，改完重启就生效，不用重新编译固件。</p><p>它本身不带界面，配 Mainsail 或 Fluidd 网页前端，中间隔一层 Moonraker API，HomeAssistant 也从这里接。官方文档站有完整的简体中文翻译，国内 Voron 社群和 B 站教程非常多，项目一直很活跃。</p><p>在 0305 里它是自建那台 Voron 2.4 的固件：主板刷 MCU 固件，klippy 和 Moonraker 跑在 0804 那台常驻的 M1 Mac 上，工作站旁边挂一块小屏当面板。装完先跑一遍共振测量生成输入整形参数，再调压力提前，这两步是自建机能不能又快又干净的分水岭。坑是配置文件每一项都要自己填，第一次点火前把限位方向、热敏类型和热保护逐条核对一遍。</p></div>
+      </article>
+      <article class="gh-card" id="gh3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/VoronDesign/Voron-2" target="_blank" rel="noopener">VoronDesign/Voron-2</a>
+          <span class="stars">★ 4.4k</span>
+          <span class="zh zh-no">无中文（国内社群有中文搭建长贴）</span>
+          
+        </header>
+        <p class="gh-desc">开源 CoreXY 打印机 Voron 2.4 的完整设计仓库：CAD 源文件、DXF 图纸、STL 打印件、装配手册和 BOM</p>
+        <p class="gh-why">→ 0305 那台机器就是照它搭的：按官方 BOM 配件、按手册一步步拧，机架尺寸和结构件全部来自这里</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0305-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0305-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0305-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Voron 2.4 · 一份图纸变成一台机器</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0305-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-3-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M246.2 222.0 C261.0 222.0 261.0 204.0 275.8 204.0" stroke-dasharray="3 3"/><path d="M322.0 148.0 L322.0 124.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="100" text-anchor="middle" font-size="10.5">官方 BOM</text><text x="78" y="180" text-anchor="middle" font-size="10.5">ABS 结构件</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Voron 2.4</text><text x="200" y="107" text-anchor="middle" font-size="10.5">CAD + 装配手册</text><text x="200" y="174" text-anchor="middle" font-size="10.5">CoreXY 运动</text><text x="200" y="187" text-anchor="middle" font-size="10.5">四丝杠热床</text><text x="200" y="248" text-anchor="middle" font-size="10.5">全封闭腔体</text><text x="200" y="261" text-anchor="middle" font-size="10.5">敢打 ABS</text><text x="322" y="94" text-anchor="middle" font-size="10.5">阁楼那台</text><text x="322" y="107" text-anchor="middle" font-size="10.5">自建打印机</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Klipper 固件</text><text x="322" y="187" text-anchor="middle" font-size="10.5">配置模板</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">配件</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">件</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">装成</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">刷固件</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">开机</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0305：按 BOM 和手册自己搭，结构件先代打，装完刷 Klipper</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">VoronDesign/Voron-2</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Voron 是 2015 年起做开源打印机设计的社区组织，Voron-2 仓库 4.4k 星，放的是旗下 Voron 2.4 这台机器的全套设计：CAD 源文件、DXF 图纸、STL 结构件、装配手册、固件配置和切片预设，许可 GPL-3.0。它要解决的不是卖机器，而是把一台高速、全封闭、可维护的打印机彻底摊开，让你自己买件自己拧。</p><p>它的结构是 CoreXY：两条交叉皮带驱动打印头在 X、Y 平面上跑，电机固定在机身上不跟着动，惯量小所以能快；热床由四根丝杠同步升降，开机自动扫描床面并补偿倾斜；机身是铝型材骨架加板材封闭，腔温保得住，才敢打 ABS、ASA 这类会翘边的材料。仓库不卖整机，给的是一份可配置的 BOM，按 250、300、350 三种尺寸选件，其中一两百个结构件要自己打印。</p><p>生态上 Voron 是 Klipper 固件最大的用户群，官方在线手册和 Discord 都很完整；设计本身已经定型，主仓库更新不频繁，但社区的改件仓库层出不穷。没有官方中文，不过矿石论坛、太极派和 B 站有大量中文搭建长贴和长视频，这也是选它而不是选成品机的原因之一。</p><p>在 0305 里它就是主角的图纸来源：按 BOM 配型材和线性件，按手册的顺序装机架、龙门、打印头，再把它的切片预设导进 OrcaSlicer 当起点。要注意结构件必须用 ABS 打印，自己还没有机器时得先找代打或蹭朋友的机器，这是自建路线的第一道坎；另外它的机架尺寸要和工作站的型材截面一起算，别等机器装好才发现台面留窄了。</p></div>
+      </article>
+      <article class="gh-card" id="gh4">
         <header class="gh-head">
           <a class="gh-name" href="https://github.com/Donkie/Spoolman" target="_blank" rel="noopener">Donkie/Spoolman</a>
           <span class="stars">★ 2.8k</span>
@@ -244,55 +301,26 @@
           
         </header>
         <p class="gh-desc">自托管的 3D 打印耗材库存管理，记录每卷剩余克数、颜色、材质，带打印机集成</p>
-        <p class="gh-why">→ 8 格耗材架每卷登记进去，标签上的剩余克数不用手写，快用完自动提醒，防止囤太多</p>
+        <p class="gh-why">→ 八格耗材架每卷登记进去，Moonraker 打完自动扣减，标签上的剩余克数不用手写，快用完自动提醒</p>
         <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
-    <filter id="g0305-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
-    <pattern id="g0305-2-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
-    <marker id="g0305-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <filter id="g0305-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0305-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0305-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
   <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Spoolman · 每卷线材的克数账本</text>
   <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <g filter="url(#g0305-2-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
-    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-2-shade)" stroke="none"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-2-shade)" stroke="none"/><path d="M160.0 234.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="234.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0305-2-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  <g filter="url(#g0305-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-4-shade)" stroke="none"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/><path d="M160.0 234.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="234.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
   </g>
-  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0" stroke-dasharray="3 3"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0"/></g>
-  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">P1S / AMS</text><text x="78" y="107" text-anchor="middle" font-size="10.5">每次打印用量</text><text x="78" y="218" text-anchor="middle" font-size="10.5">手动称重校正</text><text x="200" y="94" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="200" y="107" text-anchor="middle" font-size="9.5">（ha-bambulab）</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Spoolman</text><text x="200" y="187" text-anchor="middle" font-size="10.5">REST API</text><text x="200" y="248" text-anchor="middle" font-size="9.5">厂商 / 线材 / 线卷</text><text x="200" y="261" text-anchor="middle" font-size="10.5">剩余克数</text><text x="322" y="94" text-anchor="middle" font-size="10.5">二维码标签</text><text x="322" y="107" text-anchor="middle" font-size="10.5">贴 8 格耗材架</text><text x="322" y="180" text-anchor="middle" font-size="10.5">快用完提醒</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">用量</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">API 扣减</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">校正</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">生成</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">低于阈值</text></g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 204.0 L200.0 222.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0" stroke-dasharray="3 3"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">Voron 2.4</text><text x="78" y="107" text-anchor="middle" font-size="10.5">每单预估用量</text><text x="78" y="218" text-anchor="middle" font-size="10.5">手动称重校正</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Moonraker</text><text x="200" y="107" text-anchor="middle" font-size="9.5">spoolman 组件</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Spoolman</text><text x="200" y="187" text-anchor="middle" font-size="10.5">REST API</text><text x="200" y="248" text-anchor="middle" font-size="9.5">厂商 / 线材 / 线卷</text><text x="200" y="261" text-anchor="middle" font-size="10.5">剩余克数</text><text x="322" y="100" text-anchor="middle" font-size="10.5">二维码标签</text><text x="322" y="180" text-anchor="middle" font-size="10.5">快用完提醒</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">用量</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">API 扣减</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">校正</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">生成</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">低于阈值</text></g>
   <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0305：ha-bambulab 读用量 → HA 调 API 扣减 → 耗材架标签与低量提醒</text>
+  <text x="16" y="288" font-size="9" fill="#555">0305：Moonraker 读每单用量 → Spoolman 扣减 → 耗材架标签与低量提醒</text>
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Donkie/Spoolman</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>Spoolman 是瑞典开发者 Donkie 写的自托管 3D 打印耗材库存管理服务，2.8k 星，是 Klipper 圈里管理线材的事实标准。它解决的痛点很具体：家里十几卷线材，每卷还剩多少克、什么材质颜色，靠贴纸和记忆迟早乱掉。</p><p>它的架构是一个 Python 后端加内置网页前端，用 Docker 一条命令跑起来，数据库可以用 SQLite 或 PostgreSQL。数据模型分三层：厂商、线材（材质、颜色、直径、密度、推荐温度）、线卷（初始重量、已用克数、所在位置、批号）。打印机每打完一个任务，通过 REST API 或 WebSocket 把消耗的克数回写，剩余量自动扣减；也支持手动称重校正。它还内置二维码标签设计器，扫码就能定位到那一卷；社区维护了一份公共线材数据库，常见品牌直接选。</p><p>生态上 Moonraker、Fluidd、Mainsail 原生支持，Home Assistant 有集成，界面通过 Weblate 翻译，简体中文已完成九成以上。</p><p>在 0305 里它跑在 0802 中枢的树莓派上，八格耗材架每卷登记一条，架子上的标签就打它生成的二维码；拓竹 P1S 不是 Klipper，扣减要绕一下：用 ha-bambulab 读到的每次打印耗材用量，在 HA 自动化里调 Spoolman 的 API 写回。坑是 AMS 里线卷切换时用量归属会串，最好每卷固定槽位。</p></div>
-      </article>
-      <article class="gh-card" id="gh3">
-        <header class="gh-head">
-          <a class="gh-name" href="https://github.com/greghesp/ha-bambulab" target="_blank" rel="noopener">greghesp/ha-bambulab</a>
-          <span class="stars">★ 2.3k</span>
-          <span class="zh ">界面有中文</span>
-          
-        </header>
-        <p class="gh-desc">拓竹打印机的 Home Assistant 集成，读进度、层数、温度、AMS 耗材，还能看摄像头</p>
-        <p class="gh-why">→ P1S 接上它，开始、结束、失败自动推手机，躺帐篷里在 HA 上看第 47 层的摄像头画面</p>
-        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
-  <defs>
-    <filter id="g0305-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
-    <pattern id="g0305-3-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
-    <marker id="g0305-3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
-  </defs>
-  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">ha-bambulab · 打印机状态进 HA</text>
-  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <g filter="url(#g0305-3-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
-    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-3-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-3-shade)" stroke="none"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0305-3-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
-  </g>
-  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M246.2 204.0 C261.0 204.0 261.0 222.0 275.8 222.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
-  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">P1S 打印机</text><text x="78" y="107" text-anchor="middle" font-size="10.5">MQTT 状态报文</text><text x="78" y="180" text-anchor="middle" font-size="10.5">机内摄像头</text><text x="200" y="94" text-anchor="middle" font-size="9.5">ha-bambulab</text><text x="200" y="107" text-anchor="middle" font-size="10.5">解析成实体</text><text x="200" y="180" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="322" y="94" text-anchor="middle" font-size="10.5">手机推送</text><text x="322" y="107" text-anchor="middle" font-size="9.5">开始 / 结束 / 失败</text><text x="322" y="174" text-anchor="middle" font-size="10.5">柜顶排风扇</text><text x="322" y="187" text-anchor="middle" font-size="10.5">延时 10 分钟</text><text x="322" y="248" text-anchor="middle" font-size="10.5">0802 大屏</text><text x="322" y="261" text-anchor="middle" font-size="10.5">摄像头画面</text><text x="430" y="138" text-anchor="middle" font-size="10.5">帐篷里的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">LAN 模式</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">画面</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">层数 / 状态</text><text x="261.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">跟打印启停</text></g>
-  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0305：P1S 状态 → HA 实体 → 手机推送、排风扇联动、AMS 用量回写 Spoolm…</text>
-  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">greghesp/ha-bambulab</text>
-</svg>
-</div></figure>
-        <div class="gh-intro"><p>ha-bambulab 是 greghesp 发起、社区维护的拓竹打印机 Home Assistant 集成，2.3k 星，通过 HACS 安装，是把 X1、P1、A1 系列接进 HA 的事实方案。拓竹官方只给了自家 App 和 Bambu Studio，想让打印机和家里其他设备联动，就得靠它。</p><p>它的工作原理是走拓竹打印机的 MQTT 通道：局域网模式下直接连打印机的本机 MQTT 端口，云模式下连拓竹云。打印机会不断推送一份包含当前层数、进度、剩余时间、喷头与热床温度、AMS 各槽耗材信息、风扇转速、错误码的状态报文，集成把它们解析成几十个 HA 实体；反向可以下发暂停、继续、停止、调温、开关灯的命令。摄像头也接进来了，P1 系列走它自带的低帧率流，X1 走 RTSP。</p><p>社区非常活跃，Discord 有专门频道，几乎每月更新，翻译文件里自带简体中文，B 站上也有不少中文安装教程。</p><p>在 0305 里它是打印机和这套系统之间的桥：开始、结束、失败推送到手机，摄像头画面贴到 0802 中枢大屏上，AMS 槽位的耗材用量回写给 Spoolman 扣减，柜顶排风扇跟着打印状态自动启停，打完再延时十分钟。要注意 P1S 用局域网模式需要在打印机上开启并填入访问码，固件大版本更新后偶尔会断连，更新集成即可。</p></div>
+        <div class="gh-intro"><p>Spoolman 是瑞典开发者 Donkie 写的自托管 3D 打印耗材库存管理服务，2.8k 星，是 Klipper 圈里管理线材的事实标准。它解决的痛点很具体：家里十几卷线材，每卷还剩多少克、什么材质颜色，靠贴纸和记忆迟早乱掉。</p><p>它的架构是一个 Python 后端加内置网页前端，用 Docker 一条命令跑起来，数据库可以用 SQLite 或 PostgreSQL。数据模型分三层：厂商、线材（材质、颜色、直径、密度、推荐温度）、线卷（初始重量、已用克数、所在位置、批号）。打印机每打完一个任务，通过 REST API 或 WebSocket 把消耗的克数回写，剩余量自动扣减；也支持手动称重校正。它还内置二维码标签设计器，扫码就能定位到那一卷；社区维护了一份公共线材数据库，常见品牌直接选。</p><p>生态上 Moonraker、Fluidd、Mainsail 原生支持，Home Assistant 有集成，界面通过 Weblate 翻译，简体中文已完成九成以上。</p><p>在 0305 里它跑在 0804 那台常驻的 M1 Mac 上，八格耗材架每卷登记一条，架子上的标签就打它生成的二维码；自建的 Voron 2.4 跑 Klipper，Moonraker 自带 spoolman 组件，在 Mainsail 里选好线卷，每打完一单就按切片预估自动扣减，不用再绕一层自动化写回。坑是换料时忘了在界面里切线卷，用量会全记到上一卷头上，最好把切换动作写进换料宏；另外预估和实际总有偏差，每月称重校正一次。</p></div>
       </article>
     </div>
     <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
@@ -300,42 +328,13 @@
     <div class="gh-cards">
       <article class="gh-card gh-ext" id="ghx1">
         <header class="gh-head">
-          <a class="gh-name" href="https://github.com/Klipper3d/klipper" target="_blank" rel="noopener">Klipper3d/klipper</a>
-          <span class="stars">★ 11.6k</span>
-          <span class="zh ">有中文文档站</span>
-          <span class="ext-tag">延伸</span>
-        </header>
-        <p class="gh-desc">把运动规划搬到树莓派上的 3D 打印机固件：单片机只管步进脉冲，支持输入整形、压力提前和多 MCU</p>
-        <p class="gh-why">→ 拓竹 P1S 是封闭固件，但读懂 Klipper 就读懂了现代打印机为什么快；哪天想用 0307 的 CNC 平台改一台大尺寸打印机，固件就选它</p>
-        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
-  <defs>
-    <filter id="g0305-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
-    <pattern id="g0305-4-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
-    <marker id="g0305-4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
-  </defs>
-  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Klipper · 树莓派做大脑，单片机只管脉冲</text>
-  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <g filter="url(#g0305-4-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
-    <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-4-shade)" stroke="none"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-4-shade)" stroke="none"/><rect x="270.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 268.0 h28 M314 268.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 229.0 h98 v4 h-98 Z" fill="url(#g0305-4-shade)" stroke="none"/>
-  </g>
-  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M256.0 250.0 L266.0 250.0" stroke-dasharray="3 3"/></g>
-  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">切片 G 代码</text><text x="78" y="107" text-anchor="middle" font-size="10.5">局域网推送</text><text x="78" y="174" text-anchor="middle" font-size="9.5">printer.cfg</text><text x="78" y="187" text-anchor="middle" font-size="10.5">文本配置</text><text x="200" y="94" text-anchor="middle" font-size="10.5">klippy 主程序</text><text x="200" y="107" text-anchor="middle" font-size="10.5">树莓派 / 服务器</text><text x="200" y="174" text-anchor="middle" font-size="10.5">运动规划</text><text x="200" y="187" text-anchor="middle" font-size="9.5">输入整形 / 压力提前</text><text x="200" y="248" text-anchor="middle" font-size="9.5">Moonraker API</text><text x="200" y="261" text-anchor="middle" font-size="9.5">Mainsail 前端</text><text x="322" y="94" text-anchor="middle" font-size="10.5">主板单片机</text><text x="322" y="107" text-anchor="middle" font-size="10.5">带时间戳的步进</text><text x="322" y="174" text-anchor="middle" font-size="10.5">0307 平台改的</text><text x="322" y="187" text-anchor="middle" font-size="10.5">大尺寸打印机</text><text x="322" y="248" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="261" text-anchor="middle" font-size="10.5">开始 / 失败推送</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">读配置</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">串口 / USB</text></g>
-  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0305：先读懂 P1S 为什么要振动校准；再把 0307 龙门平台改成大尺寸打印机时…</text>
-  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">Klipper3d/klipper</text>
-</svg>
-</div></figure>
-        <div class="gh-intro"><p>Klipper 是 Kevin O’Connor 发起的开源 3D 打印机固件，11.6k 星，Voron、Creality K1 等高速打印机的固件都是它或它的改版。它要解决的问题是：传统固件把 G 代码解析和运动规划都塞进一颗小单片机，算力不够就跑不快、加不了高级算法。</p><p>它的工作方式是把大脑和手脚分开：一台树莓派或类似的 Linux 小电脑跑 klippy 主程序，负责解析 G 代码、做运动规划和各种补偿；打印机主板上的单片机只烧一个很小的固件，接收带时间戳的步进指令并执行。因为规划在大电脑上做，输入整形（抵消振纹）、压力提前（改善拐角）、自动床网都是 Python 模块，配置是一个文本文件，改完重启生效。</p><p>生态上它不带界面，配 Mainsail 或 Fluidd 网页前端，再加 Moonraker API 就能接 HomeAssistant；官方文档站有完整简体中文翻译，国内 Voron 社群和 B 站教程非常多，项目持续活跃。</p><p>对 0305 来说它是延伸项目：柜面上的拓竹 P1S 固件封闭，不用改；但读一遍 Klipper 的输入整形和压力提前文档，就能理解 P1S 为什么要做振动校准，切片参数怎么和它对应。更实际的用法是：0307 那套 2020 型材龙门平台哪天想变成一台 300 见方的大尺寸打印机，主板刷 Klipper，klippy 跑在 0802 服务器上，Moonraker 接进 HomeAssistant，推送和现在的 P1S 一样。</p></div>
-      </article>
-      <article class="gh-card gh-ext" id="ghx2">
-        <header class="gh-head">
           <a class="gh-name" href="https://github.com/OctoPrint/OctoPrint" target="_blank" rel="noopener">OctoPrint/OctoPrint</a>
           <span class="stars">★ 9k</span>
           <span class="zh ">界面有中文</span>
           <span class="ext-tag">延伸</span>
         </header>
         <p class="gh-desc">3D 打印机的网页远程控制台：上传文件、看进度、看摄像头、装插件，Python 写的老牌树莓派方案</p>
-        <p class="gh-why">→ P1S 的远程监控靠拓竹自家云，OctoPrint 是开源世界里同一件事的标杆，读懂它的插件体系就知道打印机远程监控该长什么样</p>
+        <p class="gh-why">→ 自建机已经有 Klipper 加 Mainsail，用不上它；但它是打印机远程监控这件事的开山标杆，读懂它的插件体系就知道一块监看面板该有什么</p>
         <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="g0305-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
@@ -348,15 +347,15 @@
     <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-5-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-5-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0305-5-shade)" stroke="none"/><path d="M274.0 236.0 h96 v36 h-96 Z M274.0 236.0 l8 -8 h96 l-8 8 M370.0 236.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 237.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-5-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0305-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
   </g>
   <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M256.0 250.0 L266.0 250.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
-  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">G 代码文件</text><text x="78" y="107" text-anchor="middle" font-size="10.5">网页上传</text><text x="78" y="216" text-anchor="middle" font-size="10.5">USB 摄像头</text><text x="78" y="229" text-anchor="middle" font-size="10.5">看层高</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OctoPrint</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Python 服务</text><text x="200" y="174" text-anchor="middle" font-size="10.5">插件仓库</text><text x="200" y="187" text-anchor="middle" font-size="10.5">失败检测 / 延时</text><text x="200" y="248" text-anchor="middle" font-size="10.5">串口发 G 代码</text><text x="200" y="261" text-anchor="middle" font-size="10.5">收温度回报</text><text x="322" y="248" text-anchor="middle" font-size="10.5">串口打印机</text><text x="322" y="261" text-anchor="middle" font-size="10.5">非拓竹机型</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">进度 / 急停</text><text x="430" y="138" text-anchor="middle" font-size="10.5">帐篷里看手机</text><text x="430" y="151" text-anchor="middle" font-size="10.5">的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">视频流</text><text x="261.0" y="245.0" text-anchor="middle" font-size="8" fill="#666">USB</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">集成</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">推送</text></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">G 代码文件</text><text x="78" y="107" text-anchor="middle" font-size="10.5">网页上传</text><text x="78" y="216" text-anchor="middle" font-size="10.5">USB 摄像头</text><text x="78" y="229" text-anchor="middle" font-size="10.5">看层高</text><text x="200" y="94" text-anchor="middle" font-size="10.5">OctoPrint</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Python 服务</text><text x="200" y="174" text-anchor="middle" font-size="10.5">插件仓库</text><text x="200" y="187" text-anchor="middle" font-size="10.5">失败检测 / 延时</text><text x="200" y="248" text-anchor="middle" font-size="10.5">串口发 G 代码</text><text x="200" y="261" text-anchor="middle" font-size="10.5">收温度回报</text><text x="322" y="248" text-anchor="middle" font-size="10.5">串口打印机</text><text x="322" y="261" text-anchor="middle" font-size="9.5">非 Klipper 机型</text><text x="322" y="94" text-anchor="middle" font-size="9.5">HomeAssistant</text><text x="322" y="107" text-anchor="middle" font-size="10.5">进度 / 急停</text><text x="430" y="138" text-anchor="middle" font-size="10.5">帐篷里看手机</text><text x="430" y="151" text-anchor="middle" font-size="10.5">的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">视频流</text><text x="261.0" y="245.0" text-anchor="middle" font-size="8" fill="#666">USB</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">集成</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">推送</text></g>
   <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0305：作 P1S 之外第二台串口打印机的远程台，和 ha-bambulab 并排进 HA …</text>
+  <text x="16" y="288" font-size="9" fill="#555">0305：作自建机之外第二台串口打印机的远程台，和 Mainsail 并排进 HA</text>
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">OctoPrint/OctoPrint</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>OctoPrint 是德国开发者 Gina Häußge 从 2012 年起维护的开源打印机远程控制软件，用 Python 写成，9k 星，2026 年 6 月还发了 1.11.8 版。它要解决的问题：打印机拴着一台电脑太浪费，树莓派上的一个网页就能远程上传、启动、监看和急停。</p><p>它的工作方式是串口加网页：树莓派通过 USB 连打印机，OctoPrint 把 G 代码逐行发过去，同时解析温度回报，在网页上画温度曲线、显示进度和剩余时间，接一个摄像头就能看实时画面并自动生成延时视频。它最大的特点是插件系统：官方仓库有几百个插件，从床面调平可视化到远程访问和 AI 失败检测都有；HomeAssistant 有官方 OctoPrint 集成，进度、温度和急停按钮直接进仪表盘。</p><p>生态上 OctoPi 镜像烧进树莓派就能用，教程极多，界面有社区中文语言包；项目靠赞助维持，持续更新。</p><p>对 0305 来说它是延伸项目：柜面上的拓竹 P1S 走自家协议，有 ha-bambulab 就够，不需要它；它的价值在两处。一是学习：看一个成熟的打印机监控该有什么——温度曲线、摄像头延时、失败检测、推送，这是设想里那块小屏幕和 HA 通知的参考答案。二是备用：如果耗材架旁再添一台老式串口打印机，或 0307 平台改成的打印机不跑 Klipper，把 OctoPrint 装进 0802 服务器的一个容器，USB 拉一根线过去，HA 集成一加，和 P1S 并排出现在同一个仪表盘上。</p></div>
+        <div class="gh-intro"><p>OctoPrint 是德国开发者 Gina Häußge 从 2012 年起维护的开源打印机远程控制软件，用 Python 写成，9k 星，2026 年 6 月还发了 1.11.8 版。它要解决的问题：打印机拴着一台电脑太浪费，树莓派上的一个网页就能远程上传、启动、监看和急停。</p><p>它的工作方式是串口加网页：树莓派通过 USB 连打印机，OctoPrint 把 G 代码逐行发过去，同时解析温度回报，在网页上画温度曲线、显示进度和剩余时间，接一个摄像头就能看实时画面并自动生成延时视频。它最大的特点是插件系统：官方仓库有几百个插件，从床面调平可视化到远程访问和 AI 失败检测都有；HomeAssistant 有官方 OctoPrint 集成，进度、温度和急停按钮直接进仪表盘。</p><p>生态上 OctoPi 镜像烧进树莓派就能用，教程极多，界面有社区中文语言包；项目靠赞助维持，持续更新。</p><p>对 0305 来说它是延伸项目：自建的 Voron 2.4 跑 Klipper，日常界面是 Mainsail，不需要它；它的价值在两处。一是学习：看一个成熟的打印机监控该有什么——温度曲线、摄像头延时、失败检测、推送，这是工作站那块小屏和 HA 通知的参考答案。二是备用：如果 0301 那边收来一台老式串口打印机，或者代打阶段借来的机器不跑 Klipper，把 OctoPrint 装进 0804 的一个容器，USB 拉一根线过去，HA 集成一加，就和自建机并排出现在同一个仪表盘上。</p></div>
       </article>
-      <article class="gh-card gh-ext" id="ghx3">
+      <article class="gh-card gh-ext" id="ghx2">
         <header class="gh-head">
           <a class="gh-name" href="https://github.com/prusa3d/PrusaSlicer" target="_blank" rel="noopener">prusa3d/PrusaSlicer</a>
           <span class="stars">★ 9.1k</span>
@@ -377,22 +376,51 @@
     <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-6-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-6-shade)" stroke="none"/><rect x="148.0" y="226.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M186 268.0 h28 M192 268.0 v6 h16 v-6" stroke-width="1"/><path d="M151.0 229.0 h98 v4 h-98 Z" fill="url(#g0305-6-shade)" stroke="none"/><path d="M284.0 72.0 h66 l10 10 v38 h-76 Z M350.0 72.0 v10 h10" stroke-width="1.3"/><path d="M292.0 88.0 h54 M292.0 96.0 h44 M292.0 104.0 h48" stroke-width="0.5"/><path d="M274.0 162.0 h96 v36 h-96 Z M274.0 162.0 l8 -8 h96 l-8 8 M370.0 162.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 163.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-6-shade)" stroke="none"/><rect x="270.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 274.0 h98 v3 h-98 Z" fill="url(#g0305-6-shade)" stroke="none"/>
   </g>
   <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-6-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 124.0 L200.0 222.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M222.2 124.0 C261.0 124.0 261.0 222.0 299.8 222.0" stroke-dasharray="3 3"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M322.0 222.0 L322.0 204.0"/></g>
-  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">STL / STEP</text><text x="78" y="107" text-anchor="middle" font-size="10.5">0204 设计台</text><text x="78" y="174" text-anchor="middle" font-size="10.5">打印机配置</text><text x="78" y="187" text-anchor="middle" font-size="10.5">耗材参数</text><text x="200" y="94" text-anchor="middle" font-size="9.5">PrusaSlicer</text><text x="200" y="107" text-anchor="middle" font-size="10.5">切片引擎</text><text x="200" y="174" text-anchor="middle" font-size="10.5">树状支撑</text><text x="200" y="187" text-anchor="middle" font-size="10.5">可变层高</text><text x="200" y="248" text-anchor="middle" font-size="10.5">逐层预览</text><text x="200" y="261" text-anchor="middle" font-size="10.5">时长 / 耗材</text><text x="322" y="94" text-anchor="middle" font-size="10.5">G 代码 / 3MF</text><text x="322" y="107" text-anchor="middle" font-size="10.5">参数一起存</text><text x="322" y="174" text-anchor="middle" font-size="10.5">拓竹 P1S</text><text x="322" y="187" text-anchor="middle" font-size="10.5">局域网推送</text><text x="322" y="248" text-anchor="middle" font-size="10.5">OrcaSlicer</text><text x="322" y="261" text-anchor="middle" font-size="10.5">下游分支</text><text x="261.0" y="168.0" text-anchor="middle" font-size="8" fill="#666">分叉</text><text x="322.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">日常</text></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">STL / STEP</text><text x="78" y="107" text-anchor="middle" font-size="10.5">0204 设计台</text><text x="78" y="174" text-anchor="middle" font-size="10.5">打印机配置</text><text x="78" y="187" text-anchor="middle" font-size="10.5">耗材参数</text><text x="200" y="94" text-anchor="middle" font-size="9.5">PrusaSlicer</text><text x="200" y="107" text-anchor="middle" font-size="10.5">切片引擎</text><text x="200" y="174" text-anchor="middle" font-size="10.5">树状支撑</text><text x="200" y="187" text-anchor="middle" font-size="10.5">可变层高</text><text x="200" y="248" text-anchor="middle" font-size="10.5">逐层预览</text><text x="200" y="261" text-anchor="middle" font-size="10.5">时长 / 耗材</text><text x="322" y="94" text-anchor="middle" font-size="10.5">G 代码 / 3MF</text><text x="322" y="107" text-anchor="middle" font-size="10.5">参数一起存</text><text x="322" y="174" text-anchor="middle" font-size="10.5">Voron 2.4</text><text x="322" y="187" text-anchor="middle" font-size="9.5">Moonraker 推送</text><text x="322" y="248" text-anchor="middle" font-size="10.5">OrcaSlicer</text><text x="322" y="261" text-anchor="middle" font-size="10.5">下游分支</text><text x="261.0" y="168.0" text-anchor="middle" font-size="8" fill="#666">分叉</text><text x="322.0" y="208.0" text-anchor="middle" font-size="8" fill="#666">日常</text></g>
   <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
   <text x="16" y="288" font-size="9" fill="#555">0305：日常用 OrcaSlicer，查参数和做第二意见时用上游 PrusaSlicer 对比…</text>
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">prusa3d/PrusaSlicer</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>PrusaSlicer 是捷克 Prusa Research 公司维护的开源切片软件，从 Slic3r 分叉而来，用 C++ 写成，9.1k 星，2026 年 5 月发布 2.9.5 版。它要解决的问题是把 3D 模型变成打印机能执行的 G 代码，并在这一步决定强度、速度、表面质量和耗材用量。</p><p>它的工作方式是模型进、G 代码出：导入 STL、3MF 或 STEP 后，先做摆放、缩放、切割和修复，再按层高把模型切成一层层轮廓，为每层生成外墙、内墙、填充、支撑和顶底面路径，最后按打印机配置输出 G 代码并逐层预览走线和时间。它带来的很多功能后来成了行业标配：有机树状支撑、可变层高、熨烫、涂色分区多材料、按区域改参数的修改器，以及联网直接把任务发给打印机。</p><p>生态上它是 OrcaSlicer、拓竹 Studio、SuperSlicer 的共同上游，几乎所有厂商都提供 PrusaSlicer 配置文件，界面自带简体中文，中文教程很多；Prusa 公司持续投入，版本更新稳定。</p><p>对 0305 来说它是延伸项目：日常切片继续用 OrcaSlicer 给 P1S 推任务，但某个参数看不懂时，去 PrusaSlicer 的官方知识库查同名参数，那里解释最完整，因为参数就是从这里来的。实际用途有二：地堡 0204 设计台装一份当第二意见，同一个 PSK 内衬模型用两个切片器各切一遍，比支撑用量和预计时长，选省耗材的那版；再给全屋小配件建一个 3MF 项目库，连打印参数一起存，下次再打挂钩不用重新调。</p></div>
+        <div class="gh-intro"><p>PrusaSlicer 是捷克 Prusa Research 公司维护的开源切片软件，从 Slic3r 分叉而来，用 C++ 写成，9.1k 星，2026 年 5 月发布 2.9.5 版。它要解决的问题是把 3D 模型变成打印机能执行的 G 代码，并在这一步决定强度、速度、表面质量和耗材用量。</p><p>它的工作方式是模型进、G 代码出：导入 STL、3MF 或 STEP 后，先做摆放、缩放、切割和修复，再按层高把模型切成一层层轮廓，为每层生成外墙、内墙、填充、支撑和顶底面路径，最后按打印机配置输出 G 代码并逐层预览走线和时间。它带来的很多功能后来成了行业标配：有机树状支撑、可变层高、熨烫、涂色分区多材料、按区域改参数的修改器，以及联网直接把任务发给打印机。</p><p>生态上它是 OrcaSlicer、拓竹 Studio、SuperSlicer 的共同上游，几乎所有厂商都提供 PrusaSlicer 配置文件，界面自带简体中文，中文教程很多；Prusa 公司持续投入，版本更新稳定。</p><p>对 0305 来说它是延伸项目：日常切片继续用 OrcaSlicer 给自建的 Voron 推任务，但某个参数看不懂时，去 PrusaSlicer 的官方知识库查同名参数，那里解释最完整，因为参数就是从这里来的。实际用途有二：地堡 0204 设计台装一份当第二意见，同一个 PSK 内衬模型用两个切片器各切一遍，比支撑用量和时长，选省耗材的那版；再给全屋小配件建一个 3MF 项目库，连参数一起存，下次再打挂钩不用重调。</p></div>
+      </article>
+      <article class="gh-card gh-ext" id="ghx3">
+        <header class="gh-head">
+          <a class="gh-name" href="https://github.com/mainsail-crew/mainsail" target="_blank" rel="noopener">mainsail-crew/mainsail</a>
+          <span class="stars">★ 2.2k</span>
+          <span class="zh ">界面有简体中文</span>
+          <span class="ext-tag">延伸</span>
+        </header>
+        <p class="gh-desc">Klipper 的网页控制台：温度曲线、点动、G 代码 3D 预览、床网热力图、摄像头和宏，全在浏览器里</p>
+        <p class="gh-why">→ Klipper 本身不带界面，自建那台 Voron 的日常操作全靠它；工作站小屏和帐篷里的手机刷的是同一个页面</p>
+        <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <filter id="g0305-7-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <pattern id="g0305-7-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
+    <marker id="g0305-7-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">Mainsail · 浏览器就是机器的仪表盘</text>
+  <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <g filter="url(#g0305-7-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
+    <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0305-7-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 120.0 h98 v3 h-98 Z" fill="url(#g0305-7-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="157.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 200.0 h98 v3 h-98 Z" fill="url(#g0305-7-shade)" stroke="none"/><rect x="148.0" y="228.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 274.0 h98 v3 h-98 Z" fill="url(#g0305-7-shade)" stroke="none"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0305-7-shade)" stroke="none"/><rect x="270.0" y="152.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 194.0 h28 M314 194.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 155.0 h98 v4 h-98 Z" fill="url(#g0305-7-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
+  </g>
+  <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0305-7-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M200.0 222.0 L200.0 204.0" stroke-dasharray="3 3"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M256.0 176.0 L266.0 176.0"/><path d="M359.8 148.0 C376.0 148.0 376.0 124.0 392.2 124.0"/></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">Klipper klippy</text><text x="78" y="107" text-anchor="middle" font-size="9.5">0804 M1 Mac</text><text x="78" y="216" text-anchor="middle" font-size="10.5">腔内摄像头</text><text x="78" y="229" text-anchor="middle" font-size="10.5">看层数</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Moonraker</text><text x="200" y="107" text-anchor="middle" font-size="9.5">HTTP / WebSocket</text><text x="200" y="174" text-anchor="middle" font-size="10.5">Mainsail</text><text x="200" y="187" text-anchor="middle" font-size="10.5">单页网页应用</text><text x="200" y="248" text-anchor="middle" font-size="10.5">宏按钮</text><text x="200" y="261" text-anchor="middle" font-size="10.5">换料 / 归位</text><text x="322" y="94" text-anchor="middle" font-size="10.5">工作站小屏</text><text x="322" y="107" text-anchor="middle" font-size="10.5">常开</text><text x="322" y="174" text-anchor="middle" font-size="10.5">手机浏览器</text><text x="322" y="187" text-anchor="middle" font-size="10.5">帐篷里看层数</text><text x="430" y="138" text-anchor="middle" font-size="10.5">一个人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">视频流</text><text x="200.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">API</text><text x="376.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">看层数</text></g>
+  <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
+  <text x="16" y="288" font-size="9" fill="#555">0305：klippy → Moonraker → Mainsail，工作站小屏和手机看同一块面板</text>
+  <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">mainsail-crew/mainsail</text>
+</svg>
+</div></figure>
+        <div class="gh-intro"><p>Mainsail 是 mainsail-crew 维护的 Klipper 网页前端，用 Vue 写成，2.2k 星，和 Fluidd 一起是 Klipper 世界里两个主流界面。它解决的问题很直接：Klipper 只给固件和 API，没有任何界面，机器装好之后你需要一个能上传文件、点动、看温度、改配置的地方。</p><p>它的工作方式是纯前端加一层 API：klippy 主程序通过一个本地套接字暴露能力，Moonraker 把它包成 HTTP 和 WebSocket 接口，Mainsail 只是跑在浏览器里的单页应用，连上 Moonraker 就成了机器的仪表盘。界面上有温度曲线与预设、各轴点动、G 代码文件管理、逐层 3D 刀路预览、床网热力图、打印历史统计、宏按钮、多摄像头与延时视频、带语法高亮的配置编辑器，还能管打印队列。</p><p>安装用 KIAUH 脚本或 MainsailOS 镜像一条龙，文档站完整，社区在 Discord；界面通过 Weblate 翻译成十几种语言，简体中文可用，国内 Voron 社群基本人手一份，更新很勤。</p><p>在 0305 里它是这台自建机的日常操作面板：klippy 和 Moonraker 跑在 0804 那台常驻 M1 Mac 上，工作站旁边挂一块小屏常开着它，人在帐篷里也能用手机刷同一个页面看第几层。作为延伸，它的宏按钮最值得利用——把换料、清喷头、抽接屑盘前的归位动作各做成一颗按钮，省得每次翻文档；另外它只是前端，安全兜底还是在固件和硬件上，别指望网页急停。</p></div>
       </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
     <p class="tiny">点关键词直接跳到小红书站内搜索（需登录小红书），看热门帖里的实拍效果。</p>
     <div class="xhs-list">
-      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E6%8B%93%E7%AB%B9%20P1S%20%E6%89%93%E5%8D%B0%E6%9C%BA%20%E6%A1%8C%E9%9D%A2&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 拓竹 P1S 打印机 桌面</span><span class="xnote">看封闭式打印机放矮柜的摆法和周边收纳</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=3D%E6%89%93%E5%8D%B0%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8F%B0%20%E5%8D%A0%E5%9C%B00.5m%C2%B2&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 3D打印机工作台 占地0.5m²</span><span class="xnote">看铝型材工作站的占地布局和层板分配，侧板和高度两个坑要改掉</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=Voron%202.4%20%E8%87%AA%E5%BB%BA%20%E6%90%AD%E5%BB%BA&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 Voron 2.4 自建 搭建</span><span class="xnote">看从一堆型材拧成整机的过程记录，判断自己要花多久</span></a>
       <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=3D%E6%89%93%E5%8D%B0%20%E8%80%97%E6%9D%90%E6%9E%B6%20%E6%94%B6%E7%BA%B3&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 3D打印 耗材架 收纳</span><span class="xnote">看 PLA 按颜色排开做成装饰墙的效果</span></a>
-      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=3D%E6%89%93%E5%8D%B0%E6%9C%BA%20%E6%8E%92%E9%A3%8E%20%E7%AE%A1%E9%81%93&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 3D打印机 排风 管道</span><span class="xnote">看打印机顶部接排风管到窗边的走管做法</span></a>
     </div></section>
 
   <section class="blk"><h2><em>🔗</em> 联动模块</h2>

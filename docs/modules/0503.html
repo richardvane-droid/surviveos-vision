@@ -329,7 +329,7 @@
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">hbldh/bleak</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>bleak 是瑞典开发者 Henrik Blidh 写的 Python 低功耗蓝牙库，2.5k 星。它解决的是 Python 里操作 BLE 设备长期没有跨平台标准库的问题：Linux 要走 BlueZ，macOS 要走 CoreBluetooth，Windows 要走 WinRT，bleak 把三套接口包成同一个 asyncio API。</p><p>它的用法围绕两个对象：BleakScanner 负责扫描，能拿到每个设备的名字、信号强度和广播数据，也能一直监听广播回调；BleakClient 负责连接，连上之后按 UUID 读写特征值、订阅通知。整个库是异步的，一个脚本可以同时盯着十几个设备。HomeAssistant 的蓝牙集成和很多米家设备的第三方解码脚本底层都用它。</p><p>生态上它是 PyPI 上下载量最大的 BLE 库之一，文档和示例齐全，树莓派上一行 pip 就能装。中文资料不多，但 API 简单，看官方示例就够。</p><p>在 0503 里它是延伸：前面三个方案已经把 b-parasite 和花草监测仪接进了 HomeAssistant，bleak 给的是另一条路，不依赖 HA 和任何 App，自己掌握数据。在 0802 服务器或一块树莓派上写三十行脚本，扫描广播包，解出每盆的土壤湿度和光照，写进 CSV 或 SQLite。好处是想怎么算就怎么算：统计多肉队在养病区避暑那几周的湿度曲线，或者按 20/28/36 三种盆径分别算浇水间隔。缺点是 BLE 穿墙差，接收端要放在窗边。</p></div>
+        <div class="gh-intro"><p>bleak 是瑞典开发者 Henrik Blidh 写的 Python 低功耗蓝牙库，2.5k 星。它解决的是 Python 里操作 BLE 设备长期没有跨平台标准库的问题：Linux 要走 BlueZ，macOS 要走 CoreBluetooth，Windows 要走 WinRT，bleak 把三套接口包成同一个 asyncio API。</p><p>它的用法围绕两个对象：BleakScanner 负责扫描，能拿到每个设备的名字、信号强度和广播数据，也能一直监听广播回调；BleakClient 负责连接，连上之后按 UUID 读写特征值、订阅通知。整个库是异步的，一个脚本可以同时盯着十几个设备。HomeAssistant 的蓝牙集成和很多米家设备的第三方解码脚本底层都用它。</p><p>生态上它是 PyPI 上下载量最大的 BLE 库之一，文档和示例齐全，树莓派上一行 pip 就能装。中文资料不多，但 API 简单，看官方示例就够。</p><p>在 0503 里它是延伸：前面三个方案已经把 b-parasite 和花草监测仪接进了 HomeAssistant，bleak 给的是另一条路，不依赖 HA 和任何 App，自己掌握数据。在 0804 那台常驻的 M1 Mac 上写三十行脚本，扫描广播包，解出每盆的土壤湿度和光照，写进 CSV 或 SQLite。好处是想怎么算就怎么算：统计多肉队在养病区避暑那几周的湿度曲线，或者按 20/28/36 三种盆径分别算浇水间隔。缺点是 BLE 穿墙差，接收端要放在窗边。</p></div>
       </article>
     </div></section>
 

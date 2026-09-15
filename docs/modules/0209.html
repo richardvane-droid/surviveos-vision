@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>0209 藏宝阁 · SurviveOs 设想版</title>
-<meta name="description" content="架空床下 1.8 平米的帐篷密室，是我不给任何人看的秘密基地——掀开帘子，里面是一面写满名言、电影和对话的海报墙。">
+<meta name="description" content="床下 1.5×2m 密室：推开帆布滑门，是我的秘密书房——40cm 的帆布滑门一推，里面是一整面书格、一张写字台，和一墙不给人看的海报。">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +28,11 @@
 <article class="mod">
   <header class="mod-head">
     <p class="kicker">地堡 · 模块 0209 · 藏宝阁</p>
-    <h1>架空床下 1.8 平米的帐篷密室，是我不给任何人看的秘密基地</h1>
-    <p class="lede">掀开帘子，里面是一面写满名言、电影和对话的海报墙。</p>
+    <h1>床下 1.5×2m 密室：推开帆布滑门，是我的秘密书房</h1>
+    <p class="lede">40cm 的帆布滑门一推，里面是一整面书格、一张写字台，和一墙不给人看的海报。</p>
     <p class="meta">
       <span class="st st-🚧">🚧 真实设计进行中</span>
-      <span class="tag">#秘密基地</span><span class="tag">#精神领地</span><span class="tag">#痛屋</span><span class="tag">#露营风</span><span class="tag">#海报墙</span>
+      <span class="tag">#秘密基地</span><span class="tag">#精神领地</span><span class="tag">#痛屋</span><span class="tag">#书墙</span><span class="tag">#海报墙</span>
     </p>
   </header>
   <figure class="mod-art">
@@ -49,139 +49,207 @@
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
       <line x1="0" y1="3" x2="6" y2="3" stroke="#1c1c1c" stroke-width="0.6"/>
     </pattern>
+    <pattern id="m0209-hatchl" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.7"/>
+    </pattern>
+    
   </defs>
   <g filter="url(#m0209-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- floor + back wall corner lines -->
-    <path d="M14 250 Q200 246 386 250" stroke-width="1.2"/>
-    <path d="M30 256 q30 -3 60 0 M300 257 q30 -3 60 0" stroke-width="0.8"/>
-    <path d="M14 40 H386" stroke-width="0.8"/>
-
-    <!-- loft bed: platform with mattress, seen from the front, ceiling cuts it -->
-    <path d="M40 66 H360 V80 H40 Z" stroke-width="2"/>
-    <path d="M42 68 H358 V78" stroke-width="0.9"/>
-    <path d="M60 68 v10 M120 68 v10 M200 68 v10 M280 68 v10 M340 68 v10" stroke-width="0.7"/>
-    <!-- mattress + blanket + pillow on top -->
-    <path d="M50 66 V52 H350 V66" stroke-width="1.6"/>
-    <path d="M52 64 V54 H348" stroke-width="0.8"/>
-    <path d="M60 52 q20 -10 60 -6 q30 2 60 -2 q60 -4 120 6 q10 2 4 6 H60 Z" stroke-width="1.2"/>
-    <path d="M56 50 q10 -10 34 -6 q4 6 -2 8 H58 Z" stroke-width="1.1"/>
-    <path d="M110 52 h60 M200 52 h40" stroke-width="0.6"/>
-    <path d="M52 56 H348 V64 H52 Z" fill="url(#m0209-hatch)" stroke="none"/>
-    <!-- posts to the floor -->
-    <path d="M40 80 V250 M52 80 V250 M348 80 V250 M360 80 V250" stroke-width="1.8"/>
-    <path d="M42 82 V248 M362 82 V248" stroke-width="0.7"/>
-    <path d="M42 82 H50 V248 H42 Z M350 82 H358 V248 H350 Z" fill="url(#m0209-hatch)" stroke="none"/>
-    <!-- ladder on the right post -->
-    <path d="M366 80 L384 250 M378 80 L396 250" stroke-width="1.3"/>
-    <path d="M369 110 h12 M372 140 h12 M375 170 h12 M378 200 h12 M381 230 h12" stroke-width="1.1"/>
-    <!-- small wooden sign hanging on the left post -->
-    <path d="M46 96 v10" stroke-width="0.8"/>
-    <path d="M36 106 h20 v14 h-20 Z" stroke-width="1.1"/>
-    <path d="M39 111 h14 M39 116 h10" stroke-width="0.6"/>
-
-    <!-- tent: triangular front, apex just below the bed -->
-    <path d="M200 86 L70 250 H330 Z" fill="#fff" stroke="none"/>
-    <path d="M200 86 L70 250 H330 Z" stroke-width="2.2"/>
-    <path d="M202 90 L74 248 M198 90 L326 248" stroke-width="1"/>
-    <path d="M200 86 V76" stroke-width="1.4"/>
-    <!-- door opening: inner triangle -->
-    <path d="M200 106 L118 250 H282 Z" stroke-width="1.6"/>
-    <!-- fabric flaps pulled to the sides and tied -->
-    <path d="M200 106 Q150 150 118 250" stroke-width="0.8"/>
-    <path d="M110 182 q-16 -4 -22 8 q10 8 22 2 Z" stroke-width="1.2"/>
-    <path d="M290 182 q16 -4 22 8 q-10 8 -22 2 Z" stroke-width="1.2"/>
-    <path d="M114 184 q-8 0 -12 4 M286 184 q8 0 12 4" stroke-width="0.7"/>
-    <path d="M136 170 L108 186 M264 170 L292 186" stroke-width="0.9"/>
-    <!-- outside fabric shading -->
-    <path d="M76 246 L196 96 L192 112 L124 246 Z" fill="url(#m0209-hatch)" stroke="none"/>
-    <path d="M86 226 q6 -4 12 -2 M96 208 q6 -4 12 -2 M300 226 q-6 -4 -12 -2 M290 208 q-6 -4 -12 -2" stroke-width="0.6"/>
-
-    <!-- inside: back wall of the tent covered in posters -->
-    <path d="M200 112 L128 246 H272 Z" stroke-width="0.7"/>
-    <!-- poster rows -->
-    <path d="M186 130 h28 v20 h-28 Z" stroke-width="1"/>
-    <path d="M190 138 h20 M190 144 h14" stroke-width="0.6"/>
-    <path d="M166 156 h30 v24 h-30 Z M202 154 h30 v26 h-30 Z" stroke-width="1"/>
-    <path d="M170 168 q8 -8 12 0 q6 -6 10 2 M206 162 q12 0 20 12 M208 172 h20" stroke-width="0.6"/>
-    <path d="M148 186 h28 v26 h-28 Z M182 186 h36 v26 h-36 Z M224 186 h28 v26 h-28 Z" stroke-width="1"/>
-    <path d="M152 192 h20 M152 198 h14 M152 204 h18" stroke-width="0.6"/>
-    <circle cx="200" cy="196" r="6" stroke-width="0.7"/>
-    <path d="M188 208 h24" stroke-width="0.6"/>
-    <path d="M228 194 l6 -4 l6 6 M228 204 h20" stroke-width="0.6"/>
-    <!-- string lights hanging along the inside -->
-    <path d="M150 178 q25 12 50 4 q25 -8 50 4" stroke-width="0.9"/>
-    <circle cx="160" cy="182" r="2.2" stroke-width="0.9"/>
-    <circle cx="176" cy="186" r="2.2" stroke-width="0.9"/>
-    <circle cx="194" cy="185" r="2.2" stroke-width="0.9"/>
-    <circle cx="212" cy="182" r="2.2" stroke-width="0.9"/>
-    <circle cx="228" cy="182" r="2.2" stroke-width="0.9"/>
-    <circle cx="244" cy="186" r="2.2" stroke-width="0.9"/>
-    <path d="M200 106 V124" stroke-width="0.8"/>
-    <path d="M194 124 h12 v8 h-12 Z" stroke-width="1"/>
-    <path d="M194 128 l-4 0 M206 128 l4 0" stroke-width="0.6"/>
-
-    <!-- inside floor: wool rug, cushions, person lying on the side -->
-    <path d="M130 246 q70 -6 140 0" stroke-width="0.8"/>
-    <path d="M232 236 q10 -10 26 -6 q4 8 -4 12 q-16 2 -22 -6 Z" stroke-width="1.2"/>
-    <path d="M236 224 q8 -8 22 -4 q2 6 -4 8 q-14 2 -18 -4 Z" stroke-width="1.1"/>
-    <!-- person lying on the side: head on the cushion at right, body stretched to the left -->
-    <circle cx="238" cy="226" r="8" stroke-width="1.5"/>
-    <path d="M233 225 q2 2 4 0 M240 225 q2 2 4 0" stroke-width="0.8"/>
-    <path d="M230 230 Q200 224 176 232 Q160 236 148 246" stroke-width="1.8"/>
-    <path d="M230 236 Q200 234 178 240" stroke-width="1"/>
-    <path d="M226 234 q-4 4 -2 10 M148 246 l-8 2 M150 242 l8 4" stroke-width="1.2"/>
-    <path d="M186 234 q-10 2 -14 12" stroke-width="1.3"/>
-    <!-- treasure tin box in the corner + a book -->
-    <path d="M136 246 v-16 h22 v16 Z M136 230 q11 -6 22 0" stroke-width="1.2"/>
-    <path d="M140 236 h14 M146 240 h4" stroke-width="0.7"/>
-    <path d="M254 246 l2 -6 h14 l2 6 Z" stroke-width="0.9"/>
+<path d="M149 190 L263 190" stroke-width="1.5"/>
+<path d="M149 190 L96 249 M263 190 L316 249" stroke-width="1.3"/>
+<path d="M136 204 L276 204 M121 222 L291 222 M105 240 L307 240" stroke-width="0.4"/>
+<path d="M96 249 Q110 254 124 249 Q137 245 151 249 Q165 254 179 249 Q192 245 206 249 Q220 254 233 249 Q247 245 261 249 Q275 254 288 249 Q302 245 316 249 " stroke-width="0.9"/>
+<path d="M149 61 L263 61" stroke-width="1.6"/>
+<path d="M149 57 L263 57" stroke-width="1.3"/>
+<path d="M149 61 L149 57 L263 57 L263 61 Z" fill="url(#m0209-hatch)" stroke="none"/>
+<path d="M149 61 L121 30 M263 61 L291 30" stroke-width="1.2"/>
+<path d="M178 61 L164 30 M206 61 L206 30 M234 61 L248 30" stroke-width="0.45"/>
+<path d="M121 30 Q132 33 143 30 Q153 27 164 30 Q174 33 185 30 Q195 27 206 30 Q217 33 227 30 Q238 27 248 30 Q259 33 269 30 Q280 27 291 30 " stroke-width="0.9"/>
+<path d="M149 190 L149 61 M263 190 L263 61" stroke-width="1.4"/>
+<path d="M121.5 32.2 L119.8 30.4 L118.1 30.0 L116.3 30.0 L114.5 30.0 L112.5 30.0 L110.5 30.0 L108.4 30.0 L106.2 30.0 L103.9 30.0 L101.5 30.0 L99.0 30.0 L96.3 30.0 M290.5 32.2 L292.2 30.4 L293.9 30.0 L295.7 30.0 L297.5 30.0 L299.5 30.0 L301.5 30.0 L303.6 30.0 L305.8 30.0 L308.1 30.0 L310.5 30.0 L313.0 30.0 L315.7 30.0" stroke-width="0.9"/>
+<path d="M270 197 L270 55 M278 207 L278 46 M288 218 L288 35" stroke-width="0.4"/>
+<path d="M148 186 L96 241" stroke-width="0.9"/>
+<path d="M158 186 L114 241" stroke-width="0.75"/>
+<path d="M148 186 L158 186" stroke-width="0.7"/>
+<path d="M148 161 L96 194" stroke-width="0.9"/>
+<path d="M158 161 L114 194" stroke-width="0.75"/>
+<path d="M148 161 L158 161" stroke-width="0.7"/>
+<path d="M148 142 L96 156" stroke-width="0.9"/>
+<path d="M158 142 L114 156" stroke-width="0.75"/>
+<path d="M148 142 L158 142" stroke-width="0.7"/>
+<path d="M148 117 L96 109" stroke-width="0.9"/>
+<path d="M158 117 L114 109" stroke-width="0.75"/>
+<path d="M148 117 L158 117" stroke-width="0.7"/>
+<path d="M148 97 L96 72" stroke-width="0.9"/>
+<path d="M158 97 L114 72" stroke-width="0.75"/>
+<path d="M148 97 L158 97" stroke-width="0.7"/>
+<path d="M148 73 L102 30" stroke-width="0.9"/>
+<path d="M158 73 L119 30" stroke-width="0.75"/>
+<path d="M148 73 L158 73" stroke-width="0.7"/>
+<path d="M148 62 L119 30" stroke-width="0.8"/>
+<path d="M148 186 L148 62" stroke-width="0.75"/>
+<path d="M148 186 L158 186 M148 62 L158 62" stroke-width="0.5"/>
+<path d="M140 194 L140 53" stroke-width="0.75"/>
+<path d="M140 194 L151 194 M140 53 L151 53" stroke-width="0.5"/>
+<path d="M129 206 L129 41" stroke-width="0.75"/>
+<path d="M129 206 L141 206 M129 41 L141 41" stroke-width="0.5"/>
+<path d="M113 223 L113 30" stroke-width="0.75"/>
+<path d="M113 223 L128 223" stroke-width="0.5"/>
+<path d="M99 238 L99 30" stroke-width="0.75"/>
+<path d="M99 238 L116 238" stroke-width="0.5"/>
+<path d="M152 186 L152 166 M150 188 L150 167 M149 189 L149 168 M147 191 L147 169 M144 195 L144 171 M142 197 L142 173 M140 199 L140 174 M138 202 L138 176 M133 207 L133 179 M130 210 L130 181 M127 213 L127 183 M124 216 L124 186 M152 161 L152 145 M150 162 L150 146 M149 163 L149 146 M147 164 L147 147 M144 166 L144 148 M142 167 L142 149 M140 168 L140 149 M138 170 L138 150 M133 173 L133 152 M130 175 L130 153 M127 177 L127 154 M124 179 L124 155 M152 140 L152 120 M150 141 L150 120 M149 141 L149 120 M147 142 L147 119 M144 143 L144 119 M142 143 L142 119 M140 144 L140 119 M138 144 L138 119 M133 146 L133 118 M130 146 L130 118 M127 147 L127 117 M124 148 L124 117 M152 115 L152 100 M150 115 L150 99 M149 115 L149 98 M147 114 L147 97 M144 114 L144 96 M142 113 L142 95 M140 113 L140 94 M138 113 L138 93 M133 112 L133 91 M130 111 L130 89 M127 111 L127 88 M124 110 L124 86 M152 95 L152 74 M150 94 L150 73 M149 93 L149 72 M147 92 L147 70 M144 90 L144 67 M142 89 L142 65 M140 88 L140 63 M138 87 L138 61 M133 84 L133 57 M130 83 L130 54 M127 81 L127 52 M124 79 L124 49" stroke-width="0.6"/>
+<path d="M114 219 L114 190 L101 199 L101 231 Z" fill="url(#m0209-hatchl)" stroke="none"/>
+<path d="M114 219 L114 190 L101 199 L101 231 Z" stroke-width="1.1"/>
+<path d="M114 204 L101 215" stroke-width="0.6"/>
+<path d="M148 66 L121 38 M148 66 L264 66 M264 66 L291 38" stroke-width="1.1"/>
+<path d="M156 68 L156 91 M173 68 L173 91 M190 68 L190 91 M207 68 L207 91 M224 68 L224 91 M241 68 L241 91 M257 68 L257 91 M266 66 L266 88 M271 60 L271 85 M278 54 L278 80" stroke-width="0.45"/>
+<path d="M157 113 L157 70 L182 70 L182 113 Z M187 102 L187 70 L217 70 L217 102 Z M222 97 L222 70 L257 70 L257 97 Z M189 123 L189 106 L216 106 L216 123 Z M222 123 L222 102 L257 102 L257 123 Z" stroke-width="1.0"/>
+<path d="M161 75 L161 108 M167 75 L167 108 M173 75 L173 108 M178 75 L178 108 M227 75 L252 75 M227 81 L252 81 M227 87 L252 87 M227 91 L252 91 M225 106 L254 106 M225 112 L254 112 M225 117 L254 117 M192 111 L213 111 M192 116 L213 116" stroke-width="0.45"/>
+<circle cx="202.2" cy="91.3" r="2.6" stroke-width="0.8"/>
+<path d="M202 94 L202 90" stroke-width="0.8"/>
+<path d="M189 96 L216 96" stroke-width="0.6"/>
+<path d="M153 134 L259 134 L271 136 L141 136 Z" fill="#fff" stroke="none"/>
+<path d="M153 134 L259 134 L271 136 L141 136 Z" stroke-width="1.5"/>
+<path d="M141 141 L271 141" stroke-width="1.1"/>
+<path d="M141 136 L141 141 M271 136 L271 141" stroke-width="1.0"/>
+<path d="M141 141 L271 141 L271 136 L141 136 Z" fill="url(#m0209-hatchl)" stroke="none"/>
+<path d="M147 141 L147 203 M265 141 L265 203" stroke-width="1.0"/>
+<path d="M197 134 L230 134 L236 135 L193 135 Z" fill="#fff" stroke="none"/>
+<path d="M197 134 L230 134 L236 135 L193 135 Z" stroke-width="0.9"/>
+<path d="M214 134 L215 135" stroke-width="0.6"/>
+<path d="M232 134 L260 134 L264 135 L234 135 Z" stroke-width="0.8"/>
+<path d="M234.4 134.2 q0 -10 7.5 -10 q7.5 0 7.5 10 Z" stroke-width="1.1" fill="#fff"/>
+<path d="M234.4 134.2 q0 -10 7.5 -10 q7.5 0 7.5 10 Z" stroke-width="1.1"/>
+<path d="M242.4 124.6 q2.5 -4 5.5 -3.2 M234.4 129.2 q-5 1.5 -4 5 M239.9 124.2 v-3" stroke-width="0.85"/>
+<path d="M250.8 129.9 q0 4.6 3.6 4.6 q3.6 0 3.6 -4.6 Z" stroke-width="0.85" fill="#fff"/>
+<path d="M250.8 129.9 q0 4.6 3.6 4.6 q3.6 0 3.6 -4.6 Z" stroke-width="0.85"/>
+<path d="M253.0 130.3 q0 4.6 3.6 4.6 q3.6 0 3.6 -4.6 Z" stroke-width="0.85" fill="#fff"/>
+<path d="M253.0 130.3 q0 4.6 3.6 4.6 q3.6 0 3.6 -4.6 Z" stroke-width="0.85"/>
+<path d="M185.1 214.1 L207.1 206.1 L229.1 214.1 M196.1 219.1 L207.1 206.1 L218.1 219.1" stroke-width="1.0"/>
+<circle cx="185.1" cy="217.1" r="2.4" stroke-width="0.8"/>
+<circle cx="196.1" cy="217.1" r="2.4" stroke-width="0.8"/>
+<circle cx="218.1" cy="217.1" r="2.4" stroke-width="0.8"/>
+<circle cx="229.1" cy="217.1" r="2.4" stroke-width="0.8"/>
+<path d="M204.5 206.1 V167.6 M209.7 206.1 V167.6" stroke-width="1.1"/>
+<path d="M198.1 78.0 h17.9 v13.7 h-17.9 Z" stroke-width="1.1" fill="#fff"/>
+<path d="M198.1 78.0 h17.9 v13.7 h-17.9 Z" stroke-width="1.1"/>
+<path d="M205.1 91.7 V103.3 M209.1 91.7 V103.3" stroke-width="0.8"/>
+<path d="M183.3 162.4 V111.7 q23.7 -6.3 47.5 0 V162.4 Z" stroke-width="1.2" fill="#fff"/>
+<path d="M183.3 162.4 V111.7 q23.7 -6.3 47.5 0 V162.4 Z" stroke-width="1.2"/>
+<path d="M184.3 122.3 h45.5 M184.3 137.0 h45.5 M184.3 149.7 h45.5" stroke-width="0.4"/>
+<path d="M188.1 167.6 h38 v6 h-38 Z" stroke-width="1.2" fill="#fff"/>
+<path d="M188.1 167.6 h38 v6 h-38 Z" stroke-width="1.2"/>
+<path d="M180.3 162.4 V147.6 h-7.0 M233.8 162.4 V147.6 h7.0" stroke-width="1.0"/>
+<path d="M191.2 162.4 L186.0 122.3 q0 -7.4 6.3 -8.4 h29.5 q6.3 1.1 6.3 8.4 L222.9 162.4 Z" stroke-width="1.3" fill="#fff"/>
+<path d="M191.2 162.4 L186.0 122.3 q0 -7.4 6.3 -8.4 h29.5 q6.3 1.1 6.3 8.4 L222.9 162.4 Z" stroke-width="1.3"/>
+<path d="M194.4 149.7 L219.7 149.7" stroke-width="0.4"/>
+<path d="M186.0 120.2 L181.2 137.0 L174.7 132.1" stroke-width="1.25"/>
+<path d="M171.3 131.1 q3.4 4 6.8 0" stroke-width="0.9"/>
+<path d="M228.2 120.2 L232.9 137.0 L231.9 131.7" stroke-width="1.25"/>
+<path d="M228.5 130.7 q3.4 4 6.8 0 M232.9 132.7 l5 -7" stroke-width="0.9"/>
+<path d="M204.9 107.3 V113.8 M209.3 107.3 V113.8" stroke-width="1.0"/>
+<circle cx="207.1" cy="99.1" r="9.3" stroke-width="1.3" fill="#fff"/>
+<circle cx="207.1" cy="99.1" r="9.3" stroke-width="1.3"/>
+<path d="M199.3 92.4 q7.8 -3.6 15.6 0" stroke-width="0.7"/>
+<path d="M284 54 L311 29" stroke-width="1.4"/>
+<path d="M284 58 L311 35" stroke-width="0.9"/>
+<path d="M290 222 L290 53 L309 37 L309 243 Z" fill="url(#m0209-hatchl)" stroke="none"/>
+<path d="M290 222 L290 53 L309 37 L309 243 Z" stroke-width="1.4"/>
+<path d="M290 53 L299 45 L299 225 L290 215 Z" fill="#fff" stroke="none"/>
+<path d="M290 53 L299 45 L299 225 L290 215 Z" stroke-width="1.5"/>
+<path d="M291.3 55.2 Q293.7 133.9 291.3 212.7 M293.1 53.7 Q295.5 134.1 293.1 214.5 M294.9 52.2 Q297.3 134.3 294.9 216.4 M296.8 50.6 Q299.2 134.5 296.8 218.3" stroke-width="0.6"/>
+<path d="M289.6 215.4 L298.6 225.1" stroke-width="2.4"/>
+<circle cx="290.9" cy="49.3" r="1.9" stroke-width="0.8"/>
+<circle cx="297.0" cy="43.8" r="1.9" stroke-width="0.8"/>
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="10" fill="#1c1c1c">0209</text>
+<path d="M110.0 191.8 L145.2 191.8" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<path d="M110.0 59.0 L145.2 59.0" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<path d="M94.0 55.1 L145.2 55.1" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<path d="M110.0 191.8 L110.0 59.0" stroke="#1c1c1c" stroke-width="0.8" fill="none" filter="none" stroke-linecap="round"/>
+<path d="M107.0 189.4 L113.0 194.2" stroke="#1c1c1c" stroke-width="0.8" fill="none" filter="none" stroke-linecap="round"/>
+<path d="M107.0 56.6 L113.0 61.4" stroke="#1c1c1c" stroke-width="0.8" fill="none" filter="none" stroke-linecap="round"/>
+<path d="M94.0 55.1 L94.0 191.8" stroke="#1c1c1c" stroke-width="0.7" fill="none" filter="none" stroke-linecap="round"/>
+<path d="M91.0 52.7 L97.0 57.5" stroke="#1c1c1c" stroke-width="0.8" fill="none" filter="none" stroke-linecap="round"/>
+<path d="M91.0 189.4 L97.0 194.2" stroke="#1c1c1c" stroke-width="0.8" fill="none" filter="none" stroke-linecap="round"/>
+<text x="105" y="128.44" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="end" filter="none">净高 1700</text>
+<text x="90" y="67.14285021224983" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="end" filter="none">床板 1750</text>
+<path d="M111.6 250.3 L300.4 250.3" stroke="#1c1c1c" stroke-width="0.6" fill="none" filter="none" stroke-linecap="round"/>
+<path d="M109.6 247.3 L113.6 253.3" stroke="#1c1c1c" stroke-width="0.8" fill="none" filter="none" stroke-linecap="round"/>
+<path d="M298.4 247.3 L302.4 253.3" stroke="#1c1c1c" stroke-width="0.8" fill="none" filter="none" stroke-linecap="round"/>
+<text x="206.0" y="260.2673381294964" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="middle" filter="none">1.5m（进深 2.0m）</text>
+<path d="M295.4 233.8 L313.6 256.5" stroke="#1c1c1c" stroke-width="0.6" fill="none" filter="none" stroke-linecap="round"/>
+<path d="M293.4 230.8 L297.4 236.8" stroke="#1c1c1c" stroke-width="0.8" fill="none" filter="none" stroke-linecap="round"/>
+<path d="M311.6 253.5 L315.6 259.5" stroke="#1c1c1c" stroke-width="0.8" fill="none" filter="none" stroke-linecap="round"/>
+<path d="M315.6 258.5 L342.0 240.0" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<text x="345" y="242" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="start" filter="none">400</text>
+<text x="200" y="18" font-family="'Long Cang','Kaiti SC',cursive" font-size="8.5" fill="#5a5a5a" text-anchor="middle" filter="none">顶部 360° 环绕洗墙灯带 2700K · 光贴着墙往下淌</text>
+<text x="16" y="96" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="start" filter="none">西侧长墙</text>
+<text x="16" y="107" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="start" filter="none">一整排连续浅书格</text>
+<text x="16" y="117" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="start" filter="none">进深 180</text>
+<path d="M66.0 113.0 L128.9 104.5" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<text x="16" y="208" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="start" filter="none">尽端一格：铁皮宝箱</text>
+<path d="M72.0 204.0 L106.3 209.5" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<text x="16" y="244" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="start" filter="none">1.5m 写字台 · 台面 740</text>
+<path d="M82.0 240.0 L142.8 137.5" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<text x="390" y="70" font-family="'Long Cang','Kaiti SC',cursive" font-size="8" fill="#5a5a5a" text-anchor="end" filter="none">海报墙</text>
+<text x="390" y="81" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">名言 / 电影 / 对话</text>
+<path d="M320.0 77.0 L259.0 83.8" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<text x="390" y="130" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">东侧长墙靠南</text>
+<text x="390" y="141" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">40cm 帆布滑门（半开）</text>
+<text x="390" y="152" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">隐藏滑轨 + 下沿配重杆</text>
+<path d="M322.0 137.0 L299.7 82.8" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<text x="390" y="184" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">台角明放瓷银茶器</text>
+<path d="M320.0 180.0 L256.4 127.2" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<text x="390" y="212" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">人体工学椅 总高 ≤1300</text>
+<text x="390" y="223" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">头顶离床板还有一截</text>
+<path d="M306.0 208.0 L232.8 130.7" stroke="#1c1c1c" stroke-width="0.5" fill="none" stroke-dasharray="3 3" filter="none" stroke-linecap="round"/>
+<text x="200" y="282" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0209 藏宝阁：床下 1.5×2m、净高 1700，一间能坐直了写字的密室</text>
 </svg>
 
-    <figcaption><span class="hand">速写 · 地堡西北角架空床下掀开帘子的三角帐篷密室（从东侧看，西墙在后、北墙在右），帐篷内壁贴满海报，顶上灯串，小人盘腿坐垫子上，床板压在上方</span></figcaption>
+    <figcaption><span class="hand">速写 · 地堡西北角架空床下 1.5×2m 密室剖视（从东南向看进去），40cm 帆布滑门拉开一半，左侧长墙一整排连续书格，尽端 1.5m 写字台前小人坐人体工学椅，台角摆瓷银茶器，写字台上方海报墙，顶部一圈洗墙灯带，床板压在上方</span></figcaption>
   </figure>
 
-  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>地堡西北角那张 200×120 架空床的床下：床板 1750、床下净高 1700，帐篷占 1.2×1.5m，西墙和北墙是它的两面靠山，帘子开向东侧的沙发方向；南边紧挨着双层衣架 120×60。</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
+  <section class="blk place"><h2><em>📐</em> 它在哪、有多大</h2><p>地堡西北角那张 200×120 架空床的床下：床板 1750、床下净高 1700，围出 1.5×2m 的密室，2m 的长边南北向——西侧长墙贴既有结构做连续书格，东侧长墙靠南那一端开一道 40cm 宽的帆布滑动门（正对东侧沙发方向），北端 1.5m 短墙整面留给写字台；南边紧挨着双层衣架 120×60。</p><p class="tiny">位置与尺寸依据 0008 户型图与空间标注 v1；≈ 为按图面比例预估、未实测。<a href="../space.html">看户型图 →</a></p></section>
 
-  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">你弯腰钻进西北角架空床下那顶 1.2×1.5m 的帐篷，把帘子拉上，外面的地堡就消失了。帐篷顶挂着一串小暖灯，光刚好够看清三面“墙”：左边是名言，用打字机字体打在牛皮纸上；正面是电影海报，《银翼杀手》旁边挤着《海边的曼彻斯特》；右边最私人——是这些年截下来的聊天对话，一条条贴在软木板上。地上是一张羊毛毯和两个靠垫，角落一个铁皮盒，里面是票根和旧手机。你盘腿坐下来，头顶 1.7 米就是床板。这里没有信号，也不需要。</p></section>
+  <section class="blk"><h2><em>🎬</em> 沉浸式想象</h2><p class="scene">40cm 宽的帆布滑门一推，我侧身进去，门一带上，地堡就关在外面了。1.5×2 米，净高 1.7 米，坐直了抬头还剩一大截——第一次有一间不用弯腰的密室。左手边整面长墙是贴着既有结构做的连续书格，一格一格全是最近在翻的书，伸手就能抽。尽头一张 1.5 米宽的写字台，坐进人体工学椅，腰被稳稳托住。头顶那圈洗墙灯带 360 度绕着走，2700K 的光贴着墙往下淌，书脊和海报一层层亮起来，没有一盏直射眼睛。台角那套瓷银茶器就那么明放着，银壶泛出旧旧的亮。抬头是海报墙：张岱、沈复、陶渊明、李渔的句子，几张电影海报，还有我自己聊天里截的金句，像一群古人跟我同桌。没有屏幕，没有提示音。我拉开椅子坐下，写字。</p></section>
 
   <section class="blk"><h2><em>✅</em> 设想方案清单</h2>
-    <ol class="plan"><li><span class="box"></span><span>架空床板 1750、床下净高 1700，床下塞一顶 1.2×1.5m 印第安帐篷，帘子开向东边沙发那侧，帘子做双层遮光</span></li><li><span class="box"></span><span>三面帐篷内壁挂软木板：左名言 / 正电影 / 右对话，每类一种纸和字体</span></li><li><span class="box"></span><span>顶部一串 2200K 小暖灯 + 一盏可夹阅读灯，全用 USB 供电，帐篷里没有插座</span></li><li><span class="box"></span><span>地面铺羊毛毯 + 两个大靠垫，只够一个人盘腿坐或蜷着躺</span></li><li><span class="box"></span><span>角落放一个铁皮宝箱：票根、旧手机、信、第一版 PSK 样品</span></li><li><span class="box"></span><span>帐篷外挂一块小木牌，翻面写“在” / “不在”，进去就翻到“不在”</span></li><li><span class="box"></span><span>海报墙每季度换一批，换下来的按日期收进宝箱，像地层一样堆</span></li></ol></section>
+    <ol class="plan"><li><span class="box"></span><span>架空床板 1750、床下净高 1700，床下围出 1.5×2m 的密室，宽度比 120 的床板往东多吃 30cm</span></li><li><span class="box"></span><span>门只做一道 40cm 宽的帆布滑动门，开在 2m 长墙上离写字台最远的那一端，侧身进出</span></li><li><span class="box"></span><span>另一面长墙贴既有结构做一整排浅书格，只放常翻的书，尽端留一格塞铁皮宝箱</span></li><li><span class="box"></span><span>家具直接上 1.5m 标准写字台 + 人体工学椅，椅子总高挑 ≤130cm，抬头不顶床板</span></li><li><span class="box"></span><span>顶部一圈 360° 环绕 LED 洗墙灯带，2700～3000K、双路供电，专洗书格和海报墙</span></li><li><span class="box"></span><span>瓷银茶器就明放在写字台一角，不做收纳盒，磕碰和氧化都提前认了</span></li><li><span class="box"></span><span>海报墙还是三类：名言（张岱、沈复、陶渊明、李渔）、电影海报、自己的对话金句</span></li><li><span class="box"></span><span>不额外装通风装置，只在顶角挂一颗 CO2 传感器兜底，超 1200ppm 就推送提醒开门</span></li></ol></section>
 
   <section class="blk"><h2><em>🧩</em> 核心拆解</h2>
     <p class="tiny">4 个核心产品模块 / 联动逻辑，每个都有铅笔画风格的爆炸拆解图或逻辑流程图 + 海报。</p>
     <div class="td-list">
       <a class="td-item" href="../teardown/0209.html#p1">
         <span class="kind kind-hw">产品模块</span>
-        <b>1. 床下帐篷密室总成</b>
-        <span class="td-brief">藏宝阁的主体是一顶塞进西北角架空床下的印第安帐篷：床板 1750、床下净高 1700，帐篷用四根竹杆撑出…</span>
+        <b>1. 床下密室与帆布滑门</b>
+        <span class="td-brief">藏宝阁是在西北角架空床下围出来的一间密室：床板 1750、床下净高 1700，平面 1.5×2 米，两条…</span>
       </a>
       <a class="td-item" href="../teardown/0209.html#p2">
         <span class="kind kind-hw">产品模块</span>
-        <b>2. 地层式铁皮宝箱</b>
-        <span class="td-brief">宝箱是一个带铰链盖的镀锌铁皮箱，放在帐篷角落，装票根、旧手机、信件和第一版 PSK 样品。它的设计思路是…</span>
+        <b>2. 写字台与连续书格</b>
+        <span class="td-brief">家具按正经书房配：净高 1700 足够一个人坐直写字，就不必将就。北端 1.5 米短墙整面给一张标准写字…</span>
       </a>
       <a class="td-item" href="../teardown/0209.html#p3">
         <span class="kind kind-logic">联动逻辑</span>
-        <b>3. 进入感应亮灯</b>
-        <span class="td-brief">这段逻辑解决的是“钻进帐篷时不用摸黑找开关”。输入是帘子上的磁簧开关和帐篷内一颗小 PIR 人体传感器，…</span>
+        <b>3. 环绕洗墙调光</b>
+        <span class="td-brief">这段逻辑管的是密室里唯一的光源：顶部沿四边绕一圈的 360° LED 洗墙灯带，色温 2700～3000…</span>
       </a>
       <a class="td-item" href="../teardown/0209.html#p4">
         <span class="kind kind-logic">联动逻辑</span>
-        <b>4. 请勿打扰模式</b>
-        <span class="td-brief">帐篷外那块翻面木牌是整段逻辑的唯一开关：牌子翻到“不在”，全屋就进入请勿打扰。木牌背面嵌一颗倾斜开关，翻…</span>
+        <b>4. 换墙与透气</b>
+        <span class="td-brief">这段逻辑管两件事：墙上贴什么，和什么时候该开门。素材平时用手机随手记进自托管的 memos，按名言、电影…</span>
       </a>
     </div>
     <p class="td-cta"><a class="btn" href="../teardown/0209.html">看完整拆解：爆炸图 / 流程图 / 海报 →</a></p>
   </section>
 
   <div class="two">
-    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“精神领地 / 逃避间”的极致版：地堡里再套一顶帐篷，两层隔离</li><li>“痛屋”海报墙：把喜欢的东西按类分区贴满，小红书博主的经典布置</li><li>“露营风室内帐篷”：小暖灯 + 羊毛毯 + 铁皮箱，氛围感直接拉满</li></ul></section>
-    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>帐篷布不透气，进去超过一小时会闷，顶上留一个小通风口对着 0203 出风</li><li>纸质海报在无窗地堡很容易受潮卷边，先控湿再贴，或者过一层塑封</li><li>床下净高 1700 够坐直，但帐篷杆顶别撞床板，留 10cm 余量，秘密基地变受伤现场</li></ul></section>
+    <section class="blk"><h2><em>🔥</em> 小红书灵感点</h2><ul class="inspo"><li>“精神领地 / 逃避间”的极致版：地堡里再挖一间能坐直写字的密室，两层隔离</li><li>“痛屋”海报墙：三类内容分区贴满，洗墙灯一打整面墙都是氛围感</li><li>“书墙书房”那股劲：不做大书柜，做一整面浅书格，书脊就是装饰面</li></ul></section>
+    <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit"><li>净高只有 1700，人体工学椅头枕和气压杆一升就顶床板，买之前先量总高</li><li>不装通风就得认真看 CO2，关着滑门坐两小时必闷，超 1200ppm 赶紧推开门</li><li>纸海报在无窗地堡容易受潮卷边，先控湿再贴；银茶器明放会氧化，备块擦银布</li></ul></section>
   </div>
 
-  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥1,500～3,000（帐篷、软木板、灯串、毯子靠垫）；年度打印海报 ¥100 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>一次性约 ¥5,000～9,000（写字台、人体工学椅、书格板材、滑门、洗墙灯带）；年度打印海报和擦银布 ¥200 左右</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   <section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
     <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
@@ -193,8 +261,8 @@
           <span class="zh zh-no">无中文</span>
           
         </header>
-        <p class="gh-desc">ESP32 上最流行的灯带控制固件，网页和 App 直接控，250 个预设、定时、烛光等上百种效果，HomeAssistant 自动发现</p>
-        <p class="gh-why">→ 帐篷顶那串 USB 供电小暖灯刷它，2200K 暖光、烛光闪烁、呼吸渐暗都能手机上调，三个预设对应亮起 / 阅读 / 夜灯</p>
+        <p class="gh-desc">ESP32 上最流行的灯带控制固件，网页和 App 直接控，250 个预设、定时、洗墙渐变等上百种效果，HomeAssistant 自动发现</p>
+        <p class="gh-why">→ 顶部那圈 360° 环绕洗墙灯带刷它，书格侧和海报墙侧分两路，迎接 / 写字 / 收工三个预设，手机上直接调亮度和色温</p>
         <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="g0209-1-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="16" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
@@ -207,13 +275,13 @@
     <circle cx="78" cy="76.0" r="6" stroke-width="1.2"/><path d="M78 82.0 V100.0 M78 86.0 l-9 8 M78 86.0 l9 8 M78 100.0 l-7 14 M78 100.0 l7 14" stroke-width="1.2"/><path d="M44.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-1-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0209-1-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
   </g>
   <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0209-1-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M134.0 176.0 L144.0 176.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M378.0 96.0 L374.0 96.0"/></g>
-  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">手机网页 / App</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="78" y="187" text-anchor="middle" font-size="9.5">磁簧 + PIR 状态</text><text x="200" y="94" text-anchor="middle" font-size="10.5">WLED 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">网页服务 + 效果</text><text x="200" y="174" text-anchor="middle" font-size="10.5">三个预设</text><text x="200" y="187" text-anchor="middle" font-size="9.5">亮起 / 阅读 / 夜灯</text><text x="322" y="94" text-anchor="middle" font-size="10.5">帐篷顶暖灯串</text><text x="322" y="107" text-anchor="middle" font-size="10.5">USB 供电</text><text x="430" y="138" text-anchor="middle" font-size="10.5">盘腿坐的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">存预设</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">切预设</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">数据线</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">暖光</text></g>
+  <g fill="#2a2a2a"><text x="78" y="138" text-anchor="middle" font-size="10.5">手机网页 / App</text><text x="78" y="174" text-anchor="middle" font-size="10.5">HA 自动化</text><text x="78" y="187" text-anchor="middle" font-size="10.5">滑门 + 座位</text><text x="200" y="94" text-anchor="middle" font-size="10.5">WLED 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">网页服务 + 效果</text><text x="200" y="174" text-anchor="middle" font-size="10.5">三个预设</text><text x="200" y="187" text-anchor="middle" font-size="9.5">迎接 / 写字 / 收工</text><text x="322" y="94" text-anchor="middle" font-size="10.5">顶部洗墙灯带</text><text x="322" y="107" text-anchor="middle" font-size="10.5">两路 CCT</text><text x="430" y="138" text-anchor="middle" font-size="10.5">写字台前的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">存预设</text><text x="139.0" y="171.0" text-anchor="middle" font-size="8" fill="#666">切预设</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">数据线</text><text x="376.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">暖光</text></g>
   <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0209：三个预设对应亮起 / 阅读 / 夜灯，HA 按帘子和 PIR 切</text>
+  <text x="16" y="288" font-size="9" fill="#555">0209：两路洗墙灯带三个预设，HA 按滑门和座位切</text>
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">wled/WLED</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>WLED 是奥地利开发者 Aircoookie 从 2016 年开始写的 ESP32 / ESP8266 灯带固件，18.7k 星，是 GitHub 上最流行的灯光固件。一根几十块钱的灯带接上一块 ESP32，刷完固件就是一盏能手机调、能被家庭自动化接管的智能灯。</p><p>固件内置网页服务器：手机打开网页就能选颜色、调亮度、从一百多种效果里挑，把状态存成预设，最多 250 个；内置定时器按时间或日出日落切预设。对外它开放 JSON 和 MQTT 接口，Home Assistant 有官方集成，自动发现后每个 WLED 设备是一个灯实体，预设是一个下拉选项。支持 WS2812、SK6812、CCT 等各种灯带，可分段控制。社区极大，文档英文，中文教程和 B 站视频非常多。</p><p>在 0209 里它管帐篷顶那串小暖灯：用一块 ESP32-C3 小板加一米 SK6812 RGBW 或 WWA 暖白灯带，USB 供电，藏在帐篷顶杆上。存三个预设：亮起是 2200K 暖光四成亮度，阅读是六成并把夹灯那一段拉亮，夜灯是 5% 加一点烛光闪烁；HA 根据帘子磁簧和 PIR 的状态切预设，掀帘亮起、坐下十分钟切阅读、半小时没动切夜灯。坑是充电宝供电电压掉得快，灯带别超过一米，亮度上限 60%；床下 WiFi 弱，板子天线朝帘子放。</p></div>
+        <div class="gh-intro"><p>WLED 是奥地利开发者 Aircoookie 从 2016 年开始写的 ESP32 / ESP8266 灯带固件，18.7k 星，是 GitHub 上最流行的灯光固件。一根几十块钱的灯带接上一块 ESP32，刷完固件就是一盏能手机调、能被家庭自动化接管的智能灯。</p><p>固件内置网页服务器：手机打开网页就能选颜色、调亮度、从一百多种效果里挑，把状态存成预设，最多 250 个；内置定时器按时间或日出日落切预设。对外它开放 JSON 和 MQTT 接口，Home Assistant 有官方集成，自动发现后每个 WLED 设备是一个灯实体，预设是一个下拉选项。支持 WS2812、SK6812、CCT 等各种灯带，可分段控制。社区极大，文档英文，中文教程和 B 站视频非常多。</p><p>在 0209 里它管顶部那圈 360° 环绕洗墙灯带：两块 ESP32-C3 各驱动一路 CCT 或 WWA 暖白灯带，一路洗西侧那面连续书格，一路洗写字台上方的海报墙，藏在顶部灯槽里，色温压在 2700～3000K。存三个预设：迎接是滑门一推两路都到 40%，写字是书格侧 25%、海报墙侧 60%，收工是 5% 的余光；HA 按滑门磁簧和座位存在传感器切预设。坑是洗墙灯带离墙面要留 8～10cm，不然打出一排扇形亮斑；这间密室是双路供电，两路灯带别接在同一个电源上，跳一路还剩一路能看见门。</p></div>
       </article>
       <article class="gh-card" id="gh2">
         <header class="gh-head">
@@ -223,7 +291,7 @@
           
         </header>
         <p class="gh-desc">Arduino 上最常用的 LED 灯光动画库，支持 50 多种单片机平台和几乎所有可寻址灯珠，3.10 版</p>
-        <p class="gh-why">→ 想自己写一段烛光闪烁、星空或流星效果时用它，比 WLED 更自由；也是 WLED 效果引擎的底层参考</p>
+        <p class="gh-why">→ 想给洗墙灯带写一段十几秒的长渐变或收工余晖时用它，比 WLED 自由；它也是 WLED 效果引擎的底层参考</p>
         <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="g0209-2-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
@@ -236,13 +304,13 @@
     <rect x="26.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-2-shade)" stroke="none"/><circle cx="78" cy="176" r="22.0" stroke-width="1.4"/><circle cx="78" cy="176" r="17.0" stroke-width="0.5"/><circle cx="78" cy="176" r="3" stroke-width="1"/><path d="M72 150.0 q6 -6 12 0 M68 146.0 q10 -10 20 0" stroke-width="0.8"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-2-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0209-2-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0209-2-shade)" stroke="none"/><path d="M288.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/>
   </g>
   <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0209-2-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 148.0 L200.0 124.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/></g>
-  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">自写效果</text><text x="78" y="107" text-anchor="middle" font-size="10.5">烛光 / 星空</text><text x="78" y="216" text-anchor="middle" font-size="9.5">磁簧 / PIR 触发</text><text x="200" y="94" text-anchor="middle" font-size="10.5">FastLED 库</text><text x="200" y="107" text-anchor="middle" font-size="9.5">CRGB 数组 + show</text><text x="200" y="174" text-anchor="middle" font-size="10.5">HSV / 调色板</text><text x="200" y="187" text-anchor="middle" font-size="10.5">噪声 / 淡入淡出</text><text x="322" y="94" text-anchor="middle" font-size="9.5">ESP32-C3 RMT</text><text x="322" y="107" text-anchor="middle" font-size="10.5">→ 灯珠串</text><text x="322" y="180" text-anchor="middle" font-size="10.5">MQTT 回报 HA</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">改颜色</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">时序</text></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">自写效果</text><text x="78" y="107" text-anchor="middle" font-size="10.5">长渐变 / 余晖</text><text x="78" y="216" text-anchor="middle" font-size="10.5">滑门 / 座位触发</text><text x="200" y="94" text-anchor="middle" font-size="10.5">FastLED 库</text><text x="200" y="107" text-anchor="middle" font-size="9.5">CRGB 数组 + show</text><text x="200" y="174" text-anchor="middle" font-size="10.5">HSV / 调色板</text><text x="200" y="187" text-anchor="middle" font-size="10.5">噪声 / 淡入淡出</text><text x="322" y="94" text-anchor="middle" font-size="9.5">ESP32-C3 RMT</text><text x="322" y="107" text-anchor="middle" font-size="10.5">→ 灯珠串</text><text x="322" y="180" text-anchor="middle" font-size="10.5">MQTT 回报 HA</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">改颜色</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">时序</text></g>
   <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0209：WLED 效果不够时在同一块板上自写烛光星空，MQTT 接回 HA</text>
+  <text x="16" y="288" font-size="9" fill="#555">0209：WLED 效果不够时在同一块板上自写长渐变，MQTT 接回 HA</text>
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">FastLED/FastLED</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>FastLED 是 2012 年由 Daniel Garcia 和 Mark Kriegsman 创建的 Arduino LED 库，7.4k 星，是可寻址灯珠圈里资格最老、用得最广的动画库，2025 年仍密集更新到 3.10 版。想让一串 WS2812 按自己的想法闪，时序、颜色空间和性能它全包，你只管写“第几颗灯什么颜色”。</p><p>它的核心是一个 CRGB 数组加一个 show 函数：循环里改数组里每颗灯的颜色，调用 show，库按灯珠型号的精确时序把数据推出去。上面叠一层工具：HSV 色彩、调色板、噪声函数、淡入淡出，几行代码就能写出烛光、火焰、星空、流星，示例里都有现成的。支持 50 多种平台，从 ATtiny 到 ESP32 和树莓派 Pico。文档英文，中文 Arduino 教程几乎都会讲到它。</p><p>在 0209 里它是 WLED 不够用时的下一步：帐篷里想要一段“翻票根时忽明忽暗的烛光”或“抬头看床板时的星空”，WLED 内置效果不够细腻，就用 FastLED 在同一块 ESP32-C3 上自己写，磁簧和 PIR 直接触发效果切换，再用 MQTT 接回 HA。坑是 WiFi 会打断灯珠时序造成闪一下，用 RMT 驱动或把灯效放到另一个核心跑。</p></div>
+        <div class="gh-intro"><p>FastLED 是 2012 年由 Daniel Garcia 和 Mark Kriegsman 创建的 Arduino LED 库，7.4k 星，是可寻址灯珠圈里资格最老、用得最广的动画库，2025 年仍密集更新到 3.10 版。想让一串 WS2812 按自己的想法闪，时序、颜色空间和性能它全包，你只管写“第几颗灯什么颜色”。</p><p>它的核心是一个 CRGB 数组加一个 show 函数：循环里改数组里每颗灯的颜色，调用 show，库按灯珠型号的精确时序把数据推出去。上面叠一层工具：HSV 色彩、调色板、噪声函数、淡入淡出，几行代码就能写出烛光、火焰、星空、流星，示例里都有现成的。支持 50 多种平台，从 ATtiny 到 ESP32 和树莓派 Pico。文档英文，中文 Arduino 教程几乎都会讲到它。</p><p>在 0209 里它是 WLED 不够用时的下一步：密室里不要跑马灯那种炫技，要的是慢——滑门推开时书格从尽端一格一格亮过去，收工时光像退潮一样从海报墙上撤走，这种十几秒的长渐变用内置效果很难调细，就在同一块 ESP32-C3 上用 FastLED 自己写，滑门磁簧直接触发效果切换，再用 MQTT 把状态接回 HA。坑是 WiFi 会打断灯珠时序造成闪一下，用 RMT 驱动或者把灯效放到另一个核心跑。</p></div>
       </article>
       <article class="gh-card" id="gh3">
         <header class="gh-head">
@@ -252,7 +320,7 @@
           
         </header>
         <p class="gh-desc">ESP8266 / ESP32 上的 RFID 门禁固件，支持 RC522、PN532、Wiegand 读卡器，带网页管理、用户名单、日志和 MQTT，2024 年 2.0 版</p>
-        <p class="gh-why">→ 帐篷帘子或宝箱加一把 RFID 小锁，刷卡才开，秘密基地的仪式感就有了；网页里管卡、看日志，MQTT 报给 HA</p>
+        <p class="gh-why">→ 书格尽端那个铁皮宝箱加一把 RFID 小锁，刷卡才开，秘密基地的仪式感就有了；网页里管卡、看日志，MQTT 报给 HA</p>
         <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="g0209-3-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="18" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
@@ -265,13 +333,13 @@
     <circle cx="78" cy="96" r="22.0" stroke-width="1.4"/><circle cx="78" cy="96" r="17.0" stroke-width="0.5"/><circle cx="78" cy="96" r="3" stroke-width="1"/><path d="M72 70.0 q6 -6 12 0 M68 66.0 q10 -10 20 0" stroke-width="0.8"/><circle cx="78" cy="156.0" r="6" stroke-width="1.2"/><path d="M78 162.0 V180.0 M78 166.0 l-9 8 M78 166.0 l9 8 M78 180.0 l-7 14 M78 180.0 l7 14" stroke-width="1.2"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-3-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0209-3-shade)" stroke="none"/><path d="M288.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/>
   </g>
   <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0209-3-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M256.0 96.0 L266.0 96.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0"/></g>
-  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">旧公交卡</text><text x="78" y="149" text-anchor="middle" font-size="10.5">NFC 戒指</text><text x="78" y="218" text-anchor="middle" font-size="10.5">网页管理</text><text x="78" y="231" text-anchor="middle" font-size="10.5">加卡 / 时段</text><text x="200" y="94" text-anchor="middle" font-size="9.5">esp-rfid 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">名单比对</text><text x="200" y="174" text-anchor="middle" font-size="10.5">刷卡日志</text><text x="200" y="187" text-anchor="middle" font-size="10.5">用户名单</text><text x="322" y="94" text-anchor="middle" font-size="10.5">宝箱舵机锁</text><text x="322" y="107" text-anchor="middle" font-size="10.5">继电器</text><text x="322" y="174" text-anchor="middle" font-size="10.5">MQTT → HA</text><text x="322" y="187" text-anchor="middle" font-size="10.5">触发 WLED 亮起</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">PN532</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">开锁</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">刷卡</text></g>
+  <g fill="#2a2a2a"><text x="78" y="136" text-anchor="middle" font-size="10.5">旧公交卡</text><text x="78" y="149" text-anchor="middle" font-size="10.5">NFC 戒指</text><text x="78" y="218" text-anchor="middle" font-size="10.5">网页管理</text><text x="78" y="231" text-anchor="middle" font-size="10.5">加卡 / 时段</text><text x="200" y="94" text-anchor="middle" font-size="9.5">esp-rfid 固件</text><text x="200" y="107" text-anchor="middle" font-size="10.5">名单比对</text><text x="200" y="174" text-anchor="middle" font-size="10.5">刷卡日志</text><text x="200" y="187" text-anchor="middle" font-size="10.5">用户名单</text><text x="322" y="94" text-anchor="middle" font-size="10.5">宝箱舵机锁</text><text x="322" y="107" text-anchor="middle" font-size="10.5">继电器</text><text x="322" y="174" text-anchor="middle" font-size="10.5">MQTT → HA</text><text x="322" y="187" text-anchor="middle" font-size="10.5">触发迎接预设</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">PN532</text><text x="261.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">开锁</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">刷卡</text></g>
   <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0209：帘边暗处刷卡开宝箱，刷卡事件当进入信号联动灯和木牌</text>
+  <text x="16" y="288" font-size="9" fill="#555">0209：进门在门框暗处刷卡开宝箱，刷卡事件当进入信号联动灯</text>
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">esprfid/esp-rfid</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>esp-rfid 是 2017 年由土耳其开发者 Ömer Şiar Baysal 发起的开源门禁固件，1.5k 星，2024 年 11 月发了 2.0 版，是 GitHub 上最完整的 DIY RFID 门禁方案。想给一扇门或一个柜子装“刷卡才开”的电子锁，它只需要一块 ESP8266、一个二十块钱的 RC522 或 PN532 读卡模块和一个电磁锁或舵机。</p><p>固件内置网页管理界面：加卡、删卡、给每张卡设有效期和可开的时段，最多一千个用户；每次刷卡记一条带时间戳的日志，NTP 对时；读卡器支持 RC522、PN532、RDM6300 和 Wiegand 接口；输出是继电器，可设开锁时长。对家庭自动化它有 MQTT：每次刷卡把卡号和结果发出去，也能远程开锁、远程加卡。文档英文，硬件图和 PCB 开源。</p><p>在 0209 里它给藏宝阁加一道“仪式”：帐篷帘子内侧装一块 PN532 读卡板，宝箱铁皮盒里塞一个小舵机锁，随身带一张旧公交卡或一枚 NFC 戒指，刷一下帘边的暗处，宝箱咔哒一声弹开。MQTT 把刷卡事件报给 HA，正好当“进入”信号，触发 WLED 的亮起预设并把木牌翻到“不在”。坑是 RC522 读 13.56MHz 卡距离只有两三厘米，藏在布后面要贴着；帐篷里没插座，读卡板和舵机共用那块 USB 充电宝，舵机动作时留 1A 余量。</p></div>
+        <div class="gh-intro"><p>esp-rfid 是 2017 年由土耳其开发者 Ömer Şiar Baysal 发起的开源门禁固件，1.5k 星，2024 年 11 月发了 2.0 版，是 GitHub 上最完整的 DIY RFID 门禁方案。想给一扇门或一个柜子装“刷卡才开”的电子锁，它只需要一块 ESP8266、一个二十块钱的 RC522 或 PN532 读卡模块和一个电磁锁或舵机。</p><p>固件内置网页管理界面：加卡、删卡、给每张卡设有效期和可开的时段，最多一千个用户；每次刷卡记一条带时间戳的日志，NTP 对时；读卡器支持 RC522、PN532、RDM6300 和 Wiegand 接口；输出是继电器，可设开锁时长。对家庭自动化它有 MQTT：每次刷卡把卡号和结果发出去，也能远程开锁、远程加卡。文档英文，硬件图和 PCB 开源。</p><p>在 0209 里它给藏宝阁加一道仪式：滑门内侧的门框上贴一块 PN532 读卡板，书格尽端那个铁皮宝箱里塞一个小舵机锁，随身带一张旧公交卡或一枚 NFC 戒指，侧身进门时顺手在门框暗处一刷，宝箱咔哒一声弹开。MQTT 把刷卡事件报给 HA，正好当进入信号，触发 WLED 的迎接预设。坑是 RC522 读 13.56MHz 卡距离只有两三厘米，藏在木饰面板后面要贴着板背；舵机动作瞬间电流大，和读卡板共用那路电源时留 1A 余量。</p></div>
       </article>
     </div>
     <h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
@@ -285,7 +353,7 @@
           <span class="ext-tag">延伸</span>
         </header>
         <p class="gh-desc">自托管的轻量笔记流：像发微博一样随手记一条，Markdown、标签、图片，Go 单文件部署，数据全在自己手里</p>
-        <p class="gh-why">→ 帐篷里左边那面墙的名言和右边的聊天截图，先在手机上随手记进 memos，攒够一批再挑出来打印上墙</p>
+        <p class="gh-why">→ 海报墙那三类内容——名言、电影、对话——先在手机上随手记进 memos，攒够一批再挑出来打印上墙</p>
         <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="g0209-4-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="19" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
@@ -298,13 +366,13 @@
     <path d="M30.0 82.0 h96 v36 h-96 Z M30.0 82.0 l8 -8 h96 l-8 8 M126.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M127.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0209-4-shade)" stroke="none"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0209-4-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-4-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="74.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-4-shade)" stroke="none"/><path d="M284.0 152.0 h66 l10 10 v38 h-76 Z M350.0 152.0 v10 h10" stroke-width="1.3"/><path d="M292.0 168.0 h54 M292.0 176.0 h44 M292.0 184.0 h48" stroke-width="0.5"/><circle cx="430" cy="156.0" r="6" stroke-width="1.2"/><path d="M430 162.0 V180.0 M430 166.0 l-9 8 M430 166.0 l9 8 M430 180.0 l-7 14 M430 180.0 l7 14" stroke-width="1.2"/>
   </g>
   <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0209-4-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M378.0 176.0 L374.0 176.0"/></g>
-  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机随手记</text><text x="78" y="107" text-anchor="middle" font-size="10.5">一句话 / 截图</text><text x="78" y="174" text-anchor="middle" font-size="10.5">浏览器插件</text><text x="78" y="187" text-anchor="middle" font-size="9.5">Telegram 机器人</text><text x="200" y="94" text-anchor="middle" font-size="10.5">memos</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Go + SQLite</text><text x="200" y="174" text-anchor="middle" font-size="10.5">标签流</text><text x="200" y="187" text-anchor="middle" font-size="9.5">名言 / 电影 / 对话</text><text x="322" y="94" text-anchor="middle" font-size="10.5">每季度筛选</text><text x="322" y="107" text-anchor="middle" font-size="10.5">打字机字体打印</text><text x="322" y="174" text-anchor="middle" font-size="10.5">三面软木板</text><text x="322" y="187" text-anchor="middle" font-size="10.5">牛皮纸</text><text x="430" y="218" text-anchor="middle" font-size="10.5">盘腿坐着的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">API</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">按标签筛</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">钉上去</text></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">手机随手记</text><text x="78" y="107" text-anchor="middle" font-size="10.5">一句话 / 截图</text><text x="78" y="174" text-anchor="middle" font-size="10.5">浏览器插件</text><text x="78" y="187" text-anchor="middle" font-size="9.5">Telegram 机器人</text><text x="200" y="94" text-anchor="middle" font-size="10.5">memos</text><text x="200" y="107" text-anchor="middle" font-size="9.5">Go + SQLite</text><text x="200" y="174" text-anchor="middle" font-size="10.5">标签流</text><text x="200" y="187" text-anchor="middle" font-size="9.5">名言 / 电影 / 对话</text><text x="322" y="94" text-anchor="middle" font-size="10.5">每季度筛选</text><text x="322" y="107" text-anchor="middle" font-size="10.5">打字机字体打印</text><text x="322" y="174" text-anchor="middle" font-size="10.5">海报墙</text><text x="322" y="187" text-anchor="middle" font-size="10.5">牛皮纸</text><text x="430" y="218" text-anchor="middle" font-size="10.5">写字台前的人</text><text x="139.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">API</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">按标签筛</text><text x="322.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">钉上去</text></g>
   <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0209：三个标签对应三面墙，手机随手收集，换季挑一批打印上墙</text>
+  <text x="16" y="288" font-size="9" fill="#555">0209：三个标签对应海报墙三个区，手机随手收集，换季挑一批打印上墙</text>
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">usememos/memos</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>memos 是 Steven（boojack）在 2021 年发起的开源笔记项目，Go 后端加 React 前端，62.5k 星，作者来自中文社区。它要解决的问题是：想记的东西大多是一两句话或一张截图，传统笔记软件的文件夹和标题让人懒得打开；它把笔记做成一条条时间流，像发微博一样记，像刷微博一样翻。</p><p>它的工作方式极简：一个二进制或一个 Docker 容器，数据存在 SQLite（也可以 MySQL、PostgreSQL）里，网页界面顶部一个输入框，写 Markdown、加标签、贴图片、按回车就是一条 memo；左侧按标签和日期筛选，热力图显示每天记了几条，memo 可以设公开分享链接，也能置顶和归档。它有完整的 API，社区做了 iOS、安卓、浏览器插件和 Telegram 机器人，Obsidian 也能同步。它刻意不做的事也很明确：没有文件夹、没有富文本、没有协作，专注于快速捕捉。</p><p>社区非常大，2025 年后依然每月一个版本，界面自带简体中文，中文用户和教程占了很大比例。</p><p>对 0209 它是延伸的收集箱：帐篷三面墙的素材——读到的一句话、电影里的一句台词、和朋友聊天时截的一段对话——当场用手机记进 memos，标签分名言、电影、对话三类，正好对应三面软木板。每季度换墙时按标签筛一遍，挑出来的打字机字体打在牛皮纸上钉上去，换下来的海报按日期收进宝箱，memos 里那条也顺手归档。注意它是收集不是展示，帐篷里没有插座也没有信号，最终上墙的必须是纸。</p></div>
+        <div class="gh-intro"><p>memos 是 Steven（boojack）在 2021 年发起的开源笔记项目，Go 后端加 React 前端，62.5k 星，作者来自中文社区。它要解决的问题是：想记的东西大多是一两句话或一张截图，传统笔记软件的文件夹和标题让人懒得打开；它把笔记做成一条条时间流，像发微博一样记，像刷微博一样翻。</p><p>它的工作方式极简：一个二进制或一个 Docker 容器，数据存在 SQLite（也可以 MySQL、PostgreSQL）里，网页界面顶部一个输入框，写 Markdown、加标签、贴图片、按回车就是一条 memo；左侧按标签和日期筛选，热力图显示每天记了几条，memo 可以设公开分享链接，也能置顶和归档。它有完整的 API，社区做了 iOS、安卓、浏览器插件和 Telegram 机器人，Obsidian 也能同步。它刻意不做的事也很明确：没有文件夹、没有富文本、没有协作，专注于快速捕捉。</p><p>社区非常大，2025 年后依然每月一个版本，界面自带简体中文，中文用户和教程占了很大比例。</p><p>对 0209 它是延伸的收集箱：海报墙的素材——读到的一句话、电影里的一句台词、聊天时截下的一段对话——随手记进 memos，标签分名言、电影、对话三类，正好对应墙上的三个区；名言大多来自张岱《陶庵梦忆》、沈复《浮生六记》、陶渊明《归园田居》和李渔《闲情偶寄》。每季度按标签筛一遍，挑出来的用打字机字体打在牛皮纸上贴上去，换下来的按日期收进铁皮宝箱。注意它是收集不是展示，密室里不放屏幕，最终上墙的必须是纸。</p></div>
       </article>
       <article class="gh-card gh-ext" id="ghx2">
         <header class="gh-head">
@@ -314,7 +382,7 @@
           <span class="ext-tag">延伸</span>
         </header>
         <p class="gh-desc">间隔重复记忆卡片软件：算法按遗忘曲线安排复习，桌面、手机、网页同步，卡片模板可自定义，插件生态庞大</p>
-        <p class="gh-why">→ 墙上那些名言看多了就视而不见，把它们做成 Anki 卡片每天在帐篷里翻五分钟，才真的记进脑子</p>
+        <p class="gh-why">→ 墙上那些名言看多了就视而不见，做成 Anki 卡片每天在写字台前翻五分钟，才真的记进脑子</p>
         <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="g0209-5-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="20" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
@@ -327,13 +395,13 @@
     <path d="M40.0 72.0 h66 l10 10 v38 h-76 Z M106.0 72.0 v10 h10" stroke-width="1.3"/><path d="M48.0 88.0 h54 M48.0 96.0 h44 M48.0 104.0 h48" stroke-width="0.5"/><rect x="26.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M30.0 200.0 h98 v3 h-98 Z" fill="url(#g0209-5-shade)" stroke="none"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-5-shade)" stroke="none"/><path d="M160.0 160.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="200" cy="160.0" rx="40.0" ry="6" stroke-width="1.2"/><rect x="270.0" y="72.0" width="104" height="42" rx="3" stroke-width="1.4"/><path d="M308 114.0 h28 M314 114.0 v6 h16 v-6" stroke-width="1"/><path d="M273.0 75.0 h98 v4 h-98 Z" fill="url(#g0209-5-shade)" stroke="none"/><rect x="270.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M274.0 200.0 h98 v3 h-98 Z" fill="url(#g0209-5-shade)" stroke="none"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
   </g>
   <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0209-5-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M322.0 124.0 L322.0 148.0"/><path d="M279.3 148.0 C261.0 148.0 261.0 124.0 242.7 124.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
-  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">名言 / 海报 / 对话</text><text x="78" y="107" text-anchor="middle" font-size="10.5">做成笔记</text><text x="78" y="174" text-anchor="middle" font-size="10.5">卡片模板</text><text x="78" y="187" text-anchor="middle" font-size="10.5">上半句 → 下半句</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Anki 核心</text><text x="200" y="107" text-anchor="middle" font-size="10.5">FSRS 算法</text><text x="200" y="174" text-anchor="middle" font-size="10.5">本地 SQLite</text><text x="200" y="187" text-anchor="middle" font-size="10.5">AnkiWeb 同步</text><text x="322" y="94" text-anchor="middle" font-size="10.5">AnkiDroid</text><text x="322" y="107" text-anchor="middle" font-size="10.5">帐篷里离线翻</text><text x="322" y="174" text-anchor="middle" font-size="10.5">四档打分</text><text x="322" y="187" text-anchor="middle" font-size="10.5">算下次间隔</text><text x="430" y="138" text-anchor="middle" font-size="10.5">盘腿坐着的人</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">同步</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">反馈</text></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="9.5">名言 / 海报 / 对话</text><text x="78" y="107" text-anchor="middle" font-size="10.5">做成笔记</text><text x="78" y="174" text-anchor="middle" font-size="10.5">卡片模板</text><text x="78" y="187" text-anchor="middle" font-size="10.5">上半句 → 下半句</text><text x="200" y="94" text-anchor="middle" font-size="10.5">Anki 核心</text><text x="200" y="107" text-anchor="middle" font-size="10.5">FSRS 算法</text><text x="200" y="174" text-anchor="middle" font-size="10.5">本地 SQLite</text><text x="200" y="187" text-anchor="middle" font-size="10.5">AnkiWeb 同步</text><text x="322" y="94" text-anchor="middle" font-size="10.5">AnkiDroid</text><text x="322" y="107" text-anchor="middle" font-size="10.5">密室里离线翻</text><text x="322" y="174" text-anchor="middle" font-size="10.5">四档打分</text><text x="322" y="187" text-anchor="middle" font-size="10.5">算下次间隔</text><text x="430" y="138" text-anchor="middle" font-size="10.5">写字台前的人</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">同步</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">反馈</text></g>
   <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0209：三面墙的内容做成一个牌组，每天进帐篷先翻五分钟，离线可用</text>
+  <text x="16" y="288" font-size="9" fill="#555">0209：海报墙的内容做成一个牌组，每天坐下先翻五分钟，离线可用</text>
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">ankitects/anki</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>Anki 是 Damien Elmes 在 2006 年开始写的间隔重复软件，Python 加 Rust 重写核心，30.4k 星，是背单词和医学生记知识点的标准工具。它要解决的问题是：人记东西会遗忘，复习太早浪费时间、太晚就忘光；间隔重复算法在你快要忘的那一刻把卡片再拿出来。</p><p>它的工作方式是：卡片由笔记生成，笔记是字段（正面、背面、来源），模板决定怎么渲染成卡片，可以有图片、音频、公式；每天打开它会给你今天该复习的卡片，看完正面回忆背面，按记不住、困难、良好、简单四个按钮打分，算法（现在默认是 FSRS）据此算下一次出现的间隔，从一天到几年。数据是本地 SQLite，通过 AnkiWeb 同步到手机的 AnkiMobile 和安卓的 AnkiDroid，也可以自托管同步服务器。插件用 Python 写，几千个，从自动配图到统计热力图都有。</p><p>生态极大，2025 年后仍是每两个月一个版本，界面自带简体中文，中文用户群和教程非常多。</p><p>对 0209 它是延伸的记忆环节：左边那面墙的名言、正面海报的电影和导演年份、右边对话里那些当时打动你的话，做成一个叫藏宝阁的牌组，正面是上半句或电影海报缩略图，背面是下半句或出处。每天进帐篷盘腿坐下后先用手机上的 AnkiDroid 翻五分钟，离线可用，没有信号也没关系，出去有网了再同步。注意卡片别做多，一面墙十来张就够，Anki 的价值在坚持不在数量。</p></div>
+        <div class="gh-intro"><p>Anki 是 Damien Elmes 在 2006 年开始写的间隔重复软件，Python 加 Rust 重写核心，30.4k 星，是背单词和医学生记知识点的标准工具。它要解决的问题是：人记东西会遗忘，复习太早浪费时间、太晚就忘光；间隔重复算法在你快要忘的那一刻把卡片再拿出来。</p><p>它的工作方式是：卡片由笔记生成，笔记是字段（正面、背面、来源），模板决定怎么渲染成卡片，可以有图片、音频、公式；每天打开它会给你今天该复习的卡片，看完正面回忆背面，按记不住、困难、良好、简单四个按钮打分，算法（现在默认是 FSRS）据此算下一次出现的间隔，从一天到几年。数据是本地 SQLite，通过 AnkiWeb 同步到手机的 AnkiMobile 和安卓的 AnkiDroid，也可以自托管同步服务器。插件用 Python 写，几千个，从自动配图到统计热力图都有。</p><p>生态极大，2025 年后仍是每两个月一个版本，界面自带简体中文，中文用户群和教程非常多。</p><p>对 0209 它是延伸的记忆环节：海报墙上的名言、电影的导演和年份、对话里那些当时打动你的话，做成一个叫藏宝阁的牌组，正面是上半句或电影海报缩略图，背面是下半句或出处。每天推开滑门、坐进人体工学椅之后，先用手机上的 AnkiDroid 翻五分钟，离线可用，床下信号差也没关系，出去有网了再同步。注意卡片别做多，一面墙十来张就够，Anki 的价值在坚持不在数量。</p></div>
       </article>
       <article class="gh-card gh-ext" id="ghx3">
         <header class="gh-head">
@@ -343,33 +411,33 @@
           <span class="ext-tag">延伸</span>
         </header>
         <p class="gh-desc">电子墨水阅读器上的开源阅读软件：Kindle、Kobo、PocketBook 都能装，支持 EPUB、PDF、DjVu，排版和字典功能远超原厂</p>
-        <p class="gh-why">→ 帐篷里没有信号没有插座，最适合的屏幕是一台刷了 KOReader 的旧 Kindle，一串暖灯下看书，电池撑几周</p>
+        <p class="gh-why">→ 书格里只放常翻的纸书，更长的书单塞进一台刷了 KOReader 的旧 Kindle，洗墙灯下看，电池撑几周</p>
         <figure class="gh-art"><div class="pc-frame"><svg class="pc-art gh-diag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
   <defs>
     <filter id="g0209-6-pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
     <pattern id="g0209-6-shade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b6b6b" stroke-width="0.7" stroke-opacity="0.8"/></pattern>
     <marker id="g0209-6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#3d3d3d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
-  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">KOReader · 旧 Kindle 在帐篷里撑几周</text>
+  <text x="16" y="28" font-weight="700" font-size="12" fill="#2a2a2a">KOReader · 旧 Kindle 在书格边撑几周</text>
   <path d="M16 36 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
   <g filter="url(#g0209-6-pencil)" stroke="#3d3d3d" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.92">
     <path d="M38.0 80.0 a40.0 6 0 0 1 80 0 v32 a40.0 6 0 0 1 -80 0 Z" stroke-width="1.4"/><ellipse cx="78" cy="80.0" rx="40.0" ry="6" stroke-width="1.2"/><path d="M40.0 152.0 h66 l10 10 v38 h-76 Z M106.0 152.0 v10 h10" stroke-width="1.3"/><path d="M48.0 168.0 h54 M48.0 176.0 h44 M48.0 184.0 h48" stroke-width="0.5"/><rect x="148.0" y="74.0" width="104" height="44" rx="8" stroke-width="1.6"/><rect x="151.0" y="77.0" width="98" height="38" rx="6" stroke-width="0.6"/><path d="M153.0 120.0 h98 v3 h-98 Z" fill="url(#g0209-6-shade)" stroke="none"/><rect x="148.0" y="154.0" width="104" height="44" rx="6" stroke-width="1.4"/><path d="M152.0 200.0 h98 v3 h-98 Z" fill="url(#g0209-6-shade)" stroke="none"/><path d="M274.0 82.0 h96 v36 h-96 Z M274.0 82.0 l8 -8 h96 l-8 8 M370.0 82.0 l8 -8 v36 l-8 8" stroke-width="1.3"/><path d="M371.0 83.0 l6 -6 v34 l-6 6 Z" fill="url(#g0209-6-shade)" stroke="none"/><path d="M288.0 192 q-22 0 -18 -16 q2 -14 18 -12 q6 -16 26 -10 q14 -10 30 4 q20 -4 24 10 q14 4 10 16 q-4 10 -18 8 Z" stroke-width="1.4"/><circle cx="430" cy="76.0" r="6" stroke-width="1.2"/><path d="M430 82.0 V100.0 M430 86.0 l-9 8 M430 86.0 l9 8 M430 100.0 l-7 14 M430 100.0 l7 14" stroke-width="1.2"/>
   </g>
   <g stroke="#3d3d3d" stroke-width="1.2" fill="none" marker-end="url(#g0209-6-arrow)" stroke-linecap="round"><path d="M134.0 96.0 L144.0 96.0"/><path d="M120.7 148.0 C139.0 148.0 139.0 124.0 157.3 124.0"/><path d="M200.0 124.0 L200.0 148.0"/><path d="M242.7 148.0 C261.0 148.0 261.0 124.0 279.3 124.0"/><path d="M242.7 124.0 C261.0 124.0 261.0 148.0 279.3 148.0" stroke-dasharray="3 3"/><path d="M378.0 96.0 L374.0 96.0"/></g>
-  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">Calibre 库</text><text x="78" y="107" text-anchor="middle" font-size="10.5">OPDS 目录</text><text x="78" y="174" text-anchor="middle" font-size="9.5">StarDict 词典</text><text x="78" y="187" text-anchor="middle" font-size="10.5">维基离线</text><text x="200" y="94" text-anchor="middle" font-size="10.5">KOReader</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Lua 框架</text><text x="200" y="174" text-anchor="middle" font-size="9.5">MuPDF / crengine</text><text x="200" y="187" text-anchor="middle" font-size="10.5">重排 / 竖排</text><text x="322" y="94" text-anchor="middle" font-size="9.5">旧 Kindle 墨水屏</text><text x="322" y="107" text-anchor="middle" font-size="10.5">USB 充电</text><text x="322" y="174" text-anchor="middle" font-size="10.5">进度同步</text><text x="322" y="187" text-anchor="middle" font-size="10.5">出帐篷有 Wi-Fi</text><text x="430" y="138" text-anchor="middle" font-size="10.5">盘腿坐着的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">拉书</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">渲染</text></g>
+  <g fill="#2a2a2a"><text x="78" y="94" text-anchor="middle" font-size="10.5">Calibre 库</text><text x="78" y="107" text-anchor="middle" font-size="10.5">OPDS 目录</text><text x="78" y="174" text-anchor="middle" font-size="9.5">StarDict 词典</text><text x="78" y="187" text-anchor="middle" font-size="10.5">维基离线</text><text x="200" y="94" text-anchor="middle" font-size="10.5">KOReader</text><text x="200" y="107" text-anchor="middle" font-size="10.5">Lua 框架</text><text x="200" y="174" text-anchor="middle" font-size="9.5">MuPDF / crengine</text><text x="200" y="187" text-anchor="middle" font-size="10.5">重排 / 竖排</text><text x="322" y="94" text-anchor="middle" font-size="9.5">旧 Kindle 墨水屏</text><text x="322" y="107" text-anchor="middle" font-size="10.5">USB 充电</text><text x="322" y="174" text-anchor="middle" font-size="10.5">进度同步</text><text x="322" y="187" text-anchor="middle" font-size="10.5">出滑门有 Wi-Fi</text><text x="430" y="138" text-anchor="middle" font-size="10.5">写字台前的人</text><text x="139.0" y="91.0" text-anchor="middle" font-size="8" fill="#666">拉书</text><text x="261.0" y="131.0" text-anchor="middle" font-size="8" fill="#666">渲染</text></g>
   <path d="M16 272 H464" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="4 4"/>
-  <text x="16" y="288" font-size="9" fill="#555">0209：旧 Kindle 刷 KOReader，书从 Calibre 经 OPDS 拉，进度出帐篷再同步</text>
+  <text x="16" y="288" font-size="9" fill="#555">0209：旧 Kindle 刷 KOReader，书经 OPDS 从 Calibre 拉，出滑门再同步</text>
   <text x="464" y="288" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#5a5a5a">koreader/koreader</text>
 </svg>
 </div></figure>
-        <div class="gh-intro"><p>KOReader 是 2011 年从 Kindle 越狱社区长出来的开源阅读软件，Lua 写成，29.5k 星，能装在 Kindle、Kobo、PocketBook、reMarkable 和安卓上。它要解决的问题是：电子墨水阅读器的原厂系统功能少、格式挑、排版不能细调，而这些机器的硬件其实很好。</p><p>它的架构是一个 Lua 框架加两个渲染引擎：MuPDF 负责 PDF 和 DjVu，crengine 负责 EPUB、FB2、MOBI 这类可重排格式。打开一本书后可以调字体、行距、边距和竖排，PDF 能重排和裁边；内置 StarDict 词典、维基百科查询和翻译，阅读统计能画出每天读了多久，书籍和进度可以通过 Calibre、OPDS 和自建的同步服务器同步。安装是把文件拷进设备并接管启动，各机型有详细步骤。</p><p>社区活跃，2025 年后仍是每月一个版本，界面自带简体中文，中文用户很多，繁简竖排支持是它的强项之一。</p><p>对 0209 它是延伸的阅读设备：帐篷里全是 USB 供电、没有插座，一台闲鱼买的旧 Kindle 刷上 KOReader，阅读灯照着看书，电池撑三四周。书从 0303 的 Calibre 库通过 OPDS 拉进去，出帐篷有 Wi-Fi 时同步进度；那些名言的出处——整本书——就在这台机器里。铁皮宝箱里的旧手机也可以装安卓版当备用。注意 Kindle 越狱只对老固件容易，买二手前先查型号和固件版本能不能越狱。</p></div>
+        <div class="gh-intro"><p>KOReader 是 2011 年从 Kindle 越狱社区长出来的开源阅读软件，Lua 写成，29.5k 星，能装在 Kindle、Kobo、PocketBook、reMarkable 和安卓上。它要解决的问题是：电子墨水阅读器的原厂系统功能少、格式挑、排版不能细调，而这些机器的硬件其实很好。</p><p>它的架构是一个 Lua 框架加两个渲染引擎：MuPDF 负责 PDF 和 DjVu，crengine 负责 EPUB、FB2、MOBI 这类可重排格式。打开一本书后可以调字体、行距、边距和竖排，PDF 能重排和裁边；内置 StarDict 词典、维基百科查询和翻译，阅读统计能画出每天读了多久，书籍和进度可以通过 Calibre、OPDS 和自建的同步服务器同步。安装是把文件拷进设备并接管启动，各机型有详细步骤。</p><p>社区活跃，2025 年后仍是每月一个版本，界面自带简体中文，中文用户很多，繁简竖排支持是它的强项之一。</p><p>对 0209 它是延伸的阅读设备：那面连续书格进深只有 180mm，放得下的都是最近常翻的几十本，更长的书单交给一台闲鱼买的旧 Kindle，刷上 KOReader 摆在台角，洗墙灯照着看，电池撑三四周。书从 0303 的 Calibre 库通过 OPDS 拉进去，床下 WiFi 弱，走出滑门再同步进度；海报墙上那些名言的出处——整本书——就在这台机器里。铁皮宝箱里的旧手机也可以装安卓版当备用。注意 Kindle 越狱只对老固件容易，买二手前先查型号和固件版本能不能越狱。</p></div>
       </article>
     </div></section>
 
   <section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
     <p class="tiny">点关键词直接跳到小红书站内搜索（需登录小红书），看热门帖里的实拍效果。</p>
     <div class="xhs-list">
-      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%AE%A4%E5%86%85%E5%B8%90%E7%AF%B7%20%E7%A7%98%E5%AF%86%E5%9F%BA%E5%9C%B0%20%E5%A4%A7%E4%BA%BA&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 室内帐篷 秘密基地 大人</span><span class="xnote">看成年人的室内帐篷角落怎么布置灯串毯子靠垫</span></a>
+      <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E5%BA%8A%E4%B8%8B%E5%AF%86%E5%AE%A4%20%E5%B0%8F%E4%B9%A6%E6%88%BF%20%E6%94%B9%E9%80%A0&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 床下密室 小书房 改造</span><span class="xnote">看床下净空改成能坐直写字的小书房，家具和灯怎么排</span></a>
       <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E7%97%9B%E5%B1%8B%20%E6%B5%B7%E6%8A%A5%E5%A2%99%20%E5%B8%83%E7%BD%AE&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 痛屋 海报墙 布置</span><span class="xnote">看海报按类分区贴满整面墙的排版和固定方式</span></a>
       <a class="xhs" href="https://www.xiaohongshu.com/search_result?keyword=%E9%AB%98%E6%9E%B6%E5%BA%8A%20%E5%BA%8A%E4%B8%8B%E7%A9%BA%E9%97%B4%20%E5%88%A9%E7%94%A8&amp;source=web_explore_feed" target="_blank" rel="noopener"><span class="kw">🔍 高架床 床下空间 利用</span><span class="xnote">看高架床下净空怎么做成独立小空间和采光</span></a>
     </div></section>
