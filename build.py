@@ -117,6 +117,8 @@ def _paras(t):
 for m in modules:
     r = refs_by_id.get(m["id"], {"github": [], "xhs": []})
     m["github"] = r["github"]
+    m["github_core"] = [g for g in m["github"] if not g.get("ext")]
+    m["github_ext"] = [g for g in m["github"] if g.get("ext")]
     for k, g in enumerate(m["github"], 1):
         g["intro_paras"] = _paras(g.get("intro", ""))
         g["diagram_inline"] = inline_svg(_gh_render(f"g{m['id']}-{k}", g["diagram"], g["name"], seed=(int(m["id"]) + k) % 97), "pc-art gh-diag") if g.get("diagram") else None
@@ -152,7 +154,9 @@ for e in repo_index.values():
 repo_list = sorted(repo_index.values(), key=lambda e: -float(e["stars"].lower().replace("k", "e3").replace(",", "")) if e["stars"][:1].isdigit() else 0)
 refs_stats = {"repos": len(repo_index), "links": sum(len(m["github"]) for m in modules), "xhs": sum(len(m["xhs"]) for m in modules),
               "zh": sum(1 for e in repo_list if "无" not in (e.get("zh") or "无")),
-              "multi": sum(1 for e in repo_list if len(e["used_by"]) > 1)}
+              "multi": sum(1 for e in repo_list if len(e["used_by"]) > 1),
+              "ext": sum(1 for e in repo_list if all(g.get("ext") for _, g in e["entries"]))}
+for e in repo_list: e["ext_only"] = all(g.get("ext") for _, g in e["entries"])
 def _starsn(e):
     s = e["stars"].lower().replace(",", "")
     return float(s.replace("k", "e3")) if s[:1].isdigit() else 0
@@ -359,19 +363,36 @@ MODULE = r"""{% extends "base" %}{% block title %}{{ m.id }} {{ m.name }}{% endb
 
   {% if m.github %}<section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
     <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
-    <div class="gh-cards">{% for g in m.github %}
-      <article class="gh-card" id="gh{{ loop.index }}">
+    <div class="gh-cards">{% for g in m.github_core %}
+      <article class="gh-card{% if g.ext %} gh-ext{% endif %}" id="gh{{ loop.index }}">
         <header class="gh-head">
           <a class="gh-name" href="{{ g.url }}" target="_blank" rel="noopener">{{ g.name }}</a>
           <span class="stars">★ {{ g.stars }}</span>
           {% if g.zh %}<span class="zh {% if '无' in g.zh %}zh-no{% endif %}">{{ g.zh }}</span>{% endif %}
+          {% if g.ext %}<span class="ext-tag">延伸</span>{% endif %}
         </header>
         <p class="gh-desc">{{ g.desc }}</p>
         <p class="gh-why">→ {{ g.why }}</p>
         {% if g.diagram_inline %}<figure class="gh-art"><div class="pc-frame">{{ g.diagram_inline|safe }}</div></figure>{% endif %}
         {% if g.intro %}<div class="gh-intro">{% for para in g.intro_paras %}<p>{{ para }}</p>{% endfor %}</div>{% endif %}
       </article>{% endfor %}
-    </div></section>{% endif %}
+    </div>
+    {% if m.github_ext %}<h3 class="gh-ext-h"><span>延伸阅读</span> 借这个模块顺手学一遍的热门项目</h3>
+    <p class="tiny">和本模块的关系没上面那么直接，但都是 GitHub 上值得整个看一遍的经典项目；每条最后一段写了在这里能怎么用。</p>
+    <div class="gh-cards">{% for g in m.github_ext %}
+      <article class="gh-card{% if g.ext %} gh-ext{% endif %}" id="ghx{{ loop.index }}">
+        <header class="gh-head">
+          <a class="gh-name" href="{{ g.url }}" target="_blank" rel="noopener">{{ g.name }}</a>
+          <span class="stars">★ {{ g.stars }}</span>
+          {% if g.zh %}<span class="zh {% if '无' in g.zh %}zh-no{% endif %}">{{ g.zh }}</span>{% endif %}
+          {% if g.ext %}<span class="ext-tag">延伸</span>{% endif %}
+        </header>
+        <p class="gh-desc">{{ g.desc }}</p>
+        <p class="gh-why">→ {{ g.why }}</p>
+        {% if g.diagram_inline %}<figure class="gh-art"><div class="pc-frame">{{ g.diagram_inline|safe }}</div></figure>{% endif %}
+        {% if g.intro %}<div class="gh-intro">{% for para in g.intro_paras %}<p>{{ para }}</p>{% endfor %}</div>{% endif %}
+      </article>{% endfor %}
+    </div>{% endif %}</section>{% endif %}
 
   {% if m.xhs %}<section class="blk"><h2><em>📷</em> 小红书视觉参考</h2>
     <p class="tiny">点关键词直接跳到小红书站内搜索（需登录小红书），看热门帖里的实拍效果。</p>
@@ -438,7 +459,7 @@ ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endbloc
   <section class="blk"><h2><em>③</em> 插图是统一风格的黑白钢笔速写</h2>
     <p class="scene">全站 {{ stats.modules }} 张模块速写 + {{ stats.areas }} 张区域全景都是原创的 inline SVG：只有一种墨色，阴影全部用 45° 排线，轮廓"描两遍"，线条经过轻微的扰动滤镜制造手绘感，右下角是编号签名。没有任何外部图片，页面在离线状态也能完整显示。</p></section>
   <section class="blk"><h2><em>④</em> 每页附了真实的参考链接</h2>
-    <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 3～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），选择时先看知名度（星数），同档次里有中文 README / 中文文档站 / 中文界面的优先，每个都在 2026-09 打开核实过、星数取自当时页面；每个项目配一段约 500 字的科普介绍（是什么、怎么工作、生态如何、在本模块里怎么接）和一张铅笔风的项目介绍图（由 ghdiag.py 从结构化描述自动画出，画的是这个项目的数据与控制走向以及和本模块的接法）；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见<a href="{{ root }}refs.html">参考索引</a>。</p></section>
+    <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 3～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），选择时先看知名度（星数），同档次里有中文 README / 中文文档站 / 中文界面的优先，每个都在 2026-09 打开核实过、星数取自当时页面；下面再跟 2～5 个“延伸阅读”——和本模块关系没那么直接、但值得借这个由头整个学一遍的经典热门项目（全站去重后 200 多个，等于把 GitHub 上好项目好思路顺着这座房子过一遍）；每个项目配一段约 500 字的科普介绍（是什么、怎么工作、生态如何、在本模块里怎么接）和一张铅笔风的项目介绍图（由 ghdiag.py 从结构化描述自动画出，画的是这个项目的数据与控制走向以及和本模块的接法）；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见<a href="{{ root }}refs.html">参考索引</a>。</p></section>
   <section class="blk"><h2><em>⑤</em> 每个模块再往下拆一层</h2>
     <p class="scene">每个模块页的“核心拆解”把它拆成 3～5 个最核心的东西，一共 {{ parts_stats.total }} 个：{{ parts_stats.hw }} 个<b>产品模块</b>（物理的总成——灯头、除湿柜、雨水罐组、洞洞板系统……）给科普式介绍和一张铅笔画<b>爆炸拆解图</b>；{{ parts_stats.logic }} 个<b>联动逻辑</b>（自动化 / 算法 / 数据流）当成“逻辑产品”做一张<b>海报</b>，再配一张与爆炸图对应的铅笔画<b>流程图</b>，并写明主要实现路径参考的是哪个 GitHub 项目，让逻辑可以顺着推演下去。</p></section>
   <section class="blk"><h2><em>⑥</em> 位置和尺寸以 0008 户型图为准</h2>
@@ -528,11 +549,12 @@ REFS = r"""{% extends "base" %}{% block title %}参考索引{% endblock %}
   <header class="mod-head">
     <p class="kicker">全站引用</p>
     <h1>{{ refs_stats.repos }} 个开源项目，{{ refs_stats.xhs }} 组小红书关键词</h1>
-    <p class="lede">{{ stats.modules }} 个模块专题页里引用的 GitHub 项目汇总，去重后按星数分三档。每个仓库都在 2026-09 打开核实过存在，星数取当时页面显示值；绿色标签表示有中文（官方中文 README / 中文文档站 / 界面有中文）。项目怎么工作、在模块里怎么接，每个项目下面是约 500 字的介绍（是什么、怎么工作、生态如何），被多个模块共用的项目会按模块各列一段“在这里怎么用”；铅笔示意图在各模块页——点右侧模块编号过去看。小红书关键词也在各模块页里。</p>
+    <p class="lede">{{ stats.modules }} 个模块专题页里引用的 GitHub 项目汇总，去重后按星数分三档。其中标“延伸”的是各模块顺手学一遍的经典热门项目——和模块关系没那么直接，但思路值得借；每个仓库都在 2026-09 打开核实过存在，星数取当时页面显示值；绿色标签表示有中文（官方中文 README / 中文文档站 / 界面有中文）。项目怎么工作、在模块里怎么接，每个项目下面是约 500 字的介绍（是什么、怎么工作、生态如何），被多个模块共用的项目会按模块各列一段“在这里怎么用”；铅笔示意图在各模块页——点右侧模块编号过去看。小红书关键词也在各模块页里。</p>
   </header>
   <section class="blk refs-sum">
     <div class="rs"><b>{{ refs_stats.repos }}</b><span>个项目</span></div>
     <div class="rs"><b>{{ refs_stats.zh }}</b><span>个有中文</span></div>
+    <div class="rs"><b>{{ refs_stats.ext }}</b><span>个延伸阅读</span></div>
     <div class="rs"><b>{{ refs_stats.multi }}</b><span>个被多个模块共用</span></div>
     <div class="rs"><b>{{ refs_stats.links }}</b><span>处引用</span></div>
     <nav class="rs-jump">{% for t in repo_tiers %}<a href="#{{ t.key }}">{{ t.name }} <i>{{ t.repos|length }}</i></a>{% endfor %}</nav>
@@ -548,6 +570,7 @@ REFS = r"""{% extends "base" %}{% block title %}参考索引{% endblock %}
             <a class="rname" href="{{ e.url }}" target="_blank" rel="noopener">{{ e.name }}</a>
             <span class="stars">★ {{ e.stars }}</span>
             {% if e.zh %}<span class="zh {% if '无' in e.zh %}zh-no{% endif %}">{{ e.zh }}</span>{% endif %}
+            {% if e.ext_only %}<span class="ext-tag">延伸</span>{% endif %}
           </div>
           <p class="rdesc">{{ e.desc }}</p>
           <div class="rintro">{% for para in e.intro_generic %}<p>{{ para }}</p>{% endfor %}{% for m, para in e.intro_by_module %}<p class="rmod"><a href="{{ root }}modules/{{ m.id }}.html"><i>{{ m.id }}</i>{{ m.name }}</a>{{ para }}</p>{% endfor %}</div>
@@ -683,6 +706,10 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .gh-name:hover{border-bottom-color:var(--red)}
 .zh{display:inline-block;font-size:.72rem;padding:1px 8px;border:1.3px solid #2f6b3a;color:#2f6b3a;border-radius:200px 8px 180px 8px/8px 180px 8px 200px;letter-spacing:.04em}
 .zh.zh-no{border-color:var(--ink3);color:var(--ink3)}
+.ext-tag{display:inline-block;font-size:.7rem;padding:1px 8px;border:1.3px dashed var(--red);color:var(--red);border-radius:200px 8px 180px 8px/8px 180px 8px 200px;letter-spacing:.08em}
+.gh-ext-h{font-family:"Noto Serif SC","Songti SC",serif;font-size:1.05rem;font-weight:900;margin:26px 0 4px;display:flex;align-items:center;gap:10px}
+.gh-ext-h span{font-family:"Long Cang","Kaiti SC",cursive;font-weight:400;font-size:1.3rem;color:var(--red)}
+.gh-card.gh-ext{border-style:dashed;background:rgba(255,255,255,.25)}
 .gh-art{margin:12px 0 6px}
 .gh-art .pc-frame{padding:8px 10px 4px}
 .gh-art svg{width:100%;height:auto;display:block;max-width:560px;margin:0 auto}

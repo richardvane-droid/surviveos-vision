@@ -16,6 +16,7 @@ docs/       生成出来的静态站点（GitHub Pages 从 main 分支 /docs 发
 render.py   把若干 SVG 拼成一张 PNG 预览图，方便检查插图
 data/refs-0X.json  每模块的 GitHub 成熟方案（知名度优先、中文版次之，每个约 500 字介绍 + diagram 结构化描述，规范见 GH_BRIEF.md）+ 小红书关键词（REFS_BRIEF.md），build.py 会合并进模块页并生成 docs/refs.html
 ghdiag.py   把 refs 里每个项目的 diagram 描述画成铅笔风项目介绍图（480×300）；gh_render.py 0X 出图到 ghdiag/ 并拼预览，gh_check.py 0X 检查字数与字段
+GH_EXT.md   “延伸阅读”扩充规范与候选表：每模块再补 2～5 个关联不那么直接的经典热门项目（条目带 "ext": true），全站去重 ≥200；gh_ext_check.py 统计去重数并查跨模块重复
 data/parts-*.json  每模块 3~5 个核心产品模块/联动逻辑的科普文案（规范见 PARTS_BRIEF.md）
 parts/      核心拆解的铅笔画：NNNN-K.svg（硬件爆炸图 / 逻辑流程图）、NNNN-K-poster.svg（逻辑产品海报），生成 docs/teardown/NNNN.html
 check_parts.py  检查 parts JSON 与 SVG 是否配齐
