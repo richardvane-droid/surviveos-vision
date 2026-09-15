@@ -17,49 +17,94 @@
     
   </defs>
   <g filter="url(#m0307-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path d="M14 246 H386" stroke-width="1.6"/><path d="M386 246 L200 40 L120 40" stroke-width="1.5"/>
-<path d="M371 229.5 l-7 0" stroke-width="0.5"/>
-<path d="M356 213.0 l-7 0" stroke-width="0.5"/>
-<path d="M341 196.5 l-7 0" stroke-width="0.5"/>
-<path d="M326 180.0 l-7 0" stroke-width="0.5"/>
-<path d="M311 163.5 l-7 0" stroke-width="0.5"/>
-<path d="M296 147.0 l-7 0" stroke-width="0.5"/>
-<path d="M281 130.5 l-7 0" stroke-width="0.5"/>
-<path d="M266 114.0 l-7 0" stroke-width="0.5"/>
-<path d="M251 97.5 l-7 0" stroke-width="0.5"/>
-<path d="M236 81.0 l-7 0" stroke-width="0.5"/>
-<path d="M221 64.5 l-7 0" stroke-width="0.5"/>
-<path d="M206 48.0 l-7 0" stroke-width="0.5"/>
-<path d="M262 246 V110" stroke-width="0.5" stroke-dasharray="4 3"/>
-<path d="M60 246 v-12 h150 v12 M60 234 v-6 h150 v6" stroke-width="1.6"/><path d="M62 236 h146 v8 h-146 Z" fill="url(#m0307-hatch)" stroke="none"/>
-<path d="M72 228 V120 h8 V228 M190 228 V120 h8 V228 M72 120 H198 M72 128 H198" stroke-width="1.5"/><path d="M74 130 h122 v-8" stroke-width="0.5"/>
-<path d="M60 228 h150" stroke-width="1"/>
-<path d="M75 132 V226" stroke-width="0.4"/>
-<path d="M193 132 V226" stroke-width="0.4"/>
-<path d="M118 112 h30 v24 h-30 Z M126 136 v22 h14 v-22 M129 158 v12 h8 v-12 M133 170 v10" stroke-width="1.2"/><path d="M120 114 h26 v20 h-26 Z" fill="url(#m0307-hatchl)" stroke="none"/>
-<path d="M112 228 v-10 h28 v10 M116 218 v-8 h20 v8" stroke-width="1.2"/><circle cx="126" cy="204" r="8" stroke-width="1.2"/><path d="M126 204 l-14 -14 M126 204 l14 -14" stroke-width="0.6" stroke-dasharray="2 2"/>
-<path d="M118 196 l8 -12 l12 8 l-8 12 Z" stroke-width="1.1"/><path d="M120 195 l6 -9 l9 6 l-6 9 Z" fill="url(#m0307-hatch)" stroke="none"/>
-<path d="M104 200 a10 10 0 0 1 4 -14 M104 200 l-3 -4 M104 200 l4 -2" stroke-width="0.8"/>
-<path d="M48 234 V104 H222 V234" stroke-width="0.9" stroke-dasharray="5 3"/><path d="M50 106 h170 v126 h-170 Z" fill="url(#m0307-hatchl)" stroke="none" fill-opacity="0.35"/>
-<path d="M150 108 h20 q10 0 14 8 L296 230 M150 104 h20 q12 0 17 8 L300 226" stroke-width="1"/><path d="M296 230 l10 2 l-4 6" stroke-width="0.8"/>
-<path d="M190 124.0 l-3 3" stroke-width="0.5"/>
-<path d="M206 141.5 l-3 3" stroke-width="0.5"/>
-<path d="M222 159.0 l-3 3" stroke-width="0.5"/>
-<path d="M238 176.5 l-3 3" stroke-width="0.5"/>
-<path d="M254 194.0 l-3 3" stroke-width="0.5"/>
-<path d="M270 211.5 l-3 3" stroke-width="0.5"/>
-<path d="M84 246 v-14 h50 v14 M90 238 h10 M104 238 h6 M116 236 a2 2 0 1 0 0.1 0" stroke-width="0.9"/>
-<path d="M14 246 v-30 h36 v30 M18 220 h28" stroke-width="1"/>
-<circle cx="244" cy="207.0" r="5.0" stroke-width="1.2"/><path d="M244 212.0 V230.0 M244 220.0 L235.0 232.0 M244 220.0 L253.0 232.0 M244 230.0 L237.0 246 M244 230.0 L251.0 246" stroke-width="1.2"/>
-<path d="M238 216 l-8 -6" stroke-width="0.9"/>
-<path d="M330 184 l-26 -28 l14 -6 l24 26 Z" stroke-width="1"/><path d="M328 182 l-22 -24 M318 170 l14 -6" stroke-width="0.5"/>
+<path d="M14 252 H386" stroke-width="1.6"/>
+<path d="M90 40 H230 L372 199" stroke-width="1.5"/>
+<path d="M372 199 V252" stroke-width="1.3"/>
+<path d="M90 34 H230 V40 H90 Z" fill="url(#m0307-hatch)" stroke="none"/>
+<path d="M242.9 54.5 l-7 2" stroke-width="0.5"/>
+<path d="M255.8 68.9 l-7 2" stroke-width="0.5"/>
+<path d="M268.7 83.4 l-7 2" stroke-width="0.5"/>
+<path d="M281.6 97.8 l-7 2" stroke-width="0.5"/>
+<path d="M294.5 112.3 l-7 2" stroke-width="0.5"/>
+<path d="M307.5 126.7 l-7 2" stroke-width="0.5"/>
+<path d="M320.4 141.2 l-7 2" stroke-width="0.5"/>
+<path d="M333.3 155.6 l-7 2" stroke-width="0.5"/>
+<path d="M346.2 170.1 l-7 2" stroke-width="0.5"/>
+<path d="M359.1 184.5 l-7 2" stroke-width="0.5"/>
+<path d="M76 252 V100 H252 V252" stroke-width="1" stroke-dasharray="5 3"/>
+<path d="M78 102 h172 v148 h-172 Z" fill="url(#m0307-hatchl)" stroke="none" fill-opacity="0.32"/>
+<path d="M88 252 V236 H238 V252" stroke-width="1.6"/>
+<path d="M90 238 h146 v12 h-146 Z" fill="url(#m0307-hatch)" stroke="none"/>
+<path d="M82 236 H244 V228 H82 Z" stroke-width="1.4"/>
+<path d="M84 232 H242" stroke-width="0.5"/>
+<path d="M100 228 V132 H110 V228" stroke-width="1.6"/>
+<path d="M216 228 V132 H226 V228" stroke-width="1.6"/>
+<path d="M105 224 V138 M221 224 V138" stroke-width="0.4"/>
+<path d="M100 132 H226 V118 H100 Z" stroke-width="1.6"/>
+<path d="M102 125 H224" stroke-width="0.5"/>
+<path d="M146 112 H178 V138 H146 Z" stroke-width="1.4"/>
+<path d="M148 114 H176 V136" stroke-width="0.6"/>
+<path d="M154 138 H170 V176 H154 Z" stroke-width="1.3"/>
+<path d="M157 142 V172 M167 142 V172" stroke-width="0.5"/>
+<path d="M152 176 H172 V204 H152 Z" stroke-width="1.4"/>
+<path d="M154 182 H170 M154 188 H170 M154 194 H170" stroke-width="0.6"/>
+<path d="M165 177 h6 v26 h-6 Z" fill="url(#m0307-hatch)" stroke="none"/>
+<path d="M157 204 H167 L165 212 H159 Z" stroke-width="1.2"/>
+<path d="M162 212 V220" stroke-width="1.3"/>
+<path d="M146 198 H178 V206 L174 220 H150 L146 206 Z" stroke-width="0.9" stroke-dasharray="3 2"/>
+<path d="M146 202 C128 186 142 170 132 154 C126 142 138 132 146 118" stroke-width="1.1"/>
+<path d="M138 190 l7 2" stroke-width="0.5"/>
+<path d="M138 172 l7 2" stroke-width="0.5"/>
+<path d="M130 150 l7 2" stroke-width="0.5"/>
+<path d="M138 130 l7 2" stroke-width="0.5"/>
+<path d="M114 228 V218 H208 V228" stroke-width="1.5"/>
+<path d="M118 222 H204 M118 225 H194" stroke-width="0.4"/>
+<path d="M156 218 l3 5 h6 l3 -5" stroke-width="0.9"/>
+<path d="M120 218 V210 H130 V218 M188 218 V210 H198 V218" stroke-width="1.1"/>
+<path d="M182 146 H212 M182 146 l7 -4 M182 146 l7 4 M212 146 l-7 -4 M212 146 l-7 4" stroke-width="1"/>
+<path d="M186 154 V188 M186 154 l-4 7 M186 154 l4 7 M186 188 l-4 -7 M186 188 l4 -7" stroke-width="1"/>
+<path d="M88 230 L66 243 M88 230 l-1 8 M88 230 l7 0 M66 243 l1 -8 M66 243 l-7 0" stroke-width="1"/>
+<path d="M180 104 H248 L360 196" stroke-width="1.5"/>
+<path d="M180 114 H242 L354 206" stroke-width="1.5"/>
+<path d="M180 104 V114" stroke-width="1.2"/>
+<path d="M198 104 V114" stroke-width="0.5"/>
+<path d="M216 104 V114" stroke-width="0.5"/>
+<path d="M234 104 V114" stroke-width="0.5"/>
+<path d="M272.6 124.2 l-6 10" stroke-width="0.5"/>
+<path d="M295.0 142.6 l-6 10" stroke-width="0.5"/>
+<path d="M317.4 161.0 l-6 10" stroke-width="0.5"/>
+<path d="M339.8 179.4 l-6 10" stroke-width="0.5"/>
+<path d="M360 196 l10 2 l-4 6" stroke-width="0.9"/>
+<path d="M14 142 V66 H72 V142 Z" stroke-width="1.4"/>
+<path d="M17 139 V69 H69" stroke-width="0.5"/>
+<path d="M20 86 H66" stroke-width="0.7"/>
+<circle cx="24" cy="131" r="4.5" stroke-width="1.1"/>
+<path d="M14 228 V152 H72 V228 Z" stroke-width="1.4"/>
+<path d="M17 225 V155 H69" stroke-width="0.5"/>
+<path d="M20 172 H66" stroke-width="0.7"/>
+<circle cx="24" cy="217" r="4.5" stroke-width="1.1"/>
+<circle cx="276" cy="189.6" r="8.0" stroke-width="1.4"/><path d="M276 197.6 V226.4 M276 210.4 L261.6 229.6 M276 210.4 L290.4 229.6 M276 226.4 L264.8 252 M276 226.4 L287.2 252" stroke-width="1.4"/>
+<path d="M186 199 L174 194" stroke-width="0.7" stroke-dasharray="3 2"/>
   </g>
   <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">0307</text>
-<text x="135" y="96" font-family="'Long Cang','Kaiti SC',cursive" font-size="8.5" fill="#5a5a5a" text-anchor="middle" filter="none">铝型材龙门 · 3+2 五轴</text>
-<text x="126" y="258" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">A/C 分度头</text>
-<text x="262" y="104" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">2060</text>
-<text x="300" y="120" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">排屑管 → 0404 集尘</text>
-<text x="32" y="258" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">0301</text>
-<text x="346" y="196" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">天窗</text>
-<text x="200" y="282" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0307：阁楼核心区里一台会翻面的桌面五轴，木屑顺坡顶出去</text>
+<text x="43" y="58" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">主材待定 · 两条路线</text>
+<text x="43" y="81" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">木 / 亚克力</text>
+<text x="43" y="100" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">2020+3030 机架</text>
+<text x="43" y="112" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">500W 风冷主轴</text>
+<text x="43" y="124" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">行程 300×300×100</text>
+<text x="38" y="134" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="start" filter="none">未选</text>
+<text x="43" y="167" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">铝（加强刚性）</text>
+<text x="43" y="186" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">全 4040 + 钢板</text>
+<text x="43" y="198" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">1.5kW 水冷主轴</text>
+<text x="43" y="210" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="middle" filter="none">行程 200×200×80</text>
+<text x="38" y="220" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="start" filter="none">未选</text>
+<text x="178" y="149" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">X</text>
+<text x="192" y="174" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="start" filter="none">Z</text>
+<text x="62" y="250" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="end" filter="none">Y</text>
+<text x="104" y="94" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="middle" filter="none">阳光板防护罩</text>
+<text x="188" y="202" font-family="'Long Cang','Kaiti SC',cursive" font-size="6.5" fill="#5a5a5a" text-anchor="start" filter="none">主轴待定</text>
+<text x="110" y="212" font-family="'Long Cang','Kaiti SC',cursive" font-size="7" fill="#5a5a5a" text-anchor="end" filter="none">胡桃木板</text>
+<text x="294" y="238" font-family="'Long Cang','Kaiti SC',cursive" font-size="6" fill="#5a5a5a" text-anchor="start" filter="none">排屑管 → 0404 木工间集尘</text>
+<text x="163" y="266" font-family="'Long Cang','Kaiti SC',cursive" font-size="7.5" fill="#5a5a5a" text-anchor="middle" filter="none">龙门机架 · 铝型材</text>
+<text x="200" y="286" font-family="'Long Cang','Kaiti SC',cursive" font-size="9.5" fill="#1c1c1c" text-anchor="middle" filter="none">0307：一台三轴龙门雕刻机，X / Y / Z 三根轴，木屑顺管走向木工间</text>
 </svg>
