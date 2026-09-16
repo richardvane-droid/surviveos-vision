@@ -133,6 +133,20 @@ for m in modules:
     for p in m["parts"]:
         p["img"] = (ROOT / "parts" / f"{m['id']}-{p['k']}.svg").read_text(encoding="utf-8")
         p["poster"] = (ROOT / "parts" / f"{m['id']}-{p['k']}-poster.svg").read_text(encoding="utf-8") if p["kind"] == "logic" else None
+cost = json.load(open(ROOT / "data" / "cost.json", encoding="utf-8"))
+COST_M, COST_META = cost["modules"], cost["meta"]
+for m in modules:
+    m["cost"] = COST_M.get(m["id"])
+def _crow(c): return {"m": by_id[c], **COST_M[c]}
+cost_rank = sorted((_crow(c) for c in COST_M), key=lambda r: -r["mid"])
+cost_areas = [{"a": AREAS[k], **v,
+               "rows": sorted((_crow(c) for c in COST_M if c[:2] == k), key=lambda r: -r["mid"])}
+              for k, v in sorted(COST_META["areas"].items(), key=lambda kv: -kv[1]["mid"])]
+for _ca in cost_areas:
+    AREAS[_ca["a"]["id"]]["cost"] = _ca
+cost_phases = [{"k": int(k), **v,
+                "rows": sorted((r for r in cost_rank if str(r["phase"]) == k), key=lambda r: -r["mid"])}
+               for k, v in sorted(COST_META["phases"].items())]
 parts_stats = {"total": sum(len(m["parts"]) for m in modules),
                "hw": sum(1 for m in modules for p in m["parts"] if p["kind"] == "hw"),
                "logic": sum(1 for m in modules for p in m["parts"] if p["kind"] == "logic")}
@@ -222,6 +236,7 @@ BASE = r"""<!doctype html>
     <a href="{{ root }}preface.html" class="pref {% if page == 'preface' %}on{% endif %}">序</a>
     {% for a in areas.values() %}<a href="{{ root }}areas/{{ a.id }}.html" {% if area and area.id == a.id %}class="on"{% endif %}><i>{{ a.id }}</i>{{ a.name }}</a>{% endfor %}
     <a href="{{ root }}space.html" class="about {% if page == 'space' %}on{% endif %}">户型图</a>
+    <a href="{{ root }}cost.html" class="about {% if page == 'cost' %}on{% endif %}">造价</a>
     <a href="{{ root }}refs.html" class="about {% if page == 'refs' %}on{% endif %}">参考索引</a>
     <a href="{{ root }}about.html" class="about {% if page == 'about' %}on{% endif %}">关于</a>
   </nav>
@@ -250,10 +265,12 @@ INDEX = r"""{% extends "base" %}{% block title %}一座乡野生存系统，做�
       <div><b>{{ stats.modules }}</b><span>个模块专题</span></div>
       <div><b>{{ stats.done }}</b><span>个真实已完成</span></div>
       <div><b>{{ parts_stats.total }}</b><span>个核心拆解</span></div>
+      <div><b>¥{{ (cost_meta.total.mid / 10000)|round(1) }}万</b><span>中位总造价</span></div>
     </div>
     <p class="stamp-row"><span class="stamp">设想版 · 非真实进度</span><span class="hand">看看就好，别当施工图 ↗</span></p>
     <a class="pref-entry" href="preface.html"><span class="pref-mark">序</span><span><b>{{ preface.title }}</b><small>这座园子为什么存在——三千字的代序</small></span><span class="arrow">→</span></a>
     <a class="pref-entry space-entry" href="space.html"><span class="pref-mark">📐</span><span><b>户型图与空间标注</b><small>五张铅笔底图：谁的地、多大、多高——所有模块的位置都从这里来</small></span><span class="arrow">→</span></a>
+    <a class="pref-entry cost-entry" href="cost.html"><span class="pref-mark">💰</span><span><b>全屋造价估算</b><small>{{ cost_meta.modules }} 个模块 ¥{{ cost_meta.total.low|yuan }} ～ ¥{{ cost_meta.total.high|yuan }}，{{ cost_meta.bom_items }} 项支出拆到条</small></span><span class="arrow">→</span></a>
   </div>
   <figure class="hero-art">{{ areas['01'].svg_inline|safe }}<figcaption>01 暖村木屋 · 区域速写</figcaption></figure>
 </section>
@@ -312,6 +329,7 @@ AREA = r"""{% extends "base" %}{% block title %}{{ area.id }} {{ area.name }}{% 
     <p class="lede">{{ area.line }}</p>
     <p class="intro">{{ area.intro }}</p>
     <p class="space-line"><em>📐</em> {{ area.space }} <a href="{{ root }}space.html">· 看户型图 →</a></p>
+    {% if area.cost %}<p class="space-line cost-line"><em>💰</em> {{ area.cost.n }} 个模块合计 ¥{{ area.cost.low|yuan }} ～ ¥{{ area.cost.high|yuan }}，中位 ¥{{ area.cost.mid|yuan }}（占全屋 {{ area.cost.share }}%），年度 ¥{{ area.cost.opex|yuan }} <a href="{{ root }}cost.html">· 看造价汇总 →</a></p>{% endif %}
   </div>
 </section>
 <section class="sec plan-sec">
@@ -386,7 +404,24 @@ MODULE = r"""{% extends "base" %}{% block title %}{{ m.id }} {{ m.name }}{% endb
     <section class="blk"><h2><em>⚠️</em> 避坑提醒</h2><ul class="pit">{% for p in m.pitfalls %}<li>{{ p }}</li>{% endfor %}</ul></section>
   </div>
 
-  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>{{ m.budget }}</p><p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
+  <section class="blk budget"><h2><em>💰</em> 预算幻想</h2><p>{{ m.budget }}</p>
+  {% if m.cost %}{% set c = m.cost %}
+  <div class="cost-card">
+    <div class="cc-top">
+      <div class="cc-num"><b>¥{{ c.low|yuan }} ～ ¥{{ c.high|yuan }}</b><span>一次性 · 中位 ¥{{ c.mid|yuan }}</span></div>
+      <div class="cc-chips">
+        <span class="cc-chip ph ph{{ c.phase }}">{{ c.phase_name }}</span>
+        <span class="cc-chip">{% if c.opex < 0 %}年度净省 ¥{{ (-c.opex)|yuan }}{% elif c.opex == 0 %}年度约 ¥0{% else %}年度 ¥{{ c.opex|yuan }}{% endif %}</span>
+        <span class="cc-chip">占全站 {{ c.share }}% · 第 {{ c.rank }} 贵</span>
+      </div>
+    </div>
+    <ul class="cc-bom">
+      {% for b in c.bom %}<li><span class="bar"><i style="width:{{ b.pct }}%"></i></span><span class="nm">{{ b.item }}</span><b>¥{{ b.amount|yuan }}</b><em>{{ b.pct }}%</em></li>{% endfor %}
+    </ul>
+    <p class="tiny">{{ c.note }}。主要支出 {{ c.bom|length }} 项，合计即中位。数字按 2026 年国内电商常见价估，二手件取行情中位，误差往上一倍往下一半都算正常——这套数字是用来看分布的，不是报价。<a href="{{ root }}cost.html">全屋造价汇总 →</a></p>
+  </div>
+  {% endif %}
+  <p class="tiny">纯拍脑袋的量级感，真实选型以各模块的设备电商选型阶段为准。</p></section>
 
   {% if m.github %}<section class="blk"><h2><em>🔧</em> GitHub 上的成熟方案</h2>
     <p class="tiny">按知名度（星数）优先、有中文版优先挑的开源项目，每个都在 2026-09 打开核实过存在。每个方案配一段科普介绍和一张铅笔风的“它怎么工作 + 怎么接进本模块”示意图。</p>
@@ -878,12 +913,156 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
  .mod-row .thumb{border-right:0;border-bottom:1.6px solid var(--line);padding:0 0 6px}
  .top{padding-bottom:12px}
 }
+
+/* ---------- 造价 ---------- */
+.cost-line{color:var(--ink2)}
+.cost-card{border:1.6px solid var(--line);border-radius:14px 200px 14px 220px/220px 14px 200px 14px;padding:14px 18px 10px;margin:14px 0 10px;background:rgba(255,255,255,.45)}
+.cc-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px dotted rgba(28,28,28,.3);padding-bottom:8px}
+.cc-num b{font-size:1.28rem}
+.cc-num span{display:block;font-size:.82rem;color:var(--ink2);margin-top:2px}
+.cc-chips{display:flex;gap:6px;flex-wrap:wrap}
+.cc-chip{border:1.4px solid var(--line);border-radius:999px;padding:1px 10px;font-size:.78rem;white-space:nowrap;background:rgba(255,255,255,.5)}
+.cc-chip.ph1{border-color:var(--red);color:var(--red)}
+.cc-chip.ph3{border-color:var(--ink3);color:var(--ink2)}
+.cc-bom{list-style:none;padding:0;margin:10px 0 6px;display:grid;gap:5px}
+.cc-bom li{display:grid;grid-template-columns:92px 1fr auto auto;gap:10px;align-items:center;font-size:.88rem}
+.cc-bom .bar{height:9px;border:1.2px solid var(--line);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.6)}
+.cc-bom .bar i{display:block;height:100%;background:repeating-linear-gradient(45deg,var(--ink3) 0 2px,transparent 2px 4px)}
+.cc-bom .nm{color:var(--ink2)}
+.cc-bom b{font-variant-numeric:tabular-nums}
+.cc-bom em{font-style:normal;font-size:.76rem;color:var(--ink3);min-width:40px;text-align:right}
+.cost-hero{padding:18px 0 6px;border-bottom:1.6px solid var(--line);margin-bottom:10px}
+.cost-hero h1{margin:.2em 0 .3em}
+.cost-nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:16px 0 10px}
+.cost-nums div{border:1.6px solid var(--line);border-radius:12px 120px 12px 130px/130px 12px 120px 12px;padding:10px 14px;background:rgba(255,255,255,.4)}
+.cost-nums b{display:block;font-size:1.12rem;font-variant-numeric:tabular-nums}
+.cost-nums span{font-size:.8rem;color:var(--ink2)}
+.ph-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.ph-card{border:1.6px solid var(--line);border-radius:14px 180px 14px 200px/200px 14px 180px 14px;padding:14px 18px;background:rgba(255,255,255,.4)}
+.ph-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.ph-head i{font-style:normal;font-size:.8rem;color:var(--ink2)}
+.ph-num{font-size:1.5rem;font-variant-numeric:tabular-nums;margin:6px 0 4px}
+.ph-bar{height:10px;border:1.3px solid var(--line);border-radius:999px;overflow:hidden;margin-bottom:6px}
+.ph-bar i{display:block;height:100%;background:repeating-linear-gradient(45deg,var(--ink3) 0 2px,transparent 2px 4px)}
+.ph-mods{display:flex;flex-wrap:wrap;gap:4px 6px;margin:8px 0 0}
+.ph-mods a{font-size:.78rem;border:1.2px solid var(--line);border-radius:6px;padding:0 6px;font-variant-numeric:tabular-nums}
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cost-tbl{width:100%;border-collapse:collapse;font-size:.9rem;min-width:620px}
+.cost-tbl th{text-align:left;font-weight:600;border-bottom:1.6px solid var(--line);padding:8px 10px;white-space:nowrap}
+.cost-tbl td{border-bottom:1px dotted rgba(28,28,28,.3);padding:8px 10px;vertical-align:top}
+.cost-tbl i{font-style:normal;color:var(--ink3);font-variant-numeric:tabular-nums;margin-right:4px}
+.cost-tbl .rng,.cost-tbl .mid,.cost-tbl .rk{font-variant-numeric:tabular-nums;white-space:nowrap}
+.cost-tbl .mid{font-weight:600}
+.cost-tbl .rk{color:var(--ink3)}
+.cost-tbl .neg{color:var(--red)}
+.cost-tbl .share{white-space:nowrap}
+.cost-tbl .sbar{display:inline-block;width:56px;height:8px;border:1.2px solid var(--line);border-radius:999px;overflow:hidden;margin-right:6px;vertical-align:middle}
+.cost-tbl .sbar i{display:block;height:100%;margin:0;background:repeating-linear-gradient(45deg,var(--ink3) 0 2px,transparent 2px 4px)}
+.rank-tbl .bom-cell{min-width:260px}
+.rank-tbl .bom-cell span{display:inline-block;font-size:.8rem;color:var(--ink2);border:1.2px solid var(--line);border-radius:6px;padding:0 6px;margin:0 4px 4px 0}
+.rank-tbl .bom-cell b{font-variant-numeric:tabular-nums}
+@media (max-width:820px){
+ .cc-bom li{grid-template-columns:64px 1fr auto;gap:8px}
+ .cc-bom em{display:none}
+ .cost-hero h1{font-size:1.5rem}
+}
+"""
+
+COST = r"""{% extends "base" %}{% block title %}全屋造价估算{% endblock %}
+{% block desc %}SurviveOs 设想版全屋造价：{{ cost_meta.modules }} 个模块，一次性 ¥{{ cost_meta.total.low|yuan }} ～ ¥{{ cost_meta.total.high|yuan }}，年度 ¥{{ cost_meta.total.opex|yuan }}。{% endblock %}
+{% block body %}
+<nav class="crumb"><a href="{{ root }}index.html">首页</a> › <span>全屋造价</span></nav>
+
+<section class="cost-hero">
+  <p class="kicker">设想版 · 造价估算模型</p>
+  <h1>把 {{ cost_meta.modules }} 个模块的价钱，一次算完</h1>
+  <p class="lede">不是报价单，是<b>分布图</b>：钱都压在哪个区域、哪一期、哪几件东西上。每个模块拆到 3～6 项主要支出，全站 {{ cost_meta.bom_items }} 条，合计必须等于该模块的中位数——对不上脚本会报错。</p>
+  <div class="cost-nums">
+    <div><b>¥{{ cost_meta.total.low|yuan }} ～ ¥{{ cost_meta.total.high|yuan }}</b><span>一次性投入区间</span></div>
+    <div><b>¥{{ cost_meta.total.mid|yuan }}</b><span>中位</span></div>
+    <div><b>¥{{ cost_meta.avg_mid|yuan }}</b><span>平均每模块</span></div>
+    <div><b>¥{{ cost_meta.total.opex|yuan }}</b><span>年度运行</span></div>
+  </div>
+  <p class="stamp-row"><span class="stamp">估算 · 非报价</span><span class="hand">误差往上一倍往下一半都算正常 ↗</span></p>
+</section>
+
+<section class="sec">
+  <h2 class="sec-title"><span>三期怎么分</span><small>最贵的那一期，恰好是最能往后拖的一期</small></h2>
+  <div class="ph-grid">
+  {% for p in cost_phases %}
+    <div class="ph-card ph{{ p.k }}">
+      <div class="ph-head"><b>{{ p.name }}</b><i>{{ p.n }} 个模块</i></div>
+      <div class="ph-num">¥{{ p.mid|yuan }}</div>
+      <div class="ph-bar"><i style="width:{{ p.share }}%"></i></div>
+      <p class="tiny">占全屋 {{ p.share }}%　·　区间 ¥{{ p.low|yuan }} ～ ¥{{ p.high|yuan }}　·　年度 ¥{{ p.opex|yuan }}</p>
+      <p class="ph-mods">{% for r in p.rows %}<a href="{{ root }}modules/{{ r.m.id }}.html">{{ r.m.id }}</a>{% endfor %}</p>
+    </div>
+  {% endfor %}
+  </div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-title"><span>钱压在哪个区域</span><small>地堡一个区就吃掉四成</small></h2>
+  <div class="tbl-wrap"><table class="cost-tbl">
+    <thead><tr><th>区域</th><th>模块</th><th>一次性区间</th><th>中位</th><th>占比</th><th>年度</th></tr></thead>
+    <tbody>
+    {% for c in cost_areas %}
+      <tr>
+        <td><a href="{{ root }}areas/{{ c.a.id }}.html"><i>{{ c.a.id }}</i> {{ c.a.name }}</a></td>
+        <td>{{ c.n }}</td>
+        <td class="rng">¥{{ c.low|yuan }} ～ ¥{{ c.high|yuan }}</td>
+        <td class="mid">¥{{ c.mid|yuan }}</td>
+        <td class="share"><span class="sbar"><i style="width:{{ (c.share / cost_areas[0].share * 100)|round(1) }}%"></i></span>{{ c.share }}%</td>
+        <td>¥{{ c.opex|yuan }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-title"><span>{{ cost_meta.modules }} 个模块，从贵到便宜</span><small>5 个中位过万，12 个不到两千</small></h2>
+  <div class="tbl-wrap"><table class="cost-tbl rank-tbl">
+    <thead><tr><th>#</th><th>模块</th><th>一次性区间</th><th>中位</th><th>年度</th><th>分期</th><th>主要支出</th></tr></thead>
+    <tbody>
+    {% for r in cost_rank %}
+      <tr>
+        <td class="rk">{{ r.rank }}</td>
+        <td><a href="{{ root }}modules/{{ r.m.id }}.html"><i>{{ r.m.id }}</i> {{ r.m.name }}</a></td>
+        <td class="rng">¥{{ r.low|yuan }} ～ ¥{{ r.high|yuan }}</td>
+        <td class="mid">¥{{ r.mid|yuan }}</td>
+        <td class="{% if r.opex < 0 %}neg{% endif %}">{% if r.opex < 0 %}净省 ¥{{ (-r.opex)|yuan }}{% else %}¥{{ r.opex|yuan }}{% endif %}</td>
+        <td><span class="cc-chip ph ph{{ r.phase }}">{{ r.phase_name.split(" · ")[1] }}</span></td>
+        <td class="bom-cell">{% for b in r.bom %}<span title="¥{{ b.amount|yuan }}｜{{ b.pct }}%">{{ b.item }} <b>¥{{ b.amount|yuan }}</b></span>{% endfor %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-title"><span>口径</span><small>这套数字能用来干嘛、不能用来干嘛</small></h2>
+  <div class="two">
+    <div>
+      <p class="scene">按 2026 年国内电商常见价估，二手件取行情中位。<b>不计入</b>：自己的工时；房屋本体与土建（只有柴火炉穿墙、地堡防潮这类必须请人的工序算了工费）；既有的笔记本 / Mac / 相机 / 户外装备本身——收纳它们的柜子和挂板才计。</p>
+      <p class="scene">二手波动最大的三项：0103 的九台 iPad、0208 的一对大箱、0207 的 98 寸电视。真要照着做，建议整体再留 10～15% 的试错与返工余量。</p>
+    </div>
+    <div>
+      <p class="scene">最贵五个：{% for c in cost_meta.top %}<a href="{{ root }}modules/{{ c }}.html">{{ c }}</a>{% if not loop.last %} · {% endif %}{% endfor %}。最便宜五个：{% for c in cost_meta.cheap %}<a href="{{ root }}modules/{{ c }}.html">{{ c }}</a>{% if not loop.last %} · {% endif %}{% endfor %}。</p>
+      <p class="scene">两个特例：<a href="{{ root }}modules/0805.html">0805 全套方案材质总设计</a>不产生独立预算（只有三块样板 ¥150～300），材料成本计入各引用模块；<a href="{{ root }}modules/0304.html">0304 光伏储能</a>是唯一年度为负的模块，每年净省约 ¥650。</p>
+      <p class="tiny">源表在仓库 <code>mkcost.py</code>，生成 <code>data/cost.json</code>，<code>check_cost.py</code> 负责核对区间合法、BOM 合计=中位、本页与 {{ cost_meta.modules }} 个模块页数字一致。改价格：改 C 表 → mkcost → build → check。</p>
+    </div>
+  </div>
+</section>
+<nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><span></span></nav>
+{% endblock %}
 """
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#f5f0e6"/><path d="M5 26 L16 7 L27 26 Z" fill="none" stroke="#1c1c1c" stroke-width="2.4" stroke-linejoin="round"/><path d="M12 26 V19 H20 V26" fill="none" stroke="#1c1c1c" stroke-width="2"/></svg>"""
 
-env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS, "teardown": TEARDOWN, "preface": PREFACE, "space": SPACE}),
+env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS, "teardown": TEARDOWN, "preface": PREFACE, "space": SPACE, "cost": COST}),
                   autoescape=select_autoescape(default=True))
+env.filters["yuan"] = lambda v: f"{int(v):,}"
 
 # ---------- build ----------
 if DIST.exists(): shutil.rmtree(DIST)
@@ -896,7 +1075,8 @@ for m in modules:
     for p in m["parts"]:
         p["img_inline"] = inline_svg(p["img"], "pc-art")
         p["poster_inline"] = inline_svg(p["poster"], "pc-poster") if p["poster"] else None
-ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, repo_tiers=repo_tiers, refs_pages=REFS_PAGES, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface, plans=plans, size_table=SIZE_TABLE, blocks=BLOCKS)
+ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, repo_tiers=repo_tiers, refs_pages=REFS_PAGES, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface, plans=plans, size_table=SIZE_TABLE, blocks=BLOCKS,
+           cost_meta=COST_META, cost_rank=cost_rank, cost_areas=cost_areas, cost_phases=cost_phases)
 
 (DIST / "index.html").write_text(env.get_template("index").render(root="", **ctx), encoding="utf-8")
 (DIST / "about.html").write_text(env.get_template("about").render(root="", **{**ctx, "page": "about"}), encoding="utf-8")
@@ -904,6 +1084,7 @@ for _p in REFS_PAGES:
     (DIST / _p["file"]).write_text(env.get_template("refs").render(root="", **{**ctx, "page": "refs", "rp": _p}), encoding="utf-8")
 (DIST / "preface.html").write_text(env.get_template("preface").render(root="", **{**ctx, "page": "preface"}), encoding="utf-8")
 (DIST / "space.html").write_text(env.get_template("space").render(root="", **{**ctx, "page": "space"}), encoding="utf-8")
+(DIST / "cost.html").write_text(env.get_template("cost").render(root="", **{**ctx, "page": "cost"}), encoding="utf-8")
 alist = list(AREAS.values())
 for i, a in enumerate(alist):
     (DIST / "areas" / f"{a['id']}.html").write_text(env.get_template("area").render(
@@ -923,7 +1104,7 @@ for old, new in REDIRECTS.items():
 (DIST / "favicon.svg").write_text(FAVICON, encoding="utf-8")
 (DIST / ".nojekyll").write_text("")
 # sitemap
-urls = ["index.html", "preface.html", "space.html", "about.html", "refs.html", "refs-ext.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
+urls = ["index.html", "preface.html", "space.html", "cost.html", "about.html", "refs.html", "refs-ext.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
 (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     "".join(f"<url><loc>{SITE_URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
 print(f"built {len(urls)} pages -> {DIST}")
