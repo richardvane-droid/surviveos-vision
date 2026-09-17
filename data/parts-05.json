@@ -57,11 +57,11 @@
      "兜底：探头离线 24 小时回退到只看日期",
      "出口：HA 面板每格状态 + 手机推送"
     ],
-    "impl": "用 blaineventurine/simple_inventory 建四格库存与到期日，pvvx/ATC_MiThermometer 探头上报湿度，HA 自动化做双条件判断",
+    "impl": "用 grocy/grocy 建四格库存与 8 个月到期日，pvvx/ATC_MiThermometer 探头上报湿度，HA 自动化做双条件判断",
     "github": [
      {
-      "name": "blaineventurine/simple_inventory",
-      "url": "https://github.com/blaineventurine/simple_inventory"
+      "name": "grocy/grocy",
+      "url": "https://github.com/grocy/grocy"
      },
      {
       "name": "pvvx/ATC_MiThermometer",
@@ -130,15 +130,15 @@
      "出口：照片按日期同步 NAS，每月自动合成预览",
      "兜底：拍摄失败或文件过小则推送提醒"
     ],
-    "impl": "用 pageauc/pi-timolo 的定时抓拍与自动曝光做拍摄和同步，年末用 ffmpeg 合成 30 秒视频",
+    "impl": "用 pageauc/pi-timolo 的定时抓拍与自动曝光做拍摄和同步，或用 motioneye-project/motioneye 的定时快照与延时合成，年末用 ffmpeg 合成 30 秒视频",
     "github": [
      {
       "name": "pageauc/pi-timolo",
       "url": "https://github.com/pageauc/pi-timolo"
      },
      {
-      "name": "kernelkaribou/chronosnap",
-      "url": "https://github.com/kernelkaribou/chronosnap"
+      "name": "motioneye-project/motioneye",
+      "url": "https://github.com/motioneye-project/motioneye"
      }
     ]
    }
@@ -245,8 +245,8 @@
     ],
     "github": [
      {
-      "name": "makstech/esphome-irrigation-system",
-      "url": "https://github.com/makstech/esphome-irrigation-system"
+      "name": "esphome/esphome",
+      "url": "https://github.com/esphome/esphome"
      }
     ]
    },
@@ -274,11 +274,11 @@
      "高温 >35℃ 先放遮阳网；雨天跳过",
      "兜底：传感器读数异常（0% 或 100%）回退每日一次定时"
     ],
-    "impl": "用 makstech/esphome-irrigation-system 的 ESPHome 8 路阀 YAML 本地排程，kizniche/Mycodo 做湿度曲线与阈值面板",
+    "impl": "用 esphome/esphome 的 sprinkler 组件做四路阀本地排程，kizniche/Mycodo 做湿度曲线与阈值面板",
     "github": [
      {
-      "name": "makstech/esphome-irrigation-system",
-      "url": "https://github.com/makstech/esphome-irrigation-system"
+      "name": "esphome/esphome",
+      "url": "https://github.com/esphome/esphome"
      },
      {
       "name": "kizniche/Mycodo",
@@ -317,8 +317,8 @@
     ],
     "github": [
      {
-      "name": "KaufHA/PLF10",
-      "url": "https://github.com/KaufHA/PLF10"
+      "name": "arendst/Tasmota",
+      "url": "https://github.com/arendst/Tasmota"
      }
     ]
    },
@@ -333,11 +333,11 @@
      "充满：<10W 持续 10 分钟断电，推送用电量",
      "兜底：接入超过 12 小时未充满则告警"
     ],
-    "impl": "用 KaufHA/PLF10 的 ESPHome 计量插座配置上报功率并本地断电，HomeAssistant 自动化结合手机定位与时间表做接入判断",
+    "impl": "用 arendst/Tasmota 的计量插座固件上报功率并用规则本地断电，HomeAssistant 自动化结合手机定位与时间表做接入判断",
     "github": [
      {
-      "name": "KaufHA/PLF10",
-      "url": "https://github.com/KaufHA/PLF10"
+      "name": "arendst/Tasmota",
+      "url": "https://github.com/arendst/Tasmota"
      }
     ]
    },
@@ -352,15 +352,15 @@
      "输出：每次充电的太阳能占比与用电量",
      "兜底：光伏数据离线时按时间表充电"
     ],
-    "impl": "用 evcc-io/evcc 的 pv 模式把计量插座当充电器管理，或用 jmcollin78/solar_optimizer 在 HA 里按净发电量启停插座",
+    "impl": "用 evcc-io/evcc 的 pv 模式把刷了 arendst/Tasmota 的计量插座当开关型充电器管理，按光伏盈余启停",
     "github": [
      {
       "name": "evcc-io/evcc",
       "url": "https://github.com/evcc-io/evcc"
      },
      {
-      "name": "jmcollin78/solar_optimizer",
-      "url": "https://github.com/jmcollin78/solar_optimizer"
+      "name": "arendst/Tasmota",
+      "url": "https://github.com/arendst/Tasmota"
      }
     ]
    }

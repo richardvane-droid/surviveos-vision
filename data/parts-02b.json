@@ -56,8 +56,8 @@
       "url": "https://github.com/reef-pi/reef-pi"
      },
      {
-      "name": "CelliesProjects/aquacontrol32",
-      "url": "https://github.com/CelliesProjects/aquacontrol32"
+      "name": "esphome/esphome",
+      "url": "https://github.com/esphome/esphome"
      }
     ]
    },
