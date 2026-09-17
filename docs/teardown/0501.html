@@ -444,8 +444,8 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>触发：入库满 8 个月 且 7 日均湿度 &lt;70%</li><li>回潮告警：湿度 &gt;85% 持续 48 小时</li><li>兜底：探头离线 24 小时回退到只看日期</li><li>出口：HA 面板每格状态 + 手机推送</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">用 blaineventurine/simple_inventory 建四格库存与到期日，pvvx/ATC_MiThermometer 探头上报湿度，HA 自动化做双条件判断</p>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/blaineventurine/simple_inventory" target="_blank" rel="noopener">blaineventurine/simple_inventory</a><a href="https://github.com/pvvx/ATC_MiThermometer" target="_blank" rel="noopener">pvvx/ATC_MiThermometer</a></p></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 grocy/grocy 建四格库存与 8 个月到期日，pvvx/ATC_MiThermometer 探头上报湿度，HA 自动化做双条件判断</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/grocy/grocy" target="_blank" rel="noopener">grocy/grocy</a><a href="https://github.com/pvvx/ATC_MiThermometer" target="_blank" rel="noopener">pvvx/ATC_MiThermometer</a></p></div>
     </div>
   </section>
   

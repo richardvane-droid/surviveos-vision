@@ -218,7 +218,7 @@
       <div><h3>关键参数 / 组成</h3>
         <ul class="inspo"><li>16A 计量插座，ESP32 + BL0937 计量芯片</li><li>每秒上报功率，精度约 ±2%</li><li>本地规则：&lt;10W 持续 10 分钟自动断电</li><li>防水翻盖 IP44，装屋檐下</li></ul></div>
       <div>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/KaufHA/PLF10" target="_blank" rel="noopener">KaufHA/PLF10</a></p></div>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/arendst/Tasmota" target="_blank" rel="noopener">arendst/Tasmota</a></p></div>
     </div>
   </section>
   
@@ -361,8 +361,8 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>触发：手机到家 + 插座功率 &gt;50W 判定车已接入</li><li>23:00 后才通电；电量紧急可手动“立即充”</li><li>充满：&lt;10W 持续 10 分钟断电，推送用电量</li><li>兜底：接入超过 12 小时未充满则告警</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">用 KaufHA/PLF10 的 ESPHome 计量插座配置上报功率并本地断电，HomeAssistant 自动化结合手机定位与时间表做接入判断</p>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/KaufHA/PLF10" target="_blank" rel="noopener">KaufHA/PLF10</a></p></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 arendst/Tasmota 的计量插座固件上报功率并用规则本地断电，HomeAssistant 自动化结合手机定位与时间表做接入判断</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/arendst/Tasmota" target="_blank" rel="noopener">arendst/Tasmota</a></p></div>
     </div>
   </section>
   
@@ -502,8 +502,8 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>允许条件：光伏余电 &gt;200W 且储能 &gt;30%</li><li>储能 &lt;30% 切市电，23:00 后按谷电补充</li><li>输出：每次充电的太阳能占比与用电量</li><li>兜底：光伏数据离线时按时间表充电</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">用 evcc-io/evcc 的 pv 模式把计量插座当充电器管理，或用 jmcollin78/solar_optimizer 在 HA 里按净发电量启停插座</p>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/evcc-io/evcc" target="_blank" rel="noopener">evcc-io/evcc</a><a href="https://github.com/jmcollin78/solar_optimizer" target="_blank" rel="noopener">jmcollin78/solar_optimizer</a></p></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 evcc-io/evcc 的 pv 模式把刷了 arendst/Tasmota 的计量插座当开关型充电器管理，按光伏盈余启停</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/evcc-io/evcc" target="_blank" rel="noopener">evcc-io/evcc</a><a href="https://github.com/arendst/Tasmota" target="_blank" rel="noopener">arendst/Tasmota</a></p></div>
     </div>
   </section>
   

@@ -263,8 +263,8 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>触发：每 10 秒读烟温 + 室温</li><li>阈值：烟温 &lt;120℃ 添柴，&gt;350℃ 关风门</li><li>室温 &gt;26℃ 提醒关风门，同一提醒间隔 10 分钟</li><li>兜底：ESP32 本地判断 + 蜂鸣器，断网照样叫</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">沿用 lenne0815/hafireplaceautomation 的热电偶接法与 HA 面板，阈值本地判断</p>
-        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/lenne0815/hafireplaceautomation" target="_blank" rel="noopener">lenne0815/hafireplaceautomation</a><a href="https://github.com/mbuhidar/WoodStoveRegulator" target="_blank" rel="noopener">mbuhidar/WoodStoveRegulator</a></p></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 max31855 组件读 K 型热电偶烟温，阈值在 YAML 里本地判断，HA 画曲线推通知</p>
+        <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
   </section>
   
