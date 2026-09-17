@@ -131,7 +131,11 @@ for f in sorted(glob.glob(str(ROOT / "data" / "parts-*.json"))):
 for m in modules:
     m["parts"] = sorted(parts_by_id.get(m["id"], []), key=lambda p: p["k"])
     for p in m["parts"]:
-        p["img"] = (ROOT / "parts" / f"{m['id']}-{p['k']}.svg").read_text(encoding="utf-8")
+        _png = ROOT / "parts" / f"{m['id']}-{p['k']}.png"
+        if p["kind"] == "hw" and _png.exists():
+            p["img"], p["png"] = None, _png.name          # 三维建模铅笔稿（墨色透明 PNG）
+        else:
+            p["img"], p["png"] = (ROOT / "parts" / f"{m['id']}-{p['k']}.svg").read_text(encoding="utf-8"), None
         p["poster"] = (ROOT / "parts" / f"{m['id']}-{p['k']}-poster.svg").read_text(encoding="utf-8") if p["kind"] == "logic" else None
 cost = json.load(open(ROOT / "data" / "cost.json", encoding="utf-8"))
 COST_M, COST_META = cost["modules"], cost["meta"]
@@ -580,7 +584,7 @@ TEARDOWN = r"""{% extends "base" %}{% block title %}{{ m.id }} {{ m.name }} · �
     <h2><span class="kind kind-{{ p.kind }}">{{ '产品模块' if p.kind == 'hw' else '联动逻辑' }}</span> {{ p.k }}. {{ p.name }}</h2>
     <p class="scene">{{ p.intro }}</p>
     {% if p.kind == 'hw' %}
-    <figure class="part-art"><div class="pc-frame">{{ p.img_inline|safe }}</div><figcaption><span class="hand">爆炸拆解图 · 铅笔稿</span></figcaption></figure>
+    <figure class="part-art"><div class="pc-frame">{% if p.png %}<img class="pc-png" src="{{ root }}parts/{{ p.png }}" alt="{{ p.name }} 爆炸拆解图" loading="lazy">{% else %}{{ p.img_inline|safe }}{% endif %}</div><figcaption><span class="hand">爆炸拆解图 · {{ '三维建模铅笔稿' if p.png else '铅笔稿' }}</span></figcaption></figure>
     {% else %}
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame">{{ p.poster_inline|safe }}</div><figcaption><span class="hand">逻辑产品海报</span></figcaption></figure>
@@ -843,6 +847,7 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .part h2 .kind{margin-right:6px;font-size:.7rem}
 .part h3{font-size:.95rem;margin:12px 0 6px;font-weight:900}
 .part-art{margin:16px 0 4px}
+.pc-png{display:block;width:100%;height:auto;max-width:760px;margin:0 auto}
 .pc-frame{border:1.6px solid var(--line);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;padding:10px 12px 6px;background:#f9f6ef}
 .part-art figcaption{text-align:right;font-size:.85rem;color:var(--ink3);margin-top:2px}
 .logic-art{display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start}
@@ -1073,8 +1078,16 @@ preface["svg_inline"] = inline_svg(preface["svg"], "sk-art")
 for f in plans.values(): f["svg_inline"] = inline_svg(f["svg"], "pc-art plan-art")
 for m in modules:
     for p in m["parts"]:
-        p["img_inline"] = inline_svg(p["img"], "pc-art")
+        p["img_inline"] = inline_svg(p["img"], "pc-art") if p["img"] else None
         p["poster_inline"] = inline_svg(p["poster"], "pc-poster") if p["poster"] else None
+_pd = DIST / "parts"; _pd.mkdir(parents=True, exist_ok=True)
+_npng = 0
+for _m in modules:
+    for _p in _m["parts"]:
+        if _p.get("png"):
+            shutil.copyfile(ROOT / "parts" / _p["png"], _pd / _p["png"]); _npng += 1
+print(f"copied {_npng} part PNGs -> docs/parts/")
+
 ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, repo_tiers=repo_tiers, refs_pages=REFS_PAGES, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface, plans=plans, size_table=SIZE_TABLE, blocks=BLOCKS,
            cost_meta=COST_META, cost_rank=cost_rank, cost_areas=cost_areas, cost_phases=cost_phases)
 
