@@ -1,3 +1,5 @@
 __pycache__/
 *.png
+!parts/*.png
+!docs/parts/*.png
 .DS_Store
