@@ -211,6 +211,17 @@ for p in REFS_PAGES:
     p["tiers"] = _tiers(p["repos"])
     p["h1"] = p["h1"].format(n=p["stats"]["repos"])
 for i, p in enumerate(REFS_PAGES): p["other"] = REFS_PAGES[1 - i]
+# ---------- 生态社区（参考索引的第三个 tab） ----------
+COMMS = json.load(open(ROOT / "data" / "communities.json", encoding="utf-8"))
+COMM_N = sum(len(g["sites"]) for g in COMMS)
+COMM_PAGE = {"key": "comm", "file": "comm.html", "tab": "生态社区", "title": "参考索引 · 生态社区",
+             "kicker": "全站引用 · 三", "h1": f"{COMM_N} 个生态社区与文档站",
+             "lede": "前两页是能 clone 下来跑的代码，这一页是人聚在哪儿——官方文档站、中文论坛、开源硬件广场、型材与木工的圈子。"
+                     "设想版里每一个自己焊、自己刨、自己搭的模块，真做起来都要在这些地方泡上一阵：先看别人踩过什么坑，再决定自己怎么下手。"
+                     "按领域分组，标了语种；其中 Seeed Studio Wiki 是真实项目 0805 器件总纲指定的文档基准，全屋会通电的东西都先从那里找型号。",
+             "stats": {"repos": COMM_N}, "groups": COMMS}
+REFS_PAGES.append(COMM_PAGE)
+
 all_tags = {}
 for m in modules:
     for t in m["tags"]: all_tags[t] = all_tags.get(t, 0) + 1
@@ -525,7 +536,7 @@ ABOUT = r"""{% extends "base" %}{% block title %}关于这个设想版{% endbloc
   <section class="blk"><h2><em>③</em> 插图是统一风格的黑白钢笔速写</h2>
     <p class="scene">全站 {{ stats.modules }} 张模块速写 + {{ stats.areas }} 张区域全景都是原创的 inline SVG：只有一种墨色，阴影全部用 45° 排线，轮廓"描两遍"，线条经过轻微的扰动滤镜制造手绘感，右下角是编号签名。没有任何外部图片，页面在离线状态也能完整显示。</p></section>
   <section class="blk"><h2><em>④</em> 每页附了真实的参考链接</h2>
-    <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 3～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），选择时先看知名度（星数），同档次里有中文 README / 中文文档站 / 中文界面的优先，每个都在 2026-09 打开核实过、星数取自当时页面；下面再跟 2～5 个“延伸阅读”——和本模块关系没那么直接、但值得借这个由头整个学一遍的经典热门项目（全站去重后 200 多个，等于把 GitHub 上好项目好思路顺着这座房子过一遍）；每个项目配一段约 500 字的科普介绍（是什么、怎么工作、生态如何、在本模块里怎么接）和一张铅笔风的项目介绍图（由 ghdiag.py 从结构化描述自动画出，画的是这个项目的数据与控制走向以及和本模块的接法）；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见参考索引，分成两页：<a href="{{ root }}refs.html">专门方案</a>与<a href="{{ root }}refs-ext.html">延伸阅读</a>。</p></section>
+    <p class="scene">每个模块页下方有两块引用：“GitHub 上的成熟方案”列 3～4 个真实存在的开源项目（硬件设计、固件、HomeAssistant 集成、管理软件），选择时先看知名度（星数），同档次里有中文 README / 中文文档站 / 中文界面的优先，每个都在 2026-09 打开核实过、星数取自当时页面；下面再跟 2～5 个“延伸阅读”——和本模块关系没那么直接、但值得借这个由头整个学一遍的经典热门项目（全站去重后 200 多个，等于把 GitHub 上好项目好思路顺着这座房子过一遍）；每个项目配一段约 500 字的科普介绍（是什么、怎么工作、生态如何、在本模块里怎么接）和一张铅笔风的项目介绍图（由 ghdiag.py 从结构化描述自动画出，画的是这个项目的数据与控制走向以及和本模块的接法）；“小红书视觉参考”给 2～3 组站内搜索关键词，点开直接看热门帖的实拍效果。全站去重后的项目清单见参考索引，分成三页：<a href="{{ root }}refs.html">专门方案</a>、<a href="{{ root }}refs-ext.html">延伸阅读</a>，再加一页<a href="{{ root }}comm.html">生态社区</a>——那页不是代码而是人聚在哪儿：官方文档站、中文论坛、开源硬件广场、铝型材与木工的圈子，其中 Seeed Studio Wiki 是真实项目 0805 器件总纲指定的文档基准，全屋会通电的东西都先从那里找型号。</p></section>
   <section class="blk"><h2><em>⑤</em> 每个模块再往下拆一层</h2>
     <p class="scene">每个模块页的“核心拆解”把它拆成 3～5 个最核心的东西，一共 {{ parts_stats.total }} 个：{{ parts_stats.hw }} 个<b>产品模块</b>（物理的总成——灯头、除湿柜、雨水罐组、洞洞板系统……）给科普式介绍和一张铅笔画<b>爆炸拆解图</b>；{{ parts_stats.logic }} 个<b>联动逻辑</b>（自动化 / 算法 / 数据流）当成“逻辑产品”做一张<b>海报</b>，再配一张与爆炸图对应的铅笔画<b>流程图</b>，并写明主要实现路径参考的是哪个 GitHub 项目，让逻辑可以顺着推演下去。</p></section>
   <section class="blk"><h2><em>⑥</em> 位置和尺寸以 0008 户型图为准</h2>
@@ -645,6 +656,46 @@ REFS = r"""{% extends "base" %}{% block title %}{{ rp.title }}{% endblock %}
     </div>
   </section>{% endif %}{% endfor %}
   <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><a href="{{ root }}{{ rp.other.file }}">{{ rp.other.tab }}（{{ rp.other.stats.repos }} 个）→</a></nav>
+</article>
+{% endblock %}"""
+
+COMM = r"""{% extends "base" %}{% block title %}{{ rp.title }}{% endblock %}
+{% block desc %}SurviveOs 设想版参考索引第三页：{{ rp.stats.repos }} 个生态社区与官方文档站，按电子器件 / 智能家居 / 3D 打印 / 铝型材 / 木工 / 光伏 / 户外分组。{% endblock %}
+{% block body %}
+<nav class="crumb"><a href="{{ root }}index.html">首页</a> › <a href="{{ root }}refs.html">参考索引</a> › <span>{{ rp.tab }}</span></nav>
+<article class="mod about">
+  <header class="mod-head">
+    <p class="kicker">{{ rp.kicker }}</p>
+    <h1>{{ rp.h1 }}</h1>
+    <nav class="refs-tabs">{% for p in refs_pages %}<a href="{{ root }}{{ p.file }}" class="{% if p.key == rp.key %}on{% endif %}">{{ p.tab }} <i>{{ p.stats.repos }}</i></a>{% endfor %}</nav>
+    <p class="lede">{{ rp.lede }}</p>
+  </header>
+  <section class="blk refs-sum">
+    <div class="rs"><b>{{ rp.groups|length }}</b><span>个领域</span></div>
+    <div class="rs"><b>{{ rp.stats.repos }}</b><span>个站点</span></div>
+    <nav class="rs-jump">{% for g in rp.groups %}<a href="#{{ g.key }}">{{ g.name }} <i>{{ g.sites|length }}</i></a>{% endfor %}</nav>
+  </section>
+  {% for g in rp.groups %}
+  <section class="blk comm-grp" id="{{ g.key }}">
+    <h2>{{ g.name }}</h2>
+    <p class="tiny">{{ g.note }}</p>
+    <div class="comm-list">
+    {% for it in g.sites %}
+      <div class="comm-row">
+        <div class="cm-head">
+          <a class="cm-name" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.name }}</a>
+          <span class="cm-lang">{{ it.lang }}</span>
+          {% if it.badge %}<span class="cm-badge">{{ it.badge }}</span>{% endif %}
+        </div>
+        <p class="cm-what">{{ it.what }}</p>
+        <p class="cm-use"><em>用在</em>{{ it.use }}</p>
+        <p class="cm-url">{{ it.url }}</p>
+      </div>
+    {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">回首页</a><a href="{{ root }}refs.html">专门方案 →</a></nav>
 </article>
 {% endblock %}"""
 
@@ -919,6 +970,20 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
  .top{padding-bottom:12px}
 }
 
+/* ---- 生态社区页 ---- */
+.comm-grp h2{font-size:1.2rem;margin-bottom:2px}
+.comm-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.comm-row{border:1.4px solid var(--line);border-radius:225px 14px 255px 14px/14px 255px 14px 225px;padding:11px 15px 9px;background:rgba(255,255,255,.45)}
+.cm-head{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
+.cm-name{font-family:"Noto Serif SC",serif;font-size:1.04rem;border-bottom:1.6px solid var(--red)}
+.cm-lang{font-size:.72rem;color:var(--ink3);border:1.2px solid var(--ink3);border-radius:999px;padding:0 7px}
+.cm-badge{font-size:.72rem;color:var(--red);border:1.2px solid var(--red);border-radius:999px;padding:0 7px}
+.cm-what{margin:5px 0 4px;font-size:.88rem;color:var(--ink2)}
+.cm-use{margin:0;font-size:.8rem;color:var(--ink3)}
+.cm-use em{font-style:normal;margin-right:6px;border-bottom:1.2px dotted var(--ink3)}
+.cm-url{margin:4px 0 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.72rem;color:var(--ink3);word-break:break-all}
+@media (max-width:820px){.comm-list{grid-template-columns:1fr}}
+
 /* ---------- 造价 ---------- */
 .cost-line{color:var(--ink2)}
 .cost-card{border:1.6px solid var(--line);border-radius:14px 200px 14px 220px/220px 14px 200px 14px;padding:14px 18px 10px;margin:14px 0 10px;background:rgba(255,255,255,.45)}
@@ -1065,7 +1130,7 @@ COST = r"""{% extends "base" %}{% block title %}全屋造价估算{% endblock %}
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#f5f0e6"/><path d="M5 26 L16 7 L27 26 Z" fill="none" stroke="#1c1c1c" stroke-width="2.4" stroke-linejoin="round"/><path d="M12 26 V19 H20 V26" fill="none" stroke="#1c1c1c" stroke-width="2"/></svg>"""
 
-env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS, "teardown": TEARDOWN, "preface": PREFACE, "space": SPACE, "cost": COST}),
+env = Environment(loader=DictLoader({"base": BASE, "index": INDEX, "area": AREA, "module": MODULE, "about": ABOUT, "refs": REFS, "comm": COMM, "teardown": TEARDOWN, "preface": PREFACE, "space": SPACE, "cost": COST}),
                   autoescape=select_autoescape(default=True))
 env.filters["yuan"] = lambda v: f"{int(v):,}"
 
@@ -1094,7 +1159,9 @@ ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=No
 (DIST / "index.html").write_text(env.get_template("index").render(root="", **ctx), encoding="utf-8")
 (DIST / "about.html").write_text(env.get_template("about").render(root="", **{**ctx, "page": "about"}), encoding="utf-8")
 for _p in REFS_PAGES:
+    if _p["key"] == "comm": continue
     (DIST / _p["file"]).write_text(env.get_template("refs").render(root="", **{**ctx, "page": "refs", "rp": _p}), encoding="utf-8")
+(DIST / COMM_PAGE["file"]).write_text(env.get_template("comm").render(root="", **{**ctx, "page": "refs", "rp": COMM_PAGE}), encoding="utf-8")
 (DIST / "preface.html").write_text(env.get_template("preface").render(root="", **{**ctx, "page": "preface"}), encoding="utf-8")
 (DIST / "space.html").write_text(env.get_template("space").render(root="", **{**ctx, "page": "space"}), encoding="utf-8")
 (DIST / "cost.html").write_text(env.get_template("cost").render(root="", **{**ctx, "page": "cost"}), encoding="utf-8")
@@ -1117,7 +1184,7 @@ for old, new in REDIRECTS.items():
 (DIST / "favicon.svg").write_text(FAVICON, encoding="utf-8")
 (DIST / ".nojekyll").write_text("")
 # sitemap
-urls = ["index.html", "preface.html", "space.html", "cost.html", "about.html", "refs.html", "refs-ext.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
+urls = ["index.html", "preface.html", "space.html", "cost.html", "about.html", "refs.html", "refs-ext.html", "comm.html"] + [f"areas/{a}.html" for a in AREAS] + [f"modules/{m['id']}.html" for m in modules] + [f"teardown/{m['id']}.html" for m in modules if m["parts"]]
 (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     "".join(f"<url><loc>{SITE_URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
 print(f"built {len(urls)} pages -> {DIST}")
