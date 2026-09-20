@@ -970,6 +970,12 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
  .top{padding-bottom:12px}
 }
 
+/* 窄屏：上一篇/下一篇的长标题不再撑破页面，改成竖排 */
+@media (max-width:640px){
+ .pager{flex-direction:column;align-items:flex-start;gap:9px;font-size:.9rem}
+ .pager a{white-space:normal;text-wrap:pretty}
+ .pager span:empty{display:none}
+}
 /* ---- 生态社区页 ---- */
 .comm-grp h2{font-size:1.2rem;margin-bottom:2px}
 .comm-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
