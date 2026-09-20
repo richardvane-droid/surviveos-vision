@@ -1,0 +1,206 @@
+[
+ {
+  "key": "mcu",
+  "name": "电子器件与主控",
+  "note": "0805 器件总纲定的那一支：会通电的东西先从这里找型号和接线图。",
+  "sites": [
+   {
+    "name": "Seeed Studio Wiki（中文）",
+    "url": "https://wiki.seeedstudio.com/cn/",
+    "lang": "中文",
+    "badge": "0805 文档基准",
+    "what": "XIAO 主控、Grove 模块、reCamera、SenseCAP 的官方文档站，每块板子都有引脚图、示例代码和 ESPHome / HomeAssistant 接法。",
+    "use": "全屋所有自己焊、自己刷固件的模块，选型第一站"
+   },
+   {
+    "name": "Seeed 官方论坛",
+    "url": "https://forum.seeedstudio.com/",
+    "lang": "英文",
+    "what": "Seeed 的官方用户论坛，产品与技术区一千九百多个主题，板子点不亮、Grove 读不到数的时候来这里搜。",
+    "use": "XIAO / Grove 踩坑时的第一手答疑"
+   },
+   {
+    "name": "立创开源硬件平台 OSHWHub",
+    "url": "https://oshwhub.com/",
+    "lang": "中文",
+    "what": "中文开源硬件工程广场，别人画好的板子可以直接克隆改，配套嘉立创 EDA 在线画、一键下单打样。",
+    "use": "0301 小制作工具台要画板子的时候"
+   },
+   {
+    "name": "嘉立创 EDA",
+    "url": "https://lceda.cn/",
+    "lang": "中文",
+    "what": "浏览器里就能用的 EDA，画完直接接打样与元件采购，个人用免费。",
+    "use": "自制传感器板 / 转接板"
+   }
+  ]
+ },
+ {
+  "key": "ha",
+  "name": "智能家居与自动化",
+  "note": "本项目的双钥匙模式（App 管想不想、本地传感器管该不该）就跑在这套生态上。",
+  "sites": [
+   {
+    "name": "瀚思彼岸 HassBian",
+    "url": "https://bbs.hassbian.com/",
+    "lang": "中文",
+    "what": "中文圈最大的 HomeAssistant / ESPHome 论坛，国产设备接入、米家与华为生态互通的帖子都在这儿。",
+    "use": "0201 / 0202 / 0203 / 0602 等所有接 HA 的模块"
+   },
+   {
+    "name": "ESPHome 官方文档",
+    "url": "https://esphome.io/",
+    "lang": "英文",
+    "what": "所有传感器组件的 yaml 写法与支持芯片清单，判断一块板子能不能进本项目就看它。",
+    "use": "写每个节点的 yaml 之前"
+   },
+   {
+    "name": "Home Assistant 官方社区",
+    "url": "https://community.home-assistant.io/",
+    "lang": "英文",
+    "what": "官方论坛，自动化蓝图、Lovelace 卡片、集成疑难的原始出处。",
+    "use": "0802 全屋中枢的界面与自动化"
+   }
+  ]
+ },
+ {
+  "key": "print",
+  "name": "3D 打印 · Klipper · Voron",
+  "note": "0305 是自己搭 Voron 2.4，跟着社区走比看说明书快。",
+  "sites": [
+   {
+    "name": "VORON 中文社区",
+    "url": "https://www.cnvoron.com/",
+    "lang": "中文",
+    "what": "中文的 Voron 建机资料与 Klipper 配置整理，散件采购、调平、共振补偿都有现成经验贴。",
+    "use": "0305 3D 打印"
+   },
+   {
+    "name": "VORON Design 官方论坛",
+    "url": "https://forum.vorondesign.com/",
+    "lang": "英文",
+    "what": "官方论坛，BOM 变更、版本差异、打印件公差问题的权威出处。",
+    "use": "0305 建机与后续升级"
+   },
+   {
+    "name": "discussMaker",
+    "url": "https://bbs.scumaker.org/",
+    "lang": "中文",
+    "what": "中文创客论坛，Voron / Klipper / CNC 的踩坑实录写得很细。",
+    "use": "0305 / 0307"
+   },
+   {
+    "name": "MakerWorld",
+    "url": "https://makerworld.com/",
+    "lang": "中文界面",
+    "what": "模型站，搜得到 WORX 20V 电池挂架这类正好对得上本项目工具平台的打印件。",
+    "use": "0401 工具墙、0302 装备区"
+   }
+  ]
+ },
+ {
+  "key": "alu",
+  "name": "铝型材与 CNC 结构",
+  "note": "0805 D3 已定标：欧标、20 系列为主、30/40 重载、喷砂黑阳极氧化、壁厚 1.8mm。",
+  "sites": [
+   {
+    "name": "OpenBuilds",
+    "url": "https://openbuilds.com/",
+    "lang": "英文",
+    "what": "围绕铝型材做机器的开源生态：V-Slot 型材、直线模组、CNC 整机方案加论坛，型材结构件的通用语言在这里。",
+    "use": "0307 CNC、0105 / 0301 工作台骨架"
+   },
+   {
+    "name": "嘉立创 FA 型材定制",
+    "url": "https://xc.jlcfa.com/",
+    "lang": "中文",
+    "what": "在线填尺寸就能下单切割的铝型材平台，自动出 3D、2D 与 BOM，省掉自己锯型材那一步。",
+    "use": "所有用型材做骨架的模块"
+   },
+   {
+    "name": "少数派 · 铝型材 DIY 专题",
+    "url": "https://sspai.com/post/97738",
+    "lang": "中文",
+    "what": "中文里少见的把铝型材家具受力、连接件选型讲清楚的文章，适合定规格前先扫一遍。",
+    "use": "动手前的入门读物"
+   }
+  ]
+ },
+ {
+  "key": "wood",
+  "name": "木工",
+  "note": "0805 木料这一支还没定标，先泡社区攒判断。",
+  "sites": [
+   {
+    "name": "中国木工爱好者网（学木工）",
+    "url": "http://www.zuojiaju.com/",
+    "lang": "中文",
+    "what": "国内最老牌的木工论坛，从榫卯、涂装到机器调试都有大量实操帖与作品贴。",
+    "use": "0404 木工间、0105 台面、0101 展台"
+   },
+   {
+    "name": "木匠圈",
+    "url": "https://www.mujiangquan.com/",
+    "lang": "中文",
+    "what": "另一个活跃的中文木工论坛，偏家具定制与装修木作。",
+    "use": "0107 吧台、0102 展示墙"
+   }
+  ]
+ },
+ {
+  "key": "solar",
+  "name": "离网光伏与储能",
+  "note": "0304 屋顶光伏 + 0703 钓台离网，两处都不并网，安全边界要自己把。",
+  "sites": [
+   {
+    "name": "DIY Solar Power Forum",
+    "url": "https://diysolarforum.com/",
+    "lang": "英文",
+    "what": "离网光伏与磷酸铁锂自组电池的主力论坛，逆变器选型、BMS、线径与熔断的讨论最扎实。",
+    "use": "0304 光伏储能、0703 钓台电源"
+   }
+  ]
+ },
+ {
+  "key": "outdoor",
+  "name": "户外与 PSK",
+  "note": "PSK 产品线本身的参照系。",
+  "sites": [
+   {
+    "name": "BushcraftUSA",
+    "url": "https://bushcraftusa.com/",
+    "lang": "英文",
+    "what": "丛林技能社区，PSK（个人生存盒）板块里几十年的装箱思路与实测反馈。",
+    "use": "0101 / 0102 PSK 展示与迭代"
+   }
+  ]
+ },
+ {
+  "key": "inspo",
+  "name": "灵感与比价",
+  "note": "设想版的文案与视觉参考大半来自这几处。",
+  "sites": [
+   {
+    "name": "小红书",
+    "url": "https://www.xiaohongshu.com/",
+    "lang": "中文",
+    "what": "每个模块页底部那组关键词就是为它准备的，点开直接看实拍效果。",
+    "use": "全部 46 个模块"
+   },
+   {
+    "name": "哔哩哔哩",
+    "url": "https://www.bilibili.com/",
+    "lang": "中文",
+    "what": "长视频的建造过程记录，比图文更能看出坑在哪。",
+    "use": "0305 / 0307 / 0404 这类大件"
+   },
+   {
+    "name": "什么值得买",
+    "url": "https://www.smzdm.com/",
+    "lang": "中文",
+    "what": "国内比价与真实使用反馈，采购前核一遍价格带。",
+    "use": "设备电商选型阶段"
+   }
+  ]
+ }
+]
