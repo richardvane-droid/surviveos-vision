@@ -520,6 +520,102 @@
   "id": "0402",
   "github": [
    {
+    "name": "Seeed-Studio/grove.py",
+    "url": "https://github.com/Seeed-Studio/grove.py",
+    "stars": "166",
+    "zh": "无中文",
+    "desc": "Grove 模块的官方 Python 库：几百种免焊接传感器和执行器，在嵌入式 Linux 上走 I2C / GPIO 直接读写",
+    "why": "0805 定下传感器走 Seeed 的 Grove 生态，这是官方 Python 驱动；0402 货架尽头的温湿度探头改用 Grove 模块，先读两周再定阈值",
+    "intro": "grove.py 是矽递科技（Seeed Studio）为 Grove 模块写的官方 Python 库。Grove 是一套免焊接的传感器生态，每个模块一根四芯线，接口只有 I2C、模拟、数字、串口四种，几百种模块——温湿度、气压、光照、土壤、气体、继电器、按钮、蜂鸣器——都是同一个插法，这个库就是它们在 Python 那一侧的驱动集合。\n工作方式很直白：pip 装上之后，每个模块对应一个类，给出总线地址或引脚号就能读值，库里还带了上百个可以直接跑的示例脚本，插上线执行一条命令就看到读数。它跑在有 Linux 的板子上，树莓派、Jetson、Seeed 自家的 reTerminal 都支持，适合先把传感器接通、把量程和噪声摸清楚，再决定最终跑在哪块主控上。\n仓库 166 星，无中文说明，但模块本身在 Seeed Wiki 的中文站每一款都有独立页面，接线图和量程写得比仓库清楚；库更新不快，因为硬件接口本来就稳定。\n在 0402 里它是选型阶段的量具：把 Grove 温湿度模块挂在 7 米货架尽头，先用它在一台旧树莓派上跑两周，看看梅雨季货架高处和低处到底差几个点，再定 65% 这个开除湿机的阈值；定稿后换成 XIAO 节点跑 ESPHome，模块原封不动继续用。",
+    "diagram": {
+     "title": "grove.py · 四芯线插上就能读数",
+     "nodes": [
+      {
+       "id": "mod",
+       "label": "Grove 温湿度\n四芯免焊",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "more",
+       "label": "其他 Grove\n气体 / 光照",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "lib",
+       "label": "grove.py\n驱动与示例",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "pi",
+       "label": "旧树莓派\n原型机",
+       "kind": "device",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "log",
+       "label": "两周湿度曲线",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "node",
+       "label": "XIAO 节点\nESPHome 定稿",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "定阈值的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "mod",
+       "lib",
+       "I2C"
+      ],
+      [
+       "more",
+       "lib",
+       ""
+      ],
+      [
+       "lib",
+       "pi",
+       "跑在上面"
+      ],
+      [
+       "lib",
+       "log",
+       "存曲线"
+      ],
+      [
+       "log",
+       "me",
+       "看差值"
+      ],
+      [
+       "me",
+       "node",
+       "定 65%"
+      ]
+     ],
+     "usage": "0402：Grove 探头先用 grove.py 摸底，定稿后交给 XIAO 节点"
+    }
+   },
+   {
     "name": "inventree/InvenTree",
     "url": "https://github.com/inventree/InvenTree",
     "stars": "7.3k",
@@ -1048,6 +1144,107 @@
   "id": "0403",
   "github": [
    {
+    "name": "Seeed-Studio/xiao-esphome-projects",
+    "url": "https://github.com/Seeed-Studio/xiao-esphome-projects",
+    "stars": "37",
+    "zh": "无中文",
+    "desc": "Seeed 官方的 XIAO + ESPHome 成品工程集：电能计量、土壤湿度、IoT 按钮、24GHz mmWave、W5500 以太网、2/6 路继电器",
+    "why": "0805 定下 XIAO 做全屋主控，这是官方唯一一套现成 ESPHome 工程；0403 枪钩联动那块板照它的继电器工程改，风机启停与延时全跑在本地",
+    "intro": "这个仓库是矽递科技（Seeed Studio）官方维护的 XIAO + ESPHome 工程集。它给的不是库，而是一批能直接烧进板子的成品工程：2 路和 6 路继电器控制、电能计量、土壤湿度、IoT 按钮、24GHz mmWave 生命体征与跌倒检测、W5500 有线以太网，每个工程一份 YAML 配一张接线图。\n原理是 ESPHome 的标准流程：YAML 里声明输入和输出，编译成固件烧进 XIAO，上电自己连网，被 HomeAssistant 用原生 API 发现，实体自动出现在面板上。官方工程的价值在细节已经调过——继电器的上电默认态、防抖时间、断网时的本地兜底逻辑都写好了，改几行就变成自己的设备，而所有联锁判断留在板子本地，网断了照样闭合。\n仓库 37 星、无中文，但它是 0805 定标器件的官方一手工程，这个需求没有别的现成答案；中文接线说明在 Seeed Wiki 的 cn 站上，ESPHome 本身中文资料很多。\n在 0403 里它就是枪钩联动那块板：一块 XIAO ESP32C6 照 2 路继电器工程改，一路管 300m³/h 管道风机、一路管柜角橙灯，喷枪拿起微动开关闭合即启动，挂回走 30 分钟延时脚本；柜内那颗 Grove VOC 模块同板上报，超标切高速并推送。注意风机是感性负载，继电器后面还要留一只接触器。",
+    "diagram": {
+     "title": "XIAO ESPHome · 枪钩一抬，风机自己转",
+     "nodes": [
+      {
+       "id": "hook",
+       "label": "喷枪挂钩\n微动开关",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "voc",
+       "label": "Grove VOC\n柜内挡板",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "XIAO ESP32C6\n继电器工程",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "timer",
+       "label": "30 分钟\n延时脚本",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "fan",
+       "label": "管道风机\n与橙灯",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "hook",
+       "core",
+       "拿枪"
+      ],
+      [
+       "voc",
+       "core",
+       "10 秒"
+      ],
+      [
+       "core",
+       "timer",
+       "挂回后"
+      ],
+      [
+       "core",
+       "fan",
+       "启动"
+      ],
+      [
+       "timer",
+       "fan",
+       "延时停"
+      ],
+      [
+       "core",
+       "ha",
+       "上报"
+      ],
+      [
+       "ha",
+       "me",
+       "推送"
+      ]
+     ],
+     "usage": "0403：枪钩与 VOC → XIAO 本地联锁 → 风机橙灯"
+    }
+   },
+   {
     "name": "esphome/esphome",
     "url": "https://github.com/esphome/esphome",
     "stars": "11.7k",
@@ -1567,6 +1764,103 @@
  {
   "id": "0404",
   "github": [
+   {
+    "name": "Seeed-Studio/xiao-esphome-projects",
+    "url": "https://github.com/Seeed-Studio/xiao-esphome-projects",
+    "stars": "37",
+    "zh": "无中文",
+    "desc": "Seeed 官方的 XIAO + ESPHome 成品工程集：电能计量、土壤湿度、IoT 按钮、24GHz mmWave、W5500 以太网、2/6 路继电器",
+    "why": "0805 把全屋主控定在 XIAO，这是官方给的唯一一套现成 ESPHome 工程；0404 判断哪台机器开机、开哪路集尘阀，直接照它的电能计量和 6 路继电器工程改",
+    "intro": "这个仓库是矽递科技（Seeed Studio）官方维护的 XIAO + ESPHome 工程集，收的是能直接烧的成品工程而不是库：电能计量、2 路与 6 路继电器控制、土壤湿度、IoT 按钮、24GHz mmWave 生命体征与跌倒检测、W5500 有线以太网，每个工程一份 YAML 加一张接线图。\n流程还是 ESPHome 那一套：YAML 声明输入输出，编译烧进 XIAO，板子上电自连 Wi-Fi，被 HomeAssistant 用原生 API 发现。官方工程省掉的是调参那几天——电流采样的校准系数、判定阈值的滤波窗口、继电器的上电默认态和防抖，都已经按板子实测过；改几行就是自己的设备，判断逻辑留在板上，断网不影响联锁。\n仓库 37 星、无中文，但作为 0805 定标器件的官方一手工程，这件事上它是唯一的现成答案；中文接线说明在 Seeed Wiki 的 cn 站，ESPHome 主线的中文社区也很成熟。\n在 0404 里它同时管两件事：一块 XIAO ESP32C6 照电能计量工程读六台机器电源线上的夹式电流传感器，谁超过 2A 就判它在工作；同一块板照 6 路继电器工程驱动集尘分路阀和集尘器启停，停机后延时 8 秒再关。机器本身的强电走原有开关，板子只做判断和低压侧驱动，别把主回路接到继电器模块上。",
+    "diagram": {
+     "title": "XIAO ESPHome · 谁开机就开谁那路阀",
+     "nodes": [
+      {
+       "id": "ct",
+       "label": "夹式电流\n六台机器",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "yaml",
+       "label": "官方计量与\n继电器工程",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "XIAO ESP32C6\n超 2A 判在跑",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "valve",
+       "label": "六路分路阀",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "dust",
+       "label": "旋风集尘器\n延时 8 秒停",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant",
+       "kind": "db",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ct",
+       "core",
+       "采样"
+      ],
+      [
+       "yaml",
+       "core",
+       "改两行"
+      ],
+      [
+       "core",
+       "valve",
+       "开阀"
+      ],
+      [
+       "core",
+       "dust",
+       "启停"
+      ],
+      [
+       "core",
+       "ha",
+       "上报",
+       "dash"
+      ],
+      [
+       "dust",
+       "me",
+       "即吸"
+      ]
+     ],
+     "usage": "0404：电流判机器 → XIAO 本地决策 → 分路阀与集尘器启停"
+    }
+   },
    {
     "name": "esphome/esphome",
     "url": "https://github.com/esphome/esphome",

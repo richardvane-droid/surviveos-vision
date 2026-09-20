@@ -3,6 +3,101 @@
   "id": "0601",
   "github": [
    {
+    "name": "Seeed-Studio/grove.py",
+    "url": "https://github.com/Seeed-Studio/grove.py",
+    "stars": "166",
+    "zh": "无中文",
+    "desc": "Seeed 给 Grove 模块写的 Python 库，面向树莓派这类单板机，一百多种传感器统一成四线接口，导入即读物理量",
+    "why": "0805 定下全屋传感器统一走 Seeed 的 Grove 接口，这是官方的 Python 读取库；三段草地在定植物表之前要先点测一个月，拿它凑采集脚本最省事。",
+    "intro": "grove.py 是 Seeed 给自家 Grove 模块写的 Python 库，面向树莓派这类嵌入式单板机。Grove 是 Seeed 用了十几年的四线标准接口，把一百多种传感器和执行器统一成同一个插头，接反了也烧不掉；0805 把它定成全屋传感器的基准形态，这个库就是在单板机那一侧读它们的官方实现。\n用法是一行一个模块：导入对应的类，告诉它接在哪个口，读回来就是换算好的物理量，不用自己查寄存器、算分压。库里分 I2C、模拟、数字和 UART 四类驱动，土壤湿度、光照、温湿度、气压、超声波测距都有现成类，配一块 Grove Base Hat 插上就能跑，十几行脚本就是一套临时采集。\n仓库 166 星，README 和示例都是英文，但每个模块在 Seeed Wiki 上都有中文页，接线图和量程一查就有。它更适合做原型和短期采集，长期挂在户外的常驻节点还是交给 XIAO 加 ESPHome，两边共用同一批 Grove 模块，换主控不用换传感器。\n放进 0601 就是定植物表之前那一轮点测：一块单板机配 Grove Base Hat，把 Grove 土壤湿度、光照和温湿度模块沿疏林带、草原带、点缀带各埋一组，脚本每十分钟记一次写成 CSV，跑满一个月再决定哪段种芒草、哪段要垫高种蓝羊茅。测完模块拆下来，直接转给 0602 的常驻杆接着用。",
+    "diagram": {
+     "title": "grove.py · Grove 模块点测",
+     "nodes": [
+      {
+       "id": "hat",
+       "label": "单板机 +\nGrove Base Hat",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "gsens",
+       "label": "Grove 土壤 / 光照\n温湿度模块",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "py",
+       "label": "grove.py\n采集脚本",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "drv",
+       "label": "I2C / 模拟 / UART\n四类驱动",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "csv",
+       "label": "CSV 采集记录",
+       "kind": "file",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "plan",
+       "label": "三段植物表\n与浇灌阈值",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "gsens",
+       "hat",
+       "插上四线"
+      ],
+      [
+       "hat",
+       "py",
+       "读数"
+      ],
+      [
+       "drv",
+       "py",
+       "换算量"
+      ],
+      [
+       "py",
+       "csv",
+       "记录"
+      ],
+      [
+       "csv",
+       "plan",
+       "跑满一月"
+      ],
+      [
+       "plan",
+       "me"
+      ]
+     ],
+     "usage": "0601：Grove 模块点测三段 → CSV → 定植物表与阈值"
+    }
+   },
+   {
     "name": "danielbrendel/hortusfox-web",
     "url": "https://github.com/danielbrendel/hortusfox-web",
     "stars": "1.7k",
@@ -476,6 +571,102 @@
  {
   "id": "0602",
   "github": [
+   {
+    "name": "Seeed-Studio/xiao-esphome-projects",
+    "url": "https://github.com/Seeed-Studio/xiao-esphome-projects",
+    "stars": "37",
+    "zh": "无中文",
+    "desc": "Seeed 官方的 XIAO 加 ESPHome 工程合集：电能计量、土壤湿度、mmWave、2 路 6 路继电器，都是现成 YAML",
+    "why": "0805 把 XIAO 加 Grove 定为全屋器件基准，这仓库的土壤湿度与继电器两个工程正好凑成杆内那块板；星数低，但它是这套器件唯一的官方现成工程。",
+    "intro": "xiao-esphome-projects 是 Seeed 官方放出的 XIAO 加 ESPHome 工程合集，一个子目录一份可以直接烧录的 YAML，配接线图和 Seeed Wiki 上的对应页。仓库只有 37 星，却不是社区玩票，而是 0805 定标的这套器件唯一的一手示例，拿到板子当天就能把一个传感节点挂进 HomeAssistant。\n工作方式就是 ESPHome 那一套：YAML 写清这块 XIAO 上接了什么外设、多久读一次、什么时候深睡，编译烧进去，上电后用原生 API 直连 HomeAssistant，不经云也不必架 MQTT。现成工程覆盖电能计量、土壤湿度、IoT 按钮、24GHz mmWave 和 2 路 6 路继电器。\n硬件面向 XIAO ESP32C3 / C6 / S3，配 Grove 扩展板一插就是标准接口，不用自己打样。文档是英文的，但每篇都指回 Seeed Wiki 的中文页，配置语法又是 ESPHome 通用的；更新跟着新板子走，2025 年之后仍在加工程。\n放进 0602 就是桧木杆里那块板：6 路继电器工程直接对应三路 12V 电磁阀，土壤湿度工程复制三份对应北中南三段探针，翻斗雨量计按脉冲计数挂上去，三条件判断在 XIAO ESP32C6 本地跑完再开阀，断网也不误凌晨那一轮。坑是杆内空间小，继电器和天线要隔开，不然一开阀 Wi-Fi 就掉。",
+    "diagram": {
+     "title": "XIAO+ESPHome · 三区浇灌控制",
+     "nodes": [
+      {
+       "id": "rain",
+       "label": "翻斗雨量计\n与水位计",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "soil",
+       "label": "Grove 土壤\n探针×3",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "xiao",
+       "label": "XIAO ESP32C6\n三条件判断",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "relay",
+       "label": "Grove 6 路\n继电器模块",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n草地体检",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "valve",
+       "label": "三路 12V\n电磁阀",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "rain",
+       "xiao",
+       "雨量水位"
+      ],
+      [
+       "soil",
+       "xiao",
+       "含水率"
+      ],
+      [
+       "xiao",
+       "relay",
+       "凌晨四点"
+      ],
+      [
+       "relay",
+       "valve",
+       "开阀"
+      ],
+      [
+       "xiao",
+       "ha",
+       "上报"
+      ],
+      [
+       "ha",
+       "me",
+       "看卡片"
+      ]
+     ],
+     "usage": "0602：三组 Grove 传感器 → XIAO 本地判断 → 三路阀"
+    }
+   },
    {
     "name": "esphome/esphome",
     "url": "https://github.com/esphome/esphome",
@@ -966,6 +1157,103 @@
   "id": "0603",
   "github": [
    {
+    "name": "Seeed-Studio/OSHW-XIAO-Series",
+    "url": "https://github.com/Seeed-Studio/OSHW-XIAO-Series",
+    "stars": "81",
+    "zh": "无中文",
+    "desc": "XIAO 全系列开源硬件资料：ESP32C3 / C6 / S3、nRF52840、RP2040 等拇指主控的引脚图与参考设计",
+    "why": "0805 把 XIAO 定成全屋自制板子的基准主控，罐顶那块超声波水位板的供电、深睡与天线净空全照它的参考设计来；星低，但它就是官方一手资料。",
+    "intro": "OSHW-XIAO-Series 是 Seeed 把 XIAO 全系列的开源硬件资料集中放出来的仓库：ESP32C3 / C5 / C6 / S3、nRF52840、RP2040 / RP2350、MG24 等十几款拇指大小的主控，每一款都给引脚图、原理图和参考设计。0805 把 XIAO 定成全屋自制板子的基准主控，这里就是那份基准的一手出处。\n它不是一份固件，而是一套可以照抄的设计资料：邮票孔与排针的封装尺寸、供电与锂电充电电路怎么画、天线下面要留多大净空、USB 和调试口怎么引出来。想自己做一块底板、把 XIAO 当核心模块贴上去，照着参考设计改就行，省掉射频和电源这两块最容易翻车的部分。\n配套生态是 Grove 扩展板与 Seeed Wiki：外设一律走标准四线接口，固件可以选 Arduino、ESPHome 或 MicroPython。仓库只有 81 星，README 也没有中文，但同一批板子在 Seeed Wiki 上有完整中文页，对照着看不吃力，硬件资料随新板发布持续更新。\n放进 0603 就是罐顶那块水位板：照参考设计做一块小底板，XIAO ESP32C6 上接防水超声波探头朝下测距，深睡十分钟醒一次上报水位，一颗锂电加一小片太阳能板就够养活它。板子要按引脚图留出天线净空，整块灌胶或塞进 IP65 盒，罐口常年高湿，最常见的坏法是排针先锈断。",
+    "diagram": {
+     "title": "XIAO 开源硬件 · 罐顶水位板",
+     "nodes": [
+      {
+       "id": "ref",
+       "label": "官方引脚图\n与参考设计",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "us",
+       "label": "防水超声波\n朝下测距",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "board",
+       "label": "自制小底板 +\nXIAO ESP32C6",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "solar",
+       "label": "锂电加太阳能\n深睡 10 分钟",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n水位曲线",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "valve",
+       "label": "自来水补水阀",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "ref",
+       "board",
+       "照改",
+       "dash"
+      ],
+      [
+       "us",
+       "board",
+       "距离值"
+      ],
+      [
+       "solar",
+       "board",
+       "供电"
+      ],
+      [
+       "board",
+       "ha",
+       "上报"
+      ],
+      [
+       "ha",
+       "valve",
+       "补到 40%"
+      ],
+      [
+       "ha",
+       "me",
+       "雨水占比"
+      ]
+     ],
+     "usage": "0603：超声波 → 罐顶 XIAO 板 → HA 看水位并控补水"
+    }
+   },
+   {
     "name": "home-assistant/core",
     "url": "https://github.com/home-assistant/core",
     "stars": "88k",
@@ -1443,6 +1731,101 @@
  {
   "id": "0604",
   "github": [
+   {
+    "name": "Seeed-Studio/OSHW-reCamera-Series",
+    "url": "https://github.com/Seeed-Studio/OSHW-reCamera-Series",
+    "stars": "474",
+    "zh": "有中文文档",
+    "desc": "Seeed 开源的 AI 相机整机：1TOPS RISC-V 加可换传感器板与底板，机内跑推理，自带 Node-RED",
+    "why": "0805 定了全屋电子器件优先 Seeed，要摄像头的位置就用 reCamera 整机；横臂上广角与长焦两台都是它，机内先粗筛再推给屋里的 Frigate。",
+    "intro": "reCamera 是 Seeed 开源的一台 AI 相机整机：一颗 1TOPS 算力的 RISC-V SoC，配可更换的传感器板和底板，机身里直接跑推理，不用把画面全送回服务器。仓库放的是整机的开源硬件资料，外壳、底板、传感器板的图纸都在，474 星，文档有中文版，是 0805 那份器件总纲里摄像头一项的指定型号。\n它的结构是三明治：最上一层是传感器板，可以换成广角、长焦或夜视镜头；中间是核心板，负责编解码与模型推理；最下是底板，按需要选以太网、PoE 或 Wi-Fi 版本。出厂系统带 Node-RED 和 SenseCraft，拖几个节点就能配出一条取流、识别、发通知的流水线，也可以只把它当一台标准 RTSP 相机用。\n模型侧接 SenseCraft 与 ModelAssistant，能把自己训的小模型导成 TFLite 塞进机身；软件侧支持 RTSP 与 MQTT，接 Frigate、HomeAssistant 都是现成路子，社区还在往上堆云台和太阳能供电的改装件。\n放进 0604 就是横臂上那两只眼睛：广角一台俯拍整条草地按小时定格，长焦一台换长焦传感器板对准水盆和喂鸟器，都选 PoE 底板，一根网线上墙。机身先做一次鸟在不在的粗筛，只把有动静的那一段推给屋里的 Frigate 精识别，省掉大半带宽和算力。坑是朝东会过曝，横臂要把两台都压向偏北。",
+    "diagram": {
+     "title": "reCamera · 开源 AI 相机整机",
+     "nodes": [
+      {
+       "id": "grass",
+       "label": "草地水盆\n与喂鸟器",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "lens",
+       "label": "可换传感器板\n广角 / 长焦",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "reCamera 机身\n1TOPS RISC-V",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "nr",
+       "label": "Node-RED\n机内粗筛",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "frig",
+       "label": "屋内 Frigate\n精识别",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "来访者名单",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "grass",
+       "lens",
+       "画面"
+      ],
+      [
+       "lens",
+       "core",
+       "上板"
+      ],
+      [
+       "core",
+       "nr",
+       "推理"
+      ],
+      [
+       "nr",
+       "frig",
+       "有动静才推"
+      ],
+      [
+       "frig",
+       "db",
+       "识别结果"
+      ],
+      [
+       "db",
+       "me"
+      ]
+     ],
+     "usage": "0604：reCamera 机内粗筛 → Frigate 精识别 → 名单上大屏"
+    }
+   },
    {
     "name": "blakeblackshear/frigate",
     "url": "https://github.com/blakeblackshear/frigate",

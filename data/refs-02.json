@@ -490,6 +490,102 @@
   "id": "0202",
   "github": [
    {
+    "name": "Seeed-Studio/xiao-esphome-projects",
+    "url": "https://github.com/Seeed-Studio/xiao-esphome-projects",
+    "stars": "37",
+    "desc": "Seeed 官方的 XIAO 加 ESPHome 成品工程集：24GHz mmWave 人体存在、MR60BHA2 生命体征、2 路和 6 路继电器、电能计量都有现成 YAML",
+    "why": "0805 把全屋 DIY 器件基准定在 XIAO 加 Grove；这里有官方毫米波存在检测和继电器工程，灯箱三档的人体判断和排风扇照它接",
+    "zh": "无中文",
+    "intro": "xiao-esphome-projects 是矽递科技官方维护的示例仓库，把 XIAO 系列小主控和 ESPHome 之间的接法写成一份份可以直接抄的工程。它解决的是一个很实际的麻烦：XIAO 型号多、引脚各不相同，某个模块到底怎么在 YAML 里声明，官方说明散在 Wiki 各处，这里把常见场景收成完整配置。\n每个工程是一个目录，一份 YAML 加一段说明：选哪块 XIAO、接什么模块、接哪几个脚、刷完之后 Home Assistant 里会冒出哪些实体。现有工程覆盖电能计量、土壤湿度、IoT 按钮、24GHz mmWave 人体存在、MR60BHA2 生命体征与跌倒检测、W5500 以太网，以及 2 路和 6 路继电器。固件跑在板子本地，判断和计时都不过服务器，断网照常工作，HA 只负责记录和推送。\n仓库说明是英文，但每块板子和每个模块在 Seeed Wiki 上都有中文页，照着看不吃力；更新跟着 ESPHome 版本走。\n卫生间这边用它两处。三档光切换的人体判断换成官方毫米波工程：MR60BHA2 装在灯箱边沿朝下，静止站着洗澡也不会丢人，YAML 直接抄，实体进 HA 之后按时段选场景。排风扇照它的 2 路继电器工程接，湿度由 Grove 温湿度模块给，超 70% 开、20 分钟到或降回 60% 停，全在板子本地跑。坑是雷达别正对淋浴水流，水幕会被当成动作。",
+    "diagram": {
+     "title": "XIAO 加 ESPHome · 毫米波与继电器",
+     "nodes": [
+      {
+       "id": "repo",
+       "label": "官方毫米波 /\n继电器工程",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "radar",
+       "label": "MR60BHA2 雷达\n加 Grove 温湿度",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "XIAO ESP32C6\nESPHome 固件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "rule",
+       "label": "本地分档\n时段 + 湿度",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "fan",
+       "label": "排风扇继电器",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "box",
+       "label": "灯箱三档 / 除雾膜",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "推门进来的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "repo",
+       "core",
+       "抄 YAML",
+       "dash"
+      ],
+      [
+       "radar",
+       "core",
+       "有人 / 湿度"
+      ],
+      [
+       "core",
+       "rule"
+      ],
+      [
+       "rule",
+       "fan",
+       "超 70% 开"
+      ],
+      [
+       "rule",
+       "box",
+       "选档"
+      ],
+      [
+       "box",
+       "me",
+       "软光包过来"
+      ]
+     ],
+     "usage": "0202：雷达与湿度 → XIAO 本地判断 → 灯箱分档和排风"
+    }
+   },
+   {
     "name": "wled/WLED",
     "url": "https://github.com/wled/WLED",
     "stars": "18.7k",
@@ -974,6 +1070,103 @@
  {
   "id": "0203",
   "github": [
+   {
+    "name": "Seeed-Studio/xiao-esphome-projects",
+    "url": "https://github.com/Seeed-Studio/xiao-esphome-projects",
+    "stars": "37",
+    "desc": "Seeed 官方的 XIAO 加 ESPHome 成品工程集：土壤湿度、温湿度采集、CO2、2 路和 6 路继电器、W5500 以太网都有现成 YAML",
+    "why": "0805 把全屋 DIY 器件基准定在 XIAO 加 Grove，这是官方 ESPHome 接法；四个温湿度节点、CO2 新风分档和指针表盘都照它的工程改",
+    "zh": "无中文",
+    "intro": "xiao-esphome-projects 是矽递科技官方维护的示例仓库，内容是 XIAO 小主控接各种模块、跑 ESPHome 的成套配置。它解决的麻烦很具体：XIAO 型号多、引脚各不相同，某个传感器怎么在 YAML 里声明、会不会和板载外设撞脚，官方说明散在 Wiki 各处，这里直接给完整工程。\n每个工程是一个目录，一份 YAML 加一段说明：选哪块 XIAO、接什么模块、接哪几个脚、刷完之后 Home Assistant 里会冒出哪些实体。现有工程覆盖电能计量、土壤湿度、IoT 按钮、24GHz mmWave 人体存在与 MR60BHA2 跌倒检测、W5500 以太网，以及 2 路和 6 路继电器。编译出的固件跑在板子本地，阈值和延时都不过服务器，断网照常工作。\n说明只有英文，但每块板子在 Seeed Wiki 上都有中文页，接线图一致；更新跟着 ESPHome 版本走，新型号补得不慢。\n地堡这边照它布四个节点。床头、墙角、柜内、风管出口各一块 XIAO ESP32C6 挂 Grove 温湿度模块，YAML 照它的传感器工程改，I2C 地址错开即可；表盘那块板多驱动两根 X27 步进表针。新风分档照它的继电器与 PWM 工程接，CO2 由 Grove CO2 模块给。四块板都刷本地阈值，断网时除湿机和新风按上一档跑。坑是柜内那块要远离除湿机出风口，否则读数一直偏干。",
+    "diagram": {
+     "title": "XIAO 加 ESPHome · 四点温湿度采集",
+     "nodes": [
+      {
+       "id": "repo",
+       "label": "官方传感器\n工程 YAML",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "th",
+       "label": "Grove 温湿度 ×4\n加 Grove CO2",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "XIAO ESP32C6\nESPHome ×4",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "dial",
+       "label": "指针表盘\nX27 步进",
+       "kind": "screen",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 区间调度",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "dh",
+       "label": "除湿机 / 新风",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "住在地堡的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "repo",
+       "core",
+       "抄 YAML",
+       "dash"
+      ],
+      [
+       "th",
+       "core",
+       "温湿度 / ppm"
+      ],
+      [
+       "core",
+       "dial",
+       "驱动表针"
+      ],
+      [
+       "core",
+       "ha",
+       "每分钟"
+      ],
+      [
+       "ha",
+       "dh",
+       "切档"
+      ],
+      [
+       "dh",
+       "me",
+       "22℃ / 55%"
+      ]
+     ],
+     "usage": "0203：Grove 探头 → XIAO ESPHome → HA 调度 → 除湿机"
+    }
+   },
    {
     "name": "esphome/esphome",
     "url": "https://github.com/esphome/esphome",
@@ -1934,6 +2127,102 @@
  {
   "id": "0205",
   "github": [
+   {
+    "name": "Seeed-Studio/grove.py",
+    "url": "https://github.com/Seeed-Studio/grove.py",
+    "stars": "166",
+    "desc": "Seeed 官方的 Grove 模块 Python 库：在树莓派这类嵌入式 Linux 上用几行代码读写 Grove 的 I2C、模拟、数字和 PWM 接口模块",
+    "why": "0805 把全屋 DIY 器件基准定在 XIAO 加 Grove，这是 Grove 在 Linux 侧的官方读法；鱼缸三探头先在树莓派上用它调通标定",
+    "zh": "无中文",
+    "intro": "grove.py 是矽递科技官方维护的 Python 库，给出的是 Grove 生态在嵌入式 Linux 上的读法。Grove 是 Seeed 那套统一的四线接口，一根扣线把模块接到底板，不用面包板也不用焊接；这个库把每一种 Grove 模块封成一个类，树莓派或者 Jetson 上装好之后，几行代码就能拿到读数。\n底层它把 I2C、模拟、数字和 PWM 四类接口抽成统一的 adc 与 gpio 封装，上层再按模块分文件：温湿度、光照、TDS、超声测距、继电器、OLED 屏各一个类，每个文件都能单独运行当自测程序。安装只要一条 pip 命令，仓库里附了每个模块的接线图和示例输出，调不通的时候先跑官方示例，就能分清是硬件问题还是代码问题。\n说明只有英文，但 Seeed Wiki 上每个 Grove 模块都有中文页，接线图一致。仓库更新不快，胜在稳定，是 Grove 模块在 Linux 侧事实上的标准库。\n生态缸这边它管两件事。一是调探头：温度、pH、TDS 三路先接在树莓派上，用它的示例把读数跑通、做出标定曲线，确认量程和采样间隔之后，再把同样的读法搬到吧台矮柜里那块 XIAO ESP32C6 的 ESPHome 配置。二是补 reef-pi：reef-pi 本身跑在树莓派上，缺的模块用这个库写成脚本挂上去就行。坑是 pH 电极信号极弱，走线要离水泵电源线远一点。",
+    "diagram": {
+     "title": "grove.py · Linux 上直接读 Grove",
+     "nodes": [
+      {
+       "id": "hat",
+       "label": "Grove 底板\n四线扣线",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "probe",
+       "label": "Grove 温度 / TDS\npH 放大板",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "lib",
+       "label": "grove.py\n模块类库",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "pi",
+       "label": "树莓派脚本\n标定曲线",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "reef",
+       "label": "reef-pi 面板",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "xiao",
+       "label": "XIAO ESP32C6\nESPHome 上报",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "吧台前看缸的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "hat",
+       "lib",
+       "I2C / ADC"
+      ],
+      [
+       "probe",
+       "lib",
+       "四线扣线"
+      ],
+      [
+       "lib",
+       "pi"
+      ],
+      [
+       "pi",
+       "reef",
+       "补探头"
+      ],
+      [
+       "pi",
+       "xiao",
+       "搬读法",
+       "dash"
+      ],
+      [
+       "xiao",
+       "me",
+       "0802 大屏"
+      ]
+     ],
+     "usage": "0205：树莓派上调通 Grove 探头，再搬到缸下的 XIAO ESPHome"
+    }
+   },
    {
     "name": "esphome/esphome",
     "url": "https://github.com/esphome/esphome",
@@ -3558,6 +3847,102 @@
  {
   "id": "0209",
   "github": [
+   {
+    "name": "Seeed-Studio/PN532",
+    "url": "https://github.com/Seeed-Studio/PN532",
+    "stars": "502",
+    "desc": "Seeed 的 PN532 NFC 读写库：13.56MHz 读卡、写卡与点对点，支持 Arduino 和 ESP32 的 I2C、SPI、HSU 三种接法",
+    "why": "0805 把全屋 DIY 器件基准定在 Seeed 生态，NFC 就用它；铁皮宝箱、海报卷和常翻的书贴 NFC 标签，台角刷一下就记一条",
+    "zh": "无中文",
+    "intro": "PN532 是恩智浦那颗用得最广的 13.56MHz NFC 芯片，Seeed 这个仓库是它在 Arduino 生态里的官方驱动库，配套自家的 NFC 模块与扩展板。它解决的问题是：NFC 协议栈很厚，直接写寄存器很痛苦，这个库把常用的几件事——读卡号、读写 NDEF 数据块、把板子模拟成一张卡、两块板之间点对点传数据——都包成了几行就能调的接口。\n用法上它支持 I2C、SPI 和 HSU 三种连法，同一套 API 换个构造函数就行，ESP32 和 XIAO 系列都能跑。典型流程是上电初始化、等卡、拿到 UID，按需要再读扇区或者 NDEF 记录，读一次几十毫秒。仓库里附了十来个示例，从最简单的读 UID 到写一条 NDEF 网址都有，issue 区还积累了不少排线长度和天线干扰方面的经验。\n说明是英文的，但 PN532 在中文创客圈用了十几年，接线和排错的中文帖子极多，Seeed Wiki 上模块页也有中文。库本身很稳定，是这颗芯片事实上的默认选择。\n藏宝阁这边给它一个安静的活：写字台一角埋一块 PN532 模块，接那块 XIAO ESP32C6。书格尽端的铁皮宝箱、每季度换下来的海报卷、常翻的那几本书都贴一张 NFC 标签，进出时在台角刷一下，ESPHome 把 UID 发给 HA 存进物品记录。坑是台面下若有金属层会屏蔽天线，埋之前先隔空试读一次。",
+    "diagram": {
+     "title": "PN532 · 台角刷一下就记一条",
+     "nodes": [
+      {
+       "id": "tag",
+       "label": "NFC 标签\n书 / 宝箱 / 海报",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "desk",
+       "label": "写字台一角\n刷卡区",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "mod",
+       "label": "PN532 模块\nI2C / SPI / HSU",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "lib",
+       "label": "Seeed PN532 库\n读 UID / NDEF",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "xiao",
+       "label": "XIAO ESP32C6\nESPHome",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "HA 物品记录",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "查藏品的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "tag",
+       "mod",
+       "13.56MHz"
+      ],
+      [
+       "desk",
+       "mod"
+      ],
+      [
+       "lib",
+       "mod",
+       "调 API",
+       "dash"
+      ],
+      [
+       "mod",
+       "xiao",
+       "UID"
+      ],
+      [
+       "xiao",
+       "db",
+       "写一条"
+      ],
+      [
+       "db",
+       "me",
+       "查藏品"
+      ]
+     ],
+     "usage": "0209：台角刷标签 → PN532 → XIAO ESPHome → HA 物品记录"
+    }
+   },
    {
     "name": "wled/WLED",
     "url": "https://github.com/wled/WLED",

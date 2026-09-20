@@ -3,6 +3,103 @@
   "id": "0501",
   "github": [
    {
+    "name": "Seeed-Studio/xiao-esphome-projects",
+    "url": "https://github.com/Seeed-Studio/xiao-esphome-projects",
+    "stars": "37",
+    "zh": "无中文",
+    "desc": "Seeed 官方的 XIAO 加 ESPHome 工程合集：电能计量、土壤湿度、mmWave、2 路 6 路继电器，都是现成 YAML",
+    "why": "0805 定了全屋 DIY 器件走 Seeed 生态，这是 XIAO 跑 ESPHome 的官方一手工程；柴堆回潮探头的上报 YAML 照它改，星少却是唯一答案。",
+    "intro": "xiao-esphome-projects 是 Seeed 官方放出的 XIAO 加 ESPHome 工程合集，一个子目录一份可以直接烧录的 YAML，配接线图和 Seeed Wiki 上的对应页。仓库只有 37 星，却不是社区玩票，而是 0805 定标的这套器件唯一的一手示例，拿到板子当天就能把一个传感节点挂进 HomeAssistant。\n工作方式就是 ESPHome 那一套：YAML 写清这块 XIAO 上接了什么外设、多久读一次、什么时候深睡，编译烧进去，上电后用原生 API 直连 HomeAssistant，不经云也不必架 MQTT。现成工程覆盖电能计量、土壤湿度、IoT 按钮、24GHz mmWave 和 2 路 6 路继电器。\n硬件面向 XIAO ESP32C3 / C6 / S3，配 Grove 扩展板一插就是标准接口，不用自己打样。文档是英文的，但每篇都指回 Seeed Wiki 的中文页，配置语法又是 ESPHome 通用的；更新跟着新板子走，2025 年之后仍在加工程。\n放进 0501 就是柴堆里那颗回潮探头：照它的土壤湿度工程改，探头换成 Grove 温湿度模块，一块 XIAO ESP32C6 配锂电，深睡十五分钟报一次，数据进 HomeAssistant 画成柴缝湿度曲线，跌回八成就说明这批柴回潮了。坑是柴堆里昼夜温差大，盒子要打透气孔又不能让雨飘进去。",
+    "diagram": {
+     "title": "XIAO+ESPHome · 官方现成工程",
+     "nodes": [
+      {
+       "id": "yaml",
+       "label": "官方 YAML\n工程模板",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "grove",
+       "label": "Grove\n温湿度模块",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "xiao",
+       "label": "XIAO ESP32C6\n烧录固件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "sleep",
+       "label": "深睡 15 分钟\n醒一次上报",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n本地接入",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "db",
+       "label": "柴缝湿度曲线",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "yaml",
+       "xiao",
+       "照改",
+       "dash"
+      ],
+      [
+       "grove",
+       "xiao",
+       "温湿度"
+      ],
+      [
+       "xiao",
+       "sleep",
+       "省电"
+      ],
+      [
+       "xiao",
+       "ha",
+       "直连"
+      ],
+      [
+       "ha",
+       "db",
+       "存曲线"
+      ],
+      [
+       "db",
+       "me",
+       "回潮提醒"
+      ]
+     ],
+     "usage": "0501：Grove 温湿度模块 → XIAO 上报 → HA 看柴缝回潮"
+    }
+   },
+   {
     "name": "pvvx/ATC_MiThermometer",
     "url": "https://github.com/pvvx/ATC_MiThermometer",
     "stars": "4.1k",
@@ -1314,6 +1411,103 @@
   "id": "0504",
   "github": [
    {
+    "name": "Seeed-Studio/xiao-esphome-projects",
+    "url": "https://github.com/Seeed-Studio/xiao-esphome-projects",
+    "stars": "37",
+    "zh": "无中文",
+    "desc": "Seeed 官方的 XIAO 加 ESPHome 工程合集：电能计量、土壤湿度、mmWave、2 路 6 路继电器，都是现成 YAML",
+    "why": "0805 定的全屋器件基准就是 XIAO 加 Grove，这里的土壤湿度与 6 路继电器工程照着改就能管架下四路阀；星少但它是官方一手资料。",
+    "intro": "xiao-esphome-projects 是 Seeed 官方放出的 XIAO 加 ESPHome 工程合集，一个子目录一份可以直接烧录的 YAML，配接线图和 Seeed Wiki 上的对应页。仓库只有 37 星，却不是社区玩票，而是 0805 定标的这套器件唯一的一手示例，拿到板子当天就能把一个传感节点挂进 HomeAssistant。\n工作方式就是 ESPHome 那一套：YAML 写清这块 XIAO 上接了什么外设、多久读一次、什么时候深睡，编译烧进去，上电后用原生 API 直连 HomeAssistant，不经云也不必架 MQTT。现成工程覆盖电能计量、土壤湿度、IoT 按钮、24GHz mmWave 和 2 路 6 路继电器。\n硬件面向 XIAO ESP32C3 / C6 / S3，配 Grove 扩展板一插就是标准接口，不用自己打样。文档是英文的，但每篇都指回 Seeed Wiki 的中文页，配置语法又是 ESPHome 通用的；更新跟着新板子走，2025 年之后仍在加工程。\n放进 0504 就是架子底层那只防水箱：拿它的 6 路继电器工程管四路电磁阀加一台加压泵，土壤湿度工程复制四份，对应四层各一颗 Grove 电容式土壤湿度模块，判断全在 XIAO ESP32C6 本地跑，断网照浇，只是曲线不上传。坑是继电器和泵共地会串扰，12V 动力地和逻辑地要单点接。",
+    "diagram": {
+     "title": "XIAO+ESPHome · 四路阀本地控制",
+     "nodes": [
+      {
+       "id": "yaml",
+       "label": "官方继电器\n与土壤工程",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "soil",
+       "label": "Grove 土壤\n湿度模块×4",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "xiao",
+       "label": "XIAO ESP32C6\n本地判断",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "relay",
+       "label": "Grove 6 路\n继电器模块",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n与架侧墨水屏",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "valve",
+       "label": "四路电磁阀\n与加压泵",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "yaml",
+       "xiao",
+       "照改",
+       "dash"
+      ],
+      [
+       "soil",
+       "xiao",
+       "含水率"
+      ],
+      [
+       "xiao",
+       "relay",
+       "开阀"
+      ],
+      [
+       "relay",
+       "valve",
+       "12V"
+      ],
+      [
+       "xiao",
+       "ha",
+       "上报"
+      ],
+      [
+       "ha",
+       "me",
+       "看湿度"
+      ]
+     ],
+     "usage": "0504：Grove 土壤模块 → XIAO 判断 → 四路阀与墨水屏"
+    }
+   },
+   {
     "name": "kizniche/Mycodo",
     "url": "https://github.com/kizniche/Mycodo",
     "stars": "3.3k",
@@ -1770,6 +1964,103 @@
  {
   "id": "0505",
   "github": [
+   {
+    "name": "Seeed-Studio/OSHW-XIAO-Series",
+    "url": "https://github.com/Seeed-Studio/OSHW-XIAO-Series",
+    "stars": "81",
+    "zh": "无中文",
+    "desc": "XIAO 全系列开源硬件资料：ESP32C3 / C6 / S3、nRF52840、RP2040 等拇指主控的引脚图与参考设计",
+    "why": "0805 定 XIAO 为全屋自制板子的基准主控，这是官方引脚图与参考设计的一手出处；桩柱里那块带 mmWave 感应的小底板照它画，星少但没有替代品。",
+    "intro": "OSHW-XIAO-Series 是 Seeed 把 XIAO 全系列的开源硬件资料集中放出来的仓库：ESP32C3 / C5 / C6 / S3、nRF52840、RP2040 / RP2350、MG24 等十几款拇指大小的主控，每一款都给引脚图、原理图和参考设计。0805 把 XIAO 定成全屋自制板子的基准主控，这里就是那份基准的一手出处。\n它不是一份固件，而是一套可以照抄的设计资料：邮票孔与排针的封装尺寸、供电与锂电充电电路怎么画、天线下面要留多大净空、USB 和调试口怎么引出来。想自己做一块底板、把 XIAO 当核心模块贴上去，照着参考设计改就行，省掉射频和电源这两块最容易翻车的部分。\n配套生态是 Grove 扩展板与 Seeed Wiki：外设一律走标准四线接口，固件可以选 Arduino、ESPHome 或 MicroPython。仓库只有 81 星，README 也没有中文，但同一批板子在 Seeed Wiki 上有完整中文页，对照着看不吃力，硬件资料随新板发布持续更新。\n放进 0505 就是桩柱里那块小底板：照参考设计画一块 XIAO 底板，接屋檐下的 24GHz mmWave 感应模块管那盏暖光灯，再引两颗红绿状态灯出来报充电状态。板子按引脚图留够 5V 供电和天线净空，塞进柱身背面的走线凹槽，弱电和桩上那一路电分两根管走，别并在一起。",
+    "diagram": {
+     "title": "XIAO 开源硬件 · 桩内小底板",
+     "nodes": [
+      {
+       "id": "ref",
+       "label": "官方引脚图\n与参考设计",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "mmw",
+       "label": "24GHz mmWave\n感应模块",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "board",
+       "label": "自制 XIAO 底板\n（柱内）",
+       "kind": "step",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "core",
+       "label": "XIAO ESP32C6\n跑 ESPHome",
+       "kind": "core",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "lamp",
+       "label": "屋檐暖光灯",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "led",
+       "label": "桩上红绿灯",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 1
+      }
+     ],
+     "edges": [
+      [
+       "ref",
+       "board",
+       "照改",
+       "dash"
+      ],
+      [
+       "board",
+       "core",
+       "贴上去"
+      ],
+      [
+       "mmw",
+       "core",
+       "有人靠近"
+      ],
+      [
+       "core",
+       "lamp",
+       "亮 3 分钟"
+      ],
+      [
+       "core",
+       "led",
+       "状态"
+      ],
+      [
+       "lamp",
+       "me",
+       "照亮走道"
+      ]
+     ],
+     "usage": "0505：mmWave 触发 → 柱内 XIAO 板 → 暖光灯与状态灯"
+    }
+   },
    {
     "name": "evcc-io/evcc",
     "url": "https://github.com/evcc-io/evcc",

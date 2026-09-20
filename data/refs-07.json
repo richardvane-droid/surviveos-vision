@@ -965,6 +965,102 @@
   "id": "0703",
   "github": [
    {
+    "name": "Seeed-Studio/xiao-esphome-projects",
+    "url": "https://github.com/Seeed-Studio/xiao-esphome-projects",
+    "stars": "37",
+    "zh": "无中文",
+    "desc": "Seeed 官方的 XIAO + ESPHome 成品工程集：电能计量、土壤湿度、24GHz mmWave、W5500 以太网、2/6 路继电器，都带现成 YAML",
+    "why": "0805 把 DIY 电子件定标成 XIAO + Grove，这是官方一手的 ESPHome 样板（仅 37 星但唯一现成）；钓台电池箱节点照它的电能计量工程改",
+    "intro": "xiao-esphome-projects 是 Seeed 官方放出的一组 XIAO 加 ESPHome 成品工程，一个文件夹就是一个能直接烧的项目：电能计量、土壤湿度、24GHz mmWave 跌倒检测、W5500 有线以太网、二路和六路继电器。它填的是选型和固件之间那段空档——引脚怎么接、YAML 怎么写、校准系数取多少，官方替你先试了一遍。\n结构很轻：每个工程一份 YAML 加一张接线图，ESPHome 编译时翻成固件刷进 XIAO，节点上电自己连 Wi-Fi，用原生 API 把实体推给 HomeAssistant，不经过云；阈值判断和继电器动作写在节点本地，断网照常执行。\nXIAO 系列涵盖 ESP32C3 / C6 / S3、nRF52840 等，指甲盖大小、板载天线、自带锂电充放管理，配 Grove 接口不用焊线。星数低是因为它是官方样板库不是社区框架，但引脚和坑点最准，中文说明在 wiki.seeedstudio.com/cn 上。\n放进 0703：电池箱那个监测节点换成 XIAO ESP32C6，照电能计量工程的做法接串口读 MPPT 和 BMS 的电压、剩余电量、当日发电量，一分钟推一次给 HA；日落亮灯和低电量分级断负载写在节点本地，钓台断网也生效。坑是水边湿气重，板子要灌胶塞进带干燥剂的小盒；离路由器太远就照它的 W5500 工程改走有线。",
+    "diagram": {
+     "title": "XIAO + ESPHome · 官方工程照着抄",
+     "nodes": [
+      {
+       "id": "yaml",
+       "label": "官方工程\nYAML + 接线图",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "sens",
+       "label": "MPPT / BMS\n串口读数",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "xiao",
+       "label": "XIAO ESP32C6\nESPHome 固件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "rule",
+       "label": "节点本地判断\n断网照跑",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n实体与自动化",
+       "kind": "screen",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "load",
+       "label": "马灯 / 逆变器\n分级断电",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "手机推送",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "yaml",
+       "xiao",
+       "编译烧录",
+       "dash"
+      ],
+      [
+       "sens",
+       "xiao",
+       "电压电量"
+      ],
+      [
+       "xiao",
+       "rule"
+      ],
+      [
+       "rule",
+       "load",
+       "断负载"
+      ],
+      [
+       "xiao",
+       "ha",
+       "原生 API"
+      ],
+      [
+       "ha",
+       "me",
+       "告警"
+      ]
+     ],
+     "usage": "0703：MPPT / BMS → XIAO 节点 → HA 大屏卡片与手机告警"
+    }
+   },
+   {
     "name": "syssi/esphome-jk-bms",
     "url": "https://github.com/syssi/esphome-jk-bms",
     "stars": "1.0k",

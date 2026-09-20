@@ -3,6 +3,103 @@
   "id": "0801",
   "github": [
    {
+    "name": "Seeed-Studio/ModelAssistant",
+    "url": "https://github.com/Seeed-Studio/ModelAssistant",
+    "stars": "444",
+    "zh": "官方 README_zh-CN",
+    "desc": "SenseCraft Model Assistant：给 MCU 和单板机用的嵌入式 AI 训练部署工具链，训出几百 KB 的小模型，导出 TFLite / ONNX",
+    "why": "0805 定下全屋电子件走 Seeed，模型这层就用同一家的工具链；0801 用它训一个只认自家物品的小模型，给建档录入出名称候选",
+    "intro": "SenseCraft Model Assistant 是 Seeed 开源的嵌入式 AI 工具链，专门给 MCU 和单板机这种算力很小的设备做模型训练与部署。它把目标检测、图像分类、关键点这些常见任务做成现成配置，你只准备自己的照片数据集，跑一条命令就能训出一个几百 KB 的小模型。\n链路是采集、标注、训练、量化、导出、部署六步：底层用 PyTorch 与 MMLab 那套训练，再做 INT8 量化把模型压到能塞进几 MB 闪存，导出 TFLite 或 ONNX，最后用配套工具刷进设备。推理全在设备本地，照片和视频不用出门，只有识别结果往外走。\n官方 README 有中文版，支持的硬件包括 XIAO ESP32S3 Sense、Grove Vision AI、reCamera，配套的 SenseCraft AI 平台可以在线挑模型、在线训练、一键下发，省掉搭训练环境那一步，仓库跟着新硬件持续更新。\n放进 0801：建档最累的是逐件录入名称，用它训一个只认自家常见物品大类的小模型，扫箱号拍俯视照时顺手把箱内东西框出来，名称候选直接填进 Homebox 的录入框，人只做确认和改名；改过的照片回流当新样本，越用越准。坑是别追求通用识别，样本就照自家箱子的光线和角度拍，类别控制在几十个以内，认不出来的老老实实手打。",
+    "diagram": {
+     "title": "SenseCraft MA · 小设备上的自训模型",
+     "nodes": [
+      {
+       "id": "ds",
+       "label": "自家照片\n数据集",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "cam",
+       "label": "扫码时拍的\n俯视照",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "ma",
+       "label": "ModelAssistant\n训练 + 量化",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "mdl",
+       "label": "TFLite / ONNX\n几百 KB",
+       "kind": "db",
+       "col": 1,
+       "row": 2
+      },
+      {
+       "id": "dev",
+       "label": "本地推理\n框出箱内物",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "box",
+       "label": "Homebox 录入\n名称候选",
+       "kind": "step",
+       "col": 2,
+       "row": 2
+      },
+      {
+       "id": "me",
+       "label": "一个人确认",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ds",
+       "ma",
+       "标注训练"
+      ],
+      [
+       "ma",
+       "mdl",
+       ""
+      ],
+      [
+       "mdl",
+       "dev",
+       "量化导出",
+       "dash"
+      ],
+      [
+       "cam",
+       "dev",
+       ""
+      ],
+      [
+       "dev",
+       "box",
+       "候选名"
+      ],
+      [
+       "box",
+       "me",
+       "改名回流"
+      ]
+     ],
+     "usage": "0801：俯视照 → 本地识别 → Homebox 名称候选 → 人确认"
+    }
+   },
+   {
     "name": "sysadminsmedia/homebox",
     "url": "https://github.com/sysadminsmedia/homebox",
     "stars": "7.1k",
@@ -606,6 +703,101 @@
   "id": "0802",
   "github": [
    {
+    "name": "Seeed-Studio/OSHW-XIAO-Series",
+    "url": "https://github.com/Seeed-Studio/OSHW-XIAO-Series",
+    "stars": "81",
+    "zh": "无中文",
+    "desc": "XIAO 全系列开源硬件资料：ESP32C3 / C6 / S3、nRF52840、RP2040 等十几款核心板的引脚图、原理图与参考设计",
+    "why": "0805 把全屋 DIY 电子件定标成 XIAO 主控，这里是官方一手的引脚图与参考设计（81 星，但定标后只能以它为准）；0802 的按键板和网关板照它画",
+    "intro": "OSHW-XIAO-Series 是 Seeed 把 XIAO 全系列的开源硬件资料集中放出来的仓库：ESP32C3 / C5 / C6 / S3、nRF52840、RP2040 / 2350、MG24 等十几款核心板，每款都有引脚图、原理图、PCB 尺寸和参考设计，想自己画一块底板直接拿来改。\nXIAO 的思路是把一块指甲盖大小的核心板做成所有节点的统一底座：21×17.5mm、板载天线、USB-C、自带锂电充放管理，同一排引脚顺序跨型号基本一致，所以一张扩展板换个芯片不用重画，只换固件。Grove 接口接传感器不用焊线。\n固件侧 ESPHome、Arduino、MicroPython 都支持，配合 Seeed 的扩展板生态可以直接搭出网关、按键板、电池节点。81 星是因为它是资料仓库不是代码库，但 0805 定标 XIAO 之后，引脚和参考设计只能以这里为准；中文页在 wiki.seeedstudio.com/cn。\n放进 0802：它是全屋节点的规格底座。屏下那排实体开关的按键板、Zigbee 协调器旁边那块网关板，都照这里的参考设计画，统一用 XIAO ESP32C6；各区域节点的型号、引脚和供电在这一页对齐，HA 里按区域给实体命名，坏了拔一块换一块。坑是不同芯片的 ADC 和低功耗引脚不通用，抄参考设计时别跨型号混抄。",
+    "diagram": {
+     "title": "XIAO 系列 · 全屋节点的统一底座",
+     "nodes": [
+      {
+       "id": "ref",
+       "label": "引脚图 原理图\n参考设计",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "grove",
+       "label": "Grove 传感器\n免焊接线",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "xiao",
+       "label": "XIAO ESP32C6\n自制底板",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "fw",
+       "label": "ESPHome 固件\n原生 API",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "n100",
+       "label": "N100 主机\nHA + 时序库",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "wall",
+       "label": "屏墙三块屏\n等距地图",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ref",
+       "xiao",
+       "照着画",
+       "dash"
+      ],
+      [
+       "grove",
+       "xiao",
+       "传感"
+      ],
+      [
+       "xiao",
+       "fw"
+      ],
+      [
+       "fw",
+       "n100",
+       "实体上报"
+      ],
+      [
+       "n100",
+       "wall",
+       "仪表盘"
+      ],
+      [
+       "wall",
+       "me"
+      ]
+     ],
+     "usage": "0802：XIAO 节点 → ESPHome → N100 上的 HA → 屏墙与手机"
+    }
+   },
+   {
     "name": "home-assistant/core",
     "url": "https://github.com/home-assistant/core",
     "stars": "88k",
@@ -1191,6 +1383,101 @@
   "id": "0803",
   "github": [
    {
+    "name": "Seeed-Studio/OSHW-reCamera-Series",
+    "url": "https://github.com/Seeed-Studio/OSHW-reCamera-Series",
+    "stars": "474",
+    "zh": "有中文文档",
+    "desc": "开源 AI 相机整机：RISC-V 1TOPS SoC 加可换传感器板与底板，本地跑检测模型，自带 Node-RED 与 SenseCraft",
+    "why": "0805 把全屋电子件定标成 Seeed 生态，鸭子头上那路视觉就用同家整机；0803 用它认反光标记和人脸，结果走串口给主控",
+    "intro": "OSHW-reCamera-Series 是 Seeed 开源的 AI 相机整机：一块 RISC-V SoC 带 1TOPS NPU，加上可更换的传感器板和底板，整机比火柴盒还小，硬件图纸、系统镜像和应用层全开源。它要解决的是做视觉项目时一堆零件拼不完的问题，插上电就是一台能跑模型的相机。\n它分三层叠着：最上是传感器板，可以换不同分辨率和视场角的镜头；中间是核心板，摄像头数据直接进 NPU，本地跑 YOLO 这类检测模型；最下是底板，提供以太网、Wi-Fi 或串口。识别结果用自带的 Node-RED 拖流程编排，通过 MQTT 或 HTTP 发出去，视频本身可以完全不出设备。\n配套 SenseCraft 可以在线挑模型一键下发，官方有中文文档和教程，社区在做机械臂、门口人脸、生产线计数这些例子，仓库 474 星，更新跟着新传感器板走。\n放进 0803：鸭子额头那颗广角摄像头这一路交给它——本地识别充电窝和通道口的反光标记、认出主人的脸，识别结果走串口给主控做路点导航，视频一帧都不往外传，正好对上只认一个人的设定。坑是发热和重量：整机装头上会拉高重心，要么挪到胸腔只把镜头引上去，要么退一步用 XIAO ESP32S3 Sense 顶着。",
+    "diagram": {
+     "title": "reCamera · 本地跑模型的开源相机",
+     "nodes": [
+      {
+       "id": "lens",
+       "label": "可换镜头\n传感器板",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "mark",
+       "label": "反光标记\n通道口 / 窝",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "npu",
+       "label": "RISC-V + NPU\n本地推理",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "nr",
+       "label": "Node-RED\n流程编排",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "mcu",
+       "label": "鸭子主控\n串口接收",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "nav",
+       "label": "路点导航\n切步态",
+       "kind": "step",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "只认一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "lens",
+       "npu",
+       "图像"
+      ],
+      [
+       "mark",
+       "npu",
+       "认标记"
+      ],
+      [
+       "npu",
+       "nr",
+       "检测框"
+      ],
+      [
+       "nr",
+       "mcu",
+       "串口"
+      ],
+      [
+       "mcu",
+       "nav"
+      ],
+      [
+       "nav",
+       "me",
+       "走到脚边"
+      ]
+     ],
+     "usage": "0803：镜头 → 本地认标记与人脸 → 串口给主控 → 巡游回窝"
+    }
+   },
+   {
     "name": "pollen-robotics/microduck",
     "url": "https://github.com/pollen-robotics/microduck",
     "stars": "7.6k",
@@ -1378,100 +1665,6 @@
       ]
      ],
      "usage": "0803：加通道 / 坡道地形重训步态，云 GPU 出 ONNX"
-    }
-   },
-   {
-    "name": "apirrone/Open_Duck_Mini",
-    "url": "https://github.com/apirrone/Open_Duck_Mini",
-    "stars": "3.9k",
-    "zh": "有中文文档站",
-    "desc": "Microduck 的前身：仿迪士尼 BDX 机器人的迷你双足鸭，约 42cm 高、BOM 400 美元以内，STL 与 BOM 全开源",
-    "why": "更大更便宜的替代路线，打印件、BOM 表和舵机选型都有现成清单，还有中文文档",
-    "intro": "Open Duck Mini 是 Antoine Pirrone 发起的开源项目，目标是做一只迷你版的迪士尼 BDX 机器人，整机 BOM 控制在 400 美元以内，3.9k 星，也是 Microduck 的直接前身。它解决的问题是一个人在家能不能从零造一只会走的双足鸭，答案是能。\n它的路线和 Microduck 一致但更开放：v2 版约 42cm 高，主控是树莓派 Zero 2W，舵机是 Feetech 总线舵机，仿真在 MuJoCo，训练和运行时各有配套仓库，两份训好的 ONNX 步态直接给了。所有打印件的 STL、BOM 表格、打印指南和装配说明都在仓库里，Discord 社区很活跃，近 500 个 fork。中文方面，README 链了一份社区维护的飞书中文文档，B 站有完整复刻系列。\n在 0803 里它是备用路线和参考书：如果 399 美元的 Microduck 套件缺货或想要更大一只，就照它的清单自己打印和采购；更重要的是它的打印件和舵机选型经验：外壳怎么分件才好换季换羽毛、哪些舵机耐摔，都可以直接抄。注意它比 Microduck 高 17cm，钻不过 12cm 的鸭子通道，要走这条路线就得把门下净空改成 45cm 以上。",
-    "diagram": {
-     "title": "Open Duck Mini · 自己打印的 BDX 小鸭",
-     "nodes": [
-      {
-       "id": "stl",
-       "label": "STL 打印件\n自建机打印",
-       "kind": "step",
-       "col": 0,
-       "row": 0
-      },
-      {
-       "id": "bom",
-       "label": "BOM 表格\n400 美元以内",
-       "kind": "step",
-       "col": 0,
-       "row": 1
-      },
-      {
-       "id": "core",
-       "label": "Open Duck Mini\n树莓派 Zero 2W",
-       "kind": "core",
-       "col": 1,
-       "row": 0
-      },
-      {
-       "id": "pg",
-       "label": "Playground\nMuJoCo 训练",
-       "kind": "step",
-       "col": 1,
-       "row": 1
-      },
-      {
-       "id": "servo",
-       "label": "总线舵机\n42cm 双足",
-       "kind": "device",
-       "col": 2,
-       "row": 0
-      },
-      {
-       "id": "rt",
-       "label": "Runtime\n跑 ONNX 步态",
-       "kind": "step",
-       "col": 2,
-       "row": 1
-      },
-      {
-       "id": "me",
-       "label": "一个人",
-       "kind": "person",
-       "col": 3,
-       "row": 0
-      }
-     ],
-     "edges": [
-      [
-       "stl",
-       "core",
-       "自己打印"
-      ],
-      [
-       "bom",
-       "core",
-       "照单采购"
-      ],
-      [
-       "pg",
-       "rt",
-       "ONNX"
-      ],
-      [
-       "rt",
-       "core"
-      ],
-      [
-       "core",
-       "servo",
-       "驱动"
-      ],
-      [
-       "servo",
-       "me"
-      ]
-     ],
-     "usage": "0803：套件缺货时的自造路线，抄分件外壳与舵机选型"
     }
    },
    {
@@ -2657,6 +2850,108 @@
  {
   "id": "0805",
   "github": [
+   {
+    "name": "Seeed-Studio/wiki-documents",
+    "url": "https://github.com/Seeed-Studio/wiki-documents",
+    "stars": "375",
+    "zh": "有 cn 语言版",
+    "desc": "Seeed Wiki 本体：Docusaurus 静态站源码，XIAO / Grove / reCamera 每款硬件的教程、引脚图与示例代码都在里面",
+    "why": "0805 把全屋 DIY 电子件定标成 XIAO + Grove，文档基准就指定这里（wiki.seeedstudio.com/cn）；各模块选型前先来查对应品",
+    "intro": "wiki-documents 是 Seeed Wiki 的本体仓库，Docusaurus 写的静态站源码全开源：XIAO、Grove、reCamera、SenseCAP 每一款硬件的入门教程、引脚图、示例代码和常见问题都是这里的一篇 Markdown，谁发现错了都能提 PR 改。它就是 0805 这一页指定的文档基准。\n站点结构是按产品线分目录、按语言分版本，中文在 cn 目录下，页面模板固定：硬件参数、接线图、依赖安装、一段能跑的示例、最后是踩坑清单。仓库克隆下来 npm 一装就能在本地起一个离线站，断网时照样查引脚。\n375 星，更新频率跟着 Seeed 出新品走，中文版不是机翻而是单独维护的一套页面，覆盖率对 XIAO 和 Grove 这两条主线最完整。\n放进 0805：器件总纲把全屋 DIY 电子件定标成 XIAO 主控加 Grove 模块，文档基准就写死在 wiki.seeedstudio.com/cn。每个模块进选型前先在这里查有没有对应品、引脚和供电怎么走、示例 YAML 能不能直接抄；查不到对应品、成本不可接受、强电侧或 ESPHome 不支持的，按例外走原选型。建议把仓库克隆一份跑在 0804 的机架上，断网也能查。",
+    "diagram": {
+     "title": "Seeed Wiki · 器件总纲的文档基准",
+     "nodes": [
+      {
+       "id": "src",
+       "label": "Markdown 源码\nDocusaurus",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "pr",
+       "label": "发现错就提 PR",
+       "kind": "person",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "site",
+       "label": "Seeed Wiki\ncn 中文版",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "off",
+       "label": "本地离线站\n挂 0804 机架",
+       "kind": "db",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "pick",
+       "label": "模块选型自检\n有没有对应品",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "bom",
+       "label": "XIAO + Grove\nBOM 定稿",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "src",
+       "site",
+       "构建"
+      ],
+      [
+       "pr",
+       "src",
+       "",
+       "dash"
+      ],
+      [
+       "site",
+       "off",
+       "克隆",
+       "dash"
+      ],
+      [
+       "site",
+       "pick",
+       "查示例"
+      ],
+      [
+       "off",
+       "pick",
+       "离线查"
+      ],
+      [
+       "pick",
+       "bom",
+       "定型号"
+      ],
+      [
+       "bom",
+       "me"
+      ]
+     ],
+     "usage": "0805：查 Wiki → 有对应品就用 XIAO + Grove，没有才走例外"
+    }
+   },
    {
     "name": "FreeCAD/FreeCAD",
     "url": "https://github.com/FreeCAD/FreeCAD",

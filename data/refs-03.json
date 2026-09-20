@@ -3,6 +3,107 @@
   "id": "0301",
   "github": [
    {
+    "name": "Seeed-Studio/OPL_Kicad_Library",
+    "url": "https://github.com/Seeed-Studio/OPL_Kicad_Library",
+    "stars": "363",
+    "zh": "无中文",
+    "desc": "Seeed 开放元件库 Open Parts Library 的 KiCad 版：上万个与打样供应链共享的元件符号、封装和 3D 模型",
+    "why": "0805 把全屋电子器件定在 Seeed 生态，画板子这一环就该用它家的 OPL 库；0301 给 PSK 扣件和小传感器盒画控制板时，元件直接从有现货的料号里挑",
+    "intro": "Open Parts Library 是深圳矽递科技（Seeed Studio）维护的开放元件库，这个仓库是它的 KiCad 版本，把库里上万个常用元件的原理图符号、PCB 封装和 3D 模型打包成能直接挂进 KiCad 的库文件。它要解决的是业余画板子最容易翻车的一环：图画得很漂亮，下单时才发现那颗芯片早就停产，或者封装尺寸和手里的实物对不上。\n它的特别之处在于和打样供应链绑在一起。OPL 里每个元件都对应 Seeed 自有仓库的一个料号，库存与价格公开，画图时选中的就是贴片时能贴上的那一颗。用法很轻：克隆仓库，在 KiCad 的符号库和封装库管理器里各加一条路径，元件搜索栏里就会多出 OPL 这一组；导出 BOM 时带上料号，打样厂不用再做一次元件匹配。\n库里覆盖阻容感、常用 MCU、电源芯片、连接器和传感器模组，也包含 XIAO 系列的封装，跟着新品同步更新。仓库本身没有中文说明，但命名规则简单，Seeed Wiki 的中文站上有配套的打样与 BOM 流程页，可以对照着看。\n落到 0301，它就是这张台子上的画板环节：给 PSK 扣件、标牌和小传感器盒画两层板，元件全部从 OPL 里选，画完在 60W 数显烙铁台上手贴一块样机，验证过再发打样。要注意库更新后封装偶尔改名，克隆时固定一个提交号，免得旧工程打开时丢封装。",
+    "diagram": {
+     "title": "OPL · 画进图里的元件都有现货",
+     "nodes": [
+      {
+       "id": "opl",
+       "label": "OPL 元件库\n符号与封装",
+       "kind": "db",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "pick",
+       "label": "按现货料号\n选型",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "kicad",
+       "label": "KiCad 工程\n原理图与 PCB",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "bom",
+       "label": "BOM 带料号",
+       "kind": "file",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "proto",
+       "label": "0301 烙铁台\n手贴样机",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "fab",
+       "label": "Seeed 打样\n贴片",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "PSK 小控制板",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "opl",
+       "kicad",
+       "挂库"
+      ],
+      [
+       "pick",
+       "kicad",
+       "选料"
+      ],
+      [
+       "kicad",
+       "bom",
+       "导出"
+      ],
+      [
+       "kicad",
+       "proto",
+       "样机"
+      ],
+      [
+       "bom",
+       "fab",
+       "料号"
+      ],
+      [
+       "proto",
+       "me",
+       "验证"
+      ],
+      [
+       "fab",
+       "me",
+       ""
+      ]
+     ],
+     "usage": "0301：OPL 选料 → KiCad 画板 → 烙铁台手贴 → 打样贴片"
+    }
+   },
+   {
     "name": "Ralim/IronOS",
     "url": "https://github.com/Ralim/IronOS",
     "stars": "8.3k",
@@ -535,6 +636,102 @@
  {
   "id": "0302",
   "github": [
+   {
+    "name": "Seeed-Studio/OSHW-XIAO-Series",
+    "url": "https://github.com/Seeed-Studio/OSHW-XIAO-Series",
+    "stars": "81",
+    "zh": "无中文",
+    "desc": "XIAO 全系列开源硬件资料：ESP32C3/C5/C6/S3、nRF52840、RP2040/2350、MG24 的引脚图、原理图与参考设计",
+    "why": "0805 把 XIAO 定为全屋主控基准，这个仓库是它的官方一手资料，星数不高却没有第二份；0302 格子柜那颗电池供电的温湿度节点，引脚与低功耗电路照它画",
+    "intro": "XIAO 是矽递科技（Seeed Studio）的拇指大小主控系列，一块指甲盖大的板子上做齐了 USB-C、锂电充电管理、深度睡眠和板载天线，同一套引脚排布下有 ESP32C3 / C5 / C6 / S3、nRF52840、RP2040 / RP2350、MG24 等十几种芯片。这个仓库就是这一系列的开源硬件资料本体。\n里面按型号分目录，每个型号给出引脚图、原理图 PDF、尺寸图和参考设计，另有扩展底板、电池板的图纸。它解决的是选型和布板：外形与焊盘一致，要 Wi-Fi 就挑 ESP32C6，要低功耗蓝牙就换 nRF52840，外围电路几乎不用重画；睡眠电流、充电电流这些关键值都写在各自的资料里，估电池能撑多久不用靠猜。\n仓库只有 81 星，也没有中文说明，但它是 0805 指定器件的官方一手资料，这件事上没有别的现成答案；配套中文内容在 Seeed Wiki 的 cn 站按型号一一对应，ESPHome 和 Arduino 都已原生支持这些板子。\n在 0302 里它是装备柜那颗监测节点的底稿：选 XIAO ESP32C6 接一颗 Grove 温湿度模块塞进 30cm 格子柜，照仓库里的电池板图纸配锂电，深度睡眠下每分钟醒一次上报 HomeAssistant，湿度过 70% 推送并开烘鞋器。坑在天线：木格子柜没问题，别把板子贴在金属挂板背面。",
+    "diagram": {
+     "title": "XIAO 系列 · 同一副引脚，十几种芯片",
+     "nodes": [
+      {
+       "id": "repo",
+       "label": "XIAO 资料库\n引脚图原理图",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "batt",
+       "label": "锂电 + 睡眠\n参考设计",
+       "kind": "step",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "XIAO ESP32C6\n自制节点板",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "grove",
+       "label": "Grove\n温湿度",
+       "kind": "sensor",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "dry",
+       "label": "烘鞋器 / 除湿盒",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "repo",
+       "core",
+       "布板"
+      ],
+      [
+       "batt",
+       "core",
+       "供电"
+      ],
+      [
+       "grove",
+       "core",
+       ""
+      ],
+      [
+       "core",
+       "ha",
+       "上报"
+      ],
+      [
+       "ha",
+       "dry",
+       "超 70%"
+      ],
+      [
+       "ha",
+       "me",
+       "推送"
+      ]
+     ],
+     "usage": "0302：XIAO 节点读格子柜湿度 → HA → 开烘鞋器并推送"
+    }
+   },
    {
     "name": "esphome/esphome",
     "url": "https://github.com/esphome/esphome",
@@ -2856,6 +3053,103 @@
   "id": "0306",
   "github": [
    {
+    "name": "Seeed-Studio/OSHW-XIAO-Series",
+    "url": "https://github.com/Seeed-Studio/OSHW-XIAO-Series",
+    "stars": "81",
+    "zh": "无中文",
+    "desc": "XIAO 全系列开源硬件资料：ESP32C3/C5/C6/S3、nRF52840、RP2040/2350、MG24 的引脚图、原理图与参考设计",
+    "why": "0805 定下全屋主控走 XIAO，这里是官方一手硬件资料；0306 气象杆下那块采集板和墨水屏驱动板都照它的引脚图画，选 ESP32C6 兼顾 Wi-Fi 与低功耗",
+    "intro": "XIAO 是矽递科技（Seeed Studio）做了五年的拇指大小主控系列，21×17mm 的板子上集成 USB-C、锂电充电、深度睡眠和板载天线，同一副引脚下并排放着 ESP32C3 / C5 / C6 / S3、nRF52840、RP2040 / RP2350、MG24 等十几种芯片。这个仓库是这一系列的开源硬件资料本体。\n目录按型号分，每个型号给出引脚定义图、原理图 PDF、机械尺寸和参考设计，外加扩展底板与电池板图纸。它真正的用处是布板前的那几个决定：哪几个脚能做 ADC、哪几个脚睡眠时会漏电、外接天线走哪个座子、太阳能小板怎么接充电管理，这些都写在资料里，不用拆板子量。\n仓库 81 星、无中文，但它是 0805 定标器件的官方一手资料，这个需求没有第二个现成答案；中文内容在 Seeed Wiki 的 cn 站上按型号对应，ESPHome 已原生支持 XIAO 全系。\n在 0306 里它管两块板：气象杆底部的采集板选 XIAO ESP32C6，照资料里的 ADC 与中断脚接风速风向和雨量筒的翻斗干簧管，百叶盒里那颗 Grove 气压温湿度模块走 I2C；隔断上的墨水屏用另一块 XIAO ESP32C6 驱动，靠深度睡眠一天刷几十次。注意户外那块要引外置天线，别让金属杆挡住信号。",
+    "diagram": {
+     "title": "XIAO 气象节点 · 一块板收全杆上的数",
+     "nodes": [
+      {
+       "id": "wind",
+       "label": "风杯 / 风向标\n雨量筒",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "grove",
+       "label": "Grove\n气压温湿",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "XIAO ESP32C6\nESPHome",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "repo",
+       "label": "XIAO 资料库\n引脚与天线",
+       "kind": "file",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ink",
+       "label": "7.5 寸墨水屏",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "wind",
+       "core",
+       "脉冲"
+      ],
+      [
+       "grove",
+       "core",
+       "I2C"
+      ],
+      [
+       "repo",
+       "core",
+       "",
+       "dash"
+      ],
+      [
+       "core",
+       "ha",
+       "上报"
+      ],
+      [
+       "ha",
+       "ink",
+       "天气页"
+      ],
+      [
+       "ink",
+       "me",
+       "就看"
+      ]
+     ],
+     "usage": "0306：杆上传感器 → XIAO 采集板 → HA → 墨水屏与浇灌联动"
+    }
+   },
+   {
     "name": "Madelena/esphome-weatherman-dashboard",
     "url": "https://github.com/Madelena/esphome-weatherman-dashboard",
     "stars": "1.3k",
@@ -3371,6 +3665,90 @@
  {
   "id": "0307",
   "github": [
+   {
+    "name": "Seeed-Studio/xiao-esphome-projects",
+    "url": "https://github.com/Seeed-Studio/xiao-esphome-projects",
+    "stars": "37",
+    "zh": "无中文",
+    "desc": "Seeed 官方的 XIAO + ESPHome 成品工程集：电能计量、土壤湿度、IoT 按钮、24GHz mmWave、W5500 以太网、2/6 路继电器",
+    "why": "0805 定标 XIAO 做全屋主控，这是官方给出的唯一一套现成 ESPHome 工程；0307 用它的电能计量工程做主轴电流监测与工时统计，安全联锁仍旧留在固件里",
+    "intro": "这个仓库是矽递科技（Seeed Studio）官方维护的 XIAO + ESPHome 工程集，里面不是库也不是文档，而是一个个能直接烧的成品：电能计量、土壤湿度、IoT 按钮、24GHz mmWave 生命体征与跌倒检测、W5500 以太网、2 路和 6 路继电器控制。每个工程一份 YAML 加一段接线说明。\n它的工作方式就是 ESPHome 那一套：YAML 描述有哪些传感器和开关，编译成固件烧进 XIAO，板子上电后自己连 Wi-Fi，用原生 API 被 HomeAssistant 发现，实体自动出现。好处是官方已经替你填好了坑——采样脚位、校准系数、滤波常数、上报间隔都是调过的，拿来改两行就是自己的设备，断网时本地自动化照常跑。\n仓库只有 37 星、没有中文，但它是 0805 定标器件的官方一手工程，这类现成答案只此一家；对应的中文接线图在 Seeed Wiki 的 cn 站上，ESPHome 主线本身有成熟的中文社区。\n在 0307 里它负责机床的监测这一侧：拿电能计量工程改成主轴电流监测，一块 XIAO ESP32C6 读互感器，判断在不在切削、累计工时、提醒换刀，并把峰值功率报给 0304 的负载表；开机时顺手让 0404 的集尘分路阀跟着动。要守住一条线：门磁与限位这类安全信号只接固件硬件输入，绝不绕到网络上来。",
+    "diagram": {
+     "title": "XIAO ESPHome · 官方工程改成机床监测",
+     "nodes": [
+      {
+       "id": "ct",
+       "label": "主轴电流\n互感器",
+       "kind": "sensor",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "yaml",
+       "label": "官方电能计量\nYAML",
+       "kind": "file",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "XIAO ESP32C6\nESPHome 固件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HomeAssistant\n工时与告警",
+       "kind": "db",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "dust",
+       "label": "0404 集尘分路阀",
+       "kind": "device",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "一个人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "ct",
+       "core",
+       "采样"
+      ],
+      [
+       "yaml",
+       "core",
+       "改两行"
+      ],
+      [
+       "core",
+       "ha",
+       "上报"
+      ],
+      [
+       "ha",
+       "dust",
+       "联动"
+      ],
+      [
+       "ha",
+       "me",
+       "提醒"
+      ]
+     ],
+     "usage": "0307：互感器 → XIAO 计量固件 → HA 工时与集尘联动"
+    }
+   },
    {
     "name": "bdring/FluidNC",
     "url": "https://github.com/bdring/FluidNC",

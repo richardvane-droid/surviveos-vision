@@ -975,6 +975,104 @@
   "id": "0103",
   "github": [
    {
+    "name": "Seeed-Studio/OSHW-XIAO-Series",
+    "url": "https://github.com/Seeed-Studio/OSHW-XIAO-Series",
+    "stars": "81",
+    "desc": "Seeed XIAO 全系列的开源硬件资料库：ESP32C3/C5/C6/S3、nRF52840、RP2040/2350、MG24 等指甲盖大小主控的引脚图、原理图与参考设计",
+    "why": "0805 定的全屋 DIY 器件基准就是 XIAO 加 Grove，官方一手资料；画框墙的光照节点要塞进木框散热缝，板子只有 21×17.5mm，星低但唯一出处",
+    "zh": "无中文",
+    "intro": "OSHW-XIAO-Series 是矽递科技为 XIAO 系列小主控开的开源硬件资料仓库。XIAO 的特点只有一句话：把一块能联网的主控压到 21×17.5mm，正面邮票孔加 Type-C，背面留出 Grove 焊盘。仓库按型号分目录，放引脚图、原理图、封装尺寸图和参考设计，覆盖 ESP32C3、C6、S3、nRF52840、RP2040、MG24 等十几块板子。\n它不是固件也不是库，而是做板子之前要查的那份底档。某个脚能不能当 ADC、哪几个脚被片上 Flash 占了、天线附近留多大净空、锂电池座怎么接、深睡电流能压到几微安，答案都在这里。ESP32 系直接跑 ESPHome，nRF52840 走 Zephyr，RP2040 能上 MicroPython，同一套外形换芯片不用重画底板。\n资料是英文的，但 Seeed Wiki 有中文版，型号页和这里的图纸一一对应，社区里的复刻底板也照这份尺寸来。仓库跟着新型号持续更新，是长期维护的一手资料。\n画框墙这边用它做一件小事：南窗边那颗光照节点。选 XIAO ESP32C6，背面接 Grove 光照模块，照引脚图确认 I2C 脚位和天线净空，整块板藏进木框下沿的散热缝。固件跑 ESPHome，每 10 秒把照度发给 HA，HA 算出亮度参数再由 0804 那台 M1 Mac 下发给九块屏。坑是木框里温度偏高，别把板子贴着屏幕背面。",
+    "diagram": {
+     "title": "XIAO 系列 · 指甲盖大的开源主控",
+     "nodes": [
+      {
+       "id": "doc",
+       "label": "引脚图 / 原理图\n参考设计",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "grove",
+       "label": "Grove 光照模块",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "XIAO ESP32C6\n照图选脚位",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "fw",
+       "label": "ESPHome 固件",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "ha",
+       "label": "HA 算亮度\nM1 Mac 下发",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "wall",
+       "label": "九块 iPad 画框",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "下楼倒咖啡的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "doc",
+       "core",
+       "按图布板",
+       "dash"
+      ],
+      [
+       "grove",
+       "core",
+       "I2C 照度"
+      ],
+      [
+       "fw",
+       "core",
+       "刷入",
+       "dash"
+      ],
+      [
+       "core",
+       "ha",
+       "每 10 秒"
+      ],
+      [
+       "ha",
+       "wall",
+       "亮度参数"
+      ],
+      [
+       "wall",
+       "me",
+       "像画"
+      ]
+     ],
+     "usage": "0103：Grove 光照 → XIAO ESP32C6 → HA 算亮度 → 九屏"
+    }
+   },
+   {
     "name": "MagicMirrorOrg/MagicMirror",
     "url": "https://github.com/MagicMirrorOrg/MagicMirror",
     "stars": "23.8k",
@@ -1964,6 +2062,108 @@
   "id": "0105",
   "github": [
    {
+    "name": "Seeed-Studio/OSHW-reCamera-Series",
+    "url": "https://github.com/Seeed-Studio/OSHW-reCamera-Series",
+    "stars": "474",
+    "desc": "Seeed 开源 AI 相机整机 reCamera 的硬件仓库：RISC-V 1TOPS SoC、可换的传感器板与底板，出厂固件自带 Node-RED 和 SenseCraft",
+    "why": "0805 把全屋 DIY 器件基准定在 Seeed 生态，摄像头就用它；台面上方那只俯拍机位换成 reCamera 整机，本机出 RTSP 给 Frigate",
+    "zh": "有中文文档",
+    "intro": "reCamera 是矽递科技做的开源 AI 相机整机，这个仓库放的是它的硬件：核心板、传感器板、底板的原理图、PCB 和结构件图纸全部开源。它要解决的问题是——市面上的网络摄像头要么封闭要么只会推流，想在机身上跑一点识别就得另外挂一台主机。\n做法是把一台相机拆成可换的三层。核心板用 SG2002 这类 RISC-V 芯片，带 1TOPS NPU，跑的是完整 Linux；传感器板按需要换 OV5647 或者 IMX335 等不同镜头；底板决定接口，有以太网、Wi-Fi 和树莓派兼容排针几种。整机比火柴盒大不了多少，出厂固件带 Node-RED 和 SenseCraft，拖几个节点就能把检测到某类物体接到 MQTT 上，也能直接吐一路 RTSP。\n官方 Wiki 有完整中文版，型号页、烧录和 Node-RED 教程都有中文，社区里换镜头、做外壳、接 Home Assistant 的例子不少，仓库本身随新型号持续更新。\n放进 PSK 工作台，它就是横梁上那只俯拍机位：选带以太网底板的型号，球头座固定，正对台面中央那块 A3 皮垫，网线走横梁线槽不走 Wi-Fi。RTSP 流照旧交给 Frigate 按盒号录制，机身上另外跑一个轻量模型判断盒盖有没有合上，给磁簧开关做第二路兜底。坑是长条灯就在前方 20cm，镜头容易过曝，装好先锁曝光再调白平衡。",
+    "diagram": {
+     "title": "reCamera · 机身自带算力的相机",
+     "nodes": [
+      {
+       "id": "lens",
+       "label": "可换传感器板\n镜头模组",
+       "kind": "device",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "desk",
+       "label": "台面 A3 装配区",
+       "kind": "device",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "reCamera 核心板\nRISC-V 1TOPS",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "nr",
+       "label": "Node-RED\n机上流程",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "frig",
+       "label": "Frigate 录制",
+       "kind": "step",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "nas",
+       "label": "NAS 素材库",
+       "kind": "db",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "剪视频的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "lens",
+       "core",
+       "图像"
+      ],
+      [
+       "desk",
+       "core",
+       "俯拍画面"
+      ],
+      [
+       "core",
+       "nr",
+       "识别结果"
+      ],
+      [
+       "nr",
+       "frig",
+       "合盖信号",
+       "dash"
+      ],
+      [
+       "core",
+       "frig",
+       "RTSP"
+      ],
+      [
+       "frig",
+       "nas",
+       "按盒号归档"
+      ],
+      [
+       "nas",
+       "me",
+       "路径推送"
+      ]
+     ],
+     "usage": "0105：reCamera 俯拍 → RTSP 给 Frigate → NAS 素材库"
+    }
+   },
+   {
     "name": "blakeblackshear/frigate",
     "url": "https://github.com/blakeblackshear/frigate",
     "stars": "35.1k",
@@ -2458,6 +2658,102 @@
  {
   "id": "0106",
   "github": [
+   {
+    "name": "Seeed-Studio/xiao-esphome-projects",
+    "url": "https://github.com/Seeed-Studio/xiao-esphome-projects",
+    "stars": "37",
+    "desc": "Seeed 官方的 XIAO 加 ESPHome 成品工程集：电能计量、土壤湿度、IoT 按钮、24GHz mmWave、W5500 以太网、2 路和 6 路继电器都有现成 YAML",
+    "why": "0805 定的全屋 DIY 器件基准就是 XIAO 加 Grove，官方 ESPHome 接法；烟温节点和风扇 PWM 照它的 YAML 改，星低但唯一范例",
+    "zh": "无中文",
+    "intro": "xiao-esphome-projects 是矽递科技官方维护的示例仓库，把 XIAO 系列小主控和 ESPHome 之间的接法一条条写成可以直接抄的工程。它要解决的问题很实际：XIAO 板子小、型号多，引脚和外设怎么在 YAML 里声明，官方说明散在 Wiki 各处，这个仓库把常见场景收成一份份完整配置。\n每个工程是一个目录，里面一份 YAML 加一段说明：选哪块 XIAO、接什么模块、接哪几个脚、刷进去之后 Home Assistant 里会冒出哪些实体。现有工程覆盖电能计量、土壤湿度、IoT 按钮、24GHz mmWave 人体存在与 MR60BHA2 跌倒检测、W5500 以太网，以及 2 路和 6 路继电器。编译出的固件跑在板子本地，判断和定时都不过服务器，断网照样工作，HA 只负责画曲线和推送。\n仓库只有英文说明，但每块板子在 Seeed Wiki 上都有中文页，照着看不吃力。更新跟着 ESPHome 版本走，新型号一般很快补上。\n柴火炉这边照它用两处。一是烟温节点：一块 XIAO ESP32C6 配热电偶放大板夹在烟管上，YAML 结构照仓库里的传感器工程改，甜区 150 到 300℃ 的阈值和蜂鸣器全写在本地。二是循环风扇：照它的继电器与 PWM 工程接风扇，温差大于 2℃ 才转。坑是板子别贴着烟管，留出 30cm 以上，天线也别正对铸铁炉体。",
+    "diagram": {
+     "title": "XIAO 加 ESPHome · 官方现成工程",
+     "nodes": [
+      {
+       "id": "repo",
+       "label": "官方工程集\nYAML 加说明",
+       "kind": "file",
+       "col": 0,
+       "row": 0
+      },
+      {
+       "id": "probe",
+       "label": "热电偶 / Grove\n温度模块",
+       "kind": "sensor",
+       "col": 0,
+       "row": 1
+      },
+      {
+       "id": "core",
+       "label": "XIAO ESP32C6\nESPHome 固件",
+       "kind": "core",
+       "col": 1,
+       "row": 0
+      },
+      {
+       "id": "logic",
+       "label": "本地阈值\n断网也判",
+       "kind": "step",
+       "col": 1,
+       "row": 1
+      },
+      {
+       "id": "fan",
+       "label": "循环风扇 PWM",
+       "kind": "device",
+       "col": 2,
+       "row": 0
+      },
+      {
+       "id": "ha",
+       "label": "HA 烟温曲线",
+       "kind": "screen",
+       "col": 2,
+       "row": 1
+      },
+      {
+       "id": "me",
+       "label": "守炉的人",
+       "kind": "person",
+       "col": 3,
+       "row": 0
+      }
+     ],
+     "edges": [
+      [
+       "repo",
+       "core",
+       "抄 YAML",
+       "dash"
+      ],
+      [
+       "probe",
+       "core",
+       "烟温 / 室温"
+      ],
+      [
+       "core",
+       "logic"
+      ],
+      [
+       "logic",
+       "fan",
+       "占空比"
+      ],
+      [
+       "core",
+       "ha",
+       "上报"
+      ],
+      [
+       "ha",
+       "me",
+       "添柴提醒"
+      ]
+     ],
+     "usage": "0106：热电偶 → XIAO 本地判断 → 风扇 PWM 与 HA 提醒"
+    }
+   },
    {
     "name": "esphome/esphome",
     "url": "https://github.com/esphome/esphome",
