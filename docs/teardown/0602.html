@@ -40,13 +40,13 @@
   
   <section class="blk part" id="p1">
     <h2><span class="kind kind-hw">产品模块</span> 1. 桧木传感器杆总成</h2>
-    <p class="scene">立在草地中段东墙下、雨水罐旁的一米高桧木杆是自动浇灌的大脑兼感官。8cm 方料桧木掏空走线，顶上做小斜屋顶防雨，屋顶下装翻斗雨量计：每翻一次斗记 0.2mm 雨。控制盒藏在杆内，装 ESP32 和三路继电器；杆面只露一颗指示灯和一颗大红按钮，按下就手动浇 5 分钟。杆脚的电容式土壤探针埋 15cm 深，正是草根最密的地方。</p>
+    <p class="scene">立在草地中段东墙下、雨水罐旁的一米高桧木杆是自动浇灌的大脑兼感官。8cm 方料桧木掏空走线，顶上做小斜屋顶防雨，屋顶下装翻斗雨量计：每翻一次斗记 0.2mm 雨。控制盒藏在杆内，装 XIAO ESP32C6 和 Grove 6 路继电器模块；杆面只露一颗指示灯和一颗大红按钮，按下就手动浇 5 分钟。杆脚的 Grove 电容式土壤探针埋 15cm 深，正是草根最密的地方。</p>
     
     <figure class="part-art"><div class="pc-frame"><img class="pc-png" src="../parts/0602-1.png" alt="桧木传感器杆总成 爆炸拆解图" loading="lazy"></div><figcaption><span class="hand">爆炸拆解图 · 三维建模铅笔稿</span></figcaption></figure>
     
     <div class="two">
       <div><h3>关键参数 / 组成</h3>
-        <ul class="inspo"><li>桧木方料 8×8cm，高 1m，内部掏空 4cm 走线槽</li><li>翻斗雨量计 0.2mm/翻，离树 3m 以上</li><li>电容式探针埋深 15cm，北中南每段一根，线缆穿波纹管</li><li>ESP32 + 三路 12V 继电器藏在杆内，IP54 盒</li></ul></div>
+        <ul class="inspo"><li>桧木方料 8×8cm，高 1m，内部掏空 4cm 走线槽</li><li>翻斗雨量计 0.2mm/翻，离树 3m 以上</li><li>Grove 电容式探针埋深 15cm，北中南每段一根，线缆穿波纹管</li><li>XIAO ESP32C6 + Grove 6 路继电器模块藏在杆内，IP54 盒</li></ul></div>
       <div>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
@@ -68,7 +68,7 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-logic">联动逻辑</span> 3. 三传感器灌溉判断</h2>
-    <p class="scene">浇不浇由三个传感器“开会”决定。每天凌晨四点 ESP32 醒来，读北中南三段含水率、雨量和罐水位，三个条件同时满足才开阀：含水率低于该区阈值（芒草 18%、朴树 25%、野花 22%）、未来 6 小时无雨、罐里有水。浇多久由 HomeAssistant 按前一天蒸散量算出各区需水量再折成分钟。白天绝不浇，除非按红按钮。</p>
+    <p class="scene">浇不浇由三个传感器“开会”决定。每天凌晨四点 XIAO ESP32C6 醒来，读北中南三段含水率、雨量和罐水位，三个条件同时满足才开阀：含水率低于该区阈值（芒草 18%、朴树 25%、野花 22%）、未来 6 小时无雨、罐里有水。浇多久由 HomeAssistant 按前一天蒸散量算出各区需水量再折成分钟。白天绝不浇，除非按红按钮。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -228,7 +228,7 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>触发：每天 04:00，窗口 04:00~06:00</li><li>阈值：芒草 18% · 朴树 25% · 野花 22%</li><li>时长：蒸散量折算，单区 5~15 分钟封顶</li><li>兜底：断网时用昨日时长；红按钮手动 5 分钟</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">altmenorg/HAsmartirrigation 按蒸散量算各区秒数，esphome/esphome 在杆内 ESP32 本地做三条件判断并用 sprinkler 组件开阀</p>
+      <div><h3>主要实现路径</h3><p class="impl">altmenorg/HAsmartirrigation 按蒸散量算各区秒数，esphome/esphome 在杆内 XIAO ESP32C6 本地做三条件判断并用 sprinkler 组件开阀</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/altmenorg/HAsmartirrigation" target="_blank" rel="noopener">altmenorg/HAsmartirrigation</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
   </section>

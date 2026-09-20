@@ -29,16 +29,16 @@
 <article class="mod about">
   <header class="mod-head">
     <p class="kicker">全站引用 · 一</p>
-    <h1>106 个模块专门方案</h1>
-    <nav class="refs-tabs"><a href="refs.html" class="on">专门方案 <i>106</i></a><a href="refs-ext.html" class="">延伸阅读 <i>104</i></a></nav>
+    <h1>113 个模块专门方案</h1>
+    <nav class="refs-tabs"><a href="refs.html" class="on">专门方案 <i>113</i></a><a href="refs-ext.html" class="">延伸阅读 <i>104</i></a></nav>
     <p class="lede">每个模块页“GitHub 上的成熟方案”那一栏引用的项目，去重后按星数分三档：都是直接为这个模块选的方案——硬件设计、固件、HomeAssistant 集成、管理软件。挑选时先看知名度（星数），同档次里有中文的优先；每个仓库都在 2026-09 打开核实过存在，星数取当时页面显示值，绿色标签表示有中文（官方中文 README / 中文文档站 / 界面有中文）。每个项目下面是约 500 字的介绍，被多个模块共用的会按模块各列一段“在这里怎么用”；铅笔示意图在各模块页——点右侧模块编号过去看。和模块关系没那么直接、纯为了学一遍的经典项目在另一页。</p>
   </header>
   <section class="blk refs-sum">
-    <div class="rs"><b>106</b><span>个项目</span></div>
-    <div class="rs"><b>34</b><span>个有中文</span></div>
+    <div class="rs"><b>113</b><span>个项目</span></div>
+    <div class="rs"><b>36</b><span>个有中文</span></div>
     <div class="rs"><b>46</b><span>个模块引用</span></div>
-    <div class="rs"><b>140</b><span>处引用</span></div>
-    <nav class="rs-jump"><a href="#t1">万星以上 <i>17</i></a><a href="#t2">1k ～ 10k 星 <i>46</i></a><a href="#t3">1k 星以下 <i>43</i></a></nav>
+    <div class="rs"><b>165</b><span>处引用</span></div>
+    <nav class="rs-jump"><a href="#t1">万星以上 <i>17</i></a><a href="#t2">1k ～ 10k 星 <i>45</i></a><a href="#t3">1k 星以下 <i>51</i></a></nav>
   </section>
   
   <section class="blk repo-tier" id="t1">
@@ -113,9 +113,9 @@
             <span class="zh ">有中文文档站</span>
           </div>
           <p class="rdesc">免费开源的参数化 3D 建模软件，2026 年已到 1.1 版，带建筑 BIM、零件、装配和图纸工作台，界面和 wiki 都有中文</p>
-          <div class="rintro"><p>FreeCAD 是 2002 年发起、由全球志愿者维护的开源参数化三维建模软件，GitHub 上 32.2k 星，2026 年 4 月发布了 1.1.1 版，是开源世界里最接近商业 CAD 的通用工具。它解决的问题是：自己盖一个小木构，脑子里的尺寸和纸上的草图对不上，改一根柱子高度就要重画全部，而参数化建模让每个尺寸都是变量，改一处整套联动。</p><p>它的结构是工作台制：Sketcher 画带约束的二维草图，PartDesign 把草图拉伸切削成实体，BIM 工作台自带墙、梁、柱、屋顶这类建筑对象，TechDraw 从模型出带尺寸的工程图，Spreadsheet 工作台把尺寸放进表格驱动模型，反过来也能从模型统计体积和数量。文件是开放的 XML 格式，能导出 STEP、DXF、STL。界面有简体中文，官方 wiki 有中文页面，B 站教程很多。</p><p class="rmod"><a href="modules/0204.html"><i>0204</i>系统设计工作台</a>在 0204 里它是中屏的主角，也是这面图纸墙的源头：木屋和地堡先在 BIM 工作台按 0008 的实测尺寸建一个总模型，各模块的风管、滑轨、货架都作为子对象往里加；要打印的 PSK 内衬和 0210 的斜滑轨导轨用 Part Design 画完直接导 STL 给右屏的切片软件；每个模块画好后用 TechDraw 出一张 A3 图纸打印挂上墙。坑是学习曲线仍陡，先用 Part Design 画几个小零件再上 BIM，模型按区域拆文件用链接引用。</p><p class="rmod"><a href="modules/0701.html"><i>0701</i>钓台本体与顶棚</a>在 0701 里它是钓台的图纸本：先用 Spreadsheet 写下台面 2.5×2.2 米、六个墩位、龙骨截面、顶棚 2.2×2 米单坡这些参数，BIM 工作台里立柱、梁、檩、板一一建成对象，坡度按临河一侧低来定，竹瓦和雨链位置画进去看檐口滴水落在台外哪里；TechDraw 出一张墩位放样图和一张龙骨下料图，材料清单从模型里自动算出防腐松木总长和地脚螺栓数量。缓坡踏步和竹扶手也一起建，站在模型里看视线有没有被柱子挡住。要注意 BIM 工作台上手比 PartDesign 陡，小结构直接用 PartDesign 拉伸木方更快；单位一开始就设成毫米。</p><p class="rmod"><a href="modules/0805.html"><i>0805</i>全套方案材质总设计</a>在 0805 里它是材质总纲的数字样板间：把欧标 2020（槽宽 6mm、壁厚 1.8）和 3030 / 4040（槽宽 8mm）做成两个参数化零件，角码、T 型螺母、端盖各一个，再做一套白蜡木板、植鞣皮面的外观库；以后 0301 工具台、0401 过道工具间、0404 木工间画机架时直接从这个库里拖，选错槽宽的配件就装不上，等于把材质规则写进了模型。零件库放 NAS 上统一版本，别各存各的。</p></div>
+          <div class="rintro"><p>FreeCAD 是 2002 年发起、由全球志愿者维护的开源参数化三维建模软件，GitHub 上 32.2k 星，2026 年 4 月发布了 1.1.1 版，是开源世界里最接近商业 CAD 的通用工具。它解决的问题是：自己盖一个小木构，脑子里的尺寸和纸上的草图对不上，改一根柱子高度就要重画全部，而参数化建模让每个尺寸都是变量，改一处整套联动。</p><p>它的结构是工作台制：Sketcher 画带约束的二维草图，PartDesign 把草图拉伸切削成实体，BIM 工作台自带墙、梁、柱、屋顶这类建筑对象，TechDraw 从模型出带尺寸的工程图，Spreadsheet 工作台把尺寸放进表格驱动模型，反过来也能从模型统计体积和数量。文件是开放的 XML 格式，能导出 STEP、DXF、STL。界面有简体中文，官方 wiki 有中文页面，B 站教程很多。</p><p class="rmod"><a href="modules/0204.html"><i>0204</i>系统设计工作台</a>在 0204 里它是中屏的主角，也是这面图纸墙的源头：木屋和地堡先在 BIM 工作台按 0008 的实测尺寸建一个总模型，各模块的风管、滑轨、货架都作为子对象往里加；要打印的 PSK 内衬和 0210 的斜滑轨导轨用 Part Design 画完直接导 STL 给右屏的切片软件；每个模块画好后用 TechDraw 出一张 A3 图纸打印挂上墙。坑是学习曲线仍陡，先用 Part Design 画几个小零件再上 BIM，模型按区域拆文件用链接引用。</p><p class="rmod"><a href="modules/0701.html"><i>0701</i>钓台本体与顶棚</a>在 0701 里它是钓台的图纸本：先用 Spreadsheet 写下台面 2.5×2.2 米、六个墩位、龙骨截面、顶棚 2.2×2 米单坡这些参数，BIM 工作台里立柱、梁、檩、板一一建成对象，坡度按临河一侧低来定，竹瓦和雨链位置画进去看檐口滴水落在台外哪里；TechDraw 出一张墩位放样图和一张龙骨下料图，材料清单从模型里自动算出防腐松木总长和地脚螺栓数量。缓坡踏步和竹扶手也一起建，站在模型里看视线有没有被柱子挡住。要注意 BIM 工作台上手比 PartDesign 陡，小结构直接用 PartDesign 拉伸木方更快；单位一开始就设成毫米。</p><p class="rmod"><a href="modules/0805.html"><i>0805</i>全套方案材质与器件总设计</a>在 0805 里它是材质总纲的数字样板间：把欧标 2020（槽宽 6mm、壁厚 1.8）和 3030 / 4040（槽宽 8mm）做成两个参数化零件，角码、T 型螺母、端盖各一个，再做一套白蜡木板、植鞣皮面的外观库；以后 0301 工具台、0401 过道工具间、0404 木工间画机架时直接从这个库里拖，选错槽宽的配件就装不上，等于把材质规则写进了模型。零件库放 NAS 上统一版本，别各存各的。</p></div>
         </div>
-        <div class="rused"><span class="rused-l">用在</span><a href="modules/0204.html" title="系统设计工作台"><i>0204</i>系统设计工作台</a><a href="modules/0701.html" title="钓台本体与顶棚"><i>0701</i>钓台本体与顶棚</a><a href="modules/0805.html" title="全套方案材质总设计"><i>0805</i>全套方案材质总设计</a></div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0204.html" title="系统设计工作台"><i>0204</i>系统设计工作台</a><a href="modules/0701.html" title="钓台本体与顶棚"><i>0701</i>钓台本体与顶棚</a><a href="modules/0805.html" title="全套方案材质与器件总设计"><i>0805</i>全套方案材质与器件总设计</a></div>
       </div>
       <div class="repo-row">
         <div class="rmain">
@@ -252,7 +252,7 @@
     </div>
   </section>
   <section class="blk repo-tier" id="t2">
-    <h2><em>★</em> 1k ～ 10k 星 <small>46 个</small></h2>
+    <h2><em>★</em> 1k ～ 10k 星 <small>45 个</small></h2>
     <p class="tier-note">细分领域里的主流方案，大多有活跃维护者和现成的接入示例</p>
     <div class="repo-table">
       <div class="repo-row">
@@ -265,7 +265,7 @@
           <p class="rdesc">程序员的 3D CAD：用脚本描述几何体，参数一改整件重生，Thingiverse 和 MakerWorld 上可自定义的型材配件多半用它写</p>
           <div class="rintro"><p>OpenSCAD 是程序员的 3D CAD：不用鼠标画，而是用一种小脚本语言描述几何体，9.6k 星，稳定版还是 2021.01，但开发版快照一直在更新。它解决的问题是：需要成批量、按参数变化的零件，同一个角码要出 2020 和 3030 两个版本，改一个数字就行。</p><p>它的模型是构造实体几何：立方体、圆柱、球这些基本体经过并、差、交和平移旋转拼成复杂件，二维轮廓可以拉伸成体，STL 和 3MF 直接导出去打印。所有尺寸都是变量，顶部定义 slot = 6 之类的参数，Customizer 面板里拖滑块就能改；正因如此，Thingiverse 和 MakerWorld 上绝大多数可自定义的型材配件都是它写的，围绕它长出了 NopSCADlib 等大型零件库。界面有中文语言包，README 英文。</p><p>在 0805 里它是配件打印的生产线：黑色角码缺货时，用它写一个参数化角码，槽宽、螺孔间距、壁厚都是变量，欧标 2020 出一版、3030 出一版，再加端盖、槽盖条、脚垫这几个常用件，导出 3MF 发给阁楼的拓竹打印。注意 OpenSCAD 只管形状不管装配关系，装配还是回 FreeCAD 看，两边靠同一份参数文件保持一致；打印件用黑色 PETG，别用 PLA。</p></div>
         </div>
-        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质总设计"><i>0805</i>全套方案材质总设计</a></div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质与器件总设计"><i>0805</i>全套方案材质与器件总设计</a></div>
       </div>
       <div class="repo-row">
         <div class="rmain">
@@ -422,18 +422,6 @@
           <div class="rintro"><p>ATC_MiThermometer 是俄罗斯开发者 pvvx 维护的开源替换固件，专门刷进小米、青萍、MHO 等使用 Telink 芯片的蓝牙温湿度计里。原厂固件要绑米家 App、走云端、广播又稀又慢，刷了它以后设备变成一颗纯本地的蓝牙广播探头，一颗纽扣电池能撑一年以上，还多了历史记录和屏幕自定义。pvvx 这个分支功能最全、更新最勤，GitHub 上 4.1k 星。</p><p>工作原理很简单：固件通过浏览器网页就能 OTA 刷入，不用拆机也不用烧录器；刷好后设备每隔设定的秒数广播一条 BTHome 或 ATC 格式的数据包，带温度、湿度、电量；HomeAssistant 的蓝牙适配器、ESPHome 蓝牙代理、手机都能收到并解析，无需配对。</p><p>它支持 LYWSD03MMC 的六种硬件版本、青萍 CGG1、CGDK2 等十几款设备。README 只有英文，但设备是国产的，B 站和小红书上刷机教程非常多，五分钟搞定。</p><p>放进 0501 里，它就是塞在柴堆缝里的回潮探头：买两只十几块的 LYWSD03MMC，刷好固件装进打了透气孔的小塑料盒，一只塞进中层柴缝，一只放架顶对照外界空气；广播间隔调到一分钟，HomeAssistant 做七日均值和 85% 回潮告警。要注意蓝牙可能穿不透木屋砖墙，最好在南窗放一个 ESP32 蓝牙代理接力。</p></div>
         </div>
         <div class="rused"><span class="rused-l">用在</span><a href="modules/0501.html" title="柴火堆墙"><i>0501</i>柴火堆墙</a></div>
-      </div>
-      <div class="repo-row">
-        <div class="rmain">
-          <div class="rhead">
-            <a class="rname" href="https://github.com/apirrone/Open_Duck_Mini" target="_blank" rel="noopener">apirrone/Open_Duck_Mini</a>
-            <span class="stars">★ 3.9k</span>
-            <span class="zh ">有中文文档站</span>
-          </div>
-          <p class="rdesc">Microduck 的前身：仿迪士尼 BDX 机器人的迷你双足鸭，约 42cm 高、BOM 400 美元以内，STL 与 BOM 全开源</p>
-          <div class="rintro"><p>Open Duck Mini 是 Antoine Pirrone 发起的开源项目，目标是做一只迷你版的迪士尼 BDX 机器人，整机 BOM 控制在 400 美元以内，3.9k 星，也是 Microduck 的直接前身。它解决的问题是一个人在家能不能从零造一只会走的双足鸭，答案是能。</p><p>它的路线和 Microduck 一致但更开放：v2 版约 42cm 高，主控是树莓派 Zero 2W，舵机是 Feetech 总线舵机，仿真在 MuJoCo，训练和运行时各有配套仓库，两份训好的 ONNX 步态直接给了。所有打印件的 STL、BOM 表格、打印指南和装配说明都在仓库里，Discord 社区很活跃，近 500 个 fork。中文方面，README 链了一份社区维护的飞书中文文档，B 站有完整复刻系列。</p><p>在 0803 里它是备用路线和参考书：如果 399 美元的 Microduck 套件缺货或想要更大一只，就照它的清单自己打印和采购；更重要的是它的打印件和舵机选型经验：外壳怎么分件才好换季换羽毛、哪些舵机耐摔，都可以直接抄。注意它比 Microduck 高 17cm，钻不过 12cm 的鸭子通道，要走这条路线就得把门下净空改成 45cm 以上。</p></div>
-        </div>
-        <div class="rused"><span class="rused-l">用在</span><a href="modules/0803.html" title="miniduck"><i>0803</i>miniduck</a></div>
       </div>
       <div class="repo-row">
         <div class="rmain">
@@ -685,7 +673,7 @@
           <p class="rdesc">OpenSCAD 零件库和项目框架：自带 E2020 / E3030 / E4040 铝型材、角码、滑入式 T 型螺母等标准件，能生成 BOM 和装配图</p>
           <div class="rintro"><p>NopSCADlib 是 Chris Palmer（nophead）维护的 OpenSCAD 零件库和项目框架，1.6k 星，GPL v3，持续更新十几年。它解决的问题是：做一台机器要用的标准件，每次都自己画一遍太浪费，不如有一个尺寸准确的库，顺手把 BOM 和装配图也生成了。</p><p>它的内容分两大块。vitamins（外购件）里直接有 E2020、E3030、E4040 等一整套铝型材模型，带真实槽形截面，配套 extrusion_corner_bracket、extrusion_inner_corner_bracket 角码和 sliding_t_nut 滑入式 T 型螺母；printed（打印件）里有盒子、铰链、线夹、脚垫等结构件。框架部分是一套 Python 脚本：在 OpenSCAD 注释里写 Markdown，脚本就能扫出 BOM 清单和分步装配图。README 和文档只有英文，看示例就会。</p><p>在 0805 里它是型材机架的标准件字典：0804 那个 60×40cm 三机机架，直接用 E2020 拼框架、角码做角、T 型螺母挂托板，跑一次脚本就得到型材切割清单和螺丝数量。要注意它的 2020 截面是 6mm 槽，正好对上 D3 定标；但它默认角码是银色通用件，喷砂黑那几件要在 printed 里自己加颜色参数；3030 是 8mm 槽，配件要分别传参。</p></div>
         </div>
-        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质总设计"><i>0805</i>全套方案材质总设计</a></div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质与器件总设计"><i>0805</i>全套方案材质与器件总设计</a></div>
       </div>
       <div class="repo-row">
         <div class="rmain">
@@ -810,7 +798,7 @@
     </div>
   </section>
   <section class="blk repo-tier" id="t3">
-    <h2><em>★</em> 1k 星以下 <small>43 个</small></h2>
+    <h2><em>★</em> 1k 星以下 <small>51 个</small></h2>
     <p class="tier-note">小而专的项目：恰好是这个需求的现成答案，用之前先看最近一次提交</p>
     <div class="repo-table">
       <div class="repo-row">
@@ -1008,6 +996,18 @@
       <div class="repo-row">
         <div class="rmain">
           <div class="rhead">
+            <a class="rname" href="https://github.com/Seeed-Studio/PN532" target="_blank" rel="noopener">Seeed-Studio/PN532</a>
+            <span class="stars">★ 502</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Seeed 的 PN532 NFC 读写库：13.56MHz 读卡、写卡与点对点，支持 Arduino 和 ESP32 的 I2C、SPI、HSU 三种接法</p>
+          <div class="rintro"><p>PN532 是恩智浦那颗用得最广的 13.56MHz NFC 芯片，Seeed 这个仓库是它在 Arduino 生态里的官方驱动库，配套自家的 NFC 模块与扩展板。它解决的问题是：NFC 协议栈很厚，直接写寄存器很痛苦，这个库把常用的几件事——读卡号、读写 NDEF 数据块、把板子模拟成一张卡、两块板之间点对点传数据——都包成了几行就能调的接口。</p><p>用法上它支持 I2C、SPI 和 HSU 三种连法，同一套 API 换个构造函数就行，ESP32 和 XIAO 系列都能跑。典型流程是上电初始化、等卡、拿到 UID，按需要再读扇区或者 NDEF 记录，读一次几十毫秒。仓库里附了十来个示例，从最简单的读 UID 到写一条 NDEF 网址都有，issue 区还积累了不少排线长度和天线干扰方面的经验。</p><p>说明是英文的，但 PN532 在中文创客圈用了十几年，接线和排错的中文帖子极多，Seeed Wiki 上模块页也有中文。库本身很稳定，是这颗芯片事实上的默认选择。</p><p>藏宝阁这边给它一个安静的活：写字台一角埋一块 PN532 模块，接那块 XIAO ESP32C6。书格尽端的铁皮宝箱、每季度换下来的海报卷、常翻的那几本书都贴一张 NFC 标签，进出时在台角刷一下，ESPHome 把 UID 发给 HA 存进物品记录。坑是台面下若有金属层会屏蔽天线，埋之前先隔空试读一次。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0209.html" title="藏宝阁"><i>0209</i>藏宝阁</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
             <a class="rname" href="https://github.com/fl4p/batmon-ha" target="_blank" rel="noopener">fl4p/batmon-ha</a>
             <span class="stars">★ 489</span>
             <span class="zh zh-no">无中文</span>
@@ -1032,6 +1032,18 @@
       <div class="repo-row">
         <div class="rmain">
           <div class="rhead">
+            <a class="rname" href="https://github.com/Seeed-Studio/OSHW-reCamera-Series" target="_blank" rel="noopener">Seeed-Studio/OSHW-reCamera-Series</a>
+            <span class="stars">★ 474</span>
+            <span class="zh ">有中文文档</span>
+          </div>
+          <p class="rdesc">Seeed 开源 AI 相机整机 reCamera 的硬件仓库：RISC-V 1TOPS SoC、可换的传感器板与底板，出厂固件自带 Node-RED 和 SenseCraft</p>
+          <div class="rintro"><p>reCamera 是 Seeed 开源的一台 AI 相机整机：一颗 1TOPS 算力的 RISC-V SoC，配可更换的传感器板和底板，机身里直接跑推理，不用把画面全送回服务器。仓库放的是整机的开源硬件资料，外壳、底板、传感器板的图纸都在，474 星，文档有中文版，是 0805 那份器件总纲里摄像头一项的指定型号。</p><p>它的结构是三明治：最上一层是传感器板，可以换成广角、长焦或夜视镜头；中间是核心板，负责编解码与模型推理；最下是底板，按需要选以太网、PoE 或 Wi-Fi 版本。出厂系统带 Node-RED 和 SenseCraft，拖几个节点就能配出一条取流、识别、发通知的流水线，也可以只把它当一台标准 RTSP 相机用。</p><p>模型侧接 SenseCraft 与 ModelAssistant，能把自己训的小模型导成 TFLite 塞进机身；软件侧支持 RTSP 与 MQTT，接 Frigate、HomeAssistant 都是现成路子，社区还在往上堆云台和太阳能供电的改装件。</p><p class="rmod"><a href="modules/0105.html"><i>0105</i>PSK 工作台</a>放进 PSK 工作台，它就是横梁上那只俯拍机位：选带以太网底板的型号，球头座固定，正对台面中央那块 A3 皮垫，网线走横梁线槽不走 Wi-Fi。RTSP 流照旧交给 Frigate 按盒号录制，机身上另外跑一个轻量模型判断盒盖有没有合上，给磁簧开关做第二路兜底。坑是长条灯就在前方 20cm，镜头容易过曝，装好先锁曝光再调白平衡。</p><p class="rmod"><a href="modules/0604.html"><i>0604</i>摄像头监测微环境</a>放进 0604 就是横臂上那两只眼睛：广角一台俯拍整条草地按小时定格，长焦一台换长焦传感器板对准水盆和喂鸟器，都选 PoE 底板，一根网线上墙。机身先做一次鸟在不在的粗筛，只把有动静的那一段推给屋里的 Frigate 精识别，省掉大半带宽和算力。坑是朝东会过曝，横臂要把两台都压向偏北。</p><p class="rmod"><a href="modules/0803.html"><i>0803</i>miniduck</a>放进 0803：鸭子额头那颗广角摄像头这一路交给它——本地识别充电窝和通道口的反光标记、认出主人的脸，识别结果走串口给主控做路点导航，视频一帧都不往外传，正好对上只认一个人的设定。坑是发热和重量：整机装头上会拉高重心，要么挪到胸腔只把镜头引上去，要么退一步用 XIAO ESP32S3 Sense 顶着。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0105.html" title="PSK 工作台"><i>0105</i>PSK 工作台</a><a href="modules/0604.html" title="摄像头监测微环境"><i>0604</i>摄像头监测微环境</a><a href="modules/0803.html" title="miniduck"><i>0803</i>miniduck</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
             <a class="rname" href="https://github.com/mmcc-xx/WhosAtMyFeeder" target="_blank" rel="noopener">mmcc-xx/WhosAtMyFeeder</a>
             <span class="stars">★ 456</span>
             <span class="zh zh-no">无中文</span>
@@ -1040,6 +1052,18 @@
           <div class="rintro"><p>WhosAtMyFeeder 是美国开发者 mmcc-xx 做的 Frigate 配套程序，GitHub 上 456 星，名字直译是谁在我的喂鸟器上。Frigate 只能说画面里有一只鸟，它接在后面专门说是哪一种。</p><p>它的工作方式是一条流水线：订阅 Frigate 的 MQTT 事件，遇到标签为鸟的事件就按事件 ID 去 Frigate 拉那一帧快照，裁出检测框，送进 Google 发布的 TFLite 鸟类分类模型，这个模型在 iNaturalist 的数据上训练，认得九百多种北美和常见鸟；输出物种名和置信度，超过阈值就把物种写回 Frigate 事件的子标签，同时存进本地 SQLite，自带一个 Flask 网页按天看到访物种、次数和照片。整个程序是一个 Python 容器，配置只有一份 YAML。没有中文资料，代码不到一千行。</p><p>在 0604 里它接在 Frigate 后面：只订阅长焦机那一路，分种结果写回子标签后 HomeAssistant 就能按物种名做自动化，第一次出现的种推通知带照片，每月把 SQLite 里的数据汇总成来访者名单卡片上 0802 大屏。要注意默认模型是北美鸟为主，白头鹎、珠颈斑鸠这类华东常见鸟有的能认有的会张冠李戴，先跑一个月人工核对，把误认多的种在配置里映射成正确中文名；喂鸟器画面里鸟太小会影响精度，长焦机对准时让鸟占画面十分之一以上。</p></div>
         </div>
         <div class="rused"><span class="rused-l">用在</span><a href="modules/0604.html" title="摄像头监测微环境"><i>0604</i>摄像头监测微环境</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Seeed-Studio/ModelAssistant" target="_blank" rel="noopener">Seeed-Studio/ModelAssistant</a>
+            <span class="stars">★ 444</span>
+            <span class="zh ">官方 README_zh-CN</span>
+          </div>
+          <p class="rdesc">SenseCraft Model Assistant：给 MCU 和单板机用的嵌入式 AI 训练部署工具链，训出几百 KB 的小模型，导出 TFLite / ONNX</p>
+          <div class="rintro"><p>SenseCraft Model Assistant 是 Seeed 开源的嵌入式 AI 工具链，专门给 MCU 和单板机这种算力很小的设备做模型训练与部署。它把目标检测、图像分类、关键点这些常见任务做成现成配置，你只准备自己的照片数据集，跑一条命令就能训出一个几百 KB 的小模型。</p><p>链路是采集、标注、训练、量化、导出、部署六步：底层用 PyTorch 与 MMLab 那套训练，再做 INT8 量化把模型压到能塞进几 MB 闪存，导出 TFLite 或 ONNX，最后用配套工具刷进设备。推理全在设备本地，照片和视频不用出门，只有识别结果往外走。</p><p>官方 README 有中文版，支持的硬件包括 XIAO ESP32S3 Sense、Grove Vision AI、reCamera，配套的 SenseCraft AI 平台可以在线挑模型、在线训练、一键下发，省掉搭训练环境那一步，仓库跟着新硬件持续更新。</p><p>放进 0801：建档最累的是逐件录入名称，用它训一个只认自家常见物品大类的小模型，扫箱号拍俯视照时顺手把箱内东西框出来，名称候选直接填进 Homebox 的录入框，人只做确认和改名；改过的照片回流当新样本，越用越准。坑是别追求通用识别，样本就照自家箱子的光线和角度拍，类别控制在几十个以内，认不出来的老老实实手打。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0801.html" title="物品数字孪生"><i>0801</i>物品数字孪生</a></div>
       </div>
       <div class="repo-row">
         <div class="rmain">
@@ -1088,6 +1112,30 @@
           <div class="rintro"><p>airgradienthq/arduino 是泰国公司 AirGradient 开源的空气质量监测仪固件，377 星。AirGradient 把整套监测仪的 PCB、外壳和固件全部开源，可以买套件也可以照 BOM 自己焊，这个仓库是那台机器的大脑，也是一份“空气监测怎么选传感器”的参考。</p><p>固件跑在 ESP8266 或 ESP32-C3 上，围绕几颗公认靠谱的传感器：SenseAir S8 测 CO2，Plantower PMS5003 测 PM2.5，Sensirion SHT40 测温湿度，SGP41 测 TVOC 和 NOx。固件定周期读数、校准、滑动平均，显示在自带 OLED 上，再经本地 API 或 MQTT 交给 Home Assistant，HA 有官方集成。仓库持续更新，文档英文，ESPHome 社区也有对应 YAML。</p><p>在 0203 里它解决“闷”的问题：地堡没窗，只除湿不换气 CO2 会涨到两三千 ppm，人只觉得困。照它做一颗 SenseAir S8 探头，用 ESPHome 的 senseair 组件接到 HA，装在沙发旁墙上；HA 按 ppm 分三档驱动东墙高处那台新风机的 PWM：800 以下停、1000 以上低速、1500 以上全速并推送。坑是 S8 的自动校准假定每周有一次 400ppm 的新鲜空气，地堡里没有，得关掉自动校准，定期拿到户外手动校。</p></div>
         </div>
         <div class="rused"><span class="rused-l">用在</span><a href="modules/0203.html" title="控温控湿"><i>0203</i>控温控湿</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Seeed-Studio/wiki-documents" target="_blank" rel="noopener">Seeed-Studio/wiki-documents</a>
+            <span class="stars">★ 375</span>
+            <span class="zh ">有 cn 语言版</span>
+          </div>
+          <p class="rdesc">Seeed Wiki 本体：Docusaurus 静态站源码，XIAO / Grove / reCamera 每款硬件的教程、引脚图与示例代码都在里面</p>
+          <div class="rintro"><p>wiki-documents 是 Seeed Wiki 的本体仓库，Docusaurus 写的静态站源码全开源：XIAO、Grove、reCamera、SenseCAP 每一款硬件的入门教程、引脚图、示例代码和常见问题都是这里的一篇 Markdown，谁发现错了都能提 PR 改。它就是 0805 这一页指定的文档基准。</p><p>站点结构是按产品线分目录、按语言分版本，中文在 cn 目录下，页面模板固定：硬件参数、接线图、依赖安装、一段能跑的示例、最后是踩坑清单。仓库克隆下来 npm 一装就能在本地起一个离线站，断网时照样查引脚。</p><p>375 星，更新频率跟着 Seeed 出新品走，中文版不是机翻而是单独维护的一套页面，覆盖率对 XIAO 和 Grove 这两条主线最完整。</p><p>放进 0805：器件总纲把全屋 DIY 电子件定标成 XIAO 主控加 Grove 模块，文档基准就写死在 wiki.seeedstudio.com/cn。每个模块进选型前先在这里查有没有对应品、引脚和供电怎么走、示例 YAML 能不能直接抄；查不到对应品、成本不可接受、强电侧或 ESPHome 不支持的，按例外走原选型。建议把仓库克隆一份跑在 0804 的机架上，断网也能查。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质与器件总设计"><i>0805</i>全套方案材质与器件总设计</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Seeed-Studio/OPL_Kicad_Library" target="_blank" rel="noopener">Seeed-Studio/OPL_Kicad_Library</a>
+            <span class="stars">★ 363</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Seeed 开放元件库 Open Parts Library 的 KiCad 版：上万个与打样供应链共享的元件符号、封装和 3D 模型</p>
+          <div class="rintro"><p>Open Parts Library 是深圳矽递科技（Seeed Studio）维护的开放元件库，这个仓库是它的 KiCad 版本，把库里上万个常用元件的原理图符号、PCB 封装和 3D 模型打包成能直接挂进 KiCad 的库文件。它要解决的是业余画板子最容易翻车的一环：图画得很漂亮，下单时才发现那颗芯片早就停产，或者封装尺寸和手里的实物对不上。</p><p>它的特别之处在于和打样供应链绑在一起。OPL 里每个元件都对应 Seeed 自有仓库的一个料号，库存与价格公开，画图时选中的就是贴片时能贴上的那一颗。用法很轻：克隆仓库，在 KiCad 的符号库和封装库管理器里各加一条路径，元件搜索栏里就会多出 OPL 这一组；导出 BOM 时带上料号，打样厂不用再做一次元件匹配。</p><p>库里覆盖阻容感、常用 MCU、电源芯片、连接器和传感器模组，也包含 XIAO 系列的封装，跟着新品同步更新。仓库本身没有中文说明，但命名规则简单，Seeed Wiki 的中文站上有配套的打样与 BOM 流程页，可以对照着看。</p><p>落到 0301，它就是这张台子上的画板环节：给 PSK 扣件、标牌和小传感器盒画两层板，元件全部从 OPL 里选，画完在 60W 数显烙铁台上手贴一块样机，验证过再发打样。要注意库更新后封装偶尔改名，克隆时固定一个提交号，免得旧工程打开时丢封装。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0301.html" title="小制作工具台"><i>0301</i>小制作工具台</a></div>
       </div>
       <div class="repo-row">
         <div class="rmain">
@@ -1160,6 +1208,18 @@
           <div class="rintro"><p>AIR-1 是美国 Apollo Automation 做的开源空气质量多合一传感器，172 星，硬件图纸、外壳 3D 文件和 ESPHome 固件全部公开，也可以直接买成品，六十多美元。它解决的问题是家里的空气到底怎么样：一只 61 毫米见方的小盒子同时看颗粒物、二氧化碳、一氧化碳和挥发性有机物。</p><p>工作原理很直白：ESP32 主控上挂三颗传感器，SEN55 测颗粒物、VOC、NOx 和温湿度，SCD40 测二氧化碳，DFRobot 的 MiCS-4514 测一氧化碳、氢气、二氧化氮、氨气和甲烷；固件是一份 ESPHome YAML，上电连它的热点填 WiFi，HA 就自动发现，十几个实体一次出现。盒子上还有三颗 RGB 指示灯。</p><p>生态上它是 ESPHome 官方设备库里的条目，Discord 社区活跃。文档只有英文，国内买要转运。</p><p>放进 0106 里它挂在炉子对面北墙下方、报警器规定的位置：炉子刚点着或风门开错时，CO 和 PM2.5 会先抬头，HA 自动化设 CO 超 30ppm 推送手机、大屏地图上炉区变红。但 MiCS-4514 是半导体气敏元件，不是认证级 CO 报警器，旁边那只电化学一氧化碳报警器照样要装。烧炉季每周擦炉灰，颗粒物传感器进灰会误报。</p></div>
         </div>
         <div class="rused"><span class="rused-l">用在</span><a href="modules/0106.html" title="柴火炉系统"><i>0106</i>柴火炉系统</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Seeed-Studio/grove.py" target="_blank" rel="noopener">Seeed-Studio/grove.py</a>
+            <span class="stars">★ 166</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Seeed 官方的 Grove 模块 Python 库：在树莓派这类嵌入式 Linux 上用几行代码读写 Grove 的 I2C、模拟、数字和 PWM 接口模块</p>
+          <div class="rintro"><p>grove.py 是矽递科技官方维护的 Python 库，给出的是 Grove 生态在嵌入式 Linux 上的读法。Grove 是 Seeed 那套统一的四线接口，一根扣线把模块接到底板，不用面包板也不用焊接；这个库把每一种 Grove 模块封成一个类，树莓派或者 Jetson 上装好之后，几行代码就能拿到读数。</p><p>底层它把 I2C、模拟、数字和 PWM 四类接口抽成统一的 adc 与 gpio 封装，上层再按模块分文件：温湿度、光照、TDS、超声测距、继电器、OLED 屏各一个类，每个文件都能单独运行当自测程序。安装只要一条 pip 命令，仓库里附了每个模块的接线图和示例输出，调不通的时候先跑官方示例，就能分清是硬件问题还是代码问题。</p><p>说明只有英文，但 Seeed Wiki 上每个 Grove 模块都有中文页，接线图一致。仓库更新不快，胜在稳定，是 Grove 模块在 Linux 侧事实上的标准库。</p><p class="rmod"><a href="modules/0205.html"><i>0205</i>生态鱼缸</a>生态缸这边它管两件事。一是调探头：温度、pH、TDS 三路先接在树莓派上，用它的示例把读数跑通、做出标定曲线，确认量程和采样间隔之后，再把同样的读法搬到吧台矮柜里那块 XIAO ESP32C6 的 ESPHome 配置。二是补 reef-pi：reef-pi 本身跑在树莓派上，缺的模块用这个库写成脚本挂上去就行。坑是 pH 电极信号极弱，走线要离水泵电源线远一点。</p><p class="rmod"><a href="modules/0402.html"><i>0402</i>材料仓库</a>在 0402 里它是选型阶段的量具：把 Grove 温湿度模块挂在 7 米货架尽头，先用它在一台旧树莓派上跑两周，看看梅雨季货架高处和低处到底差几个点，再定 65% 这个开除湿机的阈值；定稿后换成 XIAO 节点跑 ESPHome，模块原封不动继续用。</p><p class="rmod"><a href="modules/0601.html"><i>0601</i>稀树草原环境系统</a>放进 0601 就是定植物表之前那一轮点测：一块单板机配 Grove Base Hat，把 Grove 土壤湿度、光照和温湿度模块沿疏林带、草原带、点缀带各埋一组，脚本每十分钟记一次写成 CSV，跑满一个月再决定哪段种芒草、哪段要垫高种蓝羊茅。测完模块拆下来，直接转给 0602 的常驻杆接着用。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0205.html" title="生态鱼缸"><i>0205</i>生态鱼缸</a><a href="modules/0402.html" title="材料仓库"><i>0402</i>材料仓库</a><a href="modules/0601.html" title="稀树草原环境系统"><i>0601</i>稀树草原环境系统</a></div>
       </div>
       <div class="repo-row">
         <div class="rmain">
@@ -1260,6 +1320,18 @@
       <div class="repo-row">
         <div class="rmain">
           <div class="rhead">
+            <a class="rname" href="https://github.com/Seeed-Studio/OSHW-XIAO-Series" target="_blank" rel="noopener">Seeed-Studio/OSHW-XIAO-Series</a>
+            <span class="stars">★ 81</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Seeed XIAO 全系列的开源硬件资料库：ESP32C3/C5/C6/S3、nRF52840、RP2040/2350、MG24 等指甲盖大小主控的引脚图、原理图与参考设计</p>
+          <div class="rintro"><p>OSHW-XIAO-Series 是矽递科技为 XIAO 系列小主控开的开源硬件资料仓库。XIAO 的特点只有一句话：把一块能联网的主控压到 21×17.5mm，正面邮票孔加 Type-C，背面留出 Grove 焊盘。仓库按型号分目录，放引脚图、原理图、封装尺寸图和参考设计，覆盖 ESP32C3、C6、S3、nRF52840、RP2040、MG24 等十几块板子。</p><p>它不是固件也不是库，而是做板子之前要查的那份底档。某个脚能不能当 ADC、哪几个脚被片上 Flash 占了、天线附近留多大净空、锂电池座怎么接、深睡电流能压到几微安，答案都在这里。ESP32 系直接跑 ESPHome，nRF52840 走 Zephyr，RP2040 能上 MicroPython，同一套外形换芯片不用重画底板。</p><p>资料是英文的，但 Seeed Wiki 有中文版，型号页和这里的图纸一一对应，社区里的复刻底板也照这份尺寸来。仓库跟着新型号持续更新，是长期维护的一手资料。</p><p class="rmod"><a href="modules/0103.html"><i>0103</i>电子画框墙</a>画框墙这边用它做一件小事：南窗边那颗光照节点。选 XIAO ESP32C6，背面接 Grove 光照模块，照引脚图确认 I2C 脚位和天线净空，整块板藏进木框下沿的散热缝。固件跑 ESPHome，每 10 秒把照度发给 HA，HA 算出亮度参数再由 0804 那台 M1 Mac 下发给九块屏。坑是木框里温度偏高，别把板子贴着屏幕背面。</p><p class="rmod"><a href="modules/0302.html"><i>0302</i>户外装备区</a>在 0302 里它是装备柜那颗监测节点的底稿：选 XIAO ESP32C6 接一颗 Grove 温湿度模块塞进 30cm 格子柜，照仓库里的电池板图纸配锂电，深度睡眠下每分钟醒一次上报 HomeAssistant，湿度过 70% 推送并开烘鞋器。坑在天线：木格子柜没问题，别把板子贴在金属挂板背面。</p><p class="rmod"><a href="modules/0306.html"><i>0306</i>微型气象站</a>在 0306 里它管两块板：气象杆底部的采集板选 XIAO ESP32C6，照资料里的 ADC 与中断脚接风速风向和雨量筒的翻斗干簧管，百叶盒里那颗 Grove 气压温湿度模块走 I2C；隔断上的墨水屏用另一块 XIAO ESP32C6 驱动，靠深度睡眠一天刷几十次。注意户外那块要引外置天线，别让金属杆挡住信号。</p><p class="rmod"><a href="modules/0505.html"><i>0505</i>电摩充电桩</a>放进 0505 就是桩柱里那块小底板：照参考设计画一块 XIAO 底板，接屋檐下的 24GHz mmWave 感应模块管那盏暖光灯，再引两颗红绿状态灯出来报充电状态。板子按引脚图留够 5V 供电和天线净空，塞进柱身背面的走线凹槽，弱电和桩上那一路电分两根管走，别并在一起。</p><p class="rmod"><a href="modules/0603.html"><i>0603</i>雨水存储过滤</a>放进 0603 就是罐顶那块水位板：照参考设计做一块小底板，XIAO ESP32C6 上接防水超声波探头朝下测距，深睡十分钟醒一次上报水位，一颗锂电加一小片太阳能板就够养活它。板子要按引脚图留出天线净空，整块灌胶或塞进 IP65 盒，罐口常年高湿，最常见的坏法是排针先锈断。</p><p class="rmod"><a href="modules/0802.html"><i>0802</i>全屋中枢 / 全屋数据可视化屏</a>放进 0802：它是全屋节点的规格底座。屏下那排实体开关的按键板、Zigbee 协调器旁边那块网关板，都照这里的参考设计画，统一用 XIAO ESP32C6；各区域节点的型号、引脚和供电在这一页对齐，HA 里按区域给实体命名，坏了拔一块换一块。坑是不同芯片的 ADC 和低功耗引脚不通用，抄参考设计时别跨型号混抄。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0103.html" title="电子画框墙"><i>0103</i>电子画框墙</a><a href="modules/0302.html" title="户外装备区"><i>0302</i>户外装备区</a><a href="modules/0306.html" title="微型气象站"><i>0306</i>微型气象站</a><a href="modules/0505.html" title="电摩充电桩"><i>0505</i>电摩充电桩</a><a href="modules/0603.html" title="雨水存储过滤"><i>0603</i>雨水存储过滤</a><a href="modules/0802.html" title="全屋中枢 / 全屋数据可视化屏"><i>0802</i>全屋中枢 / 全屋数据可视化屏</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
             <a class="rname" href="https://github.com/Bettapro/Solar-Tracer-Blynk-V3" target="_blank" rel="noopener">Bettapro/Solar-Tracer-Blynk-V3</a>
             <span class="stars">★ 61</span>
             <span class="zh zh-no">无中文</span>
@@ -1292,6 +1364,18 @@
           <div class="rintro"><p>WLANThermo 是德国一个开源社区从 2014 年起做的烧烤温度计项目，这个仓库是它 ESP32 一代的固件，GitHub 上 40 星，README 是德文。它解决的问题和 HeaterMeter 一样，把烤肉时的温度监控和炭火控制交给机器，但路线更轻：不用树莓派，一块 ESP32 加一块探针板就是完整设备，网页、App、通知都在这颗芯片上。</p><p>它的结构是 ESP32 固件加两代硬件，Nano V3 有八路探针口，Mini V3 有四路，探针是标准的 NTC 热敏电阻，支持多种品牌的探针型号，也能接蓝牙探针。固件提供本地网页界面和手机 App，每路设上下限，越界通过 Telegram 等推送；Pitmaster 功能是它的温控部分，一路探针做反馈，用 PID 输出给风扇或舵机风门；数据可以走 MQTT 发出去。硬件设计和外壳文件在同一组织的其他仓库里，可以自己打板或买套件。没有中文资料，德文文档靠翻译软件能看懂。</p><p>在 0704 里它是比 HeaterMeter 更省事的选择：一块 Nano V3 装在矮桌抽屉里，两根探针分别插进烤鱼和贴在茶壶上，各设一个上限，鱼 65 度、茶壶 95 度，到了 App 推一条；MQTT 接进 HomeAssistant 后，温度显示在 0703 那块能源卡片旁边。想控火再接一个小风扇到火盆进风口，用 Pitmaster 稳炭温，不行就当纯温度计用。NTC 探针型号要在设置里选对，否则读数偏几十度；进炭层的那根探针要用耐高温款。</p></div>
         </div>
         <div class="rused"><span class="rused-l">用在</span><a href="modules/0704.html" title="水边茶席·小火塘"><i>0704</i>水边茶席·小火塘</a></div>
+      </div>
+      <div class="repo-row">
+        <div class="rmain">
+          <div class="rhead">
+            <a class="rname" href="https://github.com/Seeed-Studio/xiao-esphome-projects" target="_blank" rel="noopener">Seeed-Studio/xiao-esphome-projects</a>
+            <span class="stars">★ 37</span>
+            <span class="zh zh-no">无中文</span>
+          </div>
+          <p class="rdesc">Seeed 官方的 XIAO 加 ESPHome 成品工程集：电能计量、土壤湿度、IoT 按钮、24GHz mmWave、W5500 以太网、2 路和 6 路继电器都有现成 YAML</p>
+          <div class="rintro"><p>xiao-esphome-projects 是 Seeed 官方放出的 XIAO 加 ESPHome 工程合集，一个子目录一份可以直接烧录的 YAML，配接线图和 Seeed Wiki 上的对应页。仓库只有 37 星，却不是社区玩票，而是 0805 定标的这套器件唯一的一手示例，拿到板子当天就能把一个传感节点挂进 HomeAssistant。</p><p>工作方式就是 ESPHome 那一套：YAML 写清这块 XIAO 上接了什么外设、多久读一次、什么时候深睡，编译烧进去，上电后用原生 API 直连 HomeAssistant，不经云也不必架 MQTT。现成工程覆盖电能计量、土壤湿度、IoT 按钮、24GHz mmWave 和 2 路 6 路继电器。</p><p>硬件面向 XIAO ESP32C3 / C6 / S3，配 Grove 扩展板一插就是标准接口，不用自己打样。文档是英文的，但每篇都指回 Seeed Wiki 的中文页，配置语法又是 ESPHome 通用的；更新跟着新板子走，2025 年之后仍在加工程。</p><p class="rmod"><a href="modules/0106.html"><i>0106</i>柴火炉系统</a>柴火炉这边照它用两处。一是烟温节点：一块 XIAO ESP32C6 配热电偶放大板夹在烟管上，YAML 结构照仓库里的传感器工程改，甜区 150 到 300℃ 的阈值和蜂鸣器全写在本地。二是循环风扇：照它的继电器与 PWM 工程接风扇，温差大于 2℃ 才转。坑是板子别贴着烟管，留出 30cm 以上，天线也别正对铸铁炉体。</p><p class="rmod"><a href="modules/0202.html"><i>0202</i>卫生间灯箱系统</a>卫生间这边用它两处。三档光切换的人体判断换成官方毫米波工程：MR60BHA2 装在灯箱边沿朝下，静止站着洗澡也不会丢人，YAML 直接抄，实体进 HA 之后按时段选场景。排风扇照它的 2 路继电器工程接，湿度由 Grove 温湿度模块给，超 70% 开、20 分钟到或降回 60% 停，全在板子本地跑。坑是雷达别正对淋浴水流，水幕会被当成动作。</p><p class="rmod"><a href="modules/0203.html"><i>0203</i>控温控湿</a>地堡这边照它布四个节点。床头、墙角、柜内、风管出口各一块 XIAO ESP32C6 挂 Grove 温湿度模块，YAML 照它的传感器工程改，I2C 地址错开即可；表盘那块板多驱动两根 X27 步进表针。新风分档照它的继电器与 PWM 工程接，CO2 由 Grove CO2 模块给。四块板都刷本地阈值，断网时除湿机和新风按上一档跑。坑是柜内那块要远离除湿机出风口，否则读数一直偏干。</p><p class="rmod"><a href="modules/0307.html"><i>0307</i>CNC 雕刻机</a>在 0307 里它负责机床的监测这一侧：拿电能计量工程改成主轴电流监测，一块 XIAO ESP32C6 读互感器，判断在不在切削、累计工时、提醒换刀，并把峰值功率报给 0304 的负载表；开机时顺手让 0404 的集尘分路阀跟着动。要守住一条线：门磁与限位这类安全信号只接固件硬件输入，绝不绕到网络上来。</p><p class="rmod"><a href="modules/0403.html"><i>0403</i>喷涂柜</a>在 0403 里它就是枪钩联动那块板：一块 XIAO ESP32C6 照 2 路继电器工程改，一路管 300m³/h 管道风机、一路管柜角橙灯，喷枪拿起微动开关闭合即启动，挂回走 30 分钟延时脚本；柜内那颗 Grove VOC 模块同板上报，超标切高速并推送。注意风机是感性负载，继电器后面还要留一只接触器。</p><p class="rmod"><a href="modules/0404.html"><i>0404</i>木工间</a>在 0404 里它同时管两件事：一块 XIAO ESP32C6 照电能计量工程读六台机器电源线上的夹式电流传感器，谁超过 2A 就判它在工作；同一块板照 6 路继电器工程驱动集尘分路阀和集尘器启停，停机后延时 8 秒再关。机器本身的强电走原有开关，板子只做判断和低压侧驱动，别把主回路接到继电器模块上。</p><p class="rmod"><a href="modules/0501.html"><i>0501</i>柴火堆墙</a>放进 0501 就是柴堆里那颗回潮探头：照它的土壤湿度工程改，探头换成 Grove 温湿度模块，一块 XIAO ESP32C6 配锂电，深睡十五分钟报一次，数据进 HomeAssistant 画成柴缝湿度曲线，跌回八成就说明这批柴回潮了。坑是柴堆里昼夜温差大，盒子要打透气孔又不能让雨飘进去。</p><p class="rmod"><a href="modules/0504.html"><i>0504</i>自动种植架</a>放进 0504 就是架子底层那只防水箱：拿它的 6 路继电器工程管四路电磁阀加一台加压泵，土壤湿度工程复制四份，对应四层各一颗 Grove 电容式土壤湿度模块，判断全在 XIAO ESP32C6 本地跑，断网照浇，只是曲线不上传。坑是继电器和泵共地会串扰，12V 动力地和逻辑地要单点接。</p><p class="rmod"><a href="modules/0602.html"><i>0602</i>自动浇灌</a>放进 0602 就是桧木杆里那块板：6 路继电器工程直接对应三路 12V 电磁阀，土壤湿度工程复制三份对应北中南三段探针，翻斗雨量计按脉冲计数挂上去，三条件判断在 XIAO ESP32C6 本地跑完再开阀，断网也不误凌晨那一轮。坑是杆内空间小，继电器和天线要隔开，不然一开阀 Wi-Fi 就掉。</p><p class="rmod"><a href="modules/0703.html"><i>0703</i>钓台照明与电源</a>放进 0703：电池箱那个监测节点换成 XIAO ESP32C6，照电能计量工程的做法接串口读 MPPT 和 BMS 的电压、剩余电量、当日发电量，一分钟推一次给 HA；日落亮灯和低电量分级断负载写在节点本地，钓台断网也生效。坑是水边湿气重，板子要灌胶塞进带干燥剂的小盒；离路由器太远就照它的 W5500 工程改走有线。</p></div>
+        </div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0106.html" title="柴火炉系统"><i>0106</i>柴火炉系统</a><a href="modules/0202.html" title="卫生间灯箱系统"><i>0202</i>卫生间灯箱系统</a><a href="modules/0203.html" title="控温控湿"><i>0203</i>控温控湿</a><a href="modules/0307.html" title="CNC 雕刻机"><i>0307</i>CNC 雕刻机</a><a href="modules/0403.html" title="喷涂柜"><i>0403</i>喷涂柜</a><a href="modules/0404.html" title="木工间"><i>0404</i>木工间</a><a href="modules/0501.html" title="柴火堆墙"><i>0501</i>柴火堆墙</a><a href="modules/0504.html" title="自动种植架"><i>0504</i>自动种植架</a><a href="modules/0602.html" title="自动浇灌"><i>0602</i>自动浇灌</a><a href="modules/0703.html" title="钓台照明与电源"><i>0703</i>钓台照明与电源</a></div>
       </div>
       <div class="repo-row">
         <div class="rmain">

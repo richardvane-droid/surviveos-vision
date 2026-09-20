@@ -68,13 +68,13 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-hw">产品模块</span> 3. 水位监测与补水接头</h2>
-    <p class="scene">罐顶还有一颗一颗防水超声波探头朝下对着水面，测距离减一减就是水位。探头接一块 ESP32-C3 跑 ESPHome，每 10 分钟醒一次上报，其余时间深睡，小太阳能板就够养活。补水用一只 12V 自来水电磁阀，出口不插进罐里，而是悬在罐口上方留出“空气隔断”，落差至少 2.5 倍管径，罐里的水永远倒灌不回水管。</p>
+    <p class="scene">罐顶还有一颗一颗防水超声波探头朝下对着水面，测距离减一减就是水位。探头接一块 XIAO ESP32C6 跑 ESPHome，每 10 分钟醒一次上报，其余时间深睡，小太阳能板就够养活。补水用一只 12V 自来水电磁阀，出口不插进罐里，而是悬在罐口上方留出“空气隔断”，落差至少 2.5 倍管径，罐里的水永远倒灌不回水管。</p>
     
     <figure class="part-art"><div class="pc-frame"><img class="pc-png" src="../parts/0603-3.png" alt="水位监测与补水接头 爆炸拆解图" loading="lazy"></div><figcaption><span class="hand">爆炸拆解图 · 三维建模铅笔稿</span></figcaption></figure>
     
     <div class="two">
       <div><h3>关键参数 / 组成</h3>
-        <ul class="inspo"><li>JSN-SR04T 防水超声波，量程 0.25~4.5m</li><li>ESP32-C3 深睡眠，10 分钟上报一次</li><li>自来水 12V 常闭电磁阀，DN15</li><li>空气隔断落差 ≥ 2.5 倍管径，防倒灌</li></ul></div>
+        <ul class="inspo"><li>JSN-SR04T 防水超声波，量程 0.25~4.5m</li><li>XIAO ESP32C6 深睡眠，10 分钟上报一次</li><li>自来水 12V 常闭电磁阀，DN15</li><li>空气隔断落差 ≥ 2.5 倍管径，防倒灌</li></ul></div>
       <div>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/kane5432/ESP32-Water-Level-Sensor" target="_blank" rel="noopener">kane5432/ESP32-Water-Level-Sensor</a><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a></p></div>
     </div>

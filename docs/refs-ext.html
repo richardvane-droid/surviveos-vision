@@ -30,7 +30,7 @@
   <header class="mod-head">
     <p class="kicker">全站引用 · 二</p>
     <h1>104 个延伸阅读项目</h1>
-    <nav class="refs-tabs"><a href="refs.html" class="">专门方案 <i>106</i></a><a href="refs-ext.html" class="on">延伸阅读 <i>104</i></a></nav>
+    <nav class="refs-tabs"><a href="refs.html" class="">专门方案 <i>113</i></a><a href="refs-ext.html" class="on">延伸阅读 <i>104</i></a></nav>
     <p class="lede">借这座房子的每个模块当由头，顺手把 GitHub 上的好项目好思路过一遍。这一页的项目和所在模块的关系没有上一页那么直接——有的是同一件事的另一条技术路线，有的是另一个领域里做得最好的那个——但每条介绍的最后一段都写了在那个模块里能怎么用。选择标准和上一页一样：先看知名度，同档次里有中文的优先，每个仓库都在 2026-09 打开核实过存在。它们在模块页里排在“延伸阅读”小节，用虚线卡片和正式方案分开。</p>
   </header>
   <section class="blk refs-sum">
@@ -571,7 +571,7 @@
           <p class="rdesc">开源 3D 创作套件的官方镜像：建模、PBR 材质节点、Cycles 与 EEVEE 渲染、Python API，把 CAD 模型套上真实材质出效果图</p>
           <div class="rintro"><p>Blender 是荷兰 Blender 基金会维护的开源 3D 创作套件，GitHub 上这个仓库是官方镜像，19.3k 星，主开发在他们自己的 Gitea 上。从建模、材质、灯光到渲染、动画，一套免费软件全包，专业到被电影和游戏工作室正式使用。</p><p>它和 CAD 关心的不同：CAD 关心尺寸和约束，Blender 关心看起来像不像。材质用节点编辑器搭，原理化 BSDF 一个节点就覆盖了 PBR 的全部参数，金属度、粗糙度、法线贴图、透光；灯光用 HDRI 环境图给出真实反射；渲染有两个引擎，Cycles 是路径追踪，慢但准，EEVEE 是实时光栅，快而够看。FreeCAD 导出的 OBJ 或 glTF 直接拖进去；</p><p>4.x 系列 2026 年仍按季度发版；界面自带简体中文，官方手册也有中文翻译，B 站教程数不清。</p><p>在 0805 里它是延伸：这一页定的是材质语法，木屋作品墙下那格样板是实物，Blender 里做它的数字版。先把三种材质各调成一个节点组：喷砂黑阳极氧化铝要低金属度、中高粗糙度加细微颗粒法线；白蜡木油蜡饰面用木纹贴图加轻微清漆层；植鞣皮用高粗糙度加皮纹凹凸。然后把 FreeCAD 里各模块的机架模型导出 glTF 拖进来，按规则给每个面指派材质，型材面黑、覆面木、把手皮，用 EEVEE 几秒出一张。0301 工具台、0404 木工间下料前先渲一张看比例和配色，木料和皮草定标时把两三种候选并排渲出来比。</p></div>
         </div>
-        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质总设计"><i>0805</i>全套方案材质总设计</a></div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质与器件总设计"><i>0805</i>全套方案材质与器件总设计</a></div>
       </div>
       <div class="repo-row">
         <div class="rmain">
@@ -889,7 +889,7 @@
           <p class="rdesc">Python 参数化 CAD 脚本框架：基于 OCCT 内核的实体建模，链式 API 几行出一个带倒角的零件，能直接导出 STEP 与 STL</p>
           <div class="rintro"><p>CadQuery 是一个用 Python 写参数化 CAD 的开源框架，5.7k 星，最初由 Dave Cowden 在 2013 年发起，现在由社区维护。它和 OpenSCAD 一样用代码建模，但内核不同：OpenSCAD 是网格上的布尔运算，CadQuery 基于 OpenCASCADE 的边界表示，所以能做真正的圆角倒角、能识别面和边、能导出工程软件认的 STEP。</p><p>它的 API 是链式的：从一个工作平面开始，画草图、拉伸、选边、倒角、打孔，每一步返回新对象继续往下写，几行就是一个零件。选择器用字符串描述，改参数后整条链自动重算。装配模块能把多个零件按约束拼起来，导出格式有 STEP、STL、3MF、DXF 和 SVG。配套的 CQ-editor 是带三维预览的桌面编辑器，build123d 是社区在它之上做的新一代 API。</p><p>社区规模中等但稳定，2026 年仍在发版；文档是英文，中文资料只有零星博客。</p><p>在 0805 里它是延伸，用来把规则写成代码。建一个小 Python 包，profile 函数的参数是系列名和长度，2020 就是槽宽 6 毫米壁厚 1.8 毫米，3030 就是槽宽 8 毫米，配件函数有角码、T 型螺母、端盖、脚垫，木料函数按候选树种给出板厚和倒角。各模块的机架脚本 import 这个包，尺寸用变量，一改规格全部跟着变；输出 STEP 给 FreeCAD 做装配图，STL 给拓竹打印配件，顺手让脚本数一遍切割清单和螺母数量。定标改了槽宽，只改包里一行。</p></div>
         </div>
-        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质总设计"><i>0805</i>全套方案材质总设计</a></div>
+        <div class="rused"><span class="rused-l">用在</span><a href="modules/0805.html" title="全套方案材质与器件总设计"><i>0805</i>全套方案材质与器件总设计</a></div>
       </div>
       <div class="repo-row">
         <div class="rmain">
@@ -1307,7 +1307,7 @@
       </div>
     </div>
   </section>
-  <nav class="pager"><span></span><a class="up" href="index.html">回首页</a><a href="refs.html">专门方案（106 个）→</a></nav>
+  <nav class="pager"><span></span><a class="up" href="index.html">回首页</a><a href="refs.html">专门方案（113 个）→</a></nav>
 </article>
 
 </main>

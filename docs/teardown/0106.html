@@ -199,7 +199,7 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>触发：每 10 秒读烟温 + 室温</li><li>阈值：烟温 &lt;120℃ 添柴，&gt;350℃ 关风门</li><li>室温 &gt;26℃ 提醒关风门，同一提醒间隔 10 分钟</li><li>兜底：ESP32 本地判断 + 蜂鸣器，断网照样叫</li></ul></div>
+        <ul class="inspo"><li>触发：每 10 秒读烟温 + 室温</li><li>阈值：烟温 &lt;120℃ 添柴，&gt;350℃ 关风门</li><li>室温 &gt;26℃ 提醒关风门，同一提醒间隔 10 分钟</li><li>兜底：XIAO ESP32C6 本地判断 + 蜂鸣器，断网照样叫</li></ul></div>
       <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 max31855 组件读 K 型热电偶烟温，阈值在 YAML 里本地判断，HA 画曲线推通知</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
@@ -207,7 +207,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 炉热循环风扇</h2>
-    <p class="scene">解决的问题是：炉边 30 度、东头写字台 16 度，热量堆在炉子周围出不去。输入是炉对面北墙和东头床下两只温度传感器算出的温差 ΔT；输出是一只 PWM 循环风扇的占空比。核心逻辑是 PID：炉温超 40℃ 且温差大于 2℃ 才转，温差越大转得越快，把热推到角落。夜里 23 点到 7 点转速上限 40%；传感器掉线固定 30%。</p>
+    <p class="scene">解决的问题是：炉边 30 度、东头写字台 16 度，热量堆在炉子周围出不去。输入是炉对面北墙和东头床下两只 Grove 温度模块算出的温差 ΔT；输出是一只 PWM 循环风扇的占空比。核心逻辑是 PID：炉温超 40℃ 且温差大于 2℃ 才转，温差越大转得越快，把热推到角落。夜里 23 点到 7 点转速上限 40%；传感器掉线固定 30%。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">

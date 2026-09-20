@@ -82,7 +82,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 光伏电量看护</h2>
-    <p class="scene">让钓台的电“自己管自己”。电池箱里的 ESP32 通过串口读 MPPT 和 BMS：电压、剩余电量、当日发电量，每分钟推到 HomeAssistant。逻辑分三段：太阳落山后自动把马灯点到 30%，地脚灯同步亮起；电量低于 20% 推送提醒并关掉逆变器，只留马灯和 USB；低于 10% 关掉一切只留监测，等第二天太阳把电充回来。</p>
+    <p class="scene">让钓台的电“自己管自己”。电池箱里的 XIAO ESP32C6 通过串口读 MPPT 和 BMS：电压、剩余电量、当日发电量，每分钟推到 HomeAssistant。逻辑分三段：太阳落山后自动把马灯点到 30%，地脚灯同步亮起；电量低于 20% 推送提醒并关掉逆变器，只留马灯和 USB；低于 10% 关掉一切只留监测，等第二天太阳把电充回来。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">

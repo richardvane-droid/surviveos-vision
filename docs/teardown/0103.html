@@ -228,7 +228,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 自然光跟随调光</h2>
-    <p class="scene">让九块屏看起来像画而不是屏幕，关键是亮度跟着窗外的光走：阴天暗一点，晴天亮一点，夜里更暗。输入是南窗边一颗 ESPHome 光照传感器每 10 秒上报的照度和人在不在家，输出是常驻 M1 Mac 推给各屏画框网页的亮度参数。核心是一条对数映射曲线，把 0~2000lx 映射到 5%~70% 亮度，23 点后封顶 15%；离家半小时黑屏。</p>
+    <p class="scene">让九块屏看起来像画而不是屏幕，关键是亮度跟着窗外的光走：阴天暗一点，晴天亮一点，夜里更暗。输入是南窗边一颗 Grove 光照模块每 10 秒上报的照度和人在不在家，输出是常驻 M1 Mac 推给各屏画框网页的亮度参数。核心是一条对数映射曲线，把 0~2000lx 映射到 5%~70% 亮度，23 点后封顶 15%；离家半小时黑屏。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -381,7 +381,7 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>触发：照度每 10 秒上报，变化超过 15% 才推送</li><li>对数映射：0~2000lx → 亮度 5%~70%</li><li>离家 30 分钟黑屏，23:00 后亮度封顶 15%</li><li>兜底：传感器离线按日出日落曲线估算</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 BH1750 上报照度，HA 算亮度，经 immich-kiosk 参数下发</p>
+      <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 读 Grove 光照模块上报照度，HA 算亮度，经 immich-kiosk 参数下发</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a><a href="https://github.com/damongolding/immich-kiosk" target="_blank" rel="noopener">damongolding/immich-kiosk</a></p></div>
     </div>
   </section>

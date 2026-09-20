@@ -68,7 +68,7 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-logic">联动逻辑</span> 3. 集尘随机联动</h2>
-    <p class="scene">解决“开台锯前先去角落开集尘器，再跑回来开锯”的两步操作。每台机器的电源线穿过一只夹式电流传感器，ESP32 持续读电流：哪台机器电流超过 2A 就判定它在工作，先让舵机打开对应那路阀门、关上其他路，再通过继电器启动集尘器。机器停机后集尘器不马上停，延时 8 秒把管道里残留木屑吸干净再关。集尘桶满时光电开关发出信号，推送提醒倒桶。整个逻辑在 ESP32 本地执行，与网络无关。</p>
+    <p class="scene">解决“开台锯前先去角落开集尘器，再跑回来开锯”的两步操作。每台机器的电源线穿过一只夹式电流传感器，XIAO ESP32C6 持续读电流：哪台机器电流超过 2A 就判定它在工作，先让舵机打开对应那路阀门、关上其他路，再通过继电器启动集尘器。机器停机后集尘器不马上停，延时 8 秒把管道里残留木屑吸干净再关。集尘桶满时光电开关发出信号，推送提醒倒桶。整个逻辑在 XIAO ESP32C6 本地执行，与网络无关。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -236,7 +236,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 粉尘监测与新风调速</h2>
-    <p class="scene">集尘器抓走的是大颗粒，真正伤肺的是悬浮在空气里的细粉。天花那台空气过滤箱平时低速转，一颗激光颗粒物传感器每 10 秒把 PM2.5 / PM10 上报 HomeAssistant：PM10 超过 100µg/m³ 切到高速，回落到 50 以下持续 10 分钟再降回低速；人踩进黄线安全区（地垫压力开关）也自动高速。数值同步显示在 0802 中枢屏，收工时 PM10 仍偏高就提醒再开 20 分钟。</p>
+    <p class="scene">集尘器抓走的是大颗粒，真正伤肺的是悬浮在空气里的细粉。天花那台空气过滤箱平时低速转，一颗 Grove 激光颗粒物模块每 10 秒把 PM2.5 / PM10 上报 HomeAssistant：PM10 超过 100µg/m³ 切到高速，回落到 50 以下持续 10 分钟再降回低速；人踩进黄线安全区（地垫压力开关）也自动高速。数值同步显示在 0802 中枢屏，收工时 PM10 仍偏高就提醒再开 20 分钟。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -396,8 +396,8 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>输入：PMS5003 颗粒物传感器，每 10 秒一次</li><li>阈值：PM10 &gt;100 高速，&lt;50 持续 10 分钟降速</li><li>地垫压力开关进人即高速，出口 0802 中枢屏</li><li>兜底：传感器掉线保持低速常转</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 pmsx003 组件上报 PM2.5 / PM10，HomeAssistant 自动化做带迟滞的风速分档</p>
+        <ul class="inspo"><li>输入：Grove HM3301 颗粒物模块，每 10 秒一次</li><li>阈值：PM10 &gt;100 高速，&lt;50 持续 10 分钟降速</li><li>地垫压力开关进人即高速，出口 0802 中枢屏</li><li>兜底：传感器掉线保持低速常转</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 hm3301 组件上报 PM2.5 / PM10，HomeAssistant 自动化做带迟滞的风速分档</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a><a href="https://github.com/MallocArray/airgradient_esphome" target="_blank" rel="noopener">MallocArray/airgradient_esphome</a></p></div>
     </div>
   </section>

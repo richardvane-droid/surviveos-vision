@@ -227,15 +227,15 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>触发：LD2410 毫米波存在 ON，静止人体也能识别</li><li>分档：22~6 点夜起 2200K 5% / 6~9 点晨浴 5000K 100% / 其余 4000K 60%</li><li>晨浴档同时闭合除雾膜继电器，退出档位后自动断开</li><li>无人 3 分钟延时关灯，雷达离线时退回墙面开关手动</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">ESPHome 的 ld2410 组件报人体存在，HA 自动化按时段选场景；灯带走 WLED 预设，晨浴档同时打开除雾膜的继电器</p>
+        <ul class="inspo"><li>触发：MR60BHA2 毫米波存在 ON，静止人体也能识别</li><li>分档：22~6 点夜起 2200K 5% / 6~9 点晨浴 5000K 100% / 其余 4000K 60%</li><li>晨浴档同时闭合除雾膜继电器，退出档位后自动断开</li><li>无人 3 分钟延时关灯，雷达离线时退回墙面开关手动</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">ESPHome 的 seeed_mr60bha2 组件报人体存在，HA 自动化按时段选场景；灯带走 WLED 预设，晨浴档同时打开除雾膜的继电器</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a><a href="https://github.com/wled/WLED" target="_blank" rel="noopener">wled/WLED</a></p></div>
     </div>
   </section>
   
   <section class="blk part" id="p5">
     <h2><span class="kind kind-logic">联动逻辑</span> 5. 湿度排风控制</h2>
-    <p class="scene">让排风扇自己知道什么时候该转的一小段本地程序。淋浴间顶上一只湿度探头每 10 秒读一次数，湿度一旦超过 70% 就开排风扇并启动 20 分钟计时；计时结束或者湿度先降回 60% 以下，就停。这段判断不需要经过路由器和服务器，全部在排风扇旁边的 ESP32 上跑完，断网也照常工作，HA 只是旁观和记录。为了不让镜子和灯箱长期泡在潮气里，另外加了一条兜底：探头离线时，每小时固定通风 5 分钟。</p>
+    <p class="scene">让排风扇自己知道什么时候该转的一小段本地程序。淋浴间顶上一只 Grove 温湿度模块每 10 秒读一次数，湿度一旦超过 70% 就开排风扇并启动 20 分钟计时；计时结束或者湿度先降回 60% 以下，就停。这段判断不需要经过路由器和服务器，全部在排风扇旁边的 XIAO ESP32C6 上跑完，断网也照常工作，HA 只是旁观和记录。为了不让镜子和灯箱长期泡在潮气里，另外加了一条兜底：探头离线时，每小时固定通风 5 分钟。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -388,7 +388,7 @@
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
         <ul class="inspo"><li>触发：湿度 &gt; 70%，采样间隔 10 秒，连续 3 次才算</li><li>停止：20 分钟计时到 或 湿度 &lt; 60%，取先到者</li><li>兜底：探头离线每小时通风 5 分钟，手动开关随时可强制</li><li>数据出口：湿度曲线 + 运行时长写入 HA 记录</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">沿用 patrickcollins12/esphome-fan-controller 的 ESPHome 结构，把温度探头换成 SHT31 湿度探头，阈值和 20 分钟计时器全在 ESP32 本地执行</p>
+      <div><h3>主要实现路径</h3><p class="impl">沿用 patrickcollins12/esphome-fan-controller 的 ESPHome 结构，把温度探头换成 Grove 温湿度模块，阈值和 20 分钟计时器全在 XIAO ESP32C6 本地执行</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/patrickcollins12/esphome-fan-controller" target="_blank" rel="noopener">patrickcollins12/esphome-fan-controller</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
   </section>

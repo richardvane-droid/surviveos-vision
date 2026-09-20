@@ -54,13 +54,13 @@
   
   <section class="blk part" id="p2">
     <h2><span class="kind kind-hw">产品模块</span> 2. 水质监测探头盒</h2>
-    <p class="scene">生态缸“自己转”的前提是有人盯着水质，这个盒子就是盯梢的人。三根探头插在缸角：温度探头是防水的 DS18B20，pH 探头是玻璃电极，信号极弱，必须先经过 BNC 放大板才能被读取，TDS 探头则通过一块小板把水的导电率换算成溶解固体浓度。三路信号汇到一块 ESP32，跑 ESPHome 固件，每分钟把数值发给 HomeAssistant。整套电路装在带穿线接头的防水盒里，上盖开一个小屏窗，路过时抬眼就能看到当前读数，不必掏手机。</p>
+    <p class="scene">生态缸“自己转”的前提是有人盯着水质，这个盒子就是盯梢的人。三根探头插在缸角：温度探头是 Grove 防水温度模块，pH 探头是玻璃电极，信号极弱，必须先经过 BNC 放大板才能被读取，TDS 探头则通过一块小板把水的导电率换算成溶解固体浓度。三路信号汇到一块 XIAO ESP32C6，跑 ESPHome 固件，每分钟把数值发给 HomeAssistant。整套电路装在带穿线接头的防水盒里，上盖开一个小屏窗，路过时抬眼就能看到当前读数，不必掏手机。</p>
     
     <figure class="part-art"><div class="pc-frame"><img class="pc-png" src="../parts/0205-2.png" alt="水质监测探头盒 爆炸拆解图" loading="lazy"></div><figcaption><span class="hand">爆炸拆解图 · 三维建模铅笔稿</span></figcaption></figure>
     
     <div class="two">
       <div><h3>关键参数 / 组成</h3>
-        <ul class="inspo"><li>温度 DS18B20 防水探头，精度 ±0.5℃</li><li>pH 玻璃电极 + BNC 放大板，需每季度校准</li><li>TDS 板测导电率，软水目标 100~200ppm</li><li>ESP32 + ESPHome，防水盒 IP65，穿线接头密封</li></ul></div>
+        <ul class="inspo"><li>Grove 防水温度模块，精度 ±0.5℃</li><li>pH 玻璃电极 + BNC 放大板，需每季度校准</li><li>TDS 板测导电率，软水目标 100~200ppm</li><li>XIAO ESP32C6 + ESPHome，防水盒 IP65，穿线接头密封</li></ul></div>
       <div>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/TheRealFalseReality/aquapi" target="_blank" rel="noopener">TheRealFalseReality/aquapi</a></p></div>
     </div>
@@ -68,7 +68,7 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-logic">联动逻辑</span> 3. 鱼缸日程器</h2>
-    <p class="scene">把鱼缸每天要做的事写成一张表，由一块 ESP32 按分钟执行。表里有三类事件：灯光曲线（时刻直接取自隔壁地堡 0201 模拟阳光的日出日落，全屋太阳同步），投喂（每天两次，喂食器电机转一格），换水（排水阀开 N 秒后再开补水阀）。程序每分钟唤醒一次，读当前时刻，查今日事件表，有到期事件就按类型分发执行，执行完写一条日志。它解决的是“提桶换水麻烦、人出门鱼要饿”两个问题，输入是时间表，输出是三路执行器动作和一份日志。</p>
+    <p class="scene">把鱼缸每天要做的事写成一张表，由一块 XIAO ESP32C6 按分钟执行。表里有三类事件：灯光曲线（时刻直接取自隔壁地堡 0201 模拟阳光的日出日落，全屋太阳同步），投喂（每天两次，喂食器电机转一格），换水（排水阀开 N 秒后再开补水阀）。程序每分钟唤醒一次，读当前时刻，查今日事件表，有到期事件就按类型分发执行，执行完写一条日志。它解决的是“提桶换水麻烦、人出门鱼要饿”两个问题，输入是时间表，输出是三路执行器动作和一份日志。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -201,8 +201,8 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>每分钟唤醒查表，灯光时刻取自 0201 日出日落</li><li>投喂每天 2 次，每次定量转一格，出门一周可覆盖</li><li>换水排水阀最长 60 秒，随后补水阀接管</li><li>断网时 ESP32 用本地 RTC 时钟继续按表执行</li></ul></div>
-      <div><h3>主要实现路径</h3><p class="impl">照 reef-pi/reef-pi 的 timer 和 lighting 模块设计事件表，用 ESPHome 的 time 触发器在 ESP32 本地执行灯光 PWM、喂食器和阀门</p>
+        <ul class="inspo"><li>每分钟唤醒查表，灯光时刻取自 0201 日出日落</li><li>投喂每天 2 次，每次定量转一格，出门一周可覆盖</li><li>换水排水阀最长 60 秒，随后补水阀接管</li><li>断网时 XIAO ESP32C6 用本地 RTC 时钟继续按表执行</li></ul></div>
+      <div><h3>主要实现路径</h3><p class="impl">照 reef-pi/reef-pi 的 timer 和 lighting 模块设计事件表，用 ESPHome 的 time 触发器在 XIAO ESP32C6 本地执行灯光 PWM、喂食器和阀门</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/reef-pi/reef-pi" target="_blank" rel="noopener">reef-pi/reef-pi</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
   </section>

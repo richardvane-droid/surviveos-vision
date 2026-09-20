@@ -54,13 +54,13 @@
   
   <section class="blk part" id="p2">
     <h2><span class="kind kind-hw">产品模块</span> 2. 滴灌供水单元</h2>
-    <p class="scene">水从雨水罐来，先过一级 120 目过滤网，再进一台 12V 隔膜加压泵，泵后接一只 4 路电磁阀分配器，每层一路 16mm 主管，每个种植箱两个可调滴头。分层控制的好处是每层可以有自己的浇水量：茄果多、新苗少。整套装在架子底层的一只防水配电箱里，泵和阀都由一块 ESP32 继电器扩展板驱动，断网也照常工作，只是曲线暂时不上传。</p>
+    <p class="scene">水从雨水罐来，先过一级 120 目过滤网，再进一台 12V 隔膜加压泵，泵后接一只 4 路电磁阀分配器，每层一路 16mm 主管，每个种植箱两个可调滴头。分层控制的好处是每层可以有自己的浇水量：茄果多、新苗少。整套装在架子底层的一只防水配电箱里，泵和阀都由一块 XIAO ESP32C6 配 Grove 6 路继电器模块驱动，断网也照常工作，只是曲线暂时不上传。</p>
     
     <figure class="part-art"><div class="pc-frame"><img class="pc-png" src="../parts/0504-2.png" alt="滴灌供水单元 爆炸拆解图" loading="lazy"></div><figcaption><span class="hand">爆炸拆解图 · 三维建模铅笔稿</span></figcaption></figure>
     
     <div class="two">
       <div><h3>关键参数 / 组成</h3>
-        <ul class="inspo"><li>120 目过滤器，防雨水罐来的泥沙堵滴头</li><li>12V 隔膜泵 4L/min，4 路电磁阀分层</li><li>16mm 主管 + 可调滴头，每箱 2 个</li><li>ESP32 + 8 路继电器板驱动，装防水箱</li></ul></div>
+        <ul class="inspo"><li>120 目过滤器，防雨水罐来的泥沙堵滴头</li><li>12V 隔膜泵 4L/min，4 路电磁阀分层</li><li>16mm 主管 + 可调滴头，每箱 2 个</li><li>XIAO ESP32C6 + Grove 6 路继电器模块驱动，装防水箱</li></ul></div>
       <div>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
@@ -68,13 +68,13 @@
   
   <section class="blk part" id="p3">
     <h2><span class="kind kind-hw">产品模块</span> 3. 墨水屏状态面板</h2>
-    <p class="scene">架子侧面挂一块 2.9 寸墨水屏，显示每层土壤湿度、上次浇水时间和今日是否浇水。墨水屏不发光、不刷新时零功耗，在户外阳光下反而最清楚，一颗 18650 电池能撑几个月。它接一块 ESP32，每 10 分钟从 HomeAssistant 拉一次数据刷新一屏，然后深睡；装在一只 3D 打印的小盒里，前面盖一片亚克力挡雨。同样的数据也同步到全屋中枢的大屏上。</p>
+    <p class="scene">架子侧面挂一块 2.9 寸墨水屏，显示每层土壤湿度、上次浇水时间和今日是否浇水。墨水屏不发光、不刷新时零功耗，在户外阳光下反而最清楚，一颗 18650 电池能撑几个月。它接一块 XIAO ESP32C6，每 10 分钟从 HomeAssistant 拉一次数据刷新一屏，然后深睡；装在一只 3D 打印的小盒里，前面盖一片亚克力挡雨。同样的数据也同步到全屋中枢的大屏上。</p>
     
     <figure class="part-art"><div class="pc-frame"><img class="pc-png" src="../parts/0504-3.png" alt="墨水屏状态面板 爆炸拆解图" loading="lazy"></div><figcaption><span class="hand">爆炸拆解图 · 三维建模铅笔稿</span></figcaption></figure>
     
     <div class="two">
       <div><h3>关键参数 / 组成</h3>
-        <ul class="inspo"><li>2.9 寸墨水屏 296×128，阳光下可读</li><li>ESP32 每 10 分钟拉一次 HA 数据后深睡</li><li>18650 电池，续航约 3 个月</li><li>3D 打印外壳 + 亚克力挡雨片</li></ul></div>
+        <ul class="inspo"><li>2.9 寸墨水屏 296×128，阳光下可读</li><li>XIAO ESP32C6 每 10 分钟拉一次 HA 数据后深睡</li><li>18650 电池，续航约 3 个月</li><li>3D 打印外壳 + 亚克力挡雨片</li></ul></div>
       <div>
         </div>
     </div>
@@ -82,7 +82,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 滴灌调度器</h2>
-    <p class="scene">种植架不看时间表，看土。每层埋一颗电容式土壤湿度传感器，插在滴头之间而不是正下方。每半小时读一次，低于 40% 才给这一层开阀浇 20 秒，然后等 10 分钟再测，没到 55% 就再补一轮，最多三轮。夏天 35℃ 以上先放下遮阳网再浇；雨天由 HomeAssistant 的天气实体告诉它跳过。所有判断在 ESP32 本地执行，断网也照常浇，只是曲线暂时不上传。</p>
+    <p class="scene">种植架不看时间表，看土。每层埋一颗 Grove 电容式土壤湿度模块，插在滴头之间而不是正下方。每半小时读一次，低于 40% 才给这一层开阀浇 20 秒，然后等 10 分钟再测，没到 55% 就再补一轮，最多三轮。夏天 35℃ 以上先放下遮阳网再浇；雨天由 HomeAssistant 的天气实体告诉它跳过。所有判断在 XIAO ESP32C6 本地执行，断网也照常浇，只是曲线暂时不上传。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">

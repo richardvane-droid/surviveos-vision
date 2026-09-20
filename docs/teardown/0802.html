@@ -40,13 +40,13 @@
   
   <section class="blk part" id="p1">
     <h2><span class="kind kind-hw">产品模块</span> 1. 指挥室屏墙总成</h2>
-    <p class="scene">全屋中枢的硬件是储藏室隔墙上的一面屏墙加一台小主机。65 寸竖屏居中，两块 27 寸横屏分列左右，三块屏都用薄型壁挂支架贴墙，线缆走墙内暗管。屏下一排机械式实体开关接一块 ESP32 按键板，按下有咔哒声，用于四个模拟阳光场景、观影模式和全屋关灯。驱动一切的是一台 N100 迷你主机，跑 HomeAssistant、ESPHome 和时序数据库，功耗约 15W；旁边一台 300W UPS 能撑 30 分钟，断电时屏幕先灭、主机后关。传感器网关是一根 Zigbee 协调器加一块 ESP32 网关板，把各区域的无线传感器汇进主机。主机、UPS 和网关都装在隔墙背后储藏室里一个带风扇的浅机箱里，热量算进 0203 的负荷。</p>
+    <p class="scene">全屋中枢的硬件是储藏室隔墙上的一面屏墙加一台小主机。65 寸竖屏居中，两块 27 寸横屏分列左右，三块屏都用薄型壁挂支架贴墙，线缆走墙内暗管。屏下一排机械式实体开关接一块 XIAO ESP32C6 按键板，按下有咔哒声，用于四个模拟阳光场景、观影模式和全屋关灯。驱动一切的是一台 N100 迷你主机，跑 HomeAssistant、ESPHome 和时序数据库，功耗约 15W；旁边一台 300W UPS 能撑 30 分钟，断电时屏幕先灭、主机后关。传感器网关是一根 Zigbee 协调器加一块 XIAO ESP32C6 网关板，把各区域的无线传感器汇进主机。主机、UPS 和网关都装在隔墙背后储藏室里一个带风扇的浅机箱里，热量算进 0203 的负荷。</p>
     
     <figure class="part-art"><div class="pc-frame"><img class="pc-png" src="../parts/0802-1.png" alt="指挥室屏墙总成 爆炸拆解图" loading="lazy"></div><figcaption><span class="hand">爆炸拆解图 · 三维建模铅笔稿</span></figcaption></figure>
     
     <div class="two">
       <div><h3>关键参数 / 组成</h3>
-        <ul class="inspo"><li>65 寸竖屏 + 两块 27 寸横屏，薄壁挂支架，暗管走线</li><li>N100 迷你主机 16GB/512GB，功耗 15W，跑 HA + ESPHome</li><li>300W UPS 保 30 分钟，断电先灭屏后关机</li><li>Zigbee 协调器 + ESP32 网关板，六个机械实体开关</li></ul></div>
+        <ul class="inspo"><li>65 寸竖屏 + 两块 27 寸横屏，薄壁挂支架，暗管走线</li><li>N100 迷你主机 16GB/512GB，功耗 15W，跑 HA + ESPHome</li><li>300W UPS 保 30 分钟，断电先灭屏后关机</li><li>Zigbee 协调器 + XIAO ESP32C6 网关板，六个机械实体开关</li></ul></div>
       <div>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/home-assistant/core" target="_blank" rel="noopener">home-assistant/core</a><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
@@ -54,7 +54,7 @@
   
   <section class="blk part" id="p2">
     <h2><span class="kind kind-logic">联动逻辑</span> 2. 全屋数据汇聚总线</h2>
-    <p class="scene">七个区域的几十个传感器用的协议不一样：ESP32 节点走 ESPHome 原生 API，电池传感器走 Zigbee，鱼缸和电表走 MQTT。汇聚总线的工作是把它们都变成 HA 里统一的实体，再按用途分流：需要看曲线的写进 InfluxDB 保留 90 天，只需要当前值的留在 HA 状态机里。每个实体都带“区域”和“最后更新时间”两个属性，这样仪表盘和告警都能按区域找数据，也能发现哪个传感器已经 10 分钟没上报。核心判断是“先本地后上云”：所有数据只在 N100 上流转，手机端看的也是这台机器，断外网时全部照常。</p>
+    <p class="scene">七个区域的几十个传感器用的协议不一样：XIAO ESP32C6 节点走 ESPHome 原生 API，电池传感器走 Zigbee，鱼缸和电表走 MQTT。汇聚总线的工作是把它们都变成 HA 里统一的实体，再按用途分流：需要看曲线的写进 InfluxDB 保留 90 天，只需要当前值的留在 HA 状态机里。每个实体都带“区域”和“最后更新时间”两个属性，这样仪表盘和告警都能按区域找数据，也能发现哪个传感器已经 10 分钟没上报。核心判断是“先本地后上云”：所有数据只在 N100 上流转，手机端看的也是这台机器，断外网时全部照常。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">

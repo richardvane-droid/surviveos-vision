@@ -235,7 +235,7 @@
   
   <section class="blk part" id="p4">
     <h2><span class="kind kind-logic">联动逻辑</span> 4. 湿度看护与除湿联动</h2>
-    <p class="scene">木料怕的是持续高湿，不是一阵潮气。货架尽头的温湿度传感器接 ESP32，每分钟把仓库湿度上报 HomeAssistant；湿度连续 15 分钟高于 65% 才启动除湿机，回落到 55% 以下再关，两个阈值之间留出迟滞带，避免除湿机在临界点反复启停。每天把湿度画成曲线，梅雨季看得出哪几天最该开窗。传感器掉线一小时发离线告警，水箱满了由除湿机自身浮子停机，系统只提醒倒水。</p>
+    <p class="scene">木料怕的是持续高湿，不是一阵潮气。货架尽头的 Grove 温湿度模块接 XIAO ESP32C6，每分钟把仓库湿度上报 HomeAssistant；湿度连续 15 分钟高于 65% 才启动除湿机，回落到 55% 以下再关，两个阈值之间留出迟滞带，避免除湿机在临界点反复启停。每天把湿度画成曲线，梅雨季看得出哪几天最该开窗。传感器掉线一小时发离线告警，水箱满了由除湿机自身浮子停机，系统只提醒倒水。</p>
     
     <div class="logic-art">
       <figure class="part-art poster"><div class="pc-frame"><svg class="pc-poster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif">
@@ -392,7 +392,7 @@
     
     <div class="two">
       <div><h3>触发 · 阈值 · 兜底 · 出口</h3>
-        <ul class="inspo"><li>阈值：湿度 &gt;65% 持续 15 分钟开机，&lt;55% 关机</li><li>输入：SHT30 温湿度，每 60 秒一次</li><li>出口：手机推送 + 每日湿度曲线</li><li>兜底：掉线 1 小时告警，水箱满提醒倒水</li></ul></div>
+        <ul class="inspo"><li>阈值：湿度 &gt;65% 持续 15 分钟开机，&lt;55% 关机</li><li>输入：Grove 温湿度模块，每 60 秒一次</li><li>出口：手机推送 + 每日湿度曲线</li><li>兜底：掉线 1 小时告警，水箱满提醒倒水</li></ul></div>
       <div><h3>主要实现路径</h3><p class="impl">用 esphome/esphome 的 sht3xd 组件上报湿度，HomeAssistant 自动化做带迟滞的阈值判断并联动智能插座</p>
         <h3>参考项目</h3><p class="gh-chips"><a href="https://github.com/esphome/esphome" target="_blank" rel="noopener">esphome/esphome</a></p></div>
     </div>
