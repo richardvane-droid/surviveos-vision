@@ -569,8 +569,7 @@ PREFACE = r"""{% extends "base" %}{% block title %}序 · {{ preface.title }}{% 
     {% endfor %}
   </div>
   <p class="signoff"><span class="hand">{{ preface.signoff }}</span><span class="seal">序</span></p>
-  <figure class="pref-art">{{ preface.svg_inline|safe }}<figcaption>那段对话的最后一个问题：三道门进去，人藏在最里面。</figcaption></figure>
-  <p class="tiny pref-src">{{ preface.source }}。</p>
+  <figure class="pref-art">{{ preface.svg_inline|safe }}<figcaption>月洞门层层叠进去，最深处一盏灯，一个人。</figcaption></figure>
   <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">进入这座园子 →</a><span></span></nav>
 </article>
 {% endblock %}"""
@@ -932,7 +931,6 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .seal{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:2px solid var(--red);color:var(--red);font-family:"Long Cang","Kaiti SC",cursive;font-size:1.5rem;border-radius:4px;transform:rotate(-6deg);opacity:.9}
 .pref-art{margin:0;border:1.6px solid var(--line);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;padding:10px 14px 4px;background:rgba(255,255,255,.4)}
 .pref-art figcaption{text-align:right;font-size:.85rem;color:var(--ink3);margin-top:2px;font-family:"Long Cang","Kaiti SC",cursive;font-size:1.05rem}
-.pref-src{margin-top:16px;text-align:center}
 .space-line{margin-top:10px;font-size:.92rem;color:var(--ink2)}
 .space-line em{font-style:normal;margin-right:4px}
 .space-line a{color:var(--red);border-bottom:1.5px solid transparent}.space-line a:hover{border-bottom-color:var(--red)}
