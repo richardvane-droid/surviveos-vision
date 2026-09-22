@@ -124,7 +124,7 @@ for m in modules:
         g["diagram_inline"] = inline_svg(_gh_render(f"g{m['id']}-{k}", g["diagram"], g["name"], seed=(int(m["id"]) + k) % 97), "pc-art gh-diag") if g.get("diagram") else None
     m["xhs"] = [{**x, "url": "https://www.xiaohongshu.com/search_result?keyword=" + quote(x["keyword"]) + "&source=web_explore_feed"} for x in r["xhs"]]
 preface = json.load(open(ROOT / "data" / "preface.json", encoding="utf-8"))
-preface["svg"] = (ROOT / "illos" / "preface-doors.svg").read_text(encoding="utf-8")
+preface["svg"] = (ROOT / "illos" / "preface-shelf.svg").read_text(encoding="utf-8")
 parts_by_id = {}
 for f in sorted(glob.glob(str(ROOT / "data" / "parts-*.json"))):
     for r in json.load(open(f, encoding="utf-8")): parts_by_id[r["id"]] = r["parts"]
@@ -569,7 +569,7 @@ PREFACE = r"""{% extends "base" %}{% block title %}序 · {{ preface.title }}{% 
     {% endfor %}
   </div>
   <p class="signoff"><span class="hand">{{ preface.signoff }}</span><span class="seal">序</span></p>
-  <figure class="pref-art">{{ preface.svg_inline|safe }}<figcaption>月洞门层层叠进去，最深处一盏灯，一个人。</figcaption></figure>
+  <figure class="pref-art">{{ preface.svg_inline|safe }}<figcaption>浅书格，书脊朝外，最常翻的几本立在灯下。</figcaption></figure>
   <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">进入这座园子 →</a><span></span></nav>
 </article>
 {% endblock %}"""
