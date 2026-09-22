@@ -56,61 +56,76 @@
   <p class="signoff"><span class="hand">记 · 暖村 · 杭州 · 二〇二六年九月</span><span class="seal">序</span></p>
   <figure class="pref-art"><svg class="sk-art" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
-    <filter id="mpref-rough" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="11" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    <filter id="mpref-rough" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="17" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <pattern id="mpref-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.8"/>
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.7"/>
     </pattern>
   </defs>
+
+  <!-- night sky: crescent moon + stars -->
+  <g>
+    <circle cx="344" cy="52" r="19" fill="#1c1c1c"/>
+    <circle cx="352" cy="46" r="18" fill="#f9f6ef"/>
+  </g>
+  <g fill="#1c1c1c">
+    <circle cx="284" cy="18" r="1.1"/><circle cx="302" cy="50" r="0.9"/><circle cx="266" cy="42" r="0.8"/>
+    <circle cx="374" cy="76" r="1"/><circle cx="386" cy="34" r="0.8"/><circle cx="26" cy="20" r="0.9"/>
+  </g>
+
+  <!-- peach-blossom branch, upper left, drifting petals -->
   <g filter="url(#mpref-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- ground -->
-    <path d="M14 262 Q120 256 200 260 T388 258" stroke-width="1.2"/>
-    <!-- gate 1: 院门 (outermost, two posts + lintel, half-open leaf) -->
-    <path d="M40 258 V96 M360 258 V96 M32 96 H368" stroke-width="2"/>
-    <path d="M43 258 V99 M357 258 V99 M36 100 H364" stroke-width="0.9"/>
-    <path d="M40 90 l-8 -10 M360 90 l8 -10 M30 80 H370" stroke-width="1.4"/>
-    <path d="M40 106 L112 122 V258 L40 258 Z" stroke-width="1.6"/>
-    <path d="M44 110 L108 125 V254 L44 254 Z" fill="url(#mpref-hatch)" stroke="none"/>
-    <path d="M52 140 h44 M52 170 h44 M52 200 h44 M52 230 h44" stroke-width="0.7"/>
-    <!-- gate 2: 木屋门 (inside, smaller, log wall around) -->
-    <path d="M118 258 V140 H282 V258" stroke-width="1.8"/>
-    <path d="M121 258 V143 H279" stroke-width="0.8"/>
-    <path d="M110 140 L200 112 L290 140" stroke-width="1.8"/>
-    <path d="M121 156 H279 M121 172 H279 M121 188 H279 M121 204 H279 M121 220 H279 M121 236 H279" stroke-width="0.7"/>
-    <path d="M160 258 V176 H240 V258" stroke-width="1.6"/>
-    <path d="M163 258 V179 H237 V258" fill="#f9f6ef" stroke="none"/>
-    <path d="M163 258 V179 H237" stroke-width="0.9"/>
-    <path d="M232 218 a2 2 0 1 0 0.1 0" stroke-width="1"/>
-    <!-- gate 3: 藏宝阁门 (innermost, tent-shaped, dark inside, small light) -->
-    <path d="M200 194 L172 258 H228 Z" stroke-width="1.6"/>
-    <path d="M200 198 L176 254 H224 Z" fill="url(#mpref-hatch)" stroke="none"/>
-    <path d="M190 258 V226 L200 214 L210 226 V258" stroke-width="1.3"/>
-    <path d="M192 256 V228 L200 218 L208 228 V256" fill="#f9f6ef" stroke="none"/>
-    <!-- tiny figure inside with a lamp -->
-    <circle cx="200" cy="236" r="3.2" stroke-width="1.1"/>
-    <path d="M200 239 V249 M200 243 L196 247 M200 243 L204 246 M200 249 L197 255 M200 249 L203 255" stroke-width="1.1"/>
-    <path d="M206 232 q4 -6 8 0 M210 226 v-4" stroke-width="0.8"/>
-    <!-- path leading in -->
-    <path d="M60 262 Q140 262 176 258" stroke-width="0.9" stroke-dasharray="3 4"/>
-    <!-- grass -->
-    <path d="M300 256 l2 -7 l2 7 M312 257 l2 -6 M24 255 l2 -7 l2 7" stroke-width="0.9"/>
+    <path d="M-4 16 Q40 32 66 28 Q86 25 104 42" stroke-width="1.4"/>
+    <path d="M40 32 Q46 44 44 56" stroke-width="0.9"/>
+    <path d="M70 27 Q76 18 86 18" stroke-width="0.9"/>
   </g>
-  <g stroke="#1c1c1c" stroke-width="1" fill="#f9f6ef">
-    <circle cx="76" cy="90" r="7"/><circle cx="148" cy="130" r="7"/><circle cx="236" cy="206" r="7"/>
+  <g stroke="#1c1c1c" stroke-width="0.7" fill="#f9f6ef">
+    <g transform="translate(66,26)"><circle r="2.6"/><circle cx="3.6" cy="-1" r="2.4"/><circle cx="2.4" cy="3.2" r="2.4"/><circle cx="-2.6" cy="1.6" r="2.3"/><circle cx="-1.2" cy="-3" r="2.3"/></g>
+    <g transform="translate(88,18) scale(0.85)"><circle r="2.6"/><circle cx="3.6" cy="-1" r="2.4"/><circle cx="2.4" cy="3.2" r="2.4"/><circle cx="-2.6" cy="1.6" r="2.3"/><circle cx="-1.2" cy="-3" r="2.3"/></g>
+    <g transform="translate(46,38) scale(0.7)"><circle r="2.6"/><circle cx="3.6" cy="-1" r="2.4"/><circle cx="2.4" cy="3.2" r="2.4"/><circle cx="-2.6" cy="1.6" r="2.3"/><circle cx="-1.2" cy="-3" r="2.3"/></g>
   </g>
-  <g font-family="'Noto Sans SC','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="9" fill="#1c1c1c" text-anchor="middle">
-    <text x="76" y="93">1</text><text x="148" y="133">2</text><text x="236" y="209">3</text>
+  <g fill="#1c1c1c" opacity="0.8">
+    <ellipse cx="128" cy="66" rx="2.4" ry="1.4" transform="rotate(30 128 66)"/>
+    <ellipse cx="168" cy="90" rx="2.1" ry="1.2" transform="rotate(-15 168 90)"/>
+    <ellipse cx="104" cy="108" rx="2" ry="1.1" transform="rotate(50 104 108)"/>
   </g>
-  <g font-family="'Long Cang','Kaiti SC',cursive" font-size="12" fill="#5a5a5a">
-    <text x="18" y="30">三道门：1 院门　2 木屋门　3 藏宝阁门</text>
-    <text x="18" y="48">人藏在最里面，遥控指挥天下大事</text>
+
+  <!-- three moon-gates, concentric, receding inward like looking down a tunnel of doorways -->
+  <g filter="url(#mpref-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="196" cy="176" r="94" stroke-width="2"/>
+    <circle cx="196" cy="176" r="90" stroke-width="0.6"/>
+    <circle cx="196" cy="176" r="60" stroke-width="1.6"/>
+    <circle cx="196" cy="176" r="56" stroke-width="0.6"/>
   </g>
-  <text x="386" y="292" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="10" fill="#1c1c1c">序</text>
+  <circle cx="196" cy="176" r="30" fill="url(#mpref-hatch)" stroke="#1c1c1c" stroke-width="1.3" filter="url(#mpref-rough)"/>
+  <ellipse cx="196" cy="182" rx="16" ry="12" fill="#f9f6ef" stroke="none"/>
+
+  <!-- ground, drawn over the gates' lower rim so they read as standing thresholds -->
+  <g filter="url(#mpref-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-4 254 Q100 246 196 250 Q290 246 404 252" stroke-width="4" stroke="#f9f6ef"/>
+    <path d="M-4 254 Q100 246 196 250 Q290 246 404 252" stroke-width="1.3"/>
+  </g>
+  <g filter="url(#mpref-rough)" stroke="#1c1c1c" stroke-width="1" fill="none" stroke-linecap="round">
+    <path d="M18 251 q1 -9 3 -9 q2 0 1 9"/>
+    <path d="M330 253 q1 -8 3 -8 q2 0 1 8"/>
+    <path d="M312 256 q1 -6 2.5 -6 q1.5 0 1 6"/>
+  </g>
+
+  <!-- tiny crouched figure with a lamp, knees drawn in like before a jump -->
+  <g filter="url(#mpref-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="196" cy="172" r="3.4" stroke-width="1.1"/>
+    <path d="M196 176 Q194 184 188 188 M196 176 Q198 184 204 187 M188 188 Q184 194 186 198 M204 187 Q208 193 205 198" stroke-width="1.2"/>
+    <path d="M211 180 q3 -7 8 -3 M217 174 v-5" stroke-width="0.8"/>
+  </g>
+
+  <!-- a short trail curling off the crouch, like stored energy about to be spent outward -->
+  <path d="M196 172 Q214 156 226 136" fill="none" stroke="#1c1c1c" stroke-width="0.8" stroke-dasharray="1 4" stroke-linecap="round" opacity="0.65"/>
+
+  <text x="382" y="290" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#1c1c1c">序</text>
 </svg>
-<figcaption>那段对话的最后一个问题：三道门进去，人藏在最里面。</figcaption></figure>
-  <p class="tiny pref-src">整理自 2026 年 9 月 3 日一段关于“一个人 40 岁拥有暖村系统是什么体验”的对话，改写为散文体，隐去第三人称叙述框架，保留原意；2026-09-22 随最新项目进展更新细节（8 区域 46 模块、0209 藏宝阁改为写字室等）。</p>
+<figcaption>月洞门层层叠进去，最深处一盏灯，一个人。</figcaption></figure>
   <nav class="pager"><span></span><a class="up" href="index.html">进入这座园子 →</a><span></span></nav>
 </article>
 
