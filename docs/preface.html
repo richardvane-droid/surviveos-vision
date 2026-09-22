@@ -63,69 +63,76 @@
     <pattern id="mpref-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="#1c1c1c" stroke-width="0.7"/>
     </pattern>
+    <pattern id="mpref-hatch2" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#1c1c1c" stroke-width="0.45" stroke-opacity="0.6"/>
+    </pattern>
   </defs>
 
-  <!-- night sky: crescent moon + stars -->
-  <g>
-    <circle cx="344" cy="52" r="19" fill="#1c1c1c"/>
-    <circle cx="352" cy="46" r="18" fill="#f9f6ef"/>
-  </g>
-  <g fill="#1c1c1c">
-    <circle cx="284" cy="18" r="1.1"/><circle cx="302" cy="50" r="0.9"/><circle cx="266" cy="42" r="0.8"/>
-    <circle cx="374" cy="76" r="1"/><circle cx="386" cy="34" r="0.8"/><circle cx="26" cy="20" r="0.9"/>
-  </g>
+  <!-- wall behind the shelf, faint hatch, and a warm wash-light glow licking down from the top -->
+  <rect x="18" y="40" width="364" height="176" fill="url(#mpref-hatch2)" opacity="0.5"/>
+  <ellipse cx="210" cy="70" rx="150" ry="46" fill="#f9f6ef" opacity="0.9"/>
 
-  <!-- peach-blossom branch, upper left, drifting petals -->
+  <!-- the shelf itself: one shallow board, spines flush, built into the wall -->
   <g filter="url(#mpref-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M-4 16 Q40 32 66 28 Q86 25 104 42" stroke-width="1.4"/>
-    <path d="M40 32 Q46 44 44 56" stroke-width="0.9"/>
-    <path d="M70 27 Q76 18 86 18" stroke-width="0.9"/>
-  </g>
-  <g stroke="#1c1c1c" stroke-width="0.7" fill="#f9f6ef">
-    <g transform="translate(66,26)"><circle r="2.6"/><circle cx="3.6" cy="-1" r="2.4"/><circle cx="2.4" cy="3.2" r="2.4"/><circle cx="-2.6" cy="1.6" r="2.3"/><circle cx="-1.2" cy="-3" r="2.3"/></g>
-    <g transform="translate(88,18) scale(0.85)"><circle r="2.6"/><circle cx="3.6" cy="-1" r="2.4"/><circle cx="2.4" cy="3.2" r="2.4"/><circle cx="-2.6" cy="1.6" r="2.3"/><circle cx="-1.2" cy="-3" r="2.3"/></g>
-    <g transform="translate(46,38) scale(0.7)"><circle r="2.6"/><circle cx="3.6" cy="-1" r="2.4"/><circle cx="2.4" cy="3.2" r="2.4"/><circle cx="-2.6" cy="1.6" r="2.3"/><circle cx="-1.2" cy="-3" r="2.3"/></g>
-  </g>
-  <g fill="#1c1c1c" opacity="0.8">
-    <ellipse cx="128" cy="66" rx="2.4" ry="1.4" transform="rotate(30 128 66)"/>
-    <ellipse cx="168" cy="90" rx="2.1" ry="1.2" transform="rotate(-15 168 90)"/>
-    <ellipse cx="104" cy="108" rx="2" ry="1.1" transform="rotate(50 104 108)"/>
+    <path d="M20 214 H380" stroke-width="2"/>
+    <path d="M20 214 L10 224 H392 L380 214" stroke-width="1.6"/>
+    <path d="M10 224 V232 H392 V224" stroke-width="1.4"/>
+    <path d="M20 214 V206 M380 214 V206" stroke-width="1.2"/>
   </g>
 
-  <!-- three moon-gates, concentric, receding inward like looking down a tunnel of doorways -->
+  <!-- tin box at the far left end of the shelf -->
   <g filter="url(#mpref-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="196" cy="176" r="94" stroke-width="2"/>
-    <circle cx="196" cy="176" r="90" stroke-width="0.6"/>
-    <circle cx="196" cy="176" r="60" stroke-width="1.6"/>
-    <circle cx="196" cy="176" r="56" stroke-width="0.6"/>
+    <path d="M30 214 V182 H62 V214" stroke-width="1.5"/>
+    <path d="M28 182 L34 175 H68 L62 182 Z" stroke-width="1.3"/>
+    <path d="M46 182 V175" stroke-width="1"/>
+    <path d="M44 196 h4 v6 h-4 Z" stroke-width="0.9"/>
   </g>
-  <circle cx="196" cy="176" r="30" fill="url(#mpref-hatch)" stroke="#1c1c1c" stroke-width="1.3" filter="url(#mpref-rough)"/>
-  <ellipse cx="196" cy="182" rx="16" ry="12" fill="#f9f6ef" stroke="none"/>
+  <path d="M33 213 V185 H59 V213 Z" fill="url(#mpref-hatch)" opacity="0.5"/>
 
-  <!-- ground, drawn over the gates' lower rim so they read as standing thresholds -->
+  <!-- four books standing spine-out, titles from 0209's poster-wall reading list -->
   <g filter="url(#mpref-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M-4 254 Q100 246 196 250 Q290 246 404 252" stroke-width="4" stroke="#f9f6ef"/>
-    <path d="M-4 254 Q100 246 196 250 Q290 246 404 252" stroke-width="1.3"/>
+    <path d="M118 214 V96 H150 V214" stroke-width="1.6"/>
+    <path d="M154 214 V80 H188 V214" stroke-width="1.6"/>
+    <g transform="rotate(-4 210 214)">
+      <path d="M194 214 V108 H228 V214" stroke-width="1.6"/>
+    </g>
+    <path d="M232 214 V88 H266 V214" stroke-width="1.6"/>
   </g>
-  <g filter="url(#mpref-rough)" stroke="#1c1c1c" stroke-width="1" fill="none" stroke-linecap="round">
-    <path d="M18 251 q1 -9 3 -9 q2 0 1 9"/>
-    <path d="M330 253 q1 -8 3 -8 q2 0 1 8"/>
-    <path d="M312 256 q1 -6 2.5 -6 q1.5 0 1 6"/>
+  <g fill="url(#mpref-hatch)" opacity="0.55">
+    <path d="M121 211 V99 H147 V211 Z"/>
+    <path d="M157 211 V83 H185 V211 Z"/>
+    <path d="M235 211 V91 H263 V211 Z"/>
   </g>
 
-  <!-- tiny crouched figure with a lamp, knees drawn in like before a jump -->
+  <!-- vertical book-spine titles, one character per line, top to bottom -->
+  <g font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#1c1c1c" text-anchor="middle">
+    <text x="134" y="112">归</text><text x="134" y="128">园</text><text x="134" y="144">田</text><text x="134" y="160">居</text>
+    <text x="171" y="98">陶</text><text x="171" y="114">庵</text><text x="171" y="130">梦</text><text x="171" y="146">忆</text>
+    <g transform="rotate(-4 210 214)">
+      <text x="211" y="124">闲</text><text x="211" y="140">情</text><text x="211" y="156">偶</text><text x="211" y="172">寄</text>
+    </g>
+    <text x="249" y="104">浮</text><text x="249" y="120">生</text><text x="249" y="136">六</text><text x="249" y="152">记</text>
+  </g>
+
+  <!-- a small ceramic-and-silver tea set at the far right end -->
   <g filter="url(#mpref-rough)" stroke="#1c1c1c" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="196" cy="172" r="3.4" stroke-width="1.1"/>
-    <path d="M196 176 Q194 184 188 188 M196 176 Q198 184 204 187 M188 188 Q184 194 186 198 M204 187 Q208 193 205 198" stroke-width="1.2"/>
-    <path d="M211 180 q3 -7 8 -3 M217 174 v-5" stroke-width="0.8"/>
+    <path d="M300 214 V206 Q300 198 310 198 Q320 198 320 206 V214" stroke-width="1.3"/>
+    <path d="M320 202 q8 0 8 6 q0 5 -7 6" stroke-width="1"/>
+    <path d="M296 214 H324" stroke-width="1"/>
+    <path d="M336 214 V196 Q336 188 344 188 Q352 188 352 196 V214" stroke-width="1.4"/>
+    <path d="M336 196 H352" stroke-width="0.9"/>
+    <path d="M340 188 q4 -6 8 0" stroke-width="0.9"/>
   </g>
 
-  <!-- a short trail curling off the crouch, like stored energy about to be spent outward -->
-  <path d="M196 172 Q214 156 226 136" fill="none" stroke="#1c1c1c" stroke-width="0.8" stroke-dasharray="1 4" stroke-linecap="round" opacity="0.65"/>
+  <!-- a thin LED wash-light strip along the top edge, and a couple of dust motes in the light -->
+  <path d="M96 42 H324" stroke="#1c1c1c" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <g fill="#1c1c1c" opacity="0.5">
+    <circle cx="160" cy="56" r="0.9"/><circle cx="230" cy="46" r="0.8"/><circle cx="280" cy="60" r="0.9"/>
+  </g>
 
   <text x="382" y="290" text-anchor="end" font-family="'Long Cang','Kaiti SC',cursive" font-size="11" fill="#1c1c1c">序</text>
 </svg>
-<figcaption>月洞门层层叠进去，最深处一盏灯，一个人。</figcaption></figure>
+<figcaption>浅书格，书脊朝外，最常翻的几本立在灯下。</figcaption></figure>
   <nav class="pager"><span></span><a class="up" href="index.html">进入这座园子 →</a><span></span></nav>
 </article>
 
