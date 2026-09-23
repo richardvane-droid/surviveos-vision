@@ -244,6 +244,11 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .plan-fig.big svg{max-height:720px}
 .plan-fig figcaption{font-size:.85rem;color:var(--ink3);margin-top:6px;line-height:1.55}
 .plan-fig figcaption b{color:var(--ink);margin-right:4px}
+.pc-frame.photo{border-radius:14px;padding:6px;background:#f9f6ef}
+.plan-fig .pc-frame.photo .pref-render{max-height:560px;object-fit:contain}
+.plan-fig.big .pc-frame.photo .pref-render{max-height:720px}
+.plan-note{font-size:.85rem;color:var(--ink3);margin-top:10px;line-height:1.6}
+.plan-note b{color:var(--ink);margin-right:4px}
 .space-entry .pref-mark{font-size:1.5rem}
 .est{color:#8a8a8a;font-style:italic}
 .blk.place p:first-of-type{font-size:1.02rem;line-height:1.75}
