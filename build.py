@@ -80,7 +80,7 @@ PLANS = [("site", "场地总图", "上北下南。东南角一户 + 整个阁楼
          ("attic", "阁楼层", "45° 四坡屋面，中间最高 2060。虚线框内为可站立核心区（外轮廓内缩 2060，约 82㎡，占整层 47%）；帐篷与工具台都在核心区内。"),
          ("bunker-cabin", "地堡与木屋家具平面", "地堡 4.85×5.00，木屋 2.00×5.00。两张床都架空：地堡架子床下是 0209 藏宝阁，木屋梯子床下是写字台与通往地堡的暗门。"),
          ("northwall", "木屋北墙立面", "5000×2660，自室内向北看。吧台矮柜 900 高、台面电器顶 1500，上方从西到东是 0103 电子画框墙、0104 照片墙、0102 作品展示墙，0101 主产品展示在 0102 正下方。")]
-plans = {k: {"id": k, "name": n, "note": t, "svg": (ROOT / "illos" / f"plan-{k}.svg").read_text(encoding="utf-8")} for k, n, t in PLANS}
+plans = {k: {"id": k, "name": n, "note": t, "render": f"plan-render-{k}.jpg", "svg": (ROOT / "illos" / f"plan-{k}.svg").read_text(encoding="utf-8")} for k, n, t in PLANS}
 for a in AREAS.values(): a["plan_figs"] = [plans[k] for k in a["plans"]]
 SIZE_TABLE = [("01 暖村木屋", "2.00 × 5.00m", "10.0㎡", "2660（梁下 2400）"),
               ("02 地堡（含卫生间、储藏室）", "4.85 × 5.00m", "24.3㎡", "2660 · 无窗"),
@@ -502,7 +502,11 @@ SPACE = r"""{% extends "base" %}{% block title %}户型图与空间标注{% endb
   {% for f in plans.values() %}
   <section class="blk plan-blk" id="{{ f.id }}">
     <h2><em>📐</em> {{ loop.index }} · {{ f.name }}</h2>
-    <figure class="plan-fig big"><div class="pc-frame">{{ f.svg_inline|safe }}</div><figcaption>{{ f.note }}</figcaption></figure>
+    <div class="plan-grid plan-2">
+      <figure class="plan-fig big"><div class="pc-frame">{{ f.svg_inline|safe }}</div><figcaption>铅笔重绘</figcaption></figure>
+      <figure class="plan-fig big"><div class="pc-frame photo"><img class="pref-render" src="{{ root }}illos/{{ f.render }}" alt="{{ f.name }} 3D 渲染图" loading="lazy"></div><figcaption>3D 渲染</figcaption></figure>
+    </div>
+    <p class="plan-note">{{ f.note }}</p>
   </section>
   {% endfor %}
   <section class="blk"><h2><em>📏</em> 关键尺寸与净高</h2>
@@ -943,6 +947,11 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .plan-fig.big svg{max-height:720px}
 .plan-fig figcaption{font-size:.85rem;color:var(--ink3);margin-top:6px;line-height:1.55}
 .plan-fig figcaption b{color:var(--ink);margin-right:4px}
+.pc-frame.photo{border-radius:14px;padding:6px;background:#f9f6ef}
+.plan-fig .pc-frame.photo .pref-render{max-height:560px;object-fit:contain}
+.plan-fig.big .pc-frame.photo .pref-render{max-height:720px}
+.plan-note{font-size:.85rem;color:var(--ink3);margin-top:10px;line-height:1.6}
+.plan-note b{color:var(--ink);margin-right:4px}
 .space-entry .pref-mark{font-size:1.5rem}
 .est{color:#8a8a8a;font-style:italic}
 .blk.place p:first-of-type{font-size:1.02rem;line-height:1.75}
@@ -1158,6 +1167,8 @@ for _m in modules:
 print(f"copied {_npng} part PNGs -> docs/parts/")
 _id = DIST / "illos"; _id.mkdir(parents=True, exist_ok=True)
 shutil.copyfile(ROOT / "illos" / "preface-render.jpg", _id / "preface-render.jpg")
+for _pk in plans:
+    shutil.copyfile(ROOT / "illos" / f"plan-render-{_pk}.jpg", _id / f"plan-render-{_pk}.jpg")
 
 ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, repo_tiers=repo_tiers, refs_pages=REFS_PAGES, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface, plans=plans, size_table=SIZE_TABLE, blocks=BLOCKS,
            cost_meta=COST_META, cost_rank=cost_rank, cost_areas=cost_areas, cost_phases=cost_phases)
