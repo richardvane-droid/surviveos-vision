@@ -124,7 +124,6 @@ for m in modules:
         g["diagram_inline"] = inline_svg(_gh_render(f"g{m['id']}-{k}", g["diagram"], g["name"], seed=(int(m["id"]) + k) % 97), "pc-art gh-diag") if g.get("diagram") else None
     m["xhs"] = [{**x, "url": "https://www.xiaohongshu.com/search_result?keyword=" + quote(x["keyword"]) + "&source=web_explore_feed"} for x in r["xhs"]]
 preface = json.load(open(ROOT / "data" / "preface.json", encoding="utf-8"))
-preface["svg"] = (ROOT / "illos" / "preface-shelf.svg").read_text(encoding="utf-8")
 parts_by_id = {}
 for f in sorted(glob.glob(str(ROOT / "data" / "parts-*.json"))):
     for r in json.load(open(f, encoding="utf-8")): parts_by_id[r["id"]] = r["parts"]
@@ -569,7 +568,7 @@ PREFACE = r"""{% extends "base" %}{% block title %}序 · {{ preface.title }}{% 
     {% endfor %}
   </div>
   <p class="signoff"><span class="hand">{{ preface.signoff }}</span><span class="seal">序</span></p>
-  <figure class="pref-art">{{ preface.svg_inline|safe }}<figcaption>浅书格，书脊朝外，最常翻的几本立在灯下。</figcaption></figure>
+  <figure class="pref-art photo"><img class="pref-render" src="{{ root }}illos/preface-render.jpg" alt="木屋、地堡、庭院三段剖视渲染图" loading="lazy"><figcaption>木屋、地堡、庭院，剖开看，三段接成一条。</figcaption></figure>
   <nav class="pager"><span></span><a class="up" href="{{ root }}index.html">进入这座园子 →</a><span></span></nav>
 </article>
 {% endblock %}"""
@@ -930,6 +929,8 @@ main{max-width:var(--w);margin:0 auto;padding:0 20px}
 .signoff{display:flex;justify-content:flex-end;align-items:center;gap:14px;margin:6px 0 30px;font-size:1.2rem}
 .seal{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:2px solid var(--red);color:var(--red);font-family:"Long Cang","Kaiti SC",cursive;font-size:1.5rem;border-radius:4px;transform:rotate(-6deg);opacity:.9}
 .pref-art{margin:0;border:1.6px solid var(--line);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;padding:10px 14px 4px;background:rgba(255,255,255,.4)}
+.pref-art.photo{border-radius:14px;padding:6px;background:#f9f6ef}
+.pref-render{display:block;width:100%;height:auto;border-radius:8px}
 .pref-art figcaption{text-align:right;font-size:.85rem;color:var(--ink3);margin-top:2px;font-family:"Long Cang","Kaiti SC",cursive;font-size:1.05rem}
 .space-line{margin-top:10px;font-size:.92rem;color:var(--ink2)}
 .space-line em{font-style:normal;margin-right:4px}
@@ -1143,7 +1144,6 @@ if DIST.exists(): shutil.rmtree(DIST)
 (DIST / "areas").mkdir(parents=True); (DIST / "modules").mkdir(); (DIST / "teardown").mkdir()
 for m in modules: m["svg_inline"] = inline_svg(m["svg"], "sk-art")
 for a in AREAS.values(): a["svg_inline"] = inline_svg(a["svg"], "sk-art")
-preface["svg_inline"] = inline_svg(preface["svg"], "sk-art")
 for f in plans.values(): f["svg_inline"] = inline_svg(f["svg"], "pc-art plan-art")
 for m in modules:
     for p in m["parts"]:
@@ -1156,6 +1156,8 @@ for _m in modules:
         if _p.get("png"):
             shutil.copyfile(ROOT / "parts" / _p["png"], _pd / _p["png"]); _npng += 1
 print(f"copied {_npng} part PNGs -> docs/parts/")
+_id = DIST / "illos"; _id.mkdir(parents=True, exist_ok=True)
+shutil.copyfile(ROOT / "illos" / "preface-render.jpg", _id / "preface-render.jpg")
 
 ctx = dict(areas=AREAS, modules=modules, stats=stats, top_tags=top_tags, area=None, page=None, repo_list=repo_list, repo_tiers=repo_tiers, refs_pages=REFS_PAGES, refs_stats=refs_stats, parts_stats=parts_stats, preface=preface, plans=plans, size_table=SIZE_TABLE, blocks=BLOCKS,
            cost_meta=COST_META, cost_rank=cost_rank, cost_areas=cost_areas, cost_phases=cost_phases)
